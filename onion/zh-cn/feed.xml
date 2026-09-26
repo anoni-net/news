@@ -6,7 +6,89 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>英国 iCloud 高级数据保护的分级现状</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/uk-icloud-advanced-data-protection/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/09/uk-icloud-advanced-data-protection</guid>
+<pubDate>Tue, 29 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Apple 从 2025 年 2 月起不再让英国的新用户开启高级数据保护，在那之前开启的人仍受保护，英国的 iCloud 因此分成两种加密程度。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，来自 Apple、MacAnorak、EFF 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Apple 从 2025 年 2 月起不再让英国的新用户开启 iCloud 的高级数据保护（Advanced Data Protection，简称 ADP），在那之前已经开启的人仍受保护。一位英国作者在 9 月 21 日的文章指出，同样住在英国、用同一款 iPhone 的两个人，iCloud 的加密程度因此不同。英国以外的地方仍可以开启 ADP。&lt;/p&gt;
+&lt;p&gt;起因是《华盛顿邮报》2025 年 2 月的报道，英国政府依据《调查权力法》发出技术能力通知，要求 Apple 建立访问加密 iCloud 数据的能力，范围涵盖全球用户。Apple 在 2 月 21 日宣布英国的新用户不能再开启 ADP，说明页写明 Apple 从未、也不会在产品中建置后门或万能钥匙。&lt;/p&gt;
+&lt;p&gt;Apple 的说明页列出影响范围。默认就端到端加密的 15 类数据不受影响，例如 iCloud 钥匙串与健康数据，iMessage 与 FaceTime 也维持端到端加密。没有开启 ADP 的英国用户，iCloud 云备份、iCloud 云盘、照片、备忘录等 10 类数据改用标准数据保护，密钥存放在 Apple 的数据中心。&lt;/p&gt;
+&lt;p&gt;已经开启 ADP 的英国用户，Apple 无法自动替他们关闭，这个设置只能从用户信任的设备更改。Apple 表示会给这些用户一段时间自行关闭，原文写到 9 月 21 日为止还没有公布期限。&lt;/p&gt;
+&lt;p&gt;EFF 在 2025 年 10 月的文章写到，据报道英国改发了一份只针对英国用户的通知。Apple 在 2026 年 7 月向调查权力法庭提出新的申诉，争议还没有结果。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;所有 iCloud 数据都有加密，差别在密钥放在哪里。标准数据保护的密钥在服务方手上，收到合法的调取要求时可以解密交出。ADP 让密钥只留在用户信任的设备上，Apple 没有钥匙，要取得内容就只能改变系统设计，英国的通知与 Apple 就僵持在这一点。&lt;/p&gt;
+&lt;p&gt;在中国大陆，iCloud 由 GCBD（AIPO Cloud (Guizhou) Technology Co. Ltd）运营，存放的照片、文件与备份受 GCBD 的条款约束。Apple 的说明页也写明，不是居住在中国大陆的中国公民，可以把 Apple 账户的国家或地区改成目前所在的地方，继续按 Apple 的条款使用 iCloud。&lt;/p&gt;
+&lt;p&gt;要开启 ADP，在 iPhone 的「设置」点自己的名字，进入 iCloud 开启。开启前要先设置恢复联系人或恢复密钥，登录同一账户的设备也要更新到 iOS 16.2 以上的对应版本。&lt;/p&gt;
+&lt;p&gt;没有开启 ADP 时，Apple 的说明写明，同时开着 iCloud 云备份与「iCloud 中的信息」，备份里会附上信息的密钥。关闭 iCloud 云备份之后，设备会生成新的密钥，之后的信息维持端到端加密。改用电脑做加密的本地备份，备份就留在自己手上，这个选项默认没有开启，要在 Finder 或 Apple 设备 App 里勾选。&lt;/p&gt;
+&lt;p&gt;ADP 的代价是 Apple 无法协助恢复端到端加密的数据，丢失所有恢复方式就找不回来。开启之后 iCloud.com 的网页访问也会关闭，需要时要从信任的设备批准。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;2025 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102651&#34;&gt;iCloud data security overview&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;2026 年 1 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/108756&#34;&gt;How to turn on Advanced Data Protection for iCloud&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-17&#34;&gt;2026 年 4 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/108353&#34;&gt;About encrypted backups on your iPhone, iPad, or iPod touch&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://macanorak.com/two-tier-encryption-in-the-uk/&#34;&gt;Two-Tier Encryption in the UK&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;MacAnorak&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users&#34;&gt;The UK Is Still Trying to Backdoor Encryption for Apple Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-01&#34;&gt;2025 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/111754&#34;&gt;iCloud in China mainland&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-15&#34;&gt;2025 年 4 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2026/08/03/apple-legal-challenge-against-uk-demand/&#34;&gt;Apple Launches New Legal Challenge Against UK Backdoor Demand&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-03&#34;&gt;2026 年 8 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>iOS 27 Siri AI 的数据访问设置</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/ios27-siri-ai-data-access/</link>
