@@ -565,6 +565,19 @@ p {
     font-size: 0.9em;
 }
 
+/* 行內的程式碼（cookie 名稱、主機名稱這類識別碼）加上底色與細框，跟前後的文字分得開。
+   底色與框線沿用原文區塊的 surface 與 border，文字與連結色在 surface 上的對比度已由建置檢查。
+   長的主機名稱在手機上可以斷行，斷行後每一行都保留自己的底色與框線 */
+.content :not(pre) > code {
+    padding: 0.1em 0.3em;
+    border: 1px solid var(--c-border);
+    border-radius: 0.25em;
+    background: var(--c-surface);
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
 /* 圖片最寬到內文欄，寬高由建置程式補上，載入時版面不跳動 */
 .content figure {
     margin: 1.75rem 0;
