@@ -154,17 +154,6 @@ p {
     border-left: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.site-header__nav {
-    display: flex;
-    gap: 0 1rem;
-    margin-left: auto;
-}
-
-.site-header__nav a {
-    color: var(--c-header-link);
-    padding: 0 0.25rem;
-}
-
 .site-header a:hover,
 .site-header a:focus-visible {
     text-decoration: underline;

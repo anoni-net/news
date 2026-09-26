@@ -270,7 +270,7 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 - 樣式自己寫，只用系統字型，不載入 Bulma 與 Font Awesome。配色見下方「品牌與配色」
 - 支援 `prefers-color-scheme: dark`
-- 頁首：anoni.net 標誌連回官網首頁、「新聞導讀」、連到文件站
+- 頁首：anoni.net 標誌連回官網首頁、「新聞導讀」。頁首、刊頭與頁尾這些頁面框架不放文件站的入口，避免讀者分不清兩個產品，文件站只出現在文章內文的延伸閱讀
 - 頁尾：RSS、授權（CC-BY 4.0）、onion 位址（clearnet 才顯示）、訂閱電子報
 
 ### 版面

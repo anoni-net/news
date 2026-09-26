@@ -16,7 +16,7 @@
 {% if front %}
   <div class="masthead">
     <h1 class="masthead__title">新聞導讀</h1>
-    <p class="masthead__tagline">國際隱私、匿名網路與審查新聞，一則一篇的正體中文導讀。每篇附上原文，也連到<a href="{{ config.docs }}">文件站</a>的相關頁面。</p>
+    <p class="masthead__tagline">國際隱私、匿名網路與審查新聞，一則一篇的正體中文導讀，每篇都附上原文。</p>
 {% if latest %}
     <p class="masthead__updated">最後更新 <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
 {% endif %}
@@ -45,7 +45,7 @@
 {% set items = posts %}
 {% include "_timeline.html.j2" %}
 {% else %}
-<p class="empty">第一篇導讀還在準備中。想先讀點什麼，可以從<a href="{{ config.docs }}">文件站</a>開始，或用 <a href="{{ url('feed.xml') }}">RSS</a> 訂閱，新文章發布時就會收到。</p>
+<p class="empty">第一篇導讀還在準備中。可以先用 <a href="{{ url('feed.xml') }}">RSS</a> 訂閱，新文章發布時就會收到。</p>
 {% endif %}
 {% if prev_rel is not none or next_rel %}
 <nav class="pager" aria-label="分頁">
