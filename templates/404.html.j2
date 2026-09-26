@@ -1,0 +1,9 @@
+{% extends "_layout.html.j2" %}
+{% set page_title = "找不到頁面 | anoni.net 新聞導讀" %}
+{% set page_description = "找不到這個網址對應的頁面。" %}
+{% set og_title = page_title %}
+{% set og_type = "website" %}
+{% block content %}
+<h1>找不到頁面</h1>
+<p>網址可能打錯了，或者文章還沒發布。所有文章都列在<a href="{{ url() }}">新聞導讀</a>，工具與觀念的說明在<a href="{{ config.docs }}">文件站</a>。</p>
+{% endblock %}

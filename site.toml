@@ -1,0 +1,34 @@
+# 兩個輸出目標的差異。模板裡的連結一律寫 clearnet 的網址，onion 產物由
+# rewrites 在 HTML 產生之後改寫 href。規則見 SPEC.md「clearnet 與 onion」。
+
+onion_host = "anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion"
+per_page = 20
+feed_items = 20
+
+# 頁首與頁尾用到的外部入口，一律寫 clearnet 的網址
+homepage = "https://anoni.net/"
+docs = "https://anoni.net/docs/"
+newsletter = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
+license = "https://creativecommons.org/licenses/by/4.0/deed.zh-hant"
+
+[targets.clearnet]
+out = "public/clearnet"
+# 完整網址的前綴，用在 canonical、RSS、sitemap、Open Graph 與 JSON-LD
+base_url = "https://anoni.net/news/"
+# 站內連結的前綴，從根目錄起算、不寫網域
+prefix = "/news/"
+clearnet = true
+rewrites = []
+
+[targets.onion]
+out = "public/onion"
+base_url = "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"
+prefix = "/"
+clearnet = false
+# 由上往下比對，第一條比對到的就套用。news 與 docs 要排在官網那條前面。
+rewrites = [
+    ["https://anoni.net/news/", "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
+    ["https://anoni.net/docs/", "http://docs.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
+    ["https://form.anoni.net/", "http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
+    ["https://anoni.net/", "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
+]

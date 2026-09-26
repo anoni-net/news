@@ -1,0 +1,9 @@
+# 測試用的署名，三種類型各一個
+anoni-net:
+  name: anoni.net 社群
+night-owl:
+  name: 夜梟
+  description: 關注網路封鎖的量測
+named-example:
+  name: 範例作者
+  url: https://example.org/

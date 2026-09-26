@@ -1,0 +1,31 @@
+{% extends "_layout.html.j2" %}
+{% set page_title = post.title ~ " | anoni.net 新聞導讀" %}
+{% set page_description = post.description %}
+{% set og_title = post.title %}
+{% set og_type = "article" %}
+{% block head %}
+<meta property="article:published_time" content="{{ post.created|iso }}">
+{% if post.updated %}
+<meta property="article:modified_time" content="{{ post.updated|iso }}">
+{% endif %}
+<script type="application/ld+json">
+{{ jsonld|safe }}
+</script>
+{% endblock %}
+{% block content %}
+<article class="post">
+  <h1>{{ post.title }}</h1>
+  <p class="post__meta">
+    <time datetime="{{ post.created|iso }}">{{ post.created|ymd }}</time>
+{% if post.updated %}
+    <span>更正於 <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
+{% endif %}
+    <span>{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}、{% endif %}{% endfor %}</span>
+  </p>
+{% include "_post_body.html.j2" %}
+</article>
+<nav class="pager" aria-label="文章導覽">
+  <a href="{{ url() }}">所有文章</a>
+  <a href="{{ url(post.created.strftime('%Y/%m/')) }}">{{ post.created.year }} 年 {{ post.created.month }} 月的文章</a>
+</nav>
+{% endblock %}
