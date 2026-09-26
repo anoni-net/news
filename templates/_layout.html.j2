@@ -36,8 +36,9 @@
       <a href="{{ config.docs }}">文件</a>
     </nav>
   </div>
+{% block masthead %}{% endblock %}
 </header>
-<main class="wrap">
+<main class="{% block main_class %}wrap{% endblock %}">
 {% block content %}{% endblock %}
 </main>
 <footer class="site-footer">

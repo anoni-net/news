@@ -1,0 +1,7 @@
+<article class="brief">
+  <h3 class="brief__title"><a href="{{ url(post.rel) }}">{{ post.title }}</a></h3>
+  <p class="brief__dek">{{ post.description }}</p>
+{% if post.sources[0].publisher %}
+  <p class="brief__source">原文來自 {{ post.sources[0].publisher }}</p>
+{% endif %}
+</article>

@@ -400,6 +400,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             page_url=target.abs_url(page.rel),
             onion_url=onion_url(page.rel),
             noindex=page.noindex,
+            latest=posts[0] if posts else None,
             **context,
         )
         dest = target.out / page.file
@@ -462,6 +463,17 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     return pages
 
 
+def by_day(posts: list[Post]) -> list[dict]:
+    """列表頁的時間軸：依發布日分組，保持原本新的在前的順序。"""
+    groups: list[dict] = []
+    for post in posts:
+        day = post.created.date()
+        if not groups or groups[-1]["date"] != day:
+            groups.append({"date": day, "posts": []})
+        groups[-1]["posts"].append(post)
+    return groups
+
+
 def make_env() -> Environment:
     env = Environment(
         loader=FileSystemLoader(ROOT / "templates"),
@@ -472,6 +484,11 @@ def make_env() -> Environment:
         keep_trailing_newline=True,
     )
     env.filters["ymd"] = lambda d: f"{d.year} 年 {d.month} 月 {d.day} 日"
+    env.filters["md"] = lambda d: f"{d.month} 月 {d.day} 日"
+    env.filters["weekday"] = lambda d: "星期" + "一二三四五六日"[d.weekday()]
+    env.filters["by_day"] = by_day
+    # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
+    env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
     return env
 
@@ -692,6 +709,7 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
 CONTRAST_PAIRS = [
     ("--c-text", "--c-bg"), ("--c-muted", "--c-bg"), ("--c-link", "--c-bg"),
     ("--c-text", "--c-surface"), ("--c-muted", "--c-surface"), ("--c-link", "--c-surface"),
+    ("--c-headline", "--c-bg"), ("--c-headline", "--c-surface"),
     ("--c-header-text", "--c-header-bg"), ("--c-header-link", "--c-header-bg"),
 ]
 

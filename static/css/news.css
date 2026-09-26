@@ -1,6 +1,11 @@
 /* anoni.net 新聞導讀。規則見 SPEC.md「頁面」一節。
    樣式從手機寬度開始寫，桌機再放寬。不載入任何站外資源，字型只用系統字型。
-   --c-* 是實際使用的顏色，build.py --check 會檢查這幾組文字與背景的對比度。 */
+   --c-* 是實際使用的顏色，build.py --check 會檢查這幾組文字與背景的對比度。
+
+   版面的兩個主軸：
+   - 列表是依發布日分組的時間軸，日期在捲動時停在頂端（position: sticky，不需要 JS）
+   - 文章頁把原文與導讀分成兩條，桌機時原文條在右欄，手機時在內文上方
+   標題用明體、字色用品牌墨色 cyan-900，跟文件站的黑體黑字分開。 */
 
 :root {
     /* 品牌色票，照抄文件站 docs/zh-TW/stylesheets/extra.css，不自己調 */
@@ -16,29 +21,37 @@
     --brand-cyan-900: #003e57;
 
     --c-bg: #ffffff;
-    --c-surface: #f1f7fa;
-    --c-border: #d5e3ea;
+    --c-surface: #eef6f9;
+    --c-border: #cfe0e7;
     --c-text: #1d2b31;
-    --c-muted: #56676e;
+    --c-muted: #52646b;
+    --c-headline: var(--brand-cyan-900);
     --c-link: var(--brand-cyan-800);
+    --c-rule: var(--brand-cyan-500);
     --c-header-bg: var(--brand-cyan-900);
     --c-header-text: #ffffff;
     --c-header-link: var(--brand-cyan-50);
 
+    --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    --font-serif: "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+
     --touch: 2.75rem;
-    /* 欄寬用 rem 算，頁首、內文與頁尾的字級不同也對得齊。扣掉左右留白約 44rem，
-       桌機 18px 的字級下一行大約 40 個中文字 */
-    --measure: 46rem;
+    /* 內文欄。扣掉左右留白約 40rem，桌機 18px 的字級下一行大約 36 個中文字 */
+    --measure: 42rem;
+    /* 列表的時間軸與文章頁的原文條需要更寬的外框 */
+    --frame: 64rem;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --c-bg: #0e171b;
-        --c-surface: #16232a;
-        --c-border: #2a3a42;
+        --c-bg: #0c1b22;
+        --c-surface: #132a34;
+        --c-border: #24414d;
         --c-text: #e8f9ff;
-        --c-muted: #a5b8c0;
+        --c-muted: #a3bcc6;
+        --c-headline: var(--brand-cyan-100);
         --c-link: var(--brand-cyan-300);
+        --c-rule: var(--brand-cyan-600);
         --c-header-bg: var(--brand-cyan-900);
         --c-header-text: #ffffff;
         --c-header-link: var(--brand-cyan-50);
@@ -60,28 +73,45 @@ body {
     margin: 0;
     background: var(--c-bg);
     color: var(--c-text);
-    font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.0625rem;
-    line-height: 1.8;
+    line-height: 1.85;
+    font-variant-numeric: tabular-nums;
 }
 
 a {
     color: var(--c-link);
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
 }
 
-.wrap {
-    max-width: var(--measure);
+a:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+p {
+    margin: 0 0 1.1em;
+}
+
+.wrap,
+.story-wrap,
+.list-wrap {
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 1.5rem 1rem 3rem;
 }
 
-main.wrap {
-    padding-top: 1.5rem;
-    padding-bottom: 3rem;
+.wrap,
+.story-wrap {
+    max-width: var(--measure);
 }
 
-/* ---------------------------------------------------------------- 頁首 */
+.list-wrap {
+    max-width: var(--frame);
+}
+
+/* ---------------------------------------------------------------- 頁首與刊頭 */
 
 .site-header {
     background: var(--c-header-bg);
@@ -93,28 +123,33 @@ main.wrap {
     flex-wrap: wrap;
     align-items: center;
     gap: 0 1rem;
-    max-width: var(--measure);
+    max-width: var(--frame);
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 .site-header a {
-    display: inline-flex;
-    align-items: center;
-    min-height: var(--touch);
     color: var(--c-header-text);
     text-decoration: none;
 }
 
+.site-header__inner a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+}
+
 .site-header__brand img {
     display: block;
-    height: 1.75rem;
+    height: 1.625rem;
     width: auto;
 }
 
 .site-header__product {
+    font-family: var(--font-serif);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    font-size: 1.125rem;
+    letter-spacing: 0.08em;
     padding-left: 1rem;
     border-left: 1px solid rgba(255, 255, 255, 0.35);
 }
@@ -133,82 +168,288 @@ main.wrap {
 .site-header a:hover,
 .site-header a:focus-visible {
     text-decoration: underline;
+    text-underline-offset: 0.3em;
 }
 
-/* ---------------------------------------------------------------- 標題與內文 */
-
-h1 {
-    font-size: 1.625rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 0.75rem;
+/* 首頁的刊頭，跟頁首接在同一塊墨色底上 */
+.masthead {
+    max-width: var(--frame);
+    margin: 0 auto;
+    padding: 1.75rem 1rem 1.5rem;
 }
 
-h2 {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    margin: 2rem 0 0.75rem;
+.masthead__title {
+    font-family: var(--font-serif);
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.75rem;
 }
 
-h3 {
-    font-size: 1.1rem;
-    margin: 1.5rem 0 0.5rem;
+.masthead__tagline {
+    color: var(--c-header-link);
+    max-width: 32em;
+    margin: 0 0 1rem;
 }
 
-p {
-    margin: 0 0 1.1em;
+.masthead__tagline a {
+    color: var(--c-header-text);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
 }
 
-.lead {
-    color: var(--c-muted);
+.masthead__updated {
+    display: inline-block;
+    margin: 0;
+    padding-top: 0.6rem;
+    border-top: 3px solid var(--c-rule);
+    color: var(--c-header-link);
+    font-size: 0.9375rem;
 }
 
-.post__meta {
+/* ---------------------------------------------------------------- 列表：頭條與時間軸 */
+
+.list-heading {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.75rem;
+    line-height: 1.35;
+    margin: 0.25rem 0 1.5rem;
+}
+
+.lead-story {
+    padding-bottom: 1.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid var(--c-headline);
+}
+
+.lead-story__title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0.25rem 0 0.75rem;
+}
+
+.lead-story__title a,
+.brief__title a {
+    color: var(--c-headline);
+    text-decoration: none;
+}
+
+.lead-story__title a:hover,
+.brief__title a:hover,
+.lead-story__title a:focus-visible,
+.brief__title a:focus-visible {
+    text-decoration: underline;
+}
+
+.lead-story__dek {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.lead-story__meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 1rem;
+    gap: 0 1.25rem;
+    margin: 0;
     color: var(--c-muted);
     font-size: 0.9375rem;
 }
 
-.sources {
-    background: var(--c-surface);
-    border-left: 4px solid var(--brand-cyan-700);
-    border-radius: 4px;
-    padding: 0.75rem 1rem;
-    margin: 0 0 1.75rem;
-    font-size: 0.9375rem;
+.day {
+    border-top: 1px solid var(--c-border);
 }
 
-.sources__label {
-    margin: 0 0 0.25rem;
-    color: var(--c-muted);
+/* 頭條底下已經有一條粗線，緊接的第一天不再疊一條細線 */
+.lead-story + .day {
+    border-top: 0;
+}
+
+/* 日期標題在捲動時停在頂端，讀者隨時知道自己讀到哪一天 */
+.day__date {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0.6rem 0;
+    background: var(--c-bg);
+    color: var(--c-headline);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.day__date time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.75rem;
+}
+
+.day__md {
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
-.sources ul {
-    list-style: none;
+.day__meta {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.brief {
+    padding: 0.5rem 0 1.25rem;
+}
+
+.brief + .brief {
+    border-top: 1px dashed var(--c-border);
+    padding-top: 1rem;
+}
+
+.brief__title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.45;
+    margin: 0 0 0.4rem;
+}
+
+.brief__dek {
+    margin: 0 0 0.35rem;
+}
+
+.brief__source {
     margin: 0;
-    padding: 0;
-}
-
-.sources li + li {
-    margin-top: 0.5rem;
-}
-
-/* 原文標題與網址常是一長串英文，沒寫成連結、直接貼在內文裡的網址也一樣，
-   整段都允許在任何位置斷行，不然手機上會把整頁撐寬 */
-.sources,
-.content,
-.post-list__title {
-    overflow-wrap: anywhere;
-}
-
-.sources__meta {
-    display: block;
     color: var(--c-muted);
     font-size: 0.875rem;
 }
 
+.empty {
+    padding: 2rem 0;
+    font-size: 1.125rem;
+}
+
+/* ---------------------------------------------------------------- 文章頁 */
+
+.story__date {
+    margin: 0 0 0.5rem;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.story__title {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.75rem;
+}
+
+.story__dek {
+    font-size: 1.1875rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+/* 原文條：外文原文的標題、出處與日期。手機放在內文上方，桌機移到右欄 */
+.source-slip {
+    margin: 1.5rem 0;
+    padding: 1rem 1rem 0.25rem;
+    background: var(--c-surface);
+    border-top: 3px solid var(--c-rule);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.source-slip__heading {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-size: 1rem;
+}
+
+.source-slip__item {
+    padding-bottom: 0.75rem;
+}
+
+.source-slip__item + .source-slip__item {
+    border-top: 1px solid var(--c-border);
+    padding-top: 0.75rem;
+}
+
+.source-slip__title {
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+}
+
+.source-slip__meta {
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.source-slip__meta div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.source-slip__meta dt {
+    flex: none;
+}
+
+.source-slip__meta dd {
+    margin: 0;
+    color: var(--c-text);
+}
+
+.story__body {
+    margin-top: 1.5rem;
+}
+
+.story__body > p:first-child {
+    font-size: 1.125rem;
+}
+
+/* ---------------------------------------------------------------- 內文 */
+
+/* 原文標題與網址常是一長串英文，沒寫成連結、直接貼在內文裡的網址也一樣，
+   整段都允許在任何位置斷行，不然手機上會把整頁撐寬 */
+.content,
+.source-slip,
+.brief__title,
+.lead-story__title {
+    overflow-wrap: anywhere;
+}
+
+.content h2 {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.375rem;
+    line-height: 1.45;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.content h3 {
+    color: var(--c-headline);
+    font-size: 1.125rem;
+    margin: 1.75rem 0 0.5rem;
+}
+
+/* 表格改成 display: block 才能自己捲動，代價是欄寬會被壓到最小，一欄只剩一個字寬。
+   每欄給最小寬度，放不下時讓表格在自己的範圍內橫向捲動 */
 .content table,
 .content pre {
     display: block;
@@ -220,23 +461,35 @@ p {
     border-collapse: collapse;
     margin: 0 0 1.25rem;
     font-size: 0.9375rem;
+    line-height: 1.6;
 }
 
-/* 表格改成 display: block 才能自己捲動，代價是欄寬會被壓到最小，一欄只剩一個字寬。
-   每欄給最小寬度，放不下時讓表格在自己的範圍內橫向捲動 */
 .content th,
 .content td {
     min-width: 6em;
-    border: 1px solid var(--c-border);
-    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid var(--c-border);
+    padding: 0.5rem 0.75rem 0.5rem 0;
     text-align: left;
     vertical-align: top;
     overflow-wrap: normal;
 }
 
+.content th {
+    color: var(--c-headline);
+    border-bottom: 2px solid var(--c-headline);
+}
+
+/* 手機上畫面外的欄位如果照樣換行，會把每一列撐高，看起來像一片空白。
+   窄螢幕改成不換行，讀者左右滑動看表格 */
+@media (max-width: 47.99em) {
+    .content th,
+    .content td {
+        white-space: nowrap;
+    }
+}
+
 .content pre {
     background: var(--c-surface);
-    border-radius: 4px;
     padding: 0.75rem 1rem;
     line-height: 1.5;
 }
@@ -249,39 +502,8 @@ p {
 .content blockquote {
     margin: 0 0 1.1em;
     padding-left: 1rem;
-    border-left: 3px solid var(--c-border);
+    border-left: 3px solid var(--c-rule);
     color: var(--c-muted);
-}
-
-/* ---------------------------------------------------------------- 列表 */
-
-.post-list {
-    list-style: none;
-    margin: 1.5rem 0 0;
-    padding: 0;
-}
-
-.post-list li {
-    padding: 1rem 0;
-    border-top: 1px solid var(--c-border);
-}
-
-.post-list__title {
-    display: inline-block;
-    padding: 0.4rem 0;
-    font-size: 1.15rem;
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.post-list__meta {
-    margin: 0;
-    color: var(--c-muted);
-    font-size: 0.875rem;
-}
-
-.post-list__description {
-    margin: 0.25rem 0 0;
 }
 
 /* ---------------------------------------------------------------- 分頁與頁尾 */
@@ -304,10 +526,15 @@ p {
 }
 
 .site-footer {
-    border-top: 1px solid var(--c-border);
+    border-top: 3px solid var(--c-headline);
     color: var(--c-muted);
     font-size: 0.9375rem;
-    padding: 1rem 0 2rem;
+}
+
+.site-footer .wrap {
+    max-width: var(--frame);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 .site-footer__links {
@@ -317,16 +544,90 @@ p {
     margin-bottom: 0.5rem;
 }
 
+/* ---------------------------------------------------------------- 寬螢幕 */
+
 @media (min-width: 48em) {
     body {
         font-size: 1.125rem;
     }
 
-    h1 {
-        font-size: 2rem;
+    .masthead {
+        padding: 2.5rem 1rem 2rem;
     }
 
-    main.wrap {
-        padding-top: 2.5rem;
+    .masthead__title {
+        font-size: 4rem;
+    }
+
+    .lead-story__title {
+        font-size: 2.25rem;
+    }
+
+    .story__title {
+        font-size: 2.375rem;
+    }
+
+    /* 時間軸：日期在左欄，停在頂端跟著捲動 */
+    .day {
+        display: grid;
+        grid-template-columns: 10rem minmax(0, 1fr);
+        gap: 0 2rem;
+    }
+
+    .day__date {
+        align-self: start;
+        top: 1rem;
+        padding-top: 1.1rem;
+    }
+
+    .day__date time {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .day__md {
+        font-size: 1.5rem;
+    }
+
+    .day__briefs {
+        padding-top: 0.75rem;
+        max-width: var(--measure);
+    }
+}
+
+@media (min-width: 64em) {
+    /* 文章頁：導讀在左、原文條在右，兩條並排 */
+    .story-wrap {
+        max-width: var(--frame);
+    }
+
+    .story {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 18rem;
+        grid-template-areas:
+            "head head"
+            "body slip";
+        gap: 0 3rem;
+    }
+
+    .story__head {
+        grid-area: head;
+        max-width: 48rem;
+    }
+
+    .story__body {
+        grid-area: body;
+        max-width: 40rem;
+    }
+
+    .source-slip {
+        grid-area: slip;
+        align-self: start;
+        position: sticky;
+        top: 1rem;
+    }
+
+    .story + .pager {
+        max-width: 40rem;
     }
 }

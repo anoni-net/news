@@ -12,17 +12,24 @@
 {{ jsonld|safe }}
 </script>
 {% endblock %}
+{% block main_class %}story-wrap{% endblock %}
 {% block content %}
-<article class="post">
-  <h1>{{ post.title }}</h1>
-  <p class="post__meta">
-    <time datetime="{{ post.created|iso }}">{{ post.created|ymd }}</time>
+<article class="story">
+  <header class="story__head">
+    <p class="story__date"><time datetime="{{ post.created|iso }}">{{ post.created|ymd }}</time> {{ post.created|weekday }}</p>
+    <h1 class="story__title">{{ post.title }}</h1>
+    <p class="story__dek">{{ post.description }}</p>
+    <p class="story__byline">
+      <span>導讀：{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}、{% endif %}{% endfor %}</span>
 {% if post.updated %}
-    <span>更正於 <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
+      <span>更正於 <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
 {% endif %}
-    <span>{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}、{% endif %}{% endfor %}</span>
-  </p>
-{% include "_post_body.html.j2" %}
+    </p>
+  </header>
+{% include "_source_slip.html.j2" %}
+  <div class="story__body content">
+{{ content|safe }}
+  </div>
 </article>
 <nav class="pager" aria-label="文章導覽">
   <a href="{{ url() }}">所有文章</a>

@@ -1,5 +1,6 @@
 {% extends "_layout.html.j2" %}
-{% if kind == "index" and number == 1 %}
+{% set front = kind == "index" and number == 1 %}
+{% if front %}
 {% set page_title = "anoni.net 新聞導讀" %}
 {% set page_description = "整理國際上隱私、匿名網路與網路審查的新聞，一則寫成一篇正體中文的導讀，附上原文與延伸閱讀。" %}
 {% elif kind == "index" %}
@@ -11,23 +12,37 @@
 {% endif %}
 {% set og_title = page_title %}
 {% set og_type = "website" %}
+{% block masthead %}
+{% if front %}
+  <div class="masthead">
+    <h1 class="masthead__title">新聞導讀</h1>
+    <p class="masthead__tagline">國際隱私、匿名網路與審查新聞，一則一篇的正體中文導讀。每篇附上原文，也連到<a href="{{ config.docs }}">文件站</a>的相關頁面。</p>
+{% if latest %}
+    <p class="masthead__updated">最後更新 <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
+{% endif %}
+  </div>
+{% endif %}
+{% endblock %}
+{% block main_class %}list-wrap{% endblock %}
 {% block content %}
-<h1>{{ heading }}{% if number > 1 %}（第 {{ number }} 頁）{% endif %}</h1>
-{% if kind == "index" and number == 1 %}
-<p class="lead">整理國際上隱私、匿名網路與網路審查的新聞，一則寫成一篇正體中文的導讀。每篇附上原文，也連到<a href="{{ config.docs }}">文件站</a>的相關頁面。</p>
+{% if not front %}
+<h1 class="list-heading">{{ heading }}{% if number > 1 %}（第 {{ number }} 頁）{% endif %}</h1>
 {% endif %}
 {% if posts %}
-<ol class="post-list">
-{% for post in posts %}
-  <li>
-    <a class="post-list__title" href="{{ url(post.rel) }}">{{ post.title }}</a>
-    <p class="post-list__meta"><time datetime="{{ post.created|iso }}">{{ post.created|ymd }}</time></p>
-    <p class="post-list__description">{{ post.description }}</p>
-  </li>
-{% endfor %}
-</ol>
+{% if front %}
+{% set lead = posts[0] %}
+<section class="lead-story" aria-label="最新一篇">
+  <h2 class="lead-story__title"><a href="{{ url(lead.rel) }}">{{ lead.title }}</a></h2>
+  <p class="lead-story__dek">{{ lead.description }}</p>
+  <p class="lead-story__meta"><time datetime="{{ lead.created|iso }}">{{ lead.created|ymd }}</time>{% if lead.sources[0].publisher %}<span>原文來自 {{ lead.sources[0].publisher }}</span>{% endif %}</p>
+</section>
+{% set items = posts[1:] %}
 {% else %}
-<p>還沒有文章。</p>
+{% set items = posts %}
+{% endif %}
+{% include "_timeline.html.j2" %}
+{% else %}
+<p class="empty">第一篇導讀還在準備中。想先讀點什麼，可以從<a href="{{ config.docs }}">文件站</a>開始，或用 <a href="{{ url('feed.xml') }}">RSS</a> 訂閱，新文章發布時就會收到。</p>
 {% endif %}
 {% if prev_rel is not none or next_rel %}
 <nav class="pager" aria-label="分頁">

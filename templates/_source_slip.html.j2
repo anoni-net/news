@@ -1,0 +1,18 @@
+<aside class="source-slip" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文</h2>
+{% for source in post.sources %}
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="{{ 'zh-Hant' if source.title is cjk else 'en' }}"><a href="{{ source.url }}">{{ source.title }}</a></p>
+{% if source.publisher or source.date %}
+    <dl class="source-slip__meta">
+{% if source.publisher %}
+      <div><dt>出處</dt><dd>{{ source.publisher }}</dd></div>
+{% endif %}
+{% if source.date %}
+      <div><dt>原文日期</dt><dd><time datetime="{{ source.date.isoformat() }}">{{ source.date|ymd }}</time></dd></div>
+{% endif %}
+    </dl>
+{% endif %}
+  </div>
+{% endfor %}
+</aside>

@@ -1,11 +1,5 @@
-<aside class="sources" aria-label="原文">
-  <p class="sources__label">原文</p>
-  <ul>
-{% for source in post.sources %}
-    <li><a href="{{ source.url }}">{{ source.title }}</a>{% if source.publisher or source.date %}<span class="sources__meta">{{ source.publisher or "" }}{% if source.publisher and source.date %} · {% endif %}{% if source.date %}{{ source.date.isoformat() }}{% endif %}</span>{% endif %}</li>
-{% endfor %}
-  </ul>
-</aside>
+{# RSS 的全文用這一份：原文清單加內文。頁面上的排版另外在 post.html.j2 #}
+{% include "_source_slip.html.j2" %}
 <div class="content">
 {{ content|safe }}
 </div>
