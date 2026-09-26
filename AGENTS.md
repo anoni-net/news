@@ -17,15 +17,18 @@ uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI�
 uv run build.py --update-contract  # 新增網址之後，把它們收進 url_contract.txt
 uv run pytest -q
 ./tools/make_og.sh                 # 改了 tools/og.html 之後重新產生 static/og.png
+uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
 ```
 
-`--check` 會從 GitHub 下載文件站的網址合約，離線時用 `--docs-contract <檔案>` 指定本機的一份。版面檢查需要 Chrome，找不到時略過並提示，截圖存在 `.cache/screenshots/`，送出 PR 前要實際看過。
+`--check` 會從 GitHub 下載文件站的網址合約，離線時用 `--docs-contract <檔案>` 指定本機的一份。建置時會把 `assets.anoni.net` 的圖片抓進產物，快取在 `.cache/assets/`。版面檢查需要 Chrome，找不到時略過並提示，截圖存在 `.cache/screenshots/`，送出 PR 前要實際看過。
 
 ## 寫一篇
 
 1. 在 `posts/` 新增 `YYYY-MM-DD-<slug>.md`，front matter 與內文格式見 `SPEC.md`「一篇的格式」
 2. `uv run build.py --check`，錯誤訊息會列出檔名與行號
 3. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
+
+有圖片時，投稿者用 Markdown 的圖片語法標出位置就好，網址可以是任何地方。維護者合併前設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/ingest_images.py posts/<檔名>.md` 把圖片搬到 `assets.anoni.net`，再依工具列出的原始網址審核授權與來源，補上替代文字與圖說。規則見 `SPEC.md`「圖片」。
 
 ## 寫作規則
 

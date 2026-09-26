@@ -340,3 +340,98 @@ def test_multi_source_post_renders(fixture_site):
     post = next(p for p in posts if p.slug == "age-verification-roundup")
     data = json.loads(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
     assert len(data["citation"]) == 5
+
+
+# ---------------------------------------------------------------- 圖片
+
+ASSET = "https://assets.anoni.net/news/2026/09/test-post/"
+
+
+def make_image(path: Path, size=(400, 300), fmt="WEBP", exif: bool = False, noise: bool = False):
+    from PIL import Image
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if noise:
+        import os
+        image = Image.frombytes("RGB", size, os.urandom(size[0] * size[1] * 3))
+    else:
+        image = Image.new("RGB", size, "#003e57")
+    kwargs = {}
+    if exif:
+        data = Image.Exif()
+        data[0x010F] = "Example Camera"  # Make
+        kwargs["exif"] = data
+    image.save(path, fmt, **kwargs)
+
+
+def image_problems(tmp_path, body: str, files: dict | None = None, front: str = "") -> list[str]:
+    posts, assets = tmp_path / "posts", tmp_path / "assets"
+    posts.mkdir()
+    for rel, options in (files or {"2026/09/test-post/a.webp": {}}).items():
+        make_image(assets / rel, **options)
+    write_post(posts, GOOD.replace("authors:", front + "authors:") + "\n" + body)
+    try:
+        build.load_posts(posts, AUTHORS, build.AssetStore(assets))
+    except build.BuildError as error:
+        return error.problems
+    return []
+
+
+def test_good_image_passes(tmp_path):
+    assert image_problems(tmp_path, f'![替代文字]({ASSET}a.webp "圖：anoni.net 社群")\n') == []
+
+
+@pytest.mark.parametrize("body, expected", [
+    ('![替代文字](https://example.org/a.png "圖：x")\n', "不在 assets.anoni.net"),
+    (f'![]({ASSET}a.webp "圖：x")\n', "缺少替代文字"),
+    (f'![替代文字]({ASSET}a.webp)\n', "缺少圖說"),
+    (f'文字 ![替代文字]({ASSET}a.webp "圖：x") 文字\n', "要獨立成一段"),
+    (f'![替代文字]({ASSET}a.svg "圖：x")\n', "只收 WebP、PNG、JPEG"),
+    (f'![替代文字]({ASSET}missing.webp "圖：x")\n', "找不到圖片"),
+])
+def test_image_problems(tmp_path, body, expected):
+    problems = image_problems(tmp_path, body)
+    assert any(expected in p for p in problems), problems
+
+
+def test_missing_caption_is_not_reported_twice(tmp_path):
+    problems = image_problems(tmp_path, f'![替代文字]({ASSET}a.webp)\n')
+    assert not any("要獨立成一段" in p for p in problems), problems
+
+
+@pytest.mark.parametrize("options, expected", [
+    ({"fmt": "JPEG", "exif": True}, "EXIF"),
+    ({"size": (2400, 300)}, "長邊不能超過"),
+    ({"size": (1000, 1000), "fmt": "PNG", "noise": True}, "單張不能超過"),
+])
+def test_image_file_checks(tmp_path, options, expected):
+    name = "a.jpg" if options.get("fmt") == "JPEG" else ("a.png" if options.get("fmt") == "PNG" else "a.webp")
+    problems = image_problems(tmp_path, f'![替代文字]({ASSET}{name} "圖：x")\n',
+                              {f"2026/09/test-post/{name}": options})
+    assert any(expected in p for p in problems), problems
+
+
+def test_front_matter_image_must_be_on_assets(tmp_path):
+    problems = image_problems(tmp_path, "", front="image: https://example.org/og.png\n")
+    assert any("image 要是" in p for p in problems), problems
+
+
+def test_figure_is_localized_per_target(fixture_site):
+    targets, _, _ = fixture_site
+    rel = "2026/09/layout-stress-test/figure-1.webp"
+    clearnet = (targets["clearnet"].out / "2026/09/layout-stress-test/index.html").read_text(encoding="utf-8")
+    assert f'<figure><img src="/news/assets/{rel}"' in clearnet
+    assert 'width="1600" height="900" loading="lazy" decoding="async"' in clearnet
+    assert "<figcaption>圖：anoni.net 社群" in clearnet
+    onion = (targets["onion"].out / "2026/09/layout-stress-test/index.html").read_text(encoding="utf-8")
+    assert f'<img src="/assets/{rel}"' in onion
+    assert (targets["onion"].out / "assets" / rel).exists()
+    feed = (targets["clearnet"].out / "feed.xml").read_text(encoding="utf-8")
+    assert f"src=&#34;https://anoni.net/news/assets/{rel}&#34;" in feed
+
+
+def test_og_image_from_front_matter(fixture_site):
+    targets, _, _ = fixture_site
+    page = (targets["onion"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert "og:image\" content=\"http://news." in page and "/assets/2026/09/zkp-age-verification/og.webp" in page
+    other = (targets["onion"].out / "2026/08/onion-link-rewrite/index.html").read_text(encoding="utf-8")
+    assert "/og.png" in other

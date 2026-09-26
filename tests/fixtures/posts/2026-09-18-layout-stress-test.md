@@ -22,6 +22,8 @@ categories:
 
 也有寫成連結的長網址：[example.org/research/2026/very/long/path/that/keeps/going/without/any/natural/break/point.html](https://example.org/research/2026/very/long/path/that/keeps/going/without/any/natural/break/point.html)
 
+![對角線穿過方框的示意圖](https://assets.anoni.net/news/2026/09/layout-stress-test/figure-1.webp "圖：anoni.net 社群，CC-BY 4.0。測試用的圖，比手機螢幕寬很多")
+
 ## 量測結果 {#results}
 
 | 國家 | 測點數 | 受影響的網域 | 比例 | 備註 |

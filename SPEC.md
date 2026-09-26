@@ -43,6 +43,7 @@ static/                  # 兩份產物共用的檔案
 tools/
   og.html                # og.png 的原始檔
   make_og.sh             # 用 Chrome 從 og.html 產生 og.png
+  ingest_images.py       # 維護者合併前把稿件裡的圖片搬到 assets.anoni.net
 authors.yml              # 署名清單，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
 build.py
@@ -88,6 +89,7 @@ authors:
 | `sources` | 是 | 原文，至少一筆。每筆的 `title` 與 `url` 必填，`publisher` 與 `date` 選填。一篇可以列多筆，用在同一事件的多篇報導，也用在把好幾篇原文整理成一篇觀點 |
 | `authors` | 是 | 對應 `authors.yml` 的鍵，見「發佈身分」。不想署名就寫 `anoni-net` |
 | `categories` | 否 | 第一版只存不產頁 |
+| `image` | 否 | 這篇在社群平台分享時的預覽圖，網址規則同內文圖片（見「圖片」），建議 1200×630。沒填就用全站共用的 `og.png` |
 | `draft` | 否 | `true` 時不產出，也不進列表、封存頁與 RSS |
 
 多出來的欄位建置時報錯，避免打錯字的欄位被靜默忽略。
@@ -111,6 +113,31 @@ authors:
 - 連到文件站的網址必須存在於文件站的網址合約（`anoni-net/docs` 的 `tools/data/url_contract.txt`），錨點也一樣
 
 站內與文件站的連結一律寫 clearnet 的完整網址，onion 產物由建置程式改寫（見「clearnet 與 onion」）。
+
+## 圖片
+
+圖片放在社群的圖片主機 `assets.anoni.net` 的 `/news/` 底下，跟文件站 blog 用同一台主機。上傳與審核由維護者負責，投稿者只需要標出圖片的位置。
+
+### 上稿流程
+
+1. 投稿者在稿件裡用 Markdown 的圖片語法標出位置，網址可以是任何地方，例如原文網站上的圖，或自己放在圖床的截圖。替代文字與圖說可以先寫草稿
+2. 維護者合併前執行 `uv run tools/ingest_images.py posts/<檔名>.md`。工具把每一張不在 `assets.anoni.net` 的圖下載下來，清掉 metadata、轉成 WebP、長邊縮到 1600px 以內，上傳到圖片主機，再把文章裡的網址換成 `https://assets.anoni.net/news/YYYY/MM/<slug>/figure-N.webp`。最後列出每張圖的原始網址，供維護者審核
+3. 維護者審核每張圖的授權與來源，補上替代文字與圖說。圖說寫在圖片語法的 title 欄位，寫出處與授權：`![替代文字](網址 "圖：EFF，CC-BY 4.0")`
+4. 合併
+
+別人新聞裡的照片與圖表，著作權屬於原作者。能放的是社群自己做的圖、自己截的畫面，或授權明確允許轉載的圖，審核時照這個標準判斷。截圖裡出現的帳號、人臉與個人資料，用文件站的[截圖遮蔽工具](https://anoni.net/docs/utils/redact/)處理過再上傳。
+
+上傳的目的地由環境變數 `NEWS_ASSETS_RSYNC` 指定（rsync 的目標路徑），不寫在 repo 裡。上傳後工具會用 HTTP 確認每張圖在 `assets.anoni.net` 上回 200，才改寫文章。
+
+### 建置時的處理
+
+- 內文與 `image` 只接受 `https://assets.anoni.net/news/` 開頭的圖片，其他網址讓建置失敗，並提示執行搬圖工具。投稿的 PR 在圖片搬好之前會是紅燈，代表還有圖片待處理
+- 建置時把圖片抓進產物的 `assets/` 底下，頁面引用站內的副本，讀者不會連到 `assets.anoni.net`，onion 產物也不必改寫。做法跟文件站的 privacy 外掛相同。抓下來的檔案快取在 `.cache/assets/`
+- 抓下來的檔案再檢查一次：只收 WebP、PNG、JPEG，不能有 EXIF、XMP 或 PNG 文字區塊這類 metadata，單張不超過 300KB，長邊不超過 2000px。圖片主機上的檔案被換掉，這一步也擋得住
+- 圖片要獨立成一段，替代文字與圖說都必填。圖說轉成 `<figure>` 與 `<figcaption>`
+- 自動補上 `width`、`height`、`loading="lazy"` 與 `decoding="async"`，載入時版面不會跳動
+- RSS 裡的圖片用完整網址，指向產物裡的副本
+- 不收 SVG，SVG 裡可以夾帶程式碼與對外請求
 
 ## 發佈身分
 
@@ -302,12 +329,12 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 |---|---|---|
 | `og:type` | `article` | `website` |
 | `og:title`、`og:description`、`og:url` | 標題、`description`、本頁網址 | 同左 |
-| `og:image` | 全站共用的 `og.png` | 同左 |
+| `og:image` | front matter 的 `image`，沒填時用全站共用的 `og.png` | 全站共用的 `og.png` |
 | `article:published_time` | `date.created` | 無 |
 | `article:modified_time` | 有更正時放 `date.updated` | 無 |
 | `twitter:card` | `summary_large_image` | 同左 |
 
-預覽圖只有一張，放在 `static/`，不為每篇另外產圖。圖是站內的靜態檔，讀者端不會因此對外請求。
+全站共用的預覽圖放在 `static/`。文章指定的 `image` 跟內文圖片一樣在建置時抓進產物，兩種都是站內的靜態檔，讀者端不會因此對外請求。
 
 ### 結構化資料
 
@@ -337,7 +364,7 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 `uv run build.py` 產出兩份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
 
-1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡
+1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）
 2. 內文的錨點與文件站連結
 3. 文件站連結對得上文件站的網址合約
 4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源
@@ -363,6 +390,7 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - Python 3.12，用 uv 管理
 - `jinja2`、`markdown`（Python-Markdown，開 `attr_list`、`tables`、`fenced_code`）、`pyyaml`
 - `websockets`，版面檢查用來跟 Chrome 溝通
+- `pillow`，讀圖片的尺寸與 metadata，搬圖工具也用它轉檔
 - 開發用 `pytest`
 
 選 Python-Markdown 是因為 MkDocs 家族用的就是它，同一份 Markdown 換到 Zensical 或 mkdocs-ng 時的轉換結果最接近。不開 `toc`，它會替沒寫 `{#id}` 的小標題自動產生錨點，漏寫的錨點就檢查不到了。
@@ -375,8 +403,7 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - 多語系，只出正體中文
 - 分類與標籤頁，`categories` 只存不產頁
 - 作者頁。筆名的作者頁會把同一個人的文章集中成一頁，要做之前先想清楚匿名的代價
-- 內文圖片。有圖就要處理授權、替代文字與體積，第一版全文字。全站共用的 `og.png` 不在此限
-- 每篇各自產生的預覽卡片圖，第一版全站共用一張
+- 每篇自動產生的預覽卡片圖。需要專屬預覽圖時，用 front matter 的 `image` 手動指定
 - 留言與任何需要伺服器端的功能
 - 自動寄送電子報
 - 投稿平台。維護者代發的稿件，之後會需要一個讓投稿者送稿、跟維護者往返修改的平台，第一版先用「發布管道」一節列的 Matrix、email 與 Send

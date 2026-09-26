@@ -26,6 +26,7 @@ from pathlib import Path
 
 import markdown
 import yaml
+from PIL import Image
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 ROOT = Path(__file__).resolve().parent
@@ -35,7 +36,7 @@ NEWS_PREFIX = "https://anoni.net/news/"
 DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools/data/url_contract.txt"
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
-FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft"}
+FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "description", "url"}
@@ -45,6 +46,17 @@ FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 HEADING_ID_RE = re.compile(r"\{\s*#([^\s}]+)\s*\}$")
 HREF_RE = re.compile(r'(href)="([^"]*)"')
+
+# 圖片規則見 SPEC.md「圖片」
+ASSETS_PREFIX = "https://assets.anoni.net/news/"
+ASSETS_CACHE = ROOT / ".cache" / "assets"
+IMAGE_EXTS = {".webp", ".png", ".jpg", ".jpeg"}
+IMAGE_FORMATS = {"WEBP", "PNG", "JPEG"}
+MAX_IMAGE_BYTES = 300_000
+MAX_IMAGE_EDGE = 2000
+IMG_RE = re.compile(r"<img\b[^>]*>")
+STANDALONE_IMG_RE = re.compile(r"<p>\s*(<img\b[^>]*>)\s*</p>")
+INGEST_HINT = "維護者合併前執行 uv run tools/ingest_images.py 把圖片搬到 assets.anoni.net"
 
 
 class BuildError(Exception):
@@ -79,6 +91,12 @@ class Post:
     body: str
     html: str = ""
     anchors: list[str] = field(default_factory=list)
+    image: str | None = None
+
+    @property
+    def image_rel(self) -> str | None:
+        """front matter 的 image 在產物 assets/ 底下的相對路徑。"""
+        return self.image[len(ASSETS_PREFIX):] if self.image else None
 
     @property
     def rel(self) -> str:
@@ -234,6 +252,11 @@ def load_post(path: Path, authors: dict[str, dict]) -> Post | None:
         else:
             post_authors.append(authors[key])
 
+    image = meta.get("image")
+    if image is not None and (not isinstance(image, str) or not image.startswith(ASSETS_PREFIX)):
+        problems.append(f"{where}：image 要是 {ASSETS_PREFIX} 開頭的網址，{INGEST_HINT}")
+        image = None
+
     categories = meta.get("categories") or []
     if not isinstance(categories, list):
         problems.append(f"{where}：categories 要是清單")
@@ -253,6 +276,7 @@ def load_post(path: Path, authors: dict[str, dict]) -> Post | None:
         sources=sources,
         authors=post_authors,
         categories=[str(c) for c in categories],
+        image=image,
         body=body,
         anchors=anchors,
     )
@@ -263,7 +287,122 @@ def render_markdown(body: str) -> str:
     return md.convert(body)
 
 
-def load_posts(posts_dir: Path, authors: dict[str, dict]) -> list[Post]:
+@dataclass
+class Asset:
+    rel: str       # 在產物 assets/ 底下的路徑，例如 2026/09/slug/figure-1.webp
+    path: Path     # 本機的檔案
+    width: int
+    height: int
+
+
+class AssetStore:
+    """把 assets.anoni.net/news/ 的圖片抓到本機並檢查。local_dir 有值時改讀本機目錄，測試用。"""
+
+    def __init__(self, local_dir: Path | None = None):
+        self.local_dir = local_dir
+        self.assets: dict[str, Asset] = {}
+
+    def get(self, url: str, where: str, problems: list[str]) -> Asset | None:
+        rel = url[len(ASSETS_PREFIX):]
+        if rel in self.assets:
+            return self.assets[rel]
+        if Path(rel).suffix.lower() not in IMAGE_EXTS:
+            problems.append(f"{where}：{url} 只收 WebP、PNG、JPEG")
+            return None
+        path = (self.local_dir or ASSETS_CACHE) / rel
+        if not path.exists():
+            if self.local_dir:
+                problems.append(f"{where}：找不到圖片 {path}")
+                return None
+            try:
+                request = urllib.request.Request(url, headers={"User-Agent": "anoni-net-news-build"})
+                with urllib.request.urlopen(request, timeout=30) as response:
+                    data = response.read()
+            except OSError as error:
+                problems.append(f"{where}：抓不到 {url}（{error}），圖片要先上傳到 assets.anoni.net 才能建置")
+                return None
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        size = check_image(path, f"{where}：{url}", problems)
+        if not size:
+            return None
+        self.assets[rel] = Asset(rel, path, *size)
+        return self.assets[rel]
+
+
+def check_image(path: Path, where: str, problems: list[str]) -> tuple[int, int] | None:
+    """格式、metadata、大小。回傳 (寬, 高)，不合格回傳 None。"""
+    before = len(problems)
+    if path.stat().st_size > MAX_IMAGE_BYTES:
+        problems.append(f"{where} 有 {path.stat().st_size // 1000}KB，單張不能超過 {MAX_IMAGE_BYTES // 1000}KB")
+    try:
+        with Image.open(path) as image:
+            fmt, (width, height) = image.format, image.size
+            metadata = []
+            if image.getexif() or "exif" in image.info:
+                metadata.append("EXIF")
+            if any(key in image.info for key in ("xmp", "XML:com.adobe.xmp")):
+                metadata.append("XMP")
+            if getattr(image, "text", None):
+                metadata.append("PNG 文字區塊")
+            if "comment" in image.info:
+                metadata.append("註解")
+    except OSError:
+        problems.append(f"{where} 不是可以讀取的圖片")
+        return None
+    if fmt not in IMAGE_FORMATS:
+        problems.append(f"{where} 的格式是 {fmt}，只收 WebP、PNG、JPEG")
+    if max(width, height) > MAX_IMAGE_EDGE:
+        problems.append(f"{where} 是 {width}×{height}，長邊不能超過 {MAX_IMAGE_EDGE}px")
+    if metadata:
+        problems.append(f"{where} 帶著 {'、'.join(metadata)}，可能洩漏拍攝地點、時間或裝置，{INGEST_HINT}")
+    return None if len(problems) > before else (width, height)
+
+
+def process_images(post: Post, store: AssetStore, problems: list[str]) -> None:
+    """檢查內文圖片，獨立成段的圖轉成 figure，補上寬高。src 維持 assets 網址，產出時再換成站內副本。"""
+    where = post.path.name
+    if post.image:
+        store.get(post.image, f"{where} 的 image", problems)
+
+    reported: set[str] = set()
+
+    def to_figure(match: re.Match) -> str:
+        attrs = dict(ATTR_RE.findall(match.group(1)))
+        src = html.unescape(attrs.get("src", ""))
+        reported.add(src)
+        if not src.startswith(ASSETS_PREFIX):
+            problems.append(f"{where}：圖片 {src} 不在 assets.anoni.net，{INGEST_HINT}")
+            return match.group(0)
+        ok = True
+        if not attrs.get("alt", "").strip():
+            problems.append(f"{where}：圖片 {src} 缺少替代文字")
+            ok = False
+        if not attrs.get("title", "").strip():
+            problems.append(f"{where}：圖片 {src} 缺少圖說，寫在 title，例如 \"圖：EFF，CC-BY 4.0\"")
+            ok = False
+        asset = store.get(src, where, problems)
+        if not ok or not asset:
+            return match.group(0)
+        return (f'<figure><img src="{html.escape(src)}" alt="{attrs["alt"]}" width="{asset.width}" '
+                f'height="{asset.height}" loading="lazy" decoding="async">'
+                f'<figcaption>{attrs["title"]}</figcaption></figure>')
+
+    post.html = STANDALONE_IMG_RE.sub(to_figure, post.html)
+    outside_figures = re.sub(r"<figure>.*?</figure>", "", post.html, flags=re.S)
+    for tag in IMG_RE.findall(outside_figures):
+        src = html.unescape(dict(ATTR_RE.findall(tag)).get("src", ""))
+        if src not in reported:
+            problems.append(f"{where}：圖片 {src} 要獨立成一段，不能跟文字寫在同一段")
+
+
+def localize_assets(text: str, target: "Target", absolute: bool = False) -> str:
+    """把 assets.anoni.net 的圖片網址換成產物裡的副本。"""
+    base = target.abs_url("assets/") if absolute else target.url("assets/")
+    return text.replace(f'src="{ASSETS_PREFIX}', f'src="{base}')
+
+
+def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None) -> list[Post]:
     problems, posts = [], []
     for path in sorted(posts_dir.glob("*.md")):
         try:
@@ -273,6 +412,7 @@ def load_posts(posts_dir: Path, authors: dict[str, dict]) -> list[Post]:
             continue
         if post:
             post.html = render_markdown(post.body)
+            process_images(post, store or AssetStore(), problems)
             posts.append(post)
 
     seen: dict[str, Post] = {}
@@ -370,7 +510,7 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
         "datePublished": post.created.isoformat(),
         "url": target.abs_url(post.rel),
         "mainEntityOfPage": target.abs_url(post.rel),
-        "image": target.abs_url("og.png"),
+        "image": target.abs_url("assets/" + post.image_rel) if post.image else target.abs_url("og.png"),
         "inLanguage": "zh-Hant-TW",
         "author": authors,
         "publisher": organization,
@@ -382,10 +522,15 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
     return json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/")
 
 
-def build_target(target: Target, posts: list[Post], config: dict, env: Environment) -> list[Page]:
+def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
+                 store: AssetStore | None = None) -> list[Page]:
     if target.out.exists():
         shutil.rmtree(target.out)
     shutil.copytree(ROOT / "static", target.out)
+    for asset in (store.assets.values() if store else []):
+        dest = target.out / "assets" / asset.rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(asset.path, dest)
     pages: list[Page] = []
 
     def onion_url(rel: str) -> str | None:
@@ -402,7 +547,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             onion_url=onion_url(page.rel),
             noindex=page.noindex,
             latest=posts[0] if posts else None,
-            **context,
+            **{"og_image": None, **context},
         )
         dest = target.out / page.file
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -412,7 +557,9 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     for post in posts:
         # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
         write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
-              post=post, content=target.rewrite_html(post.html), jsonld=jsonld(post, target, config))
+              post=post, content=target.rewrite_html(localize_assets(post.html, target)),
+              jsonld=jsonld(post, target, config),
+              og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
 
     per_page = config["per_page"]
     groups = chunk(posts, per_page)
@@ -445,8 +592,8 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             "post": post,
             "link": target.abs_url(post.rel),
             "pub_date": format_datetime(post.created),
-            "content": target.rewrite_html(env.get_template("_post_body.html.j2").render(
-                post=post, content=post.html, url=target.url)),
+            "content": target.rewrite_html(localize_assets(env.get_template("_post_body.html.j2").render(
+                post=post, content=post.html, url=target.url), target, absolute=True)),
         } for post in feed_posts],
         build_date=format_datetime(feed_posts[0].created) if feed_posts else None,
     )
@@ -521,13 +668,16 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     # 測試用的文章目錄旁邊可以放自己的 authors.yml，測得到筆名與具名的署名
     authors_path = posts_dir.parent / "authors.yml"
     authors = load_authors(authors_path if authors_path.exists() else ROOT / "authors.yml")
-    posts = load_posts(posts_dir, authors)
+    # 測試用的圖片放在文章目錄旁邊的 assets/，不必連網
+    assets_dir = posts_dir.parent / "assets"
+    store = AssetStore(assets_dir if assets_dir.exists() else None)
+    posts = load_posts(posts_dir, authors, store)
     env = make_env()
     pages = {}
     for name, target in targets.items():
         if only and name not in only:
             continue
-        pages[name] = build_target(target, posts, config, env)
+        pages[name] = build_target(target, posts, config, env, store)
     return targets, pages, posts
 
 
