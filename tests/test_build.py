@@ -275,6 +275,29 @@ def test_onion_feed_link_is_caught(tmp_path):
     assert any("feed.xml" in p for p in build.check_output(target, pages["onion"]))
 
 
+def test_story_pager_links_neighbours(fixture_site):
+    targets, _, posts = fixture_site
+    out = targets["clearnet"].out
+    order = [p.slug for p in posts]  # 由新到舊，跟首頁時間軸相同
+
+    def pager(slug):
+        post = next(p for p in posts if p.slug == slug)
+        text = (out / post.rel / "index.html").read_text(encoding="utf-8")
+        nav = text[text.index('class="pager pager--story"'):]
+        nav = nav[:nav.index("</nav>")]
+        return nav
+
+    newest, middle, oldest = order[0], order[1], order[-1]
+    assert "較新的一篇" not in pager(newest) and "較舊的一篇" in pager(newest)
+    assert "較新的一篇" not in pager(newest)
+    assert "較新的一篇" in pager(oldest) and "較舊的一篇" not in pager(oldest)
+    nav = pager(middle)
+    assert f"/news/{posts[0].rel}" in nav and f"/news/{posts[2].rel}" in nav
+    assert posts[0].title in nav and posts[2].title in nav
+    for slug in order:
+        assert "所有文章" in pager(slug)
+
+
 def test_noindex_expectations(fixture_site):
     targets, _, _ = fixture_site
     out = targets["clearnet"].out

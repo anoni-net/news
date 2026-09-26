@@ -566,10 +566,14 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         dest.write_text(target.rewrite_html(html_text), encoding="utf-8")
         pages.append(page)
 
-    for post in posts:
+    for i, post in enumerate(posts):
+        # 文章已經由新到舊排好，同一天的順序跟首頁時間軸相同，前後篇直接取相鄰的兩篇
+        newer = posts[i - 1] if i > 0 else None
+        older = posts[i + 1] if i + 1 < len(posts) else None
         # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
         write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
-              post=post, content=target.rewrite_html(localize_assets(post.html, target)),
+              post=post, newer=newer, older=older,
+              content=target.rewrite_html(localize_assets(post.html, target)),
               jsonld=jsonld(post, target, config),
               og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
 
