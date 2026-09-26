@@ -25,8 +25,13 @@
 ## 目錄結構
 
 ```
-posts/                   # 一篇一個 Markdown，檔名是發布日加 slug
+posts/                   # 一篇一個 Markdown，檔名是發布日加 slug，這一層是 zh-TW
   2026-09-18-zkp-age-verification.md
+  zh-CN/                 # 同檔名的簡體中文版
+    2026-09-18-zkp-age-verification.md
+  en/                    # 同檔名的英文版
+    2026-09-18-zkp-age-verification.md
+strings.toml             # 介面文字，三個語系各一組
 templates/               # Jinja2 模板
   _layout.html.j2
   post.html.j2
@@ -39,10 +44,12 @@ static/                  # 兩份產物共用的檔案
   css/news.css
   favicon.svg            # 文件站的 logo-tonal.svg
   logo-wordmark-white.svg  # 文件站的 mono white wordmark，放在頁首
-  og.png                 # 全站共用的社群分享預覽圖，1200×630
+  og.png                 # 全站共用的社群分享預覽圖，1200×630，zh-TW
+  og-zh-cn.png           # zh-CN 的預覽圖
+  og-en.png              # en 的預覽圖
 tools/
-  og.html                # og.png 的原始檔
-  make_og.sh             # 用 Chrome 從 og.html 產生 og.png
+  og.html                # 三張預覽圖的原始檔，用 ?lang= 切換語系
+  make_og.sh             # 用 Chrome 從 og.html 產生三張預覽圖
   ingest_images.py       # 維護者合併前把稿件裡的圖片搬到 assets.anoni.net
 authors.yml              # 署名清單，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
@@ -116,6 +123,47 @@ authors:
 
 站內與文件站的連結一律寫 clearnet 的完整網址，onion 產物由建置程式改寫（見「clearnet 與 onion」）。
 
+## 多語系
+
+每篇導讀都有正體中文（zh-TW）、簡體中文（zh-CN）與英文（en）三個版本，同時發布。zh-TW 是第一版，選題與事實查核在這一版完成，另外兩個版本以它為準。三個版本的事實相同，導讀觀點依各自的讀者重寫，寫法見 `AGENTS.md`「三個語系」。
+
+| 語系 | 檔案 | 網址 | `<html lang>` | hreflang |
+|---|---|---|---|---|
+| zh-TW | `posts/<檔名>.md` | `/news/…` | `zh-Hant` | `zh-Hant`，另標 `x-default` |
+| zh-CN | `posts/zh-CN/<檔名>.md` | `/news/zh-cn/…` | `zh-Hans` | `zh-Hans` |
+| en | `posts/en/<檔名>.md` | `/news/en/…` | `en` | `en` |
+
+目錄與網址的大小寫跟文件站相同，目錄是 `zh-CN`，網址是小寫的 `zh-cn`。文件站的 `docs_style_lint.py` 依路徑裡的 `/zh-CN/` 與 `/en/` 選規則集，目錄寫成小寫的話，簡體版會被套上兩岸用詞的規則，英文版會被套上中文標點的規則。
+
+### 三個版本的對應
+
+同檔名的三個檔案就是同一篇。建置時檢查：
+
+- 每一篇 zh-TW 都要有 zh-CN 與 en，缺一個就建置失敗。三個版本在同一個 PR 送出，同時上線
+- `date.created`、`slug`、`authors`、`pin`、`draft`、`image` 與 `categories` 三個版本相同。`date.updated` 可以不同，只改了其中一個版本時只更新那一個
+- `sources` 要包含 zh-TW 的每一筆網址，可以再加。導讀觀點為了比較各地狀況而查證的資料，來源加在該版本的 `sources`。原文標題照錄，三個版本都不翻譯
+- 內文的錨點集合三個版本相同，`{#perspective}` 這類分享出去的段落連結換了語系照樣有效
+- 圖片共用同一個網址，替代文字與圖說各版本用自己的語言寫
+
+### 介面
+
+- 介面文字寫在 `strings.toml`，三個語系的鍵必須一致，少一個就建置失敗。出處行、日期格式、頁尾、404 與 `<title>` 的站名都從這裡取
+- 日期格式：zh-TW 與 zh-CN 維持現在的「2026 年 9 月 27 日 星期日」，en 寫成「Sunday, 27 September 2026」
+- 站名：zh-TW「anoni.net 新聞導讀」、zh-CN「anoni.net 新闻导读」、en「anoni.net News」
+- 頁首右側放三個語系的連結 `繁體中文 · 简体中文 · English`，目前的語系不加連結。文章頁連到另外兩個版本的同一篇，列表頁與封存頁連到另外兩個語系的同一種頁面
+- 小標題的明體與內文的黑體依 `:lang()` 各給一組字型。zh-CN 先找簡體字型（思源宋體 SC、宋体、PingFang SC、微软雅黑），避免用正體字型的字形顯示簡體字
+- 電子報的內容是中文，en 版的訂閱連結註明「in Chinese」
+- 標語改了之後，`tools/og.html` 裡的文字要一起改，再用 `tools/make_og.sh` 重新產生三張預覽圖
+- 授權連結指向 CC-BY 4.0 各自語言的頁面
+- 404 只有一頁，三種語言各寫一段，連到三個首頁。伺服器依路徑回同一個 `/news/404.html`，不必依語系分流
+
+### 產物
+
+- 每個語系有自己的列表頁、分頁、年月封存頁與 RSS（`/news/feed.xml`、`/news/zh-cn/feed.xml`、`/news/en/feed.xml`）
+- sitemap 只有一份，每一篇用 `xhtml:link` 列出三個版本
+- 文章頁的 `<head>` 用 `<link rel="alternate" hreflang>` 列出三個版本與 `x-default`，JSON-LD 加上 `inLanguage`
+- 社群預覽圖各語系一張，文章指定 `image` 時三個版本共用
+
 ## 圖片
 
 圖片放在社群的圖片主機 `assets.anoni.net` 的 `/news/` 底下，跟文件站 blog 用同一台主機。上傳與審核由維護者負責，投稿者只需要標出圖片的位置。
@@ -152,6 +200,9 @@ news 開放多人發布，署名可以是本名、固定的筆名，或不具名
 ```yaml
 anoni-net:
   name: anoni.net 社群
+  names:
+    zh-CN: anoni.net 社区
+    en: anoni.net community
 night-owl:
   name: 夜梟
   description: 關注網路封鎖的量測
@@ -160,6 +211,7 @@ night-owl:
 | 欄位 | 必填 | 說明 |
 |---|---|---|
 | `name` | 是 | 顯示在文章頁、列表頁與 RSS 的名稱 |
+| `names` | 否 | 其他語系的寫法，鍵是 `zh-CN` 或 `en`，沒寫的語系沿用 `name`。筆名與人名通常不翻 |
 | `description` | 否 | 一句話介紹 |
 | `url` | 否 | 個人網站或公開帳號，只有願意公開身分的人才填 |
 
@@ -211,7 +263,10 @@ clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的
 | `/news/2026/09/zkp-age-verification/` | 一篇 |
 | `/news/feed.xml` | RSS 2.0 |
 | `/news/sitemap.xml` | sitemap |
-| `/news/404.html` | 找不到頁面 |
+| `/news/404.html` | 找不到頁面，三個語系共用 |
+| `/news/zh-cn/…`、`/news/en/…` | zh-CN 與 en，底下的結構與上面各列相同 |
+
+語系代碼 `zh-cn` 與 `en` 保留給語系用，不會跟年份撞在一起。
 
 年齡驗證、VPN 禁令、年度報告這類題目每隔一段時間就會再寫一次，文章網址帶年月之後，slug 只需要在同一個月內不重複。新聞寫的是某個時間點的事，讀者從網址也看得出新舊。年月取第一次發布的日期，之後更正也不變。
 
@@ -237,7 +292,8 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 - RSS 2.0，放最新 20 篇，一篇一個 `<item>`
 - `<description>` 放該篇的 `description`，`<content:encoded>` 放整篇的 HTML，連同來源清單，讀者在閱讀器裡就能讀完
-- `<guid isPermaLink="false">` 用 `anoni-news:2026/09/zkp-age-verification`，clearnet 與 onion 兩份 feed 用同一個值
+- 三個語系各一份 feed，只放該語系的文章
+- `<guid isPermaLink="false">` 用 `anoni-news:2026/09/zkp-age-verification`，clearnet 與 onion 兩份 feed 用同一個值。zh-CN 與 en 在前面加上語系，寫成 `anoni-news:zh-cn/2026/09/zkp-age-verification`
 - 日期用 RFC 822 格式，時區固定 `+0800`
 - feed 裡的網址必須是完整網址，這是兩份產物一定不同的地方
 
@@ -335,7 +391,7 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 ### 標題與描述
 
-`<title>` 固定寫成「文章標題 | anoni.net 新聞導讀」，列表頁是「anoni.net 新聞導讀」。`<meta name="description">` 用 front matter 的 `description`。每頁只有一個 `<h1>`，文章頁放文章標題。
+`<title>` 固定寫成「文章標題 | 站名」，列表頁只寫站名，站名依語系而不同（見「多語系」）。`<meta name="description">` 用 front matter 的 `description`。每頁只有一個 `<h1>`，文章頁放文章標題。
 
 ### 社群分享的預覽
 
@@ -380,19 +436,19 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 `uv run build.py` 產出兩份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
 
-1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）
+1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）
 2. 內文的錨點
 3. 有連到文件站時，網址對得上文件站的網址合約
 4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
 7. 每頁都有 `<title>`、`description` 與 Open Graph 欄位，封存頁、第二頁起的列表頁與 404 頁帶 `noindex`
-8. 版面：用 headless Chrome 以 320、390、1280 三種寬度開啟列表頁、一篇文章與 404 頁，每頁的 `scrollWidth` 不得超過設定的寬度，並存下截圖。要跟設定的寬度比，不能跟 `window.innerWidth` 比：手機模式下頁面被撐寬時，Chrome 會自動縮小畫面去容納內容，`innerWidth` 跟著變大，兩邊永遠一樣寬
+8. 版面：用 headless Chrome 以 320、390、1280 三種寬度開啟三個語系的列表頁與一篇文章，以及 404 頁，每頁的 `scrollWidth` 不得超過設定的寬度，並存下截圖。要跟設定的寬度比，不能跟 `window.innerWidth` 比：手機模式下頁面被撐寬時，Chrome 會自動縮小畫面去容納內容，`innerWidth` 跟著變大，兩邊永遠一樣寬
 9. 對比度：`news.css` 裡文字色與背景色的組合，淺色與深色模式都要達到 4.5:1
 
 測試用的文章放在 `tests/fixtures/`，刻意放進最長的英文標題、長網址、表格與程式碼區塊，版面出問題時在這裡先發生。第 8 項需要 Chrome，GitHub Actions 的 runner 上有，本機沒有 Chrome 時略過並提示。截圖只證明頁面撐得住，排版好不好看，送出 PR 前還是要有人實際看過截圖。
 
-GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `posts/*.md` 與 `README.md`。
+GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `posts/` 底下全部的 Markdown 與 `README.md`。檔案一律傳完整路徑，linter 才能從 `/zh-CN/` 與 `/en/` 認出語系。
 
 ## 部署
 
@@ -416,7 +472,6 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 以下功能不在第一版，要做之前先修改本文件：
 
 - 站內搜尋。中文要斷詞，而且需要 JavaScript，加入前要先處理「路徑與子網域」一節提到的同源問題
-- 多語系，只出正體中文
 - 分類與標籤頁，`categories` 只存不產頁
 - 作者頁。筆名的作者頁會把同一個人的文章集中成一頁，要做之前先想清楚匿名的代價
 - 每篇自動產生的預覽卡片圖。需要專屬預覽圖時，用 front matter 的 `image` 手動指定

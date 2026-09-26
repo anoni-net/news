@@ -568,10 +568,178 @@ def test_featured_on_front_page_and_still_in_timeline(fixture_site):
     assert 'class="featured' not in (out / "2026" / "09" / "index.html").read_text(encoding="utf-8")
 
 
+def write_versions(posts: Path, text: str, name: str = "2026-09-18-test-post.md",
+                   overrides: dict[str, tuple[str, str]] | None = None) -> None:
+    """同一篇寫成三個語系。overrides 依語系代碼替換某一段文字，用來做出不一致的版本。"""
+    for lang in build.LANGS:
+        directory = posts / lang.dir if lang.dir else posts
+        directory.mkdir(parents=True, exist_ok=True)
+        version = text
+        if overrides and lang.code in overrides:
+            old, new = overrides[lang.code]
+            assert old in version
+            version = version.replace(old, new)
+        write_post(directory, version, name)
+
+
 def test_no_pin_no_featured(tmp_path):
     posts = tmp_path / "posts"
-    posts.mkdir()
-    write_post(posts, GOOD)
+    write_versions(posts, GOOD)
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
     targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
     assert 'class="featured' not in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+
+
+# ---------------------------------------------------------------- 多語系
+
+def site_problems(tmp_path, overrides=None, text=GOOD) -> list[str]:
+    posts = tmp_path / "posts"
+    write_versions(posts, text, overrides=overrides)
+    try:
+        build.load_site(posts, AUTHORS)
+    except build.BuildError as error:
+        return error.problems
+    return []
+
+
+def test_three_versions_load_together(tmp_path):
+    assert site_problems(tmp_path) == []
+    posts = build.load_site(tmp_path / "posts", AUTHORS)
+    versions = posts[0].translations
+    assert [versions[code].rel for code in ("zh-TW", "zh-CN", "en")] == [
+        "2026/09/test-post/", "zh-cn/2026/09/test-post/", "en/2026/09/test-post/"]
+    assert versions["en"].guid == "anoni-news:en/2026/09/test-post"
+    assert versions["zh-TW"].guid == "anoni-news:2026/09/test-post"
+
+
+def test_missing_and_orphan_versions(tmp_path):
+    posts = tmp_path / "posts"
+    posts.mkdir()
+    write_post(posts, GOOD)
+    (posts / "en").mkdir()
+    write_post(posts / "en", GOOD, "2026-09-18-other.md")
+    problems = build.check_translations(posts)
+    assert any("缺少 zh-CN 版本" in p for p in problems), problems
+    assert any("缺少 en 版本" in p for p in problems), problems
+    assert any("en/2026-09-18-other.md：找不到對應的 zh-TW 版本" in p for p in problems), problems
+
+
+@pytest.mark.parametrize("override, expected", [
+    (("  - anoni-net", "  - night-owl"), "authors 跟 zh-TW 不同"),
+    (("authors:", "pin: true\nauthors:"), "pin 跟 zh-TW 不同"),
+    (("authors:", "draft: true\nauthors:"), "draft 跟 zh-TW 不同"),
+    (("date: 2026-09-18", "date:\n  created: 2026-09-18\n  updated: 2026-09-19"), None),
+    (("    url: https://example.org/", "    url: https://example.org/other"), "sources 少了 zh-TW 有的 https://example.org/"),
+    (("內文，", "## Perspective {#perspective}\n\n內文，"), "錨點"),
+])
+def test_versions_must_agree(tmp_path, override, expected):
+    problems = site_problems(tmp_path, {"en": override})
+    if expected is None:
+        assert problems == []  # 只有 updated 不同是允許的
+    else:
+        assert any(expected in p for p in problems), problems
+
+
+def test_extra_sources_are_allowed(tmp_path):
+    extra = ("authors:", "  - title: Regional source\n    url: https://example.org/region\nauthors:")
+    assert site_problems(tmp_path, {"zh-CN": extra}) == []
+
+
+def test_strings_must_have_same_keys(tmp_path):
+    bad = tmp_path / "strings.toml"
+    bad.write_text(build.STRINGS_PATH.read_text(encoding="utf-8").replace('lang_nav_label = "Language"\n', ""))
+    with pytest.raises(build.BuildError, match=r"\[en\] 缺少 lang_nav_label"):
+        build.load_strings(bad)
+
+
+def test_every_language_gets_its_pages(fixture_site):
+    targets, pages, _ = fixture_site
+    rels = {p.rel for p in pages["clearnet"]}
+    for base in ("", "zh-cn/", "en/"):
+        assert {base, base + "2026/", base + "2026/09/", base + "2026/09/zkp-age-verification/"} <= rels
+    out = targets["clearnet"].out
+    assert '<html lang="en">' in (out / "en" / "index.html").read_text(encoding="utf-8")
+    assert '<html lang="zh-Hans">' in (out / "zh-cn" / "index.html").read_text(encoding="utf-8")
+    assert '<html lang="zh-Hant">' in (out / "index.html").read_text(encoding="utf-8")
+    assert "404.html" in rels and not any(r.endswith("/404.html") for r in rels)
+
+
+def test_alternates_and_language_switch(fixture_site):
+    targets, _, _ = fixture_site
+    page = (targets["clearnet"].out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    for hreflang, url in (("zh-Hant", "2026"), ("zh-Hans", "zh-cn/2026"), ("en", "en/2026"), ("x-default", "2026")):
+        assert f'<link rel="alternate" hreflang="{hreflang}" href="https://anoni.net/news/{url}/09/zkp-age-verification/">' in page
+    nav = page[page.index('class="site-header__langs"'):]
+    nav = nav[:nav.index("</nav>")]
+    assert '<a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>' in nav
+    assert '<a href="/news/zh-cn/2026/09/zkp-age-verification/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>' in nav
+    assert '<span lang="en" aria-current="true">English</span>' in nav
+    onion = (targets["onion"].out / "en/2026/09/index.html").read_text(encoding="utf-8")
+    assert '<a href="/zh-cn/2026/09/" hreflang="zh-Hans"' in onion
+    assert 'hreflang="en" href="http://news.' in onion
+
+
+def test_interface_text_follows_language(fixture_site):
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    en = (out / "en/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    assert "Thursday, 10 September 2026" in en
+    assert "Based on 5 sources from EFF, Access Now, OONI" in en
+    assert "Sources (5)" in en and "Older story" in en and "All stories" in en
+    assert "/news/og-en.png" in en and '"inLanguage": "en"' in en
+    # 文章內容與語系切換裡的語言名稱之外，英文頁不能留中文
+    chrome = re.sub(r'<(article|script)\b.*?</\1>|<nav class="site-header__langs".*?</nav>', "", en, flags=re.S)
+    assert not re.search(r"[\u4e00-\u9fff]", chrome), "英文頁的介面文字還有中文"
+    cn = (out / "zh-cn/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    assert "整理 5 篇原文，来自 EFF、Access Now、OONI" in cn and "较旧的一篇" in cn
+    assert (out / "zh-cn" / "index.html").read_text(encoding="utf-8").count("新闻导读") >= 2
+
+
+def test_feed_per_language(fixture_site):
+    targets, _, _ = fixture_site
+    out = targets["onion"].out
+    en = (out / "en" / "feed.xml").read_text(encoding="utf-8")
+    assert "<language>en</language>" in en and "<title>anoni.net News</title>" in en
+    assert '<guid isPermaLink="false">anoni-news:en/2026/09/zkp-age-verification</guid>' in en
+    assert "Limits of zero-knowledge proofs" in en and "零知識證明" not in en.split("<item>")[0]
+    assert "<language>zh-CN</language>" in (out / "zh-cn" / "feed.xml").read_text(encoding="utf-8")
+
+
+def test_sitemap_lists_every_version(fixture_site):
+    targets, _, _ = fixture_site
+    sitemap = (targets["clearnet"].out / "sitemap.xml").read_text(encoding="utf-8")
+    assert "<loc>https://anoni.net/news/en/2026/09/zkp-age-verification/</loc>" in sitemap
+    assert '<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/09/zkp-age-verification/"/>' in sitemap
+    assert sitemap.index("<loc>https://anoni.net/news/</loc>") < sitemap.index("<loc>https://anoni.net/news/en/</loc>")
+
+
+def test_not_found_page_has_three_languages(fixture_site):
+    targets, _, _ = fixture_site
+    page = (targets["clearnet"].out / "404.html").read_text(encoding="utf-8")
+    assert page.count("<h1>") == 1
+    for lang, home in (("zh-Hant", "/news/"), ("zh-Hans", "/news/zh-cn/"), ("en", "/news/en/")):
+        assert f'<section class="not-found" lang="{lang}">' in page
+        assert f'href="{home}"' in page
+    assert "hreflang" not in page
+
+
+def test_contract_includes_feeds_per_language(fixture_site):
+    _, pages, _ = fixture_site
+    lines = build.contract_lines(pages["clearnet"])
+    assert {"/feed.xml", "/zh-cn/feed.xml", "/en/feed.xml", "/en/2026/09/layout-stress-test/"} <= set(lines)
+
+
+def test_author_names_per_language(fixture_site):
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    assert "By anoni.net community" in (out / "en/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    assert "导读：anoni.net 社区" in (out / "zh-cn/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    # 筆名沒有寫 names，各語系都沿用 name
+    assert "<dc:creator>夜梟</dc:creator>" in (out / "en" / "feed.xml").read_text(encoding="utf-8")
+
+
+def test_author_names_keys_are_checked(tmp_path):
+    path = tmp_path / "authors.yml"
+    path.write_text("anoni-net:\n  name: x\n  names:\n    fr: y\n", encoding="utf-8")
+    with pytest.raises(build.BuildError, match="names"):
+        build.load_authors(path)

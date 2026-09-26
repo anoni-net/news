@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for loc, lastmod in urls %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for loc, lastmod, alternates in urls %}
 <url>
 <loc>{{ loc }}</loc>
 {% if lastmod %}
 <lastmod>{{ lastmod }}</lastmod>
+{% endif %}
+{% for alt in alternates %}
+<xhtml:link rel="alternate" hreflang="{{ alt.html }}" href="{{ alt.abs }}"/>
+{% endfor %}
+{% if alternates %}
+<xhtml:link rel="alternate" hreflang="x-default" href="{{ alternates[0].abs }}"/>
 {% endif %}
 </url>
 {% endfor %}

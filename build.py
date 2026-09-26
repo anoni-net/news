@@ -27,7 +27,7 @@ from pathlib import Path
 import markdown
 import yaml
 from PIL import Image
-from jinja2 import Environment, FileSystemLoader, StrictUndefined
+from jinja2 import Environment, FileSystemLoader, StrictUndefined, pass_context
 from markupsafe import Markup
 
 ROOT = Path(__file__).resolve().parent
@@ -40,7 +40,7 @@ DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
-AUTHOR_KEYS = {"name", "description", "url"}
+AUTHOR_KEYS = {"name", "names", "description", "url"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ANCHOR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
@@ -58,6 +58,62 @@ MAX_IMAGE_EDGE = 2000
 IMG_RE = re.compile(r"<img\b[^>]*>")
 STANDALONE_IMG_RE = re.compile(r"<p>\s*(<img\b[^>]*>)\s*</p>")
 INGEST_HINT = "維護者合併前執行 uv run tools/ingest_images.py 把圖片搬到 assets.anoni.net"
+
+
+# 語系規則見 SPEC.md「多語系」
+@dataclass(frozen=True)
+class Lang:
+    code: str       # strings.toml 的區段名
+    dir: str        # posts/ 底下的子目錄，zh-TW 放在 posts/ 這一層
+    path: str       # 網址前綴，接在站台前綴之後
+    html: str       # <html lang> 與 hreflang
+    og_locale: str
+    og_image: str   # 全站共用的預覽圖，放在 static/
+
+
+LANGS = [
+    Lang("zh-TW", "", "", "zh-Hant", "zh_TW", "og.png"),
+    Lang("zh-CN", "zh-CN", "zh-cn/", "zh-Hans", "zh_CN", "og-zh-cn.png"),
+    Lang("en", "en", "en/", "en", "en_US", "og-en.png"),
+]
+DEFAULT_LANG = LANGS[0]
+# 三個版本必須相同的欄位。date 另外比 created，updated 可以不同
+SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories")
+STRINGS_PATH = ROOT / "strings.toml"
+
+
+def load_strings(path: Path = STRINGS_PATH) -> dict[str, dict]:
+    """介面文字。三個語系都要有，鍵也要一致，少一個就建置失敗。"""
+    with open(path, "rb") as f:
+        data = tomllib.load(f)
+    problems = []
+    for lang in LANGS:
+        if lang.code not in data:
+            problems.append(f"{path.name}：缺少 [{lang.code}]")
+    keys = set(data.get(DEFAULT_LANG.code, {}))
+    for lang in LANGS[1:]:
+        other = set(data.get(lang.code, {}))
+        for key in sorted(keys - other):
+            problems.append(f"{path.name}：[{lang.code}] 缺少 {key}")
+        for key in sorted(other - keys):
+            problems.append(f"{path.name}：[{lang.code}] 多了 {key}，[{DEFAULT_LANG.code}] 沒有")
+    if problems:
+        raise BuildError(problems)
+    return data
+
+
+_strings: dict[str, dict] | None = None
+
+
+def strings() -> dict[str, dict]:
+    global _strings
+    if _strings is None:
+        _strings = load_strings()
+    return _strings
+
+
+def format_date(s: dict, key: str, d: date) -> str:
+    return s[key].format(year=d.year, month=s["months"][d.month - 1], day=d.day, weekday=s["weekdays"][d.weekday()])
 
 
 class BuildError(Exception):
@@ -94,6 +150,9 @@ class Post:
     anchors: list[str] = field(default_factory=list)
     image: str | None = None
     pin: bool = False
+    lang: Lang = DEFAULT_LANG
+    # 同一篇的三個版本，鍵是語系代碼，包含自己。由 load_site 填入
+    translations: dict[str, "Post"] = field(default_factory=dict)
 
     @property
     def image_rel(self) -> str | None:
@@ -103,11 +162,15 @@ class Post:
     @property
     def rel(self) -> str:
         """文章在網站裡的相對路徑，例如 2026/09/zkp-age-verification/。"""
-        return f"{self.created:%Y}/{self.created:%m}/{self.slug}/"
+        return f"{self.lang.path}{self.created:%Y}/{self.created:%m}/{self.slug}/"
 
     @property
     def guid(self) -> str:
-        return f"anoni-news:{self.created:%Y}/{self.created:%m}/{self.slug}"
+        return f"anoni-news:{self.rel.rstrip('/')}"
+
+    @property
+    def where(self) -> str:
+        return f"{self.lang.dir}/{self.path.name}" if self.lang.dir else self.path.name
 
 
 def to_datetime(value, where: str, problems: list[str]) -> datetime | None:
@@ -130,13 +193,17 @@ def load_authors(path: Path) -> dict[str, dict]:
             continue
         extra = set(info) - AUTHOR_KEYS
         if extra:
-            problems.append(f"authors.yml：{key} 有不認得的欄位 {sorted(extra)}，只收 name、description、url")
+            problems.append(f"authors.yml：{key} 有不認得的欄位 {sorted(extra)}，只收 name、names、description、url")
+        names = info.get("names", {})
+        codes = {lang.code for lang in LANGS[1:]}
+        if not isinstance(names, dict) or set(names) - codes:
+            problems.append(f"authors.yml：{key} 的 names 是其他語系的名稱，鍵只能是 {sorted(codes)}")
         url = info.get("url")
         if url and not str(url).startswith("https://"):
             problems.append(f"authors.yml：{key} 的 url 要用 https://")
     if problems:
         raise BuildError(problems)
-    return {key: {"key": key, "description": None, "url": None, **info} for key, info in data.items()}
+    return {key: {"key": key, "description": None, "url": None, "names": {}, **info} for key, info in data.items()}
 
 
 def split_front_matter(text: str, where: str) -> tuple[dict, str]:
@@ -176,9 +243,9 @@ def check_headings(body: str, where: str, problems: list[str]) -> list[str]:
     return anchors
 
 
-def load_post(path: Path, authors: dict[str, dict]) -> Post | None:
+def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -> Post | None:
     """讀一篇文章。草稿回傳 None，不符合規格就丟 BuildError。"""
-    where = path.name
+    where = f"{lang.dir}/{path.name}" if lang.dir else path.name
     meta, body = split_front_matter(path.read_text(encoding="utf-8"), where)
     if meta.get("draft") is True:
         return None
@@ -287,6 +354,7 @@ def load_post(path: Path, authors: dict[str, dict]) -> Post | None:
         pin=pin,
         body=body,
         anchors=anchors,
+        lang=lang,
     )
 
 
@@ -369,7 +437,7 @@ def check_image(path: Path, where: str, problems: list[str]) -> tuple[int, int] 
 
 def process_images(post: Post, store: AssetStore, problems: list[str]) -> None:
     """檢查內文圖片，獨立成段的圖轉成 figure，補上寬高。src 維持 assets 網址，產出時再換成站內副本。"""
-    where = post.path.name
+    where = post.where
     if post.image:
         store.get(post.image, f"{where} 的 image", problems)
 
@@ -410,11 +478,13 @@ def localize_assets(text: str, target: "Target", absolute: bool = False) -> str:
     return text.replace(f'src="{ASSETS_PREFIX}', f'src="{base}')
 
 
-def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None) -> list[Post]:
+def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
+               lang: Lang = DEFAULT_LANG) -> list[Post]:
+    """讀一個語系的文章，posts_dir 是該語系的目錄。"""
     problems, posts = [], []
     for path in sorted(posts_dir.glob("*.md")):
         try:
-            post = load_post(path, authors)
+            post = load_post(path, authors, lang)
         except BuildError as error:
             problems += error.problems
             continue
@@ -423,19 +493,94 @@ def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | No
             process_images(post, store or AssetStore(), problems)
             posts.append(post)
 
-    pinned = [post.path.name for post in posts if post.pin]
+    pinned = [post.where for post in posts if post.pin]
     if len(pinned) > 1:
         problems.append(f"首頁的頭條只能有一篇，現在有 {len(pinned)} 篇設了 pin：{'、'.join(pinned)}。換頭條時先拿掉舊的那篇")
 
     seen: dict[str, Post] = {}
     for post in posts:
         if post.rel in seen:
-            problems.append(f"{post.path.name}：跟 {seen[post.rel].path.name} 的網址相同，slug 在同一個年月內不能重複")
+            problems.append(f"{post.where}：跟 {seen[post.rel].where} 的網址相同，slug 在同一個年月內不能重複")
         seen[post.rel] = post
     if problems:
         raise BuildError(problems)
     # 新的在前。同一個時間發的，依 slug 排，讓順序固定
     return sorted(posts, key=lambda p: (-p.created.timestamp(), p.slug))
+
+
+def lang_dir(posts_dir: Path, lang: Lang) -> Path:
+    return posts_dir / lang.dir if lang.dir else posts_dir
+
+
+def created_of(meta: dict):
+    raw = meta.get("date")
+    return raw.get("created") if isinstance(raw, dict) else raw
+
+
+def check_translations(posts_dir: Path) -> list[str]:
+    """三個版本都在，共用欄位相同，sources 包含 zh-TW 的每一筆網址。草稿也一起比，三個版本要同時發布。"""
+    problems = []
+    files = {lang.code: {p.name: p for p in lang_dir(posts_dir, lang).glob("*.md")} for lang in LANGS}
+    base = files[DEFAULT_LANG.code]
+    for lang in LANGS[1:]:
+        other = files[lang.code]
+        for name in sorted(set(base) - set(other)):
+            problems.append(f"{name}：缺少 {lang.code} 版本 posts/{lang.dir}/{name}，三個語系要一起送出")
+        for name in sorted(set(other) - set(base)):
+            problems.append(f"{lang.dir}/{name}：找不到對應的 zh-TW 版本 posts/{name}")
+        for name in sorted(set(base) & set(other)):
+            where = f"{lang.dir}/{name}"
+            try:
+                meta_tw, _ = split_front_matter(base[name].read_text(encoding="utf-8"), name)
+                meta, _ = split_front_matter(other[name].read_text(encoding="utf-8"), where)
+            except BuildError:
+                continue  # 格式錯誤由 load_post 報
+            if created_of(meta) != created_of(meta_tw):
+                problems.append(f"{where}：date 的發布日跟 zh-TW 不同")
+            for key in SHARED_KEYS:
+                if meta.get(key) != meta_tw.get(key):
+                    problems.append(f"{where}：{key} 跟 zh-TW 不同，三個版本要一致")
+
+            def urls(m: dict) -> list[str]:
+                items = m.get("sources") if isinstance(m.get("sources"), list) else []
+                return [str(i.get("url")) for i in items if isinstance(i, dict)]
+
+            for url in urls(meta_tw):
+                if url not in urls(meta):
+                    problems.append(f"{where}：sources 少了 zh-TW 有的 {url}")
+    return problems
+
+
+def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None) -> list[Post]:
+    """讀三個語系，檢查對應之後回傳 zh-TW 的文章，其他版本放在 translations。"""
+    problems: list[str] = []
+    by_lang: dict[str, list[Post]] = {}
+    for lang in LANGS:
+        try:
+            by_lang[lang.code] = load_posts(lang_dir(posts_dir, lang), authors, store, lang)
+        except BuildError as error:
+            problems += error.problems
+            by_lang[lang.code] = []
+    problems += check_translations(posts_dir)
+    if problems:
+        raise BuildError(problems)
+
+    index = {code: {post.path.name: post for post in posts} for code, posts in by_lang.items()}
+    for post in by_lang[DEFAULT_LANG.code]:
+        group = {code: index[code][post.path.name] for code in index}
+        for code, version in group.items():
+            version.translations = group
+            if code != DEFAULT_LANG.code and sorted(version.anchors) != sorted(post.anchors):
+                problems.append(f"{version.where}：小標題的錨點 {sorted(version.anchors)} 跟 zh-TW 的 "
+                                f"{sorted(post.anchors)} 不同，分享出去的段落連結換了語系會失效")
+    if problems:
+        raise BuildError(problems)
+    return by_lang[DEFAULT_LANG.code]
+
+
+def all_versions(posts: list[Post]) -> list[Post]:
+    """三個語系的全部文章。還沒經過 load_site 的文章只有自己。"""
+    return [version for post in posts for version in (post.translations.values() or [post])]
 
 
 def hrefs(text: str) -> list[str]:
@@ -523,8 +668,8 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
         "datePublished": post.created.isoformat(),
         "url": target.abs_url(post.rel),
         "mainEntityOfPage": target.abs_url(post.rel),
-        "image": target.abs_url("assets/" + post.image_rel) if post.image else target.abs_url("og.png"),
-        "inLanguage": "zh-Hant-TW",
+        "image": target.abs_url("assets/" + post.image_rel) if post.image else target.abs_url(post.lang.og_image),
+        "inLanguage": post.lang.html,
         "author": authors,
         "publisher": organization,
         "citation": [{"@type": "CreativeWork", "name": s.title, "url": s.url} for s in post.sources],
@@ -537,6 +682,7 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
 
 def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
                  store: AssetStore | None = None) -> list[Page]:
+    """posts 是 zh-TW 的文章，其他語系從 translations 取。"""
     if target.out.exists():
         shutil.rmtree(target.out)
     shutil.copytree(ROOT / "static", target.out)
@@ -545,21 +691,33 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(asset.path, dest)
     pages: list[Page] = []
+    texts = strings()
 
     def onion_url(rel: str) -> str | None:
         if not target.clearnet:
             return None
         return f"http://news.{config['onion_host']}/{rel}"
 
-    def write(page: Page, template: str, **context) -> None:
+    def alternates(rel_by_code: dict[str, str] | None, current: Lang) -> list[dict]:
+        """頁首的語系切換與 hreflang。沒有對應頁面（404）時回傳空清單。"""
+        if not rel_by_code:
+            return []
+        return [{"code": lang.code, "html": lang.html, "name": texts[lang.code]["lang_name"],
+                 "href": target.url(rel_by_code[lang.code]), "abs": target.abs_url(rel_by_code[lang.code]),
+                 "current": lang == current} for lang in LANGS]
+
+    def write(page: Page, template: str, lang: Lang, rels: dict[str, str] | None, **context) -> None:
         html_text = env.get_template(template).render(
             target=target,
             config=config,
             url=target.url,
+            lang=lang,
+            s=texts[lang.code],
+            home=lang.path,
+            alternates=alternates(rels, lang),
             page_url=target.abs_url(page.rel),
             onion_url=onion_url(page.rel),
             noindex=page.noindex,
-            latest=posts[0] if posts else None,
             **{"og_image": None, **context},
         )
         dest = target.out / page.file
@@ -567,68 +725,87 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         dest.write_text(target.rewrite_html(html_text), encoding="utf-8")
         pages.append(page)
 
-    for i, post in enumerate(posts):
-        # 文章已經由新到舊排好，同一天的順序跟首頁時間軸相同，前後篇直接取相鄰的兩篇
-        newer = posts[i - 1] if i > 0 else None
-        older = posts[i + 1] if i + 1 < len(posts) else None
-        # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
-        write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
-              post=post, newer=newer, older=older,
-              content=target.rewrite_html(localize_assets(post.html, target)),
-              jsonld=jsonld(post, target, config),
-              og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
+    def same_page(suffix: str) -> dict[str, str]:
+        return {lang.code: lang.path + suffix for lang in LANGS}
 
-    featured = next((post for post in posts if post.pin), None)
-    featured_image = None
-    if featured and featured.image and store and featured.image_rel in store.assets:
-        asset = store.assets[featured.image_rel]
-        featured_image = {"src": target.url("assets/" + asset.rel), "width": asset.width, "height": asset.height}
+    sitemap_homes: list[tuple[str, str | None, list[dict]]] = []
+    sitemap_urls: list[tuple[str, str | None, list[dict]]] = []
+    for lang in LANGS:
+        s = texts[lang.code]
+        lposts = [post.translations.get(lang.code, post) for post in posts] if lang != DEFAULT_LANG else posts
+        if lang != DEFAULT_LANG and any(post.lang != lang for post in lposts):
+            continue  # 沒有經過 load_site 的文章只產 zh-TW，測試用
+        base = lang.path
 
-    per_page = config["per_page"]
-    groups = chunk(posts, per_page)
-    for number, group in enumerate(groups, 1):
-        rel = "" if number == 1 else f"page/{number}/"
-        write(Page(rel, rel + "index.html", number > 1), "list.html.j2",
-              kind="index", heading="anoni.net 新聞導讀", posts=group, number=number, total=len(groups),
-              featured=featured if number == 1 else None, featured_image=featured_image,
-              prev_rel=("" if number == 2 else f"page/{number - 1}/") if number > 1 else None,
-              next_rel=f"page/{number + 1}/" if number < len(groups) else None)
+        for i, post in enumerate(lposts):
+            # 文章已經由新到舊排好，同一天的順序跟首頁時間軸相同，前後篇直接取相鄰的兩篇
+            newer = lposts[i - 1] if i > 0 else None
+            older = lposts[i + 1] if i + 1 < len(lposts) else None
+            rels = {code: version.rel for code, version in post.translations.items()} or None
+            # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
+            write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
+                  lang, rels, post=post, newer=newer, older=older,
+                  content=target.rewrite_html(localize_assets(post.html, target)),
+                  jsonld=jsonld(post, target, config),
+                  og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
+            sitemap_urls.append((target.abs_url(post.rel), (post.updated or post.created).date().isoformat(),
+                                 alternates(rels, lang)))
 
-    years: dict[int, list[Post]] = {}
-    months: dict[tuple[int, int], list[Post]] = {}
-    for post in posts:
-        years.setdefault(post.created.year, []).append(post)
-        months.setdefault((post.created.year, post.created.month), []).append(post)
-    for year, group in years.items():
-        write(Page(f"{year}/", f"{year}/index.html", True), "list.html.j2",
-              kind="archive", heading=f"{year} 年的文章", posts=group, number=1, total=1, prev_rel=None, next_rel=None,
-              featured=None, featured_image=None)
-    for (year, month), group in months.items():
-        write(Page(f"{year}/{month:02d}/", f"{year}/{month:02d}/index.html", True), "list.html.j2",
-              kind="archive", heading=f"{year} 年 {month} 月的文章", posts=group, number=1, total=1,
-              prev_rel=None, next_rel=None, featured=None, featured_image=None)
+        featured = next((post for post in lposts if post.pin), None)
+        featured_image = None
+        if featured and featured.image and store and featured.image_rel in store.assets:
+            asset = store.assets[featured.image_rel]
+            featured_image = {"src": target.url("assets/" + asset.rel), "width": asset.width, "height": asset.height}
 
-    write(Page("404.html", "404.html", True), "404.html.j2")
+        per_page = config["per_page"]
+        groups = chunk(lposts, per_page)
+        for number, group in enumerate(groups, 1):
+            suffix = "" if number == 1 else f"page/{number}/"
+            write(Page(base + suffix, base + suffix + "index.html", number > 1), "list.html.j2", lang, same_page(suffix),
+                  kind="index", heading=s["site_name"], posts=group, number=number, total=len(groups),
+                  latest=lposts[0] if lposts else None,
+                  featured=featured if number == 1 else None, featured_image=featured_image,
+                  prev_rel=(base if number == 2 else f"{base}page/{number - 1}/") if number > 1 else None,
+                  next_rel=f"{base}page/{number + 1}/" if number < len(groups) else None)
+        sitemap_homes.append((target.abs_url(base), None, alternates(same_page(""), lang)))
 
-    feed_posts = posts[:config["feed_items"]]
-    feed = env.get_template("feed.xml.j2").render(
-        target=target, config=config,
-        items=[{
-            "post": post,
-            "link": target.abs_url(post.rel),
-            "pub_date": format_datetime(post.created),
-            "content": target.rewrite_html(localize_assets(env.get_template("_post_body.html.j2").render(
-                post=post, content=post.html, url=target.url), target, absolute=True)),
-        } for post in feed_posts],
-        build_date=format_datetime(feed_posts[0].created) if feed_posts else None,
-    )
-    (target.out / "feed.xml").write_text(feed, encoding="utf-8")
+        years: dict[int, list[Post]] = {}
+        months: dict[tuple[int, int], list[Post]] = {}
+        for post in lposts:
+            years.setdefault(post.created.year, []).append(post)
+            months.setdefault((post.created.year, post.created.month), []).append(post)
+        for year, group in years.items():
+            suffix = f"{year}/"
+            write(Page(base + suffix, base + suffix + "index.html", True), "list.html.j2", lang, same_page(suffix),
+                  kind="archive", heading=s["year_heading"].format(year=year), posts=group, number=1, total=1,
+                  latest=None, prev_rel=None, next_rel=None, featured=None, featured_image=None)
+        for (year, month), group in months.items():
+            suffix = f"{year}/{month:02d}/"
+            write(Page(base + suffix, base + suffix + "index.html", True), "list.html.j2", lang, same_page(suffix),
+                  kind="archive", heading=s["month_heading"].format(year=year, month=s["months"][month - 1]),
+                  posts=group, number=1, total=1, latest=None,
+                  prev_rel=None, next_rel=None, featured=None, featured_image=None)
 
-    sitemap = env.get_template("sitemap.xml.j2").render(
-        urls=[(target.abs_url(""), None)] + [
-            (target.abs_url(p.rel), (p.updated or p.created).date().isoformat()) for p in posts
-        ],
-    )
+        feed_posts = lposts[:config["feed_items"]]
+        feed = env.get_template("feed.xml.j2").render(
+            target=target, config=config, lang=lang, s=s, home=base,
+            items=[{
+                "post": post,
+                "link": target.abs_url(post.rel),
+                "pub_date": format_datetime(post.created),
+                "content": target.rewrite_html(localize_assets(env.get_template("_post_body.html.j2").render(
+                    post=post, content=post.html, url=target.url, s=s), target, absolute=True)),
+            } for post in feed_posts],
+            build_date=format_datetime(feed_posts[0].created) if feed_posts else None,
+        )
+        (target.out / base).mkdir(parents=True, exist_ok=True)
+        (target.out / base / "feed.xml").write_text(feed, encoding="utf-8")
+
+    # 404 只有一頁，三種語言各寫一段。伺服器依路徑回同一個檔案
+    write(Page("404.html", "404.html", True), "404.html.j2", DEFAULT_LANG, None,
+          versions=[{"lang": lang, "s": texts[lang.code]} for lang in LANGS])
+
+    sitemap = env.get_template("sitemap.xml.j2").render(urls=sitemap_homes + sitemap_urls)
     (target.out / "sitemap.xml").write_text(sitemap, encoding="utf-8")
 
     if not target.clearnet:
@@ -648,20 +825,21 @@ def by_day(posts: list[Post]) -> list[dict]:
     return groups
 
 
-def source_line(post: Post) -> str:
+def source_line(post: Post, s: dict | None = None) -> str:
     """列表與頭條上的出處行。一篇原文寫出處，多篇原文寫篇數與出處，出處太多只列前三個。"""
+    s = s or strings()[post.lang.code]
     publishers: list[str] = []
     for source in post.sources:
         if source.publisher and source.publisher not in publishers:
             publishers.append(source.publisher)
     count = len(post.sources)
     if count == 1:
-        return f"原文來自 {publishers[0]}" if publishers else ""
+        return s["source_one"].format(publishers=publishers[0]) if publishers else ""
     if not publishers:
-        return f"整理 {count} 篇原文"
+        return s["source_count"].format(count=count)
     if len(publishers) <= 3:
-        return f"整理 {count} 篇原文，來自 {'、'.join(publishers)}"
-    return f"整理 {count} 篇原文，來自 {'、'.join(publishers[:3])} 等 {len(publishers)} 個出處"
+        return s["source_some"].format(count=count, publishers=s["list_sep"].join(publishers))
+    return s["source_many"].format(count=count, publishers=s["list_sep"].join(publishers[:3]), total=len(publishers))
 
 
 ICON_DIR = ROOT / "templates" / "icons"
@@ -687,11 +865,13 @@ def make_env() -> Environment:
         lstrip_blocks=True,
         keep_trailing_newline=True,
     )
-    env.filters["ymd"] = lambda d: f"{d.year} 年 {d.month} 月 {d.day} 日"
-    env.filters["md"] = lambda d: f"{d.month} 月 {d.day} 日"
-    env.filters["weekday"] = lambda d: "星期" + "一二三四五六日"[d.weekday()]
+    # 日期與出處行依頁面的語系，從模板的 s（該語系的 strings.toml 區段）取格式
+    for name, key in (("ymd", "date"), ("md", "date_short"), ("full_date", "date_full"), ("day_meta", "day_meta")):
+        env.filters[name] = pass_context(lambda ctx, d, key=key: format_date(ctx["s"], key, d))
+    # 署名在其他語系另有寫法時用 authors.yml 的 names，筆名與人名通常不翻
+    env.filters["author_name"] = pass_context(lambda ctx, author: author["names"].get(ctx["lang"].code, author["name"]))
     env.filters["by_day"] = by_day
-    env.filters["source_line"] = source_line
+    env.filters["source_line"] = pass_context(lambda ctx, post: source_line(post, ctx["s"]))
     # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
@@ -711,7 +891,8 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     # 測試用的圖片放在文章目錄旁邊的 assets/，不必連網
     assets_dir = posts_dir.parent / "assets"
     store = AssetStore(assets_dir if assets_dir.exists() else None)
-    posts = load_posts(posts_dir, authors, store)
+    strings()  # 介面文字有缺漏時在這裡就失敗
+    posts = load_site(posts_dir, authors, store)
     env = make_env()
     pages = {}
     for name, target in targets.items():
@@ -729,7 +910,7 @@ def contract_lines(pages: list[Page]) -> list[str]:
     for page in sorted(pages, key=lambda p: p.rel):
         lines.append("/" + page.rel)
         lines += [f"\t#{anchor}" for anchor in sorted(page.anchors)]
-    lines += ["/feed.xml", "/sitemap.xml"]
+    lines += [f"/{lang.path}feed.xml" for lang in LANGS] + ["/sitemap.xml"]
     return lines
 
 
@@ -824,12 +1005,12 @@ def check_docs_links(posts: list[Post], contract: DocsContract) -> tuple[list[st
             path = "/" + urllib.parse.unquote(parsed.path)[len("/docs/"):]
             anchor = urllib.parse.unquote(parsed.fragment)
             if path in contract.redirects:
-                notices.append(f"{post.path.name}：{href} 是轉址頁，建議直接連到 {contract.redirects[path]}")
+                notices.append(f"{post.where}：{href} 是轉址頁，建議直接連到 {contract.redirects[path]}")
                 continue
             if path not in contract.pages:
-                problems.append(f"{post.path.name}：{href} 不在文件站的網址合約裡")
+                problems.append(f"{post.where}：{href} 不在文件站的網址合約裡")
             elif anchor and anchor not in contract.pages[path]:
-                problems.append(f"{post.path.name}：{href} 的錨點 #{anchor} 不在文件站的網址合約裡")
+                problems.append(f"{post.where}：{href} 的錨點 #{anchor} 不在文件站的網址合約裡")
     return problems, notices
 
 
@@ -990,7 +1171,7 @@ def check_contrast(css_path: Path) -> list[str]:
 def run_check(args, targets, pages, posts) -> int:
     problems, notices = [], []
 
-    docs_problems, docs_notices = check_docs_links(posts, load_docs_contract(args.docs_contract))
+    docs_problems, docs_notices = check_docs_links(all_versions(posts), load_docs_contract(args.docs_contract))
     problems += docs_problems
     notices += docs_notices
 
@@ -1011,12 +1192,16 @@ def run_check(args, targets, pages, posts) -> int:
     import layout_check
     with tempfile.TemporaryDirectory() as tmp:
         fixture_targets, fixture_pages, fixture_posts = build(ROOT / "tests" / "fixtures" / "posts", Path(tmp))
-        fixture_docs, _ = check_docs_links(fixture_posts, load_docs_contract(args.docs_contract))
+        fixture_docs, _ = check_docs_links(all_versions(fixture_posts), load_docs_contract(args.docs_contract))
         problems += [f"fixtures：{p}" for p in fixture_docs]
         for name, target in fixture_targets.items():
             problems += [f"fixtures：{p}" for p in check_output(target, fixture_pages[name])]
+        # 三個語系的列表頁與最新一篇，加上共用的 404
+        layout_pages = [lang.path for lang in LANGS]
+        if fixture_posts:
+            layout_pages += [fixture_posts[0].translations.get(lang.code, fixture_posts[0]).rel for lang in LANGS]
         layout_problems, layout_notice = layout_check.run(
-            fixture_targets["clearnet"].out, ["", fixture_posts[0].rel if fixture_posts else "", "404.html"],
+            fixture_targets["clearnet"].out, list(dict.fromkeys(layout_pages)) + ["404.html"],
             ROOT / ".cache" / "screenshots")
         problems += layout_problems
         if layout_notice:
@@ -1028,7 +1213,7 @@ def run_check(args, targets, pages, posts) -> int:
         print(f"檢查沒過，共 {len(problems)} 項：")
         print("\n".join(f"  {p}" for p in problems))
         return 1
-    print(f"檢查通過：{len(posts)} 篇文章，clearnet 與 onion 各 {len(pages['clearnet'])} 頁")
+    print(f"檢查通過：{len(posts)} 篇文章各 {len(LANGS)} 個語系，clearnet 與 onion 各 {len(pages['clearnet'])} 頁")
     return 0
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="{{ lang.html }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +9,20 @@
 <meta name="robots" content="noindex, follow">
 {% endif %}
 <link rel="canonical" href="{{ page_url }}">
+{% for alt in alternates %}
+<link rel="alternate" hreflang="{{ alt.html }}" href="{{ alt.abs }}">
+{% endfor %}
+{% if alternates %}
+<link rel="alternate" hreflang="x-default" href="{{ alternates[0].abs }}">
+{% endif %}
 {% if onion_url %}
 <meta http-equiv="onion-location" content="{{ onion_url }}">
 {% endif %}
 <link rel="stylesheet" href="{{ url('css/news.css') }}">
 <link rel="icon" href="{{ url('favicon.svg') }}" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="{{ target.abs_url('feed.xml') }}">
-<meta property="og:site_name" content="anoni.net 新聞導讀">
-<meta property="og:locale" content="zh_TW">
+<link rel="alternate" type="application/rss+xml" title="{{ s.site_name }}" href="{{ target.abs_url(home ~ 'feed.xml') }}">
+<meta property="og:site_name" content="{{ s.site_name }}">
+<meta property="og:locale" content="{{ lang.og_locale }}">
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:title" content="{{ og_title }}">
 <meta property="og:description" content="{{ page_description }}">
@@ -24,7 +30,7 @@
 {% if og_image %}
 <meta property="og:image" content="{{ og_image }}">
 {% else %}
-<meta property="og:image" content="{{ target.abs_url('og.png') }}">
+<meta property="og:image" content="{{ target.abs_url(lang.og_image) }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 {% endif %}
@@ -38,7 +44,18 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href="{{ config.homepage }}"><img src="{{ url('logo-wordmark-white.svg') }}" alt="anoni.net" width="116" height="28"></a>
-    <a class="site-header__product" href="{{ url() }}">新聞導讀</a>
+    <a class="site-header__product" href="{{ url(home) }}">{{ s.product }}</a>
+{% if alternates %}
+    <nav class="site-header__langs" aria-label="{{ s.lang_nav_label }}">
+{% for alt in alternates %}
+{% if alt.current %}
+      <span lang="{{ alt.html }}" aria-current="true">{{ alt.name }}</span>
+{% else %}
+      <a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}">{{ alt.name }}</a>
+{% endif %}
+{% endfor %}
+    </nav>
+{% endif %}
   </div>
 {% block masthead %}{% endblock %}
 </header>
@@ -47,17 +64,17 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav class="site-footer__links" aria-label="頁尾">
-      <a href="{{ url('feed.xml') }}">{{ icon('rss') }} RSS</a>
-      <a href="{{ config.newsletter }}">{{ icon('email-outline') }} 訂閱電子報</a>
-      <a href="{{ config.homepage }}">{{ icon('home-outline') }} anoni.net 首頁</a>
+    <nav class="site-footer__links" aria-label="{{ s.footer_label }}">
+      <a href="{{ url(home ~ 'feed.xml') }}">{{ icon('rss') }} {{ s.rss }}</a>
+      <a href="{{ config.newsletter }}">{{ icon('email-outline') }} {{ s.newsletter }}</a>
+      <a href="{{ config.homepage }}">{{ icon('home-outline') }} {{ s.home }}</a>
 {% if onion_url %}
-      <a href="{{ onion_url }}">{{ icon('torproject') }} onion 版本</a>
+      <a href="{{ onion_url }}">{{ icon('torproject') }} {{ s.onion }}</a>
 {% endif %}
     </nav>
-    <p>文章以 <a href="{{ config.license }}">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+    <p>{{ s.license_before }}<a href="{{ s.license_url }}">CC-BY 4.0</a>{{ s.license_after }}</p>
 {% if target.analytics %}
-    <p>本站以自架的 Umami 計算閱讀量，不使用 cookie，瀏覽器開啟「請勿追蹤」或 GPC 時不送出。onion 版本不載入。</p>
+    <p>{{ s.analytics }}</p>
 {% endif %}
   </div>
 </footer>

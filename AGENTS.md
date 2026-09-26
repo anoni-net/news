@@ -16,7 +16,7 @@ uv run build.py                    # 產生 public/clearnet 與 public/onion
 uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
 uv run build.py --update-contract  # 新增網址之後，把它們收進 url_contract.txt
 uv run pytest -q
-./tools/make_og.sh                 # 改了 tools/og.html 之後重新產生 static/og.png
+./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
 ```
 
@@ -24,7 +24,7 @@ uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑�
 
 ## 寫一篇
 
-1. 在 `posts/` 新增 `YYYY-MM-DD-<slug>.md`，front matter 與內文格式見 `SPEC.md`「一篇的格式」
+1. 在 `posts/` 新增 `YYYY-MM-DD-<slug>.md`，front matter 與內文格式見 `SPEC.md`「一篇的格式」。`posts/zh-CN/` 與 `posts/en/` 放同檔名的另外兩個版本，寫法見下方「三個語系」
 2. `uv run build.py --check`，錯誤訊息會列出檔名與行號
 3. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
 
@@ -57,6 +57,14 @@ uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑�
 - 官方來源與報導分開，能找到官方公告就列為第一個 `sources`，名詞照官方的寫法
 - 來源的發布日期看頁面上的 `datePublished` 或 `<time>`，不照抄轉述者寫的日期
 
+原文寫的是發布當時的狀況，之後可能過時或被更正，寫稿當下要再查核一次：
+
+- 先看原文有沒有更正或更新的註記，有的話照更新後的內容寫
+- 工具與服務的現況回到官方的說明頁、公告或版本紀錄確認，包括名稱、價格、是否還是測試版、支援的平台與地區
+- 查到的現況跟原文不同時，以寫稿當下的官方資料為準，把它列進 `sources`。讀者需要知道有過變動時，在內文寫明兩者的差別，例如「論壇公告寫 3 美元，說明頁目前寫 2.99 美元」
+- PR 內文寫明查核的日期，以及查到哪些跟原文不同的地方
+- 已發布的文章之後發現過時或有誤，照更正處理，三個語系一起改並更新 `date.updated`
+
 ### 用字
 
 - 組織的說法寫成「Signal 在社群論壇的公告寫明」，不寫「Signal 說」。原文作者寫「研究者」、「作者」，不寫名字
@@ -65,9 +73,30 @@ uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑�
 - 建議因人而異時，用處境描述對象，一句話帶過，例如「需要在手機上處理敏感對話的人」、「用使用者名稱接受消息來源聯繫的人」。不另外開「給記者」、「給公民團體」這類角色段落，也不在文中替讀者貼上身分標籤。建議對每個人都一樣時，就不必指定對象
 - 延伸閱讀目前不放，見 `SPEC.md`「內文」
 
+### 三個語系
+
+每篇都寫 zh-TW、zh-CN 與 en 三個版本，放在同一個 PR，同時發布。先寫 zh-TW 並完成事實查核，再寫另外兩個版本。文中不標註 AI 草稿或待校對，維護者上線前會審過三個版本。
+
+三個版本共同的規則：
+
+- 事實以 zh-TW 為準。zh-TW 寫出的國家、公司、產品、機構、法條與數字，另外兩個版本不能換成泛稱或拿掉，也就是文件站 i18n 頁提醒的翻漏，逐段對照 zh-TW 才抓得到
+- 導讀觀點為了比較各地狀況需要另外查證時，每篇只查一次，結果連同來源寫在 PR 內文，zh-CN 與 en 都從那一份取用。用到的來源加進該版本的 `sources`，一樣要每一句都對得到出處
+- 可以寫各地的法規、服務能不能用、既有的類似制度，不寫哪個地區、哪個族群的人在用什麼工具
+- 小標題的錨點三個版本相同，zh-CN 寫 `## 导读观点 {#perspective}`，en 寫 `## Perspective {#perspective}`
+
+zh-CN 的摘要段照 zh-TW 轉成簡體字與中國用語，詞彙的對應見文件站的[中文化與文件翻譯](https://anoni.net/docs/community/i18n/)。導讀觀點以中國境內與海外使用簡體中文的讀者為對象重寫，「現在能不能用、如何取得」依中國的服務供應狀況重新查證。例如 OpenAI 沒有在中國提供服務，ChatGPT 廣告那篇對中國境內的讀者用處不大，導讀觀點要寫給在海外使用的人。篇幅、結構與標點跟 zh-TW 相同。
+
+en 的讀者多半可以直接讀原文，篇幅留給英文媒體比較少寫的區域比較：
+
+- 約 500 到 650 個英文字，摘要約三分之一，導讀觀點約三分之二
+- 摘要只交代發生什麼事、誰用得到，第一段一樣用新聞寫法
+- 導讀觀點寫技術原理、這件事在亞洲兩三個地方的情況、讀者能做什麼與代價。挑跟新聞主題真的有差異、而且查得到來源的地方，不必每次把各地都列一遍。例如不用電話號碼註冊 Signal，可以比較幾個地方申辦 SIM 卡的實名要求
+- 照英文版貢獻者百科的寫作規則，自稱寫「we, a community based in Taiwan」，不把台灣當成讀者的預設立場
+- 標題用英文的名詞片語，原文標題照錄
+
 ## 寫作規則
 
-寫作與協作的規則以[貢獻者百科](https://anoni.net/docs/community/contributor-handbook/)為準，要調整規則時改百科，不要在這裡另存一份。檢查工具沿用文件站的 `tools/docs_style_lint.py`。
+寫作與協作的規則以[貢獻者百科](https://anoni.net/docs/community/contributor-handbook/)為準，英文版照[英文的貢獻者百科](https://anoni.net/docs/en/community/contributor-handbook/)，要調整規則時改百科，不要在這裡另存一份。檢查工具沿用文件站的 `tools/docs_style_lint.py`。
 
 導讀另有三條界線：
 

@@ -1,4 +1,8 @@
 # 署名清單，文章 front matter 的 authors 對應這裡的鍵。規則見 SPEC.md「發佈身分」。
-# 只填 name、description、url 三個欄位，url 只有願意公開身分的人才填，不收頭像。
+# 只填 name、names、description、url 四個欄位，url 只有願意公開身分的人才填，不收頭像。
+# names 是其他語系的寫法，鍵是 zh-CN 或 en，沒寫的語系沿用 name。筆名與人名通常不翻。
 anoni-net:
   name: anoni.net 社群
+  names:
+    zh-CN: anoni.net 社区
+    en: anoni.net community

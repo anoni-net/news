@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>anoni.net 新聞導讀</title>
-<link>{{ target.abs_url() }}</link>
-<atom:link href="{{ target.abs_url('feed.xml') }}" rel="self" type="application/rss+xml"/>
-<description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
-<language>zh-TW</language>
+<title>{{ s.site_name }}</title>
+<link>{{ target.abs_url(home) }}</link>
+<atom:link href="{{ target.abs_url(home ~ 'feed.xml') }}" rel="self" type="application/rss+xml"/>
+<description>{{ s.description }}</description>
+<language>{{ lang.code }}</language>
 {% if build_date %}
 <lastBuildDate>{{ build_date }}</lastBuildDate>
 {% endif %}
@@ -16,7 +16,7 @@
 <guid isPermaLink="false">{{ item.post.guid }}</guid>
 <pubDate>{{ item.pub_date }}</pubDate>
 {% for author in item.post.authors %}
-<dc:creator>{{ author.name }}</dc:creator>
+<dc:creator>{{ author|author_name }}</dc:creator>
 {% endfor %}
 <description>{{ item.post.description }}</description>
 <content:encoded>{{ item.content }}</content:encoded>
