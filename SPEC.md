@@ -455,7 +455,8 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 1. `main` 有新的 commit 時，CI 執行 `--check` 後建置兩份產物，推到 `build` 分支，目錄是 `clearnet/` 與 `onion/`。`build` 分支保留歷史，出問題時可以退回上一個 commit
 2. 伺服器上 clone `build` 分支。nginx 在 clearnet 的 `anoni.net` server block 加一條 `location /news/` 指向 `clearnet/`，onion 那一側新增一個 `news.<onion 位址>` 的 server block，根目錄指向 `onion/`。子網域共用同一個 onion service，由 nginx 依主機名稱分流，跟 `docs.<onion 位址>` 相同，Tor 的設定不用改
 3. 官網 repo 的 `robots.txt` 模板補上 `/news/sitemap.xml`，跟 news 上線同一天合併
-4. 第一版手動 `git pull` 上線，自動部署等官網首頁的部署方式定案後一起處理
+4. `static/` 的檔案（樣式、favicon、頁首 logo、預覽圖）在網址後面帶內容雜湊，例如 `css/news.css?v=3f9a1c2b7e`。HTML 不讓瀏覽器快取，內容改了網址就跟著變，瀏覽器與 Cloudflare 會當成新檔案去抓，部署之後不必清這些檔案的快取
+5. 第一版手動 `git pull` 上線，自動部署等官網首頁的部署方式定案後一起處理
 
 ## 相依
 
