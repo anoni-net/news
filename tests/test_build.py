@@ -298,6 +298,33 @@ def test_story_pager_links_neighbours(fixture_site):
         assert "所有文章" in pager(slug)
 
 
+def test_icon_is_inline_and_hidden_from_screen_readers():
+    svg = build.icon("rss")
+    assert svg.startswith('<svg class="icon" viewBox="0 0 24 24"')
+    assert 'aria-hidden="true"' in svg and 'focusable="false"' in svg
+    assert 'fill="currentColor"' in svg
+    # 來源檔的 title、id、xmlns 不帶進頁面
+    assert "<title>" not in build.icon("torproject")
+    assert "id=" not in svg and "xmlns" not in svg
+
+
+def test_every_icon_file_is_recorded_with_its_license():
+    readme = (build.ICON_DIR / "README.md").read_text(encoding="utf-8")
+    for svg in build.ICON_DIR.glob("*.svg"):
+        assert f"`{svg.name}`" in readme, svg.name
+
+
+def test_icons_render_on_both_targets(fixture_site):
+    targets, _, _ = fixture_site
+    for name in ("clearnet", "onion"):
+        index = (targets[name].out / "index.html").read_text(encoding="utf-8")
+        assert index.count('<svg class="icon"') >= 4  # 刊頭兩個、頁尾至少兩個
+    # onion 版本的連結只在 clearnet 出現，Tor 圖示也一樣
+    tor = str(build.icon("torproject"))
+    assert tor in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+    assert tor not in (targets["onion"].out / "index.html").read_text(encoding="utf-8")
+
+
 def test_noindex_expectations(fixture_site):
     targets, _, _ = fixture_site
     out = targets["clearnet"].out
@@ -394,7 +421,8 @@ def test_multi_source_post_renders(fixture_site):
     page = (out / "2026" / "09" / "age-verification-roundup" / "index.html").read_text(encoding="utf-8")
     assert "原文（5 篇）" in page
     # 頂端一行出處連到文末的原文清單，清單排在內文之後
-    assert '<a href="#sources">整理 5 篇原文，來自 EFF、Access Now、OONI</a>' in page
+    assert '<a href="#sources"><svg class="icon"' in page
+    assert '</svg>整理 5 篇原文，來自 EFF、Access Now、OONI</a>' in page
     assert page.index('class="story__body content"') < page.index('id="sources"')
     assert page.count('class="source-slip__item"') == 5
     assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
