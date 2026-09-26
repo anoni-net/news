@@ -17,8 +17,8 @@
 
 | 原則 | 怎麼驗證 |
 |---|---|
-| 不依賴 JavaScript | 產物裡沒有可執行的 `<script>`。唯一的例外是 `type="application/ld+json"` 的結構化資料，瀏覽器不會執行它 |
-| 不對外請求 | 產物的 `src`、`<link href>`、CSS 的 `url()` 只能指向站內路徑 |
+| 不依賴 JavaScript | 閱讀與導覽都不需要 JavaScript。產物裡可執行的 `<script>` 只有 clearnet 的流量統計（見「流量統計」），onion 一支都沒有。`type="application/ld+json"` 的結構化資料不會被執行，不算在內 |
+| 不對外請求 | 產物的 `src`、`<link href>`、CSS 的 `url()` 只能指向站內路徑。例外同上，clearnet 的流量統計從 anoni.net 底下的子網域載入 |
 | clearnet 與 onion 分開產出 | onion 產物裡沒有任何 `https://anoni.net` 開頭的連結 |
 | 網址一經公開就不改 | 網址合約，移除或改名會讓 CI 失敗 |
 
@@ -267,6 +267,17 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 上線後用 `curl -I` 確認標頭指向的網址在 onion 那一側回 200。
 
+## 流量統計
+
+clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪些題目有人讀、讀者從哪個社群平台進來。onion 不載入，理由跟文件站相同，onion 讀者的請求不能送到 clearnet 的端點。 <!-- docs-style-lint: disable-line -->
+
+- 設定寫在 `site.toml` 的 `[targets.clearnet.analytics]`，網站是 Umami 上的 `anoni-net-news`，跟文件站分開，兩邊的報告不會混在一起
+- `data-domains` 限定 `anoni.net`，本機預覽與 CI 的版面檢查不會送出資料
+- 送出前經過 `templates/_analytics.html.j2` 的過濾。只送頁面瀏覽，不送自訂事件與效能資料。網址只留 `utm_source`、`utm_medium`、`utm_campaign`、`utm_content`，其餘 query 與 `#` 之後的片段拿掉。螢幕尺寸捨去到百位。瀏覽器開啟「請勿追蹤」或 Global Privacy Control 時整筆不送
+- 頁尾寫明本站用 Umami 計算閱讀量、不使用 cookie、onion 版本不載入
+
+`build.py --check` 對 script 的檢查只放行兩支：帶 `data-anoni="before-send"` 的內嵌過濾，以及來源、網站 ID、`data-domains` 與 `data-before-send` 都跟 `site.toml` 相符的 Umami。onion 產物照舊不能有任何可執行的 script，也不能出現 `aa.anoni.net`。 <!-- docs-style-lint: disable-line -->
+
 ## 頁面
 
 - 樣式自己寫，只用系統字型，不載入 Bulma 與 Font Awesome。配色見下方「品牌與配色」
@@ -416,7 +427,6 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 ## 待決定的事
 
 - 發布節奏：寫好就發，或固定在每週某幾天發
-- clearnet 是否放流量統計，官網首頁與文件站都有 Umami
 - 內部篩選過的新聞改寫成對外版本時，由誰改寫、誰審稿
 - 維護者代發時用維護者本人的身分，或另設一個共用的發布身分（例如 `news@anoni.net`，要另外準備簽章金鑰）
 - 上線時的第一批文章：整理 2026 年 6 月到 9 月累積的新聞，或從下一次篩選開始

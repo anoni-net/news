@@ -220,6 +220,45 @@ def test_output_check_catches(tmp_path, old, new, expected):
     assert any(expected in p for p in problems), problems
 
 
+def test_analytics_only_on_clearnet(fixture_site):
+    targets, _, _ = fixture_site
+    clearnet = (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+    onion = (targets["onion"].out / "index.html").read_text(encoding="utf-8")
+    assert 'src="https://aa.anoni.net/script.js"' in clearnet
+    assert 'data-domains="anoni.net"' in clearnet
+    assert "Umami" in clearnet
+    assert "aa.anoni.net" not in onion
+    assert "anoniBeforeSend" not in onion
+    assert "Umami" not in onion
+
+
+@pytest.mark.parametrize("old, new", [
+    # 換掉 Umami 的來源、網站 ID，或拿掉 domains 限制，都不再是允許的那一支
+    ('src="https://aa.anoni.net/script.js"', 'src="https://evil.example.org/script.js"'),
+    ('data-website-id="', 'data-website-id="x'),
+    ('data-domains="anoni.net"', 'data-domains=""'),
+    # 其他內嵌 script 不能借用過濾那一支的例外
+    ("</body>", "<script>alert(1)</script></body>"),
+])
+def test_analytics_exception_is_narrow(tmp_path, old, new):
+    targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["clearnet"])
+    target = targets["clearnet"]
+    tamper(target, "index.html", old, new)
+    problems = build.check_output(target, pages["clearnet"])
+    assert any("可執行的 <script>" in p for p in problems), problems
+
+
+def test_onion_rejects_analytics_script(tmp_path):
+    targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["onion"])
+    target = targets["onion"]
+    tamper(target, "index.html", "</head>",
+           '<script defer src="https://aa.anoni.net/script.js" data-website-id="3790f14b-870c-4c29-83eb-dbb2977c65a9" '
+           'data-domains="anoni.net" data-before-send="anoniBeforeSend"></script></head>')
+    problems = build.check_output(target, pages["onion"])
+    assert any("可執行的 <script>" in p for p in problems), problems
+    assert any("clearnet 的連結" in p for p in problems), problems
+
+
 def test_onion_check_catches_clearnet_link(tmp_path):
     targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["onion"])
     target = targets["onion"]
