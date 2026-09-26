@@ -5,7 +5,7 @@
 
 ["zh-TW"]
 lang_name = "繁體中文"
-lang_nav_label = "語言"
+other_langs = "其他語言："
 site_name = "anoni.net 新聞導讀"
 product = "新聞導讀"
 tagline = "從科技與開源的角度，導讀國際隱私、匿名網路與審查新聞。"
@@ -63,7 +63,7 @@ months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
 
 ["zh-CN"]
 lang_name = "简体中文"
-lang_nav_label = "语言"
+other_langs = "其他语言："
 site_name = "anoni.net 新闻导读"
 product = "新闻导读"
 tagline = "从科技与开源的角度，导读国际隐私、匿名网络与审查新闻。"
@@ -121,7 +121,7 @@ months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
 
 [en]
 lang_name = "English"
-lang_nav_label = "Language"
+other_langs = "Also in "
 site_name = "anoni.net News"
 product = "News"
 tagline = "Privacy, anonymity and censorship news, read from a tech and open-source angle, with a view from Asia."
