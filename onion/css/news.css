@@ -581,6 +581,24 @@ p {
     border-top: 0;
 }
 
+/* ---------------------------------------------------------------- 圖示 */
+
+/* templates/icons/ 內嵌的 SVG，大小跟字級、顏色跟文字。
+   放在連結文字前面時右邊留一點空，放在後面（較舊的一篇）時左邊留 */
+.icon {
+    display: inline-block;
+    flex: none;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.2em;
+    margin-right: 0.25em;
+}
+
+.icon:last-child:not(:first-child) {
+    margin-right: 0;
+    margin-left: 0.25em;
+}
+
 /* ---------------------------------------------------------------- 分頁與頁尾 */
 
 /* 文章頁的前後篇：手機上下排，桌機較新在左、較舊在右，「所有文章」自成一列 */
@@ -674,13 +692,22 @@ p {
     padding-bottom: 2rem;
 }
 
-/* 連結高度維持觸控範圍，間距收小讓 390px 寬的手機排成一行。
+/* 連結高度維持觸控範圍。四個連結加上圖示約需 413px，手機放不下一行，
+   窄螢幕排成兩列兩欄，避免最後一個單獨掉到下一行，30em 以上排成一行。
    連結左右各有 0.25rem 的留白，整列往左移同樣的距離，跟下面的文字對齊 */
 .site-footer__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 0 1rem;
     margin: 0 0 0.25rem -0.25rem;
+}
+
+@media (min-width: 30em) {
+    .site-footer__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 0.75rem;
+    }
 }
 
 /* ---------------------------------------------------------------- 寬螢幕 */
