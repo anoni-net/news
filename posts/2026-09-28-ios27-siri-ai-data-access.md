@@ -25,7 +25,7 @@ Siri AI 預設可以讀取備忘錄、訊息與郵件等 Apple 自家 App 的內
 
 Mac 的做法寫在 Apple 的說明頁。macOS 27 在「系統設定」關閉 Siri 之後可以改用 Siri Classic，訊息、郵件與通知的摘要功能也各有開關。
 
-## 技術觀點 {#technical-view}
+## 導讀觀點 {#perspective}
 
 EFF 在原文寫明，Private Cloud Compute 的「Private」代表系統的設計讓 Apple 看不到、也不保存資料，但不保證資料經過加密或留在裝置上。前者要相信 Apple 的伺服器照設計運作，端對端加密只要金鑰留在使用者自己的裝置上，兩者要信任的對象不同。
 
