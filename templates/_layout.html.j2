@@ -30,6 +30,9 @@
 {% endif %}
 <meta name="twitter:card" content="summary_large_image">
 {% block head %}{% endblock %}
+{% if target.analytics %}
+{% include "_analytics.html.j2" %}
+{% endif %}
 </head>
 <body>
 <header class="site-header">
@@ -53,6 +56,9 @@
 {% endif %}
     </nav>
     <p>文章以 <a href="{{ config.license }}">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+{% if target.analytics %}
+    <p>本站以自架的 Umami 計算閱讀量，不使用 cookie，瀏覽器開啟「請勿追蹤」或 GPC 時不送出。onion 版本不載入。</p>
+{% endif %}
   </div>
 </footer>
 </body>

@@ -19,6 +19,14 @@ prefix = "/news/"
 clearnet = true
 rewrites = []
 
+# 流量統計，只放 clearnet，onion 不載入。規則見 SPEC.md「流量統計」。
+# website_id 是 aa.anoni.net 上的 anoni-net-news，跟文件站的網站分開。
+# domains 讓本機預覽與 CI 的版面檢查不送出資料。
+[targets.clearnet.analytics]
+src = "https://aa.anoni.net/script.js"
+website_id = "3790f14b-870c-4c29-83eb-dbb2977c65a9"
+domains = "anoni.net"
+
 [targets.onion]
 out = "public/onion"
 base_url = "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"

@@ -451,6 +451,8 @@ class Target:
     prefix: str
     clearnet: bool
     rewrites: list[tuple[str, str]]
+    # 流量統計的設定（src、website_id、domains），沒有就不載入，onion 一律沒有
+    analytics: dict | None = None
 
     def url(self, rel: str = "") -> str:
         return self.prefix + rel
@@ -482,6 +484,7 @@ def load_config(path: Path) -> tuple[dict, dict[str, Target]]:
             prefix=t["prefix"],
             clearnet=t["clearnet"],
             rewrites=[tuple(pair) for pair in t["rewrites"]],
+            analytics=t.get("analytics"),
         )
     return config, targets
 
@@ -825,6 +828,18 @@ def is_external(url: str) -> bool:
     return url.startswith(("http://", "https://", "//"))
 
 
+def is_analytics_script(attrs: dict[str, str], analytics: dict | None) -> bool:
+    """流量統計的兩支 script：送出前的過濾（內嵌）與 Umami 本體。其他 script 一律不准。"""
+    if not analytics:
+        return False
+    if "src" not in attrs:
+        return attrs.get("data-anoni") == "before-send"
+    return (attrs.get("src") == analytics["src"]
+            and attrs.get("data-website-id") == analytics["website_id"]
+            and attrs.get("data-domains") == analytics["domains"]
+            and attrs.get("data-before-send") == "anoniBeforeSend")
+
+
 def check_output(target: Target, pages: list[Page]) -> list[str]:
     """第 4、5、7 項：script、對外資源、onion 的 clearnet 連結、SEO 欄位與 noindex。"""
     problems = []
@@ -834,13 +849,14 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
 
         for match in SCRIPT_RE.finditer(text):
             attrs = dict(ATTR_RE.findall(match.group(1)))
-            if attrs.get("type") != "application/ld+json" or "src" in attrs:
-                problems.append(f"{where}：有可執行的 <script>")
+            if attrs.get("type") == "application/ld+json" and "src" not in attrs:
+                try:
+                    json.loads(match.group(2))
+                except ValueError:
+                    problems.append(f"{where}：JSON-LD 無法解析成 JSON")
                 continue
-            try:
-                json.loads(match.group(2))
-            except ValueError:
-                problems.append(f"{where}：JSON-LD 無法解析成 JSON")
+            if not is_analytics_script(attrs, target.analytics):
+                problems.append(f"{where}：有可執行的 <script>")
 
         for tag, raw in RESOURCE_TAG_RE.findall(text):
             attrs = dict(ATTR_RE.findall(raw))

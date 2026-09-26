@@ -1,0 +1,51 @@
+{# 流量統計，只有設定了 analytics 的目標（clearnet）會載入。規則見 SPEC.md「流量統計」。
+   第一支是送出前的過濾，Umami 的每一筆資料都先經過 anoniBeforeSend，回傳 null 就不送。
+   做法跟文件站的 overrides/main.html 相同，範圍收得更小：只送頁面瀏覽，不送自訂事件與效能資料。 #}
+<script data-anoni="before-send">
+(function () {
+  // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
+  var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+
+  function scrubUrl(url) {
+    if (typeof url !== "string" || !url) return url;
+    var hash = url.indexOf("#");
+    if (hash >= 0) url = url.slice(0, hash);
+    var q = url.indexOf("?");
+    if (q < 0) return url;
+    var kept = [];
+    var parts = url.slice(q + 1).split("&");
+    for (var i = 0; i < parts.length; i++) {
+      if (UTM.indexOf(parts[i].split("=")[0]) >= 0 && parts[i].length <= 64) kept.push(parts[i]);
+    }
+    return kept.length ? url.slice(0, q) + "?" + kept.join("&") : url.slice(0, q);
+  }
+
+  // 螢幕尺寸捨去到百位，判斷裝置類別夠用，又不留精確的指紋
+  function coarseScreen(screen) {
+    if (typeof screen !== "string") return screen;
+    var m = screen.match(/^(\d+)x(\d+)$/);
+    if (!m) return screen;
+    var floor100 = function (n) { return Math.max(100, Math.floor(n / 100) * 100); };
+    return floor100(+m[1]) + "x" + floor100(+m[2]);
+  }
+
+  window.anoniBeforeSend = function (type, payload) {
+    // data-do-not-track 只看舊的 doNotTrack，Global Privacy Control 在這裡一併尊重
+    if (window.navigator && window.navigator.globalPrivacyControl === true) return null;
+    if (type !== "event" || !payload || typeof payload !== "object") return null;
+    // 帶 name 的是自訂事件，這個站不送
+    if (payload.name) return null;
+    var out = {};
+    for (var key in payload) {
+      if (Object.prototype.hasOwnProperty.call(payload, key)) out[key] = payload[key];
+    }
+    out.url = scrubUrl(out.url);
+    out.referrer = scrubUrl(out.referrer);
+    out.screen = coarseScreen(out.screen);
+    delete out.data;
+    delete out.name;
+    return out;
+  };
+})();
+</script>
+<script defer src="{{ target.analytics.src }}" data-website-id="{{ target.analytics.website_id }}" data-domains="{{ target.analytics.domains }}" data-before-send="anoniBeforeSend" data-do-not-track="true"></script>
