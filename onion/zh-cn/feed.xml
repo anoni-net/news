@@ -6,12 +6,12 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 27 Sep 2026 07:28:00 +0800</lastBuildDate>
 <item>
 <title>英国 iCloud 高级数据保护的分级现状</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/uk-icloud-advanced-data-protection/</link>
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/uk-icloud-advanced-data-protection</guid>
-<pubDate>Tue, 29 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 07:28:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
 <description>Apple 从 2025 年 2 月起不再让英国的新用户开启高级数据保护，在那之前开启的人仍受保护，英国的 iCloud 因此分成两种加密程度。</description>
 <content:encoded>&lt;p&gt;整理 8 篇原文，来自 Apple、MacAnorak、EFF 等 4 个出处&lt;/p&gt;
@@ -93,7 +93,7 @@
 <title>iOS 27 Siri AI 的数据访问设置</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/ios27-siri-ai-data-access/</link>
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/ios27-siri-ai-data-access</guid>
-<pubDate>Mon, 28 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 03:21:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
 <description>iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。</description>
 <content:encoded>&lt;p&gt;整理 4 篇原文，来自 EFF、Apple&lt;/p&gt;
@@ -145,7 +145,7 @@
 <title>ChatGPT 广告像素的跨站识别码</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/chatgpt-ad-pixel-identifier/</link>
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/chatgpt-ad-pixel-identifier</guid>
-<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 01:24:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
 <description>一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。</description>
 <content:encoded>&lt;p&gt;整理 3 篇原文，来自 Buchodi&amp;#39;s Threat Intel、OpenAI&lt;/p&gt;
@@ -189,7 +189,7 @@
 <title>Signal 免手机号注册的 Android 测试版</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/signal-numberless-registration/</link>
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/signal-numberless-registration</guid>
-<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 01:23:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
 <description>Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。</description>
 <content:encoded>&lt;p&gt;整理 9 篇原文，来自 Signal Support、Signal Community、CyberInsider 等 7 个出处&lt;/p&gt;

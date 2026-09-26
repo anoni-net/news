@@ -6,12 +6,12 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 27 Sep 2026 07:28:00 +0800</lastBuildDate>
 <item>
 <title>英國 iCloud 進階資料保護的分級現況</title>
 <link>https://anoni.net/news/2026/09/uk-icloud-advanced-data-protection/</link>
 <guid isPermaLink="false">anoni-news:2026/09/uk-icloud-advanced-data-protection</guid>
-<pubDate>Tue, 29 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 07:28:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
 <description>Apple 從 2025 年 2 月起不再讓英國的新使用者開啟進階資料保護，在那之前開啟的人仍受保護，英國的 iCloud 因此分成兩種加密程度。</description>
 <content:encoded>&lt;p&gt;整理 7 篇原文，來自 Apple、MacAnorak、EFF 等 4 個出處&lt;/p&gt;
@@ -85,7 +85,7 @@
 <title>iOS 27 Siri AI 的資料存取設定</title>
 <link>https://anoni.net/news/2026/09/ios27-siri-ai-data-access/</link>
 <guid isPermaLink="false">anoni-news:2026/09/ios27-siri-ai-data-access</guid>
-<pubDate>Mon, 28 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 03:21:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
 <description>iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。</description>
 <content:encoded>&lt;p&gt;整理 2 篇原文，來自 EFF、Apple&lt;/p&gt;
@@ -122,7 +122,7 @@
 <title>ChatGPT 廣告像素的跨站識別碼</title>
 <link>https://anoni.net/news/2026/09/chatgpt-ad-pixel-identifier/</link>
 <guid isPermaLink="false">anoni-news:2026/09/chatgpt-ad-pixel-identifier</guid>
-<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 01:24:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
 <description>一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。</description>
 <content:encoded>&lt;p&gt;整理 2 篇原文，來自 Buchodi&amp;#39;s Threat Intel、OpenAI&lt;/p&gt;
@@ -160,7 +160,7 @@
 <title>Signal 免電話號碼註冊的 Android 測試版</title>
 <link>https://anoni.net/news/2026/09/signal-numberless-registration/</link>
 <guid isPermaLink="false">anoni-news:2026/09/signal-numberless-registration</guid>
-<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<pubDate>Sun, 27 Sep 2026 01:23:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
 <description>Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。</description>
 <content:encoded>&lt;p&gt;整理 7 篇原文，來自 Signal Support、Signal Community、CyberInsider 等 5 個出處&lt;/p&gt;
