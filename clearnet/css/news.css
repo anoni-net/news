@@ -162,7 +162,12 @@ p {
     min-height: var(--touch);
 }
 
-.site-header__brand img {
+/* flex 會吞掉標誌與產品名之間的空格，用 gap 補回跟分隔線的距離 */
+.site-header__home {
+    gap: 1rem;
+}
+
+.site-header__logo {
     display: block;
     height: 1.625rem;
     width: auto;
