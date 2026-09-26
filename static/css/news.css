@@ -215,7 +215,7 @@ p {
     min-height: var(--touch);
     padding: 0 0.25rem;
     color: var(--c-header-text);
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 0.3em;
 }
 
@@ -688,6 +688,24 @@ p {
 }
 
 .pager a,
+/* 獨立成列的導覽連結：刊頭與頁尾的連結、所有文章、列表頁的翻頁。排成一列又帶著圖示，
+   不靠底線也看得出能點，平常不畫，滑過或鍵盤選到時才出現，跟文章標題的做法一致。
+   夾在句子裡的連結（內文、原文、訂閱行、署名旁的原文、頁尾說明）維持底線。
+   前後篇整塊是一個連結，底線只畫在標題上，另外處理 */
+.site-footer__links a,
+.pager a:not(.pager__item) {
+    text-decoration: none;
+}
+
+.masthead__subscribe a:hover,
+.masthead__subscribe a:focus-visible,
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible,
+.pager a:not(.pager__item):hover,
+.pager a:not(.pager__item):focus-visible {
+    text-decoration: underline;
+}
+
 .site-footer__links a {
     display: inline-flex;
     align-items: center;
