@@ -82,7 +82,19 @@ async def measure(ws_url: str, base: str, pages: list[str], shots: Path) -> list
                 scroll_width = result["result"]["value"]
                 if scroll_width > width:
                     problems.append(f"版面：{width}px 寬開 /{rel} 出現橫向捲軸，內容寬 {scroll_width}px")
-                shot = await call("Page.captureScreenshot", format="png", captureBeyondViewport=True)
+                # 整頁截圖：先把視窗撐到整頁的高度、等圖片解碼，再截一般的畫面。
+                # captureBeyondViewport 會在截圖當下臨時改變畫面大小，已經畫好的圖可能被清掉，
+                # 截出來是一塊空白
+                height = (await call("Runtime.evaluate", returnByValue=True,
+                                     expression="document.documentElement.scrollHeight"))["result"]["value"]
+                await call("Emulation.setDeviceMetricsOverride", width=width, height=height,
+                           deviceScaleFactor=1, mobile=width < 800)
+                await call("Runtime.evaluate", awaitPromise=True, expression=(
+                    "Promise.all([...document.images].map(i => i.decode().catch(() => null)))"
+                    ".then(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))))"))
+                shot = await call("Page.captureScreenshot", format="png")
+                await call("Emulation.setDeviceMetricsOverride", width=width, height=900,
+                           deviceScaleFactor=1, mobile=width < 800)
                 name = (rel.strip("/").replace("/", "_") or "index").replace(".html", "")
                 (shots / f"{width}-{name}.png").write_bytes(base64.b64decode(shot["data"]))
     return problems

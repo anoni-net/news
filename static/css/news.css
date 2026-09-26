@@ -188,6 +188,32 @@ p {
     text-underline-offset: 0.22em;
 }
 
+/* 刊頭最底下一列：左邊是最後更新，右邊是訂閱。窄螢幕放不下時訂閱換到下一行 */
+.masthead__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.25rem 1.5rem;
+}
+
+.masthead__subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+}
+
+.masthead__subscribe a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+    padding: 0 0.25rem;
+    color: var(--c-header-text);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
 .masthead__updated {
     display: inline-block;
     margin: 0;
@@ -536,6 +562,25 @@ p {
     color: var(--c-muted);
 }
 
+/* 文章頁最後的訂閱提示 */
+.subscribe {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--c-border);
+}
+
+/* 連結夾在句子裡，只加上下的留白放大觸控範圍，左右不留，頓號才不會被隔開 */
+.subscribe a {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.subscribe + .pager {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
 /* ---------------------------------------------------------------- 分頁與頁尾 */
 
 .pager {
@@ -685,7 +730,8 @@ p {
         overflow-y: auto;
     }
 
-    .story + .pager {
+    .story ~ .subscribe,
+    .story ~ .pager {
         max-width: 40rem;
     }
 }

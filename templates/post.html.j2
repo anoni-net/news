@@ -34,6 +34,8 @@
 {# 原文清單在 HTML 裡排在內文之後：手機照順序落在文末，桌機由 grid 放到右欄 #}
 {% include "_source_slip.html.j2" %}
 </article>
+{# 從社群平台點進來的讀者看不到首頁的刊頭，讀完一篇時在這裡給訂閱的入口 #}
+<p class="subscribe">想收到新的導讀：<a href="{{ url('feed.xml') }}">RSS</a>、<a href="{{ config.newsletter }}">訂閱電子報</a></p>
 <nav class="pager" aria-label="文章導覽">
   <a href="{{ url() }}">所有文章</a>
   <a href="{{ url(post.created.strftime('%Y/%m/')) }}">{{ post.created.year }} 年 {{ post.created.month }} 月的文章</a>

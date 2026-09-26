@@ -17,9 +17,12 @@
   <div class="masthead">
     <h1 class="masthead__title">新聞導讀</h1>
     <p class="masthead__tagline">國際隱私、匿名網路與審查新聞，一則一篇的正體中文導讀，每篇都附上原文。</p>
+    <div class="masthead__bar">
 {% if latest %}
-    <p class="masthead__updated">最後更新 <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
+      <p class="masthead__updated">最後更新 <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
 {% endif %}
+      <p class="masthead__subscribe"><a href="{{ url('feed.xml') }}">RSS</a><a href="{{ config.newsletter }}">訂閱電子報</a></p>
+    </div>
   </div>
 {% endif %}
 {% endblock %}
