@@ -103,6 +103,8 @@ authors:
 
 ## 網址
 
+clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的做法切成獨立的子網域 `news.<onion 位址>`，網站放在子網域的根目錄。下表列的是 clearnet 的網址，onion 那一側去掉 `/news` 前綴，例如 `/news/2026-09-18/` 對應到 `http://news.<onion 位址>/2026-09-18/`。
+
 | 網址 | 內容 |
 |---|---|
 | `/news/` | 列表頁，新的在前，每頁 20 期 |
@@ -113,11 +115,19 @@ authors:
 | `/news/sitemap.xml` | sitemap |
 | `/news/404.html` | 找不到頁面 |
 
-頁面一律輸出成目錄加 `index.html`，網址結尾是斜線。站內連結從根目錄起算（`/news/...`），不寫網域。
+頁面一律輸出成目錄加 `index.html`，網址結尾是斜線。站內連結從根目錄起算、不寫網域，前綴依輸出目標而不同，clearnet 是 `/news/`，onion 是 `/`，由建置程式依 `site.toml` 產生，模板裡不寫死。
+
+### 路徑與子網域
+
+clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網首頁的產品卡片也照這個寫法列出。onion 用子網域，讓每個服務在 onion 那一側各自獨立，跟 `docs.<onion 位址>` 一致。
+
+用路徑的代價是 news 跟官網首頁、文件站共用同一個 origin，瀏覽器的 localStorage 與 IndexedDB 彼此讀得到。文件站有幾支工具把資料存在瀏覽器裡，news 不放任何 JavaScript，同源也讀不到那些資料。日後 news 要加入 JavaScript 時，先重新評估這一點，必要時改成子網域。
 
 ### 網址合約
 
 `build.py --update-contract` 把所有頁面網址與每一期的錨點寫進 `url_contract.txt`。CI 比對產物與合約，新增只印提醒，移除或改名讓建置失敗。判準與文件站的 `tools/check_url_contract.py` 相同：拿走讀者已經收藏或分享出去的網址，才算破壞性變更。
+
+合約只記 clearnet 的路徑。onion 的網址由「去掉 `/news` 前綴、接上 `news.<onion 位址>`」這條固定的對應推得，不另外記一份。
 
 ## RSS
 
@@ -133,16 +143,23 @@ authors:
 
 | 項目 | clearnet | onion |
 |---|---|---|
-| 完整網址的前綴（RSS、sitemap、canonical） | `https://anoni.net` | `http://<onion 位址>` |
+| 網站位置 | `https://anoni.net/news/` | `http://news.<onion 位址>/` |
+| 站內連結的前綴 | `/news/` | `/` |
+| 本站連結 `https://anoni.net/news/…` | 原樣 | 改寫成 `http://news.<onion 位址>/…` |
 | 文件站連結 `https://anoni.net/docs/…` | 原樣 | 改寫成 `http://docs.<onion 位址>/…` |
 | 官網連結 `https://anoni.net/…` | 原樣 | 改寫成 `http://<onion 位址>/…` |
 | `<link rel="canonical">` | 有 | 無 |
 | `<meta http-equiv="onion-location">` | 有 | 無 |
 | 流量統計 | 待定（見「待決定的事」） | 無 |
 
-改寫在 Markdown 轉成 HTML 之後，對 `href` 屬性做，不對內文做字串取代，避免改到程式碼區塊或照錄的網址文字。
+改寫在 Markdown 轉成 HTML 之後，對 `href` 屬性做，不對內文做字串取代，避免改到程式碼區塊或照錄的網址文字。三條改寫由上往下比對，先比對到 `/news/` 與 `/docs/` 的就不再套用最後那條官網的規則。
 
-`onion-location` 標頭另外由 Cloudflare 的 Transform Rules 發送。現有的 `onion-anoni.net` 規則只排除 `/docs`，`/news/…` 會對應到 `http://<onion 位址>/news/…`，正是 onion 產物所在的位置，上線時要實測確認。
+`onion-location` 標頭另外由 Cloudflare 的 Transform Rules 發送，上線前要改兩條規則：
+
+- 現有的 `onion-anoni.net` 規則目前只排除 `/docs` 與 `/docs/*`，要再排除 `/news` 與 `/news/*`，否則 `/news/…` 會指到官網 onion 根目錄底下不存在的 `/news/…`
+- 新增一條 `onion-news` 規則，比照 `onion-docs.anoni.net`，砍掉 `/news` 前綴之後接上 `news.<onion 位址>`
+
+上線後用 `curl -I` 確認標頭指向的網址在 onion 那一側回 200。
 
 ## 頁面
 
@@ -168,8 +185,9 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 ## 部署
 
 1. `main` 有新的 commit 時，CI 建置兩份產物，推到 `build` 分支，目錄是 `clearnet/` 與 `onion/`
-2. 伺服器上 clone `build` 分支，nginx 在 clearnet 與 onion 的 server block 各加一條 `location /news/`，分別指向兩個目錄
-3. 第一版手動 `git pull` 上線，自動部署等官網首頁的部署方式定案後一起處理
+2. 伺服器上 clone `build` 分支。nginx 在 clearnet 的 `anoni.net` server block 加一條 `location /news/` 指向 `clearnet/`，onion 那一側新增一個 `news.<onion 位址>` 的 server block，根目錄指向 `onion/`。子網域共用同一個 onion service，由 nginx 依主機名稱分流，跟 `docs.<onion 位址>` 相同，Tor 的設定不用改
+3. 官網 repo 的 `robots.txt` 模板補上 `/news/sitemap.xml`，跟 news 上線同一天合併
+4. 第一版手動 `git pull` 上線，自動部署等官網首頁的部署方式定案後一起處理
 
 ## 相依
 
@@ -182,7 +200,7 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 
 以下功能不在第一版，要做之前先修改本文件：
 
-- 站內搜尋。中文要斷詞，而且需要 JavaScript
+- 站內搜尋。中文要斷詞，而且需要 JavaScript，加入前要先處理「路徑與子網域」一節提到的同源問題
 - 多語系，只出正體中文
 - 分類、標籤與作者頁，`categories` 與 `authors` 只存不產頁
 - 圖片。有圖就要處理授權、替代文字與體積，第一版全文字
