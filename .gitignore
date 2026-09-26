@@ -1,9 +1,10 @@
 # Python
 .venv/
 __pycache__/
+.pytest_cache/
 
 # 建置產物，由 CI 推到 build 分支，不進 main
 /public/
-/site/
-/output/
-/_site/
+
+# 下載的文件站網址合約與版面檢查的截圖
+/.cache/

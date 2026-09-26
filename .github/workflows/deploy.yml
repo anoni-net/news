@@ -1,0 +1,46 @@
+name: deploy
+
+# main 更新時建置兩份產物，推到 build 分支的 clearnet/ 與 onion/。伺服器拉 build 分支上線。
+# build 分支保留歷史，出問題時可以退回上一個 commit。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+
+      - name: build.py --check
+        run: uv run build.py --check
+
+      - name: 推到 build 分支
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git fetch --depth=1 origin build:build 2>/dev/null; then
+            git worktree add ../out build
+          else
+            git worktree add --orphan -b build ../out
+          fi
+          rsync -a --delete --exclude .git public/ ../out/
+          cd ../out
+          git add -A
+          if git diff --cached --quiet; then
+            echo "產物沒有變動"
+            exit 0
+          fi
+          git commit -q -m "build: ${GITHUB_SHA}"
+          git push origin build

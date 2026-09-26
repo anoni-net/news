@@ -1,0 +1,8 @@
+<article class="brief">
+  <h3 class="brief__title"><a href="{{ url(post.rel) }}">{{ post.title }}</a></h3>
+  <p class="brief__dek">{{ post.description }}</p>
+{% set line = post|source_line %}
+{% if line %}
+  <p class="brief__source">{{ line }}</p>
+{% endif %}
+</article>

@@ -1,0 +1,4 @@
+# 署名清單，文章 front matter 的 authors 對應這裡的鍵。規則見 SPEC.md「發佈身分」。
+# 只填 name、description、url 三個欄位，url 只有願意公開身分的人才填，不收頭像。
+anoni-net:
+  name: anoni.net 社群

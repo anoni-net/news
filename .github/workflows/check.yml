@@ -1,0 +1,40 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+
+      - name: pytest
+        run: uv run --group dev pytest -q
+
+      # 產生兩份產物並執行 SPEC.md「驗證與 CI」的九項檢查。runner 上有 Chrome，版面檢查會實際執行
+      - name: build.py --check
+        run: uv run build.py --check
+
+      - name: 版面截圖
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: .cache/screenshots/
+          if-no-files-found: ignore
+
+      # 寫作規則跟文件站同一套，檢查工具直接取用文件站的版本。路徑要給完整路徑，
+      # 相對路徑會讓它套錯語系的規則
+      - name: 寫作風格
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/anoni-net/docs/main/tools/docs_style_lint.py -o /tmp/docs_style_lint.py
+          files=$(find "$GITHUB_WORKSPACE/posts" -name '*.md'; ls "$GITHUB_WORKSPACE"/{README,AGENTS,SPEC}.md)
+          python3 /tmp/docs_style_lint.py --format github $files
