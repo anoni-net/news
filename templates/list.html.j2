@@ -34,7 +34,7 @@
 <section class="lead-story" aria-label="最新一篇">
   <h2 class="lead-story__title"><a href="{{ url(lead.rel) }}">{{ lead.title }}</a></h2>
   <p class="lead-story__dek">{{ lead.description }}</p>
-  <p class="lead-story__meta"><time datetime="{{ lead.created|iso }}">{{ lead.created|ymd }}</time>{% if lead.sources[0].publisher %}<span>原文來自 {{ lead.sources[0].publisher }}</span>{% endif %}</p>
+  <p class="lead-story__meta"><time datetime="{{ lead.created|iso }}">{{ lead.created|ymd }}</time>{% if lead|source_line %}<span>{{ lead|source_line }}</span>{% endif %}</p>
 </section>
 {% set items = posts[1:] %}
 {% else %}

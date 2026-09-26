@@ -195,7 +195,7 @@ def test_fixture_site_is_clean(fixture_site):
 
 def test_fixture_pages_and_order(fixture_site):
     _, pages, posts = fixture_site
-    assert [p.slug for p in posts] == ["layout-stress-test", "zkp-age-verification", "onion-link-rewrite"]
+    assert [p.slug for p in posts] == ["layout-stress-test", "zkp-age-verification", "age-verification-roundup", "onion-link-rewrite"]
     rels = {p.rel for p in pages["clearnet"]}
     assert {"", "2026/", "2026/09/", "2026/08/", "404.html", "2026/09/zkp-age-verification/"} <= rels
 
@@ -303,3 +303,37 @@ def test_contrast_check_passes_and_catches(tmp_path):
     bad = tmp_path / "bad.css"
     bad.write_text(css.read_text(encoding="utf-8").replace("--c-link: var(--brand-cyan-800);", "--c-link: var(--brand-cyan-500);"))
     assert any("--c-link" in p for p in build.check_contrast(bad))
+
+
+# ---------------------------------------------------------------- 多篇原文
+
+def source_post(tmp_path, sources_yaml: str):
+    text = GOOD.replace("sources:\n  - title: Source\n    url: https://example.org/\n", sources_yaml)
+    return build.load_post(write_post(tmp_path, text), AUTHORS)
+
+
+@pytest.mark.parametrize("sources_yaml, expected", [
+    ("sources:\n  - title: A\n    url: https://a.example/\n    publisher: EFF\n", "原文來自 EFF"),
+    ("sources:\n  - title: A\n    url: https://a.example/\n", ""),
+    ("sources:\n  - title: A\n    url: https://a.example/\n  - title: B\n    url: https://b.example/\n", "整理 2 篇原文"),
+    ("sources:\n  - title: A\n    url: https://a.example/\n    publisher: EFF\n"
+     "  - title: B\n    url: https://b.example/\n    publisher: EFF\n"
+     "  - title: C\n    url: https://c.example/\n    publisher: OONI\n", "整理 3 篇原文，來自 EFF、OONI"),
+    ("sources:\n" + "".join(f"  - title: {n}\n    url: https://{n}.example/\n    publisher: P{n}\n" for n in "abcd"),
+     "整理 4 篇原文，來自 Pa、Pb、Pc 等 4 個出處"),
+])
+def test_source_line(tmp_path, sources_yaml, expected):
+    assert build.source_line(source_post(tmp_path, sources_yaml)) == expected
+
+
+def test_multi_source_post_renders(fixture_site):
+    targets, _, posts = fixture_site
+    out = targets["clearnet"].out
+    page = (out / "2026" / "09" / "age-verification-roundup" / "index.html").read_text(encoding="utf-8")
+    assert "原文（5 篇）" in page
+    assert page.count('class="source-slip__item"') == 5
+    assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
+    import json
+    post = next(p for p in posts if p.slug == "age-verification-roundup")
+    data = json.loads(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
+    assert len(data["citation"]) == 5

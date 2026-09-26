@@ -374,6 +374,7 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
         "inLanguage": "zh-Hant-TW",
         "author": authors,
         "publisher": organization,
+        "citation": [{"@type": "CreativeWork", "name": s.title, "url": s.url} for s in post.sources],
     }
     if post.updated:
         data["dateModified"] = post.updated.isoformat()
@@ -474,6 +475,22 @@ def by_day(posts: list[Post]) -> list[dict]:
     return groups
 
 
+def source_line(post: Post) -> str:
+    """列表與頭條上的出處行。一篇原文寫出處，多篇原文寫篇數與出處，出處太多只列前三個。"""
+    publishers: list[str] = []
+    for source in post.sources:
+        if source.publisher and source.publisher not in publishers:
+            publishers.append(source.publisher)
+    count = len(post.sources)
+    if count == 1:
+        return f"原文來自 {publishers[0]}" if publishers else ""
+    if not publishers:
+        return f"整理 {count} 篇原文"
+    if len(publishers) <= 3:
+        return f"整理 {count} 篇原文，來自 {'、'.join(publishers)}"
+    return f"整理 {count} 篇原文，來自 {'、'.join(publishers[:3])} 等 {len(publishers)} 個出處"
+
+
 def make_env() -> Environment:
     env = Environment(
         loader=FileSystemLoader(ROOT / "templates"),
@@ -487,6 +504,7 @@ def make_env() -> Environment:
     env.filters["md"] = lambda d: f"{d.month} 月 {d.day} 日"
     env.filters["weekday"] = lambda d: "星期" + "一二三四五六日"[d.weekday()]
     env.filters["by_day"] = by_day
+    env.filters["source_line"] = source_line
     # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()

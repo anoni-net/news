@@ -620,11 +620,14 @@ p {
         max-width: 40rem;
     }
 
+    /* 原文多的時候區塊會比畫面高，停在頂端就看不到下半部，超過畫面高度改在區塊內捲動 */
     .source-slip {
         grid-area: slip;
         align-self: start;
         position: sticky;
         top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
     }
 
     .story + .pager {

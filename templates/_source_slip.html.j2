@@ -1,5 +1,5 @@
 <aside class="source-slip" aria-labelledby="source-slip-heading">
-  <h2 class="source-slip__heading" id="source-slip-heading">原文</h2>
+  <h2 class="source-slip__heading" id="source-slip-heading">原文{% if post.sources|length > 1 %}（{{ post.sources|length }} 篇）{% endif %}</h2>
 {% for source in post.sources %}
   <div class="source-slip__item">
     <p class="source-slip__title" lang="{{ 'zh-Hant' if source.title is cjk else 'en' }}"><a href="{{ source.url }}">{{ source.title }}</a></p>
