@@ -211,6 +211,7 @@ p {
 .masthead__subscribe a {
     display: inline-flex;
     align-items: center;
+    gap: 0.3em;
     min-height: var(--touch);
     padding: 0 0.25rem;
     color: var(--c-header-text);
@@ -584,19 +585,39 @@ p {
 /* ---------------------------------------------------------------- 圖示 */
 
 /* templates/icons/ 內嵌的 SVG，大小跟字級、顏色跟文字。
-   放在連結文字前面時右邊留一點空，放在後面（較舊的一篇）時左邊留 */
+   圖示跟文字之間的距離靠 HTML 裡的空格，閱讀器模式、複製文字或 CSS 沒載入時一樣分得開。
+   flex 版面會吞掉空白字元，那幾處（刊頭與頁尾的連結）另外用 gap 補回同樣的距離 */
 .icon {
     display: inline-block;
     flex: none;
     width: 1.1em;
     height: 1.1em;
     vertical-align: -0.2em;
-    margin-right: 0.25em;
+    position: relative;
 }
 
-.icon:last-child:not(:first-child) {
-    margin-right: 0;
-    margin-left: 0.25em;
+/* 外框對齊之後，中文與英文字母的筆畫重心仍比圖示低（放大四倍截圖量筆畫範圍的結果）。
+   行內文字裡偏高約 1.3px，頁尾的 flex 連結偏高約 0.5px，各自往下移補回。
+   刊頭與前後篇本來就在 ±0.5px 內，不動 */
+.subscribe .icon,
+.story__sources .icon {
+    top: 0.08em;
+}
+
+/* 行內文字裡的連結，圖示與文字之間的空格也會畫到底線，底線改畫在文字的 span 上 */
+.subscribe a,
+.story__sources a {
+    text-decoration: none;
+}
+
+.subscribe a > span,
+.story__sources a > span {
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+}
+
+.site-footer__links .icon {
+    top: 0.03em;
 }
 
 /* ---------------------------------------------------------------- 分頁與頁尾 */
@@ -670,6 +691,7 @@ p {
 .site-footer__links a {
     display: inline-flex;
     align-items: center;
+    gap: 0.3em;
     min-height: var(--touch);
     padding: 0 0.25rem;
 }
