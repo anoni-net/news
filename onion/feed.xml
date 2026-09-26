@@ -89,25 +89,38 @@
 <pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
 <description>Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。</description>
-<content:encoded>&lt;p&gt;整理 5 篇原文，來自 Signal Community、CyberInsider、It&amp;#39;s FOSS 等 4 個出處&lt;/p&gt;
+<content:encoded>&lt;p&gt;整理 7 篇原文，來自 Signal Support、Signal Community、CyberInsider 等 5 個出處&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Signal 在 Android 8.28 測試版加入不用電話號碼的註冊方式。目前只有 Android 測試版可以使用，iPhone 版還在開發，已經用電話號碼註冊的帳號也還不能移除號碼。&lt;/p&gt;
-&lt;p&gt;註冊時選擇不使用電話號碼，要透過 Play 商店的應用程式內購買付一次 3 美元的費用，各國價格可能不同。沒有安裝 Google Play 服務的裝置，暫時無法用這個方式註冊。&lt;/p&gt;
+&lt;p&gt;Signal 在 Android 8.28 測試版加入不用電話號碼的註冊方式，名為 Signal Login。9 月 23 日的 8.29 測試版公告寫明，這項功能會再留在測試版一週。iPhone 版還在開發，已經用電話號碼註冊的帳號也還不能移除號碼。&lt;/p&gt;
+&lt;p&gt;註冊時選擇不使用電話號碼，要透過 Google Play 付一次 2.99 美元的費用，各國價格可能不同。沒有安裝 Google Play 服務的裝置，暫時無法用這個方式註冊。&lt;/p&gt;
 &lt;p&gt;Signal 在社群論壇的公告寫明，付款使用跟捐款系統相同的零知識證明，付款紀錄與帳號之間沒有連結。收費的原因也寫在公告裡，免費的話，垃圾訊息業者可以大量申請帳號。&lt;/p&gt;
-&lt;p&gt;註冊完成後會取得一組 Account Id 與 Account Key，作用相當於帳號與密碼。帳號沒有 PIN，也沒有其他復原管道，其中任一項遺失，帳號就無法找回。&lt;/p&gt;
+&lt;p&gt;註冊完成後會取得一組 Account ID 與 Recovery Key，作用相當於帳號與密碼。帳號沒有 PIN，也沒有其他復原管道，其中任一項遺失，帳號就無法找回。&lt;/p&gt;
 &lt;p&gt;使用者名稱可以另外設定，沒有設定的話，別人無法搜尋到這個帳號，只能參與自己發起的對話。註冊後可以在設定裡加上兩步驗證，目前支援 TOTP 驗證器，passkey 與硬體金鑰會在之後加入。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;門號在許多地方都要實名登記，用門號註冊的通訊帳號等於間接連回真實身分。Signal 的端對端加密保護訊息內容，帳號本身過去卻一直綁著一支門號。改成付費加上零知識證明之後，帳號跟門號、付款都脫鉤，想把工作與私人身分分開的人，不必另外申辦門號。Signal 的 Android 版以 AGPL-3.0 授權公開原始碼，介面有正體中文。&lt;/p&gt;
 &lt;p&gt;沒有門號之後，別人只能透過使用者名稱找到這個帳號。Freedom of the Press Foundation 提醒，公開分享過的使用者名稱要一直保留，否則別人可以取得同一個名稱來冒充。用使用者名稱接受消息來源聯繫的人，被冒充的後果更嚴重。&lt;/p&gt;
-&lt;p&gt;另一篇討論 passkey 的觀點文章認為，一個帳號的安全程度取決於最弱的那一種復原方式。Signal 的免門號帳號沒有任何復原方式，攻擊者少了一個較弱的入口，遺失的風險則全部落在使用者身上。Account Id 與 Account Key 要存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。&lt;/p&gt;
+&lt;p&gt;另一篇討論 passkey 的觀點文章認為，一個帳號的安全程度取決於最弱的那一種復原方式。Signal 的免門號帳號沒有任何復原方式，攻擊者少了一個較弱的入口，遺失的風險則全部落在使用者身上。Account ID 與 Recovery Key 要存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android&#34;&gt;Phone Numberless Registration for Android&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457&#34;&gt;Beta feedback for the upcoming Android 8.28 release&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-29-release/76509&#34;&gt;Beta feedback for the upcoming Android 8.29 release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;

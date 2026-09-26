@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>anoni.net News</title>
+<link>https://anoni.net/news/en/</link>
+<atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
+<description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
+<language>en</language>
+<lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Data access settings for Siri AI in iOS 27</title>
+<link>https://anoni.net/news/en/2026/09/ios27-siri-ai-data-access/</link>
+<guid isPermaLink="false">anoni-news:en/2026/09/ios27-siri-ai-data-access</guid>
+<pubDate>Mon, 28 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The new Siri in iOS 27 can read Notes, Messages and Mail by default, and requests may be processed on Apple&#39;s servers. EFF has listed the settings that narrow what it can read.</description>
+<content:encoded>&lt;p&gt;Based on 4 sources from EFF, Apple&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;iOS 27 brings a new Siri, Siri AI, merged with Spotlight into one interface, so swiping down on the Home Screen to search also opens Siri. It runs on the iPhone 15 Pro, 15 Pro Max and iPhone 16 or later. Siri AI is in beta, supports only English, and is not yet available in every region.&lt;/p&gt;
+&lt;p&gt;By default Siri AI can read Apple&#39;s own apps such as Notes, Messages and Mail, and third-party apps once their developers add support. A request may be handled on the phone or sent to Apple&#39;s Private Cloud Compute servers, and nothing on screen says which. EFF warns people using Advanced Data Protection, whose iCloud data is end-to-end encrypted, that cloud processing changes their risk assessment.&lt;/p&gt;
+&lt;p&gt;On-screen awareness lets you ask Siri about whatever is on screen. EFF&#39;s example is summarising an encrypted Signal group chat, whose content may then go to Private Cloud Compute. Neither users nor app developers can currently block it.&lt;/p&gt;
+&lt;p&gt;EFF&#39;s settings: to keep Siri AI out of an app, turn off Show Content in Search for that app in Settings. To return to the old Siri, set Allowed Siri Version to Siri Classic under Screen Time, Content &amp;amp; Privacy Restrictions. Siri AI does not train on your interactions by default, and consent given during setup can be withdrawn by turning off Improve Siri &amp;amp; Dictation under Privacy &amp;amp; Security, Analytics &amp;amp; Improvements. Apple&#39;s help page covers the Mac, where macOS 27 offers Siri Classic after Siri is turned off and each summary feature has its own switch.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;EFF notes that the &#34;Private&#34; in Private Cloud Compute means the system is designed so that Apple cannot see or keep the data. It does not promise that the data stays encrypted or stays on the device. Using it means trusting that Apple&#39;s servers behave as designed, whereas end-to-end encryption only needs the keys to stay on your own devices.&lt;/p&gt;
+&lt;p&gt;Where you are in Asia decides whether any of this applies yet. Apple&#39;s support page says Siri AI does not currently work when the Apple Account region is mainland China, and Apple Intelligence features do not work on supported devices bought in mainland China. Apple Intelligence itself supports Chinese (simplified and traditional), Japanese, Korean and Vietnamese, but Siri AI needs both the device language and the Siri language set to a supported language, which today means English. For the iPhone, Apple&#39;s page names only two exclusions, the EU and Apple Accounts in mainland China, and adds that availability varies by region. Elsewhere in Asia, the practical requirement is running the iPhone and Siri in English. The per-app search settings exist on every iPhone and can be changed now, without waiting for Siri AI to support your language.&lt;/p&gt;
+&lt;p&gt;Because you cannot tell which requests left the phone, the only lever is limiting which apps Siri AI can read. People using Advanced Data Protection can start with apps that hold work material or personal records, such as Notes and Mail.&lt;/p&gt;
+&lt;p&gt;On-screen awareness cannot be blocked, so whether an encrypted conversation stays on devices depends on everyone in it. If any member of a group calls up Siri over the chat, the content may leave from that person&#39;s phone, and end-to-end encryption does not cover that step. People who discuss sensitive matters in group chats can agree with the other members not to use on-screen awareness on the conversation, and can consider switching back to Siri Classic themselves.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (4)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27&#34;&gt;How to Limit What Apple&amp;#39;s New Siri AI Can Access in iOS 27&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac&#34;&gt;Turn off and restrict access to Apple Intelligence features on Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/121115&#34;&gt;How to get the next generation of Apple Intelligence&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>The cross-site identifier behind ChatGPT&#39;s ad pixel</title>
+<link>https://anoni.net/news/en/2026/09/chatgpt-ad-pixel-identifier/</link>
+<guid isPermaLink="false">anoni-news:en/2026/09/chatgpt-ad-pixel-identifier</guid>
+<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>A traffic analysis found that ChatGPT&#39;s ad system sets a cookie linked to the user&#39;s account, which advertisers&#39; sites then send back to OpenAI through its pixel along with browsing data.</description>
+<content:encoded>&lt;p&gt;Based on 3 sources from Buchodi&amp;#39;s Threat Intel, OpenAI&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;A security researcher found that while you use ChatGPT, OpenAI&#39;s ad collector &lt;code&gt;bzr.openai.com&lt;/code&gt; sets a cookie called &lt;code&gt;__obi&lt;/code&gt; that is linked to your account, lasts a year and can be sent along with requests on other sites. So far it has only been observed in Chrome on Android. Browsers on iOS block it. On 23 September OpenAI began rolling out ChatGPT ads in seven more Asian markets, shown only on the Free and Go plans.&lt;/p&gt;
+&lt;p&gt;Advertisers install OpenAI&#39;s pixel on their own sites. When you visit one, the pixel returns &lt;code&gt;__obi&lt;/code&gt; to OpenAI with the URL path, form fields and text on the page. Email addresses, phone numbers and names are hashed with SHA-256, while country, region, city and postcode are sent in the clear. Query strings were stripped, but a path alone can reveal something like a medical condition.&lt;/p&gt;
+&lt;p&gt;The cookie is set even when you are logged out. Every sync token examined was filed under the consent category &#34;analytics&#34;, so allowing analytics while refusing marketing still delivers &lt;code&gt;__obi&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The researcher reproduced this on their own phone, captured traffic in two ways and analysed 936 advertiser pixels on more than a thousand domains. The write-up states its limits: sync tokens appeared in about one in five sessions, desktop Chrome was not tested, and the server-side mapping back to accounts is inferred from the design rather than observed. OpenAI&#39;s support team received the researcher&#39;s questions on 14 September without answering them.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Pixels on advertisers&#39; sites that report visits back to an ad platform are not new, and the researcher compares this one to the Meta and Google tracking code retailers have installed for years. What differs is the account on the other end. A ChatGPT account also holds conversations with an AI, where many people discuss health, work and personal problems, and those conversations could end up linked to browsing on unrelated sites.&lt;/p&gt;
+&lt;p&gt;The timing matters for readers in Asia. OpenAI&#39;s announcement names Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan, after earlier Asia-Pacific launches in Australia, New Zealand, Japan, South Korea and India, and puts the total at more than 60 countries. OpenAI&#39;s list of supported countries leaves out mainland China, Hong Kong and Macau, so people there are outside ChatGPT&#39;s official service altogether. Elsewhere in the region, people on the Free and Go plans now see ads, while Plus, Pro and Enterprise stay ad-free.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; travels as a third-party cookie. Safari blocks cross-site tracking by default, and every browser on iOS is built on Safari&#39;s WebKit engine, which is why the researcher saw nothing on iOS. On Android and desktop you can block third-party cookies in the browser settings. Firefox isolates third-party cookies per site by default, and Brave blocks them. If you use ChatGPT while logged in through Chrome on Android, you can also move ChatGPT to a separate browser from the one you use for everything else.&lt;/p&gt;
+&lt;p&gt;Consent banners let each company define its own categories. Here, &#34;analytics&#34; also covered syncing an advertising identifier, so refusing only &#34;marketing&#34; does not keep you out of ad tracking. Blocking third-party cookies remains the more reliable option.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (3)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/&#34;&gt;ChatGPT now knows what you do on other websites via ad collector&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Buchodi&amp;#39;s Threat Intel&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-20&#34;&gt;20 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/&#34;&gt;ChatGPT Ads expands to Southeast Asia and Taiwan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Phone-number-free registration in the Signal Android beta</title>
+<link>https://anoni.net/news/en/2026/09/signal-numberless-registration/</link>
+<guid isPermaLink="false">anoni-news:en/2026/09/signal-numberless-registration</guid>
+<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Signal&#39;s Android beta lets people register without a phone number for a one-time fee. The account is tied to neither a SIM card nor the payment, and nothing can recover it if the keys are lost.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including Signal Support, Signal Community, CyberInsider&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Signal&#39;s Android 8.28 beta adds a way to register without a phone number, called Signal Login. The 8.29 beta announcement on 23 September says the feature will stay in beta for another week. The iPhone version is still in development, and accounts already registered with a number cannot remove it yet.&lt;/p&gt;
+&lt;p&gt;Registering this way takes a one-time payment of US$2.99 through Google Play, and prices can differ by country. Devices without Google Play services cannot use it yet. Signal&#39;s announcement on its community forum says the payment uses the same zero-knowledge proofs as its donation system, so there is no link between the payment and the account. The fee is there because free accounts would be registered in bulk by spammers.&lt;/p&gt;
+&lt;p&gt;Registration gives you an Account ID and a Recovery Key, which work like a username and password. There is no PIN and no other recovery mechanism, so losing either one loses the account. A username is optional. Without one, nobody can find the account, and it can only join chats it starts. TOTP two-factor authentication can be added after registration, and Signal plans to add passkeys and hardware keys later.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Signal&#39;s end-to-end encryption has always protected message content, but every account started from a phone number. In much of Asia a phone number is itself an identity record. Mainland China has required real-name registration for every phone line since 2013, when the Ministry of Industry and Information Technology obliged carriers to check a valid ID before connecting a user. Hong Kong extended registration to every SIM card, prepaid ones included, and unregistered prepaid cards stopped working after 23 February 2023. In Taiwan, carriers must record a name, an address and the numbers of two identity documents before activating any mobile number, prepaid or not. In all three places, a Signal account registered with a number leads back, through the carrier, to a named person.&lt;/p&gt;
+&lt;p&gt;The paid route breaks that chain in two places. The account is not tied to a SIM card, and the zero-knowledge payment is not tied to the account. People who want to keep a work identity apart from a personal one no longer need a second SIM card registered in their own name. Signal&#39;s Android app is open source under AGPL-3.0, and its interface is available in both Traditional and Simplified Chinese.&lt;/p&gt;
+&lt;p&gt;Reaching Signal at all is a separate question in mainland China. OONI measurements from April to September 2021 show Signal blocked there, so people inside need a circumvention tool first. The Google Play requirement also limits who can pay for now, so the option currently suits people outside the mainland whose phones run Google Play services.&lt;/p&gt;
+&lt;p&gt;Without a number, a username becomes the only way to be found. The Freedom of the Press Foundation warns that a username you have shared publicly should be kept, because once it is released someone else can claim it and impersonate you. That risk is highest for people who publish a username so that sources can contact them.&lt;/p&gt;
+&lt;p&gt;A separate essay on passkeys argues that an account is only as secure as its weakest recovery method. Signal&#39;s numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss. Store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android&#34;&gt;Phone Numberless Registration for Android&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457&#34;&gt;Beta feedback for the upcoming Android 8.28 release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-29-release/76509&#34;&gt;Beta feedback for the upcoming Android 8.29 release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/&#34;&gt;Signal tests account registration without phone number on Android&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/signal-numberless-registration/&#34;&gt;Signal Will Let You Sign Up Without a Phone Number — For $3&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/signal-introduces-registration-without-a-phone-number/&#34;&gt;Signal introduces registration without a phone number&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hawksley.dev/blog/i-dont-like-passkeys&#34;&gt;I don&amp;#39;t like passkeys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/gongbao/content/2013/content_2473882.htm&#34;&gt;电话用户真实身份信息登记规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Industry and Information Technology, China&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2013-07-16&#34;&gt;16 July 2013&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cedb.gov.hk/en/news/press_release/2023/pr19012023a.html&#34;&gt;OFCA steps up publicity and assistance for forthcoming full implementation of real-name registration programme for SIM cards (with photos)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Commerce and Economic Development Bureau, Hong Kong&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-01-19&#34;&gt;19 January 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060091&#34;&gt;行動寬頻業務管理規則&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2021-how-signal-private-messenger-blocked-around-the-world/&#34;&gt;How countries attempt to block Signal Private Messenger App around the world&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-10-21&#34;&gt;21 October 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+</channel>
+</rss>
