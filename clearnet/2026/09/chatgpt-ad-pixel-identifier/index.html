@@ -53,6 +53,54 @@
   ]
 }
 </script>
+<script data-anoni="before-send">
+(function () {
+  // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
+  var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+
+  function scrubUrl(url) {
+    if (typeof url !== "string" || !url) return url;
+    var hash = url.indexOf("#");
+    if (hash >= 0) url = url.slice(0, hash);
+    var q = url.indexOf("?");
+    if (q < 0) return url;
+    var kept = [];
+    var parts = url.slice(q + 1).split("&");
+    for (var i = 0; i < parts.length; i++) {
+      if (UTM.indexOf(parts[i].split("=")[0]) >= 0 && parts[i].length <= 64) kept.push(parts[i]);
+    }
+    return kept.length ? url.slice(0, q) + "?" + kept.join("&") : url.slice(0, q);
+  }
+
+  // 螢幕尺寸捨去到百位，判斷裝置類別夠用，又不留精確的指紋
+  function coarseScreen(screen) {
+    if (typeof screen !== "string") return screen;
+    var m = screen.match(/^(\d+)x(\d+)$/);
+    if (!m) return screen;
+    var floor100 = function (n) { return Math.max(100, Math.floor(n / 100) * 100); };
+    return floor100(+m[1]) + "x" + floor100(+m[2]);
+  }
+
+  window.anoniBeforeSend = function (type, payload) {
+    // data-do-not-track 只看舊的 doNotTrack，Global Privacy Control 在這裡一併尊重
+    if (window.navigator && window.navigator.globalPrivacyControl === true) return null;
+    if (type !== "event" || !payload || typeof payload !== "object") return null;
+    // 帶 name 的是自訂事件，這個站不送
+    if (payload.name) return null;
+    var out = {};
+    for (var key in payload) {
+      if (Object.prototype.hasOwnProperty.call(payload, key)) out[key] = payload[key];
+    }
+    out.url = scrubUrl(out.url);
+    out.referrer = scrubUrl(out.referrer);
+    out.screen = coarseScreen(out.screen);
+    delete out.data;
+    delete out.name;
+    return out;
+  };
+})();
+</script>
+<script defer src="https://aa.anoni.net/script.js" data-website-id="3790f14b-870c-4c29-83eb-dbb2977c65a9" data-domains="anoni.net" data-before-send="anoniBeforeSend" data-do-not-track="true"></script>
 </head>
 <body>
 <header class="site-header">
@@ -109,6 +157,7 @@
       <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/chatgpt-ad-pixel-identifier/">onion 版本</a>
     </nav>
     <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+    <p>本站以自架的 Umami 計算閱讀量，不使用 cookie，瀏覽器開啟「請勿追蹤」或 GPC 時不送出。onion 版本不載入。</p>
   </div>
 </footer>
 </body>
