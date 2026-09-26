@@ -3,6 +3,11 @@
 # 每一行是 https://anoni.net/news 底下的一個路徑，縮排的 # 開頭是上一行那一頁的錨點。
 # 移除任何一行都是對讀者的破壞性變更，新增則隨時可以。判準見 SPEC.md「網址合約」。
 /
+/2026/
+/2026/09/
+/2026/09/signal-numberless-registration/
+	#sources
+	#technical-view
 /404.html
 /feed.xml
 /sitemap.xml
