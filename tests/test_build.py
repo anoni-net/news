@@ -647,8 +647,8 @@ def test_extra_sources_are_allowed(tmp_path):
 
 def test_strings_must_have_same_keys(tmp_path):
     bad = tmp_path / "strings.toml"
-    bad.write_text(build.STRINGS_PATH.read_text(encoding="utf-8").replace('lang_nav_label = "Language"\n', ""))
-    with pytest.raises(build.BuildError, match=r"\[en\] 缺少 lang_nav_label"):
+    bad.write_text(build.STRINGS_PATH.read_text(encoding="utf-8").replace('other_langs = "Also in "\n', ""))
+    with pytest.raises(build.BuildError, match=r"\[en\] 缺少 other_langs"):
         build.load_strings(bad)
 
 
@@ -669,11 +669,17 @@ def test_alternates_and_language_switch(fixture_site):
     page = (targets["clearnet"].out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
     for hreflang, url in (("zh-Hant", "2026"), ("zh-Hans", "zh-cn/2026"), ("en", "en/2026"), ("x-default", "2026")):
         assert f'<link rel="alternate" hreflang="{hreflang}" href="https://anoni.net/news/{url}/09/zkp-age-verification/">' in page
-    nav = page[page.index('class="site-header__langs"'):]
-    nav = nav[:nav.index("</nav>")]
-    assert '<a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>' in nav
-    assert '<a href="/news/zh-cn/2026/09/zkp-age-verification/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>' in nav
-    assert '<span lang="en" aria-current="true">English</span>' in nav
+    # 頁首不放語系切換，文章頁在署名下方、每頁在頁尾列出另外兩個語系，不列目前的語系
+    assert "site-header__langs" not in page
+    for cls in ("story__langs", "site-footer__langs"):
+        line = page[page.index(f'<p class="{cls}">'):]
+        line = line[:line.index("</p>")]
+        assert 'Also in <a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>, ' \
+            '<a href="/news/zh-cn/2026/09/zkp-age-verification/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>' in line
+        assert "English" not in line
+    assert page.index('class="story__byline"') < page.index('class="story__langs"') < page.index('class="story__body')
+    zh = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert '其他語言：<a href="/news/zh-cn/2026/09/zkp-age-verification/"' in zh and ">繁體中文</a>" not in zh
     onion = (targets["onion"].out / "en/2026/09/index.html").read_text(encoding="utf-8")
     assert '<a href="/zh-cn/2026/09/" hreflang="zh-Hans"' in onion
     assert 'hreflang="en" href="http://news.' in onion
@@ -687,8 +693,8 @@ def test_interface_text_follows_language(fixture_site):
     assert "Based on 5 sources from EFF, Access Now, OONI" in en
     assert "Sources (5)" in en and "Older story" in en and "All stories" in en
     assert "/news/og-en.png" in en and '"inLanguage": "en"' in en
-    # 文章內容與語系切換裡的語言名稱之外，英文頁不能留中文
-    chrome = re.sub(r'<(article|script)\b.*?</\1>|<nav class="site-header__langs".*?</nav>', "", en, flags=re.S)
+    # 文章內容與頁尾列出的語言名稱之外，英文頁不能留中文
+    chrome = re.sub(r'<(article|script)\b.*?</\1>|<p class="site-footer__langs">.*?</p>', "", en, flags=re.S)
     assert not re.search(r"[\u4e00-\u9fff]", chrome), "英文頁的介面文字還有中文"
     cn = (out / "zh-cn/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
     assert "整理 5 篇原文，来自 EFF、Access Now、OONI" in cn and "较旧的一篇" in cn

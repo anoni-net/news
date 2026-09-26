@@ -27,6 +27,7 @@
       <span>{{ s.corrected }} <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
 {% endif %}
     </p>
+{% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
   </header>
   <div class="story__body content">
 {{ content|safe }}

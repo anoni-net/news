@@ -45,17 +45,6 @@
   <div class="site-header__inner">
     <a class="site-header__brand" href="{{ config.homepage }}"><img src="{{ url('logo-wordmark-white.svg') }}" alt="anoni.net" width="116" height="28"></a>
     <a class="site-header__product" href="{{ url(home) }}">{{ s.product }}</a>
-{% if alternates %}
-    <nav class="site-header__langs" aria-label="{{ s.lang_nav_label }}">
-{% for alt in alternates %}
-{% if alt.current %}
-      <span lang="{{ alt.html }}" aria-current="true">{{ alt.name }}</span>
-{% else %}
-      <a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}">{{ alt.name }}</a>
-{% endif %}
-{% endfor %}
-    </nav>
-{% endif %}
   </div>
 {% block masthead %}{% endblock %}
 </header>
@@ -72,6 +61,7 @@
       <a href="{{ onion_url }}">{{ icon('torproject') }} {{ s.onion }}</a>
 {% endif %}
     </nav>
+{% with langs_class = "site-footer__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
     <p>{{ s.license_before }}<a href="{{ s.license_url }}">CC-BY 4.0</a>{{ s.license_after }}</p>
 {% if target.analytics %}
     <p>{{ s.analytics }}</p>
