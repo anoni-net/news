@@ -21,7 +21,7 @@
     <p class="story__dek">{{ post.description }}</p>
     <p class="story__byline">
 {% set line = post|source_line %}
-      <span class="story__sources"><a href="#sources">{{ line if line else "原文" }}</a></span>
+      <span class="story__sources"><a href="#sources">{{ icon('file-document-multiple-outline') }}{{ line if line else "原文" }}</a></span>
       <span>導讀：{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}、{% endif %}{% endfor %}</span>
 {% if post.updated %}
       <span>更正於 <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
@@ -35,14 +35,14 @@
 {% include "_source_slip.html.j2" %}
 </article>
 {# 從社群平台點進來的讀者看不到首頁的刊頭，讀完一篇時在這裡給訂閱的入口 #}
-<p class="subscribe">想收到新的導讀：<a href="{{ url('feed.xml') }}">RSS</a>、<a href="{{ config.newsletter }}">訂閱電子報</a></p>
+<p class="subscribe">想收到新的導讀：<a href="{{ url('feed.xml') }}">{{ icon('rss') }}RSS</a>、<a href="{{ config.newsletter }}">{{ icon('email-outline') }}訂閱電子報</a></p>
 {# 讀完一篇接著讀相鄰的文章。用「較新、較舊」跟列表頁的翻頁說法一致，帶標題讓讀者知道點下去是什麼 #}
 <nav class="pager pager--story" aria-label="文章導覽">
 {% if newer %}
-  <a class="pager__item pager__item--newer" href="{{ url(newer.rel) }}"><span class="pager__label">較新的一篇</span><span class="pager__title">{{ newer.title }}</span></a>
+  <a class="pager__item pager__item--newer" href="{{ url(newer.rel) }}"><span class="pager__label">{{ icon('arrow-left') }}較新的一篇</span><span class="pager__title">{{ newer.title }}</span></a>
 {% endif %}
 {% if older %}
-  <a class="pager__item pager__item--older" href="{{ url(older.rel) }}"><span class="pager__label">較舊的一篇</span><span class="pager__title">{{ older.title }}</span></a>
+  <a class="pager__item pager__item--older" href="{{ url(older.rel) }}"><span class="pager__label">較舊的一篇{{ icon('arrow-right') }}</span><span class="pager__title">{{ older.title }}</span></a>
 {% endif %}
   <a class="pager__all" href="{{ url() }}">所有文章</a>
 </nav>

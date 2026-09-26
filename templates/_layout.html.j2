@@ -48,11 +48,11 @@
 <footer class="site-footer">
   <div class="wrap">
     <nav class="site-footer__links" aria-label="頁尾">
-      <a href="{{ url('feed.xml') }}">RSS</a>
-      <a href="{{ config.newsletter }}">訂閱電子報</a>
-      <a href="{{ config.homepage }}">anoni.net 首頁</a>
+      <a href="{{ url('feed.xml') }}">{{ icon('rss') }}RSS</a>
+      <a href="{{ config.newsletter }}">{{ icon('email-outline') }}訂閱電子報</a>
+      <a href="{{ config.homepage }}">{{ icon('home-outline') }}anoni.net 首頁</a>
 {% if onion_url %}
-      <a href="{{ onion_url }}">onion 版本</a>
+      <a href="{{ onion_url }}">{{ icon('torproject') }}onion 版本</a>
 {% endif %}
     </nav>
     <p>文章以 <a href="{{ config.license }}">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>

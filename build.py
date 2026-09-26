@@ -28,6 +28,7 @@ import markdown
 import yaml
 from PIL import Image
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
+from markupsafe import Markup
 
 ROOT = Path(__file__).resolve().parent
 TZ = timezone(timedelta(hours=8))
@@ -663,6 +664,20 @@ def source_line(post: Post) -> str:
     return f"整理 {count} 篇原文，來自 {'、'.join(publishers[:3])} 等 {len(publishers)} 個出處"
 
 
+ICON_DIR = ROOT / "templates" / "icons"
+SVG_VIEWBOX_RE = re.compile(r'viewBox="([^"]+)"')
+SVG_BODY_RE = re.compile(r"<svg\b[^>]*>(.*)</svg>", re.S)
+
+
+def icon(name: str) -> Markup:
+    """內嵌 templates/icons/ 裡的 SVG。大小跟字級、顏色跟文字，讀屏軟體略過，旁邊的文字才是名稱。"""
+    raw = (ICON_DIR / f"{name}.svg").read_text(encoding="utf-8")
+    view_box = SVG_VIEWBOX_RE.search(raw).group(1)
+    body = re.sub(r"<title>.*?</title>", "", SVG_BODY_RE.search(raw).group(1), flags=re.S).strip()
+    return Markup(f'<svg class="icon" viewBox="{view_box}" width="1em" height="1em" fill="currentColor" '
+                  f'aria-hidden="true" focusable="false">{body}</svg>')
+
+
 def make_env() -> Environment:
     env = Environment(
         loader=FileSystemLoader(ROOT / "templates"),
@@ -680,6 +695,7 @@ def make_env() -> Environment:
     # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
+    env.globals["icon"] = icon
     return env
 
 
