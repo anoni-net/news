@@ -1,7 +1,7 @@
 # 介面文字，三個語系的鍵必須一致，少一個就建置失敗。規則見 SPEC.md「多語系」。
 # 大括號是 str.format 的欄位，由 build.py 填入。連結前後的文字拆成 _before 與 _after，
 # 模板把連結夾在中間，不在這裡寫 HTML。newsletter 用在頁首與頁尾的連結，newsletter_inline 用在
-# 文章末尾那一句話裡，英文的大小寫不同。
+# 文章末尾那一句話裡，英文的大小寫不同。newsletter_url 是訂閱表單，中文與英文各有一份。
 
 ["zh-TW"]
 # 社群的用字是「正體中文」，不寫「繁體中文」，見文件站「為什麼我們用「正體中文」而非「繁體中文」」
@@ -33,6 +33,7 @@ subscribe = "想收到新的導讀："
 subscribe_sep = "、"
 rss = "RSS"
 newsletter = "訂閱電子報"
+newsletter_url = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 newsletter_inline = "訂閱電子報"
 byline = "導讀："
 list_sep = "、"
@@ -91,6 +92,7 @@ subscribe = "想收到新的导读："
 subscribe_sep = "、"
 rss = "RSS"
 newsletter = "订阅电子报"
+newsletter_url = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 newsletter_inline = "订阅电子报"
 byline = "导读："
 list_sep = "、"
@@ -148,8 +150,9 @@ all_stories = "All stories"
 subscribe = "Get new stories by "
 subscribe_sep = " or "
 rss = "RSS"
-newsletter = "Newsletter (in Chinese)"
-newsletter_inline = "newsletter (in Chinese)"
+newsletter = "Newsletter"
+newsletter_url = "https://form.anoni.net/s/w21855zpca072rvgp0s2govj"
+newsletter_inline = "newsletter"
 byline = "By "
 list_sep = ", "
 corrected = "Corrected on"

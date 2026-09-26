@@ -784,3 +784,18 @@ def test_static_files_carry_content_version(fixture_site):
             assert f'"{prefix}{rel}?v={digest}"' in page, rel
         og = hashlib.sha256((out / "og-en.png").read_bytes()).hexdigest()[:10]
         assert f'og-en.png?v={og}"' in page
+
+
+def test_newsletter_form_follows_language(fixture_site):
+    """訂閱表單中文與英文各一份，onion 版本改寫成 form.<onion>。"""
+    targets, _, _ = fixture_site
+    zh_form = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
+    en_form = "https://form.anoni.net/s/w21855zpca072rvgp0s2govj"
+    out = targets["clearnet"].out
+    for rel, form, other in (("", zh_form, en_form), ("zh-cn/", zh_form, en_form), ("en/", en_form, zh_form)):
+        page = (out / rel / "index.html").read_text(encoding="utf-8")
+        assert page.count(f'href="{form}"') == 2 and other not in page  # 刊頭與頁尾
+    post = (out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert post.count(f'href="{en_form}"') == 2 and "in Chinese" not in post  # 文末與頁尾
+    onion = (targets["onion"].out / "en" / "index.html").read_text(encoding="utf-8")
+    assert "http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/w21855zpca072rvgp0s2govj" in onion

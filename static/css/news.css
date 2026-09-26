@@ -801,7 +801,7 @@ p {
    連結左右各有 0.25rem 的留白，整列往左移同樣的距離，跟下面的文字對齊 */
 .site-footer__links {
     display: grid;
-    /* 右欄可以縮，英文的「Newsletter (in Chinese)」在 320px 放不下一行時在格子裡換行 */
+    /* 右欄可以縮，比較長的連結文字在 320px 放不下一行時在格子裡換行 */
     grid-template-columns: max-content minmax(0, max-content);
     gap: 0 1rem;
     margin: 0 0 0.25rem -0.25rem;
