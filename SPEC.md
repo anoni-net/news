@@ -240,6 +240,19 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 - 文章頁在標題下方顯示發布日期（有更正時加註更正日期）與來源清單，文末是延伸閱讀
 - 列表頁與封存頁列出每篇的標題、日期與 `description`
 
+### 小螢幕
+
+樣式從手機寬度開始寫，桌機再放寬。讀者多半從社群平台的連結點進來，第一個畫面通常就是手機。
+
+- 每頁帶 `<meta name="viewport" content="width=device-width, initial-scale=1">`
+- 320px 寬的螢幕也不能出現橫向捲軸，整頁的 `scrollWidth` 不得超過視窗寬度
+- 內文欄寬在桌機上限約 40 個中文字（`max-width: 40em`），手機上就是螢幕寬度扣掉左右留白
+- 內文字級至少 16px，行高 1.7 以上，中文字多，行距太密會難讀
+- 原文標題與網址常是一長串英文，來源清單與內文連結加 `overflow-wrap: anywhere`，讓它們在任何位置斷行
+- 表格與程式碼區塊在自己的範圍內橫向捲動（`overflow-x: auto`），不把整頁撐寬
+- 可以點的東西觸控範圍至少 2.75rem 見方，相鄰的連結之間要有間距，避免手指點到隔壁
+- 頁首在窄螢幕上不固定在畫面頂端，把高度留給內文。連結太多時換行，不收進需要 JavaScript 才打得開的選單
+
 ## 搜尋引擎與社群分享
 
 ### 標題與描述
@@ -296,6 +309,9 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
 7. 每頁都有 `<title>`、`description` 與 Open Graph 欄位，封存頁、第二頁起的列表頁與 404 頁帶 `noindex`
+8. 版面：用 headless Chrome 以 320、390、1280 三種寬度開啟列表頁、一篇文章與 404 頁，每頁的 `scrollWidth` 不得超過視窗寬度，並存下截圖
+
+測試用的文章放在 `tests/fixtures/`，刻意放進最長的英文標題、長網址、表格與程式碼區塊，版面出問題時在這裡先發生。第 8 項需要 Chrome，GitHub Actions 的 runner 上有，本機沒有 Chrome 時略過並提示。截圖只證明頁面撐得住，排版好不好看，送出 PR 前還是要有人實際看過截圖。
 
 GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `posts/*.md` 與 `README.md`。
 
