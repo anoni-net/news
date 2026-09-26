@@ -756,3 +756,17 @@ def test_traditional_chinese_is_called_zheng_ti(fixture_site):
     targets, _, _ = fixture_site
     for page in targets["clearnet"].out.rglob("*.html"):
         assert "繁體中文" not in page.read_text(encoding="utf-8"), page
+
+
+def test_header_links_to_news_home(fixture_site):
+    """左上角的標誌與「新聞導讀」回到該語系的 news 首頁，官網首頁的入口在頁尾。"""
+    targets, _, _ = fixture_site
+    for rel, home in (("2026/09/zkp-age-verification/", "/news/"), ("en/2026/", "/news/en/"),
+                      ("zh-cn/2026/09/zkp-age-verification/", "/news/zh-cn/")):
+        page = (targets["clearnet"].out / rel / "index.html").read_text(encoding="utf-8")
+        header = page[page.index('<header class="site-header">'):page.index("</header>")]
+        assert re.findall(r'href="([^"]+)"', header) == [home], header
+        footer = page[page.index('<footer'):]
+        assert 'href="https://anoni.net/"' in footer
+    onion = (targets["onion"].out / "en" / "index.html").read_text(encoding="utf-8")
+    assert '<a class="site-header__home" href="/en/">' in onion
