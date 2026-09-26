@@ -1,0 +1,737 @@
+/* anoni.net 新聞導讀。規則見 SPEC.md「頁面」一節。
+   樣式從手機寬度開始寫，桌機再放寬。不載入任何站外資源，字型只用系統字型。
+   --c-* 是實際使用的顏色，build.py --check 會檢查這幾組文字與背景的對比度。
+
+   版面的兩個主軸：
+   - 列表是依發布日分組的時間軸，日期在捲動時停在頂端（position: sticky，不需要 JS）
+   - 文章頁把原文與導讀分成兩條，桌機時原文條在右欄，手機時在內文上方
+   標題用明體、字色用品牌墨色 cyan-900，跟文件站的黑體黑字分開。 */
+
+:root {
+    /* 品牌色票，照抄文件站 docs/zh-TW/stylesheets/extra.css，不自己調 */
+    --brand-cyan-50:  #e0f4ff;
+    --brand-cyan-100: #b3e3ff;
+    --brand-cyan-200: #80d1ff;
+    --brand-cyan-300: #4dbfff;
+    --brand-cyan-400: #26b3ff;
+    --brand-cyan-500: #00aeff;
+    --brand-cyan-600: #009ee6;
+    --brand-cyan-700: #0089bf;
+    --brand-cyan-800: #006d99;
+    --brand-cyan-900: #003e57;
+
+    --c-bg: #ffffff;
+    --c-surface: #eef6f9;
+    --c-border: #cfe0e7;
+    --c-text: #1d2b31;
+    --c-muted: #52646b;
+    --c-headline: var(--brand-cyan-900);
+    --c-link: var(--brand-cyan-800);
+    --c-rule: var(--brand-cyan-500);
+    --c-header-bg: var(--brand-cyan-900);
+    --c-header-text: #ffffff;
+    --c-header-link: var(--brand-cyan-50);
+
+    --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    --font-serif: "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+
+    --touch: 2.75rem;
+    /* 內文欄。扣掉左右留白約 40rem，桌機 18px 的字級下一行大約 36 個中文字 */
+    --measure: 42rem;
+    /* 列表的時間軸與文章頁的原文條需要更寬的外框 */
+    --frame: 64rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c-bg: #0c1b22;
+        --c-surface: #132a34;
+        --c-border: #24414d;
+        --c-text: #e8f9ff;
+        --c-muted: #a3bcc6;
+        --c-headline: var(--brand-cyan-100);
+        --c-link: var(--brand-cyan-300);
+        --c-rule: var(--brand-cyan-600);
+        --c-header-bg: var(--brand-cyan-900);
+        --c-header-text: #ffffff;
+        --c-header-link: var(--brand-cyan-50);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    font-variant-numeric: tabular-nums;
+}
+
+a {
+    color: var(--c-link);
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+p {
+    margin: 0 0 1.1em;
+}
+
+.wrap,
+.story-wrap,
+.list-wrap {
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+.wrap,
+.story-wrap {
+    max-width: var(--measure);
+}
+
+.list-wrap {
+    max-width: var(--frame);
+}
+
+/* ---------------------------------------------------------------- 頁首與刊頭 */
+
+.site-header {
+    background: var(--c-header-bg);
+    color: var(--c-header-text);
+}
+
+.site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 1rem;
+    max-width: var(--frame);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-header a {
+    color: var(--c-header-text);
+    text-decoration: none;
+}
+
+.site-header__inner a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+}
+
+.site-header__brand img {
+    display: block;
+    height: 1.625rem;
+    width: auto;
+}
+
+.site-header__product {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: 0.08em;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.site-header a:hover,
+.site-header a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+/* 首頁的刊頭，跟頁首接在同一塊墨色底上 */
+.masthead {
+    max-width: var(--frame);
+    margin: 0 auto;
+    padding: 1.75rem 1rem 1.5rem;
+}
+
+.masthead__title {
+    font-family: var(--font-serif);
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.75rem;
+}
+
+.masthead__tagline {
+    color: var(--c-header-link);
+    max-width: 32em;
+    margin: 0 0 1rem;
+}
+
+.masthead__tagline a {
+    color: var(--c-header-text);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+}
+
+/* 刊頭最底下一列：左邊是最後更新，右邊是訂閱。窄螢幕放不下時訂閱換到下一行 */
+.masthead__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.25rem 1.5rem;
+}
+
+.masthead__subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+}
+
+.masthead__subscribe a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+    padding: 0 0.25rem;
+    color: var(--c-header-text);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+.masthead__updated {
+    display: inline-block;
+    margin: 0;
+    padding-top: 0.6rem;
+    border-top: 3px solid var(--c-rule);
+    color: var(--c-header-link);
+    font-size: 0.9375rem;
+}
+
+/* ---------------------------------------------------------------- 列表：頭條與時間軸 */
+
+.list-heading {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.75rem;
+    line-height: 1.35;
+    margin: 0.25rem 0 1.5rem;
+}
+
+/* 焦點：維護者用 front matter 的 pin 指定一篇放在首頁最上方。
+   同一篇也照樣出現在時間軸自己的日期底下，日期分組不會被拆開 */
+.featured {
+    padding-bottom: 1.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid var(--c-headline);
+}
+
+.featured__label {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding-top: 0.4rem;
+    border-top: 3px solid var(--c-rule);
+    color: var(--c-headline);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.featured__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    background: var(--c-surface);
+}
+
+.featured__title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.75rem;
+}
+
+.featured__title a,
+.brief__title a {
+    color: var(--c-headline);
+    text-decoration: none;
+}
+
+.featured__title a:hover,
+.brief__title a:hover,
+.featured__title a:focus-visible,
+.brief__title a:focus-visible {
+    text-decoration: underline;
+}
+
+.featured__dek {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.featured__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.day {
+    border-top: 1px solid var(--c-border);
+}
+
+/* 焦點底下已經有一條粗線，緊接的第一天不再疊一條細線 */
+.featured + .day {
+    border-top: 0;
+}
+
+/* 日期標題在捲動時停在頂端，讀者隨時知道自己讀到哪一天 */
+.day__date {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0.6rem 0;
+    background: var(--c-bg);
+    color: var(--c-headline);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.day__date time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.75rem;
+}
+
+.day__md {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.day__meta {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.brief {
+    padding: 0.5rem 0 1.25rem;
+}
+
+.brief + .brief {
+    border-top: 1px dashed var(--c-border);
+    padding-top: 1rem;
+}
+
+.brief__title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.45;
+    margin: 0 0 0.4rem;
+}
+
+.brief__dek {
+    margin: 0 0 0.35rem;
+}
+
+.brief__source {
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.empty {
+    padding: 2rem 0;
+    font-size: 1.125rem;
+}
+
+/* ---------------------------------------------------------------- 文章頁 */
+
+.story__date {
+    margin: 0 0 0.5rem;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.story__title {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.75rem;
+}
+
+.story__dek {
+    font-size: 1.1875rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+/* 原文清單：外文原文的標題、出處與日期。手機放在文末，桌機移到右欄。
+   頂端署名旁有一行出處連到這裡 */
+.source-slip {
+    margin: 2rem 0 1.5rem;
+    scroll-margin-top: 1rem;
+    padding: 1rem 1rem 0.25rem;
+    background: var(--c-surface);
+    border-top: 3px solid var(--c-rule);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.source-slip__heading {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-size: 1rem;
+}
+
+.source-slip__item {
+    padding-bottom: 0.75rem;
+}
+
+.source-slip__item + .source-slip__item {
+    border-top: 1px solid var(--c-border);
+    padding-top: 0.75rem;
+}
+
+.source-slip__title {
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+}
+
+.source-slip__meta {
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.source-slip__meta div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.source-slip__meta dt {
+    flex: none;
+}
+
+.source-slip__meta dd {
+    margin: 0;
+    color: var(--c-text);
+}
+
+.story__body {
+    margin-top: 1.5rem;
+}
+
+.story__body > p:first-child {
+    font-size: 1.125rem;
+}
+
+/* ---------------------------------------------------------------- 內文 */
+
+/* 原文標題與網址常是一長串英文，沒寫成連結、直接貼在內文裡的網址也一樣，
+   整段都允許在任何位置斷行，不然手機上會把整頁撐寬 */
+.content,
+.source-slip,
+.brief__title,
+.featured__title {
+    overflow-wrap: anywhere;
+}
+
+.content h2 {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.375rem;
+    line-height: 1.45;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.content h3 {
+    color: var(--c-headline);
+    font-size: 1.125rem;
+    margin: 1.75rem 0 0.5rem;
+}
+
+/* 表格改成 display: block 才能自己捲動，代價是欄寬會被壓到最小，一欄只剩一個字寬。
+   每欄給最小寬度，放不下時讓表格在自己的範圍內橫向捲動 */
+.content table,
+.content pre {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.content table {
+    border-collapse: collapse;
+    margin: 0 0 1.25rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.content th,
+.content td {
+    min-width: 6em;
+    border-bottom: 1px solid var(--c-border);
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: normal;
+}
+
+.content th {
+    color: var(--c-headline);
+    border-bottom: 2px solid var(--c-headline);
+}
+
+/* 手機上畫面外的欄位如果照樣換行，會把每一列撐高，看起來像一片空白。
+   窄螢幕改成不換行，讀者左右滑動看表格 */
+@media (max-width: 47.99em) {
+    .content th,
+    .content td {
+        white-space: nowrap;
+    }
+}
+
+.content pre {
+    background: var(--c-surface);
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+}
+
+.content code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* 圖片最寬到內文欄，寬高由建置程式補上，載入時版面不跳動 */
+.content figure {
+    margin: 1.75rem 0;
+}
+
+.content figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background: var(--c-surface);
+}
+
+.content figcaption {
+    margin-top: 0.5rem;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content blockquote {
+    margin: 0 0 1.1em;
+    padding-left: 1rem;
+    border-left: 3px solid var(--c-rule);
+    color: var(--c-muted);
+}
+
+/* 文章頁最後的訂閱提示 */
+.subscribe {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--c-border);
+}
+
+/* 連結夾在句子裡，只加上下的留白放大觸控範圍，左右不留，頓號才不會被隔開 */
+.subscribe a {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.subscribe + .pager {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+/* ---------------------------------------------------------------- 分頁與頁尾 */
+
+.pager {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--c-border);
+}
+
+.pager a,
+.site-footer__links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+    padding: 0 0.25rem;
+}
+
+.site-footer {
+    border-top: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.site-footer .wrap {
+    max-width: var(--frame);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------------------------------------------------------- 寬螢幕 */
+
+@media (min-width: 48em) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    .masthead {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .masthead__title {
+        font-size: 4rem;
+    }
+
+    .featured__title {
+        font-size: 2.25rem;
+    }
+
+    /* 有圖時文字在左、圖在右，圖約佔三分之一 */
+    .featured--image {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        grid-template-areas:
+            "label label"
+            "text image";
+        gap: 0 2rem;
+    }
+
+    .featured--image .featured__label {
+        grid-area: label;
+        justify-self: start;
+    }
+
+    .featured--image .featured__image {
+        grid-area: image;
+        margin-bottom: 0;
+    }
+
+    .featured--image .featured__text {
+        grid-area: text;
+    }
+
+    .story__title {
+        font-size: 2.375rem;
+    }
+
+    /* 時間軸：日期在左欄，停在頂端跟著捲動 */
+    .day {
+        display: grid;
+        grid-template-columns: 10rem minmax(0, 1fr);
+        gap: 0 2rem;
+    }
+
+    .day__date {
+        align-self: start;
+        top: 1rem;
+        padding-top: 1.1rem;
+    }
+
+    .day__date time {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .day__md {
+        font-size: 1.5rem;
+    }
+
+    .day__briefs {
+        padding-top: 0.75rem;
+        max-width: var(--measure);
+    }
+}
+
+@media (min-width: 64em) {
+    /* 文章頁：導讀在左、原文條在右，兩條並排 */
+    .story-wrap {
+        max-width: var(--frame);
+    }
+
+    .story {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 18rem;
+        grid-template-areas:
+            "head head"
+            "body slip";
+        gap: 0 3rem;
+    }
+
+    .story__head {
+        grid-area: head;
+        max-width: 48rem;
+    }
+
+    .story__body {
+        grid-area: body;
+        max-width: 40rem;
+    }
+
+    /* 原文多的時候區塊會比畫面高，停在頂端就看不到下半部，超過畫面高度改在區塊內捲動 */
+    .source-slip {
+        grid-area: slip;
+        align-self: start;
+        margin-top: 1.5rem;
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+
+    .story ~ .subscribe,
+    .story ~ .pager {
+        max-width: 40rem;
+    }
+}
