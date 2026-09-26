@@ -4,7 +4,7 @@
 
 ## 專案概述
 
-`anoni.net/news` 是匿名網路社群 anoni.net 的新聞導讀，整理國際上隱私、匿名網路與網路審查的新聞，一則寫成一篇。跟文件站（`anoni-net/docs`，網址 `anoni.net/docs`）的分工寫在 [`README.md`](./README.md)。
+`anoni.net/news` 是匿名網路社群 anoni.net 的新聞導讀，整理國際上隱私、匿名網路與網路審查的新聞，從科技與開源生態的角度介紹可用的專案與技術，一則寫成一篇。選題標準與跟文件站（`anoni-net/docs`，網址 `anoni.net/docs`）的分工寫在 [`README.md`](./README.md)。
 
 目前在籌備階段。網站由本 repo 的 `build.py` 產生，規格在 [`SPEC.md`](./SPEC.md)，要改行為先改規格。
 
