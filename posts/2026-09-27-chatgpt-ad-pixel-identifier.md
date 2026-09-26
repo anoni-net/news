@@ -1,18 +1,24 @@
 ---
 title: ChatGPT 廣告像素的跨站識別碼
 description: 一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素把它連同瀏覽資料送回去。
-date: 2026-09-27
+date:
+  created: 2026-09-27
+  updated: 2026-09-28
 slug: chatgpt-ad-pixel-identifier
 sources:
   - title: ChatGPT now knows what you do on other websites via ad collector
     url: https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/
     publisher: Buchodi's Threat Intel
     date: 2026-09-20
+  - title: ChatGPT Ads expands to Southeast Asia and Taiwan
+    url: https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/
+    publisher: OpenAI
+    date: 2026-09-23
 authors:
   - anoni-net
 ---
 
-一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 `bzr.openai.com` 會設定一個名為 `__obi` 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到，iOS 上的瀏覽器都擋掉了。ChatGPT 的廣告在台灣有沒有上線，原文沒有提到。
+一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 `bzr.openai.com` 會設定一個名為 `__obi` 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到，iOS 上的瀏覽器都擋掉了。OpenAI 在 9 月 23 日宣布 ChatGPT 廣告開始在台灣等七個亞洲市場推出，廣告只顯示給 Free 與 Go 方案的使用者。
 
 在 ChatGPT 買廣告的業者，會在自己的網站裝上 OpenAI 的像素。使用者之後造訪這些網站時，像素會把 `__obi` 連同頁面資料送回 OpenAI，包括網址路徑、表單欄位與網頁上的文字。電子郵件、電話與姓名經過 SHA-256 雜湊，國家、地區、城市與郵遞區號則是明碼。研究者觀察到的網址都去掉了查詢字串，但路徑本身有時就透露了病症這類敏感資訊。
 
