@@ -4,7 +4,9 @@
 # 文章末尾那一句話裡，英文的大小寫不同。
 
 ["zh-TW"]
-lang_name = "繁體中文"
+# 社群的用字是「正體中文」，不寫「繁體中文」，見文件站「為什麼我們用「正體中文」而非「繁體中文」」
+# https://anoni.net/docs/community/zh-hant-naming/ 。語言名稱用該語言自己的寫法，三個語系都寫這個
+lang_name = "正體中文"
 other_langs = "其他語言："
 site_name = "anoni.net 新聞導讀"
 product = "新聞導讀"

@@ -674,12 +674,12 @@ def test_alternates_and_language_switch(fixture_site):
     for cls in ("story__langs", "site-footer__langs"):
         line = page[page.index(f'<p class="{cls}">'):]
         line = line[:line.index("</p>")]
-        assert 'Also in <a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>, ' \
+        assert 'Also in <a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, ' \
             '<a href="/news/zh-cn/2026/09/zkp-age-verification/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>' in line
         assert "English" not in line
     assert page.index('class="story__byline"') < page.index('class="story__langs"') < page.index('class="story__body')
     zh = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
-    assert '其他語言：<a href="/news/zh-cn/2026/09/zkp-age-verification/"' in zh and ">繁體中文</a>" not in zh
+    assert '其他語言：<a href="/news/zh-cn/2026/09/zkp-age-verification/"' in zh and ">正體中文</a>" not in zh
     onion = (targets["onion"].out / "en/2026/09/index.html").read_text(encoding="utf-8")
     assert '<a href="/zh-cn/2026/09/" hreflang="zh-Hans"' in onion
     assert 'hreflang="en" href="http://news.' in onion
@@ -749,3 +749,10 @@ def test_author_names_keys_are_checked(tmp_path):
     path.write_text("anoni-net:\n  name: x\n  names:\n    fr: y\n", encoding="utf-8")
     with pytest.raises(build.BuildError, match="names"):
         build.load_authors(path)
+
+
+def test_traditional_chinese_is_called_zheng_ti(fixture_site):
+    """社群用「正體中文」，見文件站的 community/zh-hant-naming。產物裡任何一頁都不該出現「繁體中文」。"""
+    targets, _, _ = fixture_site
+    for page in targets["clearnet"].out.rglob("*.html"):
+        assert "繁體中文" not in page.read_text(encoding="utf-8"), page
