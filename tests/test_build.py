@@ -6,6 +6,7 @@ scrollWidth 跟 window.innerWidth 比，手機模式下兩者一起被撐寬，�
 
 from __future__ import annotations
 
+import re
 import shutil
 import sys
 import textwrap
@@ -325,6 +326,16 @@ def test_icons_render_on_both_targets(fixture_site):
     assert tor not in (targets["onion"].out / "index.html").read_text(encoding="utf-8")
 
 
+def test_text_stays_separated_without_css(fixture_site):
+    """閱讀器模式、複製文字與 RSS 閱讀器看不到 CSS，圖示與前後篇的標籤都要靠真正的空格跟文字分開。"""
+    targets, _, posts = fixture_site
+    page = (targets["clearnet"].out / posts[1].rel / "index.html").read_text(encoding="utf-8")
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", re.sub(r"<svg.*?</svg>", "", page, flags=re.S)))
+    assert f"較新的一篇 {posts[0].title}" in text
+    assert f"較舊的一篇 {posts[2].title}" in text
+    assert re.search(r"</svg>[^ <]", page) is None, "圖示後面要接空格"
+
+
 def test_noindex_expectations(fixture_site):
     targets, _, _ = fixture_site
     out = targets["clearnet"].out
@@ -422,7 +433,7 @@ def test_multi_source_post_renders(fixture_site):
     assert "原文（5 篇）" in page
     # 頂端一行出處連到文末的原文清單，清單排在內文之後
     assert '<a href="#sources"><svg class="icon"' in page
-    assert '</svg>整理 5 篇原文，來自 EFF、Access Now、OONI</a>' in page
+    assert '</svg> <span>整理 5 篇原文，來自 EFF、Access Now、OONI</span></a>' in page
     assert page.index('class="story__body content"') < page.index('id="sources"')
     assert page.count('class="source-slip__item"') == 5
     assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
