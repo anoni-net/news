@@ -36,7 +36,7 @@
 {% include "_source_slip.html.j2" %}
 </article>
 {# 從社群平台點進來的讀者看不到首頁的刊頭，讀完一篇時在這裡給訂閱的入口 #}
-<p class="subscribe">{{ s.subscribe }}<a href="{{ url(home ~ 'feed.xml') }}">{{ icon('rss') }} <span>{{ s.rss }}</span></a>{{ s.subscribe_sep }}<a href="{{ config.newsletter }}">{{ icon('email-outline') }} <span>{{ s.newsletter_inline }}</span></a></p>
+<p class="subscribe">{{ s.subscribe }}<a href="{{ url(home ~ 'feed.xml') }}">{{ icon('rss') }} <span>{{ s.rss }}</span></a>{{ s.subscribe_sep }}<a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} <span>{{ s.newsletter_inline }}</span></a></p>
 {# 讀完一篇接著讀相鄰的文章。用「較新、較舊」跟列表頁的翻頁說法一致，帶標題讓讀者知道點下去是什麼 #}
 <nav class="pager pager--story" aria-label="{{ s.story_nav_label }}">
 {% if newer %}

@@ -7,7 +7,6 @@ feed_items = 20
 
 # 頁首與頁尾用到的外部入口，一律寫 clearnet 的網址
 homepage = "https://anoni.net/"
-newsletter = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 
 [targets.clearnet]
 out = "public/clearnet"

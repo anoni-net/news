@@ -55,7 +55,7 @@
   <div class="wrap">
     <nav class="site-footer__links" aria-label="{{ s.footer_label }}">
       <a href="{{ url(home ~ 'feed.xml') }}">{{ icon('rss') }} {{ s.rss }}</a>
-      <a href="{{ config.newsletter }}">{{ icon('email-outline') }} {{ s.newsletter }}</a>
+      <a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a>
       <a href="{{ config.homepage }}">{{ icon('home-outline') }} {{ s.home }}</a>
 {% if onion_url %}
       <a href="{{ onion_url }}">{{ icon('torproject') }} {{ s.onion }}</a>
