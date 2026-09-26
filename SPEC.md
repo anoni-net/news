@@ -37,13 +37,19 @@ templates/               # Jinja2 模板
   robots.txt.j2          # 只輸出到 onion，clearnet 的 robots.txt 在官網 repo
 static/                  # 兩份產物共用的檔案
   css/news.css
-  favicon.svg
-  logo.svg
+  favicon.svg            # 文件站的 logo-tonal.svg
+  logo-wordmark-white.svg  # 文件站的 mono white wordmark，放在頁首
   og.png                 # 全站共用的社群分享預覽圖，1200×630
-authors.yml              # 作者代稱，front matter 的 authors 對應這裡的鍵
+tools/
+  og.html                # og.png 的原始檔
+  make_og.sh             # 用 Chrome 從 og.html 產生 og.png
+authors.yml              # 署名清單，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
 build.py
+layout_check.py          # 驗證第 8 項，用 headless Chrome 量版面
 tests/
+  test_build.py
+  fixtures/              # 測試用的文章與署名，--check 的版面檢查也用這一批
 url_contract.txt         # 網址合約，由 build.py --update-contract 產生
 ```
 
@@ -216,13 +222,14 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 | 站內連結的前綴 | `/news/` | `/` |
 | 本站連結 `https://anoni.net/news/…` | 原樣 | 改寫成 `http://news.<onion 位址>/…` |
 | 文件站連結 `https://anoni.net/docs/…` | 原樣 | 改寫成 `http://docs.<onion 位址>/…` |
+| 電子報表單 `https://form.anoni.net/…` | 原樣 | 改寫成 `http://form.<onion 位址>/…` |
 | 官網連結 `https://anoni.net/…` | 原樣 | 改寫成 `http://<onion 位址>/…` |
 | `<link rel="canonical">` | 指向 clearnet 的網址 | 指向 onion 的網址 |
 | `robots.txt` | 由官網 repo 產生，列出 `/news/sitemap.xml` | 本站產生，列出 onion 版的 sitemap |
 | `<meta http-equiv="onion-location">` | 有 | 無 |
 | 流量統計 | 待定（見「待決定的事」） | 無 |
 
-改寫在 Markdown 轉成 HTML 之後，對 `href` 屬性做，不對內文做字串取代，避免改到程式碼區塊或照錄的網址文字。三條改寫由上往下比對，先比對到 `/news/` 與 `/docs/` 的就不再套用最後那條官網的規則。
+改寫在 Markdown 轉成 HTML 之後，對 `href` 屬性做，不對內文做字串取代，避免改到程式碼區塊或照錄的網址文字。改寫規則寫在 `site.toml` 的 `rewrites`，由上往下比對，第一條比對到的就套用，所以 `/news/`、`/docs/` 與 `form.` 排在官網那條前面。
 
 `onion-location` 標頭另外由 Cloudflare 的 Transform Rules 發送，上線前要改兩條規則：
 
@@ -326,7 +333,7 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
 7. 每頁都有 `<title>`、`description` 與 Open Graph 欄位，封存頁、第二頁起的列表頁與 404 頁帶 `noindex`
-8. 版面：用 headless Chrome 以 320、390、1280 三種寬度開啟列表頁、一篇文章與 404 頁，每頁的 `scrollWidth` 不得超過視窗寬度，並存下截圖
+8. 版面：用 headless Chrome 以 320、390、1280 三種寬度開啟列表頁、一篇文章與 404 頁，每頁的 `scrollWidth` 不得超過設定的寬度，並存下截圖。要跟設定的寬度比，不能跟 `window.innerWidth` 比：手機模式下頁面被撐寬時，Chrome 會自動縮小畫面去容納內容，`innerWidth` 跟著變大，兩邊永遠一樣寬
 9. 對比度：`news.css` 裡文字色與背景色的組合，淺色與深色模式都要達到 4.5:1
 
 測試用的文章放在 `tests/fixtures/`，刻意放進最長的英文標題、長網址、表格與程式碼區塊，版面出問題時在這裡先發生。第 8 項需要 Chrome，GitHub Actions 的 runner 上有，本機沒有 Chrome 時略過並提示。截圖只證明頁面撐得住，排版好不好看，送出 PR 前還是要有人實際看過截圖。
@@ -335,7 +342,7 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 
 ## 部署
 
-1. `main` 有新的 commit 時，CI 建置兩份產物，推到 `build` 分支，目錄是 `clearnet/` 與 `onion/`
+1. `main` 有新的 commit 時，CI 執行 `--check` 後建置兩份產物，推到 `build` 分支，目錄是 `clearnet/` 與 `onion/`。`build` 分支保留歷史，出問題時可以退回上一個 commit
 2. 伺服器上 clone `build` 分支。nginx 在 clearnet 的 `anoni.net` server block 加一條 `location /news/` 指向 `clearnet/`，onion 那一側新增一個 `news.<onion 位址>` 的 server block，根目錄指向 `onion/`。子網域共用同一個 onion service，由 nginx 依主機名稱分流，跟 `docs.<onion 位址>` 相同，Tor 的設定不用改
 3. 官網 repo 的 `robots.txt` 模板補上 `/news/sitemap.xml`，跟 news 上線同一天合併
 4. 第一版手動 `git pull` 上線，自動部署等官網首頁的部署方式定案後一起處理
@@ -343,9 +350,11 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 ## 相依
 
 - Python 3.12，用 uv 管理
-- `jinja2`、`markdown`（Python-Markdown，開 `attr_list`、`tables`、`toc`）、`pyyaml`
+- `jinja2`、`markdown`（Python-Markdown，開 `attr_list`、`tables`、`fenced_code`）、`pyyaml`
+- `websockets`，版面檢查用來跟 Chrome 溝通
+- 開發用 `pytest`
 
-選 Python-Markdown 是因為 MkDocs 家族用的就是它，同一份 Markdown 換到 Zensical 或 mkdocs-ng 時的轉換結果最接近。
+選 Python-Markdown 是因為 MkDocs 家族用的就是它，同一份 Markdown 換到 Zensical 或 mkdocs-ng 時的轉換結果最接近。不開 `toc`，它會替沒寫 `{#id}` 的小標題自動產生錨點，漏寫的錨點就檢查不到了。
 
 ## 第一版不做的事
 
