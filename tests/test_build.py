@@ -331,6 +331,9 @@ def test_multi_source_post_renders(fixture_site):
     out = targets["clearnet"].out
     page = (out / "2026" / "09" / "age-verification-roundup" / "index.html").read_text(encoding="utf-8")
     assert "原文（5 篇）" in page
+    # 頂端一行出處連到文末的原文清單，清單排在內文之後
+    assert '<a href="#sources">整理 5 篇原文，來自 EFF、Access Now、OONI</a>' in page
+    assert page.index('class="story__body content"') < page.index('id="sources"')
     assert page.count('class="source-slip__item"') == 5
     assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
     import json

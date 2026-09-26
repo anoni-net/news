@@ -410,7 +410,8 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         pages.append(page)
 
     for post in posts:
-        write(Page(post.rel, post.rel + "index.html", False, post.anchors), "post.html.j2",
+        # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
+        write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
               post=post, content=target.rewrite_html(post.html), jsonld=jsonld(post, target, config))
 
     per_page = config["per_page"]

@@ -365,9 +365,11 @@ p {
     font-size: 0.9375rem;
 }
 
-/* 原文條：外文原文的標題、出處與日期。手機放在內文上方，桌機移到右欄 */
+/* 原文清單：外文原文的標題、出處與日期。手機放在文末，桌機移到右欄。
+   頂端署名旁有一行出處連到這裡 */
 .source-slip {
-    margin: 1.5rem 0;
+    margin: 2rem 0 1.5rem;
+    scroll-margin-top: 1rem;
     padding: 1rem 1rem 0.25rem;
     background: var(--c-surface);
     border-top: 3px solid var(--c-rule);
@@ -624,6 +626,7 @@ p {
     .source-slip {
         grid-area: slip;
         align-self: start;
+        margin-top: 1.5rem;
         position: sticky;
         top: 1rem;
         max-height: calc(100vh - 2rem);

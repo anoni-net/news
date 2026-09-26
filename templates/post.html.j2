@@ -20,16 +20,19 @@
     <h1 class="story__title">{{ post.title }}</h1>
     <p class="story__dek">{{ post.description }}</p>
     <p class="story__byline">
+{% set line = post|source_line %}
+      <span class="story__sources"><a href="#sources">{{ line if line else "原文" }}</a></span>
       <span>導讀：{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}、{% endif %}{% endfor %}</span>
 {% if post.updated %}
       <span>更正於 <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
 {% endif %}
     </p>
   </header>
-{% include "_source_slip.html.j2" %}
   <div class="story__body content">
 {{ content|safe }}
   </div>
+{# 原文清單在 HTML 裡排在內文之後：手機照順序落在文末，桌機由 grid 放到右欄 #}
+{% include "_source_slip.html.j2" %}
 </article>
 <nav class="pager" aria-label="文章導覽">
   <a href="{{ url() }}">所有文章</a>

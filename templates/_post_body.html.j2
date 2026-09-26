@@ -1,5 +1,9 @@
-{# RSS 的全文用這一份：原文清單加內文。頁面上的排版另外在 post.html.j2 #}
-{% include "_source_slip.html.j2" %}
+{# RSS 的全文用這一份，順序跟文章頁一樣：一行出處、內文、完整的原文清單 #}
+{% set line = post|source_line %}
+{% if line %}
+<p>{{ line }}</p>
+{% endif %}
 <div class="content">
 {{ content|safe }}
 </div>
+{% include "_source_slip.html.j2" %}
