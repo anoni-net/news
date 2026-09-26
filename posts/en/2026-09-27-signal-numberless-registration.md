@@ -7,10 +7,17 @@ date:
 slug: signal-numberless-registration
 pin: true
 sources:
+  - title: Phone Numberless Registration for Android
+    url: https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android
+    publisher: Signal Support
   - title: Beta feedback for the upcoming Android 8.28 release
     url: https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457
     publisher: Signal Community
     date: 2026-09-16
+  - title: Beta feedback for the upcoming Android 8.29 release
+    url: https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-29-release/76509
+    publisher: Signal Community
+    date: 2026-09-23
   - title: Signal tests account registration without phone number on Android
     url: https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/
     publisher: CyberInsider
@@ -45,11 +52,11 @@ authors:
   - anoni-net
 ---
 
-Signal's Android 8.28 beta adds a way to register without a phone number. For now it exists only in the Android beta. The iPhone version is still in development, and accounts already registered with a number cannot remove it yet.
+Signal's Android 8.28 beta adds a way to register without a phone number, called Signal Login. The 8.29 beta announcement on 23 September says the feature will stay in beta for another week. The iPhone version is still in development, and accounts already registered with a number cannot remove it yet.
 
-Registering this way takes a one-time in-app purchase through the Play Store of US$3, and prices can differ by country. Devices without Google Play services cannot use it yet. Signal's announcement on its community forum says the payment uses the same zero-knowledge proofs as its donation system, so there is no link between the payment and the account. The fee is there because free accounts would be registered in bulk by spammers.
+Registering this way takes a one-time payment of US$2.99 through Google Play, and prices can differ by country. Devices without Google Play services cannot use it yet. Signal's announcement on its community forum says the payment uses the same zero-knowledge proofs as its donation system, so there is no link between the payment and the account. The fee is there because free accounts would be registered in bulk by spammers.
 
-Registration gives you an Account Id and an Account Key, which work like a username and password. There is no PIN and no other recovery mechanism, so losing either one loses the account. A username is optional. Without one, nobody can find the account, and it can only join chats it starts. TOTP two-factor authentication can be added after registration, and Signal plans to add passkeys and hardware keys later.
+Registration gives you an Account ID and a Recovery Key, which work like a username and password. There is no PIN and no other recovery mechanism, so losing either one loses the account. A username is optional. Without one, nobody can find the account, and it can only join chats it starts. TOTP two-factor authentication can be added after registration, and Signal plans to add passkeys and hardware keys later.
 
 ## Perspective {#perspective}
 
@@ -61,4 +68,4 @@ Reaching Signal at all is a separate question in mainland China. OONI measuremen
 
 Without a number, a username becomes the only way to be found. The Freedom of the Press Foundation warns that a username you have shared publicly should be kept, because once it is released someone else can claim it and impersonate you. That risk is highest for people who publish a username so that sources can contact them.
 
-A separate essay on passkeys argues that an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss. Store the Account Id and Account Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
+A separate essay on passkeys argues that an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss. Store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
