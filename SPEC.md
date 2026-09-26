@@ -17,7 +17,7 @@
 
 | 原則 | 怎麼驗證 |
 |---|---|
-| 不依賴 JavaScript | 產物裡沒有任何 `<script>` 元素 |
+| 不依賴 JavaScript | 產物裡沒有可執行的 `<script>`。唯一的例外是 `type="application/ld+json"` 的結構化資料，瀏覽器不會執行它 |
 | 不對外請求 | 產物的 `src`、`<link href>`、CSS 的 `url()` 只能指向站內路徑 |
 | clearnet 與 onion 分開產出 | onion 產物裡沒有任何 `https://anoni.net` 開頭的連結 |
 | 網址一經公開就不改 | 網址合約，移除或改名會讓 CI 失敗 |
@@ -34,10 +34,12 @@ templates/               # Jinja2 模板
   404.html.j2
   feed.xml.j2
   sitemap.xml.j2
+  robots.txt.j2          # 只輸出到 onion，clearnet 的 robots.txt 在官網 repo
 static/                  # 兩份產物共用的檔案
   css/news.css
   favicon.svg
   logo.svg
+  og.png                 # 全站共用的社群分享預覽圖，1200×630
 authors.yml              # 作者代稱，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
 build.py
@@ -215,7 +217,8 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 | 本站連結 `https://anoni.net/news/…` | 原樣 | 改寫成 `http://news.<onion 位址>/…` |
 | 文件站連結 `https://anoni.net/docs/…` | 原樣 | 改寫成 `http://docs.<onion 位址>/…` |
 | 官網連結 `https://anoni.net/…` | 原樣 | 改寫成 `http://<onion 位址>/…` |
-| `<link rel="canonical">` | 有 | 無 |
+| `<link rel="canonical">` | 指向 clearnet 的網址 | 指向 onion 的網址 |
+| `robots.txt` | 由官網 repo 產生，列出 `/news/sitemap.xml` | 本站產生，列出 onion 版的 sitemap |
 | `<meta http-equiv="onion-location">` | 有 | 無 |
 | 流量統計 | 待定（見「待決定的事」） | 無 |
 
@@ -237,6 +240,51 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 - 文章頁在標題下方顯示發布日期（有更正時加註更正日期）與來源清單，文末是延伸閱讀
 - 列表頁與封存頁列出每篇的標題、日期與 `description`
 
+## 搜尋引擎與社群分享
+
+### 標題與描述
+
+`<title>` 固定寫成「文章標題 | anoni.net 新聞導讀」，列表頁是「anoni.net 新聞導讀」。`<meta name="description">` 用 front matter 的 `description`。每頁只有一個 `<h1>`，文章頁放文章標題。
+
+### 社群分享的預覽
+
+每一頁都帶 Open Graph 與 Twitter card 的欄位。新文章會發到社群平台，連結預覽是讀者看到的第一個畫面。
+
+| 欄位 | 文章頁 | 列表頁與封存頁 |
+|---|---|---|
+| `og:type` | `article` | `website` |
+| `og:title`、`og:description`、`og:url` | 標題、`description`、本頁網址 | 同左 |
+| `og:image` | 全站共用的 `og.png` | 同左 |
+| `article:published_time` | `date.created` | 無 |
+| `article:modified_time` | 有更正時放 `date.updated` | 無 |
+| `twitter:card` | `summary_large_image` | 同左 |
+
+預覽圖只有一張，放在 `static/`，不為每篇另外產圖。圖是站內的靜態檔，讀者端不會因此對外請求。
+
+### 結構化資料
+
+文章頁放一段 JSON-LD 的 `NewsArticle`，包含標題、`description`、發布與更正日期、網址與署名。署名依「發佈身分」的類型對應：
+
+| 署名 | JSON-LD |
+|---|---|
+| 社群 `anoni-net` | `Organization`，名稱 anoni.net，網址是官網首頁 |
+| 筆名、具名 | `Person`，只放 `name`。`authors.yml` 有 `url` 才放 `url` |
+
+`publisher` 一律是 anoni.net 的 `Organization`。網址依輸出目標產生，onion 產物裡的 JSON-LD 用 onion 的網址。
+
+### 索引範圍
+
+- `/news/` 與每一篇文章允許索引
+- 年、月封存頁與 `/news/page/2/` 之後的列表頁加 `<meta name="robots" content="noindex, follow">`。內容跟文章重複，搜尋引擎順著連結找到文章就好，不必把列表當成搜尋結果
+- 404 頁加 `noindex`
+- onion 的 `robots.txt` 允許爬取並列出 onion 版的 sitemap，跟文件站的 onion 版相同，onion 的搜尋引擎可以收錄
+
+上線後在 Search Console 的 `anoni.net` 網域資源提交 `/news/sitemap.xml`，之後定期看 404 報表。文件站的轉址有一批就是從那份報表補的。
+
+### 內容品質
+
+只摘要別人的新聞，搜尋引擎可能判定為內容單薄或轉貼。能拉開差距的是每篇都有的「跟正體中文使用者的關係」與連到文件站的延伸閱讀。建置程式只查得到有沒有連到文件站，寫得夠不夠深入要靠審稿。
+
 ## 驗證與 CI
 
 `uv run build.py` 產出兩份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
@@ -244,9 +292,10 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡
 2. 內文的錨點與文件站連結
 3. 文件站連結對得上文件站的網址合約
-4. 產物沒有 `<script>`，也沒有指向站外的資源
+4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
+7. 每頁都有 `<title>`、`description` 與 Open Graph 欄位，封存頁、第二頁起的列表頁與 404 頁帶 `noindex`
 
 GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `posts/*.md` 與 `README.md`。
 
@@ -272,8 +321,8 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - 多語系，只出正體中文
 - 分類與標籤頁，`categories` 只存不產頁
 - 作者頁。筆名的作者頁會把同一個人的文章集中成一頁，要做之前先想清楚匿名的代價
-- 圖片。有圖就要處理授權、替代文字與體積，第一版全文字
-- 社群分享用的預覽卡片圖
+- 內文圖片。有圖就要處理授權、替代文字與體積，第一版全文字。全站共用的 `og.png` 不在此限
+- 每篇各自產生的預覽卡片圖，第一版全站共用一張
 - 留言與任何需要伺服器端的功能
 - 自動寄送電子報
 - 投稿平台。維護者代發的稿件，之後會需要一個讓投稿者送稿、跟維護者往返修改的平台，第一版先用「發布管道」一節列的 Matrix、email 與 Send
