@@ -1,0 +1,9 @@
+# Python
+.venv/
+__pycache__/
+
+# 建置產物，由 CI 推到 build 分支，不進 main
+/public/
+/site/
+/output/
+/_site/
