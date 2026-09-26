@@ -1,7 +1,7 @@
 ---
 title: 英国 iCloud 高级数据保护的分级现状
 description: Apple 从 2025 年 2 月起不再让英国的新用户开启高级数据保护，在那之前开启的人仍受保护，英国的 iCloud 因此分成两种加密程度。
-date: 2026-09-29
+date: 2026-09-27T07:28:00+08:00
 slug: uk-icloud-advanced-data-protection
 sources:
   - title: Apple can no longer offer Advanced Data Protection in the United Kingdom to new users

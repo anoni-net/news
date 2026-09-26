@@ -25,8 +25,9 @@ uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑�
 ## 寫一篇
 
 1. 在 `posts/` 新增 `YYYY-MM-DD-<slug>.md`，front matter 與內文格式見 `SPEC.md`「一篇的格式」。`posts/zh-CN/` 與 `posts/en/` 放同檔名的另外兩個版本，寫法見下方「三個語系」
-2. `uv run build.py --check`，錯誤訊息會列出檔名與行號
-3. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
+2. `date` 填實際合併上線的時間，三個語系相同，檔名的日期跟著改。一天一篇的節奏靠合併的時間控制，不預先填未來的日期，晚於現在會建置失敗
+3. `uv run build.py --check`，錯誤訊息會列出檔名與行號
+4. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
 
 有圖片時，投稿者用 Markdown 的圖片語法標出位置就好，網址可以是任何地方。維護者合併前設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/ingest_images.py posts/<檔名>.md` 把圖片搬到 `assets.anoni.net`，再依工具列出的原始網址審核授權與來源，補上替代文字與圖說。規則見 `SPEC.md`「圖片」。
 

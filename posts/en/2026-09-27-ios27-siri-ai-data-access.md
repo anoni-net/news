@@ -1,7 +1,7 @@
 ---
 title: Data access settings for Siri AI in iOS 27
 description: The new Siri in iOS 27 can read Notes, Messages and Mail by default, and requests may be processed on Apple's servers. EFF has listed the settings that narrow what it can read.
-date: 2026-09-28
+date: 2026-09-27T03:21:00+08:00
 slug: ios27-siri-ai-data-access
 sources:
   - title: How to Limit What Apple's New Siri AI Can Access in iOS 27
