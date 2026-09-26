@@ -15,7 +15,7 @@ authors:
   - anoni-net
 ---
 
-Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，往下滑搜尋 App 時也等於在呼叫 Siri。支援的機型是 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型。Siri AI 目前是測試版、只有英文，也還沒有在所有地區開放，台灣能不能使用，原文沒有提到。
+Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，往下滑搜尋 App 時也等於在呼叫 Siri。支援的機型是 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型。Siri AI 目前是測試版，只支援英文，也還沒有在所有地區開放，Siri 語言設成中文的使用者現在還用不到。
 
 預設情況下，Siri AI 可以讀取備忘錄、訊息與郵件等 Apple 自家 App 的內容，第三方 App 要等開發者開放才會納入。請求可能在手機上處理，也可能送到 Apple 的 Private Cloud Compute 伺服器，畫面上沒有提示告訴使用者是哪一種。EFF 特別點名開啟進階資料保護的使用者，這些資料原本在 iCloud 上以端對端加密保存，送出裝置交給雲端處理，會改變原本的風險評估。
 
@@ -33,4 +33,4 @@ EFF 在原文寫明，Private Cloud Compute 的 Private 是系統設計上讓 Ap
 
 螢幕感知無法封鎖，代表在 iPhone 上閱讀加密通訊時，端對端加密保護的範圍只到畫面為止。需要在手機上處理敏感對話的人，可以考慮切回 Siri Classic。
 
-多數正體中文使用者現在還用不到 Siri AI，但螢幕使用時間與各 App 的搜尋開關已經存在，可以趁它開放之前先檢查一遍。
+螢幕使用時間與各 App 的搜尋開關已經存在，可以趁 Siri AI 支援中文之前先檢查一遍。
