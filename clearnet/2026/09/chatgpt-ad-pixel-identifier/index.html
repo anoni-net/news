@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChatGPT 廣告像素的跨站識別碼 | anoni.net 新聞導讀</title>
-<meta name="description" content="一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素把它連同瀏覽資料送回去。">
+<meta name="description" content="一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。">
 <link rel="canonical" href="https://anoni.net/news/2026/09/chatgpt-ad-pixel-identifier/">
 <meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/chatgpt-ad-pixel-identifier/">
 <link rel="stylesheet" href="/news/css/news.css">
@@ -14,19 +14,20 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ChatGPT 廣告像素的跨站識別碼">
-<meta property="og:description" content="一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素把它連同瀏覽資料送回去。">
+<meta property="og:description" content="一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。">
 <meta property="og:url" content="https://anoni.net/news/2026/09/chatgpt-ad-pixel-identifier/">
 <meta property="og:image" content="https://anoni.net/news/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="article:published_time" content="2026-09-27T00:00:00+08:00">
+<meta property="article:modified_time" content="2026-09-28T00:00:00+08:00">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   "headline": "ChatGPT 廣告像素的跨站識別碼",
-  "description": "一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素把它連同瀏覽資料送回去。",
+  "description": "一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。",
   "datePublished": "2026-09-27T00:00:00+08:00",
   "url": "https://anoni.net/news/2026/09/chatgpt-ad-pixel-identifier/",
   "mainEntityOfPage": "https://anoni.net/news/2026/09/chatgpt-ad-pixel-identifier/",
@@ -49,8 +50,14 @@
       "@type": "CreativeWork",
       "name": "ChatGPT now knows what you do on other websites via ad collector",
       "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/"
     }
-  ]
+  ],
+  "dateModified": "2026-09-28T00:00:00+08:00"
 }
 </script>
 <script data-anoni="before-send">
@@ -114,30 +121,38 @@
   <header class="story__head">
     <p class="story__date"><time datetime="2026-09-27T00:00:00+08:00">2026 年 9 月 27 日</time> 星期日</p>
     <h1 class="story__title">ChatGPT 廣告像素的跨站識別碼</h1>
-    <p class="story__dek">一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素把它連同瀏覽資料送回去。</p>
+    <p class="story__dek">一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。</p>
     <p class="story__byline">
-      <span class="story__sources"><a href="#sources">原文來自 Buchodi&#39;s Threat Intel</a></span>
+      <span class="story__sources"><a href="#sources">整理 2 篇原文，來自 Buchodi&#39;s Threat Intel、OpenAI</a></span>
       <span>導讀：anoni.net 社群</span>
+      <span>更正於 <time datetime="2026-09-28T00:00:00+08:00">2026 年 9 月 28 日</time></span>
     </p>
   </header>
   <div class="story__body content">
-<p>一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 <code>bzr.openai.com</code> 會設定一個名為 <code>__obi</code> 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到，iOS 上的瀏覽器都擋掉了。ChatGPT 的廣告在台灣有沒有上線，原文沒有提到。</p>
-<p>在 ChatGPT 買廣告的業者，會在自己的網站裝上 OpenAI 的像素。使用者之後造訪這些網站時，像素會把 <code>__obi</code> 連同頁面資料送回 OpenAI，包括網址路徑、表單欄位與網頁上的文字。電子郵件、電話與姓名經過 SHA-256 雜湊，國家、地區、城市與郵遞區號則是明碼。研究者觀察到的網址都去掉了查詢字串，但路徑本身有時就透露了病症這類敏感資訊。</p>
-<p>這組識別碼在登出時也會設定。研究者檢視的每一個同步權杖，同意類別都是「分析」，只允許分析、拒絕行銷的使用者照樣會被設定。</p>
-<p>研究者在自己的手機上重現，用兩種方式擷取流量，另外分析了 936 個廣告主像素、超過一千個網域。原文也寫明了幾項限制：約五分之一的 ChatGPT 工作階段產生同步權杖，桌機版 Chrome 沒有測試，而 OpenAI 在伺服器端把識別碼對應回帳號，是從設計推論，研究者沒有直接觀察到。研究者 9 月 14 日去信詢問，OpenAI 的客服收到後沒有回答提問。</p>
-<h2 id="technical-view">技術觀點</h2>
-<p>廣告主網站上的像素把造訪紀錄送回廣告平台，Meta 與 Google 的轉換追蹤用的都是同一套做法。差別在於 ChatGPT 帳號裡還有使用者跟 AI 的對話，許多人會在對話裡提到健康、工作與個人問題，這些資料跟其他網站的瀏覽紀錄，現在有機會連到同一個帳號。</p>
-<p><code>__obi</code> 能在其他網站送出，靠的是第三方 cookie。Safari 預設阻擋跨站追蹤，iOS 上的瀏覽器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都沒有觀察到。Android 與桌機可以在瀏覽器設定裡封鎖第三方 cookie，Firefox 預設就把第三方 cookie 依網站隔離，Brave 預設封鎖。平常不需要登入狀態跨網站延續的人，封鎖第三方 cookie 的代價很小。</p>
-<p>同意橫幅上的「分析」與「行銷」只是業者自訂的分類，選項名稱不代表實際行為。只允許分析，並不能擋下跟廣告連動的識別碼。</p>
-<p>這份分析出自單一研究者的流量觀察，OpenAI 沒有回應，伺服器端的對應也沒有直接證據。</p>
+<p>一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 <code>bzr.openai.com</code> 會設定一個名為 <code>__obi</code> 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到這個機制，iOS 上的瀏覽器都會阻擋。OpenAI 在 9 月 23 日宣布 ChatGPT 廣告開始在台灣等七個亞洲市場推出，廣告只顯示給 Free 與 Go 方案的使用者。</p>
+<p>在 ChatGPT 買廣告的業者，會在自己的網站裝上 OpenAI 的像素。使用者之後造訪廣告主的網站時，像素會把 <code>__obi</code> 連同頁面資料送回 OpenAI，包括網址路徑、表單欄位與網頁上的文字。電子郵件、電話與姓名經過 SHA-256 雜湊，國家、地區、城市與郵遞區號則是明碼。研究者觀察到的網址都去掉了查詢字串，但路徑本身有時就透露了病症等敏感資訊。</p>
+<p>使用者在登出狀態下同樣會被設定 <code>__obi</code>。研究者檢視的每一個同步權杖，同意類別都標為「分析」。使用者只要允許分析，即使拒絕行銷也會收到 <code>__obi</code>。</p>
+<p>研究者在自己的手機上重現，用兩種方式擷取流量，另外分析了 936 個廣告主像素、超過一千個網域。原文也寫明了幾項限制：約五分之一的 ChatGPT 工作階段產生同步權杖，桌機版 Chrome 沒有測試。OpenAI 在伺服器端把識別碼對應回帳號，是研究者從設計推論，沒有直接觀察到。研究者 9 月 14 日去信詢問，OpenAI 的客服收到後沒有回答提問。</p>
+<h2 id="perspective">導讀觀點</h2>
+<p>廣告主網站上的像素把造訪紀錄送回廣告平台，研究者在原文把它比作零售業者早已安裝的 Meta 與 Google 追蹤程式碼。差別在於 ChatGPT 帳號裡還有使用者跟 AI 的對話，許多人會在對話裡提到健康、工作與個人問題，對話內容與其他網站的瀏覽紀錄可能因此連到同一個帳號。</p>
+<p><code>__obi</code> 透過第三方 cookie 在其他網站送出。Safari 預設阻擋跨站追蹤，iOS 上的瀏覽器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都沒有觀察到。Android 與桌機可以在瀏覽器設定裡封鎖第三方 cookie，Firefox 預設把第三方 cookie 依網站隔離，Brave 預設封鎖。</p>
+<p>研究者觀察到的情境是在 Android 手機上用 Chrome 登入 ChatGPT。符合的人可以封鎖第三方 cookie，或改在另一個瀏覽器使用 ChatGPT，跟平常瀏覽其他網站的瀏覽器分開。</p>
+<p>同意橫幅的分類由業者自行定義，在這次的案例裡，「分析」這個選項也涵蓋了廣告用途的識別碼同步。只拒絕「行銷」不足以避開廣告追蹤，封鎖第三方 cookie 仍是比較可靠的做法。</p>
   </div>
 <aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
-  <h2 class="source-slip__heading" id="source-slip-heading">原文</h2>
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（2 篇）</h2>
   <div class="source-slip__item">
     <p class="source-slip__title" lang="en"><a href="https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/">ChatGPT now knows what you do on other websites via ad collector</a></p>
     <dl class="source-slip__meta">
       <div><dt>出處</dt><dd>Buchodi&#39;s Threat Intel</dd></div>
       <div><dt>原文日期</dt><dd><time datetime="2026-09-20">2026 年 9 月 20 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/">ChatGPT Ads expands to Southeast Asia and Taiwan</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>OpenAI</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-23">2026 年 9 月 23 日</time></dd></div>
     </dl>
   </div>
 </aside>
