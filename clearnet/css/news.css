@@ -600,6 +600,12 @@ p {
     border-top: 3px solid var(--c-headline);
     color: var(--c-muted);
     font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* 頁尾的說明文字是短短的附註，不用內文的行高與段距 */
+.site-footer p {
+    margin: 0 0 0.5rem;
 }
 
 .site-footer .wrap {
@@ -608,11 +614,13 @@ p {
     padding-bottom: 2rem;
 }
 
+/* 連結高度維持觸控範圍，間距收小讓 390px 寬的手機排成一行。
+   連結左右各有 0.25rem 的留白，整列往左移同樣的距離，跟下面的文字對齊 */
 .site-footer__links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 1.25rem;
-    margin-bottom: 0.5rem;
+    gap: 0 0.75rem;
+    margin: 0 0 0.25rem -0.25rem;
 }
 
 /* ---------------------------------------------------------------- 寬螢幕 */
