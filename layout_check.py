@@ -70,6 +70,10 @@ async def measure(ws_url: str, base: str, pages: list[str], shots: Path) -> list
                     if state["result"]["value"] == "complete":
                         break
                     await asyncio.sleep(0.1)
+                # 等圖片解碼完再量與截圖。decoding="async" 的圖在 load 之後才畫上去，
+                # 太早截圖會拍到一塊空白，看起來像版面壞了
+                await call("Runtime.evaluate", awaitPromise=True, expression=(
+                    "Promise.all([...document.images].map(i => i.decode().catch(() => null)))"))
                 # 跟設定的螢幕寬度比，不能跟 window.innerWidth 比。手機模式下頁面被撐寬時，
                 # Chrome 會自動縮小畫面去容納內容，innerWidth 跟著變大，兩邊永遠一樣寬。
                 result = await call(

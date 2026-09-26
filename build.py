@@ -36,7 +36,7 @@ NEWS_PREFIX = "https://anoni.net/news/"
 DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools/data/url_contract.txt"
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
-FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image"}
+FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "description", "url"}
@@ -92,6 +92,7 @@ class Post:
     html: str = ""
     anchors: list[str] = field(default_factory=list)
     image: str | None = None
+    pin: bool = False
 
     @property
     def image_rel(self) -> str | None:
@@ -257,6 +258,11 @@ def load_post(path: Path, authors: dict[str, dict]) -> Post | None:
         problems.append(f"{where}：image 要是 {ASSETS_PREFIX} 開頭的網址，{INGEST_HINT}")
         image = None
 
+    pin = meta.get("pin", False)
+    if not isinstance(pin, bool):
+        problems.append(f"{where}：pin 只能寫 true 或 false")
+        pin = False
+
     categories = meta.get("categories") or []
     if not isinstance(categories, list):
         problems.append(f"{where}：categories 要是清單")
@@ -277,6 +283,7 @@ def load_post(path: Path, authors: dict[str, dict]) -> Post | None:
         authors=post_authors,
         categories=[str(c) for c in categories],
         image=image,
+        pin=pin,
         body=body,
         anchors=anchors,
     )
@@ -414,6 +421,10 @@ def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | No
             post.html = render_markdown(post.body)
             process_images(post, store or AssetStore(), problems)
             posts.append(post)
+
+    pinned = [post.path.name for post in posts if post.pin]
+    if len(pinned) > 1:
+        problems.append(f"首頁的頭條只能有一篇，現在有 {len(pinned)} 篇設了 pin：{'、'.join(pinned)}。換頭條時先拿掉舊的那篇")
 
     seen: dict[str, Post] = {}
     for post in posts:
@@ -561,12 +572,19 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
               jsonld=jsonld(post, target, config),
               og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
 
+    featured = next((post for post in posts if post.pin), None)
+    featured_image = None
+    if featured and featured.image and store and featured.image_rel in store.assets:
+        asset = store.assets[featured.image_rel]
+        featured_image = {"src": target.url("assets/" + asset.rel), "width": asset.width, "height": asset.height}
+
     per_page = config["per_page"]
     groups = chunk(posts, per_page)
     for number, group in enumerate(groups, 1):
         rel = "" if number == 1 else f"page/{number}/"
         write(Page(rel, rel + "index.html", number > 1), "list.html.j2",
               kind="index", heading="anoni.net 新聞導讀", posts=group, number=number, total=len(groups),
+              featured=featured if number == 1 else None, featured_image=featured_image,
               prev_rel=("" if number == 2 else f"page/{number - 1}/") if number > 1 else None,
               next_rel=f"page/{number + 1}/" if number < len(groups) else None)
 
@@ -577,11 +595,12 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         months.setdefault((post.created.year, post.created.month), []).append(post)
     for year, group in years.items():
         write(Page(f"{year}/", f"{year}/index.html", True), "list.html.j2",
-              kind="archive", heading=f"{year} 年的文章", posts=group, number=1, total=1, prev_rel=None, next_rel=None)
+              kind="archive", heading=f"{year} 年的文章", posts=group, number=1, total=1, prev_rel=None, next_rel=None,
+              featured=None, featured_image=None)
     for (year, month), group in months.items():
         write(Page(f"{year}/{month:02d}/", f"{year}/{month:02d}/index.html", True), "list.html.j2",
               kind="archive", heading=f"{year} 年 {month} 月的文章", posts=group, number=1, total=1,
-              prev_rel=None, next_rel=None)
+              prev_rel=None, next_rel=None, featured=None, featured_image=None)
 
     write(Page("404.html", "404.html", True), "404.html.j2")
 

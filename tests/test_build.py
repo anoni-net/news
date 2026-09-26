@@ -435,3 +435,42 @@ def test_og_image_from_front_matter(fixture_site):
     assert "og:image\" content=\"http://news." in page and "/assets/2026/09/zkp-age-verification/og.webp" in page
     other = (targets["onion"].out / "2026/08/onion-link-rewrite/index.html").read_text(encoding="utf-8")
     assert "/og.png" in other
+
+
+# ---------------------------------------------------------------- 焦點（pin）
+
+def test_pin_must_be_bool(tmp_path):
+    problems = problems_of(tmp_path, GOOD.replace("authors:", "pin: yes please\nauthors:"))
+    assert any("pin 只能寫 true 或 false" in p for p in problems), problems
+
+
+def test_only_one_pin(tmp_path):
+    posts = tmp_path / "posts"
+    posts.mkdir()
+    write_post(posts, GOOD.replace("authors:", "pin: true\nauthors:"))
+    write_post(posts, GOOD.replace("authors:", "pin: true\nauthors:").replace("2026-09-18", "2026-09-20"),
+               "2026-09-20-test-post.md")
+    with pytest.raises(build.BuildError, match="頭條只能有一篇"):
+        build.load_posts(posts, AUTHORS)
+
+
+def test_featured_on_front_page_and_still_in_timeline(fixture_site):
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    index = (out / "index.html").read_text(encoding="utf-8")
+    featured = index.split('<section class="featured')[1].split("</section>")[0]
+    assert "焦點" in featured and "零知識證明用在年齡驗證的限制" in featured
+    assert '<img class="featured__image" src="/news/assets/2026/09/zkp-age-verification/og.webp"' in featured
+    timeline = index.split("</section>", 1)[1]
+    assert "/news/2026/09/zkp-age-verification/" in timeline
+    # 焦點只在首頁，封存頁沒有
+    assert 'class="featured' not in (out / "2026" / "09" / "index.html").read_text(encoding="utf-8")
+
+
+def test_no_pin_no_featured(tmp_path):
+    posts = tmp_path / "posts"
+    posts.mkdir()
+    write_post(posts, GOOD)
+    shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
+    targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
+    assert 'class="featured' not in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")

@@ -218,39 +218,59 @@ p {
     margin: 0.25rem 0 1.5rem;
 }
 
-.lead-story {
+/* 焦點：維護者用 front matter 的 pin 指定一篇放在首頁最上方。
+   同一篇也照樣出現在時間軸自己的日期底下，日期分組不會被拆開 */
+.featured {
     padding-bottom: 1.75rem;
     margin-bottom: 0.5rem;
     border-bottom: 3px solid var(--c-headline);
 }
 
-.lead-story__title {
+.featured__label {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding-top: 0.4rem;
+    border-top: 3px solid var(--c-rule);
+    color: var(--c-headline);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.featured__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    background: var(--c-surface);
+}
+
+.featured__title {
     font-family: var(--font-serif);
     font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.35;
-    margin: 0.25rem 0 0.75rem;
+    margin: 0 0 0.75rem;
 }
 
-.lead-story__title a,
+.featured__title a,
 .brief__title a {
     color: var(--c-headline);
     text-decoration: none;
 }
 
-.lead-story__title a:hover,
+.featured__title a:hover,
 .brief__title a:hover,
-.lead-story__title a:focus-visible,
+.featured__title a:focus-visible,
 .brief__title a:focus-visible {
     text-decoration: underline;
 }
 
-.lead-story__dek {
+.featured__dek {
     font-size: 1.125rem;
     margin-bottom: 0.75rem;
 }
 
-.lead-story__meta {
+.featured__meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0 1.25rem;
@@ -263,8 +283,8 @@ p {
     border-top: 1px solid var(--c-border);
 }
 
-/* 頭條底下已經有一條粗線，緊接的第一天不再疊一條細線 */
-.lead-story + .day {
+/* 焦點底下已經有一條粗線，緊接的第一天不再疊一條細線 */
+.featured + .day {
     border-top: 0;
 }
 
@@ -432,7 +452,7 @@ p {
 .content,
 .source-slip,
 .brief__title,
-.lead-story__title {
+.featured__title {
     overflow-wrap: anywhere;
 }
 
@@ -580,8 +600,32 @@ p {
         font-size: 4rem;
     }
 
-    .lead-story__title {
+    .featured__title {
         font-size: 2.25rem;
+    }
+
+    /* 有圖時文字在左、圖在右，圖約佔三分之一 */
+    .featured--image {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        grid-template-areas:
+            "label label"
+            "text image";
+        gap: 0 2rem;
+    }
+
+    .featured--image .featured__label {
+        grid-area: label;
+        justify-self: start;
+    }
+
+    .featured--image .featured__image {
+        grid-area: image;
+        margin-bottom: 0;
+    }
+
+    .featured--image .featured__text {
+        grid-area: text;
     }
 
     .story__title {

@@ -29,17 +29,20 @@
 <h1 class="list-heading">{{ heading }}{% if number > 1 %}（第 {{ number }} 頁）{% endif %}</h1>
 {% endif %}
 {% if posts %}
-{% if front %}
-{% set lead = posts[0] %}
-<section class="lead-story" aria-label="最新一篇">
-  <h2 class="lead-story__title"><a href="{{ url(lead.rel) }}">{{ lead.title }}</a></h2>
-  <p class="lead-story__dek">{{ lead.description }}</p>
-  <p class="lead-story__meta"><time datetime="{{ lead.created|iso }}">{{ lead.created|ymd }}</time>{% if lead|source_line %}<span>{{ lead|source_line }}</span>{% endif %}</p>
-</section>
-{% set items = posts[1:] %}
-{% else %}
-{% set items = posts %}
+{% if featured %}
+<section class="featured{% if featured_image %} featured--image{% endif %}" aria-labelledby="featured-heading">
+  <h2 class="featured__label" id="featured-heading">焦點</h2>
+{% if featured_image %}
+  <img class="featured__image" src="{{ featured_image.src }}" alt="" width="{{ featured_image.width }}" height="{{ featured_image.height }}" decoding="async">
 {% endif %}
+  <div class="featured__text">
+    <h3 class="featured__title"><a href="{{ url(featured.rel) }}">{{ featured.title }}</a></h3>
+    <p class="featured__dek">{{ featured.description }}</p>
+    <p class="featured__meta"><time datetime="{{ featured.created|iso }}">{{ featured.created|ymd }}</time>{% if featured|source_line %}<span>{{ featured|source_line }}</span>{% endif %}</p>
+  </div>
+</section>
+{% endif %}
+{% set items = posts %}
 {% include "_timeline.html.j2" %}
 {% else %}
 <p class="empty">第一篇導讀還在準備中。想先讀點什麼，可以從<a href="{{ config.docs }}">文件站</a>開始，或用 <a href="{{ url('feed.xml') }}">RSS</a> 訂閱，新文章發布時就會收到。</p>
