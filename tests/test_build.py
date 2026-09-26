@@ -770,3 +770,17 @@ def test_header_links_to_news_home(fixture_site):
         assert 'href="https://anoni.net/"' in footer
     onion = (targets["onion"].out / "en" / "index.html").read_text(encoding="utf-8")
     assert '<a class="site-header__home" href="/en/">' in onion
+
+
+def test_static_files_carry_content_version(fixture_site):
+    """樣式、圖示與預覽圖的網址帶內容雜湊，改了內容網址就變，讀者不必等快取過期。"""
+    import hashlib
+    targets, _, _ = fixture_site
+    for name, prefix in (("clearnet", "/news/"), ("onion", "/")):
+        out = targets[name].out
+        page = (out / "en" / "index.html").read_text(encoding="utf-8")
+        for rel in ("css/news.css", "favicon.svg", "logo-wordmark-white.svg"):
+            digest = hashlib.sha256((out / rel).read_bytes()).hexdigest()[:10]
+            assert f'"{prefix}{rel}?v={digest}"' in page, rel
+        og = hashlib.sha256((out / "og-en.png").read_bytes()).hexdigest()[:10]
+        assert f'og-en.png?v={og}"' in page

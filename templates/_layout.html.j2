@@ -18,8 +18,8 @@
 {% if onion_url %}
 <meta http-equiv="onion-location" content="{{ onion_url }}">
 {% endif %}
-<link rel="stylesheet" href="{{ url('css/news.css') }}">
-<link rel="icon" href="{{ url('favicon.svg') }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ asset('css/news.css') }}">
+<link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="{{ s.site_name }}" href="{{ target.abs_url(home ~ 'feed.xml') }}">
 <meta property="og:site_name" content="{{ s.site_name }}">
 <meta property="og:locale" content="{{ lang.og_locale }}">
@@ -30,7 +30,7 @@
 {% if og_image %}
 <meta property="og:image" content="{{ og_image }}">
 {% else %}
-<meta property="og:image" content="{{ target.abs_url(lang.og_image) }}">
+<meta property="og:image" content="{{ abs_asset(lang.og_image) }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 {% endif %}
@@ -44,7 +44,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     {# 標誌與產品名是同一個連結，回到本語系的 news 首頁。官網首頁的入口在頁尾 #}
-    <a class="site-header__home" href="{{ url(home) }}"><img class="site-header__logo" src="{{ url('logo-wordmark-white.svg') }}" alt="anoni.net" width="116" height="28"> <span class="site-header__product">{{ s.product }}</span></a>
+    <a class="site-header__home" href="{{ url(home) }}"><img class="site-header__logo" src="{{ asset('logo-wordmark-white.svg') }}" alt="anoni.net" width="116" height="28"> <span class="site-header__product">{{ s.product }}</span></a>
   </div>
 {% block masthead %}{% endblock %}
 </header>

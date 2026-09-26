@@ -10,6 +10,8 @@
 from __future__ import annotations
 
 import argparse
+import functools
+import hashlib
 import html
 import json
 import re
@@ -711,6 +713,9 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             target=target,
             config=config,
             url=target.url,
+            # static/ 的檔案帶版本號，見 static_version
+            asset=lambda rel: f"{target.url(rel)}?v={static_version(rel)}",
+            abs_asset=lambda rel: f"{target.abs_url(rel)}?v={static_version(rel)}",
             lang=lang,
             s=texts[lang.code],
             home=lang.path,
@@ -845,6 +850,13 @@ def source_line(post: Post, s: dict | None = None) -> str:
 ICON_DIR = ROOT / "templates" / "icons"
 SVG_VIEWBOX_RE = re.compile(r'viewBox="([^"]+)"')
 SVG_BODY_RE = re.compile(r"<svg\b[^>]*>(.*)</svg>", re.S)
+
+
+@functools.cache
+def static_version(rel: str) -> str:
+    """static/ 底下檔案內容的雜湊，接在網址後面當版本號。內容改了網址就跟著變，
+    瀏覽器與 Cloudflare 會當成新檔案去抓，不必等快取過期或手動清除。"""
+    return hashlib.sha256((ROOT / "static" / rel).read_bytes()).hexdigest()[:10]
 
 
 def icon(name: str) -> Markup:
