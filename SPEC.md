@@ -4,7 +4,7 @@
 
 ## 自行開發的理由
 
-新聞導讀的需求是每期一頁、一個列表、一份 RSS。這個範圍用幾百行 Python 就能涵蓋，換來四件現成工具給不了的事：
+新聞導讀的需求是一篇一頁、列表與封存頁、一份 RSS。這個範圍用幾百行 Python 就能涵蓋，換來四件現成工具給不了的事：
 
 - 不依賴 JavaScript、不對外請求、clearnet 與 onion 各一份產物，這三條由程式本身保證，不靠設定關掉工具的預設行為
 - 網址與輸出格式由本 repo 決定，不會因為上游停止維護而被迫搬家
@@ -25,12 +25,12 @@
 ## 目錄結構
 
 ```
-issues/                  # 每期一個 Markdown，檔名是發刊日
-  2026-09-18.md
+posts/                   # 一篇一個 Markdown，檔名是發布日加 slug
+  2026-09-18-zkp-age-verification.md
 templates/               # Jinja2 模板
   _layout.html.j2
-  issue.html.j2
-  index.html.j2
+  post.html.j2
+  list.html.j2           # 列表頁與年、月封存頁共用
   404.html.j2
   feed.xml.j2
   sitemap.xml.j2
@@ -38,6 +38,7 @@ static/                  # 兩份產物共用的檔案
   css/news.css
   favicon.svg
   logo.svg
+authors.yml              # 作者代稱，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
 build.py
 tests/
@@ -46,20 +47,25 @@ url_contract.txt         # 網址合約，由 build.py --update-contract 產生
 
 產物寫到 `public/clearnet/` 與 `public/onion/`，不進 `main`，由 CI 推到 `build` 分支（見「部署」）。
 
-## 一期的格式
+## 一篇的格式
 
-一期是 `issues/` 底下的一個 Markdown 檔，檔名是發刊日 `YYYY-MM-DD.md`。同一天只能有一期。
+一則新聞寫成一篇，是 `posts/` 底下的一個 Markdown 檔。檔名是 `YYYY-MM-DD-<slug>.md`，日期與 slug 都要跟 front matter 相同。檔名帶日期只是為了讓目錄依時間排序，網址由 front matter 決定。
 
 ### front matter
 
-欄位名稱與寫法沿用 Material for MkDocs 的 blog，換工具時不必改寫文章。
+欄位名稱與寫法沿用 Material for MkDocs 的 blog，換工具時不必改寫文章。`sources` 是本站自己加的欄位，Material 與 Zensical 會忽略不認得的欄位，不影響相容。
 
 ```yaml
 ---
-title: 年齡驗證的零知識證明迷思與西班牙封鎖的附帶傷害
-description: 本期五則，EFF 談零知識證明用在年齡驗證的限制，OONI 量測西班牙 IP 封鎖波及的網站。
+title: 零知識證明用在年齡驗證的限制
+description: EFF 指出零知識證明用在年齡驗證時，仍會留下單點失效與 metadata 軌跡。
 date: 2026-09-18
-slug: 2026-09-18
+slug: zkp-age-verification
+sources:
+  - title: "Zero-Knowledge Proofs Aren't Age Verification Silver Bullets"
+    url: https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets
+    publisher: EFF
+    date: 2026-08-18
 authors:
   - anoni
 ---
@@ -67,24 +73,22 @@ authors:
 
 | 欄位 | 必填 | 說明 |
 |---|---|---|
-| `title` | 是 | 這一期的標題，用名詞片語，套貢獻者百科的標題句構 |
+| `title` | 是 | 用名詞片語，套貢獻者百科的標題句構。照錄原文標題時不在此限 |
 | `description` | 是 | 一兩句話，用在列表頁、RSS 與 `<meta name="description">` |
-| `date` | 是 | 發刊日，必須跟檔名相同。有更正時寫成 `date: {created: 2026-09-18, updated: 2026-09-20}` |
-| `slug` | 是 | 必須跟檔名相同。Material 的 blog 預設從標題產生 slug，寫明才能確保換工具後網址不變 |
+| `date` | 是 | 第一次發布的日期，決定網址裡的年月，發布之後不能改。有更正時寫成 `date: {created: 2026-09-18, updated: 2026-09-20}` |
+| `slug` | 是 | 小寫英文、數字與連字號，3 到 60 個字元，同一個年月內不重複。Material 的 blog 預設從標題產生 slug，寫明才能確保換工具後網址不變 |
+| `sources` | 是 | 原文，至少一筆。每筆的 `title` 與 `url` 必填，`publisher` 與 `date` 選填。同一事件有多篇報導時合併成一篇，列出多筆 |
 | `authors` | 否 | 對應 `authors.yml` 的鍵。第一版只顯示，不產生作者頁 |
-| `draft` | 否 | `true` 時不產出，也不進列表與 RSS |
+| `categories` | 否 | 第一版只存不產頁 |
+| `draft` | 否 | `true` 時不產出，也不進列表、封存頁與 RSS |
 
 多出來的欄位建置時報錯，避免打錯字的欄位被靜默忽略。
 
 ### 內文
 
-每一則新聞是一個 `##` 小標題，小標題必須用 `{#id}` 寫明錨點：
+來源由模板依 `sources` 顯示在標題下方，內文不再重寫一次。內文依序寫摘要、跟正體中文使用者的關係，最後是延伸閱讀：
 
 ```markdown
-## 零知識證明用在年齡驗證的限制 {#zkp-age-verification}
-
-來源：[Zero-Knowledge Proofs Aren't Age Verification Silver Bullets](https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets) · EFF · 2026-08-18
-
 摘要段落……
 
 跟正體中文使用者的關係……
@@ -94,26 +98,32 @@ authors:
 
 建置時檢查：
 
-- 每個 `##` 都有 `{#id}`，id 只用小寫英文、數字與連字號，同一期裡不重複。中文標題自動產生的錨點會隨著改字而變，寫明 id 才能讓單則分享的網址長期有效
-- 每則的第一段以「來源：」開頭，而且含一條外部連結
-- 每則至少有一條連到 `https://anoni.net/docs/` 的連結
+- 內文如果有小標題，一律用 `{#id}` 寫明錨點，id 只用小寫英文、數字與連字號，同一篇裡不重複。中文標題自動產生的錨點會隨著改字而變，寫明 id 才能讓分享出去的段落連結長期有效
+- 至少有一條連到 `https://anoni.net/docs/` 的連結
 - 連到文件站的網址必須存在於文件站的網址合約（`anoni-net/docs` 的 `tools/data/url_contract.txt`），錨點也一樣
 
 站內與文件站的連結一律寫 clearnet 的完整網址，onion 產物由建置程式改寫（見「clearnet 與 onion」）。
 
 ## 網址
 
-clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的做法切成獨立的子網域 `news.<onion 位址>`，網站放在子網域的根目錄。下表列的是 clearnet 的網址，onion 那一側去掉 `/news` 前綴，例如 `/news/2026-09-18/` 對應到 `http://news.<onion 位址>/2026-09-18/`。
+clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的做法切成獨立的子網域 `news.<onion 位址>`，網站放在子網域的根目錄。下表列的是 clearnet 的網址，onion 那一側去掉 `/news` 前綴，例如 `/news/2026/09/zkp-age-verification/` 對應到 `http://news.<onion 位址>/2026/09/zkp-age-verification/`。
 
 | 網址 | 內容 |
 |---|---|
-| `/news/` | 列表頁，新的在前，每頁 20 期 |
-| `/news/page/2/` | 第二頁起，超過 20 期才產生 |
-| `/news/2026-09-18/` | 一期 |
-| `/news/2026-09-18/#zkp-age-verification` | 一期裡的一則 |
+| `/news/` | 列表頁，新的在前，每頁 20 篇 |
+| `/news/page/2/` | 第二頁起，超過 20 篇才產生 |
+| `/news/2026/` | 年封存頁，列出該年全部文章 |
+| `/news/2026/09/` | 月封存頁，列出該月全部文章 |
+| `/news/2026/09/zkp-age-verification/` | 一篇 |
 | `/news/feed.xml` | RSS 2.0 |
 | `/news/sitemap.xml` | sitemap |
 | `/news/404.html` | 找不到頁面 |
+
+年齡驗證、VPN 禁令、年度報告這類題目每隔一段時間就會再寫一次，文章網址帶年月之後，slug 只需要在同一個月內不重複。新聞寫的是某個時間點的事，讀者從網址也看得出新舊。年月取第一次發布的日期，之後更正也不變。
+
+網址裡有年月，讀者就可能把網址往上刪一層，所以年與月各有一種封存頁，不會落在 404。封存頁不分頁。
+
+Material 的 blog 設定 `post_url_format: "{date}/{slug}"` 加 `post_url_date_format: yyyy/MM` 可以產出相同的文章網址，跟文件站 blog 的格式一致。封存頁的網址格式不同，換工具時要另外設定或補轉址。
 
 頁面一律輸出成目錄加 `index.html`，網址結尾是斜線。站內連結從根目錄起算、不寫網域，前綴依輸出目標而不同，clearnet 是 `/news/`，onion 是 `/`，由建置程式依 `site.toml` 產生，模板裡不寫死。
 
@@ -125,15 +135,15 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 ### 網址合約
 
-`build.py --update-contract` 把所有頁面網址與每一期的錨點寫進 `url_contract.txt`。CI 比對產物與合約，新增只印提醒，移除或改名讓建置失敗。判準與文件站的 `tools/check_url_contract.py` 相同：拿走讀者已經收藏或分享出去的網址，才算破壞性變更。
+`build.py --update-contract` 把所有頁面網址與每一篇的錨點寫進 `url_contract.txt`。CI 比對產物與合約，新增只印提醒，移除或改名讓建置失敗。判準與文件站的 `tools/check_url_contract.py` 相同：拿走讀者已經收藏或分享出去的網址，才算破壞性變更。
 
 合約只記 clearnet 的路徑。onion 的網址由「去掉 `/news` 前綴、接上 `news.<onion 位址>`」這條固定的對應推得，不另外記一份。
 
 ## RSS
 
-- RSS 2.0，放最新 20 期，一期一個 `<item>`
-- `<description>` 放該期的 `description`，`<content:encoded>` 放整期的 HTML，讀者在閱讀器裡就能讀完
-- `<guid isPermaLink="false">` 用 `anoni-news:2026-09-18`，clearnet 與 onion 兩份 feed 用同一個值
+- RSS 2.0，放最新 20 篇，一篇一個 `<item>`
+- `<description>` 放該篇的 `description`，`<content:encoded>` 放整篇的 HTML，連同來源清單，讀者在閱讀器裡就能讀完
+- `<guid isPermaLink="false">` 用 `anoni-news:2026/09/zkp-age-verification`，clearnet 與 onion 兩份 feed 用同一個值
 - 日期用 RFC 822 格式，時區固定 `+0800`
 - feed 裡的網址必須是完整網址，這是兩份產物一定不同的地方
 
@@ -167,20 +177,21 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 - 支援 `prefers-color-scheme: dark`
 - 頁首：anoni.net 標誌連回官網首頁、「新聞導讀」、連到文件站
 - 頁尾：RSS、授權（CC-BY 4.0）、onion 位址（clearnet 才顯示）、訂閱電子報
-- 一期的頁面在標題下列出該期各則的小標題，當成目次
+- 文章頁在標題下方顯示發布日期（有更正時加註更正日期）與來源清單，文末是延伸閱讀
+- 列表頁與封存頁列出每篇的標題、日期與 `description`
 
 ## 驗證與 CI
 
 `uv run build.py` 產出兩份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
 
-1. front matter 的欄位、日期、slug 與檔名
-2. 內文的錨點、「來源：」段落、文件站連結
+1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複
+2. 內文的錨點與文件站連結
 3. 文件站連結對得上文件站的網址合約
 4. 產物沒有 `<script>`，也沒有指向站外的資源
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
 
-GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `issues/*.md` 與 `README.md`。
+GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `posts/*.md` 與 `README.md`。
 
 ## 部署
 
@@ -207,10 +218,11 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - 社群分享用的預覽卡片圖
 - 留言與任何需要伺服器端的功能
 - 自動寄送電子報
+- 每週彙整頁（例如 `/news/weekly/2026-09-18/`），把一週的文章整理成一頁給電子報與不常來的讀者，第一版上線後再評估
 
 ## 待決定的事
 
-- 發刊頻率：每週或雙週
+- 發布節奏：寫好就發，或固定在每週某幾天發
 - clearnet 是否放流量統計，官網首頁與文件站都有 Umami
 - 內部篩選過的新聞改寫成對外版本時，由誰改寫、誰審稿
-- 第一期的內容：整理 2026 年 6 月到 9 月累積的新聞，或從下一次篩選開始
+- 上線時的第一批文章：整理 2026 年 6 月到 9 月累積的新聞，或從下一次篩選開始
