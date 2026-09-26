@@ -2,7 +2,7 @@
 {% set front = kind == "index" and number == 1 %}
 {% if front %}
 {% set page_title = "anoni.net 新聞導讀" %}
-{% set page_description = "整理國際上隱私、匿名網路與網路審查的新聞，一則寫成一篇正體中文的導讀，附上原文與延伸閱讀。" %}
+{% set page_description = "從科技與開源的角度，以正體中文導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。" %}
 {% elif kind == "index" %}
 {% set page_title = "第 " ~ number ~ " 頁 | anoni.net 新聞導讀" %}
 {% set page_description = "anoni.net 新聞導讀的第 " ~ number ~ " 頁，依發布日期由新到舊排列。" %}
@@ -16,7 +16,7 @@
 {% if front %}
   <div class="masthead">
     <h1 class="masthead__title">新聞導讀</h1>
-    <p class="masthead__tagline">國際隱私、匿名網路與審查新聞，一則一篇的正體中文導讀，每篇都附上原文。</p>
+    <p class="masthead__tagline">從科技與開源的角度，導讀國際隱私、匿名網路與審查新聞。</p>
     <div class="masthead__bar">
 {% if latest %}
       <p class="masthead__updated">最後更新 <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
