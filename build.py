@@ -431,8 +431,6 @@ def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | No
         if post.rel in seen:
             problems.append(f"{post.path.name}：跟 {seen[post.rel].path.name} 的網址相同，slug 在同一個年月內不能重複")
         seen[post.rel] = post
-        if not any(href.startswith(DOCS_PREFIX) for href in hrefs(post.html)):
-            problems.append(f"{post.path.name}：至少要有一條連到 {DOCS_PREFIX} 的連結")
     if problems:
         raise BuildError(problems)
     # 新的在前。同一個時間發的，依 slug 排，讓順序固定

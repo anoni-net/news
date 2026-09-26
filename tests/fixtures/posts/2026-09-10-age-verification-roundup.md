@@ -25,5 +25,3 @@ authors:
 ---
 
 五篇原文分別從技術、法規與量測切入，指向同一組問題：驗證資料集中在少數業者手上，匿名使用的空間跟著縮小。
-
-延伸閱讀：[威脅模型](https://anoni.net/docs/basics/threat-model/)

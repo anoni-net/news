@@ -110,12 +110,12 @@ def test_heading_inside_fence_is_ignored(tmp_path):
     assert problems_of(tmp_path, text) == []
 
 
-def test_post_needs_docs_link(tmp_path):
+def test_docs_link_is_optional(tmp_path):
+    # 延伸閱讀是文件站有合適的頁面才放，沒有連到文件站也能建置
     posts = tmp_path / "posts"
     posts.mkdir()
-    write_post(posts, GOOD.replace("https://anoni.net/docs/basics/threat-model/", "https://example.org/"))
-    with pytest.raises(build.BuildError, match="至少要有一條連到"):
-        build.load_posts(posts, AUTHORS)
+    write_post(posts, GOOD.replace("內文，延伸閱讀：[威脅模型](https://anoni.net/docs/basics/threat-model/)", "內文。"))
+    assert len(build.load_posts(posts, AUTHORS)) == 1
 
 
 def test_slug_unique_within_month(tmp_path):
