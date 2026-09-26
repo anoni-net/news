@@ -175,6 +175,11 @@ class Post:
         return f"{self.lang.dir}/{self.path.name}" if self.lang.dir else self.path.name
 
 
+def current_time() -> datetime:
+    """台北時間的現在。測試會替換這個函式，檢查未來日期時不必真的等時間過去。"""
+    return datetime.now(TZ)
+
+
 def to_datetime(value, where: str, problems: list[str]) -> datetime | None:
     if isinstance(value, datetime):
         return value if value.tzinfo else value.replace(tzinfo=TZ)
@@ -278,6 +283,13 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
                 updated = to_datetime(raw_date["updated"], where, problems)
     else:
         created = to_datetime(raw_date, where, problems)
+
+    # date 填實際合併上線的時間。預先填未來的日期，讀者與搜尋引擎會看到還沒到的發布日
+    now = current_time()
+    for label, value in (("date", created), ("date.updated", updated)):
+        if value and value > now:
+            problems.append(f"{where}：{label} 是 {value:%Y-%m-%d %H:%M}，晚於現在（台北時間 {now:%Y-%m-%d %H:%M}），"
+                            "填實際合併上線的時間")
 
     slug = str(meta["slug"])
     if not SLUG_RE.match(slug) or not 3 <= len(slug) <= 60:

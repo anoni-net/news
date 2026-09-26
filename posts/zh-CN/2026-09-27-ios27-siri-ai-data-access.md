@@ -1,7 +1,7 @@
 ---
 title: iOS 27 Siri AI 的数据访问设置
 description: iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。
-date: 2026-09-28
+date: 2026-09-27T03:21:00+08:00
 slug: ios27-siri-ai-data-access
 sources:
   - title: How to Limit What Apple's New Siri AI Can Access in iOS 27

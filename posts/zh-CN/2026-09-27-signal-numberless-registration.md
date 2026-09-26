@@ -1,9 +1,7 @@
 ---
 title: Signal 免手机号注册的 Android 测试版
 description: Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。
-date:
-  created: 2026-09-27
-  updated: 2026-09-28
+date: 2026-09-27T01:23:00+08:00
 slug: signal-numberless-registration
 pin: true
 sources:

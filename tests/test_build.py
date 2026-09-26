@@ -799,3 +799,27 @@ def test_newsletter_form_follows_language(fixture_site):
     assert post.count(f'href="{en_form}"') == 2 and "in Chinese" not in post  # 文末與頁尾
     onion = (targets["onion"].out / "en" / "index.html").read_text(encoding="utf-8")
     assert "http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/w21855zpca072rvgp0s2govj" in onion
+
+
+@pytest.mark.parametrize("date_yaml, ok", [
+    ("date: 2026-09-18", True),
+    ("date: 2026-09-18T10:00:00+08:00", True),
+    ("date: 2026-09-19", False),
+    ("date: 2026-09-18T12:30:00+08:00", False),
+    ("date:\n  created: 2026-09-18\n  updated: 2026-09-20", False),
+])
+def test_date_cannot_be_in_the_future(tmp_path, monkeypatch, date_yaml, ok):
+    """date 填實際合併上線的時間，晚於現在就建置失敗。現在固定成 2026-09-18 12:00（台北時間）。"""
+    monkeypatch.setattr(build, "current_time", lambda: datetime(2026, 9, 18, 12, 0, tzinfo=build.TZ))
+    name = "2026-09-19-test-post.md" if "2026-09-19" in date_yaml else "2026-09-18-test-post.md"
+    problems = problems_of(tmp_path, GOOD.replace("date: 2026-09-18", date_yaml), name)
+    assert (not any("晚於現在" in p for p in problems)) is ok, problems
+
+
+def test_time_of_day_orders_posts_on_the_same_day(tmp_path):
+    posts = tmp_path / "posts"
+    posts.mkdir()
+    write_post(posts, GOOD.replace("date: 2026-09-18", "date: 2026-09-18T09:00:00+08:00"))
+    write_post(posts, GOOD.replace("date: 2026-09-18", "date: 2026-09-18T15:00:00+08:00").replace("slug: test-post", "slug: another-post"),
+               "2026-09-18-another-post.md")
+    assert [p.slug for p in build.load_posts(posts, AUTHORS)] == ["another-post", "test-post"]
