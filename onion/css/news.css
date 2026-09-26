@@ -177,21 +177,6 @@ p {
     border-left: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* 語系切換靠右，窄螢幕放不下時整組換到下一行 */
-.site-header__langs {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0 0.75rem;
-    margin-left: auto;
-    font-size: 0.875rem;
-}
-
-.site-header__langs span {
-    color: var(--c-header-link);
-    font-weight: 700;
-}
-
 .site-header a:hover,
 .site-header a:focus-visible {
     text-decoration: underline;
@@ -601,6 +586,27 @@ p {
     color: var(--c-muted);
 }
 
+/* 署名下方列出另外兩個語系的同一篇。有這一行時，署名下方的粗線移到這一行 */
+.story__byline:not(:last-child) {
+    padding-bottom: 0.25rem;
+    border-bottom: 0;
+}
+
+.story__langs {
+    margin: 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+/* 語言名稱夾在句子裡，跟訂閱提示一樣只加上下的留白放大觸控範圍 */
+.story__langs a,
+.site-footer__langs a {
+    display: inline-block;
+    padding: 0.375rem 0;
+}
+
 /* 文章頁最後的訂閱提示 */
 .subscribe {
     margin: 2rem 0 0;
@@ -638,7 +644,9 @@ p {
    行內文字裡偏高約 1.3px，頁尾的 flex 連結偏高約 0.5px，各自往下移補回。
    刊頭與前後篇本來就在 ±0.5px 內，不動 */
 .subscribe .icon,
-.story__sources .icon {
+.story__sources .icon,
+.story__langs .icon,
+.site-footer__langs .icon {
     top: 0.08em;
 }
 
