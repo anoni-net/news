@@ -1,27 +1,27 @@
 {% extends "_layout.html.j2" %}
 {% set front = kind == "index" and number == 1 %}
 {% if front %}
-{% set page_title = "anoni.net 新聞導讀" %}
-{% set page_description = "從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。" %}
+{% set page_title = s.site_name %}
+{% set page_description = s.description %}
 {% elif kind == "index" %}
-{% set page_title = "第 " ~ number ~ " 頁 | anoni.net 新聞導讀" %}
-{% set page_description = "anoni.net 新聞導讀的第 " ~ number ~ " 頁，依發布日期由新到舊排列。" %}
+{% set page_title = s.page_title.format(n=number) ~ " | " ~ s.site_name %}
+{% set page_description = s.page_description.format(n=number) %}
 {% else %}
-{% set page_title = heading ~ " | anoni.net 新聞導讀" %}
-{% set page_description = heading ~ "，依發布日期由新到舊排列。" %}
+{% set page_title = heading ~ " | " ~ s.site_name %}
+{% set page_description = s.archive_description.format(heading=heading) %}
 {% endif %}
 {% set og_title = page_title %}
 {% set og_type = "website" %}
 {% block masthead %}
 {% if front %}
   <div class="masthead">
-    <h1 class="masthead__title">新聞導讀</h1>
-    <p class="masthead__tagline">從科技與開源的角度，導讀國際隱私、匿名網路與審查新聞。</p>
+    <h1 class="masthead__title">{{ s.product }}</h1>
+    <p class="masthead__tagline">{{ s.tagline }}</p>
     <div class="masthead__bar">
 {% if latest %}
-      <p class="masthead__updated">最後更新 <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
+      <p class="masthead__updated">{{ s.updated }} <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
 {% endif %}
-      <p class="masthead__subscribe"><a href="{{ url('feed.xml') }}">{{ icon('rss') }} RSS</a><a href="{{ config.newsletter }}">{{ icon('email-outline') }} 訂閱電子報</a></p>
+      <p class="masthead__subscribe"><a href="{{ url(home ~ 'feed.xml') }}">{{ icon('rss') }} {{ s.rss }}</a><a href="{{ config.newsletter }}">{{ icon('email-outline') }} {{ s.newsletter }}</a></p>
     </div>
   </div>
 {% endif %}
@@ -29,12 +29,12 @@
 {% block main_class %}list-wrap{% endblock %}
 {% block content %}
 {% if not front %}
-<h1 class="list-heading">{{ heading }}{% if number > 1 %}（第 {{ number }} 頁）{% endif %}</h1>
+<h1 class="list-heading">{{ heading }}{% if number > 1 %}{{ s.page_suffix.format(n=number) }}{% endif %}</h1>
 {% endif %}
 {% if posts %}
 {% if featured %}
 <section class="featured{% if featured_image %} featured--image{% endif %}" aria-labelledby="featured-heading">
-  <h2 class="featured__label" id="featured-heading">焦點</h2>
+  <h2 class="featured__label" id="featured-heading">{{ s.featured }}</h2>
 {% if featured_image %}
   <img class="featured__image" src="{{ featured_image.src }}" alt="" width="{{ featured_image.width }}" height="{{ featured_image.height }}" decoding="async">
 {% endif %}
@@ -48,15 +48,15 @@
 {% set items = posts %}
 {% include "_timeline.html.j2" %}
 {% else %}
-<p class="empty">第一篇導讀還在準備中。可以先用 <a href="{{ url('feed.xml') }}">RSS</a> 訂閱，新文章發布時就會收到。</p>
+<p class="empty">{{ s.empty_before }}<a href="{{ url(home ~ 'feed.xml') }}">{{ s.rss }}</a>{{ s.empty_after }}</p>
 {% endif %}
 {% if prev_rel is not none or next_rel %}
-<nav class="pager" aria-label="分頁">
+<nav class="pager" aria-label="{{ s.pagination_label }}">
 {% if prev_rel is not none %}
-  <a href="{{ url(prev_rel) }}" rel="prev">較新的文章</a>
+  <a href="{{ url(prev_rel) }}" rel="prev">{{ s.newer_page }}</a>
 {% endif %}
 {% if next_rel %}
-  <a href="{{ url(next_rel) }}" rel="next">較舊的文章</a>
+  <a href="{{ url(next_rel) }}" rel="next">{{ s.older_page }}</a>
 {% endif %}
 </nav>
 {% endif %}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- 社群分享預覽圖 static/og.png 的原始檔，用 tools/make_og.sh 產生。配色與 logo 照 SPEC.md「品牌與配色」。 -->
+<!-- 社群分享預覽圖的原始檔，用 tools/make_og.sh 產生三個語系各一張，網址帶 ?lang=zh-CN 或 ?lang=en 切換文字。
+     配色與 logo 照 SPEC.md「品牌與配色」。這是產圖用的本機檔案，不會進網站，可以用 JavaScript。 -->
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
@@ -18,6 +19,9 @@
   img { width: 420px; height: auto; display: block; margin-left: -16px; }
   h1 { font-size: 112px; font-weight: 700; letter-spacing: 0.08em; margin: 28px 0 20px; line-height: 1; }
   p { font-size: 34px; margin: 0; color: #e0f4ff; letter-spacing: 0.02em; }
+  :lang(zh-Hans) body { font-family: "Noto Sans CJK SC", "Noto Sans SC", sans-serif; }
+  :lang(en) h1 { font-family: Georgia, "Noto Serif", serif; letter-spacing: 0; }
+  :lang(en) p { font-size: 36px; max-width: 960px; line-height: 1.35; }
   .bar { position: absolute; left: 96px; bottom: 72px; width: 120px; height: 8px; background: #00aeff; }
 </style>
 </head>
@@ -26,5 +30,18 @@
   <h1>新聞導讀</h1>
   <p>從科技與開源的角度，導讀國際隱私、匿名網路與審查新聞</p>
   <div class="bar"></div>
+<script>
+  // 文字與 strings.toml 的 product、tagline 相同，改標語時兩邊一起改
+  var TEXT = {
+    "zh-CN": ["zh-Hans", "新闻导读", "从科技与开源的角度，导读国际隐私、匿名网络与审查新闻"],
+    "en": ["en", "News", "Privacy, anonymity and censorship news, read from a tech and open-source angle, with a view from Asia"]
+  };
+  var t = TEXT[new URLSearchParams(location.search).get("lang")];
+  if (t) {
+    document.documentElement.lang = t[0];
+    document.querySelector("h1").textContent = t[1];
+    document.querySelector("p").textContent = t[2];
+  }
+</script>
 </body>
 </html>

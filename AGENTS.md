@@ -16,7 +16,7 @@ uv run build.py                    # 產生 public/clearnet 與 public/onion
 uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
 uv run build.py --update-contract  # 新增網址之後，把它們收進 url_contract.txt
 uv run pytest -q
-./tools/make_og.sh                 # 改了 tools/og.html 之後重新產生 static/og.png
+./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
 ```
 

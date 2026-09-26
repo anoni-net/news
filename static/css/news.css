@@ -42,6 +42,29 @@
     --frame: 64rem;
 }
 
+/* 依整頁的語系換字型，只看 <html>，頁面裡標了 lang 的原文標題不受影響。簡體頁先找簡體字型，
+   避免用正體字型的字形顯示簡體字。英文頁的標題用西文襯線體，中文字型排在後面備用 */
+html:lang(zh-Hans),
+.not-found:lang(zh-Hans) {
+    --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --font-serif: "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+}
+
+html:lang(en) {
+    --font-serif: Georgia, "Times New Roman", "Noto Serif", "Noto Serif TC", "Songti TC", serif;
+}
+
+/* 中文標題的字距拉開是為了方塊字的節奏，放在拉丁字母上會散開 */
+html:lang(en) .masthead__title,
+html:lang(en) .site-header__product {
+    letter-spacing: 0;
+}
+
+/* 404 三種語言各一段，簡體那一段要自己套上面換過的字型 */
+.not-found {
+    font-family: var(--font-sans);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --c-bg: #0c1b22;
@@ -152,6 +175,21 @@ p {
     letter-spacing: 0.08em;
     padding-left: 1rem;
     border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* 語系切換靠右，窄螢幕放不下時整組換到下一行 */
+.site-header__langs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 0.75rem;
+    margin-left: auto;
+    font-size: 0.875rem;
+}
+
+.site-header__langs span {
+    color: var(--c-header-link);
+    font-weight: 700;
 }
 
 .site-header a:hover,
@@ -737,7 +775,8 @@ p {
    連結左右各有 0.25rem 的留白，整列往左移同樣的距離，跟下面的文字對齊 */
 .site-footer__links {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    /* 右欄可以縮，英文的「Newsletter (in Chinese)」在 320px 放不下一行時在格子裡換行 */
+    grid-template-columns: max-content minmax(0, max-content);
     gap: 0 1rem;
     margin: 0 0 0.25rem -0.25rem;
 }

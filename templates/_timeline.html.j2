@@ -1,6 +1,6 @@
 {% for day in items|by_day %}
 <section class="day">
-  <h2 class="day__date"><time datetime="{{ day.date.isoformat() }}"><span class="day__md">{{ day.date|md }}</span><span class="day__meta">{{ day.date.year }} 年，{{ day.date|weekday }}</span></time></h2>
+  <h2 class="day__date"><time datetime="{{ day.date.isoformat() }}"><span class="day__md">{{ day.date|md }}</span><span class="day__meta">{{ day.date|day_meta }}</span></time></h2>
   <div class="day__briefs">
 {% for post in day.posts %}
 {% include "_brief.html.j2" %}
