@@ -6,5 +6,95 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>整理國際上隱私、匿名網路與網路審查的新聞，一則寫成一篇正體中文的導讀。</description>
 <language>zh-TW</language>
+<lastBuildDate>Sun, 27 Sep 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>ChatGPT 廣告像素的跨站識別碼</title>
+<link>https://anoni.net/news/2026/09/chatgpt-ad-pixel-identifier/</link>
+<guid isPermaLink="false">anoni-news:2026/09/chatgpt-ad-pixel-identifier</guid>
+<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素把它連同瀏覽資料送回去。</description>
+<content:encoded>&lt;p&gt;原文來自 Buchodi&amp;#39;s Threat Intel&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 會設定一個名為 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到，iOS 上的瀏覽器都擋掉了。ChatGPT 的廣告在台灣有沒有上線，原文沒有提到。&lt;/p&gt;
+&lt;p&gt;在 ChatGPT 買廣告的業者，會在自己的網站裝上 OpenAI 的像素。使用者之後造訪這些網站時，像素會把 &lt;code&gt;__obi&lt;/code&gt; 連同頁面資料送回 OpenAI，包括網址路徑、表單欄位與網頁上的文字。電子郵件、電話與姓名經過 SHA-256 雜湊，國家、地區、城市與郵遞區號則是明碼。研究者觀察到的網址都去掉了查詢字串，但路徑本身有時就透露了病症這類敏感資訊。&lt;/p&gt;
+&lt;p&gt;這組識別碼在登出時也會設定。研究者檢視的每一個同步權杖，同意類別都是「分析」，只允許分析、拒絕行銷的使用者照樣會被設定。&lt;/p&gt;
+&lt;p&gt;研究者在自己的手機上重現，用兩種方式擷取流量，另外分析了 936 個廣告主像素、超過一千個網域。原文也寫明了幾項限制：約五分之一的 ChatGPT 工作階段產生同步權杖，桌機版 Chrome 沒有測試，而 OpenAI 在伺服器端把識別碼對應回帳號，是從設計推論，研究者沒有直接觀察到。研究者 9 月 14 日去信詢問，OpenAI 的客服收到後沒有回答提問。&lt;/p&gt;
+&lt;h2 id=&#34;technical-view&#34;&gt;技術觀點&lt;/h2&gt;
+&lt;p&gt;廣告主網站上的像素把造訪紀錄送回廣告平台，Meta 與 Google 的轉換追蹤用的都是同一套做法。差別在於 ChatGPT 帳號裡還有使用者跟 AI 的對話，許多人會在對話裡提到健康、工作與個人問題，這些資料跟其他網站的瀏覽紀錄，現在有機會連到同一個帳號。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; 能在其他網站送出，靠的是第三方 cookie。Safari 預設阻擋跨站追蹤，iOS 上的瀏覽器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都沒有觀察到。Android 與桌機可以在瀏覽器設定裡封鎖第三方 cookie，Firefox 預設就把第三方 cookie 依網站隔離，Brave 預設封鎖。平常不需要登入狀態跨網站延續的人，封鎖第三方 cookie 的代價很小。&lt;/p&gt;
+&lt;p&gt;同意橫幅上的「分析」與「行銷」只是業者自訂的分類，選項名稱不代表實際行為。只允許分析，並不能擋下跟廣告連動的識別碼。&lt;/p&gt;
+&lt;p&gt;這份分析出自單一研究者的流量觀察，OpenAI 沒有回應，伺服器端的對應也沒有直接證據。它的價值在於把機制拆得夠細，其他研究者可以照著驗證。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/&#34;&gt;ChatGPT now knows what you do on other websites via ad collector&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Buchodi&amp;#39;s Threat Intel&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-20&#34;&gt;2026 年 9 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Signal 免電話號碼註冊的 Android 測試版</title>
+<link>https://anoni.net/news/2026/09/signal-numberless-registration/</link>
+<guid isPermaLink="false">anoni-news:2026/09/signal-numberless-registration</guid>
+<pubDate>Sun, 27 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。</description>
+<content:encoded>&lt;p&gt;整理 5 篇原文，來自 Signal Community、CyberInsider、It&amp;#39;s FOSS 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Signal 在 Android 8.28 測試版加入不用電話號碼的註冊方式。目前只有 Android 測試版可以使用，iPhone 版還在開發，已經用電話號碼註冊的帳號也還不能移除號碼。&lt;/p&gt;
+&lt;p&gt;註冊時選擇不使用電話號碼，要透過 Play 商店的應用程式內購買付一次費用，美國是 3 美元，各國價格不同。Signal 在社群論壇的公告寫明，付款使用跟捐款系統相同的零知識證明，付款紀錄與帳號之間沒有連結。收費是為了擋下垃圾訊息業者，免費的話，他們可以大量申請帳號。&lt;/p&gt;
+&lt;p&gt;註冊完成後會取得一組 Account Id 與 Account Key，作用相當於帳號與密碼。帳號沒有 PIN，也沒有其他復原管道，兩者遺失，帳號就無法再登入。使用者名稱可以另外設定，不設定的話別人找不到這個帳號，只能參與自己發起的對話。Freedom of the Press Foundation 建議持續保留一個公開的使用者名稱，放著不用可能被別人取得並冒用。&lt;/p&gt;
+&lt;p&gt;兩步驗證目前支援 TOTP 驗證器，passkey 與硬體金鑰會在之後加入。&lt;/p&gt;
+&lt;h2 id=&#34;technical-view&#34;&gt;技術觀點&lt;/h2&gt;
+&lt;p&gt;門號在許多地方都要實名登記，用門號註冊的通訊帳號，等於間接連回真實身分。Signal 的端對端加密保護的是訊息內容，帳號本身過去一直綁著一支門號。改成付費加上零知識證明之後，帳號跟門號、付款都脫鉤，想把工作與私人身分分開的人，不必為此另外申辦門號。&lt;/p&gt;
+&lt;p&gt;取捨在於帳號的安全完全落在 Account Key 的保管上，沒有客服、也沒有簡訊驗證碼可以找回帳號。Account Id 與 Account Key 要存進密碼管理器，另外保留一份離線備份。設定 TOTP 時也要準備不只一個第二因素，第二因素全部遺失同樣會永久鎖住帳號。&lt;/p&gt;
+&lt;p&gt;另一篇討論 passkey 的觀點文章可以對照著讀。作者認為對個人使用者來說，帳號遺失的風險比被釣魚更高，一個帳號的安全程度最後取決於最弱的那一種復原方式。Signal 免門號帳號的設計把這個取捨推到最極端，沒有任何復原方式，保管就是全部。&lt;/p&gt;
+&lt;p&gt;付款目前只走 Play 商店，需要 Google Play 服務，沒有安裝 Play 服務的裝置暫時無法用這個方式註冊。台灣的 Play 商店能不能完成付款，我們還沒有實測。Signal 的 Android 版以 AGPL-3.0 授權公開原始碼，介面有正體中文。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457&#34;&gt;Beta feedback for the upcoming Android 8.28 release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/&#34;&gt;Signal tests account registration without phone number on Android&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/signal-numberless-registration/&#34;&gt;Signal Will Let You Sign Up Without a Phone Number — For $3&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/signal-introduces-registration-without-a-phone-number/&#34;&gt;Signal introduces registration without a phone number&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hawksley.dev/blog/i-dont-like-passkeys&#34;&gt;I don&amp;#39;t like passkeys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 </channel>
 </rss>
