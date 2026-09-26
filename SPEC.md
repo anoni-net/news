@@ -200,6 +200,9 @@ news 開放多人發布，署名可以是本名、固定的筆名，或不具名
 ```yaml
 anoni-net:
   name: anoni.net 社群
+  names:
+    zh-CN: anoni.net 社区
+    en: anoni.net community
 night-owl:
   name: 夜梟
   description: 關注網路封鎖的量測
@@ -208,6 +211,7 @@ night-owl:
 | 欄位 | 必填 | 說明 |
 |---|---|---|
 | `name` | 是 | 顯示在文章頁、列表頁與 RSS 的名稱 |
+| `names` | 否 | 其他語系的寫法，鍵是 `zh-CN` 或 `en`，沒寫的語系沿用 `name`。筆名與人名通常不翻 |
 | `description` | 否 | 一句話介紹 |
 | `url` | 否 | 個人網站或公開帳號，只有願意公開身分的人才填 |
 

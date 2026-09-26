@@ -1,0 +1,64 @@
+---
+title: Phone-number-free registration in the Signal Android beta
+description: Signal's Android beta lets people register without a phone number for a one-time fee. The account is tied to neither a SIM card nor the payment, and nothing can recover it if the keys are lost.
+date:
+  created: 2026-09-27
+  updated: 2026-09-28
+slug: signal-numberless-registration
+pin: true
+sources:
+  - title: Beta feedback for the upcoming Android 8.28 release
+    url: https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457
+    publisher: Signal Community
+    date: 2026-09-16
+  - title: Signal tests account registration without phone number on Android
+    url: https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/
+    publisher: CyberInsider
+    date: 2026-09-18
+  - title: "Signal Will Let You Sign Up Without a Phone Number — For $3"
+    url: https://itsfoss.com/news/signal-numberless-registration/
+    publisher: It's FOSS
+    date: 2026-09-22
+  - title: Signal introduces registration without a phone number
+    url: https://freedom.press/digisec/blog/signal-introduces-registration-without-a-phone-number/
+    publisher: Freedom of the Press Foundation
+    date: 2026-09-23
+  - title: I don't like passkeys
+    url: https://hawksley.dev/blog/i-dont-like-passkeys
+    date: 2026-09-18
+  - title: 电话用户真实身份信息登记规定
+    url: https://www.gov.cn/gongbao/content/2013/content_2473882.htm
+    publisher: Ministry of Industry and Information Technology, China
+    date: 2013-07-16
+  - title: OFCA steps up publicity and assistance for forthcoming full implementation of real-name registration programme for SIM cards (with photos)
+    url: https://www.cedb.gov.hk/en/news/press_release/2023/pr19012023a.html
+    publisher: Commerce and Economic Development Bureau, Hong Kong
+    date: 2023-01-19
+  - title: 行動寬頻業務管理規則
+    url: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060091
+    publisher: Laws & Regulations Database of Taiwan
+  - title: How countries attempt to block Signal Private Messenger App around the world
+    url: https://ooni.org/post/2021-how-signal-private-messenger-blocked-around-the-world/
+    publisher: OONI
+    date: 2021-10-21
+authors:
+  - anoni-net
+---
+
+Signal's Android 8.28 beta adds a way to register without a phone number. For now it exists only in the Android beta. The iPhone version is still in development, and accounts already registered with a number cannot remove it yet.
+
+Registering this way takes a one-time in-app purchase through the Play Store of US$3, and prices can differ by country. Devices without Google Play services cannot use it yet. Signal's announcement on its community forum says the payment uses the same zero-knowledge proofs as its donation system, so there is no link between the payment and the account. The fee is there because free accounts would be registered in bulk by spammers.
+
+Registration gives you an Account Id and an Account Key, which work like a username and password. There is no PIN and no other recovery mechanism, so losing either one loses the account. A username is optional. Without one, nobody can find the account, and it can only join chats it starts. TOTP two-factor authentication can be added after registration, and Signal plans to add passkeys and hardware keys later.
+
+## Perspective {#perspective}
+
+Signal's end-to-end encryption has always protected message content, but every account started from a phone number. In much of Asia a phone number is itself an identity record. Mainland China has required real-name registration for every phone line since 2013, when the Ministry of Industry and Information Technology obliged carriers to check a valid ID before connecting a user. Hong Kong extended registration to every SIM card, prepaid ones included, and unregistered prepaid cards stopped working after 23 February 2023. In Taiwan, carriers must record a name, an address and the numbers of two identity documents before activating any mobile number, prepaid or not. In all three places, a Signal account registered with a number leads back, through the carrier, to a named person.
+
+The paid route breaks that chain in two places. The account is not tied to a SIM card, and the zero-knowledge payment is not tied to the account. People who want to keep a work identity apart from a personal one no longer need a second SIM card registered in their own name. Signal's Android app is open source under AGPL-3.0, and its interface is available in both Traditional and Simplified Chinese.
+
+Reaching Signal at all is a separate question in mainland China. OONI measurements from April to September 2021 show Signal blocked there, so people inside need a circumvention tool first. The Google Play requirement also limits who can pay for now, so the option currently suits people outside the mainland whose phones run Google Play services.
+
+Without a number, a username becomes the only way to be found. The Freedom of the Press Foundation warns that a username you have shared publicly should be kept, because once it is released someone else can claim it and impersonate you. That risk is highest for people who publish a username so that sources can contact them.
+
+A separate essay on passkeys argues that an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss. Store the Account Id and Account Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.

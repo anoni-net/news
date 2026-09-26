@@ -22,7 +22,7 @@
     <p class="story__byline">
 {% set line = post|source_line %}
       <span class="story__sources"><a href="#sources">{{ icon('file-document-multiple-outline') }} <span>{{ line if line else s.sources }}</span></a></span>
-      <span>{{ s.byline }}{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</span>
+      <span>{{ s.byline }}{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author|author_name }}</a>{% else %}{{ author|author_name }}{% endif %}{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</span>
 {% if post.updated %}
       <span>{{ s.corrected }} <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
 {% endif %}

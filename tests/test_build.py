@@ -727,3 +727,19 @@ def test_contract_includes_feeds_per_language(fixture_site):
     _, pages, _ = fixture_site
     lines = build.contract_lines(pages["clearnet"])
     assert {"/feed.xml", "/zh-cn/feed.xml", "/en/feed.xml", "/en/2026/09/layout-stress-test/"} <= set(lines)
+
+
+def test_author_names_per_language(fixture_site):
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    assert "By anoni.net community" in (out / "en/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    assert "导读：anoni.net 社区" in (out / "zh-cn/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    # 筆名沒有寫 names，各語系都沿用 name
+    assert "<dc:creator>夜梟</dc:creator>" in (out / "en" / "feed.xml").read_text(encoding="utf-8")
+
+
+def test_author_names_keys_are_checked(tmp_path):
+    path = tmp_path / "authors.yml"
+    path.write_text("anoni-net:\n  name: x\n  names:\n    fr: y\n", encoding="utf-8")
+    with pytest.raises(build.BuildError, match="names"):
+        build.load_authors(path)

@@ -16,7 +16,7 @@
 <guid isPermaLink="false">{{ item.post.guid }}</guid>
 <pubDate>{{ item.pub_date }}</pubDate>
 {% for author in item.post.authors %}
-<dc:creator>{{ author.name }}</dc:creator>
+<dc:creator>{{ author|author_name }}</dc:creator>
 {% endfor %}
 <description>{{ item.post.description }}</description>
 <content:encoded>{{ item.content }}</content:encoded>

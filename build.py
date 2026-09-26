@@ -40,7 +40,7 @@ DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
-AUTHOR_KEYS = {"name", "description", "url"}
+AUTHOR_KEYS = {"name", "names", "description", "url"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ANCHOR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
@@ -193,13 +193,17 @@ def load_authors(path: Path) -> dict[str, dict]:
             continue
         extra = set(info) - AUTHOR_KEYS
         if extra:
-            problems.append(f"authors.yml：{key} 有不認得的欄位 {sorted(extra)}，只收 name、description、url")
+            problems.append(f"authors.yml：{key} 有不認得的欄位 {sorted(extra)}，只收 name、names、description、url")
+        names = info.get("names", {})
+        codes = {lang.code for lang in LANGS[1:]}
+        if not isinstance(names, dict) or set(names) - codes:
+            problems.append(f"authors.yml：{key} 的 names 是其他語系的名稱，鍵只能是 {sorted(codes)}")
         url = info.get("url")
         if url and not str(url).startswith("https://"):
             problems.append(f"authors.yml：{key} 的 url 要用 https://")
     if problems:
         raise BuildError(problems)
-    return {key: {"key": key, "description": None, "url": None, **info} for key, info in data.items()}
+    return {key: {"key": key, "description": None, "url": None, "names": {}, **info} for key, info in data.items()}
 
 
 def split_front_matter(text: str, where: str) -> tuple[dict, str]:
@@ -864,6 +868,8 @@ def make_env() -> Environment:
     # 日期與出處行依頁面的語系，從模板的 s（該語系的 strings.toml 區段）取格式
     for name, key in (("ymd", "date"), ("md", "date_short"), ("full_date", "date_full"), ("day_meta", "day_meta")):
         env.filters[name] = pass_context(lambda ctx, d, key=key: format_date(ctx["s"], key, d))
+    # 署名在其他語系另有寫法時用 authors.yml 的 names，筆名與人名通常不翻
+    env.filters["author_name"] = pass_context(lambda ctx, author: author["names"].get(ctx["lang"].code, author["name"]))
     env.filters["by_day"] = by_day
     env.filters["source_line"] = pass_context(lambda ctx, post: source_line(post, ctx["s"]))
     # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
