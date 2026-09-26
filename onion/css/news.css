@@ -176,10 +176,14 @@ p {
     margin: 0 0 0.75rem;
 }
 
+/* 標語只在標點後換行，「國際隱私」這類詞組不會被拆到兩行，每行長度再平均分配。
+   標語裡最長的一段是十個字，320px 也放得下 */
 .masthead__tagline {
     color: var(--c-header-link);
     max-width: 32em;
     margin: 0 0 1rem;
+    word-break: keep-all;
+    text-wrap: balance;
 }
 
 .masthead__tagline a {
