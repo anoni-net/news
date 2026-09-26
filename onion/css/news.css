@@ -583,6 +583,62 @@ p {
 
 /* ---------------------------------------------------------------- 分頁與頁尾 */
 
+/* 文章頁的前後篇：手機上下排，桌機較新在左、較舊在右，「所有文章」自成一列 */
+/* 跟下方通用的 .pager 同一個權重會被它的 display: flex 蓋掉，所以寫成兩個 class */
+.pager.pager--story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem 1.5rem;
+}
+
+.pager .pager__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+.pager__label {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.pager__title {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.pager__item:hover .pager__title,
+.pager__item:focus-visible .pager__title {
+    text-decoration: underline;
+}
+
+.pager--story .pager__all {
+    justify-self: start;
+    padding: 0;
+}
+
+@media (min-width: 48em) {
+    .pager.pager--story {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pager .pager__item--older {
+        grid-column: 2;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .pager--story .pager__all {
+        grid-column: 1 / -1;
+    }
+}
+
 .pager {
     display: flex;
     flex-wrap: wrap;
