@@ -159,21 +159,26 @@ def candidates(page_url: str, page: str) -> list[str]:
 
 
 def fetch_icon(host: str, origin: str) -> tuple[Fetched | None, list[str]]:
-    """回傳抓到的圖示，以及每個試過的網址失敗的原因。先抓原站，抓不到再從 Internet Archive
-    取同一個網站的首頁與圖示。Cloudflare 這類防護常把首頁與圖示一起擋下，存檔裡的是原站自己的檔案。"""
+    """回傳抓到的圖示，以及每個試過的網址失敗的原因。
+
+    首頁先讀原站，讀不到再讀 Internet Archive 最近的存檔，拿到網站宣告的圖示清單。每個圖示同樣先試原站、
+    再試存檔。Cloudflare 這類防護常把首頁與圖示一起擋下，存檔裡的是原站自己的檔案。慣例位置排在宣告的
+    圖示之後：首頁讀不到就直接抓 /favicon.ico，拿到的可能是網站系統的預設圖示，eSafety 就是這樣。"""
     tried: list[str] = []
     page_url = f"https://{origin}/"
-    for via in (lambda url: url, archived):
+    page = ""
+    for url in (page_url, archived(page_url)):
         try:
-            page = fetch(via(page_url)).decode("utf-8", "replace")
+            page = fetch(url).decode("utf-8", "replace")
+            break
         except (OSError, ValueError) as error:
-            tried.append(f"{via(page_url)}：{error}")
-            page = ""
-        for url in candidates(page_url, page):
+            tried.append(f"{url}：{error}")
+    for url in candidates(page_url, page):
+        for attempt in (url, archived(url)):
             try:
-                return Fetched(host, convert(fetch(via(url))), via(url)), tried
+                return Fetched(host, convert(fetch(attempt)), attempt), tried
             except (OSError, ValueError, Image.DecompressionBombError) as error:
-                tried.append(f"{via(url)}：{error}")
+                tried.append(f"{attempt}：{error}")
     return None, tried
 
 

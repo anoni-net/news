@@ -157,3 +157,25 @@ def test_fetch_decompresses_archive_gzip(monkeypatch):
     monkeypatch.setattr(fetch_favicons.urllib.request, "urlopen",
                         lambda *args, **kwargs: Response(gzip.compress(b"\x00\x00\x01\x00icon")))
     assert fetch_favicons.fetch("https://web.archive.org/web/20260927id_/https://example.org/favicon.ico") == b"\x00\x00\x01\x00icon"
+
+
+def test_declared_icon_beats_conventional_path_when_homepage_times_out(monkeypatch):
+    """首頁逾時的時候，先從存檔讀出宣告的圖示，不要直接拿根目錄的 /favicon.ico（可能是網站系統的預設圖示）。"""
+    declared = encode(Image.new("RGBA", (144, 144), (90, 40, 140, 255)), "PNG")
+    generic = encode(Image.new("RGBA", (32, 32), (0, 160, 90, 255)), "PNG")
+    page = b'<link rel="apple-touch-icon" href="/themes/custom/esafety/favicon_144.png">'
+
+    def fake_fetch(url: str) -> bytes:
+        if url == "https://www.esafety.gov.au/":
+            raise OSError("The read operation timed out")
+        if url == fetch_favicons.archived("https://www.esafety.gov.au/"):
+            return page
+        if url == "https://www.esafety.gov.au/themes/custom/esafety/favicon_144.png":
+            return declared
+        if url == "https://www.esafety.gov.au/favicon.ico":
+            return generic
+        raise OSError("404")
+
+    monkeypatch.setattr(fetch_favicons, "fetch", fake_fetch)
+    item, _ = fetch_favicons.fetch_icon("esafety.gov.au", "www.esafety.gov.au")
+    assert item.source == "https://www.esafety.gov.au/themes/custom/esafety/favicon_144.png"
