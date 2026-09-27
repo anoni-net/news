@@ -33,7 +33,7 @@ If you spot a factual error, outdated information or a translation problem, plea
 
 ## Listening {#listening}
 
-If you would rather listen, use the read-aloud feature built into your browser or operating system. Safari on iPhone has Listen to Page, and story pages are marked up so it reads the story itself and skips the source list and footer. Whether the option appears depends on the page's language and your device's language settings. If it is missing, try Speak Screen under Accessibility on iPhone, which reads everything on screen, header and footer included. We do not add a play button of our own, because it would need JavaScript. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.
+If you would rather listen, use the read-aloud feature built into your browser or operating system. Safari on iPhone has Listen to Page, and story pages are marked up so it reads the story itself and skips the source list and footer. Whether the option appears depends on the page's language and your device's language settings. If it is missing, turn on Speak Screen in Settings > Accessibility > Read & Speak on iPhone, which reads everything on screen, header and footer included. We do not add a play button of our own, because it would need JavaScript. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.
 
 ## Analytics and privacy {#privacy}
 
