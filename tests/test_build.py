@@ -801,19 +801,50 @@ def test_newsletter_form_follows_language(fixture_site):
     assert "http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/w21855zpca072rvgp0s2govj" in onion
 
 
-@pytest.mark.parametrize("date_yaml, ok", [
-    ("date: 2026-09-18", True),
-    ("date: 2026-09-18T10:00:00+08:00", True),
-    ("date: 2026-09-19", False),
-    ("date: 2026-09-18T12:30:00+08:00", False),
-    ("date:\n  created: 2026-09-18\n  updated: 2026-09-20", False),
+NOW = datetime(2026, 9, 18, 12, 0, tzinfo=build.TZ)
+
+
+@pytest.mark.parametrize("date_yaml, name, scheduled, problem", [
+    ("date: 2026-09-18", "2026-09-18-test-post.md", False, None),
+    ("date: 2026-09-18T10:00:00+08:00", "2026-09-18-test-post.md", False, None),
+    ("date: 2026-09-18T12:30:00+08:00", "2026-09-18-test-post.md", True, None),
+    ("date: 2026-09-25T07:00:00+08:00", "2026-09-25-test-post.md", True, None),
+    ("date: 2026-09-25T12:30:00+08:00", "2026-09-25-test-post.md", None, "最多只能排到 7 天後"),
+    ("date:\n  created: 2026-09-18\n  updated: 2026-09-20", "2026-09-18-test-post.md", None, "date.updated"),
 ])
-def test_date_cannot_be_in_the_future(tmp_path, monkeypatch, date_yaml, ok):
-    """date 填實際合併上線的時間，晚於現在就建置失敗。現在固定成 2026-09-18 12:00（台北時間）。"""
-    monkeypatch.setattr(build, "current_time", lambda: datetime(2026, 9, 18, 12, 0, tzinfo=build.TZ))
-    name = "2026-09-19-test-post.md" if "2026-09-19" in date_yaml else "2026-09-18-test-post.md"
-    problems = problems_of(tmp_path, GOOD.replace("date: 2026-09-18", date_yaml), name)
-    assert (not any("晚於現在" in p for p in problems)) is ok, problems
+def test_future_date_is_scheduled_up_to_seven_days(tmp_path, monkeypatch, date_yaml, name, scheduled, problem):
+    """date 晚於現在就是排程中，最多排到 7 天後。更正日期不能在未來。現在固定成 2026-09-18 12:00（台北時間）。"""
+    monkeypatch.setattr(build, "current_time", lambda: NOW)
+    text = GOOD.replace("date: 2026-09-18", date_yaml)
+    if problem:
+        assert any(problem in p for p in problems_of(tmp_path, text, name)), problems_of(tmp_path, text, name)
+    else:
+        assert build.load_post(write_post(tmp_path, text, name), AUTHORS).scheduled is scheduled
+
+
+def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
+    """排程中的文章不產出頁面，也不進首頁、RSS 與 sitemap，網址合約先收進去。到了時間重建就出現。"""
+    posts = tmp_path / "posts"
+    write_versions(posts, GOOD)
+    later = GOOD.replace("date: 2026-09-18", "date: 2026-09-19T07:00:00+08:00").replace("slug: test-post", "slug: next-post")
+    write_versions(posts, later, "2026-09-19-next-post.md")
+    shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
+
+    monkeypatch.setattr(build, "current_time", lambda: NOW)
+    targets, pages, all_posts = build.build(posts, tmp_path / "out", ["clearnet"])
+    out = targets["clearnet"].out
+    assert [p.slug for p in all_posts if p.scheduled] == ["next-post"]
+    assert not (out / "2026/09/next-post").exists() and not (out / "en/2026/09/next-post").exists()
+    for rel in ("index.html", "feed.xml", "sitemap.xml", "en/index.html", "2026/09/test-post/index.html"):
+        assert "next-post" not in (out / rel).read_text(encoding="utf-8"), rel
+    contract = build.contract_lines(build.contract_pages(posts))
+    assert "/2026/09/next-post/" in contract and "/en/2026/09/next-post/" in contract
+
+    monkeypatch.setattr(build, "current_time", lambda: datetime(2026, 9, 19, 7, 5, tzinfo=build.TZ))
+    targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
+    out = targets["clearnet"].out
+    assert (out / "2026/09/next-post/index.html").exists()
+    assert "next-post" in (out / "feed.xml").read_text(encoding="utf-8")
 
 
 def test_time_of_day_orders_posts_on_the_same_day(tmp_path):

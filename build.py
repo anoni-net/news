@@ -82,6 +82,8 @@ DEFAULT_LANG = LANGS[0]
 # 三個版本必須相同的欄位。date 另外比 created，updated 可以不同
 SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories")
 STRINGS_PATH = ROOT / "strings.toml"
+# 排程發布：date 晚於現在的文章先不產出，最多只能排到幾天後。見 SPEC.md「排程發布」
+MAX_SCHEDULE_DAYS = 7
 
 
 def load_strings(path: Path = STRINGS_PATH) -> dict[str, dict]:
@@ -153,6 +155,8 @@ class Post:
     image: str | None = None
     pin: bool = False
     lang: Lang = DEFAULT_LANG
+    # date 晚於建置當下，排程中，這次不產出
+    scheduled: bool = False
     # 同一篇的三個版本，鍵是語系代碼，包含自己。由 load_site 填入
     translations: dict[str, "Post"] = field(default_factory=dict)
 
@@ -284,12 +288,14 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
     else:
         created = to_datetime(raw_date, where, problems)
 
-    # date 填實際合併上線的時間。預先填未來的日期，讀者與搜尋引擎會看到還沒到的發布日
+    # date 是預定的發布時間，晚於現在就是排程中，這次建置先不產出。更正日期是實際改稿的時間，不能在未來
     now = current_time()
-    for label, value in (("date", created), ("date.updated", updated)):
-        if value and value > now:
-            problems.append(f"{where}：{label} 是 {value:%Y-%m-%d %H:%M}，晚於現在（台北時間 {now:%Y-%m-%d %H:%M}），"
-                            "填實際合併上線的時間")
+    if created and created > now + timedelta(days=MAX_SCHEDULE_DAYS):
+        problems.append(f"{where}：date 是 {created:%Y-%m-%d %H:%M}，排程最多只能排到 {MAX_SCHEDULE_DAYS} 天後"
+                        f"（台北時間 {now + timedelta(days=MAX_SCHEDULE_DAYS):%Y-%m-%d %H:%M} 以前）")
+    if updated and updated > now:
+        problems.append(f"{where}：date.updated 是 {updated:%Y-%m-%d %H:%M}，晚於現在（台北時間 {now:%Y-%m-%d %H:%M}），"
+                        "填實際更正的時間")
 
     slug = str(meta["slug"])
     if not SLUG_RE.match(slug) or not 3 <= len(slug) <= 60:
@@ -369,6 +375,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         body=body,
         anchors=anchors,
         lang=lang,
+        scheduled=created > now,
     )
 
 
@@ -904,7 +911,10 @@ def make_env() -> Environment:
 
 
 def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
-          only: list[str] | None = None) -> tuple[dict[str, Target], dict[str, list[Page]], list[Post]]:
+          only: list[str] | None = None,
+          include_scheduled: bool = False) -> tuple[dict[str, Target], dict[str, list[Page]], list[Post]]:
+    """產生產物，回傳的文章包含排程中的。產物只放已經到發布時間的，include_scheduled 時全部放，
+    網址合約用這種產物，排程中的文章還沒上線也不算網址消失。"""
     config, targets = load_config(ROOT / "site.toml")
     if out_root is not None:
         for target in targets.values():
@@ -917,13 +927,21 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     store = AssetStore(assets_dir if assets_dir.exists() else None)
     strings()  # 介面文字有缺漏時在這裡就失敗
     posts = load_site(posts_dir, authors, store)
+    published = posts if include_scheduled else [post for post in posts if not post.scheduled]
     env = make_env()
     pages = {}
     for name, target in targets.items():
         if only and name not in only:
             continue
-        pages[name] = build_target(target, posts, config, env, store)
+        pages[name] = build_target(target, published, config, env, store)
     return targets, pages, posts
+
+
+def contract_pages(posts_dir: Path = ROOT / "posts") -> list[Page]:
+    """網址合約的頁面，排程中的文章也算在內。另外建一份放進暫存目錄，不動正式的產物。"""
+    with tempfile.TemporaryDirectory() as tmp:
+        _, pages, _ = build(posts_dir, Path(tmp), ["clearnet"], include_scheduled=True)
+    return pages["clearnet"]
 
 
 # ---------------------------------------------------------------- 網址合約
@@ -1192,7 +1210,7 @@ def check_contrast(css_path: Path) -> list[str]:
 
 # ---------------------------------------------------------------- 主程式
 
-def run_check(args, targets, pages, posts) -> int:
+def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
     problems, notices = [], []
 
     docs_problems, docs_notices = check_docs_links(all_versions(posts), load_docs_contract(args.docs_contract))
@@ -1202,7 +1220,7 @@ def run_check(args, targets, pages, posts) -> int:
     for name, target in targets.items():
         problems += check_output(target, pages[name])
 
-    current = parse_contract_lines(contract_lines(pages["clearnet"]))
+    current = parse_contract_lines(contract_lines(contract))
     committed = read_contract(ROOT / "url_contract.txt")
     removed = committed - current
     added = current - committed
@@ -1222,8 +1240,9 @@ def run_check(args, targets, pages, posts) -> int:
             problems += [f"fixtures：{p}" for p in check_output(target, fixture_pages[name])]
         # 三個語系的列表頁與最新一篇，加上共用的 404
         layout_pages = [lang.path for lang in LANGS]
-        if fixture_posts:
-            layout_pages += [fixture_posts[0].translations.get(lang.code, fixture_posts[0]).rel for lang in LANGS]
+        newest = next((post for post in fixture_posts if not post.scheduled), None)
+        if newest:
+            layout_pages += [newest.translations.get(lang.code, newest).rel for lang in LANGS]
         layout_problems, layout_notice = layout_check.run(
             fixture_targets["clearnet"].out, list(dict.fromkeys(layout_pages)) + ["404.html"],
             ROOT / ".cache" / "screenshots")
@@ -1237,7 +1256,11 @@ def run_check(args, targets, pages, posts) -> int:
         print(f"檢查沒過，共 {len(problems)} 項：")
         print("\n".join(f"  {p}" for p in problems))
         return 1
-    print(f"檢查通過：{len(posts)} 篇文章各 {len(LANGS)} 個語系，clearnet 與 onion 各 {len(pages['clearnet'])} 頁")
+    scheduled = [post for post in posts if post.scheduled]
+    note = f"，另有 {len(scheduled)} 篇排程中：" + "、".join(
+        f"{post.slug}（{post.created:%m-%d %H:%M}）" for post in scheduled) if scheduled else ""
+    print(f"檢查通過：{len(posts) - len(scheduled)} 篇文章各 {len(LANGS)} 個語系，"
+          f"clearnet 與 onion 各 {len(pages['clearnet'])} 頁{note}")
     return 0
 
 
@@ -1250,12 +1273,13 @@ def main() -> int:
 
     try:
         targets, pages, posts = build()
+        contract = contract_pages() if args.update_contract or args.check else []
         if args.update_contract:
             (ROOT / "url_contract.txt").write_text(
-                CONTRACT_HEADER + "\n".join(contract_lines(pages["clearnet"])) + "\n", encoding="utf-8")
-            print("已寫回 url_contract.txt，記得把 diff 一起送審")
+                CONTRACT_HEADER + "\n".join(contract_lines(contract)) + "\n", encoding="utf-8")
+            print("已寫回 url_contract.txt，排程中的文章也收進去了，記得把 diff 一起送審")
         if args.check:
-            return run_check(args, targets, pages, posts)
+            return run_check(args, targets, pages, posts, contract)
     except BuildError as error:
         print(f"建置失敗，共 {len(error.problems)} 項：")
         print("\n".join(f"  {p}" for p in error.problems))

@@ -100,6 +100,37 @@ async def measure(ws_url: str, base: str, pages: list[str], shots: Path) -> list
     return problems
 
 
+# GitHub Actions 的 runner 上，Chrome 偶爾在時限內開不出偵錯連接埠，檢查就整個失敗。
+# 2026-09 出現過五次，重跑都會過。排程發布在固定時間執行，失敗就要等下一輪才上線，
+# 所以開不出來時關掉重開，每次換一個連接埠與新的 profile
+LAUNCH_ATTEMPTS = 3
+LAUNCH_WAIT_SECONDS = 20
+
+
+def launch(chrome: str, tmp: Path) -> tuple[subprocess.Popen, str | None]:
+    """開 headless Chrome，回傳 (行程, 偵錯用的 WebSocket 網址)。都失敗時網址是 None，行程是最後一次的。"""
+    for attempt in range(LAUNCH_ATTEMPTS):
+        port = free_port()
+        profile = tmp / f"profile-{attempt}"
+        process = subprocess.Popen(
+            [chrome, "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
+             "--password-store=basic", f"--user-data-dir={profile}", f"--remote-debugging-port={port}",
+             "about:blank"],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        deadline = time.monotonic() + LAUNCH_WAIT_SECONDS
+        while time.monotonic() < deadline:
+            try:
+                with urllib.request.urlopen(f"http://127.0.0.1:{port}/json", timeout=1) as response:
+                    tabs = json.load(response)
+                return process, next(t["webSocketDebuggerUrl"] for t in tabs if t["type"] == "page")
+            except (OSError, StopIteration, ValueError):
+                time.sleep(0.2)
+        if attempt + 1 < LAUNCH_ATTEMPTS:
+            process.terminate()
+            process.wait(timeout=10)
+    return process, None
+
+
 def run(site: Path, pages: list[str], shots: Path, prefix: str = "news") -> tuple[list[str], str | None]:
     """site 是 clearnet 產物的根目錄，架在 /<prefix>/ 底下開。回傳 (問題, 提示)。"""
     chrome = find_chrome()
@@ -114,25 +145,10 @@ def run(site: Path, pages: list[str], shots: Path, prefix: str = "news") -> tupl
         threading.Thread(target=server.serve_forever, daemon=True).start()
         base = f"http://127.0.0.1:{server.server_address[1]}/{prefix}/"
 
-        port = free_port()
-        profile = Path(tmp) / "profile"
-        process = subprocess.Popen(
-            [chrome, "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
-             "--password-store=basic", f"--user-data-dir={profile}", f"--remote-debugging-port={port}",
-             "about:blank"],
-            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        process, ws_url = launch(chrome, Path(tmp))
         try:
-            ws_url = None
-            for _ in range(100):
-                try:
-                    with urllib.request.urlopen(f"http://127.0.0.1:{port}/json", timeout=1) as response:
-                        tabs = json.load(response)
-                    ws_url = next(t["webSocketDebuggerUrl"] for t in tabs if t["type"] == "page")
-                    break
-                except (OSError, StopIteration, ValueError):
-                    time.sleep(0.1)
             if not ws_url:
-                return ["版面：Chrome 沒有開出偵錯連接埠"], None
+                return [f"版面：Chrome 試了 {LAUNCH_ATTEMPTS} 次都沒有開出偵錯連接埠"], None
             problems = asyncio.run(measure(ws_url, base, pages, shots))
         finally:
             process.terminate()
