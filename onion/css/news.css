@@ -465,6 +465,23 @@ p {
     font-weight: 600;
 }
 
+/* 原文網站的圖示，沒有登記圖示的網站用通用的地球圖示，兩者對齊文字。
+   白色圓角底讓透明底的深色圖示在深色模式也看得見 */
+.source-slip__icon,
+.source-slip__title .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-inline-end: 0.4em;
+    vertical-align: -0.15em;
+}
+
+.source-slip__icon {
+    box-sizing: content-box;
+    padding: 1px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
 .source-slip__meta {
     margin: 0;
     color: var(--c-muted);
@@ -666,6 +683,30 @@ p {
 .story__langs .icon,
 .site-footer__langs .icon {
     top: 0.08em;
+}
+
+/* 署名旁出處行的網站圖示並排成一串。原本做成重疊的，16px 的圖示被下一個蓋掉一半就認不出來，
+   同一家的兩個網站（例如 Signal 的說明中心與論壇）尤其分不開。每個墊白色圓角底，
+   沒有圖示的網站用地球圖示，在白底上改用品牌墨色 */
+.favicon-stack {
+    display: inline-flex;
+    gap: 0.2rem;
+    vertical-align: -0.2em;
+}
+
+.favicon-stack img,
+.favicon-stack .icon {
+    box-sizing: content-box;
+    width: 1rem;
+    height: 1rem;
+    padding: 1px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.favicon-stack .icon {
+    top: 0;
+    color: var(--brand-cyan-900);
 }
 
 /* 行內文字裡的連結，圖示與文字之間的空格也會畫到底線，底線改畫在文字的 span 上 */
