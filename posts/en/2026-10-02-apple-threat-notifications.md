@@ -1,5 +1,5 @@
 ---
-title: What to do after an Apple threat notification
+title: Recognising and responding to Apple threat notifications
 description: Apple sent mercenary spyware threat notifications to users in 110 countries in August. Its support page explains where real notifications appear, what they never ask for, and what to do next.
 date: 2026-10-02T07:00:00+08:00
 slug: apple-threat-notifications
@@ -35,16 +35,16 @@ authors:
   - anoni-net
 ---
 
-On 13 August Apple sent threat notifications to users in 110 countries, warning that their iPhones had been targeted by mercenary spyware. On 2 September the Freedom of the Press Foundation (FPF) urged readers to take such alerts seriously, pointing to an Access Now explainer: the notification does not say whether the attack succeeded or who was behind it.
+On 13 August Apple sent threat notifications to users in 110 countries, warning that their iPhones had been targeted by mercenary spyware. A 2 September post from the Freedom of the Press Foundation (FPF) urged readers to take such alerts seriously and pointed to an Access Now explainer: the notification does not say whether the attack succeeded or who was behind it.
 
-According to TechCrunch, the alert reads: "Apple detected a mercenary spyware attack targeted at your iPhone. There are actions you can take now to protect your data and device." Apple's support page says a real notification appears on the iPhone Lock Screen and in Settings, arrives by email from `threat-notifications@email.apple.com`, and shows as a banner at the top of the Apple Account page after signing in to `account.apple.com`. It never asks you to click links, open files, install apps or profiles, or give your Apple Account password or a verification code. Apple says it cannot explain what triggers a notification. It has sent them several times a year since 2021, to users in more than 150 countries so far, and does not attribute attacks to specific attackers or regions.
+According to TechCrunch, the alert reads: "Apple detected a mercenary spyware attack targeted at your iPhone. There are actions you can take now to protect your data and device." Apple's support page says a real notification appears on the iPhone Lock Screen and in Settings, arrives by email from `threat-notifications@email.apple.com`, and shows as a banner at the top of the Apple Account page after signing in to `account.apple.com`. It never asks you to click links, open files, install apps or profiles, or give your Apple Account password or a verification code. The page also says Apple cannot explain what triggers a notification. It has sent them several times a year since 2021, to users in more than 150 countries so far, and does not attribute attacks to specific attackers or regions.
 
 ## Perspective {#perspective}
 
 Checking the channel is the fastest way to separate real alerts from phishing that imitates them. If a message claiming to be from Apple asks you to do anything, do not follow its links; sign in to `account.apple.com` yourself and look for the banner.
 
-Lockdown Mode is the most direct defence. Apple told TechCrunch in March that it was not aware of any successful mercenary spyware attack against a device with Lockdown Mode on. The cost is that the phone no longer works as usual: most message attachments other than certain images, video and audio are blocked, and link previews stop working. People who think they may be targeted do not need to wait for a notification to switch it on. FPF adds that Android users should look at Google's comparable Advanced Protection.
+Lockdown Mode is the most direct defence. In March, Apple's statement to TechCrunch said it was not aware of any successful mercenary spyware attack against a device with Lockdown Mode on. The cost is that the phone no longer works as usual: most message attachments other than certain images, video and audio are blocked, and link previews stop working. People who think they may be targeted do not need to wait for a notification to switch it on. FPF's post also points Android users to Google's comparable Advanced Protection.
 
 Getting help has a language barrier that matters for this region. Apple points recipients to the Digital Security Helpline run by Access Now, which answers around the clock and responds within two hours, but its ten languages are English, Spanish, French, German, Portuguese, Russian, Tagalog, Arabic, Italian and Ukrainian. Tagalog is the only Asian language on the list, and there is no Chinese, so readers elsewhere in Asia may need to write in English or first reach a local digital security group they trust.
 
-These alerts are not new in Asia either. A wave in October 2023 reached people in India, and Apple said at the time that some notifications may be false alarms and some attacks may go undetected. A notification is not proof of compromise, and the absence of one is not proof of safety, which is why the protections above are worth setting up in advance rather than after the fact.
+These alerts have reached Asia before. A wave in October 2023 reached people in India, and Apple's statement at the time said some notifications may be false alarms and some attacks may go undetected. A notification is therefore not proof of compromise, and the absence of one is not proof of safety, so the protections above are worth setting up in advance.
