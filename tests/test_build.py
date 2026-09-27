@@ -707,8 +707,9 @@ def test_alternates_and_language_switch(fixture_site):
     # 頁首不放語系切換，文章頁在署名下方、每頁在頁尾列出另外兩個語系，不列目前的語系
     assert "site-header__langs" not in page
     for cls in ("story__langs", "site-footer__langs"):
-        line = page[page.index(f'<p class="{cls}">'):]
-        line = line[:line.index("</p>")]
+        # role 跟 nav 重複，閱讀模式（Readability）只看 role 屬性，少了它朗讀會把這一行當成正文
+        line = page[page.index(f'<nav class="{cls}" role="navigation"'):]
+        line = line[:line.index("</nav>")]
         assert 'Also in <a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, ' \
             '<a href="/news/zh-cn/2026/09/zkp-age-verification/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>' in line
         assert "English" not in line
@@ -729,7 +730,7 @@ def test_interface_text_follows_language(fixture_site):
     assert "Sources (5)" in en and "Older story" in en and "All stories" in en
     assert "/news/og-en.png" in en and '"inLanguage": "en"' in en
     # 文章內容與頁尾列出的語言名稱之外，英文頁不能留中文
-    chrome = re.sub(r'<(article|script)\b.*?</\1>|<p class="site-footer__langs">.*?</p>', "", en, flags=re.S)
+    chrome = re.sub(r'<(article|script)\b.*?</\1>|<nav class="site-footer__langs".*?</nav>', "", en, flags=re.S)
     assert not re.search(r"[\u4e00-\u9fff]", chrome), "英文頁的介面文字還有中文"
     cn = (out / "zh-cn/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
     assert "整理 5 篇原文，来自 EFF、Access Now、OONI" in cn and "较旧的一篇" in cn
