@@ -74,4 +74,5 @@ icon = "support.apple.com-573bbc30.png"
 from = "https://support.apple.com/apple-touch-icon.png"
 
 [hosts."support.signal.org"]
-same_as = "signal.org"
+icon = "support.signal.org-ac934b40.png"
+from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
