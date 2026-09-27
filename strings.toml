@@ -3,6 +3,7 @@
 # 模板把連結夾在中間，不在這裡寫 HTML。newsletter 用在頁首與頁尾的連結，newsletter_inline 用在
 # 文章末尾那一句話裡，英文的大小寫不同。newsletter_url 是訂閱表單，中文與英文各有一份。
 # rss_url 是頁面上 RSS 連結的目的地，指向文件站同語系的「RSS 訂閱入門」。規則見 SPEC.md「RSS」。
+# about 是頁尾到關於頁的連結，report 與 report_url 是回報錯誤的連結，三個語系都指向 GitHub 的 issue 表單。
 
 ["zh-TW"]
 # 社群的用字是「正體中文」，不寫「繁體中文」，見文件站「為什麼我們用「正體中文」而非「繁體中文」」
@@ -37,6 +38,9 @@ rss_url = "https://anoni.net/docs/tools/rss/"
 newsletter = "訂閱電子報"
 newsletter_url = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 newsletter_inline = "訂閱電子報"
+about = "關於新聞導讀"
+report = "回報錯誤"
+report_url = "https://github.com/anoni-net/news/issues/new"
 byline = "導讀："
 list_sep = "、"
 corrected = "更正於"
@@ -97,6 +101,9 @@ rss_url = "https://anoni.net/docs/zh-cn/tools/rss/"
 newsletter = "订阅电子报"
 newsletter_url = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 newsletter_inline = "订阅电子报"
+about = "关于新闻导读"
+report = "报告错误"
+report_url = "https://github.com/anoni-net/news/issues/new"
 byline = "导读："
 list_sep = "、"
 corrected = "更正于"
@@ -157,6 +164,9 @@ rss_url = "https://anoni.net/docs/en/tools/rss/"
 newsletter = "Newsletter"
 newsletter_url = "https://form.anoni.net/s/w21855zpca072rvgp0s2govj"
 newsletter_inline = "newsletter"
+about = "About"
+report = "Report an error"
+report_url = "https://github.com/anoni-net/news/issues/new"
 byline = "By "
 list_sep = ", "
 corrected = "Corrected on"

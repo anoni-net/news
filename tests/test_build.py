@@ -755,6 +755,36 @@ def test_not_found_page_has_three_languages(fixture_site):
     assert "hreflang" not in page
 
 
+def test_about_page_per_language(fixture_site):
+    targets, pages, _ = fixture_site
+    rels = {page.rel for page in pages["clearnet"]}
+    assert {"about/", "zh-cn/about/", "en/about/"} <= rels
+    about = next(page for page in pages["clearnet"] if page.rel == "about/")
+    assert not about.noindex and "report" in about.anchors
+    sitemap = (targets["clearnet"].out / "sitemap.xml").read_text(encoding="utf-8")
+    assert "https://anoni.net/news/en/about/" in sitemap
+    # 頁尾連到同語系的關於頁與回報錯誤的 issue 表單
+    for rel, home in (("", "/news/"), ("en/", "/news/en/")):
+        page = (targets["clearnet"].out / rel / "index.html").read_text(encoding="utf-8")
+        assert f'href="{home}about/"' in page
+        assert 'href="https://github.com/anoni-net/news/issues/new"' in page
+
+
+def test_site_page_problems(tmp_path):
+    for lang in build.LANGS:
+        d = build.lang_dir(tmp_path, lang)
+        d.mkdir(parents=True, exist_ok=True)
+        anchor = "report" if lang != build.LANGS[2] else "other"
+        (d / "about.md").write_text(f"---\ntitle: t\ndescription: d\nextra: x\n---\n\n## 回報 {{#{anchor}}}\n", encoding="utf-8")
+    (build.lang_dir(tmp_path, build.LANGS[1]) / "about.md").unlink()
+    with pytest.raises(build.BuildError) as error:
+        build.load_site_pages(tmp_path)
+    text = "\n".join(error.value.problems)
+    assert "缺少 zh-CN 版本" in text
+    assert "多了不認得的欄位 extra" in text
+    assert "錨點跟 zh-TW 版本不同" in text
+
+
 def test_contract_includes_feeds_per_language(fixture_site):
     _, pages, _ = fixture_site
     lines = build.contract_lines(pages["clearnet"])
