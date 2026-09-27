@@ -33,6 +33,10 @@ from = "https://www.cnbc.com/apple-touch-icon.png"
 icon = "community.signalusers.org-34c4e8e9.png"
 from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
 
+[hosts."court.gov.cn"]
+icon = "court.gov.cn-1db19351.png"
+from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico"
+
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
@@ -79,6 +83,9 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 [hosts."github.com"]
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
+
+[hosts."gongbao.court.gov.cn"]
+same_as = "court.gov.cn"
 
 [hosts."gov.cn"]
 icon = "gov.cn-1db19351.png"
@@ -134,6 +141,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."pcpd.org.hk"]
+icon = "pcpd.org.hk-dc297a73.png"
+from = "https://www.pcpd.org.hk/favicon.ico"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
