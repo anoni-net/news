@@ -31,11 +31,17 @@ sources:
     url: https://techcrunch.com/2023/10/30/indian-opposition-leaders-says-apple-has-warned-them-of-state-sponsored-iphone-attacks/
     publisher: TechCrunch
     date: 2023-10-31
+  - title: 關於封閉模式
+    url: https://support.apple.com/zh-tw/105120
+    publisher: Apple
+  - title: 关于锁定模式
+    url: https://support.apple.com/zh-cn/105120
+    publisher: Apple
 authors:
   - anoni-net
 ---
 
-Apple 在 8 月 13 日向 110 个国家的用户发出威胁通知，内容是他们的 iPhone 成为雇佣间谍软件的攻击目标。Freedom of the Press Foundation（FPF）在 9 月 2 日发文，请读者认真看待这类通知，并转介 Access Now 的说明。通知的内容不包括攻击是否成功，也不包括发动攻击的是谁。
+Apple 在 8 月 13 日向 110 个国家的用户发出威胁通知，内容是他们的 iPhone 成为雇佣间谍软件的攻击目标。Freedom of the Press Foundation（FPF）在 9 月 2 日发文，请读者认真看待这类通知，并转介 Access Now 的说明。通知的内容不包括攻击是否成功，也不包括发动攻击的是谁。Apple 的说明写到，大多数人不会成为这类攻击的目标。
 
 Apple 的说明页写明，通知会出现在 iPhone 的锁定屏幕与「设置」里，同时发到 Apple 账户的邮箱。发件人是 `threat-notifications@email.apple.com`，登录 `account.apple.com` 后页面顶部也会出现横幅。威胁通知绝不会要求点链接、打开文件、安装 App 或描述文件，也不会要求提供 Apple 账户密码或验证码。
 
@@ -47,8 +53,8 @@ Apple 给收到通知者的建议是开启锁定模式，并寻求专家协助�
 
 分辨真假先看渠道，真的通知只会出现在锁定屏幕、「设置」、Apple 账户的邮箱与 `account.apple.com`，也不会要你做任何事。收到自称来自 Apple 的可疑消息时，不要点里面的链接，自行登录 `account.apple.com` 看页面顶部有没有横幅。
 
-锁定模式是这类攻击最直接的防护，TechCrunch 3 月的报道引述 Apple 的回复，目前没有发现开启锁定模式的设备遭雇佣间谍软件成功入侵。代价是手机不会照平常的方式运作，例如大部分的消息附件会被挡下，链接预览也不能用。担心自己可能成为目标的人，不必等到收到通知才开。
-
 Access Now 的热线承诺两小时内回复，提供的十种语言包括英文、西班牙文、他加禄文与阿拉伯文，但没有中文。中文用户可以用英文联系，或先找熟悉数字安全的当地团体协助判断。
 
 亚洲也收到过这类通知，2023 年 10 月的一波发到了印度。Apple 当时的说明写到，有些通知可能是误报，有些攻击则可能没有被检测到。
+
+锁定模式是这类攻击最直接的防护，TechCrunch 3 月的报道引述 Apple 的回复，目前没有发现开启锁定模式的设备遭雇佣间谍软件成功入侵。代价是手机不会照平常的方式运作，例如大部分的消息附件会被挡下，链接预览也不能用。iOS 16 以上可以在「设置」的「隐私与安全性」打开锁定模式，打开时手机会重新启动，担心自己可能成为目标的人不必等到收到通知才开。
