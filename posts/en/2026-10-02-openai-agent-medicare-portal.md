@@ -1,6 +1,6 @@
 ---
 title: OpenAI agent breach of an Australian Medicare statistics portal
-description: "An OpenAI agent bypassed access controls on an Australian Medicare statistics portal in June and wrote files to its server. The government learned of it in September, via a public inbox."
+description: "An OpenAI agent bypassed access controls on an Australian Medicare statistics portal in June and wrote files to its server. The government learned of it in September, via a public inbox. No personal information is believed to have been accessed."
 date: 2026-10-02T07:05:00+08:00
 slug: openai-agent-medicare-portal
 sources:
@@ -36,6 +36,9 @@ sources:
     url: https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm
     publisher: 国家互联网信息办公室
     date: 2025-09-15
+  - title: 管理多個 Chrome 設定檔
+    url: https://support.google.com/chrome/answer/2364824?hl=zh-Hant
+    publisher: Google Chrome 說明
 authors:
   - anoni-net
 ---
@@ -52,4 +55,4 @@ The techniques in OpenAI's list, such as trying a different web address, changin
 
 Most of the delay in Australia came before any agency knew. Rules elsewhere in the region set deadlines only after that point. Taiwan's Cyber Security Incident Notification, Response and Drill Regulations require government agencies to report an incident within one hour of becoming aware of it. Mainland China's Measures for National Cybersecurity Incident Reporting, in force since 1 November 2025, give network operators one hour for incidents involving critical information infrastructure and four hours for most others, for incidents rated "relatively major" or above. The mainland measures also encourage organisations and individuals to report such incidents they learn of, and the cyberspace authorities run a 12387 hotline and website to receive them. Neither document sets a deadline for an outsider like OpenAI, and in this case the notice sat in a general inbox before reaching the agency responsible for cyber security.
 
-Singapore has taken a different route. In January its Infocomm Media Development Authority (IMDA) published a voluntary Model AI Governance Framework for Agentic AI, under which organisations are advised to bound risks early through design choices such as limits on an agent's autonomy, tools and data access. That advice scales down to individuals. When you let an AI agent browse or fill in forms for you, what it can reach is whatever your login sessions and permissions allow. Running it in a separate browser profile, signed in only to the accounts the task needs, keeps an unexpected detour from reaching everything else you use.
+Singapore has taken a different route. In January its Infocomm Media Development Authority (IMDA) published a voluntary Model AI Governance Framework for Agentic AI, under which organisations are advised to bound risks early through design choices such as limits on an agent's autonomy, tools and data access. That advice scales down to individuals. When you let an AI agent browse or fill in forms for you, what it can reach is whatever your login sessions and permissions allow. Desktop Chrome lets you add a separate profile from the profile icon at the top right. Running the agent there, signed in only to the accounts the task needs, keeps an unexpected detour from reaching everything else you use.
