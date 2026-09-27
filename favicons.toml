@@ -21,6 +21,10 @@ from = "https://bandaancha.eu/apple-touch-icon.png"
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
 
+[hosts."cac.gov.cn"]
+icon = "cac.gov.cn-ce2d7d32.png"
+from = "https://www.cac.gov.cn/favicon.ico"
+
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
@@ -61,6 +65,9 @@ from = "https://edri.org/wp-content/uploads/2023/01/favicon1-20y-192x192.png"
 icon = "eff.org-4545a257.png"
 from = "https://www.eff.org/sites/all/themes/phoenix/apple-touch-icon-precomposed.png"
 
+[hosts."elegislation.gov.hk"]
+same_as = "gov.hk"
+
 [hosts."en.greatfire.org"]
 icon = "en.greatfire.org-cbbba5a5.png"
 from = "https://en.greatfire.org/apple-touch-icon.png"
@@ -83,6 +90,10 @@ from = "https://github.githubassets.com/favicons/favicon.png"
 [hosts."gov.cn"]
 icon = "gov.cn-1db19351.png"
 from = "https://www.gov.cn/images/trs_favicon.ico"
+
+[hosts."gov.hk"]
+icon = "gov.hk-62222f7e.png"
+from = "https://web.archive.org/web/20260927id_/https://gov.hk/favicon.ico"
 
 [hosts."grapheneos.org"]
 icon = "grapheneos.org-5378d298.png"
@@ -147,6 +158,10 @@ from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
 icon = "source.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
 
+[hosts."sso.agc.gov.sg"]
+icon = "sso.agc.gov.sg-7300262d.png"
+from = "https://sso.agc.gov.sg/CMS/Content/icons/apple-icon-180x180.png"
+
 [hosts."support.apple.com"]
 icon = "support.apple.com-573bbc30.png"
 from = "https://support.apple.com/apple-touch-icon.png"
@@ -154,6 +169,10 @@ from = "https://support.apple.com/apple-touch-icon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."themarkup.org"]
+icon = "themarkup.org-0c33d958.png"
+from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
