@@ -3,7 +3,7 @@ title: About anoni.net News
 description: How anoni.net News chooses stories, checks facts and corrects errors, how the three language versions differ, and how to report a problem.
 ---
 
-anoni.net News is written by anoni.net, an anonymity network community based in Taiwan. It covers international news on privacy, anonymity networks and internet censorship from the angle we know best, technology and the open-source ecosystem. Each piece opens with what happened and who is affected, then a Perspective section explains the technology involved, the first step readers can take now, and what it costs them.
+anoni.net News is written by anoni.net, an anonymity network community based in Taiwan. It covers international news on privacy, anonymity networks and internet censorship from the angle we know best, technology and the open-source ecosystem. Each piece opens with what happened and who is affected, then its Perspective section covers the technology involved, the first step readers can take now, and what it costs them.
 
 ## Story selection {#selection}
 
@@ -17,19 +17,19 @@ The sources behind each piece are listed in its Sources panel with publisher and
 
 ## Corrections {#corrections}
 
-When an error or outdated detail is found after publication, all three language versions are corrected together. The articles live in a public GitHub repository, so every change and its date can be checked.
+When we find an error or outdated detail after publication, we correct all three language versions together. The articles live in a public GitHub repository, so every change and its date can be checked.
 
 ## Three language versions {#languages}
 
-Each piece is published at the same time in Traditional Chinese, Simplified Chinese and English, with the Traditional Chinese version as the factual reference. The Perspective section is rewritten for each readership. The Simplified Chinese version addresses readers inside mainland China and abroad, including whether a service is reachable there and how to get it. The English version is longer and compares laws and service availability across Asia, including when the story is about an American or European product. The Perspective sections therefore differ, and each version lists its own additional sources.
+Each piece is published at the same time in Traditional Chinese, Simplified Chinese and English, with the Traditional Chinese version as the factual reference. The Perspective section is rewritten for each readership. The Simplified Chinese version is written for readers inside mainland China and abroad, and covers whether a service is reachable there and how to get it. The English Perspective is longer and adds comparisons of laws and service availability across Asia, including when the story is about an American or European product. The Perspective sections therefore differ, and each version lists its own additional sources.
 
 ## Byline {#byline}
 
-Pieces are credited to the anoni.net community by default rather than to individuals, so contributors who do not want to leave a personal trace can take part. Their accuracy rests on traceable sources and a public revision history.
+Pieces are credited to the anoni.net community by default rather than to individuals, so contributors who do not want to leave a personal trace can take part. Whether a piece is accurate can be checked against its sources and the public revision history.
 
 ## Reporting an error {#report}
 
-If you spot a factual error, outdated information or a translation problem, please open an issue on GitHub at [anoni-net/news](https://github.com/anoni-net/news/issues/new), naming the piece and the sentence, ideally with a source. If you would rather not use a GitHub account, email `whisper@anoni.net`, preferably encrypted with PGP.
+If you spot a factual error, outdated information or a translation problem, please [open an issue on GitHub](https://github.com/anoni-net/news/issues/new), naming the piece and the sentence, ideally with a source. If you would rather not use a GitHub account, email `whisper@anoni.net`, preferably encrypted with PGP.
 
 ## Analytics and privacy {#privacy}
 
