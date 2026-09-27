@@ -432,8 +432,10 @@ def test_multi_source_post_renders(fixture_site):
     page = (out / "2026" / "09" / "age-verification-roundup" / "index.html").read_text(encoding="utf-8")
     assert "原文（5 篇）" in page
     # 頂端一行出處連到文末的原文清單，清單排在內文之後
-    assert '<a href="#sources"><svg class="icon"' in page
-    assert '</svg> <span>整理 5 篇原文，來自 EFF、Access Now、OONI</span></a>' in page
+    # 行首是出處行列出的三個網站的圖示：EFF 有圖示，Access Now 與 OONI 在 example.org，登記成通用圖示
+    stack = page[page.index('<a href="#sources"><span class="favicon-stack">'):page.index('整理 5 篇原文')]
+    assert stack.count("<img ") == 1 and stack.count('<svg class="icon"') == 2, stack
+    assert '</span> <span>整理 5 篇原文，來自 EFF、Access Now、OONI</span></a>' in page
     assert page.index('class="story__body content"') < page.index('id="sources"')
     assert page.count('class="source-slip__item"') == 5
     assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
@@ -957,3 +959,27 @@ def test_favicon_missing_on_assets(tmp_path):
 ])
 def test_source_host(url, host):
     assert build.source_host(url) == host
+
+
+def test_byline_icons_follow_source_line(tmp_path):
+    """署名旁的圖示對應出處行列出的網站，最多三個，同一個出處只算一次。都沒填 publisher 時沒有圖示。"""
+    def icons_of(sources: str) -> list:
+        post = build.load_post(write_post(tmp_path, GOOD.replace(
+            "sources:\n  - title: Source\n    url: https://example.org/\n", "sources:\n" + sources)), AUTHORS)
+        for source in post.sources:
+            source.icon = f"favicons/{source.host}-00000000.png"
+        return build.source_icons(post)
+
+    item = "  - title: T\n    url: https://{host}/\n    publisher: {publisher}\n"
+    many = "".join(item.format(host=f"s{i}.org", publisher=f"P{i}") for i in range(5))
+    assert icons_of(many) == [f"favicons/s{i}.org-00000000.png" for i in range(3)]
+    same = item.format(host="a.org", publisher="A") + item.format(host="b.org", publisher="A")
+    assert icons_of(same) == ["favicons/a.org-00000000.png"]
+    assert icons_of("  - title: T\n    url: https://a.org/\n") == []
+
+
+def test_byline_icons_on_both_targets(fixture_site):
+    targets, _, _ = fixture_site
+    for name, src in (("clearnet", f"/news/assets/favicons/{FAVICON}"), ("onion", f"/assets/favicons/{FAVICON}")):
+        page = (targets[name].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+        assert f'<a href="#sources"><span class="favicon-stack"><img src="{src}" width="16" height="16" alt=""' in page

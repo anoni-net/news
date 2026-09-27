@@ -959,6 +959,17 @@ def source_line(post: Post, s: dict | None = None) -> str:
     return s["source_many"].format(count=count, publishers=s["list_sep"].join(publishers[:3]), total=len(publishers))
 
 
+def source_icons(post: Post) -> list[str | None]:
+    """署名旁出處行的網站圖示，對應出處行列出的網站，最多三個。值是產物 assets/ 底下的路徑，
+    None 是登記成 none 的網站。都沒填 publisher 時出處行只寫篇數，回傳空清單，維持文件圖示。"""
+    icons, publishers = [], []
+    for source in post.sources:
+        if source.publisher and source.publisher not in publishers:
+            publishers.append(source.publisher)
+            icons.append(source.icon)
+    return icons[:3]
+
+
 ICON_DIR = ROOT / "templates" / "icons"
 SVG_VIEWBOX_RE = re.compile(r'viewBox="([^"]+)"')
 SVG_BODY_RE = re.compile(r"<svg\b[^>]*>(.*)</svg>", re.S)
@@ -996,6 +1007,7 @@ def make_env() -> Environment:
     env.filters["author_name"] = pass_context(lambda ctx, author: author["names"].get(ctx["lang"].code, author["name"]))
     env.filters["by_day"] = by_day
     env.filters["source_line"] = pass_context(lambda ctx, post: source_line(post, ctx["s"]))
+    env.filters["source_icons"] = source_icons
     # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
