@@ -465,6 +465,23 @@ p {
     font-weight: 600;
 }
 
+/* 原文網站的圖示，沒有登記圖示的網站用通用的地球圖示，兩者對齊文字。
+   白色圓角底讓透明底的深色圖示在深色模式也看得見 */
+.source-slip__icon,
+.source-slip__title .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-inline-end: 0.4em;
+    vertical-align: -0.15em;
+}
+
+.source-slip__icon {
+    box-sizing: content-box;
+    padding: 1px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
 .source-slip__meta {
     margin: 0;
     color: var(--c-muted);

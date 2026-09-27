@@ -61,6 +61,15 @@ IMG_RE = re.compile(r"<img\b[^>]*>")
 STANDALONE_IMG_RE = re.compile(r"<p>\s*(<img\b[^>]*>)\s*</p>")
 INGEST_HINT = "維護者合併前執行 uv run tools/ingest_images.py 把圖片搬到 assets.anoni.net"
 
+# 原文的網站圖示，規則見 SPEC.md「原文的網站圖示」
+FAVICONS_PATH = ROOT / "favicons.toml"
+FAVICON_DIR = "favicons/"
+FAVICON_SIZE = 64
+MAX_FAVICON_BYTES = 8_000
+FAVICON_KEYS = {"icon", "from", "same_as", "none"}
+FAVICON_NAME_RE = re.compile(r"^[a-z0-9.-]+-[0-9a-f]{8}\.png$")
+FAVICON_HINT = "維護者執行 uv run tools/fetch_favicons.py 抓取並登記"
+
 
 # 語系規則見 SPEC.md「多語系」
 @dataclass(frozen=True)
@@ -136,6 +145,18 @@ class Source:
     url: str
     publisher: str | None = None
     date: date | None = None
+    # 網站圖示在產物 assets/ 底下的路徑。登記成 none 或還沒解析時是 None，頁面改用通用圖示
+    icon: str | None = None
+
+    @property
+    def host(self) -> str:
+        return source_host(self.url)
+
+
+def source_host(url: str) -> str:
+    """favicons.toml 的鍵：網址的主機名稱，去掉開頭的 www.。"""
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    return host[4:] if host.startswith("www.") else host
 
 
 @dataclass
@@ -493,6 +514,74 @@ def process_images(post: Post, store: AssetStore, problems: list[str]) -> None:
             problems.append(f"{where}：圖片 {src} 要獨立成一段，不能跟文字寫在同一段")
 
 
+def load_favicons(path: Path) -> dict[str, dict]:
+    """讀 favicons.toml，每個主機只能是 icon、same_as、none 其中一種。"""
+    with open(path, "rb") as f:
+        hosts = tomllib.load(f).get("hosts", {})
+    problems = []
+    for host, entry in hosts.items():
+        where = f"{path.name} 的 {host}"
+        if not isinstance(entry, dict):
+            problems.append(f"{where} 要寫成表格")
+            continue
+        extra = set(entry) - FAVICON_KEYS
+        if extra:
+            problems.append(f"{where} 有不認得的欄位 {sorted(extra)}")
+        kinds = [key for key in ("icon", "same_as", "none") if key in entry]
+        if len(kinds) != 1:
+            problems.append(f"{where} 要寫 icon、same_as、none 其中一個")
+            continue
+        if "from" in entry and "icon" not in entry:
+            problems.append(f"{where}：from 只跟 icon 一起寫")
+        if "icon" in entry and not FAVICON_NAME_RE.match(str(entry["icon"])):
+            problems.append(f"{where}：icon {entry['icon']!r} 要是 <主機>-<8 碼雜湊>.png")
+        if "none" in entry and (not isinstance(entry["none"], str) or not entry["none"].strip()):
+            problems.append(f"{where}：none 要寫理由")
+        if "same_as" in entry:
+            target = hosts.get(entry["same_as"])
+            if not isinstance(target, dict):
+                problems.append(f"{where}：same_as 指向的 {entry['same_as']} 不在登記表裡")
+            elif "same_as" in target:
+                problems.append(f"{where}：same_as 指向的 {entry['same_as']} 本身也是 same_as，要直接指到有 icon 或 none 的主機")
+    if problems:
+        raise BuildError(problems)
+    return hosts
+
+
+def resolve_favicons(posts: list[Post], hosts: dict[str, dict], store: AssetStore, problems: list[str]) -> None:
+    """替每一筆原文找到網站圖示，抓進產物並檢查。沒登記的主機只報一次。"""
+    reported: set[str] = set()
+    checked: set[str] = set()
+    for post in posts:
+        for source in post.sources:
+            host = source.host
+            entry = hosts.get(host)
+            if entry is None:
+                if host not in reported:
+                    problems.append(f"{post.where}：原文 {source.url} 的網站 {host} 不在 favicons.toml，{FAVICON_HINT}")
+                    reported.add(host)
+                continue
+            if "same_as" in entry:
+                entry = hosts[entry["same_as"]]
+            if "icon" not in entry:
+                continue
+            where = f"favicons.toml 的 {host}"
+            asset = store.get(ASSETS_PREFIX + FAVICON_DIR + entry["icon"], where, problems)
+            if not asset:
+                continue
+            if asset.rel not in checked:
+                checked.add(asset.rel)
+                with Image.open(asset.path) as image:
+                    fmt = image.format
+                if fmt != "PNG" or (asset.width, asset.height) != (FAVICON_SIZE, FAVICON_SIZE):
+                    problems.append(f"{where}：圖示要是 {FAVICON_SIZE}×{FAVICON_SIZE} 的 PNG，"
+                                    f"現在是 {asset.width}×{asset.height} 的 {fmt}")
+                if asset.path.stat().st_size > MAX_FAVICON_BYTES:
+                    problems.append(f"{where}：圖示有 {asset.path.stat().st_size // 1000}KB，"
+                                    f"不能超過 {MAX_FAVICON_BYTES // 1000}KB")
+            source.icon = asset.rel
+
+
 def localize_assets(text: str, target: "Target", absolute: bool = False) -> str:
     """把 assets.anoni.net 的圖片網址換成產物裡的副本。"""
     base = target.abs_url("assets/") if absolute else target.url("assets/")
@@ -572,8 +661,10 @@ def check_translations(posts_dir: Path) -> list[str]:
     return problems
 
 
-def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None) -> list[Post]:
-    """讀三個語系，檢查對應之後回傳 zh-TW 的文章，其他版本放在 translations。"""
+def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
+              favicons: dict[str, dict] | None = None) -> list[Post]:
+    """讀三個語系，檢查對應之後回傳 zh-TW 的文章，其他版本放在 translations。
+    favicons 是 favicons.toml 的內容，沒給就不解析網站圖示，原文一律用通用圖示。"""
     problems: list[str] = []
     by_lang: dict[str, list[Post]] = {}
     for lang in LANGS:
@@ -583,6 +674,8 @@ def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | Non
             problems += error.problems
             by_lang[lang.code] = []
     problems += check_translations(posts_dir)
+    if favicons is not None:
+        resolve_favicons([post for posts in by_lang.values() for post in posts], favicons, store or AssetStore(), problems)
     if problems:
         raise BuildError(problems)
 
@@ -925,8 +1018,10 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     # 測試用的圖片放在文章目錄旁邊的 assets/，不必連網
     assets_dir = posts_dir.parent / "assets"
     store = AssetStore(assets_dir if assets_dir.exists() else None)
+    favicons_path = posts_dir.parent / "favicons.toml"
+    favicons = load_favicons(favicons_path if favicons_path.exists() else FAVICONS_PATH)
     strings()  # 介面文字有缺漏時在這裡就失敗
-    posts = load_site(posts_dir, authors, store)
+    posts = load_site(posts_dir, authors, store, favicons)
     published = posts if include_scheduled else [post for post in posts if not post.scheduled]
     env = make_env()
     pages = {}

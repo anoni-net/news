@@ -1,0 +1,9 @@
+# 測試用的網站圖示登記表，格式見 SPEC.md「原文的網站圖示」。
+# eff.org 有圖示，example.org 登記成通用圖示，涵蓋兩種畫法。
+
+[hosts."eff.org"]
+icon = "eff.org-512902b2.png"
+from = "https://www.eff.org/apple-touch-icon.png"
+
+[hosts."example.org"]
+none = "測試用的網域"
