@@ -21,6 +21,7 @@ sys.path.insert(0, str(ROOT))
 import build  # noqa: E402
 
 FIXTURES = ROOT / "tests" / "fixtures"
+ONION_HOST = build.load_config(ROOT / "site.toml")[0]["onion_host"]
 AUTHORS = build.load_authors(FIXTURES / "authors.yml")
 
 GOOD = """\
@@ -136,6 +137,9 @@ DOCS_CONTRACT = """\
 /basics/threat-model/
 \t#三個基本問題
 /old/ -> /basics/threat-model/
+/tools/rss/
+/zh-cn/tools/rss/
+/en/tools/rss/
 """
 
 
@@ -152,6 +156,25 @@ def test_docs_links(tmp_path, href, problem, notice):
     problems, notices = build.check_docs_links([post], build.parse_docs_contract(DOCS_CONTRACT))
     assert bool(problems) is problem
     assert bool(notices) is notice
+
+
+def test_rss_links_point_to_the_guide_per_language(fixture_site):
+    """頁面上的 RSS 連結指向文件站同語系的 RSS 訂閱入門，onion 改寫成文件站的 onion 位址。閱讀器用的自動探索仍然指向 feed。"""
+    targets, _, _ = fixture_site
+    for lang, guide in (("", "tools/rss/"), ("zh-cn/", "zh-cn/tools/rss/"), ("en/", "en/tools/rss/")):
+        page = (targets["clearnet"].out / lang / "index.html").read_text(encoding="utf-8")
+        assert page.count(f'href="https://anoni.net/docs/{guide}"') == 2  # 刊頭與頁尾
+        assert f'type="application/rss+xml" title=' in page and f'href="https://anoni.net/news/{lang}feed.xml"' in page
+        onion = (targets["onion"].out / lang / "index.html").read_text(encoding="utf-8")
+        assert f'href="http://docs.{ONION_HOST}/{guide}"' in onion
+    post = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert post.count('href="https://anoni.net/docs/tools/rss/"') == 2  # 文章末與頁尾
+
+
+def test_rss_guide_must_be_in_docs_contract(tmp_path):
+    contract = build.parse_docs_contract(DOCS_CONTRACT.replace("/en/tools/rss/\n", ""))
+    problems, _ = build.check_docs_links([], contract)
+    assert problems == ["strings.toml 的 en.rss_url：https://anoni.net/docs/en/tools/rss/ 不在文件站的網址合約裡"]
 
 
 # ---------------------------------------------------------------- onion 改寫
