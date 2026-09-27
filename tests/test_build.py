@@ -158,23 +158,32 @@ def test_docs_links(tmp_path, href, problem, notice):
     assert bool(notices) is notice
 
 
-def test_rss_links_point_to_the_guide_per_language(fixture_site):
-    """頁面上的 RSS 連結指向文件站同語系的 RSS 訂閱入門，onion 改寫成文件站的 onion 位址。閱讀器用的自動探索仍然指向 feed。"""
+def test_rss_links_point_to_the_subscribe_page(fixture_site):
+    """頁面上的 RSS 連結指向同語系的訂閱頁，閱讀器用的自動探索仍然指向 feed。"""
     targets, _, _ = fixture_site
-    for lang, guide in (("", "tools/rss/"), ("zh-cn/", "zh-cn/tools/rss/"), ("en/", "en/tools/rss/")):
+    for lang in ("", "zh-cn/", "en/"):
         page = (targets["clearnet"].out / lang / "index.html").read_text(encoding="utf-8")
-        assert page.count(f'href="https://anoni.net/docs/{guide}"') == 2  # 刊頭與頁尾
+        assert page.count(f'href="/news/{lang}subscribe/"') == 2  # 刊頭與頁尾
         assert f'type="application/rss+xml" title=' in page and f'href="https://anoni.net/news/{lang}feed.xml"' in page
-        onion = (targets["onion"].out / lang / "index.html").read_text(encoding="utf-8")
-        assert f'href="http://docs.{ONION_HOST}/{guide}"' in onion
     post = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
-    assert post.count('href="https://anoni.net/docs/tools/rss/"') == 2  # 文章末與頁尾
+    assert post.count('href="/news/subscribe/"') == 2  # 文章末與頁尾
 
 
-def test_rss_guide_must_be_in_docs_contract(tmp_path):
+def test_subscribe_page_shows_the_feed_of_each_target(fixture_site):
+    """訂閱頁代入的 feed 網址跟著語系與輸出目標，onion 版顯示 onion 的網址。"""
+    targets, _, _ = fixture_site
+    for lang in ("", "zh-cn/", "en/"):
+        clearnet = (targets["clearnet"].out / lang / "subscribe" / "index.html").read_text(encoding="utf-8")
+        onion = (targets["onion"].out / lang / "subscribe" / "index.html").read_text(encoding="utf-8")
+        assert f"https://anoni.net/news/{lang}feed.xml" in clearnet and build.FEED_URL_PLACEHOLDER not in clearnet
+        assert f"http://news.{ONION_HOST}/{lang}feed.xml" in onion and "https://anoni.net/news/" not in onion
+
+
+def test_site_page_docs_links_are_checked(tmp_path):
     contract = build.parse_docs_contract(DOCS_CONTRACT.replace("/en/tools/rss/\n", ""))
-    problems, _ = build.check_docs_links([], contract)
-    assert problems == ["strings.toml 的 en.rss_url：https://anoni.net/docs/en/tools/rss/ 不在文件站的網址合約裡"]
+    pages = {"subscribe": {"en": {"html": '<a href="https://anoni.net/docs/en/tools/rss/">x</a>', "where": "pages/en/subscribe.md"}}}
+    problems, _ = build.check_docs_links([], contract, pages)
+    assert problems == ["pages/en/subscribe.md：https://anoni.net/docs/en/tools/rss/ 不在文件站的網址合約裡"]
 
 
 # ---------------------------------------------------------------- onion 改寫
