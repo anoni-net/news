@@ -1,6 +1,22 @@
 # 原文網站的圖示登記表，格式與流程見 SPEC.md「原文的網站圖示」。
 # 鍵是 sources 網址的主機名稱，去掉開頭的 www.。由 tools/fetch_favicons.py 寫入，手改之前先讀規格。
 
+[hosts."9to5google.com"]
+icon = "9to5google.com-ccc4033a.png"
+from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
+
+[hosts."androidauthority.com"]
+icon = "androidauthority.com-cadbb38a.png"
+from = "https://www.androidauthority.com/favicon.ico"
+
+[hosts."apps.apple.com"]
+icon = "apps.apple.com-21ded518.png"
+from = "https://apps.apple.com/assets/favicon/favicon-180.png"
+
+[hosts."bandaancha.eu"]
+icon = "bandaancha.eu-5be72bee.png"
+from = "https://bandaancha.eu/apple-touch-icon.png"
+
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
@@ -9,25 +25,55 @@ from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/co
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
 
+[hosts."cnbc.com"]
+icon = "cnbc.com-f77120b6.png"
+from = "https://www.cnbc.com/apple-touch-icon.png"
+
 [hosts."community.signalusers.org"]
 icon = "community.signalusers.org-34c4e8e9.png"
 from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
+
+[hosts."cultura.gob.es"]
+icon = "cultura.gob.es-6ae34a40.png"
+from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
 
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
 
+[hosts."developer.android.com"]
+icon = "developer.android.com-56e81a95.png"
+from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
+
 [hosts."eff.org"]
 icon = "eff.org-4545a257.png"
 from = "https://www.eff.org/sites/all/themes/phoenix/apple-touch-icon-precomposed.png"
+
+[hosts."en.greatfire.org"]
+icon = "en.greatfire.org-cbbba5a5.png"
+from = "https://en.greatfire.org/apple-touch-icon.png"
+
+[hosts."explorer.ooni.org"]
+same_as = "ooni.org"
 
 [hosts."freedom.press"]
 icon = "freedom.press-d782bdb6.png"
 from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 
+[hosts."github.com"]
+icon = "github.com-90043607.png"
+from = "https://github.githubassets.com/favicons/favicon.png"
+
 [hosts."gov.cn"]
 icon = "gov.cn-1db19351.png"
 from = "https://www.gov.cn/images/trs_favicon.ico"
+
+[hosts."grapheneos.org"]
+icon = "grapheneos.org-5378d298.png"
+from = "https://grapheneos.org/apple-touch-icon.png"
+
+[hosts."grapheneos.social"]
+same_as = "grapheneos.org"
 
 [hosts."hawksley.dev"]
 icon = "hawksley.dev-4e52ebdb.png"
@@ -57,6 +103,10 @@ from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badg
 icon = "macrumors.com-6643c49b.png"
 from = "https://images.macrumors.com/images-new/apple-touch-icon-blue.png"
 
+[hosts."meta.com"]
+icon = "meta.com-1115e2bb.png"
+from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -65,9 +115,17 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 
+[hosts."reclaimthenet.org"]
+icon = "reclaimthenet.org-ebe7368e.png"
+from = "https://reclaimthenet.org/apple-touch-icon.png"
+
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"
 from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
+
+[hosts."source.android.com"]
+icon = "source.android.com-56e81a95.png"
+from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
 
 [hosts."support.apple.com"]
 icon = "support.apple.com-573bbc30.png"
@@ -76,3 +134,11 @@ from = "https://support.apple.com/apple-touch-icon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."wired.me"]
+icon = "wired.me-32e047e6.png"
+from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
+
+[hosts."zuckoff.app"]
+icon = "zuckoff.app-284bd984.png"
+from = "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/88/89/1f/88891f97-8ae4-7ed0-9754-05b15f2bf184/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
