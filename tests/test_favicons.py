@@ -126,3 +126,34 @@ def test_fetched_name_follows_content():
 
 def test_project_registry_is_valid():
     build.load_favicons(build.FAVICONS_PATH)
+
+
+def test_archive_fallback_when_site_blocks(monkeypatch):
+    """原站整個擋下時，改從 Internet Archive 取同一個網站的首頁與圖示。"""
+    icon = encode(Image.new("RGBA", (180, 180), (0, 0, 0, 255)), "PNG")
+    page = b'<link rel="apple-touch-icon" href="/apple-icon.png">'
+
+    def fake_fetch(url: str) -> bytes:
+        if not url.startswith("https://web.archive.org/"):
+            raise OSError("HTTP Error 403: Forbidden")
+        return page if url.endswith("openai.com/") else icon
+
+    monkeypatch.setattr(fetch_favicons, "fetch", fake_fetch)
+    item, tried = fetch_favicons.fetch_icon("openai.com", "openai.com")
+    assert item and item.source == fetch_favicons.archived("https://openai.com/apple-icon.png")
+    assert any("403" in reason for reason in tried)
+
+
+def test_fetch_decompresses_archive_gzip(monkeypatch):
+    import gzip
+
+    class Response(io.BytesIO):
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+    monkeypatch.setattr(fetch_favicons.urllib.request, "urlopen",
+                        lambda *args, **kwargs: Response(gzip.compress(b"\x00\x00\x01\x00icon")))
+    assert fetch_favicons.fetch("https://web.archive.org/web/20260927id_/https://example.org/favicon.ico") == b"\x00\x00\x01\x00icon"

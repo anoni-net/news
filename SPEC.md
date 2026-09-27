@@ -214,7 +214,7 @@ authors:
 2. 看過預覽，設好 `NEWS_ASSETS_RSYNC` 之後拿掉 `--dry-run` 再執行一次。工具把圖示上傳到 `favicons/`，確認每個網址回 200 之後才寫進 `favicons.toml`
 3. 抓不到或抓到的圖不適合時，用 `--from <主機>=<網址或檔案>` 指定來源，或用 `--none <主機>=<理由>` 登記成通用圖示
 
-工具依序試網站首頁 `<link>` 宣告的 apple-touch-icon、標了尺寸的 PNG 或 ICO 圖示，最後才試 `/favicon.ico`，取最大的一張縮成 64×64，非正方形的補透明邊。SVG 不收，理由同內文圖片。三段以上的主機抓不到時改抓上一層，例如 `support.signal.org` 改抓 `signal.org`，成功的話登記成 `same_as`。
+工具依序試網站首頁 `<link>` 宣告的 apple-touch-icon、標了尺寸的 PNG 或 ICO 圖示，最後才試 `/favicon.ico`，取最大的一張縮成 64×64，非正方形的補透明邊。SVG 不收，理由同內文圖片。原站擋下自動抓取時（例如 Cloudflare 回 403），改從 Internet Archive 取同一個網站最近的存檔，用的仍是原站自己的圖示，`from` 記存檔的網址。三段以上的主機還是抓不到時改抓上一層，例如 `support.signal.org` 改抓 `signal.org`，成功的話登記成 `same_as`。已經登記的主機要重新抓取時用 `--refetch <主機>`。
 
 ## 發佈身分
 

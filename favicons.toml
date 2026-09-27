@@ -34,7 +34,8 @@ icon = "hawksley.dev-4e52ebdb.png"
 from = "https://hawksley.dev/favicons/v2/apple-touch-icon.png"
 
 [hosts."help.openai.com"]
-same_as = "openai.com"
+icon = "help.openai.com-cb2858c5.png"
+from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-touch-icon.png"
 
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
@@ -61,7 +62,8 @@ icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
 
 [hosts."openai.com"]
-none = "Cloudflare 擋下自動抓取（403），可以用瀏覽器下載後以 --from 補上"
+icon = "openai.com-c5ef3d83.png"
+from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"

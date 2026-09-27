@@ -4,9 +4,11 @@
     uv run tools/fetch_favicons.py --dry-run posts/2026-09-18-slug.md
     NEWS_ASSETS_RSYNC=<rsync 目標> uv run tools/fetch_favicons.py posts/2026-09-18-slug.md
     uv run tools/fetch_favicons.py --from openai.com=~/Downloads/openai.png --none ooni.org=網站沒有提供圖示
+    uv run tools/fetch_favicons.py --refetch openai.com                  # 已登記的主機重新抓取
 
 只處理 favicons.toml 還沒登記的主機。每個主機依序試網站首頁 <link> 宣告的 apple-touch-icon、
-標了尺寸的 PNG 或 ICO，最後才試 /favicon.ico，取最大的一張縮成 64×64 的 PNG。上傳到
+標了尺寸的 PNG 或 ICO，最後才試 /favicon.ico，取最大的一張縮成 64×64 的 PNG。原站擋下自動抓取時，
+改從 Internet Archive 取同一個網站最近的存檔。上傳到
 $NEWS_ASSETS_RSYNC/favicons/，確認 https://assets.anoni.net/news/favicons/ 底下回 200 之後才寫進登記表。
 
 抓到的圖對不對要人看，--dry-run 會產生 .cache/favicons/preview.html，把每個圖示放在淺色與深色背景上。
@@ -15,6 +17,7 @@ $NEWS_ASSETS_RSYNC/favicons/，確認 https://assets.anoni.net/news/favicons/ �
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import html
 import io
@@ -25,10 +28,13 @@ import shutil
 import ssl
 import subprocess
 import sys
+import time
 import tomllib
+import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 from PIL import Image
@@ -42,6 +48,7 @@ import ingest_images  # noqa: E402
 
 STAGING = ROOT / ".cache" / "favicons"
 MIN_EDGE = 16
+ARCHIVE_RETRY_WAITS = (10, 30, 60)
 # 有些網站擋掉不像瀏覽器的請求，抓圖示時用一般瀏覽器的 User-Agent
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"
 LINK_RE = re.compile(r"<link\b[^>]*>", re.I)
@@ -101,8 +108,26 @@ TLS.verify_flags &= ~ssl.VERIFY_X509_STRICT
 
 def fetch(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=20, context=TLS) as response:
-        return response.read()
+    # Internet Archive 短時間內請求太多會直接拒絕連線，等一下再試就會通
+    waits = ARCHIVE_RETRY_WAITS if url.startswith("https://web.archive.org/") else ()
+    for wait in (*waits, None):
+        try:
+            with urllib.request.urlopen(request, timeout=30, context=TLS) as response:
+                data = response.read()
+            break
+        except urllib.error.HTTPError:
+            raise
+        except OSError:
+            if wait is None:
+                raise
+            time.sleep(wait)
+    # Internet Archive 的原始檔照原站的壓縮格式回傳，urllib 不會自己解開
+    return gzip.decompress(data) if data[:2] == b"\x1f\x8b" else data
+
+
+def archived(url: str) -> str:
+    """Internet Archive 裡最接近今天的那一份原始檔。原站擋下自動抓取時，改從這裡取同一個網址。"""
+    return f"https://web.archive.org/web/{date.today():%Y%m%d}id_/{url}"
 
 
 def candidates(page_url: str, page: str) -> list[str]:
@@ -134,19 +159,21 @@ def candidates(page_url: str, page: str) -> list[str]:
 
 
 def fetch_icon(host: str, origin: str) -> tuple[Fetched | None, list[str]]:
-    """回傳抓到的圖示，以及每個試過的網址失敗的原因。"""
+    """回傳抓到的圖示，以及每個試過的網址失敗的原因。先抓原站，抓不到再從 Internet Archive
+    取同一個網站的首頁與圖示。Cloudflare 這類防護常把首頁與圖示一起擋下，存檔裡的是原站自己的檔案。"""
     tried: list[str] = []
     page_url = f"https://{origin}/"
-    try:
-        page = fetch(page_url).decode("utf-8", "replace")
-    except (OSError, ValueError) as error:
-        tried.append(f"{page_url}：{error}")
-        page = ""
-    for url in candidates(page_url, page):
+    for via in (lambda url: url, archived):
         try:
-            return Fetched(host, convert(fetch(url)), url), tried
-        except (OSError, ValueError, Image.DecompressionBombError) as error:
-            tried.append(f"{url}：{error}")
+            page = fetch(via(page_url)).decode("utf-8", "replace")
+        except (OSError, ValueError) as error:
+            tried.append(f"{via(page_url)}：{error}")
+            page = ""
+        for url in candidates(page_url, page):
+            try:
+                return Fetched(host, convert(fetch(via(url))), via(url)), tried
+            except (OSError, ValueError, Image.DecompressionBombError) as error:
+                tried.append(f"{via(url)}：{error}")
     return None, tried
 
 
@@ -242,15 +269,18 @@ def main() -> int:
                         help="登記成通用的地球圖示")
     parser.add_argument("--same-as", dest="aliases", action="append", default=[], metavar="主機=另一個主機",
                         help="沿用另一個主機的圖示")
+    parser.add_argument("--refetch", action="append", default=[], metavar="主機",
+                        help="已經登記的主機也重新抓取，例如之前登記成 none 的")
     args = parser.parse_args()
 
     registry = load_registry(build.FAVICONS_PATH)
     overrides, nones, aliases = pairs(args.overrides, "--from"), pairs(args.nones, "--none"), pairs(args.aliases, "--same-as")
     wanted = source_hosts(args.posts or all_posts())
-    for host in [*overrides, *nones, *aliases]:
+    refetch = {build.source_host(f"https://{host.strip()}/") for host in args.refetch}
+    for host in [*overrides, *nones, *aliases, *refetch]:
         wanted.setdefault(host, host)
     todo = {host: origin for host, origin in wanted.items()
-            if host not in registry or host in overrides or host in nones or host in aliases}
+            if host not in registry or host in overrides or host in nones or host in aliases or host in refetch}
     if not todo:
         print("每個主機都已經登記，沒有要處理的")
         return 0
