@@ -1,7 +1,7 @@
 ---
 title: The cross-site identifier behind ChatGPT's ad pixel
 description: A traffic analysis found that ChatGPT's ad system sets a cookie linked to the user's account, which advertisers' sites then send back to OpenAI through its pixel along with browsing data.
-date: 2026-09-27T01:24:00+08:00
+date: 2026-09-26T01:24:00+08:00
 slug: chatgpt-ad-pixel-identifier
 sources:
   - title: ChatGPT now knows what you do on other websites via ad collector
