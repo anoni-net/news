@@ -56,6 +56,8 @@
     <nav class="site-footer__links" aria-label="{{ s.footer_label }}">
       <a href="{{ s.rss_url }}">{{ icon('rss') }} {{ s.rss }}</a>
       <a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a>
+      <a href="{{ url(home ~ 'about/') }}">{{ icon('information-outline') }} {{ s.about }}</a>
+      <a href="{{ s.report_url }}">{{ icon('message-alert-outline') }} {{ s.report }}</a>
       <a href="{{ config.homepage }}">{{ icon('home-outline') }} {{ s.home }}</a>
 {% if onion_url %}
       <a href="{{ onion_url }}">{{ icon('torproject') }} {{ s.onion }}</a>

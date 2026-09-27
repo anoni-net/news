@@ -30,6 +30,15 @@
 	#perspective
 	#sources
 /404.html
+/about/
+	#byline
+	#corrections
+	#fact-checking
+	#languages
+	#license
+	#privacy
+	#report
+	#selection
 /en/
 /en/2026/
 /en/2026/09/
@@ -57,6 +66,15 @@
 /en/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
+/en/about/
+	#byline
+	#corrections
+	#fact-checking
+	#languages
+	#license
+	#privacy
+	#report
+	#selection
 /zh-cn/
 /zh-cn/2026/
 /zh-cn/2026/09/
@@ -84,6 +102,15 @@
 /zh-cn/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
+/zh-cn/about/
+	#byline
+	#corrections
+	#fact-checking
+	#languages
+	#license
+	#privacy
+	#report
+	#selection
 /feed.xml
 /zh-cn/feed.xml
 /en/feed.xml
