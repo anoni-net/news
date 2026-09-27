@@ -31,10 +31,11 @@ posts/                   # 一篇一個 Markdown，檔名是發布日加 slug，
     2026-09-18-zkp-age-verification.md
   en/                    # 同檔名的英文版
     2026-09-18-zkp-age-verification.md
-pages/                   # 文章以外的固定頁面，目前只有關於頁，語系目錄的排法同 posts/
+pages/                   # 文章以外的固定頁面：關於頁與訂閱頁，語系目錄的排法同 posts/
   about.md
-  zh-CN/about.md
-  en/about.md
+  subscribe.md
+  zh-CN/about.md、zh-CN/subscribe.md
+  en/about.md、en/subscribe.md
 strings.toml             # 介面文字，三個語系各一組
 templates/               # Jinja2 模板
   _layout.html.j2
@@ -298,6 +299,7 @@ clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的
 | `/news/feed.xml` | RSS 2.0 |
 | `/news/sitemap.xml` | sitemap |
 | `/news/about/` | 關於頁，見「關於頁」 |
+| `/news/subscribe/` | 用 RSS 訂閱的三個步驟，見「RSS」 |
 | `/news/404.html` | 找不到頁面，三個語系共用 |
 | `/news/zh-cn/…`、`/news/en/…` | zh-CN 與 en，底下的結構與上面各列相同 |
 
@@ -331,7 +333,9 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 - `<guid isPermaLink="false">` 用 `anoni-news:2026/09/zkp-age-verification`，clearnet 與 onion 兩份 feed 用同一個值。zh-CN 與 en 在前面加上語系，寫成 `anoni-news:zh-cn/2026/09/zkp-age-verification`
 - 日期用 RFC 822 格式，時區固定 `+0800`
 - feed 裡的網址必須是完整網址，這是兩份產物一定不同的地方
-- 頁面上的 RSS 連結（頁尾、刊頭、文章末的訂閱行、還沒有文章時的提示）指向文件站同語系的[RSS 訂閱入門](https://anoni.net/docs/tools/rss/)，網址寫在 `strings.toml` 的 `rss_url`。直接連到 `feed.xml` 的話，沒用過 RSS 的讀者點下去只會看到一整頁 XML。教學頁說明閱讀器的選擇與訂閱步驟，也列出三個語系的 feed 網址與 onion 版本
+- 頁面上的 RSS 連結（頁尾、刊頭、文章末的訂閱行、還沒有文章時的提示）指向同語系的訂閱頁 `subscribe/`。直接連到 `feed.xml` 的話，沒用過 RSS 的讀者點下去只會看到一整頁 XML
+- 訂閱頁只寫完成訂閱需要的三個步驟：安裝閱讀器、複製 feed 網址、在閱讀器裡新增訂閱。閱讀器照文件站[RSS 訂閱入門](https://anoni.net/docs/tools/rss/)查證過的清單，隱私取捨、經由 Tor 讀取與團隊聊天工具只留一個連到那一頁的連結。2026-09 之前 RSS 連結直接指向文件站的 RSS 訂閱入門。該頁涵蓋文件站、更新日誌與新聞導讀所有的 feed，只想訂閱新聞導讀的讀者要讀完整頁，才能找到自己要的網址
+- 訂閱頁的內文寫 `%FEED_URL%`，建置時代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
 - `<head>` 的 `<link rel="alternate" type="application/rss+xml">` 維持指向 feed，已經在用閱讀器的讀者貼上 news 首頁的網址，閱讀器就會自己找到 feed
 
 ## clearnet 與 onion
@@ -375,7 +379,7 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 - 樣式自己寫，只用系統字型，不載入 Bulma 與 Font Awesome。配色見下方「品牌與配色」
 - 支援 `prefers-color-scheme: dark`
-- 頁首：anoni.net 標誌加「新聞導讀」，兩者是同一個連結，回到該語系的 news 首頁。讀者在 news 裡點左上角，預期回到正在看的網站首頁，官網首頁的入口放在頁尾。頁首、刊頭與頁尾這些頁面框架不放文件站的入口，避免讀者分不清兩個產品，文件站只出現在文章內文（延伸閱讀目前不放，見「內文」）。RSS 連結是例外，指向文件站的 RSS 訂閱入門（見「RSS」）
+- 頁首：anoni.net 標誌加「新聞導讀」，兩者是同一個連結，回到該語系的 news 首頁。讀者在 news 裡點左上角，預期回到正在看的網站首頁，官網首頁的入口放在頁尾。頁首、刊頭與頁尾這些頁面框架不放文件站的入口，避免讀者分不清兩個產品，文件站只出現在文章內文與訂閱頁（延伸閱讀目前不放，見「內文」）
 - 頁尾：RSS、訂閱電子報、關於頁、回報錯誤、官網首頁、onion 位址（clearnet 才顯示）、授權（CC-BY 4.0）。回報錯誤連到 GitHub 的 issue 表單，三個語系相同
 
 ### 關於頁
@@ -485,7 +489,7 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）。`sources` 的每個主機都在 `favicons.toml` 裡，圖示的格式與尺寸符合規定（見「原文的網站圖示」）
 2. 內文的錨點
-3. 內文與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。RSS 訂閱入門搬家或改名，這一項會擋下來
+3. 文章、固定頁面與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。訂閱頁連到的 RSS 訂閱入門搬家或改名，這一項會擋下來
 4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約

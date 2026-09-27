@@ -2,7 +2,7 @@
 # 大括號是 str.format 的欄位，由 build.py 填入。連結前後的文字拆成 _before 與 _after，
 # 模板把連結夾在中間，不在這裡寫 HTML。newsletter 用在頁首與頁尾的連結，newsletter_inline 用在
 # 文章末尾那一句話裡，英文的大小寫不同。newsletter_url 是訂閱表單，中文與英文各有一份。
-# rss_url 是頁面上 RSS 連結的目的地，指向文件站同語系的「RSS 訂閱入門」。規則見 SPEC.md「RSS」。
+# 頁面上的 RSS 連結指向同語系的訂閱頁 subscribe/，不寫在這裡。規則見 SPEC.md「RSS」。
 # about 是頁尾到關於頁的連結，report 與 report_url 是回報錯誤的連結，三個語系都指向 GitHub 的 issue 表單。
 
 ["zh-TW"]
@@ -34,7 +34,6 @@ all_stories = "所有文章"
 subscribe = "想收到新的導讀："
 subscribe_sep = "、"
 rss = "RSS"
-rss_url = "https://anoni.net/docs/tools/rss/"
 newsletter = "訂閱電子報"
 newsletter_url = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 newsletter_inline = "訂閱電子報"
@@ -97,7 +96,6 @@ all_stories = "所有文章"
 subscribe = "想收到新的导读："
 subscribe_sep = "、"
 rss = "RSS"
-rss_url = "https://anoni.net/docs/zh-cn/tools/rss/"
 newsletter = "订阅电子报"
 newsletter_url = "https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"
 newsletter_inline = "订阅电子报"
@@ -160,7 +158,6 @@ all_stories = "All stories"
 subscribe = "Get new stories by "
 subscribe_sep = " or "
 rss = "RSS"
-rss_url = "https://anoni.net/docs/en/tools/rss/"
 newsletter = "Newsletter"
 newsletter_url = "https://form.anoni.net/s/w21855zpca072rvgp0s2govj"
 newsletter_inline = "newsletter"

@@ -93,7 +93,9 @@ SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories")
 STRINGS_PATH = ROOT / "strings.toml"
 # 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
 PAGES_DIR = ROOT / "pages"
-SITE_PAGES = ("about",)
+SITE_PAGES = ("about", "subscribe")
+# 固定頁面裡代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
+FEED_URL_PLACEHOLDER = "%FEED_URL%"
 PAGE_KEYS = {"title", "description"}
 # 排程發布：date 晚於現在的文章先不產出，最多只能排到幾天後。見 SPEC.md「排程發布」
 MAX_SCHEDULE_DAYS = 7
@@ -940,8 +942,9 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         for name, versions in (site_pages or {}).items():
             suffix = f"{name}/"
             version = versions[lang.code]
+            content = version["html"].replace(FEED_URL_PLACEHOLDER, target.abs_url(base + "feed.xml"))
             write(Page(base + suffix, base + suffix + "index.html", False, version["anchors"]), "page.html.j2",
-                  lang, same_page(suffix), site_page=version, content=version["html"])
+                  lang, same_page(suffix), site_page=version, content=content)
             sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))
 
         feed_posts = lposts[:config["feed_items"]]
@@ -1200,13 +1203,17 @@ def check_docs_link(href: str, where: str, contract: DocsContract, problems: lis
         problems.append(f"{where}：{href} 的錨點 #{anchor} 不在文件站的網址合約裡")
 
 
-def check_docs_links(posts: list[Post], contract: DocsContract) -> tuple[list[str], list[str]]:
-    """內文與介面文字裡連到文件站的網址。介面文字目前只有 RSS 連結指向的 RSS 訂閱入門。"""
+def check_docs_links(posts: list[Post], contract: DocsContract,
+                     site_pages: dict[str, dict[str, dict]] | None = None) -> tuple[list[str], list[str]]:
+    """文章、固定頁面與介面文字裡連到文件站的網址。訂閱頁連到文件站的 RSS 訂閱入門。"""
     problems, notices = [], []
-    for post in posts:
-        for href in hrefs(post.html):
+    documents = [(post.html, post.where) for post in posts]
+    documents += [(version["html"], version["where"]) for versions in (site_pages or {}).values()
+                  for version in versions.values()]
+    for text, where in documents:
+        for href in hrefs(text):
             if href.startswith(DOCS_PREFIX):
-                check_docs_link(href, post.where, contract, problems, notices)
+                check_docs_link(href, where, contract, problems, notices)
     for code, s in strings().items():
         for key, value in s.items():
             if isinstance(value, str) and value.startswith(DOCS_PREFIX):
@@ -1371,7 +1378,8 @@ def check_contrast(css_path: Path) -> list[str]:
 def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
     problems, notices = [], []
 
-    docs_problems, docs_notices = check_docs_links(all_versions(posts), load_docs_contract(args.docs_contract))
+    docs_problems, docs_notices = check_docs_links(all_versions(posts), load_docs_contract(args.docs_contract),
+                                                   load_site_pages(PAGES_DIR))
     problems += docs_problems
     notices += docs_notices
 
