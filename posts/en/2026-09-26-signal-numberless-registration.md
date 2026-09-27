@@ -71,4 +71,4 @@ Without a number, a username becomes the only way to be found. According to the 
 
 According to a separate essay on passkeys, an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss.
 
-Trying it means subscribing to Signal's beta channel on Google Play and paying the one-time fee of US$2.99, which may vary by country, through Google Play, so the option currently suits people outside the mainland whose phones run Google Play services. After registering, store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
+Trying it means subscribing to Signal's beta channel on Google Play and paying the one-time fee there, US$2.99 or a local equivalent. For now the option suits people outside the mainland whose phones run Google Play services. After registering, store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.

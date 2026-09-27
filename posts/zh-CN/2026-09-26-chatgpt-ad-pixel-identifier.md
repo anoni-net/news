@@ -43,4 +43,4 @@ OpenAI 公布的支持地区不含中国大陆、香港与澳门。9 月 23 日�
 
 同意横幅的分类由商家自行定义，在这次的案例里，「分析」这个选项也涵盖了广告用途的识别码同步。只拒绝「营销」不足以避开广告追踪。
 
-研究者观察到的情境是在 Android 手机上用 Chrome 登录 ChatGPT，用 iPhone 的人不必另外设置。在海外用 Android 版 Chrome 登录 ChatGPT 的人，可以在 Chrome 的「设置」依次点按「网站设置」、「第三方 Cookie」，选择「阻止第三方 Cookie」，Google 的帮助页面有简体中文的步骤。阻止之后部分网站可能无法正常运行，可以把需要的网站加入例外列表，或换一个浏览器专门使用 ChatGPT。
+研究者观察到的情境是在 Android 手机上用 Chrome 登录 ChatGPT，用 iPhone 的人不必另外设置。在海外用 Android 版 Chrome 登录 ChatGPT 的人，可以在 Chrome 的「设置」依次点按「网站设置」、「第三方 Cookie」，选择「阻止第三方 Cookie」，Google 的帮助页面有简体中文的步骤。阻止之后部分网站可能无法正常运行，可以把需要的网站加入例外列表。不想更改 Chrome 设置的人，也可以换一个浏览器专门使用 ChatGPT。
