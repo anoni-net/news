@@ -47,6 +47,6 @@ The app's reach in Asia depends on the network more than the app. GreatFire's te
 
 To keep up with YouTube's move to its SABR streaming protocol, PipePipe downloads an Ed25519-signed playback policy from a public GitHub repository and runs it only after checking the signature, validity window and revision number, falling back to the built-in version if anything fails. That lets the developer adjust playback logic without shipping a new release, and the source is public for review. It also means the app executes code fetched from the network, which is worth knowing before recommending it to someone whose threat model is strict.
 
-Language support is another regional factor. The interface is available in Simplified and Traditional Chinese, Japanese and Vietnamese, among others, and the project's translation guide says these are AI-assisted. Native speakers who find awkward phrasing can fix individual entries and send a pull request.
-
 Reporting problems carries its own privacy details. The troubleshooting page says users should not put cookies, tokens, account email addresses or screen recordings of a login flow in a public issue, and not to publish an IP address. Stating whether you were signed in, and the error you saw, is enough for a first report.
+
+To try it you need an Android phone, running 6.0 or later according to F-Droid's listing, and no Google account; 5.4.0 is available now from IzzyOnDroid and GitHub. The interface is available in Simplified and Traditional Chinese, Japanese and Vietnamese, among others, and the project's translation guide says these are AI-assisted. Native speakers who find awkward phrasing can fix individual entries and send a pull request.

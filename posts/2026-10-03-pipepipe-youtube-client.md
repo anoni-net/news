@@ -43,10 +43,10 @@ PipePipe 在 9 月 24 日發布 5.4.0 版，是一款可以瀏覽 YouTube、Nico
 
 ## 導讀觀點 {#perspective}
 
-第三方用戶端的好處是不必登入 Google 帳號，訂閱分組與離線播放清單都在 App 內管理。影片請求仍然直接送往 YouTube，YouTube 限制匿名請求時會出現「Sign in to confirm you're not a bot」，專案文件的建議是換一個網路或 VPN 出口再試。PipePipe 也支援登入，說明寫到登入 cookie 只在取得播放串流時使用，但登入之後這些請求就與帳號連在一起。
+第三方用戶端的好處是不必登入 Google 帳號，訂閱分組與離線播放清單都在 App 內管理。影片請求仍然直接送往 YouTube，YouTube 限制匿名請求時會出現「Sign in to confirm you're not a bot」，專案文件的建議是換一個網路或 VPN 出口再試。PipePipe 也支援登入，說明寫到登入 cookie 只在取得播放串流時使用，但登入之後這些請求就與帳號連在一起。用 DNS 過濾廣告的人要留意，專案文件寫明 PipePipe 需要連到 googleapis.com 與 google.com 的子網域，被擋下時所有 YouTube 影片都會播放失敗。
 
 YouTube 逐步改用 SABR 協定傳送影音，開發者為了跟上，讓 PipePipe 從 GitHub 的公開 repo 下載一份經 Ed25519 簽章的播放策略程式碼。App 驗證簽章、有效期間與版本號之後才執行，失敗時退回內建的實作。開發者因此不必發新版就能調整播放邏輯，原始碼也公開可供審閱，代價是 App 會執行從網路下載的程式碼。
 
-用 DNS 過濾廣告的人要留意，專案文件寫明 PipePipe 需要連到 googleapis.com 與 google.com 的子網域，被擋下時所有 YouTube 影片都會播放失敗。介面有正體與簡體中文，專案的翻譯說明寫到這兩種語言由 AI 輔助翻譯，用詞不順的地方可以直接送 PR 修正。
-
 回報問題時也有隱私上的細節要注意。專案文件寫到，公開的 issue 不要附上 cookie、token、帳號 Email 或登入過程的錄影，也不要公開 IP 位址，寫明有沒有登入與看到的錯誤訊息就足以開始排查。
+
+想試用的人需要一支 Android 手機，依 F-Droid 的標示要 Android 6.0 以上，不需要 Google 帳號，目前可以從 IzzyOnDroid 或 GitHub 取得 5.4.0。介面有正體與簡體中文，專案的翻譯說明寫到這兩種語言由 AI 輔助翻譯，用詞不順的地方可以直接送 PR 修正。
