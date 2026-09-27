@@ -5,6 +5,10 @@
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
 
+[hosts."accessnow.org"]
+icon = "accessnow.org-8d11dfe8.png"
+from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
+
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
@@ -102,6 +106,10 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
+
+[hosts."huridocs.org"]
+icon = "huridocs.org-5c928d7a.png"
+from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
 
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
