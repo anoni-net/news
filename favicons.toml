@@ -17,9 +17,17 @@ from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 icon = "bandaancha.eu-5be72bee.png"
 from = "https://bandaancha.eu/apple-touch-icon.png"
 
+[hosts."bbc.com"]
+icon = "bbc.com-0c3f441e.png"
+from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
+
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
+
+[hosts."cac.gov.cn"]
+icon = "cac.gov.cn-ce2d7d32.png"
+from = "https://www.cac.gov.cn/favicon.ico"
 
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
@@ -103,6 +111,10 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
 
+[hosts."imda.gov.sg"]
+icon = "imda.gov.sg-8b6918ac.png"
+from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
+
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
@@ -127,6 +139,10 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
 
+[hosts."minister.defence.gov.au"]
+icon = "minister.defence.gov.au-5336c074.png"
+from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -135,6 +151,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 
+[hosts."pm.gov.au"]
+icon = "pm.gov.au-6ab35cff.png"
+from = "https://www.pm.gov.au/themes/custom/pearly/favicon.ico"
+
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
@@ -142,6 +162,10 @@ from = "https://reclaimthenet.org/apple-touch-icon.png"
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"
 from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
+
+[hosts."smh.com.au"]
+icon = "smh.com.au-a36eafab.png"
+from = "https://www.smh.com.au/apple-touch-icons/smh.png"
 
 [hosts."source.android.com"]
 icon = "source.android.com-56e81a95.png"
