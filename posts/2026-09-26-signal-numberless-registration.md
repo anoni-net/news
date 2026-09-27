@@ -1,7 +1,7 @@
 ---
 title: Signal 免電話號碼註冊的 Android 測試版
 description: Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。
-date: 2026-09-27T01:23:00+08:00
+date: 2026-09-26T01:23:00+08:00
 slug: signal-numberless-registration
 pin: true
 sources:
