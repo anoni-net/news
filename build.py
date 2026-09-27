@@ -1144,22 +1144,29 @@ def load_docs_contract(path: Path | None) -> DocsContract:
     return parse_docs_contract(text)
 
 
+def check_docs_link(href: str, where: str, contract: DocsContract, problems: list[str], notices: list[str]) -> None:
+    parsed = urllib.parse.urlsplit(href)
+    path = "/" + urllib.parse.unquote(parsed.path)[len("/docs/"):]
+    anchor = urllib.parse.unquote(parsed.fragment)
+    if path in contract.redirects:
+        notices.append(f"{where}：{href} 是轉址頁，建議直接連到 {contract.redirects[path]}")
+    elif path not in contract.pages:
+        problems.append(f"{where}：{href} 不在文件站的網址合約裡")
+    elif anchor and anchor not in contract.pages[path]:
+        problems.append(f"{where}：{href} 的錨點 #{anchor} 不在文件站的網址合約裡")
+
+
 def check_docs_links(posts: list[Post], contract: DocsContract) -> tuple[list[str], list[str]]:
+    """內文與介面文字裡連到文件站的網址。介面文字目前只有 RSS 連結指向的 RSS 訂閱入門。"""
     problems, notices = [], []
     for post in posts:
         for href in hrefs(post.html):
-            if not href.startswith(DOCS_PREFIX):
-                continue
-            parsed = urllib.parse.urlsplit(href)
-            path = "/" + urllib.parse.unquote(parsed.path)[len("/docs/"):]
-            anchor = urllib.parse.unquote(parsed.fragment)
-            if path in contract.redirects:
-                notices.append(f"{post.where}：{href} 是轉址頁，建議直接連到 {contract.redirects[path]}")
-                continue
-            if path not in contract.pages:
-                problems.append(f"{post.where}：{href} 不在文件站的網址合約裡")
-            elif anchor and anchor not in contract.pages[path]:
-                problems.append(f"{post.where}：{href} 的錨點 #{anchor} 不在文件站的網址合約裡")
+            if href.startswith(DOCS_PREFIX):
+                check_docs_link(href, post.where, contract, problems, notices)
+    for code, s in strings().items():
+        for key, value in s.items():
+            if isinstance(value, str) and value.startswith(DOCS_PREFIX):
+                check_docs_link(value, f"strings.toml 的 {code}.{key}", contract, problems, notices)
     return problems, notices
 
 
