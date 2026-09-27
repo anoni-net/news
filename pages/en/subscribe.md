@@ -1,9 +1,9 @@
 ---
-title: Subscribe to anoni.net News by RSS
+title: RSS subscription
 description: Three steps to follow anoni.net News in a feed reader, with no account to create and no email address to hand over.
 ---
 
-RSS brings new pieces into a feed reader automatically, with no account to create and no email address to hand over, and the list of sites you follow stays on your own device. Opening a feed address directly usually shows a page of code, because the file is meant for readers, so follow the three steps below instead.
+RSS is a list of articles that a site publishes for feed readers. Your reader checks it regularly and adds new pieces to your list. There is no account to create and no email address to hand over, and with a local reader the list of sites you follow stays on your own device. Opening a feed address directly usually shows a page of code, because the file is meant for readers rather than people.
 
 ## Three steps {#steps}
 
@@ -11,7 +11,7 @@ RSS brings new pieces into a feed reader automatically, with no account to creat
 2. Copy the anoni.net News feed address, `%FEED_URL%`.
 3. Add a subscription in your reader and paste the address. In NetNewsWire on iPhone, tap `+` and choose Add Feed. Once the reader lists the latest pieces, confirm to subscribe.
 
-New pieces, published every morning at 07:00 Taipei time, will then appear in your reader on their own.
+New pieces, published every morning at 07:00 (UTC+8), will then appear in your reader on their own.
 
 ## More detail {#more}
 
