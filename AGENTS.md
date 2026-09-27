@@ -25,7 +25,7 @@ uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑�
 ## 寫一篇
 
 1. 在 `posts/` 新增 `YYYY-MM-DD-<slug>.md`，front matter 與內文格式見 `SPEC.md`「一篇的格式」。`posts/zh-CN/` 與 `posts/en/` 放同檔名的另外兩個版本，寫法見下方「三個語系」
-2. `date` 填實際合併上線的時間，三個語系相同，檔名的日期跟著改。一天一篇的節奏靠合併的時間控制，不預先填未來的日期，晚於現在會建置失敗
+2. `date` 填預定的發布時間，固定在台北時間早上 7 點（`YYYY-MM-DDT07:00:00+08:00`），三個語系相同，檔名的日期跟著改。最多排到 7 天後，時間到了才上線，見 `SPEC.md`「排程發布」。當天 7 點已經過了、要馬上上線的，填合併的時間
 3. `uv run build.py --check`，錯誤訊息會列出檔名與行號
 4. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
 

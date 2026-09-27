@@ -2,10 +2,17 @@ name: deploy
 
 # main 更新時建置兩份產物，推到 build 分支的 clearnet/ 與 onion/。伺服器拉 build 分支上線。
 # build 分支保留歷史，出問題時可以退回上一個 commit。
+#
+# 排程發布：date 還沒到的文章先不產出（見 SPEC.md「排程發布」），所以每小時重建一次，
+# 時間到的文章就會出現。文章排在台北時間 07:00，這一輪在 07:02 前後執行。GitHub 的排程
+# 在尖峰時會延遲，也可能遇到版面檢查的偶發失敗，每小時一輪讓最壞情況是晚一小時上線。
+# 產物沒變時不推，m6 那一側也就沒有東西要拉。
 
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "2 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -42,5 +49,5 @@ jobs:
             echo "產物沒有變動"
             exit 0
           fi
-          git commit -q -m "build: ${GITHUB_SHA}"
+          git commit -q -m "build: ${GITHUB_SHA} (${GITHUB_EVENT_NAME})"
           git push origin build
