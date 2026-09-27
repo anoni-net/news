@@ -1,0 +1,78 @@
+# 原文網站的圖示登記表，格式與流程見 SPEC.md「原文的網站圖示」。
+# 鍵是 sources 網址的主機名稱，去掉開頭的 www.。由 tools/fetch_favicons.py 寫入，手改之前先讀規格。
+
+[hosts."buchodi.com"]
+icon = "buchodi.com-143610b3.png"
+from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
+
+[hosts."cedb.gov.hk"]
+icon = "cedb.gov.hk-62222f7e.png"
+from = "https://www.cedb.gov.hk/assets/favicon.ico"
+
+[hosts."community.signalusers.org"]
+icon = "community.signalusers.org-34c4e8e9.png"
+from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
+
+[hosts."cyberinsider.com"]
+icon = "cyberinsider.com-f4b1bbac.png"
+from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
+
+[hosts."eff.org"]
+icon = "eff.org-4545a257.png"
+from = "https://www.eff.org/sites/all/themes/phoenix/apple-touch-icon-precomposed.png"
+
+[hosts."freedom.press"]
+icon = "freedom.press-d782bdb6.png"
+from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
+
+[hosts."gov.cn"]
+icon = "gov.cn-1db19351.png"
+from = "https://www.gov.cn/images/trs_favicon.ico"
+
+[hosts."hawksley.dev"]
+icon = "hawksley.dev-4e52ebdb.png"
+from = "https://hawksley.dev/favicons/v2/apple-touch-icon.png"
+
+[hosts."help.openai.com"]
+icon = "help.openai.com-cb2858c5.png"
+from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-touch-icon.png"
+
+[hosts."homeaffairs.gov.au"]
+icon = "homeaffairs.gov.au-b256f42f.png"
+from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
+
+[hosts."itsfoss.com"]
+icon = "itsfoss.com-78bc1919.png"
+from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."law.moj.gov.tw"]
+icon = "law.moj.gov.tw-ac2a3ab3.png"
+from = "https://law.moj.gov.tw/favicon.png"
+
+[hosts."macanorak.com"]
+icon = "macanorak.com-3f63f55a.png"
+from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badge-New.png"
+
+[hosts."macrumors.com"]
+icon = "macrumors.com-6643c49b.png"
+from = "https://images.macrumors.com/images-new/apple-touch-icon-blue.png"
+
+[hosts."ooni.org"]
+icon = "ooni.org-01981e09.png"
+from = "https://ooni.org/images/apple-touch-icon.png"
+
+[hosts."openai.com"]
+icon = "openai.com-c5ef3d83.png"
+from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."signal.org"]
+icon = "signal.org-c81c8229.png"
+from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
+
+[hosts."support.apple.com"]
+icon = "support.apple.com-573bbc30.png"
+from = "https://support.apple.com/apple-touch-icon.png"
+
+[hosts."support.signal.org"]
+icon = "support.signal.org-ac934b40.png"
+from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"

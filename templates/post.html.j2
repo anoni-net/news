@@ -21,7 +21,9 @@
     <p class="story__dek">{{ post.description }}</p>
     <p class="story__byline">
 {% set line = post|source_line %}
-      <span class="story__sources"><a href="#sources">{{ icon('file-document-multiple-outline') }} <span>{{ line if line else s.sources }}</span></a></span>
+{# 出處行列出的網站，圖示並排成一串放在行首，跟下方原文區塊的圖示呼應 #}
+{% set icons = post|source_icons %}
+      <span class="story__sources"><a href="#sources">{% if icons %}<span class="favicon-stack">{% for rel in icons %}{% if rel %}<img src="{{ url('assets/' ~ rel) }}" width="16" height="16" alt="" decoding="async">{% else %}{{ icon('web') }}{% endif %}{% endfor %}</span>{% else %}{{ icon('file-document-multiple-outline') }}{% endif %} <span>{{ line if line else s.sources }}</span></a></span>
       <span>{{ s.byline }}{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author|author_name }}</a>{% else %}{{ author|author_name }}{% endif %}{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</span>
 {% if post.updated %}
       <span>{{ s.corrected }} <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>

@@ -18,6 +18,7 @@ uv run build.py --update-contract  # 新增網址之後，把它們收進 url_co
 uv run pytest -q
 ./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
+uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md  # 維護者：試抓原文網站的圖示
 ```
 
 `--check` 會從 GitHub 下載文件站的網址合約，離線時用 `--docs-contract <檔案>` 指定本機的一份。建置時會把 `assets.anoni.net` 的圖片抓進產物，快取在 `.cache/assets/`。版面檢查需要 Chrome，找不到時略過並提示，截圖存在 `.cache/screenshots/`，送出 PR 前要實際看過。
@@ -30,6 +31,8 @@ uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑�
 4. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
 
 有圖片時，投稿者用 Markdown 的圖片語法標出位置就好，網址可以是任何地方。維護者合併前設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/ingest_images.py posts/<檔名>.md` 把圖片搬到 `assets.anoni.net`，再依工具列出的原始網址審核授權與來源，補上替代文字與圖說。規則見 `SPEC.md`「圖片」。
+
+原文的網站還沒有登記圖示時，建置會列出是哪個主機。維護者先執行 `uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md`，看過 `.cache/favicons/preview.html` 的預覽，再設好 `NEWS_ASSETS_RSYNC` 拿掉 `--dry-run` 執行一次，工具會上傳圖示並寫進 `favicons.toml`。抓不到或不適合的，用 `--from` 指定來源或用 `--none` 登記成通用圖示。規則見 `SPEC.md`「原文的網站圖示」。
 
 ## 導讀的寫法
 

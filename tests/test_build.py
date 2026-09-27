@@ -432,8 +432,10 @@ def test_multi_source_post_renders(fixture_site):
     page = (out / "2026" / "09" / "age-verification-roundup" / "index.html").read_text(encoding="utf-8")
     assert "原文（5 篇）" in page
     # 頂端一行出處連到文末的原文清單，清單排在內文之後
-    assert '<a href="#sources"><svg class="icon"' in page
-    assert '</svg> <span>整理 5 篇原文，來自 EFF、Access Now、OONI</span></a>' in page
+    # 行首是出處行列出的三個網站的圖示：EFF 有圖示，Access Now 與 OONI 在 example.org，登記成通用圖示
+    stack = page[page.index('<a href="#sources"><span class="favicon-stack">'):page.index('整理 5 篇原文')]
+    assert stack.count("<img ") == 1 and stack.count('<svg class="icon"') == 2, stack
+    assert '</span> <span>整理 5 篇原文，來自 EFF、Access Now、OONI</span></a>' in page
     assert page.index('class="story__body content"') < page.index('id="sources"')
     assert page.count('class="source-slip__item"') == 5
     assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
@@ -586,6 +588,7 @@ def test_no_pin_no_featured(tmp_path):
     posts = tmp_path / "posts"
     write_versions(posts, GOOD)
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
+    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
     targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
     assert 'class="featured' not in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
 
@@ -829,6 +832,7 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     later = GOOD.replace("date: 2026-09-18", "date: 2026-09-19T07:00:00+08:00").replace("slug: test-post", "slug: next-post")
     write_versions(posts, later, "2026-09-19-next-post.md")
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
+    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
 
     monkeypatch.setattr(build, "current_time", lambda: NOW)
     targets, pages, all_posts = build.build(posts, tmp_path / "out", ["clearnet"])
@@ -854,3 +858,128 @@ def test_time_of_day_orders_posts_on_the_same_day(tmp_path):
     write_post(posts, GOOD.replace("date: 2026-09-18", "date: 2026-09-18T15:00:00+08:00").replace("slug: test-post", "slug: another-post"),
                "2026-09-18-another-post.md")
     assert [p.slug for p in build.load_posts(posts, AUTHORS)] == ["another-post", "test-post"]
+
+
+# ---------------------------------------------------------------- 原文的網站圖示
+
+FAVICON = "eff.org-512902b2.png"
+
+
+def favicon_problems(tmp_path, hosts: dict, files: dict | None = None) -> list[str]:
+    """GOOD 的原文在 example.org，hosts 是 favicons.toml 的內容，files 是圖示主機上的檔案。"""
+    posts, assets = tmp_path / "posts", tmp_path / "assets"
+    write_versions(posts, GOOD)
+    for name, options in (files or {}).items():
+        make_image(assets / "favicons" / name, **{"size": (64, 64), "fmt": "PNG", **options})
+    try:
+        build.load_site(posts, AUTHORS, build.AssetStore(assets), hosts)
+    except build.BuildError as error:
+        return error.problems
+    return []
+
+
+def test_source_slip_shows_favicons(fixture_site):
+    targets, _, _ = fixture_site
+    for name, src in (("clearnet", f"/news/assets/favicons/{FAVICON}"), ("onion", f"/assets/favicons/{FAVICON}")):
+        out = targets[name].out
+        page = (out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+        assert f'<img class="source-slip__icon" src="{src}" width="16" height="16" alt=""' in page
+        assert (out / "assets/favicons" / FAVICON).exists()
+    # 登記成 none 的 example.org 用通用的地球圖示，不是空白
+    page = (targets["clearnet"].out / "2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    slip = page[page.index('id="sources"'):]
+    assert '<a href="https://example.org/' in slip and '<svg class="icon"' in slip
+
+
+def test_feed_has_no_favicons(fixture_site):
+    targets, _, _ = fixture_site
+    for target in targets.values():
+        for feed in target.out.rglob("feed.xml"):
+            assert "favicons/" not in feed.read_text(encoding="utf-8"), feed
+
+
+def test_unregistered_host_fails(tmp_path):
+    problems = favicon_problems(tmp_path, {"eff.org": {"none": "x"}})
+    assert len([p for p in problems if "example.org 不在 favicons.toml" in p]) == 1, problems
+
+
+def test_same_as_and_none_resolve(tmp_path):
+    assert favicon_problems(tmp_path, {"example.org": {"same_as": "eff.org"}, "eff.org": {"icon": FAVICON}},
+                            {FAVICON: {}}) == []
+    assert favicon_problems(tmp_path / "none", {"example.org": {"none": "網站沒有提供"}}) == []
+
+
+@pytest.mark.parametrize("entry, expected", [
+    ({}, "icon、same_as、none 其中一個"),
+    ({"icon": FAVICON, "none": "x"}, "icon、same_as、none 其中一個"),
+    ({"icon": "eff.png"}, "<主機>-<8 碼雜湊>.png"),
+    ({"none": ""}, "none 要寫理由"),
+    ({"none": "x", "from": "https://example.org/favicon.ico"}, "from 只跟 icon 一起寫"),
+    ({"icon": FAVICON, "size": 64}, "不認得的欄位"),
+    ({"same_as": "missing.org"}, "不在登記表裡"),
+])
+def test_favicon_registry_problems(tmp_path, entry, expected):
+    path = tmp_path / "favicons.toml"
+    lines = [f'{key} = {value!r}' if isinstance(value, int) else f'{key} = "{value}"' for key, value in entry.items()]
+    path.write_text('[hosts."example.org"]\n' + "\n".join(lines) + "\n", encoding="utf-8")
+    with pytest.raises(build.BuildError) as error:
+        build.load_favicons(path)
+    assert any(expected in p for p in error.value.problems), error.value.problems
+
+
+def test_same_as_cannot_chain(tmp_path):
+    path = tmp_path / "favicons.toml"
+    path.write_text('[hosts."a.org"]\nsame_as = "b.org"\n[hosts."b.org"]\nsame_as = "c.org"\n'
+                    '[hosts."c.org"]\nnone = "x"\n', encoding="utf-8")
+    with pytest.raises(build.BuildError) as error:
+        build.load_favicons(path)
+    assert any("本身也是 same_as" in p for p in error.value.problems), error.value.problems
+
+
+@pytest.mark.parametrize("options, expected", [
+    ({"size": (32, 32)}, "64×64 的 PNG"),
+    ({"fmt": "WEBP"}, "64×64 的 PNG"),
+    ({"noise": True}, "不能超過 8KB"),
+])
+def test_favicon_file_checks(tmp_path, options, expected):
+    problems = favicon_problems(tmp_path, {"example.org": {"icon": FAVICON}}, {FAVICON: options})
+    assert any(expected in p for p in problems), problems
+
+
+def test_favicon_missing_on_assets(tmp_path):
+    (tmp_path / "assets").mkdir()
+    problems = favicon_problems(tmp_path, {"example.org": {"icon": FAVICON}})
+    assert any("找不到圖片" in p for p in problems), problems
+
+
+@pytest.mark.parametrize("url, host", [
+    ("https://www.eff.org/deeplinks/x", "eff.org"),
+    ("https://Support.Apple.com/en-us/1", "support.apple.com"),
+    ("http://wwwexample.org/", "wwwexample.org"),
+])
+def test_source_host(url, host):
+    assert build.source_host(url) == host
+
+
+def test_byline_icons_follow_source_line(tmp_path):
+    """署名旁的圖示對應出處行列出的網站，最多三個，同一個出處只算一次。都沒填 publisher 時沒有圖示。"""
+    def icons_of(sources: str) -> list:
+        post = build.load_post(write_post(tmp_path, GOOD.replace(
+            "sources:\n  - title: Source\n    url: https://example.org/\n", "sources:\n" + sources)), AUTHORS)
+        for source in post.sources:
+            source.icon = f"favicons/{source.host}-00000000.png"
+        return build.source_icons(post)
+
+    item = "  - title: T\n    url: https://{host}/\n    publisher: {publisher}\n"
+    many = "".join(item.format(host=f"s{i}.org", publisher=f"P{i}") for i in range(5))
+    assert icons_of(many) == [f"favicons/s{i}.org-00000000.png" for i in range(3)]
+    same = item.format(host="a.org", publisher="A") + item.format(host="b.org", publisher="A")
+    assert icons_of(same) == ["favicons/a.org-00000000.png"]
+    assert icons_of("  - title: T\n    url: https://a.org/\n") == []
+
+
+def test_byline_icons_on_both_targets(fixture_site):
+    targets, _, _ = fixture_site
+    for name, src in (("clearnet", f"/news/assets/favicons/{FAVICON}"), ("onion", f"/assets/favicons/{FAVICON}")):
+        page = (targets[name].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+        assert f'<a href="#sources"><span class="favicon-stack"><img src="{src}" width="16" height="16" alt=""' in page
