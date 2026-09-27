@@ -24,6 +24,9 @@ sources:
     url: http://gongbao.court.gov.cn/Details/12dfb372281fcfc26a1489d012108b.html
     publisher: 最高人民法院公报
     date: 2023-09-20
+  - title: "Have I Been Pwned: Check if your email address has been exposed in a data breach"
+    url: https://haveibeenpwned.com/
+    publisher: Have I Been Pwned
 authors:
   - anoni-net
 ---
@@ -43,3 +46,5 @@ In mainland China, a 2023 guidance from the Supreme People's Court, the Supreme 
 In Taiwan, Article 41 of the Personal Data Protection Act punishes unlawful collection or use of personal data with intent to damage another person's interests, where the act is sufficient to cause damage, with up to five years in prison and a fine of up to NT$1 million.
 
 Whichever system applies, a complaint needs evidence. Start the incident log with the first message, and keep screenshots and links alongside it. According to EFF, finding and recording hateful content is stressful, which is why the guide keeps returning to shared roles: someone you trust can watch and record while you step away.
+
+The first step you can take today is to enter your email address at haveibeenpwned, which is free and in English, to see whether it appears in known breaches. If it does, EFF's guide mentions changing the exposed email address or phone number, and turning on two-factor authentication and setting social accounts to private are the other quick steps.

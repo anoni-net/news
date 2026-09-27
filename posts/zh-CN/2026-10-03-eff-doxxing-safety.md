@@ -24,6 +24,9 @@ sources:
     url: http://gongbao.court.gov.cn/Details/12dfb372281fcfc26a1489d012108b.html
     publisher: 最高人民法院公报
     date: 2023-09-20
+  - title: "Have I Been Pwned: Check if your email address has been exposed in a data breach"
+    url: https://haveibeenpwned.com/
+    publisher: Have I Been Pwned
 authors:
   - anoni-net
 ---
@@ -45,3 +48,5 @@ authors:
 中国大陆 2023 年的两高一部指导意见规定，组织“人肉搜索”，违法收集并向不特定多数人发布公民个人信息，情节严重的，以侵犯公民个人信息罪定罪处罚。受害人也可以向法院申请人格权侵害禁令。香港 2021 年 10 月起把“起底”列为罪行，最高可处罚款港币 100 万元及监禁 5 年。个人资料私隐专员还可以发出停止披露通知，要求移除起底内容。
 
 不论在哪里报案或投诉，都需要证据，事件记录最好从第一条骚扰就开始写，附上截图与网址。EFF 的指南也写到，找出并记录骚扰内容的过程压力很大，监看与整理可以交给信任的人分担。
+
+现在就能做的第一步，是到 haveibeenpwned 输入自己的邮箱，查看是否出现在泄露数据库中。查询免费，网站是英文。查到泄露时，EFF 的指南提到可以更换邮箱或电话号码，常用的账号也先开启双重验证，并把社交账号改为私密。

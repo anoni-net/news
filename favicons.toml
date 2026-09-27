@@ -98,6 +98,10 @@ from = "https://grapheneos.org/apple-touch-icon.png"
 [hosts."grapheneos.social"]
 same_as = "grapheneos.org"
 
+[hosts."haveibeenpwned.com"]
+icon = "haveibeenpwned.com-9e2dc6c7.png"
+from = "https://haveibeenpwned.com/apple-touch-icon.png"
+
 [hosts."hawksley.dev"]
 icon = "hawksley.dev-4e52ebdb.png"
 from = "https://hawksley.dev/favicons/v2/apple-touch-icon.png"

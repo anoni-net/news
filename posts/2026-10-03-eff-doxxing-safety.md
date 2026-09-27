@@ -20,6 +20,9 @@ sources:
     url: https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021
     publisher: 全國法規資料庫
     date: 2023-05-31
+  - title: "Have I Been Pwned: Check if your email address has been exposed in a data breach"
+    url: https://haveibeenpwned.com/
+    publisher: Have I Been Pwned
 authors:
   - anoni-net
 ---
@@ -41,3 +44,5 @@ authors:
 各地對肉搜的法律處理不同，香港 2021 年 10 月起把「起底」列為罪行，最重可處罰款港幣 100 萬元及監禁 5 年。個人資料私隱專員也可以發出停止披露通知，要求移除起底內容。在台灣，《個人資料保護法》第 41 條處罰意圖損害他人利益而違法蒐集、利用個人資料，足生損害於他人者，最重五年有期徒刑。
 
 不論在哪裡報案或申訴，都需要證據，事件紀錄最好從第一則騷擾就開始寫，附上截圖與網址。EFF 的指南也寫到，找出並記錄騷擾內容的過程壓力很大，監看與整理可以交給信任的人分擔。
+
+現在就能做的第一步，是到 haveibeenpwned 輸入自己的 Email，查看是否出現在外洩資料庫。查詢免費，網站是英文。查到外洩時，EFF 的指南提到可以更換 Email 或電話號碼，常用的帳號也先開啟雙重驗證，並把社群帳號改成私人。
