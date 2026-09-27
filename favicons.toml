@@ -5,6 +5,10 @@
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
 
+[hosts."accessnow.org"]
+icon = "accessnow.org-8d11dfe8.png"
+from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
+
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
@@ -103,9 +107,17 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
 
+[hosts."irrawaddy.com"]
+icon = "irrawaddy.com-eceea825.png"
+from = "https://www.irrawaddy.com/favicon.ico"
+
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."justiceformyanmar.org"]
+icon = "justiceformyanmar.org-db7870eb.png"
+from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd428e35b04b8c_jfm_logo_256_square.png"
 
 [hosts."law.moj.gov.tw"]
 icon = "law.moj.gov.tw-ac2a3ab3.png"
@@ -127,6 +139,10 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
 
+[hosts."nrk.no"]
+icon = "nrk.no-a87b9a82.png"
+from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -134,6 +150,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."politiet.no"]
+icon = "politiet.no-3b14f30b.png"
+from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
@@ -154,6 +174,10 @@ from = "https://support.apple.com/apple-touch-icon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."telenor.com"]
+icon = "telenor.com-5bb71714.png"
+from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
