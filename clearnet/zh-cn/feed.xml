@@ -145,7 +145,7 @@
 <title>ChatGPT 广告像素的跨站识别码</title>
 <link>https://anoni.net/news/zh-cn/2026/09/chatgpt-ad-pixel-identifier/</link>
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/chatgpt-ad-pixel-identifier</guid>
-<pubDate>Sun, 27 Sep 2026 01:24:00 +0800</pubDate>
+<pubDate>Sat, 26 Sep 2026 01:24:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
 <description>一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。</description>
 <content:encoded>&lt;p&gt;整理 3 篇原文，来自 Buchodi&amp;#39;s Threat Intel、OpenAI&lt;/p&gt;
@@ -189,7 +189,7 @@
 <title>Signal 免手机号注册的 Android 测试版</title>
 <link>https://anoni.net/news/zh-cn/2026/09/signal-numberless-registration/</link>
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/signal-numberless-registration</guid>
-<pubDate>Sun, 27 Sep 2026 01:23:00 +0800</pubDate>
+<pubDate>Sat, 26 Sep 2026 01:23:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
 <description>Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。</description>
 <content:encoded>&lt;p&gt;整理 9 篇原文，来自 Signal Support、Signal Community、CyberInsider 等 7 个出处&lt;/p&gt;
