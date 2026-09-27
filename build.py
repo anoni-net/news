@@ -91,6 +91,10 @@ DEFAULT_LANG = LANGS[0]
 # 三個版本必須相同的欄位。date 另外比 created，updated 可以不同
 SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories")
 STRINGS_PATH = ROOT / "strings.toml"
+# 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
+PAGES_DIR = ROOT / "pages"
+SITE_PAGES = ("about",)
+PAGE_KEYS = {"title", "description"}
 # 排程發布：date 晚於現在的文章先不產出，最多只能排到幾天後。見 SPEC.md「排程發布」
 MAX_SCHEDULE_DAYS = 7
 
@@ -622,6 +626,36 @@ def lang_dir(posts_dir: Path, lang: Lang) -> Path:
     return posts_dir / lang.dir if lang.dir else posts_dir
 
 
+def load_site_pages(pages_dir: Path) -> dict[str, dict[str, dict]]:
+    """關於頁這類固定頁面。三個語系都要有，錨點集合要相同，跟文章的規則一致。"""
+    problems: list[str] = []
+    result: dict[str, dict[str, dict]] = {}
+    for name in SITE_PAGES:
+        versions: dict[str, dict] = {}
+        for lang in LANGS:
+            path = lang_dir(pages_dir, lang) / f"{name}.md"
+            where = str(path.relative_to(pages_dir.parent)) if path.is_relative_to(pages_dir.parent) else str(path)
+            if not path.exists():
+                problems.append(f"{where}：缺少 {lang.code} 版本")
+                continue
+            meta, body = split_front_matter(path.read_text(encoding="utf-8"), where)
+            for key in sorted(PAGE_KEYS - set(meta)):
+                problems.append(f"{where}：front matter 缺少 {key}")
+            for key in sorted(set(meta) - PAGE_KEYS):
+                problems.append(f"{where}：front matter 多了不認得的欄位 {key}")
+            anchors = check_headings(body, where, problems)
+            versions[lang.code] = {"title": str(meta.get("title", "")), "description": str(meta.get("description", "")),
+                                   "html": render_markdown(body), "anchors": anchors, "where": where}
+        default = versions.get(DEFAULT_LANG.code)
+        for code, version in versions.items():
+            if default and code != DEFAULT_LANG.code and set(version["anchors"]) != set(default["anchors"]):
+                problems.append(f"{version['where']}：錨點跟 {DEFAULT_LANG.code} 版本不同")
+        result[name] = versions
+    if problems:
+        raise BuildError(problems)
+    return result
+
+
 def created_of(meta: dict):
     raw = meta.get("date")
     return raw.get("created") if isinstance(raw, dict) else raw
@@ -795,7 +829,7 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
 
 
 def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
-                 store: AssetStore | None = None) -> list[Page]:
+                 store: AssetStore | None = None, site_pages: dict[str, dict[str, dict]] | None = None) -> list[Page]:
     """posts 是 zh-TW 的文章，其他語系從 translations 取。"""
     if target.out.exists():
         shutil.rmtree(target.out)
@@ -902,6 +936,13 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
                   kind="archive", heading=s["month_heading"].format(year=year, month=s["months"][month - 1]),
                   posts=group, number=1, total=1, latest=None,
                   prev_rel=None, next_rel=None, featured=None, featured_image=None)
+
+        for name, versions in (site_pages or {}).items():
+            suffix = f"{name}/"
+            version = versions[lang.code]
+            write(Page(base + suffix, base + suffix + "index.html", False, version["anchors"]), "page.html.j2",
+                  lang, same_page(suffix), site_page=version, content=version["html"])
+            sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))
 
         feed_posts = lposts[:config["feed_items"]]
         feed = env.get_template("feed.xml.j2").render(
@@ -1034,13 +1075,16 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     favicons = load_favicons(favicons_path if favicons_path.exists() else FAVICONS_PATH)
     strings()  # 介面文字有缺漏時在這裡就失敗
     posts = load_site(posts_dir, authors, store, favicons)
+    # 測試用的文章目錄旁邊有 pages/ 時用那一份，沒有就用正式的
+    pages_dir = posts_dir.parent / "pages"
+    site_pages = load_site_pages(pages_dir if pages_dir.exists() else PAGES_DIR)
     published = posts if include_scheduled else [post for post in posts if not post.scheduled]
     env = make_env()
     pages = {}
     for name, target in targets.items():
         if only and name not in only:
             continue
-        pages[name] = build_target(target, published, config, env, store)
+        pages[name] = build_target(target, published, config, env, store, site_pages)
     return targets, pages, posts
 
 
@@ -1352,8 +1396,8 @@ def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
         problems += [f"fixtures：{p}" for p in fixture_docs]
         for name, target in fixture_targets.items():
             problems += [f"fixtures：{p}" for p in check_output(target, fixture_pages[name])]
-        # 三個語系的列表頁與最新一篇，加上共用的 404
-        layout_pages = [lang.path for lang in LANGS]
+        # 三個語系的列表頁、關於頁與最新一篇，加上共用的 404
+        layout_pages = [lang.path for lang in LANGS] + [lang.path + name + "/" for lang in LANGS for name in SITE_PAGES]
         newest = next((post for post in fixture_posts if not post.scheduled), None)
         if newest:
             layout_pages += [newest.translations.get(lang.code, newest).rel for lang in LANGS]
