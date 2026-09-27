@@ -30,6 +30,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
 
+      # 圖片與網站圖示的快取。檔名不會重複使用（內文圖片依序編號、網站圖示帶內容雜湊），
+      # 快取裡的檔案不會過期。m6 暫時連不上時，已經抓過的檔案照樣建置得出來，每小時的
+      # 排程發布不會因此停擺。build.py 從快取讀出來之後照樣檢查格式、metadata 與大小。
+      # PR 的 check 不用快取，每次都從 assets.anoni.net 重新抓，確認檔案真的在圖片主機上
+      - uses: actions/cache@v4
+        with:
+          path: .cache/assets
+          key: assets-${{ hashFiles('favicons.toml', 'posts/**/*.md') }}
+          restore-keys: assets-
+
       - name: build.py --check
         run: uv run build.py --check
 

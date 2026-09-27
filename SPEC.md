@@ -183,6 +183,7 @@ authors:
 
 - 內文與 `image` 只接受 `https://assets.anoni.net/news/` 開頭的圖片，其他網址讓建置失敗，並提示執行搬圖工具。投稿的 PR 在圖片搬好之前會是紅燈，代表還有圖片待處理
 - 建置時把圖片抓進產物的 `assets/` 底下，頁面引用站內的副本，讀者不會連到 `assets.anoni.net`，onion 產物也不必改寫。做法跟文件站的 privacy 外掛相同。抓下來的檔案快取在 `.cache/assets/`
+- deploy workflow 用 `actions/cache` 保留 `.cache/assets/`，m6 暫時連不上時，已經抓過的檔案照樣建置得出來，每小時的排程發布不會因此停擺。檔名不會重複使用，內文圖片依序編號、網站圖示帶內容雜湊，快取不必過期。PR 的 check 不用快取，每次從 `assets.anoni.net` 重新抓，確認檔案真的在圖片主機上
 - 抓下來的檔案再檢查一次：只收 WebP、PNG、JPEG，不能有 EXIF、XMP 或 PNG 文字區塊這類 metadata，單張不超過 300KB，長邊不超過 2000px。圖片主機上的檔案被換掉，這一步也擋得住
 - 圖片要獨立成一段，替代文字與圖說都必填。圖說轉成 `<figure>` 與 `<figcaption>`
 - 自動補上 `width`、`height`、`loading="lazy"` 與 `decoding="async"`，載入時版面不會跳動
@@ -478,6 +479,8 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 9. 對比度：`news.css` 裡文字色與背景色的組合，淺色與深色模式都要達到 4.5:1
 
 測試用的文章放在 `tests/fixtures/`，刻意放進最長的英文標題、長網址、表格與程式碼區塊，版面出問題時在這裡先發生。第 8 項需要 Chrome，GitHub Actions 的 runner 上有，本機沒有 Chrome 時略過並提示。截圖只證明頁面撐得住，排版好不好看，送出 PR 前還是要有人實際看過截圖。
+
+`main` 設了分支保護：`check` 必須通過才能合併，PR 的分支落後 `main` 時要先更新（PR 頁面的「Update branch」，或 `gh pr update-branch`）再執行一次 CI，管理員也一樣。規則改嚴的 PR 合併之後，其他開著的 PR 要照新規則重新執行 CI，不會帶著舊的綠燈合併進來。2026-09-27 就發生過，原文網站圖示的檢查合併之後，三篇在那之前通過 CI 的文章接著合併，`main` 的部署失敗了約半小時。
 
 GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_style_lint.py` 掃 `posts/` 底下全部的 Markdown 與 `README.md`。檔案一律傳完整路徑，linter 才能從 `/zh-CN/` 與 `/en/` 認出語系。
 
