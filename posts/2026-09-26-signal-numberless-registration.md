@@ -1,6 +1,6 @@
 ---
 title: Signal 免電話號碼註冊的 Android 測試版
-description: Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。
+description: Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。iPhone 版還在開發。
 date: 2026-09-26T01:23:00+08:00
 slug: signal-numberless-registration
 pin: true
@@ -31,6 +31,9 @@ sources:
   - title: I don't like passkeys
     url: https://hawksley.dev/blog/i-dont-like-passkeys
     date: 2026-09-18
+  - title: Signal Beta
+    url: https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta
+    publisher: Signal Support
 authors:
   - anoni-net
 ---
@@ -49,6 +52,8 @@ Signal 在社群論壇的公告寫明，付款使用跟捐款系統相同的零�
 
 門號在許多地方都要實名登記，用門號註冊的通訊帳號等於間接連回真實身分。Signal 的端對端加密保護訊息內容，帳號本身過去卻一直綁著一支門號。改成付費加上零知識證明之後，帳號跟門號、付款都脫鉤，想把工作與私人身分分開的人，不必另外申辦門號。Signal 的 Android 版以 AGPL-3.0 授權公開原始碼，介面有正體中文。
 
-沒有門號之後，別人只能透過使用者名稱找到這個帳號。Freedom of the Press Foundation 提醒，公開分享過的使用者名稱要一直保留，否則別人可以取得同一個名稱來冒充。用使用者名稱接受消息來源聯繫的人，被冒充的後果更嚴重。
+沒有門號之後，別人只能透過使用者名稱找到這個帳號。Freedom of the Press Foundation 的文章寫到，公開分享過的使用者名稱要一直保留，否則別人可以取得同一個名稱來冒充。用使用者名稱接受消息來源聯繫的人，被冒充的後果更嚴重。
 
-另一篇討論 passkey 的觀點文章認為，一個帳號的安全程度取決於最弱的那一種復原方式。Signal 的免門號帳號沒有任何復原方式，攻擊者少了一個較弱的入口，遺失的風險則全部落在使用者身上。Account ID 與 Recovery Key 要存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。
+另一篇討論 passkey 的觀點文章寫到，一個帳號的安全程度取決於最弱的那一種復原方式。Signal 的免門號帳號沒有任何復原方式，攻擊者少了一個較弱的入口，遺失的風險則全部落在使用者身上。
+
+想試用的人，要先在 Google Play 訂閱 Signal 的測試版，再透過 Google Play 付 2.99 美元的一次性費用，沒有 Google Play 服務的手機無法用這個方式註冊。註冊後把 Account ID 與 Recovery Key 存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。
