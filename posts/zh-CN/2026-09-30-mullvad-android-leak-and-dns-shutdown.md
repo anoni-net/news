@@ -37,6 +37,12 @@ sources:
   - title: Is https://dns.quad9.net/dns-query blocked in mainland China?
     url: https://en.greatfire.org/https/dns.quad9.net/dns-query
     publisher: GreatFire
+  - title: iOS 14 and later (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/
+    publisher: Quad9
+  - title: Android 9+ (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/
+    publisher: Quad9
 authors:
   - anoni-net
 ---
@@ -55,6 +61,6 @@ VPN 的锁定功能，靠操作系统检查每条连接有没有经过 VPN。这
 
 在中国大陆，GreatFire 的测试显示 Mullvad 的网站被封锁，Quad9 的 DoH 地址连接也不稳定。身在境内的人要用 Mullvad，需先解决连接本身的问题，漏洞与 DNS 的调整是那之后的事。
 
-身在海外、手动设置过 Mullvad DoH 的人，可以改用 Quad9 的 DoH，地址是 `https://dns.quad9.net/dns-query`。Quad9 的隐私政策写明不收集、不记录用户的 IP，由瑞士的基金会运营。真实 IP 一旦泄露就有风险的人，还可以参考 CyberInsider 报道的做法，让手机接在强制走 VPN 的路由器后面，同时关闭移动网络等其他连接路径。
+Quad9 的隐私政策写明不收集、不记录用户的 IP，由瑞士的基金会运营，同一份政策也写到会保留按地区、运营商与协议分类的统计数字。这些统计不含个别用户的 IP，但 DNS 查询仍然集中在一家服务商手上。真实 IP 一旦泄露就有风险的人，还可以参考 CyberInsider 报道的做法，让手机接在强制走 VPN 的路由器后面，同时关闭移动网络等其他连接路径。
 
-换成 Quad9 也有取舍，同一份政策写到，Quad9 会保留按地区、运营商与协议分类的统计数字，用来了解服务的使用情况。这些统计不含个别用户的 IP，但 DNS 查询仍然集中在一家服务商手上。
+身在海外、手动设置过 Mullvad DoH 的人，要在 11 月 2 日前换掉，Quad9 的 DoH 地址是 `https://dns.quad9.net/dns-query`。iPhone 与 Mac 可以从 Quad9 的说明页下载配置描述文件，Android 在「私人 DNS」填入 `dns.quad9.net`，说明页有英文、法文、西班牙文与罗马尼亚文，没有中文。

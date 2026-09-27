@@ -37,6 +37,12 @@ sources:
   - title: Is https://dns.quad9.net/dns-query blocked in mainland China?
     url: https://en.greatfire.org/https/dns.quad9.net/dns-query
     publisher: GreatFire
+  - title: iOS 14 and later (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/
+    publisher: Quad9
+  - title: Android 9+ (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/
+    publisher: Quad9
 authors:
   - anoni-net
 ---
@@ -51,4 +57,6 @@ A VPN lockdown relies on the operating system checking that each connection goes
 
 Where you are in Asia changes what matters first. In mainland China, GreatFire's tests show mullvad.net blocked and the Quad9 DoH endpoint disrupted, with its page summarising access as unreliable, so reaching the service at all comes before tuning it. Elsewhere in the region, Mullvad VPN users are unaffected by the DNS change, since queries go to the resolver on the VPN server, and Mullvad Browser users on default settings move to Quad9 automatically. iOS and macOS DoH profiles from Mullvad will stop working.
 
-Mullvad's help page also says that once you are connected to its VPN, a public encrypted DNS brings negligible security benefit and will always be slower than the resolver on the VPN server. Anyone who set Mullvad's DoH by hand for use without the VPN can switch to Quad9 at `https://dns.quad9.net/dns-query`. Quad9's privacy policy says it does not collect or record users' IP addresses and is run by a Swiss foundation. The same policy says Quad9 keeps aggregate counters by region, carrier network and protocol. Those contain no individual IPs, but the DNS queries themselves still go to a single operator.
+Mullvad's help page also says that once you are connected to its VPN, a public encrypted DNS brings negligible security benefit and will always be slower than the resolver on the VPN server. Quad9's privacy policy says it does not collect or record users' IP addresses and is run by a Swiss foundation. The same policy says Quad9 keeps aggregate counters by region, carrier network and protocol. Those contain no individual IPs, but the DNS queries themselves still go to a single operator.
+
+Anyone who set Mullvad's DoH by hand for use without the VPN needs to switch before 2 November; Quad9's DoH address is `https://dns.quad9.net/dns-query`. On iPhone and Mac, Quad9's setup guide provides a configuration profile to download, and on Android you enter `dns.quad9.net` under Private DNS. The guides are in English, French, Spanish and Romanian, with no Chinese version.
