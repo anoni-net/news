@@ -13,6 +13,10 @@ from = "https://www.androidauthority.com/favicon.ico"
 icon = "apps.apple.com-21ded518.png"
 from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 
+[hosts."bandaancha.eu"]
+icon = "bandaancha.eu-5be72bee.png"
+from = "https://bandaancha.eu/apple-touch-icon.png"
+
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
@@ -29,6 +33,10 @@ from = "https://www.cnbc.com/apple-touch-icon.png"
 icon = "community.signalusers.org-34c4e8e9.png"
 from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
 
+[hosts."cultura.gob.es"]
+icon = "cultura.gob.es-6ae34a40.png"
+from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
+
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
@@ -41,9 +49,20 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 icon = "eff.org-4545a257.png"
 from = "https://www.eff.org/sites/all/themes/phoenix/apple-touch-icon-precomposed.png"
 
+[hosts."en.greatfire.org"]
+icon = "en.greatfire.org-cbbba5a5.png"
+from = "https://en.greatfire.org/apple-touch-icon.png"
+
+[hosts."explorer.ooni.org"]
+same_as = "ooni.org"
+
 [hosts."freedom.press"]
 icon = "freedom.press-d782bdb6.png"
 from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
+
+[hosts."github.com"]
+icon = "github.com-90043607.png"
+from = "https://github.githubassets.com/favicons/favicon.png"
 
 [hosts."gov.cn"]
 icon = "gov.cn-1db19351.png"
@@ -95,6 +114,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."reclaimthenet.org"]
+icon = "reclaimthenet.org-ebe7368e.png"
+from = "https://reclaimthenet.org/apple-touch-icon.png"
 
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"
