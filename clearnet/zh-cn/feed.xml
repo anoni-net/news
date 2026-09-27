@@ -13,23 +13,23 @@
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/uk-icloud-advanced-data-protection</guid>
 <pubDate>Sun, 27 Sep 2026 07:28:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>Apple 从 2025 年 2 月起不再让英国的新用户开启高级数据保护，在那之前开启的人仍受保护，英国的 iCloud 因此分成两种加密程度。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，来自 Apple、MacAnorak、EFF 等 4 个出处&lt;/p&gt;
+<description>Apple 从 2025 年 2 月起不再让英国的新用户开启高级数据保护，在那之前开启的人仍受保护，英国的 iCloud 因此分成两种加密程度。英国以外的用户仍可开启。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，来自 Apple、MacAnorak、EFF 等 4 个出处&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 从 2025 年 2 月起不再让英国的新用户开启 iCloud 的高级数据保护（Advanced Data Protection，简称 ADP），在那之前已经开启的人仍受保护。一位英国作者在 9 月 21 日的文章指出，同样住在英国、用同一款 iPhone 的两个人，iCloud 的加密程度因此不同。英国以外的地方仍可以开启 ADP。&lt;/p&gt;
+&lt;p&gt;Apple 从 2025 年 2 月起不再让英国的新用户开启 iCloud 的高级数据保护（Advanced Data Protection，简称 ADP），在那之前已经开启的人仍受保护。一位英国作者在 9 月 21 日的文章写到，同样住在英国、用同一款 iPhone 的两个人，iCloud 的加密程度因此不同。英国以外的地方仍可以开启 ADP。&lt;/p&gt;
 &lt;p&gt;起因是《华盛顿邮报》2025 年 2 月的报道，英国政府依据《调查权力法》发出技术能力通知，要求 Apple 建立访问加密 iCloud 数据的能力，范围涵盖全球用户。Apple 在 2 月 21 日宣布英国的新用户不能再开启 ADP，说明页写明 Apple 从未、也不会在产品中建置后门或万能钥匙。&lt;/p&gt;
 &lt;p&gt;Apple 的说明页列出影响范围。默认就端到端加密的 15 类数据不受影响，例如 iCloud 钥匙串与健康数据，iMessage 与 FaceTime 也维持端到端加密。没有开启 ADP 的英国用户，iCloud 云备份、iCloud 云盘、照片、备忘录等 10 类数据改用标准数据保护，密钥存放在 Apple 的数据中心。&lt;/p&gt;
-&lt;p&gt;已经开启 ADP 的英国用户，Apple 无法自动替他们关闭，这个设置只能从用户信任的设备更改。Apple 表示会给这些用户一段时间自行关闭，原文写到 9 月 21 日为止还没有公布期限。&lt;/p&gt;
+&lt;p&gt;已经开启 ADP 的英国用户，Apple 无法自动替他们关闭，这个设置只能从用户信任的设备更改。Apple 的公告写到会给这些用户一段时间自行关闭，原文写到 9 月 21 日为止还没有公布期限。&lt;/p&gt;
 &lt;p&gt;EFF 在 2025 年 10 月的文章写到，据报道英国改发了一份只针对英国用户的通知。Apple 在 2026 年 7 月向调查权力法庭提出新的申诉，争议还没有结果。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;所有 iCloud 数据都有加密，差别在密钥放在哪里。标准数据保护的密钥在服务方手上，收到合法的调取要求时可以解密交出。ADP 让密钥只留在用户信任的设备上，Apple 没有钥匙，要取得内容就只能改变系统设计，英国的通知与 Apple 就僵持在这一点。&lt;/p&gt;
 &lt;p&gt;在中国大陆，iCloud 由 GCBD（AIPO Cloud (Guizhou) Technology Co. Ltd）运营，存放的照片、文件与备份受 GCBD 的条款约束。Apple 的说明页也写明，不是居住在中国大陆的中国公民，可以把 Apple 账户的国家或地区改成目前所在的地方，继续按 Apple 的条款使用 iCloud。&lt;/p&gt;
-&lt;p&gt;要开启 ADP，在 iPhone 的「设置」点自己的名字，进入 iCloud 开启。开启前要先设置恢复联系人或恢复密钥，登录同一账户的设备也要更新到 iOS 16.2 以上的对应版本。&lt;/p&gt;
 &lt;p&gt;没有开启 ADP 时，Apple 的说明写明，同时开着 iCloud 云备份与「iCloud 中的信息」，备份里会附上信息的密钥。关闭 iCloud 云备份之后，设备会生成新的密钥，之后的信息维持端到端加密。改用电脑做加密的本地备份，备份就留在自己手上，这个选项默认没有开启，要在 Finder 或 Apple 设备 App 里勾选。&lt;/p&gt;
 &lt;p&gt;ADP 的代价是 Apple 无法协助恢复端到端加密的数据，丢失所有恢复方式就找不回来。开启之后 iCloud.com 的网页访问也会关闭，需要时要从信任的设备批准。&lt;/p&gt;
+&lt;p&gt;要开启 ADP，在 iPhone 的「设置」点自己的名字，进入 iCloud 打开「高级数据保护」，Apple 的支持页面有简体中文的步骤。Apple 账户需要先打开双重认证，并设置恢复联系人或恢复密钥，登录同一账户的所有设备也要更新到 iOS 16.2、macOS 13.1 以上的对应版本。管理式 Apple 账户与儿童账户不能开启。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
@@ -86,6 +86,18 @@
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-03&#34;&gt;2026 年 8 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟 iCloud 進階資料保護&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/108756&#34;&gt;如何打开 iCloud 高级数据保护&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
 &lt;/aside&gt;
 </content:encoded>
 </item>
@@ -95,19 +107,19 @@
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/ios27-siri-ai-data-access</guid>
 <pubDate>Sun, 27 Sep 2026 03:21:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。</description>
+<description>iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。Siri 语言设为中文的用户暂时用不到。</description>
 <content:encoded>&lt;p&gt;整理 4 篇原文，来自 EFF、Apple&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
 &lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合并成同一个界面，在主屏幕往下滑打开搜索时，调出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 与 iPhone 16 之后的机型能使用。Siri AI 目前是测试版，只支持英文，也还没有在所有地区开放，Siri 语言设为中文的用户暂时无法使用。&lt;/p&gt;
-&lt;p&gt;Siri AI 默认可以读取备忘录、信息与邮件等 Apple 自家 App 的内容，第三方 App 需要开发者加入支持才会纳入。请求可能在手机上处理，也可能发到 Apple 的 Private Cloud Compute 服务器，屏幕上不会显示是哪一种。EFF 特别提醒开启高级数据保护的用户，他们的 iCloud 数据以端到端加密保存，一旦发出设备交给云端处理，风险评估就跟着改变。&lt;/p&gt;
+&lt;p&gt;Siri AI 默认可以读取备忘录、信息与邮件等 Apple 自家 App 的内容，第三方 App 需要开发者加入支持才会纳入。请求可能在手机上处理，也可能发到 Apple 的 Private Cloud Compute 服务器，屏幕上不会显示是哪一种。EFF 的文章特别写给开启高级数据保护的用户，他们的 iCloud 数据以端到端加密保存，一旦发出设备交给云端处理，风险评估就跟着改变。&lt;/p&gt;
 &lt;p&gt;屏幕感知（on-screen awareness）让用户随时调出 Siri，请它解释屏幕上的内容。EFF 举的例子是请 Siri 总结正在看的 Signal 加密群聊，此时屏幕上的数据可能发到 Private Cloud Compute。用户与 App 开发者目前都无法屏蔽屏幕感知。&lt;/p&gt;
 &lt;p&gt;要限制 Siri AI 读取某个 App，EFF 建议在「设置」的 App 列表点进该 App，在 Search 关闭 Show Content in Search。要改回旧版 Siri，可以在「屏幕使用时间」开启「内容与隐私访问限制」，再把 Siri 的 Allowed Siri Version 设为 Siri Classic。Siri AI 默认不会用交互记录训练模型，设置过程中如果点了同意，可以到「隐私与安全性」的 Analytics &amp;amp; Improvements 关闭 Improve Siri &amp;amp; Dictation 撤回。以上选项名称照原文的英文界面，中文界面的名称可能不同。&lt;/p&gt;
 &lt;p&gt;Mac 的做法写在 Apple 的说明页。macOS 27 在「系统设置」关闭 Siri 之后可以改用 Siri Classic，信息、邮件与通知的摘要功能也各有开关。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;Apple 的支持页写明，Apple 账户地区在中国大陆时，Siri AI 目前无法使用。在中国大陆购买的设备，Apple Intelligence 的功能也都无法使用。Apple Intelligence 本身支持简体中文，Siri AI 则只有英文，所以这篇的设置主要跟 Apple 账户地区不在中国大陆、设备与 Siri 语言都设为英文的人有关。&lt;/p&gt;
 &lt;p&gt;EFF 在原文写明，Private Cloud Compute 的「Private」代表系统的设计让 Apple 无法看到、也不保存数据，但不保证数据经过加密或留在设备上。使用 Private Cloud Compute 要信任 Apple 的服务器按设计运作，端到端加密则只需要密钥留在用户自己的设备上。&lt;/p&gt;
-&lt;p&gt;用户无从得知哪一次请求离开了手机，想继续使用 Siri AI，就只能从源头限制它能读取哪些 App。开启了高级数据保护的人，可以优先关闭存有工作资料或个人记录的 App，例如备忘录与邮件。&lt;/p&gt;
 &lt;p&gt;屏幕感知无法屏蔽，加密对话能不能留在设备上，取决于对话里的每一个人。群聊中只要有人对着对话调出 Siri，内容就可能从那个人的手机发出，端到端加密无法保护这一段。在群聊里讨论敏感事务的人，可以跟成员约定不对对话使用屏幕感知，自己也可以考虑改回 Siri Classic。&lt;/p&gt;
+&lt;p&gt;用户无从得知哪一次请求离开了手机，想继续使用 Siri AI，就只能从源头限制它能读取哪些 App。Apple 账户地区不在中国大陆、使用 iPhone 15 Pro 以后的机型且 Siri 语言设为英文的人，可以先对备忘录、邮件这类存有工作资料或个人记录的 App 关闭 Show Content in Search，开启了高级数据保护的人尤其需要。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（4 篇）&lt;/h2&gt;
@@ -147,21 +159,22 @@
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/chatgpt-ad-pixel-identifier</guid>
 <pubDate>Sat, 26 Sep 2026 01:24:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。</description>
-<content:encoded>&lt;p&gt;整理 3 篇原文，来自 Buchodi&amp;#39;s Threat Intel、OpenAI&lt;/p&gt;
+<description>一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。目前只在 Android 版 Chrome 观察到。</description>
+<content:encoded>&lt;p&gt;整理 5 篇原文，来自 Buchodi&amp;#39;s Threat Intel、OpenAI、Google Chrome 說明 等 4 个出处&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
 &lt;p&gt;一位安全研究者分析 ChatGPT 的广告流量，发现使用 ChatGPT 时，OpenAI 的广告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 会设置一个名为 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 账号关联，有效期一年，而且允许在其他网站的请求中发出。目前只在 Android 版 Chrome 观察到这个机制，iOS 上的浏览器都会拦截。OpenAI 在 9 月 23 日宣布 ChatGPT 广告开始在七个亚洲市场推出，广告只显示给 Free 与 Go 方案的用户。&lt;/p&gt;
 &lt;p&gt;在 ChatGPT 投放广告的商家，会在自己的网站装上 OpenAI 的像素。用户之后访问广告主的网站时，像素会把 &lt;code&gt;__obi&lt;/code&gt; 连同页面数据发回 OpenAI，包括网址路径、表单字段与网页上的文字。电子邮件、电话与姓名经过 SHA-256 哈希，国家、地区、城市与邮政编码则是明文。研究者观察到的网址都去掉了查询字符串，但路径本身有时就透露了病症等敏感信息。&lt;/p&gt;
 &lt;p&gt;用户在退出登录的状态下同样会被设置 &lt;code&gt;__obi&lt;/code&gt;。研究者检查的每一个同步令牌，同意类别都标为「分析」。用户只要允许分析，即使拒绝营销也会收到 &lt;code&gt;__obi&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;研究者在自己的手机上复现，用两种方式抓取流量，另外分析了 936 个广告主像素、超过一千个域名。原文也写明了几项限制：约五分之一的 ChatGPT 会话产生同步令牌，桌面版 Chrome 没有测试。OpenAI 在服务器端把识别码对应回账号，是研究者从设计推论，没有直接观察到。研究者 9 月 14 日去信询问，OpenAI 的客服收到后没有回答提问。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;OpenAI 公布的支持地区不含中国大陆、香港与澳门。在亚太地区，ChatGPT 广告先前已在澳大利亚、新西兰、日本、韩国与印度推出，9 月 23 日再加上印度尼西亚、马来西亚、菲律宾、新加坡、泰国、越南与台湾，使用免费或 Go 方案的人会看到广告。&lt;/p&gt;
-&lt;p&gt;广告主网站上的像素把访问记录发回广告平台，研究者在原文把它比作零售商早已安装的 Meta 与 Google 追踪代码。差别在于 ChatGPT 账号里还有用户跟 AI 的对话，许多人会在对话里提到健康、工作与个人问题，对话内容与其他网站的浏览记录可能因此连到同一个账号。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; 通过第三方 cookie 在其他网站发出。Safari 默认拦截跨站追踪，iOS 上的浏览器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都没有观察到。Android 与电脑可以在浏览器设置里屏蔽第三方 cookie，Firefox 默认把第三方 cookie 按网站隔离，Brave 默认屏蔽。在 Android 手机上用 Chrome 登录 ChatGPT 的人，也可以换一个浏览器专门使用 ChatGPT。&lt;/p&gt;
-&lt;p&gt;同意横幅的分类由商家自行定义，在这次的案例里，「分析」这个选项也涵盖了广告用途的识别码同步。只拒绝「营销」不足以避开广告追踪，屏蔽第三方 cookie 仍是比较可靠的做法。&lt;/p&gt;
+&lt;p&gt;OpenAI 公布的支持地区不含中国大陆、香港与澳门。9 月 23 日新增的七个亚洲市场包括新加坡、马来西亚与台湾等地，在当地使用免费或 Go 方案的人会看到广告。&lt;/p&gt;
+&lt;p&gt;广告主网站上的像素把访问记录发回广告平台，研究者把它比作零售商早已安装的 Meta 与 Google 追踪代码。差别在于 ChatGPT 账号里还有用户跟 AI 的对话，许多人会在对话里提到健康、工作与个人问题，对话内容与其他网站的浏览记录可能因此连到同一个账号。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; 通过第三方 cookie 在其他网站发出。Safari 默认拦截跨站追踪，iOS 上的浏览器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都没有观察到。Firefox 默认把第三方 cookie 按网站隔离，Brave 默认屏蔽。&lt;/p&gt;
+&lt;p&gt;同意横幅的分类由商家自行定义，在这次的案例里，「分析」这个选项也涵盖了广告用途的识别码同步。只拒绝「营销」不足以避开广告追踪。&lt;/p&gt;
+&lt;p&gt;研究者观察到的情境是在 Android 手机上用 Chrome 登录 ChatGPT，用 iPhone 的人不必另外设置。在海外用 Android 版 Chrome 登录 ChatGPT 的人，可以在 Chrome 的「设置」依次点按「网站设置」、「第三方 Cookie」，选择「阻止第三方 Cookie」，Google 的帮助页面有简体中文的步骤。阻止之后部分网站可能无法正常运行，可以把需要的网站加入例外列表。不想更改 Chrome 设置的人，也可以换一个浏览器专门使用 ChatGPT。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/&#34;&gt;ChatGPT now knows what you do on other websites via ad collector&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
@@ -182,6 +195,18 @@
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中刪除、允許使用與管理 Cookie&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hans&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中删除、允许和管理 Cookie&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
 &lt;/aside&gt;
 </content:encoded>
 </item>
@@ -191,8 +216,8 @@
 <guid isPermaLink="false">anoni-news:zh-cn/2026/09/signal-numberless-registration</guid>
 <pubDate>Sat, 26 Sep 2026 01:23:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，来自 Signal Support、Signal Community、CyberInsider 等 7 个出处&lt;/p&gt;
+<description>Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。iPhone 版还在开发。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，来自 Signal Support、Signal Community、CyberInsider 等 7 个出处&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
 &lt;p&gt;Signal 在 Android 8.28 测试版加入不用手机号的注册方式，名为 Signal Login。9 月 23 日的 8.29 测试版公告写明，这项功能会再留在测试版一周。iPhone 版还在开发，已经用手机号注册的账号也还不能移除号码。&lt;/p&gt;
 &lt;p&gt;注册时选择不使用手机号，要通过 Google Play 支付一次 2.99 美元的费用，各国价格可能不同。没有安装 Google Play 服务的设备，暂时无法用这个方式注册。&lt;/p&gt;
@@ -202,12 +227,12 @@
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;在中国大陆，每个电话号码都要实名登记。工业和信息化部 2013 年施行的《电话用户真实身份信息登记规定》要求电信业者为用户办理入网手续时，查验有效证件、登记真实身份信息。用手机号注册的通讯账号，因此能通过电信业者连回真实身份。&lt;/p&gt;
 &lt;p&gt;改成付费加上零知识证明之后，账号跟手机号、付款都脱钩，想把工作与私人身份分开的人，不必另外办一个手机号。Signal 的 Android 版以 AGPL-3.0 授权公开源代码，界面有简体中文。&lt;/p&gt;
-&lt;p&gt;身在中国境内的人还有另一道门槛。OONI 在 2021 年 4 月到 9 月的量测显示 Signal 在中国遭到封锁，要先有翻墙工具才能连上。免手机号注册目前又只能通过 Google Play 付款，比较适合身在海外、手机装有 Google Play 服务的人。&lt;/p&gt;
-&lt;p&gt;没有手机号之后，别人只能通过用户名找到这个账号。Freedom of the Press Foundation 提醒，公开分享过的用户名要一直保留，否则别人可以取得同一个名称来冒充。用用户名接受消息来源联系的人，被冒充的后果更严重。&lt;/p&gt;
-&lt;p&gt;另一篇讨论 passkey 的观点文章认为，一个账号的安全程度取决于最弱的那一种恢复方式。Signal 的免手机号账号没有任何恢复方式，攻击者少了一个较弱的入口，丢失的风险则全部落在用户身上。Account ID 与 Recovery Key 要存进密码管理器并保留离线备份，设置 TOTP 时也要准备不只一个第二因素。&lt;/p&gt;
+&lt;p&gt;没有手机号之后，别人只能通过用户名找到这个账号。Freedom of the Press Foundation 的文章写到，公开分享过的用户名要一直保留，否则别人可以取得同一个名称来冒充。用用户名接受消息来源联系的人，被冒充的后果更严重。&lt;/p&gt;
+&lt;p&gt;另一篇讨论 passkey 的观点文章写到，一个账号的安全程度取决于最弱的那一种恢复方式。Signal 的免手机号账号没有任何恢复方式，攻击者少了一个较弱的入口，丢失的风险则全部落在用户身上。&lt;/p&gt;
+&lt;p&gt;身在中国境内的人还有另一道门槛。OONI 在 2021 年 4 月到 9 月的量测显示 Signal 在中国遭到封锁，要先有翻墙工具才能连上。免手机号注册目前只能通过 Google Play 付款，比较适合身在海外、手机装有 Google Play 服务的人。想试用的人要先在 Google Play 订阅 Signal 的测试版，再付 2.99 美元的一次性费用，注册后把 Account ID 与 Recovery Key 存进密码管理器并保留离线备份，设置 TOTP 时也要准备不只一个第二因素。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android&#34;&gt;Phone Numberless Registration for Android&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
@@ -267,6 +292,12 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-10-21&#34;&gt;2021 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta&#34;&gt;Signal Beta&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
