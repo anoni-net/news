@@ -827,7 +827,8 @@ p {
 }
 
 /* 頁尾的說明文字是短短的附註，不用內文的行高與段距 */
-.site-footer p {
+.site-footer p,
+.site-footer__langs {
     margin: 0 0 0.5rem;
 }
 
