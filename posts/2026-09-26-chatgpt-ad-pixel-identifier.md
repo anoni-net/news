@@ -1,6 +1,6 @@
 ---
 title: ChatGPT 廣告像素的跨站識別碼
-description: 一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。
+description: 一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。目前只在 Android 版 Chrome 觀察到。
 date: 2026-09-26T01:24:00+08:00
 slug: chatgpt-ad-pixel-identifier
 sources:
@@ -12,6 +12,9 @@ sources:
     url: https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/
     publisher: OpenAI
     date: 2026-09-23
+  - title: 在 Chrome 中刪除、允許使用與管理 Cookie
+    url: https://support.google.com/chrome/answer/95647?hl=zh-Hant&co=GENIE.Platform%3DAndroid
+    publisher: Google Chrome 說明
 authors:
   - anoni-net
 ---
@@ -30,6 +33,6 @@ authors:
 
 `__obi` 透過第三方 cookie 在其他網站送出。Safari 預設阻擋跨站追蹤，iOS 上的瀏覽器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都沒有觀察到。Android 與桌機可以在瀏覽器設定裡封鎖第三方 cookie，Firefox 預設把第三方 cookie 依網站隔離，Brave 預設封鎖。
 
-研究者觀察到的情境是在 Android 手機上用 Chrome 登入 ChatGPT。符合的人可以封鎖第三方 cookie，或改在另一個瀏覽器使用 ChatGPT，跟平常瀏覽其他網站的瀏覽器分開。
+同意橫幅的分類由業者自行定義，在這次的案例裡，「分析」這個選項也涵蓋了廣告用途的識別碼同步。只拒絕「行銷」不足以避開廣告追蹤。
 
-同意橫幅的分類由業者自行定義，在這次的案例裡，「分析」這個選項也涵蓋了廣告用途的識別碼同步。只拒絕「行銷」不足以避開廣告追蹤，封鎖第三方 cookie 仍是比較可靠的做法。
+研究者觀察到的情境是在 Android 手機上用 Chrome 登入 ChatGPT，用 iPhone 的人不必另外設定。符合的人可以在 Chrome 的「設定」依序點「網站設定」、「第三方 Cookie」，選擇「封鎖第三方 Cookie」，Google 的說明頁有正體中文的步驟。封鎖之後部分網站可能無法正常運作，可以把需要的網站加進例外清單，或改在另一個瀏覽器使用 ChatGPT，跟平常瀏覽其他網站的瀏覽器分開。

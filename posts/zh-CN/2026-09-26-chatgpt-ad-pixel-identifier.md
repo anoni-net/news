@@ -1,6 +1,6 @@
 ---
 title: ChatGPT 广告像素的跨站识别码
-description: 一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。
+description: 一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。目前只在 Android 版 Chrome 观察到。
 date: 2026-09-26T01:24:00+08:00
 slug: chatgpt-ad-pixel-identifier
 sources:
@@ -15,6 +15,12 @@ sources:
   - title: ChatGPT Supported Countries
     url: https://help.openai.com/en/articles/7947663-chatgpt-supported-countries
     publisher: OpenAI
+  - title: 在 Chrome 中刪除、允許使用與管理 Cookie
+    url: https://support.google.com/chrome/answer/95647?hl=zh-Hant&co=GENIE.Platform%3DAndroid
+    publisher: Google Chrome 說明
+  - title: 在 Chrome 中删除、允许和管理 Cookie
+    url: https://support.google.com/chrome/answer/95647?hl=zh-Hans&co=GENIE.Platform%3DAndroid
+    publisher: Google Chrome 帮助
 authors:
   - anoni-net
 ---
@@ -29,10 +35,12 @@ authors:
 
 ## 导读观点 {#perspective}
 
-OpenAI 公布的支持地区不含中国大陆、香港与澳门。在亚太地区，ChatGPT 广告先前已在澳大利亚、新西兰、日本、韩国与印度推出，9 月 23 日再加上印度尼西亚、马来西亚、菲律宾、新加坡、泰国、越南与台湾，使用免费或 Go 方案的人会看到广告。
+OpenAI 公布的支持地区不含中国大陆、香港与澳门。9 月 23 日新增的七个亚洲市场包括新加坡、马来西亚与台湾等地，在当地使用免费或 Go 方案的人会看到广告。
 
-广告主网站上的像素把访问记录发回广告平台，研究者在原文把它比作零售商早已安装的 Meta 与 Google 追踪代码。差别在于 ChatGPT 账号里还有用户跟 AI 的对话，许多人会在对话里提到健康、工作与个人问题，对话内容与其他网站的浏览记录可能因此连到同一个账号。
+广告主网站上的像素把访问记录发回广告平台，研究者把它比作零售商早已安装的 Meta 与 Google 追踪代码。差别在于 ChatGPT 账号里还有用户跟 AI 的对话，许多人会在对话里提到健康、工作与个人问题，对话内容与其他网站的浏览记录可能因此连到同一个账号。
 
-`__obi` 通过第三方 cookie 在其他网站发出。Safari 默认拦截跨站追踪，iOS 上的浏览器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都没有观察到。Android 与电脑可以在浏览器设置里屏蔽第三方 cookie，Firefox 默认把第三方 cookie 按网站隔离，Brave 默认屏蔽。在 Android 手机上用 Chrome 登录 ChatGPT 的人，也可以换一个浏览器专门使用 ChatGPT。
+`__obi` 通过第三方 cookie 在其他网站发出。Safari 默认拦截跨站追踪，iOS 上的浏览器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都没有观察到。Firefox 默认把第三方 cookie 按网站隔离，Brave 默认屏蔽。
 
-同意横幅的分类由商家自行定义，在这次的案例里，「分析」这个选项也涵盖了广告用途的识别码同步。只拒绝「营销」不足以避开广告追踪，屏蔽第三方 cookie 仍是比较可靠的做法。
+同意横幅的分类由商家自行定义，在这次的案例里，「分析」这个选项也涵盖了广告用途的识别码同步。只拒绝「营销」不足以避开广告追踪。
+
+研究者观察到的情境是在 Android 手机上用 Chrome 登录 ChatGPT，用 iPhone 的人不必另外设置。在海外用 Android 版 Chrome 登录 ChatGPT 的人，可以在 Chrome 的「设置」依次点按「网站设置」、「第三方 Cookie」，选择「阻止第三方 Cookie」，Google 的帮助页面有简体中文的步骤。阻止之后部分网站可能无法正常运行，可以把需要的网站加入例外列表，或换一个浏览器专门使用 ChatGPT。

@@ -1,6 +1,6 @@
 ---
 title: The cross-site identifier behind ChatGPT's ad pixel
-description: A traffic analysis found that ChatGPT's ad system sets a cookie linked to the user's account, which advertisers' sites then send back to OpenAI through its pixel along with browsing data.
+description: A traffic analysis found that ChatGPT's ad system sets a cookie linked to the user's account, which advertisers' sites then send back to OpenAI through its pixel along with browsing data. So far it has only been seen in Chrome on Android.
 date: 2026-09-26T01:24:00+08:00
 slug: chatgpt-ad-pixel-identifier
 sources:
@@ -15,6 +15,12 @@ sources:
   - title: ChatGPT Supported Countries
     url: https://help.openai.com/en/articles/7947663-chatgpt-supported-countries
     publisher: OpenAI
+  - title: 在 Chrome 中刪除、允許使用與管理 Cookie
+    url: https://support.google.com/chrome/answer/95647?hl=zh-Hant&co=GENIE.Platform%3DAndroid
+    publisher: Google Chrome 說明
+  - title: Delete, allow, and manage cookies in Chrome
+    url: https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DAndroid
+    publisher: Google Chrome Help
 authors:
   - anoni-net
 ---
@@ -33,6 +39,8 @@ Pixels on advertisers' sites that report visits back to an ad platform are not n
 
 The timing matters for readers in Asia. OpenAI's announcement names Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan, after earlier Asia-Pacific launches in Australia, New Zealand, Japan, South Korea and India, and puts the total at more than 60 countries. OpenAI's list of supported countries leaves out mainland China, Hong Kong and Macau, so people there are outside ChatGPT's official service altogether. Elsewhere in the region, people on the Free and Go plans now see ads, while Plus, Pro and Enterprise stay ad-free.
 
-`__obi` travels as a third-party cookie. Safari blocks cross-site tracking by default, and every browser on iOS is built on Safari's WebKit engine, which is why the researcher saw nothing on iOS. On Android and desktop you can block third-party cookies in the browser settings. Firefox isolates third-party cookies per site by default, and Brave blocks them. If you use ChatGPT while logged in through Chrome on Android, you can also move ChatGPT to a separate browser from the one you use for everything else.
+`__obi` travels as a third-party cookie. Safari blocks cross-site tracking by default, and every browser on iOS is built on Safari's WebKit engine, which is why the researcher saw nothing on iOS. On Android and desktop you can block third-party cookies in the browser settings. Firefox isolates third-party cookies per site by default, and Brave blocks them.
 
-Consent banners let each company define its own categories. Here, "analytics" also covered syncing an advertising identifier, so refusing only "marketing" does not keep you out of ad tracking. Blocking third-party cookies remains the more reliable option.
+Consent banners let each company define its own categories. Here, "analytics" also covered syncing an advertising identifier, so refusing only "marketing" does not keep you out of ad tracking.
+
+The behaviour was observed with ChatGPT logged in through Chrome on Android, so iPhone users need not change anything. Android users of Chrome can go to Settings > Site settings > Third-party cookies and choose Block third-party cookies; Google's help page gives the steps in Chinese as well as English. Some sites may stop working as expected once third-party cookies are blocked, which an exception list or a separate browser for ChatGPT can work around.

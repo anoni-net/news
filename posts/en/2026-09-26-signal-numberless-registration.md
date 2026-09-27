@@ -1,6 +1,6 @@
 ---
 title: Phone-number-free registration in the Signal Android beta
-description: Signal's Android beta lets people register without a phone number for a one-time fee. The account is tied to neither a SIM card nor the payment, and nothing can recover it if the keys are lost.
+description: Signal's Android beta lets people register without a phone number for a one-time fee. The account is tied to neither a SIM card nor the payment, and nothing can recover it if the keys are lost. The iPhone version is still in development.
 date: 2026-09-26T01:23:00+08:00
 slug: signal-numberless-registration
 pin: true
@@ -46,6 +46,9 @@ sources:
     url: https://ooni.org/post/2021-how-signal-private-messenger-blocked-around-the-world/
     publisher: OONI
     date: 2021-10-21
+  - title: Signal Beta
+    url: https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta
+    publisher: Signal Support
 authors:
   - anoni-net
 ---
@@ -62,8 +65,10 @@ Signal's end-to-end encryption has always protected message content, but every a
 
 The paid route breaks that chain in two places. The account is not tied to a SIM card, and the zero-knowledge payment is not tied to the account. People who want to keep a work identity apart from a personal one no longer need a second SIM card registered in their own name. Signal's Android app is open source under AGPL-3.0, and its interface is available in both Traditional and Simplified Chinese.
 
-Reaching Signal at all is a separate question in mainland China. OONI measurements from April to September 2021 show Signal blocked there, so people inside need a circumvention tool first. The Google Play requirement also limits who can pay for now, so the option currently suits people outside the mainland whose phones run Google Play services.
+Reaching Signal at all is a separate question in mainland China. OONI measurements from April to September 2021 show Signal blocked there, so people inside need a circumvention tool first.
 
-Without a number, a username becomes the only way to be found. The Freedom of the Press Foundation warns that a username you have shared publicly should be kept, because once it is released someone else can claim it and impersonate you. That risk is highest for people who publish a username so that sources can contact them.
+Without a number, a username becomes the only way to be found. According to the Freedom of the Press Foundation, a username you have shared publicly should be kept, because once it is released someone else can claim it and impersonate you. That risk is highest for people who publish a username so that sources can contact them.
 
-A separate essay on passkeys argues that an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss. Store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
+According to a separate essay on passkeys, an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss.
+
+Trying it means subscribing to Signal's beta channel on Google Play and paying the one-time fee of US$2.99, which may vary by country, through Google Play, so the option currently suits people outside the mainland whose phones run Google Play services. After registering, store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
