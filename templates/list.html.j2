@@ -21,7 +21,7 @@
 {% if latest %}
       <p class="masthead__updated">{{ s.updated }} <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
 {% endif %}
-      <p class="masthead__subscribe"><a href="{{ url(home ~ 'feed.xml') }}">{{ icon('rss') }} {{ s.rss }}</a><a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a></p>
+      <p class="masthead__subscribe"><a href="{{ s.rss_url }}">{{ icon('rss') }} {{ s.rss }}</a><a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a></p>
     </div>
   </div>
 {% endif %}
@@ -48,7 +48,7 @@
 {% set items = posts %}
 {% include "_timeline.html.j2" %}
 {% else %}
-<p class="empty">{{ s.empty_before }}<a href="{{ url(home ~ 'feed.xml') }}">{{ s.rss }}</a>{{ s.empty_after }}</p>
+<p class="empty">{{ s.empty_before }}<a href="{{ s.rss_url }}">{{ s.rss }}</a>{{ s.empty_after }}</p>
 {% endif %}
 {% if prev_rel is not none or next_rel %}
 <nav class="pager" aria-label="{{ s.pagination_label }}">

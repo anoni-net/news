@@ -5,6 +5,9 @@
 /
 /2026/
 /2026/09/
+/2026/09/android-17-qpr1-pixel-only-apis/
+	#perspective
+	#sources
 /2026/09/chatgpt-ad-pixel-identifier/
 	#perspective
 	#sources
@@ -17,13 +20,22 @@
 /2026/09/signal-numberless-registration/
 	#perspective
 	#sources
+/2026/09/spain-blocks-archive-today/
+	#perspective
+	#sources
 /2026/09/uk-icloud-advanced-data-protection/
+	#perspective
+	#sources
+/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
 /404.html
 /en/
 /en/2026/
 /en/2026/09/
+/en/2026/09/android-17-qpr1-pixel-only-apis/
+	#perspective
+	#sources
 /en/2026/09/chatgpt-ad-pixel-identifier/
 	#perspective
 	#sources
@@ -36,12 +48,21 @@
 /en/2026/09/signal-numberless-registration/
 	#perspective
 	#sources
+/en/2026/09/spain-blocks-archive-today/
+	#perspective
+	#sources
 /en/2026/09/uk-icloud-advanced-data-protection/
+	#perspective
+	#sources
+/en/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
 /zh-cn/
 /zh-cn/2026/
 /zh-cn/2026/09/
+/zh-cn/2026/09/android-17-qpr1-pixel-only-apis/
+	#perspective
+	#sources
 /zh-cn/2026/09/chatgpt-ad-pixel-identifier/
 	#perspective
 	#sources
@@ -54,7 +75,13 @@
 /zh-cn/2026/09/signal-numberless-registration/
 	#perspective
 	#sources
+/zh-cn/2026/09/spain-blocks-archive-today/
+	#perspective
+	#sources
 /zh-cn/2026/09/uk-icloud-advanced-data-protection/
+	#perspective
+	#sources
+/zh-cn/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
 /feed.xml

@@ -1,4 +1,5 @@
-{# RSS 的全文用這一份，順序跟文章頁一樣：一行出處、內文、完整的原文清單 #}
+{# RSS 的全文用這一份，順序跟文章頁一樣：一行出處、內文、完整的原文清單。
+   原文清單不放網站圖示，不少閱讀器會忽略 width 與 height，64px 的原圖會整個撐開 #}
 {% set line = post|source_line %}
 {% if line %}
 <p>{{ line }}</p>
@@ -6,4 +7,4 @@
 <div class="content">
 {{ content|safe }}
 </div>
-{% include "_source_slip.html.j2" %}
+{% with in_feed = true %}{% include "_source_slip.html.j2" %}{% endwith %}
