@@ -127,6 +127,9 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
 
+[hosts."npc.gov.cn"]
+same_as = "gov.cn"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -154,6 +157,10 @@ from = "https://support.apple.com/apple-touch-icon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."themarkup.org"]
+icon = "themarkup.org-0c33d958.png"
+from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
