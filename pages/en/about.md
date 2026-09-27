@@ -31,6 +31,10 @@ Pieces are credited to the anoni.net community by default rather than to individ
 
 If you spot a factual error, outdated information or a translation problem, please [open an issue on GitHub](https://github.com/anoni-net/news/issues/new), naming the piece and the sentence, ideally with a source. If you would rather not use a GitHub account, email `whisper@anoni.net`, preferably encrypted with PGP.
 
+## Listening {#listening}
+
+If you would rather listen, use the read-aloud feature built into your browser or operating system, such as Listen to Page in Safari on iPhone. Story pages are marked up so these features read the story itself and skip the source list and footer. We do not add a play button of our own, because it would need JavaScript. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.
+
 ## Analytics and privacy {#privacy}
 
 We count readership with a self-hosted Umami instance that sets no cookies and sends nothing when your browser has Do Not Track or GPC enabled. Pages need no JavaScript and load no third-party fonts or resources. The onion version loads no analytics; its address is in the footer of every page.
