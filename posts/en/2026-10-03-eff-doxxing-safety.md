@@ -47,4 +47,4 @@ In Taiwan, Article 41 of the Personal Data Protection Act punishes unlawful coll
 
 Whichever system applies, a complaint needs evidence. Start the incident log with the first message, and keep screenshots and links alongside it. According to EFF, finding and recording hateful content is stressful, which is why the guide keeps returning to shared roles: someone you trust can watch and record while you step away.
 
-The first step you can take today is to enter your email address at haveibeenpwned, which is free and in English, to see whether it appears in known breaches. If it does, EFF's guide mentions changing the exposed email address or phone number, and turning on two-factor authentication and setting social accounts to private are the other quick steps.
+The first step you can take today is to enter your email address at haveibeenpwned, which is free and in English, to see whether it appears in known breaches. If it does, EFF's guide says you can change the exposed email address or phone number. Turning on two-factor authentication for important accounts and setting social accounts to private are the other quick steps.
