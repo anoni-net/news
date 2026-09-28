@@ -6,7 +6,169 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sun, 27 Sep 2026 07:28:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 28 Sep 2026 07:05:00 +0800</lastBuildDate>
+<item>
+<title>Pixel-only APIs in Android 17 QPR1</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/android-17-qpr1-pixel-only-apis/</link>
+<guid isPermaLink="false">anoni-news:en/2026/09/android-17-qpr1-pixel-only-apis</guid>
+<pubDate>Mon, 28 Sep 2026 07:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Android 17 QPR1 adds new APIs for app developers without releasing the source to AOSP, so non-Pixel phones and systems such as GrapheneOS wait until QPR2 in December.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including Google, GrapheneOS, Android Developers&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Android 17 QPR1, which Google began rolling out on 15 September to every Pixel from the Pixel 6 through the Pixel 11 series, adds new APIs for app developers at API level 37.1, including a new &lt;code&gt;android.hardware.hid&lt;/code&gt; package. Its source code has not been released to the Android Open Source Project (AOSP). According to GrapheneOS, no release since Android 3.x has added new APIs without going through AOSP. Non-Pixel phones and AOSP-based systems will get them with Android 17 QPR2 in December.&lt;/p&gt;
+&lt;p&gt;GrapheneOS&#39;s announcement says it had ported its code to QPR1 before the release but does not yet have permission to ship it, so it is backporting Pixel firmware, kernel drivers and HALs to Android 17 instead. It also says the September Pixel Update Bulletin carries patches to standard Android components that were missing from the September Android Security Bulletin, and that a GPL source request it made on 1 September took more than two weeks to be answered.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;This follows from how Google now ships Android. In March 2025 Google confirmed to Android Authority that Android development would move fully in private, with the internal branch restricted to companies holding a Google Mobile Services (GMS) licence. The AOSP site states that from 2026 source code is published only in Q2 and Q4. Android 16 QPR1 still reached AOSP, weeks late. As of 27 September, AOSP has only the Android 17 release branch and nothing for QPR1. Anyone building from AOSP, whether a phone maker without a GMS licence or a project like GrapheneOS, now works months behind Pixels, and non-Google makers who want patches on time need Google&#39;s security preview access, which GrapheneOS says it has through another manufacturer.&lt;/p&gt;
+&lt;p&gt;Across Asia, the effect depends on what a phone is built on. Google&#39;s own developer guide for China tells app makers to account for handsets without Google Play services pre-installed. Huawei&#39;s HarmonyOS NEXT, according to CNBC, reportedly no longer uses Android&#39;s open-source code at all, so the AOSP schedule does not bind it. For the other Android makers in the region, GrapheneOS writes that non-Google manufacturers can ship the yearly and QPR2 releases along with security backports. The QPR1 APIs therefore reach their phones only with QPR2 in December, and after that whenever each manufacturer pushes the update.&lt;/p&gt;
+&lt;p&gt;For privacy-focused users the options are narrow. GrapheneOS is released under OSI-approved open source licences, supports only Pixels officially, and has kept shipping updates through September, including a 17 September build that backported QPR1 modem firmware and a 19 September build adding matching carrier settings. GrapheneOS&#39;s posts say it can ship some of the withheld patches early by reverse engineering them.&lt;/p&gt;
+&lt;p&gt;The project also writes that Pixels are now significantly harder to support than many other devices, and that upcoming Motorola phones will be easier because it will receive official firmware and driver code. Until those arrive, anyone who wants GrapheneOS still has to buy a Pixel, and the supported models are listed in the GrapheneOS FAQ. The official web installer needs a computer with at least 2GB of free memory and 32GB of free storage, a USB cable and a supported browser such as Chrome or Edge, and its instructions are in English. Installation starts with unlocking the bootloader, and on models that carriers can sell locked, enabling OEM unlocking needs an internet connection so the stock OS can check the phone was not sold locked.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117282080803799576&#34;&gt;Android 17 QPR1 is the first release since Android Honeycomb (3.x) adding new APIs for app developers without a release to the Android Open Source Project&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/sdk/api_diff/37.1/changes/changes-summary&#34;&gt;Android API Differences Report&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/09/15/android-17-qpr1-pixel/&#34;&gt;Google rolling out Android 17 QPR1 for Pixel&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.androidauthority.com/android-16-qpr1-source-code-available-3614853/&#34;&gt;Android 16 QPR1&amp;#39;s source code is now available on AOSP&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Authority&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-11&#34;&gt;11 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.androidauthority.com/google-android-development-aosp-3538503/&#34;&gt;Exclusive: Google will develop the Android OS fully in private, here&amp;#39;s why&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Authority&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-26&#34;&gt;26 March 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases&#34;&gt;GrapheneOS changelog&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/training/wearables/creating-app-china&#34;&gt;Create Wear OS apps for China&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnbc.com/2024/11/26/huawei-mate-70-launch-harmonyos-next-details-specs-price-.html&#34;&gt;Huawei Mate 70 launch: HarmonyOS Next details, specs, price&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CNBC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-26&#34;&gt;26 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web install&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>ZuckOff, a Bluetooth detector for camera smart glasses</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/zuckoff-smart-glasses-detector/</link>
+<guid isPermaLink="false">anoni-news:en/2026/09/zuckoff-smart-glasses-detector</guid>
+<pubDate>Mon, 28 Sep 2026 07:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>ZuckOff matches Bluetooth broadcasts to warn that camera glasses such as Ray-Ban Meta are nearby. It cannot tell whether anyone is recording, and the app itself is closed source.</description>
+<content:encoded>&lt;p&gt;Based on 7 sources, including ZuckOff, App Store, WIRED Middle East&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;ZuckOff, an app for iPhone and Android, tells you whether someone nearby is wearing camera glasses such as Ray-Ban Meta, Oakley Meta or Snap Spectacles. Basic scanning is free, a paid Pro version adds background monitoring and alerts, and the app is listed in the App Store in Taiwan, Hong Kong, mainland China and Singapore. Its interface includes Simplified Chinese but not Traditional Chinese.&lt;/p&gt;
+&lt;p&gt;The developer bought the glasses, recorded the Bluetooth signals each model broadcasts, and matched the manufacturer codes inside them. When a code matches, the app alerts you and uses signal strength to estimate rough distance. The project site says nothing leaves your phone and no account is needed.&lt;/p&gt;
+&lt;p&gt;The site is also clear about the limits. Most pairs keep advertising while worn, but a few standalone models stay silent, and the App Store listing adds that glasses paired to their owner&#39;s phone can go quiet too. Silence is not proof that nobody is recording, a detection is not proof that anyone is, and the app cannot tell who is wearing the glasses or in which direction they are.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The technique is simple. Camera glasses announce themselves over Bluetooth, and ZuckOff publishes the codes it matches, such as &lt;code&gt;0x0D53&lt;/code&gt; for Luxottica, which makes Ray-Ban Meta and Oakley Meta. Accuracy depends on how complete and current that table is. The 1.3.0 update notes say second-generation Ray-Ban Meta frames carry a different manufacturer code from the first, which the app had to learn, and the 1.4.0 notes say it had been mistaking some iPhones for camera glasses.&lt;/p&gt;
+&lt;p&gt;ZuckOff is closed source and states no license, so nobody outside can check what it actually does. What it asks for is modest. The Android version needs only the nearby-devices permission for Bluetooth scanning, declared as never used to derive location, so it does not ask for location access.&lt;/p&gt;
+&lt;p&gt;The glasses themselves are spreading across Asia. Ray-Ban Meta and Oakley Meta went on sale in Japan on 21 May 2026, and Meta announced on 23 September that they are available in Singapore and South Korea, with Hong Kong, Macau, Malaysia, Indonesia, Thailand and the Philippines to follow later this year. Meta&#39;s help page says the white capture LED blinks while recording and the camera is disabled if the LED is covered or tampered with. According to WIRED, about seven million pairs of Meta glasses were sold in 2025.&lt;/p&gt;
+&lt;p&gt;Existing law already covers the recording itself. Taiwan&#39;s Criminal Code Article 315-1 makes it an offence to record other people&#39;s non-public activities or conversations without good reason, punishable by up to three years&#39; imprisonment. The provision applies to any recording device and does not single out wearables.&lt;/p&gt;
+&lt;p&gt;Before an interview, a meeting or a private gathering, anyone who wants to know whether there is a camera in the room can switch on Bluetooth and run a scan as a prompt; the free basic scan is enough. Treat the result as a hint, not a guarantee. For conversations that matter, agree with everyone present in advance to take off their glasses and leave their phones outside.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://zuckoff.app/&#34;&gt;ZuckOff | Camera glasses detector&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ZuckOff&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/zuckoff/id6795234035&#34;&gt;ZuckOff&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff&#34;&gt;How to Tell If Someone Near You Is Wearing Meta Smart Glasses&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;WIRED Middle East&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.meta.com/ai-glasses/privacy/&#34;&gt;Privacy Settings for Meta AI Glasses&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.meta.com/blog/ray-ban-meta-audio-and-deepest-ai-glasses-lineup/&#34;&gt;Introducing Ray-Ban Meta Audio and Our Deepest Lineup of AI Glasses Yet&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.meta.com/ja-jp/blog/AI-glasses-Japan-launch/&#34;&gt;Ray-Ban Meta (Gen 2)およびOakley Meta、5月21日より日本でも販売開始&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-19&#34;&gt;19 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法 第 315-1 條&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Two tiers of iCloud Advanced Data Protection in the UK</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/uk-icloud-advanced-data-protection/</link>
