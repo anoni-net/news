@@ -379,6 +379,37 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 - 訂閱頁的內文寫 `%FEED_URL%`，建置時代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
 - `<head>` 的 `<link rel="alternate" type="application/rss+xml">` 維持指向 feed，已經在用閱讀器的讀者貼上 news 首頁的網址，閱讀器就會自己找到 feed
 
+## Bluesky {#bluesky}
+
+新文章上線時，自動在 Bluesky 的 `@news.anoni.net` 發一則貼文。帳號名稱用子網域，以 DNS 的 `_atproto.news.anoni.net` TXT 紀錄驗證，跟 onion 的 `news.<onion 位址>` 對應。社群的主帳號 `@anoni.net` 不自動發文，維護者挑幾篇轉貼並加上社群的觀點。
+
+### 範圍與時機
+
+- zh-TW 與 en 各發一則。zh-CN 不發，GreatFire 的檢測顯示 `bsky.app` 在中國大陸全數被封鎖
+- 只處理已經發布、發布時間在 24 小時內的文章。剛開始自動發文時，過去的文章不會一次補發
+- deploy workflow 推完 `build` 分支之後才發文。m6 每 5 分鐘拉一次，Cloudflare 也會快取 5 分鐘，所以發文前先確認 clearnet 的文章網址回應 200，最多等 15 分鐘。還沒上線就跳過，下一輪重建時再試，讀者點進去不會遇到 404
+- 更正不另外發文
+
+### 不重複發文
+
+讀帳號自己的貼文紀錄（`com.atproto.repo.listRecords`），連結卡片指向同一篇文章的就不再發，比對時不看網址的 query。帳號本身就是紀錄，repo 裡不另存狀態，workflow 也不必回寫 commit（`main` 有分支保護，機器人推不上去）。每小時重建都會執行一次，已經發過的文章每次都會被略過。
+
+### 貼文的內容
+
+- 文字：標題，空一行接 `description`。超過 300 個字元（Bluesky 的上限）時只放標題
+- 連結卡片（`app.bsky.embed.external`）：標題、`description`、預覽圖與文章網址。預覽圖跟 `og:image` 相同，由貼文自己上傳，不依賴 Bluesky 去抓頁面
+- 網址加上 `utm_source=bluesky&utm_medium=social`。流量統計保留這兩個參數，看得出有多少讀者從 Bluesky 進來（見「流量統計」）
+- `langs`：zh-TW 寫 `zh`，en 寫 `en`，跟主帳號的寫法一致，讀者用語言篩選時才看得到
+- 不加 hashtag
+- front matter 有 `follows` 時，引用轉貼同語系前一篇的貼文，連結卡片照樣帶上（`app.bsky.embed.recordWithMedia`），Bluesky 上也看得出前情與後續。找不到前一篇的貼文時，例如前一篇發布時還沒有自動發文，改發一般貼文
+
+### 帳號與失敗處理
+
+- 登入用 Bluesky 的 app password，存在 repo 的 GitHub secret `BLUESKY_APP_PASSWORD`，帳號名稱寫在 `site.toml`。app password 無法變更帳號密碼或刪除帳號，外洩時在 Bluesky 的設定撤銷，再產生一組新的。secret 沒有設定時，整個步驟跳過
+- 刊頭、頁尾、文章末的訂閱行與訂閱頁都有連到 `@news.anoni.net` 的連結，跟 RSS 與電子報放在一起。zh-CN 的訂閱頁註明貼文沒有簡體中文版，而且 Bluesky 在中國大陸無法直接連線
+- 發文是 deploy workflow 裡獨立的 job，失敗不影響網站上線，錯誤留在 workflow 的紀錄
+- `uv run tools/bluesky_post.py --dry-run` 列出這一輪會發的貼文，不登入也不發文。`--now` 可以指定當下的時間，用來預覽某一天會發什麼
+
 ## clearnet 與 onion
 
 兩份產物用同一批模板，差異只寫在 `site.toml`：

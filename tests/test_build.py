@@ -158,6 +158,23 @@ def test_docs_links(tmp_path, href, problem, notice):
     assert bool(notices) is notice
 
 
+def test_bluesky_links(fixture_site):
+    """刊頭、頁尾與文章末的訂閱行都連到 @news.anoni.net，跟 RSS、電子報並列。"""
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    url = 'href="https://bsky.app/profile/news.anoni.net"'
+    home = (out / "index.html").read_text(encoding="utf-8")
+    assert home.count(url) == 2  # 刊頭與頁尾
+    zh = (out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    line = zh[zh.index('<p class="subscribe">'):]
+    line = line[:line.index("</p>")]
+    assert "訂閱電子報</span></a>、<a " + url in line and "在 Bluesky 追蹤" in line
+    en = (out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    line = en[en.index('<p class="subscribe">'):]
+    line = re.sub(r"<svg.*?</svg>", "", line[:line.index("</p>")])
+    assert re.sub(r"<[^>]+>", "", line).split() == "Get new stories by RSS, newsletter or Bluesky".split()
+
+
 def test_rss_links_point_to_the_subscribe_page(fixture_site):
     """頁面上的 RSS 連結指向同語系的訂閱頁，閱讀器用的自動探索仍然指向 feed。"""
     targets, _, _ = fixture_site

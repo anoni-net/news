@@ -20,6 +20,7 @@ uv run pytest -q
 ./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
 uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md  # 維護者：試抓原文網站的圖示
+uv run tools/bluesky_post.py --dry-run  # 列出這一輪會發到 Bluesky 的貼文，見 SPEC.md「Bluesky」
 ```
 
 `--check` 會從 GitHub 下載文件站的網址合約，離線時用 `--docs-contract <檔案>` 指定本機的一份。建置時會把 `assets.anoni.net` 的圖片抓進產物，快取在 `.cache/assets/`。版面檢查需要 Chrome，找不到時略過並提示，截圖存在 `.cache/screenshots/`，送出 PR 前要實際看過。
