@@ -31,6 +31,8 @@ sources:
 watch:
   - date: 2026-10-27
     note: 西班牙文化部的封鎖清單是否再擴大、是否有人提出法律挑戰，OONI 的量測是否仍有異常
+regions:
+  - ES
 authors:
   - anoni-net
 ---

@@ -42,6 +42,8 @@ sources:
   - title: 如何打开 iCloud 高级数据保护
     url: https://support.apple.com/zh-cn/108756
     publisher: Apple
+regions:
+  - GB
 authors:
   - anoni-net
 ---
