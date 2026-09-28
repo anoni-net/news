@@ -1,6 +1,6 @@
 ---
 title: About anoni.net News
-description: How anoni.net News chooses stories, checks facts and corrects errors, how the three language versions differ, and how to report a problem.
+description: How anoni.net News chooses stories, checks facts, corrects errors and follows up, how the three language versions differ, and how to report a problem.
 ---
 
 anoni.net News is written by anoni.net, an anonymity network community based in Taiwan. It covers international news on privacy, anonymity networks and internet censorship from the angle we know best, technology and the open-source ecosystem. Each piece opens with what happened and who is affected, then its Perspective section covers the technology involved, the first step readers can take now, and what it costs them.
@@ -18,6 +18,10 @@ The sources behind each piece are listed in its Sources panel with publisher and
 ## Corrections {#corrections}
 
 When we find an error or outdated detail after publication, we correct all three language versions together. The articles live in a public GitHub repository, so every change and its date can be checked.
+
+## Follow-ups {#follow-ups}
+
+Privacy and censorship stories often run for months. Bills are amended and voted on, features leave beta, and investigations turn up new findings months later. When a story we have covered moves forward, we write a follow-up that opens with a one-line recap, so it makes sense even if you missed the earlier piece. Earlier pieces link to the latest one just below the headline, and every piece in the story lists the others at the end, so wherever you start, you can see where things stand now.
 
 ## Three language versions {#languages}
 
