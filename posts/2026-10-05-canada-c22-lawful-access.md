@@ -33,6 +33,8 @@ sources:
 watch:
   - date: 2026-10-31
     note: 參議院二讀、三讀與御准的進度，Signal、VPN 業者是否宣布撤出加拿大
+regions:
+  - CA
 authors:
   - anoni-net
 ---

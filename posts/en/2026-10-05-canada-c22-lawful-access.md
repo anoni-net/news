@@ -37,6 +37,8 @@ sources:
     url: http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-06/12/content_2055871.htm
     publisher: National People's Congress
     date: 2018-06-12
+regions:
+  - CA
 authors:
   - anoni-net
 ---

@@ -34,6 +34,8 @@ sources:
     url: http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-06/12/content_2055871.htm
     publisher: 中国人大网
     date: 2018-06-12
+regions:
+  - CA
 authors:
   - anoni-net
 ---
