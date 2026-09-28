@@ -34,6 +34,17 @@
 	#perspective
 	#sources
 /404.html
+/about/
+	#byline
+	#corrections
+	#fact-checking
+	#follow-ups
+	#languages
+	#license
+	#listening
+	#privacy
+	#report
+	#selection
 /en/
 /en/2026/
 /en/2026/09/
@@ -65,6 +76,23 @@
 /en/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
+/en/about/
+	#byline
+	#corrections
+	#fact-checking
+	#follow-ups
+	#languages
+	#license
+	#listening
+	#privacy
+	#report
+	#selection
+/en/subscribe/
+	#more
+	#steps
+/subscribe/
+	#more
+	#steps
 /zh-cn/
 /zh-cn/2026/
 /zh-cn/2026/09/
@@ -96,6 +124,20 @@
 /zh-cn/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
+/zh-cn/about/
+	#byline
+	#corrections
+	#fact-checking
+	#follow-ups
+	#languages
+	#license
+	#listening
+	#privacy
+	#report
+	#selection
+/zh-cn/subscribe/
+	#more
+	#steps
 /feed.xml
 /zh-cn/feed.xml
 /en/feed.xml

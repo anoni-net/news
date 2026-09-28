@@ -171,6 +171,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 icon = "support.apple.com-573bbc30.png"
 from = "https://support.apple.com/apple-touch-icon.png"
 
+[hosts."support.google.com"]
+icon = "support.google.com-cb930f6f.png"
+from = "https://support.google.com/favicon.png"
+
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
