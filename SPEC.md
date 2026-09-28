@@ -31,10 +31,16 @@ posts/                   # 一篇一個 Markdown，檔名是發布日加 slug，
     2026-09-18-zkp-age-verification.md
   en/                    # 同檔名的英文版
     2026-09-18-zkp-age-verification.md
+pages/                   # 文章以外的固定頁面：關於頁與訂閱頁，語系目錄的排法同 posts/
+  about.md
+  subscribe.md
+  zh-CN/about.md、zh-CN/subscribe.md
+  en/about.md、en/subscribe.md
 strings.toml             # 介面文字，三個語系各一組
 templates/               # Jinja2 模板
   _layout.html.j2
   post.html.j2
+  page.html.j2           # 關於頁這類固定頁面
   list.html.j2           # 列表頁與年、月封存頁共用
   404.html.j2
   feed.xml.j2
@@ -99,12 +105,14 @@ authors:
 | `image` | 否 | 這篇在社群平台分享時的預覽圖，網址規則同內文圖片（見「圖片」），建議 1200×630。沒填就用全站共用的 `og.png` |
 | `draft` | 否 | `true` 時不產出，也不進列表、封存頁與 RSS |
 | `pin` | 否 | `true` 時放在首頁最上方的「焦點」。同一時間只能有一篇，換焦點時先拿掉舊的那篇，否則建置失敗。欄位名稱沿用 Material blog 的置頂 |
+| `follows` | 否 | 這篇接續的舊文章，寫檔名、不含 `.md`，例如 `2026-09-18-zkp-age-verification`。用清單，一篇可以接續兩件事。見「前情與後續」 |
+| `watch` | 否 | 之後要回頭查的事，只寫在 zh-TW 版本。每一筆有 `date`（回頭查的日期）與 `note`（要查什麼）。見「追蹤中的事件」 |
 
 多出來的欄位建置時報錯，避免打錯字的欄位被靜默忽略。
 
 ### 內文
 
-原文由模板依 `sources` 產生（見「版面」的原文區塊），內文不再重寫一次。內文依序寫摘要、導讀觀點。導讀觀點從科技與開源的角度評註這則新聞，有相關的專案或技術時，交代它能解決什麼問題，以及授權、維護狀態、使用門檻、有沒有正體中文介面，讀者看完就能判斷要不要試。導讀觀點用 `## 導讀觀點 {#perspective}` 當小標題，篇幅與語氣見 `AGENTS.md`「導讀的寫法」。小標題原本叫「技術觀點」，2026-09 第一批上線後改名。「技術」兩字會讓不寫程式的讀者以為內容是寫給工程師看的，實際寫的卻是讀者現在能做什麼：
+原文由模板依 `sources` 產生（見「版面」的原文區塊），內文不再重寫一次。內文依序寫摘要、導讀觀點。摘要的第一段寫出誰受影響，新聞發生在特定國家或只影響特定平台時，也寫明其他地方、其他平台的讀者受不受影響。導讀觀點從科技與開源的角度評註這則新聞，有相關的專案或技術時，交代它能解決什麼問題，以及授權、維護狀態、使用門檻、有沒有正體中文介面，讀者看完就能判斷要不要試。導讀觀點的最後一段寫讀者現在能做的第一步，連同要付出的門檻。2026-09 用模擬讀者檢視第一批稿件時，不寫程式的讀者多半讀完仍不知道自己該做什麼，才加上這兩條。導讀觀點用 `## 導讀觀點 {#perspective}` 當小標題，篇幅與語氣見 `AGENTS.md`「導讀的寫法」。小標題原本叫「技術觀點」，2026-09 第一批上線後改名。「技術」兩字會讓不寫程式的讀者以為內容是寫給工程師看的，實際寫的卻是讀者現在能做什麼：
 
 ```markdown
 摘要段落……
@@ -122,6 +130,45 @@ authors:
 - 有連到文件站時，網址必須存在於文件站的網址合約（`anoni-net/docs` 的 `tools/data/url_contract.txt`），錨點也一樣。文件站改了網址，這裡會先發現
 
 站內與文件站的連結一律寫 clearnet 的完整網址，onion 產物由建置程式改寫（見「clearnet 與 onion」）。
+
+## 前情與後續 {#follow-ups}
+
+隱私與審查的新聞常拖上好幾個月，一條法案從提案、修正到表決，每一段都可能寫成一篇導讀。讀者通常只從其中一篇進來，從搜尋或舊的社群連結點進舊文章時，要能馬上知道事情已經有新的進展。
+
+寫新文章時在 front matter 用 `follows` 指出接續的舊文章，舊文章不用改。建置時把用 `follows` 相連的文章串成一條事件線，依發布時間由舊到新排，同一條線上的每一篇都會在頁面上出現兩個東西：
+
+- 標題區的最後一行提示最新的一篇（「後續發展：〈標題〉（日期）」），只在這篇不是最新的一篇時出現。已發布的文章因此多了後續的連結，但內容沒有更動，不算更正，`date.updated` 不動
+- 內文與原文清單之後、訂閱行之前，列出整條事件線（「同一事件的導讀」），目前這一篇標上「本篇」、不加連結
+
+後續的文章還在排程中時，舊文章不會出現它的標題與網址，到了發布時間重建才連上，跟排程中的文章不進列表與 RSS 的道理相同。
+
+事件線放在 `<article>` 外面，標上 `role="navigation"`，閱讀模式與朗讀抽正文時不會念進去。標題區那行提示留在正文裡，用聽的讀者一樣需要知道有後續。RSS 只放正文，不列事件線，前情由新文章的第一段交代。
+
+`follows` 只用在同一件事的新進展，例如同一條法案、同一個產品變更、同一起事件。主題相近但事件不同的文章不串在一起。
+
+建置時檢查：
+
+- `follows` 的每一項是一篇存在的文章的檔名，草稿不能被接續
+- 被接續的文章要比新文章早發布，接續自己與循環也因此會被擋下。兩篇都在排程中也可以
+- 三個語系的 `follows` 相同
+
+## 追蹤中的事件 {#watch}
+
+寫稿時常會遇到之後才有結果的事，例如 12 月才釋出的原始碼、年底前要上線的 App、還在測試版的功能。在 front matter 用 `watch` 記下回頭查的日期與要查什麼，之後選題時掃這一類就好，不必靠人記得：
+
+```yaml
+watch:
+  - date: 2026-12-10
+    note: Android 17 QPR2 是否把 QPR1 的 API 與修補釋出到 AOSP
+```
+
+- 只寫在 zh-TW 版本，這是編輯用的筆記，不翻譯。zh-CN 與 en 寫了會報錯
+- 不出現在頁面、RSS 與 sitemap。對讀者寫「會持續追蹤」等於一個承諾，事件停擺時反而難交代。repo 是公開的，`note` 只寫要查什麼
+- `date` 要晚於發布日。日期依原文寫的時間推估，原文沒有寫時間的，抓一個月後再看一次
+- 後續稿用 `follows` 接上之後，舊文章的 `watch` 全部視為完成，不必回頭改。後續稿還在排程中也算
+- 事件沒有新進展、不打算再寫時，刪掉那一筆。只動 front matter、內容沒變，不算更正，`date.updated` 不動
+
+`uv run build.py --watch` 列出回頭查的日期在 7 天內或已經過了、還沒有後續稿的項目，每筆一行 checkbox，可以直接貼進每週候選票的「追蹤中的事件」。7 天跟排程的上限相同，列出來的題目趕得上排進下一批稿。過期只提醒，不讓 `--check` 失敗。
 
 ## 多語系
 
@@ -150,7 +197,7 @@ authors:
 - 介面文字寫在 `strings.toml`，三個語系的鍵必須一致，少一個就建置失敗。出處行、日期格式、頁尾、404 與 `<title>` 的站名都從這裡取
 - 日期格式：zh-TW 與 zh-CN 維持現在的「2026 年 9 月 27 日 星期日」，en 寫成「Sunday, 27 September 2026」
 - 站名：zh-TW「anoni.net 新聞導讀」、zh-CN「anoni.net 新闻导读」、en「anoni.net News」
-- 其他語系的連結只列目前語系以外的兩個，例如 zh-TW 頁寫「其他語言：简体中文、English」。每一頁放在頁尾，文章頁另外放在署名的下一行，連到另外兩個版本的同一篇。列表頁與封存頁連到另外兩個語系的同一種頁面。頁首不放，避免跟「新聞導讀」擠在同一列
+- 其他語系的連結只列目前語系以外的兩個，例如 zh-TW 頁寫「其他語言：简体中文、English」。每一頁放在頁尾，文章頁另外放在署名的下一行，連到另外兩個版本的同一篇。列表頁與封存頁連到另外兩個語系的同一種頁面。頁首不放，避免跟「新聞導讀」擠在同一列。這一行用 `<nav role="navigation">`，閱讀模式與朗讀才不會把它當成正文（見「閱讀模式與朗讀」）
 - 小標題的明體與內文的黑體依 `:lang()` 各給一組字型。zh-CN 先找簡體字型（思源宋體 SC、宋体、PingFang SC、微软雅黑），避免用正體字型的字形顯示簡體字
 - 訂閱電子報的表單依語系不同，zh-TW 與 zh-CN 用中文的表單，en 用英文的表單，網址寫在 `strings.toml` 的 `newsletter_url`
 - 標語改了之後，`tools/og.html` 裡的文字要一起改，再用 `tools/make_og.sh` 重新產生三張預覽圖
@@ -292,6 +339,8 @@ clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的
 | `/news/2026/09/zkp-age-verification/` | 一篇 |
 | `/news/feed.xml` | RSS 2.0 |
 | `/news/sitemap.xml` | sitemap |
+| `/news/about/` | 關於頁，見「關於頁」 |
+| `/news/subscribe/` | 用 RSS 訂閱的三個步驟，見「RSS」 |
 | `/news/404.html` | 找不到頁面，三個語系共用 |
 | `/news/zh-cn/…`、`/news/en/…` | zh-CN 與 en，底下的結構與上面各列相同 |
 
@@ -325,8 +374,41 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 - `<guid isPermaLink="false">` 用 `anoni-news:2026/09/zkp-age-verification`，clearnet 與 onion 兩份 feed 用同一個值。zh-CN 與 en 在前面加上語系，寫成 `anoni-news:zh-cn/2026/09/zkp-age-verification`
 - 日期用 RFC 822 格式，時區固定 `+0800`
 - feed 裡的網址必須是完整網址，這是兩份產物一定不同的地方
-- 頁面上的 RSS 連結（頁尾、刊頭、文章末的訂閱行、還沒有文章時的提示）指向文件站同語系的[RSS 訂閱入門](https://anoni.net/docs/tools/rss/)，網址寫在 `strings.toml` 的 `rss_url`。直接連到 `feed.xml` 的話，沒用過 RSS 的讀者點下去只會看到一整頁 XML。教學頁說明閱讀器的選擇與訂閱步驟，也列出三個語系的 feed 網址與 onion 版本
+- 頁面上的 RSS 連結（頁尾、刊頭、文章末的訂閱行、還沒有文章時的提示）指向同語系的訂閱頁 `subscribe/`。直接連到 `feed.xml` 的話，沒用過 RSS 的讀者點下去只會看到一整頁 XML
+- 訂閱頁只寫完成訂閱需要的三個步驟：安裝閱讀器、複製 feed 網址、在閱讀器裡新增訂閱。閱讀器照文件站[RSS 訂閱入門](https://anoni.net/docs/tools/rss/)查證過的清單，隱私取捨、經由 Tor 讀取與團隊聊天工具只留一個連到那一頁的連結。2026-09 之前 RSS 連結直接指向文件站的 RSS 訂閱入門。該頁涵蓋文件站、更新日誌與新聞導讀所有的 feed，只想訂閱新聞導讀的讀者要讀完整頁，才能找到自己要的網址
+- 訂閱頁的內文寫 `%FEED_URL%`，建置時代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
 - `<head>` 的 `<link rel="alternate" type="application/rss+xml">` 維持指向 feed，已經在用閱讀器的讀者貼上 news 首頁的網址，閱讀器就會自己找到 feed
+
+## Bluesky {#bluesky}
+
+新文章上線時，自動在 Bluesky 的 `@news.anoni.net` 發一則貼文。帳號名稱用子網域，以 DNS 的 `_atproto.news.anoni.net` TXT 紀錄驗證，跟 onion 的 `news.<onion 位址>` 對應。社群的主帳號 `@anoni.net` 不自動發文，維護者挑幾篇轉貼並加上社群的觀點。
+
+### 範圍與時機
+
+- zh-TW 與 en 各發一則。zh-CN 不發，GreatFire 的檢測顯示 `bsky.app` 在中國大陸全數被封鎖
+- 只處理已經發布、發布時間在 24 小時內的文章。剛開始自動發文時，過去的文章不會一次補發
+- deploy workflow 推完 `build` 分支之後才發文。m6 每 5 分鐘拉一次，Cloudflare 也會快取 5 分鐘，所以發文前先確認 clearnet 的文章網址回應 200，最多等 15 分鐘。還沒上線就跳過，下一輪重建時再試，讀者點進去不會遇到 404
+- 更正不另外發文
+
+### 不重複發文
+
+讀帳號自己的貼文紀錄（`com.atproto.repo.listRecords`），連結卡片指向同一篇文章的就不再發，比對時不看網址的 query。帳號本身就是紀錄，repo 裡不另存狀態，workflow 也不必回寫 commit（`main` 有分支保護，機器人推不上去）。每小時重建都會執行一次，已經發過的文章每次都會被略過。
+
+### 貼文的內容
+
+- 文字：標題，空一行接 `description`。超過 300 個字元（Bluesky 的上限）時只放標題
+- 連結卡片（`app.bsky.embed.external`）：標題、`description`、預覽圖與文章網址。預覽圖跟 `og:image` 相同，由貼文自己上傳，不依賴 Bluesky 去抓頁面
+- 網址加上 `utm_source=bluesky&utm_medium=social`。流量統計保留這兩個參數，看得出有多少讀者從 Bluesky 進來（見「流量統計」）
+- `langs`：zh-TW 寫 `zh`，en 寫 `en`，跟主帳號的寫法一致，讀者用語言篩選時才看得到
+- 不加 hashtag
+- front matter 有 `follows` 時，引用轉貼同語系前一篇的貼文，連結卡片照樣帶上（`app.bsky.embed.recordWithMedia`），Bluesky 上也看得出前情與後續。找不到前一篇的貼文時，例如前一篇發布時還沒有自動發文，改發一般貼文
+
+### 帳號與失敗處理
+
+- 登入用 Bluesky 的 app password，存在 repo 的 GitHub secret `BLUESKY_APP_PASSWORD`，帳號名稱寫在 `site.toml`。app password 無法變更帳號密碼或刪除帳號，外洩時在 Bluesky 的設定撤銷，再產生一組新的。secret 沒有設定時，整個步驟跳過
+- 刊頭、頁尾、文章末的訂閱行與訂閱頁都有連到 `@news.anoni.net` 的連結，跟 RSS 與電子報放在一起。zh-CN 的訂閱頁註明貼文沒有簡體中文版，而且 Bluesky 在中國大陸無法直接連線
+- 發文是 deploy workflow 裡獨立的 job，失敗不影響網站上線，錯誤留在 workflow 的紀錄
+- `uv run tools/bluesky_post.py --dry-run` 列出這一輪會發的貼文，不登入也不發文。`--now` 可以指定當下的時間，用來預覽某一天會發什麼
 
 ## clearnet 與 onion
 
@@ -369,8 +451,29 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 - 樣式自己寫，只用系統字型，不載入 Bulma 與 Font Awesome。配色見下方「品牌與配色」
 - 支援 `prefers-color-scheme: dark`
-- 頁首：anoni.net 標誌加「新聞導讀」，兩者是同一個連結，回到該語系的 news 首頁。讀者在 news 裡點左上角，預期回到正在看的網站首頁，官網首頁的入口放在頁尾。頁首、刊頭與頁尾這些頁面框架不放文件站的入口，避免讀者分不清兩個產品，文件站只出現在文章內文（延伸閱讀目前不放，見「內文」）。RSS 連結是例外，指向文件站的 RSS 訂閱入門（見「RSS」）
-- 頁尾：RSS、授權（CC-BY 4.0）、onion 位址（clearnet 才顯示）、訂閱電子報
+- 頁首：anoni.net 標誌加「新聞導讀」，兩者是同一個連結，回到該語系的 news 首頁。讀者在 news 裡點左上角，預期回到正在看的網站首頁，官網首頁的入口放在頁尾。頁首、刊頭與頁尾這些頁面框架不放文件站的入口，避免讀者分不清兩個產品，文件站只出現在文章內文與訂閱頁（延伸閱讀目前不放，見「內文」）
+- 頁尾：RSS、訂閱電子報、關於頁、回報錯誤、官網首頁、onion 位址（clearnet 才顯示）、授權（CC-BY 4.0）。回報錯誤連到 GitHub 的 issue 表單，三個語系相同
+
+### 閱讀模式與朗讀
+
+想用聽的讀者，靠瀏覽器與作業系統內建的功能，例如 Safari 的閱讀器、Chrome 與 Edge 的朗讀、螢幕閱讀器。news 不自己放朗讀按鈕，那需要 JavaScript，而 Chrome 桌機版預設的中文語音是線上語音，全文會送到 Google 的伺服器。
+
+這些功能多半先把正文抽出來再念，文章頁的標記要讓它們抽得乾淨：
+
+- 正文從日期、副標、出處行與署名開始，接著是內文與導讀觀點。有後續的文章，標題區多一行後續提示，也算正文（見「前情與後續」）
+- 原文清單、其他語系的連結、同一事件的導讀、訂閱行與前後篇導覽不在正文裡。語系連結放在 `<article>` 裡面，所以另外標上 `role="navigation"`，Firefox 閱讀模式用的 Readability 只認這個屬性，不看 `<nav>` 標籤本身
+- 改動文章頁的結構時，用 Readability（`@mozilla/readability`）解析三個語系各一篇，確認抽出來的文字符合上面兩點
+
+iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出現。2026-09-28 在介面設成中文的 iPhone 上實測，正體中文的文章頁有這個選項，同一篇的英文版沒有。英文版在 Readability 的判定下比中文版更容易抽出正文，所以判斷是 Safari 依語言決定，跟本站的標記無關。關於頁的「朗讀」一節因此另外寫了不受語言限制的「朗讀螢幕」，設定路徑照 Apple 支援頁各語系的用字：「輔助使用 > 閱讀與朗讀」、「无障碍 > 阅读与朗读」、「Accessibility > Read & Speak」。
+
+### 關於頁
+
+寫給第一次來的讀者，也寫給考慮引用的記者與研究者：選題方式、查核方式、更正方式、三個語系為什麼不完全相同、社群署名、回報錯誤的管道、閱讀量統計與授權。2026-09 用模擬讀者檢視時，研究者與記者都把「查得到編輯流程與更正方式」列為引用的前提。
+
+- 內容寫在 `pages/about.md`、`pages/zh-CN/about.md`、`pages/en/about.md`，front matter 只有 `title` 與 `description`，多出來的欄位建置時報錯
+- 網址是各語系首頁底下的 `about/`，例如 `/news/about/`、`/news/zh-cn/about/`。收進 sitemap 與網址合約，不帶 noindex
+- 小標題的規則跟文章相同，一律寫明 `{#id}`，三個語系的錨點集合相同，缺一個語系就建置失敗
+- 更正的寫法跟實際做法一致。已經發布的文章修正時，三個語系一起改，修改紀錄留在公開 repo
 
 ### 版面
 
@@ -470,7 +573,7 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）。`sources` 的每個主機都在 `favicons.toml` 裡，圖示的格式與尺寸符合規定（見「原文的網站圖示」）
 2. 內文的錨點
-3. 內文與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。RSS 訂閱入門搬家或改名，這一項會擋下來
+3. 文章、固定頁面與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。訂閱頁連到的 RSS 訂閱入門搬家或改名，這一項會擋下來
 4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
@@ -488,7 +591,7 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 
 1. `main` 有新的 commit 時，CI 執行 `--check` 後建置兩份產物，推到 `build` 分支，目錄是 `clearnet/` 與 `onion/`。`build` 分支保留歷史，出問題時可以退回上一個 commit
 2. 伺服器上 clone `build` 分支。nginx 在 clearnet 的 `anoni.net` server block 加一條 `location /news/` 指向 `clearnet/`，onion 那一側新增一個 `news.<onion 位址>` 的 server block，根目錄指向 `onion/`。子網域共用同一個 onion service，由 nginx 依主機名稱分流，跟 `docs.<onion 位址>` 相同，Tor 的設定不用改
-3. 官網 repo 的 `robots.txt` 模板補上 `/news/sitemap.xml`，跟 news 上線同一天合併
+3. 官網 repo 的 `robots.txt` 模板補上 `/news/sitemap.xml`，跟 news 上線同一天合併。2026-09-26 上線時漏了這一步，隔天由 toomore/anoni-net#7 補上，clearnet 與 onion 兩份都列
 4. `static/` 的檔案（樣式、favicon、頁首 logo、預覽圖）在網址後面帶內容雜湊，例如 `css/news.css?v=3f9a1c2b7e`。HTML 不讓瀏覽器快取，內容改了網址就跟著變，瀏覽器與 Cloudflare 會當成新檔案去抓，部署之後不必清這些檔案的快取
 5. m6 由 `ubuntu` 的 crontab 每 5 分鐘執行 `/home/ubuntu/news-pull.sh`，拉 `build` 分支上線，原始檔是本 repo 的 `tools/m6-pull.sh`。只接受 fast-forward，`build` 分支的歷史被改寫時停下來寫進 `/home/ubuntu/news-pull.log`，不強制覆蓋
 6. 從合併到上線最慢約 15 分鐘：CI 建置約 3 分鐘，m6 最多等 5 分鐘，Cloudflare 上的頁面最多快取 5 分鐘。急著看的話清頁面的快取
@@ -535,4 +638,3 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - 發布節奏：寫好就發，或固定在每週某幾天發
 - 內部篩選過的新聞改寫成對外版本時，由誰改寫、誰審稿
 - 維護者代發時用維護者本人的身分，或另設一個共用的發布身分（例如 `news@anoni.net`，要另外準備簽章金鑰）
-- 上線時的第一批文章：整理 2026 年 6 月到 9 月累積的新聞，或從下一次篩選開始

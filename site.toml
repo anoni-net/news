@@ -8,6 +8,11 @@ feed_items = 20
 # 頁首與頁尾用到的外部入口，一律寫 clearnet 的網址
 homepage = "https://anoni.net/"
 
+# 新文章上線時自動發文的 Bluesky 帳號，規則見 SPEC.md「Bluesky」。
+# 登入用的 app password 放在 GitHub secret BLUESKY_APP_PASSWORD，不寫在這裡
+[bluesky]
+handle = "news.anoni.net"
+
 [targets.clearnet]
 out = "public/clearnet"
 # 完整網址的前綴，用在 canonical、RSS、sitemap、Open Graph 與 JSON-LD
