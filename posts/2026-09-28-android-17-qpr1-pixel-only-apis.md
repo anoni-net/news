@@ -32,17 +32,23 @@ sources:
   - title: GrapheneOS changelog
     url: https://grapheneos.org/releases
     publisher: GrapheneOS
+  - title: Web install
+    url: https://grapheneos.org/install/web
+    publisher: GrapheneOS
+watch:
+  - date: 2026-12-10
+    note: Android 17 QPR2 是否把 QPR1 的 API 與修補釋出到 AOSP，GrapheneOS 與其他廠商何時取得
 authors:
   - anoni-net
 ---
 
-Google 在 9 月 15 日推送給 Pixel 6 以後機型的 Android 17 QPR1，新增了給 App 開發者的 API，版本號是 API level 37.1，例如新的 `android.hardware.hid` 套件，但原始碼沒有釋出到 Android 開源專案（AOSP）。GrapheneOS 指出，Android 3.x 以來還沒有過新 API 不經過 AOSP 就推出的情況。非 Pixel 的手機與以 AOSP 為基礎的系統，要等到 12 月的 Android 17 QPR2 才能取得。
+Google 在 9 月 15 日推送給 Pixel 6 以後機型的 Android 17 QPR1，新增了給 App 開發者的 API，版本號是 API level 37.1，例如新的 `android.hardware.hid` 套件。這些 API 的原始碼沒有釋出到 Android 開源專案（AOSP）。GrapheneOS 的公告寫到，Android 3.x 以來還沒有過新 API 不經過 AOSP 就推出的情況。非 Pixel 的手機與以 AOSP 為基礎的系統，要等到 12 月的 Android 17 QPR2 才能取得。
 
 這跟 Google 的釋出方式有關。Google 在 2025 年 3 月向 Android Authority 證實，Android 的開發會全部改在內部進行，內部分支只開放給簽了 Google 行動服務（GMS）授權的公司。AOSP 網站也寫明，從 2026 年起只在第二季與第四季釋出原始碼。Android 16 的 QPR1 晚了幾週才進 AOSP，到 9 月 27 日為止，AOSP 上 Android 17 只有正式版的分支，沒有 QPR1。
 
-GrapheneOS 表示在 QPR1 推出前就把自家的程式移植好了，但還沒有取得釋出的許可，目前改成把 Pixel 的韌體、核心驅動與硬體抽象層從 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的行動網路數據機韌體，19 日再補上對應的電信業者設定。
+GrapheneOS 的公告寫到，他們在 QPR1 推出前就把自家的程式移植好了，但還沒有取得釋出的許可，目前改成把 Pixel 的韌體、核心驅動與硬體抽象層從 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的行動網路數據機韌體，19 日再補上對應的電信業者設定。
 
-GrapheneOS 另外指出，9 月的 Pixel 更新公告裡有幾項一般 Android 元件的修補，沒有出現在同月的 Android 安全公告，其他廠商要等 12 月的 QPR2。GrapheneOS 也寫到，9 月 1 日向 Google 索取的 GPL 原始碼，隔了兩週多才取得。
+GrapheneOS 另外寫到，9 月的 Pixel 更新公告裡有幾項一般 Android 元件的修補，沒有出現在同月的 Android 安全公告，其他廠商要等 12 月的 QPR2。GrapheneOS 也寫到，9 月 1 日向 Google 索取的 GPL 原始碼，隔了兩週多才取得。
 
 ## 導讀觀點 {#perspective}
 
@@ -52,4 +58,4 @@ GrapheneOS 以 OSI 核可的開源授權釋出，目前只支援 Pixel，9 月�
 
 GrapheneOS 也寫到，Pixel 現在比許多裝置更難支援，過去的優勢反而成了負擔。他們預期支援即將推出的 Motorola 新機會比支援 Pixel 容易，因為會取得官方提供的韌體與驅動程式。
 
-想刷 GrapheneOS 保護隱私的人，現在仍然只能選 Pixel，官方支援的機型列在 GrapheneOS 的 FAQ。用其他品牌手機的人，QPR1 新增的 API 與部分修補要等到 12 月的 QPR2，實際收到的時間還要看手機廠商何時推送。
+用其他品牌手機的人，QPR1 新增的 API 與部分修補要等到 12 月的 QPR2，實際收到的時間還要看手機廠商何時推送。想刷 GrapheneOS 保護隱私的人，現在仍然只能選 Pixel，官方支援的機型列在 GrapheneOS 的 FAQ。官方的網頁安裝程式需要一台至少有 2GB 可用記憶體與 32GB 可用空間的電腦和一條 USB 線，瀏覽器要用 Chrome、Edge 這類官方支援的瀏覽器，安裝說明是英文。安裝前要先解鎖手機的 bootloader，可能由電信業者鎖定販售的機型要先連網，讓原廠系統確認手機沒有被鎖定。

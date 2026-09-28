@@ -20,6 +20,9 @@ sources:
     publisher: EFF
   - title: Regional overview without a publisher
     url: https://example.org/overview
+watch:
+  - date: 2026-12-31
+    note: 編輯用的追蹤筆記不出現在頁面上
 authors:
   - anoni-net
 ---
