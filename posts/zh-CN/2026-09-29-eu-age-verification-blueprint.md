@@ -39,6 +39,8 @@ sources:
     url: https://www.gov.cn/zhengce/content/202310/content_6911288.htm
     publisher: 中华人民共和国国务院
     date: 2023-10-16
+regions:
+  - EU
 authors:
   - anoni-net
 ---

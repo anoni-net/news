@@ -23,11 +23,11 @@ authors:
   - anoni-net
 ---
 
-Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合并成同一个界面，在主屏幕往下滑打开搜索时，调出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 与 iPhone 16 之后的机型能使用。Siri AI 目前是测试版，只支持英文，也还没有在所有地区开放，Siri 语言设为中文的用户暂时无法使用。
+Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合并成同一个界面，在主屏幕往下滑打开搜索时，调出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 与 iPhone 16 之后的机型能使用。到 9 月 27 日为止，Siri AI 还是只支持英文的测试版，也还没有在所有地区开放。Siri 语言设为中文的用户暂时无法使用。
 
 Siri AI 默认可以读取备忘录、信息与邮件等 Apple 自家 App 的内容，第三方 App 需要开发者加入支持才会纳入。请求可能在手机上处理，也可能发到 Apple 的 Private Cloud Compute 服务器，屏幕上不会显示是哪一种。EFF 的文章特别写给开启高级数据保护的用户，他们的 iCloud 数据以端到端加密保存，一旦发出设备交给云端处理，风险评估就跟着改变。
 
-屏幕感知（on-screen awareness）让用户随时调出 Siri，请它解释屏幕上的内容。EFF 举的例子是请 Siri 总结正在看的 Signal 加密群聊，此时屏幕上的数据可能发到 Private Cloud Compute。用户与 App 开发者目前都无法屏蔽屏幕感知。
+屏幕感知（on-screen awareness）让用户随时调出 Siri，请它解释屏幕上的内容。EFF 举的例子是请 Siri 总结正在看的 Signal 加密群聊，此时屏幕上的数据可能发到 Private Cloud Compute。到 9 月 27 日为止，用户与 App 开发者都无法屏蔽屏幕感知。
 
 要限制 Siri AI 读取某个 App，EFF 建议在「设置」的 App 列表点进该 App，在 Search 关闭 Show Content in Search。要改回旧版 Siri，可以在「屏幕使用时间」开启「内容与隐私访问限制」，再把 Siri 的 Allowed Siri Version 设为 Siri Classic。Siri AI 默认不会用交互记录训练模型，设置过程中如果点了同意，可以到「隐私与安全性」的 Analytics & Improvements 关闭 Improve Siri & Dictation 撤回。以上选项名称照原文的英文界面，中文界面的名称可能不同。
 
