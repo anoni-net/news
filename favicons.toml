@@ -151,6 +151,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 
+[hosts."pib.gov.in"]
+icon = "pib.gov.in-fffa8d37.png"
+from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
+
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
