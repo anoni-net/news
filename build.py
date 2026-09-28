@@ -39,7 +39,8 @@ NEWS_PREFIX = "https://anoni.net/news/"
 DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools/data/url_contract.txt"
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
-FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin"}
+FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin",
+                     "follows"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "names", "description", "url"}
@@ -89,7 +90,7 @@ LANGS = [
 ]
 DEFAULT_LANG = LANGS[0]
 # 三個版本必須相同的欄位。date 另外比 created，updated 可以不同
-SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories")
+SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories", "follows")
 STRINGS_PATH = ROOT / "strings.toml"
 # 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
 PAGES_DIR = ROOT / "pages"
@@ -181,6 +182,8 @@ class Post:
     anchors: list[str] = field(default_factory=list)
     image: str | None = None
     pin: bool = False
+    # 接續的舊文章，寫檔名（不含 .md）。見 SPEC.md「前情與後續」
+    follows: list[str] = field(default_factory=list)
     lang: Lang = DEFAULT_LANG
     # date 晚於建置當下，排程中，這次不產出
     scheduled: bool = False
@@ -279,6 +282,12 @@ def check_headings(body: str, where: str, problems: list[str]) -> list[str]:
             problems.append(f"{where}:{number}：錨點 {anchor!r} 在同一篇裡重複")
         anchors.append(anchor)
     return anchors
+
+
+def is_post_name(name: str) -> bool:
+    """文章的檔名去掉 .md，也就是 follows 的寫法，例如 2026-09-18-zkp-age-verification。"""
+    match = FILENAME_RE.match(name + ".md")
+    return bool(match and SLUG_RE.match(match.group(2)))
 
 
 def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -> Post | None:
@@ -383,6 +392,11 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         problems.append(f"{where}：categories 要是清單")
         categories = []
 
+    follows = meta.get("follows") or []
+    if not isinstance(follows, list) or not all(isinstance(ref, str) and is_post_name(ref) for ref in follows):
+        problems.append(f"{where}：follows 要是清單，每一項寫接續的舊文章檔名、不含 .md，例如 2026-09-18-zkp-age-verification")
+        follows = []
+
     anchors = check_headings(body, where, problems)
     if problems:
         raise BuildError(problems)
@@ -399,6 +413,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         categories=[str(c) for c in categories],
         image=image,
         pin=pin,
+        follows=list(follows),
         body=body,
         anchors=anchors,
         lang=lang,
@@ -697,6 +712,49 @@ def check_translations(posts_dir: Path) -> list[str]:
     return problems
 
 
+def check_follows(posts: list[Post]) -> list[str]:
+    """follows 指到的文章要存在，而且比這篇早發布。三個語系的 follows 相同，只查 zh-TW。
+    排程中的文章也算，兩篇都還在排程裡的時候一樣能接續。"""
+    by_stem = {post.path.stem: post for post in posts}
+    problems = []
+    for post in posts:
+        for ref in post.follows:
+            earlier = by_stem.get(ref)
+            if earlier is None:
+                problems.append(f"{post.where}：follows 的 {ref} 找不到，寫舊文章的檔名、不含 .md。草稿不能被接續")
+            elif earlier.created >= post.created:
+                problems.append(f"{post.where}：follows 的 {ref} 沒有比這篇早發布，只能接續較早的文章")
+    return problems
+
+
+def story_threads(posts: list[Post]) -> dict[str, list[Post]]:
+    """用 follows 把同一事件的文章串成一條事件線，回傳每篇的檔名對應到整條線，由舊到新排。
+    posts 只放這次要產出的文章。後續還在排程中時不在裡面，舊文章就不會提早露出它的標題，
+    到了發布時間重建才連上。只有自己一篇的不列。"""
+    by_stem = {post.path.stem: post for post in posts}
+    parent = {stem: stem for stem in by_stem}
+
+    def root(stem: str) -> str:
+        while parent[stem] != stem:
+            stem = parent[stem]
+        return stem
+
+    for post in posts:
+        for ref in post.follows:
+            if ref in by_stem:
+                parent[root(post.path.stem)] = root(ref)
+    groups: dict[str, list[Post]] = {}
+    for stem, post in by_stem.items():
+        groups.setdefault(root(stem), []).append(post)
+    threads = {}
+    for group in groups.values():
+        if len(group) > 1:
+            ordered = sorted(group, key=lambda p: (p.created.timestamp(), p.slug))
+            for post in group:
+                threads[post.path.stem] = ordered
+    return threads
+
+
 def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
               favicons: dict[str, dict] | None = None) -> list[Post]:
     """讀三個語系，檢查對應之後回傳 zh-TW 的文章，其他版本放在 translations。
@@ -723,6 +781,7 @@ def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | Non
             if code != DEFAULT_LANG.code and sorted(version.anchors) != sorted(post.anchors):
                 problems.append(f"{version.where}：小標題的錨點 {sorted(version.anchors)} 跟 zh-TW 的 "
                                 f"{sorted(post.anchors)} 不同，分享出去的段落連結換了語系會失效")
+    problems += check_follows(by_lang[DEFAULT_LANG.code])
     if problems:
         raise BuildError(problems)
     return by_lang[DEFAULT_LANG.code]
@@ -881,6 +940,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     def same_page(suffix: str) -> dict[str, str]:
         return {lang.code: lang.path + suffix for lang in LANGS}
 
+    threads = story_threads(posts)
     sitemap_homes: list[tuple[str, str | None, list[dict]]] = []
     sitemap_urls: list[tuple[str, str | None, list[dict]]] = []
     for lang in LANGS:
@@ -895,9 +955,12 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             newer = lposts[i - 1] if i > 0 else None
             older = lposts[i + 1] if i + 1 < len(lposts) else None
             rels = {code: version.rel for code, version in post.translations.items()} or None
+            # 同一事件的導讀，由舊到新。這篇不是最新的一篇時，標題區提示最新的後續
+            thread = [item.translations.get(lang.code, item) for item in threads.get(post.path.stem, [])]
+            followup = thread[-1] if thread and thread[-1].rel != post.rel else None
             # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
             write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
-                  lang, rels, post=post, newer=newer, older=older,
+                  lang, rels, post=post, newer=newer, older=older, thread=thread, followup=followup,
                   content=target.rewrite_html(localize_assets(post.html, target)),
                   jsonld=jsonld(post, target, config),
                   og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
@@ -1404,11 +1467,14 @@ def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
         problems += [f"fixtures：{p}" for p in fixture_docs]
         for name, target in fixture_targets.items():
             problems += [f"fixtures：{p}" for p in check_output(target, fixture_pages[name])]
-        # 三個語系的列表頁、關於頁與最新一篇，加上共用的 404
+        # 三個語系的列表頁、關於頁、最新一篇與有後續的一篇（標題區的後續提示與事件線），加上共用的 404
         layout_pages = [lang.path for lang in LANGS] + [lang.path + name + "/" for lang in LANGS for name in SITE_PAGES]
+        followed = {ref for post in fixture_posts for ref in post.follows}
         newest = next((post for post in fixture_posts if not post.scheduled), None)
-        if newest:
-            layout_pages += [newest.translations.get(lang.code, newest).rel for lang in LANGS]
+        earlier = next((post for post in fixture_posts if not post.scheduled and post.path.stem in followed), None)
+        for post in (newest, earlier):
+            if post:
+                layout_pages += [post.translations.get(lang.code, post).rel for lang in LANGS]
         layout_problems, layout_notice = layout_check.run(
             fixture_targets["clearnet"].out, list(dict.fromkeys(layout_pages)) + ["404.html"],
             ROOT / ".cache" / "screenshots")
