@@ -1,6 +1,6 @@
 ---
 title: Recognising and responding to Apple threat notifications
-description: Apple sent mercenary spyware threat notifications to users in 110 countries in August. Its support page explains where real notifications appear, what they never ask for, and what to do next.
+description: Apple sent mercenary spyware threat notifications to users in 110 countries in August, though the vast majority of people will never be targeted. Apple's support page lists where genuine notifications appear and what they never ask for, and recipients can turn on Lockdown Mode and seek help.
 date: 2026-10-02T07:00:00+08:00
 slug: apple-threat-notifications
 sources:
@@ -34,20 +34,40 @@ sources:
   - title: 關於封閉模式
     url: https://support.apple.com/zh-tw/105120
     publisher: Apple
+    date: 2026-09-18
+  - title: 關於 Apple 威脅通知與防範傭兵間諜軟體
+    url: https://support.apple.com/zh-tw/102174
+    publisher: Apple
+    date: 2026-08-13
+  - title: 关于锁定模式
+    url: https://support.apple.com/zh-cn/105120
+    publisher: Apple
+    date: 2026-09-18
+  - title: OONI Explorer
+    url: https://explorer.ooni.org/chart/mat?probe_cc=CN&since=2026-09-01&until=2026-09-29&time_grain=day&axis_x=measurement_start_day&test_name=web_connectivity&domain=www.accessnow.org
+    publisher: OONI
 authors:
   - anoni-net
 ---
 
-On 13 August Apple sent threat notifications to users in 110 countries, warning that their iPhones had been targeted by mercenary spyware. A 2 September post from the Freedom of the Press Foundation (FPF) urged readers to take such alerts seriously and pointed to an Access Now explainer: the notification does not say whether the attack succeeded or who was behind it. Apple's page says most people are never targeted by such attacks.
+On 13 August Apple sent threat notifications to users in 110 countries, warning that their iPhones had been targeted by mercenary spyware, meaning spyware that private companies develop for governments, such as NSO Group's Pegasus. Apple has sent such notifications several times a year since 2021 and had reached users in more than 150 countries as of 13 August. According to Apple's support page, the vast majority of users will never be targeted.
 
-According to TechCrunch, the alert reads: "Apple detected a mercenary spyware attack targeted at your iPhone. There are actions you can take now to protect your data and device." Apple's support page says a real notification appears on the iPhone Lock Screen and in Settings, arrives by email from `threat-notifications@email.apple.com`, and shows as a banner at the top of the Apple Account page after signing in to `account.apple.com`. It never asks you to click links, open files, install apps or profiles, or give your Apple Account password or a verification code. The page also says Apple cannot explain what triggers a notification. It has sent them several times a year since 2021, to users in more than 150 countries as of August, and does not attribute attacks to specific attackers or regions.
+In a 2 September newsletter, the press freedom nonprofit Freedom of the Press Foundation (FPF) urged readers to take the alerts seriously. It relayed an explainer from the digital rights nonprofit Access Now: a notification does not say whether the attack succeeded or who was behind it.
+
+According to Apple's support page, notifications arrive through three channels: an alert on the iPhone Lock Screen and in Settings, an email to the addresses linked to the Apple Account (from `threat-notifications@email.apple.com` as of 2026), and a banner at the top of the page after signing in to `account.apple.com`. The format may vary by device model and software version.
+
+Apple advises recipients to turn on Lockdown Mode, a built-in setting that restricts some features to reduce the risk of compromise, and to seek expert help such as Access Now's round-the-clock Digital Security Helpline. FPF also suggested that Android users look into Google's comparable Advanced Protection.
 
 ## Perspective {#perspective}
 
-Checking the channel is the fastest way to separate real alerts from phishing that imitates them. If a message claiming to be from Apple asks you to do anything, do not follow its links; sign in to `account.apple.com` yourself and look for the banner.
+A genuine notification recommends protective steps such as Lockdown Mode, but never asks you to click links, open files, install apps or profiles, or give an Apple Account password or verification code. If a message claiming to be from Apple does, sign in to `account.apple.com` yourself and check for the banner.
 
-Getting help has a language barrier that matters for this region. Apple points recipients to the Digital Security Helpline run by Access Now, which answers around the clock and responds within two hours, but its ten languages are English, Spanish, French, German, Portuguese, Russian, Tagalog, Arabic, Italian and Ukrainian. Tagalog is the only Asian language on the list, and there is no Chinese, so readers elsewhere in Asia may need to write in English or first reach a local digital security group they trust.
+Apple does not attribute attacks to specific attackers or regions, and does not explain what triggers a notification. When a batch reached people in India in October 2023, Apple told TechCrunch that some notifications might be false alarms and some attacks might go undetected. In the support page updated in August 2026, Apple calls the notifications high-confidence alerts that should be taken very seriously, while acknowledging that its investigations can never achieve absolute certainty.
 
-These alerts have reached Asia before. A wave in October 2023 reached people in India, and Apple's statement at the time said some notifications may be false alarms and some attacks may go undetected. A notification is therefore not proof of compromise, and the absence of one is not proof of safety, so protection is worth setting up in advance.
+According to Access Now's helpline page, as of 29 September the service replies to every request within two hours and supports ten languages: English, Spanish, French, German, Portuguese, Russian, Tagalog, Arabic, Italian and Ukrainian. Tagalog, spoken in the Philippines, is the only East or Southeast Asian language on the list, so Chinese speakers and others in East Asia may need to write in English. OONI, a project that measures internet censorship, has 76 measurements of the Access Now homepage from mainland China in September, 73 of them without anomalies.
 
-Lockdown Mode is the most direct defence. In March, Apple's statement to TechCrunch said it was not aware of any successful mercenary spyware attack against a device with Lockdown Mode on. The cost is that the phone no longer works as usual: most message attachments other than certain images, video and audio are blocked, and link previews stop working. It is available from iOS 16 under Settings > Privacy & Security > Lockdown Mode, turning it on restarts the phone, and people who think they may be targeted do not need to wait for a notification to switch it on. FPF's post also points Android users to Google's comparable Advanced Protection.
+A security researcher quoted by TechCrunch in March said Lockdown Mode blocks most message attachment types and restricts features of the WebKit browser engine, shrinking the attack surface, especially for zero-click exploits that need no action from the victim. On 27 March Apple told TechCrunch it was not aware of any successful mercenary spyware attack against a device with Lockdown Mode on. TechCrunch noted that an undetected bypass cannot be ruled out.
+
+The trade-off is that devices no longer work as usual: apart from certain images, video and audio, most message attachments are blocked, links and link previews are unavailable, and some websites may load slowly or not work correctly. Trusted websites and apps can be excluded, at the cost of weaker protection.
+
+On iPhone, Lockdown Mode needs iOS 16 or later and sits under Settings > Privacy & Security > Lockdown Mode, and turning it on restarts the device. iPad (iPadOS 16 or later) and Mac (macOS Ventura or later) must each be switched on separately, while a paired Apple Watch follows the iPhone. Apple's instructions and the interface are available in both Simplified and Traditional Chinese. People with good reason to think they may be targeted do not need to wait for a notification to turn it on.

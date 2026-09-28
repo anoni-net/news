@@ -1,6 +1,6 @@
 ---
 title: Apple 威胁通知的辨识与应对
-description: Apple 8 月向 110 个国家的用户发出雇佣间谍软件的威胁通知。Apple 的说明页写明通知会出现在哪里、绝不会要求什么，收到之后可以开启锁定模式并寻求协助。
+description: Apple 8 月向 110 个国家的用户发出雇佣间谍软件的威胁通知，绝大多数人不会成为这类攻击的目标。说明页写明真正的通知出现在哪里、不会要求密码与验证码，收到之后可以开启锁定模式并寻求协助。
 date: 2026-10-02T07:00:00+08:00
 slug: apple-threat-notifications
 sources:
@@ -34,27 +34,44 @@ sources:
   - title: 關於封閉模式
     url: https://support.apple.com/zh-tw/105120
     publisher: Apple
+    date: 2026-09-18
+  - title: 關於 Apple 威脅通知與防範傭兵間諜軟體
+    url: https://support.apple.com/zh-tw/102174
+    publisher: Apple
+    date: 2026-08-13
   - title: 关于锁定模式
     url: https://support.apple.com/zh-cn/105120
     publisher: Apple
+    date: 2026-09-18
+  - title: 关于 Apple 威胁通知和防范雇佣间谍软件的攻击
+    url: https://support.apple.com/zh-cn/102174
+    publisher: Apple
+    date: 2026-08-13
+  - title: OONI Explorer
+    url: https://explorer.ooni.org/chart/mat?probe_cc=CN&since=2026-09-01&until=2026-09-29&time_grain=day&axis_x=measurement_start_day&test_name=web_connectivity&domain=www.accessnow.org
+    publisher: OONI
 authors:
   - anoni-net
 ---
 
-Apple 在 8 月 13 日向 110 个国家的用户发出威胁通知，内容是他们的 iPhone 成为雇佣间谍软件的攻击目标。Freedom of the Press Foundation（FPF）在 9 月 2 日发文，请读者认真看待这类通知，并转介 Access Now 的说明。通知的内容不包括攻击是否成功，也不包括发动攻击的是谁。Apple 的说明写到，大多数人不会成为这类攻击的目标。
+Apple 在 8 月 13 日向 110 个国家的用户发出威胁通知，告知他们的 iPhone 成为雇佣间谍软件（私营公司为政府开发的间谍软件，例如 NSO Group 的 Pegasus）的攻击目标。Apple 从 2021 年起每年发出多次通知，到 8 月 13 日为止覆盖超过 150 个国家。Apple 的说明页也写道，绝大多数人不会成为这类目标。
 
-Apple 的说明页写明，通知会出现在 iPhone 的锁定屏幕与「设置」里，同时发到 Apple 账户的邮箱。发件人是 `threat-notifications@email.apple.com`，登录 `account.apple.com` 后页面顶部也会出现横幅。威胁通知绝不会要求点链接、打开文件、安装 App 或描述文件，也不会要求提供 Apple 账户密码或验证码。
+新闻自由组织 Freedom of the Press Foundation（FPF）9 月 2 日在邮件简报提醒读者重视这类通知。FPF 转述非营利数字权利组织 Access Now 的解说，通知不会交代攻击是否成功，也不会说明攻击者是谁。Apple 也不指明攻击者或地区，发出通知的原因同样不公开。
 
-Apple 从 2021 年起每年发出多次通知，到 8 月为止通知过超过 150 个国家的用户。说明页也写到，Apple 不会把攻击归咎于特定的攻击者或地区，也无法说明发出通知的原因。
+Apple 的说明页写明，通知会出现在 iPhone 的锁定屏幕与「设置」里，同时发到 Apple 账户关联的邮箱，2026 年起的发件人是 `threat-notifications@email.apple.com`。通知形式因机型与系统版本而异。
 
-Apple 给收到通知者的建议是开启锁定模式，并寻求专家协助，例如非营利组织 Access Now 全年无休的数字安全求助热线。FPF 的文章也提到，Android 有类似的「高级保护」功能。
+Apple 建议收到通知的人开启锁定模式（限制部分功能以降低入侵机会的内置模式），并寻求专家协助，例如 Access Now 全天候的数字安全帮助热线。FPF 的邮件简报也建议 Android 用户了解类似的「高级保护」功能。
 
 ## 导读观点 {#perspective}
 
-分辨真假先看渠道，真的通知只会出现在锁定屏幕、「设置」、Apple 账户的邮箱与 `account.apple.com`，也不会要你做任何事。收到自称来自 Apple 的可疑消息时，不要点里面的链接，自行登录 `account.apple.com` 看页面顶部有没有横幅。
+真正的通知会建议开启锁定模式等措施，但不会要你点链接、打开文件、安装 App 或描述文件，也不会索取密码与验证码。收到自称来自 Apple 的可疑消息时，不要点链接，自行登录 `account.apple.com` 查看页面顶部有没有横幅。
 
-Access Now 的热线承诺两小时内回复，提供的十种语言包括英文、西班牙文、他加禄文与阿拉伯文，但没有中文。中文用户可以用英文联系，或先找熟悉数字安全的当地团体协助判断。
+截至 9 月 29 日，Access Now 的说明页写明热线会在两小时内回复，十种语言包括英文、西班牙文、他加禄文与阿拉伯文，但没有中文。网络干扰观测项目 OONI 9 月在中国境内测量 Access Now 首页 76 次，73 次没有异常。中文用户可以用英文联系，海外读者也可以求助当地熟悉数字安全的团体。
 
-亚洲也收到过这类通知，2023 年 10 月的一波发到了印度。Apple 当时的说明写到，有些通知可能是误报，有些攻击则可能没有被检测到。
+2023 年 10 月有一批通知发到印度，Apple 当时给 TechCrunch 的声明写道可能有误报，也可能漏掉部分攻击。2026 年 8 月更新的说明页改称通知是高可信度的警报，应高度重视，但承认调查无法绝对可靠。
 
-锁定模式是这类攻击最直接的防护，TechCrunch 3 月的报道引述 Apple 的回复，到 3 月为止没有发现开启锁定模式的设备遭雇佣间谍软件成功入侵。代价是手机不会照平常的方式运作，例如大部分的消息附件会被挡下，链接预览也不能用。iOS 16 以上可以在「设置」的「隐私与安全性」打开锁定模式，打开时手机会重新启动，担心自己可能成为目标的人不必等到收到通知才开。
+TechCrunch 采访的安全研究者提到，锁定模式阻止多数信息附件类型并限制网页引擎 WebKit，缩小可利用的范围，特别针对不需受害者操作的零点击攻击。Apple 3 月 27 日给 TechCrunch 的回复写道，没有发现开启锁定模式的设备遭雇佣间谍软件成功入侵。TechCrunch 的报道也写道，不排除有未被发现的绕过手法。
+
+代价是除某些图像、视频和音频外，大多数信息附件都会被阻止，链接预览也无法使用。信任的网站与 App 可以排除在外，但会削弱保护。
+
+iPhone 需要 iOS 16 以上，锁定模式在「设置」的「隐私与安全性」里，打开时会重新启动。iPad 与 Mac 要分别打开，配对的 Apple Watch 会跟着 iPhone 打开。简体中文界面称为「锁定模式」，Apple 支持网站有简体中文说明。有充分理由担心自己成为目标的人，不必等收到通知才打开。
