@@ -25,7 +25,7 @@ authors:
   - anoni-net
 ---
 
-A security researcher found that while you use ChatGPT, OpenAI's ad collector `bzr.openai.com` sets a cookie called `__obi` that is linked to your account, lasts a year and can be sent along with requests on other sites. So far it has only been observed in Chrome on Android. Browsers on iOS block it. On 23 September OpenAI began rolling out ChatGPT ads in seven more Asian markets, shown only on the Free and Go plans.
+A security researcher found that while you use ChatGPT, OpenAI's ad collector `bzr.openai.com` sets a cookie called `__obi` that is linked to your account, lasts a year and can be sent along with requests on other sites. The researcher observed it only in Chrome on Android. Browsers on iOS block it. On 23 September OpenAI began rolling out ChatGPT ads in seven more Asian markets, shown only on the Free and Go plans.
 
 Advertisers install OpenAI's pixel on their own sites. When you visit one, the pixel returns `__obi` to OpenAI with the URL path, form fields and text on the page. Email addresses, phone numbers and names are hashed with SHA-256, while country, region, city and postcode are sent in the clear. Query strings were stripped, but a path alone can reveal something like a medical condition.
 
@@ -37,7 +37,7 @@ The researcher reproduced this on their own phone, captured traffic in two ways 
 
 Pixels on advertisers' sites that report visits back to an ad platform are not new, and the researcher compares this one to the Meta and Google tracking code retailers have installed for years. What differs is the account on the other end. A ChatGPT account also holds conversations with an AI, where many people discuss health, work and personal problems, and those conversations could end up linked to browsing on unrelated sites.
 
-The timing matters for readers in Asia. OpenAI's announcement names Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan, after earlier Asia-Pacific launches in Australia, New Zealand, Japan, South Korea and India, and puts the total at more than 60 countries. OpenAI's list of supported countries leaves out mainland China, Hong Kong and Macau, so people there are outside ChatGPT's official service altogether. Elsewhere in the region, people on the Free and Go plans now see ads, while Plus, Pro and Enterprise stay ad-free.
+The timing matters for readers in Asia. OpenAI's announcement names Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan, after earlier Asia-Pacific launches in Australia, New Zealand, Japan, South Korea and India, and puts the total at more than 60 countries. OpenAI's list of supported countries leaves out mainland China, Hong Kong and Macau, so people there are outside ChatGPT's official service altogether. Elsewhere in the region, people on the Free and Go plans have seen ads since the 23 September launch, while Plus, Pro and Enterprise stay ad-free.
 
 `__obi` travels as a third-party cookie. Safari blocks cross-site tracking by default, and every browser on iOS is built on Safari's WebKit engine, which is why the researcher saw nothing on iOS. On Android and desktop you can block third-party cookies in the browser settings. Firefox isolates third-party cookies per site by default, and Brave blocks them.
 
