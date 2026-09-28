@@ -55,7 +55,7 @@ The Washington Post reported in February 2025 that the UK had issued a technical
 
 The 15 categories end-to-end encrypted by default, such as iCloud Keychain and Health data, are unaffected, as are iMessage and FaceTime. For UK users without ADP, 10 categories including iCloud Backup, iCloud Drive, Photos and Notes fall back to standard data protection, with keys held in Apple's data centres. Apple cannot switch ADP off for existing UK users, because only their trusted devices can change the setting, and as of 21 September it had published no deadline for them to do it themselves.
 
-EFF wrote in October 2025 that the UK had reportedly narrowed the notice to UK users. Apple filed a new complaint with the Investigatory Powers Tribunal in July 2026, and the dispute is unresolved.
+EFF wrote in October 2025 that the UK had reportedly narrowed the notice to UK users. Apple filed a new complaint with the Investigatory Powers Tribunal in July 2026, and as of 27 September the dispute is unresolved.
 
 ## Perspective {#perspective}
 
