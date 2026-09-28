@@ -39,6 +39,8 @@ sources:
   - title: 管理多個 Chrome 設定檔
     url: https://support.google.com/chrome/answer/2364824?hl=zh-Hant
     publisher: Google Chrome 說明
+regions:
+  - AU
 authors:
   - anoni-net
 ---

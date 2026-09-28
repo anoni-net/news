@@ -42,6 +42,8 @@ sources:
   - title: 通过多份个人资料使用 Chrome
     url: https://support.google.com/chrome/answer/2364824?hl=zh-Hans
     publisher: Google Chrome 帮助
+regions:
+  - AU
 authors:
   - anoni-net
 ---
