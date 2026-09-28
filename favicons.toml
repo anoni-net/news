@@ -147,6 +147,10 @@ from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
 
+[hosts."security.googleblog.com"]
+icon = "security.googleblog.com-624359af.png"
+from = "https://security.googleblog.com/favicon.ico"
+
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"
 from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
@@ -166,6 +170,10 @@ from = "https://support.google.com/favicon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."verizon.com"]
+icon = "verizon.com-6ec72a34.png"
+from = "https://www.verizon.com/favicon.ico"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"

@@ -8,6 +8,9 @@ sources:
     url: https://freedom.press/digisec/blog/ask-a-security-trainer-does-ai-make-phishing-worse/
     publisher: Freedom of the Press Foundation
     date: 2026-08-27
+  - title: 2026 Data Breach Investigations Report
+    url: https://www.verizon.com/business/resources/T459/reports/2026-dbir-data-breach-investigations-report.pdf
+    publisher: Verizon
   - title: Banks in Singapore to Strengthen Resilience Against Phishing Scams
     url: https://www.mas.gov.sg/news/media-releases/2024/banks-in-singapore-to-strengthen-resilience-against-phishing-scams
     publisher: Monetary Authority of Singapore
@@ -19,12 +22,16 @@ sources:
   - title: Sign in with a passkey instead of a password
     url: https://support.google.com/accounts/answer/13548313?hl=en
     publisher: Google
-  - title: google.com
-    url: https://en.greatfire.org/google.com
-    publisher: GreatFire
   - title: 以密碼金鑰登入，不必再用密碼
     url: https://support.google.com/accounts/answer/13548313?hl=zh-Hant
     publisher: Google
+  - title: So long passwords, thanks for all the phish
+    url: https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html
+    publisher: Google
+    date: 2023-05-03
+  - title: Is http://google.com blocked in mainland China?
+    url: https://en.greatfire.org/google.com
+    publisher: GreatFire
   - title: Dangerzone
     url: https://github.com/freedomofpress/dangerzone
     publisher: Freedom of the Press Foundation
@@ -32,18 +39,22 @@ authors:
   - anoni-net
 ---
 
-In an advice column published on 27 August, the digital security training team at the Freedom of the Press Foundation (FPF) answered a reader's question about whether AI makes phishing worse. Phishing now arrives by email, text message, QR code, and voice and video calls, and FPF's answer is that AI makes lures more convincing while the defences individuals should use stay the same. The advice applies to anyone who receives these messages.
+In an advice column on 27 August 2026, the digital security training team at the Freedom of the Press Foundation (FPF), a US press freedom organisation, rounded up research on AI-assisted phishing. Lures arrive by email, text message, QR code, and voice and video calls. FPF's answer is that AI makes them more convincing while the defences everyone should use stay the same.
 
-Among the reports FPF cites, KnowBe4 estimates that phishing attacks using AI in some way rose by roughly 86% between October 2025 and March 2026. In Verizon's 2026 Data Breach Investigations Report, attackers used generative AI to develop phishing lures as the initial point of access in about 44% of detected incidents. According to a 2025 Microsoft report, AI-automated phishing emails reached a 54% click-through rate, against 12% for standard attempts.
+FPF cites KnowBe4, a security awareness training company, which estimates that AI-assisted phishing rose roughly 86% between October 2025 and March 2026. A 2025 Microsoft report put the click-through rate of AI-automated phishing emails at 54%, against 12% for standard ones. Verizon's 2026 Data Breach Investigations Report, using misuse records from an AI company's platform, found that phishing made up about 44% of AI-assisted initial access techniques (FPF misreports this as a share of incidents). Its incident data shows the share of breaches starting with phishing has barely moved in years.
 
-The techniques in this research include automated reconnaissance on targets, more personalised lures, small variations between similar messages to avoid detection, and lures drafted in several languages. The result reads as if it were written for the recipient, for example by impersonating a colleague or mentioning a public event the recipient may attend.
+The research describes automated reconnaissance on targets, more personalised lures, small variations such as in subject lines to avoid detection, and lures in several languages. The result reads as if written for the recipient, for example impersonating a colleague.
 
 ## Perspective {#perspective}
 
-Large language models are good at imitating a particular voice, so spotting scams by clumsy grammar or awkward machine translation is becoming unreliable, in Chinese and other Asian languages as much as in English. FPF's four red flags do not depend on the quality of the writing: a sender address that does not match the organisation it claims to be, links that have nothing to do with the service, pressure or urgency, and attachments nobody asked for. Its advice is to skip the link and type the address yourself, preview dubious files in a sandbox such as Google Drive or convert them with Dangerzone, and turn on two-factor authentication.
+Large language models imitate a voice well, so spotting scams by bad grammar or clumsy translation is likely becoming unreliable, in Chinese as in English. FPF's four red flags do not depend on the writing: a sender address that does not match, or merely resembles, the claimed organisation; links unrelated to the service; pressure or urgency; and unsolicited attachments. FPF suggests typing addresses yourself and previewing dubious files in Google Drive or converting them with Dangerzone.
 
-One-time codes can be phished too, and regulators in Asia have acted on that. In July 2024 the Monetary Authority of Singapore and the Association of Banks in Singapore announced that major retail banks would phase out one-time passwords for logins by customers who use a digital token on their phone, within three months. The reason given was that scammers set up fake bank websites to trick customers into handing over the codes. In an April 2025 circular, the Hong Kong Monetary Authority asked banks to make authentication in the banking app on a bound device the default, instead of SMS codes, for internet banking logins and high-risk transactions. According to the same circular, there are early signs of fraudsters using AI and deepfakes, and card-issuing banks that had already moved online card payments to bound devices saw fraud rates fall by nearly 80%.
+FPF also recommends two-factor authentication, such as a code sent to your phone, but codes can be phished too. In July 2024 the Monetary Authority of Singapore and the Association of Banks in Singapore announced that major retail banks would, within three months, progressively phase out one-time passwords (OTPs) for logins by customers who use a digital token. The announcement said OTPs had become easier to phish, for example through fake bank websites, while the token approves logins without a code to steal.
 
-For personal accounts, the equivalent step is a passkey. Google's help page says passkeys cannot be shared, copied or accidentally given to someone else, which makes them more resistant to phishing. Setting one up for a Google Account needs a computer running at least Windows 10 or macOS Ventura, or a phone on Android 9 or iOS 16, with iCloud Keychain turned on for Apple devices. Adding a passkey does not remove the account's existing verification or recovery options, and the help page is available in Chinese. GreatFire's tests show `google.com` is largely blocked in mainland China, so readers there will need to apply the same idea to the accounts they actually use.
+In an April 2025 circular, the Hong Kong Monetary Authority (HKMA) asked banks to make in-app approval on a bound device, not SMS codes, the default for logins and high-risk transactions. The circular notes early signs that some fraudsters may have tried to use AI and deepfakes. It adds that card issuers, required since late 2024 to default to bound devices for online card payments, saw fraud fall by nearly 80%.
 
-People who open unsolicited documents for work can try Dangerzone. It is released under AGPL-3.0, version 0.11.0 came out in July, and it runs on Windows, macOS and Linux, with an English-only interface. It renders a document to pixels inside a sandbox with no network access and rebuilds it as a PDF. The trade-off is that the result has no text layer unless you turn on OCR, and the Windows version needs hardware virtualisation enabled.
+For personal accounts, a passkey offers similar protection. Google's security blog explains that the device shares its sign-in signature only with Google's websites and apps, never with a phishing site in between. The trade-off is that anyone who can unlock the device can get into the account, so Google's help page says to create them only on devices you personally own and use.
+
+People who often open unsolicited documents can try Dangerzone, open-source software under AGPL-3.0; version 0.11.0 came out in July 2026. It renders a document to pixels in a sandbox with no network access and rebuilds a PDF outside it, with no text layer unless you turn on optical character recognition (OCR). It runs on Windows, macOS and Linux in English only, and on Windows the computer must support hardware virtualisation and have it turned on.
+
+A first step is to add a passkey to your most-used account. For a Google Account that means Windows 10, macOS Ventura, Android 9 or iOS 16 or later, a phone screen lock, Chrome or Edge 109, Safari 16 or Firefox 122 or later, and iCloud Keychain on Apple devices. A new passkey may take 7 days to work for sign-in, and the help page is available in Chinese. GreatFire, which monitors censorship in China, listed `google.com` as mostly blocked in mainland China as of 29 September 2026.
