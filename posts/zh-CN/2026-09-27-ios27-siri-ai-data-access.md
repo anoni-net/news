@@ -1,6 +1,6 @@
 ---
 title: iOS 27 Siri AI 的数据访问设置
-description: iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。
+description: iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。Siri 语言设为中文的用户暂时用不到。
 date: 2026-09-27T03:21:00+08:00
 slug: ios27-siri-ai-data-access
 sources:
@@ -25,7 +25,7 @@ authors:
 
 Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合并成同一个界面，在主屏幕往下滑打开搜索时，调出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 与 iPhone 16 之后的机型能使用。Siri AI 目前是测试版，只支持英文，也还没有在所有地区开放，Siri 语言设为中文的用户暂时无法使用。
 
-Siri AI 默认可以读取备忘录、信息与邮件等 Apple 自家 App 的内容，第三方 App 需要开发者加入支持才会纳入。请求可能在手机上处理，也可能发到 Apple 的 Private Cloud Compute 服务器，屏幕上不会显示是哪一种。EFF 特别提醒开启高级数据保护的用户，他们的 iCloud 数据以端到端加密保存，一旦发出设备交给云端处理，风险评估就跟着改变。
+Siri AI 默认可以读取备忘录、信息与邮件等 Apple 自家 App 的内容，第三方 App 需要开发者加入支持才会纳入。请求可能在手机上处理，也可能发到 Apple 的 Private Cloud Compute 服务器，屏幕上不会显示是哪一种。EFF 的文章特别写给开启高级数据保护的用户，他们的 iCloud 数据以端到端加密保存，一旦发出设备交给云端处理，风险评估就跟着改变。
 
 屏幕感知（on-screen awareness）让用户随时调出 Siri，请它解释屏幕上的内容。EFF 举的例子是请 Siri 总结正在看的 Signal 加密群聊，此时屏幕上的数据可能发到 Private Cloud Compute。用户与 App 开发者目前都无法屏蔽屏幕感知。
 
@@ -39,6 +39,6 @@ Apple 的支持页写明，Apple 账户地区在中国大陆时，Siri AI 目前
 
 EFF 在原文写明，Private Cloud Compute 的「Private」代表系统的设计让 Apple 无法看到、也不保存数据，但不保证数据经过加密或留在设备上。使用 Private Cloud Compute 要信任 Apple 的服务器按设计运作，端到端加密则只需要密钥留在用户自己的设备上。
 
-用户无从得知哪一次请求离开了手机，想继续使用 Siri AI，就只能从源头限制它能读取哪些 App。开启了高级数据保护的人，可以优先关闭存有工作资料或个人记录的 App，例如备忘录与邮件。
-
 屏幕感知无法屏蔽，加密对话能不能留在设备上，取决于对话里的每一个人。群聊中只要有人对着对话调出 Siri，内容就可能从那个人的手机发出，端到端加密无法保护这一段。在群聊里讨论敏感事务的人，可以跟成员约定不对对话使用屏幕感知，自己也可以考虑改回 Siri Classic。
+
+用户无从得知哪一次请求离开了手机，想继续使用 Siri AI，就只能从源头限制它能读取哪些 App。Apple 账户地区不在中国大陆、使用 iPhone 15 Pro 以后的机型且 Siri 语言设为英文的人，可以先对备忘录、邮件这类存有工作资料或个人记录的 App 关闭 Show Content in Search，开启了高级数据保护的人尤其需要。

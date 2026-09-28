@@ -1,6 +1,6 @@
 ---
 title: Two tiers of iCloud Advanced Data Protection in the UK
-description: Since February 2025 new UK users cannot turn on Advanced Data Protection, while those who enabled it earlier keep it, leaving two levels of iCloud encryption in the same country.
+description: Since February 2025 new UK users cannot turn on Advanced Data Protection, while those who enabled it earlier keep it, leaving two levels of iCloud encryption in the same country. Users outside the UK can still turn it on.
 date: 2026-09-27T07:28:00+08:00
 slug: uk-icloud-advanced-data-protection
 sources:
@@ -40,6 +40,9 @@ sources:
     url: https://www.macrumors.com/2026/08/03/apple-legal-challenge-against-uk-demand/
     publisher: MacRumors
     date: 2026-08-03
+  - title: 如何開啟 iCloud 進階資料保護
+    url: https://support.apple.com/zh-tw/108756
+    publisher: Apple
 authors:
   - anoni-net
 ---
@@ -62,6 +65,8 @@ In mainland China, iCloud is operated by GCBD (AIPO Cloud (Guizhou) Technology C
 
 In Hong Kong, Taiwan, Japan, Singapore and the rest of Asia, ADP is available but optional, so it protects only people who switch it on. When the UK moved, the only people who stayed covered were those who had already done so.
 
-To turn it on, open Settings, tap your name, then iCloud. You will be asked to set up a recovery contact or recovery key first, and every device on the account needs iOS 16.2 or the equivalent version. Without ADP, Apple notes that if iCloud Backup and Messages in iCloud are both on, the backup includes the Messages key. Turning off iCloud Backup makes the device generate a new key that keeps future messages end-to-end encrypted. An encrypted local backup on a computer, off by default and enabled in Finder or the Apple Devices app, keeps backups in your own hands.
+Without ADP, Apple's page says that if iCloud Backup and Messages in iCloud are both on, the backup includes the Messages key. Turning off iCloud Backup makes the device generate a new key that keeps future messages end-to-end encrypted. An encrypted local backup on a computer, off by default and enabled in Finder or the Apple Devices app, keeps backups in your own hands.
 
 The cost of ADP is that Apple cannot help you recover end-to-end encrypted data if you lose every recovery method. Web access at iCloud.com is also turned off until you approve it from a trusted device.
+
+To turn it on, open Settings, tap your name, then iCloud > Advanced Data Protection; Apple's support page also has the steps in Chinese. The Apple Account needs two-factor authentication and you will be asked to set up a recovery contact or recovery key first. Every device signed in to the account needs iOS 16.2, macOS 13.1 or the equivalent version. Managed Apple Accounts and child accounts are not eligible.

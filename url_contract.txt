@@ -29,11 +29,18 @@
 /2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
-/2026/10/
-/2026/10/huridocs-sudan-documentation-technology/
-	#perspective
-	#sources
 /404.html
+/about/
+	#byline
+	#corrections
+	#fact-checking
+	#follow-ups
+	#languages
+	#license
+	#listening
+	#privacy
+	#report
+	#selection
 /en/
 /en/2026/
 /en/2026/09/
@@ -61,10 +68,23 @@
 /en/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
-/en/2026/10/
-/en/2026/10/huridocs-sudan-documentation-technology/
-	#perspective
-	#sources
+/en/about/
+	#byline
+	#corrections
+	#fact-checking
+	#follow-ups
+	#languages
+	#license
+	#listening
+	#privacy
+	#report
+	#selection
+/en/subscribe/
+	#more
+	#steps
+/subscribe/
+	#more
+	#steps
 /zh-cn/
 /zh-cn/2026/
 /zh-cn/2026/09/
@@ -92,10 +112,20 @@
 /zh-cn/2026/09/zuckoff-smart-glasses-detector/
 	#perspective
 	#sources
-/zh-cn/2026/10/
-/zh-cn/2026/10/huridocs-sudan-documentation-technology/
-	#perspective
-	#sources
+/zh-cn/about/
+	#byline
+	#corrections
+	#fact-checking
+	#follow-ups
+	#languages
+	#license
+	#listening
+	#privacy
+	#report
+	#selection
+/zh-cn/subscribe/
+	#more
+	#steps
 /feed.xml
 /zh-cn/feed.xml
 /en/feed.xml
