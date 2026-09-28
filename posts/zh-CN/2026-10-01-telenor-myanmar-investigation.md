@@ -32,6 +32,9 @@ sources:
     url: https://www.gov.cn/gongbao/content/2013/content_2473882.htm
     publisher: 中华人民共和国工业和信息化部
     date: 2013-07-16
+regions:
+  - "NO"
+  - MM
 authors:
   - anoni-net
 ---

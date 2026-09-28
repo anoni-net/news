@@ -36,6 +36,9 @@ sources:
     url: https://www.cedb.gov.hk/en/news/press_release/2023/pr19012023a.html
     publisher: Commerce and Economic Development Bureau, Hong Kong
     date: 2023-01-19
+regions:
+  - "NO"
+  - MM
 authors:
   - anoni-net
 ---

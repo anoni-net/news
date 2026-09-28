@@ -31,6 +31,9 @@ sources:
 watch:
   - date: 2026-11-01
     note: 挪威對 Telenor 的起訴是否進入法院程序，集體訴訟的進度，是否有個人被起訴
+regions:
+  - "NO"
+  - MM
 authors:
   - anoni-net
 ---
