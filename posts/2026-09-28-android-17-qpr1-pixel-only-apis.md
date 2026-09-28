@@ -35,6 +35,9 @@ sources:
   - title: Web install
     url: https://grapheneos.org/install/web
     publisher: GrapheneOS
+watch:
+  - date: 2026-12-10
+    note: Android 17 QPR2 是否把 QPR1 的 API 與修補釋出到 AOSP，GrapheneOS 與其他廠商何時取得
 authors:
   - anoni-net
 ---

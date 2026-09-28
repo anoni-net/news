@@ -711,6 +711,67 @@ def test_follows_must_agree(tmp_path):
     assert any("follows 跟 zh-TW 不同" in p for p in site_problems(tmp_path, {"en": override}))
 
 
+@pytest.mark.parametrize("watch, expected", [
+    ("watch:\n  - date: 2026-10-01\n    note: 正式版是否推出", None),
+    ("watch: 2026-10-01", "watch 要是清單"),
+    ("watch:\n  - date: 2026-10-01", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-10-01\n    note: ''", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-10-01T07:00:00+08:00\n    note: x", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-10-01\n    note: x\n    who: y", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-09-18\n    note: x", "要晚於發布日"),
+])
+def test_watch_needs_a_date_and_a_note(tmp_path, watch, expected):
+    text = GOOD.replace("authors:", watch + "\nauthors:")
+    problems = problems_of(tmp_path, text)
+    if expected is None:
+        assert problems == []
+        post = build.load_post(write_post(tmp_path, text), AUTHORS)
+        assert [(w.due.isoformat(), w.note) for w in post.watch] == [("2026-10-01", "正式版是否推出")]
+    else:
+        assert any(expected in p for p in problems), problems
+
+
+def test_watch_only_in_the_zh_tw_version(tmp_path):
+    """watch 是編輯用的追蹤筆記，不翻譯，其他語系寫了就報錯。只有 zh-TW 寫是正常的寫法。"""
+    watch = ("authors:", "watch:\n  - date: 2026-10-01\n    note: x\nauthors:")
+    assert site_problems(tmp_path / "a", {"zh-TW": watch}) == []
+    assert any("watch 只寫在 zh-TW" in p for p in site_problems(tmp_path / "b", {"en": watch}))
+
+
+def test_due_watches(tmp_path):
+    """快到期與過期的列出來，還沒到期的只算數量，已經有後續稿（包含排程中的）就不列。"""
+    posts = tmp_path / "posts"
+    watched = GOOD.replace("authors:", "watch:\n  - date: 2026-09-30\n    note: 過期的\n"
+                                       "  - date: 2026-10-08\n    note: 七天內的\n"
+                                       "  - date: 2026-10-20\n    note: 還沒到的\nauthors:")
+    for lang in build.LANGS:
+        directory = posts / lang.dir if lang.dir else posts
+        directory.mkdir(parents=True, exist_ok=True)
+        write_post(directory, watched if lang == build.DEFAULT_LANG else GOOD)
+    other = GOOD.replace("date: 2026-09-18", "date: 2026-09-19").replace("slug: test-post", "slug: other-post") \
+        .replace("authors:", "watch:\n  - date: 2026-10-02\n    note: 會被後續結案\nauthors:")
+    for lang in build.LANGS:
+        directory = posts / lang.dir if lang.dir else posts
+        write_post(directory, other if lang == build.DEFAULT_LANG else other.replace("watch:\n  - date: 2026-10-02\n    note: 會被後續結案\n", ""),
+                   "2026-09-19-other-post.md")
+    loaded = build.load_site(posts, AUTHORS)
+    today = datetime(2026, 10, 2).date()
+    due, later = build.due_watches(loaded, today)
+    assert [w.note for w, _ in due] == ["過期的", "會被後續結案", "七天內的"]
+    assert [w.note for w, _ in later] == ["還沒到的"]
+
+    follow_up = FOLLOW_UP.replace("2026-09-18-test-post", "2026-09-19-other-post")
+    write_versions(posts, follow_up, "2026-09-20-follow-up.md")
+    loaded = build.load_site(posts, AUTHORS)
+    due, _ = build.due_watches(loaded, today)
+    assert [w.note for w, _ in due] == ["過期的", "七天內的"]
+
+    report = build.watch_report(loaded, today)
+    assert "- [ ] 2026-09-30 測試文章：過期的 https://anoni.net/news/2026/09/test-post/（已過 2 天）" in report
+    assert "- [ ] 2026-10-08 測試文章：七天內的 https://anoni.net/news/2026/09/test-post/\n" in report
+    assert "另有 1 筆還沒到期，最早是 2026-10-20" in report
+
+
 def test_extra_sources_are_allowed(tmp_path):
     extra = ("authors:", "  - title: Regional source\n    url: https://example.org/region\nauthors:")
     assert site_problems(tmp_path, {"zh-CN": extra}) == []
@@ -768,6 +829,15 @@ def test_story_thread_links_earlier_and_later_coverage(fixture_site):
     assert 'class="thread"' not in alone and "story__followup" not in alone
     # 事件線不進 RSS，前情由第一段交代
     assert "thread__" not in (out / "feed.xml").read_text(encoding="utf-8")
+
+
+def test_watch_is_not_published(fixture_site):
+    """watch 是編輯用的筆記，頁面、RSS 與 sitemap 都不出現。"""
+    targets, _, _ = fixture_site
+    for target in targets.values():
+        for path in target.out.rglob("*"):
+            if path.suffix in {".html", ".xml", ".json"}:
+                assert "追蹤筆記" not in path.read_text(encoding="utf-8"), path
 
 
 def test_alternates_and_language_switch(fixture_site):
