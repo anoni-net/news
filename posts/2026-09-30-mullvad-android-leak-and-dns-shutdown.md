@@ -37,6 +37,9 @@ sources:
   - title: Android 9+ (Encrypted)
     url: https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/
     publisher: Quad9
+watch:
+  - date: 2026-11-03
+    note: Mullvad 的公開加密 DNS 是否如期在 11 月 2 日停止，Android 的 VPN 漏洞與 GrapheneOS 的修正是否發布
 authors:
   - anoni-net
 ---
