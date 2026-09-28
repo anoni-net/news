@@ -28,6 +28,8 @@ sources:
   - title: 管理 Android 的廣告隱私權設定
     url: https://support.google.com/android/answer/13720755?hl=zh-Hant
     publisher: Android 說明
+regions:
+  - US
 authors:
   - anoni-net
 ---

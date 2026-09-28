@@ -38,6 +38,8 @@ sources:
   - title: 在 Android 设备上管理广告隐私权设置
     url: https://support.google.com/android/answer/13720755?hl=zh-Hans
     publisher: Android 帮助
+regions:
+  - US
 authors:
   - anoni-net
 ---
