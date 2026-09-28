@@ -1,5 +1,6 @@
-{# 另外兩個語系的同一頁，目前的語系不列。頁尾與文章頁的署名下方共用，langs_class 決定樣式 #}
+{# 另外兩個語系的同一頁，目前的語系不列。頁尾與文章頁的署名下方共用，langs_class 決定樣式。
+   role 跟 nav 重複，但 Firefox 閱讀模式（Readability）只看 role 屬性，沒寫的話朗讀時會把這一行當成正文念出來 #}
 {% set others = alternates|rejectattr("current")|list %}
 {% if others %}
-<p class="{{ langs_class }}">{{ icon('translate') }} {{ s.other_langs }}{% for alt in others %}<a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}">{{ alt.name }}</a>{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</p>
+<nav class="{{ langs_class }}" role="navigation" aria-label="{{ s.other_langs_label }}">{{ icon('translate') }} {{ s.other_langs }}{% for alt in others %}<a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}">{{ alt.name }}</a>{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</nav>
 {% endif %}

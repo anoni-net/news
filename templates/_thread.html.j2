@@ -1,0 +1,17 @@
+{# 同一事件的導讀，由舊到新列出整條事件線，這一篇標上「本篇」。放在 <article> 外面並標上 role，
+   閱讀模式與朗讀抽正文時不會把它念進去。規則見 SPEC.md「前情與後續」 #}
+<nav class="thread" role="navigation" aria-labelledby="thread-heading">
+  <h2 class="thread__heading" id="thread-heading">{{ s.thread_heading }}</h2>
+  <ol class="thread__list">
+{% for item in thread %}
+    <li class="thread__item{% if item.rel == post.rel %} thread__item--current{% endif %}">
+      <time class="thread__date" datetime="{{ item.created|iso }}">{{ item.created|ymd }}</time>
+{% if item.rel == post.rel %}
+      <span><span class="thread__title">{{ item.title }}</span> <span class="thread__here">{{ s.thread_current }}</span></span>
+{% else %}
+      <a class="thread__title" href="{{ url(item.rel) }}">{{ item.title }}</a>
+{% endif %}
+    </li>
+{% endfor %}
+  </ol>
+</nav>
