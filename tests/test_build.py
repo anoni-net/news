@@ -158,23 +158,49 @@ def test_docs_links(tmp_path, href, problem, notice):
     assert bool(notices) is notice
 
 
-def test_rss_links_point_to_the_guide_per_language(fixture_site):
-    """頁面上的 RSS 連結指向文件站同語系的 RSS 訂閱入門，onion 改寫成文件站的 onion 位址。閱讀器用的自動探索仍然指向 feed。"""
+def test_bluesky_links(fixture_site):
+    """刊頭、頁尾與文章末的訂閱行都連到 @news.anoni.net，跟 RSS、電子報並列。"""
     targets, _, _ = fixture_site
-    for lang, guide in (("", "tools/rss/"), ("zh-cn/", "zh-cn/tools/rss/"), ("en/", "en/tools/rss/")):
+    out = targets["clearnet"].out
+    url = 'href="https://bsky.app/profile/news.anoni.net"'
+    home = (out / "index.html").read_text(encoding="utf-8")
+    assert home.count(url) == 2  # 刊頭與頁尾
+    zh = (out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    line = zh[zh.index('<p class="subscribe">'):]
+    line = line[:line.index("</p>")]
+    assert "訂閱電子報</span></a>、<a " + url in line and "在 Bluesky 追蹤" in line
+    en = (out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    line = en[en.index('<p class="subscribe">'):]
+    line = re.sub(r"<svg.*?</svg>", "", line[:line.index("</p>")])
+    assert re.sub(r"<[^>]+>", "", line).split() == "Get new stories by RSS, newsletter or Bluesky".split()
+
+
+def test_rss_links_point_to_the_subscribe_page(fixture_site):
+    """頁面上的 RSS 連結指向同語系的訂閱頁，閱讀器用的自動探索仍然指向 feed。"""
+    targets, _, _ = fixture_site
+    for lang in ("", "zh-cn/", "en/"):
         page = (targets["clearnet"].out / lang / "index.html").read_text(encoding="utf-8")
-        assert page.count(f'href="https://anoni.net/docs/{guide}"') == 2  # 刊頭與頁尾
+        assert page.count(f'href="/news/{lang}subscribe/"') == 2  # 刊頭與頁尾
         assert f'type="application/rss+xml" title=' in page and f'href="https://anoni.net/news/{lang}feed.xml"' in page
-        onion = (targets["onion"].out / lang / "index.html").read_text(encoding="utf-8")
-        assert f'href="http://docs.{ONION_HOST}/{guide}"' in onion
     post = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
-    assert post.count('href="https://anoni.net/docs/tools/rss/"') == 2  # 文章末與頁尾
+    assert post.count('href="/news/subscribe/"') == 2  # 文章末與頁尾
 
 
-def test_rss_guide_must_be_in_docs_contract(tmp_path):
+def test_subscribe_page_shows_the_feed_of_each_target(fixture_site):
+    """訂閱頁代入的 feed 網址跟著語系與輸出目標，onion 版顯示 onion 的網址。"""
+    targets, _, _ = fixture_site
+    for lang in ("", "zh-cn/", "en/"):
+        clearnet = (targets["clearnet"].out / lang / "subscribe" / "index.html").read_text(encoding="utf-8")
+        onion = (targets["onion"].out / lang / "subscribe" / "index.html").read_text(encoding="utf-8")
+        assert f"https://anoni.net/news/{lang}feed.xml" in clearnet and build.FEED_URL_PLACEHOLDER not in clearnet
+        assert f"http://news.{ONION_HOST}/{lang}feed.xml" in onion and "https://anoni.net/news/" not in onion
+
+
+def test_site_page_docs_links_are_checked(tmp_path):
     contract = build.parse_docs_contract(DOCS_CONTRACT.replace("/en/tools/rss/\n", ""))
-    problems, _ = build.check_docs_links([], contract)
-    assert problems == ["strings.toml 的 en.rss_url：https://anoni.net/docs/en/tools/rss/ 不在文件站的網址合約裡"]
+    pages = {"subscribe": {"en": {"html": '<a href="https://anoni.net/docs/en/tools/rss/">x</a>', "where": "pages/en/subscribe.md"}}}
+    problems, _ = build.check_docs_links([], contract, pages)
+    assert problems == ["pages/en/subscribe.md：https://anoni.net/docs/en/tools/rss/ 不在文件站的網址合約裡"]
 
 
 # ---------------------------------------------------------------- onion 改寫
@@ -666,6 +692,103 @@ def test_versions_must_agree(tmp_path, override, expected):
         assert any(expected in p for p in problems), problems
 
 
+FOLLOW_UP = GOOD.replace("date: 2026-09-18", "date: 2026-09-20").replace("slug: test-post", "slug: follow-up") \
+    .replace("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
+
+
+@pytest.mark.parametrize("follows", ["follows: 2026-09-18-test-post", "follows:\n  - test-post", "follows:\n  - 2026-09-18-test-post.md"])
+def test_follows_is_a_list_of_file_names(tmp_path, follows):
+    text = GOOD.replace("authors:", follows + "\nauthors:")
+    assert any("follows 要是清單" in p for p in problems_of(tmp_path, text)), problems_of(tmp_path, text)
+
+
+@pytest.mark.parametrize("old, new, expected", [
+    (None, None, None),
+    ("  - 2026-09-18-test-post", "  - 2026-09-18-no-such-post", "找不到"),
+    ("  - 2026-09-18-test-post", "  - 2026-09-20-follow-up", "沒有比這篇早發布"),
+])
+def test_follows_points_to_an_earlier_post(tmp_path, old, new, expected):
+    """follows 指到的文章要存在、比較早發布。接續自己也算沒有比較早。"""
+    posts = tmp_path / "posts"
+    write_versions(posts, GOOD)
+    write_versions(posts, FOLLOW_UP.replace(old, new) if old else FOLLOW_UP, "2026-09-20-follow-up.md")
+    try:
+        build.load_site(posts, AUTHORS)
+        problems = []
+    except build.BuildError as error:
+        problems = error.problems
+    if expected is None:
+        assert problems == []
+    else:
+        assert any(expected in p for p in problems), problems
+
+
+def test_follows_must_agree(tmp_path):
+    override = ("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
+    assert any("follows 跟 zh-TW 不同" in p for p in site_problems(tmp_path, {"en": override}))
+
+
+@pytest.mark.parametrize("watch, expected", [
+    ("watch:\n  - date: 2026-10-01\n    note: 正式版是否推出", None),
+    ("watch: 2026-10-01", "watch 要是清單"),
+    ("watch:\n  - date: 2026-10-01", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-10-01\n    note: ''", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-10-01T07:00:00+08:00\n    note: x", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-10-01\n    note: x\n    who: y", "watch 第 1 筆要有 date"),
+    ("watch:\n  - date: 2026-09-18\n    note: x", "要晚於發布日"),
+])
+def test_watch_needs_a_date_and_a_note(tmp_path, watch, expected):
+    text = GOOD.replace("authors:", watch + "\nauthors:")
+    problems = problems_of(tmp_path, text)
+    if expected is None:
+        assert problems == []
+        post = build.load_post(write_post(tmp_path, text), AUTHORS)
+        assert [(w.due.isoformat(), w.note) for w in post.watch] == [("2026-10-01", "正式版是否推出")]
+    else:
+        assert any(expected in p for p in problems), problems
+
+
+def test_watch_only_in_the_zh_tw_version(tmp_path):
+    """watch 是編輯用的追蹤筆記，不翻譯，其他語系寫了就報錯。只有 zh-TW 寫是正常的寫法。"""
+    watch = ("authors:", "watch:\n  - date: 2026-10-01\n    note: x\nauthors:")
+    assert site_problems(tmp_path / "a", {"zh-TW": watch}) == []
+    assert any("watch 只寫在 zh-TW" in p for p in site_problems(tmp_path / "b", {"en": watch}))
+
+
+def test_due_watches(tmp_path):
+    """快到期與過期的列出來，還沒到期的只算數量，已經有後續稿（包含排程中的）就不列。"""
+    posts = tmp_path / "posts"
+    watched = GOOD.replace("authors:", "watch:\n  - date: 2026-09-30\n    note: 過期的\n"
+                                       "  - date: 2026-10-08\n    note: 七天內的\n"
+                                       "  - date: 2026-10-20\n    note: 還沒到的\nauthors:")
+    for lang in build.LANGS:
+        directory = posts / lang.dir if lang.dir else posts
+        directory.mkdir(parents=True, exist_ok=True)
+        write_post(directory, watched if lang == build.DEFAULT_LANG else GOOD)
+    other = GOOD.replace("date: 2026-09-18", "date: 2026-09-19").replace("slug: test-post", "slug: other-post") \
+        .replace("authors:", "watch:\n  - date: 2026-10-02\n    note: 會被後續結案\nauthors:")
+    for lang in build.LANGS:
+        directory = posts / lang.dir if lang.dir else posts
+        write_post(directory, other if lang == build.DEFAULT_LANG else other.replace("watch:\n  - date: 2026-10-02\n    note: 會被後續結案\n", ""),
+                   "2026-09-19-other-post.md")
+    loaded = build.load_site(posts, AUTHORS)
+    today = datetime(2026, 10, 2).date()
+    due, later = build.due_watches(loaded, today)
+    assert [w.note for w, _ in due] == ["過期的", "會被後續結案", "七天內的"]
+    assert [w.note for w, _ in later] == ["還沒到的"]
+
+    follow_up = FOLLOW_UP.replace("2026-09-18-test-post", "2026-09-19-other-post")
+    write_versions(posts, follow_up, "2026-09-20-follow-up.md")
+    loaded = build.load_site(posts, AUTHORS)
+    due, _ = build.due_watches(loaded, today)
+    assert [w.note for w, _ in due] == ["過期的", "七天內的"]
+
+    report = build.watch_report(loaded, today)
+    assert "- [ ] 2026-09-30 測試文章：過期的 https://anoni.net/news/2026/09/test-post/（已過 2 天）" in report
+    assert "- [ ] 2026-10-08 測試文章：七天內的 https://anoni.net/news/2026/09/test-post/\n" in report
+    assert "另有 1 筆還沒到期，最早是 2026-10-20" in report
+
+
 def test_extra_sources_are_allowed(tmp_path):
     extra = ("authors:", "  - title: Regional source\n    url: https://example.org/region\nauthors:")
     assert site_problems(tmp_path, {"zh-CN": extra}) == []
@@ -690,6 +813,50 @@ def test_every_language_gets_its_pages(fixture_site):
     assert "404.html" in rels and not any(r.endswith("/404.html") for r in rels)
 
 
+def test_story_thread_links_earlier_and_later_coverage(fixture_site):
+    """zkp-age-verification 接續 age-verification-roundup。兩篇都列出整條事件線，較舊的那篇在標題區提示後續。"""
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    old = (out / "2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    new = (out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+
+    notice = old[old.index('<p class="story__followup">'):]
+    notice = notice[:notice.index("</p>")]
+    assert '後續發展：<a href="/news/2026/09/zkp-age-verification/">零知識證明用在年齡驗證的限制</a>（2026 年 9 月 18 日）' in notice
+    assert old.index('class="story__langs"') < old.index('class="story__followup"') < old.index('class="story__body')
+    assert "story__followup" not in new
+
+    for page, current in ((old, "各國年齡驗證立法的共同問題"), (new, "零知識證明用在年齡驗證的限制")):
+        # 放在 <article> 外面並標上 role，閱讀模式不會當成正文
+        assert page.index("</article>") < page.index('<nav class="thread" role="navigation"') < page.index('class="subscribe"')
+        thread = page[page.index('<nav class="thread"'):]
+        thread = thread[:thread.index("</nav>")]
+        assert thread.index("各國年齡驗證立法的共同問題") < thread.index("零知識證明用在年齡驗證的限制")
+        assert f'<span class="thread__title">{current}</span> <span class="thread__here">本篇</span>' in thread
+        assert f'">{current}</a>' not in thread
+        assert thread.count("<li") == 2
+
+    en = (out / "en/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    assert 'Follow-up: <a href="/news/en/2026/09/zkp-age-verification/">' in en
+    assert "Coverage of this story" in en and "This story" in en
+    onion = (targets["onion"].out / "zh-cn/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert '<a class="thread__title" href="/zh-cn/2026/09/age-verification-roundup/">' in onion
+
+    alone = (out / "2026/09/layout-stress-test/index.html").read_text(encoding="utf-8")
+    assert 'class="thread"' not in alone and "story__followup" not in alone
+    # 事件線不進 RSS，前情由第一段交代
+    assert "thread__" not in (out / "feed.xml").read_text(encoding="utf-8")
+
+
+def test_watch_is_not_published(fixture_site):
+    """watch 是編輯用的筆記，頁面、RSS 與 sitemap 都不出現。"""
+    targets, _, _ = fixture_site
+    for target in targets.values():
+        for path in target.out.rglob("*"):
+            if path.suffix in {".html", ".xml", ".json"}:
+                assert "追蹤筆記" not in path.read_text(encoding="utf-8"), path
+
+
 def test_alternates_and_language_switch(fixture_site):
     targets, _, _ = fixture_site
     page = (targets["clearnet"].out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
@@ -698,8 +865,9 @@ def test_alternates_and_language_switch(fixture_site):
     # 頁首不放語系切換，文章頁在署名下方、每頁在頁尾列出另外兩個語系，不列目前的語系
     assert "site-header__langs" not in page
     for cls in ("story__langs", "site-footer__langs"):
-        line = page[page.index(f'<p class="{cls}">'):]
-        line = line[:line.index("</p>")]
+        # role 跟 nav 重複，閱讀模式（Readability）只看 role 屬性，少了它朗讀會把這一行當成正文
+        line = page[page.index(f'<nav class="{cls}" role="navigation"'):]
+        line = line[:line.index("</nav>")]
         assert 'Also in <a href="/news/2026/09/zkp-age-verification/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, ' \
             '<a href="/news/zh-cn/2026/09/zkp-age-verification/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>' in line
         assert "English" not in line
@@ -720,7 +888,7 @@ def test_interface_text_follows_language(fixture_site):
     assert "Sources (5)" in en and "Older story" in en and "All stories" in en
     assert "/news/og-en.png" in en and '"inLanguage": "en"' in en
     # 文章內容與頁尾列出的語言名稱之外，英文頁不能留中文
-    chrome = re.sub(r'<(article|script)\b.*?</\1>|<p class="site-footer__langs">.*?</p>', "", en, flags=re.S)
+    chrome = re.sub(r'<(article|script)\b.*?</\1>|<nav class="site-footer__langs".*?</nav>', "", en, flags=re.S)
     assert not re.search(r"[\u4e00-\u9fff]", chrome), "英文頁的介面文字還有中文"
     cn = (out / "zh-cn/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
     assert "整理 5 篇原文，来自 EFF、Access Now、OONI" in cn and "较旧的一篇" in cn
@@ -753,6 +921,36 @@ def test_not_found_page_has_three_languages(fixture_site):
         assert f'<section class="not-found" lang="{lang}">' in page
         assert f'href="{home}"' in page
     assert "hreflang" not in page
+
+
+def test_about_page_per_language(fixture_site):
+    targets, pages, _ = fixture_site
+    rels = {page.rel for page in pages["clearnet"]}
+    assert {"about/", "zh-cn/about/", "en/about/"} <= rels
+    about = next(page for page in pages["clearnet"] if page.rel == "about/")
+    assert not about.noindex and "report" in about.anchors
+    sitemap = (targets["clearnet"].out / "sitemap.xml").read_text(encoding="utf-8")
+    assert "https://anoni.net/news/en/about/" in sitemap
+    # 頁尾連到同語系的關於頁與回報錯誤的 issue 表單
+    for rel, home in (("", "/news/"), ("en/", "/news/en/")):
+        page = (targets["clearnet"].out / rel / "index.html").read_text(encoding="utf-8")
+        assert f'href="{home}about/"' in page
+        assert 'href="https://github.com/anoni-net/news/issues/new"' in page
+
+
+def test_site_page_problems(tmp_path):
+    for lang in build.LANGS:
+        d = build.lang_dir(tmp_path, lang)
+        d.mkdir(parents=True, exist_ok=True)
+        anchor = "report" if lang != build.LANGS[2] else "other"
+        (d / "about.md").write_text(f"---\ntitle: t\ndescription: d\nextra: x\n---\n\n## 回報 {{#{anchor}}}\n", encoding="utf-8")
+    (build.lang_dir(tmp_path, build.LANGS[1]) / "about.md").unlink()
+    with pytest.raises(build.BuildError) as error:
+        build.load_site_pages(tmp_path)
+    text = "\n".join(error.value.problems)
+    assert "缺少 zh-CN 版本" in text
+    assert "多了不認得的欄位 extra" in text
+    assert "錨點跟 zh-TW 版本不同" in text
 
 
 def test_contract_includes_feeds_per_language(fixture_site):
@@ -852,7 +1050,9 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     """排程中的文章不產出頁面，也不進首頁、RSS 與 sitemap，網址合約先收進去。到了時間重建就出現。"""
     posts = tmp_path / "posts"
     write_versions(posts, GOOD)
-    later = GOOD.replace("date: 2026-09-18", "date: 2026-09-19T07:00:00+08:00").replace("slug: test-post", "slug: next-post")
+    # 排程中的後續接續已發布的文章，舊文章在後續上線以前不能露出它的標題與網址
+    later = GOOD.replace("date: 2026-09-18", "date: 2026-09-19T07:00:00+08:00").replace("slug: test-post", "slug: next-post") \
+        .replace("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
     write_versions(posts, later, "2026-09-19-next-post.md")
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
     shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
@@ -864,6 +1064,7 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     assert not (out / "2026/09/next-post").exists() and not (out / "en/2026/09/next-post").exists()
     for rel in ("index.html", "feed.xml", "sitemap.xml", "en/index.html", "2026/09/test-post/index.html"):
         assert "next-post" not in (out / rel).read_text(encoding="utf-8"), rel
+    assert 'class="thread"' not in (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
     contract = build.contract_lines(build.contract_pages(posts))
     assert "/2026/09/next-post/" in contract and "/en/2026/09/next-post/" in contract
 
@@ -872,6 +1073,9 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     out = targets["clearnet"].out
     assert (out / "2026/09/next-post/index.html").exists()
     assert "next-post" in (out / "feed.xml").read_text(encoding="utf-8")
+    earlier = (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
+    assert '<p class="story__followup">後續發展：<a href="/news/2026/09/next-post/">' in earlier
+    assert 'class="thread"' in earlier
 
 
 def test_time_of_day_orders_posts_on_the_same_day(tmp_path):

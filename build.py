@@ -39,10 +39,12 @@ NEWS_PREFIX = "https://anoni.net/news/"
 DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools/data/url_contract.txt"
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
-FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin"}
+FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin",
+                     "follows", "watch"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "names", "description", "url"}
+WATCH_KEYS = {"date", "note"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ANCHOR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
@@ -89,10 +91,18 @@ LANGS = [
 ]
 DEFAULT_LANG = LANGS[0]
 # 三個版本必須相同的欄位。date 另外比 created，updated 可以不同
-SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories")
+SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories", "follows")
 STRINGS_PATH = ROOT / "strings.toml"
+# 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
+PAGES_DIR = ROOT / "pages"
+SITE_PAGES = ("about", "subscribe")
+# 固定頁面裡代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
+FEED_URL_PLACEHOLDER = "%FEED_URL%"
+PAGE_KEYS = {"title", "description"}
 # 排程發布：date 晚於現在的文章先不產出，最多只能排到幾天後。見 SPEC.md「排程發布」
 MAX_SCHEDULE_DAYS = 7
+# 追蹤中的事件：回頭查的日期在幾天內就列出來，跟排程的窗口相同，趕得上排進下一批稿。見 SPEC.md「追蹤中的事件」
+WATCH_AHEAD_DAYS = MAX_SCHEDULE_DAYS
 
 
 def load_strings(path: Path = STRINGS_PATH) -> dict[str, dict]:
@@ -160,6 +170,13 @@ def source_host(url: str) -> str:
 
 
 @dataclass
+class Watch:
+    """文章裡記下的一件之後要回頭查的事。due 是回頭查的日期，note 是要查什麼。"""
+    due: date
+    note: str
+
+
+@dataclass
 class Post:
     path: Path
     title: str
@@ -175,6 +192,10 @@ class Post:
     anchors: list[str] = field(default_factory=list)
     image: str | None = None
     pin: bool = False
+    # 接續的舊文章，寫檔名（不含 .md）。見 SPEC.md「前情與後續」
+    follows: list[str] = field(default_factory=list)
+    # 之後要回頭查的事，只寫在 zh-TW 版本。見 SPEC.md「追蹤中的事件」
+    watch: list[Watch] = field(default_factory=list)
     lang: Lang = DEFAULT_LANG
     # date 晚於建置當下，排程中，這次不產出
     scheduled: bool = False
@@ -273,6 +294,12 @@ def check_headings(body: str, where: str, problems: list[str]) -> list[str]:
             problems.append(f"{where}:{number}：錨點 {anchor!r} 在同一篇裡重複")
         anchors.append(anchor)
     return anchors
+
+
+def is_post_name(name: str) -> bool:
+    """文章的檔名去掉 .md，也就是 follows 的寫法，例如 2026-09-18-zkp-age-verification。"""
+    match = FILENAME_RE.match(name + ".md")
+    return bool(match and SLUG_RE.match(match.group(2)))
 
 
 def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -> Post | None:
@@ -377,6 +404,28 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         problems.append(f"{where}：categories 要是清單")
         categories = []
 
+    follows = meta.get("follows") or []
+    if not isinstance(follows, list) or not all(isinstance(ref, str) and is_post_name(ref) for ref in follows):
+        problems.append(f"{where}：follows 要是清單，每一項寫接續的舊文章檔名、不含 .md，例如 2026-09-18-zkp-age-verification")
+        follows = []
+
+    watch = []
+    raw_watch = meta.get("watch") or []
+    if raw_watch and lang != DEFAULT_LANG:
+        problems.append(f"{where}：watch 只寫在 zh-TW 版本，這是編輯用的追蹤筆記，不翻譯")
+    elif not isinstance(raw_watch, list):
+        problems.append(f"{where}：watch 要是清單，每一筆有 date 與 note")
+    else:
+        for index, item in enumerate(raw_watch, 1):
+            if (not isinstance(item, dict) or set(item) != WATCH_KEYS
+                    or not isinstance(item["date"], date) or isinstance(item["date"], datetime)
+                    or not isinstance(item["note"], str) or not item["note"].strip()):
+                problems.append(f"{where}：watch 第 {index} 筆要有 date（YYYY-MM-DD，回頭查的日期）與 note（要查什麼）")
+            elif created and item["date"] <= created.date():
+                problems.append(f"{where}：watch 第 {index} 筆的 date 是 {item['date']}，要晚於發布日")
+            else:
+                watch.append(Watch(item["date"], item["note"].strip()))
+
     anchors = check_headings(body, where, problems)
     if problems:
         raise BuildError(problems)
@@ -393,6 +442,8 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         categories=[str(c) for c in categories],
         image=image,
         pin=pin,
+        follows=list(follows),
+        watch=watch,
         body=body,
         anchors=anchors,
         lang=lang,
@@ -622,6 +673,36 @@ def lang_dir(posts_dir: Path, lang: Lang) -> Path:
     return posts_dir / lang.dir if lang.dir else posts_dir
 
 
+def load_site_pages(pages_dir: Path) -> dict[str, dict[str, dict]]:
+    """關於頁這類固定頁面。三個語系都要有，錨點集合要相同，跟文章的規則一致。"""
+    problems: list[str] = []
+    result: dict[str, dict[str, dict]] = {}
+    for name in SITE_PAGES:
+        versions: dict[str, dict] = {}
+        for lang in LANGS:
+            path = lang_dir(pages_dir, lang) / f"{name}.md"
+            where = str(path.relative_to(pages_dir.parent)) if path.is_relative_to(pages_dir.parent) else str(path)
+            if not path.exists():
+                problems.append(f"{where}：缺少 {lang.code} 版本")
+                continue
+            meta, body = split_front_matter(path.read_text(encoding="utf-8"), where)
+            for key in sorted(PAGE_KEYS - set(meta)):
+                problems.append(f"{where}：front matter 缺少 {key}")
+            for key in sorted(set(meta) - PAGE_KEYS):
+                problems.append(f"{where}：front matter 多了不認得的欄位 {key}")
+            anchors = check_headings(body, where, problems)
+            versions[lang.code] = {"title": str(meta.get("title", "")), "description": str(meta.get("description", "")),
+                                   "html": render_markdown(body), "anchors": anchors, "where": where}
+        default = versions.get(DEFAULT_LANG.code)
+        for code, version in versions.items():
+            if default and code != DEFAULT_LANG.code and set(version["anchors"]) != set(default["anchors"]):
+                problems.append(f"{version['where']}：錨點跟 {DEFAULT_LANG.code} 版本不同")
+        result[name] = versions
+    if problems:
+        raise BuildError(problems)
+    return result
+
+
 def created_of(meta: dict):
     raw = meta.get("date")
     return raw.get("created") if isinstance(raw, dict) else raw
@@ -661,6 +742,81 @@ def check_translations(posts_dir: Path) -> list[str]:
     return problems
 
 
+def check_follows(posts: list[Post]) -> list[str]:
+    """follows 指到的文章要存在，而且比這篇早發布。三個語系的 follows 相同，只查 zh-TW。
+    排程中的文章也算，兩篇都還在排程裡的時候一樣能接續。"""
+    by_stem = {post.path.stem: post for post in posts}
+    problems = []
+    for post in posts:
+        for ref in post.follows:
+            earlier = by_stem.get(ref)
+            if earlier is None:
+                problems.append(f"{post.where}：follows 的 {ref} 找不到，寫舊文章的檔名、不含 .md。草稿不能被接續")
+            elif earlier.created >= post.created:
+                problems.append(f"{post.where}：follows 的 {ref} 沒有比這篇早發布，只能接續較早的文章")
+    return problems
+
+
+def story_threads(posts: list[Post]) -> dict[str, list[Post]]:
+    """用 follows 把同一事件的文章串成一條事件線，回傳每篇的檔名對應到整條線，由舊到新排。
+    posts 只放這次要產出的文章。後續還在排程中時不在裡面，舊文章就不會提早露出它的標題，
+    到了發布時間重建才連上。只有自己一篇的不列。"""
+    by_stem = {post.path.stem: post for post in posts}
+    parent = {stem: stem for stem in by_stem}
+
+    def root(stem: str) -> str:
+        while parent[stem] != stem:
+            stem = parent[stem]
+        return stem
+
+    for post in posts:
+        for ref in post.follows:
+            if ref in by_stem:
+                parent[root(post.path.stem)] = root(ref)
+    groups: dict[str, list[Post]] = {}
+    for stem, post in by_stem.items():
+        groups.setdefault(root(stem), []).append(post)
+    threads = {}
+    for group in groups.values():
+        if len(group) > 1:
+            ordered = sorted(group, key=lambda p: (p.created.timestamp(), p.slug))
+            for post in group:
+                threads[post.path.stem] = ordered
+    return threads
+
+
+def due_watches(posts: list[Post], today: date,
+                ahead: int = WATCH_AHEAD_DAYS) -> tuple[list[tuple[Watch, Post]], list[tuple[Watch, Post]]]:
+    """追蹤中的事件，分成到期（回頭查的日期在 ahead 天內或已經過了）與還沒到期兩組，各自依日期排。
+    已經有後續稿的文章不列，後續稿還在排程中也算有了。posts 要包含排程中的文章。"""
+    followed = {ref for post in posts for ref in post.follows}
+    due, later = [], []
+    for post in posts:
+        if post.path.stem in followed:
+            continue
+        for item in post.watch:
+            (due if item.due <= today + timedelta(days=ahead) else later).append((item, post))
+
+    def key(pair: tuple[Watch, Post]):
+        return pair[0].due, pair[1].created
+
+    return sorted(due, key=key), sorted(later, key=key)
+
+
+def watch_report(posts: list[Post], today: date) -> str:
+    """--watch 的輸出。到期的每筆一行 checkbox，可以直接貼進每週候選票的「追蹤中的事件」。"""
+    due, later = due_watches(posts, today)
+    lines = [f"追蹤中的事件：{len(due)} 筆已到期或 {WATCH_AHEAD_DAYS} 天內到期（今天 {today}，台北時間）"]
+    for item, post in due:
+        late = (today - item.due).days
+        suffix = f"（已過 {late} 天）" if late > 0 else ""
+        lines.append(f"- [ ] {item.due} {post.title}：{item.note} {NEWS_PREFIX}{post.rel}{suffix}")
+    if later:
+        lines.append(f"另有 {len(later)} 筆還沒到期，最早是 {later[0][0].due}")
+    lines.append("寫了後續稿（follows 接上這篇）就不再列出。事件沒有新進展時，刪掉那一筆 watch")
+    return "\n".join(lines)
+
+
 def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
               favicons: dict[str, dict] | None = None) -> list[Post]:
     """讀三個語系，檢查對應之後回傳 zh-TW 的文章，其他版本放在 translations。
@@ -687,6 +843,7 @@ def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | Non
             if code != DEFAULT_LANG.code and sorted(version.anchors) != sorted(post.anchors):
                 problems.append(f"{version.where}：小標題的錨點 {sorted(version.anchors)} 跟 zh-TW 的 "
                                 f"{sorted(post.anchors)} 不同，分享出去的段落連結換了語系會失效")
+    problems += check_follows(by_lang[DEFAULT_LANG.code])
     if problems:
         raise BuildError(problems)
     return by_lang[DEFAULT_LANG.code]
@@ -795,7 +952,7 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
 
 
 def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
-                 store: AssetStore | None = None) -> list[Page]:
+                 store: AssetStore | None = None, site_pages: dict[str, dict[str, dict]] | None = None) -> list[Page]:
     """posts 是 zh-TW 的文章，其他語系從 translations 取。"""
     if target.out.exists():
         shutil.rmtree(target.out)
@@ -845,6 +1002,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     def same_page(suffix: str) -> dict[str, str]:
         return {lang.code: lang.path + suffix for lang in LANGS}
 
+    threads = story_threads(posts)
     sitemap_homes: list[tuple[str, str | None, list[dict]]] = []
     sitemap_urls: list[tuple[str, str | None, list[dict]]] = []
     for lang in LANGS:
@@ -859,9 +1017,12 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             newer = lposts[i - 1] if i > 0 else None
             older = lposts[i + 1] if i + 1 < len(lposts) else None
             rels = {code: version.rel for code, version in post.translations.items()} or None
+            # 同一事件的導讀，由舊到新。這篇不是最新的一篇時，標題區提示最新的後續
+            thread = [item.translations.get(lang.code, item) for item in threads.get(post.path.stem, [])]
+            followup = thread[-1] if thread and thread[-1].rel != post.rel else None
             # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
             write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
-                  lang, rels, post=post, newer=newer, older=older,
+                  lang, rels, post=post, newer=newer, older=older, thread=thread, followup=followup,
                   content=target.rewrite_html(localize_assets(post.html, target)),
                   jsonld=jsonld(post, target, config),
                   og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
@@ -902,6 +1063,14 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
                   kind="archive", heading=s["month_heading"].format(year=year, month=s["months"][month - 1]),
                   posts=group, number=1, total=1, latest=None,
                   prev_rel=None, next_rel=None, featured=None, featured_image=None)
+
+        for name, versions in (site_pages or {}).items():
+            suffix = f"{name}/"
+            version = versions[lang.code]
+            content = version["html"].replace(FEED_URL_PLACEHOLDER, target.abs_url(base + "feed.xml"))
+            write(Page(base + suffix, base + suffix + "index.html", False, version["anchors"]), "page.html.j2",
+                  lang, same_page(suffix), site_page=version, content=content)
+            sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))
 
         feed_posts = lposts[:config["feed_items"]]
         feed = env.get_template("feed.xml.j2").render(
@@ -1034,13 +1203,16 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     favicons = load_favicons(favicons_path if favicons_path.exists() else FAVICONS_PATH)
     strings()  # 介面文字有缺漏時在這裡就失敗
     posts = load_site(posts_dir, authors, store, favicons)
+    # 測試用的文章目錄旁邊有 pages/ 時用那一份，沒有就用正式的
+    pages_dir = posts_dir.parent / "pages"
+    site_pages = load_site_pages(pages_dir if pages_dir.exists() else PAGES_DIR)
     published = posts if include_scheduled else [post for post in posts if not post.scheduled]
     env = make_env()
     pages = {}
     for name, target in targets.items():
         if only and name not in only:
             continue
-        pages[name] = build_target(target, published, config, env, store)
+        pages[name] = build_target(target, published, config, env, store, site_pages)
     return targets, pages, posts
 
 
@@ -1156,13 +1328,17 @@ def check_docs_link(href: str, where: str, contract: DocsContract, problems: lis
         problems.append(f"{where}：{href} 的錨點 #{anchor} 不在文件站的網址合約裡")
 
 
-def check_docs_links(posts: list[Post], contract: DocsContract) -> tuple[list[str], list[str]]:
-    """內文與介面文字裡連到文件站的網址。介面文字目前只有 RSS 連結指向的 RSS 訂閱入門。"""
+def check_docs_links(posts: list[Post], contract: DocsContract,
+                     site_pages: dict[str, dict[str, dict]] | None = None) -> tuple[list[str], list[str]]:
+    """文章、固定頁面與介面文字裡連到文件站的網址。訂閱頁連到文件站的 RSS 訂閱入門。"""
     problems, notices = [], []
-    for post in posts:
-        for href in hrefs(post.html):
+    documents = [(post.html, post.where) for post in posts]
+    documents += [(version["html"], version["where"]) for versions in (site_pages or {}).values()
+                  for version in versions.values()]
+    for text, where in documents:
+        for href in hrefs(text):
             if href.startswith(DOCS_PREFIX):
-                check_docs_link(href, post.where, contract, problems, notices)
+                check_docs_link(href, where, contract, problems, notices)
     for code, s in strings().items():
         for key, value in s.items():
             if isinstance(value, str) and value.startswith(DOCS_PREFIX):
@@ -1327,7 +1503,8 @@ def check_contrast(css_path: Path) -> list[str]:
 def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
     problems, notices = [], []
 
-    docs_problems, docs_notices = check_docs_links(all_versions(posts), load_docs_contract(args.docs_contract))
+    docs_problems, docs_notices = check_docs_links(all_versions(posts), load_docs_contract(args.docs_contract),
+                                                   load_site_pages(PAGES_DIR))
     problems += docs_problems
     notices += docs_notices
 
@@ -1352,11 +1529,14 @@ def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
         problems += [f"fixtures：{p}" for p in fixture_docs]
         for name, target in fixture_targets.items():
             problems += [f"fixtures：{p}" for p in check_output(target, fixture_pages[name])]
-        # 三個語系的列表頁與最新一篇，加上共用的 404
-        layout_pages = [lang.path for lang in LANGS]
+        # 三個語系的列表頁、關於頁、最新一篇與有後續的一篇（標題區的後續提示與事件線），加上共用的 404
+        layout_pages = [lang.path for lang in LANGS] + [lang.path + name + "/" for lang in LANGS for name in SITE_PAGES]
+        followed = {ref for post in fixture_posts for ref in post.follows}
         newest = next((post for post in fixture_posts if not post.scheduled), None)
-        if newest:
-            layout_pages += [newest.translations.get(lang.code, newest).rel for lang in LANGS]
+        earlier = next((post for post in fixture_posts if not post.scheduled and post.path.stem in followed), None)
+        for post in (newest, earlier):
+            if post:
+                layout_pages += [post.translations.get(lang.code, post).rel for lang in LANGS]
         layout_problems, layout_notice = layout_check.run(
             fixture_targets["clearnet"].out, list(dict.fromkeys(layout_pages)) + ["404.html"],
             ROOT / ".cache" / "screenshots")
@@ -1383,9 +1563,13 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="產生之後執行 SPEC.md 的九項檢查")
     parser.add_argument("--update-contract", action="store_true", help="把目前的網址寫回 url_contract.txt")
     parser.add_argument("--docs-contract", type=Path, help="文件站網址合約的本機檔案，預設從 GitHub 下載")
+    parser.add_argument("--watch", action="store_true", help="列出追蹤中、快要到期的事件，不產生網站")
     args = parser.parse_args()
 
     try:
+        if args.watch:
+            print(watch_report(load_site(ROOT / "posts", load_authors(ROOT / "authors.yml")), current_time().date()))
+            return 0
         targets, pages, posts = build()
         contract = contract_pages() if args.update_contract or args.check else []
         if args.update_contract:

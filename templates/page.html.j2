@@ -1,0 +1,18 @@
+{% extends "_layout.html.j2" %}
+{# 關於頁這類固定頁面，內容來自 pages/ 的 Markdown，版面沿用文章頁的標題與內文樣式 #}
+{% set page_title = site_page.title ~ " | " ~ s.site_name %}
+{% set page_description = site_page.description %}
+{% set og_title = site_page.title %}
+{% set og_type = "website" %}
+{% block content %}
+<article class="site-page">
+  <header class="story__head">
+    <h1 class="story__title">{{ site_page.title }}</h1>
+    <p class="story__dek">{{ site_page.description }}</p>
+{% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+  </header>
+  <div class="story__body content">
+{{ content|safe }}
+  </div>
+</article>
+{% endblock %}
