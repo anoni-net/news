@@ -43,6 +43,8 @@ sources:
   - title: 如何開啟 iCloud 進階資料保護
     url: https://support.apple.com/zh-tw/108756
     publisher: Apple
+regions:
+  - GB
 authors:
   - anoni-net
 ---
