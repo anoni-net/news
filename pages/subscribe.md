@@ -16,3 +16,5 @@ RSS 是網站整理給閱讀器的一份文章清單，閱讀器定時讀取，�
 ## 更多說明 {#more}
 
 Thunderbird 的設定步驟、本機與雲端閱讀器的隱私取捨、經由 Tor 讀取，以及把 feed 接到團隊聊天工具的做法，都寫在文件站的 [RSS 訂閱入門](https://anoni.net/docs/tools/rss/)。不想使用 RSS 的人，也可以[訂閱電子報](https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq)。
+
+用 Bluesky 的人可以追蹤 [@news.anoni.net](https://bsky.app/profile/news.anoni.net)，每篇導讀上線後會發正體中文與英文各一則貼文。
