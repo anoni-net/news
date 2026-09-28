@@ -61,3 +61,20 @@ jobs:
           fi
           git commit -q -m "build: ${GITHUB_SHA} (${GITHUB_EVENT_NAME})"
           git push origin build
+
+  # 新文章上線後發到 Bluesky 的 @news.anoni.net，規則見 SPEC.md「Bluesky」。
+  # 獨立成一個 job，失敗不影響網站上線。已經發過的文章每一輪都會略過，
+  # 還沒上線的等下一輪。BLUESKY_APP_PASSWORD 沒設時工具直接略過
+  bluesky:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: 發文到 Bluesky
+        env:
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: uv run tools/bluesky_post.py
