@@ -21,7 +21,7 @@
 {% if latest %}
       <p class="masthead__updated">{{ s.updated }} <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
 {% endif %}
-      <p class="masthead__subscribe"><a href="{{ url(home ~ 'subscribe/') }}">{{ icon('rss') }} {{ s.rss }}</a><a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a></p>
+      <p class="masthead__subscribe"><a href="{{ url(home ~ 'subscribe/') }}">{{ icon('rss') }} {{ s.rss }}</a><a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a><a href="{{ s.bluesky_url }}">{{ icon('bluesky') }} {{ s.bluesky }}</a></p>
     </div>
   </div>
 {% endif %}
