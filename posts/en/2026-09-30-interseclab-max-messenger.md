@@ -20,6 +20,8 @@ sources:
     url: https://citizenlab.ca/2023/06/privacy-in-the-wechat-ecosystem-full-report/
     publisher: Citizen Lab
     date: 2023-06-28
+regions:
+  - RU
 authors:
   - anoni-net
 ---
