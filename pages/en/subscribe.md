@@ -16,3 +16,5 @@ New pieces, published every morning at 07:00 (UTC+8), will then appear in your r
 ## More detail {#more}
 
 Setting up Thunderbird, the privacy trade-offs between local and cloud readers, reading feeds over Tor, and piping feeds into a team chat are all covered in [Following sites with RSS](https://anoni.net/docs/en/tools/rss/) on the docs site. If you would rather not use RSS, you can also [subscribe to the newsletter](https://form.anoni.net/s/w21855zpca072rvgp0s2govj).
+
+On Bluesky, follow [@news.anoni.net](https://bsky.app/profile/news.anoni.net), which posts each new story in English and Traditional Chinese.

@@ -406,6 +406,7 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 ### 帳號與失敗處理
 
 - 登入用 Bluesky 的 app password，存在 repo 的 GitHub secret `BLUESKY_APP_PASSWORD`，帳號名稱寫在 `site.toml`。app password 無法變更帳號密碼或刪除帳號，外洩時在 Bluesky 的設定撤銷，再產生一組新的。secret 沒有設定時，整個步驟跳過
+- 刊頭、頁尾、文章末的訂閱行與訂閱頁都有連到 `@news.anoni.net` 的連結，跟 RSS 與電子報放在一起。zh-CN 的訂閱頁註明貼文沒有簡體中文版，而且 Bluesky 在中國大陸無法直接連線
 - 發文是 deploy workflow 裡獨立的 job，失敗不影響網站上線，錯誤留在 workflow 的紀錄
 - `uv run tools/bluesky_post.py --dry-run` 列出這一輪會發的貼文，不登入也不發文。`--now` 可以指定當下的時間，用來預覽某一天會發什麼
 
