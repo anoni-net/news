@@ -675,6 +675,42 @@ def test_versions_must_agree(tmp_path, override, expected):
         assert any(expected in p for p in problems), problems
 
 
+FOLLOW_UP = GOOD.replace("date: 2026-09-18", "date: 2026-09-20").replace("slug: test-post", "slug: follow-up") \
+    .replace("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
+
+
+@pytest.mark.parametrize("follows", ["follows: 2026-09-18-test-post", "follows:\n  - test-post", "follows:\n  - 2026-09-18-test-post.md"])
+def test_follows_is_a_list_of_file_names(tmp_path, follows):
+    text = GOOD.replace("authors:", follows + "\nauthors:")
+    assert any("follows 要是清單" in p for p in problems_of(tmp_path, text)), problems_of(tmp_path, text)
+
+
+@pytest.mark.parametrize("old, new, expected", [
+    (None, None, None),
+    ("  - 2026-09-18-test-post", "  - 2026-09-18-no-such-post", "找不到"),
+    ("  - 2026-09-18-test-post", "  - 2026-09-20-follow-up", "沒有比這篇早發布"),
+])
+def test_follows_points_to_an_earlier_post(tmp_path, old, new, expected):
+    """follows 指到的文章要存在、比較早發布。接續自己也算沒有比較早。"""
+    posts = tmp_path / "posts"
+    write_versions(posts, GOOD)
+    write_versions(posts, FOLLOW_UP.replace(old, new) if old else FOLLOW_UP, "2026-09-20-follow-up.md")
+    try:
+        build.load_site(posts, AUTHORS)
+        problems = []
+    except build.BuildError as error:
+        problems = error.problems
+    if expected is None:
+        assert problems == []
+    else:
+        assert any(expected in p for p in problems), problems
+
+
+def test_follows_must_agree(tmp_path):
+    override = ("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
+    assert any("follows 跟 zh-TW 不同" in p for p in site_problems(tmp_path, {"en": override}))
+
+
 def test_extra_sources_are_allowed(tmp_path):
     extra = ("authors:", "  - title: Regional source\n    url: https://example.org/region\nauthors:")
     assert site_problems(tmp_path, {"zh-CN": extra}) == []
@@ -697,6 +733,41 @@ def test_every_language_gets_its_pages(fixture_site):
     assert '<html lang="zh-Hans">' in (out / "zh-cn" / "index.html").read_text(encoding="utf-8")
     assert '<html lang="zh-Hant">' in (out / "index.html").read_text(encoding="utf-8")
     assert "404.html" in rels and not any(r.endswith("/404.html") for r in rels)
+
+
+def test_story_thread_links_earlier_and_later_coverage(fixture_site):
+    """zkp-age-verification 接續 age-verification-roundup。兩篇都列出整條事件線，較舊的那篇在標題區提示後續。"""
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    old = (out / "2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    new = (out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+
+    notice = old[old.index('<p class="story__followup">'):]
+    notice = notice[:notice.index("</p>")]
+    assert '後續發展：<a href="/news/2026/09/zkp-age-verification/">零知識證明用在年齡驗證的限制</a>（2026 年 9 月 18 日）' in notice
+    assert old.index('class="story__langs"') < old.index('class="story__followup"') < old.index('class="story__body')
+    assert "story__followup" not in new
+
+    for page, current in ((old, "各國年齡驗證立法的共同問題"), (new, "零知識證明用在年齡驗證的限制")):
+        # 放在 <article> 外面並標上 role，閱讀模式不會當成正文
+        assert page.index("</article>") < page.index('<nav class="thread" role="navigation"') < page.index('class="subscribe"')
+        thread = page[page.index('<nav class="thread"'):]
+        thread = thread[:thread.index("</nav>")]
+        assert thread.index("各國年齡驗證立法的共同問題") < thread.index("零知識證明用在年齡驗證的限制")
+        assert f'<span class="thread__title">{current}</span> <span class="thread__here">本篇</span>' in thread
+        assert f'">{current}</a>' not in thread
+        assert thread.count("<li") == 2
+
+    en = (out / "en/2026/09/age-verification-roundup/index.html").read_text(encoding="utf-8")
+    assert 'Follow-up: <a href="/news/en/2026/09/zkp-age-verification/">' in en
+    assert "Coverage of this story" in en and "This story" in en
+    onion = (targets["onion"].out / "zh-cn/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert '<a class="thread__title" href="/zh-cn/2026/09/age-verification-roundup/">' in onion
+
+    alone = (out / "2026/09/layout-stress-test/index.html").read_text(encoding="utf-8")
+    assert 'class="thread"' not in alone and "story__followup" not in alone
+    # 事件線不進 RSS，前情由第一段交代
+    assert "thread__" not in (out / "feed.xml").read_text(encoding="utf-8")
 
 
 def test_alternates_and_language_switch(fixture_site):
@@ -892,7 +963,9 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     """排程中的文章不產出頁面，也不進首頁、RSS 與 sitemap，網址合約先收進去。到了時間重建就出現。"""
     posts = tmp_path / "posts"
     write_versions(posts, GOOD)
-    later = GOOD.replace("date: 2026-09-18", "date: 2026-09-19T07:00:00+08:00").replace("slug: test-post", "slug: next-post")
+    # 排程中的後續接續已發布的文章，舊文章在後續上線以前不能露出它的標題與網址
+    later = GOOD.replace("date: 2026-09-18", "date: 2026-09-19T07:00:00+08:00").replace("slug: test-post", "slug: next-post") \
+        .replace("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
     write_versions(posts, later, "2026-09-19-next-post.md")
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
     shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
@@ -904,6 +977,7 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     assert not (out / "2026/09/next-post").exists() and not (out / "en/2026/09/next-post").exists()
     for rel in ("index.html", "feed.xml", "sitemap.xml", "en/index.html", "2026/09/test-post/index.html"):
         assert "next-post" not in (out / rel).read_text(encoding="utf-8"), rel
+    assert 'class="thread"' not in (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
     contract = build.contract_lines(build.contract_pages(posts))
     assert "/2026/09/next-post/" in contract and "/en/2026/09/next-post/" in contract
 
@@ -912,6 +986,9 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
     out = targets["clearnet"].out
     assert (out / "2026/09/next-post/index.html").exists()
     assert "next-post" in (out / "feed.xml").read_text(encoding="utf-8")
+    earlier = (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
+    assert '<p class="story__followup">後續發展：<a href="/news/2026/09/next-post/">' in earlier
+    assert 'class="thread"' in earlier
 
 
 def test_time_of_day_orders_posts_on_the_same_day(tmp_path):

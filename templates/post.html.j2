@@ -30,6 +30,10 @@
 {% endif %}
     </p>
 {% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+{# 這件事有更新的導讀時，在標題區就提示，從搜尋或舊連結進來的讀者第一眼就知道內容可能已經不是最新 #}
+{% if followup %}
+    <p class="story__followup">{{ s.followup }}<a href="{{ url(followup.rel) }}">{{ followup.title }}</a>{{ s.followup_date.format(date=followup.created|ymd) }}</p>
+{% endif %}
   </header>
   <div class="story__body content">
 {{ content|safe }}
@@ -37,6 +41,9 @@
 {# 原文清單在 HTML 裡排在內文之後：手機照順序落在文末，桌機由 grid 放到右欄 #}
 {% include "_source_slip.html.j2" %}
 </article>
+{% if thread %}
+{% include "_thread.html.j2" %}
+{% endif %}
 {# 從社群平台點進來的讀者看不到首頁的刊頭，讀完一篇時在這裡給訂閱的入口 #}
 <p class="subscribe">{{ s.subscribe }}<a href="{{ url(home ~ 'subscribe/') }}">{{ icon('rss') }} <span>{{ s.rss }}</span></a>{{ s.subscribe_sep }}<a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} <span>{{ s.newsletter_inline }}</span></a></p>
 {# 讀完一篇接著讀相鄰的文章。用「較新、較舊」跟列表頁的翻頁說法一致，帶標題讓讀者知道點下去是什麼 #}

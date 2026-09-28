@@ -642,6 +642,71 @@ p {
     padding: 0.375rem 0;
 }
 
+/* 這件事有更新的導讀時，標題區最後一行提示最新的一篇 */
+.story__followup {
+    margin: 1rem 0 0;
+    padding: 0.75rem 1rem;
+    background: var(--c-surface);
+    border-left: 3px solid var(--c-rule);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.story__followup a {
+    font-weight: 600;
+}
+
+/* 同一事件的導讀：整條事件線由舊到新，日期在上、標題在下，本篇不連結 */
+.thread {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 3px solid var(--c-rule);
+}
+
+.thread__heading {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-size: 1rem;
+}
+
+.thread__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.thread__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding: 0.5rem 0;
+}
+
+.thread__item + .thread__item {
+    border-top: 1px solid var(--c-border);
+}
+
+.thread__date {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.thread__title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.thread__item--current .thread__title {
+    color: var(--c-headline);
+}
+
+.thread__here {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
 /* 文章頁最後的訂閱提示 */
 .subscribe {
     margin: 2rem 0 0;
@@ -968,6 +1033,7 @@ p {
         overflow-y: auto;
     }
 
+    .story ~ .thread,
     .story ~ .subscribe,
     .story ~ .pager {
         max-width: 40rem;
