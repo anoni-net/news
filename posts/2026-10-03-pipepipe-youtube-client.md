@@ -37,7 +37,7 @@ PipePipe 在 9 月 24 日發布 5.4.0 版，是一款可以瀏覽 YouTube、Nico
 
 官網列出的特色包括不需要帳號、沒有廣告與追蹤器、不蒐集資料，並整合 SponsorBlock 跳過業配片段，可以依關鍵字或頻道過濾內容、隱藏 Shorts，支援背景播放與下載整個播放清單。5.4.0 改善了電視的操作，直播可以選擇畫質，也修正了全螢幕時字幕消失等十多個問題。
 
-安裝管道有 F-Droid 與 IzzyOnDroid，兩邊都標示 NonFreeNet 反功能，意思是 App 依賴非自由的網路服務。撰稿時 IzzyOnDroid 已經更新到 5.4.0，F-Droid 還是 9 月 12 日加入的 5.3.1。
+安裝管道有 F-Droid 與 IzzyOnDroid，兩邊都標示 NonFreeNet 反功能，意思是 App 依賴非自由的網路服務。到 9 月 27 日為止，IzzyOnDroid 已經更新到 5.4.0，F-Droid 還是 9 月 12 日加入的 5.3.1。
 
 也可以從 GitHub 的發布頁直接下載 APK，依發布說明，多數手機選 arm64-v8a 版本即可。F-Droid 標示需要 Android 6.0 以上，頁面也寫到直接下載 APK 安裝不會收到更新通知。
 
@@ -49,4 +49,4 @@ YouTube 逐步改用 SABR 協定傳送影音，開發者為了跟上，讓 PipeP
 
 回報問題時也有隱私上的細節要注意。專案文件寫到，公開的 issue 不要附上 cookie、token、帳號 Email 或登入過程的錄影，也不要公開 IP 位址，寫明有沒有登入與看到的錯誤訊息就足以開始排查。
 
-想試用的人需要一支 Android 手機，依 F-Droid 的標示要 Android 6.0 以上，不需要 Google 帳號，目前可以從 IzzyOnDroid 或 GitHub 取得 5.4.0。介面有正體與簡體中文，專案的翻譯說明寫到這兩種語言由 AI 輔助翻譯，用詞不順的地方可以直接送 PR 修正。
+想試用的人需要一支 Android 手機，依 F-Droid 的標示要 Android 6.0 以上，不需要 Google 帳號，可以從 IzzyOnDroid 或 GitHub 取得 5.4.0。介面有正體與簡體中文，專案的翻譯說明寫到這兩種語言由 AI 輔助翻譯，用詞不順的地方可以直接送 PR 修正。
