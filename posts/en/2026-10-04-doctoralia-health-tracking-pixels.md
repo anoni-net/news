@@ -22,6 +22,10 @@ sources:
     url: http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html
     publisher: 全国人民代表大会
     date: 2021-08-20
+regions:
+  - BR
+  - CO
+  - MX
 authors:
   - anoni-net
 ---

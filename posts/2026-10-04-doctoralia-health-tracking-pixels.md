@@ -18,6 +18,10 @@ sources:
   - title: 個人資料保護法 第 6 條
     url: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=6
     publisher: 全國法規資料庫
+regions:
+  - BR
+  - CO
+  - MX
 authors:
   - anoni-net
 ---
