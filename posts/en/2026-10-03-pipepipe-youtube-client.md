@@ -1,6 +1,6 @@
 ---
 title: PipePipe 5.4.0, an open-source YouTube client
-description: PipePipe, an Android fork of NewPipe, plays YouTube, NicoNico and BiliBili without an account. Version 5.4.0, released on 24 September, improves TV controls and fixes a dozen playback bugs.
+description: PipePipe, an Android fork of NewPipe, plays YouTube, NicoNico and BiliBili without an account or Google Play. Version 5.4.0 improves TV controls and fixes 12 bugs.
 date: 2026-10-03T07:05:00+08:00
 slug: pipepipe-youtube-client
 sources:
@@ -29,24 +29,53 @@ sources:
   - title: TRANSLATION.md
     url: https://github.com/InfinityLoop1308/PipePipe/blob/main/TRANSLATION.md
     publisher: GitHub
+  - title: "[Important] YouTube playback will fail if your DNS blocks googleapis.com or google.com"
+    url: https://github.com/InfinityLoop1308/PipePipe/issues/2757
+    publisher: GitHub
+    date: 2026-07-24
+  - title: SABR
+    url: https://priveetee.github.io/Docs-PipePipe/developer-guide/introduction.html
+    publisher: PipePipe Wiki
   - title: Is http://youtube.com blocked in mainland China?
     url: https://en.greatfire.org/youtube.com
     publisher: GreatFire
     date: 2026-09-21
+  - title: Is http://google.com blocked in mainland China?
+    url: https://en.greatfire.org/google.com
+    publisher: GreatFire
+    date: 2026-09-27
+  - title: Is http://googleapis.com blocked in mainland China?
+    url: https://en.greatfire.org/googleapis.com
+    publisher: GreatFire
+    date: 2026-08-16
+  - title: "OONI Explorer: www.youtube.com, Hong Kong"
+    url: https://explorer.ooni.org/chart/mat?test_name=web_connectivity&domain=www.youtube.com&probe_cc=HK&since=2026-08-29&until=2026-09-28&axis_x=measurement_start_day&time_grain=day
+    publisher: OONI
+  - title: "OONI Explorer: www.youtube.com, Taiwan"
+    url: https://explorer.ooni.org/chart/mat?test_name=web_connectivity&domain=www.youtube.com&probe_cc=TW&since=2026-08-29&until=2026-09-28&axis_x=measurement_start_day&time_grain=day
+    publisher: OONI
 authors:
   - anoni-net
 ---
 
-PipePipe released version 5.4.0 on 24 September. It is a GPL-3.0 Android client for YouTube, NicoNico and BiliBili, forked from NewPipe in early 2022 and developed independently since, without syncing changes in either direction. Its website lists no account, no ads, no trackers and no data collection, alongside SponsorBlock, keyword and channel filters, Shorts blocking, background play and whole-playlist downloads. The new release improves TV controls, adds quality selection for live streams and fixes a dozen bugs, including subtitles vanishing in fullscreen. It is available from F-Droid and IzzyOnDroid, both of which flag the NonFreeNet anti-feature because the app depends on non-free network services. As of 27 September, IzzyOnDroid carries 5.4.0, while F-Droid still offers 5.3.1, added on 12 September. APKs are also on the GitHub releases page, where the notes say arm64-v8a suits most devices; F-Droid lists Android 6.0 or newer as the minimum.
+PipePipe, a GPL-3.0 open-source Android client for YouTube, the Japanese video platform NicoNico and China's BiliBili, released version 5.4.0 on 24 September (UTC). It installs without Google Play. The release improves TV controls, adds quality selection for live streams and fixes 12 bugs, including subtitles vanishing in fullscreen.
+
+The developer forked PipePipe in early 2022 from NewPipe, an earlier open-source YouTube client, and the two projects no longer sync changes. The website lists no account, no ads, no trackers and no data collection, plus subscription groups and offline playlists. The app integrates SponsorBlock, a crowd-sourced service for skipping sponsored segments, along with keyword and channel filters, Shorts blocking, background play and whole-playlist downloads.
+
+It is available from F-Droid, a repository of open-source Android apps, and from IzzyOnDroid, a third-party repository that F-Droid clients can use. Both flag the NonFreeNet anti-feature because the app depends on non-free network services. As of 29 September, IzzyOnDroid carries 5.4.0, while F-Droid still offers 5.3.1, added on 12 September. APKs are also on the GitHub releases page, where the notes say `arm64-v8a` suits most devices.
 
 ## Perspective {#perspective}
 
-A third-party client spares you a Google account; subscription groups and offline playlists live in the app. Requests still go straight to YouTube, though, and when YouTube restricts an anonymous request the app shows "Sign in to confirm you're not a bot". The project's troubleshooting page says to retry on another network or VPN exit. PipePipe also supports signing in, and its README says the login cookie is used only when retrieving playback streams, but once you sign in, those requests are tied to your account.
+With a third-party client you need no Google account, but requests still go straight to YouTube. When YouTube restricts an anonymous request, the app shows "Sign in to confirm you're not a bot". The fix given in the community-maintained PipePipe Wiki, linked from the website, is to retry once and then test another network or VPN exit.
 
-The app's reach in Asia depends on the network more than the app. GreatFire's test on 21 September recorded youtube.com as 100% blocked in mainland China, and the project's documentation says PipePipe needs googleapis.com and google.com subdomains; when they are unreachable, every YouTube video fails. The same symptom appears elsewhere when a DNS ad filter blocks those domains, so users of such filters need to allow both families. Support for NicoNico and BiliBili, video platforms from Japan and China, gives the app a use beyond YouTube for viewers who follow creators there.
+PipePipe also supports signing in. Its README states that the YouTube login cookie is used only to retrieve playback streams, which means those requests can be tied to your account. According to the Wiki, login is best kept for IP blocks, age-restricted videos and channel-member content, and signing in means no audio-only downloads and no rewinding of live streams.
 
-To keep up with YouTube's move to its SABR streaming protocol, PipePipe downloads an Ed25519-signed playback policy from a public GitHub repository and runs it only after checking the signature, validity window and revision number, falling back to the built-in version if anything fails. That lets the developer adjust playback logic without shipping a new release, and the source is public for review. It also means the app executes code fetched from the network, which is worth knowing before recommending it to someone whose threat model is strict.
+A pinned notice from the developer, GitHub issue `#2757`, lists the domains PipePipe needs: `googleapis.com`, `google.com` and their subdomains. If a DNS ad filter blocks them, every YouTube video fails, and the Wiki's fix is to allowlist them rather than switch filtering off.
 
-Reporting problems carries its own privacy details. The troubleshooting page says users should not put cookies, tokens, account email addresses or screen recordings of a login flow in a public issue, and not to publish an IP address. Stating whether you were signed in, and the error you saw, is enough for a first report.
+GreatFire, which monitors censorship in mainland China, found `youtube.com` unreachable in all of its last three conclusive tests, most recently on 21 September, and `google.com` blocked in 87% of its last 23, most recently on 27 September. Its last three tests of `googleapis.com` all showed interference. PipePipe is therefore unlikely to play YouTube on a mainland network. OONI measurements of `www.youtube.com` from 29 August to 27 September found 3 anomalies in 909 tests from Hong Kong and 1 in 4,966 from Taiwan.
 
-To try it you need an Android phone, running 6.0 or later according to F-Droid's listing, and no Google account; 5.4.0 is available from IzzyOnDroid and GitHub. The interface is available in Simplified and Traditional Chinese, Japanese and Vietnamese, among others, and the project's translation guide says these are AI-assisted. Native speakers who find awkward phrasing can fix individual entries and send a pull request.
+The Wiki's developer guide describes SABR (Server Adaptive BitRate), which YouTube increasingly uses, as a session in which the client reports its playback state and receives media in small pieces. PipePipe downloads a playback policy from a public GitHub repository and runs it only after checking its Ed25519 signature, which proves the developer signed it and nobody altered it, plus its validity window and revision number. If anything fails, it falls back to the built-in version. By design, the developer can adjust playback without a new release, and the policy source is public, but the app executes code fetched from the network.
+
+For bug reports, the Wiki's guidance is to keep cookies, tokens, account email addresses and screen recordings of a login flow out of public issues, and not to publish an IP address. Whether you were signed in, and the error you saw, is enough for a first report.
+
+To try it you need an Android phone running 6.0 or later, according to F-Droid's listing. No Google account is required, and the quickest route is the `arm64-v8a` APK from GitHub. For automatic updates, add the IzzyOnDroid repository to an F-Droid client (by hand in the official one) and install from there. According to the project's translation guide, Simplified and Traditional Chinese are among its AI-assisted translations, while the Wiki and issue tracker are in English.
