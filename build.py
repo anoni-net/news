@@ -441,7 +441,11 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
                 watch.append(Watch(item["date"], item["note"].strip()))
 
     regions = meta.get("regions") or []
-    if not isinstance(regions, list) or not all(isinstance(code, str) for code in regions):
+    if isinstance(regions, list) and any(isinstance(code, bool) for code in regions):
+        # YAML 1.1 把沒加引號的 NO 讀成 false，挪威的代碼要寫成 "NO"
+        problems.append(f"{where}：regions 裡有 YAML 讀成 true 或 false 的值，挪威的代碼要加引號寫成 \"NO\"")
+        regions = []
+    elif not isinstance(regions, list) or not all(isinstance(code, str) for code in regions):
         problems.append(f"{where}：regions 要是清單，每一項是 ISO 3166-1 的兩碼代碼，例如 TW、ES")
         regions = []
     else:
