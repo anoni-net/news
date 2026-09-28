@@ -18,13 +18,13 @@
 &lt;div class=&#34;content&#34;&gt;
 &lt;p&gt;Google 在 9 月 15 日推送给 Pixel 6 以后机型的 Android 17 QPR1，新增了给 App 开发者的 API，版本号是 API level 37.1，例如新的 &lt;code&gt;android.hardware.hid&lt;/code&gt; 包。这些 API 的源代码没有发布到 Android 开源项目（AOSP）。GrapheneOS 的公告写到，Android 3.x 以来还没有过新 API 不经过 AOSP 就推出的情况。非 Pixel 的手机与基于 AOSP 的系统，要等到 12 月的 Android 17 QPR2 才能取得。&lt;/p&gt;
 &lt;p&gt;这跟 Google 的发布方式有关。Google 在 2025 年 3 月向 Android Authority 证实，Android 的开发会全部改在内部进行，内部分支只开放给签了 Google 移动服务（GMS）授权的公司。AOSP 网站也写明，从 2026 年起只在第二季度与第四季度发布源代码。Android 16 的 QPR1 晚了几周才进 AOSP，到 9 月 27 日为止，AOSP 上 Android 17 只有正式版的分支，没有 QPR1。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 的公告写到，他们在 QPR1 推出前就把自家的代码移植好了，但还没有取得发布的许可，目前改成把 Pixel 的固件、内核驱动与硬件抽象层从 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的移动网络调制解调器固件，19 日再补上对应的运营商设置。&lt;/p&gt;
+&lt;p&gt;GrapheneOS 的公告写到，他们在 QPR1 推出前就把自家的代码移植好了，但到 9 月 27 日为止还没有取得发布的许可，因此改成把 Pixel 的固件、内核驱动与硬件抽象层从 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的移动网络调制解调器固件，19 日再补上对应的运营商设置。&lt;/p&gt;
 &lt;p&gt;GrapheneOS 另外写到，9 月的 Pixel 更新公告里有几项通用 Android 组件的补丁，没有出现在同月的 Android 安全公告，其他厂商要等 12 月的 QPR2。GrapheneOS 也写到，9 月 1 日向 Google 索取的 GPL 源代码，隔了两周多才取得。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;Android 的开放建立在 AOSP 上，没有 GMS 授权的厂商与 GrapheneOS 等项目，都从同一份源代码构建系统。源代码改成半年发布一次之后，Pixel 先取得新 API 与部分安全补丁，其他设备的用户要多等几个月。&lt;/p&gt;
 &lt;p&gt;在中国大陆，Google 的开发者文档写到，为中国开发 App 要考虑没有预装 Google Play 服务的手机。华为的 HarmonyOS NEXT 据 CNBC 报道已不再使用 Android 的开源代码，AOSP 的发布时程对它没有直接影响。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 以 OSI 认可的开源授权发布，目前只支持 Pixel，9 月到现在仍陆续推出新版本。GrapheneOS 写到，可以用逆向工程的方式提前补上 Pixel 公告里的补丁，也预期支持即将推出的 Motorola 新机会比支持 Pixel 容易，因为会取得官方提供的固件与驱动程序。&lt;/p&gt;
-&lt;p&gt;用其他品牌手机的人，QPR1 新增的 API 与部分补丁要等到 12 月的 QPR2，实际收到的时间还要看手机厂商何时推送。想刷 GrapheneOS 保护隐私的人，现在仍然只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。安装前要先解锁手机的 bootloader，可能由运营商锁定销售的机型要先联网，让原厂系统确认手机没有被锁定。&lt;/p&gt;
+&lt;p&gt;GrapheneOS 以 OSI 认可的开源授权发布，只支持 Pixel，9 月仍陆续推出新版本。GrapheneOS 写到，可以用逆向工程的方式提前补上 Pixel 公告里的补丁，也预期支持即将推出的 Motorola 新机会比支持 Pixel 容易，因为会取得官方提供的固件与驱动程序。&lt;/p&gt;
+&lt;p&gt;用其他品牌手机的人，QPR1 新增的 API 与部分补丁要等到 12 月的 QPR2，实际收到的时间还要看手机厂商何时推送。想刷 GrapheneOS 保护隐私的人，在 Motorola 新机推出之前仍然只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。安装前要先解锁手机的 bootloader，可能由运营商锁定销售的机型要先联网，让原厂系统确认手机没有被锁定。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
@@ -118,7 +118,7 @@
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;智能眼镜会通过蓝牙对外广播自己的存在，广播里带着制造商的代码。ZuckOff 在项目网站公开了比对用的代码，例如 Ray-Ban Meta 与 Oakley Meta 所属 Luxottica 的 &lt;code&gt;0x0D53&lt;/code&gt;。检测的原理不复杂，准确度取决于这张表整理得多完整，App Store 的更新记录就写到，1.4.0 修正了把某些 iPhone 误判成镜头眼镜的问题。&lt;/p&gt;
 &lt;p&gt;ZuckOff 没有公开源代码，也没有授权声明，外界无法检验 App 实际做了什么，只能相信网站上的说法。它要的权限不多，Android 版只要求蓝牙扫描所需的附近设备权限，并声明不用来推算位置，所以不要求定位权限。&lt;/p&gt;
-&lt;p&gt;Meta 在 9 月 23 日宣布眼镜在新加坡与韩国开卖。香港、澳门、马来西亚、印度尼西亚与泰国今年稍晚也会上市，日本则是 5 月 21 日就已经开卖。&lt;/p&gt;
+&lt;p&gt;Meta 在 9 月 23 日宣布眼镜在新加坡与韩国开卖。香港、澳门、马来西亚、印度尼西亚与泰国2026 年稍晚也会上市，日本则是 5 月 21 日就已经开卖。&lt;/p&gt;
 &lt;p&gt;在采访、开会或私人聚会前，想确认现场有没有镜头的人，可以开着蓝牙用 ZuckOff 扫描一次当作提醒，免费的基本扫描就够用。扫描结果只是线索，重要的对话仍然要事先跟在场的人约定，请大家摘下眼镜、把手机留在场外。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
@@ -174,11 +174,11 @@
 <description>Apple 从 2025 年 2 月起不再让英国的新用户开启高级数据保护，在那之前开启的人仍受保护，英国的 iCloud 因此分成两种加密程度。英国以外的用户仍可开启。</description>
 <content:encoded>&lt;p&gt;整理 10 篇原文，来自 Apple、MacAnorak、EFF 等 4 个出处&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 从 2025 年 2 月起不再让英国的新用户开启 iCloud 的高级数据保护（Advanced Data Protection，简称 ADP），在那之前已经开启的人仍受保护。一位英国作者在 9 月 21 日的文章写到，同样住在英国、用同一款 iPhone 的两个人，iCloud 的加密程度因此不同。英国以外的地方仍可以开启 ADP。&lt;/p&gt;
+&lt;p&gt;Apple 从 2025 年 2 月起不再让英国的新用户开启 iCloud 的高级数据保护（Advanced Data Protection，简称 ADP），在那之前已经开启的人，到 9 月 21 日为止仍受保护。一位英国作者在 9 月 21 日的文章写到，同样住在英国、用同一款 iPhone 的两个人，iCloud 的加密程度因此不同。英国以外的地方仍可以开启 ADP。&lt;/p&gt;
 &lt;p&gt;起因是《华盛顿邮报》2025 年 2 月的报道，英国政府依据《调查权力法》发出技术能力通知，要求 Apple 建立访问加密 iCloud 数据的能力，范围涵盖全球用户。Apple 在 2 月 21 日宣布英国的新用户不能再开启 ADP，说明页写明 Apple 从未、也不会在产品中建置后门或万能钥匙。&lt;/p&gt;
 &lt;p&gt;Apple 的说明页列出影响范围。默认就端到端加密的 15 类数据不受影响，例如 iCloud 钥匙串与健康数据，iMessage 与 FaceTime 也维持端到端加密。没有开启 ADP 的英国用户，iCloud 云备份、iCloud 云盘、照片、备忘录等 10 类数据改用标准数据保护，密钥存放在 Apple 的数据中心。&lt;/p&gt;
 &lt;p&gt;已经开启 ADP 的英国用户，Apple 无法自动替他们关闭，这个设置只能从用户信任的设备更改。Apple 的公告写到会给这些用户一段时间自行关闭，原文写到 9 月 21 日为止还没有公布期限。&lt;/p&gt;
-&lt;p&gt;EFF 在 2025 年 10 月的文章写到，据报道英国改发了一份只针对英国用户的通知。Apple 在 2026 年 7 月向调查权力法庭提出新的申诉，争议还没有结果。&lt;/p&gt;
+&lt;p&gt;EFF 在 2025 年 10 月的文章写到，据报道英国改发了一份只针对英国用户的通知。Apple 在 2026 年 7 月向调查权力法庭提出新的申诉，到 9 月 27 日为止，争议还没有结果。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;所有 iCloud 数据都有加密，差别在密钥放在哪里。标准数据保护的密钥在服务方手上，收到合法的调取要求时可以解密交出。ADP 让密钥只留在用户信任的设备上，Apple 没有钥匙，要取得内容就只能改变系统设计，英国的通知与 Apple 就僵持在这一点。&lt;/p&gt;
 &lt;p&gt;在中国大陆，iCloud 由 GCBD（AIPO Cloud (Guizhou) Technology Co. Ltd）运营，存放的照片、文件与备份受 GCBD 的条款约束。Apple 的说明页也写明，不是居住在中国大陆的中国公民，可以把 Apple 账户的国家或地区改成目前所在的地方，继续按 Apple 的条款使用 iCloud。&lt;/p&gt;
@@ -268,9 +268,9 @@
 <description>iOS 27 的新版 Siri 默认可以读取备忘录、信息与邮件，请求可能发到 Apple 的服务器处理。EFF 整理了限制读取范围的设置。Siri 语言设为中文的用户暂时用不到。</description>
 <content:encoded>&lt;p&gt;整理 4 篇原文，来自 EFF、Apple&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合并成同一个界面，在主屏幕往下滑打开搜索时，调出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 与 iPhone 16 之后的机型能使用。Siri AI 目前是测试版，只支持英文，也还没有在所有地区开放，Siri 语言设为中文的用户暂时无法使用。&lt;/p&gt;
+&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合并成同一个界面，在主屏幕往下滑打开搜索时，调出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 与 iPhone 16 之后的机型能使用。到 9 月 27 日为止，Siri AI 还是只支持英文的测试版，也还没有在所有地区开放。Siri 语言设为中文的用户暂时无法使用。&lt;/p&gt;
 &lt;p&gt;Siri AI 默认可以读取备忘录、信息与邮件等 Apple 自家 App 的内容，第三方 App 需要开发者加入支持才会纳入。请求可能在手机上处理，也可能发到 Apple 的 Private Cloud Compute 服务器，屏幕上不会显示是哪一种。EFF 的文章特别写给开启高级数据保护的用户，他们的 iCloud 数据以端到端加密保存，一旦发出设备交给云端处理，风险评估就跟着改变。&lt;/p&gt;
-&lt;p&gt;屏幕感知（on-screen awareness）让用户随时调出 Siri，请它解释屏幕上的内容。EFF 举的例子是请 Siri 总结正在看的 Signal 加密群聊，此时屏幕上的数据可能发到 Private Cloud Compute。用户与 App 开发者目前都无法屏蔽屏幕感知。&lt;/p&gt;
+&lt;p&gt;屏幕感知（on-screen awareness）让用户随时调出 Siri，请它解释屏幕上的内容。EFF 举的例子是请 Siri 总结正在看的 Signal 加密群聊，此时屏幕上的数据可能发到 Private Cloud Compute。到 9 月 27 日为止，用户与 App 开发者都无法屏蔽屏幕感知。&lt;/p&gt;
 &lt;p&gt;要限制 Siri AI 读取某个 App，EFF 建议在「设置」的 App 列表点进该 App，在 Search 关闭 Show Content in Search。要改回旧版 Siri，可以在「屏幕使用时间」开启「内容与隐私访问限制」，再把 Siri 的 Allowed Siri Version 设为 Siri Classic。Siri AI 默认不会用交互记录训练模型，设置过程中如果点了同意，可以到「隐私与安全性」的 Analytics &amp;amp; Improvements 关闭 Improve Siri &amp;amp; Dictation 撤回。以上选项名称照原文的英文界面，中文界面的名称可能不同。&lt;/p&gt;
 &lt;p&gt;Mac 的做法写在 Apple 的说明页。macOS 27 在「系统设置」关闭 Siri 之后可以改用 Siri Classic，信息、邮件与通知的摘要功能也各有开关。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
@@ -320,7 +320,7 @@
 <description>一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。目前只在 Android 版 Chrome 观察到。</description>
 <content:encoded>&lt;p&gt;整理 5 篇原文，来自 Buchodi&amp;#39;s Threat Intel、OpenAI、Google Chrome 說明 等 4 个出处&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;一位安全研究者分析 ChatGPT 的广告流量，发现使用 ChatGPT 时，OpenAI 的广告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 会设置一个名为 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 账号关联，有效期一年，而且允许在其他网站的请求中发出。目前只在 Android 版 Chrome 观察到这个机制，iOS 上的浏览器都会拦截。OpenAI 在 9 月 23 日宣布 ChatGPT 广告开始在七个亚洲市场推出，广告只显示给 Free 与 Go 方案的用户。&lt;/p&gt;
+&lt;p&gt;一位安全研究者分析 ChatGPT 的广告流量，发现使用 ChatGPT 时，OpenAI 的广告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 会设置一个名为 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 账号关联，有效期一年，而且允许在其他网站的请求中发出。研究者只在 Android 版 Chrome 观察到这个机制，iOS 上的浏览器都会拦截。OpenAI 在 9 月 23 日宣布 ChatGPT 广告开始在七个亚洲市场推出，广告只显示给 Free 与 Go 方案的用户。&lt;/p&gt;
 &lt;p&gt;在 ChatGPT 投放广告的商家，会在自己的网站装上 OpenAI 的像素。用户之后访问广告主的网站时，像素会把 &lt;code&gt;__obi&lt;/code&gt; 连同页面数据发回 OpenAI，包括网址路径、表单字段与网页上的文字。电子邮件、电话与姓名经过 SHA-256 哈希，国家、地区、城市与邮政编码则是明文。研究者观察到的网址都去掉了查询字符串，但路径本身有时就透露了病症等敏感信息。&lt;/p&gt;
 &lt;p&gt;用户在退出登录的状态下同样会被设置 &lt;code&gt;__obi&lt;/code&gt;。研究者检查的每一个同步令牌，同意类别都标为「分析」。用户只要允许分析，即使拒绝营销也会收到 &lt;code&gt;__obi&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;研究者在自己的手机上复现，用两种方式抓取流量，另外分析了 936 个广告主像素、超过一千个域名。原文也写明了几项限制：约五分之一的 ChatGPT 会话产生同步令牌，桌面版 Chrome 没有测试。OpenAI 在服务器端把识别码对应回账号，是研究者从设计推论，没有直接观察到。研究者 9 月 14 日去信询问，OpenAI 的客服收到后没有回答提问。&lt;/p&gt;
@@ -377,17 +377,17 @@
 <description>Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。iPhone 版还在开发。</description>
 <content:encoded>&lt;p&gt;整理 10 篇原文，来自 Signal Support、Signal Community、CyberInsider 等 7 个出处&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Signal 在 Android 8.28 测试版加入不用手机号的注册方式，名为 Signal Login。9 月 23 日的 8.29 测试版公告写明，这项功能会再留在测试版一周。iPhone 版还在开发，已经用手机号注册的账号也还不能移除号码。&lt;/p&gt;
+&lt;p&gt;Signal 在 Android 8.28 测试版加入不用手机号的注册方式，名为 Signal Login。9 月 23 日的 8.29 测试版公告写明，这项功能会再留在测试版一周。到 9 月 26 日为止，iPhone 版还在开发，已经用手机号注册的账号也还不能移除号码。&lt;/p&gt;
 &lt;p&gt;注册时选择不使用手机号，要通过 Google Play 支付一次 2.99 美元的费用，各国价格可能不同。没有安装 Google Play 服务的设备，暂时无法用这个方式注册。&lt;/p&gt;
 &lt;p&gt;Signal 在社区论坛的公告写明，付款使用跟捐款系统相同的零知识证明，付款记录与账号之间没有关联。收费的原因也写在公告里，免费的话，发送垃圾信息的人可以大量申请账号。&lt;/p&gt;
 &lt;p&gt;注册完成后会得到一组 Account ID 与 Recovery Key，作用相当于账号与密码。账号没有 PIN，也没有其他恢复渠道，其中任一项丢失，账号就无法找回。&lt;/p&gt;
-&lt;p&gt;用户名可以另外设置，没有设置的话，别人无法搜索到这个账号，只能参与自己发起的对话。注册后可以在设置里加上两步验证，目前支持 TOTP 验证器，passkey 与硬件密钥会在之后加入。&lt;/p&gt;
+&lt;p&gt;用户名可以另外设置，没有设置的话，别人无法搜索到这个账号，只能参与自己发起的对话。注册后可以在设置里加上两步验证，到 9 月 26 日为止支持 TOTP 验证器，passkey 与硬件密钥会在之后加入。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
 &lt;p&gt;在中国大陆，每个电话号码都要实名登记。工业和信息化部 2013 年施行的《电话用户真实身份信息登记规定》要求电信业者为用户办理入网手续时，查验有效证件、登记真实身份信息。用手机号注册的通讯账号，因此能通过电信业者连回真实身份。&lt;/p&gt;
 &lt;p&gt;改成付费加上零知识证明之后，账号跟手机号、付款都脱钩，想把工作与私人身份分开的人，不必另外办一个手机号。Signal 的 Android 版以 AGPL-3.0 授权公开源代码，界面有简体中文。&lt;/p&gt;
 &lt;p&gt;没有手机号之后，别人只能通过用户名找到这个账号。Freedom of the Press Foundation 的文章写到，公开分享过的用户名要一直保留，否则别人可以取得同一个名称来冒充。用用户名接受消息来源联系的人，被冒充的后果更严重。&lt;/p&gt;
 &lt;p&gt;另一篇讨论 passkey 的观点文章写到，一个账号的安全程度取决于最弱的那一种恢复方式。Signal 的免手机号账号没有任何恢复方式，攻击者少了一个较弱的入口，丢失的风险则全部落在用户身上。&lt;/p&gt;
-&lt;p&gt;身在中国境内的人还有另一道门槛。OONI 在 2021 年 4 月到 9 月的量测显示 Signal 在中国遭到封锁，要先有翻墙工具才能连上。免手机号注册目前只能通过 Google Play 付款，比较适合身在海外、手机装有 Google Play 服务的人。想试用的人要先在 Google Play 订阅 Signal 的测试版，再付 2.99 美元的一次性费用，注册后把 Account ID 与 Recovery Key 存进密码管理器并保留离线备份，设置 TOTP 时也要准备不只一个第二因素。&lt;/p&gt;
+&lt;p&gt;身在中国境内的人还有另一道门槛。OONI 在 2021 年 4 月到 9 月的量测显示 Signal 在中国遭到封锁，要先有翻墙工具才能连上。到 9 月 26 日为止，免手机号注册只能通过 Google Play 付款，比较适合身在海外、手机装有 Google Play 服务的人。想试用的人要先在 Google Play 订阅 Signal 的测试版，再付 2.99 美元的一次性费用，注册后把 Account ID 与 Recovery Key 存进密码管理器并保留离线备份，设置 TOTP 时也要准备不只一个第二因素。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;

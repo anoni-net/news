@@ -128,13 +128,13 @@
   <div class="story__body content">
 <p>Google 在 9 月 15 日推送给 Pixel 6 以后机型的 Android 17 QPR1，新增了给 App 开发者的 API，版本号是 API level 37.1，例如新的 <code>android.hardware.hid</code> 包。这些 API 的源代码没有发布到 Android 开源项目（AOSP）。GrapheneOS 的公告写到，Android 3.x 以来还没有过新 API 不经过 AOSP 就推出的情况。非 Pixel 的手机与基于 AOSP 的系统，要等到 12 月的 Android 17 QPR2 才能取得。</p>
 <p>这跟 Google 的发布方式有关。Google 在 2025 年 3 月向 Android Authority 证实，Android 的开发会全部改在内部进行，内部分支只开放给签了 Google 移动服务（GMS）授权的公司。AOSP 网站也写明，从 2026 年起只在第二季度与第四季度发布源代码。Android 16 的 QPR1 晚了几周才进 AOSP，到 9 月 27 日为止，AOSP 上 Android 17 只有正式版的分支，没有 QPR1。</p>
-<p>GrapheneOS 的公告写到，他们在 QPR1 推出前就把自家的代码移植好了，但还没有取得发布的许可，目前改成把 Pixel 的固件、内核驱动与硬件抽象层从 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的移动网络调制解调器固件，19 日再补上对应的运营商设置。</p>
+<p>GrapheneOS 的公告写到，他们在 QPR1 推出前就把自家的代码移植好了，但到 9 月 27 日为止还没有取得发布的许可，因此改成把 Pixel 的固件、内核驱动与硬件抽象层从 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的移动网络调制解调器固件，19 日再补上对应的运营商设置。</p>
 <p>GrapheneOS 另外写到，9 月的 Pixel 更新公告里有几项通用 Android 组件的补丁，没有出现在同月的 Android 安全公告，其他厂商要等 12 月的 QPR2。GrapheneOS 也写到，9 月 1 日向 Google 索取的 GPL 源代码，隔了两周多才取得。</p>
 <h2 id="perspective">导读观点</h2>
 <p>Android 的开放建立在 AOSP 上，没有 GMS 授权的厂商与 GrapheneOS 等项目，都从同一份源代码构建系统。源代码改成半年发布一次之后，Pixel 先取得新 API 与部分安全补丁，其他设备的用户要多等几个月。</p>
 <p>在中国大陆，Google 的开发者文档写到，为中国开发 App 要考虑没有预装 Google Play 服务的手机。华为的 HarmonyOS NEXT 据 CNBC 报道已不再使用 Android 的开源代码，AOSP 的发布时程对它没有直接影响。</p>
-<p>GrapheneOS 以 OSI 认可的开源授权发布，目前只支持 Pixel，9 月到现在仍陆续推出新版本。GrapheneOS 写到，可以用逆向工程的方式提前补上 Pixel 公告里的补丁，也预期支持即将推出的 Motorola 新机会比支持 Pixel 容易，因为会取得官方提供的固件与驱动程序。</p>
-<p>用其他品牌手机的人，QPR1 新增的 API 与部分补丁要等到 12 月的 QPR2，实际收到的时间还要看手机厂商何时推送。想刷 GrapheneOS 保护隐私的人，现在仍然只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。安装前要先解锁手机的 bootloader，可能由运营商锁定销售的机型要先联网，让原厂系统确认手机没有被锁定。</p>
+<p>GrapheneOS 以 OSI 认可的开源授权发布，只支持 Pixel，9 月仍陆续推出新版本。GrapheneOS 写到，可以用逆向工程的方式提前补上 Pixel 公告里的补丁，也预期支持即将推出的 Motorola 新机会比支持 Pixel 容易，因为会取得官方提供的固件与驱动程序。</p>
+<p>用其他品牌手机的人，QPR1 新增的 API 与部分补丁要等到 12 月的 QPR2，实际收到的时间还要看手机厂商何时推送。想刷 GrapheneOS 保护隐私的人，在 Motorola 新机推出之前仍然只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。安装前要先解锁手机的 bootloader，可能由运营商锁定销售的机型要先联网，让原厂系统确认手机没有被锁定。</p>
   </div>
 <aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
   <h2 class="source-slip__heading" id="source-slip-heading">原文（11 篇）</h2>

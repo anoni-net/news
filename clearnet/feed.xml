@@ -18,13 +18,13 @@
 &lt;div class=&#34;content&#34;&gt;
 &lt;p&gt;Google 在 9 月 15 日推送給 Pixel 6 以後機型的 Android 17 QPR1，新增了給 App 開發者的 API，版本號是 API level 37.1，例如新的 &lt;code&gt;android.hardware.hid&lt;/code&gt; 套件。這些 API 的原始碼沒有釋出到 Android 開源專案（AOSP）。GrapheneOS 的公告寫到，Android 3.x 以來還沒有過新 API 不經過 AOSP 就推出的情況。非 Pixel 的手機與以 AOSP 為基礎的系統，要等到 12 月的 Android 17 QPR2 才能取得。&lt;/p&gt;
 &lt;p&gt;這跟 Google 的釋出方式有關。Google 在 2025 年 3 月向 Android Authority 證實，Android 的開發會全部改在內部進行，內部分支只開放給簽了 Google 行動服務（GMS）授權的公司。AOSP 網站也寫明，從 2026 年起只在第二季與第四季釋出原始碼。Android 16 的 QPR1 晚了幾週才進 AOSP，到 9 月 27 日為止，AOSP 上 Android 17 只有正式版的分支，沒有 QPR1。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 的公告寫到，他們在 QPR1 推出前就把自家的程式移植好了，但還沒有取得釋出的許可，目前改成把 Pixel 的韌體、核心驅動與硬體抽象層從 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的行動網路數據機韌體，19 日再補上對應的電信業者設定。&lt;/p&gt;
+&lt;p&gt;GrapheneOS 的公告寫到，他們在 QPR1 推出前就把自家的程式移植好了，但到 9 月 27 日為止還沒有取得釋出的許可，因此改成把 Pixel 的韌體、核心驅動與硬體抽象層從 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的行動網路數據機韌體，19 日再補上對應的電信業者設定。&lt;/p&gt;
 &lt;p&gt;GrapheneOS 另外寫到，9 月的 Pixel 更新公告裡有幾項一般 Android 元件的修補，沒有出現在同月的 Android 安全公告，其他廠商要等 12 月的 QPR2。GrapheneOS 也寫到，9 月 1 日向 Google 索取的 GPL 原始碼，隔了兩週多才取得。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;Android 的開放建立在 AOSP 上，其他手機廠商與 GrapheneOS 等專案都從同一份原始碼建構系統。原始碼改成半年釋出一次之後，Pixel 先取得新 API 與部分安全修補，其他裝置的使用者要多等幾個月。非 Google 的廠商想及時推送修補，需先取得 Google 的安全預覽權限，GrapheneOS 寫到他們是透過另一家廠商取得。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 以 OSI 核可的開源授權釋出，目前只支援 Pixel，9 月到現在仍陸續推出新版本。GrapheneOS 寫到，可以用反向工程的方式提早補上 Pixel 公告裡的修補，使用者在 QPR2 之前仍能收到更新。&lt;/p&gt;
+&lt;p&gt;GrapheneOS 以 OSI 核可的開源授權釋出，只支援 Pixel，9 月仍陸續推出新版本。GrapheneOS 寫到，可以用反向工程的方式提早補上 Pixel 公告裡的修補，使用者在 QPR2 之前仍能收到更新。&lt;/p&gt;
 &lt;p&gt;GrapheneOS 也寫到，Pixel 現在比許多裝置更難支援，過去的優勢反而成了負擔。他們預期支援即將推出的 Motorola 新機會比支援 Pixel 容易，因為會取得官方提供的韌體與驅動程式。&lt;/p&gt;
-&lt;p&gt;用其他品牌手機的人，QPR1 新增的 API 與部分修補要等到 12 月的 QPR2，實際收到的時間還要看手機廠商何時推送。想刷 GrapheneOS 保護隱私的人，現在仍然只能選 Pixel，官方支援的機型列在 GrapheneOS 的 FAQ。官方的網頁安裝程式需要一台至少有 2GB 可用記憶體與 32GB 可用空間的電腦和一條 USB 線，瀏覽器要用 Chrome、Edge 這類官方支援的瀏覽器，安裝說明是英文。安裝前要先解鎖手機的 bootloader，可能由電信業者鎖定販售的機型要先連網，讓原廠系統確認手機沒有被鎖定。&lt;/p&gt;
+&lt;p&gt;用其他品牌手機的人，QPR1 新增的 API 與部分修補要等到 12 月的 QPR2，實際收到的時間還要看手機廠商何時推送。想刷 GrapheneOS 保護隱私的人，在 Motorola 新機推出之前仍然只能選 Pixel，官方支援的機型列在 GrapheneOS 的 FAQ。官方的網頁安裝程式需要一台至少有 2GB 可用記憶體與 32GB 可用空間的電腦和一條 USB 線，瀏覽器要用 Chrome、Edge 這類官方支援的瀏覽器，安裝說明是英文。安裝前要先解鎖手機的 bootloader，可能由電信業者鎖定販售的機型要先連網，讓原廠系統確認手機沒有被鎖定。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
@@ -105,7 +105,7 @@
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;智慧眼鏡會透過藍牙對外廣播自己的存在，廣播裡帶著製造商的代碼。ZuckOff 在專案網站公開了比對用的代碼，例如 Ray-Ban Meta 與 Oakley Meta 所屬 Luxottica 的 &lt;code&gt;0x0D53&lt;/code&gt;。偵測的原理不複雜，準確度取決於這張表整理得多完整，App Store 的更新紀錄就寫到，1.4.0 修正了把某些 iPhone 誤判成鏡頭眼鏡的問題。&lt;/p&gt;
 &lt;p&gt;ZuckOff 沒有公開原始碼，也沒有授權聲明，外界無法檢驗 App 實際做了什麼，只能相信網站上的說法。它要的權限不多，Android 版只要求藍牙掃描所需的附近裝置權限，並宣告不用來推算位置，所以不要求定位權限。&lt;/p&gt;
-&lt;p&gt;Meta 在 9 月 23 日宣布眼鏡在新加坡與南韓開賣。香港、澳門、馬來西亞等地今年稍晚也會上市，日本則是 5 月 21 日就已經開賣。&lt;/p&gt;
+&lt;p&gt;Meta 在 9 月 23 日宣布眼鏡在新加坡與南韓開賣。香港、澳門、馬來西亞等地2026 年稍晚也會上市，日本則是 5 月 21 日就已經開賣。&lt;/p&gt;
 &lt;p&gt;在採訪、開會或私人聚會前，想確認現場有沒有鏡頭的人，可以開著藍牙用 ZuckOff 掃描一次當作提醒，免費的基本掃描就夠用。掃描結果只是線索，重要的對話仍然要事先跟在場的人約定，請大家摘下眼鏡、把手機留在場外。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
@@ -161,11 +161,11 @@
 <description>Apple 從 2025 年 2 月起不再讓英國的新使用者開啟進階資料保護，在那之前開啟的人仍受保護，英國的 iCloud 因此分成兩種加密程度。英國以外的使用者仍可開啟。</description>
 <content:encoded>&lt;p&gt;整理 8 篇原文，來自 Apple、MacAnorak、EFF 等 4 個出處&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 從 2025 年 2 月起不再讓英國的新使用者開啟 iCloud 的進階資料保護（Advanced Data Protection，簡稱 ADP），在那之前已經開啟的人仍受保護。一位英國作者在 9 月 21 日的文章寫到，同樣住在英國、用同一款 iPhone 的兩個人，iCloud 的加密程度因此不同。英國以外的地方仍可以開啟 ADP。&lt;/p&gt;
+&lt;p&gt;Apple 從 2025 年 2 月起不再讓英國的新使用者開啟 iCloud 的進階資料保護（Advanced Data Protection，簡稱 ADP），在那之前已經開啟的人，到 9 月 21 日為止仍受保護。一位英國作者在 9 月 21 日的文章寫到，同樣住在英國、用同一款 iPhone 的兩個人，iCloud 的加密程度因此不同。英國以外的地方仍可以開啟 ADP。&lt;/p&gt;
 &lt;p&gt;起因是《華盛頓郵報》2025 年 2 月的報導，英國政府依《調查權力法》發出技術能力通知，要求 Apple 建立存取加密 iCloud 資料的能力，範圍涵蓋全球的使用者。Apple 在 2 月 21 日宣布英國的新使用者不能再開啟 ADP，說明頁寫明 Apple 從未、也不會在產品中建置後門或萬能鑰匙。&lt;/p&gt;
 &lt;p&gt;Apple 的說明頁列出影響範圍。預設就端對端加密的 15 類資料不受影響，例如 iCloud 鑰匙圈與健康資料，iMessage 與 FaceTime 也維持端對端加密。沒有開啟 ADP 的英國使用者，iCloud 備份、iCloud 雲碟、照片、備忘錄等 10 類資料改用標準資料保護，金鑰存在 Apple 的資料中心。&lt;/p&gt;
 &lt;p&gt;已經開啟 ADP 的英國使用者，Apple 無法自動替他們關閉，這個設定只能從使用者信任的裝置更改。Apple 的公告寫到會給這些使用者一段時間自行關閉，原文寫到 9 月 21 日為止還沒有公布期限。&lt;/p&gt;
-&lt;p&gt;EFF 在 2025 年 10 月的文章寫到，據報導英國改發了一份只針對英國使用者的通知。Apple 在 2026 年 7 月向調查權力法庭提出新的申訴，這場爭議還沒有結果。&lt;/p&gt;
+&lt;p&gt;EFF 在 2025 年 10 月的文章寫到，據報導英國改發了一份只針對英國使用者的通知。Apple 在 2026 年 7 月向調查權力法庭提出新的申訴，到 9 月 27 日為止，這場爭議還沒有結果。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;所有 iCloud 資料都有加密，差別在金鑰放在哪裡。標準資料保護的金鑰在 Apple 手上，收到合法的調閱要求時可以解密交出。ADP 讓金鑰只留在使用者信任的裝置上，Apple 沒有鑰匙，要取得內容就只能改變系統的設計，英國的通知與 Apple 就僵持在這一點。&lt;/p&gt;
 &lt;p&gt;在英國、無法開啟 ADP 的人，Apple 的說明寫明，同時開著 iCloud 備份與「iCloud 中的訊息」時，備份裡會附上訊息的金鑰。關閉 iCloud 備份之後，裝置會產生新的金鑰，之後的訊息維持端對端加密。改用電腦做加密的本機備份，備份也留在自己手上，這個選項預設沒有開啟，要在 Finder 或 Apple 裝置 App 裡勾選。&lt;/p&gt;
@@ -241,15 +241,15 @@
 <description>iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。Siri 語言設為中文的使用者暫時用不到。</description>
 <content:encoded>&lt;p&gt;整理 2 篇原文，來自 EFF、Apple&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。Siri AI 目前是測試版，只支援英文，也還沒有在所有地區開放，Siri 語言設為中文的使用者暫時無法使用。&lt;/p&gt;
+&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。到 9 月 27 日為止，Siri AI 還是只支援英文的測試版，也還沒有在所有地區開放。Siri 語言設為中文的使用者暫時無法使用。&lt;/p&gt;
 &lt;p&gt;Siri AI 預設可以讀取備忘錄、訊息與郵件等 Apple 自家 App 的內容，第三方 App 需要開發者加入支援才會納入。請求可能在手機上處理，也可能送到 Apple 的 Private Cloud Compute 伺服器，畫面上不會顯示是哪一種。EFF 的文章特別寫給開啟進階資料保護的使用者，他們的 iCloud 資料以端對端加密保存，一旦送出裝置交給雲端處理，風險評估就跟著改變。&lt;/p&gt;
-&lt;p&gt;螢幕感知（on-screen awareness）讓使用者隨時叫出 Siri，請它解釋畫面上的內容。EFF 舉的例子是請 Siri 摘要正在看的 Signal 加密群組對話，此時畫面上的資料可能送到 Private Cloud Compute。使用者與 App 開發者目前都無法封鎖螢幕感知。&lt;/p&gt;
+&lt;p&gt;螢幕感知（on-screen awareness）讓使用者隨時叫出 Siri，請它解釋畫面上的內容。EFF 舉的例子是請 Siri 摘要正在看的 Signal 加密群組對話，此時畫面上的資料可能送到 Private Cloud Compute。到 9 月 27 日為止，使用者與 App 開發者都無法封鎖螢幕感知。&lt;/p&gt;
 &lt;p&gt;要限制 Siri AI 讀取某個 App，EFF 建議在「設定」的 App 清單點進該 App，於 Search 關閉 Show Content in Search。要改回舊版 Siri，可以在「螢幕使用時間」開啟「內容與隱私權限制」，再把 Siri 的 Allowed Siri Version 設為 Siri Classic。Siri AI 預設不會用互動紀錄訓練模型，設定過程中如果點了同意，可以到「隱私權與安全性」的 Analytics &amp;amp; Improvements 關閉 Improve Siri &amp;amp; Dictation 撤回。以上選項名稱照原文的英文介面，中文介面的名稱可能不同。&lt;/p&gt;
 &lt;p&gt;Mac 的做法寫在 Apple 的說明頁。macOS 27 在「系統設定」關閉 Siri 之後可以改用 Siri Classic，訊息、郵件與通知的摘要功能也各有開關。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;EFF 在原文寫明，Private Cloud Compute 的「Private」代表系統的設計讓 Apple 無法看到、也不保存資料，但不保證資料經過加密或留在裝置上。使用 Private Cloud Compute 要信任 Apple 的伺服器照設計運作，端對端加密則只需要金鑰留在使用者自己的裝置上。&lt;/p&gt;
 &lt;p&gt;螢幕感知無法封鎖，加密對話能不能留在裝置上，取決於對話裡的每一個人。群組中只要有人對著對話叫出 Siri，內容就可能從那個人的手機送出，端對端加密無法保護這一段。在群組裡討論敏感事務的人，可以跟成員約定不對對話使用螢幕感知，自己也可以考慮改回 Siri Classic。&lt;/p&gt;
-&lt;p&gt;使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 目前只在 iPhone 15 Pro 以後的機型、Siri 語言設為英文時可用，符合的人可以先對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。Siri 語言設為中文的人暫時不受影響，也可以先把各 App 的搜尋設定調整好。&lt;/p&gt;
+&lt;p&gt;使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 只在 iPhone 15 Pro 以後的機型、Siri 語言設為英文時可用，符合的人可以先對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。Siri 語言設為中文的人暫時不受影響，也可以先把各 App 的搜尋設定調整好。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（2 篇）&lt;/h2&gt;
@@ -278,7 +278,7 @@
 <description>一份流量分析發現，ChatGPT 的廣告系統會設定一個跟帳號連動的 cookie，買廣告的網站再透過 OpenAI 的像素，把它連同瀏覽資料送回 OpenAI。目前只在 Android 版 Chrome 觀察到。</description>
 <content:encoded>&lt;p&gt;整理 3 篇原文，來自 Buchodi&amp;#39;s Threat Intel、OpenAI、Google Chrome 說明&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 會設定一個名為 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到這個機制，iOS 上的瀏覽器都會阻擋。OpenAI 在 9 月 23 日宣布 ChatGPT 廣告開始在台灣等七個亞洲市場推出，廣告只顯示給 Free 與 Go 方案的使用者。&lt;/p&gt;
+&lt;p&gt;一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 會設定一個名為 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。研究者只在 Android 版 Chrome 觀察到這個機制，iOS 上的瀏覽器都會阻擋。OpenAI 在 9 月 23 日宣布 ChatGPT 廣告開始在台灣等七個亞洲市場推出，廣告只顯示給 Free 與 Go 方案的使用者。&lt;/p&gt;
 &lt;p&gt;在 ChatGPT 買廣告的業者，會在自己的網站裝上 OpenAI 的像素。使用者之後造訪廣告主的網站時，像素會把 &lt;code&gt;__obi&lt;/code&gt; 連同頁面資料送回 OpenAI，包括網址路徑、表單欄位與網頁上的文字。電子郵件、電話與姓名經過 SHA-256 雜湊，國家、地區、城市與郵遞區號則是明碼。研究者觀察到的網址都去掉了查詢字串，但路徑本身有時就透露了病症等敏感資訊。&lt;/p&gt;
 &lt;p&gt;使用者在登出狀態下同樣會被設定 &lt;code&gt;__obi&lt;/code&gt;。研究者檢視的每一個同步權杖，同意類別都標為「分析」。使用者只要允許分析，即使拒絕行銷也會收到 &lt;code&gt;__obi&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;研究者在自己的手機上重現，用兩種方式擷取流量，另外分析了 936 個廣告主像素、超過一千個網域。原文也寫明了幾項限制：約五分之一的 ChatGPT 工作階段產生同步權杖，桌機版 Chrome 沒有測試。OpenAI 在伺服器端把識別碼對應回帳號，是研究者從設計推論，沒有直接觀察到。研究者 9 月 14 日去信詢問，OpenAI 的客服收到後沒有回答提問。&lt;/p&gt;
@@ -322,11 +322,11 @@
 <description>Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。iPhone 版還在開發。</description>
 <content:encoded>&lt;p&gt;整理 8 篇原文，來自 Signal Support、Signal Community、CyberInsider 等 5 個出處&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Signal 在 Android 8.28 測試版加入不用電話號碼的註冊方式，名為 Signal Login。9 月 23 日的 8.29 測試版公告寫明，這項功能會再留在測試版一週。iPhone 版還在開發，已經用電話號碼註冊的帳號也還不能移除號碼。&lt;/p&gt;
+&lt;p&gt;Signal 在 Android 8.28 測試版加入不用電話號碼的註冊方式，名為 Signal Login。9 月 23 日的 8.29 測試版公告寫明，這項功能會再留在測試版一週。到 9 月 26 日為止，iPhone 版還在開發，已經用電話號碼註冊的帳號也還不能移除號碼。&lt;/p&gt;
 &lt;p&gt;註冊時選擇不使用電話號碼，要透過 Google Play 付一次 2.99 美元的費用，各國價格可能不同。沒有安裝 Google Play 服務的裝置，暫時無法用這個方式註冊。&lt;/p&gt;
 &lt;p&gt;Signal 在社群論壇的公告寫明，付款使用跟捐款系統相同的零知識證明，付款紀錄與帳號之間沒有連結。收費的原因也寫在公告裡，免費的話，垃圾訊息業者可以大量申請帳號。&lt;/p&gt;
 &lt;p&gt;註冊完成後會取得一組 Account ID 與 Recovery Key，作用相當於帳號與密碼。帳號沒有 PIN，也沒有其他復原管道，其中任一項遺失，帳號就無法找回。&lt;/p&gt;
-&lt;p&gt;使用者名稱可以另外設定，沒有設定的話，別人無法搜尋到這個帳號，只能參與自己發起的對話。註冊後可以在設定裡加上兩步驗證，目前支援 TOTP 驗證器，passkey 與硬體金鑰會在之後加入。&lt;/p&gt;
+&lt;p&gt;使用者名稱可以另外設定，沒有設定的話，別人無法搜尋到這個帳號，只能參與自己發起的對話。註冊後可以在設定裡加上兩步驗證，到 9 月 26 日為止支援 TOTP 驗證器，passkey 與硬體金鑰會在之後加入。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;門號在許多地方都要實名登記，用門號註冊的通訊帳號等於間接連回真實身分。Signal 的端對端加密保護訊息內容，帳號本身過去卻一直綁著一支門號。改成付費加上零知識證明之後，帳號跟門號、付款都脫鉤，想把工作與私人身分分開的人，不必另外申辦門號。Signal 的 Android 版以 AGPL-3.0 授權公開原始碼，介面有正體中文。&lt;/p&gt;
 &lt;p&gt;沒有門號之後，別人只能透過使用者名稱找到這個帳號。Freedom of the Press Foundation 的文章寫到，公開分享過的使用者名稱要一直保留，否則別人可以取得同一個名稱來冒充。用使用者名稱接受消息來源聯繫的人，被冒充的後果更嚴重。&lt;/p&gt;
