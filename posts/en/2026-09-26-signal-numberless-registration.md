@@ -53,7 +53,7 @@ authors:
   - anoni-net
 ---
 
-Signal's Android 8.28 beta adds a way to register without a phone number, called Signal Login. The 8.29 beta announcement on 23 September says the feature will stay in beta for another week. The iPhone version is still in development, and accounts already registered with a number cannot remove it yet.
+Signal's Android 8.28 beta adds a way to register without a phone number, called Signal Login. The 8.29 beta announcement on 23 September says the feature will stay in beta for another week. As of 26 September, the iPhone version is still in development, and accounts already registered with a number cannot remove it.
 
 Registering this way takes a one-time payment of US$2.99 through Google Play, and prices can differ by country. Devices without Google Play services cannot use it yet. Signal's announcement on its community forum says the payment uses the same zero-knowledge proofs as its donation system, so there is no link between the payment and the account. The fee is there because free accounts would be registered in bulk by spammers.
 
@@ -71,4 +71,4 @@ Without a number, a username becomes the only way to be found. According to the 
 
 According to a separate essay on passkeys, an account is only as secure as its weakest recovery method. Signal's numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss.
 
-Trying it means subscribing to Signal's beta channel on Google Play and paying the one-time fee there, US$2.99 or a local equivalent. For now the option suits people outside the mainland whose phones run Google Play services. After registering, store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
+Trying it means subscribing to Signal's beta channel on Google Play and paying the one-time fee there, US$2.99 or a local equivalent. As of 26 September, the option suits people outside the mainland whose phones run Google Play services. After registering, store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor.
