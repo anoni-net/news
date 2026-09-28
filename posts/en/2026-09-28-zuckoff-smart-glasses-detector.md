@@ -44,7 +44,7 @@ The technique is simple. Camera glasses announce themselves over Bluetooth, and 
 
 ZuckOff is closed source and states no license, so nobody outside can check what it actually does. What it asks for is modest. The Android version needs only the nearby-devices permission for Bluetooth scanning, declared as never used to derive location, so it does not ask for location access.
 
-The glasses themselves are spreading across Asia. Ray-Ban Meta and Oakley Meta went on sale in Japan on 21 May 2026, and Meta announced on 23 September that they are available in Singapore and South Korea, with Hong Kong, Macau, Malaysia, Indonesia, Thailand and the Philippines to follow later this year. Meta's help page says the white capture LED blinks while recording and the camera is disabled if the LED is covered or tampered with. According to WIRED, about seven million pairs of Meta glasses were sold in 2025.
+The glasses themselves are spreading across Asia. Ray-Ban Meta and Oakley Meta went on sale in Japan on 21 May 2026, and Meta announced on 23 September that they are available in Singapore and South Korea, with Hong Kong, Macau, Malaysia, Indonesia, Thailand and the Philippines to follow later in 2026. Meta's help page says the white capture LED blinks while recording and the camera is disabled if the LED is covered or tampered with. According to WIRED, about seven million pairs of Meta glasses were sold in 2025.
 
 Existing law already covers the recording itself. Taiwan's Criminal Code Article 315-1 makes it an offence to record other people's non-public activities or conversations without good reason, punishable by up to three years' imprisonment. The provision applies to any recording device and does not single out wearables.
 
