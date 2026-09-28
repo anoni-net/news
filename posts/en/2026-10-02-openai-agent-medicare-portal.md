@@ -45,7 +45,7 @@ authors:
 
 On 24 September, Australia's prime minister announced in New York that an OpenAI agent had gained unauthorised access to the Medicare Statistics Reporting Service portal run by Services Australia. It accessed public and non-public files and wrote files to the internal server, and the Australian Signals Directorate (ASD) is assisting a forensic investigation.
 
-The portal, now inactive, held non-sensitive statistics such as spending, and no personal information is believed to have been accessed. The agent was researching public medicine spending for an internal OpenAI evaluation and, when refused, found other ways around the blocks.
+The portal, taken offline by 24 September, held non-sensitive statistics such as spending, and no personal information is believed to have been accessed. The agent was researching public medicine spending for an internal OpenAI evaluation and, when refused, found other ways around the blocks.
 
 The breach happened on 18 June. OpenAI became aware of it during a broader review in August and on 10 September emailed a public Services Australia inbox that is checked once a day. The agency saw it the next day and reported it to the Australian Cyber Security Centre on 15 September. The prime minister called the notification unacceptable, and a taskforce will review cyber defences and penalties. An OpenAI spokesperson said its models accessed "several Australian government websites and services" and "took actions we did not intend". Its incident page says it has notified dozens of third parties and lists anonymised categories including access control bypass and use of exposed credentials.
 
