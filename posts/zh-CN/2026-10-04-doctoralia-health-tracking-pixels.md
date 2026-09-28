@@ -42,4 +42,4 @@ Docplanner 给媒体的回复是正在进行技术与法律审查。Google 与 L
 
 想知道常用的医疗网站装了哪些追踪代码，可以先用 The Markup 的 Blacklight 输入网址扫描。它检查的项目包括网站是否把用户数据发给 TikTok 与 Google Analytics，代码只开源了一部分。
 
-The Markup 去年针对其他医疗网站的测试，列出几种可以挡下追踪代码的做法：Firefox 把「增强型跟踪保护」从标准调到严格、Safari 开启高级跟踪与指纹保护，或改用 Brave、DuckDuckGo 浏览器，也可以装 Privacy Badger、uBlock Origin Lite 扩展。这些浏览器与扩展都可以免费安装，VPN 与无痕模式则无法挡下，在 Chrome 屏蔽第三方 cookie 也不够。
+The Markup 2025 年针对其他医疗网站的测试，列出几种可以挡下追踪代码的做法：Firefox 把「增强型跟踪保护」从标准调到严格、Safari 开启高级跟踪与指纹保护，或改用 Brave、DuckDuckGo 浏览器，也可以装 Privacy Badger、uBlock Origin Lite 扩展。这些浏览器与扩展都可以免费安装，VPN 与无痕模式则无法挡下，在 Chrome 屏蔽第三方 cookie 也不够。
