@@ -28,13 +28,16 @@ sources:
     url: https://www.irrawaddy.com/news/burma/new-phone-registration-system-gives-junta-more-powers-to-track-users.html
     publisher: The Irrawaddy
     date: 2026-03-06
+watch:
+  - date: 2026-11-01
+    note: 挪威對 Telenor 的起訴是否進入法院程序，集體訴訟的進度，是否有個人被起訴
 authors:
   - anoni-net
 ---
 
 挪威警方在 9 月 15 日宣布對電信業者 Telenor ASA 展開兩項調查並提出起訴。刑事警察 Kripos 以協助違反人道罪起訴，起訴理由是 2021 年 2 月緬甸政變後到 2022 年 3 月出售為止，Telenor 的緬甸子公司多次把用戶的歷史通聯資料交給軍政府。安全警察 PST 則以違反制裁法起訴，因為出售緬甸子公司時一併轉移了受制裁的監控設備，沒有取得外交部的許可。兩項起訴都針對緬甸子公司，受影響的是當時緬甸 Telenor 的用戶。
 
-Telenor 的聲明寫到，員工若不服從軍方的命令，會面臨監禁、酷刑甚至死刑，公司沒有真正的選擇。目前沒有任何個人被起訴，聲明也寫到 Telenor 會全力配合警方。
+Telenor 的聲明寫到，員工若不服從軍方的命令，會面臨監禁、酷刑甚至死刑，公司沒有真正的選擇。到 9 月 27 日為止沒有任何個人被起訴，聲明也寫到 Telenor 會全力配合警方。
 
 另一條是民事訴訟。9 月 17 日，挪威的地方法院同意受理一件集體訴訟，涵蓋至少 1253 人。挪威公共廣播 NRK 報導，Telenor 交出的資料包括通話紀錄、姓名、地址與用戶最後已知的位置。
 
