@@ -17,6 +17,10 @@ from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 icon = "bandaancha.eu-5be72bee.png"
 from = "https://bandaancha.eu/apple-touch-icon.png"
 
+[hosts."brdr.hkma.gov.hk"]
+icon = "brdr.hkma.gov.hk-e2b6d0cb.png"
+from = "https://www.hkma.gov.hk/favicon.jpg"
+
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
@@ -118,6 +122,10 @@ from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badg
 [hosts."macrumors.com"]
 icon = "macrumors.com-6643c49b.png"
 from = "https://images.macrumors.com/images-new/apple-touch-icon-blue.png"
+
+[hosts."mas.gov.sg"]
+icon = "mas.gov.sg-760a368b.png"
+from = "https://www.mas.gov.sg/html/site/_favicon/apple-touch-icon.png"
 
 [hosts."mcmc.gov.my"]
 icon = "mcmc.gov.my-7010665f.png"
