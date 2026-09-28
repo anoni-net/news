@@ -19,7 +19,7 @@ authors:
   - anoni-net
 ---
 
-一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 `bzr.openai.com` 會設定一個名為 `__obi` 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。目前只在 Android 版 Chrome 觀察到這個機制，iOS 上的瀏覽器都會阻擋。OpenAI 在 9 月 23 日宣布 ChatGPT 廣告開始在台灣等七個亞洲市場推出，廣告只顯示給 Free 與 Go 方案的使用者。
+一位資安研究者分析 ChatGPT 的廣告流量，發現使用 ChatGPT 時，OpenAI 的廣告收集器 `bzr.openai.com` 會設定一個名為 `__obi` 的 cookie。它跟 ChatGPT 帳號連動，有效期一年，而且允許在其他網站的請求中送出。研究者只在 Android 版 Chrome 觀察到這個機制，iOS 上的瀏覽器都會阻擋。OpenAI 在 9 月 23 日宣布 ChatGPT 廣告開始在台灣等七個亞洲市場推出，廣告只顯示給 Free 與 Go 方案的使用者。
 
 在 ChatGPT 買廣告的業者，會在自己的網站裝上 OpenAI 的像素。使用者之後造訪廣告主的網站時，像素會把 `__obi` 連同頁面資料送回 OpenAI，包括網址路徑、表單欄位與網頁上的文字。電子郵件、電話與姓名經過 SHA-256 雜湊，國家、地區、城市與郵遞區號則是明碼。研究者觀察到的網址都去掉了查詢字串，但路徑本身有時就透露了病症等敏感資訊。
 
