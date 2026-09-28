@@ -100,6 +100,10 @@ from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_sq
 icon = "gov.cn-1db19351.png"
 from = "https://www.gov.cn/images/trs_favicon.ico"
 
+[hosts."gov.hk"]
+icon = "gov.hk-62222f7e.png"
+from = "https://web.archive.org/web/20260929id_/https://gov.hk/favicon.ico"
+
 [hosts."grapheneos.org"]
 icon = "grapheneos.org-5378d298.png"
 from = "https://grapheneos.org/apple-touch-icon.png"
@@ -118,6 +122,9 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
+
+[hosts."info.gov.hk"]
+same_as = "gov.hk"
 
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
