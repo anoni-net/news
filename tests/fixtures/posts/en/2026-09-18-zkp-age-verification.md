@@ -8,6 +8,8 @@ sources:
     url: https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets
     publisher: EFF
     date: 2026-08-18
+follows:
+  - 2026-09-10-age-verification-roundup
 authors:
   - anoni-net
 image: https://assets.anoni.net/news/2026/09/zkp-age-verification/og.webp
