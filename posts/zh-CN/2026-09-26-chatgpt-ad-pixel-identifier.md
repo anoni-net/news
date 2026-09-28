@@ -25,7 +25,7 @@ authors:
   - anoni-net
 ---
 
-一位安全研究者分析 ChatGPT 的广告流量，发现使用 ChatGPT 时，OpenAI 的广告收集器 `bzr.openai.com` 会设置一个名为 `__obi` 的 cookie。它跟 ChatGPT 账号关联，有效期一年，而且允许在其他网站的请求中发出。目前只在 Android 版 Chrome 观察到这个机制，iOS 上的浏览器都会拦截。OpenAI 在 9 月 23 日宣布 ChatGPT 广告开始在七个亚洲市场推出，广告只显示给 Free 与 Go 方案的用户。
+一位安全研究者分析 ChatGPT 的广告流量，发现使用 ChatGPT 时，OpenAI 的广告收集器 `bzr.openai.com` 会设置一个名为 `__obi` 的 cookie。它跟 ChatGPT 账号关联，有效期一年，而且允许在其他网站的请求中发出。研究者只在 Android 版 Chrome 观察到这个机制，iOS 上的浏览器都会拦截。OpenAI 在 9 月 23 日宣布 ChatGPT 广告开始在七个亚洲市场推出，广告只显示给 Free 与 Go 方案的用户。
 
 在 ChatGPT 投放广告的商家，会在自己的网站装上 OpenAI 的像素。用户之后访问广告主的网站时，像素会把 `__obi` 连同页面数据发回 OpenAI，包括网址路径、表单字段与网页上的文字。电子邮件、电话与姓名经过 SHA-256 哈希，国家、地区、城市与邮政编码则是明文。研究者观察到的网址都去掉了查询字符串，但路径本身有时就透露了病症等敏感信息。
 
