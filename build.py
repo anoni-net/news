@@ -40,10 +40,11 @@ DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
 FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin",
-                     "follows"}
+                     "follows", "watch"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "names", "description", "url"}
+WATCH_KEYS = {"date", "note"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ANCHOR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
@@ -100,6 +101,8 @@ FEED_URL_PLACEHOLDER = "%FEED_URL%"
 PAGE_KEYS = {"title", "description"}
 # 排程發布：date 晚於現在的文章先不產出，最多只能排到幾天後。見 SPEC.md「排程發布」
 MAX_SCHEDULE_DAYS = 7
+# 追蹤中的事件：回頭查的日期在幾天內就列出來，跟排程的窗口相同，趕得上排進下一批稿。見 SPEC.md「追蹤中的事件」
+WATCH_AHEAD_DAYS = MAX_SCHEDULE_DAYS
 
 
 def load_strings(path: Path = STRINGS_PATH) -> dict[str, dict]:
@@ -167,6 +170,13 @@ def source_host(url: str) -> str:
 
 
 @dataclass
+class Watch:
+    """文章裡記下的一件之後要回頭查的事。due 是回頭查的日期，note 是要查什麼。"""
+    due: date
+    note: str
+
+
+@dataclass
 class Post:
     path: Path
     title: str
@@ -184,6 +194,8 @@ class Post:
     pin: bool = False
     # 接續的舊文章，寫檔名（不含 .md）。見 SPEC.md「前情與後續」
     follows: list[str] = field(default_factory=list)
+    # 之後要回頭查的事，只寫在 zh-TW 版本。見 SPEC.md「追蹤中的事件」
+    watch: list[Watch] = field(default_factory=list)
     lang: Lang = DEFAULT_LANG
     # date 晚於建置當下，排程中，這次不產出
     scheduled: bool = False
@@ -397,6 +409,23 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         problems.append(f"{where}：follows 要是清單，每一項寫接續的舊文章檔名、不含 .md，例如 2026-09-18-zkp-age-verification")
         follows = []
 
+    watch = []
+    raw_watch = meta.get("watch") or []
+    if raw_watch and lang != DEFAULT_LANG:
+        problems.append(f"{where}：watch 只寫在 zh-TW 版本，這是編輯用的追蹤筆記，不翻譯")
+    elif not isinstance(raw_watch, list):
+        problems.append(f"{where}：watch 要是清單，每一筆有 date 與 note")
+    else:
+        for index, item in enumerate(raw_watch, 1):
+            if (not isinstance(item, dict) or set(item) != WATCH_KEYS
+                    or not isinstance(item["date"], date) or isinstance(item["date"], datetime)
+                    or not isinstance(item["note"], str) or not item["note"].strip()):
+                problems.append(f"{where}：watch 第 {index} 筆要有 date（YYYY-MM-DD，回頭查的日期）與 note（要查什麼）")
+            elif created and item["date"] <= created.date():
+                problems.append(f"{where}：watch 第 {index} 筆的 date 是 {item['date']}，要晚於發布日")
+            else:
+                watch.append(Watch(item["date"], item["note"].strip()))
+
     anchors = check_headings(body, where, problems)
     if problems:
         raise BuildError(problems)
@@ -414,6 +443,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         image=image,
         pin=pin,
         follows=list(follows),
+        watch=watch,
         body=body,
         anchors=anchors,
         lang=lang,
@@ -753,6 +783,38 @@ def story_threads(posts: list[Post]) -> dict[str, list[Post]]:
             for post in group:
                 threads[post.path.stem] = ordered
     return threads
+
+
+def due_watches(posts: list[Post], today: date,
+                ahead: int = WATCH_AHEAD_DAYS) -> tuple[list[tuple[Watch, Post]], list[tuple[Watch, Post]]]:
+    """追蹤中的事件，分成到期（回頭查的日期在 ahead 天內或已經過了）與還沒到期兩組，各自依日期排。
+    已經有後續稿的文章不列，後續稿還在排程中也算有了。posts 要包含排程中的文章。"""
+    followed = {ref for post in posts for ref in post.follows}
+    due, later = [], []
+    for post in posts:
+        if post.path.stem in followed:
+            continue
+        for item in post.watch:
+            (due if item.due <= today + timedelta(days=ahead) else later).append((item, post))
+
+    def key(pair: tuple[Watch, Post]):
+        return pair[0].due, pair[1].created
+
+    return sorted(due, key=key), sorted(later, key=key)
+
+
+def watch_report(posts: list[Post], today: date) -> str:
+    """--watch 的輸出。到期的每筆一行 checkbox，可以直接貼進每週候選票的「追蹤中的事件」。"""
+    due, later = due_watches(posts, today)
+    lines = [f"追蹤中的事件：{len(due)} 筆已到期或 {WATCH_AHEAD_DAYS} 天內到期（今天 {today}，台北時間）"]
+    for item, post in due:
+        late = (today - item.due).days
+        suffix = f"（已過 {late} 天）" if late > 0 else ""
+        lines.append(f"- [ ] {item.due} {post.title}：{item.note} {NEWS_PREFIX}{post.rel}{suffix}")
+    if later:
+        lines.append(f"另有 {len(later)} 筆還沒到期，最早是 {later[0][0].due}")
+    lines.append("寫了後續稿（follows 接上這篇）就不再列出。事件沒有新進展時，刪掉那一筆 watch")
+    return "\n".join(lines)
 
 
 def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
@@ -1501,9 +1563,13 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="產生之後執行 SPEC.md 的九項檢查")
     parser.add_argument("--update-contract", action="store_true", help="把目前的網址寫回 url_contract.txt")
     parser.add_argument("--docs-contract", type=Path, help="文件站網址合約的本機檔案，預設從 GitHub 下載")
+    parser.add_argument("--watch", action="store_true", help="列出追蹤中、快要到期的事件，不產生網站")
     args = parser.parse_args()
 
     try:
+        if args.watch:
+            print(watch_report(load_site(ROOT / "posts", load_authors(ROOT / "authors.yml")), current_time().date()))
+            return 0
         targets, pages, posts = build()
         contract = contract_pages() if args.update_contract or args.check else []
         if args.update_contract:

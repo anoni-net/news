@@ -15,6 +15,7 @@ uv sync
 uv run build.py                    # 產生 public/clearnet 與 public/onion
 uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
 uv run build.py --update-contract  # 新增網址之後，把它們收進 url_contract.txt
+uv run build.py --watch            # 列出快到期、還沒有後續稿的追蹤事件，貼進每週候選票
 uv run pytest -q
 ./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
@@ -58,6 +59,8 @@ uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md  # 維護者：試抓
 同一條法案、同一個產品變更或同一起事件有新進展時，在 front matter 用 `follows` 寫出前一篇導讀的檔名，舊文章不用改，建置時會替兩邊加上連結（見 `SPEC.md`「前情與後續」）。第一段照常先寫這次發生什麼事，前情用一句話帶過，不預期讀者讀過舊文章。主題相近但事件不同的不用 `follows`。
 
 寫稿前先用法案編號、產品名或組織名在 `posts/` 搜尋，確認有沒有寫過同一件事。
+
+文章裡寫到之後才有結果的事，例如 12 月才釋出、年底前上線、還在測試版，在 zh-TW 版本的 front matter 用 `watch` 記下回頭查的日期與要查什麼（見 `SPEC.md`「追蹤中的事件」）。日期依原文寫的時間推估，查不到時間的抓一個月後。
 
 ### 事實與不確定
 
