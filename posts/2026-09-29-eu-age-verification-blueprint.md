@@ -35,6 +35,9 @@ sources:
   - title: Under-16
     url: https://www.mcmc.gov.my/en/onsa/under-16
     publisher: Malaysian Communications and Multimedia Commission
+watch:
+  - date: 2027-01-05
+    note: 各會員國的年齡驗證 App 是否在年底前上線，EU KIDS Act 草案的審議進度
 authors:
   - anoni-net
 ---
