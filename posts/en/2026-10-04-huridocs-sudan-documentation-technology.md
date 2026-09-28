@@ -19,6 +19,8 @@ sources:
     url: https://www.accessnow.org/wp-content/uploads/2026/03/KeepItOn-Internet-Shutdowns-2025-Annual-Report.pdf
     publisher: Access Now
     date: 2026-03-28
+regions:
+  - SD
 authors:
   - anoni-net
 ---
