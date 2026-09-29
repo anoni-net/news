@@ -134,6 +134,14 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
 
+[hosts."globalencryption.org"]
+icon = "globalencryption.org-6a2f17a9.png"
+from = "https://www.globalencryption.org/wp-content/uploads/2020/05/cropped-GEC-graphics-01-192x192.png"
+
+[hosts."globalnews.ca"]
+icon = "globalnews.ca-1e432260.png"
+from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_square-144.png"
+
 [hosts."gongbao.court.gov.cn"]
 same_as = "court.gov.cn"
 
@@ -183,6 +191,9 @@ from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-ic
 [hosts."imda.gov.sg"]
 icon = "imda.gov.sg-8b6918ac.png"
 from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
+
+[hosts."info.gov.hk"]
+same_as = "gov.hk"
 
 [hosts."interseclab.org"]
 icon = "interseclab.org-cfaee2eb.png"
@@ -246,6 +257,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."parl.ca"]
+icon = "parl.ca-cc71bd4e.png"
+from = "https://www.parl.ca/favicon.ico"
 
 [hosts."pcpd.org.hk"]
 icon = "pcpd.org.hk-dc297a73.png"
