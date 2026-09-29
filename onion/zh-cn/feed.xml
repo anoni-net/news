@@ -6,7 +6,201 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 29 Sep 2026 07:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 30 Sep 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>俄罗斯国家通讯 App Max 的技术分析</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/interseclab-max-messenger/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/09/interseclab-max-messenger</guid>
+<pubDate>Wed, 30 Sep 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>InterSecLab 分析俄罗斯规定预装的通讯 App Max，发现它没有端到端加密。VPN 检测、网络探测与语音转文字都能从服务器针对个别账号切换，界面上没有任何提示。预装规定只在俄罗斯实施。</description>
+<content:encoded>&lt;p&gt;整理 4 篇原文，来自 InterSecLab、Правительство России、CNN 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;数字安全实验室 InterSecLab 在 9 月 24 日发表报告，分析俄罗斯政府规定预装的通讯 App Max。报告写明 Max 没有端到端加密，开发 Max 的俄罗斯互联网公司 VK 可在服务器上读取每条消息。研究者在 2026 年 3 到 5 月间分析 Android 版 &lt;code&gt;26.12.0&lt;/code&gt;，结果只代表这个版本。预装规定只适用于俄罗斯销售的手机与平板，俄罗斯以外的读者不受影响。&lt;/p&gt;
+&lt;p&gt;俄罗斯政府 2025 年 8 月宣布，Max 从 2025 年 9 月 1 日起列入电子设备必须预装的软件。CNN 报道，俄罗斯在 2026 年 2 月证实封锁 WhatsApp，并引导民众改用 Max。据报告，使用政府服务越来越常需要 Max。&lt;/p&gt;
+&lt;p&gt;报告最重要的发现是，VK 的服务器可以针对一个或一批账号，切换网络探测、VPN 检测、语音转文字等功能。切换时不需要更新 App，界面上也没有提示。网络探测开启后，App 每次启动或切换到后台都会查询设备的公网 IP、检查是否启用 VPN、读取运营商，再上报给 VK。&lt;/p&gt;
+&lt;p&gt;Max 检测到 VPN 就停止工作。研究者尝试回复消息时，屏幕只剩关闭 VPN 的提示。检测只看设备本身，路由器上的 VPN 不会被发现。&lt;/p&gt;
+&lt;p&gt;Max 也会把整份通讯录以明文上传给 VK。语音消息则在服务器而非手机上转成文字。&lt;/p&gt;
+&lt;p&gt;研究者 9 月 25 日在报告页刊出更正，Max 的界面上没有「秘密聊天」这项功能，1.1 版 PDF 已在 9 月 28 日改写相关段落。没有端到端加密的结论不受影响，依据是在 App 内截获的明文消息。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;端到端加密让运营方也无法读取消息内容，Max 没有这项保护。Max 的功能又能由服务器针对账号切换，同一版 App 在不同账号上的行为可能不同。研究者只能看到测试账号收到的设置，也未收集到 VK 或任何俄罗斯国家机关对特定人士使用这些功能的证据。&lt;/p&gt;
+&lt;p&gt;多伦多大学的研究室 Citizen Lab 在 2023 年的微信报告写明，微信的聊天消息没有端到端加密，腾讯能看到所有消息。用中国大陆手机号注册的账号，消息会被按关键词自动审查。据同一份报告引述的研究，大陆以外账号的消息也被用来训练审查算法。Citizen Lab 报告的建议是收紧 App 权限、定期更新系统，但高风险用户无法靠这些调整确保安全。&lt;/p&gt;
+&lt;p&gt;报告的建议是不要用 Max 发送敏感内容，装了 Max 的人应假设内容都能被 VK 读取。报告也列出不得不使用 Max 时的三种做法，把 VPN 设在路由器上、把 Max 装进 Android 的独立用户或资料（profile），或用另一部手机装政府要求的 App。三种做法能让翻墙工具照常工作，但 VK 存储的消息未经加密，内容仍无保护。&lt;/p&gt;
+&lt;p&gt;俄罗斯以外的读者不需要做任何设置。可以留意报告的俄文译本，以及下一版报告对服务器端设置何时生效的修正。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（4 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://interseclab.org/research/max/&#34;&gt;The Max Messenger: An Analysis of Russia’s State-Mandated Messaging Application&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;InterSecLab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;http://government.ru/docs/55977/&#34;&gt;Правительство включит новые цифровые продукты в перечень программ для обязательной предустановки&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Правительство России&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-08-21&#34;&gt;2025 年 8 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnn.com/2026/02/12/tech/russia-whatsapp-social-media-clampdown-intl&#34;&gt;Russia says it has blocked WhatsApp amid wider clampdown on social media&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CNN&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-12&#34;&gt;2026 年 2 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2023/06/privacy-in-the-wechat-ecosystem-full-report/&#34;&gt;Should We Chat? Privacy in the WeChat Ecosystem&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-06-28&#34;&gt;2023 年 6 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Android 的 VPN 漏洞与 Mullvad 加密 DNS 的停用</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown</guid>
+<pubDate>Wed, 30 Sep 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Android 的一个漏洞让任何 App 绕过 VPN、泄露真实 IP，开启「屏蔽未使用 VPN 的所有连接」也无法阻止。Mullvad 的公共加密 DNS 将在 11 月 2 日停止服务，手动设置过的人需要更换。</description>
+<content:encoded>&lt;p&gt;整理 18 篇原文，来自 Mullvad、CyberInsider、GrapheneOS 等 6 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;VPN 服务商 Mullvad 在 9 月发布两则公告，一则影响所有在 Android 上使用 VPN 的人，另一则影响手动设置过 Mullvad 加密 DNS 的人。Android 新发现的漏洞使任何 App 不需要特殊权限就能让部分数据包绕过 VPN，开启「屏蔽未使用 VPN 的所有连接」也无法阻止。研究者估计多数 Android 12 及以上的设备受影响，但并非每个型号都实测过。Mullvad 的公共加密 DNS 则将在 11 月 2 日停止服务。&lt;/p&gt;
+&lt;p&gt;漏洞出在 keep-alive 数据包（为了维持连接、定期发送的小数据包）。恶意 App 可以要求 Android 建立一条 keep-alive 连接，由 Android 交给 Wi-Fi 或移动网络芯片发送。网络安全新闻网站 CyberInsider 报道，数据包格式由 Android 决定，无法夹带任意数据。接收的服务器仍能看到设备在 VPN 之外的真实 IP。&lt;/p&gt;
+&lt;p&gt;依研究者的披露时间线，他在 5 月 15 日把漏洞报告给 Google 的 Android 漏洞奖励计划，Google 之后标记为重复报告。公开前，Google 没有告知修复，也没有分配 CVE（公开漏洞的统一编号）。Mullvad 9 月 10 日的公告写到，Google 不太可能处理，Mullvad 目前也没有计划提供占满硬件 keep-alive 名额这种理论上的缓解做法。&lt;/p&gt;
+&lt;p&gt;DNS 那一则是 9 月 3 日的公告，写明运营注重隐私的公共 DNS 需要高度专业，Mullvad 决定改为资助 Quad9 基金会（提供公共 DNS 的瑞士非营利组织）。使用 Mullvad VPN 的人不受影响，查询由 VPN 服务器处理。使用默认设置的 Mullvad Browser 会自动改用 Quad9，手动选过其他 Mullvad DNS 变体的人要改回默认。iOS 与 macOS 上 Mullvad 的 DNS 描述文件则会失效。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;开启「屏蔽未使用 VPN 的所有连接」时，系统会检查每条连接是否经过 VPN。keep-alive 交给网络芯片后，数据包直接从硬件发出，不经过这道检查。漏洞因此与 VPN 品牌无关。CyberInsider 9 月 11 日的报道写到，当时没有可靠的应用层修复。&lt;/p&gt;
+&lt;p&gt;Mullvad 的建议是只安装信任的 App，可以的话改用 GrapheneOS 这类强化隐私与安全的 Android 版本，不过 GrapheneOS 的正式版只支持 Pixel 6 及以上的 Pixel 设备。GrapheneOS 关闭这类 keep-alive 的修复在 9 月 28 日合并，到 9 月 29 日为止还没有进入正式版。&lt;/p&gt;
+&lt;p&gt;真实 IP 一旦泄露就有风险的人，可以参考 CyberInsider 报道的做法，让手机连上强制走 VPN 的路由器。前提是关闭移动网络等其他连接路径。手机离开那台路由器就没有这层保护。&lt;/p&gt;
+&lt;p&gt;到 9 月 29 日为止，GreatFire（测试中国大陆网址封锁状况的网站）近 90 天对 mullvad.net 的 17 次测试结果全部是封锁。被封锁的网址也包括 Android、Windows、macOS 与 Linux 版的下载链接。Quad9 的 DoH（DNS over HTTPS）地址最近两次有结果的测试也都受到干扰，最后一次在 9 月 3 日。&lt;/p&gt;
+&lt;p&gt;身在海外、手动设置过 Mullvad 加密 DNS 的人，可以在 11 月 2 日前改用 Quad9。Quad9 的隐私政策写明用户的 IP 只在处理查询的极短时间内留在内存，另外保留的统计按地区、电信网络与协议分类，不含个别 IP。改用之后，DNS 查询仍集中在同一个运营方手上。&lt;/p&gt;
+&lt;p&gt;iPhone（iOS 14 及以上）与 Mac（Big Sur 及以上）要用 Safari 下载 Quad9 说明页的描述文件，2027 年 1 月 19 日到期后需重新安装。Android 9 及以上在「专用 DNS」填入主机名 &lt;code&gt;dns.quad9.net&lt;/code&gt;，这一项走 DoT（DNS over TLS），不能填 DoH 地址 &lt;code&gt;https://dns.quad9.net/dns-query&lt;/code&gt;。Quad9 的说明页写明，用其他 VPN 时描述文件与专用 DNS 通常不会生效，要改在 VPN App 的自定义 DNS 设置 Quad9。说明页有英文、法文、西班牙文与罗马尼亚文，没有中文。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（18 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mullvad.net/en/blog/2026/9/10/another-way-to-leak-traffic-on-android-has-been-discovered/&#34;&gt;Another way to leak traffic on Android has been discovered&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mullvad.net/en/blog/2026/9/3/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead/&#34;&gt;Shutting down our public encrypted DNS servers and sponsoring Quad9 instead&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-03&#34;&gt;2026 年 9 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mullvad.net/en/help/dns-over-https-and-dns-over-tls&#34;&gt;DNS over HTTPS and DNS over TLS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-03&#34;&gt;2026 年 9 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/mullvad-warns-of-new-android-vpn-leak-as-grapheneos-works-on-fix/&#34;&gt;Mullvad warns of a new Android VPN leak as GrapheneOS develops a fix&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-11&#34;&gt;2026 年 9 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_packages_modules_Connectivity/pull/47&#34;&gt;Disable unprivileged hardware keepalives&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-26&#34;&gt;2026 年 9 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases&#34;&gt;Releases | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#supported-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/privacy/policy/&#34;&gt;Quad9 Privacy Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-24&#34;&gt;2026 年 6 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/service/service-addresses-and-features/&#34;&gt;Service Addresses &amp;amp; Features&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/&#34;&gt;iOS 14 and later (Encrypted)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.quad9.net/Setup_Guides/MacOS/Big_Sur_and_later_%28Encrypted%29/&#34;&gt;Big Sur and later (Encrypted)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/&#34;&gt;Android 9+ (Encrypted)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rTW/strings.xml&#34;&gt;packages/apps/Settings/res/values-zh-rTW/strings.xml&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rTW/strings.xml&#34;&gt;frameworks/base/packages/SettingsLib/res/values-zh-rTW/strings.xml&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/mullvad.net&#34;&gt;Is https://mullvad.net blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/dns.quad9.net/dns-query&#34;&gt;Is https://dns.quad9.net/dns-query blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rCN/strings.xml&#34;&gt;packages/apps/Settings/res/values-zh-rCN/strings.xml&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rCN/strings.xml&#34;&gt;frameworks/base/packages/SettingsLib/res/values-zh-rCN/strings.xml&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>西班牙对 archive.today 的行政封锁</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/spain-blocks-archive-today/</link>

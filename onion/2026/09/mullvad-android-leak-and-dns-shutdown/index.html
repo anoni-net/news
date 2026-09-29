@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用 | anoni.net 新聞導讀</title>
+<meta name="description" content="Android 的一個漏洞讓任何 App 繞過 VPN、洩漏真實 IP，開啟「封鎖沒有 VPN 的連線」也無法阻擋。Mullvad 的公開加密 DNS 將在 11 月 2 日停止服務，手動設定過的人需要更換。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/mullvad-android-leak-and-dns-shutdown/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/mullvad-android-leak-and-dns-shutdown/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/mullvad-android-leak-and-dns-shutdown/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/mullvad-android-leak-and-dns-shutdown/">
+<link rel="stylesheet" href="/css/news.css?v=6f8ff6f365">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml">
+<meta property="og:site_name" content="anoni.net 新聞導讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用">
+<meta property="og:description" content="Android 的一個漏洞讓任何 App 繞過 VPN、洩漏真實 IP，開啟「封鎖沒有 VPN 的連線」也無法阻擋。Mullvad 的公開加密 DNS 將在 11 月 2 日停止服務，手動設定過的人需要更換。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/mullvad-android-leak-and-dns-shutdown/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og.png?v=970cfc6f1d">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-09-30T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用",
+  "description": "Android 的一個漏洞讓任何 App 繞過 VPN、洩漏真實 IP，開啟「封鎖沒有 VPN 的連線」也無法阻擋。Mullvad 的公開加密 DNS 將在 11 月 2 日停止服務，手動設定過的人需要更換。",
+  "datePublished": "2026-09-30T00:00:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/mullvad-android-leak-and-dns-shutdown/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/mullvad-android-leak-and-dns-shutdown/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og.png",
+  "inLanguage": "zh-Hant",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Another way to leak traffic on Android has been discovered",
+      "url": "https://www.mullvad.net/en/blog/2026/9/10/another-way-to-leak-traffic-on-android-has-been-discovered/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Shutting down our public encrypted DNS servers and sponsoring Quad9 instead",
+      "url": "https://www.mullvad.net/en/blog/2026/9/3/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "DNS over HTTPS and DNS over TLS",
+      "url": "https://mullvad.net/en/help/dns-over-https-and-dns-over-tls"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Mullvad warns of a new Android VPN leak as GrapheneOS develops a fix",
+      "url": "https://cyberinsider.com/mullvad-warns-of-new-android-vpn-leak-as-grapheneos-works-on-fix/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Disable unprivileged hardware keepalives",
+      "url": "https://github.com/GrapheneOS/platform_packages_modules_Connectivity/pull/47"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Releases | GrapheneOS",
+      "url": "https://grapheneos.org/releases"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Frequently Asked Questions | GrapheneOS",
+      "url": "https://grapheneos.org/faq#supported-devices"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Quad9 Privacy Policy",
+      "url": "https://quad9.net/privacy/policy/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Service Addresses & Features",
+      "url": "https://quad9.net/service/service-addresses-and-features/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "iOS 14 and later (Encrypted)",
+      "url": "https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Big Sur and later (Encrypted)",
+      "url": "https://docs.quad9.net/Setup_Guides/MacOS/Big_Sur_and_later_%28Encrypted%29/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Android 9+ (Encrypted)",
+      "url": "https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "packages/apps/Settings/res/values-zh-rTW/strings.xml",
+      "url": "https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rTW/strings.xml"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "frameworks/base/packages/SettingsLib/res/values-zh-rTW/strings.xml",
+      "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rTW/strings.xml"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新聞導讀</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story">
+  <header class="story__head">
+    <p class="story__date"><time datetime="2026-09-30T00:00:00+08:00">2026 年 9 月 30 日 星期三</time></p>
+    <h1 class="story__title">Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用</h1>
+    <p class="story__dek">Android 的一個漏洞讓任何 App 繞過 VPN、洩漏真實 IP，開啟「封鎖沒有 VPN 的連線」也無法阻擋。Mullvad 的公開加密 DNS 將在 11 月 2 日停止服務，手動設定過的人需要更換。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/mullvad.net-21b79597.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/cyberinsider.com-f4b1bbac.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 14 篇原文，來自 Mullvad、CyberInsider、GrapheneOS 等 5 個出處</span></a></span>
+      <span>導讀：anoni.net 社群</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/en/2026/09/mullvad-android-leak-and-dns-shutdown/" hreflang="en" lang="en">English</a></nav>
+  </header>
+  <div class="story__body content">
+<p>VPN 業者 Mullvad 在 9 月發布兩則公告，一則影響所有在 Android 上使用 VPN 的人，另一則影響手動設定過 Mullvad 加密 DNS 的人。Android 新發現的漏洞使任何 App 不需特殊權限就能讓部分封包繞過 VPN，開啟「封鎖沒有 VPN 的連線」也無法阻擋。研究者估計多數 Android 12 以上的裝置受影響，但並非每個型號都實測過。Mullvad 的公開加密 DNS 則將在 11 月 2 日停止服務。</p>
+<p>漏洞出在 keep-alive 封包（為了維持連線、定期送出的小封包）。惡意 App 可以要求 Android 建立一條 keep-alive 連線，由 Android 交給 Wi-Fi 或行動網路晶片送出。資安新聞網站 CyberInsider 報導，封包格式由 Android 決定，無法夾帶任意資料。接收的伺服器仍能看到裝置在 VPN 之外的真實 IP。</p>
+<p>依研究者的揭露時間線，他在 5 月 15 日把漏洞回報給 Google 的 Android 漏洞獎勵計畫，Google 之後標記為重複回報。公開前，Google 沒有告知修正，也沒有配發 CVE（公開漏洞的統一編號）。Mullvad 9 月 10 日的公告寫到，Google 不太可能處理，Mullvad 目前也沒有計畫提供占滿硬體 keep-alive 名額這種理論上的緩解做法。</p>
+<p>DNS 那一則是 9 月 3 日的公告，寫明經營注重隱私的公開 DNS 需要高度專業，Mullvad 決定改為資助 Quad9 基金會（提供公開 DNS 的瑞士非營利組織）。使用 Mullvad VPN 的人不受影響，查詢由 VPN 伺服器處理。使用預設設定的 Mullvad Browser 會自動改用 Quad9，手動選過其他 Mullvad DNS 變體的人要改回預設。iOS 與 macOS 上 Mullvad 的 DNS 描述檔則會失效。</p>
+<h2 id="perspective">導讀觀點</h2>
+<p>開啟「封鎖沒有 VPN 的連線」時，系統會檢查每條連線是否經過 VPN。keep-alive 交給網路晶片之後，封包直接從網路硬體送出，不經過這道檢查。CyberInsider 9 月 11 日的報導寫到，當時沒有可靠的 App 層級修正。</p>
+<p>Mullvad 的建議是只安裝信任的 App，可以的話改用 GrapheneOS 這類強化隱私與安全的 Android 版本，不過 GrapheneOS 的正式版本只支援 Pixel 6 以上的 Pixel 裝置。GrapheneOS 關閉這類 keep-alive 的修正在 9 月 28 日合併，到 9 月 29 日為止還沒有進入正式版本。</p>
+<p>真實 IP 一旦外洩就有風險的人，可以參考 CyberInsider 報導的做法，讓手機連上強制走 VPN 的路由器。前提是關閉行動網路等其他連線路徑。手機離開那台路由器就沒有這層保護。</p>
+<p>手動設定過 Mullvad 加密 DNS 的人可以改用 Quad9，它的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。</p>
+<p>更換要在 11 月 2 日前完成。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 的說明頁下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 <code>dns.quad9.net</code>，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 <code>https://dns.quad9.net/dns-query</code>。</p>
+<p>Quad9 的說明頁寫明，用其他 VPN 時描述檔與私人 DNS 通常不會生效，要改在 VPN App 的自訂 DNS 設定 Quad9。說明頁有英文、法文、西班牙文與羅馬尼亞文，沒有中文。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（14 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.mullvad.net/en/blog/2026/9/10/another-way-to-leak-traffic-on-android-has-been-discovered/"><img class="source-slip__icon" src="/assets/favicons/mullvad.net-21b79597.png" width="16" height="16" alt="" loading="lazy" decoding="async">Another way to leak traffic on Android has been discovered</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Mullvad</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-10">2026 年 9 月 10 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.mullvad.net/en/blog/2026/9/3/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead/"><img class="source-slip__icon" src="/assets/favicons/mullvad.net-21b79597.png" width="16" height="16" alt="" loading="lazy" decoding="async">Shutting down our public encrypted DNS servers and sponsoring Quad9 instead</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Mullvad</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-03">2026 年 9 月 3 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls"><img class="source-slip__icon" src="/assets/favicons/mullvad.net-21b79597.png" width="16" height="16" alt="" loading="lazy" decoding="async">DNS over HTTPS and DNS over TLS</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Mullvad</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-03">2026 年 9 月 3 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://cyberinsider.com/mullvad-warns-of-new-android-vpn-leak-as-grapheneos-works-on-fix/"><img class="source-slip__icon" src="/assets/favicons/cyberinsider.com-f4b1bbac.png" width="16" height="16" alt="" loading="lazy" decoding="async">Mullvad warns of a new Android VPN leak as GrapheneOS develops a fix</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>CyberInsider</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-11">2026 年 9 月 11 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/GrapheneOS/platform_packages_modules_Connectivity/pull/47"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Disable unprivileged hardware keepalives</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GrapheneOS</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-26">2026 年 9 月 26 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://grapheneos.org/releases"><img class="source-slip__icon" src="/assets/favicons/grapheneos.org-5378d298.png" width="16" height="16" alt="" loading="lazy" decoding="async">Releases | GrapheneOS</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GrapheneOS</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://grapheneos.org/faq#supported-devices"><img class="source-slip__icon" src="/assets/favicons/grapheneos.org-5378d298.png" width="16" height="16" alt="" loading="lazy" decoding="async">Frequently Asked Questions | GrapheneOS</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GrapheneOS</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://quad9.net/privacy/policy/"><img class="source-slip__icon" src="/assets/favicons/quad9.net-ff6922f7.png" width="16" height="16" alt="" loading="lazy" decoding="async">Quad9 Privacy Policy</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Quad9</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-06-24">2026 年 6 月 24 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://quad9.net/service/service-addresses-and-features/"><img class="source-slip__icon" src="/assets/favicons/quad9.net-ff6922f7.png" width="16" height="16" alt="" loading="lazy" decoding="async">Service Addresses &amp; Features</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Quad9</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/"><img class="source-slip__icon" src="/assets/favicons/quad9.net-ff6922f7.png" width="16" height="16" alt="" loading="lazy" decoding="async">iOS 14 and later (Encrypted)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Quad9</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://docs.quad9.net/Setup_Guides/MacOS/Big_Sur_and_later_%28Encrypted%29/"><img class="source-slip__icon" src="/assets/favicons/quad9.net-ff6922f7.png" width="16" height="16" alt="" loading="lazy" decoding="async">Big Sur and later (Encrypted)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Quad9</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/"><img class="source-slip__icon" src="/assets/favicons/quad9.net-ff6922f7.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android 9+ (Encrypted)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Quad9</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rTW/strings.xml"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">packages/apps/Settings/res/values-zh-rTW/strings.xml</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Android Open Source Project</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rTW/strings.xml"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">frameworks/base/packages/SettingsLib/res/values-zh-rTW/strings.xml</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Android Open Source Project</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<p class="subscribe">想收到新的導讀：<a href="/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>訂閱電子報</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 追蹤</span></a></p>
+<nav class="pager pager--story" aria-label="文章導覽">
+  <a class="pager__item pager__item--newer" href="/2026/09/interseclab-max-messenger/"><span class="pager__label"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg> 較新的一篇</span> <span class="pager__title">俄羅斯國家通訊 App Max 的技術分析</span></a>
+  <a class="pager__item pager__item--older" href="/2026/09/spain-blocks-archive-today/"><span class="pager__label">較舊的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">西班牙對 archive.today 的行政封鎖</span></a>
+  <a class="pager__all" href="/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="頁尾">
+      <a href="/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 訂閱電子報</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 追蹤</a>
+      <a href="/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 關於新聞導讀</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 回報錯誤</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首頁</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/en/2026/09/mullvad-android-leak-and-dns-shutdown/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+  </div>
+</footer>
+</body>
+</html>
