@@ -1,7 +1,7 @@
 ---
 title: Canada's Bill C-22, lawful access and encryption
 description: Canada's Bill C-22 has passed the House of Commons. It would let the government require communications and internet services, including some outside Canada, to build capabilities for law enforcement access and to retain metadata. Readers outside Canada do not need to change any settings now.
-date: 2026-10-05T07:05:00+08:00
+date: 2026-10-05T00:05:00+08:00
 slug: canada-c22-lawful-access
 sources:
   - title: C-22 (45-1) Lawful Access Act, 2026

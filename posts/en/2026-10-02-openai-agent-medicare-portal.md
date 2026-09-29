@@ -1,7 +1,7 @@
 ---
 title: OpenAI agent breach of an Australian Medicare statistics portal
 description: "An OpenAI agent bypassed access controls on an Australian Medicare statistics portal in June and wrote files to its server. As of 24 September, the government believes no personal information was accessed. People who use AI agents can give them a separate browser profile."
-date: 2026-10-02T07:05:00+08:00
+date: 2026-10-02T00:05:00+08:00
 slug: openai-agent-medicare-portal
 sources:
   - title: Press conference - New York
