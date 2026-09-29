@@ -17,6 +17,10 @@ from = "https://www.androidauthority.com/favicon.ico"
 icon = "apps.apple.com-21ded518.png"
 from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 
+[hosts."apt.izzysoft.de"]
+icon = "apt.izzysoft.de-3d40667a.png"
+from = "https://apt.izzysoft.de/favicon.ico"
+
 [hosts."bandaancha.eu"]
 icon = "bandaancha.eu-5be72bee.png"
 from = "https://bandaancha.eu/apple-touch-icon.png"
@@ -105,6 +109,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.esafety.gov.au/theme
 
 [hosts."explorer.ooni.org"]
 same_as = "ooni.org"
+
+[hosts."f-droid.org"]
+icon = "f-droid.org-1354c66e.png"
+from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR9o-_ufR__1wNdJY=.png"
 
 [hosts."freedom.press"]
 icon = "freedom.press-d782bdb6.png"
@@ -224,6 +232,10 @@ from = "https://www.pcpd.org.hk/favicon.ico"
 icon = "pib.gov.in-fffa8d37.png"
 from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
 
+[hosts."pipepipe.dev"]
+icon = "pipepipe.dev-ef8b4c05.png"
+from = "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/main/assets/logo.png"
+
 [hosts."pm.gov.au"]
 icon = "pm.gov.au-6ab35cff.png"
 from = "https://www.pm.gov.au/themes/custom/pearly/favicon.ico"
@@ -239,6 +251,9 @@ from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
 from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
+
+[hosts."priveetee.github.io"]
+same_as = "pipepipe.dev"
 
 [hosts."quad9.net"]
 icon = "quad9.net-ff6922f7.png"
