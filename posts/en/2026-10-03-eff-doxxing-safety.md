@@ -1,6 +1,6 @@
 ---
 title: Doxxing prevention and incident response
-description: "EFF published a two-part doxxing safety guide in late August: audit your own footprint, then log incidents, harden accounts and lock your phone number. Some steps rely on US systems and need local substitutes."
+description: "EFF published a two-part doxxing safety guide in late August: audit your own footprint, then log incidents, harden accounts and lock your phone number. It is written for US readers, but the footprint audit and account hardening work anywhere."
 date: 2026-10-03T07:00:00+08:00
 slug: eff-doxxing-safety
 sources:
@@ -27,24 +27,41 @@ sources:
   - title: "Have I Been Pwned: Check if your email address has been exposed in a data breach"
     url: https://haveibeenpwned.com/
     publisher: Have I Been Pwned
+  - title: FAQs - Have I Been Pwned
+    url: https://haveibeenpwned.com/FAQs
+    publisher: Have I Been Pwned
+  - title: DROP for data brokers
+    url: https://privacy.ca.gov/data-brokers
+    publisher: California Privacy Protection Agency
+  - title: Connecting to Tor from censored regions
+    url: https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/
+    publisher: Tor Project
+  - title: Is http://www.torproject.org blocked in mainland China?
+    url: https://en.greatfire.org/www.torproject.org
+    publisher: GreatFire
+  - title: Is https://haveibeenpwned.com blocked in mainland China?
+    url: https://en.greatfire.org/https/haveibeenpwned.com
+    publisher: GreatFire
 authors:
   - anoni-net
 ---
 
-On 31 August the Electronic Frontier Foundation (EFF) published a two-part guide to doxxing, which it defines as the deliberate disclosure of personal information in order to bully, harass, intimidate, or instigate a chain of harms against someone. Part I covers prevention and shrinking your digital footprint; Part II covers what to do once it is happening. EFF's advice is to read both before anything happens.
+On 31 August the Electronic Frontier Foundation (EFF), a US digital rights group, published a two-part guide to doxxing, which it defines as "the deliberate disclosure of personal information" to bully, harass or intimidate someone. Part I is about prevention, Part II about responding once an attack is under way. The guide is written for readers in the US, but auditing your footprint and hardening your accounts work anywhere.
 
-Prevention starts with auditing yourself: check breach databases with haveibeenpwned, use username search engines such as What's My Name or Namechk to see where your handles are registered, and set social media accounts to private. According to EFF, data brokers are a frequent source for doxxers, and a recent study found that filing removal requests yourself is still more effective than paid services. Once an incident starts, keep an incident log of times, places, people and what you saw, turn on two-factor authentication, and consider shutting down targeted accounts. For checking forums where harassers gather, the guide's advice is Tor Browser and no engagement. It also covers security passwords or PINs on phone and bank accounts to block SIM swapping, and a PACE plan (primary, alternate, contingency, emergency) shared with trusted people. "Privacy is a team sport," EFF writes.
+Prevention starts with auditing yourself: check breach databases, list the sites where your usernames are registered (EFF notes such search tools may not be entirely accurate) and set social media accounts to private. EFF names data brokers as a frequent source for doxxers and cites a study finding DIY removal requests more effective than paid services, which may still suit people who would rather hand the work off.
+
+Once an incident starts, keep a log of times, places, people and what you saw. To check forums where harassers gather, EFF recommends Tor Browser (a browser that hides where you connect from) and no engagement. Turn on two-factor authentication, consider shutting down targeted accounts and, where providers offer them, add PINs to phone and bank accounts to block SIM swapping (an attacker taking over your number by impersonating you). Friends can share the monitoring, and Part II suggests a PACE plan (primary, alternate, contingency, escape/emergency).
 
 ## Perspective {#perspective}
 
-Several steps rest on US institutions: address confidentiality programmes in some states, and the DROP tool, which only California residents can use. Readers elsewhere will need local equivalents. The rest travels well. Checking breach records, finding forgotten accounts, tightening social media settings and turning on two-factor authentication work the same everywhere, and are worth doing on a quiet day rather than in the middle of an attack.
+Doxxers piece together scraps of information from breach databases, data brokers and public records into a dossier. Some remedies exist only in the US: address confidentiality programmes in some states, which substitute a proxy address in public records, and California's DROP, which lets residents send one deletion request to all registered data brokers. In mainland China, GreatFire's tests show torproject.org blocked (checked 29 September), and the Tor Project's support page advises users there to get Tor Browser through GetTor and connect with bridges (unlisted entry points to the Tor network).
 
-The legal picture differs across East Asia, and it shapes what an incident log is for. Hong Kong made doxxing a specific offence in October 2021. The first tier carries a fine of HK$100,000 and two years in prison; the second, where specified harm is caused, carries HK$1,000,000 and five years. The Privacy Commissioner for Personal Data can also serve cessation notices to have doxxing content removed, including messages posted on online platforms, and can investigate and prosecute the offences directly.
+Hong Kong made doxxing a specific offence in October 2021, with a first tier punishable by up to HK$100,000 and two years in prison and a second tier, where specified harm is caused, by up to HK$1,000,000 and five years. The Privacy Commissioner for Personal Data, head of the city's privacy regulator, can also serve cessation notices to have doxxing content removed, including posts on online platforms.
 
-In mainland China, a 2023 guidance from the Supreme People's Court, the Supreme People's Procuratorate and the Ministry of Public Security says that organising a "human flesh search", illegally collecting citizens' personal information and publishing it to an unspecified public, is punished as the crime of infringing citizens' personal information when the circumstances are serious. The same guidance lets victims apply to a court for an injunction against infringement of personality rights.
+In mainland China, under 2023 guidelines on cyber violence from the Supreme People's Court, the Supreme People's Procuratorate and the Ministry of Public Security, organising a "human flesh search" to illegally collect citizens' personal information and publish it to the public at large is punished as the crime of infringing citizens' personal information when the circumstances are serious. Victims who can show an infringement is under way or imminent can also seek an injunction under Article 997 of the Civil Code.
 
-In Taiwan, Article 41 of the Personal Data Protection Act punishes unlawful collection or use of personal data with intent to damage another person's interests, where the act is sufficient to cause damage, with up to five years in prison and a fine of up to NT$1 million.
+In Taiwan, unlawfully collecting or using personal data in a way liable to cause damage can bring up to five years in prison under Article 41 of the Personal Data Protection Act, to which a fine of up to NT$1 million may be added. The offence requires intent to obtain an unlawful gain for oneself or a third party, or to damage another person's interests.
 
-Whichever system applies, a complaint needs evidence. Start the incident log with the first message, and keep screenshots and links alongside it. According to EFF, finding and recording hateful content is stressful, which is why the guide keeps returning to shared roles: someone you trust can watch and record while you step away.
+Whichever system applies, a complaint needs evidence, so start the incident log with the first message and keep screenshots and links alongside it. Going to the police is a judgement call: EFF writes that "for many, talking to law enforcement will only make things worse."
 
-The first step you can take today is to enter your email address at haveibeenpwned, which is free and in English, to see whether it appears in known breaches. If it does, EFF's guide says you can change the exposed email address or phone number. Turning on two-factor authentication for important accounts and setting social accounts to private are the other quick steps.
+The first step you can take today is to enter your email address at Have I Been Pwned, a site that indexes known data breaches. As of 29 September the search is free, needs no account and the site is English-only; GreatFire's last test, on 9 February, found it reachable from mainland China. If your address appears, EFF lists changing the exposed email address or phone number as an option, while noting that doing so is "extremely inconvenient".

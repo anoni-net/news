@@ -150,6 +150,10 @@ from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 icon = "pcpd.org.hk-dc297a73.png"
 from = "https://www.pcpd.org.hk/favicon.ico"
 
+[hosts."privacy.ca.gov"]
+icon = "privacy.ca.gov-a08db90b.png"
+from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
+
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
@@ -173,6 +177,10 @@ from = "https://support.google.com/favicon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."support.torproject.org"]
+icon = "support.torproject.org-f88d6334.png"
+from = "https://support.torproject.org/images/favicon/favicon-192x192.png?h=a118bd0b"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
