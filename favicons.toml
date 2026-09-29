@@ -37,6 +37,10 @@ from = "https://www.cnbc.com/apple-touch-icon.png"
 icon = "community.signalusers.org-34c4e8e9.png"
 from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
 
+[hosts."consumer.huawei.com"]
+icon = "consumer.huawei.com-dddcd8b6.png"
+from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawei-logo.png"
+
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
@@ -145,6 +149,14 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."pcpd.org.hk"]
+icon = "pcpd.org.hk-dc297a73.png"
+from = "https://www.pcpd.org.hk/favicon.ico"
+
+[hosts."policies.google.com"]
+icon = "policies.google.com-53ae8c75.png"
+from = "https://www.gstatic.com/policies/favicon.ico"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
