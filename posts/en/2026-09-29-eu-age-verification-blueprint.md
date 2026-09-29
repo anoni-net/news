@@ -1,7 +1,7 @@
 ---
 title: Privacy design and disputes around the EU age verification app
-description: The European Commission recommends that member states launch an age verification app by the end of 2026; users outside the EU are not affected. According to the Commission, the app keeps no ID documents or biometric data, while EDRi questions its privacy protections. Under the specification released in September, apps and websites must implement zero-knowledge proofs, falling back to a plain method the issuer could trace only when a device lacks support.
-date: {created: 2026-09-29T07:00:00+08:00, updated: 2026-09-29T15:30:00+08:00}
+description: The European Commission recommends that member states launch an age verification app by the end of 2026; users outside the EU are not affected. According to the Commission, the app keeps no ID documents or biometric data, while EDRi questions its privacy protections. Under the specification released in September, apps and websites must implement zero-knowledge proofs, falling back only on devices without support to a plain method that an issuer could trace.
+date: {created: 2026-09-29T07:00:00+08:00, updated: 2026-09-29T15:38:00+08:00}
 slug: eu-age-verification-blueprint
 sources:
   - title: The EU approach to age verification
@@ -43,6 +43,7 @@ sources:
   - title: Under-16
     url: https://www.mcmc.gov.my/en/onsa/under-16
     publisher: Malaysian Communications and Multimedia Commission
+    date: 2026-06-15
   - title: 未成年人网络保护条例
     url: https://www.gov.cn/zhengce/content/202310/content_6911288.htm
     publisher: 中华人民共和国国务院
@@ -57,7 +58,7 @@ The European Commission declared its age verification app ready in April and rec
 
 According to the Commission's policy page, users can prove they are over 18 without sharing any other personal information. The app, also called the "mini wallet", shares the specifications of the EU Digital Identity Wallets due in every member state by the end of 2026. Per the proposal's press release, the app retains no identity documents or biometric data, and 92% of respondents to an EU-wide survey see stronger online protection for children as a top policy priority.
 
-In a technical analysis on 7 September, the digital rights network European Digital Rights (EDRi) concluded that the tools, pitched as "ready" and "privacy-preserving", fail on both counts. EDRi opposes building age verification while refusing is still an option, and holds that any age gate must meet the highest privacy and data protection standards. By its analysis, the law requires the underlying Digital Identity Wallet to "ensure" unlinkability (age proofs that cannot be tied to one person) where relevant, and the Commission has weakened this to "hindering" linkage.
+In a technical analysis on 7 September, the digital rights network European Digital Rights (EDRi) concluded that the tools, pitched as "ready" and "privacy-preserving", fail on both counts. EDRi opposes building age verification while refusing is still an option, and in its analysis any age gate would have to meet the highest privacy and data protection standards. By its analysis, the law requires the underlying Digital Identity Wallet to "ensure" unlinkability (age proofs that cannot be tied to one person) where relevant, and the Commission has weakened this to "hindering" linkage.
 
 Credentials in the plain verification method carry salts, signatures and timestamps, so an issuer that keeps records and cooperates with websites can trace users. EDRi quotes specifications older than version 1.1.0, where zero-knowledge proofs (a cryptographic way to prove a condition without revealing anything else) were a non-binding "SHOULD". In version 1.1.0, published on 2 September, apps and websites must both implement them, falling back to the plain method only on devices without support.
 
@@ -71,8 +72,8 @@ The reference app is open source under the EUPL-1.2 licence, and in its recommen
 
 In EDRi's analysis, the app confirms users through national ID combined with biometric checks, excluding people without ID documents, a suitable phone, or willingness to undergo facial recognition. Other ways to obtain the credential listed in the specification include electronic identity schemes and identity checks by banks and mobile network operators. For people lacking identity documents, its Equity provision includes alternative issuance procedures or human intervention.
 
-For us, a community based in Taiwan, the nearest comparisons are in the Asia-Pacific, where the ID question is settled differently. Since 10 December 2025, Australia has required social media platforms to take reasonable steps to stop under-16s from holding accounts. Australian law bars platforms from compelling users to provide government ID or use an accredited government digital ID, and platforms that offer it as an option must also offer a reasonable alternative. eSafety, the regulator, describes the rule as a delay to having accounts, with no penalties for under-16s or their parents.
+Since 10 December 2025, Australia has required social media platforms to take reasonable steps to stop under-16s from holding accounts. Australian law bars platforms from compelling users to provide government ID or use an accredited government digital ID, and platforms that offer it as an option must also offer a reasonable alternative. On the eSafety Commissioner's explainer page, the rule is framed as a delay to having accounts, with no penalties for under-16s or their parents.
 
-Malaysia has required social media platforms by law to verify users' ages since 1 June 2026. Its regulator, the Malaysian Communications and Multimedia Commission (MCMC), takes a technology-neutral approach but expects verification based on government-issued records or documents where required. In mainland China, Article 31 of the Regulations on the Protection of Minors Online, in force since 1 January 2024, requires services offering posting, instant messaging and the like to minors to obtain their real identity information and to withhold the service without it.
+Malaysia has required social media platforms by law to verify users' ages since 1 June 2026. Under the technology-neutral approach of its regulator, the Malaysian Communications and Multimedia Commission (MCMC), verification is expected to rely on government-issued records or documents where required. In mainland China, Article 31 of the Regulations on the Protection of Minors Online, in force since 1 January 2024, requires services offering posting, instant messaging and the like to minors to obtain their real identity information and to withhold the service without it.
 
 Readers have nothing to set up for now. Those in the EU can check which specification version their national app follows when it launches by the end of 2026. The same questions help compare approaches anywhere: whether zero-knowledge proofs are mandatory, whether issuing and presentation are kept apart, whether the app is open source, and whether people who do not show ID have an alternative.
