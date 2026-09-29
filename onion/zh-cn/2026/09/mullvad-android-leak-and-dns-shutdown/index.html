@@ -161,17 +161,17 @@
 <nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/09/mullvad-android-leak-and-dns-shutdown/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/09/mullvad-android-leak-and-dns-shutdown/" hreflang="en" lang="en">English</a></nav>
   </header>
   <div class="story__body content">
-<p>VPN 服务商 Mullvad 在 9 月发布两则公告，一则影响所有在 Android 上使用 VPN 的人，另一则影响手动设置过 Mullvad 加密 DNS 的人。Android 新发现的漏洞使任何 App 不需要特殊权限就能让部分数据包绕过 VPN，开启「屏蔽未使用 VPN 的所有连接」也无法阻止。研究者估计多数 Android 12 及以上的设备受影响，但并非每个型号都实测过。Mullvad 的公共加密 DNS 则将在 11 月 2 日停止服务。</p>
+<p>VPN 服务商 Mullvad 9 月的两则公告，分别影响在 Android 上使用 VPN 的人，以及手动设置过 Mullvad 加密 DNS 的人。Android 新发现的漏洞使任何 App 不需要特殊权限就能让部分数据包绕过 VPN，开启「屏蔽未使用 VPN 的所有连接」也无法阻止。研究者估计多数 Android 12 及以上的设备受影响，但并非每个型号都实测过。Mullvad 的公共加密 DNS 则将在 11 月 2 日停止服务。</p>
 <p>漏洞出在 keep-alive 数据包（为了维持连接、定期发送的小数据包）。恶意 App 可以要求 Android 建立一条 keep-alive 连接，由 Android 交给 Wi-Fi 或移动网络芯片发送。网络安全新闻网站 CyberInsider 报道，数据包格式由 Android 决定，无法夹带任意数据。接收的服务器仍能看到设备在 VPN 之外的真实 IP。</p>
-<p>依研究者的披露时间线，他在 5 月 15 日把漏洞报告给 Google 的 Android 漏洞奖励计划，Google 之后标记为重复报告。公开前，Google 没有告知修复，也没有分配 CVE（公开漏洞的统一编号）。Mullvad 9 月 10 日的公告写到，Google 不太可能处理，Mullvad 目前也没有计划提供占满硬件 keep-alive 名额这种理论上的缓解做法。</p>
-<p>DNS 那一则是 9 月 3 日的公告，写明运营注重隐私的公共 DNS 需要高度专业，Mullvad 决定改为资助 Quad9 基金会（提供公共 DNS 的瑞士非营利组织）。使用 Mullvad VPN 的人不受影响，查询由 VPN 服务器处理。使用默认设置的 Mullvad Browser 会自动改用 Quad9，手动选过其他 Mullvad DNS 变体的人要改回默认。iOS 与 macOS 上 Mullvad 的 DNS 描述文件则会失效。</p>
+<p>研究者 5 月 15 日把漏洞报告给 Google 的 Android 漏洞奖励计划，之后被标记为重复报告。公开前，Google 没有告知修复，也没有分配 CVE（公开漏洞的统一编号）。Mullvad 9 月 10 日的公告写到，Google 不太可能处理。</p>
+<p>9 月 3 日关于 DNS 的公告写明，运营注重隐私的公共 DNS 需要高度专业，Mullvad 决定改为资助 Quad9 基金会（提供公共 DNS 的瑞士非营利组织）。使用 Mullvad VPN 的人不受影响，查询由 VPN 服务器处理。使用默认设置的 Mullvad Browser 会自动改用 Quad9，手动选过其他 Mullvad DNS 变体的人要改回默认。iOS 与 macOS 上 Mullvad 的 DNS 描述文件则会失效。</p>
 <h2 id="perspective">导读观点</h2>
-<p>开启「屏蔽未使用 VPN 的所有连接」时，系统会检查每条连接是否经过 VPN。keep-alive 交给网络芯片后，数据包直接从硬件发出，不经过这道检查。漏洞因此与 VPN 品牌无关。CyberInsider 9 月 11 日的报道写到，当时没有可靠的应用层修复。</p>
+<p>开启「屏蔽未使用 VPN 的所有连接」时，系统会检查每条连接是否经过 VPN，keep-alive 交给网络芯片后就不经过这道检查。网络硬件能同时维持的 keep-alive 连接有上限，据 Mullvad 的公告，理论上先把名额占满就能挡住恶意 App。Mullvad 不打算这样做，因为占位的连接同样要在 VPN 外发出数据包，恶意 App 也可能在 Mullvad App 启动前就开始泄露。CyberInsider 9 月 11 日的报道写到，当时没有可靠的应用层修复。</p>
 <p>Mullvad 的建议是只安装信任的 App，可以的话改用 GrapheneOS 这类强化隐私与安全的 Android 版本，不过 GrapheneOS 的正式版只支持 Pixel 6 及以上的 Pixel 设备。GrapheneOS 关闭这类 keep-alive 的修复在 9 月 28 日合并，到 9 月 29 日为止还没有进入正式版。</p>
-<p>真实 IP 一旦泄露就有风险的人，可以参考 CyberInsider 报道的做法，让手机连上强制走 VPN 的路由器。前提是关闭移动网络等其他连接路径。手机离开那台路由器就没有这层保护。</p>
+<p>真实 IP 一旦泄露就有风险的人，可以参考 CyberInsider 报道的做法，让手机连上强制走 VPN 的路由器。前提是关闭移动网络等其他连接路径。手机离开这台路由器就失去保护。</p>
 <p>到 9 月 29 日为止，GreatFire（测试中国大陆网址封锁状况的网站）近 90 天对 mullvad.net 的 17 次测试结果全部是封锁。被封锁的网址也包括 Android、Windows、macOS 与 Linux 版的下载链接。Quad9 的 DoH（DNS over HTTPS）地址最近两次有结果的测试也都受到干扰，最后一次在 9 月 3 日。</p>
 <p>身在海外、手动设置过 Mullvad 加密 DNS 的人，可以在 11 月 2 日前改用 Quad9。Quad9 的隐私政策写明用户的 IP 只在处理查询的极短时间内留在内存，另外保留的统计按地区、电信网络与协议分类，不含个别 IP。改用之后，DNS 查询仍集中在同一个运营方手上。</p>
-<p>iPhone（iOS 14 及以上）与 Mac（Big Sur 及以上）要用 Safari 下载 Quad9 说明页的描述文件，2027 年 1 月 19 日到期后需重新安装。Android 9 及以上在「专用 DNS」填入主机名 <code>dns.quad9.net</code>，这一项走 DoT（DNS over TLS），不能填 DoH 地址 <code>https://dns.quad9.net/dns-query</code>。Quad9 的说明页写明，用其他 VPN 时描述文件与专用 DNS 通常不会生效，要改在 VPN App 的自定义 DNS 设置 Quad9。说明页有英文、法文、西班牙文与罗马尼亚文，没有中文。</p>
+<p>iPhone（iOS 14 及以上）与 Mac（Big Sur 及以上）要用 Safari 下载 Quad9 说明页的描述文件，2027 年 1 月 19 日到期后需重新安装。Android 9 及以上在「专用 DNS」填入主机名 <code>dns.quad9.net</code>，这一项走 DoT（DNS over TLS），不能填 DoH 地址 <code>https://dns.quad9.net/dns-query</code>。Quad9 的说明页写明，用其他 VPN 时描述文件与专用 DNS 通常不会生效，要改在 VPN App 的自定义 DNS 设置 Quad9。说明页没有中文。</p>
   </div>
 <aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
   <h2 class="source-slip__heading" id="source-slip-heading">原文（18 篇）</h2>
