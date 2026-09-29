@@ -789,6 +789,32 @@ def test_due_watches(tmp_path):
     assert "另有 1 筆還沒到期，最早是 2026-10-20" in report
 
 
+@pytest.mark.parametrize("regions, expected", [
+    ("regions:\n  - ES", None),
+    ("regions:\n  - EU\n  - TW", None),
+    ("regions: ES", "regions 要是清單"),
+    ("regions:\n  - es", "不是 ISO 3166-1 的兩碼代碼"),
+    ("regions:\n  - UK", "英國是 GB"),
+    ("regions:\n  - NO", "挪威的代碼要加引號"),
+    ("regions:\n  - \"NO\"", None),
+    ("regions:\n  - ESP", "不是 ISO 3166-1 的兩碼代碼"),
+    ("regions:\n  - ES\n  - ES", "重複"),
+])
+def test_regions_are_iso_codes(tmp_path, regions, expected):
+    text = GOOD.replace("authors:", regions + "\nauthors:")
+    problems = problems_of(tmp_path, text)
+    if expected is None:
+        assert problems == []
+        assert build.load_post(write_post(tmp_path, text), AUTHORS).regions == [r.strip('- "') for r in regions.splitlines()[1:]]
+    else:
+        assert any(expected in p for p in problems), problems
+
+
+def test_regions_must_agree(tmp_path):
+    override = ("authors:", "regions:\n  - ES\nauthors:")
+    assert any("regions 跟 zh-TW 不同" in p for p in site_problems(tmp_path, {"en": override}))
+
+
 def test_extra_sources_are_allowed(tmp_path):
     extra = ("authors:", "  - title: Regional source\n    url: https://example.org/region\nauthors:")
     assert site_problems(tmp_path, {"zh-CN": extra}) == []

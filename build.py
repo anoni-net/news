@@ -40,11 +40,23 @@ DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
 FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin",
-                     "follows", "watch"}
+                     "follows", "watch", "regions"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "names", "description", "url"}
 WATCH_KEYS = {"date", "note"}
+# regions 可以填的代碼：ISO 3166-1 alpha-2（取自 Debian iso-codes 套件，只取代碼、不用國名），
+# 加上歐盟層級的 EU（ISO 3166 的例外保留碼）。見 SPEC.md「一篇的格式」
+REGION_CODES = frozenset("""
+AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT
+BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH
+ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT
+HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS
+LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI
+NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG
+SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG
+UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW
+""".split()) | {"EU"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ANCHOR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
@@ -91,7 +103,7 @@ LANGS = [
 ]
 DEFAULT_LANG = LANGS[0]
 # 三個版本必須相同的欄位。date 另外比 created，updated 可以不同
-SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories", "follows")
+SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories", "follows", "regions")
 STRINGS_PATH = ROOT / "strings.toml"
 # 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
 PAGES_DIR = ROOT / "pages"
@@ -196,6 +208,8 @@ class Post:
     follows: list[str] = field(default_factory=list)
     # 之後要回頭查的事，只寫在 zh-TW 版本。見 SPEC.md「追蹤中的事件」
     watch: list[Watch] = field(default_factory=list)
+    # 新聞發生的國家或地區，ISO 3166-1 alpha-2 代碼。全球性的新聞不填
+    regions: list[str] = field(default_factory=list)
     lang: Lang = DEFAULT_LANG
     # date 晚於建置當下，排程中，這次不產出
     scheduled: bool = False
@@ -426,6 +440,22 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
             else:
                 watch.append(Watch(item["date"], item["note"].strip()))
 
+    regions = meta.get("regions") or []
+    if isinstance(regions, list) and any(isinstance(code, bool) for code in regions):
+        # YAML 1.1 把沒加引號的 NO 讀成 false，挪威的代碼要寫成 "NO"
+        problems.append(f"{where}：regions 裡有 YAML 讀成 true 或 false 的值，挪威的代碼要加引號寫成 \"NO\"")
+        regions = []
+    elif not isinstance(regions, list) or not all(isinstance(code, str) for code in regions):
+        problems.append(f"{where}：regions 要是清單，每一項是 ISO 3166-1 的兩碼代碼，例如 TW、ES")
+        regions = []
+    else:
+        for code in regions:
+            if code not in REGION_CODES:
+                hint = "，英國是 GB" if code == "UK" else ""
+                problems.append(f"{where}：regions 的 {code} 不是 ISO 3166-1 的兩碼代碼，要大寫{hint}")
+        if len(set(regions)) != len(regions):
+            problems.append(f"{where}：regions 有重複的代碼")
+
     anchors = check_headings(body, where, problems)
     if problems:
         raise BuildError(problems)
@@ -444,6 +474,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         pin=pin,
         follows=list(follows),
         watch=watch,
+        regions=list(regions),
         body=body,
         anchors=anchors,
         lang=lang,
