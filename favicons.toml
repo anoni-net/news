@@ -57,6 +57,9 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
 
+[hosts."docs.quad9.net"]
+same_as = "quad9.net"
+
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
 from = "https://ec.europa.eu/favicon.ico"
@@ -143,6 +146,10 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
 
+[hosts."mullvad.net"]
+icon = "mullvad.net-21b79597.png"
+from = "https://www.mullvad.net/apple-touch-icon.png"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -154,6 +161,10 @@ from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 [hosts."pib.gov.in"]
 icon = "pib.gov.in-fffa8d37.png"
 from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
+
+[hosts."quad9.net"]
+icon = "quad9.net-ff6922f7.png"
+from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
