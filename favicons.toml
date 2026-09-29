@@ -25,9 +25,17 @@ from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/co
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
 
+[hosts."citizenlab.ca"]
+icon = "citizenlab.ca-a8596c5e.png"
+from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-192x192.png"
+
 [hosts."cnbc.com"]
 icon = "cnbc.com-f77120b6.png"
 from = "https://www.cnbc.com/apple-touch-icon.png"
+
+[hosts."cnn.com"]
+icon = "cnn.com-ae11d4e1.png"
+from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
 
 [hosts."community.signalusers.org"]
 icon = "community.signalusers.org-34c4e8e9.png"
@@ -87,6 +95,10 @@ from = "https://github.githubassets.com/favicons/favicon.png"
 icon = "gov.cn-1db19351.png"
 from = "https://www.gov.cn/images/trs_favicon.ico"
 
+[hosts."government.ru"]
+icon = "government.ru-28901b86.png"
+from = "https://web.archive.org/web/20260927id_/https://government.ru/favicon.ico"
+
 [hosts."grapheneos.org"]
 icon = "grapheneos.org-5378d298.png"
 from = "https://grapheneos.org/apple-touch-icon.png"
@@ -105,6 +117,10 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
+
+[hosts."interseclab.org"]
+icon = "interseclab.org-cfaee2eb.png"
+from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-Logo-192x192.png"
 
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
@@ -141,6 +157,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."pib.gov.in"]
+icon = "pib.gov.in-fffa8d37.png"
+from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
 
 [hosts."quad9.net"]
 icon = "quad9.net-ff6922f7.png"
