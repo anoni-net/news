@@ -1,7 +1,7 @@
 ---
 title: CryptPad 2026 夏季進度與後量子加密的瓶頸
 description: 端對端加密協作套件 CryptPad 訂出新的資安政策，漏洞修正發布後至少 90 天才公開細節。後量子加密的實驗讓部分功能慢到難以使用，瀏覽器內建新的演算法之後可望改善。使用公開實例的人不必調整設定，自行架設的管理者要跟上新版。
-date: 2026-10-06T07:00:00+08:00
+date: 2026-10-06T00:00:00+08:00
 slug: cryptpad-summer-2026-status
 sources:
   - title: Summer 2026 status
