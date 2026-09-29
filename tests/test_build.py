@@ -795,6 +795,8 @@ def test_due_watches(tmp_path):
     ("regions: ES", "regions 要是清單"),
     ("regions:\n  - es", "不是 ISO 3166-1 的兩碼代碼"),
     ("regions:\n  - UK", "英國是 GB"),
+    ("regions:\n  - NO", "挪威的代碼要加引號"),
+    ("regions:\n  - \"NO\"", None),
     ("regions:\n  - ESP", "不是 ISO 3166-1 的兩碼代碼"),
     ("regions:\n  - ES\n  - ES", "重複"),
 ])
@@ -803,7 +805,7 @@ def test_regions_are_iso_codes(tmp_path, regions, expected):
     problems = problems_of(tmp_path, text)
     if expected is None:
         assert problems == []
-        assert build.load_post(write_post(tmp_path, text), AUTHORS).regions == [r.strip("- ") for r in regions.splitlines()[1:]]
+        assert build.load_post(write_post(tmp_path, text), AUTHORS).regions == [r.strip('- "') for r in regions.splitlines()[1:]]
     else:
         assert any(expected in p for p in problems), problems
 
