@@ -60,14 +60,14 @@ Android 开源客户端 PipePipe 于 9 月 24 日（UTC）发布 5.4.0 版，可
 
 ## 导读观点 {#perspective}
 
-开发者置顶的问题反馈（issue）`#2757` 写明，PipePipe 需要连到 `googleapis.com`、`google.com` 与两者的子域名。GreatFire（监测中国网络审查的网站）对 `youtube.com` 最近三次有结论的测试都无法连上，最近一次在 9 月 21 日。`google.com` 最近 23 次有 87% 失败（最近一次 9 月 27 日），`googleapis.com` 截至 8 月 16 日的最近三次测试都受到干扰。由此推断，在中国大陆境内的网络下，PipePipe 很可能无法直接播放 YouTube。
+开发者置顶的问题反馈（issue）`#2757` 写明，PipePipe 需要连到 `googleapis.com`、`google.com` 与两者的子域名。GreatFire（监测中国网络审查的网站）对 `youtube.com` 最近三次有结论的测试都无法连上，最近一次在 9 月 21 日。`google.com` 最近 23 次有 87% 失败（最近一次 9 月 27 日），`googleapis.com` 截至 8 月 16 日的最近三次测试都受到干扰。由此推断，PipePipe 在中国大陆境内很可能无法直接播放 YouTube。
 
-在海外，视频请求直接发往 YouTube，匿名请求受限时 App 会显示「Sign in to confirm you're not a bot」。社区维护的 PipePipe Wiki 写的做法是先重试，再换网络或 VPN 出口。用 DNS 过滤广告时拦下上述域名，播放同样会失败。Wiki 的解法是加入允许列表，不要整个关闭过滤。
+在海外即使不登录 Google 账号，视频请求仍直接发往 YouTube，匿名请求受限时 App 会显示「Sign in to confirm you're not a bot」。社区维护的 PipePipe Wiki 写的做法是先重试，再换网络或 VPN 出口。用 DNS 过滤广告时拦下上述域名，播放同样会失败。Wiki 的解法是加入允许列表，不要整个关闭过滤。
 
 PipePipe 也支持登录，README 写明 YouTube 的登录 cookie 只在获取播放流时使用。登录后，带 cookie 的播放请求就能对应到账号。Wiki 写明登录最好留给 IP 被封、年龄限制与频道会员内容，代价是不能只下载音频，进行中的直播也不能后退。
 
-Wiki 的开发者指南写到，YouTube 越来越常用 SABR（客户端与服务器保持连接、分小段传送音视频的流媒体协议）。PipePipe 会从 GitHub 公开仓库下载播放策略，验证 Ed25519 签名（确认出自开发者、未被篡改）、有效期与版本号后才执行，失败就改用内置实现。从设计上看，开发者不发布新版本也能调整播放方式，策略源代码也公开可审阅，代价是 App 会执行从网络下载的代码。
+Wiki 的开发者指南写到，YouTube 越来越常用 SABR（客户端与服务器保持连接、分小段传送音视频的流媒体协议）。PipePipe 会从 GitHub 公开仓库下载播放策略，验证 Ed25519 签名（确认出自开发者、未被篡改）、有效期与版本号后才执行，失败就改用内置实现。从设计上看，开发者不发布新版本也能调整播放方式，策略源代码则公开可审阅。代价是 App 会执行从网络下载的代码。
 
 反馈问题时，Wiki 写明公开的 issue 不要附上 cookie、token 等登录凭证、账号邮箱、登录过程的录屏或 IP 地址。首次反馈写明是否登录与报错信息即可。
 
-海外读者试用需要一部 Android 6.0 以上的手机（按 F-Droid 标注），无需 Google 账号。从 GitHub 发布页下载 `arm64-v8a` 的 APK 最直接。用 F-Droid 客户端安装则会收到更新通知，官方仓库还没有 5.4.0，要先用新版可添加 IzzyOnDroid 仓库（官方客户端需手动添加）。界面有简体与正体中文，翻译说明写明两者由 AI 辅助翻译，Wiki 与 issue 则以英文为主。
+海外读者试用需要一部 Android 6.0 以上的手机（按 F-Droid 标注），无需 Google 账号。从 GitHub 发布页下载 `arm64-v8a` 的 APK 最直接。用 F-Droid 客户端安装也会收到更新通知，官方仓库还没有 5.4.0，要先用新版可添加 IzzyOnDroid 仓库（官方客户端需手动添加）。界面有简体与正体中文，翻译说明写明两者由 AI 辅助翻译，Wiki 与 issue 则以英文为主。

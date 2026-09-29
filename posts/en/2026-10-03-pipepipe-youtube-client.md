@@ -62,13 +62,13 @@ PipePipe, a GPL-3.0 open-source Android client for YouTube, the Japanese video p
 
 The developer forked NewPipe, an earlier open-source YouTube client, in early 2022 to create PipePipe, and the two projects have not synced changes since. The website lists no account, no ads, no trackers and no data collection. The app integrates SponsorBlock, a crowd-sourced service for skipping sponsored segments, along with keyword and channel filters, Shorts blocking, background play and whole-playlist downloads.
 
-It is available from F-Droid, a repository of open-source Android apps, and IzzyOnDroid, a third-party repository for F-Droid clients. Both flag the NonFreeNet anti-feature because the app depends on non-free network services. As of 29 September, IzzyOnDroid carries 5.4.0, while F-Droid still offers 5.3.1, added on 12 September. APKs are also on the GitHub releases page, where the notes say `arm64-v8a` suits most devices.
+It is available from F-Droid, a repository of open-source Android apps, and IzzyOnDroid, a third-party repository for F-Droid clients. Both flag the NonFreeNet anti-feature because the app depends on non-free network services. As of 29 September, IzzyOnDroid carries 5.4.0, while F-Droid still offers 5.3.1, added on 12 September. APKs are on the GitHub releases page, where the notes say `arm64-v8a` suits most devices.
 
 ## Perspective {#perspective}
 
 With a third-party client you need no Google account, but requests still go straight to YouTube. When YouTube restricts an anonymous request, the app shows "Sign in to confirm you're not a bot". The community-maintained PipePipe Wiki's fix is to retry once, then try another network or VPN exit.
 
-PipePipe also supports signing in, and its README states that the YouTube login cookie is used only to retrieve playback streams. Those requests then carry the cookie and can be tied to your account. According to the Wiki, login is best kept for IP blocks, age-restricted videos and channel-member content, at the cost of audio-only downloads and rewinding live streams in progress.
+PipePipe supports signing in, and its README states that the YouTube login cookie is used only to retrieve playback streams. Those requests then carry the cookie and can be tied to your account. According to the Wiki, login is best kept for IP blocks, age-restricted videos and channel-member content, at the cost of audio-only downloads and rewinding live streams in progress.
 
 The developer's pinned GitHub issue `#2757` lists the domains PipePipe needs: `googleapis.com`, `google.com` and their subdomains. A DNS ad filter that blocks them can make YouTube playback fail, and the Wiki's fix is to allowlist them rather than switch filtering off.
 
@@ -76,7 +76,7 @@ GreatFire, which monitors censorship in mainland China, found `youtube.com` unre
 
 OONI (Open Observatory of Network Interference) collected 909 measurements of `www.youtube.com` from Hong Kong between 29 August and 27 September, and 4,966 from Taiwan, 574 of which failed to complete. Hong Kong had 3 anomalies, results that differ from a control measurement, and Taiwan had 1. Neither had a confirmed block.
 
-The Wiki's developer guide describes SABR (Server Adaptive BitRate), which YouTube increasingly uses, as a session where the client reports playback state and receives media in small pieces. PipePipe downloads a playback policy from a public GitHub repository and runs it only after checking its Ed25519 signature, which shows the developer signed it unaltered, plus its validity window and revision number. It falls back to the built-in version on failure. By design, the developer can adjust playback without a new release, and the policy source is public, but the app executes code fetched from the network.
+The Wiki's developer guide describes SABR (Server Adaptive BitRate), which YouTube increasingly uses, as a session where the client reports playback state and receives media in small pieces. PipePipe downloads a playback policy from a public GitHub repository and runs it only after checking its Ed25519 signature, confirming it came unaltered from the developer, plus its validity window and revision number. It falls back to the built-in version on failure. By design, the developer can adjust playback without a new release, and the policy source is public, but the app executes code fetched from the network.
 
 For bug reports, the Wiki's guidance is to keep cookies, tokens, account emails, screen recordings of a login and IP addresses out of public issues. Your sign-in state and the error you saw are enough for a first report.
 
