@@ -39,6 +39,9 @@
 /2026/10/apple-threat-notifications/
 	#perspective
 	#sources
+/2026/10/doctoralia-health-tracking-pixels/
+	#perspective
+	#sources
 /2026/10/eff-doxxing-safety/
 	#perspective
 	#sources
@@ -101,6 +104,9 @@
 	#sources
 /en/2026/10/
 /en/2026/10/apple-threat-notifications/
+	#perspective
+	#sources
+/en/2026/10/doctoralia-health-tracking-pixels/
 	#perspective
 	#sources
 /en/2026/10/eff-doxxing-safety/
@@ -170,6 +176,9 @@
 	#sources
 /zh-cn/2026/10/
 /zh-cn/2026/10/apple-threat-notifications/
+	#perspective
+	#sources
+/zh-cn/2026/10/doctoralia-health-tracking-pixels/
 	#perspective
 	#sources
 /zh-cn/2026/10/eff-doxxing-safety/
