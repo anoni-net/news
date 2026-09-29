@@ -6,7 +6,155 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 28 Sep 2026 07:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 29 Sep 2026 07:05:00 +0800</lastBuildDate>
+<item>
+<title>西班牙對 archive.today 的行政封鎖</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/spain-blocks-archive-today/</link>
+<guid isPermaLink="false">anoni-news:2026/09/spain-blocks-archive-today</guid>
+<pubDate>Tue, 29 Sep 2026 07:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>西班牙文化部的智慧財產委員會以行政決定封鎖網頁封存服務 archive.today 與它的鏡像網域，沒有經過法院，OONI 的量測也看得到異常。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，來自 Ministerio de Cultura、Reclaim The Net、Banda Ancha 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;西班牙文化部轄下的智慧財產委員會第二組，下令電信業者封鎖網頁封存服務 archive.today。文化部 9 月 25 日更新的清單列出 7 個網域，除了 archive.today，還有 archive.is、archive.ph、archive.li 等鏡像。封鎖是依一位沒有具名的權利人申訴做出的行政決定，沒有經過法院。西班牙以外的網路不受這次封鎖影響。&lt;/p&gt;
+&lt;p&gt;西班牙網站 Banda Ancha 最早報導了封鎖。封鎖 8 月中先在部分電信業者生效，到 Banda Ancha 9 月 17 日報導時，已擴大到所有參與智慧財產保護協議的業者。用 HTTPS 連線時會出現連線錯誤，改用 HTTP 則會被導到文化部的頁面，告知這是「非法」網站。&lt;/p&gt;
+&lt;p&gt;Reclaim The Net 寫到，協議由文化部、權利人與大型電信業者在 2021 年簽署，業者在接到技術委員會通知後 24 小時內封鎖鏡像網站。為了一則侵權內容封鎖整個服務，在西班牙並不是第一次，體育轉播網站也被這樣封鎖過。&lt;/p&gt;
+&lt;p&gt;OONI 的量測結果也出現變化。9 月 1 日到 27 日，西班牙對 archive.ph 的 641 次量測中有 205 次異常，同期 Internet Archive 的 web.archive.org 在 410 次量測中只有 2 次異常。異常不等於確認封鎖，只代表連線結果跟對照組不同。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;archive.today 存下網頁的快照，讓人在原頁面被刪除或修改之後，仍然可以讀到當時的內容。西班牙封鎖的是整個網域，不是單一快照，存在上面的所有頁面，在多數業者的網路上都讀不到了。程序是行政決定加上業者的協議，不需要法院介入，範圍又擴及鏡像網域。&lt;/p&gt;
+&lt;p&gt;OONI 6 月到 9 月的量測顯示亞洲也有類似的情況。在中國大陸，archive.ph 的 308 次量測有 273 次異常，GreatFire 也記錄 web.archive.org 從 2016 年起在中國大陸持續被封鎖。在印尼，archive.is 有 155 次量測被 OONI 確認為封鎖。在台灣，archive.ph 的 1183 次量測則只有 41 次異常。&lt;/p&gt;
+&lt;p&gt;需要大量封存的團隊，可以自架開源的 ArchiveBox，以 MIT 授權，9 月 26 日發布新版。安裝方式是在 Linux 或 macOS 上用 Docker 或 pip 執行指令。存在自己手上的檔案不怕服務被封，但也要自己負責備份，而且無法像公開的封存服務那樣讓別人獨立驗證頁面當時的樣子。&lt;/p&gt;
+&lt;p&gt;需要保存網頁證據的人，不要只依賴一個封存服務，可以同時存到 Internet Archive 的 Wayback Machine。要把證據留在自己手上，可以用開源的瀏覽器擴充套件 SingleFile 把整頁存成一個 HTML 檔，以 AGPL-3.0 授權，9 月 24 日發布新版。SingleFile 支援 Chrome、Firefox、Edge 與 Safari，介面有正體與簡體中文，裝好之後在要保存的頁面按一下工具列上的按鈕即可。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cultura.gob.es/cultura/propiedadintelectual/lucha-contra-la-pirateria/s2cpi/listadowebs.html&#34;&gt;Nombres de dominios Web objeto de resolución final firme de la S2CPI (2012 – 2026)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ministerio de Cultura&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors&#34;&gt;Spain orders blocks on Archive.today and its mirrors&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Reclaim The Net&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bandaancha.eu/articulos/archive-today-pasa-ser-web-ilegal-espana-11923&#34;&gt;Archive.today pasa a ser una una web &amp;#34;ilegal&amp;#34; en España por orden del Ministerio de Cultura&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Banda Ancha&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/web.archive.org&#34;&gt;Is http://web.archive.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gildas-lormeau/SingleFile&#34;&gt;SingleFile&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ArchiveBox/ArchiveBox&#34;&gt;ArchiveBox&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>歐盟年齡驗證藍圖的隱私缺口</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/eu-age-verification-blueprint/</link>
+<guid isPermaLink="false">anoni-news:2026/09/eu-age-verification-blueprint</guid>
+<pubDate>Tue, 29 Sep 2026 07:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>歐盟推動各國在年底前推出年齡驗證 App。依 EDRi 的技術分析，不可連結性被放寬、憑證仍能追溯到使用者，沒有證件的人也會被排除在外。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 European Commission、EDRi、EU Digital Identity Wallet 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;歐盟執委會在 4 月宣布年齡驗證 App 技術就緒，並建議各會員國在年底前推出。9 月 17 日提出的《EU KIDS Act》草案要求線上服務與 App 商店採用年齡確認工具，13 歲以下不得使用社群平台，15 歲才能自己開帳號。歐洲數位權利組織 EDRi 在 9 月 7 日發表的技術分析，結論是這套工具在「就緒」與「保護隱私」兩方面都做不到。這套 App 只在歐盟推行，歐盟以外的使用者不會用到。&lt;/p&gt;
+&lt;p&gt;執委會 2025 年 7 月先發布一份藍圖，讓各國據此開發自己的 App。各國的 App 又稱「迷你錢包」，技術規格沿用各國在 2026 年底前要提供的歐盟數位身分錢包。依 EDRi 的分析，27 個會員國可能做出 27 種設計、技術與隱私保護都不同的 App。&lt;/p&gt;
+&lt;p&gt;法律要求在相關情況下「確保」不可連結性（unlinkability，每次出示的年齡證明無法被串回同一個人）。依 EDRi 的分析，執委會把這項要求改成「阻礙」連結，追蹤會變難，但不保證做不到。App 以國家核發的證件為信任來源，再用臉部辨識綁定使用者，沒有證件、沒有合適的手機或不願做臉部辨識的人都會被排除。&lt;/p&gt;
+&lt;p&gt;EDRi 引用的規格書條文裡，零知識證明（zero-knowledge proof，只證明條件成立、不交出其他資料的密碼學方法）都寫成非強制的「SHOULD」。即使一次發給多張憑證，憑證裡仍有鹽值、雜湊、公鑰、簽章與時間戳，發證方可以據此追溯到使用者。規格書 9 月 2 日合併的 1.1.0 版裡，零知識證明已改列為首選的機制，不用零知識證明的一般驗證方式保留作為備援。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;匿名的年齡驗證裡，網站只得知「年齡符合」，發證的一方也不會得知你去過哪些網站，兩邊都靠不可連結性保護。照規格書的建議，發證方也同時提供 App。依 EDRi 的分析，發證與出示因此集中在同一方手上，就算強制使用零知識證明，也不足以做到嚴格的不可連結。&lt;/p&gt;
+&lt;p&gt;執委會的示範 App 以 EUPL-1.2 授權開源，但依 EDRi 的分析，開源的要求只適用於各國的數位身分錢包，不包括各國的年齡驗證 App。丹麥的 App 在用戶端就有專有（非開源）的程式碼，外界無法檢驗。&lt;/p&gt;
+&lt;p&gt;亞太地區的澳洲從 2025 年 12 月 10 日起要求社群平台阻止 16 歲以下的人開帳號，法律同時禁止平台強迫使用者出示政府證件或使用政府的數位身分。馬來西亞從 2026 年 6 月 1 日起，也依法要求社群平台驗證使用者的年齡。&lt;/p&gt;
+&lt;p&gt;這套 App 目前不需要讀者做任何設定。關注年齡驗證立法的人，可以拿 EDRi 列出的幾點檢驗各地的做法，包括零知識證明是否強制、發證與出示是否分開、App 是否開源，以及有沒有不需要證件與臉部辨識的替代方式。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification&#34;&gt;The EU approach to age verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu&#34;&gt;EU KIDS Act to restrict social media platforms’ access to children in the EU&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1890&#34;&gt;EU KIDS Act to restrict social media platforms&amp;#39; access to children in the EU&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app&#34;&gt;Commission urges Member States to rollout EU age verification app&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;2026 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/our-work/eu-age-verification-tool-does-not-solve-privacy-concerns/&#34;&gt;Why the EU age-verification tool does not solve privacy concerns&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-07&#34;&gt;2026 年 9 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-doc-technical-specification&#34;&gt;av-doc-technical-specification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions&#34;&gt;Social media age restrictions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eSafety Commissioner&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mcmc.gov.my/en/onsa/under-16&#34;&gt;Under-16&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Malaysian Communications and Multimedia Commission&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Android 17 QPR1 的 Pixel 獨占 API</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/android-17-qpr1-pixel-only-apis/</link>
