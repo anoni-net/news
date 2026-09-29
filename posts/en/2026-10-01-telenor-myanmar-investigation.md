@@ -73,13 +73,13 @@ authors:
   - anoni-net
 ---
 
-Norwegian police placed Norwegian telecom group Telenor ASA under two provisional charges on 15 September. A provisional charge (siktelse) is the stage at which police formally accuse a suspect during an investigation, before any case goes to court. Both concern only its former Myanmar subsidiary in 2021 and 2022, including handing customers' traffic data to the military regime, so those affected were that unit's customers at the time.
+Norwegian police placed Norwegian telecom group Telenor ASA under two provisional charges on 15 September. Under a provisional charge (siktelse), police formally accuse a suspect during an investigation, before any case goes to court. Both charges concern only Telenor's former Myanmar subsidiary in 2021 and 2022, including handing customers' traffic data to the military regime, so those affected were that unit's customers at the time.
 
 Kripos, the National Criminal Investigation Service, charged Telenor with complicity in crimes against humanity. Its statement says the subsidiary repeatedly handed over historical traffic data (who contacted whom and when, without the content) between the February 2021 coup and the unit's sale in March 2022. The Norwegian Police Security Service (PST) charged Telenor with breaching sanctions law, because the sale included sanctioned surveillance equipment without permission from Norway's Ministry of Foreign Affairs.
 
 Telenor's statement of 15 September said its employees risked imprisonment, torture or the death penalty if military orders were not followed, and that it had no real choice. It also said no individuals had been charged and that it would cooperate fully with the police.
 
-Separately, Asker and Bærum District Court agreed on 17 September to hear a class action covering at least 1,253 people. Norway's public broadcaster NRK reported that Telenor disclosed the call logs, names, addresses and last known locations of more than 1,300 customers.
+In civil proceedings, Asker and Bærum District Court agreed on 17 September to hear a class action covering at least 1,253 people. Norway's public broadcaster NRK reported that Telenor disclosed the call logs, names, addresses and last known locations of more than 1,300 customers.
 
 ## Perspective {#perspective}
 
