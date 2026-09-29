@@ -55,11 +55,11 @@ authors:
   - anoni-net
 ---
 
-Australia's prime minister announced at a press conference in New York, just after 6am on 24 September Australian Eastern Standard Time (4am in Taipei), that an OpenAI agent had gained unauthorised access to a statistics portal for Medicare, Australia's public health insurance scheme. It accessed non-public files and wrote files to an internal server. As of 24 September, the government believes no personal information was accessed. OpenAI has also notified dozens of third parties that may have been affected.
+Australia's prime minister announced at a press conference in New York, just after 6am on 24 September Australian Eastern Standard Time (just after 4am in Taipei), that an OpenAI agent had gained unauthorised access to a statistics portal for Medicare, Australia's public health insurance scheme. It accessed non-public files and wrote files to an internal server. As of 24 September, the government believes no personal information was accessed. OpenAI has also notified dozens of third parties that may have been affected.
 
-The portal, run by the federal agency Services Australia, held aggregate statistics and was offline by 24 September. The agent was researching public medicine spending for an internal OpenAI capability evaluation and, when refused on 18 June, found other ways around the blocks.
+The portal, run by Services Australia, the federal agency that delivers Medicare, held aggregate statistics and was offline by 24 September. The agent was researching public medicine spending for an internal OpenAI capability evaluation and, when refused on 18 June, found other ways around the blocks.
 
-OpenAI noticed in August and on 10 September emailed the inbox Services Australia uses for vulnerability reports. The agency saw it on 11 September and, after a weekend and checks on its authenticity, reported it on 15 September to the Australian Cyber Security Centre, part of the Australian Signals Directorate (ASD).
+OpenAI noticed the breach during a broader review in August and on 10 September emailed the inbox Services Australia uses for vulnerability reports. The agency saw it on 11 September and, after a weekend and checks on its authenticity, reported it on 15 September to the Australian Cyber Security Centre, part of the Australian Signals Directorate (ASD).
 
 The prime minister said OpenAI took far too long and notified the government in an unacceptable way. A taskforce will review cyber defences and penalties, and the government will consider a referral to the Australian Federal Police. A forensic investigation aided by ASD is checking whether other government systems were affected.
 
@@ -73,6 +73,6 @@ Nearly three months passed between the breach and OpenAI's email, all of it befo
 
 Neither contains a deadline for an outsider like OpenAI. The mainland measures only encourage organisations and individuals to report such incidents they learn of, and Taiwan's regulations do not cover outsiders.
 
-In January, Singapore's Infocomm Media Development Authority (IMDA) published a Model AI Governance Framework for Agentic AI, which advises organisations to bound risks early through design choices such as limits on an agent's autonomy, tools and data access. The same principle works for individuals, since what an AI agent can reach is whatever your login sessions and permissions allow.
+In January, Singapore's Infocomm Media Development Authority (IMDA) published a Model AI Governance Framework for Agentic AI, under which organisations are advised to bound risks early through design choices such as limits on an agent's autonomy, tools and data access. The same principle works for individuals, since what an AI agent can reach is whatever your login sessions and permissions allow.
 
 If you run an agent in desktop Chrome, you can add a separate profile from the profile icon at the top right and sign in there only to the accounts the task needs. Adding a profile takes three steps, explained on a Google help page that is also available in Traditional and Simplified Chinese, and no Google account is required. Chrome on Android allows only one profile, and agents that run in a cloud browser cannot use this approach either. The cost is that the new profile starts without your bookmarks, saved passwords and logins, so you have to sign in again.
