@@ -1,6 +1,6 @@
 ---
-title: An Android VPN leak and the end of Mullvad’s public encrypted DNS
-description: A flaw lets any Android app send traffic around a VPN and reveal the real IP, even with "Block all connections without VPN" on. Mullvad is also shutting its public encrypted DNS on 2 November.
+title: An Android VPN leak and the end of Mullvad's public encrypted DNS
+description: A flaw lets any Android app send traffic around a VPN and reveal the real IP, even with "Block connections without VPN" on. Mullvad is also shutting down its public encrypted DNS on 2 November, so anyone who set it up by hand needs to switch.
 date: 2026-09-30T07:00:00+08:00
 slug: mullvad-android-leak-and-dns-shutdown
 sources:
@@ -24,6 +24,12 @@ sources:
     url: https://github.com/GrapheneOS/platform_packages_modules_Connectivity/pull/47
     publisher: GrapheneOS
     date: 2026-09-26
+  - title: Releases | GrapheneOS
+    url: https://grapheneos.org/releases
+    publisher: GrapheneOS
+  - title: Frequently Asked Questions | GrapheneOS
+    url: https://grapheneos.org/faq#supported-devices
+    publisher: GrapheneOS
   - title: Quad9 Privacy Policy
     url: https://quad9.net/privacy/policy/
     publisher: Quad9
@@ -40,23 +46,42 @@ sources:
   - title: iOS 14 and later (Encrypted)
     url: https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/
     publisher: Quad9
+  - title: Big Sur and later (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/MacOS/Big_Sur_and_later_%28Encrypted%29/
+    publisher: Quad9
   - title: Android 9+ (Encrypted)
     url: https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/
     publisher: Quad9
+  - title: packages/apps/Settings/res/values-zh-rTW/strings.xml
+    url: https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rTW/strings.xml
+    publisher: Android Open Source Project
+  - title: frameworks/base/packages/SettingsLib/res/values-zh-rTW/strings.xml
+    url: https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rTW/strings.xml
+    publisher: Android Open Source Project
 authors:
   - anoni-net
 ---
 
-Mullvad published two notices in September that affect how its users set up their devices. The first concerns a newly disclosed Android flaw: any app, with no special permission, can send some traffic outside the VPN tunnel even when "Block all connections without VPN" is on. The second: Mullvad's public encrypted DNS service shuts down on 2 November, so anyone who configured it by hand needs to switch.
+Mullvad published two notices in September, one affecting anyone using a VPN on Android and the other anyone who set up Mullvad's public encrypted DNS by hand. A newly disclosed Android flaw lets any app, with no special permission, send some traffic outside the VPN even when "Block connections without VPN" is on. The researcher estimates that most devices on Android 12 and newer are affected, although not every model has been individually tested.
 
-The flaw abuses keep-alive packets. An app asks Android to create a keep-alive UDP connection that is offloaded to the Wi-Fi or cellular chip, and because the packets leave straight from the hardware they skip the VPN check. CyberInsider reports that the researcher demonstrated it on a Pixel 8 Pro running Android 16 and believes most Android 12 and newer devices are affected. The packets cannot carry arbitrary data, but they are enough to reveal the device's network identity outside the VPN. Google marked the report as a duplicate, with no fix or CVE before disclosure, and did not respond to CyberInsider's request for comment.
+The flaw lies in keep-alive packets, small packets sent at intervals to hold a connection open. An app asks Android for a keep-alive UDP connection, which Android hands to the Wi-Fi or cellular chip to send. CyberInsider, a security news site, reports that the packets cannot carry arbitrary data but still reveal the device's real IP address to a server run by the attacker.
+
+According to the researcher's disclosure timeline, he reported the flaw to Google's Android Vulnerability Reward Program on 15 May, and Google later marked it as a duplicate. No fix or CVE (a public vulnerability identifier) had been communicated before disclosure, and Mullvad's announcement says Google is unlikely to act.
+
+Separately, Mullvad's public encrypted DNS shuts down on 2 November. Its 3 September notice says running a privacy-focused public DNS is highly specialised work, so Mullvad will fund the Quad9 Foundation, a Swiss non-profit, instead. Mullvad VPN users are unaffected, because their queries go to the resolver on the VPN server.
 
 ## Perspective {#perspective}
 
-A VPN lockdown relies on the operating system checking that each connection goes through the tunnel. Here the packets are handed to the network chip and never pass that check. Mullvad's announcement says a fix from Google is unlikely and that Mullvad has no plans to ship a mitigation itself. Its advice sits at the source: install only apps you trust and, if possible, use a security-focused Android fork such as GrapheneOS. GrapheneOS has open pull requests that disable unprivileged hardware keep-alives, but as of 27 September they had not been merged or released. For people whose real IP must not leak, CyberInsider's report mentions placing the phone behind a router that enforces the VPN, with cellular and other paths turned off, which costs extra hardware when travelling.
+With "Block connections without VPN" on, the operating system checks that each connection goes through the tunnel. Keep-alive packets handed to the network chip leave straight from the hardware and never pass that check, so every VPN app is affected. CyberInsider notes that there is currently no reliable app-level fix, and Mullvad has no current plan to ship the theoretical workaround of filling up the hardware's keep-alive slots.
 
-Where you are in Asia changes what matters first. In mainland China, GreatFire's tests show mullvad.net blocked and the Quad9 DoH endpoint disrupted, with its page summarising access as unreliable, so reaching the service at all comes before tuning it. Elsewhere in the region, Mullvad VPN users are unaffected by the DNS change, since queries go to the resolver on the VPN server, and Mullvad Browser users on default settings move to Quad9 automatically. iOS and macOS DoH profiles from Mullvad will stop working.
+Mullvad's advice is to install only apps you trust and, if possible, use a security- and privacy-focused Android fork such as GrapheneOS. GrapheneOS officially supports only Pixel devices from the Pixel 6 onward. It merged a change disabling unprivileged hardware keep-alives on 28 September, and as of 29 September no release included it yet.
 
-Mullvad's help page also says that once you are connected to its VPN, a public encrypted DNS brings negligible security benefit and will always be slower than the resolver on the VPN server. Quad9's privacy policy says it does not collect or record users' IP addresses and is run by a Swiss foundation. The same policy says Quad9 keeps aggregate counters by region, carrier network and protocol. Those contain no individual IPs, but the DNS queries themselves still go to a single operator.
+For people whose real IP must not leak, CyberInsider mentions putting the phone behind a router that enforces the VPN, provided cellular and other network paths are turned off. The protection ends when the phone leaves that network.
 
-Anyone who set Mullvad's DoH by hand for use without the VPN needs to switch before 2 November; Quad9's DoH address is `https://dns.quad9.net/dns-query`. On iPhone and Mac, Quad9's setup guide provides a configuration profile to download, and on Android you enter `dns.quad9.net` under Private DNS. The guides are in English, French, Spanish and Romanian, with no Chinese version.
+In mainland China, GreatFire, which tests what the Great Firewall blocks, had recorded all 17 of its tests of mullvad.net over the past 90 days as blocked as of 29 September. The blocked addresses include the download links for Mullvad's apps. Its two most recent conclusive tests of Quad9's DoH (DNS over HTTPS) address both showed interference, the latest on 3 September, so the DNS switch below matters mostly outside mainland China.
+
+Quad9's privacy policy says users' IP addresses stay in memory only for the microseconds to milliseconds needed to answer a query. The same policy says Quad9 keeps aggregate counters by region, carrier network and protocol, without individual IPs. Switching still leaves every DNS query with a single operator.
+
+Mullvad Browser users on default settings move to Quad9 automatically, while those who chose another Mullvad DNS variant should switch back to the default. Anyone else who set it up by hand should switch before 2 November. Mullvad's iOS and macOS profiles will stop working. Quad9's replacements for iPhone (iOS 14 or later) and Mac (Big Sur or later) are downloaded in Safari and expire on 19 January 2027.
+
+On Android 9 or later, enter the hostname `dns.quad9.net` under Private DNS. That setting uses DNS over TLS, so the DoH address `https://dns.quad9.net/dns-query` does not belong there. With a VPN on, Quad9's guides say profiles and Private DNS are generally not used, and Quad9's addresses go in the VPN app's custom DNS setting. The guides come in English, French, Spanish and Romanian only.

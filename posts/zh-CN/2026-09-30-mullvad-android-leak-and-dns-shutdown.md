@@ -1,6 +1,6 @@
 ---
 title: Android 的 VPN 漏洞与 Mullvad 加密 DNS 的停用
-description: Android 有个漏洞让任何 App 绕过 VPN 暴露真实 IP，开着阻止未使用 VPN 的连接也挡不住。Mullvad 公开的加密 DNS 也将在 11 月 2 日停止服务。
+description: Android 的一个漏洞让任何 App 绕过 VPN、泄露真实 IP，开启「屏蔽未使用 VPN 的所有连接」也无法阻止。Mullvad 的公共加密 DNS 将在 11 月 2 日停止服务，手动设置过的人需要更换。
 date: 2026-09-30T07:00:00+08:00
 slug: mullvad-android-leak-and-dns-shutdown
 sources:
@@ -24,6 +24,12 @@ sources:
     url: https://github.com/GrapheneOS/platform_packages_modules_Connectivity/pull/47
     publisher: GrapheneOS
     date: 2026-09-26
+  - title: Releases | GrapheneOS
+    url: https://grapheneos.org/releases
+    publisher: GrapheneOS
+  - title: Frequently Asked Questions | GrapheneOS
+    url: https://grapheneos.org/faq#supported-devices
+    publisher: GrapheneOS
   - title: Quad9 Privacy Policy
     url: https://quad9.net/privacy/policy/
     publisher: Quad9
@@ -31,36 +37,55 @@ sources:
   - title: Service Addresses & Features
     url: https://quad9.net/service/service-addresses-and-features/
     publisher: Quad9
+  - title: iOS 14 and later (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/
+    publisher: Quad9
+  - title: Big Sur and later (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/MacOS/Big_Sur_and_later_%28Encrypted%29/
+    publisher: Quad9
+  - title: Android 9+ (Encrypted)
+    url: https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/
+    publisher: Quad9
+  - title: packages/apps/Settings/res/values-zh-rTW/strings.xml
+    url: https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rTW/strings.xml
+    publisher: Android Open Source Project
+  - title: frameworks/base/packages/SettingsLib/res/values-zh-rTW/strings.xml
+    url: https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rTW/strings.xml
+    publisher: Android Open Source Project
   - title: Is https://mullvad.net blocked in mainland China?
     url: https://en.greatfire.org/https/mullvad.net
     publisher: GreatFire
   - title: Is https://dns.quad9.net/dns-query blocked in mainland China?
     url: https://en.greatfire.org/https/dns.quad9.net/dns-query
     publisher: GreatFire
-  - title: iOS 14 and later (Encrypted)
-    url: https://docs.quad9.net/Setup_Guides/iOS/iOS_14_and_later_%28Encrypted%29/
-    publisher: Quad9
-  - title: Android 9+ (Encrypted)
-    url: https://docs.quad9.net/Setup_Guides/Android/Android_9%2B_%28Encrypted%29/
-    publisher: Quad9
+  - title: packages/apps/Settings/res/values-zh-rCN/strings.xml
+    url: https://github.com/aosp-mirror/platform_packages_apps_settings/blob/main/res/values-zh-rCN/strings.xml
+    publisher: Android Open Source Project
+  - title: frameworks/base/packages/SettingsLib/res/values-zh-rCN/strings.xml
+    url: https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rCN/strings.xml
+    publisher: Android Open Source Project
 authors:
   - anoni-net
 ---
 
-VPN 服务商 Mullvad 在 9 月发了两则公告，都会影响用户的设置。一则是 Android 新发现的漏洞，任何 App 不需要特殊权限，就能让部分流量绕过 VPN，即使开着「阻止所有未使用 VPN 的连接」也一样。另一则是 Mullvad 公开的加密 DNS 将在 11 月 2 日停止服务，手动设置过的人要换掉。
+VPN 服务商 Mullvad 在 9 月发布两则公告，一则影响所有在 Android 上使用 VPN 的人，另一则影响手动设置过 Mullvad 加密 DNS 的人。Android 新发现的漏洞让任何 App 不需要特殊权限就能绕过 VPN，开启「屏蔽未使用 VPN 的所有连接」也无法阻止。研究者估计多数 Android 12 及以上的设备受影响，但并非每个型号都实测过。Mullvad 的公共加密 DNS 则将在 11 月 2 日停止服务。
 
-漏洞出在 keep-alive 数据包。恶意 App 可以要求 Android 建立一条 keep-alive 的 UDP 连接，交给 Wi-Fi 或移动网络芯片自行发送，数据包直接从硬件出去，就绕过了 VPN 的检查。CyberInsider 报道，研究者估计多数 Android 12 以后的设备都受影响，这种数据包无法夹带任意数据，但足以暴露设备在 VPN 之外的网络身份。
+漏洞出在 keep-alive 数据包（为了维持连接、定期发送的小数据包）。恶意 App 可以要求 Android 建立一条 keep-alive 连接，由 Android 交给 Wi-Fi 或移动网络芯片自行发送。网络安全新闻网站 CyberInsider 报道，数据包的格式由 Android 决定，无法夹带任意数据。接收的服务器仍然可以看到设备在 VPN 之外的真实 IP。
 
-研究者把漏洞报告给 Google 的漏洞奖励计划，被标记为重复报告，公开前没有修复，也没有 CVE。Mullvad 的公告写到，Google 不太可能处理，Mullvad 也没有打算提供缓解措施。
+依研究者的披露时间线，他在 5 月 15 日把漏洞报告给 Google 的 Android 漏洞奖励计划，Google 之后把它标记为重复报告。公开之前，Google 没有告知修复，也没有分配 CVE（公开漏洞的统一编号）。Mullvad 的公告写到，Google 不太可能处理，Mullvad 目前也没有计划提供占满硬件 keep-alive 名额这种理论上的缓解做法。
 
-Mullvad 的公告写到，运营注重隐私的公共 DNS 需要高度专业，所以把资源改为资助 Quad9 基金会。使用 Mullvad VPN 的人不受影响，连接时由 VPN 服务器的 DNS 处理查询。使用默认设置的 Mullvad Browser 会自动改用 Quad9，iOS 与 macOS 的 Mullvad DoH 配置文件则会失效。
+DNS 那一则是 9 月 3 日的公告，写明运营注重隐私的公共 DNS 需要高度专业，Mullvad 决定改为资助 Quad9 基金会（提供公共 DNS 的瑞士非营利组织）。使用 Mullvad VPN 的人不受影响，查询由 VPN 服务器处理。使用默认设置的 Mullvad Browser 会自动改用 Quad9，手动选过其他 Mullvad DNS 变体的人要改回默认。iOS 与 macOS 上 Mullvad 的 DNS 描述文件则会失效。
 
 ## 导读观点 {#perspective}
 
-VPN 的锁定功能，靠操作系统检查每条连接有没有经过 VPN。这次的问题出在 Android 把 keep-alive 交给网络芯片处理，数据包根本不经过那道检查。所以 Mullvad 的建议落在源头，只安装信任的 App，可以的话改用 GrapheneOS 这类注重隐私与安全的 Android 版本。GrapheneOS 已经有关闭这类 keep-alive 的修复，到 9 月 27 日还没有合并发布。
+开启「屏蔽未使用 VPN 的所有连接」时，系统会检查每条连接是否经过 VPN。keep-alive 交给网络芯片后，数据包直接从硬件发出，不经过这道检查，所以漏洞与 VPN 品牌无关。CyberInsider 的报道写到，目前没有可靠的应用层修复。
 
-在中国大陆，GreatFire 的测试显示 Mullvad 的网站被封锁，Quad9 的 DoH 地址连接也不稳定。身在境内的人要用 Mullvad，需先解决连接本身的问题，漏洞与 DNS 的调整是那之后的事。
+Mullvad 的建议是只安装信任的 App，可以的话改用 GrapheneOS 这类强化隐私与安全的 Android 版本，不过 GrapheneOS 的正式版只支持 Pixel 6 及以上的 Pixel 设备。GrapheneOS 关闭这类 keep-alive 的修复在 9 月 28 日合并，到 9 月 29 日为止还没有进入正式版。
 
-替代的选项之一是 Mullvad 改为资助的 Quad9，它的隐私政策写明不收集、不记录用户的 IP，由瑞士的基金会运营。同一份政策也写到，Quad9 会保留按地区、运营商与协议分类的统计数字，这些统计不含个别用户的 IP，但 DNS 查询仍然集中在一家服务商手上。真实 IP 一旦泄露就有风险的人，还可以参考 CyberInsider 报道的做法，让手机接在强制走 VPN 的路由器后面，同时关闭移动网络等其他连接路径。
+真实 IP 一旦泄露就有风险的人，可以参考 CyberInsider 报道的做法，让手机连上强制走 VPN 的路由器。前提是关闭移动网络等其他连接路径，手机离开那台路由器就没有这层保护。
 
-身在海外、手动设置过 Mullvad DoH 的人，要在 11 月 2 日前换掉，Quad9 的 DoH 地址是 `https://dns.quad9.net/dns-query`。iPhone 与 Mac 可以从 Quad9 的说明页下载配置描述文件，Android 在「私人 DNS」填入 `dns.quad9.net`，说明页有英文、法文、西班牙文与罗马尼亚文，没有中文。
+到 9 月 29 日为止，GreatFire（测试中国大陆网址封锁状况的网站）近 90 天对 mullvad.net 的 17 次测试全部被封锁。被封锁的网址也包括各平台 App 的下载链接。Quad9 的 DoH 地址最近两次有结果的测试也都受到干扰，最后一次在 9 月 3 日。
+
+身在海外、手动设置过 Mullvad 加密 DNS 的人，可以在 11 月 2 日前改用 Quad9。Quad9 的隐私政策写明用户的 IP 只在处理查询的极短时间内留在内存，另外保留的统计按地区、电信网络与协议分类，不含个别 IP。改用之后，DNS 查询仍然集中在同一个运营方手上。
+
+iPhone（iOS 14 及以上）与 Mac（Big Sur 及以上）要用 Safari 下载 Quad9 说明页的描述文件，2027 年 1 月 19 日到期后需重新安装。Android 9 及以上在「专用 DNS」填入主机名 `dns.quad9.net`，这一项走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）地址 `https://dns.quad9.net/dns-query`。开着 VPN 时描述文件与专用 DNS 通常不会生效，要改在 VPN App 的自定义 DNS 设置 Quad9。说明页有英文、法文、西班牙文与罗马尼亚文，没有中文。
