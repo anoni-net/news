@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>欧盟年龄验证蓝图的隐私缺口 | anoni.net 新闻导读</title>
-<meta name="description" content="欧盟推动各国在年底前推出年龄验证 App。依 EDRi 的技术分析，不可关联性被放宽、凭证仍能追溯到用户，没有证件的人也会被排除在外。">
+<title>欧盟年龄验证 App 的隐私设计与争议 | anoni.net 新闻导读</title>
+<meta name="description" content="欧盟委员会建议各成员国在 2026 年底前推出年龄验证 App，欧盟以外的用户不受影响。欧委会写明 App 不保留证件与生物特征数据，EDRi 则质疑它的隐私保护。依欧委会 9 月发布的新版规范，App 与网站都必须实现零知识证明，只在设备不支持时退回签发方可能追溯的一般验证方式。">
 <link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/eu-age-verification-blueprint/">
 <link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/eu-age-verification-blueprint/">
 <link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/eu-age-verification-blueprint/">
@@ -16,20 +16,21 @@
 <meta property="og:site_name" content="anoni.net 新闻导读">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="欧盟年龄验证蓝图的隐私缺口">
-<meta property="og:description" content="欧盟推动各国在年底前推出年龄验证 App。依 EDRi 的技术分析，不可关联性被放宽、凭证仍能追溯到用户，没有证件的人也会被排除在外。">
+<meta property="og:title" content="欧盟年龄验证 App 的隐私设计与争议">
+<meta property="og:description" content="欧盟委员会建议各成员国在 2026 年底前推出年龄验证 App，欧盟以外的用户不受影响。欧委会写明 App 不保留证件与生物特征数据，EDRi 则质疑它的隐私保护。依欧委会 9 月发布的新版规范，App 与网站都必须实现零知识证明，只在设备不支持时退回签发方可能追溯的一般验证方式。">
 <meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/eu-age-verification-blueprint/">
 <meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png?v=74a0aa1c7b">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="article:published_time" content="2026-09-29T07:00:00+08:00">
+<meta property="article:modified_time" content="2026-09-29T16:33:00+08:00">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  "headline": "欧盟年龄验证蓝图的隐私缺口",
-  "description": "欧盟推动各国在年底前推出年龄验证 App。依 EDRi 的技术分析，不可关联性被放宽、凭证仍能追溯到用户，没有证件的人也会被排除在外。",
+  "headline": "欧盟年龄验证 App 的隐私设计与争议",
+  "description": "欧盟委员会建议各成员国在 2026 年底前推出年龄验证 App，欧盟以外的用户不受影响。欧委会写明 App 不保留证件与生物特征数据，EDRi 则质疑它的隐私保护。依欧委会 9 月发布的新版规范，App 与网站都必须实现零知识证明，只在设备不支持时退回签发方可能追溯的一般验证方式。",
   "datePublished": "2026-09-29T07:00:00+08:00",
   "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/eu-age-verification-blueprint/",
   "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/eu-age-verification-blueprint/",
@@ -55,11 +56,6 @@
     },
     {
       "@type": "CreativeWork",
-      "name": "EU KIDS Act to restrict social media platforms’ access to children in the EU",
-      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu"
-    },
-    {
-      "@type": "CreativeWork",
       "name": "EU KIDS Act to restrict social media platforms' access to children in the EU",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1890"
     },
@@ -75,8 +71,18 @@
     },
     {
       "@type": "CreativeWork",
+      "name": "Why age verification misses the mark and puts everyone at risk",
+      "url": "https://edri.org/our-work/why-age-verification-misses-the-mark-and-puts-everyone-at-risk/"
+    },
+    {
+      "@type": "CreativeWork",
       "name": "av-doc-technical-specification",
       "url": "https://github.com/eu-digital-identity-wallet/av-doc-technical-specification"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "av-app-android-wallet-ui",
+      "url": "https://github.com/eu-digital-identity-wallet/av-app-android-wallet-ui"
     },
     {
       "@type": "CreativeWork",
@@ -85,15 +91,16 @@
     },
     {
       "@type": "CreativeWork",
-      "name": "Under-16",
-      "url": "https://www.mcmc.gov.my/en/onsa/under-16"
+      "name": "Social media 'ban' or delay FAQ",
+      "url": "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions/faqs"
     },
     {
       "@type": "CreativeWork",
       "name": "未成年人网络保护条例",
       "url": "https://www.gov.cn/zhengce/content/202310/content_6911288.htm"
     }
-  ]
+  ],
+  "dateModified": "2026-09-29T16:33:00+08:00"
 }
 </script>
 </head>
@@ -107,39 +114,35 @@
 <article class="story">
   <header class="story__head">
     <p class="story__date"><time datetime="2026-09-29T07:00:00+08:00">2026 年 9 月 29 日 星期二</time></p>
-    <h1 class="story__title">欧盟年龄验证蓝图的隐私缺口</h1>
-    <p class="story__dek">欧盟推动各国在年底前推出年龄验证 App。依 EDRi 的技术分析，不可关联性被放宽、凭证仍能追溯到用户，没有证件的人也会被排除在外。</p>
+    <h1 class="story__title">欧盟年龄验证 App 的隐私设计与争议</h1>
+    <p class="story__dek">欧盟委员会建议各成员国在 2026 年底前推出年龄验证 App，欧盟以外的用户不受影响。欧委会写明 App 不保留证件与生物特征数据，EDRi 则质疑它的隐私保护。依欧委会 9 月发布的新版规范，App 与网站都必须实现零知识证明，只在设备不支持时退回签发方可能追溯的一般验证方式。</p>
     <p class="story__byline">
-      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/digital-strategy.ec.europa.eu-3712d20c.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/edri.org-9b49c818.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 9 篇原文，来自 European Commission、EDRi、EU Digital Identity Wallet 等 6 个出处</span></a></span>
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/digital-strategy.ec.europa.eu-3712d20c.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/edri.org-9b49c818.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 10 篇原文，来自 European Commission、EDRi、EU Digital Identity Wallet 等 5 个出处</span></a></span>
       <span>导读：anoni.net 社区</span>
+      <span>更正于 <time datetime="2026-09-29T16:33:00+08:00">2026 年 9 月 29 日</time></span>
     </p>
 <nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/09/eu-age-verification-blueprint/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/09/eu-age-verification-blueprint/" hreflang="en" lang="en">English</a></nav>
   </header>
   <div class="story__body content">
-<p>欧盟委员会在 4 月宣布年龄验证 App 技术就绪，并建议各成员国在年底前推出。9 月 17 日提出的《EU KIDS Act》草案要求在线服务与应用商店采用年龄确认工具，13 岁以下不得使用社交平台，15 岁才能自己开账号。欧洲数字权利组织 EDRi 在 9 月 7 日发表的技术分析，结论是这套工具在「就绪」与「保护隐私」两方面都做不到。这套 App 只在欧盟推行，欧盟以外的用户不会用到。</p>
-<p>欧盟委员会 2025 年 7 月先发布一份蓝图，让各国据此开发自己的 App。各国的 App 又称「迷你钱包」，技术规范沿用各国在 2026 年底前要提供的欧盟数字身份钱包。依 EDRi 的分析，27 个成员国可能做出 27 种设计、技术与隐私保护都不同的 App。</p>
-<p>法律要求在相关情况下「确保」不可关联性（unlinkability，每次出示的年龄证明无法被串回同一个人）。依 EDRi 的分析，欧盟委员会把这项要求改成「阻碍」关联，追踪会变难，但不保证做不到。App 以国家签发的证件为信任来源，再用人脸识别绑定用户，没有证件、没有合适的手机或不愿做人脸识别的人都会被排除。</p>
-<p>EDRi 引用的规范条文里，零知识证明（zero-knowledge proof，只证明条件成立、不交出其他数据的密码学方法）都写成非强制的「SHOULD」。即使一次签发多张凭证，凭证里仍有盐值、哈希、公钥、签名与时间戳，签发方可以据此追溯到用户。规范文件 9 月 2 日合并的 1.1.0 版里，零知识证明已改列为首选的机制，不用零知识证明的一般验证方式保留作为备用。</p>
+<p>欧盟委员会 4 月宣布年龄验证 App 技术就绪，建议各成员国年底前推出自己的 App。依 9 月 17 日提出的《EU KIDS Act》草案，13 岁以下不得使用社交平台，15 岁才能自己开账号。在线服务与应用商店要采用年龄确认工具，这套 App 是选项之一，欧盟以外的用户用不到。</p>
+<p>依欧委会的新闻稿，社交与视频平台要在新开账号时验证年龄，已有账号改用创建日期等指标推估年龄。13 岁到未满 15 岁由家长设立迷你账号（mini accounts），每天最多使用一小时。</p>
+<p>依欧委会的说明页与新闻稿，用户不必分享其他个人信息就能证明年满 18 岁，App 也不保留证件与生物特征数据。App 的昵称是迷你钱包（mini wallet），规范沿用欧盟数字身份钱包。9 月 2 日的 1.1.0 版规范文件里，App 与网站都必须实现零知识证明（zero-knowledge proof，只证明条件成立、不透露其他内容），设备不支持时才退回一般验证方式。一般验证方式下，签发方保留记录并与网站串通就能追溯用户。</p>
+<p>欧洲数字权利组织 EDRi 在 9 月 7 日发表技术分析，结论是工具在「就绪」与「保护隐私」两方面都做不到。分析里谈零知识证明的部分，引用的是仍非强制的旧版规范文件。EDRi 主张网络安全另有做法，应拒绝建设年龄验证。分析里也写到，数字身份钱包依法要「确保」不可关联性（unlinkability，多次出示无法串回同一人），欧委会改成只需「阻碍」关联。</p>
 <h2 id="perspective">导读观点</h2>
-<p>匿名的年龄验证里，网站只得知「年龄符合」，签发的一方也不会得知你去过哪些网站，两边都靠不可关联性保护。按规范文件的建议，签发方也同时提供 App。依 EDRi 的分析，签发与出示因此集中在同一方手上，就算强制使用零知识证明，也不足以做到严格的不可关联。</p>
-<p>欧盟委员会的示范 App 以 EUPL-1.2 授权开源，但依 EDRi 的分析，开源的要求只适用于各国的数字身份钱包，不包括各国的年龄验证 App。丹麦的 App 在客户端就有专有（非开源）的代码，外界无法检验。</p>
-<p>中国大陆 2024 年 1 月 1 日施行的《未成年人网络保护条例》第三十一条要求为未成年人提供信息发布、即时通讯等服务时，取得未成年人的真实身份信息。澳大利亚从 2025 年 12 月 10 日起要求社交平台阻止 16 岁以下的人开账号，法律同时禁止平台强迫用户出示政府证件或使用政府的数字身份。马来西亚从 2026 年 6 月 1 日起，也依法要求社交平台验证用户年龄。</p>
-<p>这套 App 目前不需要读者做任何设置。关注年龄验证立法的人，可以拿 EDRi 列出的几点检验各地的做法，包括零知识证明是否强制、签发与出示是否分开、App 是否开源，以及有没有不需要证件与人脸识别的替代方式。</p>
+<p>欧委会规范文件附的威胁模型里，使用零知识证明时网站没有可比对签发记录的数据。一般验证方式的追溯风险列为可接受，理由是列在欧委会发布的欧盟可信列表、受各国监管的签发方要故意违规才会发生。欧委会的规范文件也建议签发方同时提供 App。依 EDRi 的分析，这让签发与出示集中在同一方，即使强制零知识证明也做不到严格的不可关联。</p>
+<p>依 EDRi 的分析，App 以国家证件搭配生物识别确认用户，没有证件、合适的手机或不愿做人脸识别的人会被排除。欧委会的规范文件另列电子身份与银行、电信运营商的身份验证，威胁模型里只有扫描证件要做人脸比对。缺少证件的人另有规范文件公平性（Equity）条款的替代程序或人工处理。</p>
+<p>欧委会的示范 App 以 EUPL-1.2（欧盟的开源许可证）开源，建议书里请各国通过第三方审查确保网络安全与隐私合规。依 EDRi 的分析，开源要求只涵盖数字身份钱包，丹麦的 App 在客户端有非开源的代码。</p>
+<p>EDRi 在 2025 年 11 月的文章里写，所有年龄验证都能在某种程度上被绕过。欧委会的威胁模型里，大人在旁代为验证或替孩子的手机注册列为可接受的残余风险，每次出示都比对人脸的做法因过度侵犯隐私被否决。</p>
+<p>澳大利亚从 2025 年 12 月 10 日起要求社交平台采取合理措施阻止 16 岁以下的人持有账号，没采取的平台可能受罚，用户与家长不受罚。在排除的争点上，澳大利亚法律禁止平台强迫出示政府证件，列为选项时要另有合理的替代方式。依中国大陆 2024 年 1 月 1 日施行的《未成年人网络保护条例》第三十一条，为未成年人提供信息发布、即时通讯等服务时要依法要求提供真实身份信息，在追溯的争点上与欧盟规范让网站只得知年龄符合的方向不同。</p>
+<p>中国境内的读者用不到这套 App，各国 App 预计年底前上线。比较各地时，隐私方面可以问签发方能不能追溯用户、没有证件的人有没有替代方式。未成年人保护方面可以问能不能轻易绕过验证、已有账号如何处理。</p>
   </div>
 <aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
-  <h2 class="source-slip__heading" id="source-slip-heading">原文（9 篇）</h2>
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（10 篇）</h2>
   <div class="source-slip__item">
     <p class="source-slip__title" lang="en"><a href="https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification"><img class="source-slip__icon" src="/assets/favicons/digital-strategy.ec.europa.eu-3712d20c.png" width="16" height="16" alt="" loading="lazy" decoding="async">The EU approach to age verification</a></p>
     <dl class="source-slip__meta">
       <div><dt>出处</dt><dd>European Commission</dd></div>
       <div><dt>原文日期</dt><dd><time datetime="2026-09-22">2026 年 9 月 22 日</time></dd></div>
-    </dl>
-  </div>
-  <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu"><img class="source-slip__icon" src="/assets/favicons/digital-strategy.ec.europa.eu-3712d20c.png" width="16" height="16" alt="" loading="lazy" decoding="async">EU KIDS Act to restrict social media platforms’ access to children in the EU</a></p>
-    <dl class="source-slip__meta">
-      <div><dt>出处</dt><dd>European Commission</dd></div>
-      <div><dt>原文日期</dt><dd><time datetime="2026-09-17">2026 年 9 月 17 日</time></dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
@@ -164,10 +167,24 @@
     </dl>
   </div>
   <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://edri.org/our-work/why-age-verification-misses-the-mark-and-puts-everyone-at-risk/"><img class="source-slip__icon" src="/assets/favicons/edri.org-9b49c818.png" width="16" height="16" alt="" loading="lazy" decoding="async">Why age verification misses the mark and puts everyone at risk</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>EDRi</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-11-25">2025 年 11 月 25 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
     <p class="source-slip__title" lang="en"><a href="https://github.com/eu-digital-identity-wallet/av-doc-technical-specification"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">av-doc-technical-specification</a></p>
     <dl class="source-slip__meta">
       <div><dt>出处</dt><dd>EU Digital Identity Wallet</dd></div>
       <div><dt>原文日期</dt><dd><time datetime="2026-09-02">2026 年 9 月 2 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/eu-digital-identity-wallet/av-app-android-wallet-ui"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">av-app-android-wallet-ui</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>EU Digital Identity Wallet</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-03">2026 年 9 月 3 日</time></dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
@@ -178,16 +195,17 @@
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://www.mcmc.gov.my/en/onsa/under-16"><img class="source-slip__icon" src="/assets/favicons/mcmc.gov.my-7010665f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Under-16</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions/faqs"><img class="source-slip__icon" src="/assets/favicons/esafety.gov.au-8abaddf2.png" width="16" height="16" alt="" loading="lazy" decoding="async">Social media &#39;ban&#39; or delay FAQ</a></p>
     <dl class="source-slip__meta">
-      <div><dt>出处</dt><dd>Malaysian Communications and Multimedia Commission</dd></div>
+      <div><dt>出处</dt><dd>eSafety Commissioner</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-16">2026 年 9 月 16 日</time></dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
     <p class="source-slip__title" lang="zh-Hant"><a href="https://www.gov.cn/zhengce/content/202310/content_6911288.htm"><img class="source-slip__icon" src="/assets/favicons/gov.cn-1db19351.png" width="16" height="16" alt="" loading="lazy" decoding="async">未成年人网络保护条例</a></p>
     <dl class="source-slip__meta">
       <div><dt>出处</dt><dd>中华人民共和国国务院</dd></div>
-      <div><dt>原文日期</dt><dd><time datetime="2023-10-16">2023 年 10 月 16 日</time></dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2023-10-24">2023 年 10 月 24 日</time></dd></div>
     </dl>
   </div>
 </aside>

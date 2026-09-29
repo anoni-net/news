@@ -76,36 +76,34 @@
 </content:encoded>
 </item>
 <item>
-<title>Privacy gaps in the EU age verification blueprint</title>
+<title>Privacy design and disputes around the EU age verification app</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/eu-age-verification-blueprint/</link>
 <guid isPermaLink="false">anoni-news:en/2026/09/eu-age-verification-blueprint</guid>
 <pubDate>Tue, 29 Sep 2026 07:00:00 +0800</pubDate>
 <dc:creator>anoni.net community</dc:creator>
-<description>The EU wants member states to launch an age verification app by the end of the year. According to EDRi&#39;s technical analysis, unlinkability has been weakened, credentials can still be traced back to users, and people without ID are shut out.</description>
-<content:encoded>&lt;p&gt;Based on 9 sources, including European Commission, EDRi, EU Digital Identity Wallet&lt;/p&gt;
+<description>The European Commission recommends that member states launch an age verification app by the end of 2026; users outside the EU are not affected. According to the Commission, the app keeps no ID documents or biometric data, while EDRi questions its privacy protections. Under the Commission&#39;s specification released in September, apps and websites must implement zero-knowledge proofs, falling back only on devices without support to a plain method that an issuer could trace.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including European Commission, EDRi, EU Digital Identity Wallet&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The European Commission declared its age verification app technically ready in April and urged member states to launch it by the end of the year. On 17 September it proposed the EU KIDS Act, under which online services and app stores must use age assurance tools, children under 13 are kept off social media, and 15 becomes the minimum age for an account of one&#39;s own. The conclusion of a technical analysis published on 7 September by the digital rights network EDRi is that the tools, pitched as &#34;ready&#34; and &#34;privacy-preserving&#34;, fall short on both counts. The app is being rolled out only in the EU, so users elsewhere will not encounter it.&lt;/p&gt;
-&lt;p&gt;What the Commission released in July 2025 was a blueprint, nicknamed the &#34;mini wallet&#34;, for each country to build its own app on the specifications of the EU Digital Identity Wallet, which member states have to provide by the end of 2026. According to EDRi, the law requires unlinkability to be &#34;ensured&#34; where relevant, while the Commission has changed this to &#34;hindering&#34; linkage. Anchoring the app to state ID plus facial recognition excludes people without ID, a suitable phone, or willingness to be scanned, and credentials still carry salts, hashes, public keys, signatures and timestamps an issuer could link back to a person. In the specification text EDRi quotes, zero-knowledge proofs appear only as a non-binding &#34;SHOULD&#34;. Version 1.1.0 of the specification, merged on 2 September, makes them the preferred method but keeps a plain verification fallback.&lt;/p&gt;
+&lt;p&gt;The European Commission declared its age verification app ready in April and urged member states to launch their own by year-end. The EU KIDS Act, proposed on 17 September, would bar under-13s from social media platforms and set 15 as the minimum age for an account of one&#39;s own. Online services and app stores would have to use age assurance tools, with this app as one option. Users outside the EU are not affected.&lt;/p&gt;
+&lt;p&gt;Per the Commission&#39;s press release, social media and video-sharing platforms would check age when an account is opened and estimate existing users&#39; ages from proxies such as account creation date. Children aged 13 to under 15 would use mini accounts set up by a guardian, limited to one hour a day.&lt;/p&gt;
+&lt;p&gt;On the Commission&#39;s policy page, users can prove they are over 18 without sharing other personal data, and per the press release the app retains no identity documents or biometric data. The app is nicknamed the &#34;mini wallet&#34; and shares the technical specifications of the EU Digital Identity Wallets. In version 1.1.0 of the specification, published on 2 September, apps and websites must implement zero-knowledge proofs (a way to prove a condition without revealing anything else), falling back to a plain method only on devices without support. Under the plain method, an issuer that keeps records and colludes with websites can trace users.&lt;/p&gt;
+&lt;p&gt;In a technical analysis on 7 September, European Digital Rights (EDRi) concluded that the tools, pitched as &#34;ready&#34; and &#34;privacy-preserving&#34;, fail on both counts. Its point on zero-knowledge proofs quotes an earlier version of the specification, in which they were optional. EDRi argues that online safety can be reached by other routes and calls for refusing to build age verification. By its analysis, the law requires the underlying wallet to &#34;ensure&#34; unlinkability (proofs that cannot be tied to one person) where relevant, and the Commission has weakened this to &#34;hindering&#34; linkage.&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Anonymous age verification rests on unlinkability: a site should learn only that you are old enough, and whoever issued the credential should not learn where you used it. Zero-knowledge proofs can show that a condition holds without revealing anything else, but under the specification the credential issuer is still expected to run the app as well. In EDRi&#39;s analysis, that puts issuing and presentation in the same hands, and mandating zero-knowledge proofs alone would not deliver strict unlinkability.&lt;/p&gt;
-&lt;p&gt;The Commission&#39;s reference apps are open source under EUPL-1.2. According to EDRi, though, the open-source requirement covers national identity wallets, not national age verification apps, and Denmark&#39;s app has proprietary code on the client side that outsiders cannot inspect. In EDRi&#39;s reading, the 27 member states could end up with 27 different designs and levels of protection.&lt;/p&gt;
-&lt;p&gt;Governments in the Asia-Pacific have made different choices on the same points EDRi raises. Since 10 December 2025, Australia has required platforms to keep under-16s off social media, while its law bars platforms from compelling anyone to provide government ID or use the government&#39;s digital ID. By eSafety&#39;s count, platforms had removed access to 4.7 million under-16 accounts by mid-December 2025. Malaysia has required social media platforms to verify users&#39; ages since 1 June 2026. In mainland China, the Regulations on the Protection of Minors Online, in force since 1 January 2024, require services offering posting and instant messaging to minors to obtain the minor&#39;s real identity information.&lt;/p&gt;
-&lt;p&gt;Readers have nothing to configure for this app. Anyone following these laws can use EDRi&#39;s points as a checklist: whether zero-knowledge proofs are mandatory, whether the issuer and the app are kept separate, whether the app is open source, and whether there is an alternative that needs neither ID documents nor a face scan.&lt;/p&gt;
+&lt;p&gt;In the threat model attached to the Commission&#39;s specification, zero-knowledge proofs leave a website nothing to match against issuance records. The plain method&#39;s tracing risk is accepted, because it would take deliberate wrongdoing by an issuer on the EU Trusted List published by the Commission and under national supervision. Under the Commission&#39;s specification, issuers are also recommended to provide the app. In EDRi&#39;s analysis, that puts issuing and presentation in the same hands, so even mandatory zero-knowledge proofs would not deliver strict unlinkability.&lt;/p&gt;
+&lt;p&gt;In EDRi&#39;s analysis, the app confirms users through national ID combined with biometric checks, excluding people without ID documents, a suitable phone, or willingness to undergo facial recognition. The Commission&#39;s specification also lists electronic identity schemes and identity checks by banks and mobile network operators, and under its threat model only scanning a passport or ID card involves a face match. For people lacking documents, the specification&#39;s Equity provision includes alternative issuance procedures or human intervention.&lt;/p&gt;
+&lt;p&gt;The Commission&#39;s reference app is open source under the EUPL-1.2 licence (the EU&#39;s open-source licence), and in its recommendation the Commission asks member states to ensure compliance with cybersecurity and privacy standards through third-party scrutiny. According to EDRi, the open-source requirement covers only the Digital Identity Wallets, and Denmark&#39;s app has proprietary code on the client side.&lt;/p&gt;
+&lt;p&gt;In November 2025, EDRi wrote that all age verification methods can be circumvented to some extent. In the Commission&#39;s threat model, an adult helping in person or enrolling a minor&#39;s phone is an accepted residual risk, while checking the face at every presentation was rejected as a disproportionate invasion of privacy.&lt;/p&gt;
+&lt;p&gt;Since 10 December 2025, Australia has required social media platforms to take reasonable steps to stop under-16s from holding accounts, with penalties for platforms that do not but none for under-16s or their parents. On exclusion, Australian law bars platforms from compelling users to provide government ID, and any platform offering it must also offer a reasonable alternative.&lt;/p&gt;
+&lt;p&gt;Malaysia has required social media platforms by law to verify users&#39; ages since 1 June 2026. Under the technology-neutral approach of its regulator, the Malaysian Communications and Multimedia Commission (MCMC), verification is expected to use government-issued records or documents where required. In mainland China, Article 31 of the Regulations on the Protection of Minors Online, in force since 1 January 2024, requires services offering posting, instant messaging and the like to minors to obtain their real identity information. On tracing, that points in a different direction from the EU design, where a website learns only that the age threshold is met.&lt;/p&gt;
+&lt;p&gt;Readers have nothing to set up for now, and national apps are expected by year-end. On privacy, compare whether the issuer can trace users and whether people without ID have an alternative. On child protection, compare whether minors can easily get around the checks and how existing accounts are handled.&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification&#34;&gt;The EU approach to age verification&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu&#34;&gt;EU KIDS Act to restrict social media platforms’ access to children in the EU&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;17 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
@@ -130,10 +128,24 @@
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/our-work/why-age-verification-misses-the-mark-and-puts-everyone-at-risk/&#34;&gt;Why age verification misses the mark and puts everyone at risk&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-25&#34;&gt;25 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-doc-technical-specification&#34;&gt;av-doc-technical-specification&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-app-android-wallet-ui&#34;&gt;av-app-android-wallet-ui&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-03&#34;&gt;3 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
@@ -144,16 +156,24 @@
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions/faqs&#34;&gt;Social media &amp;#39;ban&amp;#39; or delay FAQ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eSafety Commissioner&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mcmc.gov.my/en/onsa/under-16&#34;&gt;Under-16&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Malaysian Communications and Multimedia Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-15&#34;&gt;15 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/content/202310/content_6911288.htm&#34;&gt;未成年人网络保护条例&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中华人民共和国国务院&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-16&#34;&gt;16 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-24&#34;&gt;24 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
