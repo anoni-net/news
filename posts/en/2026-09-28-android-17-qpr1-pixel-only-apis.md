@@ -48,7 +48,7 @@ authors:
 
 Android 17 QPR1, which Google began rolling out on 15 September to every Pixel from the Pixel 6 through the Pixel 11 series, adds new APIs for app developers at API level 37.1, including a new `android.hardware.hid` package. Its source code has not been released to the Android Open Source Project (AOSP). According to GrapheneOS, no release since Android 3.x has added new APIs without going through AOSP. Non-Pixel phones and AOSP-based systems will get them with Android 17 QPR2 in December.
 
-GrapheneOS's announcement says it had ported its code to QPR1 before the release but does not yet have permission to ship it, so it is backporting Pixel firmware, kernel drivers and HALs to Android 17 instead. It also says the September Pixel Update Bulletin carries patches to standard Android components that were missing from the September Android Security Bulletin, and that a GPL source request it made on 1 September took more than two weeks to be answered.
+GrapheneOS's announcement says it had ported its code to QPR1 before the release but as of 27 September did not have permission to ship it, so it is backporting Pixel firmware, kernel drivers and HALs to Android 17 instead. It also says the September Pixel Update Bulletin carries patches to standard Android components that were missing from the September Android Security Bulletin, and that a GPL source request it made on 1 September took more than two weeks to be answered.
 
 ## Perspective {#perspective}
 
