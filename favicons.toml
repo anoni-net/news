@@ -88,6 +88,10 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
 
+[hosts."google.cn"]
+icon = "google.cn-b463ba0d.png"
+from = "https://www.google.cn/chrome/static/images/favicons/android-icon-192x192.png"
+
 [hosts."gov.cn"]
 icon = "gov.cn-1db19351.png"
 from = "https://www.gov.cn/images/trs_favicon.ico"
