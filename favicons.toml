@@ -57,6 +57,10 @@ from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f
 icon = "consumer.huawei.com-dddcd8b6.png"
 from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawei-logo.png"
 
+[hosts."court.gov.cn"]
+icon = "court.gov.cn-1db19351.png"
+from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico"
+
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
@@ -110,6 +114,9 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
 
+[hosts."gongbao.court.gov.cn"]
+same_as = "court.gov.cn"
+
 [hosts."google.cn"]
 icon = "google.cn-b463ba0d.png"
 from = "https://www.google.cn/chrome/static/images/favicons/android-icon-192x192.png"
@@ -132,6 +139,10 @@ from = "https://grapheneos.org/apple-touch-icon.png"
 
 [hosts."grapheneos.social"]
 same_as = "grapheneos.org"
+
+[hosts."haveibeenpwned.com"]
+icon = "haveibeenpwned.com-9e2dc6c7.png"
+from = "https://haveibeenpwned.com/apple-touch-icon.png"
 
 [hosts."hawksley.dev"]
 icon = "hawksley.dev-4e52ebdb.png"
@@ -225,6 +236,10 @@ from = "https://www.gstatic.com/policies/favicon.ico"
 icon = "politiet.no-3b14f30b.png"
 from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 
+[hosts."privacy.ca.gov"]
+icon = "privacy.ca.gov-a08db90b.png"
+from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
+
 [hosts."quad9.net"]
 icon = "quad9.net-ff6922f7.png"
 from = "https://quad9.net/icons/icon_512x512.a811cc.png"
@@ -260,6 +275,10 @@ from = "https://support.google.com/favicon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."support.torproject.org"]
+icon = "support.torproject.org-f88d6334.png"
+from = "https://support.torproject.org/images/favicon/favicon-192x192.png?h=a118bd0b"
 
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
