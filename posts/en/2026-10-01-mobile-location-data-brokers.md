@@ -1,7 +1,7 @@
 ---
 title: Mobile location data and the files data brokers keep on you
 description: The Markup and Consumer Reports obtained data broker files on US residents showing more than a thousand inferences and over a hundred buyers. The Freedom of the Press Foundation lists two phone settings that cut the location data a phone leaks, in any country.
-date: 2026-10-01T07:00:00+08:00
+date: 2026-10-01T00:00:00+08:00
 slug: mobile-location-data-brokers
 sources:
   - title: Claw back your mobile location data

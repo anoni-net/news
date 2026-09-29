@@ -1,7 +1,7 @@
 ---
 title: InterSecLab’s technical analysis of Russia’s state messenger Max
 description: InterSecLab finds that Max, the messaging app Russia requires on new devices, has no end-to-end encryption. VPN detection, network probing and voice transcription can be switched per account from the server with nothing shown in the app. The mandate applies only to devices sold in Russia.
-date: 2026-09-30T07:05:00+08:00
+date: 2026-09-30T00:05:00+08:00
 slug: interseclab-max-messenger
 sources:
   - title: "The Max Messenger: An Analysis of Russia’s State-Mandated Messaging Application"

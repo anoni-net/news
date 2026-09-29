@@ -1,7 +1,7 @@
 ---
 title: Tracking pixels that sent doctors' appointments to social platforms
 description: Doctoralia's sites in Brazil, Colombia, Mexico and elsewhere in Latin America sent specialties, doctors' names and appointment times to Google, TikTok and LinkedIn. Its parent company does not operate in mainland China, Hong Kong, Macau or Taiwan.
-date: 2026-10-04T07:00:00+08:00
+date: 2026-10-04T00:00:00+08:00
 slug: doctoralia-health-tracking-pixels
 sources:
   - title: How TikTok and Google ended up with information about doctors’ appointments around the world

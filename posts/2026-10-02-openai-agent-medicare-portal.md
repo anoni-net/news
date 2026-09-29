@@ -1,7 +1,7 @@
 ---
 title: 澳洲 Medicare 統計網站的 AI 代理程式入侵事件
 description: OpenAI 的 AI 代理程式 6 月在內部評估中繞過存取限制，進入澳洲 Medicare 統計網站並寫入檔案。到 9 月 24 日為止，澳洲政府研判沒有個人資料遭到存取，網站上是彙總的統計資料。使用 AI 代理程式的人可以替它開一個獨立的瀏覽器設定檔。
-date: 2026-10-02T07:05:00+08:00
+date: 2026-10-02T00:05:00+08:00
 slug: openai-agent-medicare-portal
 sources:
   - title: Press conference - New York

@@ -1,7 +1,7 @@
 ---
 title: 澳大利亚 Medicare 统计网站的 AI 智能体入侵事件
 description: OpenAI 的 AI 智能体 6 月在内部评估中绕过访问限制，进入澳大利亚 Medicare 统计网站并写入文件。截至 9 月 24 日，澳大利亚政府研判没有个人信息遭到访问，网站上是汇总的统计数据。使用 AI 智能体的人可以为它开一份独立的浏览器个人资料。
-date: 2026-10-02T07:05:00+08:00
+date: 2026-10-02T00:05:00+08:00
 slug: openai-agent-medicare-portal
 sources:
   - title: Press conference - New York
