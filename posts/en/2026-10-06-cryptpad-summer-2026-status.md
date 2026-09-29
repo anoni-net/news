@@ -86,19 +86,19 @@ CryptPad published its summer 2026 status on 15 September, covering a new securi
 
 According to the June post-mortem, the server did not rate-limit WebSocket connections, the channel through which the browser and server exchange data, so repeatedly sending frames could exhaust its resources. On 28 January cryptpad.fr was hit by a distributed denial-of-service attack exploiting that gap, and the resulting outage was resolved in under three hours. The fix shipped in 2026.2.1 on 27 March.
 
-The team had intended a 90-day embargo, but the reporter disputed it because the previous policy did not state it clearly. The CVE was published 34 days after that release. The new policy, published in June, keeps a CVE private for at least 90 days after the fixed release.
+The team had intended a 90-day embargo, but the reporter disputed it because the previous policy did not state it clearly. The CVE was published 34 days after 2026.2.1. The new policy, published in June, keeps a CVE private for at least 90 days after the fixed release.
 
 For post-quantum cryptography, the team chose NIST's ML-KEM, used to exchange keys, and ML-DSA, used for digital signatures. In experiments the two were combined with CryptPad's existing public-key cryptography in a hybrid way. Most of CryptPad ran smoothly, but some parts became too slow to use. According to the post, a draft adding both algorithms to the browser's Web Cryptography API should be two orders of magnitude faster than an external library.
 
-cryptpad.fr will drop French-language support because the support team no longer has a French speaker. An Autumn Release bundling two releases' worth of improvements is coming, with no release date announced as of 29 September.
+The flagship instance, cryptpad.fr, will drop French-language support because the support team no longer has a French speaker. An Autumn Release bundling two releases' worth of improvements is coming, with no release date announced as of 29 September.
 
 ## Perspective {#perspective}
 
-CryptPad encrypts documents in the browser, and the server has no access to their content. The user guide lists several trust assumptions, including that the instance runs the same code as published on GitHub and that collaborators do not forward sharing links to others. When they all hold, administrators cannot read or modify your documents. The guide also states that CryptPad offers only weak anonymity, since the instance can see your IP address and browser, and points to Tor for stronger guarantees.
+CryptPad encrypts documents in the browser, and the server has no access to their content. The user guide lists several trust assumptions, including that the instance runs the same code as published on GitHub and that sharing links do not reach illegitimate third parties. When they all hold, administrators cannot read or modify your documents. The guide also states that CryptPad offers only weak anonymity, since the instance can see your IP address and browser, and points to Tor for stronger guarantees.
 
 A fix takes effect only once an instance's administrators upgrade. Under the security policy, the 90-day embargo gives them time to do so before the vulnerability is published and attackers may start exploiting it. The public instance list only includes instances that pass checks for an up-to-date version, so it is a good place to start when choosing one.
 
-The draft is maintained by the WICG, a W3C community group for new specifications, and as of 29 September it was not on the W3C standards track. Browser support may make a post-quantum CryptPad more realistic. The team has already restructured the code for crypto-agility, so cryptographic libraries can be swapped more easily.
+The Web Cryptography API draft is maintained by the WICG, a W3C community group for new specifications, and as of 29 September it was not on the W3C standards track. Browser support may make a post-quantum CryptPad more realistic. The team has already restructured the code for crypto-agility, so cryptographic libraries can be swapped more easily.
 
 As of 29 September, CryptPad's Weblate shows the interface fully translated into Traditional and Simplified Chinese, 96.6% into Japanese and only 5.8% into Korean. The user guide has a Japanese edition but no Chinese or Korean one. The support page shows which languages an instance's administrators use, and the guide suggests an online translator when needed.
 
@@ -108,4 +108,4 @@ To try it, open cryptpad.fr or another listed instance in a browser with JavaScr
 
 Registering needs only a username and password, with no email address. Because of the encryption, administrators cannot view, retrieve or reset a password, so the guide advises noting it somewhere safe.
 
-According to the post-mortem, administrators running CryptPad behind nginx with a variation of the official advanced configuration should switch to the latest example configuration as soon as possible, since it adds rate limiting. Severity is now scored with CVSS 4.0, and release notes list only the highest score among fixed vulnerabilities plus a notice to upgrade. Each version is supported for 90 days, and the recommended version is always the latest release, which as of 29 September was 2026.5.1 from 26 May.
+According to the post-mortem, administrators running CryptPad behind nginx with a variation of the official advanced configuration should update it from the latest example configuration as soon as possible, since the new example adds rate limiting. Severity is now scored with CVSS 4.0, and release notes list only the highest score among fixed vulnerabilities plus a notice to upgrade. Each version is supported for 90 days. The recommended version is always the latest, with new versions published quarterly, and as of 29 September the latest release was 2026.5.1 from 26 May.
