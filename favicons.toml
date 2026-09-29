@@ -183,6 +183,10 @@ from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/th
 icon = "telenor.com-5bb71714.png"
 from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
 
+[hosts."thelocal.no"]
+icon = "thelocal.no-231a147a.png"
+from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
+
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
 from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
