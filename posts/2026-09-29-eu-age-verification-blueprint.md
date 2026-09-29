@@ -38,6 +38,8 @@ sources:
 watch:
   - date: 2027-01-05
     note: 各會員國的年齡驗證 App 是否在年底前上線，EU KIDS Act 草案的審議進度
+regions:
+  - EU
 authors:
   - anoni-net
 ---
