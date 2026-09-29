@@ -237,6 +237,10 @@ from = "https://support.google.com/favicon.png"
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
 
+[hosts."techcrunch.com"]
+icon = "techcrunch.com-72f4a02d.png"
+from = "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=192"
+
 [hosts."telenor.com"]
 icon = "telenor.com-5bb71714.png"
 from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
