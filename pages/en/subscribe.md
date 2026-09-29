@@ -11,7 +11,7 @@ RSS is a list of articles that a site publishes for feed readers. Your reader ch
 2. Copy the anoni.net News feed address, `%FEED_URL%`.
 3. Add a subscription in your reader and paste the address. In NetNewsWire on iPhone, tap `+` and choose Add Feed. Once the reader lists the latest pieces, confirm to subscribe.
 
-New pieces, published every morning at 07:00 (UTC+8), will then appear in your reader on their own.
+New pieces, published daily at midnight (00:00 UTC+8), will then appear in your reader on their own.
 
 ## More detail {#more}
 

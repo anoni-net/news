@@ -1,7 +1,7 @@
 ---
 title: Doxxing prevention and incident response
 description: "EFF published a two-part doxxing safety guide in late August: audit your own footprint, then log incidents, harden accounts and lock your phone number. It is written for US readers, but the footprint audit and account hardening work anywhere."
-date: 2026-10-03T07:00:00+08:00
+date: 2026-10-03T00:00:00+08:00
 slug: eff-doxxing-safety
 sources:
   - title: "Doxxing Safety Pt I: Prevention and Footprint Management"

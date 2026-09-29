@@ -1,7 +1,7 @@
 ---
 title: 挪威對 Telenor 交出緬甸用戶資料的刑事指控
 description: 挪威警方對挪威電信業者 Telenor 提出協助違反人道罪的正式指控，只涉及 2021 至 2022 年的緬甸業務，當時的緬甸子公司多次把歷史通聯資料交給軍政府。
-date: 2026-10-01T07:05:00+08:00
+date: 2026-10-01T00:05:00+08:00
 slug: telenor-myanmar-investigation
 sources:
   - title: "PST og Kripos: Etterforskninger mot Telenor ASA"

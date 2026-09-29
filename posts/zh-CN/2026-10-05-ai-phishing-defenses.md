@@ -1,7 +1,7 @@
 ---
 title: AI 辅助的钓鱼攻击与防范方式
 description: Freedom of the Press Foundation 整理 AI 被用在钓鱼攻击的研究，邮件写得更通顺、更个性化，但识别的危险信号与防御方式没有改变。建议适用于每个收电子邮件与短信的人。
-date: 2026-10-05T07:00:00+08:00
+date: 2026-10-05T00:00:00+08:00
 slug: ai-phishing-defenses
 sources:
   - title: "Ask a security trainer: Does AI make phishing worse?"

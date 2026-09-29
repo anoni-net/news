@@ -1,7 +1,7 @@
 ---
 title: 戰時人權紀錄與科技工具的取捨
 description: HURIDOCS 整理蘇丹戰時人權紀錄的專家會議。在高風險環境做紀錄的團體，引進新工具前要評估成本是否值得，以及資料能否與合作夥伴互通。一般使用者不需要調整設定。
-date: 2026-10-04T07:05:00+08:00
+date: 2026-10-04T00:05:00+08:00
 slug: huridocs-sudan-documentation-technology
 sources:
   - title: "What wartime documentation demands of technology: Lessons from Sudan"

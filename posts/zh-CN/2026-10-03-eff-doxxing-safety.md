@@ -1,7 +1,7 @@
 ---
 title: 人肉搜索的预防与应对
 description: EFF 8 月底发布两篇人肉搜索防护指南，从盘点自己的数字足迹开始，到事发时记录事件、加固账号与请运营商加设密码。指南以美国读者为对象，盘点足迹与加固账号的步骤在其他地方同样适用。
-date: 2026-10-03T07:00:00+08:00
+date: 2026-10-03T00:00:00+08:00
 slug: eff-doxxing-safety
 sources:
   - title: "Doxxing Safety Pt I: Prevention and Footprint Management"
