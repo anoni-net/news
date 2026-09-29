@@ -39,6 +39,9 @@
 /2026/10/mobile-location-data-brokers/
 	#perspective
 	#sources
+/2026/10/telenor-myanmar-investigation/
+	#perspective
+	#sources
 /404.html
 /about/
 	#byline
@@ -86,6 +89,9 @@
 	#sources
 /en/2026/10/
 /en/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/en/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
 /en/about/
@@ -140,6 +146,9 @@
 	#sources
 /zh-cn/2026/10/
 /zh-cn/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/zh-cn/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
 /zh-cn/about/

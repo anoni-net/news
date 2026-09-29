@@ -5,6 +5,10 @@
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
 
+[hosts."accessnow.org"]
+icon = "accessnow.org-8d11dfe8.png"
+from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
+
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
@@ -137,9 +141,17 @@ from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.i
 icon = "interseclab.org-cfaee2eb.png"
 from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-Logo-192x192.png"
 
+[hosts."irrawaddy.com"]
+icon = "irrawaddy.com-eceea825.png"
+from = "https://www.irrawaddy.com/favicon.ico"
+
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."justiceformyanmar.org"]
+icon = "justiceformyanmar.org-db7870eb.png"
+from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd428e35b04b8c_jfm_logo_256_square.png"
 
 [hosts."law.moj.gov.tw"]
 icon = "law.moj.gov.tw-ac2a3ab3.png"
@@ -165,6 +177,10 @@ from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
 
+[hosts."nrk.no"]
+icon = "nrk.no-a87b9a82.png"
+from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -184,6 +200,10 @@ from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20
 [hosts."policies.google.com"]
 icon = "policies.google.com-53ae8c75.png"
 from = "https://www.gstatic.com/policies/favicon.ico"
+
+[hosts."politiet.no"]
+icon = "politiet.no-3b14f30b.png"
+from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 
 [hosts."quad9.net"]
 icon = "quad9.net-ff6922f7.png"
@@ -216,6 +236,14 @@ from = "https://support.google.com/favicon.png"
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
 from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/theming_assets/01KCQNWF0KF3SHTJWPP27QNNYJ"
+
+[hosts."telenor.com"]
+icon = "telenor.com-5bb71714.png"
+from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
+
+[hosts."thelocal.no"]
+icon = "thelocal.no-231a147a.png"
+from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 
 [hosts."themarkup.org"]
 icon = "themarkup.org-0c33d958.png"
