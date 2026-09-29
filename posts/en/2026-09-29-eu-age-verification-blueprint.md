@@ -1,7 +1,7 @@
 ---
 title: Privacy design and disputes around the EU age verification app
 description: The European Commission recommends that member states launch an age verification app by the end of 2026; users outside the EU are not affected. According to the Commission, the app keeps no ID documents or biometric data, while EDRi questions its privacy protections. Under the Commission's specification released in September, apps and websites must implement zero-knowledge proofs, falling back only on devices without support to a plain method that an issuer could trace.
-date: {created: 2026-09-29T07:00:00+08:00, updated: 2026-09-29T16:03:00+08:00}
+date: {created: 2026-09-29T07:00:00+08:00, updated: 2026-09-29T16:08:00+08:00}
 slug: eu-age-verification-blueprint
 sources:
   - title: The EU approach to age verification
@@ -54,9 +54,9 @@ authors:
   - anoni-net
 ---
 
-The European Commission declared its age verification app ready in April and urged member states to launch their own by the end of the year. The EU KIDS Act, proposed on 17 September, would bar under-13s from social media platforms and set 15 as the minimum age for an account of one's own. Online services and app stores would have to use age assurance tools, with this app as one option. Users outside the EU are not affected.
+The European Commission declared its age verification app ready in April and urged member states to launch their own by year-end. The EU KIDS Act, proposed on 17 September, would bar under-13s from social media platforms and set 15 as the minimum age for an account of one's own. Online services and app stores would have to use age assurance tools, with this app as one option. Users outside the EU are not affected.
 
-Per the Commission's press release, social media and video-sharing platforms would verify age when a user opens a new account, and estimate the age of existing users from reasonable proxies such as account creation date or credit card details. Children aged 13 to under 15 would use mini accounts set up by a guardian, with screen time limited to one hour a day. In an EU survey cited there, 92% of respondents rank stronger online protection for children as a top policy priority.
+Per the Commission's press release, social media and video-sharing platforms would check age when an account is opened and estimate existing users' ages from reasonable proxies such as account creation date or credit card details. Children aged 13 to under 15 would use mini accounts set up by a guardian, limited to one hour a day. In the Commission's threat model for the app, an adult helping in person or enrolling a minor's phone is an accepted residual risk, while checking the face at every presentation was rejected as a disproportionate invasion of privacy.
 
 On the Commission's policy page, users can prove they are over 18 without sharing other personal data, and per the press release the app retains no identity documents or biometric data. The app is nicknamed the "mini wallet" and shares the technical specifications of the EU Digital Identity Wallets.
 
@@ -66,7 +66,7 @@ In version 1.1.0 of the Commission's specification, published on 2 September, ap
 
 ## Perspective {#perspective}
 
-In the threat model attached to the Commission's specification, zero-knowledge proofs leave a website nothing to match against issuance records. Under the plain method, an issuer that keeps records and colludes with websites could trace users, a risk accepted because it would take deliberate wrongdoing by an issuer on the Commission's Trusted List and under national supervision. In EDRi's analysis, the specification's recommendation that issuers also provide the app puts issuing and presentation in the same hands, so even mandatory zero-knowledge proofs would not deliver strict unlinkability.
+In the Commission's threat model, zero-knowledge proofs leave a website nothing to match against issuance records. Under the plain method, an issuer that keeps records and colludes with websites could trace users, a risk accepted because it would take deliberate wrongdoing by issuers on the Commission's Trusted List and under national supervision. In EDRi's analysis, the specification's recommendation that issuers also provide the app puts issuing and presentation in the same hands, so even mandatory zero-knowledge proofs would not deliver strict unlinkability.
 
 In EDRi's analysis, the app confirms users through national ID combined with biometric checks, excluding people without ID documents, a suitable phone, or willingness to undergo facial recognition. The Commission's specification also lists electronic identity schemes and identity checks by banks and mobile network operators, and under its threat model only the route of scanning a passport or ID card involves a face match. For people lacking documents, the specification's Equity provision offers alternative issuance procedures or human intervention.
 
