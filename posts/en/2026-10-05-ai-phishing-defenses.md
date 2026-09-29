@@ -1,7 +1,7 @@
 ---
 title: AI-assisted phishing and the defences that still work
 description: Freedom of the Press Foundation rounds up research on attackers using AI to write more fluent, personalised phishing. The warning signs and defences have not changed, and they apply to anyone who receives email or text messages.
-date: 2026-10-05T07:00:00+08:00
+date: 2026-10-05T00:00:00+08:00
 slug: ai-phishing-defenses
 sources:
   - title: "Ask a security trainer: Does AI make phishing worse?"

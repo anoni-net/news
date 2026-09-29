@@ -1,7 +1,7 @@
 ---
 title: Apple 威脅通知的辨識與應對
 description: Apple 8 月向 110 個國家的使用者發出傭兵間諜軟體的威脅通知，絕大多數人不會成為這類攻擊的目標。說明頁寫明真正的通知出現在哪裡、不會要求密碼與驗證碼，收到之後可以開啟封閉模式並尋求協助。
-date: 2026-10-02T07:00:00+08:00
+date: 2026-10-02T00:00:00+08:00
 slug: apple-threat-notifications
 sources:
   - title: About Apple threat notifications and protecting against mercenary spyware

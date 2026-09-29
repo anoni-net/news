@@ -1,7 +1,7 @@
 ---
 title: 手機位置資料與資料仲介手上的個人檔案
 description: 美國的 The Markup 與 Consumer Reports 取得資料仲介的個人檔案，裡面有上千項推測與上百個買家。Freedom of the Press Foundation 整理了兩個減少手機洩漏位置資料的設定，美國以外也能照做。
-date: 2026-10-01T07:00:00+08:00
+date: 2026-10-01T00:00:00+08:00
 slug: mobile-location-data-brokers
 sources:
   - title: Claw back your mobile location data
