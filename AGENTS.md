@@ -61,7 +61,7 @@ uv run tools/bluesky_post.py --dry-run  # 列出這一輪會發到 Bluesky 的�
 
 寫稿前先用法案編號、產品名或組織名在 `posts/` 搜尋，確認有沒有寫過同一件事。
 
-新聞發生在特定的國家或地區時，在 front matter 用 `regions` 填 ISO 3166-1 的兩碼代碼（見 `SPEC.md`「一篇的格式」）。填的是新聞發生的地方，例如西班牙封鎖 archive.today 填 `ES`，挪威起訴 Telenor 在緬甸的行為填 `NO` 與 `MM`。導讀觀點為了比較而提到的地方不算。Apple、Android 這類全球性的產品新聞不填。
+新聞發生在特定的國家或地區時，在 front matter 用 `regions` 填 ISO 3166-1 的兩碼代碼（見 `SPEC.md`「一篇的格式」）。填的是新聞發生的地方，例如西班牙封鎖 archive.today 填 `ES`，挪威起訴 Telenor 在緬甸的行為填 `"NO"` 與 `MM`（挪威的代碼要加引號，否則 YAML 會讀成 false）。導讀觀點為了比較而提到的地方不算。Apple、Android 這類全球性的產品新聞不填。
 
 文章裡寫到之後才有結果的事，例如 12 月才釋出、年底前上線、還在測試版，在 zh-TW 版本的 front matter 用 `watch` 記下回頭查的日期與要查什麼（見 `SPEC.md`「追蹤中的事件」）。日期依原文寫的時間推估，查不到時間的抓一個月後。
 
