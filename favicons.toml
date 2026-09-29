@@ -227,10 +227,6 @@ from = "https://laws.e-gov.go.jp/favicon.ico"
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
 
-[hosts."leighday.co.uk"]
-icon = "leighday.co.uk-a8452534.png"
-from = "https://www.leighday.co.uk/apple-touch-icon.png"
-
 [hosts."macanorak.com"]
 icon = "macanorak.com-3f63f55a.png"
 from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badge-New.png"
