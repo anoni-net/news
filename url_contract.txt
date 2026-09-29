@@ -17,6 +17,9 @@
 /2026/09/ios27-siri-ai-data-access/
 	#perspective
 	#sources
+/2026/09/mullvad-android-leak-and-dns-shutdown/
+	#perspective
+	#sources
 /2026/09/signal-numberless-registration/
 	#perspective
 	#sources
@@ -54,6 +57,9 @@
 	#perspective
 	#sources
 /en/2026/09/ios27-siri-ai-data-access/
+	#perspective
+	#sources
+/en/2026/09/mullvad-android-leak-and-dns-shutdown/
 	#perspective
 	#sources
 /en/2026/09/signal-numberless-registration/
@@ -98,6 +104,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/09/ios27-siri-ai-data-access/
+	#perspective
+	#sources
+/zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown/
 	#perspective
 	#sources
 /zh-cn/2026/09/signal-numberless-registration/
