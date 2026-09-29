@@ -52,10 +52,10 @@ FPF 列出四个危险信号：发件地址与冒充对象不符或只是相似�
 
 大语言模型擅长模仿语气，中文钓鱼消息也可能写得通顺。靠错字辨认诈骗会越来越不可靠，四个危险信号都跟文笔无关。
 
-常打开陌生附件的人可以用开源的 Dangerzone（AGPL-3.0 许可证，2026 年 7 月发布 0.11.0）。它在断网的沙箱里把文件转成像素，再到沙箱外重建成没有文字层的 PDF，要开启文字识别（OCR）才能搜索。支持 Windows、macOS 与 Linux，界面只有英文，Windows 版需要电脑支持并开启硬件虚拟化。Windows 与 macOS 版从 GitHub 下载，监测中国网络审查的 GreatFire 把 `github.com` 列为在中国大陆时常受干扰。
+常打开陌生附件的人可以用开源的 Dangerzone（AGPL-3.0 许可证，2026 年 7 月发布 0.11.0）。它在断网的沙箱里把文件转成像素，再到沙箱外重建成没有文字层的 PDF，要开启文字识别（OCR）才能搜索。支持 Windows、macOS 与 Linux，界面只有英文，Windows 版需要电脑支持并开启硬件虚拟化。Windows 与 macOS 版从 GitHub 下载，监测中国网络审查的 GreatFire 截至 2026 年 9 月 29 日把 `github.com` 列为在中国大陆时常受干扰。
 
 FPF 建议的两步验证以手机收到的一次性密码（OTP）为例。新加坡金融管理局与当地银行公会 2024 年 7 月宣布，主要零售银行三个月内逐步停止让已启用数字令牌的客户用 OTP 登录，改由令牌验证。公告的理由是 OTP 容易被骗走，例如仿冒的银行网站。
 
 通行密钥（passkey，用指纹、人脸或锁屏代替密码）同样不必输入可被骗走的代码。Google 的安全博客写到，设备只把登录签名交给 Google 的网站与 App，钓鱼网站拿不到。代价是能解锁设备的人就能登录账号，帮助页面因此写明只在自己专用的设备上创建。
 
-在海外使用 Google 账号的人，第一步可以添加通行密钥（GreatFire 截至 2026 年 9 月 29 日把 `google.com` 列为大多被封锁）。电脑要 Windows 10、macOS Ventura 以上，手机要 Android 9、iOS 16 以上并开启屏幕锁定。浏览器要 Chrome 或 Edge 109、Safari 16、Firefox 122 以上，iPhone 与 Mac 要开启 iCloud 钥匙串。新建的通行密钥可能要 7 天后才能登录，帮助页面有简体中文版。
+在海外使用 Google 账号的人，第一步可以添加通行密钥（GreatFire 截至 2026 年 9 月 29 日把 `google.com` 列为大多被封锁）。电脑要 Windows 10、macOS Ventura 以上，手机要 Android 9、iOS 16 以上并开启屏幕锁定。浏览器要 Chrome 或 Edge 109、Safari 16、Firefox 122 以上，iPhone 与 Mac 要开启 iCloud 钥匙串。通行密钥建立后可能要 7 天才能用来登录，帮助页面有简体中文版。
