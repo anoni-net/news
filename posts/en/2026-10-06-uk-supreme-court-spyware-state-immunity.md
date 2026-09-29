@@ -1,7 +1,7 @@
 ---
 title: The UK Supreme Court ruling on state immunity in a spyware claim
 description: "On 27 July the UK Supreme Court ruled 3–2 that a foreign state cannot claim immunity in UK courts when spyware installed remotely from abroad causes personal injury in the UK. The ruling decides only jurisdiction, Bahrain denies the allegations, and courts outside the UK apply their own law."
-date: 2026-10-06T07:05:00+08:00
+date: 2026-10-06T00:05:00+08:00
 slug: uk-supreme-court-spyware-state-immunity
 sources:
   - title: "[2026] UKSC 25, Case UKSC/2024/0152"
