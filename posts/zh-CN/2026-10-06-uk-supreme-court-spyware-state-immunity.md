@@ -4,7 +4,7 @@ description: 英国最高法院 7 月 27 日以三比二判决，外国从境外
 date: 2026-10-06T07:05:00+08:00
 slug: uk-supreme-court-spyware-state-immunity
 sources:
-  - title: The Kingdom of Bahrain (Appellant) v Shehabi and another (Respondents)
+  - title: "[2026] UKSC 25, Case UKSC/2024/0152"
     url: https://supremecourt.uk/cases/uksc-2024-0152
     publisher: UK Supreme Court
     date: 2026-07-27
