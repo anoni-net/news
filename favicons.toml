@@ -73,6 +73,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favic
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
 
+[hosts."demo.uwazi.io"]
+icon = "demo.uwazi.io-990b6692.png"
+from = "https://demo.uwazi.io/public/favicon.ico"
+
 [hosts."developer.android.com"]
 icon = "developer.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
@@ -167,6 +171,10 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
+
+[hosts."huridocs.org"]
+icon = "huridocs.org-5c928d7a.png"
+from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
 
 [hosts."imda.gov.sg"]
 icon = "imda.gov.sg-8b6918ac.png"
