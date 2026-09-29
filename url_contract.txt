@@ -42,6 +42,9 @@
 /2026/10/mobile-location-data-brokers/
 	#perspective
 	#sources
+/2026/10/openai-agent-medicare-portal/
+	#perspective
+	#sources
 /2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
@@ -95,6 +98,9 @@
 	#perspective
 	#sources
 /en/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/en/2026/10/openai-agent-medicare-portal/
 	#perspective
 	#sources
 /en/2026/10/telenor-myanmar-investigation/
@@ -155,6 +161,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/zh-cn/2026/10/openai-agent-medicare-portal/
 	#perspective
 	#sources
 /zh-cn/2026/10/telenor-myanmar-investigation/
