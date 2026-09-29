@@ -14,7 +14,13 @@
 /2026/09/eu-age-verification-blueprint/
 	#perspective
 	#sources
+/2026/09/interseclab-max-messenger/
+	#perspective
+	#sources
 /2026/09/ios27-siri-ai-data-access/
+	#perspective
+	#sources
+/2026/09/mullvad-android-leak-and-dns-shutdown/
 	#perspective
 	#sources
 /2026/09/signal-numberless-registration/
@@ -30,7 +36,19 @@
 	#perspective
 	#sources
 /2026/10/
-/2026/10/pipepipe-youtube-client/
+/2026/10/apple-threat-notifications/
+	#perspective
+	#sources
+/2026/10/eff-doxxing-safety/
+	#perspective
+	#sources
+/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/2026/10/openai-agent-medicare-portal/
+	#perspective
+	#sources
+/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
 /404.html
@@ -57,7 +75,13 @@
 /en/2026/09/eu-age-verification-blueprint/
 	#perspective
 	#sources
+/en/2026/09/interseclab-max-messenger/
+	#perspective
+	#sources
 /en/2026/09/ios27-siri-ai-data-access/
+	#perspective
+	#sources
+/en/2026/09/mullvad-android-leak-and-dns-shutdown/
 	#perspective
 	#sources
 /en/2026/09/signal-numberless-registration/
@@ -73,7 +97,19 @@
 	#perspective
 	#sources
 /en/2026/10/
-/en/2026/10/pipepipe-youtube-client/
+/en/2026/10/apple-threat-notifications/
+	#perspective
+	#sources
+/en/2026/10/eff-doxxing-safety/
+	#perspective
+	#sources
+/en/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/en/2026/10/openai-agent-medicare-portal/
+	#perspective
+	#sources
+/en/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
 /en/about/
@@ -105,7 +141,13 @@
 /zh-cn/2026/09/eu-age-verification-blueprint/
 	#perspective
 	#sources
+/zh-cn/2026/09/interseclab-max-messenger/
+	#perspective
+	#sources
 /zh-cn/2026/09/ios27-siri-ai-data-access/
+	#perspective
+	#sources
+/zh-cn/2026/09/mullvad-android-leak-and-dns-shutdown/
 	#perspective
 	#sources
 /zh-cn/2026/09/signal-numberless-registration/
@@ -121,7 +163,19 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/
-/zh-cn/2026/10/pipepipe-youtube-client/
+/zh-cn/2026/10/apple-threat-notifications/
+	#perspective
+	#sources
+/zh-cn/2026/10/eff-doxxing-safety/
+	#perspective
+	#sources
+/zh-cn/2026/10/mobile-location-data-brokers/
+	#perspective
+	#sources
+/zh-cn/2026/10/openai-agent-medicare-portal/
+	#perspective
+	#sources
+/zh-cn/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
 /zh-cn/about/
