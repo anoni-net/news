@@ -49,6 +49,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
 
+[hosts."docplanner.com"]
+icon = "docplanner.com-c257216b.png"
+from = "https://www.docplanner.com/favicon/apple-touch-icon.png"
+
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
 from = "https://ec.europa.eu/favicon.ico"
