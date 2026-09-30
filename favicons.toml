@@ -228,6 +228,18 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 icon = "law.moj.gov.tw-ac2a3ab3.png"
 from = "https://law.moj.gov.tw/favicon.png"
 
+[hosts."lawfaremedia.org"]
+icon = "lawfaremedia.org-66501058.png"
+from = "https://www.lawfaremedia.org/assets/icons/apple-touch-icon.png"
+
+[hosts."laws.e-gov.go.jp"]
+icon = "laws.e-gov.go.jp-1d3e542a.png"
+from = "https://laws.e-gov.go.jp/favicon.ico"
+
+[hosts."legislation.gov.uk"]
+icon = "legislation.gov.uk-4d9dd818.png"
+from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
+
 [hosts."macanorak.com"]
 icon = "macanorak.com-3f63f55a.png"
 from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badge-New.png"
@@ -349,6 +361,10 @@ from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/th
 [hosts."support.torproject.org"]
 icon = "support.torproject.org-f88d6334.png"
 from = "https://support.torproject.org/images/favicon/favicon-192x192.png?h=a118bd0b"
+
+[hosts."supremecourt.uk"]
+icon = "supremecourt.uk-75b9325d.png"
+from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
 
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
