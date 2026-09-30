@@ -29,6 +29,9 @@ from = "https://bandaancha.eu/apple-touch-icon.png"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."blog.cryptpad.org"]
+same_as = "cryptpad.org"
+
 [hosts."brdr.hkma.gov.hk"]
 icon = "brdr.hkma.gov.hk-e2b6d0cb.png"
 from = "https://www.hkma.gov.hk/favicon.jpg"
@@ -69,6 +72,13 @@ from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawe
 icon = "court.gov.cn-1db19351.png"
 from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico"
 
+[hosts."cryptpad.fr"]
+same_as = "cryptpad.org"
+
+[hosts."cryptpad.org"]
+icon = "cryptpad.org-0c6cadf4.png"
+from = "https://cryptpad.org/images/main-favicon.png"
+
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
@@ -92,6 +102,9 @@ from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/fav
 [hosts."docplanner.com"]
 icon = "docplanner.com-c257216b.png"
 from = "https://www.docplanner.com/favicon/apple-touch-icon.png"
+
+[hosts."docs.cryptpad.org"]
+same_as = "cryptpad.org"
 
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
@@ -372,6 +385,14 @@ from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/app
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
 from = "https://www.verizon.com/favicon.ico"
+
+[hosts."weblate.cryptpad.org"]
+icon = "weblate.cryptpad.org-676939f0.png"
+from = "https://weblate.cryptpad.org/favicon.ico"
+
+[hosts."wicg.github.io"]
+icon = "wicg.github.io-bf155846.png"
+from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
