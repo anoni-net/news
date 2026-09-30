@@ -9,6 +9,10 @@ from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-non
 icon = "accessnow.org-8d11dfe8.png"
 from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
 
+[hosts."airbus.com"]
+icon = "airbus.com-904efa67.png"
+from = "https://www.airbus.com/themes/custom/airbus_web_experience_ui/favicons/corporate/apple-touch-icon.png"
+
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
@@ -20,6 +24,14 @@ from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 [hosts."apt.izzysoft.de"]
 icon = "apt.izzysoft.de-3d40667a.png"
 from = "https://apt.izzysoft.de/favicon.ico"
+
+[hosts."assets.publishing.service.gov.uk"]
+icon = "assets.publishing.service.gov.uk-a7b0c84b.png"
+from = "https://assets.publishing.service.gov.uk/favicon.ico"
+
+[hosts."bamf.de"]
+icon = "bamf.de-c1ab8b4d.png"
+from = "https://www.BAMF.de/SiteGlobals/Frontend/Images/favicon-180x180.png?__blob=normal&v=7"
 
 [hosts."bandaancha.eu"]
 icon = "bandaancha.eu-5be72bee.png"
@@ -44,9 +56,17 @@ from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/co
 icon = "cac.gov.cn-ce2d7d32.png"
 from = "https://www.cac.gov.cn/favicon.ico"
 
+[hosts."canada.ca"]
+icon = "canada.ca-6be11ced.png"
+from = "https://www.canada.ca/favicon.ico"
+
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
+
+[hosts."cellebrite.com"]
+icon = "cellebrite.com-705db917.png"
+from = "https://media.cellebrite.com/wp-content/uploads/2020/01/favicon.png"
 
 [hosts."citizenlab.ca"]
 icon = "citizenlab.ca-a8596c5e.png"
@@ -132,6 +152,10 @@ from = "https://en.greatfire.org/apple-touch-icon.png"
 icon = "esafety.gov.au-8abaddf2.png"
 from = "https://web.archive.org/web/20260927id_/https://www.esafety.gov.au/themes/custom/esafety/favicon_256.png"
 
+[hosts."eulisa.europa.eu"]
+icon = "eulisa.europa.eu-6d263dc5.png"
+from = "https://www.eulisa.europa.eu/sites/default/files/favicons/apple-touch-icon.png"
+
 [hosts."explorer.ooni.org"]
 same_as = "ooni.org"
 
@@ -142,6 +166,10 @@ from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR
 [hosts."freedom.press"]
 icon = "freedom.press-d782bdb6.png"
 from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
+
+[hosts."frontex.europa.eu"]
+icon = "frontex.europa.eu-bda9fadf.png"
+from = "https://www.frontex.europa.eu/favicon.ico"
 
 [hosts."github.com"]
 icon = "github.com-90043607.png"
@@ -200,6 +228,10 @@ from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.i
 [hosts."huridocs.org"]
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
+
+[hosts."ico.org.uk"]
+icon = "ico.org.uk-8989c7e1.png"
+from = "https://ico.org.uk/media2/lhphq55z/favicon.ico"
 
 [hosts."imda.gov.sg"]
 icon = "imda.gov.sg-8b6918ac.png"
@@ -264,6 +296,10 @@ from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc
 icon = "minister.defence.gov.au-5336c074.png"
 from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
 
+[hosts."moj.go.jp"]
+icon = "moj.go.jp-21a2efa2.png"
+from = "https://www.moj.go.jp/content/001428634.ico"
+
 [hosts."mullvad.net"]
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
@@ -282,6 +318,9 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."overseas.mofa.go.kr"]
+none = "favicon.ico 轉址到自己形成無限迴圈，頁面也沒有宣告圖示"
 
 [hosts."parl.ca"]
 icon = "parl.ca-cc71bd4e.png"
@@ -314,6 +353,10 @@ from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
 from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
+
+[hosts."privacyinternational.org"]
+icon = "privacyinternational.org-3b35f25d.png"
+from = "https://privacyinternational.org/sites/default/files/fav/android-icon-192x192.png"
 
 [hosts."priveetee.github.io"]
 same_as = "pipepipe.dev"
@@ -397,6 +440,10 @@ from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
 from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
+
+[hosts."xinhuanet.com"]
+icon = "xinhuanet.com-db68823e.png"
+from = "https://www.xinhuanet.com/favicon.ico"
 
 [hosts."zuckoff.app"]
 icon = "zuckoff.app-284bd984.png"
