@@ -13,6 +13,10 @@ from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
 
+[hosts."apc.org"]
+icon = "apc.org-89de3e1b.png"
+from = "https://www.apc.org/themes/custom/apc_barrio/apple-touch-icon.png"
+
 [hosts."apps.apple.com"]
 icon = "apps.apple.com-21ded518.png"
 from = "https://apps.apple.com/assets/favicon/favicon-180.png"
@@ -197,6 +201,9 @@ from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-to
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
 
+[hosts."hrw.org"]
+none = "官方圖示是沒有圖案的純色方塊"
+
 [hosts."huridocs.org"]
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
@@ -341,6 +348,10 @@ from = "https://www.smh.com.au/apple-touch-icons/smh.png"
 [hosts."source.android.com"]
 icon = "source.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
+
+[hosts."ssd.eff.org"]
+icon = "ssd.eff.org-88f6a486.png"
+from = "https://ssd.eff.org/favicon.ico"
 
 [hosts."sso.agc.gov.sg"]
 icon = "sso.agc.gov.sg-7300262d.png"
