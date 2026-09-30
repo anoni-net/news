@@ -350,10 +350,6 @@ from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
 
-[hosts."riaclu.org"]
-icon = "riaclu.org-c61d33c8.png"
-from = "https://www.riaclu.org/app/uploads/2025/08/cropped-ACLUofRI_color-1-192x192.png"
-
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
