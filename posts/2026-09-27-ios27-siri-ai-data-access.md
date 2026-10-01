@@ -1,13 +1,17 @@
 ---
 title: iOS 27 Siri AI 的資料存取設定
-description: iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。Siri 語言設為中文的使用者暫時用不到。
-date: 2026-09-27T03:21:00+08:00
+description: iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。裝置或 Siri 語言設為中文的使用者暫時用不到。
+date: {created: 2026-09-27T03:21:00+08:00, updated: 2026-10-01T13:43:00+08:00}
 slug: ios27-siri-ai-data-access
 sources:
   - title: How to Limit What Apple's New Siri AI Can Access in iOS 27
     url: https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27
     publisher: EFF
     date: 2026-09-18
+  - title: How to get Siri AI
+    url: https://support.apple.com/en-us/127893
+    publisher: Apple
+    date: 2026-09-22
   - title: Turn off and restrict access to Apple Intelligence features on Mac
     url: https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac
     publisher: Apple
@@ -15,7 +19,7 @@ authors:
   - anoni-net
 ---
 
-Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。到 9 月 27 日為止，Siri AI 還是只支援英文的測試版，也還沒有在所有地區開放。Siri 語言設為中文的使用者暫時無法使用。
+Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。到 9 月 27 日為止，Siri AI 還是只支援英文的測試版，裝置或 Siri 語言設為中文的使用者暫時無法使用。依 Apple 的說明頁，裝置語言與 Siri 語言都要設為英文，Apple 帳號也要在開放的地區。
 
 Siri AI 預設可以讀取備忘錄、訊息與郵件等 Apple 自家 App 的內容，第三方 App 需要開發者加入支援才會納入。請求可能在手機上處理，也可能送到 Apple 的 Private Cloud Compute 伺服器，畫面上不會顯示是哪一種。EFF 的文章特別寫給開啟進階資料保護的使用者，他們的 iCloud 資料以端對端加密保存，一旦送出裝置交給雲端處理，風險評估就跟著改變。
 
@@ -31,4 +35,4 @@ EFF 在原文寫明，Private Cloud Compute 的「Private」代表系統的設�
 
 螢幕感知無法封鎖，加密對話能不能留在裝置上，取決於對話裡的每一個人。群組中只要有人對著對話叫出 Siri，內容就可能從那個人的手機送出，端對端加密無法保護這一段。在群組裡討論敏感事務的人，可以跟成員約定不對對話使用螢幕感知，自己也可以考慮改回 Siri Classic。
 
-使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 只在 iPhone 15 Pro 以後的機型、Siri 語言設為英文時可用，設為中文的人暫時不受影響。符合條件的人可以對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。關閉之後，Siri AI 回答一般問題時不會取用該 App 的資料，但畫面上正在顯示的內容仍可能經由螢幕感知送到 Private Cloud Compute。
+使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 只在 iPhone 15 Pro 以後的機型、裝置與 Siri 語言都設為英文時可用，設為中文的人暫時不受影響。符合條件的人可以對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。關閉之後，Siri AI 回答一般問題時不會取用該 App 的資料，但畫面上正在顯示的內容仍可能經由螢幕感知送到 Private Cloud Compute。
