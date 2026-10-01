@@ -14,6 +14,7 @@ import argparse
 import functools
 import hashlib
 import html
+import html.parser
 import json
 import re
 import shutil
@@ -1628,6 +1629,68 @@ def static_version(rel: str) -> str:
     return hashlib.sha256((ROOT / "static" / rel).read_bytes()).hexdigest()[:10]
 
 
+# 點擊事件，只有載入流量統計的 clearnet 會送。事件名稱與每個欄位能帶的值都列在這裡，
+# 模板產生屬性、送出前的過濾與 --check 的檢查共用這一份，不在清單上的事件與值不會送出。
+# 見 SPEC.md「流量統計」
+ANALYTICS_EVENTS: dict[str, dict[str, list[str]]] = {
+    # 原文區塊的連結
+    "source-click": {},
+    # 訂閱的入口：管道與位置
+    "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]},
+    # 首頁第一頁的文章連結來自焦點還是時間軸
+    "home-story-click": {"section": ["featured", "timeline"]},
+}
+# 點擊事件用自己的屬性，由 _analytics.html.j2 的 listener 呼叫 umami.track()。
+# 不用 Umami 內建的 data-umami-event，它會先擋下換頁、等統計請求完成才跳轉，端點連不上時連結會卡住
+EVENT_ATTR = "data-anoni-event"
+
+
+class _EventCollector(html.parser.HTMLParser):
+    """收集每個開始標籤上的點擊事件屬性。用標準庫的解析器，大小寫、引號、沒有值的屬性與值裡的 > 都照瀏覽器的方式處理。"""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.events: list[tuple[str | None, dict[str, str]]] = []
+
+    def handle_starttag(self, tag, attrs):
+        found = {key: value or "" for key, value in attrs if key == EVENT_ATTR or key.startswith(EVENT_ATTR + "-")}
+        if found:
+            fields = {key[len(EVENT_ATTR) + 1:]: value for key, value in found.items() if key != EVENT_ATTR}
+            self.events.append((found.get(EVENT_ATTR), fields))
+
+    handle_startendtag = handle_starttag
+
+
+@pass_context
+def track(ctx, name: str, **data: str) -> Markup:
+    """連結上的 Umami 點擊事件屬性。沒有載入流量統計的目標（onion、RSS）什麼都不輸出。"""
+    spec = ANALYTICS_EVENTS[name]
+    if set(data) != set(spec) or any(value not in spec[key] for key, value in data.items()):
+        raise ValueError(f"事件 {name} 的欄位 {data} 不在 ANALYTICS_EVENTS 的清單裡")
+    target = ctx.get("target")
+    if not target or not getattr(target, "analytics", None):
+        return Markup("")
+    attrs = f' {EVENT_ATTR}="{name}"' + "".join(f' {EVENT_ATTR}-{key}="{value}"' for key, value in data.items())
+    return Markup(attrs)
+
+
+def event_problems(text: str, analytics: dict | None) -> list[str]:
+    """逐個標籤檢查點擊事件的屬性：沒有流量統計的產物不能有，有的話名稱、欄位與值都要在清單裡。"""
+    problems = []
+    collector = _EventCollector()
+    collector.feed(text)
+    collector.close()
+    for name, fields in collector.events:
+        if not analytics:
+            return [f"沒有載入流量統計的產物裡有點擊事件 {EVENT_ATTR}"]
+        spec = ANALYTICS_EVENTS.get(name or "")
+        if spec is None:
+            problems.append(f"點擊事件 {name} 不在 ANALYTICS_EVENTS 的清單裡")
+        elif set(fields) != set(spec) or any(value not in spec[key] for key, value in fields.items()):
+            problems.append(f"點擊事件 {name} 的欄位 {fields} 跟 ANALYTICS_EVENTS 的清單不符")
+    return problems
+
+
 def icon(name: str) -> Markup:
     """內嵌 templates/icons/ 裡的 SVG。大小跟字級、顏色跟文字，讀屏軟體略過，旁邊的文字才是名稱。"""
     raw = (ICON_DIR / f"{name}.svg").read_text(encoding="utf-8")
@@ -1658,6 +1721,8 @@ def make_env() -> Environment:
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
     env.globals["icon"] = icon
+    env.globals["track"] = track
+    env.globals["analytics_events"] = ANALYTICS_EVENTS
     return env
 
 
@@ -1884,6 +1949,8 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
                 value = attrs.get(key)
                 if value and is_external(html.unescape(value)):
                     problems.append(f"{where}：<{tag}> 載入站外資源 {value}")
+
+        problems += [f"{where}：{problem}" for problem in event_problems(text, target.analytics)]
 
         if not target.clearnet:
             attr_values = [html.unescape(v) for _, v in ATTR_RE.findall(text)]

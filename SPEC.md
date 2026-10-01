@@ -576,8 +576,20 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 - 設定寫在 `site.toml` 的 `[targets.clearnet.analytics]`，網站是 Umami 上的 `anoni-net-news`，跟文件站分開，兩邊的報告不會混在一起
 - `data-domains` 限定 `anoni.net`，本機預覽與 CI 的版面檢查不會送出資料
-- 送出前經過 `templates/_analytics.html.j2` 的過濾。只送頁面瀏覽，不送自訂事件與效能資料。網址只留 `utm_source`、`utm_medium`、`utm_campaign`、`utm_content`，其餘 query 與 `#` 之後的片段拿掉。螢幕尺寸捨去到百位。瀏覽器開啟「請勿追蹤」或 Global Privacy Control 時整筆不送
-- 頁尾寫明本站用 Umami 計算閱讀量、不使用 cookie、onion 版本不載入
+- 送出前經過 `templates/_analytics.html.j2` 的過濾。送頁面瀏覽與下面三種點擊事件，不送效能資料。網址只留 `utm_source`、`utm_medium`、`utm_campaign`、`utm_content`，其餘 query 與 `#` 之後的片段拿掉。螢幕尺寸捨去到百位。瀏覽器開啟「請勿追蹤」或 Global Privacy Control 時整筆不送
+- 頁尾寫明本站用 Umami 計算閱讀量與點擊、不使用 cookie、onion 版本不載入，關於頁列出三種點擊事件與它們帶的值
+
+點擊事件用來回答三個問題：讀者讀完導讀會不會點原文、哪個訂閱入口有人用、首頁的焦點有沒有作用。2026-10 上線前只送頁面瀏覽，一週約 230 次瀏覽。照這個量推估，單篇的點擊多半是個位數，所以只看全站合計，一個月後再評估是否保留。
+
+| 事件 | 放在哪裡 | 帶的值 |
+|---|---|---|
+| `source-click` | 文章頁原文區塊的每一個連結 | 不帶值，從事件附帶的頁面網址可以判斷是哪一篇 |
+| `subscribe-click` | 首頁刊頭、文章末的訂閱列、頁尾的 RSS、電子報與 Bluesky | `channel`：`rss`、`newsletter`、`bluesky`。`where`：`masthead`、`article`、`footer` |
+| `home-story-click` | 首頁第一頁的文章標題，第二頁起與封存頁不送 | `section`：`featured`、`timeline` |
+
+- 事件與每個欄位能帶的值寫在 `build.py` 的 `ANALYTICS_EVENTS`，模板用 `track()` 產生 `data-anoni-event` 屬性，送出前的過濾也讀同一份清單。名稱不在清單、欄位多了或少了、值不在清單裡的事件整筆不送，送出的事件也不帶連結的網址
+- 點擊由 `_analytics.html.j2` 裡的 listener 呼叫 `umami.track()`，不擋換頁。不用 Umami 內建的 `data-umami-event`。它會先擋下換頁，等統計請求完成才跳轉，而且沒有逾時。統計端點連不上時，讀者點原文或訂閱連結會停在原頁。Umami 送出時帶 `keepalive`，換頁之後請求照樣完成
+- onion 與 RSS 不輸出這些屬性。`build.py --check` 逐個標籤檢查，沒有載入流量統計的產物只要出現 `data-anoni-event` 就失敗，clearnet 的事件名稱、欄位與值要跟清單完全相符
 
 `build.py --check` 對 script 的檢查只放行兩支：帶 `data-anoni="before-send"` 的內嵌過濾，以及來源、網站 ID、`data-domains` 與 `data-before-send` 都跟 `site.toml` 相符的 Umami。onion 產物照舊不能有任何可執行的 script，也不能出現 `aa.anoni.net`。 <!-- docs-style-lint: disable-line -->
 

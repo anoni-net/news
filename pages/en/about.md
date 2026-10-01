@@ -41,7 +41,7 @@ If you would rather listen, use the read-aloud feature built into your browser o
 
 ## Analytics and privacy {#privacy}
 
-We count readership with a self-hosted Umami instance that sets no cookies and sends nothing when your browser has Do Not Track or GPC enabled. Pages need no JavaScript and load no third-party fonts or resources. The onion version loads no analytics; its address is in the footer of every page.
+We count readership with a self-hosted Umami instance that sets no cookies and sends nothing when your browser has Do Not Track or GPC enabled. Besides page views, it counts three kinds of clicks: links in the Sources section, subscription links (recording the channel (RSS, newsletter or Bluesky) and whether the link sits in the masthead, at the end of a story or in the footer), and front-page story links (recording whether the click came from the featured story or the timeline). Click events do not include the link's address. Pages need no JavaScript and load no third-party fonts or resources. The onion version loads no analytics; its address is in the footer of every page.
 
 ## Licence {#license}
 

@@ -2,7 +2,7 @@
   <h2 class="source-slip__heading" id="source-slip-heading">{% if post.sources|length > 1 %}{{ s.sources_count.format(count=post.sources|length) }}{% else %}{{ s.sources }}{% endif %}</h2>
 {% for source in post.sources %}
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="{{ 'zh-Hant' if source.title is cjk else 'en' }}"><a href="{{ source.url }}">{% if in_feed is not defined %}{% if source.icon %}<img class="source-slip__icon" src="{{ url('assets/' ~ source.icon) }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% else %}{{ icon('web') }}{% endif %}{% endif %}{{ source.title }}</a></p>
+    <p class="source-slip__title" lang="{{ 'zh-Hant' if source.title is cjk else 'en' }}"><a href="{{ source.url }}"{% if in_feed is not defined %}{{ track("source-click") }}{% endif %}>{% if in_feed is not defined %}{% if source.icon %}<img class="source-slip__icon" src="{{ url('assets/' ~ source.icon) }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% else %}{{ icon('web') }}{% endif %}{% endif %}{{ source.title }}</a></p>
 {% if source.publisher or source.date %}
     <dl class="source-slip__meta">
 {% if source.publisher %}

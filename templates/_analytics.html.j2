@@ -1,10 +1,13 @@
 {# 流量統計，只有設定了 analytics 的目標（clearnet）會載入。規則見 SPEC.md「流量統計」。
    第一支是送出前的過濾，Umami 的每一筆資料都先經過 anoniBeforeSend，回傳 null 就不送。
-   做法跟文件站的 overrides/main.html 相同，範圍收得更小：只送頁面瀏覽，不送自訂事件與效能資料。 #}
+   做法跟文件站的 overrides/main.html 相同，範圍收得更小：只送頁面瀏覽與 build.py 的 ANALYTICS_EVENTS 列出的點擊事件，
+   不送效能資料。 #}
 <script data-anoni="before-send">
 (function () {
   // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
   var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+  // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
+  var EVENTS = {{ analytics_events|tojson }};
 
   function scrubUrl(url) {
     if (typeof url !== "string" || !url) return url;
@@ -29,12 +32,29 @@
     return floor100(+m[1]) + "x" + floor100(+m[2]);
   }
 
+  // 事件的欄位要剛好是清單上的那幾個，值也要在清單裡，否則整筆不送
+  function scrubData(name, data) {
+    var spec = EVENTS[name];
+    var out = {};
+    var count = 0;
+    if (data && typeof data === "object") {
+      for (var extra in data) {
+        if (Object.prototype.hasOwnProperty.call(data, extra) && !Object.prototype.hasOwnProperty.call(spec, extra)) return null;
+      }
+    }
+    for (var key in spec) {
+      if (!Object.prototype.hasOwnProperty.call(spec, key)) continue;
+      if (!data || spec[key].indexOf(data[key]) < 0) return null;
+      out[key] = data[key];
+      count++;
+    }
+    return count ? out : undefined;
+  }
+
   window.anoniBeforeSend = function (type, payload) {
     // data-do-not-track 只看舊的 doNotTrack，Global Privacy Control 在這裡一併尊重
     if (window.navigator && window.navigator.globalPrivacyControl === true) return null;
     if (type !== "event" || !payload || typeof payload !== "object") return null;
-    // 帶 name 的是自訂事件，這個站不送
-    if (payload.name) return null;
     var out = {};
     for (var key in payload) {
       if (Object.prototype.hasOwnProperty.call(payload, key)) out[key] = payload[key];
@@ -42,10 +62,36 @@
     out.url = scrubUrl(out.url);
     out.referrer = scrubUrl(out.referrer);
     out.screen = coarseScreen(out.screen);
-    delete out.data;
-    delete out.name;
+    if (typeof out.name === "string") {
+      if (!Object.prototype.hasOwnProperty.call(EVENTS, out.name)) return null;
+      var data = scrubData(out.name, out.data);
+      if (data === null) return null;
+      if (data) out.data = data; else delete out.data;
+    } else {
+      // 頁面瀏覽不該帶 data 與 name
+      delete out.data;
+      delete out.name;
+    }
     return out;
   };
+
+  // 點擊事件：帶 data-anoni-event 的連結被點時呼叫 umami.track()，不擋換頁。
+  // Umami 送出時帶 keepalive，換頁之後請求照樣完成。DNT、網域限制與上面的過濾都在 track() 裡生效
+  var PREFIX = "data-anoni-event";
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[" + PREFIX + "]") : null;
+    if (!el || !window.umami || typeof window.umami.track !== "function") return;
+    var data = {};
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf(PREFIX + "-") === 0) data[attr.name.slice(PREFIX.length + 1)] = attr.value;
+    }
+    try {
+      window.umami.track(el.getAttribute(PREFIX), data);
+    } catch (err) {
+      // 統計壞掉不該影響連結
+    }
+  }, true);
 })();
 </script>
 <script defer src="{{ target.analytics.src }}" data-website-id="{{ target.analytics.website_id }}" data-domains="{{ target.analytics.domains }}" data-before-send="anoniBeforeSend" data-do-not-track="true"></script>

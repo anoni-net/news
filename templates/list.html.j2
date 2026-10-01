@@ -21,7 +21,7 @@
 {% if latest %}
       <p class="masthead__updated">{{ s.updated }} <time datetime="{{ latest.created|iso }}">{{ latest.created|ymd }}</time></p>
 {% endif %}
-      <p class="masthead__subscribe"><a href="{{ url(home ~ 'subscribe/') }}">{{ icon('rss') }} {{ s.rss }}</a><a href="{{ s.newsletter_url }}">{{ icon('email-outline') }} {{ s.newsletter }}</a><a href="{{ s.bluesky_url }}">{{ icon('bluesky') }} {{ s.bluesky }}</a></p>
+      <p class="masthead__subscribe"><a href="{{ url(home ~ 'subscribe/') }}"{{ track("subscribe-click", channel="rss", where="masthead") }}>{{ icon('rss') }} {{ s.rss }}</a><a href="{{ s.newsletter_url }}"{{ track("subscribe-click", channel="newsletter", where="masthead") }}>{{ icon('email-outline') }} {{ s.newsletter }}</a><a href="{{ s.bluesky_url }}"{{ track("subscribe-click", channel="bluesky", where="masthead") }}>{{ icon('bluesky') }} {{ s.bluesky }}</a></p>
     </div>
   </div>
 {% endif %}
@@ -39,7 +39,7 @@
   <img class="featured__image" src="{{ featured_image.src }}" alt="" width="{{ featured_image.width }}" height="{{ featured_image.height }}" decoding="async">
 {% endif %}
   <div class="featured__text">
-    <h3 class="featured__title"><a href="{{ url(featured.rel) }}">{{ featured.title }}</a></h3>
+    <h3 class="featured__title"><a href="{{ url(featured.rel) }}"{{ track("home-story-click", section="featured") }}>{{ featured.title }}</a></h3>
     <p class="featured__dek">{{ featured.description }}</p>
     <p class="featured__meta"><time datetime="{{ featured.created|iso }}">{{ featured.created|ymd }}</time>{% if featured|source_line %}<span>{{ featured|source_line }}</span>{% endif %}</p>
   </div>
