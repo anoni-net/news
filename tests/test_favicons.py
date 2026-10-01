@@ -179,3 +179,26 @@ def test_declared_icon_beats_conventional_path_when_homepage_times_out(monkeypat
     monkeypatch.setattr(fetch_favicons, "fetch", fake_fetch)
     item, _ = fetch_favicons.fetch_icon("esafety.gov.au", "www.esafety.gov.au")
     assert item.source == "https://www.esafety.gov.au/themes/custom/esafety/favicon_144.png"
+
+
+def test_source_hosts_reads_history_snapshots(tmp_path):
+    path = tmp_path / "09-29.md"
+    path.write_text("""---
+snapshots:
+  - date: 2026-09-29T00:10:00+08:00
+    sources:
+      - title: A
+        url: https://www.example.org/a
+  - date: 2027-09-29T00:10:00+08:00
+    sources:
+      - title: B
+        url: https://news.example.net/b
+---
+""", encoding="utf-8")
+    assert fetch_favicons.source_hosts([path]) == {"example.org": "www.example.org", "news.example.net": "news.example.net"}
+
+
+def test_all_posts_includes_history_but_not_its_index():
+    paths = fetch_favicons.all_posts()
+    assert any(p.parent.name == "history" and p.name != "index.md" for p in paths)
+    assert not any(p.name == "index.md" for p in paths)

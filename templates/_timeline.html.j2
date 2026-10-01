@@ -1,10 +1,13 @@
-{% for day in items|by_day %}
+{% for day in days %}
 <section class="day">
   <h2 class="day__date"><time datetime="{{ day.date.isoformat() }}"><span class="day__md">{{ day.date|md }}</span><span class="day__meta">{{ day.date|day_meta }}</span></time></h2>
   <div class="day__briefs">
 {% for post in day.posts %}
 {% include "_brief.html.j2" %}
 {% endfor %}
+{% if day.history %}
+{% with snap = day.history %}{% include "_past.html.j2" %}{% endwith %}
+{% endif %}
   </div>
 </section>
 {% endfor %}

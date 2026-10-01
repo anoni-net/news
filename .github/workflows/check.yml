@@ -36,5 +36,5 @@ jobs:
       - name: 寫作風格
         run: |
           curl -fsSL https://raw.githubusercontent.com/anoni-net/docs/main/tools/docs_style_lint.py -o /tmp/docs_style_lint.py
-          files=$(find "$GITHUB_WORKSPACE/posts" -name '*.md'; ls "$GITHUB_WORKSPACE"/{README,AGENTS,SPEC}.md)
+          files=$(find "$GITHUB_WORKSPACE/posts" "$GITHUB_WORKSPACE/history" -name '*.md'; ls "$GITHUB_WORKSPACE"/{README,AGENTS,SPEC}.md)
           python3 /tmp/docs_style_lint.py --format github $files

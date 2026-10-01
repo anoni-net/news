@@ -31,7 +31,7 @@
 {% if not front %}
 <h1 class="list-heading">{{ heading }}{% if number > 1 %}{{ s.page_suffix.format(n=number) }}{% endif %}</h1>
 {% endif %}
-{% if posts %}
+{% if days %}
 {% if featured %}
 <section class="featured{% if featured_image %} featured--image{% endif %}" aria-labelledby="featured-heading">
   <h2 class="featured__label" id="featured-heading">{{ s.featured }}</h2>
@@ -45,7 +45,6 @@
   </div>
 </section>
 {% endif %}
-{% set items = posts %}
 {% include "_timeline.html.j2" %}
 {% else %}
 <p class="empty">{{ s.empty_before }}<a href="{{ url(home ~ 'subscribe/') }}">{{ s.rss }}</a>{{ s.empty_after }}</p>

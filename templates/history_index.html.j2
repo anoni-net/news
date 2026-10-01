@@ -1,0 +1,37 @@
+{% extends "_layout.html.j2" %}
+{# 導讀歷史的專欄首頁：前言，接著是全年的日期，有快照的連到日期頁 #}
+{% set page_title = intro.title ~ " | " ~ s.site_name %}
+{% set page_description = intro.description %}
+{% set og_title = intro.title %}
+{% set og_type = "website" %}
+{% block main_class %}story-wrap{% endblock %}
+{% block content %}
+<article class="site-page history-index">
+  <header class="story__head">
+    <h1 class="story__title">{{ intro.title }}</h1>
+    <p class="story__dek">{{ intro.description }}</p>
+{% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+  </header>
+  <div class="story__body content">
+{{ intro.html|safe }}
+  </div>
+{% for m in months %}
+  <section class="history-month" aria-labelledby="month-{{ m.month }}">
+    <h2 class="history-month__name" id="month-{{ m.month }}">{{ s.history_month.format(month=s.months[m.month - 1]) }}</h2>
+    <ol class="history-month__grid">
+{% for d in m.days %}
+      <li{% if (d.date.month, d.date.day) == (today.month, today.day) %} class="is-today"{% endif %}>{% if d.snapshot %}<a href="{{ url(d.snapshot.rel) }}" aria-label="{{ d.date|md }}">{{ d.date.day }}</a>{% else %}<span>{{ d.date.day }}</span>{% endif %}</li>
+{% endfor %}
+    </ol>
+{% set written = m.days|selectattr("snapshot")|list %}
+{% if written %}
+    <ul class="history-month__list">
+{% for d in written %}
+      <li><a href="{{ url(d.snapshot.rel) }}"><span class="history-month__date">{{ d.date|md }}</span> {{ d.snapshot.title }}</a></li>
+{% endfor %}
+    </ul>
+{% endif %}
+  </section>
+{% endfor %}
+</article>
+{% endblock %}
