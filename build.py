@@ -204,7 +204,8 @@ class Post:
     html: str = ""
     anchors: list[str] = field(default_factory=list)
     image: str | None = None
-    pin: bool = False
+    # 焦點的最後一天（台北時間），過了這天就不再放焦點。見 SPEC.md「焦點」
+    pin: date | None = None
     # 接續的舊文章，寫檔名（不含 .md）。見 SPEC.md「前情與後續」
     follows: list[str] = field(default_factory=list)
     # 之後要回頭查的事，只寫在 zh-TW 版本。見 SPEC.md「追蹤中的事件」
@@ -234,6 +235,11 @@ class Post:
     @property
     def where(self) -> str:
         return f"{self.lang.dir}/{self.path.name}" if self.lang.dir else self.path.name
+
+
+def featured_post(posts: list[Post], today: date) -> Post | None:
+    """首頁的焦點：pin 還沒過期的文章裡最新發布的一篇，都過期了就沒有焦點。posts 由新到舊排列。"""
+    return next((post for post in posts if post.pin and post.pin >= today), None)
 
 
 def current_time() -> datetime:
@@ -441,10 +447,13 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         problems.append(f"{where}：image 要是 {ASSETS_PREFIX} 開頭的網址，{INGEST_HINT}")
         image = None
 
-    pin = meta.get("pin", False)
-    if not isinstance(pin, bool):
-        problems.append(f"{where}：pin 只能寫 true 或 false")
-        pin = False
+    pin = meta.get("pin")
+    if pin is not None and (not isinstance(pin, date) or isinstance(pin, datetime)):
+        problems.append(f"{where}：pin 填焦點的最後一天（YYYY-MM-DD），例如 pin: 2026-10-14，過了這天自動離開焦點")
+        pin = None
+    elif pin is not None and created and pin < created.date():
+        problems.append(f"{where}：pin 是 {pin}，早於發布日，焦點的最後一天要在發布日當天或之後")
+        pin = None
 
     categories = meta.get("categories") or []
     if not isinstance(categories, list):
@@ -703,10 +712,6 @@ def load_posts(posts_dir: Path, authors: dict[str, dict], store: AssetStore | No
             post.html = render_markdown(post.body)
             process_images(post, store or AssetStore(), problems)
             posts.append(post)
-
-    pinned = [post.where for post in posts if post.pin]
-    if len(pinned) > 1:
-        problems.append(f"首頁的頭條只能有一篇，現在有 {len(pinned)} 篇設了 pin：{'、'.join(pinned)}。換頭條時先拿掉舊的那篇")
 
     seen: dict[str, Post] = {}
     for post in posts:
@@ -1436,7 +1441,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             sitemap_urls.append((target.abs_url(post.rel), (post.updated or post.created).date().isoformat(),
                                  alternates(rels, lang)))
 
-        featured = next((post for post in lposts if post.pin), None)
+        featured = featured_post(lposts, current_time().date())
         featured_image = None
         if featured and featured.image and store and featured.image_rel in store.assets:
             asset = store.assets[featured.image_rel]

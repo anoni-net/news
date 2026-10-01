@@ -33,6 +33,8 @@ uv run tools/bluesky_post.py --dry-run  # 列出這一輪會發到 Bluesky 的�
 3. `uv run build.py --check`，錯誤訊息會列出檔名與行號
 4. `uv run build.py --update-contract`，把新文章的網址收進合約，跟文章放在同一個 PR
 
+維護者要把這篇放進首頁的焦點時，三個語系的 front matter 都寫 `pin: YYYY-MM-DD`，填焦點的最後一天，過了就自動離開，規則見 `SPEC.md`「一篇的格式」。
+
 有圖片時，投稿者用 Markdown 的圖片語法標出位置就好，網址可以是任何地方。維護者合併前設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/ingest_images.py posts/<檔名>.md` 把圖片搬到 `assets.anoni.net`，再依工具列出的原始網址審核授權與來源，補上替代文字與圖說。規則見 `SPEC.md`「圖片」。
 
 原文的網站還沒有登記圖示時，建置會列出是哪個主機。維護者先執行 `uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md`，看過 `.cache/favicons/preview.html` 的預覽，再設好 `NEWS_ASSETS_RSYNC` 拿掉 `--dry-run` 執行一次，工具會上傳圖示並寫進 `favicons.toml`。抓不到或不適合的，用 `--from` 指定來源或用 `--none` 登記成通用圖示。規則見 `SPEC.md`「原文的網站圖示」。

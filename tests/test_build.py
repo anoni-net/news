@@ -10,7 +10,7 @@ import re
 import shutil
 import sys
 import textwrap
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 import pytest
@@ -591,19 +591,32 @@ def test_og_image_from_front_matter(fixture_site):
 
 # ---------------------------------------------------------------- 焦點（pin）
 
-def test_pin_must_be_bool(tmp_path):
-    problems = problems_of(tmp_path, GOOD.replace("authors:", "pin: yes please\nauthors:"))
-    assert any("pin 只能寫 true 或 false" in p for p in problems), problems
+@pytest.mark.parametrize("value", ["true", "yes please", "2026-10-01T00:00:00+08:00"])
+def test_pin_must_be_a_date(tmp_path, value):
+    problems = problems_of(tmp_path, GOOD.replace("authors:", f"pin: {value}\nauthors:"))
+    assert any("pin 填焦點的最後一天" in p for p in problems), problems
 
 
-def test_only_one_pin(tmp_path):
+def test_pin_not_before_publish_date(tmp_path):
+    problems = problems_of(tmp_path, GOOD.replace("authors:", "pin: 2026-09-17\nauthors:"))
+    assert any("早於發布日" in p for p in problems), problems
+    assert problems_of(tmp_path, GOOD.replace("authors:", "pin: 2026-09-18\nauthors:")) == []
+
+
+def test_featured_is_newest_unexpired_pin(tmp_path):
     posts = tmp_path / "posts"
     posts.mkdir()
-    write_post(posts, GOOD.replace("authors:", "pin: true\nauthors:"))
-    write_post(posts, GOOD.replace("authors:", "pin: true\nauthors:").replace("2026-09-18", "2026-09-20"),
-               "2026-09-20-test-post.md")
-    with pytest.raises(build.BuildError, match="頭條只能有一篇"):
-        build.load_posts(posts, AUTHORS)
+    write_post(posts, GOOD.replace("authors:", "pin: 2026-10-10\nauthors:"))
+    write_post(posts, GOOD.replace("authors:", "pin: 2026-09-25\nauthors:").replace("2026-09-18", "2026-09-20")
+               .replace("slug: test-post", "slug: other-post"), "2026-09-20-other-post.md")
+    loaded = sorted(build.load_posts(posts, AUTHORS), key=lambda post: post.created, reverse=True)
+    newer, older = loaded
+    # 兩篇都在期限內時取最新發布的，不必先拿掉舊的那篇
+    assert build.featured_post(loaded, date(2026, 9, 25)) is newer
+    # 較新的那篇過期了，焦點換回還在期限內的舊文章
+    assert build.featured_post(loaded, date(2026, 9, 26)) is older
+    # 都過期了就沒有焦點
+    assert build.featured_post(loaded, date(2026, 10, 11)) is None
 
 
 def test_featured_on_front_page_and_still_in_timeline(fixture_site):
@@ -678,7 +691,7 @@ def test_missing_and_orphan_versions(tmp_path):
 
 @pytest.mark.parametrize("override, expected", [
     (("  - anoni-net", "  - night-owl"), "authors 跟 zh-TW 不同"),
-    (("authors:", "pin: true\nauthors:"), "pin 跟 zh-TW 不同"),
+    (("authors:", "pin: 2026-09-20\nauthors:"), "pin 跟 zh-TW 不同"),
     (("authors:", "draft: true\nauthors:"), "draft 跟 zh-TW 不同"),
     (("date: 2026-09-18", "date:\n  created: 2026-09-18\n  updated: 2026-09-19"), None),
     (("    url: https://example.org/", "    url: https://example.org/other"), "sources 少了 zh-TW 有的 https://example.org/"),
