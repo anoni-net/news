@@ -84,6 +84,14 @@ from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawe
 icon = "court.gov.cn-1db19351.png"
 from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico"
 
+[hosts."courtlistener.com"]
+icon = "courtlistener.com-9d872fbc.png"
+from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e6d.png"
+
+[hosts."cronkitenews.azpbs.org"]
+icon = "cronkitenews.azpbs.org-fc11a7ee.png"
+from = "https://i0.wp.com/cronkitenews.azpbs.org/wp-content/uploads/2026/02/favicon1.png?fit=85%2C85&ssl=1"
+
 [hosts."cryptpad.fr"]
 same_as = "cryptpad.org"
 
@@ -106,6 +114,10 @@ from = "https://demo.uwazi.io/public/favicon.ico"
 [hosts."developer.android.com"]
 icon = "developer.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
+
+[hosts."developers.google.com"]
+icon = "developers.google.com-ce307183.png"
+from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/touchicon-180-new.png"
 
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
@@ -154,6 +166,18 @@ same_as = "ooni.org"
 [hosts."f-droid.org"]
 icon = "f-droid.org-1354c66e.png"
 from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR9o-_ufR__1wNdJY=.png"
+
+[hosts."fdotwww.blob.core.windows.net"]
+icon = "fdotwww.blob.core.windows.net-7d319a66.png"
+from = "https://www.fdot.gov/favicon.ico"
+
+[hosts."flocksafety.com"]
+icon = "flocksafety.com-b8c9ee48.png"
+from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
+
+[hosts."foxnews.com"]
+icon = "foxnews.com-69c2c6ef.png"
+from = "https://static.foxnews.com/static/orion/styles/img/fox-news/favicons/android-chrome-192x192.png"
 
 [hosts."freedom.press"]
 icon = "freedom.press-d782bdb6.png"
@@ -268,6 +292,10 @@ from = "https://laws.e-gov.go.jp/favicon.ico"
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
 
+[hosts."ly.gov.tw"]
+icon = "ly.gov.tw-c284cb73.png"
+from = "https://www.ly.gov.tw/images/favicon.ico"
+
 [hosts."macanorak.com"]
 icon = "macanorak.com-3f63f55a.png"
 from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badge-New.png"
@@ -295,6 +323,9 @@ from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
+
+[hosts."msa-alliance.cn"]
+none = "網站沒有 favicon，https 憑證為自簽"
 
 [hosts."mullvad.net"]
 icon = "mullvad.net-21b79597.png"
@@ -347,6 +378,10 @@ from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 icon = "privacy.ca.gov-a08db90b.png"
 from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
 
+[hosts."privacy.mi.com"]
+icon = "privacy.mi.com-7de29412.png"
+from = "https://privacy.mi.com/favicon.ico"
+
 [hosts."privacyinternational.org"]
 icon = "privacyinternational.org-3b35f25d.png"
 from = "https://privacyinternational.org/sites/default/files/fav/android-icon-192x192.png"
@@ -362,9 +397,17 @@ from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
 
+[hosts."rollcall.com"]
+icon = "rollcall.com-c436aa3d.png"
+from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
+
 [hosts."security.googleblog.com"]
 icon = "security.googleblog.com-624359af.png"
 from = "https://security.googleblog.com/favicon.ico"
+
+[hosts."sheriffs.org"]
+icon = "sheriffs.org-fd44e411.png"
+from = "https://www.sheriffs.org/wp-content/uploads/2024/01/nsa-logo.png"
 
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"
@@ -381,6 +424,9 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 [hosts."sso.agc.gov.sg"]
 icon = "sso.agc.gov.sg-7300262d.png"
 from = "https://sso.agc.gov.sg/CMS/Content/icons/apple-icon-180x180.png"
+
+[hosts."storage.courtlistener.com"]
+same_as = "courtlistener.com"
 
 [hosts."support.apple.com"]
 icon = "support.apple.com-573bbc30.png"
@@ -409,6 +455,10 @@ from = "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favico
 [hosts."telenor.com"]
 icon = "telenor.com-5bb71714.png"
 from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
+
+[hosts."texastribune.org"]
+icon = "texastribune.org-90fb8aad.png"
+from = "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2025/09/cropped-cropped-texas-tribune-favicon.png?fit=192%2C192&ssl=1"
 
 [hosts."thelocal.no"]
 icon = "thelocal.no-231a147a.png"

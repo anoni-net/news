@@ -47,6 +47,27 @@ sources:
   - title: OAID（匿名设备标识符）相关简介
     url: https://consumer.huawei.com/cn/support/content/zh-cn16054609/
     publisher: 华为
+  - title: 使用定位服务
+    url: https://consumer.huawei.com/cn/support/content/zh-cn15824274/
+    publisher: 华为
+  - title: 翻译隐私政策
+    url: https://privacy.mi.com/Translate/zh_CN/
+    publisher: 小米
+    date: 2024-08-27
+  - title: 移动安全工作委员会
+    url: http://www.msa-alliance.cn/
+    publisher: 移动安全工作委员会
+  - title: ARCore supported devices
+    url: https://developers.google.com/ar/devices
+    publisher: Google for Developers
+  - title: Is https://support.google.com blocked in mainland China?
+    url: https://en.greatfire.org/https/support.google.com
+    publisher: GreatFire
+    date: 2026-08-24
+  - title: Is https://support.apple.com blocked in mainland China?
+    url: https://en.greatfire.org/https/support.apple.com
+    publisher: GreatFire
+    date: 2026-09-23
   - title: 如果 App 要求追蹤你的活動
     url: https://support.apple.com/zh-tw/102420
     publisher: Apple
@@ -84,8 +105,8 @@ FPF 的文章提到，2026 年早些时候传出军人因商业位置数据被�
 
 FPF 的文章写到，位置追踪常通过广告的实时竞价（real-time bidding，展示广告前即时出价）与 App 内置的软件开发工具包（SDK）进行。其中相当多是用广告标识符关联到设备。
 
-FPF 列出的第一步是不让 App 取得广告标识符。在 iPhone 上到「设置」轻点「隐私与安全性」、「跟踪」，关闭「允许 App 请求跟踪」。Apple 的说明写明关闭后 App 无法访问广告标识符（IDFA），功能不受影响。
+FPF 列出的第一步是不让 App 获取广告标识符。在 iPhone 上到「设置」轻点「隐私与安全性」、「跟踪」，关闭「允许 App 请求跟踪」，需要 iOS 14.5 以上。Apple 的说明写明关闭后 App 无法访问广告标识符（IDFA），功能不受影响。
 
-Android 的广告 ID 由 Google Play 服务提供，Google 的路径是「设置」、「隐私」、「广告」、「删除广告 ID」，另一种菜单的「广告」在「安全和隐私」、「隐私」、「隐私控制」下。华为设备另有广告标识符 OAID（匿名设备标识符），关闭跟踪开关后，应用只能获取全 0 的 OAID。开关位置依 HarmonyOS 版本不同。
+在中国大陆销售的 Android 手机出厂不预装 Google Play 商店，华为、小米等品牌的广告标识符是 OAID（匿名设备标识符）。华为 HarmonyOS 4.X 在「设置」、「隐私」、「跟踪管理」关闭「允许全部应用跟踪」，5.0 以上在「设置」、「隐私和安全」、「跨应用关联」关闭「要求应用请求关联」，App 就无法获取有效的 OAID。小米「翻译」App 的隐私政策（2024 年 8 月版）写到，可以在「设置」、「隐私保护」、「保护隐私」、「防追踪」里更换虚拟身份 ID（即 OAID）。在海外购买、装有 Google Play 服务的手机，可以按照 Google 的说明在「设置」、「隐私」、「广告」里删除广告 ID（部分机型的「广告」在「安全和隐私」、「隐私」、「隐私控制」下）。
 
-第二步是关闭定位权限，只留给地图等需要的 App，需要时再打开。iPhone 的路径是「隐私与安全性」、「定位服务」，Android 是「安全和隐私」、「隐私」、「权限管理器」里的「位置信息」。两步几分钟就能完成。跟踪设置需要 iOS 14.5 以上，Apple 与 Google 的说明页都有简体中文版（9 月 29 日查证）。
+第二步是关闭定位权限，只留给地图等必要的 App，使用时再打开。iPhone 的路径是「隐私与安全性」、「定位服务」，华为 HarmonyOS 4.X 以下在「设置」、「隐私」、「定位服务」、「位置信息」，装有 Google 服务的手机在「安全和隐私」、「隐私」、「权限管理器」的「位置信息」。据 GreatFire 8 月 24 日与 9 月 23 日的测试，Google 的说明页在中国大陆遭到屏蔽，Apple 的简体中文说明页可以打开。两步几分钟就能完成，往后被收集的位置数据会减少，已经卖出的记录则无法收回。
