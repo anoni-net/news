@@ -13,8 +13,8 @@
 <guid isPermaLink="false">anoni-news:history/10-01/2026</guid>
 <pubDate>Thu, 01 Oct 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>在中國的平台留言，帳號背後要對應到真實身分。這一天，中國的留言實名規定開始施行。</description>
-<content:encoded>&lt;p&gt;你如果在台灣使用中國的平台留言，帳號背後同樣要對應到真實身分，豆瓣在 2022 年 4 月更新政策，境外使用者要改綁中國大陸的手機號碼，或提供身分證件。這項要求來自 2017 年 10 月 1 日施行的《互聯網跟帖評論服務管理規定》，留言時可以只顯示暱稱，平台的後台要能對應到真實身分，國家網信辦稱為「後台實名、前台自願」。2022 年 12 月施行的修訂版取代了原規定，寫明用手機號碼或身分證件號碼認證。2025 年 7 月起又多了國家核發的網號與網證，選用的人向平台核驗身分時，平台不得再要求明文的身分資料。同一份辦法也寫明，法律規定需要協助時，國家平台要提供網號對應的真實身分與認證日誌。在這些平台上的留言都能對應回綁定的手機號碼或證件，不使用中國平台的讀者則不受這些規定影響。&lt;/p&gt;</content:encoded>
+<description>你在中國的平台留言，帳號背後要對應到真實身分。這一天，中國的留言實名規定開始施行。</description>
+<content:encoded>&lt;p&gt;你如果在台灣使用中國的平台留言，帳號背後要對應到真實身分，豆瓣從 2022 年 4 月起也要求境外使用者綁定中國大陸手機號碼或提供證件。2017 年 10 月 1 日施行的《互聯網跟帖評論服務管理規定》要求平台的後台能對應到真實身分，留言時可以只顯示暱稱（規定稱為「後台實名、前台自願」），2022 年 12 月的修訂版再寫明用手機號碼或身分證件號碼認證。2025 年 7 月起，公安部、國家網信辦等六個部門的辦法開始施行，使用者可以選擇用國家核發的網路身分代號與憑證（網號、網證）向平台核驗身分。辦法寫明，除法律、行政法規另有規定或使用者同意外，選用的人不必再向平台提供可以直接讀出的身分資料。辦法也寫明，法律規定需要協助時，國家的認證平台要提供網號對應的真實身分與認證紀錄。不使用中國平台的讀者，不受這些規定影響。&lt;/p&gt;</content:encoded>
 </item>
 <item>
 <title>舊手機的 HTTPS 憑證警告</title>
@@ -22,35 +22,35 @@
 <guid isPermaLink="false">anoni-news:history/09-30/2026</guid>
 <pubDate>Wed, 30 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>手機停在 Android 7 以前，打開使用 Let&#39;s Encrypt 憑證的網站會跳出警告。這一天，Let&#39;s Encrypt 早年借來的信任到期。</description>
-<content:encoded>&lt;p&gt;你或家人的手機如果停在 Android 7 以前，打開使用 Let&#39;s Encrypt 憑證的網站會跳出憑證警告。Let&#39;s Encrypt 是免費發出 HTTPS 憑證的服務，手機要認得它的根憑證，才會信任用它憑證的網站。它早年向另一家憑證機構借來的信任在 2021 年 9 月 30 日到期，舊版 Android 另外靠一張特別簽發、效期到 2024 年 9 月 30 日的憑證多用了三年。Let&#39;s Encrypt 在 2023 年建議這些手機改用 Firefox，Mozilla 卻在 2025 年 9 月公告 Firefox 144 起只支援 Android 8.0 以上，舊手機只能停在不再更新的版本。想確認的話，可以在手機的設定裡查看 Android 版本。&lt;/p&gt;</content:encoded>
+<description>你的手機如果停在 Android 7.0 或更早的版本，打開使用 Let&#39;s Encrypt 憑證的網站會跳出警告。這一天，Let&#39;s Encrypt 早年借來的信任到期，舊版 Android 靠另一張憑證又能正常連線三年。</description>
+<content:encoded>&lt;p&gt;你或家人的手機如果停在 Android 7.0 或更早的版本，打開使用 Let&#39;s Encrypt 憑證的網站會跳出憑證警告。Let&#39;s Encrypt 是免費發出 HTTPS 憑證的服務，手機內建的清單裡要有它的根憑證（用來驗證其他憑證的最上層憑證），才會接受它發出的憑證。2021 年 9 月 30 日，它早年向另一家憑證機構借來的信任到期，舊版 Android 靠一張效期到 2024 年 9 月 30 日的特別憑證又能正常連線三年。Let&#39;s Encrypt 在 2023 年建議這些手機的使用者改用 Firefox，Mozilla 則在 2025 年 9 月公告，這些手機只能用到不再收到安全更新的版本。可以在設定裡查看 Android 版本，停在 7.0 或更早的話仍可以用最後一個支援的 Firefox 版本開啟這些網站，但要承擔沒有安全更新的風險。&lt;/p&gt;</content:encoded>
 </item>
 <item>
-<title>網址列鎖頭沒蓋住的網站名稱</title>
+<title>網址列鎖頭以外的網站名稱</title>
 <link>https://anoni.net/news/history/09-29/#y2026</link>
 <guid isPermaLink="false">anoni-news:history/09-29/2026</guid>
 <pubDate>Tue, 29 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站。這一天，Cloudflare 讓所有網站都能加密這一段。</description>
-<content:encoded>&lt;p&gt;用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站，2026 年 8 月還有開發者在 Apple 的開發者論壇回報，Safari 送出的網站名稱是明文。網址列的鎖頭只代表網頁內容加密，連線一開始送出的網站名稱要靠另一項技術 Encrypted Client Hello（ECH）加密，2023 年 9 月 29 日 Cloudflare 宣布所有方案都可以啟用。到 10 月 1 日為止，Cloudflare 免費方案上的網站預設開啟，Chrome 在電腦與 Android 上也預設使用。中國在 2020 年 7 月封鎖了 ECH 的早期版本，俄羅斯的通訊監管機構也從 2024 年 11 月起封鎖這類連線。想知道自己的瀏覽器做到哪幾項，可以打開 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-tw/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 頁面檢查。&lt;/p&gt;</content:encoded>
+<description>用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站。這一天，Cloudflare 讓使用它服務的網站都能加密網站名稱。</description>
+<content:encoded>&lt;p&gt;用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站，2026 年 8 月還有開發者在 Apple 的開發者論壇回報 Safari 送出的網站名稱沒有加密。網址列的鎖頭只代表網頁內容加密，連線一開始送出的網站名稱要靠另一項技術 Encrypted Client Hello（ECH）加密。2023 年 9 月 29 日，Cloudflare 宣布所有方案的網站都可以啟用 ECH，Chrome 在電腦與 Android 上也預設使用。中國在 2020 年 7 月封鎖了 ECH 的早期版本，俄羅斯的通訊監管機構也從 2024 年 11 月起封鎖使用 ECH 的連線。想知道自己的瀏覽器有沒有加密網站名稱，可以打開 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-tw/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 頁面檢查。&lt;/p&gt;</content:encoded>
 </item>
 <item>
-<title>一直登入著的 Facebook 帳號</title>
+<title>保持登入的 Facebook 帳號</title>
 <link>https://anoni.net/news/history/09-28/#y2026</link>
 <guid isPermaLink="false">anoni-news:history/09-28/2026</guid>
 <pubDate>Mon, 28 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>手機上的 Facebook 不必每次輸入密碼，靠的是一組保持登入的憑證。這一天，Facebook 公布這組憑證因漏洞外洩。</description>
-<content:encoded>&lt;p&gt;你的手機打開 Facebook 不必每次輸入密碼，靠的是一組讓你保持登入的憑證，Facebook 的公告把它比喻成數位鑰匙。2018 年 9 月 28 日，Facebook 公布讓使用者預覽別人眼中個人頁面的「View As」功能有漏洞，攻擊者藉此偷走這組憑證，不需要密碼就能接管帳號，約 9,000 萬人因此被強制登出。Facebook 在 10 月的後續公告把數字修正成約 3,000 萬人的憑證實際被偷，菲律賓的 BusinessWorld 報導其中有 755,973 個菲律賓帳號。2025 年 6 月起，Facebook 在手機上支援通行金鑰（passkey），可以取代密碼登入。想確認帳號沒有被別人登入，可以在 Facebook 的設定裡查看目前登入的裝置，Facebook 當年的公告就建議從這裡一次登出全部裝置。&lt;/p&gt;</content:encoded>
+<description>你用手機開 Facebook 不必每次輸入密碼，靠的是一組保持登入的憑證。這一天，Facebook 公布攻擊者利用漏洞偷走了大量帳號的這類憑證。</description>
+<content:encoded>&lt;p&gt;你用手機打開 Facebook 時不必每次輸入密碼，靠的是一組讓你保持登入的憑證，Facebook 的公告把它比喻成數位鑰匙。Facebook 在 2018 年 9 月 28 日公布「View As」功能有漏洞，這個功能讓使用者預覽自己的個人頁面在別人眼中的樣子，攻擊者可以藉此偷走這類憑證並在不需要密碼的情況下接管帳號。Facebook 當天估計約 5,000 萬個帳號受影響，並讓約 9,000 萬人重新登入。Facebook 在 10 月的後續公告把數字修正為約 3,000 萬人的憑證實際被偷，菲律賓的 BusinessWorld 報導其中有 755,973 個菲律賓帳號。想確認帳號沒有被別人登入，可以在 Facebook 的設定裡查看目前登入的裝置，Facebook 當年的公告也建議從這裡一次登出全部裝置。&lt;/p&gt;</content:encoded>
 </item>
 <item>
-<title>軟體更新修不掉的 iPhone 開機漏洞</title>
+<title>無法用軟體更新修補的 iPhone 開機漏洞</title>
 <link>https://anoni.net/news/history/09-27/#y2026</link>
 <guid isPermaLink="false">anoni-news:history/09-27/2026</guid>
 <pubDate>Sun, 27 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>還在用 iPhone X 以前的機型，手機裡有一個更新修不掉的開機漏洞。這一天，研究者公開了這個漏洞的利用程式。</description>
-<content:encoded>&lt;p&gt;你如果還在用 iPhone X 或更早的機型，手機裡有一個軟體更新修不掉的漏洞，手機落到別人手上時，資料能不能被讀取要看解鎖密碼。2019 年 9 月 27 日，一位研究者公開了名為 checkm8 的漏洞利用程式，它攻擊的是開機時最先執行的程式碼，這段程式碼寫在晶片的唯讀記憶體裡，Apple 無法用更新修補。Ars Technica 的專訪寫明，它影響從 iPhone 4S 到 iPhone X 共 11 代機型，而且必須實際接觸到手機才能使用。研究者在同一篇專訪表示，iPhone 6 到 iPhone 8 這幾代有獨立的安全隔離區保護資料，不知道解鎖密碼的人用這個漏洞也讀不到。Apple 到 2026 年 5 月仍替 iPhone 8 與 iPhone X 發布 iOS 16.7.16 的安全更新，開機漏洞則一直都在。還在用這幾代 iPhone 的人，可以確認手機設了解鎖密碼，並裝上最新的系統更新。&lt;/p&gt;</content:encoded>
+<description>你如果還在用 iPhone X 或更早的機型，手機落到別人手上時資料要靠解鎖密碼保護。這一天，研究者公開了能利用 iPhone 開機漏洞的程式 checkm8。</description>
+<content:encoded>&lt;p&gt;你如果還在用 iPhone X 或更早的機型，手機裡有一個無法用軟體更新修補的開機漏洞。2019 年 9 月 27 日，一位研究者公開了能利用這個漏洞的程式 checkm8，它攻擊的是寫在晶片唯讀記憶體裡、開機時最先執行的程式碼。Ars Technica 的專訪寫明，checkm8 影響從 iPhone 4S 到 iPhone X 共 11 代 iPhone，而且必須實際接觸到手機才能使用。研究者在同一篇專訪提到，有安全隔離區的機型，不知道解鎖密碼的人用這個漏洞也無法讀取資料。還在用 iPhone X 或更早機型的人可以確認手機設了解鎖密碼，iPhone 8 與 iPhone X 到 2026 年 5 月仍有安全更新，也要裝上最新版本。&lt;/p&gt;</content:encoded>
 </item>
 <item>
 <title>App 用通訊錄找朋友時的隱私</title>
@@ -58,8 +58,8 @@
 <guid isPermaLink="false">anoni-news:history/09-26/2026</guid>
 <pubDate>Sat, 26 Sep 2026 01:30:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>知道你電話號碼的人，可以讓 LINE 自動把你加為好友。這一天，Signal 公開了讓伺服器看不到通訊錄的比對方式。</description>
-<content:encoded>&lt;p&gt;你的電話號碼只要存在別人的手機通訊錄裡，對方的 LINE 就可能自動把你加為好友，App 用通訊錄找朋友，靠的是把號碼拿去伺服器比對。2017 年 9 月 26 日，Signal 公開一種新的比對方式，讓伺服器比對時看不到通訊錄的內容。Signal 在同一篇文章寫明，把電話號碼轉成雜湊值再上傳保護不了號碼，所有可能的號碼數量太少，雜湊值幾乎都能反推回來。Signal 在 2024 年 2 月加上讓別人無法用電話號碼找到你的設定，2026 年 9 月的 Android 測試版更可以不用電話號碼註冊（見&lt;a href=&#34;https://anoni.net/news/2026/09/signal-numberless-registration/&#34;&gt;Signal 免電話號碼註冊的 Android 測試版&lt;/a&gt;）。不想被知道號碼的人加為 LINE 好友，可以在「設定 &amp;gt; 好友」關閉「允許被加入好友」。&lt;/p&gt;</content:encoded>
+<description>你的號碼存在別人的通訊錄裡，對方的 LINE 就可能自動把你加為好友。這一天，Signal 公開了讓伺服器無法得知通訊錄內容的比對方式。</description>
+<content:encoded>&lt;p&gt;你的電話號碼只要存在別人的手機通訊錄裡，對方的 LINE 就可能自動把你加為好友，因為 App 會把通訊錄裡的號碼上傳到伺服器比對。2017 年 9 月 26 日，Signal 公開一種新的比對方式，讓伺服器比對時無法得知通訊錄的內容。Signal 在同一篇文章寫明，所有可能的號碼數量太少，就算把號碼轉成看不出原號碼的代碼（雜湊值）再上傳也幾乎都能反推回去。Signal 在 2024 年 2 月加上讓別人無法用號碼找到你的設定，2026 年 9 月的 Android 測試版更可以不用電話號碼註冊（見&lt;a href=&#34;https://anoni.net/news/2026/09/signal-numberless-registration/&#34;&gt;Signal 免電話號碼註冊的 Android 測試版&lt;/a&gt;）。不想讓知道你號碼的人自動把你加為 LINE 好友，可以在「設定 &amp;gt; 好友」關閉「允許被加入好友」。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

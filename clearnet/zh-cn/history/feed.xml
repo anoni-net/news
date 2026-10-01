@@ -13,8 +13,8 @@
 <guid isPermaLink="false">anoni-news:zh-cn/history/10-01/2026</guid>
 <pubDate>Thu, 01 Oct 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>在中国的平台跟帖评论，账号背后要对应到真实身份。这一天，跟帖评论的实名规定开始施行。</description>
-<content:encoded>&lt;p&gt;在中国的网站与 App 跟帖评论，账号背后都要对应到真实身份，豆瓣在 2022 年 4 月更新政策，境外用户也要改绑中国大陆的手机号码，或提供身份证件。这项要求来自 2017 年 10 月 1 日施行的《互联网跟帖评论服务管理规定》，评论时可以只显示昵称，平台的后台要能对应到真实身份，国家网信办称为“后台实名、前台自愿”。2022 年 12 月施行的修订版取代了原规定，写明用手机号码或身份证件号码认证。2025 年 7 月起又多了国家签发的网号与网证，选用的人向平台核验身份时，平台不得再要求明文身份信息。同一份办法也写明，法律、行政法规规定应当履行协助义务时，国家平台要提供网号对应的真实身份信息与认证日志。不选用的人仍用手机号码等方式认证，两种方式下的评论都能对应回真实身份。&lt;/p&gt;</content:encoded>
+<description>你在中国的平台跟帖评论，账号背后要对应到真实身份。这一天，中国的跟帖评论实名规定开始施行。</description>
+<content:encoded>&lt;p&gt;在中国的网站与 App 跟帖评论，账号背后都要对应到真实身份，豆瓣从 2022 年 4 月起也要求境外用户绑定中国大陆手机号码或提供证件。2017 年 10 月 1 日施行的《互联网跟帖评论服务管理规定》要求平台的后台能对应到真实身份，评论时可以只显示昵称（规定称为「后台实名、前台自愿」），2022 年 12 月的修订版再写明用手机号码或身份证件号码认证。2025 年 7 月起，公安部、国家网信办等六部门的《国家网络身份认证公共服务管理办法》开始施行，用户可以选择用国家签发的网号与网证向平台核验身份。办法写明，除法律、行政法规另有规定或者用户同意外，选用的人不必再以明文向平台提供身份信息。办法也写明，法律、行政法规规定应当履行协助义务时，国家网络身份认证公共服务平台要提供网号对应的真实身份信息与认证日志。不使用中国平台的海外读者，不受这些规定影响。&lt;/p&gt;</content:encoded>
 </item>
 <item>
 <title>旧手机的 HTTPS 证书警告</title>
@@ -22,35 +22,35 @@
 <guid isPermaLink="false">anoni-news:zh-cn/history/09-30/2026</guid>
 <pubDate>Wed, 30 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>手机停在 Android 7 以前，打开使用 Let&#39;s Encrypt 证书的网站会弹出警告。这一天，Let&#39;s Encrypt 早年借来的信任到期。</description>
-<content:encoded>&lt;p&gt;你或家人的手机如果停在 Android 7 以前，打开使用 Let&#39;s Encrypt 证书的网站会弹出证书警告。Let&#39;s Encrypt 是免费签发 HTTPS 证书的服务，手机要认得它的根证书，才会信任用它证书的网站。它早年向另一家证书机构借来的信任在 2021 年 9 月 30 日到期，旧版 Android 另外靠一张特别签发、有效期到 2024 年 9 月 30 日的证书多用了三年。Let&#39;s Encrypt 在 2023 年建议这些手机改用 Firefox，Mozilla 却在 2025 年 9 月公告 Firefox 144 起只支持 Android 8.0 以上，旧手机只能停在不再更新的版本。想确认的话，可以在手机的设置里查看 Android 版本。&lt;/p&gt;</content:encoded>
+<description>你的手机如果停在 Android 7.0 或更早的版本，打开使用 Let&#39;s Encrypt 证书的网站会弹出警告。这一天，Let&#39;s Encrypt 早年借来的信任到期，旧版 Android 靠另一张证书又能正常连接三年。</description>
+<content:encoded>&lt;p&gt;你或家人的手机如果停在 Android 7.0 或更早的版本，打开使用 Let&#39;s Encrypt 证书的网站会弹出证书警告。Let&#39;s Encrypt 是免费签发 HTTPS 证书的服务，手机内置的列表里要有它的根证书（用来验证其他证书的最上层证书），才会接受它签发的证书。2021 年 9 月 30 日，它早年向另一家证书机构借来的信任到期，旧版 Android 靠一张有效期到 2024 年 9 月 30 日的特别证书又能正常连接三年。Let&#39;s Encrypt 在 2023 年建议这些手机的用户改用 Firefox，Mozilla 则在 2025 年 9 月公告，这些手机只能用到不再收到安全更新的版本。可以在设置里查看 Android 版本，停在 7.0 或更早的话仍可以用最后一个支持的 Firefox 版本打开这些网站，但要承担没有安全更新的风险。&lt;/p&gt;</content:encoded>
 </item>
 <item>
-<title>地址栏锁头没盖住的网站名称</title>
+<title>地址栏小锁图标以外的网站名称</title>
 <link>https://anoni.net/news/zh-cn/history/09-29/#y2026</link>
 <guid isPermaLink="false">anoni-news:zh-cn/history/09-29/2026</guid>
 <pubDate>Tue, 29 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>用 iPhone 的 Safari 上网时，网络运营商仍可以看到你连到哪个网站。这一天，Cloudflare 让所有网站都能加密这一段。</description>
-<content:encoded>&lt;p&gt;用 iPhone 的 Safari 上网时，网络运营商仍可以看到你连到哪个网站，2026 年 8 月还有开发者在 Apple 的开发者论坛反馈，Safari 发出的网站名称是明文。地址栏的锁头只代表网页内容加密，连接一开始发出的网站名称要靠另一项技术 Encrypted Client Hello（ECH）加密，2023 年 9 月 29 日 Cloudflare 宣布所有方案都可以启用。到 10 月 1 日为止，Cloudflare 免费方案上的网站默认开启，Chrome 在电脑与 Android 上也默认使用。中国在 2020 年 7 月封锁了 ECH 的早期版本，俄罗斯的通信监管机构也从 2024 年 11 月起封锁这类连接。想知道自己的浏览器做到哪几项，可以打开 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-cn/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 页面检查。&lt;/p&gt;</content:encoded>
+<description>用 iPhone 的 Safari 上网时，网络运营商仍可以看到你连到哪个网站。这一天，Cloudflare 让使用它服务的网站都能加密网站名称。</description>
+<content:encoded>&lt;p&gt;用 iPhone 的 Safari 上网时，网络运营商仍可以看到你连到哪个网站，2026 年 8 月还有开发者在 Apple 的开发者论坛反馈 Safari 发出的网站名称没有加密。地址栏的小锁图标只代表网页内容加密，连接一开始发出的网站名称要靠另一项技术 Encrypted Client Hello（ECH）加密。2023 年 9 月 29 日，Cloudflare 宣布所有方案的网站都可以启用 ECH，Chrome 在电脑与 Android 上也默认使用。中国在 2020 年 7 月封锁了 ECH 的早期版本，俄罗斯的通信监管机构也从 2024 年 11 月起封锁使用 ECH 的连接。想知道自己的浏览器有没有加密网站名称，可以打开 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-cn/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 页面检查。&lt;/p&gt;</content:encoded>
 </item>
 <item>
-<title>一直登录着的 Facebook 账号</title>
+<title>保持登录的 Facebook 账号</title>
 <link>https://anoni.net/news/zh-cn/history/09-28/#y2026</link>
 <guid isPermaLink="false">anoni-news:zh-cn/history/09-28/2026</guid>
 <pubDate>Mon, 28 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>手机上的 Facebook 不必每次输入密码，靠的是一组保持登录的凭证。这一天，Facebook 公布这组凭证因漏洞外泄。</description>
-<content:encoded>&lt;p&gt;手机打开 Facebook 不必每次输入密码，靠的是一组让你保持登录的凭证，Facebook 的公告把它比喻成数字钥匙。2018 年 9 月 28 日，Facebook 公布让用户预览别人眼中个人主页的“View As”功能有漏洞，攻击者借此偷走这组凭证，不需要密码就能接管账号，约 9,000 万人因此被强制登出。Facebook 在 10 月的后续公告把数字修正成约 3,000 万人的凭证实际被偷，菲律宾的 BusinessWorld 报道其中有 755,973 个菲律宾账号。2025 年 6 月起，Facebook 在手机上支持通行密钥（passkey），可以取代密码登录。在海外使用 Facebook 的人想确认账号没有被别人登录，可以在 Facebook 的设置里查看目前登录的设备，Facebook 当年的公告就建议从这里一次登出全部设备。&lt;/p&gt;</content:encoded>
+<description>你用手机打开 Facebook 不必每次输入密码，靠的是一组保持登录的凭证。这一天，Facebook 公布攻击者利用漏洞偷走了大量账号的这类凭证。</description>
+<content:encoded>&lt;p&gt;你用手机打开 Facebook 时不必每次输入密码，靠的是一组让你保持登录的凭证，Facebook 的公告把它比喻成数字钥匙。Facebook 在 2018 年 9 月 28 日公布「View As」功能有漏洞，这个功能让用户预览自己的个人主页在别人眼中的样子，攻击者可以借此偷走这类凭证并在不需要密码的情况下接管账号。Facebook 当天估计约 5,000 万个账号受影响，并让约 9,000 万人重新登录。Facebook 在 10 月的后续公告把数字修正为约 3,000 万人的凭证实际被偷，菲律宾的 BusinessWorld 报道其中有 755,973 个菲律宾账号。在海外使用 Facebook 的人想确认账号没有被别人登录，可以在 Facebook 的设置里查看目前登录的设备，Facebook 当年的公告也建议从这里一次退出所有设备上的登录。&lt;/p&gt;</content:encoded>
 </item>
 <item>
-<title>软件更新修不掉的 iPhone 开机漏洞</title>
+<title>无法用软件更新修补的 iPhone 开机漏洞</title>
 <link>https://anoni.net/news/zh-cn/history/09-27/#y2026</link>
 <guid isPermaLink="false">anoni-news:zh-cn/history/09-27/2026</guid>
 <pubDate>Sun, 27 Sep 2026 00:10:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>还在用 iPhone X 以前的机型，手机里有一个更新修不掉的开机漏洞。这一天，研究者公开了这个漏洞的利用程序。</description>
-<content:encoded>&lt;p&gt;你如果还在用 iPhone X 或更早的机型，手机里有一个软件更新修不掉的漏洞，手机落到别人手上时，数据能不能被读取要看解锁密码。2019 年 9 月 27 日，一位研究者公开了名为 checkm8 的漏洞利用程序，它攻击的是开机时最先执行的代码，这段代码写在芯片的只读存储器里，Apple 无法用更新修补。Ars Technica 的专访写明，它影响从 iPhone 4S 到 iPhone X 共 11 代机型，而且必须实际接触到手机才能使用。研究者在同一篇专访表示，iPhone 6 到 iPhone 8 这几代有独立的安全隔区保护数据，不知道解锁密码的人用这个漏洞也读不到。Apple 到 2026 年 5 月仍为 iPhone 8 与 iPhone X 发布 iOS 16.7.16 的安全更新，开机漏洞则一直都在。还在用这几代 iPhone 的人，可以确认手机设了解锁密码，并装上最新的系统更新。&lt;/p&gt;</content:encoded>
+<description>你如果还在用 iPhone X 或更早的机型，手机落到别人手上时数据要靠解锁密码保护。这一天，研究者公开了能利用 iPhone 开机漏洞的程序 checkm8。</description>
+<content:encoded>&lt;p&gt;你如果还在用 iPhone X 或更早的机型，手机里有一个无法用软件更新修补的开机漏洞。2019 年 9 月 27 日，一位研究者公开了能利用这个漏洞的程序 checkm8，它攻击的是写在芯片只读存储器里、开机时最先执行的代码。Ars Technica 的专访写明，checkm8 影响从 iPhone 4S 到 iPhone X 共 11 代 iPhone，而且必须实际接触到手机才能使用。研究者在同一篇专访提到，有安全隔区的机型，不知道解锁密码的人用这个漏洞也无法读取数据。还在用 iPhone X 或更早机型的人可以确认手机设了解锁密码，iPhone 8 与 iPhone X 到 2026 年 5 月仍有安全更新，也要装上最新版本。&lt;/p&gt;</content:encoded>
 </item>
 <item>
 <title>App 用通讯录找朋友时的隐私</title>
@@ -58,8 +58,8 @@
 <guid isPermaLink="false">anoni-news:zh-cn/history/09-26/2026</guid>
 <pubDate>Sat, 26 Sep 2026 01:30:00 +0800</pubDate>
 <dc:creator>anoni.net 社区</dc:creator>
-<description>知道你手机号码的人，可能让聊天 App 自动把你加为好友。这一天，Signal 公开了让服务器看不到通讯录的比对方式。</description>
-<content:encoded>&lt;p&gt;你的手机号码只要存在别人的手机通讯录里，对方的聊天 App（例如 LINE）就可能自动把你加为好友，App 用通讯录找朋友，靠的是把号码拿去服务器比对。2017 年 9 月 26 日，Signal 公开一种新的比对方式，让服务器比对时看不到通讯录的内容。Signal 在同一篇文章写明，把手机号码转成哈希值再上传保护不了号码，所有可能的号码数量太少，哈希值几乎都能反推回来。Signal 在 2024 年 2 月加上让别人无法用手机号码找到你的设置，2026 年 9 月的 Android 测试版更可以不用手机号码注册（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/09/signal-numberless-registration/&#34;&gt;Signal 免手机号注册的 Android 测试版&lt;/a&gt;）。在手机系统的权限设置里，可以只把通讯录权限给真正需要的 App。&lt;/p&gt;</content:encoded>
+<description>知道你手机号码的人，就可能让 LINE 这类聊天 App 自动把你加为好友。这一天，Signal 公开了让服务器无法得知通讯录内容的比对方式。</description>
+<content:encoded>&lt;p&gt;你的手机号码只要存在别人的手机通讯录里，对方的 LINE 这类聊天 App 就可能自动把你加为好友，因为 App 会把通讯录里的号码上传到服务器比对。2017 年 9 月 26 日，Signal 公开一种新的比对方式，让服务器比对时无法得知通讯录的内容。Signal 在同一篇文章写明，所有可能的号码数量太少，就算把号码转成看不出原号码的代码（哈希值）再上传也几乎都能反推回去。Signal 在 2024 年 2 月加上让别人无法用号码找到你的设置，2026 年 9 月的 Android 测试版更可以不用手机号码注册（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/09/signal-numberless-registration/&#34;&gt;Signal 免手机号注册的 Android 测试版&lt;/a&gt;）。在常用的聊天 App 里，可以检查是否允许别人通过手机号添加你，LINE 的设置在「设置 &amp;gt; 好友」的「允许被加入好友」。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
