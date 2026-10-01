@@ -1,5 +1,5 @@
 ---
-title: Then and Now
+title: Same Day, Years Apart
 description: One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.
 ---
 

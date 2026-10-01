@@ -503,7 +503,7 @@ from = "https://www.xinhuanet.com/favicon.ico"
 icon = "zuckoff.app-284bd984.png"
 from = "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/88/89/1f/88891f97-8ae4-7ed0-9754-05b15f2bf184/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
 
-# 以下九筆是導讀歷史預覽用的暫時登記，合併前改用 tools/fetch_favicons.py 抓取上傳
+# 以下是導讀歷史預覽用的暫時登記，合併前改用 tools/fetch_favicons.py 抓取上傳
 [hosts."blog.cloudflare.com"]
 none = "預覽用，還沒抓取"
 
@@ -529,4 +529,10 @@ none = "預覽用，還沒抓取"
 none = "預覽用，還沒抓取"
 
 [hosts."blog.mozilla.org"]
+none = "預覽用，還沒抓取"
+
+[hosts."cloudflare.com"]
+none = "預覽用，還沒抓取"
+
+[hosts."developer.apple.com"]
 none = "預覽用，還沒抓取"
