@@ -536,3 +536,18 @@ none = "預覽用，還沒抓取"
 
 [hosts."developer.apple.com"]
 none = "預覽用，還沒抓取"
+
+[hosts."m.thepaper.cn"]
+none = "預覽用，還沒抓取"
+
+[hosts."help.line.me"]
+none = "預覽用，還沒抓取"
+
+[hosts."arstechnica.com"]
+none = "預覽用，還沒抓取"
+
+[hosts."about.fb.com"]
+none = "預覽用，還沒抓取"
+
+[hosts."bworldonline.com"]
+none = "預覽用，還沒抓取"
