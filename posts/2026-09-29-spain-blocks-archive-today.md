@@ -51,6 +51,6 @@ archive.today 存下網頁的快照，讓人在原頁面被刪除或修改之後
 
 OONI 6 月到 9 月的量測顯示亞洲也有類似的情況。在中國大陸，archive.ph 的 308 次量測有 273 次異常，GreatFire 也記錄 web.archive.org 從 2016 年起在中國大陸持續被封鎖。在印尼，archive.is 有 155 次量測被 OONI 確認為封鎖。在台灣，archive.ph 的 1183 次量測則只有 41 次異常。
 
-需要大量封存的團隊，可以自架開源的 ArchiveBox，以 MIT 授權，9 月 26 日發布新版。安裝方式是在 Linux 或 macOS 上用 Docker 或 pip 執行指令。存在自己手上的檔案不怕服務被封，但也要自己負責備份，而且無法像公開的封存服務那樣讓別人獨立驗證頁面當時的樣子。
+需要保存網頁證據的人，不要只依賴一個封存服務，可以同時存到 Internet Archive 的 Wayback Machine。要把證據留在自己手上，可以用開源的瀏覽器擴充套件 SingleFile（AGPL-3.0 授權，9 月 24 日發布新版）把整頁存成一個 HTML 檔。SingleFile 支援 Chrome、Firefox、Edge 與 Safari，介面有正體與簡體中文，安裝之後在要保存的頁面按下工具列上的按鈕即可。
 
-需要保存網頁證據的人，不要只依賴一個封存服務，可以同時存到 Internet Archive 的 Wayback Machine。要把證據留在自己手上，可以用開源的瀏覽器擴充套件 SingleFile 把整頁存成一個 HTML 檔，以 AGPL-3.0 授權，9 月 24 日發布新版。SingleFile 支援 Chrome、Firefox、Edge 與 Safari，介面有正體與簡體中文，裝好之後在要保存的頁面按一下工具列上的按鈕即可。
+需要大量封存的團隊，可以自架開源的 ArchiveBox（MIT 授權，9 月 26 日發布新版）。安裝方式是在 Linux 或 macOS 上用 Docker 或 pip 執行指令。存在自己手上的檔案不受服務封鎖影響，但要自行負責備份，也無法像公開的封存服務那樣讓別人獨立驗證頁面當時的樣子。
