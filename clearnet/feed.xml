@@ -280,9 +280,8 @@
 &lt;p&gt;開啟「封鎖沒有 VPN 的連線」時，系統會檢查每條連線是否經過 VPN，keep-alive 交給網路晶片之後就不經過這道檢查。網路硬體能同時維持的 keep-alive 連線有上限，依 Mullvad 的公告，理論上先把名額占滿就能擋住惡意 App。Mullvad 不打算這樣做，因為占位的連線同樣要在 VPN 外送出封包，惡意 App 也可能在 Mullvad App 啟動前就開始外洩。CyberInsider 9 月 11 日的報導寫到，當時沒有可靠的 App 層級修正。&lt;/p&gt;
 &lt;p&gt;Mullvad 的建議是只安裝信任的 App，可以的話改用 GrapheneOS 這類強化隱私與安全的 Android 版本，不過 GrapheneOS 的正式版本只支援 Pixel 6 以上的 Pixel 裝置。GrapheneOS 關閉這類 keep-alive 的修正在 9 月 28 日合併，到 9 月 29 日為止還沒有進入正式版本。&lt;/p&gt;
 &lt;p&gt;真實 IP 一旦外洩就有風險的人，可以參考 CyberInsider 報導的做法，讓手機連上強制走 VPN 的路由器。前提是關閉行動網路等其他連線路徑。手機離開這台路由器就失去保護。&lt;/p&gt;
-&lt;p&gt;手動設定過 Mullvad 加密 DNS 的人可以改用 Quad9，它的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。&lt;/p&gt;
-&lt;p&gt;更換要在 11 月 2 日前完成。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 &lt;code&gt;dns.quad9.net&lt;/code&gt;，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 &lt;code&gt;https://dns.quad9.net/dns-query&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;Quad9 的說明頁寫明，用其他 VPN 時描述檔與私人 DNS 通常不會生效，要改在 VPN App 的自訂 DNS 設定 Quad9。說明頁沒有中文。&lt;/p&gt;
+&lt;p&gt;手動設定過 Mullvad 加密 DNS 的人要在 11 月 2 日前更換，可以改用 Quad9。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁（沒有中文版）下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 &lt;code&gt;dns.quad9.net&lt;/code&gt;，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 &lt;code&gt;https://dns.quad9.net/dns-query&lt;/code&gt;。同時使用其他 VPN 的人，描述檔與私人 DNS 通常不會生效，說明頁寫明要改在 VPN App 的自訂 DNS 設定 Quad9。&lt;/p&gt;
+&lt;p&gt;Quad9 的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
@@ -393,10 +392,10 @@
 &lt;p&gt;Reclaim The Net 寫到，協議由文化部、權利人與大型電信業者在 2021 年簽署，業者在接到技術委員會通知後 24 小時內封鎖鏡像網站。為了一則侵權內容封鎖整個服務，在西班牙並不是第一次，體育轉播網站也被這樣封鎖過。&lt;/p&gt;
 &lt;p&gt;OONI 的量測結果也出現變化。9 月 1 日到 27 日，西班牙對 archive.ph 的 641 次量測中有 205 次異常，同期 Internet Archive 的 web.archive.org 在 410 次量測中只有 2 次異常。異常不等於確認封鎖，只代表連線結果跟對照組不同。&lt;/p&gt;
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;archive.today 存下網頁的快照，讓人在原頁面被刪除或修改之後，仍然可以讀到當時的內容。西班牙封鎖的是整個網域，不是單一快照，存在上面的所有頁面，在多數業者的網路上都讀不到了。程序是行政決定加上業者的協議，不需要法院介入，範圍又擴及鏡像網域。&lt;/p&gt;
+&lt;p&gt;archive.today 存下網頁的快照，讓人在原頁面被刪除或修改之後，仍然可以讀到當時的內容。西班牙封鎖整個網域，存在上面的所有快照在多數業者的網路上都無法開啟。程序是行政決定加上業者的協議，不需要法院介入，範圍又擴及鏡像網域。&lt;/p&gt;
 &lt;p&gt;OONI 6 月到 9 月的量測顯示亞洲也有類似的情況。在中國大陸，archive.ph 的 308 次量測有 273 次異常，GreatFire 也記錄 web.archive.org 從 2016 年起在中國大陸持續被封鎖。在印尼，archive.is 有 155 次量測被 OONI 確認為封鎖。在台灣，archive.ph 的 1183 次量測則只有 41 次異常。&lt;/p&gt;
-&lt;p&gt;需要大量封存的團隊，可以自架開源的 ArchiveBox，以 MIT 授權，9 月 26 日發布新版。安裝方式是在 Linux 或 macOS 上用 Docker 或 pip 執行指令。存在自己手上的檔案不怕服務被封，但也要自己負責備份，而且無法像公開的封存服務那樣讓別人獨立驗證頁面當時的樣子。&lt;/p&gt;
-&lt;p&gt;需要保存網頁證據的人，不要只依賴一個封存服務，可以同時存到 Internet Archive 的 Wayback Machine。要把證據留在自己手上，可以用開源的瀏覽器擴充套件 SingleFile 把整頁存成一個 HTML 檔，以 AGPL-3.0 授權，9 月 24 日發布新版。SingleFile 支援 Chrome、Firefox、Edge 與 Safari，介面有正體與簡體中文，裝好之後在要保存的頁面按一下工具列上的按鈕即可。&lt;/p&gt;
+&lt;p&gt;需要保存網頁證據的人，不要只依賴一個封存服務，可以同時存到 Internet Archive 的 Wayback Machine。要把證據留在自己手上，可以用開源的瀏覽器擴充套件 SingleFile（AGPL-3.0 授權，9 月 24 日發布新版）把整頁存成一個 HTML 檔。SingleFile 支援 Chrome、Firefox、Edge 與 Safari，介面有正體與簡體中文，安裝之後在要保存的頁面按下工具列上的按鈕即可。&lt;/p&gt;
+&lt;p&gt;需要大量封存的團隊，可以自架開源的 ArchiveBox（MIT 授權，9 月 26 日發布新版）。安裝方式是在 Linux 或 macOS 上用 Docker 或 pip 執行指令。存在自己手上的檔案不受服務封鎖影響，但要自行負責備份，也無法像公開的封存服務那樣讓別人獨立驗證頁面當時的樣子。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
@@ -467,7 +466,8 @@
 &lt;p&gt;執委會的示範 App 以 EUPL-1.2（歐盟的開源授權）開源，建議書裡請各國透過第三方審查確保資安與隱私合規。依 EDRi 的分析，開源要求只涵蓋數位身分錢包，丹麥的 App 在用戶端有非開源的程式碼。&lt;/p&gt;
 &lt;p&gt;EDRi 在 2025 年 11 月的文章裡寫，所有年齡驗證都能在某種程度上被繞過。執委會的威脅模型裡，大人在旁代為驗證或替孩子的手機註冊列為可接受的殘餘風險，每次出示都比對臉部的做法因過度侵犯隱私被否決。&lt;/p&gt;
 &lt;p&gt;澳洲從 2025 年 12 月 10 日起要求社群平台採取合理措施阻止 16 歲以下的人持有帳號，沒採取的平台可能受罰，使用者與家長不受罰。在排除的爭點上，澳洲的法律禁止平台強迫出示政府證件，列為選項時要另有合理的替代方式。&lt;/p&gt;
-&lt;p&gt;讀者目前不必做設定，各國 App 預計年底前上線。比較各地時，隱私方面可以問發證方能不能追溯使用者、沒有證件的人有沒有替代方式。兒少保護方面可以問能不能輕易繞過驗證、既有帳號如何處理。&lt;/p&gt;
+&lt;p&gt;讀者目前不必做任何設定。可以留意的後續有各會員國的 App 能否在 2026 年底前上線，以及《EU KIDS Act》草案的審議進度。&lt;/p&gt;
+&lt;p&gt;比較各地時，隱私方面可以問發證方能不能追溯使用者、沒有證件的人有沒有替代方式。兒少保護方面可以問能不能輕易繞過驗證、既有帳號如何處理。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
@@ -554,7 +554,8 @@
 &lt;p&gt;Android 的開放建立在 AOSP 上，其他手機廠商與 GrapheneOS 等專案都從同一份原始碼建構系統。原始碼改成半年釋出一次之後，Pixel 先取得新 API 與部分安全修補，其他裝置的使用者要多等幾個月。非 Google 的廠商想及時推送修補，需先取得 Google 的安全預覽權限，GrapheneOS 寫到他們是透過另一家廠商取得。&lt;/p&gt;
 &lt;p&gt;GrapheneOS 以 OSI 核可的開源授權釋出，只支援 Pixel，9 月仍陸續推出新版本。GrapheneOS 寫到，可以用反向工程的方式提早補上 Pixel 公告裡的修補，使用者在 QPR2 之前仍能收到更新。&lt;/p&gt;
 &lt;p&gt;GrapheneOS 也寫到，Pixel 現在比許多裝置更難支援，過去的優勢反而成了負擔。他們預期支援即將推出的 Motorola 新機會比支援 Pixel 容易，因為會取得官方提供的韌體與驅動程式。&lt;/p&gt;
-&lt;p&gt;用其他品牌手機的人，QPR1 新增的 API 與部分修補要等到 12 月的 QPR2，實際收到的時間還要看手機廠商何時推送。想刷 GrapheneOS 保護隱私的人，在 Motorola 新機推出之前仍然只能選 Pixel，官方支援的機型列在 GrapheneOS 的 FAQ。官方的網頁安裝程式需要一台至少有 2GB 可用記憶體與 32GB 可用空間的電腦和一條 USB 線，瀏覽器要用 Chrome、Edge 這類官方支援的瀏覽器，安裝說明是英文。安裝前要先解鎖手機的 bootloader，可能由電信業者鎖定販售的機型要先連網，讓原廠系統確認手機沒有被鎖定。&lt;/p&gt;
+&lt;p&gt;想刷 GrapheneOS 保護隱私的人，在 Motorola 新機推出之前只能選 Pixel，官方支援的機型列在 GrapheneOS 的 FAQ。官方的網頁安裝程式需要一台至少有 2GB 可用記憶體與 32GB 可用空間的電腦和一條 USB 線，瀏覽器要用 Chrome、Edge 這類官方支援的瀏覽器，安裝說明是英文。可能由電信業者鎖定販售的機型，要先連網讓原廠系統確認手機沒有被鎖定，才能解鎖 bootloader。解鎖 bootloader 與安裝系統都會清除手機上的所有資料，而且換成 GrapheneOS 之後，要等到 QPR2 才有原廠系統已經提供的 QPR1 新 API。&lt;/p&gt;
+&lt;p&gt;用其他品牌手機的人不必做任何設定，QPR1 新增的 API 與部分修補要等手機廠商推送 QPR2 之後才會收到。12 月可以留意 Google 釋出 QPR2 時有沒有把 QPR1 的 API 與修補一起放進 AOSP，以及 GrapheneOS 與其他廠商何時取得。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
@@ -635,8 +636,8 @@
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;智慧眼鏡會透過藍牙對外廣播自己的存在，廣播裡帶著製造商的代碼。ZuckOff 在專案網站公開了比對用的代碼，例如 Ray-Ban Meta 與 Oakley Meta 所屬 Luxottica 的 &lt;code&gt;0x0D53&lt;/code&gt;。偵測的原理不複雜，準確度取決於這張表整理得多完整，App Store 的更新紀錄就寫到，1.4.0 修正了把某些 iPhone 誤判成鏡頭眼鏡的問題。&lt;/p&gt;
 &lt;p&gt;ZuckOff 沒有公開原始碼，也沒有授權聲明，外界無法檢驗 App 實際做了什麼，只能相信網站上的說法。它要的權限不多，Android 版只要求藍牙掃描所需的附近裝置權限，並宣告不用來推算位置，所以不要求定位權限。&lt;/p&gt;
-&lt;p&gt;Meta 在 9 月 23 日宣布眼鏡在新加坡與南韓開賣。香港、澳門、馬來西亞等地2026 年稍晚也會上市，日本則是 5 月 21 日就已經開賣。&lt;/p&gt;
-&lt;p&gt;在採訪、開會或私人聚會前，想確認現場有沒有鏡頭的人，可以開著藍牙用 ZuckOff 掃描一次當作提醒，免費的基本掃描就夠用。掃描結果只是線索，重要的對話仍然要事先跟在場的人約定，請大家摘下眼鏡、把手機留在場外。&lt;/p&gt;
+&lt;p&gt;Meta 在 9 月 23 日宣布眼鏡在新加坡與南韓開賣。香港、澳門、馬來西亞等地 2026 年稍晚也會上市，日本則是 5 月 21 日就已經開賣。&lt;/p&gt;
+&lt;p&gt;在採訪、開會或私人聚會前想確認現場有沒有鏡頭的人，可以開著藍牙用 ZuckOff 掃描一次。免費的基本掃描就夠用，iPhone 與 Android 都有，不需要註冊帳號。遇到重要的對話，可以事先跟在場的人約定，請大家摘下眼鏡、把手機留在場外。掃描結果只能當作線索，獨立運作或已跟主人手機配對而停止廣播的眼鏡，ZuckOff 可能偵測不到。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
@@ -699,8 +700,8 @@
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;所有 iCloud 資料都有加密，差別在金鑰放在哪裡。標準資料保護的金鑰在 Apple 手上，收到合法的調閱要求時可以解密交出。ADP 讓金鑰只留在使用者信任的裝置上，Apple 沒有鑰匙，要取得內容就只能改變系統的設計，英國的通知與 Apple 就僵持在這一點。&lt;/p&gt;
 &lt;p&gt;在英國、無法開啟 ADP 的人，Apple 的說明寫明，同時開著 iCloud 備份與「iCloud 中的訊息」時，備份裡會附上訊息的金鑰。關閉 iCloud 備份之後，裝置會產生新的金鑰，之後的訊息維持端對端加密。改用電腦做加密的本機備份，備份也留在自己手上，這個選項預設沒有開啟，要在 Finder 或 Apple 裝置 App 裡勾選。&lt;/p&gt;
-&lt;p&gt;ADP 的代價是 Apple 無法協助復原端對端加密的資料，遺失所有復原方式就找不回來。開啟之後 iCloud.com 的網頁存取也會關閉，需要時要從信任的裝置核准。&lt;/p&gt;
 &lt;p&gt;不在英國的人，可以在 iPhone 的「設定」點自己的名字，進入 iCloud 開啟「進階資料保護」，Apple 的說明頁有正體中文的步驟。Apple 帳號需要先啟用雙重認證，並設定復原聯絡人或復原密鑰，所有登入同一帳號的裝置也要更新到 iOS 16.2、macOS 13.1 以上的對應版本。管理式 Apple 帳號與兒童帳號不能開啟。&lt;/p&gt;
+&lt;p&gt;開啟 ADP 之後，iCloud.com 的網頁存取會停用，在設定裡重新允許後，要用一部受信任裝置核准暫時使用。ADP 的代價是 Apple 沒有所需的加密金鑰，所有復原方式都遺失時也無法協助取回端對端加密的資料。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
@@ -768,10 +769,10 @@
 <guid isPermaLink="false">anoni-news:2026/09/ios27-siri-ai-data-access</guid>
 <pubDate>Sun, 27 Sep 2026 03:21:00 +0800</pubDate>
 <dc:creator>anoni.net 社群</dc:creator>
-<description>iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。Siri 語言設為中文的使用者暫時用不到。</description>
-<content:encoded>&lt;p&gt;整理 2 篇原文，來自 EFF、Apple&lt;/p&gt;
+<description>iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。裝置或 Siri 語言設為中文的使用者暫時用不到。</description>
+<content:encoded>&lt;p&gt;整理 3 篇原文，來自 EFF、Apple&lt;/p&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。到 9 月 27 日為止，Siri AI 還是只支援英文的測試版，也還沒有在所有地區開放。Siri 語言設為中文的使用者暫時無法使用。&lt;/p&gt;
+&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。到 9 月 27 日為止，Siri AI 還是只支援英文的測試版，裝置或 Siri 語言設為中文的使用者暫時無法使用。依 Apple 的說明頁，裝置語言與 Siri 語言都要設為英文，Apple 帳號也要在開放的地區。&lt;/p&gt;
 &lt;p&gt;Siri AI 預設可以讀取備忘錄、訊息與郵件等 Apple 自家 App 的內容，第三方 App 需要開發者加入支援才會納入。請求可能在手機上處理，也可能送到 Apple 的 Private Cloud Compute 伺服器，畫面上不會顯示是哪一種。EFF 的文章特別寫給開啟進階資料保護的使用者，他們的 iCloud 資料以端對端加密保存，一旦送出裝置交給雲端處理，風險評估就跟著改變。&lt;/p&gt;
 &lt;p&gt;螢幕感知（on-screen awareness）讓使用者隨時叫出 Siri，請它解釋畫面上的內容。EFF 舉的例子是請 Siri 摘要正在看的 Signal 加密群組對話，此時畫面上的資料可能送到 Private Cloud Compute。到 9 月 27 日為止，使用者與 App 開發者都無法封鎖螢幕感知。&lt;/p&gt;
 &lt;p&gt;要限制 Siri AI 讀取某個 App，EFF 建議在「設定」的 App 清單點進該 App，於 Search 關閉 Show Content in Search。要改回舊版 Siri，可以在「螢幕使用時間」開啟「內容與隱私權限制」，再把 Siri 的 Allowed Siri Version 設為 Siri Classic。Siri AI 預設不會用互動紀錄訓練模型，設定過程中如果點了同意，可以到「隱私權與安全性」的 Analytics &amp;amp; Improvements 關閉 Improve Siri &amp;amp; Dictation 撤回。以上選項名稱照原文的英文介面，中文介面的名稱可能不同。&lt;/p&gt;
@@ -779,15 +780,22 @@
 &lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
 &lt;p&gt;EFF 在原文寫明，Private Cloud Compute 的「Private」代表系統的設計讓 Apple 無法看到、也不保存資料，但不保證資料經過加密或留在裝置上。使用 Private Cloud Compute 要信任 Apple 的伺服器照設計運作，端對端加密則只需要金鑰留在使用者自己的裝置上。&lt;/p&gt;
 &lt;p&gt;螢幕感知無法封鎖，加密對話能不能留在裝置上，取決於對話裡的每一個人。群組中只要有人對著對話叫出 Siri，內容就可能從那個人的手機送出，端對端加密無法保護這一段。在群組裡討論敏感事務的人，可以跟成員約定不對對話使用螢幕感知，自己也可以考慮改回 Siri Classic。&lt;/p&gt;
-&lt;p&gt;使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 只在 iPhone 15 Pro 以後的機型、Siri 語言設為英文時可用，符合的人可以先對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。Siri 語言設為中文的人暫時不受影響，也可以先把各 App 的搜尋設定調整好。&lt;/p&gt;
+&lt;p&gt;使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 只在 iPhone 15 Pro 以後的機型、裝置與 Siri 語言都設為英文時可用，設為中文的人暫時不受影響。符合條件的人可以對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。關閉之後，Siri AI 回答一般問題時不會取用該 App 的資料，但畫面上正在顯示的內容仍可能經由螢幕感知送到 Private Cloud Compute。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（2 篇）&lt;/h2&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27&#34;&gt;How to Limit What Apple&amp;#39;s New Siri AI Can Access in iOS 27&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
@@ -816,7 +824,7 @@
 &lt;p&gt;廣告主網站上的像素把造訪紀錄送回廣告平台，研究者在原文把它比作零售業者早已安裝的 Meta 與 Google 追蹤程式碼。差別在於 ChatGPT 帳號裡還有使用者跟 AI 的對話，許多人會在對話裡提到健康、工作與個人問題，對話內容與其他網站的瀏覽紀錄可能因此連到同一個帳號。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; 透過第三方 cookie 在其他網站送出。Safari 預設阻擋跨站追蹤，iOS 上的瀏覽器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都沒有觀察到。Android 與桌機可以在瀏覽器設定裡封鎖第三方 cookie，Firefox 預設把第三方 cookie 依網站隔離，Brave 預設封鎖。&lt;/p&gt;
 &lt;p&gt;同意橫幅的分類由業者自行定義，在這次的案例裡，「分析」這個選項也涵蓋了廣告用途的識別碼同步。只拒絕「行銷」不足以避開廣告追蹤。&lt;/p&gt;
-&lt;p&gt;研究者觀察到的情境是在 Android 手機上用 Chrome 登入 ChatGPT，用 iPhone 的人不必另外設定。符合的人可以在 Chrome 的「設定」依序點「網站設定」、「第三方 Cookie」，選擇「封鎖第三方 Cookie」，Google 的說明頁有正體中文的步驟。封鎖之後部分網站可能無法正常運作，可以把需要的網站加進例外清單。不想更動 Chrome 設定的人，也可以改在另一個瀏覽器使用 ChatGPT，跟平常瀏覽其他網站的瀏覽器分開。&lt;/p&gt;
+&lt;p&gt;研究者觀察到的情境是在 Android 手機上用 Chrome 登入 ChatGPT，用 iPhone 的人不必另外設定。符合的人可以在 Chrome 的「設定」依序點「網站設定」、「第三方 Cookie」，選擇「封鎖第三方 Cookie」（Google 的說明頁有正體中文的步驟）。封鎖之後若有網站無法正常運作，可以把它加進例外清單，不想更動設定的人也可以另用一個瀏覽器專門登入 ChatGPT。常在對話裡談健康、工作或個人問題的人，其他網站的瀏覽紀錄一旦連回 ChatGPT 帳號，可能暴露的內容比較多。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
@@ -861,7 +869,7 @@
 &lt;p&gt;門號在許多地方都要實名登記，用門號註冊的通訊帳號等於間接連回真實身分。Signal 的端對端加密保護訊息內容，帳號本身過去卻一直綁著一支門號。改成付費加上零知識證明之後，帳號跟門號、付款都脫鉤，想把工作與私人身分分開的人，不必另外申辦門號。Signal 的 Android 版以 AGPL-3.0 授權公開原始碼，介面有正體中文。&lt;/p&gt;
 &lt;p&gt;沒有門號之後，別人只能透過使用者名稱找到這個帳號。Freedom of the Press Foundation 的文章寫到，公開分享過的使用者名稱要一直保留，否則別人可以取得同一個名稱來冒充。用使用者名稱接受消息來源聯繫的人，被冒充的後果更嚴重。&lt;/p&gt;
 &lt;p&gt;另一篇討論 passkey 的觀點文章寫到，一個帳號的安全程度取決於最弱的那一種復原方式。Signal 的免門號帳號沒有任何復原方式，攻擊者少了一個較弱的入口，遺失的風險則全部落在使用者身上。&lt;/p&gt;
-&lt;p&gt;想試用的人，要先在 Google Play 訂閱 Signal 的測試版，再透過 Google Play 付 2.99 美元的一次性費用，沒有 Google Play 服務的手機無法用這個方式註冊。註冊後把 Account ID 與 Recovery Key 存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。&lt;/p&gt;
+&lt;p&gt;想讓帳號不連回門號的人，要先在 Google Play 訂閱 Signal 的測試版，再透過 Google Play 付 2.99 美元的一次性費用。沒有 Google Play 服務的手機暫時無法用這個方式註冊。註冊後把 Account ID 與 Recovery Key 存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。只需要保護訊息內容的人，用門號註冊的帳號同樣有端對端加密，不必改走付費註冊。&lt;/p&gt;
 &lt;/div&gt;
 &lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
   &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;

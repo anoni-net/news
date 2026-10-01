@@ -198,9 +198,8 @@
 <p>開啟「封鎖沒有 VPN 的連線」時，系統會檢查每條連線是否經過 VPN，keep-alive 交給網路晶片之後就不經過這道檢查。網路硬體能同時維持的 keep-alive 連線有上限，依 Mullvad 的公告，理論上先把名額占滿就能擋住惡意 App。Mullvad 不打算這樣做，因為占位的連線同樣要在 VPN 外送出封包，惡意 App 也可能在 Mullvad App 啟動前就開始外洩。CyberInsider 9 月 11 日的報導寫到，當時沒有可靠的 App 層級修正。</p>
 <p>Mullvad 的建議是只安裝信任的 App，可以的話改用 GrapheneOS 這類強化隱私與安全的 Android 版本，不過 GrapheneOS 的正式版本只支援 Pixel 6 以上的 Pixel 裝置。GrapheneOS 關閉這類 keep-alive 的修正在 9 月 28 日合併，到 9 月 29 日為止還沒有進入正式版本。</p>
 <p>真實 IP 一旦外洩就有風險的人，可以參考 CyberInsider 報導的做法，讓手機連上強制走 VPN 的路由器。前提是關閉行動網路等其他連線路徑。手機離開這台路由器就失去保護。</p>
-<p>手動設定過 Mullvad 加密 DNS 的人可以改用 Quad9，它的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。</p>
-<p>更換要在 11 月 2 日前完成。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 <code>dns.quad9.net</code>，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 <code>https://dns.quad9.net/dns-query</code>。</p>
-<p>Quad9 的說明頁寫明，用其他 VPN 時描述檔與私人 DNS 通常不會生效，要改在 VPN App 的自訂 DNS 設定 Quad9。說明頁沒有中文。</p>
+<p>手動設定過 Mullvad 加密 DNS 的人要在 11 月 2 日前更換，可以改用 Quad9。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁（沒有中文版）下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 <code>dns.quad9.net</code>，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 <code>https://dns.quad9.net/dns-query</code>。同時使用其他 VPN 的人，描述檔與私人 DNS 通常不會生效，說明頁寫明要改在 VPN App 的自訂 DNS 設定 Quad9。</p>
+<p>Quad9 的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。</p>
   </div>
 <aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
   <h2 class="source-slip__heading" id="source-slip-heading">原文（14 篇）</h2>
