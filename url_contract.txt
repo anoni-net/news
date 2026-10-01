@@ -183,10 +183,36 @@
 	#privacy
 	#report
 	#selection
+/en/history/
+/en/history/09-26/
+	#y2026
+/en/history/09-27/
+	#y2026
+/en/history/09-28/
+	#y2026
+/en/history/09-29/
+	#y2026
+/en/history/09-30/
+	#y2026
+/en/history/10-01/
+	#y2026
 /en/page/2/
 /en/subscribe/
 	#more
 	#steps
+/history/
+/history/09-26/
+	#y2026
+/history/09-27/
+	#y2026
+/history/09-28/
+	#y2026
+/history/09-29/
+	#y2026
+/history/09-30/
+	#y2026
+/history/10-01/
+	#y2026
 /page/2/
 /subscribe/
 	#more
@@ -281,6 +307,19 @@
 	#privacy
 	#report
 	#selection
+/zh-cn/history/
+/zh-cn/history/09-26/
+	#y2026
+/zh-cn/history/09-27/
+	#y2026
+/zh-cn/history/09-28/
+	#y2026
+/zh-cn/history/09-29/
+	#y2026
+/zh-cn/history/09-30/
+	#y2026
+/zh-cn/history/10-01/
+	#y2026
 /zh-cn/page/2/
 /zh-cn/subscribe/
 	#more
