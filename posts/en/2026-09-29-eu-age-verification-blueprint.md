@@ -76,4 +76,6 @@ Since 10 December 2025, Australia has required social media platforms to take re
 
 Malaysia has required social media platforms by law to verify users' ages since 1 June 2026. Under the technology-neutral approach of its regulator, the Malaysian Communications and Multimedia Commission (MCMC), verification is expected to use government-issued records or documents where required. In mainland China, Article 31 of the Regulations on the Protection of Minors Online, in force since 1 January 2024, requires services offering posting, instant messaging and the like to minors to obtain their real identity information. On tracing, that points in a different direction from the EU design, where a website learns only that the age threshold is met.
 
-Readers have nothing to set up for now, and national apps are expected by year-end. On privacy, compare whether the issuer can trace users and whether people without ID have an alternative. On child protection, compare whether minors can easily get around the checks and how existing accounts are handled.
+Readers have nothing to set up for now. Two things are worth watching: whether member states launch their apps by the end of 2026, and how the EU KIDS Act proposal progresses.
+
+On privacy, compare whether the issuer can trace users and whether people without ID have an alternative. On child protection, compare whether minors can easily get around the checks and how existing accounts are handled.

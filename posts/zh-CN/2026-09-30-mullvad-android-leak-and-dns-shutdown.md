@@ -86,6 +86,6 @@ Mullvad 的建议是只安装信任的 App，可以的话改用 GrapheneOS 这�
 
 到 9 月 29 日为止，GreatFire（测试中国大陆网址封锁状况的网站）近 90 天对 mullvad.net 的 17 次测试结果全部是封锁。被封锁的网址也包括 Android、Windows、macOS 与 Linux 版的下载链接。Quad9 的 DoH（DNS over HTTPS）地址最近两次有结果的测试也都受到干扰，最后一次在 9 月 3 日。
 
-身在海外、手动设置过 Mullvad 加密 DNS 的人，可以在 11 月 2 日前改用 Quad9。Quad9 的隐私政策写明用户的 IP 只在处理查询的极短时间内留在内存，另外保留的统计按地区、电信网络与协议分类，不含个别 IP。改用之后，DNS 查询仍集中在同一个运营方手上。
+身在海外、手动设置过 Mullvad 加密 DNS 的人，要在 11 月 2 日前更换，可以改用 Quad9。iPhone（iOS 14 及以上）与 Mac（Big Sur 及以上）要用 Safari 下载 Quad9 说明页（没有中文版）的描述文件，2027 年 1 月 19 日到期后需重新安装。Android 9 及以上在「专用 DNS」填入主机名 `dns.quad9.net`，这一项走 DoT（DNS over TLS），不能填 DoH 地址 `https://dns.quad9.net/dns-query`。同时使用其他 VPN 的人，描述文件与专用 DNS 通常不会生效，说明页写明要改在 VPN App 的自定义 DNS 设置 Quad9。
 
-iPhone（iOS 14 及以上）与 Mac（Big Sur 及以上）要用 Safari 下载 Quad9 说明页的描述文件，2027 年 1 月 19 日到期后需重新安装。Android 9 及以上在「专用 DNS」填入主机名 `dns.quad9.net`，这一项走 DoT（DNS over TLS），不能填 DoH 地址 `https://dns.quad9.net/dns-query`。Quad9 的说明页写明，用其他 VPN 时描述文件与专用 DNS 通常不会生效，要改在 VPN App 的自定义 DNS 设置 Quad9。说明页没有中文。
+Quad9 的隐私政策写明用户的 IP 只在处理查询的极短时间内留在内存，另外保留的统计按地区、电信网络与协议分类，不含个别 IP。改用之后，DNS 查询仍集中在同一个运营方手上。
