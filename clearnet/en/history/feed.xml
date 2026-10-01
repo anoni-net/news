@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Same Day, Years Apart | anoni.net News</title>
+<link>https://anoni.net/news/en/history/</link>
+<atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
+<description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
+<language>en</language>
+<lastBuildDate>Thu, 01 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Real-name verification for comments in China</title>
+<link>https://anoni.net/news/en/history/10-01/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-01/2026</guid>
+<pubDate>Thu, 01 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Commenting on Chinese platforms requires an account tied to a real identity. On this day, China&#39;s real-name rules for comments took effect.</description>
+<content:encoded>&lt;p&gt;If you comment on Chinese platforms from elsewhere in Asia, your account still has to be tied to a real identity: in April 2022 Douban updated its policy so that overseas users must bind a mainland Chinese phone number or provide identity documents. The requirement comes from the Provisions on the Administration of Internet Comment Services, which took effect on 1 October 2017 and which the Cyberspace Administration of China framed as &#34;real names in the back end, voluntary in the front end&#34;, meaning a nickname on the page but a verified identity behind it. A revised version that took effect in December 2022 replaced them and named phone numbers and ID numbers as the means of verification. Since July 2025, a state-issued &#34;network number&#34; can be used instead: platforms may then not ask for identity details directly, while the state platform must provide the real identity behind a network number, along with its authentication logs, whenever the law requires assistance. Comments on these platforms can be traced back to a phone number or ID either way, and readers who do not use Chinese platforms are not affected by these rules.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Certificate warnings on old phones</title>
+<link>https://anoni.net/news/en/history/09-30/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/09-30/2026</guid>
+<pubDate>Wed, 30 Sep 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Phones stuck on Android 7 or earlier show warnings on sites that use Let&#39;s Encrypt certificates. On this day, the trust Let&#39;s Encrypt had borrowed in its early years expired.</description>
+<content:encoded>&lt;p&gt;If your phone, or a family member&#39;s, is stuck on Android 7 or earlier, websites that use Let&#39;s Encrypt certificates show certificate warnings. Let&#39;s Encrypt is a free service that issues HTTPS certificates, and a phone trusts those sites only if it recognises the Let&#39;s Encrypt root certificate. The trust Let&#39;s Encrypt had borrowed from another certificate authority expired on 30 September 2021, and older Android versions held on for three more years through a specially issued certificate valid until 30 September 2024. In 2023 Let&#39;s Encrypt advised those phones to switch to Firefox, but in September 2025 Mozilla announced that Firefox 144 would support only Android 8.0 and later, leaving older phones on a version that no longer receives updates. To check, look up the Android version in your phone&#39;s settings.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>The site name the padlock doesn&#39;t hide</title>
+<link>https://anoni.net/news/en/history/09-29/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/09-29/2026</guid>
+<pubDate>Tue, 29 Sep 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On Safari for iPhone, network operators can still see which site you visit. On this day, Cloudflare let every site it serves encrypt that part.</description>
+<content:encoded>&lt;p&gt;If you browse with Safari on an iPhone, network operators can still see which site you are visiting; in August 2026 a developer reported on Apple&#39;s developer forums that Safari still sends the site name in plain text. The padlock in the address bar only means the page content is encrypted, and hiding the site name sent at the start of a connection takes another technology, Encrypted Client Hello (ECH), which Cloudflare made available on all of its plans on 29 September 2023. As of 1 October 2026, sites on Cloudflare&#39;s free plan have it on by default, and Chrome uses it by default on desktop and Android. China blocked an earlier version of ECH in July 2020, according to researchers from Geneva, GFW Report and iYouPort, and Russia&#39;s telecom regulator has blocked these connections since November 2024. To see which of these protections your browser covers, open Cloudflare&#39;s &lt;a href=&#34;https://www.cloudflare.com/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; page.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Facebook accounts that stay logged in</title>
+<link>https://anoni.net/news/en/history/09-28/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/09-28/2026</guid>
+<pubDate>Mon, 28 Sep 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Facebook on your phone keeps you logged in with a stored credential instead of your password. On this day, Facebook disclosed that a bug had leaked these credentials.</description>
+<content:encoded>&lt;p&gt;Facebook on your phone does not ask for your password every time, because it keeps you logged in with a stored credential that Facebook&#39;s announcement compared to a digital key. On 28 September 2018, Facebook disclosed that a bug in &#34;View As&#34;, a feature for previewing how your profile looks to others, had let attackers steal these credentials and take over accounts without passwords, and about 90 million people were logged out as a precaution. In an October update Facebook revised the figure to about 30 million people whose credentials were actually stolen, and the Philippine newspaper BusinessWorld reported that 755,973 of the affected accounts were in the Philippines. Since June 2025 Facebook has supported passkeys on mobile, which can replace your password when you log in. To make sure no one else is logged into your account, check the list of logged-in devices in Facebook&#39;s settings, which Facebook&#39;s 2018 announcement pointed to as the place to log out of every device at once.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>An iPhone startup flaw that updates cannot fix</title>
+<link>https://anoni.net/news/en/history/09-27/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/09-27/2026</guid>
+<pubDate>Sun, 27 Sep 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>iPhones up to the iPhone X carry a startup flaw that no update can fix. On this day, a researcher released an exploit for it.</description>
+<content:encoded>&lt;p&gt;If you still use an iPhone X or an older model, your phone has a flaw that no software update can fix, and if the phone ends up in someone else&#39;s hands, whether your data can be read depends on your passcode. On 27 September 2019, a researcher released an exploit called checkm8 that targets the first code an iPhone runs when it starts up, code stored in read-only memory on the chip, which Apple cannot patch. Ars Technica&#39;s interview with the developer reported that it works on 11 generations of iPhones, from the 4S to the X, and needs physical access to the phone. In the same interview, the developer said that iPhones from the 6 to the 8 have a separate Secure Enclave, so anyone without the passcode still cannot read the data. As of May 2026 Apple was still releasing security updates for the iPhone 8 and iPhone X, most recently iOS 16.7.16, but the startup flaw remains. If you still use one of these iPhones, make sure it has a passcode set and the latest system update installed.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Privacy when apps use your contacts to find friends</title>
+<link>https://anoni.net/news/en/history/09-26/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/09-26/2026</guid>
+<pubDate>Sat, 26 Sep 2026 01:30:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Anyone with your phone number can have LINE add you as a friend automatically. On this day, Signal published a way to match contacts without its servers seeing them.</description>
+<content:encoded>&lt;p&gt;If your phone number is saved in someone else&#39;s contacts, their LINE app may add you as a friend automatically, because apps find friends by checking the numbers in your contacts against their servers. On 26 September 2017, Signal published a new way to do this matching without its servers seeing what is in your contacts. In the same post, Signal explained that uploading hashed phone numbers does not protect them, since the number of possible phone numbers is so small that the hashes can almost always be reversed. In February 2024 Signal added a setting that stops people from finding you by your number, and its Android beta in September 2026 lets you register without a phone number at all (see &lt;a href=&#34;https://anoni.net/news/en/2026/09/signal-numberless-registration/&#34;&gt;Phone-number-free registration in the Signal Android beta&lt;/a&gt;). On LINE, you can stop people who know your number from adding you by turning off the setting under Settings &amp;gt; Friends that allows others to add you.&lt;/p&gt;</content:encoded>
+</item>
+</channel>
+</rss>

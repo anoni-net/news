@@ -1039,3 +1039,172 @@ p {
         max-width: 40rem;
     }
 }
+
+/* ---------------------------------------------------------------- 導讀歷史 */
+
+/* 時間軸上的快照放在當天導讀的後面。標題與說明沿用 .brief，靠這一行標籤跟導讀分開 */
+.past__label {
+    margin: 0 0 0.25rem;
+    color: var(--c-link);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.past__label a {
+    color: var(--c-link);
+    text-decoration: none;
+}
+
+.past__label a:hover,
+.past__label a:focus-visible {
+    text-decoration: underline;
+}
+
+.past__label time {
+    font-weight: 400;
+}
+
+.past__label .icon {
+    vertical-align: -0.125em;
+}
+
+.history-day__column {
+    color: var(--c-link);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.snapshot {
+    padding: 1.5rem 0 0.5rem;
+    scroll-margin-top: 1rem;
+}
+
+.snapshot + .snapshot {
+    border-top: 1px solid var(--c-border);
+}
+
+.snapshot__year {
+    margin: 0 0 0.25rem;
+    color: var(--c-muted);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.snapshot__title {
+    margin: 0 0 0.25rem;
+    color: var(--c-headline);
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    line-height: 1.45;
+}
+
+.snapshot__event {
+    margin: 0 0 0.75rem;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.snapshot__sources {
+    margin: 0 0 0.5rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9375rem;
+    overflow-wrap: anywhere;
+}
+
+.snapshot__sources li {
+    margin: 0 0 0.25rem;
+}
+
+.snapshot__sources img,
+.snapshot__sources .icon {
+    margin-right: 0.35rem;
+    vertical-align: -0.15em;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.snapshot__sources-label {
+    margin: 0.5rem 0 0.25rem;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.history-month__grid .is-today a,
+.history-month__grid .is-today span {
+    outline: 2px solid var(--c-rule);
+    outline-offset: -2px;
+}
+
+.snapshot__publisher {
+    margin-left: 0.5rem;
+    color: var(--c-muted);
+}
+
+.snapshot__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.history-month {
+    margin-top: 2rem;
+}
+
+.history-month__name {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+}
+
+.history-month__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--touch), 1fr));
+    gap: 0.25rem;
+    margin: 0 0 0.75rem;
+    padding: 0;
+    list-style: none;
+}
+
+.history-month__grid a,
+.history-month__grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--touch);
+    border-radius: 4px;
+    font-size: 0.9375rem;
+}
+
+.history-month__grid span {
+    color: var(--c-muted);
+}
+
+.history-month__grid a {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    color: var(--c-link);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.history-month__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-month__list li {
+    margin: 0 0 0.35rem;
+}
+
+.history-month__date {
+    margin-right: 0.5rem;
+    color: var(--c-muted);
+}
