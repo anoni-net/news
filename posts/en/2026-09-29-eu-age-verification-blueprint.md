@@ -50,6 +50,7 @@ sources:
     date: 2023-10-24
 regions:
   - EU
+pin: 2026-10-14
 authors:
   - anoni-net
 ---
