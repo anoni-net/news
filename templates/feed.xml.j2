@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>{{ s.site_name }}</title>
-<link>{{ target.abs_url(home) }}</link>
-<atom:link href="{{ target.abs_url(home ~ 'feed.xml') }}" rel="self" type="application/rss+xml"/>
-<description>{{ s.description }}</description>
+<title>{{ channel_title }}</title>
+<link>{{ target.abs_url(channel_home) }}</link>
+<atom:link href="{{ target.abs_url(channel_home ~ 'feed.xml') }}" rel="self" type="application/rss+xml"/>
+<description>{{ channel_description }}</description>
 <language>{{ lang.code }}</language>
 {% if build_date %}
 <lastBuildDate>{{ build_date }}</lastBuildDate>

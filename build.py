@@ -3,6 +3,7 @@
     uv run build.py                    # 產生 public/clearnet 與 public/onion
     uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
     uv run build.py --update-contract  # 認可目前的網址，寫回 url_contract.txt
+    uv run build.py --history          # 列出接下來 7 天還沒有快照的導讀歷史日期
 
 規格見 SPEC.md，要改行為先改規格。
 """
@@ -316,6 +317,83 @@ def is_post_name(name: str) -> bool:
     return bool(match and SLUG_RE.match(match.group(2)))
 
 
+def parse_date_field(raw_date, where: str, problems: list[str], now: datetime) -> tuple[datetime | None, datetime | None]:
+    """front matter 的 date：發布時間，或寫成 {created, updated}。導讀與導讀歷史的快照共用。"""
+    updated = None
+    if isinstance(raw_date, dict):
+        if set(raw_date) - {"created", "updated"} or "created" not in raw_date:
+            problems.append(f"{where}：date 寫成對照表時只能有 created 與 updated，而且要有 created")
+            created = None
+        else:
+            created = to_datetime(raw_date["created"], where, problems)
+            if "updated" in raw_date:
+                updated = to_datetime(raw_date["updated"], where, problems)
+    else:
+        created = to_datetime(raw_date, where, problems)
+
+    # date 是預定的發布時間，晚於現在就是排程中，這次建置先不產出。更正日期是實際改稿的時間，不能在未來
+    if created and created > now + timedelta(days=MAX_SCHEDULE_DAYS):
+        problems.append(f"{where}：date 是 {created:%Y-%m-%d %H:%M}，排程最多只能排到 {MAX_SCHEDULE_DAYS} 天後"
+                        f"（台北時間 {now + timedelta(days=MAX_SCHEDULE_DAYS):%Y-%m-%d %H:%M} 以前）")
+    if updated and updated > now:
+        problems.append(f"{where}：date.updated 是 {updated:%Y-%m-%d %H:%M}，晚於現在（台北時間 {now:%Y-%m-%d %H:%M}），"
+                        "填實際更正的時間")
+    return created, updated
+
+
+def parse_sources(raw_sources, where: str, problems: list[str]) -> list[Source]:
+    sources = []
+    if not isinstance(raw_sources, list) or not raw_sources:
+        problems.append(f"{where}：sources 至少要有一筆")
+        raw_sources = []
+    for index, item in enumerate(raw_sources, 1):
+        if not isinstance(item, dict) or not item.get("title") or not item.get("url"):
+            problems.append(f"{where}：sources 第 {index} 筆要有 title 與 url")
+            continue
+        extra = set(item) - SOURCE_KEYS
+        if extra:
+            problems.append(f"{where}：sources 第 {index} 筆有不認得的欄位 {sorted(extra)}")
+        if not str(item["url"]).startswith(("https://", "http://")):
+            problems.append(f"{where}：sources 第 {index} 筆的 url 要是完整網址")
+        source_date = item.get("date")
+        if source_date is not None and not isinstance(source_date, date):
+            problems.append(f"{where}：sources 第 {index} 筆的 date 要寫成 YYYY-MM-DD")
+            source_date = None
+        sources.append(Source(str(item["title"]), str(item["url"]), item.get("publisher"), source_date))
+    return sources
+
+
+def parse_authors(raw_authors, authors: dict[str, dict], where: str, problems: list[str]) -> list[dict]:
+    result = []
+    if not isinstance(raw_authors, list) or not raw_authors:
+        problems.append(f"{where}：authors 至少要有一個，不想署名就寫 anoni-net")
+        raw_authors = []
+    for key in raw_authors:
+        if key not in authors:
+            problems.append(f"{where}：authors 的 {key!r} 不在 authors.yml 裡")
+        else:
+            result.append(authors[key])
+    return result
+
+
+def parse_regions(raw, where: str, problems: list[str]) -> list[str]:
+    regions = raw or []
+    if isinstance(regions, list) and any(isinstance(code, bool) for code in regions):
+        # YAML 1.1 把沒加引號的 NO 讀成 false，挪威的代碼要寫成 "NO"
+        problems.append(f"{where}：regions 裡有 YAML 讀成 true 或 false 的值，挪威的代碼要加引號寫成 \"NO\"")
+        return []
+    if not isinstance(regions, list) or not all(isinstance(code, str) for code in regions):
+        problems.append(f"{where}：regions 要是清單，每一項是 ISO 3166-1 的兩碼代碼，例如 TW、ES")
+        return []
+    for code in regions:
+        if code not in REGION_CODES:
+            hint = "，英國是 GB" if code == "UK" else ""
+            problems.append(f"{where}：regions 的 {code} 不是 ISO 3166-1 的兩碼代碼，要大寫{hint}")
+    if len(set(regions)) != len(regions):
+        problems.append(f"{where}：regions 有重複的代碼")
+    return list(regions)
+
+
 def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -> Post | None:
     """讀一篇文章。草稿回傳 None，不符合規格就丟 BuildError。"""
     where = f"{lang.dir}/{path.name}" if lang.dir else path.name
@@ -337,27 +415,8 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         if not isinstance(meta[key], str) or not meta[key].strip():
             problems.append(f"{where}：{key} 要是非空的文字")
 
-    raw_date = meta["date"]
-    updated = None
-    if isinstance(raw_date, dict):
-        if set(raw_date) - {"created", "updated"} or "created" not in raw_date:
-            problems.append(f"{where}：date 寫成對照表時只能有 created 與 updated，而且要有 created")
-            created = None
-        else:
-            created = to_datetime(raw_date["created"], where, problems)
-            if "updated" in raw_date:
-                updated = to_datetime(raw_date["updated"], where, problems)
-    else:
-        created = to_datetime(raw_date, where, problems)
-
-    # date 是預定的發布時間，晚於現在就是排程中，這次建置先不產出。更正日期是實際改稿的時間，不能在未來
     now = current_time()
-    if created and created > now + timedelta(days=MAX_SCHEDULE_DAYS):
-        problems.append(f"{where}：date 是 {created:%Y-%m-%d %H:%M}，排程最多只能排到 {MAX_SCHEDULE_DAYS} 天後"
-                        f"（台北時間 {now + timedelta(days=MAX_SCHEDULE_DAYS):%Y-%m-%d %H:%M} 以前）")
-    if updated and updated > now:
-        problems.append(f"{where}：date.updated 是 {updated:%Y-%m-%d %H:%M}，晚於現在（台北時間 {now:%Y-%m-%d %H:%M}），"
-                        "填實際更正的時間")
+    created, updated = parse_date_field(meta["date"], where, problems, now)
 
     slug = str(meta["slug"])
     if not SLUG_RE.match(slug) or not 3 <= len(slug) <= 60:
@@ -372,36 +431,8 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         if name.group(2) != slug:
             problems.append(f"{where}：檔名的 slug 跟 front matter 的 slug 不同")
 
-    sources = []
-    raw_sources = meta["sources"]
-    if not isinstance(raw_sources, list) or not raw_sources:
-        problems.append(f"{where}：sources 至少要有一筆")
-        raw_sources = []
-    for index, item in enumerate(raw_sources, 1):
-        if not isinstance(item, dict) or not item.get("title") or not item.get("url"):
-            problems.append(f"{where}：sources 第 {index} 筆要有 title 與 url")
-            continue
-        extra = set(item) - SOURCE_KEYS
-        if extra:
-            problems.append(f"{where}：sources 第 {index} 筆有不認得的欄位 {sorted(extra)}")
-        if not str(item["url"]).startswith(("https://", "http://")):
-            problems.append(f"{where}：sources 第 {index} 筆的 url 要是完整網址")
-        source_date = item.get("date")
-        if source_date is not None and not isinstance(source_date, date):
-            problems.append(f"{where}：sources 第 {index} 筆的 date 要寫成 YYYY-MM-DD")
-            source_date = None
-        sources.append(Source(str(item["title"]), str(item["url"]), item.get("publisher"), source_date))
-
-    post_authors = []
-    raw_authors = meta["authors"]
-    if not isinstance(raw_authors, list) or not raw_authors:
-        problems.append(f"{where}：authors 至少要有一個，不想署名就寫 anoni-net")
-        raw_authors = []
-    for key in raw_authors:
-        if key not in authors:
-            problems.append(f"{where}：authors 的 {key!r} 不在 authors.yml 裡")
-        else:
-            post_authors.append(authors[key])
+    sources = parse_sources(meta["sources"], where, problems)
+    post_authors = parse_authors(meta["authors"], authors, where, problems)
 
     image = meta.get("image")
     if image is not None and (not isinstance(image, str) or not image.startswith(ASSETS_PREFIX)):
@@ -440,21 +471,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
             else:
                 watch.append(Watch(item["date"], item["note"].strip()))
 
-    regions = meta.get("regions") or []
-    if isinstance(regions, list) and any(isinstance(code, bool) for code in regions):
-        # YAML 1.1 把沒加引號的 NO 讀成 false，挪威的代碼要寫成 "NO"
-        problems.append(f"{where}：regions 裡有 YAML 讀成 true 或 false 的值，挪威的代碼要加引號寫成 \"NO\"")
-        regions = []
-    elif not isinstance(regions, list) or not all(isinstance(code, str) for code in regions):
-        problems.append(f"{where}：regions 要是清單，每一項是 ISO 3166-1 的兩碼代碼，例如 TW、ES")
-        regions = []
-    else:
-        for code in regions:
-            if code not in REGION_CODES:
-                hint = "，英國是 GB" if code == "UK" else ""
-                problems.append(f"{where}：regions 的 {code} 不是 ISO 3166-1 的兩碼代碼，要大寫{hint}")
-        if len(set(regions)) != len(regions):
-            problems.append(f"{where}：regions 有重複的代碼")
+    regions = parse_regions(meta.get("regions"), where, problems)
 
     anchors = check_headings(body, where, problems)
     if problems:
@@ -889,6 +906,286 @@ def hrefs(text: str) -> list[str]:
     return [html.unescape(m.group(2)) for m in HREF_RE.finditer(text)]
 
 
+# ---------------------------------------------------------------- 導讀歷史
+
+# 一個日期一份檔案，每年在最後面增補一段。規則見 SPEC.md「導讀歷史」
+HISTORY_DIR = ROOT / "history"
+HISTORY_FILE_RE = re.compile(r"^(\d{2})-(\d{2})\.md$")
+HISTORY_INDEX = "index.md"
+SNAPSHOT_KEYS = {"date", "title", "description", "event", "sources", "authors", "regions", "draft"}
+SNAPSHOT_REQUIRED = {"date", "title", "description", "event", "sources", "authors"}
+# 三個版本同一個年份必須相同的欄位，date 另外比 created
+SNAPSHOT_SHARED_KEYS = ("event", "authors", "regions", "draft")
+YEAR_HEADING_RE = re.compile(r"^##\s+(\d{4})\s+\{#y(\d{4})\}\s*$")
+# 一段內文只能轉出一個 <p>，不能有其他區塊
+SNAPSHOT_BLOCK_RE = re.compile(r"<(?:p|h[1-6]|img|table|pre|ul|ol|blockquote|figure|hr)\b")
+
+
+@dataclass
+class Snapshot:
+    """導讀歷史裡某一年寫的一段回看。"""
+    day: "HistoryDay"
+    year: int
+    title: str
+    description: str
+    created: datetime
+    updated: datetime | None
+    event: date
+    sources: list[Source]
+    authors: list[dict]
+    regions: list[str]
+    body: str
+    html: str = ""
+    draft: bool = False
+    scheduled: bool = False
+
+    @property
+    def lang(self) -> Lang:
+        return self.day.lang
+
+    @property
+    def anchor(self) -> str:
+        return f"y{self.year}"
+
+    @property
+    def rel(self) -> str:
+        return self.day.rel
+
+    @property
+    def guid(self) -> str:
+        return f"anoni-news:{self.lang.path}history/{self.day.mmdd}/{self.year}"
+
+    @property
+    def where(self) -> str:
+        return f"{self.day.where} 的 {self.year}"
+
+
+@dataclass
+class HistoryDay:
+    """導讀歷史的一個日期，也就是 history/MM-DD.md 一份檔案。"""
+    path: Path
+    month: int
+    day: int
+    lang: Lang
+    snapshots: list[Snapshot] = field(default_factory=list)
+    translations: dict[str, "HistoryDay"] = field(default_factory=dict)
+
+    @property
+    def mmdd(self) -> str:
+        return f"{self.month:02d}-{self.day:02d}"
+
+    @property
+    def rel(self) -> str:
+        return f"{self.lang.path}history/{self.mmdd}/"
+
+    @property
+    def where(self) -> str:
+        return f"history/{self.lang.dir}/{self.path.name}" if self.lang.dir else f"history/{self.path.name}"
+
+    @property
+    def calendar(self) -> date:
+        """只拿來排序與顯示月日。用閏年，02-29 才放得進去。"""
+        return date(2000, self.month, self.day)
+
+
+def split_year_sections(body: str, where: str, problems: list[str]) -> list[tuple[int, str]]:
+    """內文依年份小標題切開。小標題只能是 `## 2026 {#y2026}`，第一個小標題之前不能有內文。"""
+    sections: list[tuple[int, list[str]]] = []
+    for number, line in enumerate(body.splitlines(), 1):
+        if HEADING_RE.match(line):
+            match = YEAR_HEADING_RE.match(line)
+            if not match or match.group(1) != match.group(2):
+                problems.append(f"{where}:{number}：小標題只能寫年份，例如 ## 2026 {{#y2026}}")
+                continue
+            sections.append((int(match.group(1)), []))
+        elif sections:
+            sections[-1][1].append(line)
+        elif line.strip():
+            problems.append(f"{where}:{number}：第一個年份小標題之前不能有內文")
+    return [(year, "\n".join(lines).strip()) for year, lines in sections]
+
+
+def load_history_day(path: Path, authors: dict[str, dict], lang: Lang, now: datetime) -> HistoryDay:
+    name = HISTORY_FILE_RE.match(path.name)
+    where = f"history/{lang.dir}/{path.name}" if lang.dir else f"history/{path.name}"
+    if not name:
+        raise BuildError([f"{where}：檔名要是 MM-DD.md"])
+    month, day_number = int(name.group(1)), int(name.group(2))
+    try:
+        date(2000, month, day_number)
+    except ValueError:
+        raise BuildError([f"{where}：{path.stem} 不是存在的日期"]) from None
+    day = HistoryDay(path, month, day_number, lang)
+
+    meta, body = split_front_matter(path.read_text(encoding="utf-8"), where)
+    problems: list[str] = []
+    if set(meta) != {"snapshots"}:
+        problems.append(f"{where}：front matter 只有 snapshots，一個年份一筆")
+    raw = meta.get("snapshots")
+    if not isinstance(raw, list) or not raw:
+        problems.append(f"{where}：snapshots 至少要有一筆")
+        raw = []
+    sections = split_year_sections(body, where, problems)
+    years = [year for year, _ in sections]
+    if years != sorted(set(years)):
+        problems.append(f"{where}：年份小標題要由舊到新排，不能重複")
+    if len(sections) != len(raw):
+        problems.append(f"{where}：有 {len(sections)} 個年份小標題、{len(raw)} 筆 snapshots，要一個年份對一筆")
+
+    for index, (item, (year, text)) in enumerate(zip(raw, sections), 1):
+        at = f"{where} 的 {year}"
+        if not isinstance(item, dict):
+            problems.append(f"{at}：snapshots 第 {index} 筆要是 key: value 的格式")
+            continue
+        missing = SNAPSHOT_REQUIRED - set(item)
+        if missing:
+            problems.append(f"{at}：缺少必填欄位 {sorted(missing)}")
+            continue
+        extra = set(item) - SNAPSHOT_KEYS
+        if extra:
+            problems.append(f"{at}：有不認得的欄位 {sorted(extra)}")
+        for key in ("title", "description"):
+            if not isinstance(item[key], str) or not item[key].strip():
+                problems.append(f"{at}：{key} 要是非空的文字")
+        created, updated = parse_date_field(item["date"], at, problems, now)
+        if created:
+            if created.year != year:
+                problems.append(f"{at}：date 的年份 {created.year} 跟小標題的 {year} 不同")
+            if (created.month, created.day) != (month, day_number):
+                problems.append(f"{at}：date 的月日跟檔名 {path.stem} 不同")
+        event = item["event"]
+        if not isinstance(event, date) or isinstance(event, datetime):
+            problems.append(f"{at}：event 要寫成 YYYY-MM-DD，是事件發生的日期")
+            event = None
+        elif (event.month, event.day) != (month, day_number):
+            problems.append(f"{at}：event 的月日跟檔名 {path.stem} 不同")
+        elif created and event >= created.date():
+            problems.append(f"{at}：event 要早於這則快照的 date")
+        draft = item.get("draft", False)
+        if not isinstance(draft, bool):
+            problems.append(f"{at}：draft 只能寫 true 或 false")
+            draft = False
+        html_text = render_markdown(text)
+        if not text or len(SNAPSHOT_BLOCK_RE.findall(html_text)) != 1 or not html_text.startswith("<p>"):
+            problems.append(f"{at}：每個年份底下寫一段，不放其他小標題、圖片、表格、清單與程式碼區塊")
+        snapshot = Snapshot(
+            day=day, year=year, title=str(item["title"]).strip(), description=str(item["description"]).strip(),
+            created=created, updated=updated, event=event,
+            sources=parse_sources(item["sources"], at, problems),
+            authors=parse_authors(item["authors"], authors, at, problems),
+            regions=parse_regions(item.get("regions"), at, problems),
+            body=text, html=html_text, draft=draft, scheduled=bool(created and created > now))
+        if not draft:
+            day.snapshots.append(snapshot)
+    if problems:
+        raise BuildError(problems)
+    return day
+
+
+def load_history_index(path: Path, where: str, problems: list[str]) -> dict:
+    """專欄首頁的前言，front matter 只有 title 與 description，跟固定頁面相同。"""
+    if not path.exists():
+        problems.append(f"{where}：缺少專欄首頁的前言")
+        return {}
+    meta, body = split_front_matter(path.read_text(encoding="utf-8"), where)
+    for key in sorted(PAGE_KEYS - set(meta)):
+        problems.append(f"{where}：front matter 缺少 {key}")
+    for key in sorted(set(meta) - PAGE_KEYS):
+        problems.append(f"{where}：front matter 多了不認得的欄位 {key}")
+    if any(HEADING_RE.match(line) for line in body.splitlines()):
+        problems.append(f"{where}：前言不放小標題")
+    return {"title": str(meta.get("title", "")), "description": str(meta.get("description", "")),
+            "html": render_markdown(body)}
+
+
+def load_history(history_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
+                 favicons: dict[str, dict] | None = None) -> tuple[list[HistoryDay], dict[str, dict]]:
+    """讀三個語系的導讀歷史，回傳 zh-TW 的日期（其他版本放在 translations）與各語系的前言。"""
+    problems: list[str] = []
+    now = current_time()
+    by_lang: dict[str, dict[str, HistoryDay]] = {}
+    intros: dict[str, dict] = {}
+    for lang in LANGS:
+        folder = lang_dir(history_dir, lang)
+        intros[lang.code] = load_history_index(folder / HISTORY_INDEX, f"history/{lang.dir}/{HISTORY_INDEX}".replace("//", "/"),
+                                               problems)
+        days = {}
+        for path in sorted(folder.glob("*.md")):
+            if path.name == HISTORY_INDEX:
+                continue
+            try:
+                days[path.name] = load_history_day(path, authors, lang, now)
+            except BuildError as error:
+                problems += error.problems
+        by_lang[lang.code] = days
+    if problems:
+        raise BuildError(problems)
+
+    base = by_lang[DEFAULT_LANG.code]
+    for lang in LANGS[1:]:
+        other = by_lang[lang.code]
+        for name in sorted(set(base) - set(other)):
+            problems.append(f"history/{name}：缺少 {lang.code} 版本 history/{lang.dir}/{name}，三個語系要一起送出")
+        for name in sorted(set(other) - set(base)):
+            problems.append(f"history/{lang.dir}/{name}：找不到對應的 zh-TW 版本 history/{name}")
+        for name in sorted(set(base) & set(other)):
+            tw, version = base[name], other[name]
+            if [s.year for s in tw.snapshots] != [s.year for s in version.snapshots]:
+                problems.append(f"{version.where}：年份跟 zh-TW 不同，三個版本要有同樣的年份")
+                continue
+            for a, b in zip(tw.snapshots, version.snapshots):
+                if a.created != b.created:
+                    problems.append(f"{b.where}：date 跟 zh-TW 不同")
+                for key in SNAPSHOT_SHARED_KEYS:
+                    left, right = getattr(a, key), getattr(b, key)
+                    if key == "authors":
+                        left, right = [x["key"] for x in left], [x["key"] for x in right]
+                    if left != right:
+                        problems.append(f"{b.where}：{key} 跟 zh-TW 不同，三個版本要一致")
+                for source in a.sources:
+                    if source.url not in [s.url for s in b.sources]:
+                        problems.append(f"{b.where}：sources 少了 zh-TW 有的 {source.url}")
+    if favicons is not None:
+        snapshots = [s for days in by_lang.values() for day in days.values() for s in day.snapshots]
+        resolve_favicons(snapshots, favicons, store or AssetStore(), problems)
+    if problems:
+        raise BuildError(problems)
+
+    for name, day in base.items():
+        group = {code: by_lang[code][name] for code in by_lang}
+        for version in group.values():
+            version.translations = group
+    return sorted(base.values(), key=lambda d: d.calendar), intros
+
+
+def check_history_links(days: list[HistoryDay], posts: list[Post]) -> list[str]:
+    """快照連到本站導讀時，那一篇要存在，而且不比這則快照晚發布。"""
+    by_url = {NEWS_PREFIX + version.rel: version for version in all_versions(posts)}
+    problems = []
+    for day in days:
+        for version in day.translations.values() or [day]:
+            for snapshot in version.snapshots:
+                for href in hrefs(snapshot.html):
+                    if not href.startswith(NEWS_PREFIX) or href.startswith(NEWS_PREFIX + "history/"):
+                        continue
+                    target = by_url.get(href.split("#")[0])
+                    if target is None:
+                        problems.append(f"{snapshot.where}：連到 {href}，本站沒有這一篇")
+                    elif target.created > snapshot.created:
+                        problems.append(f"{snapshot.where}：連到的 {href} 比這則快照晚發布")
+    return problems
+
+
+def history_report(days: list[HistoryDay], today: date, ahead: int = MAX_SCHEDULE_DAYS) -> str:
+    """--history 的輸出。接下來幾天還沒有當年快照的日期，每筆一行 checkbox。"""
+    written = {s.created.date() for day in days for s in day.snapshots}
+    missing = [today + timedelta(days=n) for n in range(ahead + 1)]
+    missing = [d for d in missing if d not in written]
+    lines = [f"導讀歷史：接下來 {ahead} 天有 {len(missing)} 天還沒有快照（今天 {today}，台北時間）"]
+    lines += [f"- [ ] {d:%m-%d}（history/{d:%m-%d}.md 的 {d.year}）" for d in missing]
+    return "\n".join(lines)
+
+
 # ---------------------------------------------------------------- 產生
 
 @dataclass
@@ -983,8 +1280,11 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
 
 
 def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
-                 store: AssetStore | None = None, site_pages: dict[str, dict[str, dict]] | None = None) -> list[Page]:
-    """posts 是 zh-TW 的文章，其他語系從 translations 取。"""
+                 store: AssetStore | None = None, site_pages: dict[str, dict[str, dict]] | None = None,
+                 history: tuple[list[HistoryDay], dict[str, dict]] | None = None,
+                 include_scheduled: bool = False) -> list[Page]:
+    """posts 是 zh-TW 的文章，其他語系從 translations 取。history 是 load_history 的結果，
+    沒有就不產生導讀歷史。"""
     if target.out.exists():
         shutil.rmtree(target.out)
     shutil.copytree(ROOT / "static", target.out)
@@ -1033,6 +1333,46 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     def same_page(suffix: str) -> dict[str, str]:
         return {lang.code: lang.path + suffix for lang in LANGS}
 
+    def write_history(lang: Lang, hdays: list[tuple[HistoryDay, list[Snapshot]]], snapshots: list[Snapshot],
+                      intro: dict) -> list[tuple[str, str | None, list[dict]]]:
+        """導讀歷史的專欄首頁、日期頁與 feed。回傳要收進 sitemap 的網址。"""
+        s = texts[lang.code]
+        base = lang.path + "history/"
+        urls = []
+        latest_by_day = {day.mmdd: visible[-1] for day, visible in hdays}
+        write(Page(base, base + "index.html", False), "history_index.html.j2", lang, same_page("history/"),
+              intro=intro, months=history_calendar(latest_by_day, current_time().month),
+              today=current_time().date())
+        urls.append((target.abs_url(base), None, alternates(same_page("history/"), lang)))
+        for i, (day, visible) in enumerate(hdays):
+            # 前一天與後一天只連有快照的日期，12 月 31 日之後接回 1 月 1 日
+            earlier = hdays[i - 1][0] if len(hdays) > 1 else None
+            later = hdays[(i + 1) % len(hdays)][0] if len(hdays) > 1 else None
+            suffix = f"history/{day.mmdd}/"
+            write(Page(day.rel, day.rel + "index.html", False, [snap.anchor for snap in visible]),
+                  "history_day.html.j2", lang, same_page(suffix), day=day, snapshots=visible,
+                  earlier=earlier, later=later,
+                  contents={snap.year: target.rewrite_html(snap.html) for snap in visible})
+            lastmod = max((snap.updated or snap.created) for snap in visible).date().isoformat()
+            urls.append((target.abs_url(day.rel), lastmod, alternates(same_page(suffix), lang)))
+
+        recent = sorted(snapshots, key=lambda snap: snap.created, reverse=True)[:config["feed_items"]]
+        feed = env.get_template("feed.xml.j2").render(
+            target=target, config=config, lang=lang, s=s, home=lang.path,
+            channel_title=f"{s['history']} | {s['site_name']}", channel_home=base,
+            channel_description=s["history_description"],
+            items=[{
+                "post": snap,
+                "link": target.abs_url(snap.rel) + "#" + snap.anchor,
+                "pub_date": format_datetime(snap.created),
+                "content": target.rewrite_html(snap.html),
+            } for snap in recent],
+            build_date=format_datetime(recent[0].created) if recent else None,
+        )
+        (target.out / base).mkdir(parents=True, exist_ok=True)
+        (target.out / base / "feed.xml").write_text(feed, encoding="utf-8")
+        return urls
+
     threads = story_threads(posts)
     sitemap_homes: list[tuple[str, str | None, list[dict]]] = []
     sitemap_urls: list[tuple[str, str | None, list[dict]]] = []
@@ -1066,12 +1406,24 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             asset = store.assets[featured.image_rel]
             featured_image = {"src": target.url("assets/" + asset.rel), "width": asset.width, "height": asset.height}
 
+        # 這個語系要產出的導讀歷史：日期與快照，排程中的快照不放
+        hdays, snapshots = [], []
+        if history:
+            for day in history[0]:
+                version = day.translations.get(lang.code, day)
+                visible = [snap for snap in version.snapshots if include_scheduled or not snap.scheduled]
+                if visible:
+                    hdays.append((version, visible))
+                    snapshots += visible
+
         per_page = config["per_page"]
         groups = chunk(lposts, per_page)
+        page_snapshots = assign_snapshots(groups, snapshots)
         for number, group in enumerate(groups, 1):
             suffix = "" if number == 1 else f"page/{number}/"
             write(Page(base + suffix, base + suffix + "index.html", number > 1), "list.html.j2", lang, same_page(suffix),
                   kind="index", heading=s["site_name"], posts=group, number=number, total=len(groups),
+                  days=timeline(group, page_snapshots[number - 1]),
                   latest=lposts[0] if lposts else None,
                   featured=featured if number == 1 else None, featured_image=featured_image,
                   prev_rel=(base if number == 2 else f"{base}page/{number - 1}/") if number > 1 else None,
@@ -1083,17 +1435,27 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         for post in lposts:
             years.setdefault(post.created.year, []).append(post)
             months.setdefault((post.created.year, post.created.month), []).append(post)
+        # 只有導讀歷史的年月也有封存頁，時間軸上那幾天才不會沒有地方去
+        for snap in snapshots:
+            years.setdefault(snap.created.year, [])
+            months.setdefault((snap.created.year, snap.created.month), [])
         for year, group in years.items():
             suffix = f"{year}/"
             write(Page(base + suffix, base + suffix + "index.html", True), "list.html.j2", lang, same_page(suffix),
                   kind="archive", heading=s["year_heading"].format(year=year), posts=group, number=1, total=1,
+                  days=timeline(group, [snap for snap in snapshots if snap.created.year == year]),
                   latest=None, prev_rel=None, next_rel=None, featured=None, featured_image=None)
         for (year, month), group in months.items():
             suffix = f"{year}/{month:02d}/"
             write(Page(base + suffix, base + suffix + "index.html", True), "list.html.j2", lang, same_page(suffix),
                   kind="archive", heading=s["month_heading"].format(year=year, month=s["months"][month - 1]),
                   posts=group, number=1, total=1, latest=None,
+                  days=timeline(group, [snap for snap in snapshots
+                                        if (snap.created.year, snap.created.month) == (year, month)]),
                   prev_rel=None, next_rel=None, featured=None, featured_image=None)
+
+        if history:
+            sitemap_urls += write_history(lang, hdays, snapshots, history[1][lang.code])
 
         for name, versions in (site_pages or {}).items():
             suffix = f"{name}/"
@@ -1106,6 +1468,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         feed_posts = lposts[:config["feed_items"]]
         feed = env.get_template("feed.xml.j2").render(
             target=target, config=config, lang=lang, s=s, home=base,
+            channel_title=s["site_name"], channel_home=base, channel_description=s["description"],
             items=[{
                 "post": post,
                 "link": target.abs_url(post.rel),
@@ -1140,6 +1503,48 @@ def by_day(posts: list[Post]) -> list[dict]:
             groups.append({"date": day, "posts": []})
         groups[-1]["posts"].append(post)
     return groups
+
+
+def timeline(posts: list[Post], snapshots: list[Snapshot]) -> list[dict]:
+    """時間軸：依日期分組，新的在前。導讀歷史的快照放在當天導讀的後面，沒有導讀的日子只有快照。"""
+    groups: dict[date, dict] = {}
+    for day in by_day(posts):
+        groups[day["date"]] = {**day, "history": None}
+    for snap in snapshots:
+        groups.setdefault(snap.created.date(), {"date": snap.created.date(), "posts": [], "history": None})
+        groups[snap.created.date()]["history"] = snap
+    return [groups[d] for d in sorted(groups, reverse=True)]
+
+
+def assign_snapshots(groups: list[list[Post]], snapshots: list[Snapshot]) -> list[list[Snapshot]]:
+    """首頁分頁只依導讀計數，快照跟著日期所在的那一頁。落在兩頁之間、沒有導讀的日子，
+    放在較新的那一頁。比最舊的導讀還早的放在最後一頁。"""
+    result: list[list[Snapshot]] = [[] for _ in groups]
+    for snap in snapshots:
+        d = snap.created.date()
+        index = len(groups) - 1
+        for i, group in enumerate(groups):
+            if group and group[-1].created.date() <= d:
+                newest = group[0].created.date()
+                index = i - 1 if d > newest and i > 0 else i
+                break
+        result[index].append(snap)
+    return result
+
+
+def history_calendar(latest_by_day: dict[str, Snapshot], start: int = 1) -> list[dict]:
+    """專欄首頁的全年日期，一個月一組，從 start 那個月排起，跨年接回 1 月。有快照的日期附最新一則。"""
+    months = []
+    for month in [(start - 1 + i) % 12 + 1 for i in range(12)]:
+        days = []
+        for number in range(1, 32):
+            try:
+                day = date(2000, month, number)
+            except ValueError:
+                break
+            days.append({"date": day, "snapshot": latest_by_day.get(f"{month:02d}-{number:02d}")})
+        months.append({"month": month, "days": days})
+    return months
 
 
 def source_line(post: Post, s: dict | None = None) -> str:
@@ -1237,13 +1642,21 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     # 測試用的文章目錄旁邊有 pages/ 時用那一份，沒有就用正式的
     pages_dir = posts_dir.parent / "pages"
     site_pages = load_site_pages(pages_dir if pages_dir.exists() else PAGES_DIR)
+    # 導讀歷史放在文章目錄旁邊的 history/，測試用的目錄沒有就不產生
+    history_dir = posts_dir.parent / "history"
+    history = None
+    if history_dir.exists():
+        history = load_history(history_dir, authors, store, favicons)
+        problems = check_history_links(history[0], posts)
+        if problems:
+            raise BuildError(problems)
     published = posts if include_scheduled else [post for post in posts if not post.scheduled]
     env = make_env()
     pages = {}
     for name, target in targets.items():
         if only and name not in only:
             continue
-        pages[name] = build_target(target, published, config, env, store, site_pages)
+        pages[name] = build_target(target, published, config, env, store, site_pages, history, include_scheduled)
     return targets, pages, posts
 
 
@@ -1595,11 +2008,16 @@ def main() -> int:
     parser.add_argument("--update-contract", action="store_true", help="把目前的網址寫回 url_contract.txt")
     parser.add_argument("--docs-contract", type=Path, help="文件站網址合約的本機檔案，預設從 GitHub 下載")
     parser.add_argument("--watch", action="store_true", help="列出追蹤中、快要到期的事件，不產生網站")
+    parser.add_argument("--history", action="store_true", help="列出接下來 7 天還沒有快照的導讀歷史日期，不產生網站")
     args = parser.parse_args()
 
     try:
         if args.watch:
             print(watch_report(load_site(ROOT / "posts", load_authors(ROOT / "authors.yml")), current_time().date()))
+            return 0
+        if args.history:
+            days, _ = load_history(HISTORY_DIR, load_authors(ROOT / "authors.yml"))
+            print(history_report(days, current_time().date()))
             return 0
         targets, pages, posts = build()
         contract = contract_pages() if args.update_contract or args.check else []
