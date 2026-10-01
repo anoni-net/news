@@ -156,6 +156,8 @@
 (function () {
   // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
   var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+  // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
+  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
 
   function scrubUrl(url) {
     if (typeof url !== "string" || !url) return url;
@@ -180,12 +182,29 @@
     return floor100(+m[1]) + "x" + floor100(+m[2]);
   }
 
+  // 事件的欄位要剛好是清單上的那幾個，值也要在清單裡，否則整筆不送
+  function scrubData(name, data) {
+    var spec = EVENTS[name];
+    var out = {};
+    var count = 0;
+    if (data && typeof data === "object") {
+      for (var extra in data) {
+        if (Object.prototype.hasOwnProperty.call(data, extra) && !Object.prototype.hasOwnProperty.call(spec, extra)) return null;
+      }
+    }
+    for (var key in spec) {
+      if (!Object.prototype.hasOwnProperty.call(spec, key)) continue;
+      if (!data || spec[key].indexOf(data[key]) < 0) return null;
+      out[key] = data[key];
+      count++;
+    }
+    return count ? out : undefined;
+  }
+
   window.anoniBeforeSend = function (type, payload) {
     // data-do-not-track 只看舊的 doNotTrack，Global Privacy Control 在這裡一併尊重
     if (window.navigator && window.navigator.globalPrivacyControl === true) return null;
     if (type !== "event" || !payload || typeof payload !== "object") return null;
-    // 帶 name 的是自訂事件，這個站不送
-    if (payload.name) return null;
     var out = {};
     for (var key in payload) {
       if (Object.prototype.hasOwnProperty.call(payload, key)) out[key] = payload[key];
@@ -193,10 +212,36 @@
     out.url = scrubUrl(out.url);
     out.referrer = scrubUrl(out.referrer);
     out.screen = coarseScreen(out.screen);
-    delete out.data;
-    delete out.name;
+    if (typeof out.name === "string") {
+      if (!Object.prototype.hasOwnProperty.call(EVENTS, out.name)) return null;
+      var data = scrubData(out.name, out.data);
+      if (data === null) return null;
+      if (data) out.data = data; else delete out.data;
+    } else {
+      // 頁面瀏覽不該帶 data 與 name
+      delete out.data;
+      delete out.name;
+    }
     return out;
   };
+
+  // 點擊事件：帶 data-anoni-event 的連結被點時呼叫 umami.track()，不擋換頁。
+  // Umami 送出時帶 keepalive，換頁之後請求照樣完成。DNT、網域限制與上面的過濾都在 track() 裡生效
+  var PREFIX = "data-anoni-event";
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[" + PREFIX + "]") : null;
+    if (!el || !window.umami || typeof window.umami.track !== "function") return;
+    var data = {};
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf(PREFIX + "-") === 0) data[attr.name.slice(PREFIX.length + 1)] = attr.value;
+    }
+    try {
+      window.umami.track(el.getAttribute(PREFIX), data);
+    } catch (err) {
+      // 統計壞掉不該影響連結
+    }
+  }, true);
 })();
 </script>
 <script defer src="https://aa.anoni.net/script.js" data-website-id="3790f14b-870c-4c29-83eb-dbb2977c65a9" data-domains="anoni.net" data-before-send="anoniBeforeSend" data-do-not-track="true"></script>
@@ -233,131 +278,131 @@
 <aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
   <h2 class="source-slip__heading" id="source-slip-heading">Sources (20)</h2>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://freedom.press/digisec/blog/claw-back-your-mobile-location-data/"><img class="source-slip__icon" src="/news/assets/favicons/freedom.press-d782bdb6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Claw back your mobile location data</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://freedom.press/digisec/blog/claw-back-your-mobile-location-data/" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/freedom.press-d782bdb6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Claw back your mobile location data</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Freedom of the Press Foundation</dd></div>
       <div><dt>Published</dt><dd><time datetime="2026-09-09">9 September 2026</time></dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://themarkup.org/privacy/2026/09/16/data-brokers-have-detailed-files-on-you-heres-whats-in-them-and-how-it-impacts-you"><img class="source-slip__icon" src="/news/assets/favicons/themarkup.org-0c33d958.png" width="16" height="16" alt="" loading="lazy" decoding="async">Data brokers have detailed files on you. Here’s what’s in them — and how it impacts you</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://themarkup.org/privacy/2026/09/16/data-brokers-have-detailed-files-on-you-heres-whats-in-them-and-how-it-impacts-you" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/themarkup.org-0c33d958.png" width="16" height="16" alt="" loading="lazy" decoding="async">Data brokers have detailed files on you. Here’s what’s in them — and how it impacts you</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>The Markup</dd></div>
       <div><dt>Published</dt><dd><time datetime="2026-09-16">16 September 2026</time></dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get"><img class="source-slip__icon" src="/news/assets/favicons/themarkup.org-0c33d958.png" width="16" height="16" alt="" loading="lazy" decoding="async">Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/themarkup.org-0c33d958.png" width="16" height="16" alt="" loading="lazy" decoding="async">Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>The Markup</dd></div>
       <div><dt>Published</dt><dd><time datetime="2026-09-16">16 September 2026</time></dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0050021"><img class="source-slip__icon" src="/news/assets/favicons/law.moj.gov.tw-ac2a3ab3.png" width="16" height="16" alt="" loading="lazy" decoding="async">Personal Data Protection Act</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0050021" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/law.moj.gov.tw-ac2a3ab3.png" width="16" height="16" alt="" loading="lazy" decoding="async">Personal Data Protection Act</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Laws &amp; Regulations Database of Taiwan</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://www.elegislation.gov.hk/hk/cap486!en"><img class="source-slip__icon" src="/news/assets/favicons/gov.hk-62222f7e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cap. 486 Personal Data (Privacy) Ordinance</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://www.elegislation.gov.hk/hk/cap486!en" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/gov.hk-62222f7e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cap. 486 Personal Data (Privacy) Ordinance</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Hong Kong e-Legislation</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://www.pcpd.org.hk/english/resources_centre/publications/files/DAR_QnA_e.pdf"><img class="source-slip__icon" src="/news/assets/favicons/pcpd.org.hk-dc297a73.png" width="16" height="16" alt="" loading="lazy" decoding="async">Exercising Your Data Access Rights under the Personal Data (Privacy) Ordinance</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://www.pcpd.org.hk/english/resources_centre/publications/files/DAR_QnA_e.pdf" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/pcpd.org.hk-dc297a73.png" width="16" height="16" alt="" loading="lazy" decoding="async">Exercising Your Data Access Rights under the Personal Data (Privacy) Ordinance</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Office of the Privacy Commissioner for Personal Data, Hong Kong</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr21-"><img class="source-slip__icon" src="/news/assets/favicons/sso.agc.gov.sg-7300262d.png" width="16" height="16" alt="" loading="lazy" decoding="async">Personal Data Protection Act 2012</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr21-" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/sso.agc.gov.sg-7300262d.png" width="16" height="16" alt="" loading="lazy" decoding="async">Personal Data Protection Act 2012</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Singapore Statutes Online</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/en-us/102420"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">If an app asks to track your activity</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/en-us/102420" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">If an app asks to track your activity</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Apple</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/en-us/102647"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Turn Location Services and GPS on or off on your iPhone, iPad, or iPod touch</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/en-us/102647" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Turn Location Services and GPS on or off on your iPhone, iPad, or iPod touch</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Apple</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://policies.google.com/technologies/ads?hl=en"><img class="source-slip__icon" src="/news/assets/favicons/policies.google.com-53ae8c75.png" width="16" height="16" alt="" loading="lazy" decoding="async">Advertising</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://policies.google.com/technologies/ads?hl=en" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/policies.google.com-53ae8c75.png" width="16" height="16" alt="" loading="lazy" decoding="async">Advertising</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Google Privacy &amp; Terms</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://support.google.com/googleplay/android-developer/answer/6048248?hl=en"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Advertising ID</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/googleplay/android-developer/answer/6048248?hl=en" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Advertising ID</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Play Console Help</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="en"><a href="https://support.google.com/android/answer/9431959?hl=en"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Change app permissions on your Android phone</a></p>
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/android/answer/9431959?hl=en" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Change app permissions on your Android phone</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Android Help</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021"><img class="source-slip__icon" src="/news/assets/favicons/law.moj.gov.tw-ac2a3ab3.png" width="16" height="16" alt="" loading="lazy" decoding="async">個人資料保護法</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/law.moj.gov.tw-ac2a3ab3.png" width="16" height="16" alt="" loading="lazy" decoding="async">個人資料保護法</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>全國法規資料庫</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.elegislation.gov.hk/hk/cap486!zh-Hant-HK"><img class="source-slip__icon" src="/news/assets/favicons/gov.hk-62222f7e.png" width="16" height="16" alt="" loading="lazy" decoding="async">第 486 章《個人資料（私隱）條例》</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.elegislation.gov.hk/hk/cap486!zh-Hant-HK" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/gov.hk-62222f7e.png" width="16" height="16" alt="" loading="lazy" decoding="async">第 486 章《個人資料（私隱）條例》</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>電子版香港法例</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.pcpd.org.hk/tc_chi/resources_centre/publications/files/DAR_QnA_c.pdf"><img class="source-slip__icon" src="/news/assets/favicons/pcpd.org.hk-dc297a73.png" width="16" height="16" alt="" loading="lazy" decoding="async">如何行使你在《個人資料（私隱）條例》下的查閱個人資料權（常問問題及答案）</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.pcpd.org.hk/tc_chi/resources_centre/publications/files/DAR_QnA_c.pdf" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/pcpd.org.hk-dc297a73.png" width="16" height="16" alt="" loading="lazy" decoding="async">如何行使你在《個人資料（私隱）條例》下的查閱個人資料權（常問問題及答案）</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>個人資料私隱專員公署</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-tw/102420"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">如果 App 要求追蹤你的活動</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-tw/102420" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">如果 App 要求追蹤你的活動</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Apple</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-tw/102647"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">開啟或關閉 iPhone、iPad 或 iPod touch 上的「定位服務」和 GPS 功能</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-tw/102647" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">開啟或關閉 iPhone、iPad 或 iPod touch 上的「定位服務」和 GPS 功能</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Apple</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://policies.google.com/technologies/ads?hl=zh-TW"><img class="source-slip__icon" src="/news/assets/favicons/policies.google.com-53ae8c75.png" width="16" height="16" alt="" loading="lazy" decoding="async">廣告</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://policies.google.com/technologies/ads?hl=zh-TW" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/policies.google.com-53ae8c75.png" width="16" height="16" alt="" loading="lazy" decoding="async">廣告</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Google 隱私權與條款</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">廣告 ID</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">廣告 ID</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Play 管理中心說明</dd></div>
     </dl>
   </div>
   <div class="source-slip__item">
-    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.google.com/android/answer/9431959?hl=zh-Hant"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">在 Android 手機上變更應用程式權限</a></p>
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.google.com/android/answer/9431959?hl=zh-Hant" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">在 Android 手機上變更應用程式權限</a></p>
     <dl class="source-slip__meta">
       <div><dt>Publisher</dt><dd>Android 說明</dd></div>
     </dl>
   </div>
 </aside>
 </article>
-<p class="subscribe">Get new stories by <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>, <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>newsletter</span></a> or <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>Bluesky</span></a></p>
+<p class="subscribe">Get new stories by <a href="/news/en/subscribe/" data-anoni-event="subscribe-click" data-anoni-event-channel="rss" data-anoni-event-where="article"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>, <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj" data-anoni-event="subscribe-click" data-anoni-event-channel="newsletter" data-anoni-event-where="article"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>newsletter</span></a> or <a href="https://bsky.app/profile/news.anoni.net" data-anoni-event="subscribe-click" data-anoni-event-channel="bluesky" data-anoni-event-where="article"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>Bluesky</span></a></p>
 <nav class="pager pager--story" aria-label="Story navigation">
   <a class="pager__item pager__item--newer" href="/news/en/2026/10/telenor-myanmar-investigation/"><span class="pager__label"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg> Newer story</span> <span class="pager__title">Norway&#39;s provisional charges against Telenor over customer data handed to Myanmar&#39;s junta</span></a>
   <a class="pager__item pager__item--older" href="/news/en/2026/09/interseclab-max-messenger/"><span class="pager__label">Older story <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">InterSecLab’s technical analysis of Russia’s state messenger Max</span></a>
@@ -367,9 +412,9 @@
 <footer class="site-footer">
   <div class="wrap">
     <nav class="site-footer__links" aria-label="Footer">
-      <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
-      <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> Newsletter</a>
-      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> Follow on Bluesky</a>
+      <a href="/news/en/subscribe/" data-anoni-event="subscribe-click" data-anoni-event-channel="rss" data-anoni-event-where="footer"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj" data-anoni-event="subscribe-click" data-anoni-event-channel="newsletter" data-anoni-event-where="footer"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> Newsletter</a>
+      <a href="https://bsky.app/profile/news.anoni.net" data-anoni-event="subscribe-click" data-anoni-event-channel="bluesky" data-anoni-event-where="footer"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> Follow on Bluesky</a>
       <a href="/news/en/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> Same Day, Years Apart</a>
       <a href="/news/en/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> About</a>
       <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> Report an error</a>
@@ -378,7 +423,7 @@
     </nav>
 <nav class="site-footer__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/10/mobile-location-data-brokers/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/10/mobile-location-data-brokers/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
     <p>Stories are licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>. Copyright in the quoted sources stays with their authors.</p>
-    <p>We count page views with a self-hosted Umami instance. It sets no cookies and sends nothing when your browser has Do Not Track or GPC turned on. The onion version does not load it.</p>
+    <p>We count page views and clicks with a self-hosted Umami instance. It sets no cookies and sends nothing when your browser has Do Not Track or GPC turned on. The onion version does not load it.</p>
   </div>
 </footer>
 </body>
