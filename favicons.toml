@@ -446,6 +446,10 @@ from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quali
 icon = "news.risky.biz-8a82d4e1.png"
 from = "https://storage.ghost.io/c/16/e9/16e9a748-ca66-4b3c-8590-85537131f696/content/images/size/w256h256/2024/01/rbicon.png"
 
+[hosts."nhi.gov.tw"]
+icon = "nhi.gov.tw-f4da548a.png"
+from = "https://www.nhi.gov.tw/favicon.ico"
+
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
 
@@ -460,6 +464,9 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."oscca.gov.cn"]
+same_as = "gov.cn"
 
 [hosts."parl.ca"]
 icon = "parl.ca-cc71bd4e.png"
