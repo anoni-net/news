@@ -5,6 +5,9 @@
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
 
+[hosts."about.fb.com"]
+same_as = "meta.com"
+
 [hosts."accessnow.org"]
 icon = "accessnow.org-8d11dfe8.png"
 from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
@@ -25,6 +28,10 @@ from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 icon = "apt.izzysoft.de-3d40667a.png"
 from = "https://apt.izzysoft.de/favicon.ico"
 
+[hosts."arstechnica.com"]
+icon = "arstechnica.com-18386f32.png"
+from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-300x300.png"
+
 [hosts."assets.publishing.service.gov.uk"]
 icon = "assets.publishing.service.gov.uk-a7b0c84b.png"
 from = "https://assets.publishing.service.gov.uk/favicon.ico"
@@ -41,8 +48,16 @@ from = "https://bandaancha.eu/apple-touch-icon.png"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."blog.cloudflare.com"]
+icon = "blog.cloudflare.com-71ae303d.png"
+from = "https://blog.cloudflare.com/favicon.ico"
+
 [hosts."blog.cryptpad.org"]
 same_as = "cryptpad.org"
+
+[hosts."blog.mozilla.org"]
+icon = "blog.mozilla.org-f0f07a35.png"
+from = "https://blog.mozilla.org/wp-content/themes/foxtail/assets/images/favicons/apple-touch-icon.png"
 
 [hosts."brdr.hkma.gov.hk"]
 icon = "brdr.hkma.gov.hk-e2b6d0cb.png"
@@ -51,6 +66,10 @@ from = "https://www.hkma.gov.hk/favicon.jpg"
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
+
+[hosts."bworldonline.com"]
+icon = "bworldonline.com-d9edf818.png"
+from = "https://bworldonline.com/wp-content/uploads/2024/09/cropped-bworld_icon-1-192x192.png"
 
 [hosts."cac.gov.cn"]
 icon = "cac.gov.cn-ce2d7d32.png"
@@ -64,9 +83,17 @@ from = "https://www.canada.ca/favicon.ico"
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
 
+[hosts."chromestatus.com"]
+icon = "chromestatus.com-1338ffe4.png"
+from = "https://chromestatus.com/static/img/crstatus_192.png"
+
 [hosts."citizenlab.ca"]
 icon = "citizenlab.ca-a8596c5e.png"
 from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-192x192.png"
+
+[hosts."cloudflare.com"]
+icon = "cloudflare.com-71ae303d.png"
+from = "https://www.cloudflare.com/favicon.ico"
 
 [hosts."cnbc.com"]
 icon = "cnbc.com-f77120b6.png"
@@ -103,6 +130,10 @@ same_as = "cryptpad.org"
 icon = "cryptpad.org-0c6cadf4.png"
 from = "https://cryptpad.org/images/main-favicon.png"
 
+[hosts."cs.umd.edu"]
+icon = "cs.umd.edu-d1ebf39c.png"
+from = "https://www.cs.umd.edu/sites/all/themes/cs_gogo/favicon.ico"
+
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
@@ -118,6 +149,10 @@ from = "https://demo.uwazi.io/public/favicon.ico"
 [hosts."developer.android.com"]
 icon = "developer.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
+
+[hosts."developer.apple.com"]
+icon = "developer.apple.com-30fa6887.png"
+from = "https://developer.apple.com/favicon.ico"
 
 [hosts."developers.google.com"]
 icon = "developers.google.com-ce307183.png"
@@ -175,6 +210,10 @@ from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR
 icon = "fdotwww.blob.core.windows.net-7d319a66.png"
 from = "https://www.fdot.gov/favicon.ico"
 
+[hosts."firefox.com"]
+icon = "firefox.com-cf4f5299.png"
+from = "https://www.firefox.com/media/img/favicons/firefox/browser/favicon-196x196.59e3822720be.png"
+
 [hosts."flocksafety.com"]
 icon = "flocksafety.com-b8c9ee48.png"
 from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
@@ -190,6 +229,9 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 [hosts."frontex.europa.eu"]
 icon = "frontex.europa.eu-bda9fadf.png"
 from = "https://www.frontex.europa.eu/favicon.ico"
+
+[hosts."geneva.cs.umd.edu"]
+same_as = "cs.umd.edu"
 
 [hosts."github.com"]
 icon = "github.com-90043607.png"
@@ -236,6 +278,10 @@ from = "https://haveibeenpwned.com/apple-touch-icon.png"
 [hosts."hawksley.dev"]
 icon = "hawksley.dev-4e52ebdb.png"
 from = "https://hawksley.dev/favicons/v2/apple-touch-icon.png"
+
+[hosts."help.line.me"]
+icon = "help.line.me-18d4298b.png"
+from = "https://line.me/static/img/apple-touch-icon-180x180.png"
 
 [hosts."help.openai.com"]
 icon = "help.openai.com-cb2858c5.png"
@@ -299,9 +345,17 @@ from = "https://laws.e-gov.go.jp/favicon.ico"
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
 
+[hosts."letsencrypt.org"]
+icon = "letsencrypt.org-005fa57a.png"
+from = "https://letsencrypt.org/favicon.ico"
+
 [hosts."ly.gov.tw"]
 icon = "ly.gov.tw-c284cb73.png"
 from = "https://www.ly.gov.tw/images/favicon.ico"
+
+[hosts."m.thepaper.cn"]
+icon = "m.thepaper.cn-b6907a6e.png"
+from = "https://m.thepaper.cn/favicon.ico"
 
 [hosts."macanorak.com"]
 icon = "macanorak.com-3f63f55a.png"
@@ -337,6 +391,10 @@ none = "網站沒有 favicon，https 憑證為自簽"
 [hosts."mullvad.net"]
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
+
+[hosts."news.risky.biz"]
+icon = "news.risky.biz-8a82d4e1.png"
+from = "https://storage.ghost.io/c/16/e9/16e9a748-ca66-4b3c-8590-85537131f696/content/images/size/w256h256/2024/01/rbicon.png"
 
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
@@ -403,6 +461,10 @@ from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
+
+[hosts."rfc-editor.org"]
+icon = "rfc-editor.org-39c23b26.png"
+from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
@@ -502,52 +564,3 @@ from = "https://www.xinhuanet.com/favicon.ico"
 [hosts."zuckoff.app"]
 icon = "zuckoff.app-284bd984.png"
 from = "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/88/89/1f/88891f97-8ae4-7ed0-9754-05b15f2bf184/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
-
-# 以下是導讀歷史預覽用的暫時登記，合併前改用 tools/fetch_favicons.py 抓取上傳
-[hosts."blog.cloudflare.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."developers.cloudflare.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."rfc-editor.org"]
-none = "預覽用，還沒抓取"
-
-[hosts."news.risky.biz"]
-none = "預覽用，還沒抓取"
-
-[hosts."letsencrypt.org"]
-none = "預覽用，還沒抓取"
-
-[hosts."chromestatus.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."firefox.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."geneva.cs.umd.edu"]
-none = "預覽用，還沒抓取"
-
-[hosts."blog.mozilla.org"]
-none = "預覽用，還沒抓取"
-
-[hosts."cloudflare.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."developer.apple.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."m.thepaper.cn"]
-none = "預覽用，還沒抓取"
-
-[hosts."help.line.me"]
-none = "預覽用，還沒抓取"
-
-[hosts."arstechnica.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."about.fb.com"]
-none = "預覽用，還沒抓取"
-
-[hosts."bworldonline.com"]
-none = "預覽用，還沒抓取"

@@ -218,11 +218,16 @@ def dump_registry(hosts: dict[str, dict]) -> str:
 
 
 def source_hosts(paths: list[Path]) -> dict[str, str]:
-    """文章 sources 的主機，值是第一次出現時的原始主機（可能帶 www.），抓首頁用。"""
+    """文章 sources 的主機，值是第一次出現時的原始主機（可能帶 www.），抓首頁用。
+    導讀歷史的來源寫在每一年的 snapshots 底下，一起收進來。"""
     hosts: dict[str, str] = {}
     for path in paths:
         meta, _ = build.split_front_matter(path.read_text(encoding="utf-8"), path.name)
-        for item in meta.get("sources") or []:
+        items = list(meta.get("sources") or [])
+        for snapshot in meta.get("snapshots") or []:
+            if isinstance(snapshot, dict):
+                items += snapshot.get("sources") or []
+        for item in items:
             url = str(item.get("url", "")) if isinstance(item, dict) else ""
             origin = urllib.parse.urlsplit(url).hostname
             if origin:
@@ -231,7 +236,11 @@ def source_hosts(paths: list[Path]) -> dict[str, str]:
 
 
 def all_posts() -> list[Path]:
-    return sorted(p for lang in build.LANGS for p in build.lang_dir(ROOT / "posts", lang).glob("*.md"))
+    """三個語系的全部文章，加上導讀歷史的日期檔（前言 index.md 沒有來源，不算）。"""
+    posts = [p for lang in build.LANGS for p in build.lang_dir(ROOT / "posts", lang).glob("*.md")]
+    history = [p for lang in build.LANGS for p in build.lang_dir(build.HISTORY_DIR, lang).glob("*.md")
+               if p.name != build.HISTORY_INDEX]
+    return sorted(posts + history)
 
 
 def write_preview(fetched: list[Fetched], failed: dict[str, list[str]]) -> Path:
@@ -266,7 +275,7 @@ def pairs(values: list[str], flag: str) -> dict[str, str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("posts", nargs="*", type=Path, help="要處理的文章，不給就是三個語系的全部文章")
+    parser.add_argument("posts", nargs="*", type=Path, help="要處理的文章，不給就是三個語系的全部文章與導讀歷史")
     parser.add_argument("--dry-run", action="store_true", help="只抓取與轉檔、產生預覽，不上傳也不改登記表")
     parser.add_argument("--from", dest="overrides", action="append", default=[], metavar="主機=網址或檔案",
                         help="指定圖示的來源，抓不到或抓到的圖不適合時用")
