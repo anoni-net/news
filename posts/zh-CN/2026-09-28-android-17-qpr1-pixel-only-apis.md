@@ -62,4 +62,6 @@ Android 的开放建立在 AOSP 上，没有 GMS 授权的厂商与 GrapheneOS �
 
 GrapheneOS 以 OSI 认可的开源授权发布，只支持 Pixel，9 月仍陆续推出新版本。GrapheneOS 写到，可以用逆向工程的方式提前补上 Pixel 公告里的补丁，也预期支持即将推出的 Motorola 新机会比支持 Pixel 容易，因为会取得官方提供的固件与驱动程序。
 
-用其他品牌手机的人，QPR1 新增的 API 与部分补丁要等到 12 月的 QPR2，实际收到的时间还要看手机厂商何时推送。想刷 GrapheneOS 保护隐私的人，在 Motorola 新机推出之前仍然只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。安装前要先解锁手机的 bootloader，可能由运营商锁定销售的机型要先联网，让原厂系统确认手机没有被锁定。
+想刷 GrapheneOS 保护隐私的人，在 Motorola 新机推出之前只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。可能由运营商锁定销售的机型，要先联网让原厂系统确认手机没有被锁定，才能解锁 bootloader。解锁 bootloader 与安装系统都会清除手机上的所有数据，而且换成 GrapheneOS 之后，要等到 QPR2 才有原厂系统已经提供的 QPR1 新 API。
+
+用其他品牌手机的人不必做任何设置，QPR1 新增的 API 与部分补丁要等手机厂商推送 QPR2 之后才会收到。12 月可以留意 Google 发布 QPR2 时有没有把 QPR1 的 API 与补丁一起放进 AOSP，以及 GrapheneOS 与其他厂商何时取得。

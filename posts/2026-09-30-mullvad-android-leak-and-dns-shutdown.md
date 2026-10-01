@@ -75,8 +75,6 @@ Mullvad 的建議是只安裝信任的 App，可以的話改用 GrapheneOS 這�
 
 真實 IP 一旦外洩就有風險的人，可以參考 CyberInsider 報導的做法，讓手機連上強制走 VPN 的路由器。前提是關閉行動網路等其他連線路徑。手機離開這台路由器就失去保護。
 
-手動設定過 Mullvad 加密 DNS 的人可以改用 Quad9，它的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。
+手動設定過 Mullvad 加密 DNS 的人要在 11 月 2 日前更換，可以改用 Quad9。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁（沒有中文版）下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 `dns.quad9.net`，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 `https://dns.quad9.net/dns-query`。同時使用其他 VPN 的人，描述檔與私人 DNS 通常不會生效，說明頁寫明要改在 VPN App 的自訂 DNS 設定 Quad9。
 
-更換要在 11 月 2 日前完成。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 `dns.quad9.net`，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 `https://dns.quad9.net/dns-query`。
-
-Quad9 的說明頁寫明，用其他 VPN 時描述檔與私人 DNS 通常不會生效，要改在 VPN App 的自訂 DNS 設定 Quad9。說明頁沒有中文。
+Quad9 的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。
