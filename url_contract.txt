@@ -39,6 +39,9 @@
 /2026/10/ai-phishing-defenses/
 	#perspective
 	#sources
+/2026/10/apc-frontline-communities/
+	#perspective
+	#sources
 /2026/10/apple-threat-notifications/
 	#perspective
 	#sources
@@ -125,6 +128,9 @@
 	#sources
 /en/2026/10/
 /en/2026/10/ai-phishing-defenses/
+	#perspective
+	#sources
+/en/2026/10/apc-frontline-communities/
 	#perspective
 	#sources
 /en/2026/10/apple-threat-notifications/
@@ -220,6 +226,9 @@
 	#sources
 /zh-cn/2026/10/
 /zh-cn/2026/10/ai-phishing-defenses/
+	#perspective
+	#sources
+/zh-cn/2026/10/apc-frontline-communities/
 	#perspective
 	#sources
 /zh-cn/2026/10/apple-threat-notifications/
