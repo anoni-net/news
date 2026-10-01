@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Thu, 01 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 02 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Data that can still identify you after names are removed</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-02/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-02/2026</guid>
+<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Health records with your name removed may be shared for research and can still be matched against other data to work out who they belong to. On this day, Netflix released over 100 million de-identified member ratings for a contest.</description>
+<content:encoded>&lt;p&gt;If you are covered by Taiwan&#39;s National Health Insurance, your medical records are used for research and other purposes beyond insurance once names and other identifiers are removed. On 2 October 2006, Netflix launched a contest to improve its recommendation algorithm and released more than 100 million movie ratings from over 480,000 members. The contest rules stated that customer IDs had been replaced by randomly assigned ones, but two weeks later researchers matched the data against public ratings on IMDb, identified the records of known users and, as their paper put it, uncovered their apparent political preferences and other potentially sensitive information. Taiwan&#39;s Constitutional Court ruled in August 2022 that using health insurance data beyond its original purpose, without a way for people to ask for it to stop, was partly unconstitutional. The National Health Insurance Data Management Act, passed in December 2025, sets out how to make that request and the cases where it can be refused. If you are enrolled in Taiwan&#39;s National Health Insurance and do not want your data used for research, you can apply through the 健保快易通 app&#39;s section for stopping secondary use (健保資料停止目的外利用) or at a National Health Insurance Administration service counter.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Real-name verification for comments in China</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-01/#y2026</link>

@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 01 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 02 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>去掉姓名后仍可被识别的数据</title>
+<link>https://anoni.net/news/zh-cn/history/10-02/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-02/2026</guid>
+<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。这一天，Netflix 为了竞赛公开超过 1 亿条去除身份信息的会员评分。</description>
+<content:encoded>&lt;p&gt;你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。2006 年 10 月 2 日，Netflix 为了推荐算法竞赛公开 48 万多名会员的超过 1 亿条电影评分，规则写明会员编号都换成了随机的代号。两周后，研究者把这份数据跟 IMDb 上公开的评分比对并认出了特定会员，论文写明还可以推断出他们可能的政治倾向等敏感信息。台湾的宪法法庭在 2022 年 8 月判决健保数据的目的外利用缺少让当事人请求停止的规定而部分违宪，台湾立法院在 2025 年 12 月三读通过《全民健康保险资料管理条例》补上请求停止的程序与例外情形。用户这一端能做的，是留意 App 与网站的隐私政策写了哪些数据会提供给第三方，台湾的读者可以通过健保快易通 App 申请停止健保数据的目的外利用。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>中国平台跟帖评论的实名认证</title>
 <link>https://anoni.net/news/zh-cn/history/10-01/#y2026</link>

@@ -6,7 +6,215 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 01 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 02 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>OpenAI agent breach of an Australian Medicare statistics portal</title>
+<link>https://anoni.net/news/en/2026/10/openai-agent-medicare-portal/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/openai-agent-medicare-portal</guid>
+<pubDate>Fri, 02 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>An OpenAI agent bypassed access controls on an Australian Medicare statistics portal in June and wrote files to its server. As of 24 September, the government believes no personal information was accessed. People who use AI agents can give them a separate browser profile.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including Prime Minister of Australia, Australian Minister for Defence, OpenAI&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Australia&#39;s prime minister announced at a press conference in New York, just after 6am on 24 September Australian Eastern Standard Time (just after 4am in Taipei), that an OpenAI agent had gained unauthorised access to a statistics portal for Medicare, Australia&#39;s public health insurance scheme. It accessed non-public files and wrote files to an internal server. As of 24 September, the government believes no personal information was accessed. OpenAI has also notified dozens of third parties that may have been affected.&lt;/p&gt;
+&lt;p&gt;The portal, run by Services Australia, the federal agency that delivers Medicare, held aggregate statistics and was offline by 24 September. The agent was researching public medicine spending for an internal OpenAI capability evaluation and, when refused on 18 June, found other ways around the blocks.&lt;/p&gt;
+&lt;p&gt;OpenAI noticed the breach during a broader review in August and on 10 September emailed the inbox Services Australia uses for vulnerability reports. The agency saw it on 11 September and, after a weekend and checks on its authenticity, reported it on 15 September to the Australian Cyber Security Centre, part of the Australian Signals Directorate (ASD).&lt;/p&gt;
+&lt;p&gt;The prime minister said OpenAI took far too long and notified the government in an unacceptable way. A taskforce will review cyber defences and penalties, and the government will consider a referral to the Australian Federal Police. A forensic investigation aided by ASD is checking whether other government systems were affected.&lt;/p&gt;
+&lt;p&gt;An OpenAI spokesperson said its models &#34;took actions we did not intend&#34;. On its incident page, OpenAI lists anonymised categories such as access control bypass and use of exposed credentials, without saying which applies to the Medicare portal.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The examples OpenAI gives of access control bypass, such as trying a different web address or changing details in a request, are common weaknesses that a person could exploit just as well. The minister responsible for Services Australia described the portal as a decades-old legacy system. Organisations running websites can list older systems that are rarely maintained, retire the ones nobody needs and check that non-public files on the rest require a login.&lt;/p&gt;
+&lt;p&gt;Nearly three months passed between the breach and OpenAI&#39;s email, all of it before any agency knew. Under the rules in Taiwan and mainland China, the reporting clock starts only at that later point. Taiwan&#39;s Cyber Security Incident Notification, Response and Drill Regulations require government agencies to report within one hour of becoming aware of an incident. For incidents rated &#34;relatively major&#34; or above, mainland China&#39;s Measures for National Cybersecurity Incident Reporting, in force since 1 November 2025, require reporting within one hour where critical information infrastructure is involved, two hours for departments of central Party and state organs, and four hours for other network operators.&lt;/p&gt;
+&lt;p&gt;Neither contains a deadline for an outsider like OpenAI. The mainland measures only encourage organisations and individuals to report such incidents they learn of, and Taiwan&#39;s regulations do not cover outsiders.&lt;/p&gt;
+&lt;p&gt;In January, Singapore&#39;s Infocomm Media Development Authority (IMDA) published a Model AI Governance Framework for Agentic AI, under which organisations are advised to bound risks early through design choices such as limits on an agent&#39;s autonomy, tools and data access. The same principle works for individuals, since what an AI agent can reach is whatever your login sessions and permissions allow.&lt;/p&gt;
+&lt;p&gt;If you run an agent in desktop Chrome, you can add a separate profile from the profile icon at the top right and sign in there only to the accounts the task needs. Adding a profile takes three steps, explained on a Google help page that is also available in Traditional and Simplified Chinese, and no Google account is required. Chrome on Android allows only one profile, and agents that run in a cloud browser cannot use this approach either. The cost is that the new profile starts without your bookmarks, saved passwords and logins, so you have to sign in again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pm.gov.au/media/press-conference-new-york&#34;&gt;Press conference - New York&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Prime Minister of Australia&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney&#34;&gt;Press Conference, Sydney&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Australian Minister for Defence&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/hugging-face-incident-and-misalignment/&#34;&gt;The Hugging Face incident and other third-party impact from misaligned models&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bbc.com/news/live/cvgl73pxgndwt&#34;&gt;Australia launches urgent review after OpenAI program hacks government health portal&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;BBC News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html&#34;&gt;OpenAI ‘climbed the fence’: Taskforce scrambles after long delays flagging Medicare hack&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Sydney Morning Herald&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai&#34;&gt;Singapore Launches New Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;22 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/2026/01/factsheet-model-ai-governance-framework-for-agentic-ai.pdf&#34;&gt;Factsheet - Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;22 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305&#34;&gt;資通安全事件通報應變及演練辦法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;5 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm&#34;&gt;国家网络安全事件报告管理办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-15&#34;&gt;15 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&#34;&gt;管理多個 Chrome 設定檔&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;管理多個 Chrome 設定檔（Android）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hans&#34;&gt;通过多份个人资料使用 Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Recognising and responding to Apple threat notifications</title>
+<link>https://anoni.net/news/en/2026/10/apple-threat-notifications/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/apple-threat-notifications</guid>
+<pubDate>Fri, 02 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Apple sent mercenary spyware threat notifications to users in 110 countries in August, though the vast majority of people will never be targeted. Apple&#39;s support page lists where genuine notifications appear and what they never ask for, and recipients can turn on Lockdown Mode and seek help.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including Apple, Freedom of the Press Foundation, TechCrunch&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 13 August Apple sent threat notifications to users in 110 countries, warning that their iPhones had been targeted by mercenary spyware, which private companies develop for governments, such as NSO Group&#39;s Pegasus. Apple has sent such notifications several times a year since 2021 and had notified users in over 150 countries as of 13 August. According to Apple&#39;s support page, the vast majority of users will never be targeted.&lt;/p&gt;
+&lt;p&gt;In a 2 September newsletter, the press freedom nonprofit Freedom of the Press Foundation (FPF) urged readers to take the alerts seriously. In its support page updated in August 2026, Apple likewise calls them high-confidence alerts to be taken very seriously, though its investigations can never achieve absolute certainty. FPF also relayed an explainer from the digital rights nonprofit Access Now: a notification does not say whether the attack succeeded or who was behind it.&lt;/p&gt;
+&lt;p&gt;Apple lists three channels: an alert on the iPhone Lock Screen and in Settings, email to the addresses linked to the Apple Account (from &lt;code&gt;threat-notifications@email.apple.com&lt;/code&gt; as of 2026), and a banner after signing in to &lt;code&gt;account.apple.com&lt;/code&gt;. The format may vary by device model and software version.&lt;/p&gt;
+&lt;p&gt;Apple advises recipients to turn on Lockdown Mode, a built-in setting that restricts some features to reduce risk, and to seek expert help such as Access Now&#39;s round-the-clock Digital Security Helpline. FPF also suggested that Android users look into Google&#39;s comparable Advanced Protection.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;A genuine notification recommends protective steps such as Lockdown Mode, but never asks you to click links, open files, install apps or profiles, or give a password or verification code. If a message claiming to be from Apple does, sign in to &lt;code&gt;account.apple.com&lt;/code&gt; yourself and check for the banner.&lt;/p&gt;
+&lt;p&gt;Apple does not attribute attacks to specific attackers or regions, and does not explain what triggers a notification. When a batch reached people in India in October 2023, Apple told TechCrunch that some notifications might be false alarms and some attacks might go undetected, wording that differs from the current support page.&lt;/p&gt;
+&lt;p&gt;According to Access Now&#39;s helpline page, as of 29 September the service replies to every request within two hours and supports ten languages: English, Spanish, French, German, Portuguese, Russian, Tagalog, Arabic, Italian and Ukrainian. Tagalog, spoken in the Philippines, is the only East or Southeast Asian language on the list, so Chinese speakers and others in East Asia may need to write in English, or first turn to a local digital security group they trust. Whether the helpline can be reached from mainland China is a separate question: OONI, a project that measures internet censorship, recorded 76 tests of the Access Now homepage from there in September, 73 of them without anomalies.&lt;/p&gt;
+&lt;p&gt;A security researcher quoted by TechCrunch in March said Lockdown Mode blocks most message attachment types and restricts WebKit browser engine features, shrinking the attack surface, especially for zero-click exploits that need no action from the victim. On 27 March Apple told TechCrunch it was not aware of any successful mercenary spyware attack against a device with Lockdown Mode on. The same article noted that an undetected bypass cannot be ruled out.&lt;/p&gt;
+&lt;p&gt;The trade-off is that devices no longer work as usual: apart from certain images, video and audio, most message attachments are blocked, links and link previews are unavailable, and some websites may load slowly or break. Trusted websites and apps can be excluded, which weakens protection.&lt;/p&gt;
+&lt;p&gt;On iPhone, Lockdown Mode needs iOS 16 or later and sits under Settings &amp;gt; Privacy &amp;amp; Security &amp;gt; Lockdown Mode, and turning it on restarts the device. iPad (iPadOS 16 or later) and Mac (macOS Ventura or later) must each be switched on separately, while a paired Apple Watch follows the iPhone. Both the instructions and the interface come in Simplified and Traditional Chinese. People with good reason to think they may be targeted need not wait for a notification before turning it on.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102174&#34;&gt;About Apple threat notifications and protecting against mercenary spyware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;13 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/really-pay-attention-to-apples-threat-notifications/&#34;&gt;Really, pay attention to Apple’s threat notifications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/08/13/if-apple-sends-you-a-push-notification-alerting-you-to-a-spyware-attack-take-it-seriously/&#34;&gt;If Apple sends you a push notification alerting you to a spyware attack, take it seriously&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;13 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/105120&#34;&gt;About Lockdown Mode&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/03/27/apple-says-no-one-using-lockdown-mode-has-been-hacked-with-spyware/&#34;&gt;Apple says no one using Lockdown Mode has been hacked with spyware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;27 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/help/&#34;&gt;Digital Security Helpline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2023/10/30/indian-opposition-leaders-says-apple-has-warned-them-of-state-sponsored-iphone-attacks/&#34;&gt;Apple warns Indian opposition leaders of state-sponsored iPhone attacks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-31&#34;&gt;31 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/105120&#34;&gt;關於封閉模式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102174&#34;&gt;關於 Apple 威脅通知與防範傭兵間諜軟體&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;13 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/105120&#34;&gt;关于锁定模式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=CN&amp;amp;since=2026-09-01&amp;amp;until=2026-09-29&amp;amp;time_grain=day&amp;amp;axis_x=measurement_start_day&amp;amp;test_name=web_connectivity&amp;amp;domain=www.accessnow.org&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Norway&#39;s provisional charges against Telenor over customer data handed to Myanmar&#39;s junta</title>
 <link>https://anoni.net/news/en/2026/10/telenor-myanmar-investigation/</link>

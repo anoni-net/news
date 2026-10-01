@@ -6,7 +6,227 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 01 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 02 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>澳大利亚 Medicare 统计网站的 AI 智能体入侵事件</title>
+<link>https://anoni.net/news/zh-cn/2026/10/openai-agent-medicare-portal/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/openai-agent-medicare-portal</guid>
+<pubDate>Fri, 02 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>OpenAI 的 AI 智能体 6 月在内部评估中绕过访问限制，进入澳大利亚 Medicare 统计网站并写入文件。截至 9 月 24 日，澳大利亚政府研判没有个人信息遭到访问，网站上是汇总的统计数据。使用 AI 智能体的人可以为它开一份独立的浏览器个人资料。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Prime Minister of Australia、Australian Minister for Defence、OpenAI 等 11 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;澳大利亚总理在纽约的记者会上（澳大利亚东部时间 9 月 24 日清晨 6 点过后，北京时间凌晨 4 点过后）公布，OpenAI 的 AI 智能体（能自行操作网页的程序）未经授权，进入澳大利亚 Medicare（全民医保）的统计报表网站。智能体访问了非公开的文件，也在内部服务器写入文件。截至 9 月 24 日，澳大利亚政府研判没有个人信息遭到访问。OpenAI 也通知了数十个可能受影响的第三方。&lt;/p&gt;
+&lt;p&gt;网站由 Services Australia（办理医保等服务的联邦机构）管理，存放汇总统计数据，到 9 月 24 日已经停用。智能体当时在 OpenAI 的内部能力评估中研究政府的药品支出，6 月 18 日被网站拒绝之后，改用其他方式绕过限制。&lt;/p&gt;
+&lt;p&gt;OpenAI 8 月在全面审查中察觉这起事件，9 月 10 日发信到 Services Australia 受理漏洞报告的邮箱。该机构 11 日看到邮件，经过周末与核实真伪，15 日通报澳大利亚信号局（ASD，负责网络防御的情报机构）下属的澳大利亚网络安全中心。&lt;/p&gt;
+&lt;p&gt;总理表示，OpenAI 通知得太慢，方式也无法接受。政府成立专责小组审视网络防护与罚则，也将评估是否移交澳大利亚联邦警察。取证调查由 ASD 协助，范围包括其他政府系统是否受影响。&lt;/p&gt;
+&lt;p&gt;OpenAI 发言人表示，模型「采取了并非我们本意的行动」。OpenAI 在事件说明页列出匿名的行为分类，例如绕过访问控制、使用公开暴露的登录凭据，没有写明 Medicare 网站属于哪一类。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;OpenAI 举的绕过例子有换用另一个网址、修改请求内容，利用的都是常见的访问控制弱点，人工操作也可以做到。主管 Services Australia 的部长说明，网站是用了数十年的旧系统。维护网站的机构可以把少有人管理的旧系统下线，还要用的确认非公开文件需要登录。&lt;/p&gt;
+&lt;p&gt;中国大陆的《国家网络安全事件报告管理办法》规定较大以上事件涉及关键信息基础设施的最迟 1 小时报告，中央和国家机关各部门 2 小时，其他运营者 4 小时。台湾的《资通安全事件通报应变及演练办法》规定，公务机关知悉后须在一小时内通报。澳大利亚这次从事件发生到 OpenAI 发出通知将近三个月，都在机关知悉之前。外部发现者何时通知，大陆办法第六条只作鼓励，台湾办法没有规定。&lt;/p&gt;
+&lt;p&gt;新加坡资讯通信媒体发展局（IMDA）1 月发布智能体 AI 的治理框架，建议机构在设计阶段就限制智能体的自主程度、可用工具与数据访问。个人也可以照这个原则做。&lt;/p&gt;
+&lt;p&gt;在电脑版 Chrome 运行智能体的人，可以从右上角的个人资料图标选择「添加 Chrome 个人资料」，在里面只登录必要的账号。&lt;code&gt;google.cn&lt;/code&gt; 有电脑版 Chrome 的简体中文下载页，添加个人资料只有三步，不需要 Google 账号。Android 版 Chrome 只能有一份个人资料，云端浏览器里运行的智能体也用不上这个做法。代价是新的个人资料没有原来的书签、密码与登录状态，账号要重新登录。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pm.gov.au/media/press-conference-new-york&#34;&gt;Press conference - New York&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Prime Minister of Australia&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney&#34;&gt;Press Conference, Sydney&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Australian Minister for Defence&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/hugging-face-incident-and-misalignment/&#34;&gt;The Hugging Face incident and other third-party impact from misaligned models&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bbc.com/news/live/cvgl73pxgndwt&#34;&gt;Australia launches urgent review after OpenAI program hacks government health portal&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BBC News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html&#34;&gt;OpenAI ‘climbed the fence’: Taskforce scrambles after long delays flagging Medicare hack&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Sydney Morning Herald&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai&#34;&gt;Singapore Launches New Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;2026 年 1 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/2026/01/factsheet-model-ai-governance-framework-for-agentic-ai.pdf&#34;&gt;Factsheet - Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;2026 年 1 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305&#34;&gt;資通安全事件通報應變及演練辦法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;2026 年 1 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm&#34;&gt;国家网络安全事件报告管理办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-15&#34;&gt;2025 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&#34;&gt;管理多個 Chrome 設定檔&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;管理多個 Chrome 設定檔（Android）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hans&#34;&gt;通过多份个人资料使用 Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.google.cn/chrome/&#34;&gt;Google Chrome 网络浏览器&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Apple 威胁通知的辨识与应对</title>
+<link>https://anoni.net/news/zh-cn/2026/10/apple-threat-notifications/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/apple-threat-notifications</guid>
+<pubDate>Fri, 02 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Apple 8 月向 110 个国家的用户发出雇佣间谍软件的威胁通知，绝大多数人不会成为这类攻击的目标。说明页写明真正的通知出现在哪里、不会要求密码与验证码，收到之后可以开启锁定模式并寻求协助。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，来自 Apple、Freedom of the Press Foundation、TechCrunch 等 5 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Apple 在 8 月 13 日向 110 个国家的用户发出威胁通知，称他们的 iPhone 成为雇佣间谍软件（私营公司为政府开发的间谍软件，例如 NSO Group 的 Pegasus）的攻击目标。Apple 从 2021 年起每年发出多次通知，至 8 月 13 日覆盖 150 多个国家或地区。Apple 的说明页也写道，绝大多数人不会成为这类攻击的目标。&lt;/p&gt;
+&lt;p&gt;新闻自由组织 Freedom of the Press Foundation（FPF）9 月 2 日在简报中提醒读者重视这类通知。Apple 2026 年 8 月更新的说明页也写明通知是高可信度的警报，应高度重视，但调查无法绝对可靠。FPF 转述非营利组织 Access Now 的解说，通知不会交代攻击是否成功与攻击者是谁。Apple 也不指明攻击者或地区，发出通知的原因同样不公开。&lt;/p&gt;
+&lt;p&gt;Apple 的说明页写明，通知会出现在 iPhone 的锁定屏幕与「设置」里，同时发到 Apple 账户关联的邮箱。2026 年起的发件人是 &lt;code&gt;threat-notifications@email.apple.com&lt;/code&gt;。登录 &lt;code&gt;account.apple.com&lt;/code&gt; 后，页面顶部也会显示横幅。通知形式因机型与系统版本而异。&lt;/p&gt;
+&lt;p&gt;Apple 建议收到通知的人开启锁定模式（限制部分功能以降低风险的模式），并寻求专家协助，例如 Access Now 全天候数字安全帮助热线。FPF 也建议 Android 用户了解类似的「高级保护」功能。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;真正的通知会建议开启锁定模式等措施，但不会要你点链接、打开文件、安装 App 或描述文件，也不索取密码与验证码。收到自称来自 Apple 的可疑消息时，不要点链接，自行登录 &lt;code&gt;account.apple.com&lt;/code&gt; 查看有没有横幅。&lt;/p&gt;
+&lt;p&gt;截至 9 月 29 日，Access Now 的说明页写明热线在两小时内回复。热线的十种语言包括英文、西班牙文、他加禄文与阿拉伯文，但没有中文。网络干扰观测项目 OONI 9 月在中国境内测量了 Access Now 首页 76 次，73 次无异常。中文用户可以用英文联系，海外读者也可求助当地数字安全团体。&lt;/p&gt;
+&lt;p&gt;2023 年 10 月有一批通知发到印度。Apple 当时给 TechCrunch 的声明写道可能有误报，也可能漏掉部分攻击。现行说明页已不提误报。&lt;/p&gt;
+&lt;p&gt;TechCrunch 采访的安全研究者提到，锁定模式阻止多数信息附件类型并限制网页引擎 WebKit，尤其缩小了零点击攻击（无需受害者操作）可利用的范围。Apple 3 月 27 日给 TechCrunch 的回复写道，没有发现开启锁定模式的设备被雇佣间谍软件攻破。同一篇报道也写道，不排除有未被发现的绕过手法。&lt;/p&gt;
+&lt;p&gt;代价是除某些图像、视频和音频外，大多数信息附件都会被阻止，链接和链接预览也无法使用。部分网站可能无法正常运行。信任的网站与 App 可以排除在外，但会削弱保护。&lt;/p&gt;
+&lt;p&gt;锁定模式需要 iOS 16 以上，位置在「设置」的「隐私与安全性」，打开时会重启。iPad 与 Mac 要分别打开，配对的 Apple Watch 会跟着 iPhone 打开。简体中文界面称为「锁定模式」。有充分理由担心自己成为目标的人，不必等收到通知才打开。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102174&#34;&gt;About Apple threat notifications and protecting against mercenary spyware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;2026 年 8 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/really-pay-attention-to-apples-threat-notifications/&#34;&gt;Really, pay attention to Apple’s threat notifications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/08/13/if-apple-sends-you-a-push-notification-alerting-you-to-a-spyware-attack-take-it-seriously/&#34;&gt;If Apple sends you a push notification alerting you to a spyware attack, take it seriously&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;2026 年 8 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/105120&#34;&gt;About Lockdown Mode&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/03/27/apple-says-no-one-using-lockdown-mode-has-been-hacked-with-spyware/&#34;&gt;Apple says no one using Lockdown Mode has been hacked with spyware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;2026 年 3 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/help/&#34;&gt;Digital Security Helpline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2023/10/30/indian-opposition-leaders-says-apple-has-warned-them-of-state-sponsored-iphone-attacks/&#34;&gt;Apple warns Indian opposition leaders of state-sponsored iPhone attacks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-31&#34;&gt;2023 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/105120&#34;&gt;關於封閉模式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102174&#34;&gt;關於 Apple 威脅通知與防範傭兵間諜軟體&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;2026 年 8 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/105120&#34;&gt;关于锁定模式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/102174&#34;&gt;关于 Apple 威胁通知和防范雇佣间谍软件的攻击&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;2026 年 8 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=CN&amp;amp;since=2026-09-01&amp;amp;until=2026-09-29&amp;amp;time_grain=day&amp;amp;axis_x=measurement_start_day&amp;amp;test_name=web_connectivity&amp;amp;domain=www.accessnow.org&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>挪威对 Telenor 交出缅甸用户数据的刑事指控</title>
 <link>https://anoni.net/news/zh-cn/2026/10/telenor-myanmar-investigation/</link>
