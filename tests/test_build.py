@@ -6,8 +6,10 @@ scrollWidth 跟 window.innerWidth 比，手機模式下兩者一起被撐寬，�
 
 from __future__ import annotations
 
+import json
 import re
 import shutil
+import subprocess
 import sys
 import textwrap
 from datetime import date, datetime
@@ -296,6 +298,127 @@ def test_analytics_exception_is_narrow(tmp_path, old, new):
     tamper(target, "index.html", old, new)
     problems = build.check_output(target, pages["clearnet"])
     assert any("可執行的 <script>" in p for p in problems), problems
+
+
+def test_click_events_only_on_clearnet(fixture_site):
+    targets, _, _ = fixture_site
+    clearnet = (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+    assert 'data-anoni-event="home-story-click" data-anoni-event-section="featured"' in clearnet
+    assert 'data-anoni-event="home-story-click" data-anoni-event-section="timeline"' in clearnet
+    assert 'data-anoni-event-channel="rss" data-anoni-event-where="masthead"' in clearnet
+    post = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert 'data-anoni-event="source-click"' in post
+    assert 'data-anoni-event-where="article"' in post
+    # 首頁點擊來源只在首頁第一頁，封存頁的文章連結不送
+    archive = (targets["clearnet"].out / "2026/09/index.html").read_text(encoding="utf-8")
+    assert 'data-anoni-event="home-story-click"' not in archive
+    assert "data-anoni-event" not in (targets["clearnet"].out / "feed.xml").read_text(encoding="utf-8")
+    for page in targets["onion"].out.rglob("*.html"):
+        assert "data-anoni-event" not in page.read_text(encoding="utf-8"), page
+
+
+@pytest.mark.parametrize("target_name, old, new, expected", [
+    ("clearnet", 'data-anoni-event="source-click"', 'data-anoni-event="outbound-click"', "outbound-click 不在"),
+    ("clearnet", 'data-anoni-event-where="article"', 'data-anoni-event-where="https://example.org/"', "跟 ANALYTICS_EVENTS 的清單不符"),
+    # 欄位要跟同一個元素的事件對得上，借用別的事件的欄位也不行
+    ("clearnet", 'data-anoni-event="source-click"', 'data-anoni-event="source-click" data-anoni-event-section="featured"',
+     "跟 ANALYTICS_EVENTS 的清單不符"),
+    ("clearnet", 'data-anoni-event="source-click"', "DATA-ANONI-EVENT='outbound-click'", "outbound-click 不在"),
+    # 不加引號、沒有值、引號裡有 > 的寫法，Markdown 的 raw HTML 都會原樣保留
+    ("onion", '<a href="#sources">', '<a href="#sources" data-anoni-event=evil>', "沒有載入流量統計"),
+    ("onion", '<a href="#sources">', '<a href="#sources" data-anoni-event>', "沒有載入流量統計"),
+    ("onion", '<a href="#sources">', '<a href="#sources" title="a > b" data-anoni-event="evil">', "沒有載入流量統計"),
+    ("clearnet", 'data-anoni-event="source-click"', 'data-anoni-event', "點擊事件  不在"),
+    ("onion", '<a href="#sources">', '<a href="#sources" data-anoni-event="source-click">', "沒有載入流量統計"),
+])
+def test_check_rejects_unlisted_click_events(tmp_path, target_name, old, new, expected):
+    targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, [target_name])
+    target = targets[target_name]
+    tamper(target, "2026/09/zkp-age-verification/index.html", old, new)
+    problems = build.check_output(target, pages[target_name])
+    assert any(expected in p for p in problems), problems
+
+
+def test_home_story_click_only_on_first_page(tmp_path, monkeypatch):
+    load_config = build.load_config
+
+    def one_per_page(path):
+        config, targets = load_config(path)
+        return {**config, "per_page": 1}, targets
+    monkeypatch.setattr(build, "load_config", one_per_page)
+    targets, _, _ = build.build(FIXTURES / "posts", tmp_path, ["clearnet"])
+    out = targets["clearnet"].out
+    assert 'data-anoni-event="home-story-click"' in (out / "index.html").read_text(encoding="utf-8")
+    second = (out / "page" / "2" / "index.html").read_text(encoding="utf-8")
+    assert 'data-anoni-event="home-story-click"' not in second
+
+
+def test_inline_code_mentioning_events_is_not_flagged():
+    # 內文用 inline code 寫到屬性時，角括號已經跳脫，不算標籤
+    assert build.event_problems("<code>&lt;a data-anoni-event=\"x\"&gt;</code>", None) == []
+
+
+def test_track_rejects_unlisted_fields():
+    # 模板寫錯欄位時建置失敗，不必等到上線才發現事件被過濾掉
+    with pytest.raises(ValueError, match="不在 ANALYTICS_EVENTS"):
+        build.track({}, "subscribe-click", channel="rss")
+    with pytest.raises(ValueError, match="不在 ANALYTICS_EVENTS"):
+        build.track({}, "home-story-click", section="sidebar")
+
+
+def test_before_send_uses_the_same_event_list(fixture_site):
+    targets, _, _ = fixture_site
+    text = (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+    events = json.loads(re.search(r"var EVENTS = (.*?);\n", text).group(1))
+    assert events == build.ANALYTICS_EVENTS
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="需要 node 執行送出前的過濾")
+def test_before_send_filters_events(fixture_site, tmp_path):
+    targets, _, _ = fixture_site
+    text = (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+    script = re.search(r'<script data-anoni="before-send">(.*?)</script>', text, re.S).group(1)
+    cases = {
+        "pageview": {"url": "https://anoni.net/news/?a=1&utm_source=x#h", "screen": "1234x987", "data": {"x": 1}},
+        "source": {"name": "source-click", "url": "https://anoni.net/news/2026/09/x/"},
+        "source_extra": {"name": "source-click", "data": {"href": "https://example.org/"}},
+        "subscribe": {"name": "subscribe-click", "data": {"channel": "rss", "where": "footer"}},
+        "subscribe_bad": {"name": "subscribe-click", "data": {"channel": "rss", "where": "sidebar"}},
+        "subscribe_missing": {"name": "subscribe-click", "data": {"channel": "rss"}},
+        "subscribe_extra": {"name": "subscribe-click", "data": {"channel": "rss", "where": "footer", "href": "x"}},
+        "unknown": {"name": "outbound-click"},
+        "proto": {"name": "__proto__"},
+    }
+    runner = tmp_path / "run.js"
+    runner.write_text(
+        "var listeners = []; var document = {addEventListener: function () { listeners.push(arguments); }};\n"
+        "var window = {navigator: {}};\n" + script +
+        "\nvar cases = " + json.dumps(cases) + ";\nvar out = {};\n"
+        "for (var k in cases) out[k] = window.anoniBeforeSend('event', cases[k]);\n"
+        "window.navigator.globalPrivacyControl = true;\n"
+        "out.gpc = window.anoniBeforeSend('event', cases.source);\n"
+        "out.listeners = listeners.length;\n"
+        # 呼叫收集到的 click listener：track 收到的值、不擋換頁、umami 沒載入或 target 沒有 closest 時不丟例外
+        "var handler = listeners[0][1], tracked = [], prevented = false;\n"
+        "var link = {attributes: [{name: 'href', value: '/x/'}, {name: 'data-anoni-event', value: 'subscribe-click'},"
+        " {name: 'data-anoni-event-channel', value: 'rss'}, {name: 'data-anoni-event-where', value: 'footer'}],"
+        " getAttribute: function (n) { return n === 'data-anoni-event' ? 'subscribe-click' : null; }};\n"
+        "var event = {target: {closest: function () { return link; }}, preventDefault: function () { prevented = true; }};\n"
+        "handler(event);\n"
+        "window.umami = {track: function (name, data) { tracked.push([name, data]); }};\n"
+        "handler(event);\n"
+        "handler({target: {}, preventDefault: event.preventDefault});\n"
+        "out.tracked = tracked; out.prevented = prevented;\n"
+        "console.log(JSON.stringify(out));\n", encoding="utf-8")
+    result = json.loads(subprocess.run(["node", str(runner)], capture_output=True, text=True, check=True).stdout)
+    assert result["pageview"] == {"url": "https://anoni.net/news/?utm_source=x", "screen": "1200x900"}
+    assert result["source"] == {"name": "source-click", "url": "https://anoni.net/news/2026/09/x/"}
+    assert result["subscribe"]["data"] == {"channel": "rss", "where": "footer"}
+    for key in ("source_extra", "subscribe_bad", "subscribe_missing", "subscribe_extra", "unknown", "proto", "gpc"):
+        assert result[key] is None, key
+    assert result["listeners"] == 1
+    assert result["tracked"] == [["subscribe-click", {"channel": "rss", "where": "footer"}]]
+    assert result["prevented"] is False
 
 
 def test_onion_rejects_analytics_script(tmp_path):
