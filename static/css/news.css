@@ -1042,60 +1042,30 @@ p {
 
 /* ---------------------------------------------------------------- 導讀歷史 */
 
-/* 時間軸上的快照放在當天導讀的後面，只有標題與一句說明。新聞導讀是主線，
-   快照不加底色，字級與用色都比導讀低一階，讀者掃過時間軸時視線先落在導讀上 */
-.past {
-    padding: 0.25rem 0 1.25rem;
-}
-
-.brief + .past {
-    border-top: 1px dashed var(--c-border);
-    padding-top: 0.85rem;
-}
-
+/* 時間軸上的快照放在當天導讀的後面。標題與說明沿用 .brief，靠這一行標籤跟導讀分開 */
 .past__label {
-    margin: 0 0 0.15rem;
-    color: var(--c-muted);
-    font-size: 0.8125rem;
+    margin: 0 0 0.25rem;
+    color: var(--c-link);
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
 .past__label a {
-    color: var(--c-muted);
+    color: var(--c-link);
     text-decoration: none;
 }
 
 .past__label a:hover,
 .past__label a:focus-visible {
-    color: var(--c-link);
     text-decoration: underline;
+}
+
+.past__label time {
+    font-weight: 400;
 }
 
 .past__label .icon {
     vertical-align: -0.125em;
-}
-
-.past__title {
-    margin: 0 0 0.2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.past__title a {
-    color: var(--c-headline);
-    text-decoration: none;
-}
-
-.past__title a:hover,
-.past__title a:focus-visible {
-    text-decoration: underline;
-}
-
-.past__dek {
-    margin: 0;
-    color: var(--c-muted);
-    font-size: 0.875rem;
-    line-height: 1.6;
 }
 
 .history-day__column {

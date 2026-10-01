@@ -3,7 +3,7 @@
     uv run build.py                    # 產生 public/clearnet 與 public/onion
     uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
     uv run build.py --update-contract  # 認可目前的網址，寫回 url_contract.txt
-    uv run build.py --history          # 列出接下來 7 天還沒有快照的導讀歷史日期
+    uv run build.py --history          # 列出導讀歷史要重新查證現況的快照與還沒有快照的日期
 
 規格見 SPEC.md，要改行為先改規格。
 """
@@ -317,8 +317,10 @@ def is_post_name(name: str) -> bool:
     return bool(match and SLUG_RE.match(match.group(2)))
 
 
-def parse_date_field(raw_date, where: str, problems: list[str], now: datetime) -> tuple[datetime | None, datetime | None]:
-    """front matter 的 date：發布時間，或寫成 {created, updated}。導讀與導讀歷史的快照共用。"""
+def parse_date_field(raw_date, where: str, problems: list[str], now: datetime,
+                     max_days: int = MAX_SCHEDULE_DAYS) -> tuple[datetime | None, datetime | None]:
+    """front matter 的 date：發布時間，或寫成 {created, updated}。導讀與導讀歷史的快照共用，
+    max_days 是排程的上限，導讀歷史比導讀寬。"""
     updated = None
     if isinstance(raw_date, dict):
         if set(raw_date) - {"created", "updated"} or "created" not in raw_date:
@@ -332,9 +334,9 @@ def parse_date_field(raw_date, where: str, problems: list[str], now: datetime) -
         created = to_datetime(raw_date, where, problems)
 
     # date 是預定的發布時間，晚於現在就是排程中，這次建置先不產出。更正日期是實際改稿的時間，不能在未來
-    if created and created > now + timedelta(days=MAX_SCHEDULE_DAYS):
-        problems.append(f"{where}：date 是 {created:%Y-%m-%d %H:%M}，排程最多只能排到 {MAX_SCHEDULE_DAYS} 天後"
-                        f"（台北時間 {now + timedelta(days=MAX_SCHEDULE_DAYS):%Y-%m-%d %H:%M} 以前）")
+    if created and created > now + timedelta(days=max_days):
+        problems.append(f"{where}：date 是 {created:%Y-%m-%d %H:%M}，排程最多只能排到 {max_days} 天後"
+                        f"（台北時間 {now + timedelta(days=max_days):%Y-%m-%d %H:%M} 以前）")
     if updated and updated > now:
         problems.append(f"{where}：date.updated 是 {updated:%Y-%m-%d %H:%M}，晚於現在（台北時間 {now:%Y-%m-%d %H:%M}），"
                         "填實際更正的時間")
@@ -912,7 +914,11 @@ def hrefs(text: str) -> list[str]:
 HISTORY_DIR = ROOT / "history"
 HISTORY_FILE_RE = re.compile(r"^(\d{2})-(\d{2})\.md$")
 HISTORY_INDEX = "index.md"
-SNAPSHOT_KEYS = {"date", "title", "description", "event", "sources", "authors", "regions", "draft"}
+SNAPSHOT_KEYS = {"date", "title", "description", "event", "sources", "authors", "regions", "draft", "checked"}
+# 歷史的部分不會過期，排程可以比導讀遠。寫現況的句子在上線前 RECHECK_DAYS 天內要重新查證，
+# 記在 checked，--history 會列出還沒重查的。見 SPEC.md「導讀歷史」的「提早寫稿」
+HISTORY_MAX_SCHEDULE_DAYS = 30
+RECHECK_DAYS = MAX_SCHEDULE_DAYS
 SNAPSHOT_REQUIRED = {"date", "title", "description", "event", "sources", "authors"}
 # 三個版本同一個年份必須相同的欄位，date 另外比 created
 SNAPSHOT_SHARED_KEYS = ("event", "authors", "regions", "draft")
@@ -938,10 +944,18 @@ class Snapshot:
     html: str = ""
     draft: bool = False
     scheduled: bool = False
+    # 寫現況的句子最後一次查證的日期，沒寫就當成跟 date 同一天查證
+    checked: date | None = None
 
     @property
     def lang(self) -> Lang:
         return self.day.lang
+
+    @property
+    def needs_recheck(self) -> bool:
+        """現況的查證早於上線前 RECHECK_DAYS 天，上線前要再查一次。"""
+        checked = self.checked or self.created.date()
+        return checked < self.created.date() - timedelta(days=RECHECK_DAYS)
 
     @property
     def anchor(self) -> str:
@@ -1047,7 +1061,7 @@ def load_history_day(path: Path, authors: dict[str, dict], lang: Lang, now: date
         for key in ("title", "description"):
             if not isinstance(item[key], str) or not item[key].strip():
                 problems.append(f"{at}：{key} 要是非空的文字")
-        created, updated = parse_date_field(item["date"], at, problems, now)
+        created, updated = parse_date_field(item["date"], at, problems, now, HISTORY_MAX_SCHEDULE_DAYS)
         if created:
             if created.year != year:
                 problems.append(f"{at}：date 的年份 {created.year} 跟小標題的 {year} 不同")
@@ -1061,6 +1075,15 @@ def load_history_day(path: Path, authors: dict[str, dict], lang: Lang, now: date
             problems.append(f"{at}：event 的月日跟檔名 {path.stem} 不同")
         elif created and event >= created.date():
             problems.append(f"{at}：event 要早於這則快照的 date")
+        checked = item.get("checked")
+        if checked is not None:
+            if not isinstance(checked, date) or isinstance(checked, datetime):
+                problems.append(f"{at}：checked 要寫成 YYYY-MM-DD，是現況最後一次查證的日期")
+                checked = None
+            elif checked > now.date():
+                problems.append(f"{at}：checked 是 {checked}，晚於今天，填實際查證的日期")
+            elif created and checked > created.date():
+                problems.append(f"{at}：checked 晚於這則快照的 date，上線之後的查證寫進下一年")
         draft = item.get("draft", False)
         if not isinstance(draft, bool):
             problems.append(f"{at}：draft 只能寫 true 或 false")
@@ -1074,7 +1097,7 @@ def load_history_day(path: Path, authors: dict[str, dict], lang: Lang, now: date
             sources=parse_sources(item["sources"], at, problems),
             authors=parse_authors(item["authors"], authors, at, problems),
             regions=parse_regions(item.get("regions"), at, problems),
-            body=text, html=html_text, draft=draft, scheduled=bool(created and created > now))
+            body=text, html=html_text, draft=draft, scheduled=bool(created and created > now), checked=checked)
         if not draft:
             day.snapshots.append(snapshot)
     if problems:
@@ -1176,12 +1199,25 @@ def check_history_links(days: list[HistoryDay], posts: list[Post]) -> list[str]:
     return problems
 
 
-def history_report(days: list[HistoryDay], today: date, ahead: int = MAX_SCHEDULE_DAYS) -> str:
-    """--history 的輸出。接下來幾天還沒有當年快照的日期，每筆一行 checkbox。"""
+def history_report(days: list[HistoryDay], today: date, ahead: int = HISTORY_MAX_SCHEDULE_DAYS) -> str:
+    """--history 的輸出，兩段都是一筆一行 checkbox。先列接下來 RECHECK_DAYS 天內要上線、
+    現況還沒重新查證的快照（三個語系分開列），再列排程範圍內還沒有快照的日期。"""
+    lines = []
+    soon = today + timedelta(days=RECHECK_DAYS)
+    recheck = [snap for day in days for version in (day.translations.values() or [day])
+               for snap in version.snapshots
+               if today <= snap.created.date() <= soon and snap.needs_recheck]
+    recheck.sort(key=lambda snap: (snap.created, LANGS.index(snap.lang)))
+    lines.append(f"導讀歷史：{RECHECK_DAYS} 天內要上線、現況還沒重新查證的有 {len(recheck)} 則（今天 {today}，台北時間）")
+    for snap in recheck:
+        checked = snap.checked or "沒有寫 checked"
+        lines.append(f"- [ ] {snap.created:%m-%d} {snap.day.where}：{snap.title}（現況查證於 {checked}）")
+    if recheck:
+        lines.append("重新查證寫現況的句子，改好之後把 checked 改成查證的日期")
     written = {s.created.date() for day in days for s in day.snapshots}
     missing = [today + timedelta(days=n) for n in range(ahead + 1)]
     missing = [d for d in missing if d not in written]
-    lines = [f"導讀歷史：接下來 {ahead} 天有 {len(missing)} 天還沒有快照（今天 {today}，台北時間）"]
+    lines.append(f"接下來 {ahead} 天有 {len(missing)} 天還沒有快照")
     lines += [f"- [ ] {d:%m-%d}（history/{d:%m-%d}.md 的 {d.year}）" for d in missing]
     return "\n".join(lines)
 
@@ -2008,7 +2044,8 @@ def main() -> int:
     parser.add_argument("--update-contract", action="store_true", help="把目前的網址寫回 url_contract.txt")
     parser.add_argument("--docs-contract", type=Path, help="文件站網址合約的本機檔案，預設從 GitHub 下載")
     parser.add_argument("--watch", action="store_true", help="列出追蹤中、快要到期的事件，不產生網站")
-    parser.add_argument("--history", action="store_true", help="列出接下來 7 天還沒有快照的導讀歷史日期，不產生網站")
+    parser.add_argument("--history", action="store_true",
+                        help="列出導讀歷史要重新查證現況的快照與還沒有快照的日期，不產生網站")
     args = parser.parse_args()
 
     try:
