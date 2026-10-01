@@ -95,6 +95,10 @@ from = "https://demo.uwazi.io/public/favicon.ico"
 icon = "developer.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
 
+[hosts."developers.google.com"]
+icon = "developers.google.com-ce307183.png"
+from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/touchicon-180-new.png"
+
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
@@ -264,6 +268,9 @@ from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc
 icon = "minister.defence.gov.au-5336c074.png"
 from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
 
+[hosts."msa-alliance.cn"]
+none = "網站沒有 favicon，https 憑證為自簽"
+
 [hosts."mullvad.net"]
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
@@ -314,6 +321,10 @@ from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
 from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
+
+[hosts."privacy.mi.com"]
+icon = "privacy.mi.com-7de29412.png"
+from = "https://privacy.mi.com/favicon.ico"
 
 [hosts."priveetee.github.io"]
 same_as = "pipepipe.dev"
