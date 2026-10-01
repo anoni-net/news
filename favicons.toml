@@ -12,6 +12,10 @@ same_as = "meta.com"
 icon = "accessnow.org-8d11dfe8.png"
 from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
 
+[hosts."android-developers.googleblog.com"]
+icon = "android-developers.googleblog.com-2fb9822b.png"
+from = "https://android-developers.googleblog.com/favicon.ico"
+
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
@@ -87,6 +91,9 @@ from = "https://www.cedb.gov.hk/assets/favicon.ico"
 icon = "chromestatus.com-1338ffe4.png"
 from = "https://chromestatus.com/static/img/crstatus_192.png"
 
+[hosts."cisa.gov"]
+none = "原站與 Internet Archive 都擋下自動抓取，存檔只有 16px 的圖示"
+
 [hosts."citizenlab.ca"]
 icon = "citizenlab.ca-a8596c5e.png"
 from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-192x192.png"
@@ -138,6 +145,10 @@ from = "https://www.cs.umd.edu/sites/all/themes/cs_gogo/favicon.ico"
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
 
+[hosts."curia.europa.eu"]
+icon = "curia.europa.eu-6c6c445d.png"
+from = "https://curia.europa.eu/site/plugins/CURIA2MainPlugin/images/icons/favicon.ico?v=2026-09-23_14-17"
+
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
@@ -161,6 +172,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
+
+[hosts."discord.com"]
+icon = "discord.com-891ddcd3.png"
+from = "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico"
 
 [hosts."docplanner.com"]
 icon = "docplanner.com-c257216b.png"
@@ -287,6 +302,10 @@ from = "https://line.me/static/img/apple-touch-icon-180x180.png"
 icon = "help.openai.com-cb2858c5.png"
 from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-touch-icon.png"
 
+[hosts."helpnetsecurity.com"]
+icon = "helpnetsecurity.com-eb4f8b13.png"
+from = "https://img.helpnetsecurity.com/wp-content/uploads/2019/09/09093400/cropped-hns2-192x192.png"
+
 [hosts."home-affairs.ec.europa.eu"]
 icon = "home-affairs.ec.europa.eu-3712d20c.png"
 from = "https://home-affairs.ec.europa.eu/themes/contrib/oe_theme/images/favicons/ec/favicon.png"
@@ -391,6 +410,10 @@ none = "網站沒有 favicon，https 憑證為自簽"
 [hosts."mullvad.net"]
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
+
+[hosts."nbcdfw.com"]
+icon = "nbcdfw.com-eece2dd2.png"
+from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quality=85&strip=all"
 
 [hosts."news.risky.biz"]
 icon = "news.risky.biz-8a82d4e1.png"
@@ -540,6 +563,10 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 [hosts."themarkup.org"]
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
+
+[hosts."theregister.com"]
+icon = "theregister.com-315165b2.png"
+from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
 
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
