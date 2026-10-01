@@ -36,6 +36,10 @@ from = "https://apt.izzysoft.de/favicon.ico"
 icon = "arstechnica.com-18386f32.png"
 from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-300x300.png"
 
+[hosts."arxiv.org"]
+icon = "arxiv.org-c4f5309f.png"
+from = "https://arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png"
+
 [hosts."assets.publishing.service.gov.uk"]
 icon = "assets.publishing.service.gov.uk-a7b0c84b.png"
 from = "https://assets.publishing.service.gov.uk/favicon.ico"
@@ -102,6 +106,10 @@ from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-1
 icon = "cloudflare.com-71ae303d.png"
 from = "https://www.cloudflare.com/favicon.ico"
 
+[hosts."cna.com.tw"]
+icon = "cna.com.tw-86ae6cef.png"
+from = "https://imgcdn.cna.com.tw/www/website/img/fav-icon.png"
+
 [hosts."cnbc.com"]
 icon = "cnbc.com-f77120b6.png"
 from = "https://www.cnbc.com/apple-touch-icon.png"
@@ -113,6 +121,14 @@ from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
 [hosts."community.signalusers.org"]
 icon = "community.signalusers.org-34c4e8e9.png"
 from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
+
+[hosts."congress.gov"]
+icon = "congress.gov-1737b801.png"
+from = "https://www.congress.gov/apple-touch-icon.png"
+
+[hosts."cons.judicial.gov.tw"]
+icon = "cons.judicial.gov.tw-5b9fcfc7.png"
+from = "https://cons.judicial.gov.tw/appiconmaker.co/size/favicon-196x196.png"
 
 [hosts."consumer.huawei.com"]
 icon = "consumer.huawei.com-dddcd8b6.png"
@@ -279,6 +295,9 @@ from = "https://web.archive.org/web/20260927id_/https://gov.hk/favicon.ico"
 icon = "government.ru-28901b86.png"
 from = "https://web.archive.org/web/20260927id_/https://government.ru/favicon.ico"
 
+[hosts."govinfo.gov"]
+none = "首頁宣告的大圖示連結失效，favicon 只有 16px，放大後無法辨識"
+
 [hosts."grapheneos.org"]
 icon = "grapheneos.org-5378d298.png"
 from = "https://grapheneos.org/apple-touch-icon.png"
@@ -301,6 +320,10 @@ from = "https://line.me/static/img/apple-touch-icon-180x180.png"
 [hosts."help.openai.com"]
 icon = "help.openai.com-cb2858c5.png"
 from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-touch-icon.png"
+
+[hosts."help.yahoo.com"]
+icon = "help.yahoo.com-c254779b.png"
+from = "https://help.yahoo.com/favicon.ico"
 
 [hosts."helpnetsecurity.com"]
 icon = "helpnetsecurity.com-eb4f8b13.png"
@@ -400,6 +423,10 @@ from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc
 icon = "minister.defence.gov.au-5336c074.png"
 from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
 
+[hosts."mohw.gov.tw"]
+icon = "mohw.gov.tw-5e72f012.png"
+from = "https://www.mohw.gov.tw/xslGip/Unit001/images/favicon.ico"
+
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
@@ -493,6 +520,10 @@ from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
 
+[hosts."sec.gov"]
+icon = "sec.gov-8ecd49c8.png"
+from = "https://www.sec.gov/favicon.ico"
+
 [hosts."security.googleblog.com"]
 icon = "security.googleblog.com-624359af.png"
 from = "https://security.googleblog.com/favicon.ico"
@@ -572,6 +603,10 @@ from = "https://www.theregister.com/view-resources/dachser2/public/theregister/f
 icon = "verizon.com-6ec72a34.png"
 from = "https://www.verizon.com/favicon.ico"
 
+[hosts."web.archive.org"]
+icon = "web.archive.org-32e1e194.png"
+from = "https://archive.org/apple-touch-icon.png（本機 DNS 解析不到，用 1.1.1.1 解析後下載）"
+
 [hosts."weblate.cryptpad.org"]
 icon = "weblate.cryptpad.org-676939f0.png"
 from = "https://weblate.cryptpad.org/favicon.ico"
@@ -587,6 +622,10 @@ from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
 [hosts."xinhuanet.com"]
 icon = "xinhuanet.com-db68823e.png"
 from = "https://www.xinhuanet.com/favicon.ico"
+
+[hosts."zhonglun.com"]
+icon = "zhonglun.com-c0e89dfa.png"
+from = "https://www.zhonglun.com/upload/static/images/icon.png"
 
 [hosts."zuckoff.app"]
 icon = "zuckoff.app-284bd984.png"
