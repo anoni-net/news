@@ -410,12 +410,19 @@ p {
     padding-top: 1rem;
 }
 
+/* 時間軸的導讀標題：手機 22px、平板以上 24px，夾在焦點的 28px 與日期的 20px 之間 */
 .brief__title {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.375rem;
     font-weight: 700;
-    line-height: 1.45;
+    line-height: 1.4;
     margin: 0 0 0.4rem;
+}
+
+@media (min-width: 48em) {
+    .brief__title {
+        font-size: 1.5rem;
+    }
 }
 
 .brief__dek {
@@ -1076,11 +1083,12 @@ p {
 
 /* ---------------------------------------------------------------- 導讀歷史 */
 
-/* 時間軸上的快照放在當天導讀的後面。標題與說明沿用 .brief，靠這一行標籤跟導讀分開 */
+/* 時間軸上的快照放在當天導讀的後面。標題與說明沿用 .brief，靠這一行標籤跟導讀分開。
+   字級跟「焦點」標籤一樣是 16px，標題放大到 22–24px 之後，14px 的標籤顯得太小 */
 .past__label {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.375rem;
     color: var(--c-link);
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
