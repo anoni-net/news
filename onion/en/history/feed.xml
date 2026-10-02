@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Fri, 02 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Passwords and security questions in old accounts</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-03/2026</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Passwords and security questions you have reused elsewhere may have leaked long ago along with an old account. On this day, Yahoo disclosed that an earlier breach had affected every account it had at the time.</description>
+<content:encoded>&lt;p&gt;If you reuse a password, or the same security questions for account recovery, across different sites, a leak at any one of them puts the others at risk too. On 3 October 2017, Yahoo announced that a breach in August 2013 had affected all of its user accounts. Taiwan&#39;s Central News Agency reported the next day that this came to about 3 billion, three times the earlier estimate. Yahoo&#39;s FAQ says the stolen information may have included names, email addresses, phone numbers, dates of birth, hashed passwords and, in some accounts, security questions and answers. Names, phone numbers and birthdays are also what doxxers piece together, and our story the same day covers how to guard against that (see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;). Yahoo advised anyone who had used the same or similar passwords and security questions on other accounts to change them as well.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Data that can still identify you after names are removed</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-02/#y2026</link>

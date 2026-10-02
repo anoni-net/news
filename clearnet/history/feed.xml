@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 02 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>舊帳號裡的密碼與提示問題</title>
+<link>https://anoni.net/news/history/10-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-03/2026</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在其他網站用過的密碼與提示問題，可能早就跟著一個舊帳號外洩。這一天，Yahoo 公布早年的一次入侵影響了當時所有的帳號。</description>
+<content:encoded>&lt;p&gt;你如果在不同網站重複使用同一組密碼或提示問題，只要其中一個網站的資料外洩，其他帳號也跟著有風險。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影響了所有使用者帳號，中央社報導的數字約為原先估計 3 倍的 30 億個。Yahoo 的說明頁寫明，外洩的資料可能包括姓名、Email、電話、生日、經過雜湊處理（轉成看不出原文的代碼）的密碼，部分帳號還有安全提示問題與答案。姓名、電話與生日也是肉搜時用來拼湊個人資料的材料，本站同一天的導讀整理了預防的做法（見&lt;a href=&#34;https://anoni.net/news/2026/10/eff-doxxing-safety/&#34;&gt;肉搜的預防與應變&lt;/a&gt;）。Yahoo 建議，在其他帳號用過相同或類似密碼與提示問題的人，都要一起更換。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>去除姓名後仍可被辨識的資料</title>
 <link>https://anoni.net/news/history/10-02/#y2026</link>

@@ -6,7 +6,170 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>每週短訊 2026 第 40 週</title>
+<link>https://anoni.net/news/2026/10/weekly-brief-2026-w40/</link>
+<guid isPermaLink="false">anoni-news:2026/10/weekly-brief-2026-w40</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>9 月 15 日到 29 日的 6 則新聞，包括 Wayback Machine 誤擋真人的存取限制、倫敦車站的即時人臉辨識試辦、荷蘭政府以 NixOS 建立的工作環境、新墨西哥州的 Cambridge Analytica 裁決、澳洲的推薦演算法退出條款，以及聯邦式聊天系統 Parley。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，來自 The Guardian、DAWO、It&amp;#39;s FOSS 等 7 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;這一期收了 6 則 9 月 15 日到 9 月 29 日之間的新聞，題材寫不成一篇完整的導讀。&lt;/p&gt;
+&lt;h3 id=&#34;london-lfr&#34;&gt;倫敦車站的即時人臉辨識試辦&lt;/h3&gt;
+&lt;p&gt;英國交通警察 2 月到 7 月在倫敦幾個主要車站試辦即時人臉辨識，掃描了 50 多萬張臉。依 The Guardian 報導、由調查新聞組織 Liberty Investigates 以資訊公開申請取得的文件，試辦花費約 32 萬英鎊與近 100 小時的警力，只出現一次誤判的比對警示，沒有逮捕任何人。警方 8 月宣布延長四個月並擴大到地鐵站。到 9 月 29 日的報導為止，警方表示延長後有三次確認的比對，比對到的人都在遵守法院的命令。&lt;/p&gt;
+&lt;h3 id=&#34;dutch-nixos&#34;&gt;荷蘭政府以 NixOS 建立的工作環境&lt;/h3&gt;
+&lt;p&gt;依 It&#39;s FOSS 的報導，美國在 2025 年初制裁國際刑事法院之後，法院首席檢察官的 Microsoft 服務被切斷，荷蘭政府在 2026 年 7 月決定建立自主的數位工作環境 DAWO。DAWO 的作業系統採用 NixOS，程式碼託管於自架的 Forgejo。到 9 月 25 日的報導為止，已有 8 個市政府在測試，試辦用的是原本要淘汰的舊筆電，報導也寫到 NixOS 能在 Windows 11 不支援的硬體上執行。&lt;/p&gt;
+&lt;h3 id=&#34;wayback-access&#34;&gt;Wayback Machine 的存取限制&lt;/h3&gt;
+&lt;p&gt;Internet Archive 9 月 15 日的公告寫到，Wayback Machine 受到大量自動化流量衝擊，為此加上的防護措施有時會誤擋真人，畫面會出現 429 錯誤。公告請認為自己被誤擋的人寫信到 &lt;code&gt;info@archive.org&lt;/code&gt;，附上作業系統、瀏覽器與 IP 位址。&lt;/p&gt;
+&lt;h3 id=&#34;cambridge-analytica&#34;&gt;新墨西哥州的 Cambridge Analytica 裁決&lt;/h3&gt;
+&lt;p&gt;美國新墨西哥州的陪審團 9 月 25 日裁定 Facebook 在隱私保護上誤導使用者。Facebook 母公司 Meta 的發言人告訴 CBS News 不同意裁決，會繼續抗辯。案件起於一個第三方人格測驗 App 收集了約 8700 萬個使用者檔案的資料，並賣給政治顧問公司 Cambridge Analytica。&lt;/p&gt;
+&lt;p&gt;CBS News 的報導寫到罰款金額還待法官決定，州政府要求以每次違規最高 5,000 美元計算。報導也寫到，Meta 8 月與多個州就兒少安全達成的和解，內容包含免除 Cambridge Analytica 事件的責任。到 9 月 25 日的報導為止，新墨西哥州是唯一繼續追究該事件的州。&lt;/p&gt;
+&lt;h3 id=&#34;au-algorithm-opt-out&#34;&gt;澳洲的推薦演算法退出條款&lt;/h3&gt;
+&lt;p&gt;BBC 9 月 23 日報導，澳洲的數位注意義務（digital duty of care）法草案要求平台讓使用者可以關閉推薦演算法，沒做到的業者可能面臨高額罰款。美國駐坎培拉大使館提交了 BBC 形容為罕見的意見書。意見書認為「傷害」的定義模糊，可能造成針對特定觀點的審查，平台設計的強制規定也可能影響澳洲以外的使用者。澳洲總理回應，法案的目的是把控制權交還給個人，政府不取得控制權。&lt;/p&gt;
+&lt;h3 id=&#34;parley&#34;&gt;聯邦式聊天系統 Parley&lt;/h3&gt;
+&lt;p&gt;依專案頁面的說明，Parley 是 MIT 授權的開源聊天系統，用一般的 IRC 用戶端就能連線，各自架設的伺服器透過 DNS 找到彼此，以 HTTPS 傳送有簽章的訊息。到 10 月 2 日為止，專案寫明的限制包括只有伺服器層級的金鑰、沒有端對端加密，作者也寫明仍是概念驗證，尚未強化安全性。最新的版本是 9 月 18 日的 v0.5.0。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive&#34;&gt;Trial of live facial recognition in London stations leads to a false positive and no arrests&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Guardian&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dawo.community/en/&#34;&gt;DAWO.community&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;DAWO&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/netherlands-dawo-initiative/&#34;&gt;The Netherlands Built a Nix-Based Linux Desktop Because Microsoft Cut Off the ICC&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/&#34;&gt;An Update on Wayback Machine Access&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Internet Archive&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbsnews.com/news/facebook-liable-deceiving-users-cambridge-analytica/&#34;&gt;Jury finds Facebook liable for deceiving users in Cambridge Analytica case&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CBS News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bbc.com/news/articles/cqj3dgy8x3vro&#34;&gt;US criticises Australia&amp;#39;s proposed algorithm opt-out laws as &amp;#39;censorship&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BBC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://git.mills.io/prologic/parley&#34;&gt;parley&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;git.mills.io&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>開源 YouTube 用戶端 PipePipe 5.4.0</title>
+<link>https://anoni.net/news/2026/10/pipepipe-youtube-client/</link>
+<guid isPermaLink="false">anoni-news:2026/10/pipepipe-youtube-client</guid>
+<pubDate>Sat, 03 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>PipePipe 是從 NewPipe 分支出來的 Android 開源用戶端，不需要帳號與 Google Play 就能觀看 YouTube、NicoNico 與 BiliBili。5.4.0 改善了在電視上的操作，也修正了 12 個問題。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，來自 PipePipe、GitHub、F-Droid 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Android 開源用戶端 PipePipe 在 9 月 24 日（UTC）發布 5.4.0 版，可以瀏覽 YouTube、日本的影音平台 NicoNico 與中國的 BiliBili。PipePipe 以 GPL-3.0 授權，不需要 Google Play 就能安裝。新版改善了在電視上的操作，直播可以選擇畫質，也修正了進入全螢幕時字幕消失等 12 個問題。&lt;/p&gt;
+&lt;p&gt;開發者在 2022 年初從另一款開源 YouTube 用戶端 NewPipe 分支出來，此後兩個專案互不同步更新。官網列出的特色是不需要帳號、沒有廣告與追蹤器、不蒐集資料。App 整合了 SponsorBlock（由使用者標記並自動跳過業配片段的服務），可以依關鍵字或頻道過濾內容、隱藏 Shorts，也支援背景播放與下載整個播放清單。&lt;/p&gt;
+&lt;p&gt;安裝管道有 F-Droid（只收錄開源 App 的 Android 軟體庫）與 IzzyOnDroid（另一個與 F-Droid 客戶端相容的第三方軟體庫），兩邊都標示 NonFreeNet 反功能（Anti-Features），意思是 App 依賴非自由的網路服務。到 9 月 29 日為止，IzzyOnDroid 已更新到 5.4.0，F-Droid 仍是 9 月 12 日加入的 5.3.1。PipePipe 在 GitHub 的發布頁也提供 APK，發布說明寫明多數裝置選 &lt;code&gt;arm64-v8a&lt;/code&gt; 版本即可。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;用第三方用戶端不必登入 Google 帳號，但影片請求仍然直接送往 YouTube。YouTube 限制匿名請求時，App 會顯示「Sign in to confirm you&#39;re not a bot」。官網與 README 連到的 PipePipe Wiki 由社群維護，疑難排解頁寫的做法是先重試，再換網路或 VPN 出口。&lt;/p&gt;
+&lt;p&gt;PipePipe 也支援登入，README 寫明 YouTube 的登入 cookie 只在取得播放串流時使用。登入之後，帶著 cookie 的播放請求就能對應到帳號。Wiki 寫明登入最好留給 IP 遭封鎖、年齡限制與頻道會員內容，代價是不能只下載音訊，進行中的直播也不能倒轉。&lt;/p&gt;
+&lt;p&gt;開發者在 GitHub 問題回報區（issue）置頂的 &lt;code&gt;#2757&lt;/code&gt; 寫明，PipePipe 需要連到 &lt;code&gt;googleapis.com&lt;/code&gt;、&lt;code&gt;google.com&lt;/code&gt; 與兩者的子網域。用 DNS 過濾廣告的人擋下這些網域時，YouTube 播放會失敗。Wiki 寫的解法是把它們加入允許清單，不要整個關掉過濾。&lt;/p&gt;
+&lt;p&gt;Wiki 的開發者指南寫到，YouTube 越來越常用 SABR（用戶端與伺服器保持連線、分小段傳送影音的串流協定）。PipePipe 會從 GitHub 的公開儲存庫下載播放策略，驗證 Ed25519 簽章（確認出自開發者、未遭竄改）、有效期間與版本號之後才執行，失敗就退回內建的實作。從設計上看，開發者不發布新版也能調整播放方式，策略原始碼則公開可供審閱。代價是 App 會執行從網路下載的程式碼。&lt;/p&gt;
+&lt;p&gt;回報問題時，Wiki 寫明公開的 issue 不要附上 cookie、token 等登入憑證、帳號電子郵件地址或登入過程的螢幕錄影，也不要公開 IP 位址。第一次回報只要寫明有沒有登入與看到的錯誤訊息。&lt;/p&gt;
+&lt;p&gt;試用需要一支 Android 6.0 以上的手機（依 F-Droid 的標示），不需要 Google 帳號。從 GitHub 發布頁下載 &lt;code&gt;arm64-v8a&lt;/code&gt; 的 APK 最直接。用 F-Droid 客戶端安裝也會收到更新通知，官方軟體庫還沒有 5.4.0，想先用新版可以加入 IzzyOnDroid 軟體庫（官方客戶端要手動加入）。介面有正體與簡體中文，專案的翻譯說明寫明兩者由 AI 輔助翻譯，Wiki 與 issue 則以英文為主。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.4.0&#34;&gt;PipePipe v5.4.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PipePipe&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pipepipe.dev&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PipePipe&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe&#34;&gt;InfinityLoop1308/PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/packages/InfinityLoop1309.NewPipeEnhanced/&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IzzyOnDroid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipeSabrPolicies&#34;&gt;PipePipe SABR policies&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://priveetee.github.io/Docs-PipePipe/issues/youtube-playback.html&#34;&gt;YouTube playback, network, and sign-in&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PipePipe Wiki&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/blob/main/TRANSLATION.md&#34;&gt;TRANSLATION.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/issues/2757&#34;&gt;[Important] YouTube playback will fail if your DNS blocks googleapis.com or google.com&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-24&#34;&gt;2026 年 7 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://priveetee.github.io/Docs-PipePipe/developer-guide/introduction.html&#34;&gt;SABR&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PipePipe Wiki&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>肉搜的預防與應變</title>
 <link>https://anoni.net/news/2026/10/eff-doxxing-safety/</link>

@@ -6,7 +6,205 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Weekly brief, 2026 week 40</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/weekly-brief-2026-w40/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/weekly-brief-2026-w40</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Six stories from 15 to 29 September, including Wayback Machine access limits that block real people, a live facial recognition trial at London stations, the Dutch government&#39;s NixOS-based work environment, New Mexico&#39;s Cambridge Analytica verdict, Australia&#39;s proposed algorithm opt-out and the federated chat system Parley.</description>
+<content:encoded>&lt;p&gt;Based on 7 sources, including The Guardian, DAWO, It&amp;#39;s FOSS&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;This issue collects six stories from 15 to 29 September that do not make a full piece.&lt;/p&gt;
+&lt;h3 id=&#34;london-lfr&#34;&gt;Live facial recognition at London stations&lt;/h3&gt;
+&lt;p&gt;British Transport Police trialled live facial recognition at several major London stations from February to July, scanning more than 500,000 faces. According to documents obtained by the investigative outlet Liberty Investigates through a freedom of information request and reported by The Guardian, the trial cost about £320,000 and nearly 100 hours of police time, producing a single alert that was a false match and no arrests. Police announced in August a four-month extension covering Underground stations too. As of The Guardian&#39;s 29 September report, police said the extension had produced three confirmed matches, all involving people who were complying with court orders.&lt;/p&gt;
+&lt;h3 id=&#34;dutch-nixos&#34;&gt;The Dutch government&#39;s NixOS work environment&lt;/h3&gt;
+&lt;p&gt;According to It&#39;s FOSS, the International Criminal Court&#39;s chief prosecutor lost access to Microsoft services after US sanctions on the court in early 2025, and the Dutch government decided in July 2026 to build DAWO, an autonomous digital work environment. DAWO runs on NixOS, with its code on a self-hosted Forgejo. As of the 25 September report, eight municipalities were testing it on laptops that would otherwise have been retired, and It&#39;s FOSS notes that NixOS runs on hardware Windows 11 does not support.&lt;/p&gt;
+&lt;h3 id=&#34;wayback-access&#34;&gt;Wayback Machine access limits&lt;/h3&gt;
+&lt;p&gt;The Internet Archive wrote on 15 September that the Wayback Machine has been hit by heavy automated traffic, and that the protections it added sometimes block real people, who see a 429 error. It asks anyone who thinks they were blocked by mistake to email &lt;code&gt;info@archive.org&lt;/code&gt; with their operating system, browser and IP address.&lt;/p&gt;
+&lt;h3 id=&#34;cambridge-analytica&#34;&gt;New Mexico&#39;s Cambridge Analytica verdict&lt;/h3&gt;
+&lt;p&gt;A jury in the US state of New Mexico found on 25 September that Facebook misled users about privacy protections. A spokesperson for Facebook&#39;s parent company Meta told CBS News that Meta disagrees with the verdict and will keep defending itself. The case concerns a third-party personality quiz app that harvested data from about 87 million profiles and sold it to the political consultancy Cambridge Analytica.&lt;/p&gt;
+&lt;p&gt;CBS News reports that a judge has yet to set the penalty, and the state asked for the maximum $5,000 per violation. The report adds that an August settlement between Meta and several states over child safety also released Meta from liability over Cambridge Analytica. As of the 25 September report, New Mexico was the only state still pursuing the case.&lt;/p&gt;
+&lt;h3 id=&#34;au-algorithm-opt-out&#34;&gt;Australia&#39;s proposed algorithm opt-out&lt;/h3&gt;
+&lt;p&gt;The BBC reported on 23 September that Australia&#39;s draft digital duty of care law would require platforms to let users switch off recommendation algorithms, with hefty fines for those that do not. The BBC described a submission by the US embassy in Canberra as rare. The submission says vague definitions of &#34;harm&#34; could lead to viewpoint-based censorship and that mandated design rules could affect users outside Australia. Australia&#39;s prime minister responded that the bill is about giving control back to individuals, not to governments.&lt;/p&gt;
+&lt;h3 id=&#34;parley&#34;&gt;Parley, a federated chat system&lt;/h3&gt;
+&lt;p&gt;According to its project page, Parley is an MIT-licensed open-source chat system that works with ordinary IRC clients, with independently run servers finding each other through DNS and exchanging signed messages over HTTPS. As of 2 October, the listed limitations include server-level keys only and no end-to-end encryption, and its author describes it as a proof of concept that is not yet hardened. The latest release is v0.5.0 from 18 September.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive&#34;&gt;Trial of live facial recognition in London stations leads to a false positive and no arrests&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Guardian&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;29 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dawo.community/en/&#34;&gt;DAWO.community&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;DAWO&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/netherlands-dawo-initiative/&#34;&gt;The Netherlands Built a Nix-Based Linux Desktop Because Microsoft Cut Off the ICC&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/&#34;&gt;An Update on Wayback Machine Access&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Internet Archive&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbsnews.com/news/facebook-liable-deceiving-users-cambridge-analytica/&#34;&gt;Jury finds Facebook liable for deceiving users in Cambridge Analytica case&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CBS News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bbc.com/news/articles/cqj3dgy8x3vro&#34;&gt;US criticises Australia&amp;#39;s proposed algorithm opt-out laws as &amp;#39;censorship&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;BBC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://git.mills.io/prologic/parley&#34;&gt;parley&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;git.mills.io&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>PipePipe 5.4.0, an open-source YouTube client</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/pipepipe-youtube-client/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/pipepipe-youtube-client</guid>
+<pubDate>Sat, 03 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>PipePipe, an Android fork of NewPipe, plays YouTube, NicoNico and BiliBili without an account or Google Play. Version 5.4.0 improves TV controls and fixes 12 bugs.</description>
+<content:encoded>&lt;p&gt;Based on 15 sources, including PipePipe, GitHub, F-Droid&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;PipePipe, a GPL-3.0 open-source Android client for YouTube, the Japanese video platform NicoNico and China&#39;s BiliBili, released version 5.4.0 on 24 September (UTC) and installs without Google Play. The release improves TV controls, adds quality selection for live streams and fixes 12 bugs, including subtitles vanishing in fullscreen.&lt;/p&gt;
+&lt;p&gt;The developer forked NewPipe, an earlier open-source YouTube client, in early 2022 to create PipePipe, and the two projects have not synced changes since. The website lists no account, no ads, no trackers and no data collection. The app integrates SponsorBlock, a crowd-sourced service for skipping sponsored segments, along with keyword and channel filters, Shorts blocking, background play and whole-playlist downloads.&lt;/p&gt;
+&lt;p&gt;It is available from F-Droid, a repository of open-source Android apps, and IzzyOnDroid, a third-party repository for F-Droid clients. Both flag the NonFreeNet anti-feature because the app depends on non-free network services. As of 29 September, IzzyOnDroid carries 5.4.0, while F-Droid still offers 5.3.1, added on 12 September. APKs are on the GitHub releases page, where the notes say &lt;code&gt;arm64-v8a&lt;/code&gt; suits most devices.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;With a third-party client you need no Google account, but requests still go straight to YouTube. When YouTube restricts an anonymous request, the app shows &#34;Sign in to confirm you&#39;re not a bot&#34;. The community-maintained PipePipe Wiki&#39;s fix is to retry once, then try another network or VPN exit.&lt;/p&gt;
+&lt;p&gt;PipePipe supports signing in, and its README states that the YouTube login cookie is used only to retrieve playback streams. Those requests then carry the cookie and can be tied to your account. According to the Wiki, login is best kept for IP blocks, age-restricted videos and channel-member content, at the cost of audio-only downloads and rewinding live streams in progress.&lt;/p&gt;
+&lt;p&gt;The developer&#39;s pinned GitHub issue &lt;code&gt;#2757&lt;/code&gt; lists the domains PipePipe needs: &lt;code&gt;googleapis.com&lt;/code&gt;, &lt;code&gt;google.com&lt;/code&gt; and their subdomains. A DNS ad filter that blocks them can make YouTube playback fail, and the Wiki&#39;s fix is to allowlist them rather than switch filtering off.&lt;/p&gt;
+&lt;p&gt;GreatFire, which monitors censorship in mainland China, found &lt;code&gt;youtube.com&lt;/code&gt; unreachable in all of its last three conclusive tests, most recently on 21 September, and &lt;code&gt;google.com&lt;/code&gt; blocked in 87% of its last 23, most recently on 27 September. Its last three tests of &lt;code&gt;googleapis.com&lt;/code&gt;, the latest on 16 August, all showed interference. PipePipe is therefore unlikely to play YouTube on a mainland network.&lt;/p&gt;
+&lt;p&gt;OONI (Open Observatory of Network Interference) collected 909 measurements of &lt;code&gt;www.youtube.com&lt;/code&gt; from Hong Kong between 29 August and 27 September, and 4,966 from Taiwan, 574 of which failed to complete. Hong Kong had 3 anomalies, results that differ from a control measurement, and Taiwan had 1. Neither had a confirmed block.&lt;/p&gt;
+&lt;p&gt;The Wiki&#39;s developer guide describes SABR (Server Adaptive BitRate), which YouTube increasingly uses, as a session where the client reports playback state and receives media in small pieces. PipePipe downloads a playback policy from a public GitHub repository and runs it only after checking its Ed25519 signature, confirming it came unaltered from the developer, plus its validity window and revision number. It falls back to the built-in version on failure. By design, the developer can adjust playback without a new release, and the policy source is public, but the app executes code fetched from the network.&lt;/p&gt;
+&lt;p&gt;For bug reports, the Wiki&#39;s guidance is to keep cookies, tokens, account emails, screen recordings of a login and IP addresses out of public issues. Your sign-in state and the error you saw are enough for a first report.&lt;/p&gt;
+&lt;p&gt;To try it you need an Android phone running 6.0 or later, per F-Droid&#39;s listing, and the quickest route is the &lt;code&gt;arm64-v8a&lt;/code&gt; APK from GitHub. Installing through an F-Droid client gives you update notifications. The official F-Droid repository lacks 5.4.0 so far; the IzzyOnDroid repository, added by hand in the official client, has it. According to the project&#39;s translation guide, the interface&#39;s Simplified and Traditional Chinese are AI-assisted; the Wiki and issue tracker are mostly in English.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (15)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.4.0&#34;&gt;PipePipe v5.4.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pipepipe.dev&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe&#34;&gt;InfinityLoop1308/PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/packages/InfinityLoop1309.NewPipeEnhanced/&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IzzyOnDroid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipeSabrPolicies&#34;&gt;PipePipe SABR policies&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://priveetee.github.io/Docs-PipePipe/issues/youtube-playback.html&#34;&gt;YouTube playback, network, and sign-in&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe Wiki&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/blob/main/TRANSLATION.md&#34;&gt;TRANSLATION.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/issues/2757&#34;&gt;[Important] YouTube playback will fail if your DNS blocks googleapis.com or google.com&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-24&#34;&gt;24 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://priveetee.github.io/Docs-PipePipe/developer-guide/introduction.html&#34;&gt;SABR&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe Wiki&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/youtube.com&#34;&gt;Is http://youtube.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/google.com&#34;&gt;Is http://google.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;27 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/googleapis.com&#34;&gt;Is http://googleapis.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-16&#34;&gt;16 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?test_name=web_connectivity&amp;amp;domain=www.youtube.com&amp;amp;probe_cc=HK&amp;amp;since=2026-08-29&amp;amp;until=2026-09-28&amp;amp;axis_x=measurement_start_day&amp;amp;time_grain=day&#34;&gt;OONI Explorer: www.youtube.com, Hong Kong&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?test_name=web_connectivity&amp;amp;domain=www.youtube.com&amp;amp;probe_cc=TW&amp;amp;since=2026-08-29&amp;amp;until=2026-09-28&amp;amp;axis_x=measurement_start_day&amp;amp;time_grain=day&#34;&gt;OONI Explorer: www.youtube.com, Taiwan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Doxxing prevention and incident response</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/eff-doxxing-safety/</link>

@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Fri, 02 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>旧账号里的密码与密保问题</title>
+<link>https://anoni.net/news/zh-cn/history/10-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-03/2026</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在其他网站用过的密码与密保问题，可能早就跟着一个旧账号外泄。这一天，Yahoo 公布早年的一次入侵影响了当时所有的账号。</description>
+<content:encoded>&lt;p&gt;你如果在不同网站重复使用同一组密码或密保问题，只要其中一个网站的数据外泄，其他账号也跟着有风险。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影响了所有用户账号，台湾中央社报道的数字约为原先估计 3 倍的 30 亿个。Yahoo 的说明页写明，外泄的信息可能包括姓名、电子邮箱、电话、生日、经过哈希处理（转成看不出原文的代码）的密码，部分账号还有密保问题与答案。姓名、电话与生日也是人肉搜索时用来拼凑个人信息的材料，本站同一天的导读整理了预防的做法（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/eff-doxxing-safety/&#34;&gt;人肉搜索的预防与应对&lt;/a&gt;）。Yahoo 建议，在其他账号用过相同或类似密码与密保问题的人，都要一起更换。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>去掉姓名后仍可被识别的数据</title>
 <link>https://anoni.net/news/zh-cn/history/10-02/#y2026</link>
