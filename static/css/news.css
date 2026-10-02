@@ -1147,6 +1147,47 @@ p {
     font-size: 0.9375rem;
 }
 
+/* 同一天還有：比那一段輕，年份當行首的標籤，來源另起一行 */
+.snapshot__also {
+    margin: 1.25rem 0 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--c-surface);
+    border-left: 3px solid var(--c-rule);
+}
+
+.snapshot__also-heading {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--c-headline);
+}
+
+.snapshot__also-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.snapshot__also-list li {
+    margin: 0 0 0.6rem;
+    line-height: 1.7;
+}
+
+.snapshot__also-list li:last-child {
+    margin-bottom: 0;
+}
+
+.snapshot__also-year {
+    margin-right: 0.35rem;
+    color: var(--c-link);
+    font-weight: 700;
+}
+
+.snapshot__also-source {
+    display: block;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
 .snapshot__sources {
     margin: 0 0 0.5rem;
     padding: 0;

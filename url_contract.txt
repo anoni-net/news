@@ -85,6 +85,7 @@
 /about/
 	#byline
 	#corrections
+	#display
 	#fact-checking
 	#follow-ups
 	#languages
@@ -175,6 +176,7 @@
 /en/about/
 	#byline
 	#corrections
+	#display
 	#fact-checking
 	#follow-ups
 	#languages
@@ -327,6 +329,7 @@
 /zh-cn/about/
 	#byline
 	#corrections
+	#display
 	#fact-checking
 	#follow-ups
 	#languages
