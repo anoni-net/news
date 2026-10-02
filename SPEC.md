@@ -742,6 +742,8 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 4. `static/` 的檔案（樣式、favicon、頁首 logo、預覽圖）在網址後面帶內容雜湊，例如 `css/news.css?v=3f9a1c2b7e`。HTML 不讓瀏覽器快取，內容改了網址就跟著變，瀏覽器與 Cloudflare 會當成新檔案去抓，部署之後不必清這些檔案的快取
 5. m6 由 `ubuntu` 的 crontab 每 5 分鐘執行 `/home/ubuntu/news-pull.sh`，拉 `build` 分支上線，原始檔是本 repo 的 `tools/m6-pull.sh`。只接受 fast-forward，`build` 分支的歷史被改寫時停下來寫進 `/home/ubuntu/news-pull.log`，不強制覆蓋
 6. 從合併到上線最慢約 15 分鐘：CI 建置約 3 分鐘，m6 最多等 5 分鐘，Cloudflare 上的頁面最多快取 5 分鐘。急著看的話清頁面的快取
+7. m6 由 `ubuntu` 的 crontab 在台北時間 00:03、00:13、00:23 執行 `/home/ubuntu/news-dispatch.sh`（m6 的時區是 Asia/Taipei），呼叫 GitHub API 觸發 deploy workflow，原始檔是本 repo 的 `tools/m6-dispatch.sh`。成功時不寫 log，失敗才寫進 `/home/ubuntu/news-dispatch.log`。排程的文章沒有準時出現時，先看這份 log，再看 `gh run list -R anoni-net/news -w deploy` 最近一次執行的時間
+8. 觸發用的 token 是 fine-grained personal access token，範圍只有 `anoni-net/news`，權限只有 Actions 的讀寫，放在 m6 的 `/home/ubuntu/.config/news-dispatch-token`（權限 600）。2027-10-03 到期，到期前在 GitHub 的 Settings → Developer settings → Fine-grained tokens 重新產生，覆寫同一個檔案。換完用 `curl` 對 `actions/workflows/deploy.yml/dispatches` 送一次 `{"ref":"main"}`，回 `204` 就是可以用
 
 ## 排程發布
 
@@ -750,11 +752,12 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - `date` 晚於建置當下（台北時間）的文章是排程中，建置照樣檢查它的格式、三個語系的對應與圖片，但不產生頁面，也不進首頁、封存頁、RSS 與 sitemap，前後篇的連結當它不存在
 - 固定在台北時間午夜 0 點發布，`date` 寫成 `YYYY-MM-DDT00:00:00+08:00`，同一天的第二篇排 00:05
 - 最多排到 7 天後，超過就建置失敗。寫稿當下查核的事實放久了可能又變了，排程不宜太遠
-- deploy workflow 每小時第 2 分鐘重建一次（`cron: "2 * * * *"`），時間到的文章就出現在產物裡。GitHub 的排程在尖峰時會延遲，版面檢查也偶爾失敗，每小時一輪讓最壞情況是晚一小時上線。產物沒變時不推 `build` 分支
+- 重建之後，時間到的文章才出現在產物裡。午夜那一批由 m6 在台北時間 00:03、00:13、00:23 觸發 deploy workflow，分別接住 00:00 與 00:05 的導讀、00:10 的導讀歷史，00:23 補前兩輪失敗的情況。做法見「部署」第 7 項。產物沒變時不推 `build` 分支
+- workflow 另有每小時第 2 分鐘的 schedule（`cron: "2 * * * *"`）當備援。GitHub 的 schedule 不可靠，2026-09-27 到 10-01 實際 4 到 8 小時才執行一次，10/2 的稿子到台北 01:36 還沒上線，才改由 m6 觸發
 - 網址合約收進排程中的文章，`--check` 比對的是「已發布加上排程中」的網址，排程中的文章還沒上線不算網址消失
 - `anoni-net/news` 是公開 repo，排程中的稿子合併之後，發布前就讀得到。需要等特定時間才能公開的稿子，到時間再合併
 - 排程中的稿子要改，就再開一個 PR。已經上線的照更正處理
-- GitHub 會停掉 60 天沒有任何 commit 的公開 repo 的排程。照目前的發稿節奏不會遇到，長期停更之前要記得這件事
+- GitHub 會停掉 60 天沒有任何 commit 的公開 repo 的 schedule。m6 用的 `workflow_dispatch` 不受影響，停掉的只有備援
 
 ## 相依
 
