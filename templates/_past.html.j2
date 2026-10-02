@@ -4,4 +4,8 @@
   <p class="past__label"><a href="{{ url(home ~ 'history/') }}">{{ icon('history') }} {{ s.history }}</a> <span aria-hidden="true">·</span> <time datetime="{{ snap.event.isoformat() }}">{{ s.history_event_year.format(year=snap.event.year) }}</time></p>
   <h3 class="brief__title"><a href="{{ url(snap.rel) }}#{{ snap.anchor }}">{{ snap.title }}</a></h3>
   <p class="brief__dek">{{ snap.description }}</p>
+{% if snap.also %}
+  {# 跟導讀的「整理 X 篇原文」同一層的次要資訊，只列年份，內容在日期頁 #}
+  <p class="brief__source"><a class="past__also" href="{{ url(snap.rel) }}#{{ snap.anchor }}-also">{{ s.history_also_line.format(years=snap.also|map(attribute="event.year")|join(s.list_sep)) }}</a></p>
+{% endif %}
 </article>

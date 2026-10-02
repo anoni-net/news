@@ -435,6 +435,17 @@ p {
     font-size: 0.875rem;
 }
 
+/* 導讀歷史的「同一天還有」那一行是連結，顏色跟導讀的出處行一樣用次要色，滑過才加底線 */
+.brief__source .past__also {
+    color: var(--c-muted);
+    text-decoration: none;
+}
+
+.brief__source .past__also:hover,
+.brief__source .past__also:focus-visible {
+    text-decoration: underline;
+}
+
 .empty {
     padding: 2rem 0;
     font-size: 1.125rem;
