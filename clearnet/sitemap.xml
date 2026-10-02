@@ -158,6 +158,62 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/09/signal-numberless-registration/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/category/encryption/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/encryption/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/tracking/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/tracking/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/surveillance/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/surveillance/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/censorship/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/censorship/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/mobile/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/mobile/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/security/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/security/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/security/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/security/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/security/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/civil-society/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/civil-society/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/category/brief/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/brief/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/history/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/"/>
@@ -379,6 +435,62 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/09/signal-numberless-registration/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/category/encryption/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/encryption/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/tracking/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/tracking/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/surveillance/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/surveillance/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/censorship/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/censorship/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/mobile/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/mobile/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/security/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/security/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/security/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/security/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/security/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/civil-society/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/civil-society/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/category/brief/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/brief/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/history/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/"/>
@@ -598,6 +710,62 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/09/signal-numberless-registration/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/09/signal-numberless-registration/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/09/signal-numberless-registration/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/encryption/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/encryption/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/encryption/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/tracking/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/tracking/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/tracking/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/surveillance/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/surveillance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/surveillance/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/censorship/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/censorship/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/censorship/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/mobile/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/mobile/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/mobile/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/security/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/security/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/security/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/security/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/security/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/civil-society/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/civil-society/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/civil-society/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/brief/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/brief/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/brief/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/history/</loc>
