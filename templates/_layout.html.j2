@@ -45,6 +45,14 @@
   <div class="site-header__inner">
     {# 標誌與產品名是同一個連結，回到本語系的 news 首頁。官網首頁的入口在頁尾 #}
     <a class="site-header__home" href="{{ url(home) }}"><img class="site-header__logo" src="{{ asset('logo-wordmark-white.svg') }}" alt="anoni.net" width="116" height="28"> <span class="site-header__product">{{ s.product }}</span></a>
+{% block header_langs %}
+{% set header_langs = alternates|rejectattr("current")|list %}
+{% if header_langs %}
+    {# 頁首右側的語系切換，用簡稱放得進手機的一列，完整名稱寫在 aria-label，朗讀時念得出來。
+       文章頁與單頁在標題區已經有「其他語言」那一行，覆寫成空的 block，不重複放 #}
+    <nav class="site-header__langs" role="navigation" aria-label="{{ s.other_langs_label }}">{{ icon('translate') }}{% for alt in header_langs %}<a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}" aria-label="{{ alt.name }}">{{ alt.short }}</a>{% endfor %}</nav>
+{% endif %}
+{% endblock %}
   </div>
 {% block masthead %}{% endblock %}
 </header>

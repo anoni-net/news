@@ -1151,11 +1151,27 @@ def test_header_links_to_news_home(fixture_site):
                       ("zh-cn/2026/09/zkp-age-verification/", "/news/zh-cn/")):
         page = (targets["clearnet"].out / rel / "index.html").read_text(encoding="utf-8")
         header = page[page.index('<header class="site-header">'):page.index("</header>")]
-        assert re.findall(r'href="([^"]+)"', header) == [home], header
+        assert re.findall(r'class="site-header__home" href="([^"]+)"', header) == [home], header
         footer = page[page.index('<footer'):]
         assert 'href="https://anoni.net/"' in footer
     onion = (targets["onion"].out / "en" / "index.html").read_text(encoding="utf-8")
     assert '<a class="site-header__home" href="/en/">' in onion
+
+
+def test_header_langs_only_where_story_has_none(fixture_site):
+    """列表頁與封存頁的頁首右側有另外兩個語系的簡稱，文章頁在標題區已經有那一行，頁首不重複放。"""
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+
+    def header(rel):
+        page = (out / rel / "index.html").read_text(encoding="utf-8")
+        return page[page.index('<header class="site-header">'):page.index("</header>")]
+
+    assert re.findall(r'href="(/news/[^"]*)"[^>]*aria-label="([^"]+)">([^<]+)</a>', header("")) == [
+        ("/news/zh-cn/", "简体中文", "简体"), ("/news/en/", "English", "EN")]
+    assert re.findall(r'aria-label="([^"]+)">([^<]+)</a>', header("en/2026/")) == [
+        ("正體中文", "正體"), ("简体中文", "简体")]
+    assert "site-header__langs" not in header("2026/09/zkp-age-verification/")
 
 
 def test_static_files_carry_content_version(fixture_site):
