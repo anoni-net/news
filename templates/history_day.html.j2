@@ -6,6 +6,10 @@
 {% set page_description = snapshots[-1].description %}
 {% set og_title = s.history_day_title.format(date=day_label) %}
 {% set og_type = "website" %}
+{# 閱讀模式從 meta 取署名。沒有這一行時，Readability 會把每一段下方「寫於、導讀」那一行連同換行抓成署名 #}
+{% block head %}
+<meta name="author" content="{% for author in snapshots[-1].authors %}{{ author|author_name }}{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}">
+{% endblock %}
 {% block main_class %}story-wrap{% endblock %}
 {% block content %}
 <article class="history-day">
@@ -13,7 +17,12 @@
     <p class="story__date"><a class="history-day__column" href="{{ url(home ~ 'history/') }}">{{ icon('history') }} {{ s.history }}</a></p>
     <h1 class="story__title">{{ day_label }}</h1>
     <p class="story__dek">{{ s.history_day_dek }}</p>
+{# 日期頁的正文只有一兩段，字數低於閱讀模式的門檻（Readability 是 500 字）時，它會放寬條件重抓，
+   role="navigation" 擋不住語系連結。包在 aside 裡，閱讀模式一律移除。aside 在 article 裡、沒有名稱，
+   輔助科技不會把它當成地標 #}
+  <aside>
 {% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+  </aside>
   </header>
 {% for snap in snapshots %}
   <section class="snapshot" id="{{ snap.anchor }}" aria-labelledby="{{ snap.anchor }}-title">
@@ -23,8 +32,10 @@
     <div class="snapshot__body content">
 {{ contents[snap.year]|safe }}
     </div>
+    {# 原文與署名放在 aside，閱讀模式只留年份、標題、事件日期與那一段，跟文章頁的原文條相同 #}
+    <aside class="snapshot__meta">
     <p class="snapshot__sources-label">{{ s.sources }}</p>
-    <ul class="snapshot__sources" aria-label="{{ s.sources }}">
+    <ul class="snapshot__sources">
 {% for source in snap.sources %}
       <li><a href="{{ source.url }}" lang="{{ 'zh-Hant' if source.title is cjk else 'en' }}">{% if source.icon %}<img src="{{ url('assets/' ~ source.icon) }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% else %}{{ icon('web') }}{% endif %}{{ source.title }}</a>{% if source.publisher or source.date %}<span class="snapshot__publisher">{{ source.publisher or "" }}{% if source.publisher and source.date %}{{ s.list_sep }}{% endif %}{% if source.date %}<time datetime="{{ source.date.isoformat() }}">{{ source.date|ymd }}</time>{% endif %}</span>{% endif %}</li>
 {% endfor %}
@@ -36,6 +47,7 @@
       <span>{{ s.corrected }} <time datetime="{{ snap.updated|iso }}">{{ snap.updated|ymd }}</time></span>
 {% endif %}
     </p>
+    </aside>
   </section>
 {% endfor %}
 </article>

@@ -145,3 +145,23 @@ def test_timeline_puts_history_after_the_posts_of_the_day(tmp_path):
     day = load(tmp_path, snapshot_yaml(), GOOD_BODY)
     days = build.timeline([], day.snapshots)
     assert days == [{"date": date(2026, 9, 29), "posts": [], "history": day.snapshots[0]}]
+
+
+def test_reader_mode_skips_sources_and_language_links(tmp_path):
+    """日期頁的正文太短，閱讀模式會放寬條件重抓，role="navigation" 擋不住。原文、署名與語系連結
+    包在 aside 裡，Readability 一律移除。索引頁的日曆格子也一樣，閱讀模式裡只留日期加標題的清單。"""
+    import re
+
+    targets, _, _ = build.build(ROOT / "posts", tmp_path, only=["clearnet"])
+    out = targets["clearnet"].out
+    day = next((out / "history").glob("[0-9][0-9]-[0-9][0-9]/index.html")).read_text(encoding="utf-8")
+    assert '<meta name="author" content="anoni.net 社群">' in day
+    without_asides = re.sub(r"<aside\b.*?</aside>", "", day, flags=re.S)
+    article = without_asides[without_asides.index("<article"):without_asides.index("</article>")]
+    for leftover in ("story__langs", "snapshot__sources", "snapshot__byline"):
+        assert leftover not in article, leftover
+    assert "snapshot__body" in article
+    index = (out / "history" / "index.html").read_text(encoding="utf-8")
+    index_text = re.sub(r"<aside\b.*?</aside>", "", index, flags=re.S)
+    assert "history-month__grid" not in index_text and "story__langs" not in index_text
+    assert "history-month__list" in index_text
