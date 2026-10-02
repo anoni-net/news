@@ -5,6 +5,10 @@
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
 
+[hosts."9to5mac.com"]
+icon = "9to5mac.com-02276a1f.png"
+from = "https://9to5mac.com/wp-content/uploads/sites/6/2019/10/cropped-cropped-mac1-1.png?w=192"
+
 [hosts."about.fb.com"]
 same_as = "meta.com"
 
@@ -180,6 +184,9 @@ from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Inside
 [hosts."dawo.community"]
 icon = "dawo.community-cf7a3078.png"
 from = "https://www.dawo.community/favicon.svg（轉成 PNG）"
+[hosts."decrypt.co"]
+icon = "decrypt.co-136239ed.png"
+from = "https://cdn.decrypt.co/wp-content/themes/decrypt-media/assets/images/favicon-192x192.png"
 
 [hosts."demo.uwazi.io"]
 icon = "demo.uwazi.io-990b6692.png"
@@ -459,6 +466,10 @@ from = "https://www.mohw.gov.tw/xslGip/Unit001/images/favicon.ico"
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
 
+[hosts."mouse.dev"]
+icon = "mouse.dev-69b682f3.png"
+from = "https://mouse.dev/favicon-192.png"
+
 [hosts."msa-alliance.cn"]
 none = "網站沒有 favicon，https 憑證為自簽"
 
@@ -469,6 +480,10 @@ from = "https://www.mullvad.net/apple-touch-icon.png"
 [hosts."nbcdfw.com"]
 icon = "nbcdfw.com-eece2dd2.png"
 from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quality=85&strip=all"
+
+[hosts."news.mtn.co.kr"]
+icon = "news.mtn.co.kr-5e21f499.png"
+from = "https://news.mtn.co.kr/images/favicon.png"
 
 [hosts."news.risky.biz"]
 icon = "news.risky.biz-8a82d4e1.png"
@@ -558,6 +573,10 @@ from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-im
 [hosts."sec.gov"]
 icon = "sec.gov-8ecd49c8.png"
 from = "https://www.sec.gov/favicon.ico"
+
+[hosts."securedrop.org"]
+icon = "securedrop.org-903dcbd4.png"
+from = "https://securedrop.org/apple-touch-icon.png"
 
 [hosts."security.googleblog.com"]
 icon = "security.googleblog.com-624359af.png"
