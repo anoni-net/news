@@ -165,3 +165,39 @@ def test_reader_mode_skips_sources_and_language_links(tmp_path):
     index_text = re.sub(r"<aside\b.*?</aside>", "", index, flags=re.S)
     assert "history-month__grid" not in index_text and "story__langs" not in index_text
     assert "history-month__list" in index_text
+
+
+ALSO_OK = """\
+    also:
+      - event: 1999-09-29
+        text: 一件事。
+        source:
+          title: Page
+          url: https://example.org/a
+          publisher: Example
+      - event: 2010-09-29
+        text: 另一件事。
+        source:
+          title: Page 2
+          url: https://example.org/b
+          publisher: Example
+"""
+
+
+def test_also_items_load_in_order(tmp_path):
+    day = load(tmp_path, snapshot_yaml(extra=ALSO_OK), GOOD_BODY)
+    also = day.snapshots[0].also
+    assert [(i.event, i.text, i.source.publisher) for i in also] == [
+        (date(1999, 9, 29), "一件事。", "Example"), (date(2010, 9, 29), "另一件事。", "Example")]
+
+
+@pytest.mark.parametrize("extra, expected", [
+    (ALSO_OK.replace("1999-09-29", "1999-09-28"), "event 的月日跟檔名不同"),
+    (ALSO_OK.replace("1999-09-29", "2023-09-29"), "跟這則快照的主要事件同一天"),
+    (ALSO_OK.replace("2010-09-29", "1990-09-29"), "also 要依 event 由舊到新排"),
+    (ALSO_OK.replace("          publisher: Example\n      - event", "      - event"), "source 要寫 publisher"),
+    (ALSO_OK.replace("        text: 一件事。\n", ""), "要有 event、text、source 三個欄位"),
+    ("    also: []\n", "1 到 3 則"),
+])
+def test_also_rules(tmp_path, extra, expected):
+    assert any(expected in p for p in problems_of(tmp_path, snapshot_yaml(extra=extra), GOOD_BODY)), expected

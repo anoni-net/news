@@ -920,7 +920,10 @@ def hrefs(text: str) -> list[str]:
 HISTORY_DIR = ROOT / "history"
 HISTORY_FILE_RE = re.compile(r"^(\d{2})-(\d{2})\.md$")
 HISTORY_INDEX = "index.md"
-SNAPSHOT_KEYS = {"date", "title", "description", "event", "sources", "authors", "regions", "draft", "checked"}
+SNAPSHOT_KEYS = {"date", "title", "description", "event", "sources", "authors", "regions", "draft", "checked", "also"}
+# 「同一天還有」：寫稿時查過、沒選上的同一天的事件，每則一句加一個來源，只放在日期頁
+ALSO_KEYS = {"event", "text", "source"}
+ALSO_MAX = 3
 # 歷史的部分不會過期，排程可以比導讀遠。寫現況的句子在上線前 RECHECK_DAYS 天內要重新查證，
 # 記在 checked，--history 會列出還沒重查的。見 SPEC.md「導讀歷史」的「提早寫稿」
 HISTORY_MAX_SCHEDULE_DAYS = 30
@@ -931,6 +934,14 @@ SNAPSHOT_SHARED_KEYS = ("event", "authors", "regions", "draft")
 YEAR_HEADING_RE = re.compile(r"^##\s+(\d{4})\s+\{#y(\d{4})\}\s*$")
 # 一段內文只能轉出一個 <p>，不能有其他區塊
 SNAPSHOT_BLOCK_RE = re.compile(r"<(?:p|h[1-6]|img|table|pre|ul|ol|blockquote|figure|hr)\b")
+
+
+@dataclass
+class AlsoItem:
+    """快照底下「同一天還有」的一則：同一天發生的另一件事，一句話加一個來源。"""
+    event: date
+    text: str
+    source: Source
 
 
 @dataclass
@@ -952,6 +963,7 @@ class Snapshot:
     scheduled: bool = False
     # 寫現況的句子最後一次查證的日期，沒寫就當成跟 date 同一天查證
     checked: date | None = None
+    also: list[AlsoItem] = field(default_factory=list)
 
     @property
     def lang(self) -> Lang:
@@ -1006,6 +1018,45 @@ class HistoryDay:
     def calendar(self) -> date:
         """只拿來排序與顯示月日。用閏年，02-29 才放得進去。"""
         return date(2000, self.month, self.day)
+
+
+def parse_also(raw, at: str, month: int, day_number: int, created: datetime | None, event: date | None,
+               problems: list[str]) -> list[AlsoItem]:
+    """「同一天還有」最多 ALSO_MAX 則，依事件日期由舊到新排。事件的月日跟檔名相同，早於這則快照，
+    不能跟主要的事件同一天。來源只有一個，要寫 publisher，頁面上用它當連結文字。"""
+    if raw is None:
+        return []
+    if not isinstance(raw, list) or not raw or len(raw) > ALSO_MAX:
+        problems.append(f"{at}：also 要是清單，1 到 {ALSO_MAX} 則")
+        return []
+    items = []
+    for index, item in enumerate(raw, 1):
+        here = f"{at} 的 also 第 {index} 則"
+        if not isinstance(item, dict) or set(item) != ALSO_KEYS:
+            problems.append(f"{here}：要有 event、text、source 三個欄位，不能多")
+            continue
+        when = item["event"]
+        if not isinstance(when, date) or isinstance(when, datetime):
+            problems.append(f"{here}：event 要寫成 YYYY-MM-DD")
+            continue
+        if (when.month, when.day) != (month, day_number):
+            problems.append(f"{here}：event 的月日跟檔名不同")
+        if created and when >= created.date():
+            problems.append(f"{here}：event 要早於這則快照的 date")
+        if when == event:
+            problems.append(f"{here}：event 跟這則快照的主要事件同一天，同一天只挑一件寫成快照")
+        text = item["text"]
+        if not isinstance(text, str) or not text.strip() or "\n" in text.strip():
+            problems.append(f"{here}：text 是一句話，不換行")
+            continue
+        sources = parse_sources([item["source"]], here, problems)
+        if sources and not sources[0].publisher:
+            problems.append(f"{here}：source 要寫 publisher，頁面上用它當連結文字")
+        if sources:
+            items.append(AlsoItem(when, text.strip(), sources[0]))
+    if [i.event for i in items] != sorted(i.event for i in items):
+        problems.append(f"{at}：also 要依 event 由舊到新排")
+    return items
 
 
 def split_year_sections(body: str, where: str, problems: list[str]) -> list[tuple[int, str]]:
@@ -1103,7 +1154,8 @@ def load_history_day(path: Path, authors: dict[str, dict], lang: Lang, now: date
             sources=parse_sources(item["sources"], at, problems),
             authors=parse_authors(item["authors"], authors, at, problems),
             regions=parse_regions(item.get("regions"), at, problems),
-            body=text, html=html_text, draft=draft, scheduled=bool(created and created > now), checked=checked)
+            body=text, html=html_text, draft=draft, scheduled=bool(created and created > now), checked=checked,
+            also=parse_also(item.get("also"), at, month, day_number, created, event, problems))
         if not draft:
             day.snapshots.append(snapshot)
     if problems:
@@ -1174,6 +1226,8 @@ def load_history(history_dir: Path, authors: dict[str, dict], store: AssetStore 
                 for source in a.sources:
                     if source.url not in [s.url for s in b.sources]:
                         problems.append(f"{b.where}：sources 少了 zh-TW 有的 {source.url}")
+                if [(i.event, i.source.url) for i in a.also] != [(i.event, i.source.url) for i in b.also]:
+                    problems.append(f"{b.where}：also 的事件與來源跟 zh-TW 不同，三個版本要列同樣幾件事")
     if favicons is not None:
         snapshots = [s for days in by_lang.values() for day in days.values() for s in day.snapshots]
         resolve_favicons(snapshots, favicons, store or AssetStore(), problems)

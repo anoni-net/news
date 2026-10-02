@@ -32,6 +32,17 @@
     <div class="snapshot__body content">
 {{ contents[snap.year]|safe }}
     </div>
+{% if snap.also %}
+    {# 寫稿時查過、沒選上的同一天的事，每則一句加一個來源。跟著寫下它的那一年，舊的同樣保留原樣 #}
+    <div class="snapshot__also">
+      <h4 class="snapshot__also-heading">{{ s.history_also }}</h4>
+      <ul class="snapshot__also-list">
+{% for item in snap.also %}
+        <li><time class="snapshot__also-year" datetime="{{ item.event.isoformat() }}">{{ s.history_event_year.format(year=item.event.year) }}</time> {{ item.text }} <span class="snapshot__also-source">{{ s.history_also_source }}<a href="{{ item.source.url }}" title="{{ item.source.title }}">{{ item.source.publisher }}</a></span></li>
+{% endfor %}
+      </ul>
+    </div>
+{% endif %}
     {# 原文與署名放在 aside，閱讀模式只留年份、標題、事件日期與那一段，跟文章頁的原文條相同 #}
     <aside class="snapshot__meta">
     <p class="snapshot__sources-label">{{ s.sources }}</p>
