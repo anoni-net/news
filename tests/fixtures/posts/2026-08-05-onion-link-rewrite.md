@@ -3,6 +3,8 @@ title: onion 連結改寫的測試文章
 description: 測試用的文章，內文連到本站、文件站與官網，檢查 onion 產物的改寫。
 date: 2026-08-05
 slug: onion-link-rewrite
+categories:
+  - censorship
 sources:
   - title: Example source
     url: https://example.org/source

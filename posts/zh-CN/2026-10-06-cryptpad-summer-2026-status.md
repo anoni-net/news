@@ -3,6 +3,8 @@ title: CryptPad 2026 夏季进度与后量子加密的瓶颈
 description: 端到端加密协作套件 CryptPad 制定新的安全政策，漏洞修复发布后至少 90 天才公开细节。后量子加密的实验让部分功能慢到难以使用，浏览器内置新的算法之后有望改善。使用公共实例的人无需调整设置，自行搭建的管理员要跟上新版。
 date: 2026-10-06T00:00:00+08:00
 slug: cryptpad-summer-2026-status
+categories:
+  - encryption
 sources:
   - title: Summer 2026 status
     url: https://blog.cryptpad.org/2026/09/15/status-2026-09/

@@ -3,6 +3,8 @@ title: 西班牙對 archive.today 的行政封鎖
 description: 西班牙文化部的智慧財產委員會以行政決定封鎖網頁封存服務 archive.today 與它的鏡像網域，沒有經過法院，OONI 的量測也看得到異常。
 date: 2026-09-29T07:05:00+08:00
 slug: spain-blocks-archive-today
+categories:
+  - censorship
 sources:
   - title: Nombres de dominios Web objeto de resolución final firme de la S2CPI (2012 – 2026)
     url: https://www.cultura.gob.es/cultura/propiedadintelectual/lucha-contra-la-pirateria/s2cpi/listadowebs.html

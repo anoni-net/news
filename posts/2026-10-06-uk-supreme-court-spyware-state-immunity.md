@@ -3,6 +3,8 @@ title: 英國最高法院的間諜軟體國家豁免判決
 description: 巴林政府被控從國外用間諜軟體入侵英國境內的電腦、造成原告精神傷害，英國最高法院判決它不能以外國政府不受別國法院審理為由擋下這場訴訟。判決只決定英國法院能否受理，入侵是否屬實還沒審。
 date: 2026-10-06T00:05:00+08:00
 slug: uk-supreme-court-spyware-state-immunity
+categories:
+  - surveillance
 sources:
   - title: "[2026] UKSC 25, Case UKSC/2024/0152"
     url: https://supremecourt.uk/cases/uksc-2024-0152

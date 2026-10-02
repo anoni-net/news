@@ -3,6 +3,8 @@ title: 零知识证明用在年龄验证的限制
 description: EFF 指出零知识证明用在年龄验证时，仍会留下单点失效与 metadata 轨迹。
 date: 2026-09-18
 slug: zkp-age-verification
+categories:
+  - censorship
 sources:
   - title: "Zero-Knowledge Proofs Aren't Age Verification Silver Bullets"
     url: https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets

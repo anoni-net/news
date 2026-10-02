@@ -3,6 +3,8 @@ title: 移民與邊境管理的監控技術與爭議
 description: Privacy International 9 月發布指南，整理各國移民與邊境機關使用的 12 類技術，包括手機鑑識、無人機、GPS 追蹤與演算法決策。直接受影響的是移民與庇護申請者，一般旅客入境時的指紋與臉部查驗也屬於其中一類。英國、德國、加拿大與歐盟機關的公開文件另外寫明用途與保障機制。
 date: 2026-10-07T00:05:00+08:00
 slug: privacy-international-migrant-surveillance
+categories:
+  - surveillance
 sources:
   - title: "An Arsenal of Surveillance: A Guide to the Technologies Harming Migrants"
     url: https://privacyinternational.org/report/5866/arsenal-surveillance-guide-technologies-harming-migrants

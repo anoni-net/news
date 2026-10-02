@@ -3,6 +3,8 @@ title: 俄罗斯国家通讯 App Max 的技术分析
 description: InterSecLab 分析俄罗斯规定预装的通讯 App Max，发现它没有端到端加密。VPN 检测、网络探测与语音转文字都能从服务器针对个别账号切换，界面上没有任何提示。预装规定只在俄罗斯实施。
 date: 2026-09-30T00:05:00+08:00
 slug: interseclab-max-messenger
+categories:
+  - encryption
 sources:
   - title: "The Max Messenger: An Analysis of Russia’s State-Mandated Messaging Application"
     url: https://interseclab.org/research/max/

@@ -3,6 +3,8 @@ title: iOS 27 Siri AI 的資料存取設定
 description: iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。裝置或 Siri 語言設為中文的使用者暫時用不到。
 date: {created: 2026-09-27T03:21:00+08:00, updated: 2026-10-01T13:43:00+08:00}
 slug: ios27-siri-ai-data-access
+categories:
+  - tracking
 sources:
   - title: How to Limit What Apple's New Siri AI Can Access in iOS 27
     url: https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27

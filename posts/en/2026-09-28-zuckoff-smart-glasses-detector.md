@@ -3,6 +3,8 @@ title: ZuckOff, a Bluetooth detector for camera smart glasses
 description: ZuckOff matches Bluetooth broadcasts to warn that camera glasses such as Ray-Ban Meta are nearby. It cannot tell whether anyone is recording, and the app itself is closed source.
 date: 2026-09-28T07:00:00+08:00
 slug: zuckoff-smart-glasses-detector
+categories:
+  - surveillance
 sources:
   - title: ZuckOff | Camera glasses detector
     url: https://zuckoff.app/

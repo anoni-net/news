@@ -3,6 +3,8 @@ title: F-Droid 2.0 与 Google 的 Android 开发者验证
 description: 开源应用商店 F-Droid 9 月 24 日推出全面重写的 2.0，最低需要 Android 7。Google 9 月 30 日起在巴西、印度尼西亚、新加坡、泰国要求七家商店的应用由验证身份的开发者注册，2027 年扩大到全球的认证 Android 设备。截至 10 月 2 日，各地从 F-Droid 安装应用都不受影响。
 date: 2026-10-09T00:00:00+08:00
 slug: fdroid-2-android-developer-verification
+categories:
+  - censorship
 sources:
   - title: "F-Droid 2.0: A New Chapter for Android Freedom"
     url: https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html

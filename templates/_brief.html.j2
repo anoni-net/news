@@ -1,4 +1,7 @@
 <article class="brief">
+{% if post.categories and kind != "category" %}
+  <p class="brief__category">{% with cat = post.categories[0] %}{% include "_category.html.j2" %}{% endwith %}</p>
+{% endif %}
   <h3 class="brief__title"><a href="{{ url(post.rel) }}"{% if front is defined and front %}{{ track("home-story-click", section="timeline") }}{% endif %}>{{ post.title }}</a></h3>
   <p class="brief__dek">{{ post.description }}</p>
 {% set line = post|source_line %}

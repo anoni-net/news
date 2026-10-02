@@ -3,6 +3,8 @@ title: Technology trade-offs in wartime human rights documentation
 description: "HURIDOCS reflects on an expert meeting about wartime documentation in Sudan. Groups documenting abuses in high-risk settings should weigh whether a tool is worth its cost and whether its data can move between partners' systems. Nothing changes for everyday users."
 date: 2026-10-04T00:05:00+08:00
 slug: huridocs-sudan-documentation-technology
+categories:
+  - civil-society
 sources:
   - title: "What wartime documentation demands of technology: Lessons from Sudan"
     url: https://huridocs.org/2026/09/what-wartime-documentation-demands-of-technology-lessons-from-sudan/

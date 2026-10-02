@@ -3,6 +3,8 @@ title: US Police License Plate Readers and a Florida Arrest
 description: Flock's license plate reader cameras, used by US police, saw a run of developments in August and September. Flock shortened its default data retention, a Senate subcommittee held a hearing, and Florida and Texas restricted the cameras. A woman who was arrested and then not prosecuted sued two state troopers. The practices are confined to the US, and readers elsewhere are not directly affected.
 date: 2026-10-07T00:00:00+08:00
 slug: us-flock-alpr-arrest
+categories:
+  - surveillance
 sources:
   - title: "Engineering and Operations Memorandum No. 26-01: Revocation of General Use Permits for Automated License Plate Readers"
     url: https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/design/bulletins/eom26-01.pdf

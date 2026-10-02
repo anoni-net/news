@@ -3,6 +3,8 @@ title: Test story for onion link rewriting
 description: A test story linking to this site, the docs site and the homepage, to check rewriting in the onion build.
 date: 2026-08-05
 slug: onion-link-rewrite
+categories:
+  - censorship
 sources:
   - title: Example source
     url: https://example.org/source

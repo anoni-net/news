@@ -6,6 +6,9 @@
 {% elif kind == "index" %}
 {% set page_title = s.page_title.format(n=number) ~ " | " ~ s.site_name %}
 {% set page_description = s.page_description.format(n=number) %}
+{% elif kind == "category" %}
+{% set page_title = heading ~ " | " ~ s.site_name %}
+{% set page_description = s.category_description.format(heading=heading) %}
 {% else %}
 {% set page_title = heading ~ " | " ~ s.site_name %}
 {% set page_description = s.archive_description.format(heading=heading) %}
@@ -29,7 +32,11 @@
 {% block main_class %}list-wrap{% endblock %}
 {% block content %}
 {% if not front %}
+{% if kind == "category" %}
+<h1 class="list-heading list-heading--category cat--{{ category }}">{{ heading }}</h1>
+{% else %}
 <h1 class="list-heading">{{ heading }}{% if number > 1 %}{{ s.page_suffix.format(n=number) }}{% endif %}</h1>
+{% endif %}
 {% endif %}
 {% if days %}
 {% if featured %}
@@ -39,6 +46,9 @@
   <img class="featured__image" src="{{ featured_image.src }}" alt="" width="{{ featured_image.width }}" height="{{ featured_image.height }}" decoding="async">
 {% endif %}
   <div class="featured__text">
+{% if featured.categories %}
+    <p class="brief__category">{% with cat = featured.categories[0] %}{% include "_category.html.j2" %}{% endwith %}</p>
+{% endif %}
     <h3 class="featured__title"><a href="{{ url(featured.rel) }}"{{ track("home-story-click", section="featured") }}>{{ featured.title }}</a></h3>
     <p class="featured__dek">{{ featured.description }}</p>
     <p class="featured__meta"><time datetime="{{ featured.created|iso }}">{{ featured.created|ymd }}</time>{% if featured|source_line %}<span>{{ featured|source_line }}</span>{% endif %}</p>

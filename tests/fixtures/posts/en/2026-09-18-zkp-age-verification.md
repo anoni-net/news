@@ -3,6 +3,8 @@ title: Limits of zero-knowledge proofs for age verification
 description: EFF finds that zero-knowledge proofs used for age verification still leave a single point of failure and a metadata trail.
 date: 2026-09-18
 slug: zkp-age-verification
+categories:
+  - censorship
 sources:
   - title: "Zero-Knowledge Proofs Aren't Age Verification Silver Bullets"
     url: https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets

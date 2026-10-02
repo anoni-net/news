@@ -3,6 +3,8 @@ title: 手机位置数据与数据经纪商手上的个人档案
 description: 美国的 The Markup 与 Consumer Reports 取得数据经纪商的个人档案，里面有上千项推测与上百个买家。Freedom of the Press Foundation 整理了两个减少手机泄露位置数据的设置，美国以外也能照做。
 date: 2026-10-01T00:00:00+08:00
 slug: mobile-location-data-brokers
+categories:
+  - tracking
 sources:
   - title: Claw back your mobile location data
     url: https://freedom.press/digisec/blog/claw-back-your-mobile-location-data/

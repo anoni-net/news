@@ -3,6 +3,8 @@ title: CryptPad's summer 2026 status and the post-quantum bottleneck
 description: CryptPad, an end-to-end encrypted collaboration suite, has a new security policy that keeps vulnerability details private for at least 90 days after a fix ships. Its post-quantum experiment left some features too slow to use, and native browser support for the algorithms may change that. People on public instances need not change anything, while self-hosting administrators should keep up with releases.
 date: 2026-10-06T00:00:00+08:00
 slug: cryptpad-summer-2026-status
+categories:
+  - encryption
 sources:
   - title: Summer 2026 status
     url: https://blog.cryptpad.org/2026/09/15/status-2026-09/

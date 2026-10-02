@@ -3,6 +3,8 @@ title: Common problems in age verification laws
 description: Five reports and analyses from different organizations, on the privacy and anonymity problems that keep recurring in age verification laws.
 date: 2026-09-10
 slug: age-verification-roundup
+categories:
+  - censorship
 sources:
   - title: "Zero-Knowledge Proofs Aren't Age Verification Silver Bullets"
     url: https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets

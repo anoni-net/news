@@ -3,6 +3,8 @@ title: Android 17 QPR1 的 Pixel 獨占 API
 description: Android 17 QPR1 新增了給 App 開發者的 API，原始碼卻沒有釋出到 AOSP，非 Pixel 的手機與 GrapheneOS 這類系統要等到 12 月的 QPR2。
 date: 2026-09-28T07:05:00+08:00
 slug: android-17-qpr1-pixel-only-apis
+categories:
+  - mobile
 sources:
   - title: Android Open Source Project
     url: https://source.android.com/

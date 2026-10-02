@@ -15,7 +15,7 @@ authors:
   - night-owl
   - named-example
 categories:
-  - 測試
+  - mobile
 ---
 
 原始網址直接貼在內文裡：https://example.org/research/2026/very/long/path/that/keeps/going/without/any/natural/break/point.html

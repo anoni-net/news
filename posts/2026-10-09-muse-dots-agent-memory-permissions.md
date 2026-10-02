@@ -3,6 +3,8 @@ title: Meta Muse 與 OpenAI Dots 的記憶與權限設計
 description: Meta 的 Muse 與 OpenAI 的 Dots 都在 9 月推出，在雲端常駐、讀取連上的 App 資料並整理成記憶。到 10 月 2 日為止，台灣的 App Store 沒有 Muse，Dots 只開放給 ChatGPT 的 Pro 與 Business Premium 方案，用 ChatGPT 或 Mac 的人可以先檢查記憶與權限設定。
 date: 2026-10-09T00:05:00+08:00
 slug: muse-dots-agent-memory-permissions
+categories:
+  - tracking
 sources:
   - title: "Introducing Muse: The World’s First Personal AI Agent Built for Everyone"
     url: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/

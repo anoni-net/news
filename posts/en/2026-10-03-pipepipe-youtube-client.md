@@ -3,6 +3,8 @@ title: PipePipe 5.4.0, an open-source YouTube client
 description: PipePipe, an Android fork of NewPipe, plays YouTube, NicoNico and BiliBili without an account or Google Play. Version 5.4.0 improves TV controls and fixes 12 bugs.
 date: 2026-10-03T00:05:00+08:00
 slug: pipepipe-youtube-client
+categories:
+  - mobile
 sources:
   - title: PipePipe v5.4.0
     url: https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.4.0

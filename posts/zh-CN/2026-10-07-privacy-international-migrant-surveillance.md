@@ -3,6 +3,8 @@ title: 移民与边境管理的监控技术与争议
 description: Privacy International 9 月发布指南，整理各国移民与边境机关使用的 12 类技术，包括手机取证、无人机、GPS 追踪与算法决策。直接受影响的是移民与庇护申请者，普通旅客入境时的指纹与面部查验也属于其中一类。英国、德国、加拿大与欧盟机关的公开文件另外写明了用途与保障机制。
 date: 2026-10-07T00:05:00+08:00
 slug: privacy-international-migrant-surveillance
+categories:
+  - surveillance
 sources:
   - title: "An Arsenal of Surveillance: A Guide to the Technologies Harming Migrants"
     url: https://privacyinternational.org/report/5866/arsenal-surveillance-guide-technologies-harming-migrants

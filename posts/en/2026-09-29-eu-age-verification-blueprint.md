@@ -3,6 +3,8 @@ title: Privacy design and disputes around the EU age verification app
 description: The European Commission recommends that member states launch an age verification app by the end of 2026; users outside the EU are not affected. According to the Commission, the app keeps no ID documents or biometric data, while EDRi questions its privacy protections. Under the Commission's specification released in September, apps and websites must implement zero-knowledge proofs, falling back only on devices without support to a plain method that an issuer could trace.
 date: {created: 2026-09-29T07:00:00+08:00, updated: 2026-09-29T16:33:00+08:00}
 slug: eu-age-verification-blueprint
+categories:
+  - censorship
 sources:
   - title: The EU approach to age verification
     url: https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification

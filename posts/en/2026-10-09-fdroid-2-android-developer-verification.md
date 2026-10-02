@@ -3,6 +3,8 @@ title: F-Droid 2.0 and Google's Android developer verification
 description: F-Droid, the open-source Android app store, released 2.0, a rewrite that requires Android 7, on 24 September. From 30 September Google began requiring apps on seven stores in Brazil, Indonesia, Singapore and Thailand to be registered by identity-verified developers, with a global expansion to certified Android devices planned for 2027. As of 2 October, installing apps from F-Droid is unaffected anywhere.
 date: 2026-10-09T00:00:00+08:00
 slug: fdroid-2-android-developer-verification
+categories:
+  - censorship
 sources:
   - title: "F-Droid 2.0: A New Chapter for Android Freedom"
     url: https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html

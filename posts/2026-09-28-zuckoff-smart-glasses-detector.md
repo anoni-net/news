@@ -3,6 +3,8 @@ title: 偵測智慧眼鏡藍牙訊號的 ZuckOff
 description: ZuckOff 比對藍牙廣播，提醒附近有 Ray-Ban Meta 這類帶鏡頭的智慧眼鏡，但無法判斷對方是否正在錄影，App 本身也沒有公開原始碼。
 date: 2026-09-28T07:00:00+08:00
 slug: zuckoff-smart-glasses-detector
+categories:
+  - surveillance
 sources:
   - title: ZuckOff | Camera glasses detector
     url: https://zuckoff.app/

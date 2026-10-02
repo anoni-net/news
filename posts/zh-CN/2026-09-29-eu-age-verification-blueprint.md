@@ -3,6 +3,8 @@ title: 欧盟年龄验证 App 的隐私设计与争议
 description: 欧盟委员会建议各成员国在 2026 年底前推出年龄验证 App，欧盟以外的用户不受影响。欧委会写明 App 不保留证件与生物特征数据，EDRi 则质疑它的隐私保护。依欧委会 9 月发布的新版规范，App 与网站都必须实现零知识证明，只在设备不支持时退回签发方可能追溯的一般验证方式。
 date: {created: 2026-09-29T07:00:00+08:00, updated: 2026-09-29T16:33:00+08:00}
 slug: eu-age-verification-blueprint
+categories:
+  - censorship
 sources:
   - title: The EU approach to age verification
     url: https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification

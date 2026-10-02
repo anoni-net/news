@@ -3,6 +3,8 @@ title: AI 輔助的釣魚攻擊與防範方式
 description: Freedom of the Press Foundation 整理 AI 被用在釣魚攻擊的研究，信件寫得更通順、更個人化，但辨識的警訊與防禦方式沒有改變。建議適用於每個收 Email 與簡訊的人。
 date: 2026-10-05T00:00:00+08:00
 slug: ai-phishing-defenses
+categories:
+  - security
 sources:
   - title: "Ask a security trainer: Does AI make phishing worse?"
     url: https://freedom.press/digisec/blog/ask-a-security-trainer-does-ai-make-phishing-worse/
