@@ -81,6 +81,14 @@
 /2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/2026/10/weekly-brief-2026-w40/
+	#au-algorithm-opt-out
+	#cambridge-analytica
+	#dutch-nixos
+	#london-lfr
+	#parley
+	#sources
+	#wayback-access
 /404.html
 /about/
 	#byline
@@ -173,6 +181,14 @@
 /en/2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/en/2026/10/weekly-brief-2026-w40/
+	#au-algorithm-opt-out
+	#cambridge-analytica
+	#dutch-nixos
+	#london-lfr
+	#parley
+	#sources
+	#wayback-access
 /en/about/
 	#byline
 	#corrections
@@ -326,6 +342,14 @@
 /zh-cn/2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/zh-cn/2026/10/weekly-brief-2026-w40/
+	#au-algorithm-opt-out
+	#cambridge-analytica
+	#dutch-nixos
+	#london-lfr
+	#parley
+	#sources
+	#wayback-access
 /zh-cn/about/
 	#byline
 	#corrections
