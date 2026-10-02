@@ -759,6 +759,18 @@ p {
     font-size: 0.875rem;
 }
 
+/* 同分類的其他導讀，上緣用分類的顏色，跟同一事件的導讀區分 */
+.related {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 3px solid var(--cat);
+}
+
+.related__all {
+    margin: 0.5rem 0 0;
+    font-size: 0.9375rem;
+}
+
 /* 文章頁最後的訂閱提示 */
 .subscribe {
     margin: 2rem 0 0;
@@ -1086,6 +1098,7 @@ p {
     }
 
     .story ~ .thread,
+    .story ~ .related,
     .story ~ .subscribe,
     .story ~ .pager {
         max-width: 40rem;
