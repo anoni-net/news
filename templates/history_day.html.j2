@@ -34,7 +34,7 @@
     </div>
 {% if snap.also %}
     {# 寫稿時查過、沒選上的同一天的事，每則一句加一個來源。跟著寫下它的那一年，舊的同樣保留原樣 #}
-    <div class="snapshot__also">
+    <div class="snapshot__also" id="{{ snap.anchor }}-also">
       <h4 class="snapshot__also-heading">{{ s.history_also }}</h4>
       <ul class="snapshot__also-list">
 {% for item in snap.also %}
