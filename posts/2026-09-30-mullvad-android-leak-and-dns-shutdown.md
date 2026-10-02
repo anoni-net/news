@@ -3,6 +3,8 @@ title: Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用
 description: Android 的一個漏洞讓任何 App 繞過 VPN、洩漏真實 IP，開啟「封鎖沒有 VPN 的連線」也無法阻擋。Mullvad 的公開加密 DNS 將在 11 月 2 日停止服務，手動設定過的人需要更換。
 date: 2026-09-30T00:00:00+08:00
 slug: mullvad-android-leak-and-dns-shutdown
+categories:
+  - mobile
 sources:
   - title: Another way to leak traffic on Android has been discovered
     url: https://www.mullvad.net/en/blog/2026/9/10/another-way-to-leak-traffic-on-android-has-been-discovered/

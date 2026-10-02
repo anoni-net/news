@@ -3,6 +3,8 @@ title: Memory and permission design in Meta Muse and OpenAI Dots
 description: Meta's Muse and OpenAI's Dots, both launched in September, run continuously in the cloud, read data from connected apps and turn it into memory. As of 2 October, Muse was not in the App Store in Taiwan, Hong Kong, Japan or South Korea, and Dots required ChatGPT's Pro or Business Premium plan. ChatGPT memory settings and Mac permissions can be checked today.
 date: 2026-10-09T00:05:00+08:00
 slug: muse-dots-agent-memory-permissions
+categories:
+  - tracking
 sources:
   - title: "Introducing Muse: The World’s First Personal AI Agent Built for Everyone"
     url: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/

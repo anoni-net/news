@@ -3,6 +3,8 @@ title: 美國警方的車牌辨識與一起逮捕案
 description: 美國警方使用的 Flock 車牌辨識攝影機 8、9 月接連有新進展。Flock 縮短預設的資料保存期限，參議院小組委員會舉行聽證，佛羅里達州與德州也限制使用。一位被捕後獲不起訴的女性則對州警提起訴訟。做法都在美國境內，其他地方的讀者不受直接影響。
 date: 2026-10-07T00:00:00+08:00
 slug: us-flock-alpr-arrest
+categories:
+  - surveillance
 sources:
   - title: "Engineering and Operations Memorandum No. 26-01: Revocation of General Use Permits for Automated License Plate Readers"
     url: https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/design/bulletins/eom26-01.pdf

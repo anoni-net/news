@@ -3,6 +3,8 @@ title: Recognising and responding to Apple threat notifications
 description: Apple sent mercenary spyware threat notifications to users in 110 countries in August, though the vast majority of people will never be targeted. Apple's support page lists where genuine notifications appear and what they never ask for, and recipients can turn on Lockdown Mode and seek help.
 date: 2026-10-02T00:00:00+08:00
 slug: apple-threat-notifications
+categories:
+  - surveillance
 sources:
   - title: About Apple threat notifications and protecting against mercenary spyware
     url: https://support.apple.com/en-us/102174

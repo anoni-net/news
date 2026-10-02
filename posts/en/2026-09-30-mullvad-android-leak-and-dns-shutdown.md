@@ -3,6 +3,8 @@ title: An Android VPN leak and the end of Mullvad's public encrypted DNS
 description: A flaw lets any Android app send traffic around a VPN and reveal the real IP, even with "Block connections without VPN" on. Mullvad is also shutting down its public encrypted DNS on 2 November, so anyone who set it up by hand needs to switch.
 date: 2026-09-30T00:00:00+08:00
 slug: mullvad-android-leak-and-dns-shutdown
+categories:
+  - mobile
 sources:
   - title: Another way to leak traffic on Android has been discovered
     url: https://www.mullvad.net/en/blog/2026/9/10/another-way-to-leak-traffic-on-android-has-been-discovered/

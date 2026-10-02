@@ -3,6 +3,8 @@ title: A four-country study of technology-facilitated violence against environme
 description: "APC previews research from Brazil, Kenya, Mexico and the Philippines on the disinformation, harassment and surveillance facing environmental defenders, and on how their communities respond. The full reports launch online on 8 October. Readers elsewhere can borrow the approach of protecting households and communities together."
 date: 2026-10-08T00:00:00+08:00
 slug: apc-frontline-communities
+categories:
+  - civil-society
 sources:
   - title: Frontline communities identify and resist technology-facilitated violence and disinformation in their territories
     url: https://www.apc.org/en/blog/frontline-communities-identify-and-resist-technology-facilitated-violence-and-disinformation

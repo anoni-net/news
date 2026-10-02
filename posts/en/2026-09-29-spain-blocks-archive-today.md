@@ -3,6 +3,8 @@ title: Spain’s administrative block on archive.today
 description: A commission under Spain's Ministry of Culture has ordered ISPs to block the archive.today web archive and its mirror domains without any court ruling, and OONI measurements show the effect.
 date: 2026-09-29T07:05:00+08:00
 slug: spain-blocks-archive-today
+categories:
+  - censorship
 sources:
   - title: Nombres de dominios Web objeto de resolución final firme de la S2CPI (2012 – 2026)
     url: https://www.cultura.gob.es/cultura/propiedadintelectual/lucha-contra-la-pirateria/s2cpi/listadowebs.html

@@ -3,6 +3,8 @@ title: 医疗预约网站把就诊信息发给社交平台的追踪代码
 description: 医疗预约平台 Doctoralia 在巴西、哥伦比亚、墨西哥等地的网站，把就诊专科、医生姓名与预约时间发给 Google、TikTok 与 LinkedIn。它的母公司没有在中国大陆、香港、澳门与台湾运营。
 date: 2026-10-04T00:00:00+08:00
 slug: doctoralia-health-tracking-pixels
+categories:
+  - tracking
 sources:
   - title: How TikTok and Google ended up with information about doctors’ appointments around the world
     url: https://themarkup.org/pixel-hunt/2026/09/14/how-tiktok-and-google-ended-up-with-information-about-doctors-appointments-around-the-world

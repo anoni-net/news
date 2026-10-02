@@ -3,6 +3,8 @@ title: 肉搜的預防與應變
 description: EFF 8 月底發布兩篇肉搜防護指南，從盤點自己的數位足跡開始，到事發時記錄事件、強化帳號與請電信業者加設密碼。指南以美國讀者為對象，盤點足跡與強化帳號的步驟在其他地方同樣適用。
 date: 2026-10-03T00:00:00+08:00
 slug: eff-doxxing-safety
+categories:
+  - civil-society
 sources:
   - title: "Doxxing Safety Pt I: Prevention and Footprint Management"
     url: https://www.eff.org/deeplinks/2026/08/doxxing-safety-pt-i-prevention-and-footprint-management

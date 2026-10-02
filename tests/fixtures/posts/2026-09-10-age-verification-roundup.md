@@ -3,6 +3,8 @@ title: 各國年齡驗證立法的共同問題
 description: 整理五篇來自不同組織的報導與分析，歸納年齡驗證立法在隱私與匿名上反覆出現的問題。
 date: 2026-09-10
 slug: age-verification-roundup
+categories:
+  - censorship
 sources:
   - title: "Zero-Knowledge Proofs Aren't Age Verification Silver Bullets"
     url: https://www.eff.org/deeplinks/2026/08/zkps-arent-age-verification-silver-bullets

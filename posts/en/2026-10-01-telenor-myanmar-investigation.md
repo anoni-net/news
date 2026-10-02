@@ -3,6 +3,8 @@ title: Norway's provisional charges against Telenor over customer data handed to
 description: Norwegian police have provisionally charged Norwegian telecom group Telenor with complicity in crimes against humanity. The charges cover only its former Myanmar unit in 2021 and 2022, which repeatedly gave customers' historical traffic data to the military regime.
 date: 2026-10-01T00:05:00+08:00
 slug: telenor-myanmar-investigation
+categories:
+  - surveillance
 sources:
   - title: "PST og Kripos: Etterforskninger mot Telenor ASA"
     url: https://www.politiet.no/nyheter-og-presse/kripos/nyhet/2026-09-15/pressemelding

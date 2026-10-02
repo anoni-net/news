@@ -1302,3 +1302,65 @@ p {
     margin-right: 0.5rem;
     color: var(--c-muted);
 }
+
+/* ---------------------------------------------------------------- 分類標籤
+
+   每篇導讀一個分類，見 categories.toml。標籤放在標題上方與文章頁的日期前面，用色系區分，
+   文字顏色在淺色底上至少 4.5:1，深色模式改用較亮的同色系。每週短訊是格式，用中性色 */
+.cat--encryption { --cat: #0f766e; }
+.cat--tracking { --cat: #b45309; }
+.cat--surveillance { --cat: #b91c1c; }
+.cat--censorship { --cat: #7e22ce; }
+.cat--mobile { --cat: #1d4ed8; }
+.cat--security { --cat: #be185d; }
+.cat--civil-society { --cat: #15803d; }
+.cat--brief { --cat: #4b5563; }
+
+@media (prefers-color-scheme: dark) {
+    .cat--encryption { --cat: #5eead4; }
+    .cat--tracking { --cat: #fcd34d; }
+    .cat--surveillance { --cat: #fca5a5; }
+    .cat--censorship { --cat: #d8b4fe; }
+    .cat--mobile { --cat: #93c5fd; }
+    .cat--security { --cat: #f9a8d4; }
+    .cat--civil-society { --cat: #86efac; }
+    .cat--brief { --cat: #cbd5e1; }
+}
+
+.brief__category {
+    margin: 0 0 0.25rem;
+    font-size: 0.875rem;
+}
+
+.cat {
+    color: var(--cat);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* 色塊讓色系在掃視時就分得出來，文字本身也帶顏色，不只靠色塊 */
+.cat::before {
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-right: 0.4em;
+    border-radius: 2px;
+    background: var(--cat);
+    vertical-align: 0.05em;
+}
+
+.cat:hover,
+.cat:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.story__date .cat {
+    font-size: 0.875rem;
+}
+
+.list-heading--category {
+    padding-left: 0.75rem;
+    border-left: 6px solid var(--cat);
+}

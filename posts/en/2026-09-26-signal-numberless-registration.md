@@ -3,6 +3,8 @@ title: Phone-number-free registration in the Signal Android beta
 description: Signal's Android beta lets people register without a phone number for a one-time fee. The account is tied to neither a SIM card nor the payment, and nothing can recover it if the keys are lost. The iPhone version is still in development.
 date: 2026-09-26T01:23:00+08:00
 slug: signal-numberless-registration
+categories:
+  - encryption
 sources:
   - title: Phone Numberless Registration for Android
     url: https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android

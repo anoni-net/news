@@ -1,0 +1,2 @@
+{# 導讀的分類標籤，連到分類頁。顏色由 .cat--<鍵> 決定，見 news.css。cat 是分類的鍵 #}
+<a class="cat cat--{{ cat }}" href="{{ url(home ~ 'category/' ~ cat ~ '/') }}">{{ categories[cat][lang.code] }}</a>

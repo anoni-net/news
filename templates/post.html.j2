@@ -17,7 +17,7 @@
 {% block content %}
 <article class="story">
   <header class="story__head">
-    <p class="story__date"><time datetime="{{ post.created|iso }}">{{ post.created|full_date }}</time></p>
+    <p class="story__date">{% if post.categories %}{% with cat = post.categories[0] %}{% include "_category.html.j2" %}{% endwith %} <span aria-hidden="true">·</span> {% endif %}<time datetime="{{ post.created|iso }}">{{ post.created|full_date }}</time></p>
     <h1 class="story__title">{{ post.title }}</h1>
     <p class="story__dek">{{ post.description }}</p>
     <p class="story__byline">

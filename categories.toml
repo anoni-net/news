@@ -1,0 +1,46 @@
+# 導讀的分類，每篇在 front matter 的 categories 寫一個鍵。規則見 SPEC.md「分類」。
+#
+# 鍵是網址的一段（/news/category/<鍵>/），上線之後不改。三個語系的名稱都要有。
+# 顏色寫在 static/css/news.css 的 .cat--<鍵>，淺色與深色模式各一組，新增分類時一起加。
+# 順序是分類頁與說明列出的順序。
+
+[encryption]
+zh-TW = "加密與通訊"
+zh-CN = "加密与通信"
+en = "Encryption & Messaging"
+
+[tracking]
+zh-TW = "追蹤與個人資料"
+zh-CN = "追踪与个人数据"
+en = "Tracking & Personal Data"
+
+[surveillance]
+zh-TW = "監控與間諜軟體"
+zh-CN = "监控与间谍软件"
+en = "Surveillance & Spyware"
+
+[censorship]
+zh-TW = "審查與存取管制"
+zh-CN = "审查与访问管制"
+en = "Censorship & Access Control"
+
+[mobile]
+zh-TW = "手機與 App"
+zh-CN = "手机与 App"
+en = "Phones & Apps"
+
+[security]
+zh-TW = "資安與詐騙"
+zh-CN = "安全与诈骗"
+en = "Security & Scams"
+
+[civil-society]
+zh-TW = "公民團體的科技實務"
+zh-CN = "公民团体的科技实务"
+en = "Civil Society Tech Practice"
+
+# 每週短訊是固定的格式，內容橫跨好幾個主題，用中性色
+[brief]
+zh-TW = "每週短訊"
+zh-CN = "每周短讯"
+en = "Weekly Brief"

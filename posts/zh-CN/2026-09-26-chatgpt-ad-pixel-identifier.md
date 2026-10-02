@@ -3,6 +3,8 @@ title: ChatGPT 广告像素的跨站识别码
 description: 一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。目前只在 Android 版 Chrome 观察到。
 date: 2026-09-26T01:24:00+08:00
 slug: chatgpt-ad-pixel-identifier
+categories:
+  - tracking
 sources:
   - title: ChatGPT now knows what you do on other websites via ad collector
     url: https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/

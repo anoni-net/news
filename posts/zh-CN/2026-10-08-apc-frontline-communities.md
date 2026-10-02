@@ -3,6 +3,8 @@ title: 环境捍卫者与技术助长暴力的四国研究
 description: APC 预告巴西、肯尼亚、墨西哥与菲律宾四国的研究，记录环境捍卫者遭受的虚假信息、骚扰与监控，以及社区自己的应对方式。完整报告在北京时间 10 月 8 日晚间在线发布。四国以外的读者可以参考的是以家庭与社区为单位的防护做法。
 date: 2026-10-08T00:00:00+08:00
 slug: apc-frontline-communities
+categories:
+  - civil-society
 sources:
   - title: Frontline communities identify and resist technology-facilitated violence and disinformation in their territories
     url: https://www.apc.org/en/blog/frontline-communities-identify-and-resist-technology-facilitated-violence-and-disinformation

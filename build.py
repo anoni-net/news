@@ -142,6 +142,33 @@ def load_strings(path: Path = STRINGS_PATH) -> dict[str, dict]:
 _strings: dict[str, dict] | None = None
 
 
+CATEGORIES_PATH = ROOT / "categories.toml"
+_categories: dict[str, dict[str, str]] | None = None
+
+
+def load_categories(path: Path = CATEGORIES_PATH) -> dict[str, dict[str, str]]:
+    """分類的鍵對到三個語系的名稱，順序照檔案。規則見 SPEC.md「分類」。"""
+    with path.open("rb") as handle:
+        raw = tomllib.load(handle)
+    problems = []
+    for key, names in raw.items():
+        if not SLUG_RE.match(key):
+            problems.append(f"categories.toml：[{key}] 的鍵要是小寫英文、數字與連字號")
+        missing = [lang.code for lang in LANGS if not str(names.get(lang.code, "")).strip()]
+        if missing:
+            problems.append(f"categories.toml：[{key}] 缺少 {missing} 的名稱")
+    if problems:
+        raise BuildError(problems)
+    return {key: {lang.code: str(names[lang.code]) for lang in LANGS} for key, names in raw.items()}
+
+
+def categories_table() -> dict[str, dict[str, str]]:
+    global _categories
+    if _categories is None:
+        _categories = load_categories()
+    return _categories
+
+
 def strings() -> dict[str, dict]:
     global _strings
     if _strings is None:
@@ -456,9 +483,14 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         problems.append(f"{where}：pin 是 {pin}，早於發布日，焦點的最後一天要在發布日當天或之後")
         pin = None
 
+    # 每篇一個分類，寫成只有一項的清單，欄位名稱沿用 Material blog。清單見 categories.toml
     categories = meta.get("categories") or []
-    if not isinstance(categories, list):
-        problems.append(f"{where}：categories 要是清單")
+    known = categories_table()
+    if not isinstance(categories, list) or len(categories) != 1:
+        problems.append(f"{where}：categories 要寫一個分類，例如 categories: [encryption]，可用的有 {list(known)}")
+        categories = []
+    elif categories[0] not in known:
+        problems.append(f"{where}：categories 的 {categories[0]!r} 不在 categories.toml 裡，可用的有 {list(known)}")
         categories = []
 
     follows = meta.get("follows") or []
@@ -1550,6 +1582,18 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
                                         if (snap.created.year, snap.created.month) == (year, month)]),
                   prev_rel=None, next_rel=None, featured=None, featured_image=None)
 
+        # 分類頁：每個分類一頁，列出這個語系已發布的導讀。導讀歷史不分類，不放進來
+        for key, names in categories_table().items():
+            group = [post for post in lposts if post.categories == [key]]
+            if not group:
+                continue
+            suffix = f"category/{key}/"
+            write(Page(base + suffix, base + suffix + "index.html", False), "list.html.j2", lang, same_page(suffix),
+                  kind="category", category=key, heading=names[lang.code], posts=group, number=1, total=1,
+                  days=timeline(group, []), latest=None, prev_rel=None, next_rel=None, featured=None,
+                  featured_image=None)
+            sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))
+
         if history:
             sitemap_urls += write_history(lang, hdays, snapshots, history[1][lang.code])
 
@@ -1775,6 +1819,7 @@ def make_env() -> Environment:
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
     env.globals["icon"] = icon
+    env.globals["categories"] = categories_table()
     env.globals["track"] = track
     env.globals["analytics_events"] = ANALYTICS_EVENTS
     return env

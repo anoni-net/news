@@ -3,6 +3,8 @@ title: Surveillance technologies in migration and border control
 description: Privacy International published a guide in September to 12 categories of technology used by immigration and border authorities, including phone extraction, drones, GPS tagging and algorithmic decision-making. Migrants and asylum seekers are directly affected, and the fingerprint and face checks travellers meet at borders fall into one category. Public documents from UK, German, Canadian and EU bodies set out their purposes and safeguards.
 date: 2026-10-07T00:05:00+08:00
 slug: privacy-international-migrant-surveillance
+categories:
+  - surveillance
 sources:
   - title: "An Arsenal of Surveillance: A Guide to the Technologies Harming Migrants"
     url: https://privacyinternational.org/report/5866/arsenal-surveillance-guide-technologies-harming-migrants

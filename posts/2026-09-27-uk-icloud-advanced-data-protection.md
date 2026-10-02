@@ -3,6 +3,8 @@ title: 英國 iCloud 進階資料保護的分級現況
 description: Apple 從 2025 年 2 月起不再讓英國的新使用者開啟進階資料保護，在那之前開啟的人仍受保護，英國的 iCloud 因此分成兩種加密程度。英國以外的使用者仍可開啟。
 date: 2026-09-27T07:28:00+08:00
 slug: uk-icloud-advanced-data-protection
+categories:
+  - encryption
 sources:
   - title: Apple can no longer offer Advanced Data Protection in the United Kingdom to new users
     url: https://support.apple.com/en-us/122234

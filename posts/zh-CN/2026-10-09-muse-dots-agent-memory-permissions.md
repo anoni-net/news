@@ -3,6 +3,8 @@ title: Meta Muse 与 OpenAI Dots 的记忆与权限设计
 description: Meta 的 Muse 与 OpenAI 的 Dots 都在 9 月推出，在云端常驻、读取连接的应用数据并整理成记忆。截至 10 月 2 日，OpenAI 的支持清单不含中国大陆，Muse 在中国大陆的 App Store 没有上架，在海外使用 ChatGPT 或 Mac 的人可以先检查记忆与权限设置。
 date: 2026-10-09T00:05:00+08:00
 slug: muse-dots-agent-memory-permissions
+categories:
+  - tracking
 sources:
   - title: "Introducing Muse: The World’s First Personal AI Agent Built for Everyone"
     url: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/

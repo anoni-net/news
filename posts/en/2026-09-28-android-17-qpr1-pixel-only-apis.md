@@ -3,6 +3,8 @@ title: Pixel-only APIs in Android 17 QPR1
 description: Android 17 QPR1 adds new APIs for app developers without releasing the source to AOSP, so non-Pixel phones and systems such as GrapheneOS wait until QPR2 in December.
 date: 2026-09-28T07:05:00+08:00
 slug: android-17-qpr1-pixel-only-apis
+categories:
+  - mobile
 sources:
   - title: Android Open Source Project
     url: https://source.android.com/

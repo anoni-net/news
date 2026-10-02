@@ -37,6 +37,8 @@ sources:
     url: https://example.org/
 authors:
   - anoni-net
+categories:
+  - encryption
 ---
 
 內文，延伸閱讀：[威脅模型](https://anoni.net/docs/basics/threat-model/)
@@ -1401,3 +1403,30 @@ def test_front_matter_text_is_extracted_per_language(tmp_path):
         text = (tmp_path / lang / "front-matter.md").read_text(encoding="utf-8")
         assert " title：" in text and " description：" in text
         assert " also 1：" in text
+
+
+@pytest.mark.parametrize("replacement, expected", [
+    ("", "categories 要寫一個分類"),
+    ("categories:\n  - unknown\n", "不在 categories.toml 裡"),
+    ("categories:\n  - encryption\n  - tracking\n", "categories 要寫一個分類"),
+])
+def test_category_rules(tmp_path, replacement, expected):
+    """每篇一個分類，只能用 categories.toml 裡的鍵。"""
+    text = GOOD.replace("categories:\n  - encryption\n", replacement)
+    with pytest.raises(build.BuildError) as error:
+        build.load_post(write_post(tmp_path, text), AUTHORS)
+    assert any(expected in p for p in error.value.problems)
+
+
+def test_category_label_and_page(fixture_site):
+    """首頁的導讀標題上方有分類標籤，連到分類頁。分類頁只列那個分類的導讀，不放導讀歷史。"""
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    home = (out / "index.html").read_text(encoding="utf-8")
+    assert '<a class="cat cat--censorship" href="/news/category/censorship/">審查與存取管制</a>' in home
+    page = (out / "category" / "censorship" / "index.html").read_text(encoding="utf-8")
+    assert "list-heading--category cat--censorship" in page
+    assert "past__label" not in page
+    assert not (out / "category" / "encryption").exists()
+    en = (out / "en" / "category" / "mobile" / "index.html").read_text(encoding="utf-8")
+    assert "Phones &amp; Apps" in en

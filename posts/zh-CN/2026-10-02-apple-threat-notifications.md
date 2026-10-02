@@ -3,6 +3,8 @@ title: Apple 威胁通知的辨识与应对
 description: Apple 8 月向 110 个国家的用户发出雇佣间谍软件的威胁通知，绝大多数人不会成为这类攻击的目标。说明页写明真正的通知出现在哪里、不会要求密码与验证码，收到之后可以开启锁定模式并寻求协助。
 date: 2026-10-02T00:00:00+08:00
 slug: apple-threat-notifications
+categories:
+  - surveillance
 sources:
   - title: About Apple threat notifications and protecting against mercenary spyware
     url: https://support.apple.com/en-us/102174

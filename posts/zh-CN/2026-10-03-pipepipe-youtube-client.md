@@ -3,6 +3,8 @@ title: 开源 YouTube 客户端 PipePipe 5.4.0
 description: PipePipe 是从 NewPipe 分支出来的 Android 开源客户端，不需要账号与 Google Play 就能观看 YouTube、NicoNico 与 BiliBili。5.4.0 改进了在电视上的操作，也修复了 12 个问题。中国大陆境内的网络无法直接连上 YouTube。
 date: 2026-10-03T00:05:00+08:00
 slug: pipepipe-youtube-client
+categories:
+  - mobile
 sources:
   - title: PipePipe v5.4.0
     url: https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.4.0

@@ -3,6 +3,8 @@ title: 加拿大 C-22 合法存取法案與加密
 description: 加拿大的 C-22 法案已在眾議院三讀通過，政府能要求通訊與網路服務業者建立協助執法的技術能力、保存詮釋資料，部分加拿大以外的業者也在範圍內。加拿大以外的讀者現在不需要調整設定。
 date: 2026-10-05T00:05:00+08:00
 slug: canada-c22-lawful-access
+categories:
+  - encryption
 sources:
   - title: C-22 (45-1) Lawful Access Act, 2026
     url: https://www.parl.ca/legisinfo/en/bill/45-1/c-22

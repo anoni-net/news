@@ -3,6 +3,8 @@ title: The UK Supreme Court ruling on state immunity in a spyware claim
 description: "The UK Supreme Court ruled that Bahrain cannot claim state immunity to stop a UK court hearing claims that it hacked computers in the UK with spyware operated from abroad. The ruling decides only whether UK courts can hear the case, and whether the hacking happened has not been tried."
 date: 2026-10-06T00:05:00+08:00
 slug: uk-supreme-court-spyware-state-immunity
+categories:
+  - surveillance
 sources:
   - title: "[2026] UKSC 25, Case UKSC/2024/0152"
     url: https://supremecourt.uk/cases/uksc-2024-0152

@@ -3,6 +3,8 @@ title: 加拿大 C-22 合法访问法案与加密
 description: 加拿大的 C-22 法案已在众议院三读通过，政府能要求通信与网络服务商建立协助执法的技术能力、保存元数据，部分加拿大以外的服务商也在范围内。加拿大以外的读者现在不需要调整设置。
 date: 2026-10-05T00:05:00+08:00
 slug: canada-c22-lawful-access
+categories:
+  - encryption
 sources:
   - title: C-22 (45-1) Lawful Access Act, 2026
     url: https://www.parl.ca/legisinfo/en/bill/45-1/c-22
