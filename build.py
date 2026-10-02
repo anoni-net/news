@@ -845,6 +845,21 @@ def check_follows(posts: list[Post]) -> list[str]:
     return problems
 
 
+RELATED_LIMIT = 3
+
+
+def related_posts(posts: list[Post], index: int, skip: set[str], limit: int = RELATED_LIMIT) -> list[Post]:
+    """同分類的其他導讀：posts 由新到舊排好，取發布時間跟這篇最接近的 limit 篇，再由新到舊排。
+    skip 是已經出現在同一事件與前後篇導覽的網址，不重複列。見 SPEC.md「分類」。"""
+    post = posts[index]
+    if not post.categories:
+        return []
+    candidates = [other for other in posts
+                  if other is not post and other.categories == post.categories and other.rel not in skip]
+    candidates.sort(key=lambda other: abs((other.created - post.created).total_seconds()))
+    return sorted(candidates[:limit], key=lambda other: other.created, reverse=True)
+
+
 def story_threads(posts: list[Post]) -> dict[str, list[Post]]:
     """用 follows 把同一事件的文章串成一條事件線，回傳每篇的檔名對應到整條線，由舊到新排。
     posts 只放這次要產出的文章。後續還在排程中時不在裡面，舊文章就不會提早露出它的標題，
@@ -1519,9 +1534,13 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             # 同一事件的導讀，由舊到新。這篇不是最新的一篇時，標題區提示最新的後續
             thread = [item.translations.get(lang.code, item) for item in threads.get(post.path.stem, [])]
             followup = thread[-1] if thread and thread[-1].rel != post.rel else None
+            skip = {item.rel for item in thread} | {item.rel for item in (newer, older) if item}
+            related = related_posts(lposts, i, skip)
+            category_count = sum(1 for other in lposts if other.categories == post.categories)
             # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
             write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
                   lang, rels, post=post, newer=newer, older=older, thread=thread, followup=followup,
+                  related=related, category_count=category_count,
                   content=target.rewrite_html(localize_assets(post.html, target)),
                   jsonld=jsonld(post, target, config),
                   og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
