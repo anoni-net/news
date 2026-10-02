@@ -1,0 +1,16 @@
+{# 同分類的其他導讀，發布時間跟這篇最接近的幾篇，同一事件與前後篇已經列過的不重複。
+   放在 <article> 外面並標上 role，閱讀模式與朗讀不會念進去。規則見 SPEC.md「分類」 #}
+{% set cat = post.categories[0] %}
+<nav class="related cat--{{ cat }}" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">{{ s.related_heading }}</h2>
+  <p class="brief__category">{% include "_category.html.j2" %}</p>
+  <ol class="thread__list">
+{% for item in related %}
+    <li class="thread__item">
+      <time class="thread__date" datetime="{{ item.created|iso }}">{{ item.created|ymd }}</time>
+      <a class="thread__title" href="{{ url(item.rel) }}">{{ item.title }}</a>
+    </li>
+{% endfor %}
+  </ol>
+  <p class="related__all"><a href="{{ url(home ~ 'category/' ~ cat ~ '/') }}">{{ s.related_all.format(category=categories[cat][lang.code], count=category_count) }}</a></p>
+</nav>

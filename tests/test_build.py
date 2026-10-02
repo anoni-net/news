@@ -1430,3 +1430,18 @@ def test_category_label_and_page(fixture_site):
     assert not (out / "category" / "encryption").exists()
     en = (out / "en" / "category" / "mobile" / "index.html").read_text(encoding="utf-8")
     assert "Phones &amp; Apps" in en
+
+
+def test_related_posts_pick_the_nearest_in_the_same_category():
+    """同分類的其他導讀：取發布時間最接近的三篇，跳過前後篇與同一事件已經列過的，由新到舊排。"""
+    from types import SimpleNamespace
+    from datetime import datetime as dt
+
+    def post(day, cat="surveillance"):
+        return SimpleNamespace(rel=f"2026/10/p{day}/", categories=[cat], created=dt(2026, 10, day, tzinfo=build.TZ))
+
+    posts = sorted([post(d) for d in (1, 3, 5, 6, 7, 9, 20)] + [post(8, "mobile")],
+                   key=lambda p: p.created, reverse=True)
+    index = next(i for i, p in enumerate(posts) if p.rel == "2026/10/p6/")
+    related = build.related_posts(posts, index, skip={"2026/10/p7/"})
+    assert [p.rel for p in related] == ["2026/10/p9/", "2026/10/p5/", "2026/10/p3/"]
