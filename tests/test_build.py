@@ -1388,3 +1388,16 @@ def test_byline_icons_on_both_targets(fixture_site):
     for name, src in (("clearnet", f"/news/assets/favicons/{FAVICON}"), ("onion", f"/assets/favicons/{FAVICON}")):
         page = (targets[name].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
         assert f'<a href="#sources"><span class="favicon-stack"><img src="{src}" width="16" height="16" alt=""' in page
+
+
+def test_front_matter_text_is_extracted_per_language(tmp_path):
+    """linter 跳過 front matter，標題、description 與「同一天還有」要抽出來，目錄名稱帶語系才會套對規則。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("front_matter_text", ROOT / "tools" / "front_matter_text.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.main(tmp_path)
+    for lang in ("zh-TW", "zh-CN", "en"):
+        text = (tmp_path / lang / "front-matter.md").read_text(encoding="utf-8")
+        assert " title：" in text and " description：" in text
+        assert " also 1：" in text

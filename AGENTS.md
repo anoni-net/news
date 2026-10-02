@@ -17,6 +17,7 @@ uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI�
 uv run build.py --update-contract  # 新增網址之後，把它們收進 url_contract.txt
 uv run build.py --watch            # 列出快到期、還沒有後續稿的追蹤事件，貼進每週候選票
 uv run build.py --history          # 導讀歷史：列出 7 天內要上線、現況要重新查證的快照，以及 30 天內還沒寫的日期
+uv run tools/front_matter_text.py /tmp/fm  # 把 front matter 的標題、description 與「同一天還有」抽成 Markdown，給 linter 掃
 uv run pytest -q
 ./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
@@ -197,7 +198,7 @@ en 的讀者多半可以直接讀原文，篇幅留給英文媒體比較少寫�
 
 查證完成不等於可以交稿。推送前照這個順序做完：
 
-1. 用文件站的 `docs_style_lint.py` 掃三個語系，要 0 error 0 warn
+1. 用文件站的 `docs_style_lint.py` 掃三個語系，要 0 error 0 warn。linter 跳過 front matter，標題、`description` 與 `also` 的句子要先用 `uv run tools/front_matter_text.py <目錄>` 抽成 Markdown 再掃，CI 也是這樣做
 2. 派一個沒有參與寫稿的審稿（人或 AI 協作工具），拿貢獻者百科的寫作規則與本節當檢查表，三個語系逐句審，只列問題不改稿。lint 只抓詞表上的句型，四個以上逗號分句、「看得到」這類動補結構、擬人化、指涉不清、逗號斷在動詞與受詞之間，都要靠逐句讀
 3. 照審稿意見改完，請同一位審稿複審，直到只剩取捨性的意見。改動只是調換句序或拆句，也要複審，調序最容易讓主詞與前指消失
 4. 來源標題逐一對照原始頁面，照錄頁面上的大標題
