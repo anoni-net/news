@@ -11,7 +11,9 @@
   <header class="story__head">
     <h1 class="story__title">{{ intro.title }}</h1>
     <p class="story__dek">{{ intro.description }}</p>
+    <aside>
 {% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+    </aside>
   </header>
   <div class="story__body content">
 {{ intro.html|safe }}
@@ -19,11 +21,15 @@
 {% for m in months %}
   <section class="history-month" aria-labelledby="month-{{ m.month }}">
     <h2 class="history-month__name" id="month-{{ m.month }}">{{ s.history_month.format(month=s.months[m.month - 1]) }}</h2>
+    {# 日曆的格子只有日期數字，閱讀模式裡會變成一串數字，包在 aside 讓它移除，留下下方日期加標題的清單。
+       aside 在 section 裡、沒有名稱，輔助科技不會把它當成地標 #}
+    <aside>
     <ol class="history-month__grid">
 {% for d in m.days %}
       <li{% if (d.date.month, d.date.day) == (today.month, today.day) %} class="is-today"{% endif %}>{% if d.snapshot %}<a href="{{ url(d.snapshot.rel) }}" aria-label="{{ d.date|md }}">{{ d.date.day }}</a>{% else %}<span>{{ d.date.day }}</span>{% endif %}</li>
 {% endfor %}
     </ol>
+    </aside>
 {% set written = m.days|selectattr("snapshot")|list %}
 {% if written %}
     <ul class="history-month__list">

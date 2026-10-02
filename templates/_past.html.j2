@@ -1,7 +1,7 @@
 {# 導讀歷史的快照放在當天導讀的後面，只放標題與一句 description，全文在日期頁。
    標題與說明沿用導讀的樣式，讀起來一樣清楚，靠上方「導讀歷史 · 年份」的標籤跟導讀分開 #}
 <article class="brief past">
-  <p class="past__label"><a href="{{ url(home ~ 'history/') }}">{{ icon('history') }} {{ s.history }}</a><span aria-hidden="true"> · </span><time datetime="{{ snap.event.isoformat() }}">{{ s.history_event_year.format(year=snap.event.year) }}</time></p>
+  <p class="past__label"><a href="{{ url(home ~ 'history/') }}">{{ icon('history') }} {{ s.history }}</a> <span aria-hidden="true">·</span> <time datetime="{{ snap.event.isoformat() }}">{{ s.history_event_year.format(year=snap.event.year) }}</time></p>
   <h3 class="brief__title"><a href="{{ url(snap.rel) }}#{{ snap.anchor }}">{{ snap.title }}</a></h3>
   <p class="brief__dek">{{ snap.description }}</p>
 </article>
