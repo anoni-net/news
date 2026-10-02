@@ -1,4 +1,5 @@
 {% extends "_layout.html.j2" %}
+{% block header_langs %}{% endblock %}
 {# 導讀歷史的一個日期。快照照檔案的順序由舊到新排，往下讀就是一年一年增補上去的回看 #}
 {% set day_label = day.calendar|md %}
 {% set page_title = s.history_day_title.format(date=day_label) ~ " | " ~ s.site_name %}

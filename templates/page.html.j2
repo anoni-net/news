@@ -1,4 +1,5 @@
 {% extends "_layout.html.j2" %}
+{% block header_langs %}{% endblock %}
 {# 關於頁這類固定頁面，內容來自 pages/ 的 Markdown，版面沿用文章頁的標題與內文樣式 #}
 {% set page_title = site_page.title ~ " | " ~ s.site_name %}
 {% set page_description = site_page.description %}

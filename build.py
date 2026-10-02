@@ -1346,7 +1346,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         """頁首的語系切換與 hreflang。沒有對應頁面（404）時回傳空清單。"""
         if not rel_by_code:
             return []
-        return [{"code": lang.code, "html": lang.html, "name": texts[lang.code]["lang_name"],
+        return [{"code": lang.code, "html": lang.html, "name": texts[lang.code]["lang_name"], "short": texts[lang.code]["lang_short"],
                  "href": target.url(rel_by_code[lang.code]), "abs": target.abs_url(rel_by_code[lang.code]),
                  "current": lang == current} for lang in LANGS]
 
