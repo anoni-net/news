@@ -6,7 +6,103 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 02 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Doxxing prevention and incident response</title>
+<link>https://anoni.net/news/en/2026/10/eff-doxxing-safety/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/eff-doxxing-safety</guid>
+<pubDate>Sat, 03 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>EFF published a two-part doxxing safety guide in late August: audit your own footprint, then log incidents, harden accounts and lock your phone number. It is written for US readers, but the footprint audit and account hardening work anywhere.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including Electronic Frontier Foundation, Office of the Privacy Commissioner for Personal Data, Hong Kong, 全國法規資料庫&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 31 August the Electronic Frontier Foundation (EFF), a US digital rights group, published a two-part guide to doxxing, which it defines as &#34;the deliberate disclosure of personal information&#34; to bully, harass or intimidate someone. Part I is about prevention, Part II about response. The guide is written for US readers, but auditing your footprint and hardening accounts work anywhere.&lt;/p&gt;
+&lt;p&gt;Prevention starts with auditing yourself: check breach databases, list the sites where your usernames are registered (EFF notes the results may not be entirely accurate) and set social media accounts to private. EFF names data brokers as a frequent source of doxxing material and cites a study finding DIY removal requests more effective than paid services, though slower; paid services can suit those who would rather delegate.&lt;/p&gt;
+&lt;p&gt;Once an incident starts, keep a log of times, places, people and what you saw. To check forums where harassers gather, EFF recommends Tor Browser (a browser that hides where you connect from) and no engagement. Turn on two-factor authentication, consider shutting down targeted accounts and, where providers offer them, add security passwords or PINs to phone and bank accounts to block SIM swapping, where an attacker impersonates you to take over your number and then the accounts tied to it. Friends can share the monitoring, and Part II suggests a PACE plan (primary, alternate, contingency, escape/emergency).&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Doxxers piece together scraps from breach databases, data brokers and public records into a dossier. Some remedies exist only in the US: address confidentiality programmes in some states, which substitute a proxy address in public records, and California&#39;s DROP, which lets residents send one deletion request to all active data brokers. Following EFF&#39;s Tor Browser advice takes an extra step in mainland China, where GreatFire&#39;s tests show torproject.org blocked (checked 29 September). The Tor Project recommends on its support page that users there get the browser through GetTor and connect with bridges (unlisted entry points to the Tor network).&lt;/p&gt;
+&lt;p&gt;Hong Kong made doxxing a specific offence in October 2021, punishable by up to HK$1,000,000 and five years in prison where specified harm is caused. The Privacy Commissioner for Personal Data, head of the city&#39;s privacy regulator, can also serve cessation notices to have doxxing content removed.&lt;/p&gt;
+&lt;p&gt;In mainland China, under 2023 guidelines on cyber violence from the Supreme People&#39;s Court, the Supreme People&#39;s Procuratorate and the Ministry of Public Security, organising a &#34;human flesh search&#34; to illegally collect citizens&#39; personal information and publish it to the public at large is punished as the crime of infringing citizens&#39; personal information in serious cases. Victims who can show an infringement is under way or imminent, and that delay would cause irreparable harm, can also seek an injunction under Article 997 of the Civil Code.&lt;/p&gt;
+&lt;p&gt;In Taiwan, unlawfully collecting or using personal data in a way liable to cause damage can bring up to five years in prison under Article 41 of the Personal Data Protection Act, to which a fine of up to NT$1 million may be added. The offence requires intent to obtain an unlawful gain for oneself or a third party, or to damage another person&#39;s interests.&lt;/p&gt;
+&lt;p&gt;Any complaint needs evidence, so keep screenshots and links in the incident log from the first message. Going to the police is a judgement call: EFF writes that &#34;for many, talking to law enforcement will only make things worse.&#34;&lt;/p&gt;
+&lt;p&gt;The first step today is to enter your email address at Have I Been Pwned, a breach search site, to see whether it appears in any known data breach. When we checked on 29 September the search was free, needed no account and the site was English-only. GreatFire&#39;s last test, on 9 February 2026, found it reachable from mainland China, and it has not been retested since. If your address appears, EFF lists changing the address or phone number as an option, while calling it &#34;extremely inconvenient&#34;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/08/doxxing-safety-pt-i-prevention-and-footprint-management&#34;&gt;Doxxing Safety Pt I: Prevention and Footprint Management&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Electronic Frontier Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-31&#34;&gt;31 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/08/doxxing-safety-part-ii-incident-response&#34;&gt;Doxxing Safety Part II: Incident Response&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Electronic Frontier Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-31&#34;&gt;31 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/data_privacy_law/amendments_2021/amendment_2021.html&#34;&gt;The Personal Data (Privacy) (Amendment) Ordinance 2021&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data, Hong Kong&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-10-08&#34;&gt;8 October 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-05-31&#34;&gt;31 May 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://gongbao.court.gov.cn/Details/12dfb372281fcfc26a1489d012108b.html&#34;&gt;最高人民法院 最高人民检察院 公安部印发《关于依法惩治网络暴力违法犯罪的指导意见》的通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;最高人民法院公报&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-09-20&#34;&gt;20 September 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;Have I Been Pwned: Check if your email address has been exposed in a data breach&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Have I Been Pwned&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://haveibeenpwned.com/FAQs&#34;&gt;FAQs - Have I Been Pwned&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Have I Been Pwned&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacy.ca.gov/data-brokers&#34;&gt;DROP for data brokers&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;California Privacy Protection Agency&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/&#34;&gt;Connecting to Tor from censored regions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/www.torproject.org&#34;&gt;Is http://www.torproject.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/haveibeenpwned.com&#34;&gt;Is https://haveibeenpwned.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>OpenAI agent breach of an Australian Medicare statistics portal</title>
 <link>https://anoni.net/news/en/2026/10/openai-agent-medicare-portal/</link>
