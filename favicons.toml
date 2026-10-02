@@ -321,6 +321,10 @@ from = "https://grapheneos.org/apple-touch-icon.png"
 [hosts."grapheneos.social"]
 same_as = "grapheneos.org"
 
+[hosts."gultsch.de"]
+icon = "gultsch.de-8aabebf2.png"
+from = "https://gultsch.de/favicon.ico"
+
 [hosts."haveibeenpwned.com"]
 icon = "haveibeenpwned.com-9e2dc6c7.png"
 from = "https://haveibeenpwned.com/apple-touch-icon.png"
@@ -387,6 +391,10 @@ from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-
 icon = "justiceformyanmar.org-db7870eb.png"
 from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd428e35b04b8c_jfm_logo_256_square.png"
 
+[hosts."keepandroidopen.org"]
+icon = "keepandroidopen.org-32ba658c.png"
+from = "https://keepandroidopen.org/favicon.ico"
+
 [hosts."law.moj.gov.tw"]
 icon = "law.moj.gov.tw-ac2a3ab3.png"
 from = "https://law.moj.gov.tw/favicon.png"
@@ -438,6 +446,10 @@ from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc
 [hosts."minister.defence.gov.au"]
 icon = "minister.defence.gov.au-5336c074.png"
 from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
+
+[hosts."mirrors.tuna.tsinghua.edu.cn"]
+icon = "mirrors.tuna.tsinghua.edu.cn-4a3f6ec5.png"
+from = "https://mirrors.tuna.tsinghua.edu.cn/static/img/favicon.png"
 
 [hosts."mohw.gov.tw"]
 icon = "mohw.gov.tw-5e72f012.png"
