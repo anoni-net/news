@@ -56,6 +56,10 @@ from = "https://bandaancha.eu/apple-touch-icon.png"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."blog.archive.org"]
+icon = "blog.archive.org-f5b4b9c3.png"
+from = "https://blog.archive.org/wp-content/uploads/2023/03/ia-logo-sq-300x300.png"
+
 [hosts."blog.cloudflare.com"]
 icon = "blog.cloudflare.com-71ae303d.png"
 from = "https://blog.cloudflare.com/favicon.ico"
@@ -86,6 +90,10 @@ from = "https://www.cac.gov.cn/favicon.ico"
 [hosts."canada.ca"]
 icon = "canada.ca-6be11ced.png"
 from = "https://www.canada.ca/favicon.ico"
+
+[hosts."cbsnews.com"]
+icon = "cbsnews.com-5afd5cc8.png"
+from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
 
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
@@ -168,6 +176,10 @@ from = "https://curia.europa.eu/site/plugins/CURIA2MainPlugin/images/icons/favic
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
+
+[hosts."dawo.community"]
+icon = "dawo.community-cf7a3078.png"
+from = "https://www.dawo.community/favicon.svg（轉成 PNG）"
 
 [hosts."demo.uwazi.io"]
 icon = "demo.uwazi.io-990b6692.png"
@@ -263,6 +275,10 @@ from = "https://www.frontex.europa.eu/favicon.ico"
 
 [hosts."geneva.cs.umd.edu"]
 same_as = "cs.umd.edu"
+
+[hosts."git.mills.io"]
+icon = "git.mills.io-ed49de22.png"
+from = "https://git.mills.io/favicon.ico"
 
 [hosts."github.com"]
 icon = "github.com-90043607.png"
@@ -593,6 +609,10 @@ from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
 [hosts."texastribune.org"]
 icon = "texastribune.org-90fb8aad.png"
 from = "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2025/09/cropped-cropped-texas-tribune-favicon.png?fit=192%2C192&ssl=1"
+
+[hosts."theguardian.com"]
+icon = "theguardian.com-04032708.png"
+from = "https://assets.guim.co.uk/static/frontend/icons/homescreen/apple-touch-icon-512.png"
 
 [hosts."thelocal.no"]
 icon = "thelocal.no-231a147a.png"
