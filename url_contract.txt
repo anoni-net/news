@@ -259,6 +259,9 @@
 /en/history/10-08/
 	#y2026
 /en/page/2/
+/en/reading/
+	#display
+	#listening
 /en/subscribe/
 	#more
 	#steps
@@ -290,6 +293,9 @@
 /history/10-08/
 	#y2026
 /page/2/
+/reading/
+	#display
+	#listening
 /subscribe/
 	#more
 	#steps
@@ -435,6 +441,9 @@
 /zh-cn/history/10-08/
 	#y2026
 /zh-cn/page/2/
+/zh-cn/reading/
+	#display
+	#listening
 /zh-cn/subscribe/
 	#more
 	#steps

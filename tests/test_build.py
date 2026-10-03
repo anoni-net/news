@@ -1104,8 +1104,21 @@ def test_about_page_per_language(fixture_site):
     # 頁尾連到同語系的關於頁與回報錯誤的 issue 表單
     for rel, home in (("", "/news/"), ("en/", "/news/en/")):
         page = (targets["clearnet"].out / rel / "index.html").read_text(encoding="utf-8")
-        assert f'href="{home}about/"' in page
+        assert f'href="{home}about/"' in page and f'href="{home}reading/"' in page
         assert 'href="https://github.com/anoni-net/news/issues/new"' in page
+
+
+def test_reading_page_and_about_pointers(fixture_site):
+    """閱讀說明頁有字級與朗讀兩節。關於頁保留同名錨點，各用一句話連到閱讀說明頁，分享出去的舊連結仍接得上。"""
+    targets, pages, _ = fixture_site
+    for target in ("clearnet", "onion"):
+        rels = {page.rel: page for page in pages[target]}
+        for lang in ("", "zh-cn/", "en/"):
+            assert {"display", "listening"} <= set(rels[lang + "reading/"].anchors)
+            assert {"display", "listening"} <= set(rels[lang + "about/"].anchors)
+            about = (targets[target].out / lang / "about" / "index.html").read_text(encoding="utf-8")
+            assert 'href="../reading/#display"' in about and 'href="../reading/#listening"' in about
+            assert (targets[target].out / lang / "reading" / "index.html").exists()
 
 
 def test_site_page_problems(tmp_path):

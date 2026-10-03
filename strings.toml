@@ -3,7 +3,7 @@
 # 模板把連結夾在中間，不在這裡寫 HTML。newsletter 用在頁首與頁尾的連結，newsletter_inline 用在
 # 文章末尾那一句話裡，英文的大小寫不同。newsletter_url 是訂閱表單，中文與英文各有一份。
 # 頁面上的 RSS 連結指向同語系的訂閱頁 subscribe/，不寫在這裡。規則見 SPEC.md「RSS」。
-# about 是頁尾到關於頁的連結，report 與 report_url 是回報錯誤的連結，三個語系都指向 GitHub 的 issue 表單。
+# about 與 reading 是頁尾到關於頁與閱讀說明頁的連結，report 與 report_url 是回報錯誤的連結，三個語系都指向 GitHub 的 issue 表單。
 
 ["zh-TW"]
 # 社群的用字是「正體中文」，不寫「繁體中文」，見文件站「為什麼我們用「正體中文」而非「繁體中文」」
@@ -44,6 +44,7 @@ bluesky = "在 Bluesky 追蹤"
 bluesky_inline = "在 Bluesky 追蹤"
 bluesky_url = "https://bsky.app/profile/news.anoni.net"
 about = "關於新聞導讀"
+reading = "閱讀說明"
 report = "回報錯誤"
 report_url = "https://github.com/anoni-net/news/issues/new"
 byline = "導讀："
@@ -132,6 +133,7 @@ bluesky = "在 Bluesky 关注"
 bluesky_inline = "在 Bluesky 关注"
 bluesky_url = "https://bsky.app/profile/news.anoni.net"
 about = "关于新闻导读"
+reading = "阅读说明"
 report = "报告错误"
 report_url = "https://github.com/anoni-net/news/issues/new"
 byline = "导读："
@@ -220,6 +222,7 @@ bluesky = "Follow on Bluesky"
 bluesky_inline = "Bluesky"
 bluesky_url = "https://bsky.app/profile/news.anoni.net"
 about = "About"
+reading = "Reading options"
 report = "Report an error"
 report_url = "https://github.com/anoni-net/news/issues/new"
 byline = "By "
