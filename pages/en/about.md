@@ -1,9 +1,19 @@
 ---
 title: About anoni.net News
-description: How anoni.net News chooses stories, checks facts, corrects errors and follows up, how the three language versions differ, and how to report a problem.
+description: What anoni.net News covers, how it chooses stories, checks facts, corrects errors and follows up, how the three language versions differ, and how to report a problem.
 ---
 
 anoni.net News is written by anoni.net, an anonymity network community based in Taiwan. It covers international news on privacy, anonymity networks and internet censorship from the angle we know best, technology and the open-source ecosystem. Each piece opens with what happened and who is affected, then its Perspective section covers the technology involved, the first step readers can take now, and what it costs them.
+
+## Coverage {#coverage}
+
+Stories are grouped into the categories below, one each. Select a category to see every story in it.
+
+%CATEGORIES%
+
+We do not cover tech news unrelated to privacy, anonymity networks or censorship, such as general AI governance or the business of the tech industry. Release announcements that only bump a version number without changing how people use a tool are left out, as are fundraising, event and staffing announcements.
+
+There is also a companion series, [Same Day, Years Apart](../history/), with one page per date looking back at what happened in privacy, anonymity networks and censorship on that date in earlier years.
 
 ## Story selection {#selection}
 

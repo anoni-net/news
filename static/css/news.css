@@ -1374,6 +1374,23 @@ p {
     font-size: 0.875rem;
 }
 
+/* 關於頁「報導範圍」的分類清單，名稱用分類標籤，說明接在下一行 */
+.coverage {
+    margin: 0 0 1.25rem;
+}
+
+.coverage dt {
+    margin-top: 1rem;
+}
+
+.coverage dt:first-child {
+    margin-top: 0;
+}
+
+.coverage dd {
+    margin: 0.25rem 0 0;
+}
+
 .list-heading--category {
     padding-left: 0.75rem;
     border-left: 6px solid var(--cat);

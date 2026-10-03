@@ -1,9 +1,9 @@
 # 導讀的分類，每篇在 front matter 的 categories 寫一個鍵。規則見 SPEC.md「分類」。
 #
 # 鍵是網址的一段（/news/category/<鍵>/），上線之後不改。三個語系的名稱都要有。
-# [<鍵>.description] 是分類頁開頭的說明與 <meta name="description">，寫給讀者看，三個語系都要有。
+# [<鍵>.description] 是分類頁開頭的說明與 <meta name="description">，關於頁「報導範圍」也列出它，寫給讀者看，三個語系都要有。
 # 顏色寫在 static/css/news.css 的 .cat--<鍵>，淺色與深色模式各一組，新增分類時一起加。
-# 順序是分類頁與說明列出的順序。
+# 順序是分類頁、說明與關於頁列出的順序。
 
 [encryption]
 zh-TW = "加密與通訊"

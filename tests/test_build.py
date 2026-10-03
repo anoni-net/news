@@ -1438,6 +1438,21 @@ def test_category_label_and_page(fixture_site):
     assert "Phones &amp; Apps" in en
 
 
+def test_about_page_lists_every_category(fixture_site):
+    """關於頁「報導範圍」照 categories.toml 列出每個分類與說明，有文章的連到分類頁，還沒有的只列名稱。"""
+    targets, _, _ = fixture_site
+    for target, prefix in ((targets["clearnet"], "/news/"), (targets["onion"], "/")):
+        for lang in ("", "zh-cn/", "en/"):
+            page = (target.out / lang / "about" / "index.html").read_text(encoding="utf-8")
+            assert "%CATEGORIES%" not in page
+            section = page[page.index('<dl class="coverage">'):page.index("</dl>", page.index('<dl class="coverage">'))]
+            assert section.count("<dt>") == len(build.categories_table())
+            assert f'<a class="cat cat--censorship" href="{prefix}{lang}category/censorship/">' in section
+            assert '<span class="cat cat--encryption">' in section
+    zh = (targets["clearnet"].out / "about" / "index.html").read_text(encoding="utf-8")
+    assert build.categories_table()["encryption"]["description"]["zh-TW"] in zh
+
+
 def test_related_posts_pick_the_nearest_in_the_same_category():
     """同分類的其他導讀：取發布時間最接近的三篇，跳過前後篇與同一事件已經列過的，由新到舊排。"""
     from types import SimpleNamespace
