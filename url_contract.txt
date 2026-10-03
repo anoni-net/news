@@ -99,6 +99,7 @@
 /about/
 	#byline
 	#corrections
+	#coverage
 	#display
 	#fact-checking
 	#follow-ups
@@ -212,6 +213,7 @@
 /en/about/
 	#byline
 	#corrections
+	#coverage
 	#display
 	#fact-checking
 	#follow-ups
@@ -387,6 +389,7 @@
 /zh-cn/about/
 	#byline
 	#corrections
+	#coverage
 	#display
 	#fact-checking
 	#follow-ups

@@ -1,0 +1,7 @@
+{# 關於頁「報導範圍」的分類清單，順序與說明照 categories.toml。還沒有文章的分類沒有分類頁，只列名稱。live 是有分類頁的鍵 #}
+<dl class="coverage">
+{% for cat, names in categories.items() %}
+  <dt>{% if cat in live %}{% include "_category.html.j2" %}{% else %}<span class="cat cat--{{ cat }}">{{ names[lang.code] }}</span>{% endif %}</dt>
+  <dd>{{ names.description[lang.code] }}</dd>
+{% endfor %}
+</dl>
