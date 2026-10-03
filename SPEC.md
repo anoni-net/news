@@ -159,6 +159,7 @@ authors:
 - 每篇一個。兩個都說得通時，挑讀者最可能拿來找的那個，例如 F-Droid 2.0 那篇的重點是 Google 的開發者驗證，放在「審查與存取管制」
 - 每個分類有自己的顏色，寫在 `news.css` 的 `.cat--<鍵>`，淺色與深色模式各一組，文字對背景至少 4.5:1。標籤前面加一個同色的小方塊，掃視時就分得出來，文字本身也帶顏色，不只靠色塊。每週短訊是格式，用中性的灰色
 - 標籤出現在首頁時間軸與焦點的標題上方，字級跟「導讀歷史 · 年份」的標籤相同，以及文章頁的日期前面，連到分類頁
+- 每個分類在 `categories.toml` 的 `[<鍵>.description]` 寫一句說明，三個語系各一句，寫給讀者看這一類收什麼。分類頁的標題下方顯示這句，也當成那一頁的 `<meta name="description">`。只有標題與文章清單的頁面，搜尋引擎容易當成內容太薄的頁面
 - 分類頁的網址是各語系首頁底下的 `category/<鍵>/`，例如 `/news/category/encryption/`，列出這個分類已發布的導讀，依發布日期由新到舊，收進 sitemap 與網址合約。還沒有文章的分類不產生頁面。分類頁沒有分頁，一個分類超過 `per_page` 篇時再加
 - 導讀歷史不分類，首頁上它已經有自己的「導讀歷史 · 年份」標籤，也不出現在分類頁
 - 文章頁在同一事件的導讀之後放「同分類的其他導讀」，列同一分類裡發布時間跟這篇最接近的 3 篇，由新到舊排，最後一行連到分類頁並寫出那個分類的篇數。前後篇導覽與同一事件的導讀已經列過的不重複，扣掉之後沒有文章就不顯示。區塊上緣用分類的顏色，放在 `<article>` 外面並標上 `role="navigation"`，閱讀模式與朗讀不會念進去。讀者多半從社群連結點進單篇，讀完要有下一篇可以讀，前後篇只照時間排，跟這篇的主題不一定相關
@@ -740,6 +741,7 @@ iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出
 | `article:published_time` | `date.created` | 無 |
 | `article:modified_time` | 有更正時放 `date.updated` | 無 |
 | `twitter:card` | `summary_large_image` | 同左 |
+| `og:image:alt`、`twitter:image:alt` | 頁面標題，用全站的 `og.png` 時寫站名 | 站名 |
 
 全站共用的預覽圖放在 `static/`。文章指定的 `image` 跟內文圖片一樣在建置時抓進產物，兩種都是站內的靜態檔，讀者端不會因此對外請求。預覽卡片例外，`og:image` 直接寫圖片主機的網址，那是給社群平台的爬蟲抓的，瀏覽器不會載入。
 
@@ -762,14 +764,16 @@ iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出
 
 ### 結構化資料
 
-文章頁放一段 JSON-LD 的 `NewsArticle`，包含標題、`description`、發布與更正日期、網址與署名，`citation` 列出每一筆原文。署名依「發佈身分」的類型對應：
+文章頁放一段 JSON-LD 的 `NewsArticle`，包含標題、`description`、發布與更正日期、網址與署名，`citation` 列出每一筆原文，`articleSection` 是分類的名稱，`image` 跟 `og:image` 是同一張（預覽卡片、指定的 `image` 或全站的 `og.png`）。署名依「發佈身分」的類型對應：
 
 | 署名 | JSON-LD |
 |---|---|
 | 社群 `anoni-net` | `Organization`，名稱 anoni.net，網址是官網首頁 |
 | 筆名、具名 | `Person`，只放 `name`。`authors.yml` 有 `url` 才放 `url` |
 
-`publisher` 一律是 anoni.net 的 `Organization`。網址依輸出目標產生，onion 產物裡的 JSON-LD 用 onion 的網址。
+`publisher` 一律是 anoni.net 的 `Organization`，附上 `static/logo-512.png` 當 `logo`（從 `favicon.svg` 轉成 512×512 的 PNG，白底，Google 建議的 logo 要是點陣圖）。網址依輸出目標產生，onion 產物裡的 JSON-LD 用 onion 的網址。
+
+文章頁另外放一段 `BreadcrumbList`，路徑是「新聞導讀 › 分類 › 文章標題」，分類頁是「新聞導讀 › 分類」。搜尋結果會在標題上方顯示這條路徑，取代一長串網址，讀者一眼看得出這篇屬於哪一類。
 
 ### 索引範圍
 

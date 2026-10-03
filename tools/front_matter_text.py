@@ -1,7 +1,7 @@
 """把 front matter 裡寫給讀者看的文字抽成 Markdown，讓 docs_style_lint.py 也掃得到。
 
 linter 會跳過 front matter，導讀的 title、description，以及導讀歷史快照的 title、description
-與「同一天還有」的句子都掃不到。2026-10 有一則「同一天還有」寫了破折號，CI 沒有擋下來。
+與「同一天還有」的句子都掃不到。categories.toml 的分類名稱與說明也一起抽出來。2026-10 有一則「同一天還有」寫了破折號，CI 沒有擋下來。
 
 用法：uv run tools/front_matter_text.py <輸出目錄>
 輸出 <輸出目錄>/zh-TW/front-matter.md、zh-CN/、en/ 三份，每行標明來源檔與欄位。目錄名稱
@@ -11,6 +11,8 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
+
+import tomllib
 
 import yaml
 
@@ -43,8 +45,11 @@ def lines_for(path: Path) -> list[str]:
 
 
 def main(target: Path) -> None:
+    with (ROOT / "categories.toml").open("rb") as handle:
+        categories = tomllib.load(handle)
     for lang, sub in LANG_DIRS:
-        lines = []
+        lines = [f"categories.toml {key}：{entry[lang]}" for key, entry in categories.items()]
+        lines += [f"categories.toml {key} description：{entry['description'][lang]}" for key, entry in categories.items()]
         for folder in ("posts", "history"):
             base = ROOT / folder / sub if sub else ROOT / folder
             for path in sorted(base.glob("*.md")):

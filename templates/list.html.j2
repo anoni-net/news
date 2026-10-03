@@ -8,13 +8,18 @@
 {% set page_description = s.page_description.format(n=number) %}
 {% elif kind == "category" %}
 {% set page_title = heading ~ " | " ~ s.site_name %}
-{% set page_description = s.category_description.format(heading=heading) %}
+{% set page_description = intro %}
 {% else %}
 {% set page_title = heading ~ " | " ~ s.site_name %}
 {% set page_description = s.archive_description.format(heading=heading) %}
 {% endif %}
 {% set og_title = page_title %}
 {% set og_type = "website" %}
+{% block head %}
+{% if jsonld is defined %}
+{{ jsonld|safe }}
+{% endif %}
+{% endblock %}
 {% block masthead %}
 {% if front %}
   <div class="masthead">
@@ -34,6 +39,7 @@
 {% if not front %}
 {% if kind == "category" %}
 <h1 class="list-heading list-heading--category cat--{{ category }}">{{ heading }}</h1>
+<p class="list-intro">{{ intro }}</p>
 {% else %}
 <h1 class="list-heading">{{ heading }}{% if number > 1 %}{{ s.page_suffix.format(n=number) }}{% endif %}</h1>
 {% endif %}

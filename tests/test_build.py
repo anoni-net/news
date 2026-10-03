@@ -26,6 +26,12 @@ FIXTURES = ROOT / "tests" / "fixtures"
 ONION_HOST = build.load_config(ROOT / "site.toml")[0]["onion_host"]
 AUTHORS = build.load_authors(FIXTURES / "authors.yml")
 
+def first_jsonld(scripts: str) -> dict:
+    """jsonld() 回傳好幾段 <script>，第一段是 NewsArticle。"""
+    import json as jsonlib
+    return jsonlib.loads(re.search(r'<script type="application/ld\+json">\n(.*?)\n</script>', scripts, re.S).group(1))
+
+
 GOOD = """\
 ---
 title: 測試文章
@@ -542,7 +548,7 @@ def test_jsonld_author_types(fixture_site):
     targets, _, posts = fixture_site
     post = next(p for p in posts if p.slug == "layout-stress-test")
     import json
-    data = json.loads(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
+    data = first_jsonld(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
     assert [a["@type"] for a in data["author"]] == ["Person", "Person"]
     assert "url" not in data["author"][0]
     assert data["dateModified"].startswith("2026-09-20")
@@ -615,7 +621,7 @@ def test_multi_source_post_renders(fixture_site):
     assert "整理 5 篇原文，來自 EFF、Access Now、OONI" in (out / "index.html").read_text(encoding="utf-8")
     import json
     post = next(p for p in posts if p.slug == "age-verification-roundup")
-    data = json.loads(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
+    data = first_jsonld(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
     assert len(data["citation"]) == 5
 
 
@@ -1466,3 +1472,21 @@ def test_onion_never_points_og_image_at_the_card_host(fixture_site):
     targets, _, _ = fixture_site
     page = (targets["onion"].out / "2026" / "09" / "zkp-age-verification" / "index.html").read_text(encoding="utf-8")
     assert "assets.anoni.net/news/og/" not in page
+
+
+def test_structured_data_has_section_breadcrumb_and_logo(fixture_site):
+    """文章頁的 JSON-LD 帶分類、發布者的 logo 與麵包屑，分類頁有說明與麵包屑。"""
+    import json as jsonlib
+    targets, _, _ = fixture_site
+    out = targets["clearnet"].out
+    page = (out / "2026" / "09" / "zkp-age-verification" / "index.html").read_text(encoding="utf-8")
+    blocks = [jsonlib.loads(b) for b in re.findall(r'<script type="application/ld\+json">\n(.*?)\n</script>', page, re.S)]
+    article, crumbs = blocks
+    assert article["articleSection"] == "審查與存取管制"
+    assert article["publisher"]["logo"]["url"] == "https://anoni.net/news/logo-512.png"
+    assert [item["name"] for item in crumbs["itemListElement"]] == ["新聞導讀", "審查與存取管制", article["headline"]]
+    assert crumbs["itemListElement"][1]["item"] == "https://anoni.net/news/category/censorship/"
+    assert "item" not in crumbs["itemListElement"][-1]
+    category = (out / "category" / "censorship" / "index.html").read_text(encoding="utf-8")
+    assert '<p class="list-intro">' in category and '"@type": "BreadcrumbList"' in category
+    assert (out / "logo-512.png").exists()
