@@ -6,7 +6,108 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 04 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Tracking pixels that sent doctors&#39; appointments to social platforms</title>
+<link>https://anoni.net/news/en/2026/10/doctoralia-health-tracking-pixels/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/doctoralia-health-tracking-pixels</guid>
+<pubDate>Sun, 04 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Doctoralia&#39;s sites in Brazil, Colombia, Mexico and elsewhere in Latin America sent specialties, doctors&#39; names and appointment times to Google, TikTok and LinkedIn. Its parent company does not operate in mainland China, Hong Kong, Macau or Taiwan.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including The Markup, Docplanner, GitHub&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;US outlet The Markup and Agência Pública, a Brazilian investigative nonprofit, reported on 14 September that booking platform Doctoralia sent appointment information to Google, TikTok and LinkedIn for advertising from its sites in Brazil, Colombia, Mexico and elsewhere in Latin America. Parent company Docplanner lists 13 markets in Europe, Turkey and Latin America, none in mainland China, Hong Kong, Macau or Taiwan.&lt;/p&gt;
+&lt;p&gt;In Brazil, the site sent searched specialties such as gynaecology to Google, then the doctor&#39;s name and appointment time after booking. In Colombia, it sent the doctor&#39;s name and appointment time for any specialist to LinkedIn, and bookings in Colombia and Mexico also went to TikTok. Tracking started before visitors entered a name or email. Doctoralia also appeared to use Facebook trackers, though in the cases reviewed Meta received less sensitive information than the others did.&lt;/p&gt;
+&lt;p&gt;Doctoralia is based in Spain, where the EU&#39;s General Data Protection Regulation applies, and its Spanish site sent no searches to outside companies in testing. Docplanner&#39;s similar German platform offers a pop-up to switch off tracking cookies, while the Latin American sites&#39; cookie notices offered no immediate opt-out.&lt;/p&gt;
+&lt;p&gt;Docplanner&#39;s statement said the trackers measured its own social media campaigns and that it does not sell personal data. As of 14 September it was conducting a technical and legal review. LinkedIn&#39;s response said its policies prohibit its Insight Tag on pages collecting sensitive data, Google&#39;s response pointed to policies against collecting private health information, and TikTok did not respond.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;A tracking pixel is code an ad platform gives a website. The visitor&#39;s browser sends what they view and click back to the platform, often with a unique ID, and according to social media companies, such IDs can be tied to a person&#39;s profile. On a medical site, the specialty someone searches for or the doctor they book can reveal aspects of their health.&lt;/p&gt;
+&lt;p&gt;Two Brazilian regulators disagree on whether this counts as health data. The Federal Council of Medicine, which licenses and regulates doctors, holds that booking an appointment involves no medical confidentiality. The National Supplementary Health Agency, which regulates private health insurance, takes the view that the specialty sought and other booking details may reveal aspects of a person&#39;s health.&lt;/p&gt;
+&lt;p&gt;Taiwan&#39;s Personal Data Protection Act, Article 6, bars collecting, processing or using medical records, medical care and health check data except in listed cases. Mainland China&#39;s Personal Information Protection Law lists medical and health information as sensitive personal information in Article 28 and requires separate consent to process it in Article 29. Neither law spells out booking data.&lt;/p&gt;
+&lt;p&gt;The Markup&#39;s Blacklight scanner tests a URL for data sent to TikTok, Google Analytics and others. A scan normally takes 30 seconds to a minute, the interface is in English only, and scans run from Ohio, California or Europe. Only the entered address is scanned, so data sent later in a booking may not show up. Part of its code is on GitHub under the GPL-3.0 licence, with a release on 4 June.&lt;/p&gt;
+&lt;p&gt;In tests published in June 2025 on US state health-insurance exchange sites, The Markup found that stricter Firefox and Safari settings, the Brave and DuckDuckGo browsers, and the Privacy Badger and uBlock Origin Lite extensions blocked the LinkedIn, Snapchat and Google trackers it examined. TikTok&#39;s tracker was not tested, the extensions were tested on desktop, and a VPN or private browsing did not help.&lt;/p&gt;
+&lt;p&gt;In desktop Firefox, a first step is to switch Enhanced Tracking Protection from Standard to Strict under Settings, Privacy and security. The change needs no account, and Firefox comes in Traditional and Simplified Chinese. The trade-off appears on the same page as the warning &#34;Some sites may break with strict tracking protection.&#34; On a Mac, users can set &#34;Use advanced tracking and fingerprinting protection&#34; in Safari&#39;s Advanced settings to cover all browsing; according to Apple&#39;s help page, some website features may be affected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/pixel-hunt/2026/09/14/how-tiktok-and-google-ended-up-with-information-about-doctors-appointments-around-the-world&#34;&gt;How TikTok and Google ended up with information about doctors’ appointments around the world&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.docplanner.com/&#34;&gt;Docplanner Group&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Docplanner&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/the-breakdown/2025/06/17/this-is-how-you-stop-data-trackers-from-sucking-up-your-health-data&#34;&gt;This is how you stop data trackers from sucking up your health data&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-17&#34;&gt;17 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/blacklight&#34;&gt;Blacklight&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/the-markup/blacklight-collector&#34;&gt;the-markup/blacklight-collector&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=6&#34;&gt;個人資料保護法 第 6 條&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全国人民代表大会&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-l10n/firefox-l10n/blob/main/zh-TW/browser/browser/preferences/preferences.ftl&#34;&gt;Firefox 正體中文介面字串 preferences.ftl&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-l10n/firefox-l10n/blob/main/zh-CN/browser/browser/preferences/preferences.ftl&#34;&gt;Firefox 简体中文界面字符串 preferences.ftl&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-firefox/firefox/blob/main/browser/locales/en-US/browser/preferences/preferences.ftl&#34;&gt;Firefox en-US interface strings preferences.ftl&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/safari/ibrw1069/mac&#34;&gt;在 Mac 上的 Safari 中進行私密瀏覽&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac&#34;&gt;Browse privately in Safari on Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Weekly brief, 2026 week 40</title>
 <link>https://anoni.net/news/en/2026/10/weekly-brief-2026-w40/</link>
