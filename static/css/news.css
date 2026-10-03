@@ -1377,4 +1377,12 @@ p {
 .list-heading--category {
     padding-left: 0.75rem;
     border-left: 6px solid var(--cat);
+    margin-bottom: 0.5rem;
+}
+
+/* 分類頁標題下的說明，寫這一類收什麼，也是這一頁的 description */
+.list-intro {
+    max-width: var(--measure);
+    margin: 0 0 1.5rem;
+    color: var(--c-muted);
 }

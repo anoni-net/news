@@ -9,9 +9,7 @@
 {% if post.updated %}
 <meta property="article:modified_time" content="{{ post.updated|iso }}">
 {% endif %}
-<script type="application/ld+json">
 {{ jsonld|safe }}
-</script>
 {% endblock %}
 {% block main_class %}story-wrap{% endblock %}
 {% block content %}

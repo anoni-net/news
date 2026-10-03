@@ -157,9 +157,16 @@ def load_categories(path: Path = CATEGORIES_PATH) -> dict[str, dict[str, str]]:
         missing = [lang.code for lang in LANGS if not str(names.get(lang.code, "")).strip()]
         if missing:
             problems.append(f"categories.toml：[{key}] 缺少 {missing} 的名稱")
+        descriptions = names.get("description") or {}
+        missing = [lang.code for lang in LANGS if not str(descriptions.get(lang.code, "")).strip()]
+        if missing:
+            problems.append(f"categories.toml：[{key}.description] 缺少 {missing} 的說明")
     if problems:
         raise BuildError(problems)
-    return {key: {lang.code: str(names[lang.code]) for lang in LANGS} for key, names in raw.items()}
+    # 名稱直接用語系代碼取，說明放在 description 底下，同樣用語系代碼取
+    return {key: {**{lang.code: str(names[lang.code]) for lang in LANGS},
+                  "description": {lang.code: str(names["description"][lang.code]) for lang in LANGS}}
+            for key, names in raw.items()}
 
 
 def categories_table() -> dict[str, dict[str, str]]:
@@ -1446,9 +1453,11 @@ def chunk(items: list, size: int) -> list[list]:
     return [items[i:i + size] for i in range(0, len(items), size)] or [[]]
 
 
-def jsonld(post: Post, target: Target, config: dict) -> str:
+def jsonld(post: Post, target: Target, config: dict, image: str | None = None) -> str:
+    """文章頁的 NewsArticle 與麵包屑。image 是這篇的預覽圖，跟 og:image 相同。見 SPEC.md「結構化資料」。"""
     homepage = target.rewrite(config["homepage"])
-    organization = {"@type": "Organization", "name": "anoni.net", "url": homepage}
+    organization = {"@type": "Organization", "name": "anoni.net", "url": homepage,
+                    "logo": {"@type": "ImageObject", "url": target.abs_url("logo-512.png"), "width": 512, "height": 512}}
     authors = []
     for author in post.authors:
         if author["key"] == "anoni-net":
@@ -1466,16 +1475,40 @@ def jsonld(post: Post, target: Target, config: dict) -> str:
         "datePublished": post.created.isoformat(),
         "url": target.abs_url(post.rel),
         "mainEntityOfPage": target.abs_url(post.rel),
-        "image": target.abs_url("assets/" + post.image_rel) if post.image else target.abs_url(post.lang.og_image),
+        "image": image or target.abs_url(post.lang.og_image),
         "inLanguage": post.lang.html,
         "author": authors,
         "publisher": organization,
         "citation": [{"@type": "CreativeWork", "name": s.title, "url": s.url} for s in post.sources],
     }
+    if post.categories:
+        data["articleSection"] = categories_table()[post.categories[0]][post.lang.code]
     if post.updated:
         data["dateModified"] = post.updated.isoformat()
+    s = strings()[post.lang.code]
+    crumbs = [(s["product"], target.abs_url(post.lang.path))]
+    if post.categories:
+        key = post.categories[0]
+        crumbs.append((categories_table()[key][post.lang.code], target.abs_url(f"{post.lang.path}category/{key}/")))
+    crumbs.append((post.title, None))
+    return json_script(data) + "\n" + json_script(breadcrumb(crumbs))
+
+
+def breadcrumb(crumbs: list[tuple[str, str | None]]) -> dict:
+    """搜尋結果在標題上方顯示的路徑，例如「新聞導讀 › 監控與間諜軟體 › 標題」。最後一層是本頁，不帶網址。"""
+    items = []
+    for position, (name, url) in enumerate(crumbs, 1):
+        item = {"@type": "ListItem", "position": position, "name": name}
+        if url:
+            item["item"] = url
+        items.append(item)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
+
+
+def json_script(data: dict) -> str:
     # </script> 出現在字串裡會提早結束 script 元素，跳脫掉
-    return json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/")
+    body = json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/")
+    return f'<script type="application/ld+json">\n{body}\n</script>'
 
 
 def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
@@ -1596,16 +1629,16 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             skip = {item.rel for item in thread} | {item.rel for item in (newer, older) if item}
             related = related_posts(lposts, i, skip)
             category_count = sum(1 for other in lposts if other.categories == post.categories)
+            # 預覽圖：指定的 image，沒有就用這篇的預覽卡片（只有 clearnet），og:image 與 JSON-LD 用同一張
+            card = card_url(post_card(post), lang, cards) if target.clearnet and not post.image else None
+            image = target.abs_url("assets/" + post.image_rel) if post.image else card
             # #sources 是模板產生的原文清單錨點，頂端那行出處連到這裡，跟內文的錨點一起收進合約
             write(Page(post.rel, post.rel + "index.html", False, post.anchors + ["sources"]), "post.html.j2",
                   lang, rels, post=post, newer=newer, older=older, thread=thread, followup=followup,
                   related=related, category_count=category_count,
                   content=target.rewrite_html(localize_assets(post.html, target)),
-                  jsonld=jsonld(post, target, config),
-                  og_image=(target.abs_url("assets/" + post.image_rel) if post.image
-                            # 卡片只放在圖片主機上，onion 產物不引用 clearnet 的網址，維持全站的預覽圖
-                            else card_url(post_card(post), lang, cards) if target.clearnet else None),
-                  og_card=bool(not post.image and target.clearnet and card_url(post_card(post), lang, cards)))
+                  jsonld=jsonld(post, target, config, image),
+                  og_image=image, og_card=card is not None)
             sitemap_urls.append((target.abs_url(post.rel), (post.updated or post.created).date().isoformat(),
                                  alternates(rels, lang)))
 
@@ -1669,8 +1702,10 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             if not group:
                 continue
             suffix = f"category/{key}/"
+            crumbs = json_script(breadcrumb([(s["product"], target.abs_url(base)), (names[lang.code], None)]))
             write(Page(base + suffix, base + suffix + "index.html", False), "list.html.j2", lang, same_page(suffix),
                   kind="category", category=key, heading=names[lang.code], posts=group, number=1, total=1,
+                  intro=names["description"][lang.code], jsonld=crumbs,
                   days=timeline(group, []), latest=None, prev_rel=None, next_rel=None, featured=None,
                   featured_image=None)
             sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))

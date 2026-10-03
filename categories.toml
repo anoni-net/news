@@ -1,6 +1,7 @@
 # 導讀的分類，每篇在 front matter 的 categories 寫一個鍵。規則見 SPEC.md「分類」。
 #
 # 鍵是網址的一段（/news/category/<鍵>/），上線之後不改。三個語系的名稱都要有。
+# [<鍵>.description] 是分類頁開頭的說明與 <meta name="description">，寫給讀者看，三個語系都要有。
 # 顏色寫在 static/css/news.css 的 .cat--<鍵>，淺色與深色模式各一組，新增分類時一起加。
 # 順序是分類頁與說明列出的順序。
 
@@ -9,38 +10,78 @@ zh-TW = "加密與通訊"
 zh-CN = "加密与通信"
 en = "Encryption & Messaging"
 
+[encryption.description]
+zh-TW = "通訊軟體與雲端服務的加密設計，以及各國要求業者調取或掃描通訊內容的政策與法案。"
+zh-CN = "通信软件与云服务的加密设计，以及各国要求企业调取或扫描通信内容的政策与法案。"
+en = "How messaging apps and cloud services encrypt your data, and the laws and policies that seek to have providers hand over or scan communications."
+
 [tracking]
 zh-TW = "追蹤與個人資料"
 zh-CN = "追踪与个人数据"
 en = "Tracking & Personal Data"
+
+[tracking.description]
+zh-TW = "網站與 App 的追蹤碼、資料仲介建立的個人檔案，以及 App 與 AI 服務讀取的個人資料。"
+zh-CN = "网站与 App 的追踪代码、数据经纪商建立的个人档案，以及 App 与 AI 服务读取的个人数据。"
+en = "Tracking code on websites and apps, the profiles data brokers build, and the personal data apps and AI services read."
 
 [surveillance]
 zh-TW = "監控與間諜軟體"
 zh-CN = "监控与间谍软件"
 en = "Surveillance & Spyware"
 
+[surveillance.description]
+zh-TW = "國家與企業的監控技術，包括間諜軟體、人臉辨識與車牌辨識，以及相關的判決與調查。"
+zh-CN = "国家与企业的监控技术，包括间谍软件、人脸识别与车牌识别，以及相关的判决与调查。"
+en = "Surveillance by governments and companies, including spyware and face and licence plate recognition, and the rulings and investigations around it."
+
 [censorship]
 zh-TW = "審查與存取管制"
 zh-CN = "审查与访问管制"
 en = "Censorship & Access Control"
+
+[censorship.description]
+zh-TW = "各國與平台對上網、取得內容與發布 App 設下的限制或要求，包括網站封鎖、年齡驗證、實名制與開發者驗證。"
+zh-CN = "各国与平台对上网、获取内容与发布 App 设下的限制或要求，包括网站封锁、年龄验证、实名制与开发者验证。"
+en = "Restrictions and requirements that governments and platforms set on getting online, reaching content and publishing apps, including website blocking, age verification, real-name rules and developer verification."
 
 [mobile]
 zh-TW = "手機與 App"
 zh-CN = "手机与 App"
 en = "Phones & Apps"
 
+[mobile.description]
+zh-TW = "手機作業系統、App 商店與 App 的功能與政策變更，以及對隱私與安全的影響。"
+zh-CN = "手机操作系统、App 商店与 App 的功能与政策变更，以及对隐私与安全的影响。"
+en = "Feature and policy changes to phone operating systems, app stores and apps, and what they mean for privacy and security."
+
 [security]
 zh-TW = "資安與詐騙"
 zh-CN = "安全与诈骗"
 en = "Security & Scams"
+
+[security.description]
+zh-TW = "釣魚、詐騙、入侵與資料外洩，以及一般使用者可以採取的防範方式。"
+zh-CN = "钓鱼、诈骗、入侵与数据泄露，以及普通用户可以采取的防范方式。"
+en = "Phishing, scams, intrusions and data breaches, and the steps people can take to protect themselves."
 
 [civil-society]
 zh-TW = "公民團體的科技實務"
 zh-CN = "公民团体的科技实务"
 en = "Civil Society Tech Practice"
 
+[civil-society.description]
+zh-TW = "公民團體使用、評估或因應科技的方法，例如數位安全指南、紀錄與存證、社區網路。"
+zh-CN = "公民团体使用、评估或应对科技的方法，例如数字安全指南、记录与存证、社区网络。"
+en = "How civil society groups use, assess and respond to technology, from digital security guides to record-keeping, evidence preservation and community networks."
+
 # 每週短訊是固定的格式，內容橫跨好幾個主題，用中性色
 [brief]
 zh-TW = "每週短訊"
 zh-CN = "每周短讯"
 en = "Weekly Brief"
+
+[brief.description]
+zh-TW = "每週整理幾則沒有單獨成篇的隱私、匿名與審查新聞，每則一段。"
+zh-CN = "每周整理几则没有单独成篇的隐私、匿名与审查新闻，每则一段。"
+en = "A weekly round-up of privacy, anonymity and censorship news that did not get a story of its own, one paragraph each."
