@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 04 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Permission usage history on your phone</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-04/2026</guid>
+<pubDate>Sun, 04 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On an Android phone, the Privacy Dashboard shows you which apps recently used the microphone, camera and location. On this day, Google released the Android 12 source code that introduced it.</description>
+<content:encoded>&lt;p&gt;On an Android phone, you can open the Privacy Dashboard to see which apps used the microphone, camera and location in the past 24 hours or 7 days. On 4 October 2021, Google released Android 12 to the Android Open Source Project (AOSP), and its developer blog said the new dashboard gives users better visibility into when apps access the microphone, camera and location. Two years later to the day, Google added a section to the location permission dialog in Android 14, shown when an app&#39;s developer has declared that the app shares location data with third parties. Both cover only what apps do, not tracking code on websites, which is what our story the same day is about (see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;Tracking pixels that sent doctors&#39; appointments to social platforms&lt;/a&gt;). To see which apps have used these permissions recently, open Settings, tap Security &amp;amp; privacy or Privacy, and then tap Privacy dashboard.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Passwords and security questions in old accounts</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-03/#y2026</link>

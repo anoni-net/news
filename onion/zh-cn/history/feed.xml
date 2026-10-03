@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 04 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>手机上的权限使用记录</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-04/2026</guid>
+<pubDate>Sun, 04 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你可以在 Android 手机的隐私信息中心，看到最近哪些 App 用过麦克风、相机与位置。这一天，Google 公开了加入这项功能的 Android 12 源代码。</description>
+<content:encoded>&lt;p&gt;你可以在 Android 手机的隐私信息中心，查看最近 24 小时或 7 天内有哪些 App 用过麦克风、相机与位置。2021 年 10 月 4 日，Google 把 Android 12 的源代码发布到 Android 开源项目（AOSP），开发者博客写明新的隐私信息中心让用户更清楚 App 何时访问麦克风、相机与位置。两年后的同一天，Google 在 Android 14 的位置权限弹窗加上一段说明，App 的开发者申报会把位置分享给第三方时就会显示。这两项功能只涵盖 App 的行为，网站里的追踪代码不在范围内，本站同一天的导读写的是网站把就诊信息发给第三方的情况（见&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;医疗预约网站把就诊信息发给社交平台的追踪代码&lt;/a&gt;）。使用原生 Android 的读者可以依序进入「设置」、「安全与隐私」或「隐私」、「隐私信息中心」，使用中国大陆品牌手机的人如果找不到这个页面，可以在设置里搜索「隐私」或「权限」。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>旧账号里的密码与密保问题</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-03/#y2026</link>

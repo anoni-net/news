@@ -6,7 +6,73 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 04 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 04 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>战时人权记录与技术工具的取舍</title>
+<link>https://anoni.net/news/zh-cn/2026/10/huridocs-sudan-documentation-technology/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/huridocs-sudan-documentation-technology</guid>
+<pubDate>Sun, 04 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>HURIDOCS 整理苏丹战时人权记录的专家会议。在高风险环境做记录的团体，引进新工具前要评估成本是否值得，以及数据能否与合作伙伴互通。一般用户不需要调整设置。</description>
+<content:encoded>&lt;p&gt;整理 6 篇原文，来自 HURIDOCS、GitHub、Access Now 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;协助人权组织管理记录的 HURIDOCS 在 9 月 15 日发表文章，整理 9 月在内罗毕讨论苏丹战时人权记录的专家会议。在苏丹的记录者面对流离失所、安全威胁、时断时续的网络与设备不足。文中建议适用于在战争与高风险环境做人权记录的团体，一般用户不需要调整设置。&lt;/p&gt;
+&lt;p&gt;会议讨论信息如何从记录者传到研究者，之后可能交给检察官。记录可能用于刑事追诉时（例如国际刑事法院），作者认为最糟的结果是多年后才发现记录不能使用，因为当初没有完全符合可预见的证据标准或证据保管链（chain of custody，证据每次经手的记录）的要求。&lt;/p&gt;
+&lt;p&gt;作者列出技术能做的事，包括离线且安全地收集信息、保存出处记录（provenance），以及连接不同系统的数据。但新工具都要花时间学习，需要培训、设备、网络与维护，还可能造成对厂商或基础设施的依赖。在高风险环境也可能带来新的安全问题。作者的评估标准是成本是否值得技术带来的效益。&lt;/p&gt;
+&lt;p&gt;作者认为延续性是需要更多关注的挑战之一，比创新更值得留意。延续性是让三种知识能够衔接，包括人权运动的经验、记录者对自身处境的了解，以及日后可能使用数据的机构的需求。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;据数字权利组织 Access Now 的统计，2025 年苏丹在内战期间断网三次，其中一次在 7 月考试期间。全球最多的是缅甸 95 次（含跨境断网），其次是印度 65 次、巴基斯坦 20 次，中国也有 2 次。在这些地方，必须联网的工具断网时就无法使用。&lt;/p&gt;
+&lt;p&gt;断网之外，证据还需要出处记录与保管链，记下每份文件的来源、取得时间与经手人。取得时计算哈希值（依内容产生的指纹），日后重算比对就知道是否被改过。&lt;/p&gt;
+&lt;p&gt;作者把互通性（interoperability）视为人权工作基础设施的一部分，不求所有人共用一个系统。各系统能导出、导入共同格式，数据才能在机构间流动。&lt;/p&gt;
+&lt;p&gt;HURIDOCS 维护的 Uwazi 是浏览器操作的人权记录数据库，代码以 MIT 许可证（允许自由使用与修改）在 GitHub 开源，9 月 28 日仍有新版本。操作日志（activity log）记下每次变更，数据可以导出成 CSV。&lt;/p&gt;
+&lt;p&gt;Uwazi 可以免费自行部署，需要 Elasticsearch（全文搜索引擎）等组件与至少 4 GB 内存，也可以用 HURIDOCS 托管。据检测中国网络审查的 GreatFire，到 9 月 27 日为止，从中国大陆连接 github.com 近七成受到干扰。境内部署时，下载代码可能受阻。&lt;/p&gt;
+&lt;p&gt;评估工具时可逐项检查学习与维护要多少人力、能否与伙伴交换数据、能否保存出处记录，以及断网时能否继续记录。想试 Uwazi 可以用官方 demo 页的公开账号登录。界面内置 11 种语言，包括阿拉伯文但没有中文，中文界面要自行翻译。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huridocs.org/2026/09/what-wartime-documentation-demands-of-technology-lessons-from-sudan/&#34;&gt;What wartime documentation demands of technology: Lessons from Sudan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HURIDOCS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huridocs.org/technology/uwazi/&#34;&gt;Uwazi&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HURIDOCS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/huridocs/uwazi&#34;&gt;huridocs/uwazi&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-28&#34;&gt;2026 年 9 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/wp-content/uploads/2026/03/KeepItOn-Internet-Shutdowns-2025-Annual-Report.pdf&#34;&gt;Rising repression meets global resistance: Internet shutdowns in 2025&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-31&#34;&gt;2026 年 3 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://demo.uwazi.io/&#34;&gt;Welcome to the Uwazi demo!&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HURIDOCS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/github.com&#34;&gt;Is https://github.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;2026 年 9 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>医疗预约网站把就诊信息发给社交平台的追踪代码</title>
 <link>https://anoni.net/news/zh-cn/2026/10/doctoralia-health-tracking-pixels/</link>

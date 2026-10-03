@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 03 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 04 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>手機上的權限使用紀錄</title>
+<link>https://anoni.net/news/history/10-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-04/2026</guid>
+<pubDate>Sun, 04 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你可以在 Android 手機的隱私資訊主頁，看到最近哪些 App 用過麥克風、相機與位置。這一天，Google 公開了加入這項功能的 Android 12 原始碼。</description>
+<content:encoded>&lt;p&gt;你可以在 Android 手機的隱私資訊主頁，查看最近 24 小時或 7 天內有哪些 App 用過麥克風、相機與位置。2021 年 10 月 4 日，Google 把 Android 12 的原始碼公開到 Android 開放原始碼專案（AOSP），開發者部落格寫明新的隱私資訊主頁讓使用者更清楚 App 何時存取麥克風、相機與位置。兩年後的同一天，Google 在 Android 14 的位置權限視窗加上一段說明，App 的開發者申報會把位置分享給第三方時就會顯示。這兩項功能只涵蓋 App 的行為，網站裡的追蹤碼不在範圍內，本站同一天的導讀寫的是網站把看診資訊送給第三方的情況（見&lt;a href=&#34;https://anoni.net/news/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;醫療預約網站把看診資訊送給社群平台的追蹤碼&lt;/a&gt;）。想看看最近有哪些 App 用了這些權限，可以在「設定」輕觸「安全性與隱私權」或「隱私權」，再輕觸「隱私資訊主頁」。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>舊帳號裡的密碼與提示問題</title>
 <link>https://anoni.net/news/history/10-03/#y2026</link>
