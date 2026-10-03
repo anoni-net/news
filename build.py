@@ -109,7 +109,7 @@ SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories", "follow
 STRINGS_PATH = ROOT / "strings.toml"
 # 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
 PAGES_DIR = ROOT / "pages"
-SITE_PAGES = ("about", "subscribe")
+SITE_PAGES = ("about", "subscribe", "reading")
 # 固定頁面裡代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
 FEED_URL_PLACEHOLDER = "%FEED_URL%"
 # 關於頁「報導範圍」的分類清單，Markdown 裡單獨一行，建置時換成 _coverage.html.j2，說明取自 categories.toml

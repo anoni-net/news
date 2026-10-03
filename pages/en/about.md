@@ -47,15 +47,11 @@ If you spot a factual error, outdated information or a translation problem, plea
 
 ## Text size, colours and reader mode {#display}
 
-Text size and colours follow your browser and device settings. In a desktop browser you can raise the default font size in its settings, and the whole site scales with it, or simply zoom the page. On iPhone you can change the text size of a page in Safari, and Chrome on Android has text scaling under Accessibility in its settings. When your device switches to dark mode, the site switches to dark colours too.
-
-If you only want the story itself, turn on your browser's reader mode. In Firefox's Reader View, story pages show only the story, without the source list and footer.
-
-We do not offer a settings menu of our own, because it would need JavaScript and would have to store your choices in your browser. With Tor Browser's security level set to Safest, the text of each piece stays readable.
+See [Reading options](../reading/#display) for changing text size, dark mode and reader mode.
 
 ## Listening {#listening}
 
-If you would rather listen, use the read-aloud feature built into your browser or operating system. Safari on iPhone has Listen to Page, and story pages are marked up so it reads the story itself and skips the source list and footer. Whether the option appears depends on the page's language and your device's language settings. If it is missing, turn on Speak Screen in Settings > Accessibility > Read & Speak on iPhone, which reads everything on screen, header and footer included. We do not add a play button of our own, because it would need JavaScript. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.
+See [Reading options](../reading/#listening) for listening to stories with the read-aloud features built into your browser and device.
 
 ## Analytics and privacy {#privacy}
 
