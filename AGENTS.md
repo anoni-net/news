@@ -23,6 +23,7 @@ uv run pytest -q
 uv run tools/ingest_images.py --dry-run posts/<檔名>.md  # 維護者：試跑搬圖
 uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md  # 維護者：試抓原文網站的圖示
 uv run tools/bluesky_post.py --dry-run  # 列出這一輪會發到 Bluesky 的貼文，見 SPEC.md「Bluesky」
+uv run tools/make_cards.py --dry-run    # 維護者：產生還沒有或已過期的預覽卡片，見 SPEC.md「預覽卡片」
 ```
 
 `--check` 會從 GitHub 下載文件站的網址合約，離線時用 `--docs-contract <檔案>` 指定本機的一份。建置時會把 `assets.anoni.net` 的圖片抓進產物，快取在 `.cache/assets/`。版面檢查需要 Chrome，找不到時略過並提示，截圖存在 `.cache/screenshots/`，送出 PR 前要實際看過。
@@ -38,6 +39,8 @@ uv run tools/bluesky_post.py --dry-run  # 列出這一輪會發到 Bluesky 的�
 維護者要把這篇放進首頁的焦點時，三個語系的 front matter 都寫 `pin: YYYY-MM-DD`，填焦點的最後一天，過了就自動離開，規則見 `SPEC.md`「一篇的格式」。
 
 有圖片時，投稿者用 Markdown 的圖片語法標出位置就好，網址可以是任何地方。維護者合併前設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/ingest_images.py posts/<檔名>.md` 把圖片搬到 `assets.anoni.net`，再依工具列出的原始網址審核授權與來源，補上替代文字與圖說。規則見 `SPEC.md`「圖片」。
+
+維護者合併前設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/make_cards.py` 產生這篇三個語系的社群預覽卡片，工具會上傳卡片並寫進 `og_cards.toml`。導讀歷史的快照也一樣，標題改過就要重新產生。規則見 `SPEC.md`「預覽卡片」。
 
 原文的網站還沒有登記圖示時，建置會列出是哪個主機。維護者先執行 `uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md`，看過 `.cache/favicons/preview.html` 的預覽，再設好 `NEWS_ASSETS_RSYNC` 拿掉 `--dry-run` 執行一次，工具會上傳圖示並寫進 `favicons.toml`。抓不到或不適合的，用 `--from` 指定來源或用 `--none` 登記成通用圖示。規則見 `SPEC.md`「原文的網站圖示」。
 

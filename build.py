@@ -169,6 +169,62 @@ def categories_table() -> dict[str, dict[str, str]]:
     return _categories
 
 
+# ---------------------------------------------------------------- 預覽卡片
+
+# 每篇導讀的社群預覽卡片：tools/make_cards.py 用 tools/card.html 產圖，上傳到圖片主機的 og/，
+# 檔名寫進 og_cards.toml。卡片不進 repo，頁面直接引用圖片主機的網址。見 SPEC.md「預覽卡片」
+CARDS_PATH = ROOT / "og_cards.toml"
+CARD_TEMPLATE = ROOT / "tools" / "card.html"
+CARD_DIR = "og"
+
+
+def card_template_hash() -> str:
+    return hashlib.sha256(CARD_TEMPLATE.read_bytes()
+                          + (ROOT / "static" / "logo-wordmark-white.svg").read_bytes()).hexdigest()
+
+
+def _card_rel(stem: str, data: dict) -> str:
+    """卡片在圖片主機 /news/ 底下的路徑，雜湊來自卡片上的每一個字與模板，內容改了檔名就換，不會重複使用。"""
+    key = json.dumps([data, card_template_hash()], ensure_ascii=False, sort_keys=True)
+    digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:8]
+    return f"{CARD_DIR}/{stem}-{digest}.png"
+
+
+def post_card(post: "Post") -> tuple[str, str, dict]:
+    """導讀的卡片：登記表的鍵、圖片路徑與填進 tools/card.html 的文字。"""
+    s = strings()[post.lang.code]
+    key = post.categories[0] if post.categories else "brief"
+    data = {"html_lang": post.lang.html, "product": s["product"], "site": "anoni.net/news",
+            "label": categories_table()[key][post.lang.code], "label_class": key,
+            "title": post.title, "date": format_date(s, "date", post.created.date())}
+    lang = post.lang.path.strip("/") or "zh-tw"
+    return post.path.stem, _card_rel(f"{post.created:%Y/%m}/{post.slug}-{lang}", data), data
+
+
+def history_card(day: "HistoryDay", snap: "Snapshot") -> tuple[str, str, dict]:
+    """導讀歷史日期頁的卡片，用這一頁最新的一則快照。隔年增補之後內容不同，要重新產生。"""
+    s = strings()[day.lang.code]
+    data = {"html_lang": day.lang.html, "product": s["product"], "site": "anoni.net/news",
+            "label": f"{s['history']} · {s['history_event_year'].format(year=snap.event.year)}",
+            "label_class": "history", "title": snap.title, "date": format_date(s, "date_short", day.calendar)}
+    lang = day.lang.path.strip("/") or "zh-tw"
+    return f"history/{day.mmdd}", _card_rel(f"history/{day.mmdd}-{lang}", data), data
+
+
+def load_cards(path: Path = CARDS_PATH) -> dict[str, dict[str, str]]:
+    """og_cards.toml：文章的檔名（不含 .md）或 history/MM-DD，對到三個語系上傳好的卡片路徑。"""
+    if not path.exists():
+        return {}
+    with path.open("rb") as handle:
+        return tomllib.load(handle).get("cards", {})
+
+
+def card_url(card: tuple[str, str, dict], lang: "Lang", cards: dict[str, dict[str, str]]) -> str | None:
+    """上傳好、而且跟目前內容相符的卡片網址。還沒產生或內容改過（雜湊對不上）時回傳 None，頁面改用全站的預覽圖。"""
+    key, rel, _ = card
+    return ASSETS_PREFIX + rel if cards.get(key, {}).get(lang.code) == rel else None
+
+
 def strings() -> dict[str, dict]:
     global _strings
     if _strings is None:
@@ -1437,6 +1493,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
         shutil.copyfile(asset.path, dest)
     pages: list[Page] = []
     texts = strings()
+    cards = load_cards()
 
     def onion_url(rel: str) -> str | None:
         if not target.clearnet:
@@ -1495,7 +1552,9 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
             write(Page(day.rel, day.rel + "index.html", False, [snap.anchor for snap in visible]),
                   "history_day.html.j2", lang, same_page(suffix), day=day, snapshots=visible,
                   earlier=earlier, later=later,
-                  contents={snap.year: target.rewrite_html(snap.html) for snap in visible})
+                  contents={snap.year: target.rewrite_html(snap.html) for snap in visible},
+                  og_image=card_url(history_card(day, visible[-1]), lang, cards) if target.clearnet else None,
+                  og_card=bool(target.clearnet and card_url(history_card(day, visible[-1]), lang, cards)))
             lastmod = max((snap.updated or snap.created) for snap in visible).date().isoformat()
             urls.append((target.abs_url(day.rel), lastmod, alternates(same_page(suffix), lang)))
 
@@ -1543,7 +1602,10 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
                   related=related, category_count=category_count,
                   content=target.rewrite_html(localize_assets(post.html, target)),
                   jsonld=jsonld(post, target, config),
-                  og_image=target.abs_url("assets/" + post.image_rel) if post.image else None)
+                  og_image=(target.abs_url("assets/" + post.image_rel) if post.image
+                            # 卡片只放在圖片主機上，onion 產物不引用 clearnet 的網址，維持全站的預覽圖
+                            else card_url(post_card(post), lang, cards) if target.clearnet else None),
+                  og_card=bool(not post.image and target.clearnet and card_url(post_card(post), lang, cards)))
             sitemap_urls.append((target.abs_url(post.rel), (post.updated or post.created).date().isoformat(),
                                  alternates(rels, lang)))
 

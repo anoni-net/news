@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- 每篇導讀與導讀歷史日期頁的社群預覽卡片，由 tools/make_cards.py 填入 DATA 之後用 Chrome 截圖，1200×630。
+     配色照 SPEC.md「品牌與配色」，分類的顏色用 news.css 深色模式那一組，在墨色底上才夠亮。導讀歷史用品牌的淺藍。
+     這是產圖用的本機檔案，不會進網站，可以用 JavaScript。改了這個檔案，所有卡片的檔名都會換掉。 -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    background: #003e57;
+    color: #ffffff;
+    font-family: "Noto Sans CJK TC", sans-serif;
+    box-sizing: border-box;
+    padding: 64px 88px 0;
+  }
+  :lang(zh-Hans) body { font-family: "Noto Sans CJK SC", sans-serif; }
+  .brand { display: flex; align-items: center; gap: 28px; height: 52px; }
+  .brand img { height: 46px; width: auto; display: block; }
+  .brand span {
+    font-family: "Noto Serif CJK TC", serif; font-weight: 700; font-size: 32px; letter-spacing: 0.08em;
+    padding-left: 28px; border-left: 2px solid rgba(255, 255, 255, 0.35); line-height: 46px;
+  }
+  :lang(zh-Hans) .brand span { font-family: "Noto Serif CJK SC", serif; }
+  :lang(en) .brand span { font-family: Georgia, "Noto Serif", serif; letter-spacing: 0; }
+  .cat { margin: 64px 0 0; font-size: 34px; font-weight: 700; color: var(--cat); }
+  .cat::before {
+    content: ""; display: inline-block; width: 0.6em; height: 0.6em; margin-right: 0.4em;
+    border-radius: 4px; background: var(--cat); vertical-align: 0.05em;
+  }
+  h1 {
+    margin: 18px 0 0; max-width: 1024px;
+    font-family: "Noto Serif CJK TC", serif; font-weight: 700; line-height: 1.32; letter-spacing: 0.02em;
+    /* 中文逐字都能換行，再用 balance 讓各行長度平均，不會剩一個字落單，也不會讓 AI、Apple 這種開頭的英文自成一行 */
+    line-break: strict; overflow-wrap: anywhere; text-wrap: balance;
+  }
+  :lang(zh-Hans) h1 { font-family: "Noto Serif CJK SC", serif; }
+  :lang(en) h1 { font-family: Georgia, "Noto Serif", serif; letter-spacing: 0; line-height: 1.22; word-break: normal; }
+  .foot {
+    position: absolute; left: 88px; right: 88px; bottom: 56px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    font-size: 30px; color: #e0f4ff;
+  }
+  .foot .date { padding-top: 14px; border-top: 6px solid #00aeff; }
+  .encryption { --cat: #5eead4; } .tracking { --cat: #fcd34d; } .surveillance { --cat: #fca5a5; }
+  .censorship { --cat: #d8b4fe; } .mobile { --cat: #93c5fd; } .security { --cat: #f9a8d4; }
+  .civil-society { --cat: #86efac; } .brief { --cat: #cbd5e1; } .history { --cat: #7dd3fc; }
+</style>
+</head>
+<body>
+  <div class="brand"><img src="LOGO_URL" alt=""><span id="product"></span></div>
+  <p class="cat" id="cat"></p>
+  <h1 id="title"></h1>
+  <div class="foot"><span class="date" id="date"></span><span id="site"></span></div>
+<script>
+  var DATA = CARD_DATA;
+  document.documentElement.lang = DATA.html_lang;
+  document.getElementById("product").textContent = DATA.product;
+  var cat = document.getElementById("cat");
+  cat.textContent = DATA.label;
+  cat.className = "cat " + DATA.label_class;
+  document.getElementById("title").textContent = DATA.title;
+  document.getElementById("date").textContent = DATA.date;
+  document.getElementById("site").textContent = DATA.site;
+  // 標題從大字開始縮，放得進三行、又不碰到底下的日期為止
+  var h1 = document.getElementById("title");
+  var foot = document.querySelector(".foot").getBoundingClientRect().top;
+  for (var size = 76; size >= 44; size -= 2) {
+    h1.style.fontSize = size + "px";
+    var lines = Math.round(h1.getBoundingClientRect().height / (size * parseFloat(getComputedStyle(h1).lineHeight) / size));
+    if (lines <= 3 && h1.getBoundingClientRect().bottom < foot - 32) break;
+  }
+</script>
+</body>
+</html>
