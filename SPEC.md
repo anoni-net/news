@@ -61,6 +61,8 @@ static/                  # 兩份產物共用的檔案
 tools/
   og.html                # 三張預覽圖的原始檔，用 ?lang= 切換語系
   make_og.sh             # 用 Chrome 從 og.html 產生三張預覽圖
+  card.html              # 每篇導讀與導讀歷史日期頁的預覽卡片模板
+  make_cards.py          # 維護者產生預覽卡片，上傳到 assets.anoni.net 並登記
   ingest_images.py       # 維護者合併前把稿件裡的圖片搬到 assets.anoni.net
 authors.yml              # 署名清單，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
@@ -70,6 +72,7 @@ tests/
   test_build.py
   fixtures/              # 測試用的文章與署名，--check 的版面檢查也用這一批
 url_contract.txt         # 網址合約，由 build.py --update-contract 產生
+og_cards.toml            # 預覽卡片的登記表，由 tools/make_cards.py 寫入
 ```
 
 產物寫到 `public/clearnet/` 與 `public/onion/`，不進 `main`，由 CI 推到 `build` 分支（見「部署」）。
@@ -107,7 +110,7 @@ authors:
 | `sources` | 是 | 原文，至少一筆。每筆的 `title` 與 `url` 必填，`publisher` 與 `date` 選填。一篇可以列多筆，用在同一事件的多篇報導，也用在把好幾篇原文整理成一篇觀點 |
 | `authors` | 是 | 對應 `authors.yml` 的鍵，見「發佈身分」。不想署名就寫 `anoni-net` |
 | `categories` | 是 | 這篇的分類，寫成只有一項的清單，例如 `categories: [encryption]`，可用的鍵在 `categories.toml`。每篇一個，三個語系相同。見「分類」 |
-| `image` | 否 | 這篇在社群平台分享時的預覽圖，網址規則同內文圖片（見「圖片」），建議 1200×630。沒填就用全站共用的 `og.png` |
+| `image` | 否 | 這篇在社群平台分享時的預覽圖，網址規則同內文圖片（見「圖片」），建議 1200×630。沒填就用這篇的預覽卡片，卡片還沒產生或已過期時用全站共用的 `og.png`，見「預覽卡片」 |
 | `draft` | 否 | `true` 時不產出，也不進列表、封存頁與 RSS |
 | `pin` | 否 | 放在首頁最上方「焦點」的最後一天，寫 `YYYY-MM-DD`，不能早於發布日。期限內的文章有好幾篇時取最新發布的那篇，過了期限自動離開焦點，部署每小時重建就會換掉，不必回頭改文章。焦點由維護者挑選，寫稿時在新文章的 PR 裡一起設好。改 `pin` 不算更正，`date.updated` 不動。2026-10 以前寫 `true`，沒人記得換，焦點停在同一篇五天多，才改成填期限。欄位名稱沿用 Material blog 的置頂 |
 | `follows` | 否 | 這篇接續的舊文章，寫檔名、不含 `.md`，例如 `2026-09-18-zkp-age-verification`。用清單，一篇可以接續兩件事。見「前情與後續」 |
@@ -733,12 +736,29 @@ iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出
 |---|---|---|
 | `og:type` | `article` | `website` |
 | `og:title`、`og:description`、`og:url` | 標題、`description`、本頁網址 | 同左 |
-| `og:image` | front matter 的 `image`，沒填時用全站共用的 `og.png` | 全站共用的 `og.png` |
+| `og:image` | front matter 的 `image`，沒填時用這篇的預覽卡片，卡片不在時用全站共用的 `og.png` | 全站共用的 `og.png`，導讀歷史的日期頁用那一天的預覽卡片 |
 | `article:published_time` | `date.created` | 無 |
 | `article:modified_time` | 有更正時放 `date.updated` | 無 |
 | `twitter:card` | `summary_large_image` | 同左 |
 
-全站共用的預覽圖放在 `static/`。文章指定的 `image` 跟內文圖片一樣在建置時抓進產物，兩種都是站內的靜態檔，讀者端不會因此對外請求。
+全站共用的預覽圖放在 `static/`。文章指定的 `image` 跟內文圖片一樣在建置時抓進產物，兩種都是站內的靜態檔，讀者端不會因此對外請求。預覽卡片例外，`og:image` 直接寫圖片主機的網址，那是給社群平台的爬蟲抓的，瀏覽器不會載入。
+
+### 預覽卡片
+
+每篇導讀與導讀歷史的日期頁各有一張社群預覽卡片，三個語系各一張。2026-10 以前每篇都用全站共用的 `og.png`，Bluesky 帳號一天發好幾則，時間軸上每一則的預覽圖都一樣，看起來像重複發文。
+
+- 卡片 1200×630，墨色底，上方是 logo 與「新聞導讀」，接著是分類的色塊與名稱、標題、日期。分類用 `news.css` 深色模式那組較亮的顏色。導讀歷史在分類的位置寫「導讀歷史 · 事件年份」，標題與日期用那一天最新的一則快照
+- 模板是 `tools/card.html`，維護者執行 `tools/make_cards.py`，用 Chrome 截圖，轉成調色盤 PNG，一張約 20KB，不超過 150KB
+- 卡片不進 repo。工具把卡片上傳到圖片主機的 `og/`（`https://assets.anoni.net/news/og/`），確認回 200 之後把檔名寫進 `og_cards.toml`，repo 裡只有這份登記表
+- 檔名帶雜湊，算的是卡片上的每一個字與模板。標題、分類、日期改了，或改了模板，檔名就換，不會重複使用，也不必處理快取
+- 建置時算出這一頁目前該用的檔名，跟登記表對得上才引用，對不上（還沒產生，或內容改過）就退回全站的 `og.png`，不會掛著舊標題的卡片。建置不抓卡片、也不檢查圖片主機，每小時的排程重建不受圖片主機影響
+- 只有 clearnet 引用卡片，onion 產物維持站內的全站預覽圖，產物裡不出現 clearnet 的網址
+- front matter 指定了 `image` 的文章用那張圖，不產生卡片
+- Bluesky 自動發文的預覽圖跟 `og:image` 相同，用同一張卡片
+- 導讀歷史隔年增補快照時，日期頁的卡片要重新產生。新的快照還在排程中的那段時間，日期頁的卡片對不上登記表，暫時用全站的預覽圖
+- 中文標題逐字都能換行，再用 `text-wrap: balance` 讓各行長度平均，避免最後一行只剩一個字，也避免開頭的英文單字自成一行。字級從 76px 往下縮到放得進三行為止
+
+上稿流程：新文章合併前，維護者設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/make_cards.py`，沒給檔名時會處理所有還沒有卡片或已過期的頁面。先加 `--dry-run` 只產圖，看過 `.cache/cards/preview.html` 再上傳。忘了產生也不會讓建置失敗，那一篇暫時用全站的預覽圖。
 
 ### 結構化資料
 
@@ -826,7 +846,6 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 - 站內搜尋。中文要斷詞，而且需要 JavaScript，加入前要先處理「路徑與子網域」一節提到的同源問題
 - 標籤頁。分類以外的標籤（例如工具名稱）第一版不做，見「分類」
 - 作者頁。筆名的作者頁會把同一個人的文章集中成一頁，要做之前先想清楚匿名的代價
-- 每篇自動產生的預覽卡片圖。需要專屬預覽圖時，用 front matter 的 `image` 手動指定
 - 留言與任何需要伺服器端的功能
 - 自動寄送電子報
 - 投稿平台。維護者代發的稿件，之後會需要一個讓投稿者送稿、跟維護者往返修改的平台，第一版先用「發布管道」一節列的 Matrix、email 與 Send

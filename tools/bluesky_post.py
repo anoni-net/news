@@ -66,6 +66,7 @@ def post_text(title: str, description: str) -> str:
 def plan(posts: list[build.Post], base_url: str, now: datetime) -> list[Item]:
     """這一輪該發的貼文，由舊到新排，前一篇先發，後續稿才找得到它的貼文。posts 是 zh-TW 的文章。"""
     items = []
+    cards = build.load_cards()
     by_stem = {post.path.stem: post for post in posts}
     for post in sorted(posts, key=lambda p: (p.created, p.slug)):
         if post.created > now or now - post.created > WINDOW:
@@ -79,7 +80,8 @@ def plan(posts: list[build.Post], base_url: str, now: datetime) -> list[Item]:
                 tag=tag,
                 url=base_url + version.rel,
                 text=post_text(version.title, version.description),
-                thumb=version.image or version.lang.og_image,
+                # 預覽圖跟頁面的 og:image 相同：指定的 image、這篇的預覽卡片，都沒有時用全站的預覽圖
+                thumb=version.image or build.card_url(build.post_card(version), version.lang, cards) or version.lang.og_image,
                 quote_url=quote_url,
             ))
     return items

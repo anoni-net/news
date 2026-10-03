@@ -1445,3 +1445,24 @@ def test_related_posts_pick_the_nearest_in_the_same_category():
     index = next(i for i, p in enumerate(posts) if p.rel == "2026/10/p6/")
     related = build.related_posts(posts, index, skip={"2026/10/p7/"})
     assert [p.rel for p in related] == ["2026/10/p9/", "2026/10/p5/", "2026/10/p3/"]
+
+
+def test_card_url_only_when_registry_matches(tmp_path):
+    """預覽卡片的檔名跟著內容變，登記表裡的檔名跟目前的內容對得上才引用，內容改過就退回全站的預覽圖。"""
+    post = build.load_post(write_post(tmp_path, GOOD), AUTHORS)
+    key, rel, data = build.post_card(post)
+    assert key == "2026-09-18-test-post"
+    assert rel.startswith("og/2026/09/test-post-zh-tw-") and rel.endswith(".png")
+    assert data["label"] == "加密與通訊" and data["title"] == "測試文章"
+    assert build.card_url(build.post_card(post), post.lang, {key: {"zh-TW": rel}}) == build.ASSETS_PREFIX + rel
+    assert build.card_url(build.post_card(post), post.lang, {}) is None
+    post.title = "改過的標題"
+    assert build.post_card(post)[1] != rel
+    assert build.card_url(build.post_card(post), post.lang, {key: {"zh-TW": rel}}) is None
+
+
+def test_onion_never_points_og_image_at_the_card_host(fixture_site):
+    """卡片只放在圖片主機上，onion 產物的 og:image 維持站內的全站預覽圖。"""
+    targets, _, _ = fixture_site
+    page = (targets["onion"].out / "2026" / "09" / "zkp-age-verification" / "index.html").read_text(encoding="utf-8")
+    assert "assets.anoni.net/news/og/" not in page
