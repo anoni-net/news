@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 04 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>電信網路裡預留的監聽能力</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-05/2026</guid>
+<pubDate>Mon, 05 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你手機上的一般簡訊沒有端對端加密。這一天，美國眾議院通過要求電信業者預留監聽能力的法案。</description>
+<content:encoded>&lt;p&gt;你手機上的一般簡訊沒有端對端加密（只有收發雙方能讀的加密），Google Messages 的說明頁寫明，這種加密只適用於新一代的 RCS 訊息。美國眾議院在 1994 年 10 月 5 日通過《通訊協助執法法》（CALEA），法案要求電信業者讓設備具備協助執法監聽的能力，10 月 25 日經總統簽署成為法律。條文另外寫明，業者不必替使用者自行加密的通訊解密，除非加密是業者提供、而且業者握有解密所需的資訊。台灣的《通訊保障及監察法》也規定，經指定的電信業者的通訊系統要具有配合執行監察的功能，本站同一天導讀介紹的加拿大 C-22 法案也提出類似的要求（見&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/canada-c22-lawful-access/&#34;&gt;加拿大 C-22 合法存取法案與加密&lt;/a&gt;）。需要保密的對話可以改用端對端加密的通訊 App，用 Android 的 Google Messages 時，傳送鍵出現鎖頭圖示就代表對話有端對端加密。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>手機上的權限使用紀錄</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-04/#y2026</link>

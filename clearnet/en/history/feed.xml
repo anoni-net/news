@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sun, 04 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Wiretap capability built into phone networks</title>
+<link>https://anoni.net/news/en/history/10-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-05/2026</guid>
+<pubDate>Mon, 05 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Ordinary text messages on your phone are not end-to-end encrypted. On this day, the US House passed the bill requiring carriers to build in wiretap capability.</description>
+<content:encoded>&lt;p&gt;Ordinary text messages on your phone are not end-to-end encrypted, the kind of encryption that only the sender and recipient can read, and Google&#39;s help page for Google Messages says this encryption covers only the newer RCS messages. On 5 October 1994, the US House of Representatives passed the Communications Assistance for Law Enforcement Act (CALEA), which requires telecom carriers to make their equipment capable of assisting law enforcement wiretaps. It was signed into law on 25 October, and the law also says a carrier need not decrypt communications a subscriber encrypted unless the carrier provided the encryption and holds the information needed to decrypt it. Taiwan&#39;s Communication Security and Surveillance Act likewise requires designated carriers to equip their systems to carry out interception, and Canada&#39;s Bill C-22, in our story the same day, would impose a similar requirement (see &lt;a href=&#34;https://anoni.net/news/en/2026/10/canada-c22-lawful-access/&#34;&gt;Canada&#39;s Bill C-22, lawful access and encryption&lt;/a&gt;). For conversations you need to keep private, use an end-to-end encrypted messaging app, and in Google Messages on Android, a lock on the send button means the conversation is end-to-end encrypted.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Permission usage history on your phone</title>
 <link>https://anoni.net/news/en/history/10-04/#y2026</link>

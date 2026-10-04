@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 04 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>电信网络里预留的监听能力</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-05/2026</guid>
+<pubDate>Mon, 05 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你手机上的普通短信没有端到端加密。这一天，美国众议院通过要求电信运营商预留监听能力的法案。</description>
+<content:encoded>&lt;p&gt;你手机上的普通短信没有端到端加密（只有收发双方能读的加密），Google Messages 的说明页写明，这种加密只适用于新一代的 RCS 消息。美国众议院在 1994 年 10 月 5 日通过《通信协助执法法》（CALEA），法案要求电信运营商让设备具备协助执法监听的能力，10 月 25 日经总统签署成为法律。条文另外写明，运营商不必替用户自行加密的通信解密，除非加密是运营商提供、而且运营商握有解密所需的信息。台湾的《通讯保障及监察法》也规定经指定的电信运营商的通信系统要具有配合执行监察的功能，本站同一天导读介绍的加拿大 C-22 法案也提出类似的要求（见&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/canada-c22-lawful-access/&#34;&gt;加拿大 C-22 合法访问法案与加密&lt;/a&gt;）。需要保密的对话可以改用端到端加密的通讯 App，用 Android 的 Google Messages 时，发送键出现锁头图标就代表对话有端到端加密。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>手机上的权限使用记录</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-04/#y2026</link>

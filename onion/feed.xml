@@ -6,7 +6,86 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>加拿大 C-22 合法存取法案與加密</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/canada-c22-lawful-access/</link>
+<guid isPermaLink="false">anoni-news:2026/10/canada-c22-lawful-access</guid>
+<pubDate>Mon, 05 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>加拿大的 C-22 法案已在眾議院三讀通過，政府能要求通訊與網路服務業者建立協助執法的技術能力、保存詮釋資料，部分加拿大以外的業者也在範圍內。加拿大以外的讀者現在不需要調整設定。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Parliament of Canada、Access Now、Citizen Lab 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;加拿大的《合法存取法》（Bill C-22）6 月 18 日在眾議院三讀通過，到 9 月 29 日為止，參議院的二讀還沒有完成。法案讓政府能要求通訊與網路服務業者建立協助執法的技術能力，部分加拿大以外的業者也在適用範圍內。數位權利組織 Access Now 與多個歐洲公民團體 9 月致信歐盟要求介入，新聞稿寫到法案最快可能在 10 月成為法律。加拿大以外的讀者現在不需要調整設定。&lt;/p&gt;
+&lt;p&gt;技術能力的要求分成兩層，第一層適用於「核心業者」（core providers），這些業者要依法規具備指定的能力。第二層是公共安全部長的命令，可以要求任何業者建立特定能力。命令只需要獨立的情報專員（Intelligence Commissioner）核准，不必經過法院。收到命令的業者不得透露命令的存在與內容。&lt;/p&gt;
+&lt;p&gt;法案也允許以法規要求業者保存詮釋資料（metadata，通訊內容以外的紀錄）。最長保存期限在初版是一年，眾議院通過的版本改成六個月。依多倫多大學研究單位 Citizen Lab 6 月初的分析，詮釋資料很可能包括每個人跟誰聯絡、行動軌跡，以及用過哪些 App。&lt;/p&gt;
+&lt;p&gt;條文寫明，業者不必遵守會「引入系統性漏洞」的要求。使用者自行加密、業者手上沒有金鑰的資料，業者也不必解密。&lt;/p&gt;
+&lt;p&gt;Signal 6 月出席眾議院委員會作證，立場是被迫在背叛使用者與離開市場之間選擇時，會離開加拿大。DuckDuckGo 也向加拿大媒體 Global News 確認，法案若照 6 月初、眾議院修正前的版本通過，會在加拿大下架 VPN 服務。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;端對端加密的金鑰只存在通訊雙方的裝置上，營運 Signal 這類服務的業者沒有金鑰，照條文的文字應該落在解密例外之內。爭議集中在部長命令能要求的範圍，依 Citizen Lab 的分析，可能包括改變服務的運作方式與在服務裡嵌入監控工具。&lt;/p&gt;
+&lt;p&gt;英國政府 2025 年 1 月依《調查權力法》，對 Apple 發出了同類的技術能力通知（EFF 2025 年 10 月的文章）。Apple 選擇在英國撤下 iCloud 進階資料保護，沒有建立後門，Apple 的說明頁也寫明英國的新使用者不能開啟。&lt;/p&gt;
+&lt;p&gt;到 9 月 29 日為止，法案還需要參議院二讀、三讀與御准（Royal Assent，成為法律前的最後程序）。實際影響要看部長對哪些業者下命令。業者握有金鑰的資料不在解密例外之內，例如沒有端對端加密的雲端備份。&lt;/p&gt;
+&lt;p&gt;想讓雲端備份也改用端對端加密的 iPhone 使用者，可以開啟 iCloud 的進階資料保護，iCloud 備份與照片等大部分資料都會納入。條件是帳號已開啟雙重認證、登入同一帳號的所有裝置都更新到 iOS 16.2、macOS 13.1 等對應版本以上，管理式帳號與兒童帳號不能使用。開啟前要設定復原聯絡人或 28 個字元的復原密鑰，因為 Apple 無法協助找回端對端加密的資料。在「設定」點你的姓名，再依序點「iCloud」與「進階資料保護」即可開啟（Apple 的說明頁有正體中文版）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) Lawful Access Act, 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/documentviewer/en/45-1/bill/C-22/third-reading&#34;&gt;Bill C-22, Third Reading&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/press-release/the-eu-must-act-now-canadas-overreaching-bill-c-22/&#34;&gt;The EU must act now to protect privacy and encryption from Canada’s overreaching Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/&#34;&gt;Analysis of Proposed Surveillance Law Expansion under Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-02&#34;&gt;2026 年 6 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://globalnews.ca/news/11886905/lawful-access-bill-c-22-companies-services-canada/&#34;&gt;Signal, DuckDuckGo among firms weighing Canada exit over lawful access bill&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Global News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;2026 年 6 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users&#34;&gt;The UK Is Still Trying to Backdoor Encryption for Apple Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-01&#34;&gt;2025 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;2025 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟「iCloud 進階資料保護」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;2026 年 4 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>AI 輔助的釣魚攻擊與防範方式</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/ai-phishing-defenses/</link>
@@ -1459,84 +1538,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中刪除、允許使用與管理 Cookie&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Signal 免電話號碼註冊的 Android 測試版</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/signal-numberless-registration/</link>
-<guid isPermaLink="false">anoni-news:2026/09/signal-numberless-registration</guid>
-<pubDate>Sat, 26 Sep 2026 01:23:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Signal 的 Android 測試版可以不用電話號碼註冊，付一次費用換一個不綁門號的帳號，代價是帳號遺失後沒有任何復原管道。iPhone 版還在開發。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Signal Support、Signal Community、CyberInsider 等 5 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Signal 在 Android 8.28 測試版加入不用電話號碼的註冊方式，名為 Signal Login。9 月 23 日的 8.29 測試版公告寫明，這項功能會再留在測試版一週。到 9 月 26 日為止，iPhone 版還在開發，已經用電話號碼註冊的帳號也還不能移除號碼。&lt;/p&gt;
-&lt;p&gt;註冊時選擇不使用電話號碼，要透過 Google Play 付一次 2.99 美元的費用，各國價格可能不同。沒有安裝 Google Play 服務的裝置，暫時無法用這個方式註冊。&lt;/p&gt;
-&lt;p&gt;Signal 在社群論壇的公告寫明，付款使用跟捐款系統相同的零知識證明，付款紀錄與帳號之間沒有連結。收費的原因也寫在公告裡，免費的話，垃圾訊息業者可以大量申請帳號。&lt;/p&gt;
-&lt;p&gt;註冊完成後會取得一組 Account ID 與 Recovery Key，作用相當於帳號與密碼。帳號沒有 PIN，也沒有其他復原管道，其中任一項遺失，帳號就無法找回。&lt;/p&gt;
-&lt;p&gt;使用者名稱可以另外設定，沒有設定的話，別人無法搜尋到這個帳號，只能參與自己發起的對話。註冊後可以在設定裡加上兩步驗證，到 9 月 26 日為止支援 TOTP 驗證器，passkey 與硬體金鑰會在之後加入。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;門號在許多地方都要實名登記，用門號註冊的通訊帳號等於間接連回真實身分。Signal 的端對端加密保護訊息內容，帳號本身過去卻一直綁著一支門號。改成付費加上零知識證明之後，帳號跟門號、付款都脫鉤，想把工作與私人身分分開的人，不必另外申辦門號。Signal 的 Android 版以 AGPL-3.0 授權公開原始碼，介面有正體中文。&lt;/p&gt;
-&lt;p&gt;沒有門號之後，別人只能透過使用者名稱找到這個帳號。Freedom of the Press Foundation 的文章寫到，公開分享過的使用者名稱要一直保留，否則別人可以取得同一個名稱來冒充。用使用者名稱接受消息來源聯繫的人，被冒充的後果更嚴重。&lt;/p&gt;
-&lt;p&gt;另一篇討論 passkey 的觀點文章寫到，一個帳號的安全程度取決於最弱的那一種復原方式。Signal 的免門號帳號沒有任何復原方式，攻擊者少了一個較弱的入口，遺失的風險則全部落在使用者身上。&lt;/p&gt;
-&lt;p&gt;想讓帳號不連回門號的人，要先在 Google Play 訂閱 Signal 的測試版，再透過 Google Play 付 2.99 美元的一次性費用。沒有 Google Play 服務的手機暫時無法用這個方式註冊。註冊後把 Account ID 與 Recovery Key 存進密碼管理器並保留離線備份，設定 TOTP 時也要準備不只一個第二因素。只需要保護訊息內容的人，用門號註冊的帳號同樣有端對端加密，不必改走付費註冊。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android&#34;&gt;Phone Numberless Registration for Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457&#34;&gt;Beta feedback for the upcoming Android 8.28 release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-29-release/76509&#34;&gt;Beta feedback for the upcoming Android 8.29 release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/&#34;&gt;Signal tests account registration without phone number on Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/signal-numberless-registration/&#34;&gt;Signal Will Let You Sign Up Without a Phone Number — For $3&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/signal-introduces-registration-without-a-phone-number/&#34;&gt;Signal introduces registration without a phone number&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hawksley.dev/blog/i-dont-like-passkeys&#34;&gt;I don&amp;#39;t like passkeys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta&#34;&gt;Signal Beta&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

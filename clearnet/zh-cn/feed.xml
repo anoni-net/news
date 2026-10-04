@@ -6,7 +6,106 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>加拿大 C-22 合法访问法案与加密</title>
+<link>https://anoni.net/news/zh-cn/2026/10/canada-c22-lawful-access/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/canada-c22-lawful-access</guid>
+<pubDate>Mon, 05 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>加拿大的 C-22 法案已在众议院三读通过，政府能要求通信与网络服务商建立协助执法的技术能力、保存元数据，部分加拿大以外的服务商也在范围内。加拿大以外的读者现在不需要调整设置。</description>
+<content:encoded>&lt;p&gt;整理 11 篇原文，来自 Parliament of Canada、Access Now、Citizen Lab 等 7 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;加拿大的《合法访问法》（Bill C-22）6 月 18 日在众议院三读通过，到 9 月 29 日为止，参议院的二读还没有完成。法案让政府能要求通信与网络服务商建立协助执法的技术能力，部分加拿大以外的服务商也在适用范围内。数字权利组织 Access Now 与多个欧洲民间组织 9 月致信欧盟要求介入，新闻稿写到法案最快可能在 10 月成为法律。加拿大以外的读者现在不需要调整设置。&lt;/p&gt;
+&lt;p&gt;技术能力的要求分成两层，第一层适用于「核心服务商」（core providers），这些服务商要按法规具备指定的能力。第二层是公共安全部长的命令，可以要求任何服务商建立特定能力。命令只需要独立的情报专员（Intelligence Commissioner）批准，不必经过法院。收到命令的服务商不得透露命令的存在与内容。&lt;/p&gt;
+&lt;p&gt;法案也允许以法规要求服务商保存元数据（metadata，通信内容以外的记录）。最长保存期限在初版是一年，众议院通过的版本改成六个月。按多伦多大学研究机构 Citizen Lab 6 月初的分析，元数据很可能包括每个人跟谁联系、行动轨迹，以及用过哪些 App。&lt;/p&gt;
+&lt;p&gt;条文写明，服务商不必遵守会「引入系统性漏洞」的要求。用户自行加密、服务商手上没有密钥的数据，服务商也不必解密。&lt;/p&gt;
+&lt;p&gt;Signal 6 月出席众议院委员会作证，立场是被迫在背叛用户与离开市场之间选择时，会离开加拿大。DuckDuckGo 也向加拿大媒体 Global News 确认，法案若按 6 月初、众议院修正前的版本通过，会在加拿大下架 VPN 服务。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;端到端加密的密钥只存在通信双方的设备上，运营 Signal 这类服务的服务商没有密钥，按条文的文字应该落在解密例外之内。争议集中在部长命令能要求的范围，按 Citizen Lab 的分析，可能包括改变服务的运作方式与在服务里嵌入监控工具。&lt;/p&gt;
+&lt;p&gt;英国政府 2025 年 1 月依《调查权力法》，对 Apple 发出了同类的技术能力通知（EFF 2025 年 10 月的文章）。Apple 选择在英国撤下 iCloud 高级数据保护，没有建立后门，Apple 的说明页也写明英国的新用户不能开启。类似的协助义务在中国大陆写在《反恐怖主义法》第十八条，电信业务经营者、互联网服务提供者「应当为公安机关、国家安全机关依法进行防范、调查恐怖活动提供技术接口和解密等技术支持和协助」。&lt;/p&gt;
+&lt;p&gt;到 9 月 29 日为止，法案还需要参议院二读、三读与御准（Royal Assent，成为法律前的最后程序）。实际影响要看部长对哪些服务商下命令。服务商握有密钥的数据不在解密例外之内，例如没有端到端加密的云备份。&lt;/p&gt;
+&lt;p&gt;想让云备份也改用端到端加密的 iPhone 用户，可以开启 iCloud 的高级数据保护，iCloud 云备份与照片等大部分数据都会纳入。条件是账户已开启双重认证、登录同一账户的所有设备都更新到 iOS 16.2、macOS 13.1 等对应版本以上，管理式账户与儿童账户不能使用。开启前要设置恢复联系人或 28 个字符的恢复密钥，因为 Apple 无法协助找回端到端加密的数据，入口在「设置」的姓名、「iCloud」与「高级数据保护」（Apple 的帮助页面有简体中文版）。中国大陆的 iCloud 由 GCBD（AIPO Cloud (Guizhou) Technology Co. Ltd）运营，Apple 的高级数据保护说明页没有写明中国大陆账户能否开启。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) Lawful Access Act, 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/documentviewer/en/45-1/bill/C-22/third-reading&#34;&gt;Bill C-22, Third Reading&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/press-release/the-eu-must-act-now-canadas-overreaching-bill-c-22/&#34;&gt;The EU must act now to protect privacy and encryption from Canada’s overreaching Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/&#34;&gt;Analysis of Proposed Surveillance Law Expansion under Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-02&#34;&gt;2026 年 6 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://globalnews.ca/news/11886905/lawful-access-bill-c-22-companies-services-canada/&#34;&gt;Signal, DuckDuckGo among firms weighing Canada exit over lawful access bill&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Global News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;2026 年 6 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users&#34;&gt;The UK Is Still Trying to Backdoor Encryption for Apple Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-01&#34;&gt;2025 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;2025 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/111754&#34;&gt;iCloud in China mainland&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-06/12/content_2055871.htm&#34;&gt;中华人民共和国反恐怖主义法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2018-06-12&#34;&gt;2018 年 6 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟「iCloud 進階資料保護」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;2026 年 4 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/108756&#34;&gt;如何打开 iCloud 高级数据保护&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;2026 年 4 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>AI 辅助的钓鱼攻击与防范方式</title>
 <link>https://anoni.net/news/zh-cn/2026/10/ai-phishing-defenses/</link>
@@ -1807,100 +1906,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hans&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中删除、允许和管理 Cookie&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Signal 免手机号注册的 Android 测试版</title>
-<link>https://anoni.net/news/zh-cn/2026/09/signal-numberless-registration/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/09/signal-numberless-registration</guid>
-<pubDate>Sat, 26 Sep 2026 01:23:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Signal 的 Android 测试版可以不用手机号注册，付一次费用换一个不绑定号码的账号，代价是账号丢失后没有任何恢复渠道。iPhone 版还在开发。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，来自 Signal Support、Signal Community、CyberInsider 等 7 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Signal 在 Android 8.28 测试版加入不用手机号的注册方式，名为 Signal Login。9 月 23 日的 8.29 测试版公告写明，这项功能会再留在测试版一周。到 9 月 26 日为止，iPhone 版还在开发，已经用手机号注册的账号也还不能移除号码。&lt;/p&gt;
-&lt;p&gt;注册时选择不使用手机号，要通过 Google Play 支付一次 2.99 美元的费用，各国价格可能不同。没有安装 Google Play 服务的设备，暂时无法用这个方式注册。&lt;/p&gt;
-&lt;p&gt;Signal 在社区论坛的公告写明，付款使用跟捐款系统相同的零知识证明，付款记录与账号之间没有关联。收费的原因也写在公告里，免费的话，发送垃圾信息的人可以大量申请账号。&lt;/p&gt;
-&lt;p&gt;注册完成后会得到一组 Account ID 与 Recovery Key，作用相当于账号与密码。账号没有 PIN，也没有其他恢复渠道，其中任一项丢失，账号就无法找回。&lt;/p&gt;
-&lt;p&gt;用户名可以另外设置，没有设置的话，别人无法搜索到这个账号，只能参与自己发起的对话。注册后可以在设置里加上两步验证，到 9 月 26 日为止支持 TOTP 验证器，passkey 与硬件密钥会在之后加入。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;在中国大陆，每个电话号码都要实名登记。工业和信息化部 2013 年施行的《电话用户真实身份信息登记规定》要求电信业者为用户办理入网手续时，查验有效证件、登记真实身份信息。用手机号注册的通讯账号，因此能通过电信业者连回真实身份。&lt;/p&gt;
-&lt;p&gt;改成付费加上零知识证明之后，账号跟手机号、付款都脱钩，想把工作与私人身份分开的人，不必另外办一个手机号。Signal 的 Android 版以 AGPL-3.0 授权公开源代码，界面有简体中文。&lt;/p&gt;
-&lt;p&gt;没有手机号之后，别人只能通过用户名找到这个账号。Freedom of the Press Foundation 的文章写到，公开分享过的用户名要一直保留，否则别人可以取得同一个名称来冒充。用用户名接受消息来源联系的人，被冒充的后果更严重。&lt;/p&gt;
-&lt;p&gt;另一篇讨论 passkey 的观点文章写到，一个账号的安全程度取决于最弱的那一种恢复方式。Signal 的免手机号账号没有任何恢复方式，攻击者少了一个较弱的入口，丢失的风险则全部落在用户身上。&lt;/p&gt;
-&lt;p&gt;身在中国境内的人还要先解决网络连接问题。OONI 在 2021 年 4 月到 9 月的量测显示 Signal 在中国遭到封锁，要先有翻墙工具才能连上。到 9 月 26 日为止，免手机号注册只能通过 Google Play 付款，比较适合身在海外、手机装有 Google Play 服务的人。&lt;/p&gt;
-&lt;p&gt;想让账号不连回手机号的人，要先在 Google Play 订阅 Signal 的测试版，再支付 2.99 美元的一次性费用。注册后把 Account ID 与 Recovery Key 存进密码管理器并保留离线备份，设置 TOTP 时也要准备不只一个第二因素。只需要保护消息内容的人，用手机号注册的账号同样有端到端加密，不必改走付费注册。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android&#34;&gt;Phone Numberless Registration for Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457&#34;&gt;Beta feedback for the upcoming Android 8.28 release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-29-release/76509&#34;&gt;Beta feedback for the upcoming Android 8.29 release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/&#34;&gt;Signal tests account registration without phone number on Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/signal-numberless-registration/&#34;&gt;Signal Will Let You Sign Up Without a Phone Number — For $3&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/signal-introduces-registration-without-a-phone-number/&#34;&gt;Signal introduces registration without a phone number&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hawksley.dev/blog/i-dont-like-passkeys&#34;&gt;I don&amp;#39;t like passkeys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/gongbao/content/2013/content_2473882.htm&#34;&gt;电话用户真实身份信息登记规定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中华人民共和国工业和信息化部&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2013-07-16&#34;&gt;2013 年 7 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2021-how-signal-private-messenger-blocked-around-the-world/&#34;&gt;How countries attempt to block Signal Private Messenger App around the world&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-10-21&#34;&gt;2021 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta&#34;&gt;Signal Beta&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

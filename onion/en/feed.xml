@@ -6,7 +6,113 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Canada&#39;s Bill C-22, lawful access and encryption</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/canada-c22-lawful-access/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/canada-c22-lawful-access</guid>
+<pubDate>Mon, 05 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Canada&#39;s Bill C-22 has passed the House of Commons. It would let the government require communications and internet services, including some outside Canada, to build capabilities for law enforcement access and to retain metadata. Readers outside Canada do not need to change any settings now.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including Parliament of Canada, Access Now, Citizen Lab&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Canada&#39;s Lawful Access Act, Bill C-22, passed third reading in the House of Commons on 18 June, and as of 29 September the Senate had not completed second reading. It would let the government require communications and internet services to build capabilities that help law enforcement obtain data, and it reaches some providers outside Canada. In September the digital rights group Access Now and several European civil society groups asked the EU to intervene; Access Now&#39;s press release says the bill could become law as early as October. Readers outside Canada do not need to change any settings now.&lt;/p&gt;
+&lt;p&gt;The capability requirements come in two tiers. &#34;Core providers&#34; must have capabilities set out in regulations, and the public safety minister can order any provider, core or not, to build a particular capability. An order needs approval only from the Intelligence Commissioner, an independent official, rather than a court, and the provider may not disclose that it received one or what it says.&lt;/p&gt;
+&lt;p&gt;Regulations can also require providers to retain metadata, records about communications rather than their content, for up to one year under the first-reading text and six months under the version the House passed. According to an early June analysis by Citizen Lab, a research lab at the University of Toronto, that metadata would likely cover who each person contacts, their movements and the apps they use.&lt;/p&gt;
+&lt;p&gt;According to Global News, Signal testified to a House committee in June that if forced to choose between betraying its users and leaving a market, it would leave. DuckDuckGo confirmed to the Canadian broadcaster that it would pull its VPN service from Canada if the bill passed as it stood in early June, before the House amendments.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The text exempts providers from requirements that would introduce a &#34;systemic vulnerability&#34; and does not compel them to decrypt data that users encrypted themselves when the provider holds no key. With end-to-end encryption the keys stay on users&#39; devices, so on the text&#39;s wording services like Signal would fall inside that exception. The dispute is over the reach of ministerial orders, which according to Citizen Lab could include changing how a service works or embedding surveillance tools in it. According to an April open letter from the Global Encryption Coalition, written about the first-reading text, the definition of systemic vulnerability is vague, and the version the House passed still does not define encryption.&lt;/p&gt;
+&lt;p&gt;Comparable powers in Asia come with different checks. According to the Hong Kong government&#39;s 2020 announcement of the implementation rules for Article 43 of the National Security Law, officers may, under specific circumstances, apply to a magistrate for a warrant authorising police to request identification records or decryption assistance from a service provider. The same announcement says all applications to intercept communications must be approved by the Chief Executive. In mainland China, Article 18 of the Counter-Terrorism Law requires telecom operators and internet service providers to give public security and state security organs technical interfaces and decryption support for preventing and investigating terrorism.&lt;/p&gt;
+&lt;p&gt;As of 29 September the bill still needed Senate second and third reading and Royal Assent, and its effect will depend on which providers receive orders. According to EFF, the UK government issued Apple a comparable technical capability notice under the Investigatory Powers Act in January 2025, and Apple removed Advanced Data Protection in the UK rather than build a backdoor. Apple&#39;s support page says new UK users cannot turn it on. Data a provider can decrypt, such as cloud backups without end-to-end encryption, is outside the decryption exception.&lt;/p&gt;
+&lt;p&gt;On an iPhone, Advanced Data Protection end-to-end encrypts most iCloud data, including iCloud Backup and Photos. It requires two-factor authentication and iOS 16.2, macOS 13.1 or the matching versions on every device signed in to the account, and managed and child accounts are not eligible. You also need to set up a recovery contact or a 28-character recovery key first, because Apple cannot help recover the data. It is under Settings, your name, iCloud, Advanced Data Protection (Apple&#39;s help page is available in Chinese).&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) Lawful Access Act, 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/documentviewer/en/45-1/bill/C-22/third-reading&#34;&gt;Bill C-22, Third Reading&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/press-release/the-eu-must-act-now-canadas-overreaching-bill-c-22/&#34;&gt;The EU must act now to protect privacy and encryption from Canada’s overreaching Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/&#34;&gt;Analysis of Proposed Surveillance Law Expansion under Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-02&#34;&gt;2 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.globalencryption.org/2026/04/open-letter-on-bill-c-22-an-act-respecting-lawful-access/&#34;&gt;Open Letter on Bill C-22: An Act respecting lawful access&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Global Encryption Coalition&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-28&#34;&gt;28 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://globalnews.ca/news/11886905/lawful-access-bill-c-22-companies-services-canada/&#34;&gt;Signal, DuckDuckGo among firms weighing Canada exit over lawful access bill&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Global News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;4 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users&#34;&gt;The UK Is Still Trying to Backdoor Encryption for Apple Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-01&#34;&gt;1 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;22 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.info.gov.hk/gia/general/202007/06/P2020070600784.htm&#34;&gt;Implementation Rules for Article 43 of the Law of the People&amp;#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region gazetted&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Government&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-06&#34;&gt;6 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-06/12/content_2055871.htm&#34;&gt;中华人民共和国反恐怖主义法 (Counter-Terrorism Law of the People&amp;#39;s Republic of China)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2018-06-12&#34;&gt;12 June 2018&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟「iCloud 進階資料保護」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;24 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/108756&#34;&gt;How to turn on Advanced Data Protection for iCloud&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-17&#34;&gt;17 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>AI-assisted phishing and the defences that still work</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/ai-phishing-defenses/</link>
@@ -1777,111 +1883,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=en&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;Delete, allow, and manage cookies in Chrome&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Phone-number-free registration in the Signal Android beta</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/signal-numberless-registration/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/signal-numberless-registration</guid>
-<pubDate>Sat, 26 Sep 2026 01:23:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Signal&#39;s Android beta lets people register without a phone number for a one-time fee. The account is tied to neither a SIM card nor the payment, and nothing can recover it if the keys are lost. The iPhone version is still in development.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including Signal Support, Signal Community, CyberInsider&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Signal&#39;s Android 8.28 beta adds a way to register without a phone number, called Signal Login. The 8.29 beta announcement on 23 September says the feature will stay in beta for another week. As of 26 September, the iPhone version is still in development, and accounts already registered with a number cannot remove it.&lt;/p&gt;
-&lt;p&gt;Registering this way takes a one-time payment of US$2.99 through Google Play, and prices can differ by country. Devices without Google Play services cannot use it yet. Signal&#39;s announcement on its community forum says the payment uses the same zero-knowledge proofs as its donation system, so there is no link between the payment and the account. The fee is there because free accounts would be registered in bulk by spammers.&lt;/p&gt;
-&lt;p&gt;Registration gives you an Account ID and a Recovery Key, which work like a username and password. There is no PIN and no other recovery mechanism, so losing either one loses the account. A username is optional. Without one, nobody can find the account, and it can only join chats it starts. TOTP two-factor authentication can be added after registration, and Signal plans to add passkeys and hardware keys later.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Signal&#39;s end-to-end encryption has always protected message content, but every account started from a phone number. In much of Asia a phone number is itself an identity record. Mainland China has required real-name registration for every phone line since 2013, when the Ministry of Industry and Information Technology obliged carriers to check a valid ID before connecting a user. Hong Kong extended registration to every SIM card, prepaid ones included, and unregistered prepaid cards stopped working after 23 February 2023. In Taiwan, carriers must record a name, an address and the numbers of two identity documents before activating any mobile number, prepaid or not. In all three places, a Signal account registered with a number leads back, through the carrier, to a named person.&lt;/p&gt;
-&lt;p&gt;The paid route breaks that chain in two places. The account is not tied to a SIM card, and the zero-knowledge payment is not tied to the account. People who want to keep a work identity apart from a personal one no longer need a second SIM card registered in their own name. Signal&#39;s Android app is open source under AGPL-3.0, and its interface is available in both Traditional and Simplified Chinese.&lt;/p&gt;
-&lt;p&gt;Reaching Signal at all is a separate question in mainland China. OONI measurements from April to September 2021 show Signal blocked there, so people inside need a circumvention tool first.&lt;/p&gt;
-&lt;p&gt;Without a number, a username becomes the only way to be found. According to the Freedom of the Press Foundation, a username you have shared publicly should be kept, because once it is released someone else can claim it and impersonate you. That risk is highest for people who publish a username so that sources can contact them.&lt;/p&gt;
-&lt;p&gt;According to a separate essay on passkeys, an account is only as secure as its weakest recovery method. Signal&#39;s numberless accounts have no recovery method at all. Attackers lose a weak entry point, and users carry the entire risk of loss.&lt;/p&gt;
-&lt;p&gt;People who want an account that does not lead back to a phone number can subscribe to Signal&#39;s beta channel on Google Play and pay the one-time fee there, US$2.99 or a local equivalent. As of 26 September, the option suits people outside the mainland whose phones run Google Play services. After registering, store the Account ID and Recovery Key in a password manager with an offline backup, and if you add TOTP, set up more than one second factor. People who only need their messages protected get end-to-end encryption with a number-based account as well, so they have no need to switch to the paid route.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android&#34;&gt;Phone Numberless Registration for Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-28-release/76457&#34;&gt;Beta feedback for the upcoming Android 8.28 release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.signalusers.org/t/beta-feedback-for-the-upcoming-android-8-29-release/76509&#34;&gt;Beta feedback for the upcoming Android 8.29 release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Community&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/signal-tests-account-registration-without-phone-number-on-android/&#34;&gt;Signal tests account registration without phone number on Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/signal-numberless-registration/&#34;&gt;Signal Will Let You Sign Up Without a Phone Number — For $3&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/signal-introduces-registration-without-a-phone-number/&#34;&gt;Signal introduces registration without a phone number&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hawksley.dev/blog/i-dont-like-passkeys&#34;&gt;I don&amp;#39;t like passkeys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/gongbao/content/2013/content_2473882.htm&#34;&gt;电话用户真实身份信息登记规定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Industry and Information Technology, China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2013-07-16&#34;&gt;16 July 2013&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cedb.gov.hk/en/news/press_release/2023/pr19012023a.html&#34;&gt;OFCA steps up publicity and assistance for forthcoming full implementation of real-name registration programme for SIM cards (with photos)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Commerce and Economic Development Bureau, Hong Kong&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-01-19&#34;&gt;19 January 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060091&#34;&gt;行動寬頻業務管理規則&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2021-how-signal-private-messenger-blocked-around-the-world/&#34;&gt;How countries attempt to block Signal Private Messenger App around the world&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-10-21&#34;&gt;21 October 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta&#34;&gt;Signal Beta&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Signal Support&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
