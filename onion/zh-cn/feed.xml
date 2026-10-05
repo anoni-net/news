@@ -6,7 +6,162 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>CryptPad 2026 夏季进度与后量子加密的瓶颈</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/cryptpad-summer-2026-status/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/cryptpad-summer-2026-status</guid>
+<pubDate>Tue, 06 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>端到端加密协作套件 CryptPad 制定新的安全政策，漏洞修复发布后至少 90 天才公开细节。后量子加密的实验让部分功能慢到难以使用，浏览器内置新的算法之后有望改善。使用公共实例的人无需调整设置，自行搭建的管理员要跟上新版。</description>
+<content:encoded>&lt;p&gt;整理 19 篇原文，来自 CryptPad、GitHub、WICG 等 5 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;CryptPad 于 9 月 15 日发布夏季进度报告，介绍新的安全政策、后量子加密研究与 cryptpad.fr 的客服变动。CryptPad 是开源（AGPL-3.0）的端到端加密协作套件，可以在浏览器里协同编辑文档与电子表格。用户可以使用公共实例（向公众开放的服务器），也可以自行搭建。使用公共实例的人无需调整设置，自行搭建的管理员要留意升级。&lt;/p&gt;
+&lt;p&gt;按 6 月公布的新安全政策，漏洞修复发布后至少保密 90 天，之后才以 CVE（通用漏洞编号）公开细节。严重程度改用 CVSS 4.0（漏洞严重度评分）。版本说明不列出修复了哪些漏洞，只标出其中最高的 CVSS 分数与升级提醒。推荐的版本一律是最新版，新版每季度发布。&lt;/p&gt;
+&lt;p&gt;据 6 月的事后复盘，服务器此前没有限制 WebSocket 连接（浏览器与服务器交换数据的通道）的发送频率，有人反复发送大量消息就能耗尽资源。官方实例 cryptpad.fr 在 1 月 28 日因此遭到分布式拒绝服务攻击，服务中断不到 3 小时就恢复，修复收录在 3 月 27 日发布的 2026.2.1。&lt;/p&gt;
+&lt;p&gt;团队原本打算保密 90 天，但当时的政策没有写清楚保密期。报告漏洞的人因此提出异议，CVE 在 2026.2.1 发布后第 34 天就公开了。&lt;/p&gt;
+&lt;p&gt;后量子加密是能抵御量子计算机攻击的算法。团队选定美国标准机构 NIST 制定的 ML-KEM 与 ML-DSA，前者用于交换密钥，后者用于数字签名。实验中两者与原有的公钥加密混合使用，多数功能运行正常，部分功能却慢到难以使用。&lt;/p&gt;
+&lt;p&gt;浏览器内置的加密接口 Web Cryptography API 有一份草案，要直接加入这两种算法。据进度报告估计，速度约为外部加载的库的 100 倍。&lt;/p&gt;
+&lt;p&gt;进度报告写明客服团队已没有会说法语的成员，cryptpad.fr 将停止提供法语客服。秋季版会包含相当于两个版本的改进，截至 9 月 29 日还没有公布发布日期。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;CryptPad 在浏览器里加密文档，服务器无法获取文档内容。用户指南列出的信任前提有几项，包括实例运行与 GitHub 公开版本相同的代码，以及分享链接不会落入不该获得的人手中。这些前提都成立时，管理员无法读取或修改文档。用户指南也写明匿名性较弱，管理员能看到用户的 IP 地址与浏览器信息，需要时可以通过 Tor 连接。&lt;/p&gt;
+&lt;p&gt;修复要等实例的管理员升级之后才会生效。按安全政策，90 天的保密期是留给管理员升级的时间。漏洞公开之后，攻击者也可能开始利用。公共实例列表只收录通过检查、版本最新的实例，挑选实例时可以从列表开始。&lt;/p&gt;
+&lt;p&gt;Web Cryptography API 的草案由 WICG（W3C 孵化新规范的社区小组）维护，截至 9 月 29 日尚未进入 W3C 的正式标准流程。浏览器实现草案之后，后量子版的 CryptPad 可能比较可行。团队已先把程序改成可替换加密库的架构（密码敏捷性，crypto-agility）。&lt;/p&gt;
+&lt;p&gt;截至 9 月 29 日的 90 天内，GreatFire（监测中国网络审查的网站）只在 9 月 18 日测试过 &lt;code&gt;https://cryptpad.fr&lt;/code&gt;，结果是连接被拒绝。GreatFire 自 8 月底起不把这种结果算作封锁的证据，所以判定未封锁。编辑时还要连到 &lt;code&gt;api.cryptpad.fr&lt;/code&gt; 与 &lt;code&gt;sandbox.cryptpad.info&lt;/code&gt;，GreatFire 都未测过。因此截至 9 月 29 日，还没有可靠的测量数据能说明 CryptPad 在中国大陆能否正常使用。&lt;/p&gt;
+&lt;p&gt;据事后复盘，使用 nginx 并以官方高级示例配置为基础的管理员，要尽快按最新版的示例更新自己的配置。新版示例加入了连接频率限制。按安全政策，每个版本的支持期是 90 天。截至 9 月 29 日，最新版是 5 月 26 日的 2026.5.1。&lt;/p&gt;
+&lt;p&gt;搭建时要从 GitHub 下载源代码与新版。截至 9 月 27 日的 90 天内，GreatFire 对 GitHub 的 54 次有明确结果的测试中，69% 受到干扰。&lt;/p&gt;
+&lt;p&gt;打开 cryptpad.fr 或列表上的其他实例就能试用，浏览器要启用 JavaScript。截至 9 月 29 日，列表上的 13 个实例都在欧洲与北美。不注册也能协同编辑，但不能上传图片、视频与 PDF，文档连续 3 个月未使用也不再保留。&lt;/p&gt;
+&lt;p&gt;注册只需要用户名与密码，无需邮箱。管理员无法查看、找回或重置密码，用户指南写明要把密码另外记在安全的地方。界面有简体与正体中文，用户指南没有中文版。各实例的客服页面会标出管理员使用的语言。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（19 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/09/15/status-2026-09/&#34;&gt;Summer 2026 status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/06/24/2026.2-security-issues/&#34;&gt;2026.2 security fixes and our new security policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-24&#34;&gt;2026 年 6 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.org/security/&#34;&gt;CryptPad Security Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-23&#34;&gt;2026 年 6 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1&#34;&gt;Winter fix release (2026.2.1)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;2026 年 3 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.5.1&#34;&gt;Spring fix release (2026.5.1)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-26&#34;&gt;2026 年 5 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/milestone/20&#34;&gt;Autumn Release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2025/09/05/status-2025-08/&#34;&gt;Summer 2025 status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-05&#34;&gt;2025 年 9 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://wicg.github.io/webcrypto-modern-algos/&#34;&gt;Modern Algorithms in the Web Cryptography API&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;WICG&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.fr/&#34;&gt;CryptPad: Collaboration suite, encrypted and open-source&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/security.html&#34;&gt;Security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/user_account.html&#34;&gt;User Account&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/support.html&#34;&gt;Support&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.org/instances/&#34;&gt;Public instances&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hant/&#34;&gt;Chinese (Traditional Han script)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hans/&#34;&gt;Chinese (Simplified Han script)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.fr/api/config&#34;&gt;cryptpad.fr/api/config&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/cryptpad.fr&#34;&gt;Is https://cryptpad.fr blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/api/url/https/cryptpad.fr&#34;&gt;https://cryptpad.fr（GreatFire API）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/github.com&#34;&gt;Is https://github.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;2026 年 9 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>加拿大 C-22 合法访问法案与加密</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/canada-c22-lawful-access/</link>
@@ -1849,63 +2004,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>ChatGPT 广告像素的跨站识别码</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/chatgpt-ad-pixel-identifier/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/09/chatgpt-ad-pixel-identifier</guid>
-<pubDate>Sat, 26 Sep 2026 01:24:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>一份流量分析发现，ChatGPT 的广告系统会设置一个跟账号关联的 cookie，买广告的网站再通过 OpenAI 的像素，把它连同浏览数据发回 OpenAI。目前只在 Android 版 Chrome 观察到。</description>
-<content:encoded>&lt;p&gt;整理 5 篇原文，来自 Buchodi&amp;#39;s Threat Intel、OpenAI、Google Chrome 說明 等 4 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;一位安全研究者分析 ChatGPT 的广告流量，发现使用 ChatGPT 时，OpenAI 的广告收集器 &lt;code&gt;bzr.openai.com&lt;/code&gt; 会设置一个名为 &lt;code&gt;__obi&lt;/code&gt; 的 cookie。它跟 ChatGPT 账号关联，有效期一年，而且允许在其他网站的请求中发出。研究者只在 Android 版 Chrome 观察到这个机制，iOS 上的浏览器都会拦截。OpenAI 在 9 月 23 日宣布 ChatGPT 广告开始在七个亚洲市场推出，广告只显示给 Free 与 Go 方案的用户。&lt;/p&gt;
-&lt;p&gt;在 ChatGPT 投放广告的商家，会在自己的网站装上 OpenAI 的像素。用户之后访问广告主的网站时，像素会把 &lt;code&gt;__obi&lt;/code&gt; 连同页面数据发回 OpenAI，包括网址路径、表单字段与网页上的文字。电子邮件、电话与姓名经过 SHA-256 哈希，国家、地区、城市与邮政编码则是明文。研究者观察到的网址都去掉了查询字符串，但路径本身有时就透露了病症等敏感信息。&lt;/p&gt;
-&lt;p&gt;用户在退出登录的状态下同样会被设置 &lt;code&gt;__obi&lt;/code&gt;。研究者检查的每一个同步令牌，同意类别都标为「分析」。用户只要允许分析，即使拒绝营销也会收到 &lt;code&gt;__obi&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;研究者在自己的手机上复现，用两种方式抓取流量，另外分析了 936 个广告主像素、超过一千个域名。原文也写明了几项限制：约五分之一的 ChatGPT 会话产生同步令牌，桌面版 Chrome 没有测试。OpenAI 在服务器端把识别码对应回账号，是研究者从设计推论，没有直接观察到。研究者 9 月 14 日去信询问，OpenAI 的客服收到后没有回答提问。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;OpenAI 公布的支持地区不含中国大陆、香港与澳门。9 月 23 日新增的七个亚洲市场包括新加坡、马来西亚与台湾等地，在当地使用免费或 Go 方案的人会看到广告。&lt;/p&gt;
-&lt;p&gt;广告主网站上的像素把访问记录发回广告平台，研究者把它比作零售商早已安装的 Meta 与 Google 追踪代码。差别在于 ChatGPT 账号里还有用户跟 AI 的对话，许多人会在对话里提到健康、工作与个人问题，对话内容与其他网站的浏览记录可能因此连到同一个账号。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; 通过第三方 cookie 在其他网站发出。Safari 默认拦截跨站追踪，iOS 上的浏览器又都使用 Safari 的 WebKit 引擎，所以研究者在 iOS 上都没有观察到。Firefox 默认把第三方 cookie 按网站隔离，Brave 默认屏蔽。&lt;/p&gt;
-&lt;p&gt;同意横幅的分类由商家自行定义，在这次的案例里，「分析」这个选项也涵盖了广告用途的识别码同步。只拒绝「营销」不足以避开广告追踪。&lt;/p&gt;
-&lt;p&gt;研究者观察到的情境是在 Android 手机上用 Chrome 登录 ChatGPT，用 iPhone 的人不必另外设置。在海外用 Android 版 Chrome 登录 ChatGPT 的人，可以在 Chrome 的「设置」依次点按「网站设置」、「第三方 Cookie」，选择「阻止第三方 Cookie」（Google 的帮助页面有简体中文的步骤）。阻止之后部分网站可能无法正常运行，需要的网站可以加入例外列表，不想更改设置的人也可以换一个浏览器专门使用 ChatGPT。经常在对话里谈健康、工作或个人问题的人，其他网站的浏览记录一旦连回 ChatGPT 账号，可能暴露的内容比较多。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/&#34;&gt;ChatGPT now knows what you do on other websites via ad collector&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Buchodi&amp;#39;s Threat Intel&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-20&#34;&gt;2026 年 9 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/&#34;&gt;ChatGPT Ads expands to Southeast Asia and Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中刪除、允許使用與管理 Cookie&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hans&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中删除、允许和管理 Cookie&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

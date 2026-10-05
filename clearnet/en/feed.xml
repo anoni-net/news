@@ -6,7 +6,172 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>CryptPad&#39;s summer 2026 status and the post-quantum bottleneck</title>
+<link>https://anoni.net/news/en/2026/10/cryptpad-summer-2026-status/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/cryptpad-summer-2026-status</guid>
+<pubDate>Tue, 06 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>CryptPad, an end-to-end encrypted collaboration suite, has a new security policy that keeps vulnerability details private for at least 90 days after a fix ships. Its post-quantum experiment left some features too slow to use, and native browser support for the algorithms may change that. People on public instances need not change anything, while self-hosting administrators should keep up with releases.</description>
+<content:encoded>&lt;p&gt;Based on 21 sources, including CryptPad, GitHub, WICG&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;CryptPad published its summer 2026 status on 15 September, covering a new security policy, post-quantum research and a support change on cryptpad.fr, its flagship instance. CryptPad is an AGPL-3.0 end-to-end encrypted suite for co-editing documents and spreadsheets in the browser. You can use a public instance or host your own. Users of public instances need not change anything, while self-hosting administrators should watch for upgrades.&lt;/p&gt;
+&lt;p&gt;According to the June post-mortem, the server did not rate-limit WebSocket connections, the channel through which the browser and server exchange data, so repeatedly sending frames could exhaust its resources. On 28 January cryptpad.fr was hit by a distributed denial-of-service attack exploiting that gap, and the resulting outage was resolved in under three hours. The fix shipped in 2026.2.1 on 27 March.&lt;/p&gt;
+&lt;p&gt;The team had intended a 90-day embargo, but the reporter disputed it because the previous policy did not state it clearly. The CVE was published 34 days after 2026.2.1. The new policy, published in June, keeps a CVE private for at least 90 days after the fixed release.&lt;/p&gt;
+&lt;p&gt;For post-quantum cryptography, the team chose NIST&#39;s ML-KEM, used to exchange keys, and ML-DSA, used for digital signatures. In experiments the two were combined with CryptPad&#39;s existing public-key cryptography in a hybrid way. Most of CryptPad ran smoothly, but some parts became too slow to use. According to the post, a draft adding both algorithms to the browser&#39;s Web Cryptography API should be two orders of magnitude faster than an external library.&lt;/p&gt;
+&lt;p&gt;The flagship instance, cryptpad.fr, will drop French-language support because the support team no longer has a French speaker. An Autumn Release bundling two releases&#39; worth of improvements is coming, with no release date announced as of 29 September.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;CryptPad encrypts documents in the browser, and the server has no access to their content. The user guide lists several trust assumptions, including that the instance runs the same code as published on GitHub and that sharing links do not reach illegitimate third parties. When they all hold, administrators cannot read or modify your documents. The guide also states that CryptPad offers only weak anonymity, since the instance can see your IP address and browser, and points to Tor for stronger guarantees.&lt;/p&gt;
+&lt;p&gt;A fix takes effect only once an instance&#39;s administrators upgrade. Under the security policy, the 90-day embargo gives them time to do so before the vulnerability is published and attackers may start exploiting it. The public instance list only includes instances that pass checks for an up-to-date version, so it is a good place to start when choosing one.&lt;/p&gt;
+&lt;p&gt;The Web Cryptography API draft is maintained by the WICG, a W3C community group for new specifications, and as of 29 September it was not on the W3C standards track. Browser support may make a post-quantum CryptPad more realistic. The team has already restructured the code for crypto-agility, so cryptographic libraries can be swapped more easily.&lt;/p&gt;
+&lt;p&gt;As of 29 September, CryptPad&#39;s Weblate shows the interface fully translated into Traditional and Simplified Chinese, 96.6% into Japanese and only 5.8% into Korean. The user guide has a Japanese edition but no Chinese or Korean one. The support page shows which languages an instance&#39;s administrators use, and the guide suggests an online translator when needed.&lt;/p&gt;
+&lt;p&gt;In mainland China, GreatFire rates &lt;code&gt;https://cryptpad.fr&lt;/code&gt; as not blocked as of 29 September, based on a single test on 18 September whose connection was refused. Since late August GreatFire no longer counts refusals as evidence of blocking. The hosts the editor also needs, such as &lt;code&gt;api.cryptpad.fr&lt;/code&gt; and &lt;code&gt;sandbox.cryptpad.info&lt;/code&gt;, had not been tested, so as of 29 September there was no reliable measurement. GitHub, where the source code and releases are published, showed interference in 69% of 54 conclusive tests over the 90 days to 27 September.&lt;/p&gt;
+&lt;p&gt;To try it, open cryptpad.fr or another listed instance in a browser with JavaScript enabled. All 13 instances on the public list are hosted in Europe or North America as of 29 September. Without an account you can still co-edit documents, but you cannot upload images, videos or PDFs, and a document unused for three months is no longer kept.&lt;/p&gt;
+&lt;p&gt;Registering needs only a username and password, with no email address. Because of the encryption, administrators cannot view, retrieve or reset a password, so the guide advises noting it somewhere safe.&lt;/p&gt;
+&lt;p&gt;According to the post-mortem, administrators running CryptPad behind nginx with a variation of the official advanced configuration should update it from the latest example configuration as soon as possible, since the new example adds rate limiting. Severity is now scored with CVSS 4.0, and release notes list only the highest score among fixed vulnerabilities plus a notice to upgrade. Each version is supported for 90 days. The recommended version is always the latest, with new versions published quarterly, and as of 29 September the latest release was 2026.5.1 from 26 May.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (21)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/09/15/status-2026-09/&#34;&gt;Summer 2026 status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/06/24/2026.2-security-issues/&#34;&gt;2026.2 security fixes and our new security policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-24&#34;&gt;24 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.org/security/&#34;&gt;CryptPad Security Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-23&#34;&gt;23 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1&#34;&gt;Winter fix release (2026.2.1)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;27 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.5.1&#34;&gt;Spring fix release (2026.5.1)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-26&#34;&gt;26 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/milestone/20&#34;&gt;Autumn Release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2025/09/05/status-2025-08/&#34;&gt;Summer 2025 status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-05&#34;&gt;5 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://wicg.github.io/webcrypto-modern-algos/&#34;&gt;Modern Algorithms in the Web Cryptography API&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;WICG&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.fr/&#34;&gt;CryptPad: Collaboration suite, encrypted and open-source&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/security.html&#34;&gt;Security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/user_account.html&#34;&gt;User Account&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/support.html&#34;&gt;Support&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.org/instances/&#34;&gt;Public instances&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hant/&#34;&gt;Chinese (Traditional Han script)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hans/&#34;&gt;Chinese (Simplified Han script)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/ja/&#34;&gt;Japanese&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/ko/&#34;&gt;Korean&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.fr/api/config&#34;&gt;cryptpad.fr/api/config&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/cryptpad.fr&#34;&gt;Is https://cryptpad.fr blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/api/url/https/cryptpad.fr&#34;&gt;https://cryptpad.fr (GreatFire API)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/github.com&#34;&gt;Is https://github.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;27 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Canada&#39;s Bill C-22, lawful access and encryption</title>
 <link>https://anoni.net/news/en/2026/10/canada-c22-lawful-access/</link>
@@ -1826,63 +1991,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The cross-site identifier behind ChatGPT&#39;s ad pixel</title>
-<link>https://anoni.net/news/en/2026/09/chatgpt-ad-pixel-identifier/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/chatgpt-ad-pixel-identifier</guid>
-<pubDate>Sat, 26 Sep 2026 01:24:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>A traffic analysis found that ChatGPT&#39;s ad system sets a cookie linked to the user&#39;s account, which advertisers&#39; sites then send back to OpenAI through its pixel along with browsing data. So far it has only been seen in Chrome on Android.</description>
-<content:encoded>&lt;p&gt;Based on 5 sources, including Buchodi&amp;#39;s Threat Intel, OpenAI, Google Chrome 說明&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;A security researcher found that while you use ChatGPT, OpenAI&#39;s ad collector &lt;code&gt;bzr.openai.com&lt;/code&gt; sets a cookie called &lt;code&gt;__obi&lt;/code&gt; that is linked to your account, lasts a year and can be sent along with requests on other sites. The researcher observed it only in Chrome on Android. Browsers on iOS block it. On 23 September OpenAI began rolling out ChatGPT ads in seven more Asian markets, shown only on the Free and Go plans.&lt;/p&gt;
-&lt;p&gt;Advertisers install OpenAI&#39;s pixel on their own sites. When you visit one, the pixel returns &lt;code&gt;__obi&lt;/code&gt; to OpenAI with the URL path, form fields and text on the page. Email addresses, phone numbers and names are hashed with SHA-256, while country, region, city and postcode are sent in the clear. Query strings were stripped, but a path alone can reveal something like a medical condition.&lt;/p&gt;
-&lt;p&gt;The cookie is set even when you are logged out. Every sync token examined was filed under the consent category &#34;analytics&#34;, so allowing analytics while refusing marketing still delivers &lt;code&gt;__obi&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The researcher reproduced this on their own phone, captured traffic in two ways and analysed 936 advertiser pixels on more than a thousand domains. The write-up states its limits: sync tokens appeared in about one in five sessions, desktop Chrome was not tested, and the server-side mapping back to accounts is inferred from the design rather than observed. OpenAI&#39;s support team received the researcher&#39;s questions on 14 September without answering them.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Pixels on advertisers&#39; sites that report visits back to an ad platform are not new, and the researcher compares this one to the Meta and Google tracking code retailers have installed for years. What differs is the account on the other end. A ChatGPT account also holds conversations with an AI, where many people discuss health, work and personal problems, and those conversations could end up linked to browsing on unrelated sites.&lt;/p&gt;
-&lt;p&gt;The timing matters for readers in Asia. OpenAI&#39;s announcement names Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam and Taiwan, after earlier Asia-Pacific launches in Australia, New Zealand, Japan, South Korea and India, and puts the total at more than 60 countries. OpenAI&#39;s list of supported countries leaves out mainland China, Hong Kong and Macau, so people there are outside ChatGPT&#39;s official service altogether. Elsewhere in the region, people on the Free and Go plans have seen ads since the 23 September launch, while Plus, Pro and Enterprise stay ad-free.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;__obi&lt;/code&gt; travels as a third-party cookie. Safari blocks cross-site tracking by default, and every browser on iOS is built on Safari&#39;s WebKit engine, which is why the researcher saw nothing on iOS. On Android and desktop you can block third-party cookies in the browser settings. Firefox isolates third-party cookies per site by default, and Brave blocks them.&lt;/p&gt;
-&lt;p&gt;Consent banners let each company define its own categories. Here, &#34;analytics&#34; also covered syncing an advertising identifier, so refusing only &#34;marketing&#34; does not keep you out of ad tracking.&lt;/p&gt;
-&lt;p&gt;The behaviour was observed with ChatGPT logged in through Chrome on Android, so iPhone users need not change anything. Android users of Chrome can go to Settings &amp;gt; Site settings &amp;gt; Third-party cookies and choose Block third-party cookies (Google&#39;s help page gives the steps in Chinese as well as English). Blocking them may break some sites, which can be added to an exception list, and anyone who would rather leave Chrome&#39;s settings alone can keep ChatGPT in a separate browser instead. The stakes are higher for people who discuss health, work or personal problems with ChatGPT, since more would be exposed if their browsing on other sites were tied back to their ChatGPT account.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (5)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/&#34;&gt;ChatGPT now knows what you do on other websites via ad collector&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Buchodi&amp;#39;s Threat Intel&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-20&#34;&gt;20 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/&#34;&gt;ChatGPT Ads expands to Southeast Asia and Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;在 Chrome 中刪除、允許使用與管理 Cookie&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95647?hl=en&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;Delete, allow, and manage cookies in Chrome&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome Help&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
