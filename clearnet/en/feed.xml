@@ -6,7 +6,103 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>The UK Supreme Court ruling on state immunity in a spyware claim</title>
+<link>https://anoni.net/news/en/2026/10/uk-supreme-court-spyware-state-immunity/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/uk-supreme-court-spyware-state-immunity</guid>
+<pubDate>Tue, 06 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The UK Supreme Court ruled that Bahrain cannot claim state immunity to stop a UK court hearing claims that it hacked computers in the UK with spyware operated from abroad. The ruling decides only whether UK courts can hear the case, and whether the hacking happened has not been tried.</description>
+<content:encoded>&lt;p&gt;Based on 10 sources, including UK Supreme Court, legislation.gov.uk, Citizen Lab&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 27 July the UK Supreme Court dismissed Bahrain&#39;s appeal by a 3–2 majority, so two claimants living in the UK can keep suing the Bahraini government. Bahrain had claimed state immunity, the rule that a foreign government generally cannot be sued in another country&#39;s courts unless national law makes an exception. The claimants allege that Bahrain infected their computers with FinSpy (commercial spyware), and that learning of it caused them psychiatric injury. The ruling covers only whether UK courts can hear the case: Bahrain denies the allegations, which are left for trial, and courts outside the UK apply their own law.&lt;/p&gt;
+&lt;p&gt;Section 5 of the State Immunity Act 1978 removes immunity for claims over death, personal injury or damage to tangible property &#34;caused by an act or omission in the United Kingdom&#34;. The claimants seek damages for psychiatric injury, which counts as personal injury. Claims over data exposure or economic loss alone, with no injury or property damage, fall outside it.&lt;/p&gt;
+&lt;p&gt;The core question is whether a hacker operating remotely from abroad, breaking into a computer in the UK, has committed an act in the UK. On the claimants&#39; pleaded facts, the operators were likely abroad, using a command and control server in Bahrain, while the claimants and their computers were in the UK.&lt;/p&gt;
+&lt;p&gt;The UK is a party to the European Convention on State Immunity, whose Article 11 sets a similar exception with two conditions. The facts causing the injury must occur in the forum state, and the author of the injury must be present there at the time. Both sides agree the case fails the second condition on the claimants&#39; pleaded facts, but section 5 does not spell that condition out, so the dispute is whether section 5 should be read to include it.&lt;/p&gt;
+&lt;p&gt;Of the five justices, the three in the majority held that Parliament deliberately left the Convention&#39;s presence requirement out of section 5, and that an &#34;act&#34; includes one carried out through software or a device operated remotely. On that view, remotely manipulating a UK computer from abroad is an act in the UK. The two dissenting justices held that section 5 should be read consistently with the Convention, so that it too requires the foreign agent to be present in the UK.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Bahrain argued that the harm was caused by commands entered abroad, with what happened on the claimants&#39; computers as secondary events. One of the dissenting justices likened this to firing a rifle across a border river, placing the act in Bahrain where commands were entered and treating a camera switching on in the UK as its effect. The claimants listed ten classes of acts in the UK, including transmitting installation files, activating microphones and cameras, and logging keystrokes. The majority found that together they amount to surveillance in the UK.&lt;/p&gt;
+&lt;p&gt;The majority noted that Bahrain accepts it would have no immunity if its agents came to the UK and killed someone. On Bahrain&#39;s reading, the same killing carried out by a drone flown from abroad would attract immunity, which the majority called an arbitrary distinction. The same justice replied that such examples read the 1978 Act with hindsight, since no one drafting it could have foreseen drones or hacking. The justice added that a rule based on where the agent is located offers clarity and certainty.&lt;/p&gt;
+&lt;p&gt;A further dispute is whether widening the exception puts the UK in breach of international law. Beyond the Convention, that includes customary international law, the rules drawn from consistent state practice that states accept as legally binding. The majority found that the Convention lets states widen the exception, and that the UK had a reasonable basis in customary law to apply it to sovereign acts. Sovereign acts are things a government does in its capacity as a state, as opposed to ordinary commercial dealings, and both sides agree the alleged hacking counts.&lt;/p&gt;
+&lt;p&gt;Bahrain argued that widening the exception breaches the Convention and customary international law. The same dissenting justice agreed, reasoning that the Convention permits wider exceptions only within what customary law allows. That justice held that customary law allows the exception only where the agent is present, and found not a single state that denies immunity when the agent is abroad.&lt;/p&gt;
+&lt;p&gt;Asian laws differ on whether presence is required. Singapore&#39;s State Immunity Act 1979 uses the same wording as the UK Act, &#34;caused by an act or omission in Singapore&#34;, with no express presence requirement, and whether such wording implies one is exactly what the UK justices split over. Japan&#39;s 2009 Act on the Civil Jurisdiction of Japan with respect to a Foreign State goes the other way, and it requires the person who performed the act to have been in Japan at the time.&lt;/p&gt;
+&lt;p&gt;Mainland China&#39;s Foreign State Immunity Law, in force since 2024, lifts immunity for compensation claims over injury, death or property loss caused by a foreign state&#39;s acts within Chinese territory. Like the UK and Singapore laws, it does not spell out whether the actor must be present.&lt;/p&gt;
+&lt;p&gt;Back in the High Court, the trial-level court that will now hear the facts, the claimants must prove attribution to Bahrain, causation and injury, according to a Lawfare article by researchers from Citizen Lab and Access Now. In another UK case the article describes, expert forensic evidence showed the claimant&#39;s phone had been hacked with Pegasus, another spyware product. The defendant state stopped taking part once the court rejected immunity, and the High Court then ruled for the claimant. The researchers note that how such claims fare against a real defence by a foreign state remains unclear.&lt;/p&gt;
+&lt;p&gt;Even a successful claimant faces limits on enforcement. Under the State Immunity Act, a foreign state&#39;s property cannot be seized to enforce a judgment unless it is in commercial use or the state consents in writing.&lt;/p&gt;
+&lt;p&gt;Anyone who suspects spyware can write to Access Now&#39;s free Digital Security Helpline. As of 29 September its page says it replies within two hours and first checks that the requester is within its civil society remit. None of its ten languages is Chinese, so Chinese speakers may need to use English. When comparing jurisdictions, ask whether a remote intrusion counts as a local act, how much a victim must prove to attribute it to a state, whether widening the exception breaches international law, and whether a judgment can be enforced.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/cases/uksc-2024-0152&#34;&gt;[2026] UKSC 25, Case UKSC/2024/0152&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;27 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/uploads/uksc_2024_0152_judgment_a1ae6cd3a5.pdf&#34;&gt;Judgment (PDF)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;27 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/uploads/uksc_2024_0152_press_summary_800976eda1.pdf&#34;&gt;Press summary (PDF)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;27 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.uk/ukpga/1978/33&#34;&gt;State Immunity Act 1978&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;legislation.gov.uk&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/uk-supreme-court-opens-door-for-spyware-victims-to-sue-foreign-states/&#34;&gt;U.K. Supreme Court Opens Door for Spyware Victims to Sue Foreign States&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.lawfaremedia.org/article/u.k.-supreme-court-opens-door-for-spyware-victims-to-sue-foreign-states&#34;&gt;U.K. Supreme Court Opens Door for Spyware Victims to Sue Foreign States&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Lawfare&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/help/&#34;&gt;Digital Security Helpline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sso.agc.gov.sg/Act/SIA1979&#34;&gt;State Immunity Act 1979&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Statutes Online&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/421AC0000000024&#34;&gt;外国等に対する我が国の民事裁判権に関する法律&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202309/t20230901_431424.html&#34;&gt;中华人民共和国外国国家豁免法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-09-01&#34;&gt;1 September 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>CryptPad&#39;s summer 2026 status and the post-quantum bottleneck</title>
 <link>https://anoni.net/news/en/2026/10/cryptpad-summer-2026-status/</link>
@@ -1940,57 +2036,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟 iCloud 進階資料保護&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Data access settings for Siri AI in iOS 27</title>
-<link>https://anoni.net/news/en/2026/09/ios27-siri-ai-data-access/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/ios27-siri-ai-data-access</guid>
-<pubDate>Sun, 27 Sep 2026 03:21:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The new Siri in iOS 27 can read Notes, Messages and Mail by default, and requests may be processed on Apple&#39;s servers. EFF has listed the settings that narrow what it can read. For now Siri AI works only with Siri set to English.</description>
-<content:encoded>&lt;p&gt;Based on 4 sources from EFF, Apple&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;iOS 27 brings a new Siri, Siri AI, merged with Spotlight into one interface, so swiping down on the Home Screen to search also opens Siri. It runs on the iPhone 15 Pro, 15 Pro Max and iPhone 16 or later. As of 27 September, Siri AI is in beta, supports only English, and is not yet available in every region.&lt;/p&gt;
-&lt;p&gt;By default Siri AI can read Apple&#39;s own apps such as Notes, Messages and Mail, and third-party apps once their developers add support. A request may be handled on the phone or sent to Apple&#39;s Private Cloud Compute servers, and nothing on screen says which. For people using Advanced Data Protection, whose iCloud data is end-to-end encrypted, EFF&#39;s post says cloud processing changes the risk assessment.&lt;/p&gt;
-&lt;p&gt;On-screen awareness lets you ask Siri about whatever is on screen. EFF&#39;s example is summarising an encrypted Signal group chat, whose content may then go to Private Cloud Compute. As of 27 September, neither users nor app developers can block it.&lt;/p&gt;
-&lt;p&gt;EFF&#39;s settings: to keep Siri AI out of an app, turn off Show Content in Search for that app in Settings. To return to the old Siri, set Allowed Siri Version to Siri Classic under Screen Time, Content &amp;amp; Privacy Restrictions. Siri AI does not train on your interactions by default, and consent given during setup can be withdrawn by turning off Improve Siri &amp;amp; Dictation under Privacy &amp;amp; Security, Analytics &amp;amp; Improvements. Apple&#39;s help page covers the Mac, where macOS 27 offers Siri Classic after Siri is turned off and each summary feature has its own switch.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to EFF, the &#34;Private&#34; in Private Cloud Compute means the system is designed so that Apple cannot see or keep the data. It does not promise that the data stays encrypted or stays on the device. Using it means trusting that Apple&#39;s servers behave as designed, whereas end-to-end encryption only needs the keys to stay on your own devices.&lt;/p&gt;
-&lt;p&gt;Where you are in Asia decides whether any of this applies yet. Apple&#39;s support page says Siri AI does not work when the Apple Account region is mainland China, and Apple Intelligence features do not work on supported devices bought in mainland China. Apple Intelligence itself supports Chinese (simplified and traditional), Japanese, Korean and Vietnamese, but Siri AI needs both the device language and the Siri language set to a supported language, which today means English. For the iPhone, Apple&#39;s page names only two exclusions, the EU and Apple Accounts in mainland China, and adds that availability varies by region. Elsewhere in Asia, the practical requirement is running the iPhone and Siri in English. The per-app search settings exist on every iPhone and can be changed now, without waiting for Siri AI to support your language.&lt;/p&gt;
-&lt;p&gt;On-screen awareness cannot be blocked, so whether an encrypted conversation stays on devices depends on everyone in it. If any member of a group calls up Siri over the chat, the content may leave from that person&#39;s phone, and end-to-end encryption does not cover that step. People who discuss sensitive matters in group chats can agree with the other members not to use on-screen awareness on the conversation, and can consider switching back to Siri Classic themselves.&lt;/p&gt;
-&lt;p&gt;Because you cannot tell which requests left the phone, the only lever is limiting which apps Siri AI can read. Siri AI needs an iPhone 15 Pro or later with the device and Siri language set to English. If that describes your phone, you can turn off Show Content in Search for apps that hold work material or personal records, such as Notes and Mail, especially if you use Advanced Data Protection. With the setting off, Siri AI no longer draws on that app&#39;s content when answering general questions, but whatever is on screen can still be sent to Private Cloud Compute through on-screen awareness.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (4)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27&#34;&gt;How to Limit What Apple&amp;#39;s New Siri AI Can Access in iOS 27&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac&#34;&gt;Turn off and restrict access to Apple Intelligence features on Mac&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/121115&#34;&gt;How to get the next generation of Apple Intelligence&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

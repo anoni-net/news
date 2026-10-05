@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>How long your phone records are kept</title>
+<link>https://anoni.net/news/en/history/10-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-06/2026</guid>
+<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Every call you make leaves a record of both numbers and the time, which carriers in Taiwan must keep for six months. On this day, the EU&#39;s top court ruled that member states generally cannot require carriers to keep everyone&#39;s traffic and location data.</description>
+<content:encoded>&lt;p&gt;Every call you make leaves a record of both numbers, the date and the start and end times. In Taiwan, the regulations on agencies&#39; queries of telecom records (電信事業處理有關機關查詢電信通信紀錄實施辦法) set the retention period for mobile call records at six months. On 6 October 2020, the Grand Chamber of the Court of Justice of the European Union ruled that member states generally cannot require telecom providers to retain or hand over everyone&#39;s traffic and location data across the board, whether to fight crime in general or to safeguard national security. A member state facing a genuine and present or foreseeable serious threat to national security can still require such retention, but only for a period limited to what is strictly necessary, which may be extended while the threat persists. Call records are kept by carriers under the law, and there is no setting on your side that turns them off.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Wiretap capability built into phone networks</title>
 <link>https://anoni.net/news/en/history/10-05/#y2026</link>

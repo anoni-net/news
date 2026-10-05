@@ -6,7 +6,82 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>英國最高法院的間諜軟體國家豁免判決</title>
+<link>https://anoni.net/news/2026/10/uk-supreme-court-spyware-state-immunity/</link>
+<guid isPermaLink="false">anoni-news:2026/10/uk-supreme-court-spyware-state-immunity</guid>
+<pubDate>Tue, 06 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>巴林政府被控從國外用間諜軟體入侵英國境內的電腦、造成原告精神傷害，英國最高法院判決它不能以外國政府不受別國法院審理為由擋下這場訴訟。判決只決定英國法院能否受理，入侵是否屬實還沒審。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，來自 UK Supreme Court、legislation.gov.uk、Citizen Lab 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;英國最高法院 7 月 27 日以三比二駁回巴林政府的上訴，兩位住在英國的原告可以繼續告巴林。一般情況下外國政府不能在別國法院被告，這叫國家豁免，巴林主張自己享有這項豁免。原告主張巴林用 FinSpy（間諜軟體）入侵他們的電腦，巴林否認指控。判決只決定英國法院能不能受理，英國以外的法院依各自的法律判斷。&lt;/p&gt;
+&lt;p&gt;《1978 年國家豁免法》第 5 條規定，外國政府在英國做的事造成死亡、人身傷害或有形財物損壞時，不能主張豁免。原告主張的是人身傷害，也就是得知遭入侵後出現精神傷害。只有資料外洩或經濟損失、沒有人身傷害或財物損壞的求償，不在這個例外內。&lt;/p&gt;
+&lt;p&gt;案子的核心問題是駭客從國外遠端操作、入侵在英國的電腦，算不算在英國做的事。依原告的主張，操作者可能人在國外，透過位在巴林的控制伺服器下指令。&lt;/p&gt;
+&lt;p&gt;英國加入了《歐洲國家豁免公約》，公約有類似的例外，另外要求加害者當時人在法院所在的國家。雙方都承認，依原告的主張，本案不符合公約的這項條件。但英國《國家豁免法》第 5 條的條文沒有明寫這個條件，所以爭點變成第 5 條要不要照公約的條件來讀。&lt;/p&gt;
+&lt;p&gt;五位大法官裡，三位多數大法官認為，國會有意不把公約的這項要求寫進第 5 條。他們還認為透過軟體或裝置遠端操作的動作也算在英國做的事，所以從國外操控英國境內的電腦符合例外。另外兩位持不同意見的少數大法官則認為，第 5 條應該照公約的條件來讀，也就是要求加害者當時人在英國。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;巴林主張，造成傷害的是在國外輸入的指令，電腦上發生的事只是後續結果。其中一位少數大法官以隔著界河開槍為例，認為下指令的動作跟開槍一樣發生在巴林這一岸，鏡頭在英國開啟只是結果。原告列出十類發生在英國的動作，例如傳送安裝檔、開啟麥克風與鏡頭、記錄鍵盤輸入。多數大法官認為，這些動作合起來就是在英國進行的監控。&lt;/p&gt;
+&lt;p&gt;多數大法官舉例，外國政府派人入境殺人時不能主張豁免，巴林也同意這一點。照巴林的解釋，改用國外遙控的無人機殺人卻可以主張豁免，多數大法官認為這種差別不合理。同一位少數大法官回應，1978 年立法時沒人想得到無人機與網路入侵，法律要依立法當時的背景解讀。他也認為，以加害者所在地為準比較明確，容易判斷。&lt;/p&gt;
+&lt;p&gt;另一個爭點是放寬例外會不會讓英國違反國際法。國際法除了公約，還有各國長期一致遵行、當成義務的做法，稱為國際習慣法。多數大法官認為公約允許各國放寬例外，英國把例外用在外國政府行使國家權力的行為上，也有國際習慣法上的合理依據。行使國家權力的行為指政府以國家身分做的事，相對於一般的商業往來，本案指控的入侵雙方都同意屬於前者。&lt;/p&gt;
+&lt;p&gt;巴林主張放寬例外會讓英國違反公約與國際習慣法。同一位少數大法官也同意，因為公約允許的放寬不能超出國際習慣法。他指出，國際習慣法只容許加害者身在當地時的例外，也找不到任何一個國家在加害者不在當地時不給豁免。&lt;/p&gt;
+&lt;p&gt;案子回到一審的高等法院後才會審入侵是否屬實，原告要證明入侵出自巴林，也要證明入侵造成了傷害。Citizen Lab 與 Access Now 的研究者在 Lawfare 的文章提到英國另一起案件，原告靠專家鑑識證明手機遭另一款間諜軟體 Pegasus 入侵。被告國在法院認定不能主張豁免之後就不再參與訴訟，法院最後判原告勝訴。研究者也寫到，外國政府實際出庭答辯時，這類訴訟的結果仍難預料。&lt;/p&gt;
+&lt;p&gt;原告就算勝訴，外國政府的財產原則上也不能扣押來執行判決。依《國家豁免法》，只有財產用於商業或該國書面同意時，原告才能扣押。&lt;/p&gt;
+&lt;p&gt;懷疑裝置遭間諜軟體入侵的人，可以寫信給 Access Now 的免費數位安全專線。到 9 月 29 日為止，說明頁寫明兩小時內回覆，受理前會先確認是否在服務範圍。專線的十種語言沒有中文，可以用英文聯絡。比較各地的法律時，可以問遠端入侵算不算當地發生的事、要證明到什麼程度才算外國政府所為、放寬豁免的例外會不會違反國際法，以及判決能不能執行。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/cases/uksc-2024-0152&#34;&gt;[2026] UKSC 25, Case UKSC/2024/0152&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;2026 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/uploads/uksc_2024_0152_judgment_a1ae6cd3a5.pdf&#34;&gt;Judgment (PDF)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;2026 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/uploads/uksc_2024_0152_press_summary_800976eda1.pdf&#34;&gt;Press summary (PDF)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;2026 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.uk/ukpga/1978/33&#34;&gt;State Immunity Act 1978&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;legislation.gov.uk&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/uk-supreme-court-opens-door-for-spyware-victims-to-sue-foreign-states/&#34;&gt;U.K. Supreme Court Opens Door for Spyware Victims to Sue Foreign States&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.lawfaremedia.org/article/u.k.-supreme-court-opens-door-for-spyware-victims-to-sue-foreign-states&#34;&gt;U.K. Supreme Court Opens Door for Spyware Victims to Sue Foreign States&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Lawfare&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/help/&#34;&gt;Digital Security Helpline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>CryptPad 2026 夏季進度與後量子加密的瓶頸</title>
 <link>https://anoni.net/news/2026/10/cryptpad-summer-2026-status/</link>
@@ -1574,50 +1649,6 @@
   &lt;/div&gt;
   &lt;div class=&#34;source-slip__item&#34;&gt;
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟 iCloud 進階資料保護&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>iOS 27 Siri AI 的資料存取設定</title>
-<link>https://anoni.net/news/2026/09/ios27-siri-ai-data-access/</link>
-<guid isPermaLink="false">anoni-news:2026/09/ios27-siri-ai-data-access</guid>
-<pubDate>Sun, 27 Sep 2026 03:21:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>iOS 27 的新版 Siri 預設可以讀取備忘錄、訊息與郵件，請求可能送到 Apple 的伺服器處理。EFF 整理了限制讀取範圍的設定。裝置或 Siri 語言設為中文的使用者暫時用不到。</description>
-<content:encoded>&lt;p&gt;整理 3 篇原文，來自 EFF、Apple&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 在 iOS 27 推出新版 Siri（Siri AI），跟 Spotlight 合併成同一個介面，在主畫面往下滑開啟搜尋時，叫出的也是 Siri。只有 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型能使用。到 9 月 27 日為止，Siri AI 還是只支援英文的測試版，裝置或 Siri 語言設為中文的使用者暫時無法使用。依 Apple 的說明頁，裝置語言與 Siri 語言都要設為英文，Apple 帳號也要在開放的地區。&lt;/p&gt;
-&lt;p&gt;Siri AI 預設可以讀取備忘錄、訊息與郵件等 Apple 自家 App 的內容，第三方 App 需要開發者加入支援才會納入。請求可能在手機上處理，也可能送到 Apple 的 Private Cloud Compute 伺服器，畫面上不會顯示是哪一種。EFF 的文章特別寫給開啟進階資料保護的使用者，他們的 iCloud 資料以端對端加密保存，一旦送出裝置交給雲端處理，風險評估就跟著改變。&lt;/p&gt;
-&lt;p&gt;螢幕感知（on-screen awareness）讓使用者隨時叫出 Siri，請它解釋畫面上的內容。EFF 舉的例子是請 Siri 摘要正在看的 Signal 加密群組對話，此時畫面上的資料可能送到 Private Cloud Compute。到 9 月 27 日為止，使用者與 App 開發者都無法封鎖螢幕感知。&lt;/p&gt;
-&lt;p&gt;要限制 Siri AI 讀取某個 App，EFF 建議在「設定」的 App 清單點進該 App，於 Search 關閉 Show Content in Search。要改回舊版 Siri，可以在「螢幕使用時間」開啟「內容與隱私權限制」，再把 Siri 的 Allowed Siri Version 設為 Siri Classic。Siri AI 預設不會用互動紀錄訓練模型，設定過程中如果點了同意，可以到「隱私權與安全性」的 Analytics &amp;amp; Improvements 關閉 Improve Siri &amp;amp; Dictation 撤回。以上選項名稱照原文的英文介面，中文介面的名稱可能不同。&lt;/p&gt;
-&lt;p&gt;Mac 的做法寫在 Apple 的說明頁。macOS 27 在「系統設定」關閉 Siri 之後可以改用 Siri Classic，訊息、郵件與通知的摘要功能也各有開關。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;EFF 在原文寫明，Private Cloud Compute 的「Private」代表系統的設計讓 Apple 無法看到、也不保存資料，但不保證資料經過加密或留在裝置上。使用 Private Cloud Compute 要信任 Apple 的伺服器照設計運作，端對端加密則只需要金鑰留在使用者自己的裝置上。&lt;/p&gt;
-&lt;p&gt;螢幕感知無法封鎖，加密對話能不能留在裝置上，取決於對話裡的每一個人。群組中只要有人對著對話叫出 Siri，內容就可能從那個人的手機送出，端對端加密無法保護這一段。在群組裡討論敏感事務的人，可以跟成員約定不對對話使用螢幕感知，自己也可以考慮改回 Siri Classic。&lt;/p&gt;
-&lt;p&gt;使用者無從得知哪一次請求離開了手機，想繼續使用 Siri AI，就只能從源頭限制它能讀取哪些 App。Siri AI 只在 iPhone 15 Pro 以後的機型、裝置與 Siri 語言都設為英文時可用，設為中文的人暫時不受影響。符合條件的人可以對備忘錄、郵件這類存有工作資料或個人紀錄的 App 關閉 Show Content in Search，開啟了進階資料保護的人尤其需要。關閉之後，Siri AI 回答一般問題時不會取用該 App 的資料，但畫面上正在顯示的內容仍可能經由螢幕感知送到 Private Cloud Compute。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27&#34;&gt;How to Limit What Apple&amp;#39;s New Siri AI Can Access in iOS 27&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac&#34;&gt;Turn off and restrict access to Apple Intelligence features on Mac&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;

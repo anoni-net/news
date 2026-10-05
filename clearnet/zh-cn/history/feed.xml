@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 05 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>手机通信记录的保存</title>
+<link>https://anoni.net/news/zh-cn/history/10-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-06/2026</guid>
+<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你打的每个电话，双方号码与时间都会留在电信运营商的记录里。这一天，欧盟法院判决成员国原则上不能要求运营商全面保存所有人的通信与位置数据。</description>
+<content:encoded>&lt;p&gt;你用手机打的每一个电话，双方号码、日期与起止时间都会留下通信记录。保存多久依各地法规而定，以台湾为例，《电信事业处理有关机关查询电信通信纪录实施办法》规定移动通信的记录保存最近六个月。2020 年 10 月 6 日，欧盟法院大法庭判决成员国原则上不能为了一般犯罪侦查或维护国家安全，要求电信运营商全面、无差别地保存或交出用户的通信与位置数据。判决同时写明，国家安全面临真实、当下或可预见的严重威胁时，成员国仍可以要求运营商在必要且可延长的期间内全面保存。通信记录由运营商依法保存，用户这一端没有可以自行关闭的设置。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>电信网络里预留的监听能力</title>
 <link>https://anoni.net/news/zh-cn/history/10-05/#y2026</link>
