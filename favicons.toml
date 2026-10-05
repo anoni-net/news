@@ -16,6 +16,10 @@ same_as = "meta.com"
 icon = "accessnow.org-8d11dfe8.png"
 from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
 
+[hosts."aisi.gov.uk"]
+icon = "aisi.gov.uk-d819a7e1.png"
+from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf52818a86a4f9f86_AISI%20icon%20256.png"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -23,6 +27,10 @@ from = "https://android-developers.googleblog.com/favicon.ico"
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
+
+[hosts."anthropic.com"]
+icon = "anthropic.com-c45fad63.png"
+from = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa394792257596c5_webclip.png"
 
 [hosts."apc.org"]
 icon = "apc.org-89de3e1b.png"
@@ -102,6 +110,10 @@ from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
+
+[hosts."chromereleases.googleblog.com"]
+icon = "chromereleases.googleblog.com-c7f09aac.png"
+from = "https://chromereleases.googleblog.com/favicon.ico"
 
 [hosts."chromestatus.com"]
 icon = "chromestatus.com-1338ffe4.png"
@@ -184,6 +196,7 @@ from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Inside
 [hosts."dawo.community"]
 icon = "dawo.community-cf7a3078.png"
 from = "https://www.dawo.community/favicon.svg（轉成 PNG）"
+
 [hosts."decrypt.co"]
 icon = "decrypt.co-136239ed.png"
 from = "https://cdn.decrypt.co/wp-content/themes/decrypt-media/assets/images/favicon-192x192.png"
@@ -207,6 +220,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
+
+[hosts."digitaltoday.co.kr"]
+icon = "digitaltoday.co.kr-a149a2e1.png"
+from = "https://cdn.digitaltoday.co.kr/image/logo/favicon.ico"
 
 [hosts."discord.com"]
 icon = "discord.com-891ddcd3.png"
@@ -458,6 +475,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov
 icon = "mirrors.tuna.tsinghua.edu.cn-4a3f6ec5.png"
 from = "https://mirrors.tuna.tsinghua.edu.cn/static/img/favicon.png"
 
+[hosts."moda.gov.tw"]
+icon = "moda.gov.tw-99fb4327.png"
+from = "https://moda.gov.tw/assets/img/touch-icon.png"
+
 [hosts."mohw.gov.tw"]
 icon = "mohw.gov.tw-5e72f012.png"
 from = "https://www.mohw.gov.tw/xslGip/Unit001/images/favicon.ico"
@@ -492,6 +513,9 @@ from = "https://storage.ghost.io/c/16/e9/16e9a748-ca66-4b3c-8590-85537131f696/co
 [hosts."nhi.gov.tw"]
 icon = "nhi.gov.tw-f4da548a.png"
 from = "https://www.nhi.gov.tw/favicon.ico"
+
+[hosts."nist.gov"]
+none = "官方 favicon 是透明底的黑色字樣，深色模式下無法辨識"
 
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
@@ -677,9 +701,17 @@ from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
 icon = "wired.me-32e047e6.png"
 from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
 
+[hosts."x.com"]
+icon = "x.com-17d5ac31.png"
+from = "https://x.com/apple-touch-icon.png"
+
 [hosts."xinhuanet.com"]
 icon = "xinhuanet.com-db68823e.png"
 from = "https://www.xinhuanet.com/favicon.ico"
+
+[hosts."z.ai"]
+icon = "z.ai-e7bc4841.png"
+from = "https://docs.z.ai/mintlify-assets/_mintlify/favicons/zhipu-32152247/ksfquWFAc8TQf_Hb/_generated/favicon/apple-touch-icon.png"
 
 [hosts."zhonglun.com"]
 icon = "zhonglun.com-c0e89dfa.png"
