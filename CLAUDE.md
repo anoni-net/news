@@ -18,3 +18,7 @@
 派這四個角色時用 agent 名稱，不要用通用的 subagent。通用的 subagent 沒有指定模型時，會沿用主對話的模型。
 
 從工作區或其他目錄開的 session 讀不到這裡的 `.claude/agents/`。這時改用通用的 subagent，明確指定表上的模型，並把對應 agent 檔的內文放進指示，不要另外寫一份更長的指示。
+
+### 主對話的工作目錄
+
+從工作區或其他目錄開的 session，不要把主對話的工作目錄切進這個 repo 的 worktree。Claude Code 會在工作目錄改變時自動載入該目錄的 `CLAUDE.md` 與它引入的 `AGENTS.md`，約 1.5 萬 token，之後每一回合都要重讀。執行建置、lint 或 `prose_check.py` 時用子 shell，例如 `(cd <worktree> && uv run build.py --check)`，主對話的工作目錄維持原樣。需要的規則只讀相關的小節，或交給子代理去讀。2026-10-07 寫 anoni-net/news#100 時發現這個耗量來源。
