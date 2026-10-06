@@ -36,7 +36,7 @@ jobs:
       - name: 寫作風格
         run: |
           curl -fsSL https://raw.githubusercontent.com/anoni-net/docs/main/tools/docs_style_lint.py -o /tmp/docs_style_lint.py
-          files=$(find "$GITHUB_WORKSPACE/posts" "$GITHUB_WORKSPACE/history" -name '*.md'; ls "$GITHUB_WORKSPACE"/{README,AGENTS,SPEC}.md)
+          files=$(find "$GITHUB_WORKSPACE/posts" "$GITHUB_WORKSPACE/history" "$GITHUB_WORKSPACE/guides" "$GITHUB_WORKSPACE/notes" -name '*.md'; ls "$GITHUB_WORKSPACE"/{README,AGENTS,SPEC}.md)
           # linter 跳過 front matter，標題、description 與「同一天還有」另外抽成 Markdown 再掃
           uv run tools/front_matter_text.py "$RUNNER_TEMP/front-matter"
           files="$files $(find "$RUNNER_TEMP/front-matter" -name '*.md')"
