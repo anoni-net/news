@@ -6,7 +6,133 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 06 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>US Police License Plate Readers and a Florida Arrest</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/us-flock-alpr-arrest/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/us-flock-alpr-arrest</guid>
+<pubDate>Wed, 07 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Flock&#39;s license plate reader cameras, used by US police, saw a run of developments in August and September. Flock shortened its default data retention, a Senate subcommittee held a hearing, and Florida and Texas restricted the cameras. A woman who was arrested and then not prosecuted sued two state troopers. The practices are confined to the US, and readers elsewhere are not directly affected.</description>
+<content:encoded>&lt;p&gt;Based on 14 sources, including Florida Department of Transportation, National Sheriffs&amp;#39; Association, Flock Safety&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;A US Senate subcommittee held a hearing on 23 September on Flock Safety&#39;s network of automated license plate readers (ALPRs), cameras that log each passing vehicle&#39;s plate, time and place so police can later look up where a car has been. One witness was a woman who had been arrested in a case involving a plate reader record and whom prosecutors later declined to charge. Taiwan also uses plate readers in traffic enforcement, and a 2022 research report for its Legislative Yuan examined whether that data may be reused for other purposes.&lt;/p&gt;
+&lt;p&gt;The Electronic Frontier Foundation (EFF) requested Flock search logs from agencies under public records laws and published its analysis on 14 September. Officers are supposed to give a reason for each search, and the logs EFF found include &lt;code&gt;LOL&lt;/code&gt;, &lt;code&gt;idk&lt;/code&gt;, &lt;code&gt;TBD&lt;/code&gt; and strings of keyboard mashing, with more than 30 agencies running over 6,300 searches with &lt;code&gt;TBD&lt;/code&gt;. According to the Texas Tribune, the governor of Texas ordered state agencies on the night of 27 August to pause funding for Flock cameras. On 31 August, Florida&#39;s Department of Transportation ordered plate readers removed from state highways within 30 days and stopped issuing new permits, though per EFF the order does not reach city streets or private land, and Texas agencies can still use other funding.&lt;/p&gt;
+&lt;p&gt;The woman at the hearing was arrested over a hit-and-run on Interstate 4 in Florida in October 2025 that killed three people. According to her federal complaint, a Flock camera recorded her black Dodge Durango heading east about three miles west of the scene two minutes before the crash, and by the complaint&#39;s time-and-distance reckoning she had already driven past the crash site when it happened. State troopers arrested her in April 2026 on eight felony charges, and she spent 13 days in jail. Prosecutors declined to proceed on 22 May, and another woman, alleged to have driven a maroon Durango, was arrested later.&lt;/p&gt;
+&lt;p&gt;In a civil rights suit against two troopers, she alleges that they claimed damage on her car in the warrant affidavit and in court testimony that was not there, and that the affidavit did not mention a 911 call describing a maroon Durango with a partial plate. As of 1 October, the two troopers&#39; response to these allegations was not available to read, and the Florida Highway Patrol did not respond to Fox News.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;According to Flock&#39;s announcement of 13 August, its system reads plates with machine-learning models trained on each state&#39;s plate designs and gives every read a confidence score. Low-confidence reads do not trigger alerts to officers. According to the Texas Tribune, Flock also logs make, model and colour, and agencies in its national lookup can search one another&#39;s data. The same announcement cut the recommended default retention from 30 days to 7, and existing customers keep their current settings.&lt;/p&gt;
+&lt;p&gt;In a joint statement on 25 August, ten law enforcement associations wrote that a plate reader provides an investigative lead, does not establish guilt, and must be verified before enforcement action. In a statement to Fox News, Flock wrote that its cameras do not identify perpetrators or make arrest decisions, and that the read in the Florida case accurately placed the woman&#39;s car three miles away two minutes before the crash. A specialised Florida Highway Patrol team later examined her car at prosecutors&#39; request and found no damage suggesting a collision. In an interview, she put the problem on how police interpreted the camera data.&lt;/p&gt;
+&lt;p&gt;EFF writes that Flock switched search reasons from free text to a dropdown menu in late 2025, and that officers do not have to show the option they pick matches the real purpose. Among agencies EFF contacted, some replied that officers had been counselled or that case numbers are now required, and one sheriff&#39;s office replied that its &lt;code&gt;idk&lt;/code&gt; searches all related to active investigations. Under Flock&#39;s announcement, every search will need a case number by the end of 2026, and the system will flag unusual searches for each agency&#39;s administrators to review.&lt;/p&gt;
+&lt;p&gt;In their joint statement, the law enforcement associations stress that sharing and searching across jurisdictions is critical, governed by access controls, audits and accountability. In a letter to a sheriff in Arizona, Flock argued that a fixed camera capturing a vehicle in plain view at a specific moment does not violate the Fourth Amendment, the US constitutional protection against unreasonable searches. EFF writes that police need a warrant from a judge to obtain phone location records but not to search ALPR databases. The Institute for Justice, a public interest law firm, released revised model legislation in September, a template for state lawmakers that would require a warrant for historical location data in most cases, and its legislative counsel told the hearing this would not stop police from finding a missing child or a stolen car.&lt;/p&gt;
+&lt;p&gt;Florida&#39;s transportation memo gives its reasons as the rapid growth of deployments along with reports of misuse, data privacy concerns and surveillance schemes. In a statement to the Texas Tribune, Flock wrote that its technology helps officers solve serious crimes, find missing people and recover stolen vehicles, and its announcement puts the July figures at more than 1,000 missing people and over 20,000 stolen cars detected. A sheriff in Arizona ended his county&#39;s Flock contract in August and testified that the company&#39;s account of whether its newer cameras use AI did not match what he later found. His county&#39;s anti-smuggling unit still uses non-Flock plate readers on its vehicles and trailers.&lt;/p&gt;
+&lt;p&gt;In Taiwan, the Police Power Exercise Act lets police collect data with cameras or other technology tools in public places where crime is frequent or reasonably expected. The data must be destroyed within one year unless needed to investigate a suspect or an illegal act. The 2022 research report for the Legislative Yuan treated plate numbers as indirectly identifying personal data and questioned a pilot, run by the Administrative Enforcement Agency with police from December 2021 on the Suhua Highway, that used plate readers to stop drivers with unpaid fines and seize their cars. According to the report, such reuse would need its own legal basis, so the Taiwanese debate turns on reusing data collected for one purpose, while the US debate turns on whether a search needs a judge&#39;s approval.&lt;/p&gt;
+&lt;p&gt;In mainland China, the Personal Information Protection Law classes whereabouts as sensitive personal information, to be processed only for a specific purpose with sufficient necessity. Image-capture and identity-recognition devices in public places must be necessary for public security, and what they collect may be used only for that purpose. State organs must act within their statutory authority and procedures and must notify the people concerned, unless notice would impede their duties. Where the US argument centres on judicial approval, the Chinese law works through purpose limits and statutory authority.&lt;/p&gt;
+&lt;p&gt;Readers living in the US can check whether their local police publish a Flock transparency portal. According to Flock&#39;s announcement, more than 1,500 agencies have published one, setting out the agency&#39;s policy, retention period, sharing partners and search activity in its own words. Agencies choose whether to publish a portal, so not every department has one.&lt;/p&gt;
+&lt;p&gt;Readers elsewhere have nothing to change. Developments to watch include mediation and any resumed proceedings in the Florida civil suit, the investigation the subcommittee chair announced in August, and whether Flock enforces the case-number and abnormal-search detection requirements it promised by the end of 2026.&lt;/p&gt;
+&lt;p&gt;When comparing places, on privacy, ask whether a search needs a judge&#39;s approval and how long records are kept. On accountability, ask whether anyone audits search logs and whether misuse would be caught. On public safety, ask how many missing people and stolen vehicles the systems actually help find, and whether cases still get solved after cameras come down.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (14)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/design/bulletins/eom26-01.pdf&#34;&gt;Engineering and Operations Memorandum No. 26-01: Revocation of General Use Permits for Automated License Plate Readers&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Florida Department of Transportation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-31&#34;&gt;31 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.sheriffs.org/wp-content/uploads/2026/08/Final-Joint-Law-Enforcement-Statement-on-ALPR-August-25-2026.pdf&#34;&gt;Joint Statement on Automated License Plate Recognition (ALPR) Technology&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National Sheriffs&amp;#39; Association&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-25&#34;&gt;25 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency&#34;&gt;Flock Updates Privacy, Accountability, Security, and Transparency Safeguards&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Flock Safety&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;13 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://storage.courtlistener.com/recap/gov.uscourts.flmd.461176/gov.uscourts.flmd.461176.1.0.pdf&#34;&gt;Complaint, Case No. 6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;8 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke&#34;&gt;The High Crime of “LMAO”: How Cops Are Treating Flock&amp;#39;s Mass Surveillance As a Joke&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/texas-and-florida-step-back-alprs&#34;&gt;Texas and Florida Step Back from ALPRs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.foxnews.com/tech/innocent-woman-says-police-use-flock-camera-led-13-days-jail&#34;&gt;Innocent woman says police use of Flock camera led to 13 days in jail&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Fox News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-09&#34;&gt;9 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texastribune.org/2026/08/28/texas-greg-abbott-flock-cameras-order-state-money/&#34;&gt;Abbott blocks state agencies from spending money on Flock cameras&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Texas Tribune&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://rollcall.com/2026/09/23/flock-cameras-draw-bipartisan-concerns-at-senate-hearing/&#34;&gt;Flock cameras draw bipartisan concerns at Senate hearing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Roll Call&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cronkitenews.azpbs.org/2026/09/24/flock-dishonesty-pinal-sheriff/&#34;&gt;Pinal County sheriff accuses Flock of ‘dishonesty’ about its cameras&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cronkite News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080145&#34;&gt;Police Power Exercise Act&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of The Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080145&#34;&gt;警察職權行使法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of The Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&amp;amp;pid=217015&#34;&gt;運用科技執法查扣車輛之問題探討&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Legislative Yuan&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-26&#34;&gt;26 January 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The UK Supreme Court ruling on state immunity in a spyware claim</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/uk-supreme-court-spyware-state-immunity/</link>
@@ -1940,102 +2066,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法 第 315-1 條&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Two tiers of iCloud Advanced Data Protection in the UK</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/uk-icloud-advanced-data-protection/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/uk-icloud-advanced-data-protection</guid>
-<pubDate>Sun, 27 Sep 2026 07:28:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Since February 2025 new UK users cannot turn on Advanced Data Protection, while those who enabled it earlier keep it, leaving two levels of iCloud encryption in the same country. Users outside the UK can still turn it on.</description>
-<content:encoded>&lt;p&gt;Based on 10 sources, including Apple, MacAnorak, EFF&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Since February 2025, Apple has not let new UK users turn on Advanced Data Protection (ADP) for iCloud, while people who turned it on earlier keep it. A UK writer pointed out on 21 September that two people in the UK with the same iPhone can therefore have different levels of iCloud encryption. ADP remains available everywhere else.&lt;/p&gt;
-&lt;p&gt;The Washington Post reported in February 2025 that the UK had issued a technical capability notice under the Investigatory Powers Act, requiring Apple to be able to access encrypted iCloud data worldwide. On 21 February Apple withdrew ADP for new UK users, and its support page states that it has never built a backdoor or master key and never will.&lt;/p&gt;
-&lt;p&gt;The 15 categories end-to-end encrypted by default, such as iCloud Keychain and Health data, are unaffected, as are iMessage and FaceTime. For UK users without ADP, 10 categories including iCloud Backup, iCloud Drive, Photos and Notes fall back to standard data protection, with keys held in Apple&#39;s data centres. Apple cannot switch ADP off for existing UK users, because only their trusted devices can change the setting, and as of 21 September it had published no deadline for them to do it themselves.&lt;/p&gt;
-&lt;p&gt;EFF wrote in October 2025 that the UK had reportedly narrowed the notice to UK users. Apple filed a new complaint with the Investigatory Powers Tribunal in July 2026, and as of 27 September the dispute is unresolved.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;All iCloud data is encrypted. What differs is who holds the keys. Under standard data protection Apple holds them and can decrypt data in response to a lawful demand. With ADP the keys stay on the user&#39;s trusted devices, so the only way to reach the content would be to change the system&#39;s design, and that is the point on which the UK notice and Apple are stuck.&lt;/p&gt;
-&lt;p&gt;The same legal instrument exists elsewhere in the region with a different limit. Australia&#39;s Assistance and Access Act 2018 also created technical capability notices, issued jointly by the Attorney-General and the Minister for Communications. The Department of Home Affairs states that such a notice is expressly prohibited from requiring a provider to build a capability to decrypt information or remove electronic protection. The UK notice, as reported, asks for the kind of capability that the Australian version rules out.&lt;/p&gt;
-&lt;p&gt;In mainland China, iCloud is operated by GCBD (AIPO Cloud (Guizhou) Technology Co. Ltd), and data stored there is subject to GCBD&#39;s terms. Apple&#39;s page adds that people who are not Chinese citizens living in mainland China can change their Apple Account country or region to where they are now and keep using iCloud under Apple&#39;s terms.&lt;/p&gt;
-&lt;p&gt;In Hong Kong, Taiwan, Japan, Singapore and the rest of Asia, ADP is available but optional, so it protects only people who switch it on. When the UK moved, the only people who stayed covered were those who had already done so.&lt;/p&gt;
-&lt;p&gt;Without ADP, Apple&#39;s page says that if iCloud Backup and Messages in iCloud are both on, the backup includes the Messages key. Turning off iCloud Backup makes the device generate a new key that keeps future messages end-to-end encrypted. An encrypted local backup on a computer, off by default and enabled in Finder or the Apple Devices app, keeps backups in your own hands.&lt;/p&gt;
-&lt;p&gt;To turn on ADP outside the UK, open Settings, tap your name, then iCloud &amp;gt; Advanced Data Protection; Apple&#39;s support page also has the steps in Chinese. The Apple Account needs two-factor authentication and you will be asked to set up a recovery contact or recovery key first. Every device signed in to the account needs iOS 16.2, macOS 13.1 or the equivalent version. Managed Apple Accounts and child accounts are not eligible.&lt;/p&gt;
-&lt;p&gt;Once ADP is on, web access to iCloud data at iCloud.com is disabled. If you turn web access back on, you approve temporary access from one of your trusted devices. The trade-off is that Apple does not have the keys needed, so it cannot help you recover end-to-end encrypted data if you lose every recovery method.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;22 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102651&#34;&gt;iCloud data security overview&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;5 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/108756&#34;&gt;How to turn on Advanced Data Protection for iCloud&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-17&#34;&gt;17 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/108353&#34;&gt;About encrypted backups on your iPhone, iPad, or iPod touch&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://macanorak.com/two-tier-encryption-in-the-uk/&#34;&gt;Two-Tier Encryption in the UK&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MacAnorak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users&#34;&gt;The UK Is Still Trying to Backdoor Encryption for Apple Users&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-01&#34;&gt;1 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/111754&#34;&gt;iCloud in China mainland&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-15&#34;&gt;15 April 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.homeaffairs.gov.au/about-us/our-portfolios/national-security/lawful-access-telecommunications/assistance-and-access-industry-assistance-framework&#34;&gt;Assistance and Access: A new industry assistance framework&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Australian Department of Home Affairs&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2026/08/03/apple-legal-challenge-against-uk-demand/&#34;&gt;Apple Launches New Legal Challenge Against UK Backdoor Demand&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-03&#34;&gt;3 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟 iCloud 進階資料保護&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
