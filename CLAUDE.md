@@ -21,4 +21,4 @@
 
 ### 主對話的工作目錄
 
-從工作區或其他目錄開的 session，不要把主對話的工作目錄切進這個 repo 的 worktree。Claude Code 會在工作目錄改變時自動載入該目錄的 `CLAUDE.md` 與它引入的 `AGENTS.md`，約 1.5 萬 token，之後每一回合都要重讀。執行建置、lint 或 `prose_check.py` 時用子 shell，例如 `(cd <worktree> && uv run build.py --check)`，主對話的工作目錄維持原樣。需要的規則只讀相關的小節，或交給子代理去讀。2026-10-07 寫 anoni-net/news#100 時發現這個耗量來源。
+session 從 anoni-net/news 的上層目錄或其他 repo 開啟、再進來工作時，不要把主對話的工作目錄切進本 repo 或它的 worktree。Claude Code 會在工作目錄改變時自動載入該目錄的 `CLAUDE.md` 與它引入的 `AGENTS.md`，約 1.5 萬 token，之後每一回合都要重讀。執行建置、lint 或 `prose_check.py` 時用子 shell，例如 `(cd <repo 路徑> && uv run build.py --check)`，主對話的工作目錄維持原樣。需要的規則只讀相關的小節，或交給子代理去讀。直接在本 repo 開 session 的不受影響，本檔與 `AGENTS.md` 開場就會載入一次。2026-10-07 寫 anoni-net/news#100 時發現這個耗量來源。
