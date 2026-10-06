@@ -6,7 +6,116 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Surveillance technologies in migration and border control</title>
+<link>https://anoni.net/news/en/2026/10/privacy-international-migrant-surveillance/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/privacy-international-migrant-surveillance</guid>
+<pubDate>Wed, 07 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Privacy International published a guide in September to 12 categories of technology used by immigration and border authorities, including phone extraction, drones, GPS tagging and algorithmic decision-making. Migrants and asylum seekers are directly affected, and the fingerprint and face checks travellers meet at borders fall into one category. Public documents from UK, German, Canadian and EU bodies set out their purposes and safeguards.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including Privacy International, Bundesamt für Migration und Flüchtlinge, Frontex&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 21 September, Privacy International (PI), a UK privacy advocacy group, published a guide to 12 categories of surveillance technology used by immigration and border authorities, from mobile phone extraction, drones and facial recognition to GPS tagging and algorithmic decision-making. It draws on a 2022 PI survey of immigration lawyers, advocates and organisers around the world, and the report says the list is not exhaustive. Migrants, asylum seekers and the people who help them are directly affected, while the fingerprints and face photos that ordinary travellers give at borders belong to the biometrics category.&lt;/p&gt;
+&lt;p&gt;For each category the report covers how the technology works, its risks, companies reported to be involved and examples by country. Phone extraction can recover photos, contacts, social media accounts, deleted content and metadata such as where a photo was taken, and survey responses describe its use to assess asylum claims, build risk profiles and prosecute. The report names Cellebrite and cites the company&#39;s website saying its UFED phone extraction device can get past encryption and other locks.&lt;/p&gt;
+&lt;p&gt;GPS tagging uses ankle tags, smartwatches or other devices, and some forms let authorities see a wearer&#39;s live location at all times. Citing earlier PI research, the report says GPS tag accuracy appears limited to around 10 metres, with errors of 100 metres or more when signals bounce off tall buildings. Such errors could lead to misreadings of a person&#39;s movements and so risk unjust detention or deportation.&lt;/p&gt;
+&lt;p&gt;The report also says most algorithmic tools in migration cases are highly secretive, so it is unclear how far officers are involved or whether people can meaningfully contest the outcome.&lt;/p&gt;
+&lt;p&gt;Other categories include dialect recognition software used to infer a person&#39;s country of origin, which critics cited in the report say is unreliable because dialects do not always follow borders, and bone and dental scans for age assessment. According to the report, bones and teeth do not mature at a constant rate, so scans have no sound scientific basis for age and risk treating a child as an adult.&lt;/p&gt;
+&lt;p&gt;The PDF cover is dated February, and some of it has moved on since. The report describes plans to add faces to Eurodac, the EU database that compares asylum seekers&#39; fingerprints. eu-LISA, which runs it, announced that the new Eurodac went live on 12 June handling both fingerprints and facial images.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;PI&#39;s report says data from a phone may be out of context or out of date, and a second-hand or shared phone may even hold someone else&#39;s data. It adds that the power imbalance between officials and the person concerned could undermine meaningful consent. Germany&#39;s Federal Office for Migration and Refugees (BAMF) says on its identity management page that it reads phone metadata, such as the countries called and location data from certain apps, only when identity cannot be established by less intrusive means such as identity documents. The same page says these technical aids do not replace the applicant&#39;s own account or BAMF experts&#39; assessment of all the evidence.&lt;/p&gt;
+&lt;p&gt;Frontex, the EU border agency, says on its search and rescue page that its planes and drones patrol selected areas beyond the EU&#39;s external borders as an early warning mechanism, and that it alerts the responsible national rescue authority when it spots a boat in distress. In studies cited by PI, aerial surveillance does not simply deter crossings but also pushes people into more dangerous areas and routes, raising the risk of injury or death. The report also says drones can facilitate pushbacks, forcing people back across a border and frustrating their right to seek asylum.&lt;/p&gt;
+&lt;p&gt;The UK Home Office&#39;s immigration bail guidance, updated in September, says bail conditions should let the Home Office keep in contact with a person and reduce the risk of absconding, and that electronic monitoring must not be imposed on anyone under 18. Under the guidance, location trail data is held by the monitoring contractor and accessed by the Home Office only in listed cases such as a breach of bail conditions, loss of contact or a specific request from a law enforcement agency, with regular reviews of whether monitoring is still necessary. PI&#39;s report says people who are tagged reportedly suffer stress, sleeplessness and anxiety, and devices can cause bruises and blisters.&lt;/p&gt;
+&lt;p&gt;In March 2024 the Information Commissioner&#39;s Office (ICO), the UK data protection regulator, found that a Home Office pilot tagging up to 600 people who had arrived in the UK breached data protection law. In the ICO&#39;s finding, the Home Office had not sufficiently assessed the privacy intrusion and could not justify the pilot as necessary. The ICO also said it was for the Home Office to decide what measures are necessary.&lt;/p&gt;
+&lt;p&gt;PI&#39;s report says Canada uses automated decision-making at various stages of visa processing, on questions including whether an application is complete, whether the applicant is a risk and whether the stated basis is truthful. Immigration, Refugees and Citizenship Canada (IRCC) said in January 2022 that for temporary resident visa applications from outside Canada the system sorts files, letting routine ones be assessed 87% faster. According to IRCC, the system can find an applicant eligible but never refuses or recommends refusing an application, and officers can overturn an eligibility finding.&lt;/p&gt;
+&lt;p&gt;The EU and several places in East Asia also collect biometrics from ordinary foreign visitors, outside any asylum procedure. According to the European Commission, the EU&#39;s Entry/Exit System (EES), which began progressive operations on 12 October 2025 and became fully operational on 10 April 2026, records fingerprints and facial images of non-EU nationals on short stays in 29 European countries. In Taiwan, under Article 91 of the Immigration Act, the National Immigration Agency may collect biometric data from foreign nationals and several other groups when they cross the border or apply for residence, with under-14s exempt and entry refusable if a person declines. Japan requires foreign nationals applying for landing to provide fingerprints and a facial photograph unless exempted by law, and mainland China began fingerprinting foreign nationals aged 14 to 70 at entry in 2017, according to an August 2017 Xinhua report.&lt;/p&gt;
+&lt;p&gt;The stated purposes also differ. The Commission says the EES replaces passport stamps so that overstayers are detected automatically, and that it helps prevent irregular migration and catch people using forged documents, while eu-LISA describes Eurodac as a tool for identifying asylum seekers and irregular migrants. Japan&#39;s Immigration Services Agency describes landing examination as a way to stop the landing of undesirable foreign nationals, including those whose purpose of entry is doubtful. Taiwan&#39;s Article 91 sets out who is covered and leaves the details of collection, management and use to implementing rules.&lt;/p&gt;
+&lt;p&gt;Most readers have nothing to change. People who help migrants or asylum seekers through legal procedures can start with the PDF, which runs to 47 pages in English only and needs no registration. PI&#39;s copyright page permits non-commercial distribution, including translation, with credit to PI. The guide draws on a survey PI sent to immigration lawyers and advocates in 2022 and covers the most common technologies, not every one in use.&lt;/p&gt;
+&lt;p&gt;On privacy, compare how long data is kept, who can access it, and whether people are told and can challenge the outcome. On the stated aims, compare whether these tools actually make identity checks and visa processing faster and more accurate, whether biometric entry checks catch overstays and forged documents, and whether monitoring helps rescues or reduces absconding.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/report/5866/arsenal-surveillance-guide-technologies-harming-migrants&#34;&gt;An Arsenal of Surveillance: A Guide to the Technologies Harming Migrants&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/sites/default/files/2026-09/An%20Arsenal%20of%20Surveillance_0.pdf&#34;&gt;An Arsenal of Surveillance (PDF)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bamf.de/DE/Themen/Sicherheit/Identitaetsmanagement/identitaetsmanagement-node.html&#34;&gt;Identitätsmanagement&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Bundesamt für Migration und Flüchtlinge&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.frontex.europa.eu/what-we-do/operations/search-and-rescue/&#34;&gt;Search and Rescue&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Frontex&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://assets.publishing.service.gov.uk/media/68514c37f2ccfcfd2f823f5b/Immigration+bail.pdf&#34;&gt;Immigration bail (version 23.0)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/03/ico-finds-the-home-office-s-pilot-of-gps-electronic-monitoring-of-migrants-breached-uk-data-protection-law/&#34;&gt;ICO finds the Home Office&amp;#39;s pilot of GPS electronic monitoring of migrants breached UK data protection law&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Information Commissioner&amp;#39;s Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-03-01&#34;&gt;1 March 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/analytics-help-process-trv-applications.html&#34;&gt;Advanced data analytics to help IRCC officers sort and process temporary resident visa applications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Immigration, Refugees and Citizenship Canada&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-24&#34;&gt;24 January 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eulisa.europa.eu/news-and-events/news/new-eurodac-enters-operation&#34;&gt;New Eurodac enters into operation&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eu-LISA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-12&#34;&gt;12 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&amp;amp;flno=91&#34;&gt;入出國及移民法第 91 條&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.moj.go.jp/isa/immigration/procedures/zyouriku_00001.html&#34;&gt;入国・帰国手続＜外国人の上陸手続（入管法第6・7・10・11条）＞&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;出入国在留管理庁&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.xinhuanet.com/world/2017-08/12/c_129679094.htm&#34;&gt;为何外国人入境须留存指纹——规范管理 优化服务&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;新华网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2017-08-12&#34;&gt;12 August 2017&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/smart-borders/entry-exit-system_en&#34;&gt;Entry/Exit System (EES)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>US Police License Plate Readers and a Florida Arrest</title>
 <link>https://anoni.net/news/en/2026/10/us-flock-alpr-arrest/</link>
@@ -1997,75 +2106,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web install&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>ZuckOff, a Bluetooth detector for camera smart glasses</title>
-<link>https://anoni.net/news/en/2026/09/zuckoff-smart-glasses-detector/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/zuckoff-smart-glasses-detector</guid>
-<pubDate>Mon, 28 Sep 2026 07:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>ZuckOff matches Bluetooth broadcasts to warn that camera glasses such as Ray-Ban Meta are nearby. It cannot tell whether anyone is recording, and the app itself is closed source.</description>
-<content:encoded>&lt;p&gt;Based on 7 sources, including ZuckOff, App Store, WIRED Middle East&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;ZuckOff, an app for iPhone and Android, tells you whether someone nearby is wearing camera glasses such as Ray-Ban Meta, Oakley Meta or Snap Spectacles. Basic scanning is free, a paid Pro version adds background monitoring and alerts, and the app is listed in the App Store in Taiwan, Hong Kong, mainland China and Singapore. Its interface includes Simplified Chinese but not Traditional Chinese.&lt;/p&gt;
-&lt;p&gt;The developer bought the glasses, recorded the Bluetooth signals each model broadcasts, and matched the manufacturer codes inside them. When a code matches, the app alerts you and uses signal strength to estimate rough distance. The project site says nothing leaves your phone and no account is needed.&lt;/p&gt;
-&lt;p&gt;The site is also clear about the limits. Most pairs keep advertising while worn, but a few standalone models stay silent, and the App Store listing adds that glasses paired to their owner&#39;s phone can go quiet too. Silence is not proof that nobody is recording, a detection is not proof that anyone is, and the app cannot tell who is wearing the glasses or in which direction they are.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The technique is simple. Camera glasses announce themselves over Bluetooth, and ZuckOff publishes the codes it matches, such as &lt;code&gt;0x0D53&lt;/code&gt; for Luxottica, which makes Ray-Ban Meta and Oakley Meta. Accuracy depends on how complete and current that table is. The 1.3.0 update notes say second-generation Ray-Ban Meta frames carry a different manufacturer code from the first, which the app had to learn, and the 1.4.0 notes say it had been mistaking some iPhones for camera glasses.&lt;/p&gt;
-&lt;p&gt;ZuckOff is closed source and states no license, so nobody outside can check what it actually does. What it asks for is modest. The Android version needs only the nearby-devices permission for Bluetooth scanning, declared as never used to derive location, so it does not ask for location access.&lt;/p&gt;
-&lt;p&gt;The glasses themselves are spreading across Asia. Ray-Ban Meta and Oakley Meta went on sale in Japan on 21 May 2026, and Meta announced on 23 September that they are available in Singapore and South Korea, with Hong Kong, Macau, Malaysia, Indonesia, Thailand and the Philippines to follow later in 2026. Meta&#39;s help page says the white capture LED blinks while recording and the camera is disabled if the LED is covered or tampered with. According to WIRED, about seven million pairs of Meta glasses were sold in 2025.&lt;/p&gt;
-&lt;p&gt;Existing law already covers the recording itself. Taiwan&#39;s Criminal Code Article 315-1 makes it an offence to record other people&#39;s non-public activities or conversations without good reason, punishable by up to three years&#39; imprisonment. The provision applies to any recording device and does not single out wearables.&lt;/p&gt;
-&lt;p&gt;Before an interview, a meeting or a private gathering, anyone who wants to know whether there is a camera in the room can switch on Bluetooth and run a scan. The free basic scan is enough; it works on iPhone and Android and needs no account. For conversations that matter, the people present can also agree in advance to take off their glasses and leave their phones outside. A scan result is only a hint, because standalone models and glasses that have stopped broadcasting after pairing with their owner&#39;s phone may not show up at all.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://zuckoff.app/&#34;&gt;ZuckOff | Camera glasses detector&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ZuckOff&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/zuckoff/id6795234035&#34;&gt;ZuckOff&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff&#34;&gt;How to Tell If Someone Near You Is Wearing Meta Smart Glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;WIRED Middle East&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.meta.com/ai-glasses/privacy/&#34;&gt;Privacy Settings for Meta AI Glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.meta.com/blog/ray-ban-meta-audio-and-deepest-ai-glasses-lineup/&#34;&gt;Introducing Ray-Ban Meta Audio and Our Deepest Lineup of AI Glasses Yet&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.meta.com/ja-jp/blog/AI-glasses-Japan-launch/&#34;&gt;Ray-Ban Meta (Gen 2)およびOakley Meta、5月21日より日本でも販売開始&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-19&#34;&gt;19 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法 第 315-1 條&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

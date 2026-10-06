@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 06 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>手机加密功能的进口规定</title>
+<link>https://anoni.net/news/zh-cn/history/10-07/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-07/2026</guid>
+<pubDate>Wed, 07 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你手机与笔记本电脑里的加密功能，在中国大陆属于不实行进口许可的大众消费类产品。这一天，中国国务院发布当年要求加密产品经国家认可的《商用密码管理条例》。</description>
+<content:encoded>&lt;p&gt;你手机与笔记本电脑里的加密功能，在中国大陆属于不实行进口许可的大众消费类产品。这项分类出自国务院在 1999 年 10 月 7 日发布、2023 年修订的《商用密码管理条例》，《密码法》规定商用密码用于保护不属于国家秘密的信息。中伦律师事务所的文章引用了 1999 年版的条文，当时任何单位或者个人只能使用经国家密码管理机构认可的商用密码产品，不得使用自行研制的或者境外生产的密码产品。2023 年的修订版则写明，大众消费类产品所采用的商用密码不实行进口许可和出口管制制度。条例的进口许可只适用于列入商用密码进口许可清单的商品，在中国大陆以外使用手机的读者不受这份条例影响。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>手机通信记录的保存</title>
 <link>https://anoni.net/news/zh-cn/history/10-06/#y2026</link>

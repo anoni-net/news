@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Tue, 06 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Import rules for the encryption in your phone</title>
+<link>https://anoni.net/news/en/history/10-07/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-07/2026</guid>
+<pubDate>Wed, 07 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, exempt from import licensing. On this day, China&#39;s State Council issued the Regulations on the Administration of Commercial Cryptography, which once required encryption products to be state-approved.</description>
+<content:encoded>&lt;p&gt;In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, which is exempt from import licensing. That classification comes from the Regulations on the Administration of Commercial Cryptography, which China&#39;s State Council issued on 7 October 1999 and revised in 2023. China&#39;s Cryptography Law defines commercial cryptography as encryption used to protect information that is not a state secret. As quoted by the law firm Zhong Lun, the 1999 version allowed organisations and individuals to use only commercial cryptography products approved by the state cryptography authority. It also barred them from using products they had developed themselves or that were made abroad. The 2023 revision states that commercial cryptography used in mass-market consumer products is not subject to import licensing or export controls. Import licensing applies only to commercial cryptography on the import licence list, and readers who use their phones outside mainland China are not affected by these regulations.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>How long your phone records are kept</title>
 <link>https://anoni.net/news/en/history/10-06/#y2026</link>

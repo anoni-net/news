@@ -6,7 +6,108 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>移民與邊境管理的監控技術與爭議</title>
+<link>https://anoni.net/news/2026/10/privacy-international-migrant-surveillance/</link>
+<guid isPermaLink="false">anoni-news:2026/10/privacy-international-migrant-surveillance</guid>
+<pubDate>Wed, 07 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Privacy International 9 月發布指南，整理各國移民與邊境機關使用的 12 類技術，包括手機鑑識、無人機、GPS 追蹤與演算法決策。直接受影響的是移民與庇護申請者，一般旅客入境時的指紋與臉部查驗也屬於其中一類。英國、德國、加拿大與歐盟機關的公開文件另外寫明用途與保障機制。</description>
+<content:encoded>&lt;p&gt;整理 11 篇原文，來自 Privacy International、Bundesamt für Migration und Flüchtlinge、Frontex 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;英國的隱私倡議組織 Privacy International（PI）9 月 21 日發布一份指南，整理各國移民與邊境機關使用的 12 類監控技術，從手機鑑識、無人機、臉部辨識到 GPS 追蹤與演算法決策。內容來自 PI 在 2022 年對各地移民律師、倡議者與組織者做的問卷，報告寫明清單並不完整。直接受影響的是移民、庇護申請者與協助他們的人，一般旅客在各地入境時按的指紋與拍的臉部照片，也屬於報告整理的生物特徵技術。&lt;/p&gt;
+&lt;p&gt;報告對每一類技術寫出運作方式、風險、據報參與的廠商與各地的案例。手機鑑識是扣押手機後用專門的設備讀取內容，照片、聯絡人與社群帳號之外，已刪除的內容與照片的拍攝地點也可能被讀出來。依報告整理的問卷回覆，讀出的資料被用來審查庇護申請、評估個人的風險與起訴。報告點名的廠商包括 Cellebrite，引用的 Cellebrite 網站說明寫到，它的手機資料擷取設備 UFED 能突破加密與其他鎖定。&lt;/p&gt;
+&lt;p&gt;GPS 追蹤是讓當事人配戴腳鐐、智慧手錶，或隨身攜帶定位裝置，有些做法讓移民機關隨時可以查看配戴者的位置。報告引用 PI 先前的研究，GPS 的精確度看來只能到 10 公尺左右，衛星訊號被高樓反射時誤差可能超過 100 公尺。報告寫到，行蹤可能因定位誤差被誤讀，當事人因此有被不當拘留或遣返的風險。&lt;/p&gt;
+&lt;p&gt;報告也寫到，多數用在移民案件的演算法工具並不公開，外界無法得知官員參與決策的程度。當事人能否有效提出異議也不清楚。&lt;/p&gt;
+&lt;p&gt;其他類別還包括辨識方言以推斷來源國的語言辨識軟體，以及判斷年齡的骨骼與牙齒掃描。報告引用批評者的看法，方言的分布不一定跟國界一致。報告也寫到，骨骼與牙齒的成熟速度並不固定，用掃描判斷年齡缺乏科學依據。誤判可能讓未成年人被當成成年人。&lt;/p&gt;
+&lt;p&gt;報告 PDF 的封面日期是 2 月，部分內容已經有新進展。報告裡寫的是歐盟比對庇護申請者指紋的資料庫 Eurodac 計畫加入臉部影像。依營運單位 eu-LISA 的公告，新版 Eurodac 已在 6 月 12 日上線，同時處理指紋與臉部影像。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;PI 的報告寫到，手機裡的資料可能脫離脈絡或已經過時，二手或共用的手機甚至可能存著別人的資料。報告也寫到，官員與當事人之間權力不對等，可能讓當事人的同意失去實質意義。德國聯邦移民與難民局（BAMF）的說明頁寫明，無法用出示證件這類侵擾較小的方式確認身分時，才會讀取手機的中繼資料（metadata，例如撥往哪些國家與 App 的位置資料）找出來源地的線索。說明頁也寫明，這些技術工具只是輔助，不取代申請者自己的陳述與專家對全部證據的判斷。&lt;/p&gt;
+&lt;p&gt;歐盟邊境管理局 Frontex 的說明頁寫明，飛機與無人機在歐盟外部邊境以外的特定區域巡邏是為了建立預警機制，發現需要救援的船隻時會通報負責的國家救援單位。PI 報告引用的研究則發現，空中監視除了嚇阻越境，也讓人改走更危險的區域與路線。報告也寫到，無人機蒐集的資訊可以用來把人推回邊境外，妨礙他們申請庇護。&lt;/p&gt;
+&lt;p&gt;英國內政部 9 月更新的保釋指引寫明，保釋條件要讓內政部能與當事人保持聯繫、降低逃匿的風險，電子監控不得用在未滿 18 歲的人身上。依指引，位置軌跡由承包廠商保管，內政部只在違反保釋條件、當事人失聯或執法機關提出具體請求等情況調閱。指引也要求定期檢討監控是否仍有必要。PI 的報告則寫到，依收到的回報，受追蹤的人有壓力、失眠與焦慮的情形，裝置有時也會造成瘀傷與水泡。&lt;/p&gt;
+&lt;p&gt;英國的資料保護主管機關 ICO 在 2024 年 3 月認定，內政部對最多 600 名入境者的 GPS 腳鐐試辦計畫違反資料保護法。ICO 認定的問題是內政部沒有充分評估侵擾程度，也無法說明試辦的必要性。ICO 的公告同時寫明，決定哪些措施有必要是內政部的職責。&lt;/p&gt;
+&lt;p&gt;PI 的報告寫到，加拿大在簽證申請的各個階段使用自動化決策，判斷的項目包括申請是否完整、申請人是否有風險與申請理由是否真實。加拿大移民部 2022 年 1 月的公告針對境外送件的臨時居留簽證，寫明系統負責分流，讓例行案件的處理速度快了 87%。依公告，系統可以認定申請符合資格，但不會拒絕或建議拒絕任何申請。官員也可以推翻系統的資格認定。&lt;/p&gt;
+&lt;p&gt;一般旅客最常接觸到的是入境時的生物特徵查驗。台灣旅客入境日本時，除了法令免除的人，都要提供指紋與臉部照片。歐盟執委會的說明頁寫明，出入境系統（EES）從 2025 年 10 月分階段啟用、2026 年 4 月 10 日全面上線，在 29 個歐洲國家記錄非歐盟短期旅客的指紋與臉部影像。依《入出國及移民法》第 91 條，移民署可以在外國人等旅客入出境時蒐集生物特徵，拒絕接受的人可能不獲准入境。&lt;/p&gt;
+&lt;p&gt;多數讀者沒有需要調整的設定。協助移民或庇護申請者處理法律程序的人，可以先讀報告的 PDF，共 47 頁、只有英文，不需要註冊就能下載。報告的版權頁寫明，非商業用途可以轉載與翻譯，需註明出自 PI。報告依 PI 2022 年向移民律師與倡議者發出的問卷整理，列出的是最常見的技術，並不完整。&lt;/p&gt;
+&lt;p&gt;比較各地的做法時，隱私方面可以問資料保存多久、誰能調閱、當事人能否得知並提出異議。目的方面，可以對照各國機關寫明的用途，問技術是否真的讓身分查核與簽證審查更快、更準，以及監控是否達成協助救援或降低逃匿的效果。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/report/5866/arsenal-surveillance-guide-technologies-harming-migrants&#34;&gt;An Arsenal of Surveillance: A Guide to the Technologies Harming Migrants&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/sites/default/files/2026-09/An%20Arsenal%20of%20Surveillance_0.pdf&#34;&gt;An Arsenal of Surveillance (PDF)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bamf.de/DE/Themen/Sicherheit/Identitaetsmanagement/identitaetsmanagement-node.html&#34;&gt;Identitätsmanagement&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bundesamt für Migration und Flüchtlinge&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.frontex.europa.eu/what-we-do/operations/search-and-rescue/&#34;&gt;Search and Rescue&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Frontex&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://assets.publishing.service.gov.uk/media/68514c37f2ccfcfd2f823f5b/Immigration+bail.pdf&#34;&gt;Immigration bail (version 23.0)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/03/ico-finds-the-home-office-s-pilot-of-gps-electronic-monitoring-of-migrants-breached-uk-data-protection-law/&#34;&gt;ICO finds the Home Office&amp;#39;s pilot of GPS electronic monitoring of migrants breached UK data protection law&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Information Commissioner&amp;#39;s Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-03-01&#34;&gt;2024 年 3 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/analytics-help-process-trv-applications.html&#34;&gt;Advanced data analytics to help IRCC officers sort and process temporary resident visa applications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Immigration, Refugees and Citizenship Canada&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-24&#34;&gt;2022 年 1 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eulisa.europa.eu/news-and-events/news/new-eurodac-enters-operation&#34;&gt;New Eurodac enters into operation&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eu-LISA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-12&#34;&gt;2026 年 6 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&amp;amp;flno=91&#34;&gt;入出國及移民法第 91 條&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.moj.go.jp/isa/immigration/procedures/zyouriku_00001.html&#34;&gt;入国・帰国手続＜外国人の上陸手続（入管法第6・7・10・11条）＞&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;出入国在留管理庁&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/smart-borders/entry-exit-system_en&#34;&gt;Entry/Exit System (EES)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>美國警方的車牌辨識與一起逮捕案</title>
 <link>https://anoni.net/news/2026/10/us-flock-alpr-arrest/</link>
@@ -1621,69 +1722,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web install&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>偵測智慧眼鏡藍牙訊號的 ZuckOff</title>
-<link>https://anoni.net/news/2026/09/zuckoff-smart-glasses-detector/</link>
-<guid isPermaLink="false">anoni-news:2026/09/zuckoff-smart-glasses-detector</guid>
-<pubDate>Mon, 28 Sep 2026 07:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>ZuckOff 比對藍牙廣播，提醒附近有 Ray-Ban Meta 這類帶鏡頭的智慧眼鏡，但無法判斷對方是否正在錄影，App 本身也沒有公開原始碼。</description>
-<content:encoded>&lt;p&gt;整理 6 篇原文，來自 ZuckOff、App Store、WIRED Middle East 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;一支名為 ZuckOff 的 App 可以偵測附近有沒有人戴著 Ray-Ban Meta、Oakley Meta 或 Snap Spectacles 這類帶鏡頭的智慧眼鏡。iPhone 與 Android 都有，基本的掃描功能免費，台灣、香港的 App Store 都能下載。介面有簡體中文，沒有正體中文。&lt;/p&gt;
-&lt;p&gt;開發者自己買了各款眼鏡，錄下它們廣播的藍牙訊號，整理成每一款的特徵。App 比對藍牙廣播裡的製造商代碼，比對到時提醒使用者，並依訊號強度估計大概的距離。專案網站寫明資料不會離開手機，也不需要註冊帳號。&lt;/p&gt;
-&lt;p&gt;限制同樣寫在專案網站。多數眼鏡戴著時會持續廣播，少數獨立運作的型號不發出訊號，App Store 的說明另外寫到，眼鏡跟主人的手機配對之後也可能停止廣播。沒偵測到不代表沒有人在錄影，偵測到也不代表有人在錄影，App 無法得知是誰戴著，訊號強度也指不出方向。&lt;/p&gt;
-&lt;p&gt;Wired 寫到，Meta 的智慧眼鏡 2025 年約賣出七百萬副。眼鏡拍攝時會亮起白色的指示燈，Meta 的說明頁寫明，偵測到指示燈被遮住、動過手腳或破壞時，眼鏡會自動停用鏡頭。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;智慧眼鏡會透過藍牙對外廣播自己的存在，廣播裡帶著製造商的代碼。ZuckOff 在專案網站公開了比對用的代碼，例如 Ray-Ban Meta 與 Oakley Meta 所屬 Luxottica 的 &lt;code&gt;0x0D53&lt;/code&gt;。偵測的原理不複雜，準確度取決於這張表整理得多完整，App Store 的更新紀錄就寫到，1.4.0 修正了把某些 iPhone 誤判成鏡頭眼鏡的問題。&lt;/p&gt;
-&lt;p&gt;ZuckOff 沒有公開原始碼，也沒有授權聲明，外界無法檢驗 App 實際做了什麼，只能相信網站上的說法。它要的權限不多，Android 版只要求藍牙掃描所需的附近裝置權限，並宣告不用來推算位置，所以不要求定位權限。&lt;/p&gt;
-&lt;p&gt;Meta 在 9 月 23 日宣布眼鏡在新加坡與南韓開賣。香港、澳門、馬來西亞等地 2026 年稍晚也會上市，日本則是 5 月 21 日就已經開賣。&lt;/p&gt;
-&lt;p&gt;在採訪、開會或私人聚會前想確認現場有沒有鏡頭的人，可以開著藍牙用 ZuckOff 掃描一次。免費的基本掃描就夠用，iPhone 與 Android 都有，不需要註冊帳號。遇到重要的對話，可以事先跟在場的人約定，請大家摘下眼鏡、把手機留在場外。掃描結果只能當作線索，獨立運作或已跟主人手機配對而停止廣播的眼鏡，ZuckOff 可能偵測不到。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://zuckoff.app/&#34;&gt;ZuckOff | Camera glasses detector&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ZuckOff&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/zuckoff/id6795234035&#34;&gt;ZuckOff&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff&#34;&gt;How to Tell If Someone Near You Is Wearing Meta Smart Glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;WIRED Middle East&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.meta.com/ai-glasses/privacy/&#34;&gt;Privacy Settings for Meta AI Glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.meta.com/blog/ray-ban-meta-audio-and-deepest-ai-glasses-lineup/&#34;&gt;Introducing Ray-Ban Meta Audio and Our Deepest Lineup of AI Glasses Yet&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.meta.com/ja-jp/blog/AI-glasses-Japan-launch/&#34;&gt;Ray-Ban Meta (Gen 2)およびOakley Meta、5月21日より日本でも販売開始&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-19&#34;&gt;2026 年 5 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
