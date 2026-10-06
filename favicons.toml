@@ -1,6 +1,10 @@
 # 原文網站的圖示登記表，格式與流程見 SPEC.md「原文的網站圖示」。
 # 鍵是 sources 網址的主機名稱，去掉開頭的 www.。由 tools/fetch_favicons.py 寫入，手改之前先讀規格。
 
+[hosts."404media.co"]
+icon = "404media.co-96a9d826.png"
+from = "https://www.404media.co/favicon.ico"
+
 [hosts."9to5google.com"]
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
@@ -110,6 +114,10 @@ from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
+
+[hosts."chinalawtranslate.com"]
+icon = "chinalawtranslate.com-bb85a1d1.png"
+from = "https://www.chinalawtranslate.com/wp-content/uploads/2015/06/cropped-bao80-300x300.jpg"
 
 [hosts."chromereleases.googleblog.com"]
 icon = "chromereleases.googleblog.com-c7f09aac.png"
@@ -239,6 +247,10 @@ same_as = "cryptpad.org"
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
 
+[hosts."doj.gov.hk"]
+icon = "doj.gov.hk-54bc34f1.png"
+from = "https://www.doj.gov.hk/favicon.ico"
+
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
 from = "https://ec.europa.eu/favicon.ico"
@@ -250,6 +262,10 @@ from = "https://edri.org/wp-content/uploads/2023/01/favicon1-20y-192x192.png"
 [hosts."eff.org"]
 icon = "eff.org-4545a257.png"
 from = "https://www.eff.org/sites/all/themes/phoenix/apple-touch-icon-precomposed.png"
+
+[hosts."elawcn.com"]
+icon = "elawcn.com-c1822820.png"
+from = "https://www.elawcn.com/favicon.ico"
 
 [hosts."elegislation.gov.hk"]
 same_as = "gov.hk"
@@ -455,6 +471,10 @@ from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badg
 icon = "macrumors.com-6643c49b.png"
 from = "https://images.macrumors.com/images-new/apple-touch-icon-blue.png"
 
+[hosts."magnetforensics.com"]
+icon = "magnetforensics.com-3a08e791.png"
+from = "https://www.magnetforensics.com/wp-content/uploads/2025/05/cropped-MF_Favicon_48x48-2024-192x192.png"
+
 [hosts."mas.gov.sg"]
 icon = "mas.gov.sg-760a368b.png"
 from = "https://www.mas.gov.sg/html/site/_favicon/apple-touch-icon.png"
@@ -498,9 +518,17 @@ none = "網站沒有 favicon，https 憑證為自簽"
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
 
+[hosts."naehrdine.blogspot.com"]
+icon = "naehrdine.blogspot.com-624359af.png"
+from = "https://naehrdine.blogspot.com/favicon.ico"
+
 [hosts."nbcdfw.com"]
 icon = "nbcdfw.com-eece2dd2.png"
 from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quality=85&strip=all"
+
+[hosts."news.cn"]
+icon = "news.cn-db68823e.png"
+from = "https://www.news.cn/favicon.ico"
 
 [hosts."news.mtn.co.kr"]
 icon = "news.mtn.co.kr-5e21f499.png"
@@ -570,6 +598,10 @@ from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-t
 [hosts."privacy.mi.com"]
 icon = "privacy.mi.com-7de29412.png"
 from = "https://privacy.mi.com/favicon.ico"
+
+[hosts."privacyguides.org"]
+icon = "privacyguides.org-9c0b097f.png"
+from = "https://www.privacyguides.org/content/images/size/w256h256/2024/01/pg-yellow-2.png"
 
 [hosts."privacyinternational.org"]
 icon = "privacyinternational.org-3b35f25d.png"
@@ -656,6 +688,10 @@ from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
 from = "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=192"
+
+[hosts."techspot.com"]
+icon = "techspot.com-5fd11eb4.png"
+from = "https://www.techspot.com/images/ts3mobile-badge.png"
 
 [hosts."telenor.com"]
 icon = "telenor.com-5bb71714.png"
