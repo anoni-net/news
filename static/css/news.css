@@ -845,6 +845,12 @@ p {
     line-height: 1.6;
 }
 
+/* 連到閱讀說明的連結夾在小字裡，跟語系那一行一樣只加上下的留白放大觸控範圍 */
+.listen__note a {
+    display: inline-block;
+    padding: 0.375rem 0;
+}
+
 /* 正在念的段落，底色跟原文區塊相同。用 outline 往外延伸底色，不改變版面，文字不會跳動 */
 .is-reading {
     background: var(--c-surface);

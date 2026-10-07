@@ -47,7 +47,7 @@
           <label class="listen__field" data-voice-field hidden><span>{{ s.listen_voice }}</span> <select class="listen__select" data-voice data-group-tw="{{ s.listen_group_tw }}" data-group-cn="{{ s.listen_group_cn }}" data-group-zh="{{ s.listen_group_zh }}" data-group-yue="{{ s.listen_group_yue }}"></select></label>
           <label class="listen__field"><span>{{ s.listen_rate }}</span> <select class="listen__select" data-rate>{% for rate in ["0.8", "1", "1.25", "1.5"] %}<option value="{{ rate }}"{% if rate == "1" %} selected{% endif %}>{{ s.listen_rate_option.format(rate=rate) }}</option>{% endfor %}</select></label>
         </div>
-        <p class="listen__note">{{ s.listen_note }}</p>
+        <p class="listen__note">{{ s.listen_note }}<a href="{{ url(home ~ 'reading/') }}#listening">{{ s.listen_help }}</a></p>
       </div>
     </aside>
 {% endif %}

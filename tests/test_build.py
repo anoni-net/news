@@ -448,6 +448,8 @@ def test_read_aloud_only_on_clearnet_posts(fixture_site):
     assert re.search(r'<script defer src="/news/js/read-aloud\.js\?v=[0-9a-f]{10}" data-anoni="read-aloud">', post)
     assert '<aside class="listen" data-read-aloud hidden>' in post
     assert 'data-anoni-event="listen-click"' in post
+    # 面板的說明連到閱讀說明頁的「朗讀」一節
+    assert '<a href="/news/reading/#listening">' in post
     assert (clearnet / "js" / "read-aloud.js").exists()
     assert "read-aloud" not in (clearnet / "index.html").read_text(encoding="utf-8")
     onion_post = (onion / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
