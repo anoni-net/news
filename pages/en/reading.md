@@ -1,9 +1,9 @@
 ---
 title: Reading options
-description: How to change text size, dark mode and reader mode, and how to listen to stories with the read-aloud features built into your browser and device.
+description: How to change text size, dark mode and reader mode, and how to listen to stories with the Listen button or the read-aloud features built into your browser and device.
 ---
 
-Text size, colours, reader mode and read-aloud are all handled by your browser and device. We do not offer a settings menu or a play button of our own. Both would need JavaScript, and a menu would also have to store your choices in your browser. The pages themselves need no JavaScript, so with Tor Browser's security level set to Safest, the text of each piece stays readable.
+Text size, colours and reader mode are all handled by your browser and device. We do not offer a settings menu of our own, as it would need JavaScript and would have to store your choices in your browser. Story pages have a Listen button, which appears only when your browser supports it and your device has a voice installed locally. The pages themselves need no JavaScript, so with Tor Browser's security level set to Safest, the text of each piece stays readable.
 
 ## Text size, colours and reader mode {#display}
 
@@ -13,4 +13,6 @@ If you only want the story itself, turn on your browser's reader mode. In Firefo
 
 ## Listening {#listening}
 
-If you would rather listen, use the read-aloud feature built into your browser or operating system. Safari on iPhone has Listen to Page, and story pages are marked up so it reads the story itself and skips the source list and footer. Whether the option appears depends on the page's language and your device's language settings. If it is missing, turn on Speak Screen in Settings > Accessibility > Read & Speak on iPhone, which reads everything on screen, header and footer included. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.
+Story pages have a Listen button below the headline. It reads the headline, summary and story aloud with a voice built into your device, and highlights the paragraph being read. It only uses voices that run on your device, so the text is not sent to any server, and it does not appear when your device has no such voice. Tor Browser turns off the browser's speech feature, and the onion version does not include the button.
+
+If you do not see the button, use the read-aloud feature built into your browser or operating system. Safari on iPhone has Listen to Page, and story pages are marked up so it reads the story itself and skips the source list and footer. Whether the option appears depends on the page's language and your device's language settings. If it is missing, turn on Speak Screen in Settings > Accessibility > Read & Speak on iPhone, which reads everything on screen, header and footer included. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.

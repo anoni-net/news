@@ -708,6 +708,67 @@ p {
     font-weight: 600;
 }
 
+/* 朗讀按鈕，在標題區粗線的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」 */
+.listen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0.75rem;
+    margin: 1rem 0 0;
+}
+
+.listen[hidden] {
+    display: none;
+}
+
+.listen__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    min-height: var(--touch);
+    padding: 0 1rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-surface);
+    color: var(--c-link);
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.listen__button:hover {
+    border-color: var(--c-link);
+}
+
+.listen__button:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+/* 圖示依狀態切換：沒在念時是喇叭，念的時候是暫停 */
+.listen__pause,
+.listen__button[data-state="playing"] .listen__play {
+    display: none;
+}
+
+.listen__button[data-state="playing"] .listen__pause {
+    display: inline;
+}
+
+.listen__note {
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* 正在念的段落，底色跟原文區塊相同。用 outline 往外延伸底色，不改變版面，文字不會跳動 */
+.is-reading {
+    background: var(--c-surface);
+    outline: 0.375rem solid var(--c-surface);
+}
+
 /* 同一事件的導讀：整條事件線由舊到新，日期在上、標題在下，本篇不連結 */
 .thread {
     margin: 2rem 0 0;
