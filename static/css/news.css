@@ -756,7 +756,43 @@ p {
     display: inline;
 }
 
+/* 語音與速度的選單接在按鈕後面，窄螢幕放不下時兩個一起換到下一列 */
+.listen__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+}
+
+.listen__field {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.listen__field[hidden] {
+    display: none;
+}
+
+.listen__select {
+    min-height: var(--touch);
+    max-width: 9.5em;
+    padding: 0 0.5rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font: inherit;
+}
+
+.listen__select:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
 .listen__note {
+    flex-basis: 100%;
     margin: 0;
     color: var(--c-muted);
     font-size: 0.875rem;

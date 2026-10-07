@@ -483,13 +483,18 @@ def test_onion_rejects_read_aloud(tmp_path):
 
 
 def test_read_aloud_uses_local_voices_only():
-    """線上語音會把全文送到廠商的伺服器，腳本只能挑 localService 為 true 的語音，也不碰瀏覽器的儲存。"""
+    """線上語音會把全文送到廠商的伺服器，腳本只能挑 localService 為 true 的語音。
+    瀏覽器儲存只用 localStorage 的一個鍵，存讀者選的語音與速度，其他儲存與網路請求一律不用。"""
     script = (ROOT / "static" / "js" / "read-aloud.js").read_text(encoding="utf-8")
     # 註解裡會寫到這些名稱，只看程式碼
     script = re.sub(r"/\*.*?\*/|//[^\n]*", "", script, flags=re.S)
-    assert "v.localService !== true" in script
-    for banned in ("localStorage", "sessionStorage", "indexedDB", "document.cookie", "fetch(", "XMLHttpRequest", "sendBeacon"):
+    assert "localService !== true" in script
+    for banned in ("sessionStorage", "indexedDB", "document.cookie", "fetch(", "XMLHttpRequest", "sendBeacon", "WebSocket"):
         assert banned not in script, banned
+    assert re.search(r'var STORE_KEY = "anoni-news-listen";', script)
+    uses = re.findall(r"localStorage\.(\w+)\(([^,)]*)", script)
+    assert uses == [("getItem", "STORE_KEY"), ("setItem", "STORE_KEY")], uses
+    assert script.count("localStorage") == 2
 
 
 def test_onion_check_catches_clearnet_link(tmp_path):

@@ -36,14 +36,14 @@ FAKE = r"""
     Object.defineProperty(window, "speechSynthesis", { value: undefined, configurable: true });
     return;
   }
-  window.SpeechSynthesisUtterance = function (text) { this.text = text; this.voice = null; this.lang = ""; };
+  window.SpeechSynthesisUtterance = function (text) { this.text = text; this.voice = null; this.lang = ""; this.rate = 1; };
   window.__spoken = [];
   const queue = [];
   let cur = null;
   function next() {
     if (cur || !queue.length) return;
     cur = queue.shift();
-    window.__spoken.push({ text: cur.text, voice: cur.voice && cur.voice.name, lang: cur.lang });
+    window.__spoken.push({ text: cur.text, voice: cur.voice && cur.voice.name, lang: cur.lang, rate: cur.rate });
     if (cur.onstart) cur.onstart({});
   }
   window.__advance = function () {
@@ -69,6 +69,7 @@ FAKE = r"""
 
 TW_REMOTE = {"name": "Google 國語（臺灣）", "lang": "zh-TW", "localService": False, "default": True}
 TW_LOCAL = {"name": "Meijia", "lang": "zh-TW", "localService": True, "default": False}
+TW_LOCAL_2 = {"name": "Meijia（加強版）", "voiceURI": "com.apple.voice.enhanced.zh-TW.Meijia", "lang": "zh-TW", "localService": True, "default": False}
 CN_LOCAL = {"name": "Tingting", "lang": "zh_CN", "localService": True, "default": False}
 HK_LOCAL = {"name": "Sinji", "lang": "zh-HK", "localService": True, "default": False}
 EN_LOCAL = {"name": "Samantha", "lang": "en-US", "localService": True, "default": False}
@@ -126,6 +127,8 @@ async def scenarios(ws_url, base):
         b = Browser(ws, base)
         await b.call("Page.enable")
         results = {}
+        await b.open(POST, None)
+        await b.eval("localStorage.clear()")
 
         for name, rel, voices in [
             ("headless 的語音清單", POST, "real"),
@@ -164,6 +167,39 @@ async def scenarios(ws_url, base):
         results["念完"] = await b.eval(STATE)
         results["念過的段落"] = await b.eval("__spoken.map(s => s.text)")
         results["語音"] = await b.eval("[...new Set(__spoken.map(s => s.voice + '|' + s.lang))]")
+        results["一個語音時的選單"] = await b.eval("document.querySelector('[data-voice-field]').hidden")
+        results["沒選過時的儲存"] = await b.eval("localStorage.getItem('anoni-news-listen')")
+
+        # 選語音與速度：選單只列本機、語言符合的語音，念到一半換掉就從同一段用新設定重念
+        voices = [TW_REMOTE, HK_LOCAL, TW_LOCAL, CN_LOCAL, EN_LOCAL, TW_LOCAL_2]
+        await b.open(POST, voices)
+        results["選單"] = await b.eval("[...document.querySelectorAll('[data-voice] option')].map(o => o.textContent)")
+        results["選單顯示"] = await b.eval("!document.querySelector('[data-voice-field]').hidden")
+        await b.eval(CLICK)
+        await b.eval("__advance()")
+        before = await b.eval("__spoken.length")
+        await b.eval("const s = document.querySelector('[data-voice]'); s.value = '1'; s.dispatchEvent(new Event('change'))")
+        await b.eval("const r = document.querySelector('[data-rate]'); r.value = '1.5'; r.dispatchEvent(new Event('change'))")
+        results["換設定後"] = await b.eval(f"__spoken.slice({before}).map(s => [s.voice, s.rate, s.text])")
+        results["換設定時的段落"] = await b.eval(f"__spoken[{before} - 1].text")
+        results["儲存"] = await b.eval("JSON.parse(localStorage.getItem('anoni-news-listen'))")
+        results["其他鍵"] = await b.eval("Object.keys(localStorage)")
+
+        # 換頁之後沿用
+        await b.open("2026/09/zkp-age-verification/", voices)
+        results["換頁後的選單"] = await b.eval(
+            "[document.querySelector('[data-voice] option:checked').textContent, document.querySelector('[data-rate]').value]")
+        await b.eval(CLICK)
+        results["換頁後念的"] = await b.eval("[__spoken[0].voice, __spoken[0].rate]")
+
+        # 存的語音不在這台裝置上、速度不在選項裡時，回到預設
+        await b.eval("localStorage.setItem('anoni-news-listen', JSON.stringify({voice: 'gone', rate: '9'}))")
+        await b.open(POST, voices)
+        results["存的值無效"] = await b.eval(
+            "[document.querySelector('[data-voice] option:checked').textContent, document.querySelector('[data-rate]').value]")
+        await b.eval("localStorage.setItem('anoni-news-listen', '{not json')")
+        await b.open(POST, voices)
+        results["存的值壞掉"] = await b.eval(VISIBLE)
         return results
 
 
@@ -233,3 +269,33 @@ def test_reads_title_body_and_tables_but_not_code(results):
     assert any(text.startswith("Spain，1,234，554,500，5.8%") for text in spoken)
     # 原文清單、語系連結與訂閱行不在朗讀範圍
     assert not any(text.startswith(("其他語言", "想收到新的導讀")) for text in spoken)
+
+
+def test_voice_menu_lists_local_voices_for_page_language(results):
+    assert results["一個語音時的選單"] is True
+    assert results["選單顯示"] is True
+    # 台灣的兩個在前，接著中國的普通話，粵語最後。線上語音與英文語音不列
+    assert results["選單"] == ["Meijia", "Meijia（加強版）", "Tingting", "Sinji"]
+
+
+def test_change_voice_and_rate_while_playing(results):
+    changed = results["換設定後"]
+    # 每換一次就從同一段重念：先換語音，再換速度
+    assert [c[:2] for c in changed] == [["Meijia（加強版）", 1], ["Meijia（加強版）", 1.5]]
+    assert all(c[2] == results["換設定時的段落"] for c in changed)
+
+
+def test_choice_is_stored_under_one_key_only(results):
+    assert results["沒選過時的儲存"] is None
+    assert results["儲存"] == {"voice": "com.apple.voice.enhanced.zh-TW.Meijia", "rate": "1.5"}
+    assert results["其他鍵"] == ["anoni-news-listen"]
+
+
+def test_choice_carries_to_next_page(results):
+    assert results["換頁後的選單"] == ["Meijia（加強版）", "1.5"]
+    assert results["換頁後念的"] == ["Meijia（加強版）", 1.5]
+
+
+def test_invalid_stored_choice_falls_back(results):
+    assert results["存的值無效"] == ["Meijia", "1"]
+    assert results["存的值壞掉"] is True

@@ -37,6 +37,11 @@
 {% if target.read_aloud %}
     <aside class="listen" data-read-aloud hidden>
       <button type="button" class="listen__button" data-state="idle" data-label-idle="{{ s.listen }}" data-label-playing="{{ s.listen_pause }}" data-label-paused="{{ s.listen_resume }}"{{ track("listen-click") }}><span class="listen__play">{{ icon('volume-high') }}</span><span class="listen__pause">{{ icon('pause') }}</span> <span data-label>{{ s.listen }}</span></button>
+      {# 語音的選項由 read-aloud.js 依裝置上的本機語音填入，只有一個時不顯示。速度的選項寫在這裡 #}
+      <span class="listen__options">
+      <label class="listen__field" data-voice-field hidden><span>{{ s.listen_voice }}</span> <select class="listen__select" data-voice></select></label>
+      <label class="listen__field"><span>{{ s.listen_rate }}</span> <select class="listen__select" data-rate>{% for rate in ["0.8", "1", "1.25", "1.5"] %}<option value="{{ rate }}"{% if rate == "1" %} selected{% endif %}>{{ s.listen_rate_option.format(rate=rate) }}</option>{% endfor %}</select></label>
+      </span>
       <p class="listen__note">{{ s.listen_note }}</p>
     </aside>
 {% endif %}

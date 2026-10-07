@@ -1,6 +1,7 @@
 /* 文章頁的朗讀按鈕。規則見 SPEC.md「朗讀按鈕」。
    只用裝置本機的語音（localService 為 true），找不到符合頁面語系的本機語音就不顯示按鈕，
-   文章內容不會送到語音服務的伺服器。不讀寫 cookie、localStorage 與 IndexedDB，也不發出網路請求。
+   文章內容不會送到語音服務的伺服器。不發出網路請求。
+   瀏覽器儲存只用 localStorage 的一個鍵（STORE_KEY），存讀者選的語音與速度，不讀寫其他鍵，也不碰 cookie 與 IndexedDB。
    按鈕在 HTML 裡預設是 hidden，沒有 JavaScript 或瀏覽器不支援時，頁面跟沒有這支檔案一樣。 */
 (function () {
   "use strict";
@@ -10,9 +11,37 @@
   if (!box || !synth || typeof window.SpeechSynthesisUtterance !== "function") return;
   var button = box.querySelector("button");
   var label = box.querySelector("[data-label]");
+  var voiceField = box.querySelector("[data-voice-field]");
+  var voiceSelect = box.querySelector("[data-voice]");
+  var rateSelect = box.querySelector("[data-rate]");
   var pageLang = (document.documentElement.lang || "").toLowerCase();
   var pageEnglish = pageLang.indexOf("en") === 0;
   var pageHans = /hans|-cn\b/.test(pageLang);
+
+  // 讀者選的語音與速度，換頁之後沿用。只存在讀者自己的瀏覽器，不會送出
+  var STORE_KEY = "anoni-news-listen";
+  function load() {
+    try {
+      var saved = JSON.parse(window.localStorage.getItem(STORE_KEY));
+      return saved && typeof saved === "object" ? saved : {};
+    } catch (err) {
+      // 無痕模式或關掉儲存時讀不到，照預設值
+      return {};
+    }
+  }
+  function save() {
+    try {
+      window.localStorage.setItem(STORE_KEY, JSON.stringify({ voice: voice ? voiceId(voice) : null, rate: rateSelect.value }));
+    } catch (err) {
+      // 存不進去就只在這一頁有效
+    }
+  }
+  var saved = load();
+
+  // 速度的選項寫在 HTML 裡，存下來的值不在選項裡就維持預設
+  for (var r = 0; r < rateSelect.options.length; r++) {
+    if (rateSelect.options[r].value === String(saved.rate)) rateSelect.value = saved.rate;
+  }
 
   // 語音的語言代碼各家寫法不同：zh-TW、zh_TW、cmn-Hant-TW、yue-HK。數字越小越優先，-1 是不能用。
   // 中文頁先找同一種字的普通話語音，再找另一種字的普通話，粵語排最後
@@ -28,28 +57,52 @@
     return hant ? 0 : hans ? 1 : 2;
   }
 
+  function voiceId(v) {
+    return v.voiceURI || v.name;
+  }
+
+  var voices = [];
+  var listed = "";
   var voice = null;
   var state = "idle";
 
+  // 可選的語音：本機、語言符合頁面，依 rank 排序，同一級裡系統預設的排前面
   function pickVoice() {
     var list = synth.getVoices() || [];
-    var best = null;
-    var bestRank = 99;
+    var found = [];
     for (var i = 0; i < list.length; i++) {
-      var v = list[i];
       // 線上語音（Chrome 的 Google 語音、Edge 的 Natural 語音）會把全文送到廠商的伺服器，一律不用
-      if (v.localService !== true) continue;
-      var r = rank(v.lang);
-      if (r < 0) continue;
-      if (r < bestRank || (r === bestRank && v["default"] && !best["default"])) {
-        best = v;
-        bestRank = r;
-      }
+      if (list[i].localService !== true) continue;
+      var r = rank(list[i].lang);
+      if (r >= 0) found.push({ v: list[i], r: r, i: i });
     }
-    if (state === "idle") {
-      voice = best;
-      box.hidden = !voice;
+    found.sort(function (a, b) {
+      return a.r - b.r || (b.v["default"] ? 1 : 0) - (a.v["default"] ? 1 : 0) || a.i - b.i;
+    });
+    var key = found.map(function (f) { return voiceId(f.v); }).join("\n");
+    // 清單沒變就不重填選單，讀者正打開選單時不會被關掉
+    if (key === listed) return;
+    listed = key;
+    voices = found.map(function (f) { return f.v; });
+
+    var keep = voice ? voiceId(voice) : saved.voice;
+    voice = null;
+    for (var j = 0; j < voices.length; j++) {
+      if (voiceId(voices[j]) === keep) voice = voices[j];
     }
+    if (!voice) voice = voices[0] || null;
+
+    voiceSelect.textContent = "";
+    for (var k = 0; k < voices.length; k++) {
+      var option = document.createElement("option");
+      option.value = String(k);
+      option.textContent = voices[k].name;
+      option.selected = voices[k] === voice;
+      voiceSelect.appendChild(option);
+    }
+    // 只有一個可選時不顯示語音選單
+    voiceField.hidden = voices.length < 2;
+    if (state === "idle") box.hidden = !voice;
   }
 
   // 要朗讀的段落：標題、副標，接著是內文的每一個區塊。程式碼區塊逐字念出來沒有意義，跳過
@@ -113,12 +166,14 @@
   function start(from) {
     run += 1;
     var mine = run;
+    var rate = parseFloat(rateSelect.value) || 1;
     synth.cancel();
     for (var i = from; i < items.length; i++) {
       (function (i) {
         var u = new window.SpeechSynthesisUtterance(items[i].text);
         u.voice = voice;
         u.lang = voice.lang;
+        u.rate = rate;
         u.onstart = function () {
           if (mine !== run) return;
           index = i;
@@ -155,6 +210,17 @@
     if (!items.length) return;
     start(state === "paused" ? index : 0);
   });
+
+  // 念到一半換語音或速度，從正在念的那一段用新的設定重念
+  function changed() {
+    save();
+    if (state === "playing") start(index);
+  }
+  voiceSelect.addEventListener("change", function () {
+    voice = voices[+voiceSelect.value] || voice;
+    changed();
+  });
+  rateSelect.addEventListener("change", changed);
 
   // 離開頁面時停止，避免換頁之後還在念上一篇
   window.addEventListener("pagehide", function () {
