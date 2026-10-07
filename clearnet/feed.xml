@@ -6,7 +6,117 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>iPhone 自動重新啟動與鑑識工具的繞過宣稱</title>
+<link>https://anoni.net/news/2026/10/iphone-inactivity-reboot-bypass/</link>
+<guid isPermaLink="false">anoni-news:2026/10/iphone-inactivity-reboot-bypass</guid>
+<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>iOS 18.1 起，iPhone 長時間沒有解鎖會自動重新啟動，讓資料回到較難取出的狀態。一支約在 2025 年初製作的鑑識廠商影片裡，員工說扣押的手機即使重新啟動也能保留解鎖過一次的狀態。這項手法對最新版 iOS 是否有效，到 10 月 7 日為止並不清楚。Apple 沒有回覆報導的詢問，擔心手機被扣押取證的人可以留意後續。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，來自 Apple、404 Media、Privacy Guides 等 8 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;404 Media 在 10 月 1 日的報導寫到，他們取得了一支 Magnet Forensics 的影片，該公司的 Graykey 是賣給執法單位、用來解鎖手機並取出資料的工具。影片裡的 Magnet 員工說，Graykey Preserve 裝置與 Graykey 的 Evidence Preservation Mode 能讓扣押的 iPhone 停留在較容易取出資料的狀態，即使手機因各種原因重新啟動或斷電也一樣。404 Media 的報導把這項技術寫成用來繞過 iOS 18.1 起的「自動重新啟動」（英文報導多稱 Inactivity Reboot）。依 9to5Mac 引述 404 Media 的內容，這是專給執法人員的教學影片，看起來在 2025 年初製作。&lt;/p&gt;
+&lt;p&gt;TechSpot 在 10 月 2 日的報導寫明，這項宣稱尚未經過獨立驗證。9to5Mac 也寫到，這項技術提供給執法單位多久、是否用在實際案件，以及對最新版的 iOS 是否有效都不清楚。依 9to5Mac 與 Privacy Guides 的轉述，404 Media 向 Apple 與 Magnet 詢問，兩家都沒有回覆。到 10 月 7 日為止，本文查到的來源裡沒有 Apple 對這項宣稱的回應。&lt;/p&gt;
+&lt;p&gt;TechCrunch 2024 年 11 月的報導寫到兩種狀態的差別。手機開機之後還沒輸入過密碼的狀態稱為「首次解鎖前」（BFU）。依 TechCrunch 的說法，這時使用者資料完全加密，不知道密碼幾乎無法取出。輸入過一次密碼之後是「首次解鎖後」（AFU），即使手機鎖著也有部分資料沒有加密，某些鑑識工具可能比較容易取出。&lt;/p&gt;
+&lt;p&gt;Apple 的安全性指南寫明，iOS 18.1 與 iPadOS 18.1 起的「自動重新啟動」由「安全隔離區」（晶片裡專門處理密鑰的獨立子系統）監控裝置的解鎖事件，裝置長時間維持鎖定就會自動重新啟動。重新啟動會讓裝置從 AFU 轉為 BFU，並從記憶體清除敏感的密鑰與暫存資料。iOS 18.4 起，裝置管理者可以開關這項機制，受監管的裝置（公司或學校透過裝置管理統一設定的 iPhone）預設關閉。Apple 的文件沒有寫出要鎖定多久，研究者 2024 年 11 月的實測是 72 小時，TechCrunch 當時的報導也寫到 Magnet 確認了這個數字。&lt;/p&gt;
+&lt;p&gt;Privacy Guides 轉述影片的說法，Evidence Preservation Mode 會在 AFU 狀態「捕捉」iPhone，重新啟動之後 AFU 狀態也不會消失。依 TechSpot 的轉述，影片裡的員工說，Graykey 在取得初步存取、進入保存狀態之後會關閉手機的無線電（Wi-Fi、藍牙與行動網路）。員工也說 Graykey Preserve 能保留快取的位置資料、最近刪除的照片與 iMessage，這些資料原本會在一段時間後清除。依 Privacy Guides 的轉述，影片沒有說明技術細節。&lt;/p&gt;
+&lt;p&gt;Magnet 官網的 Graykey 產品頁到 10 月 7 日為止寫到，Graykey 能保護資料擷取不受自動重新啟動計時器影響。同一頁對 Graykey Preserve 的說明只提到 iOS。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;2024 年的逆向分析寫到，竊賊沒有資源在三天內取得最新的破解手法，自動重新啟動很可能讓他們完全取不到資料。同一篇也寫到，執法單位因此多了時間壓力。Magnet 的說法如果屬實，取得初步存取並開始保存的手機，72 小時到期時 AFU 狀態也不會消失。&lt;/p&gt;
+&lt;p&gt;本文引用的來源都沒有寫到一般使用者能做什麼來擋下 Magnet 的手法。依 iPhone 使用手冊，開機或重新開機之後一律要輸入密碼。本文從 BFU 的定義推論，關機之後再開機的手機會處於 BFU，擔心手機被扣押取證的人因此可以在手機可能離開自己身邊之前關機。影片沒有說明 Magnet 的手法能不能用在已經是 BFU 的手機。&lt;/p&gt;
+&lt;p&gt;依影片的說法，保存開始之後即使斷電，AFU 狀態也不會消失。關機的代價是期間收不到電話與訊息，手機在使用中被拿走時也來不及關機。&lt;/p&gt;
+&lt;p&gt;Apple 的「密碼」說明寫到，攻擊者即使取得裝置，沒有密碼也無法存取特定保護類別的資料。同一份說明也寫到密碼越長越能抵擋暴力破解，較長的數字密碼與較短的英數密碼相比更便於輸入，也可提供類似的安全性。這份說明沒有談到密碼長度對 Magnet 手法的影響。&lt;/p&gt;
+&lt;p&gt;在「設定」的「Face ID 與密碼」（或「Touch ID 與密碼」）點「更改密碼」，再點「密碼選項」就能更換。iPhone 使用手冊把「自訂英數密碼」與「自訂數字密碼」列為最安全的選項。長密碼的代價是開機或重新開機之後，以及超過 48 小時沒有解鎖時，都要輸入較長的字串。&lt;/p&gt;
+&lt;p&gt;Magnet 宣稱的手法跟執法單位扣押手機之後的取證有關，沒有手機被扣押疑慮的人不必改變設定。依 Apple 的安全性指南，受監管的 iPhone 預設不啟用自動重新啟動，使用這類手機的人不能假設有 72 小時的保護。&lt;/p&gt;
+&lt;p&gt;Apple 的「Apple 安全性發布」頁面寫明，在調查並公開提供修補程式或版本之前，不會揭露、討論或確認安全性問題。到 10 月 7 日為止，Magnet 的手法對最新版 iOS 是否有效並不清楚。11 月可以回頭看 iOS 的更新說明有沒有相關修補，以及有沒有研究者獨立驗證。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/security/protecting-user-data-in-the-face-of-attack-secf5549a4f5/web&#34;&gt;Protecting user data in the face of attack&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/security/secf5549a4f5/web&#34;&gt;遭遇攻擊時保護使用者資料&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/&#34;&gt;Cops Can Bypass iPhone’s Automatic Reboot to Get Into Locked Phones, Leaked Video Claims&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/01/leaked-video-shows-that-police-can-bypass-iphones-automatic-reboot-feature/&#34;&gt;Leaked Video Shows That Police Can Bypass iPhones&amp;#39; Automatic Reboot Feature&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5mac.com/2026/10/01/graykey-maker-can-reportedly-bypass-the-iphones-inactivity-reboot-security-feature/&#34;&gt;GrayKey maker can reportedly bypass the iPhone’s ‘Inactivity Reboot’ security feature&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;9to5Mac&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.techspot.com/news/114070-new-graykey-feature-police-stop-seized-iphones-becoming.html&#34;&gt;A forensic tool claims it can stop seized iPhones from locking down after 72 hours&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechSpot&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.magnetforensics.com/products/magnet-graykey/&#34;&gt;Access the critical iOS and Android evidence you need&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Magnet Forensics&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2024/11/14/new-apple-security-feature-reboots-iphones-after-3-days-researchers-confirm&#34;&gt;New Apple security feature reboots iPhones after 3 days, researchers confirm&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-14&#34;&gt;2024 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://naehrdine.blogspot.com/2024/11/reverse-engineering-ios-18-inactivity.html&#34;&gt;Reverse Engineering iOS 18 Inactivity Reboot&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;naehrdine&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-17&#34;&gt;2024 年 11 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/security/sec20230a10d/web&#34;&gt;密碼&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-19&#34;&gt;2024 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/iphone/iph14a867ae/ios&#34;&gt;在 iPhone 上設定密碼&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/100100&#34;&gt;Apple 安全性發布&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>環境捍衛者與科技助長暴力的四國研究</title>
 <link>https://anoni.net/news/2026/10/apc-frontline-communities/</link>
@@ -1624,96 +1734,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ArchiveBox/ArchiveBox&#34;&gt;ArchiveBox&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>歐盟年齡驗證 App 的隱私設計與爭議</title>
-<link>https://anoni.net/news/2026/09/eu-age-verification-blueprint/</link>
-<guid isPermaLink="false">anoni-news:2026/09/eu-age-verification-blueprint</guid>
-<pubDate>Tue, 29 Sep 2026 07:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>歐盟執委會建議各會員國在 2026 年底前推出年齡驗證 App，歐盟以外的使用者不受影響。執委會寫明 App 不保留證件與生物特徵資料，EDRi 則質疑它的隱私保護。依執委會 9 月發布的新版規格，App 與網站都必須實作零知識證明，只在裝置不支援時退回發證方可能追溯的一般驗證方式。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，來自 European Commission、EDRi、EU Digital Identity Wallet 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;歐盟執委會 4 月宣布年齡驗證 App 技術就緒，建議各會員國年底前推出自己的 App。依 9 月 17 日提出的《EU KIDS Act》草案，13 歲以下不得使用社群平台，15 歲才能自己開帳號。線上服務與 App 商店要採用年齡確認工具，這套 App 是選項之一，歐盟以外的使用者用不到。&lt;/p&gt;
-&lt;p&gt;依執委會的新聞稿，社群與影音平台要在新開帳號時驗證年齡，既有帳號改用建立日期等指標推估年齡。13 歲到未滿 15 歲由家長設立迷你帳號（mini accounts），每天最多使用一小時。&lt;/p&gt;
-&lt;p&gt;依執委會的說明頁與新聞稿，使用者不必分享其他個資就能證明年滿 18 歲，App 也不保留證件與生物特徵資料。App 的暱稱是迷你錢包（mini wallet），規格沿用歐盟數位身分錢包。9 月 2 日的 1.1.0 版規格書裡，App 與網站都必須實作零知識證明（zero-knowledge proof，只證明條件成立、不透露其他內容），裝置不支援時才退回一般驗證方式。一般驗證方式下，發證方保留紀錄並與網站串通就能追溯使用者。&lt;/p&gt;
-&lt;p&gt;歐洲數位權利組織 EDRi 在 9 月 7 日發表技術分析，結論是工具在「就緒」與「保護隱私」兩方面都做不到。分析裡談零知識證明的部分，引用的是仍非強制的舊版規格書。EDRi 主張網路安全另有做法，應拒絕建置年齡驗證。分析裡也寫到，數位身分錢包依法要「確保」不可連結性（unlinkability，多次出示無法串回同一人），執委會改成只需「阻礙」連結。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;執委會規格書附的威脅模型裡，使用零知識證明時網站沒有可比對發證紀錄的資料。一般驗證方式的追溯風險列為可接受，理由是列在執委會發布的歐盟信任清單、受各國監管的發證方要刻意違規才會發生。執委會的規格書也建議發證方同時提供 App。依 EDRi 的分析，這讓發證與出示集中在同一方，即使強制零知識證明也做不到嚴格的不可連結。&lt;/p&gt;
-&lt;p&gt;依 EDRi 的分析，App 以國家證件搭配生物辨識確認使用者，沒有證件、合適的手機或不願做臉部辨識的人會被排除。執委會的規格書另列電子身分與銀行、電信業者的身分驗證，威脅模型裡只有掃描證件要做臉部比對。缺少證件的人另有規格書公平性（Equity）條款的替代程序或人工處理。&lt;/p&gt;
-&lt;p&gt;執委會的示範 App 以 EUPL-1.2（歐盟的開源授權）開源，建議書裡請各國透過第三方審查確保資安與隱私合規。依 EDRi 的分析，開源要求只涵蓋數位身分錢包，丹麥的 App 在用戶端有非開源的程式碼。&lt;/p&gt;
-&lt;p&gt;EDRi 在 2025 年 11 月的文章裡寫，所有年齡驗證都能在某種程度上被繞過。執委會的威脅模型裡，大人在旁代為驗證或替孩子的手機註冊列為可接受的殘餘風險，每次出示都比對臉部的做法因過度侵犯隱私被否決。&lt;/p&gt;
-&lt;p&gt;澳洲從 2025 年 12 月 10 日起要求社群平台採取合理措施阻止 16 歲以下的人持有帳號，沒採取的平台可能受罰，使用者與家長不受罰。在排除的爭點上，澳洲的法律禁止平台強迫出示政府證件，列為選項時要另有合理的替代方式。&lt;/p&gt;
-&lt;p&gt;讀者目前不必做任何設定。可以留意的後續有各會員國的 App 能否在 2026 年底前上線，以及《EU KIDS Act》草案的審議進度。&lt;/p&gt;
-&lt;p&gt;比較各地時，隱私方面可以問發證方能不能追溯使用者、沒有證件的人有沒有替代方式。兒少保護方面可以問能不能輕易繞過驗證、既有帳號如何處理。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification&#34;&gt;The EU approach to age verification&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1890&#34;&gt;EU KIDS Act to restrict social media platforms&amp;#39; access to children in the EU&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app&#34;&gt;Commission urges Member States to rollout EU age verification app&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;2026 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/our-work/eu-age-verification-tool-does-not-solve-privacy-concerns/&#34;&gt;Why the EU age-verification tool does not solve privacy concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-07&#34;&gt;2026 年 9 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/our-work/why-age-verification-misses-the-mark-and-puts-everyone-at-risk/&#34;&gt;Why age verification misses the mark and puts everyone at risk&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-25&#34;&gt;2025 年 11 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-doc-technical-specification&#34;&gt;av-doc-technical-specification&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-app-android-wallet-ui&#34;&gt;av-app-android-wallet-ui&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-03&#34;&gt;2026 年 9 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions&#34;&gt;Social media age restrictions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eSafety Commissioner&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions/faqs&#34;&gt;Social media &amp;#39;ban&amp;#39; or delay FAQ&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eSafety Commissioner&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

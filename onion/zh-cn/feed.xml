@@ -6,7 +6,181 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>iPhone 自动重启与取证工具的绕过说法</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/iphone-inactivity-reboot-bypass/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/iphone-inactivity-reboot-bypass</guid>
+<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>iOS 18.1 起，iPhone 长时间没有解锁会自动重启，让数据回到较难提取的状态。一段约在 2025 年初制作的取证厂商视频里，员工说扣押的手机即使重启也能保留解锁过一次的状态。这项手法对最新版 iOS 是否有效，到 10 月 7 日为止并不清楚。Apple 没有回复报道的询问，担心手机被扣押取证的人可以留意后续。</description>
+<content:encoded>&lt;p&gt;整理 21 篇原文，来自 Apple、404 Media、Privacy Guides 等 12 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;404 Media 在 10 月 1 日的报道写到，他们取得了一段 Magnet Forensics 的视频，该公司的 Graykey 是卖给执法部门、用来解锁手机并提取数据的工具。视频里的 Magnet 员工说，Graykey Preserve 设备与 Graykey 的 Evidence Preservation Mode 能让扣押的 iPhone 停留在较容易提取数据的状态，即使手机因各种原因重启或断电也一样。404 Media 的报道把这项技术写成用来绕过 iOS 18.1 起的“自动重启”（英文报道多称 Inactivity Reboot）。据 9to5Mac 引述 404 Media 的内容，这是专给执法人员的培训视频，看起来在 2025 年初制作。&lt;/p&gt;
+&lt;p&gt;TechSpot 在 10 月 2 日的报道写明，这一说法尚未经过独立验证。9to5Mac 也写到，这项技术提供给执法部门多久、是否用在实际案件，以及对最新版的 iOS 是否有效都不清楚。据 9to5Mac 与 Privacy Guides 的转述，404 Media 向 Apple 与 Magnet 询问，两家都没有回复。到 10 月 7 日为止，本文查到的来源里没有 Apple 对这一说法的回应。&lt;/p&gt;
+&lt;p&gt;TechCrunch 2024 年 11 月的报道写到两种状态的差别。手机开机之后还没输入过密码的状态称为“首次解锁前”（BFU）。据 TechCrunch 的说法，这时用户数据完全加密，不知道密码几乎无法提取。输入过一次密码之后是“首次解锁后”（AFU），即使手机锁着也有部分数据没有加密，某些取证工具可能比较容易提取。&lt;/p&gt;
+&lt;p&gt;Apple 的安全性指南写明，iOS 18.1 与 iPadOS 18.1 起的“自动重启”由“安全隔区”（芯片里专门处理密钥的独立子系统）监控设备的解锁事件，设备长时间处于锁定状态就会自动重启。重启会让设备从 AFU 转为 BFU，并从内存清除敏感的安全密钥和瞬态数据。iOS 18.4 起，管理员可以打开或关闭这项机制，受监督设备（公司或学校通过设备管理统一设置的 iPhone）默认关闭。Apple 的文件没有写出要锁定多久，研究者 2024 年 11 月的实测是 72 小时，TechCrunch 当时的报道也写到 Magnet 确认了这个数字。&lt;/p&gt;
+&lt;p&gt;Privacy Guides 转述视频的说法，Evidence Preservation Mode 会在 AFU 状态“捕捉”iPhone，重启之后 AFU 状态也不会消失。据 TechSpot 的转述，视频里的员工说，Graykey 在取得初步访问、进入保存状态之后会关闭手机的无线电（Wi-Fi、蓝牙与移动网络）。员工也说 Graykey Preserve 能保留缓存的位置数据、最近删除的照片与 iMessage，这些数据原本会在一段时间后清除。据 Privacy Guides 的转述，视频没有说明技术细节。&lt;/p&gt;
+&lt;p&gt;Magnet 官网的 Graykey 产品页到 10 月 7 日为止写到，Graykey 能保护数据提取不受自动重启计时器影响。同一页对 Graykey Preserve 的说明只提到 iOS。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;2024 年的逆向分析写到，窃贼没有资源在三天内取得最新的破解手法，自动重启很可能让他们完全取不到数据。同一篇也写到，执法部门因此多了时间压力。Magnet 的说法如果属实，取得初步访问并开始保存的手机，72 小时到期时 AFU 状态也不会消失。&lt;/p&gt;
+&lt;p&gt;本文引用的来源都没有写到普通用户能做什么来挡下 Magnet 的手法。据 iPhone 使用手册，开机或重启之后一律要输入密码。本文从 BFU 的定义推论，关机之后再开机的手机会处于 BFU，担心手机被扣押取证的人因此可以在手机可能离开自己身边之前关机。视频没有说明 Magnet 的手法能不能用在已经是 BFU 的手机。&lt;/p&gt;
+&lt;p&gt;据视频的说法，保存开始之后即使断电，AFU 状态也不会消失。关机的代价是期间收不到电话与消息，手机在使用中被拿走时也来不及关机。&lt;/p&gt;
+&lt;p&gt;中国大陆办理刑事案件时，手机扣押之后的封存方式有明文规定。最高人民法院、最高人民检察院与公安部 2016 年的规定，以及公安部 2019 年施行的《公安机关办理刑事案件电子数据取证规则》，都把信号屏蔽、信号阻断或者切断电源列为封存措施。两份规定都没有提到 iPhone，切断电源只是并列的措施之一。&lt;/p&gt;
+&lt;p&gt;公安部 2026 年 5 月公开征求意见的《公安机关电子数据取证规则（征求意见稿）》修订的是 2019 年施行的规则，封存手机的措施列出信号屏蔽、信号阻断等，没有列出切断电源。起草说明列出的修订背景没有提到封存措施的改动，到 10 月 7 日为止本文也没有查到定稿。&lt;/p&gt;
+&lt;p&gt;据新华社的报道，征求意见稿明确了确需输入与案件相关的智能终端等账号密码、持有人又不提供时的程序。此时公安机关采取措施获取账号密码，需经县级以上公安机关负责人批准，并明确告知持有人或者有见证人见证。持有人不提供账号密码，又不立即提取数据可能造成灭失等严重后果时，征求意见稿允许先行采取措施获取账号密码。先行采取措施之后，须在 24 小时内补办批准手续。&lt;/p&gt;
+&lt;p&gt;Apple 的“密码”说明写到，攻击者即使取得设备，在没有密码的情况下也无法访问某些特定保护类的数据。同一份说明也写到密码越长强度越高，更容易阻止暴力破解攻击。与较短的字母数字密码相比，较长的数字密码可能更容易输入，而且可以提供类似的安全性。这份说明没有谈到密码长度对 Magnet 手法的影响。&lt;/p&gt;
+&lt;p&gt;在“设置”的“面容 ID 与密码”（或“触控 ID 与密码”）轻点“更改密码”，再轻点“密码选项”就能更换。iPhone 使用手册把“自定义字母数字密码”与“自定义数字密码”列为最安全的选项。长密码的代价是开机或重启之后，以及超过 48 小时没有解锁时，都要输入较长的字符串。&lt;/p&gt;
+&lt;p&gt;Magnet 所说的手法跟执法部门扣押手机之后的取证有关，没有手机被扣押顾虑的人不必改变设置。据 Apple 的安全性指南，受监督的 iPhone 默认不启用自动重启，使用这类手机的人不能假设有 72 小时的保护。&lt;/p&gt;
+&lt;p&gt;Apple 的“Apple 安全性发布”页面写明，在进行调查并全面推出修补程序或发行版之前，Apple 不会透露、讨论或确认安全性问题。到 10 月 7 日为止，Magnet 的手法对最新版 iOS 是否有效并不清楚。11 月可以回头看 iOS 的更新说明有没有相关修补，以及有没有研究者独立验证。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（21 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/security/protecting-user-data-in-the-face-of-attack-secf5549a4f5/web&#34;&gt;Protecting user data in the face of attack&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/security/secf5549a4f5/web&#34;&gt;遭遇攻擊時保護使用者資料&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/&#34;&gt;Cops Can Bypass iPhone’s Automatic Reboot to Get Into Locked Phones, Leaked Video Claims&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/01/leaked-video-shows-that-police-can-bypass-iphones-automatic-reboot-feature/&#34;&gt;Leaked Video Shows That Police Can Bypass iPhones&amp;#39; Automatic Reboot Feature&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5mac.com/2026/10/01/graykey-maker-can-reportedly-bypass-the-iphones-inactivity-reboot-security-feature/&#34;&gt;GrayKey maker can reportedly bypass the iPhone’s ‘Inactivity Reboot’ security feature&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;9to5Mac&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.techspot.com/news/114070-new-graykey-feature-police-stop-seized-iphones-becoming.html&#34;&gt;A forensic tool claims it can stop seized iPhones from locking down after 72 hours&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechSpot&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.magnetforensics.com/products/magnet-graykey/&#34;&gt;Access the critical iOS and Android evidence you need&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Magnet Forensics&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2024/11/14/new-apple-security-feature-reboots-iphones-after-3-days-researchers-confirm&#34;&gt;New Apple security feature reboots iPhones after 3 days, researchers confirm&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-14&#34;&gt;2024 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://naehrdine.blogspot.com/2024/11/reverse-engineering-ios-18-inactivity.html&#34;&gt;Reverse Engineering iOS 18 Inactivity Reboot&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;naehrdine&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-17&#34;&gt;2024 年 11 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/security/sec20230a10d/web&#34;&gt;密碼&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-19&#34;&gt;2024 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/iphone/iph14a867ae/ios&#34;&gt;在 iPhone 上設定密碼&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/100100&#34;&gt;Apple 安全性發布&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/guide/security/secf5549a4f5/web&#34;&gt;在用户数据受到攻击时提供保护&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/guide/security/sec20230a10d/web&#34;&gt;密码&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-19&#34;&gt;2024 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/guide/iphone/iph14a867ae/ios&#34;&gt;在 iPhone 上设定密码&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/100100&#34;&gt;Apple 安全性发布&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.court.gov.cn/fabu/xiangqing/26431.html&#34;&gt;最高人民法院 最高人民检察院 公安部关于办理刑事案件收集提取和审查判断电子数据若干问题的规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;最高人民法院&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2016-09-20&#34;&gt;2016 年 9 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinalawtranslate.com/公安机关办理刑事案件电子数据取证规则/&#34;&gt;公安机关办理刑事案件电子数据取证规则&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;China Law Translate&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-01-03&#34;&gt;2019 年 1 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.elawcn.com/rule/2026/0827/1902.html&#34;&gt;公安机关电子数据取证规则（征求意见稿）及起草说明&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国互联网法务网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;2026 年 8 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.news.cn/20260522/8b1b030da10b422aa634e1324e5a1f10/c.html&#34;&gt;公安部拟明确刑事案件电子数据取证中获取密码等特殊程序&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;新华社&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-22&#34;&gt;2026 年 5 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinalawtranslate.com/en/22621-2/&#34;&gt;公安机关电子数据取证规则（征求意见稿）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;China Law Translate&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-01&#34;&gt;2026 年 6 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>环境捍卫者与技术助长暴力的四国研究</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/apc-frontline-communities/</link>
@@ -2013,103 +2187,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ArchiveBox/ArchiveBox&#34;&gt;ArchiveBox&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>欧盟年龄验证 App 的隐私设计与争议</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/eu-age-verification-blueprint/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/09/eu-age-verification-blueprint</guid>
-<pubDate>Tue, 29 Sep 2026 07:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>欧盟委员会建议各成员国在 2026 年底前推出年龄验证 App，欧盟以外的用户不受影响。欧委会写明 App 不保留证件与生物特征数据，EDRi 则质疑它的隐私保护。依欧委会 9 月发布的新版规范，App 与网站都必须实现零知识证明，只在设备不支持时退回签发方可能追溯的一般验证方式。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，来自 European Commission、EDRi、EU Digital Identity Wallet 等 5 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;欧盟委员会 4 月宣布年龄验证 App 技术就绪，建议各成员国年底前推出自己的 App。依 9 月 17 日提出的《EU KIDS Act》草案，13 岁以下不得使用社交平台，15 岁才能自己开账号。在线服务与应用商店要采用年龄确认工具，这套 App 是选项之一，欧盟以外的用户用不到。&lt;/p&gt;
-&lt;p&gt;依欧委会的新闻稿，社交与视频平台要在新开账号时验证年龄，已有账号改用创建日期等指标推估年龄。13 岁到未满 15 岁由家长设立迷你账号（mini accounts），每天最多使用一小时。&lt;/p&gt;
-&lt;p&gt;依欧委会的说明页与新闻稿，用户不必分享其他个人信息就能证明年满 18 岁，App 也不保留证件与生物特征数据。App 的昵称是迷你钱包（mini wallet），规范沿用欧盟数字身份钱包。9 月 2 日的 1.1.0 版规范文件里，App 与网站都必须实现零知识证明（zero-knowledge proof，只证明条件成立、不透露其他内容），设备不支持时才退回一般验证方式。一般验证方式下，签发方保留记录并与网站串通就能追溯用户。&lt;/p&gt;
-&lt;p&gt;欧洲数字权利组织 EDRi 在 9 月 7 日发表技术分析，结论是工具在「就绪」与「保护隐私」两方面都做不到。分析里谈零知识证明的部分，引用的是仍非强制的旧版规范文件。EDRi 主张网络安全另有做法，应拒绝建设年龄验证。分析里也写到，数字身份钱包依法要「确保」不可关联性（unlinkability，多次出示无法串回同一人），欧委会改成只需「阻碍」关联。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;欧委会规范文件附的威胁模型里，使用零知识证明时网站没有可比对签发记录的数据。一般验证方式的追溯风险列为可接受，理由是列在欧委会发布的欧盟可信列表、受各国监管的签发方要故意违规才会发生。欧委会的规范文件也建议签发方同时提供 App。依 EDRi 的分析，这让签发与出示集中在同一方，即使强制零知识证明也做不到严格的不可关联。&lt;/p&gt;
-&lt;p&gt;依 EDRi 的分析，App 以国家证件搭配生物识别确认用户，没有证件、合适的手机或不愿做人脸识别的人会被排除。欧委会的规范文件另列电子身份与银行、电信运营商的身份验证，威胁模型里只有扫描证件要做人脸比对。缺少证件的人另有规范文件公平性（Equity）条款的替代程序或人工处理。&lt;/p&gt;
-&lt;p&gt;欧委会的示范 App 以 EUPL-1.2（欧盟的开源许可证）开源，建议书里请各国通过第三方审查确保网络安全与隐私合规。依 EDRi 的分析，开源要求只涵盖数字身份钱包，丹麦的 App 在客户端有非开源的代码。&lt;/p&gt;
-&lt;p&gt;EDRi 在 2025 年 11 月的文章里写，所有年龄验证都能在某种程度上被绕过。欧委会的威胁模型里，大人在旁代为验证或替孩子的手机注册列为可接受的残余风险，每次出示都比对人脸的做法因过度侵犯隐私被否决。&lt;/p&gt;
-&lt;p&gt;澳大利亚从 2025 年 12 月 10 日起要求社交平台采取合理措施阻止 16 岁以下的人持有账号，没采取的平台可能受罚，用户与家长不受罚。在排除的争点上，澳大利亚法律禁止平台强迫出示政府证件，列为选项时要另有合理的替代方式。依中国大陆 2024 年 1 月 1 日施行的《未成年人网络保护条例》第三十一条，为未成年人提供信息发布、即时通讯等服务时要依法要求提供真实身份信息，在追溯的争点上与欧盟规范让网站只得知年龄符合的方向不同。&lt;/p&gt;
-&lt;p&gt;读者目前不必做任何设置，身在中国境内也用不到这套 App。可以留意的后续有各成员国的 App 能否在 2026 年底前上线，以及《EU KIDS Act》草案的审议进度。&lt;/p&gt;
-&lt;p&gt;比较各地时，隐私方面可以问签发方能不能追溯用户、没有证件的人有没有替代方式。未成年人保护方面可以问能不能轻易绕过验证、已有账号如何处理。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification&#34;&gt;The EU approach to age verification&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1890&#34;&gt;EU KIDS Act to restrict social media platforms&amp;#39; access to children in the EU&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app&#34;&gt;Commission urges Member States to rollout EU age verification app&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;2026 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/our-work/eu-age-verification-tool-does-not-solve-privacy-concerns/&#34;&gt;Why the EU age-verification tool does not solve privacy concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-07&#34;&gt;2026 年 9 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/our-work/why-age-verification-misses-the-mark-and-puts-everyone-at-risk/&#34;&gt;Why age verification misses the mark and puts everyone at risk&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-25&#34;&gt;2025 年 11 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-doc-technical-specification&#34;&gt;av-doc-technical-specification&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/eu-digital-identity-wallet/av-app-android-wallet-ui&#34;&gt;av-app-android-wallet-ui&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EU Digital Identity Wallet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-03&#34;&gt;2026 年 9 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions&#34;&gt;Social media age restrictions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;eSafety Commissioner&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions/faqs&#34;&gt;Social media &amp;#39;ban&amp;#39; or delay FAQ&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;eSafety Commissioner&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/content/202310/content_6911288.htm&#34;&gt;未成年人网络保护条例&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中华人民共和国国务院&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-24&#34;&gt;2023 年 10 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

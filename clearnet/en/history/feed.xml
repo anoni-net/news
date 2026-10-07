@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Wed, 07 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Hong Kong&#39;s anti-doxxing removal powers</title>
+<link>https://anoni.net/news/en/history/10-08/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-08/2026</guid>
+<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>If your personal details are posted online in Hong Kong, you can ask the Privacy Commissioner for Personal Data to have platforms remove them. On this day, Hong Kong&#39;s anti-doxxing provisions took effect.</description>
+<content:encoded>&lt;p&gt;If your personal details are posted online in Hong Kong, you can ask the Office of the Privacy Commissioner for Personal Data to have platforms remove them, including social media platforms based overseas. On 8 October 2021, the Personal Data (Privacy) (Amendment) Ordinance 2021 took effect and made doxxing a criminal offence. The commissioner&#39;s announcement said the amendment aimed to combat doxxing acts that intrude on personal data privacy, and the amendment gave the office powers to conduct criminal investigations and issue cessation notices. Before the law passed, the Asia Internet Coalition, whose members include Apple, Facebook and Google, wrote that the possibility of prosecuting local staff would create uncertainty for businesses, as quoted by The Register. Figures the office published show that by the end of 2025 it had issued 2,104 cessation notices to 57 online platforms, with an overall compliance rate above 96%. The ordinance is Hong Kong law, so if you face doxxing elsewhere, see &lt;a href=&#34;https://anoni.net/news/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;, published on 3 October.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Import rules for the encryption in your phone</title>
 <link>https://anoni.net/news/en/history/10-07/#y2026</link>
