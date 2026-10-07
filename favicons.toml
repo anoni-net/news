@@ -107,6 +107,10 @@ from = "https://bworldonline.com/wp-content/uploads/2024/09/cropped-bworld_icon-
 icon = "cac.gov.cn-ce2d7d32.png"
 from = "https://www.cac.gov.cn/favicon.ico"
 
+[hosts."calmatters.digitaldemocracy.org"]
+icon = "calmatters.digitaldemocracy.org-33e29a9c.png"
+from = "https://calmatters.digitaldemocracy.org/apple-touch-icon-ca-calmatters.png"
+
 [hosts."canada.ca"]
 icon = "canada.ca-6be11ced.png"
 from = "https://www.canada.ca/favicon.ico"
@@ -245,6 +249,10 @@ from = "https://cdn.digitaltoday.co.kr/image/logo/favicon.ico"
 icon = "discord.com-891ddcd3.png"
 from = "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico"
 
+[hosts."discourse.ubuntu.com"]
+icon = "discourse.ubuntu.com-ce5cea47.png"
+from = "https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/optimized/3X/f/3/f38b9c7e7decc51bc26320541c441bfa28f99298_2_180x180.png"
+
 [hosts."docplanner.com"]
 icon = "docplanner.com-c257216b.png"
 from = "https://www.docplanner.com/favicon/apple-touch-icon.png"
@@ -346,6 +354,10 @@ same_as = "court.gov.cn"
 [hosts."google.cn"]
 icon = "google.cn-b463ba0d.png"
 from = "https://www.google.cn/chrome/static/images/favicons/android-icon-192x192.png"
+
+[hosts."gov.ca.gov"]
+icon = "gov.ca.gov-a08db90b.png"
+from = "https://www.gov.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
 
 [hosts."gov.cn"]
 icon = "gov.cn-1db19351.png"
@@ -463,6 +475,14 @@ from = "https://www.lawfaremedia.org/assets/icons/apple-touch-icon.png"
 icon = "laws.e-gov.go.jp-1d3e542a.png"
 from = "https://laws.e-gov.go.jp/favicon.ico"
 
+[hosts."leg.colorado.gov"]
+icon = "leg.colorado.gov-6606b55f.png"
+from = "https://leg.colorado.gov/assets/apple-touch-icon-c8ff93a2e70b52915d8cc0b6132070db2484e4ea64b52289069a7610a280289e.png"
+
+[hosts."leginfo.legislature.ca.gov"]
+icon = "leginfo.legislature.ca.gov-78ee4ac7.png"
+from = "https://web.archive.org/web/20261007id_/https://leginfo.legislature.ca.gov/favicon.ico"
+
 [hosts."legislation.gov.uk"]
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
@@ -470,6 +490,10 @@ from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-tou
 [hosts."letsencrypt.org"]
 icon = "letsencrypt.org-005fa57a.png"
 from = "https://letsencrypt.org/favicon.ico"
+
+[hosts."lists.debian.org"]
+icon = "lists.debian.org-aef258f5.png"
+from = "https://web.archive.org/web/20261007id_/https://lists.debian.org/favicon.ico"
 
 [hosts."ly.gov.tw"]
 icon = "ly.gov.tw-c284cb73.png"
@@ -704,6 +728,10 @@ from = "https://support.torproject.org/images/favicon/favicon-192x192.png?h=a118
 [hosts."supremecourt.uk"]
 icon = "supremecourt.uk-75b9325d.png"
 from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
+
+[hosts."system76.com"]
+icon = "system76.com-3462b304.png"
+from = "https://cdn11.bigcommerce.com/s-pywjnxrcr2/product_images/system76_logo-fav-32x32.png?t=1711381758"
 
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
