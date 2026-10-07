@@ -79,6 +79,17 @@
     return v.voiceURI || v.name;
   }
 
+  // Apple 的同一個語音會依音質分成好幾個版本，名稱相同，只有 voiceURI 不同，
+  // 例如 iOS 的 com.apple.voice.compact.zh-TW.Meijia 與 com.apple.voice.super-compact.zh-TW.Meijia。
+  // 同名的只留音質最好的那一個
+  function quality(v) {
+    var uri = String(v.voiceURI || "").toLowerCase();
+    if (uri.indexOf(".premium.") >= 0) return 3;
+    if (uri.indexOf(".enhanced.") >= 0) return 2;
+    if (uri.indexOf(".super-compact.") >= 0) return 0;
+    return 1;
+  }
+
   var voices = [];
   var listed = "";
   var voice = null;
@@ -89,39 +100,49 @@
   function pickVoice() {
     var list = synth.getVoices() || [];
     var found = [];
-    var seen = {};
+    var byName = {};
     for (var i = 0; i < list.length; i++) {
       var v = list[i];
       // 線上語音（Chrome 的 Google 語音、Edge 的 Natural 語音）會把全文送到廠商的伺服器，一律不用
       if (v.localService !== true) continue;
       var c = classify(v.lang);
       if (!c) continue;
-      // 有些瀏覽器每次回報清單都把同一個語音多列一次，去掉重複，選單才不會越來越長
-      var id = voiceId(v) + "\n" + v.lang;
-      if (seen[id]) continue;
-      seen[id] = true;
-      found.push({ v: v, c: c, i: i, old: /eloquence/i.test(v.voiceURI || "") ? 1 : 0 });
+      // 同一個語音重複回報、或同名的不同音質版本，依名稱與語言合併成一項。
+      // ids 記下合併掉的 voiceURI，讀者存過其中任何一個，都對應到留下來的這一項
+      var key = v.name + "\n" + v.lang;
+      var same = byName[key];
+      if (same) {
+        same.ids.push(voiceId(v));
+        if (quality(v) > quality(same.v)) same.v = v;
+        continue;
+      }
+      byName[key] = { v: v, c: c, i: i, ids: [voiceId(v)], old: /eloquence/i.test(v.voiceURI || "") ? 1 : 0 };
+      found.push(byName[key]);
     }
-    // 英文的各組 rank 相同，系統預設語音所在的那一組排第一，其餘依組名
+    // 英文的各組 rank 相同，系統預設語音所在的那一組排第一，其餘依組名。
+    // iOS 把每個語音都標成預設，預設分散在好幾組時不採用
     var home = null;
+    var homes = {};
     for (var d = 0; d < found.length; d++) {
-      if (found[d].v["default"]) home = found[d].c.group;
+      if (found[d].v["default"]) homes[found[d].c.group] = true;
     }
+    var homeList = Object.keys(homes);
+    if (homeList.length === 1) home = homeList[0];
     found.sort(function (a, b) {
       return a.c.rank - b.c.rank || (b.c.group === home ? 1 : 0) - (a.c.group === home ? 1 : 0) ||
         (a.c.group < b.c.group ? -1 : a.c.group > b.c.group ? 1 : 0) ||
         a.old - b.old || (b.v["default"] ? 1 : 0) - (a.v["default"] ? 1 : 0) || a.i - b.i;
     });
-    var key = found.map(function (f) { return voiceId(f.v) + "\n" + f.v.lang; }).join("\n");
+    var signature = found.map(function (f) { return voiceId(f.v) + "\n" + f.v.lang; }).join("\n");
     // 清單沒變就不重填選單，讀者正打開選單時不會被關掉
-    if (key === listed) return;
-    listed = key;
+    if (signature === listed) return;
+    listed = signature;
     voices = found.map(function (f) { return f.v; });
 
     var keep = voice ? voiceId(voice) : saved.voice;
     voice = null;
-    for (var j = 0; j < voices.length; j++) {
-      if (!voice && voiceId(voices[j]) === keep) voice = voices[j];
+    for (var j = 0; j < found.length; j++) {
+      if (!voice && found[j].ids.indexOf(keep) >= 0) voice = found[j].v;
     }
     if (!voice) voice = voices[0] || null;
 

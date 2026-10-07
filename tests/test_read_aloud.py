@@ -47,7 +47,7 @@ FAKE = r"""
   function next() {
     if (cur || !queue.length) return;
     cur = queue.shift();
-    window.__spoken.push({ text: cur.text, voice: cur.voice && cur.voice.name, lang: cur.lang, rate: cur.rate });
+    window.__spoken.push({ text: cur.text, voice: cur.voice && cur.voice.name, uri: cur.voice && cur.voice.voiceURI, lang: cur.lang, rate: cur.rate });
     if (cur.onstart) cur.onstart({});
   }
   window.__advance = function () {
@@ -77,6 +77,16 @@ TW_LOCAL_2 = {"name": "Meijia（加強版）", "voiceURI": "com.apple.voice.enha
 CN_LOCAL = {"name": "Tingting", "lang": "zh_CN", "localService": True, "default": False}
 HK_LOCAL = {"name": "Sinji", "lang": "zh-HK", "localService": True, "default": False}
 EN_LOCAL = {"name": "Samantha", "lang": "en-US", "localService": True, "default": False}
+
+# iPhone 15 Pro、iOS 27 的 Safari 實際回報的中文語音（2026-10-08）：每個語音有 compact 與
+# super-compact 兩個版本，名稱相同，全部標成預設
+IOS_VOICES = [
+    {"name": n, "lang": lang, "voiceURI": f"com.apple.voice.{size}.{uri}.{en}", "localService": True, "default": True}
+    for size in ("compact", "super-compact")
+    for n, lang, uri, en in [("美佳", "zh-TW", "zh-TW", "Meijia"), ("婷婷", "zh-CN", "zh-CN", "Tingting"),
+                             ("善怡", "yue-HK", "zh-HK", "Sinji")]
+] + [{"name": "Samantha", "lang": "en-US", "voiceURI": "com.apple.voice.compact.en-US.Samantha",
+      "localService": True, "default": True}]
 
 VISIBLE = "!document.querySelector('[data-read-aloud]').hidden"
 STATE = """({
@@ -204,6 +214,19 @@ async def scenarios(ws_url, base):
         ])
         results["英文分組"] = await b.eval(
             "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
+
+        # iOS：同名的不同音質版本合併成一項，留 compact，存過 super-compact 的也對應得到
+        stash = await b.eval("localStorage.getItem('anoni-news-listen')")
+        await b.eval("localStorage.removeItem('anoni-news-listen')")
+        await b.open(POST, IOS_VOICES)
+        results["iOS 分組"] = await b.eval(
+            "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
+        await b.eval(CLICK)
+        results["iOS 念的語音"] = await b.eval("__spoken[0].uri")
+        await b.eval("localStorage.setItem('anoni-news-listen', JSON.stringify({voice: 'com.apple.voice.super-compact.zh-CN.Tingting', rate: '1'}))")
+        await b.open(POST, IOS_VOICES)
+        results["iOS 存過 super-compact"] = await b.eval("document.querySelector('[data-voice] option:checked').textContent")
+        await b.eval(f"localStorage.setItem('anoni-news-listen', {json.dumps(stash)})")
 
         # 換頁之後沿用
         await b.open("2026/09/zkp-age-verification/", voices)
@@ -334,3 +357,12 @@ def test_choice_carries_to_next_page(results):
 def test_invalid_stored_choice_falls_back(results):
     assert results["存的值無效"] == ["Meijia", "1"]
     assert results["存的值壞掉"] is True
+
+
+def test_ios_quality_variants_merge_into_one(results):
+    s = build.strings()["zh-TW"]
+    assert results["iOS 分組"] == [[s["listen_group_tw"], ["美佳"]], [s["listen_group_cn"], ["婷婷"]],
+                                  [s["listen_group_yue"], ["善怡"]]]
+    # 留音質較好的 compact，不用 super-compact
+    assert results["iOS 念的語音"] == "com.apple.voice.compact.zh-TW.Meijia"
+    assert results["iOS 存過 super-compact"] == "婷婷"
