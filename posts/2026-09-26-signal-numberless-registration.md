@@ -35,9 +35,6 @@ sources:
   - title: Signal Beta
     url: https://support.signal.org/hc/en-us/articles/360007318471-Signal-Beta
     publisher: Signal Support
-watch:
-  - date: 2026-10-07
-    note: Signal Login 是否離開測試版進入正式版，iPhone 版與既有帳號改用的進度
 authors:
   - anoni-net
 ---
