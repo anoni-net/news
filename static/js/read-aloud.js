@@ -9,7 +9,9 @@
   var box = document.querySelector("[data-read-aloud]");
   var synth = window.speechSynthesis;
   if (!box || !synth || typeof window.SpeechSynthesisUtterance !== "function") return;
-  var button = box.querySelector("button");
+  var button = box.querySelector("[data-listen-play]");
+  var toggle = box.querySelector("[data-listen-toggle]");
+  var panel = document.getElementById(toggle.getAttribute("aria-controls"));
   var label = box.querySelector("[data-label]");
   var voiceField = box.querySelector("[data-voice-field]");
   var voiceSelect = box.querySelector("[data-voice]");
@@ -270,6 +272,13 @@
     if (!items) items = collect();
     if (!items.length) return;
     start(state === "paused" ? index : 0);
+  });
+
+  // 「調整」按鈕展開與收起語音、速度與說明。平常收起來，只占一列
+  toggle.addEventListener("click", function () {
+    var open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.hidden = !open;
   });
 
   // 念到一半換語音或速度，從正在念的那一段用新的設定重念

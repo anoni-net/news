@@ -33,16 +33,22 @@
     </p>
 {% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
 {# 朗讀按鈕，規則見 SPEC.md「朗讀按鈕」。預設 hidden，read-aloud.js 找到本機語音才顯示，沒有 JavaScript 時看不到。
+   平常只有「朗讀」與「調整」兩顆按鈕，語音、速度與說明收在調整面板裡，按「調整」才展開。
    包在 aside 裡，閱讀模式不會把按鈕與說明當成正文 #}
 {% if target.read_aloud %}
     <aside class="listen" data-read-aloud hidden>
-      <button type="button" class="listen__button" data-state="idle" data-label-idle="{{ s.listen }}" data-label-playing="{{ s.listen_pause }}" data-label-paused="{{ s.listen_resume }}"{{ track("listen-click") }}><span class="listen__play">{{ icon('volume-high') }}</span><span class="listen__pause">{{ icon('pause') }}</span> <span data-label>{{ s.listen }}</span></button>
-      {# 語音的選項由 read-aloud.js 依裝置上的本機語音填入，依語言分組，組名來自 data-group-*，只有一個時不顯示。速度的選項寫在這裡 #}
-      <span class="listen__options">
-      <label class="listen__field" data-voice-field hidden><span>{{ s.listen_voice }}</span> <select class="listen__select" data-voice data-group-tw="{{ s.listen_group_tw }}" data-group-cn="{{ s.listen_group_cn }}" data-group-zh="{{ s.listen_group_zh }}" data-group-yue="{{ s.listen_group_yue }}"></select></label>
-      <label class="listen__field"><span>{{ s.listen_rate }}</span> <select class="listen__select" data-rate>{% for rate in ["0.8", "1", "1.25", "1.5"] %}<option value="{{ rate }}"{% if rate == "1" %} selected{% endif %}>{{ s.listen_rate_option.format(rate=rate) }}</option>{% endfor %}</select></label>
-      </span>
-      <p class="listen__note">{{ s.listen_note }}</p>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="{{ s.listen }}" data-label-playing="{{ s.listen_pause }}" data-label-paused="{{ s.listen_resume }}"{{ track("listen-click") }}><span class="listen__play">{{ icon('volume-high') }}</span><span class="listen__pause">{{ icon('pause') }}</span> <span data-label>{{ s.listen }}</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel">{{ icon('tune-variant') }} <span>{{ s.listen_options }}</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        {# 語音的選項由 read-aloud.js 依裝置上的本機語音填入，依語言分組，組名來自 data-group-*，只有一個時不顯示。速度的選項寫在這裡 #}
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>{{ s.listen_voice }}</span> <select class="listen__select" data-voice data-group-tw="{{ s.listen_group_tw }}" data-group-cn="{{ s.listen_group_cn }}" data-group-zh="{{ s.listen_group_zh }}" data-group-yue="{{ s.listen_group_yue }}"></select></label>
+          <label class="listen__field"><span>{{ s.listen_rate }}</span> <select class="listen__select" data-rate>{% for rate in ["0.8", "1", "1.25", "1.5"] %}<option value="{{ rate }}"{% if rate == "1" %} selected{% endif %}>{{ s.listen_rate_option.format(rate=rate) }}</option>{% endfor %}</select></label>
+        </div>
+        <p class="listen__note">{{ s.listen_note }}</p>
+      </div>
     </aside>
 {% endif %}
 {# 這件事有更新的導讀時，在標題區就提示，從搜尋或舊連結進來的讀者第一眼就知道內容可能已經不是最新 #}

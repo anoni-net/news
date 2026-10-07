@@ -708,21 +708,37 @@ p {
     font-weight: 600;
 }
 
-/* 朗讀按鈕，在標題區粗線的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」 */
+/* 朗讀按鈕，在標題區粗線的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」。
+   平常只有「朗讀」與「調整」一列，按「調整」才展開語音、速度與說明 */
 .listen {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    /* 小螢幕上按鈕、選單與說明會分成好幾列，列與列之間留得跟左右一樣寬 */
-    gap: 0.75rem;
     margin: 1rem 0 0;
 }
 
-.listen[hidden] {
+.listen[hidden],
+.listen__panel[hidden],
+.listen__field[hidden] {
     display: none;
 }
 
-.listen__button {
+/* 小螢幕上分成好幾列時，列與列之間留得跟左右一樣寬 */
+.listen__bar,
+.listen__panel,
+.listen__options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.listen__panel {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+}
+
+.listen__button,
+.listen__toggle {
     display: inline-flex;
     align-items: center;
     gap: 0.4em;
@@ -738,11 +754,23 @@ p {
     cursor: pointer;
 }
 
-.listen__button:hover {
+/* 「調整」是次要的按鈕，不放底色，展開時才跟面板一樣有底色 */
+.listen__toggle {
+    background: transparent;
+    font-weight: 400;
+}
+
+.listen__toggle[aria-expanded="true"] {
+    background: var(--c-surface);
+}
+
+.listen__button:hover,
+.listen__toggle:hover {
     border-color: var(--c-link);
 }
 
-.listen__button:focus-visible {
+.listen__button:focus-visible,
+.listen__toggle:focus-visible {
     outline: 2px solid var(--c-rule);
     outline-offset: 2px;
 }
@@ -757,23 +785,12 @@ p {
     display: inline;
 }
 
-/* 語音與速度的選單接在按鈕後面，窄螢幕放不下時兩個一起換到下一列 */
-.listen__options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
 .listen__field {
     display: inline-flex;
     align-items: center;
     gap: 0.4em;
     color: var(--c-muted);
     font-size: 0.9375rem;
-}
-
-.listen__field[hidden] {
-    display: none;
 }
 
 .listen__select {

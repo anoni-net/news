@@ -4,7 +4,7 @@
 # 文章末尾那一句話裡，英文的大小寫不同。newsletter_url 是訂閱表單，中文與英文各有一份。
 # 頁面上的 RSS 連結指向同語系的訂閱頁 subscribe/，不寫在這裡。規則見 SPEC.md「RSS」。
 # about 與 reading 是頁尾到關於頁與閱讀說明頁的連結，report 與 report_url 是回報錯誤的連結，三個語系都指向 GitHub 的 issue 表單。
-# listen 開頭的是文章頁的朗讀按鈕、語音與速度的選單和下方的說明，按鈕文字依狀態切換。listen_group_* 是語音選單的分組名稱，
+# listen 開頭的是文章頁的朗讀按鈕、展開調整面板的按鈕（listen_options）、面板裡的語音與速度選單和說明，按鈕文字依狀態切換。listen_group_* 是語音選單的分組名稱，
 # 英文頁的英文語音改用瀏覽器內建的語言名稱。見 SPEC.md「朗讀按鈕」。
 
 ["zh-TW"]
@@ -64,6 +64,7 @@ listen = "朗讀這篇"
 listen_pause = "暫停"
 listen_resume = "繼續朗讀"
 listen_note = "用這台裝置內建的語音朗讀，文章不會傳到其他伺服器。選擇的語音與速度只存在這個瀏覽器裡。"
+listen_options = "調整"
 listen_voice = "語音"
 listen_rate = "速度"
 listen_rate_option = "{rate} 倍"
@@ -164,6 +165,7 @@ listen = "朗读这篇"
 listen_pause = "暂停"
 listen_resume = "继续朗读"
 listen_note = "用这台设备内置的语音朗读，文章不会传到其他服务器。选择的语音与语速只保存在这个浏览器里。"
+listen_options = "调整"
 listen_voice = "语音"
 listen_rate = "语速"
 listen_rate_option = "{rate} 倍"
@@ -264,6 +266,7 @@ listen = "Listen"
 listen_pause = "Pause"
 listen_resume = "Resume"
 listen_note = "Read aloud with a voice built into this device. The text is not sent to any server, and your voice and speed choices stay in this browser."
+listen_options = "Options"
 listen_voice = "Voice"
 listen_rate = "Speed"
 listen_rate_option = "{rate}×"

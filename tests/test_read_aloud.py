@@ -187,6 +187,13 @@ async def scenarios(ws_url, base):
         # 選語音與速度：選單只列本機、語言符合的語音，念到一半換掉就從同一段用新設定重念
         voices = [TW_REMOTE, HK_LOCAL, TW_LOCAL, CN_LOCAL, EN_LOCAL, TW_LOCAL_2]
         await b.open(POST, voices)
+        panel = "[document.querySelector('#listen-panel').hidden, document.querySelector('[data-listen-toggle]').getAttribute('aria-expanded')]"
+        results["面板預設"] = await b.eval(panel)
+        await b.eval("document.querySelector('[data-listen-toggle]').click()")
+        results["面板展開"] = await b.eval(panel)
+        results["展開後看得到選單"] = await b.eval("document.querySelector('[data-voice]').getBoundingClientRect().height > 0")
+        await b.eval("document.querySelector('[data-listen-toggle]').click()")
+        results["面板收起"] = await b.eval(panel)
         results["選單"] = await b.eval("[...document.querySelectorAll('[data-voice] option')].map(o => o.textContent)")
         results["分組"] = await b.eval(
             "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
@@ -366,3 +373,11 @@ def test_ios_quality_variants_merge_into_one(results):
     # 留音質較好的 compact，不用 super-compact
     assert results["iOS 念的語音"] == "com.apple.voice.compact.zh-TW.Meijia"
     assert results["iOS 存過 super-compact"] == "婷婷"
+
+
+def test_options_panel_collapsed_until_toggled(results):
+    # 平常只有朗讀與調整兩顆按鈕，語音、速度與說明按「調整」才展開
+    assert results["面板預設"] == [True, "false"]
+    assert results["面板展開"] == [False, "true"]
+    assert results["展開後看得到選單"] is True
+    assert results["面板收起"] == [True, "false"]
