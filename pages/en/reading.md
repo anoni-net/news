@@ -13,7 +13,7 @@ If you only want the story itself, turn on your browser's reader mode. In Firefo
 
 ## Listening {#listening}
 
-Story pages have a Listen button below the headline. It reads the headline, summary and story aloud with a voice built into your device, and highlights the paragraph being read. Tap Options next to it to pick the voice and speed; your choice stays in this browser for the next story and is not sent to any server. It only uses voices that run on your device, so the text is not sent to any server, and it does not appear when your device has no such voice. Tor Browser turns off the browser's speech feature, and the onion version does not include the button.
+Story pages have a Listen button below the "Also in" line under the headline. It reads the headline, summary and story aloud with a voice built into your device, and highlights the paragraph being read. Tap Options next to it to pick the voice and speed; your choice stays in this browser for the next story and is not sent to any server. It only uses voices that run on your device, so the text is not sent to any server, and it does not appear when your device has no such voice. Tor Browser turns off the browser's speech feature, and the onion version does not include the button.
 
 An iPhone comes with small, basic-quality voices. To download better-sounding ones, go to Settings > Accessibility > Read & Speak > Voices and choose a language and voice. These downloads can be over 100 MB, so connect to Wi-Fi first. Reload the story page afterwards and the Listen button will use the best-quality version.
 
