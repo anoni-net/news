@@ -87,6 +87,10 @@ same_as = "cryptpad.org"
 icon = "blog.mozilla.org-f0f07a35.png"
 from = "https://blog.mozilla.org/wp-content/themes/foxtail/assets/images/favicons/apple-touch-icon.png"
 
+[hosts."blog.talosintelligence.com"]
+icon = "blog.talosintelligence.com-74ce512f.png"
+from = "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/size/w256h256/2022/07/talos_o_square.png"
+
 [hosts."brdr.hkma.gov.hk"]
 icon = "brdr.hkma.gov.hk-e2b6d0cb.png"
 from = "https://www.hkma.gov.hk/favicon.jpg"
@@ -188,6 +192,10 @@ from = "https://cryptpad.org/images/main-favicon.png"
 [hosts."cs.umd.edu"]
 icon = "cs.umd.edu-d1ebf39c.png"
 from = "https://www.cs.umd.edu/sites/all/themes/cs_gogo/favicon.ico"
+
+[hosts."csmonitor.com"]
+icon = "csmonitor.com-bbc4d219.png"
+from = "https://www.csmonitor.com/bundles/csm/images/favicon/apple-touch-icon.png"
 
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
@@ -423,6 +431,10 @@ from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-L
 icon = "irrawaddy.com-eceea825.png"
 from = "https://www.irrawaddy.com/favicon.ico"
 
+[hosts."ithome.com.tw"]
+icon = "ithome.com.tw-bd791a4e.png"
+from = "https://www.ithome.com.tw/favicon.ico"
+
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
@@ -434,6 +446,10 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 [hosts."keepandroidopen.org"]
 icon = "keepandroidopen.org-32ba658c.png"
 from = "https://keepandroidopen.org/favicon.ico"
+
+[hosts."landing.google.com"]
+icon = "landing.google.com-53ae8c75.png"
+from = "https://landing.google.com/favicon.ico"
 
 [hosts."law.moj.gov.tw"]
 icon = "law.moj.gov.tw-ac2a3ab3.png"
@@ -566,6 +582,10 @@ same_as = "gov.cn"
 [hosts."parl.ca"]
 icon = "parl.ca-cc71bd4e.png"
 from = "https://www.parl.ca/favicon.ico"
+
+[hosts."pbs.org"]
+icon = "pbs.org-f7a94f50.png"
+from = "https://www.pbs.org/favicons/favicon-180x180.png"
 
 [hosts."pcpd.org.hk"]
 icon = "pcpd.org.hk-dc297a73.png"
