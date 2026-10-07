@@ -6,7 +6,88 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 07 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>环境捍卫者与技术助长暴力的四国研究</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/apc-frontline-communities/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/apc-frontline-communities</guid>
+<pubDate>Thu, 08 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>APC 预告巴西、肯尼亚、墨西哥与菲律宾四国的研究，记录环境捍卫者遭受的虚假信息、骚扰与监控，以及社区自己的应对方式。完整报告在北京时间 10 月 8 日晚间在线发布。四国以外的读者可以参考的是以家庭与社区为单位的防护做法。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，来自 APC、EFF、GreatFire&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;APC（Association for Progressive Communications，以公民团体为会员的国际组织）在 9 月 22 日发表文章，预告巴西、肯尼亚、墨西哥与菲律宾四国的研究报告。研究对象是反对采矿、能源工程等开采项目的环境捍卫者，许多来自原住民与传统社区，研究记录他们在网上遭受的攻击与社区的应对。四国的完整报告在 UTC 时间 10 月 8 日 13:00（北京时间 21:00）的在线活动发布，需先报名，提供英语、西班牙语与葡萄牙语口译。研究以四国为范围，其他地方的读者可以参考的是社区集体应对骚扰与虚假信息的做法。&lt;/p&gt;
+&lt;p&gt;研究使用「技术助长的暴力」（technology-facilitated violence）一词，指通过数字平台进行、协助或加剧的伤害。肯尼亚的研究记录到的形式有仇恨言论、网络霸凌、监控、虚假信息、冒名、人肉搜索（公开他人的个人信息）与直接的网络攻击。6 月先公开的摘要报告写到，攻击也延伸到当事人的家人、朋友与同事，在社区里造成寒蝉效应。APC 在文章里的看法是，加害者得益于大型平台的设计与算法的运作方式。&lt;/p&gt;
+&lt;p&gt;四国的研究都发现数字鸿沟，网络、设备与使用技能不足，让社区更容易受到虚假信息、诈骗、监控与网络攻击。APC 的文章也写到，在本地媒体大量消失的地方，大型科技公司对互联网服务的主导加重了虚假信息的影响。研究的结论之一，是需要更仔细地评估外来的数字技术与基础设施对这些社区的实际代价，把社区与环境、文化的关系一并纳入考虑。&lt;/p&gt;
+&lt;p&gt;研究从 2024 年开始，与四国 20 多个原住民社区合作。研究采用女性主义的参与式方法，社区的研究者参与每个阶段。报告记录了社区的应对，例如自己经营广播电台、社交媒体账号与内部网络（只在社区里连接的局域网），并订出社区自己的数字保护做法。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;其中一份报告的研究团队发现，在许多情况下，一部手机由家人、邻居与同事共用。团队因此认为数字安全不只看个人，也要看家庭、邻里与社区。受访者能说出的防护做法很少，例如把社交媒体账号设为不公开，以及避开可能招来攻击的话题。报告写到，避开话题本身也是一种噤声。&lt;/p&gt;
+&lt;p&gt;一部手机由好几个人共用时，已登录的 App、通知与短信验证码都是共用的，每个拿起手机的人都能看到。账号是否安全因此不只看机主自己的设置，防护做法需要共用手机的人一起约定。&lt;/p&gt;
+&lt;p&gt;自己经营电台与账号，可以在虚假信息流传时提出社区自己的说法。报告也记录到，有社区电台放到社交平台上的内容被下架，放在别人平台上的内容要受平台的规则约束。自建的内部网络不受平台规则管辖，但只能在社区内部连接，设备、电力与维护也要社区自己负担。要回应在社区以外流传的虚假信息，还是需要能触及社区以外的电台与账号。&lt;/p&gt;
+&lt;p&gt;肯尼亚研究的问卷里，遭受过网络攻击的人有六成向科技公司举报，29% 拉黑对方。在焦点小组（研究者邀请一小群受访者一起座谈）的讨论里，也有不少人没有采取任何行动。原因包括攻击来自匿名或假账号、缺少明确的投诉渠道、担心报复，以及不信任地方当局与执法部门。&lt;/p&gt;
+&lt;p&gt;受访者即使怀疑是谁，也缺少工具、支持或法律途径可以追究。举报与拉黑只能处理平台上已经出现的账号与内容，攻击者换一个账号再来时，受害者又要从头举报一次。&lt;/p&gt;
+&lt;p&gt;同一份报告的建议包括先做安全风险评估，找出威胁与弱点之后制定量身定制的安全计划，并建立社区与同伴的支持网络。想和家人、同事一起规划的人，我们建议从 EFF（美国的数字权利组织电子前哨基金会）监控自我防卫指南的「制定安全计划」（Your Security Plan）开始。指南列出六个问题，包括要保护什么、防范谁、后果多严重、发生的可能性多高、愿意付出多少代价，最后一题是有谁可以一起帮忙。&lt;/p&gt;
+&lt;p&gt;10 月 1 日核查时，指南可以免费阅读、不需要注册，网站有 14 种语言，简体中文版与英文版同样在 2023 年 10 月 27 日更新。EFF 的翻译页另外列出一份社区翻译的正体中文版，内容停在 2019 年。GreatFire（测试中国大陆网址封锁状况的网站）在 7 月到 9 月之间对 &lt;code&gt;ssd.eff.org&lt;/code&gt; 只有一次有结果的测试，连接正常，境内能否稳定访问仍需实际测试确认。&lt;/p&gt;
+&lt;p&gt;指南里也写到，不存在完美的安全方案，每个人在乎的事与能取得的资源都不同。安全计划要与时俱进，有必要经常回顾。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/blog/frontline-communities-identify-and-resist-technology-facilitated-violence-and-disinformation&#34;&gt;Frontline communities identify and resist technology-facilitated violence and disinformation in their territories&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/pubs/summary-reports-resistance-and-resilience-collaborative-responses-online-attacks-environmental&#34;&gt;Summary reports - Resistance and resilience: Collaborative responses to online attacks on environmental defenders&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/event/research-launch-and-discussion-resistance-and-resilience-collaborative-responses-online&#34;&gt;Research launch and discussion - Resistance and Resilience: Collaborative responses to online attacks on environmental defenders in Brazil, Kenya, Mexico and the Philippines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-04&#34;&gt;2026 年 9 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/about&#34;&gt;Who we are&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/your-security-plan&#34;&gt;Your Security Plan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;2023 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/zh-hans/module/your-security-plan&#34;&gt;制定安全计划&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;2023 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/pages/other-translations&#34;&gt;Other Translations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/ssd.eff.org&#34;&gt;Is https://ssd.eff.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>移民与边境管理的监控技术与争议</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/privacy-international-migrant-surveillance/</link>
@@ -2029,102 +2110,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中华人民共和国国务院&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-24&#34;&gt;2023 年 10 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Android 17 QPR1 的 Pixel 独占 API</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/09/android-17-qpr1-pixel-only-apis/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/09/android-17-qpr1-pixel-only-apis</guid>
-<pubDate>Mon, 28 Sep 2026 07:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Android 17 QPR1 新增了给 App 开发者的 API，源代码却没有发布到 AOSP，非 Pixel 的手机与 GrapheneOS 这类系统要等到 12 月的 QPR2。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，来自 Google、GrapheneOS、Android Developers 等 6 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Google 在 9 月 15 日推送给 Pixel 6 以后机型的 Android 17 QPR1，新增了给 App 开发者的 API，版本号是 API level 37.1，例如新的 &lt;code&gt;android.hardware.hid&lt;/code&gt; 包。这些 API 的源代码没有发布到 Android 开源项目（AOSP）。GrapheneOS 的公告写到，Android 3.x 以来还没有过新 API 不经过 AOSP 就推出的情况。非 Pixel 的手机与基于 AOSP 的系统，要等到 12 月的 Android 17 QPR2 才能取得。&lt;/p&gt;
-&lt;p&gt;这跟 Google 的发布方式有关。Google 在 2025 年 3 月向 Android Authority 证实，Android 的开发会全部改在内部进行，内部分支只开放给签了 Google 移动服务（GMS）授权的公司。AOSP 网站也写明，从 2026 年起只在第二季度与第四季度发布源代码。Android 16 的 QPR1 晚了几周才进 AOSP，到 9 月 27 日为止，AOSP 上 Android 17 只有正式版的分支，没有 QPR1。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 的公告写到，他们在 QPR1 推出前就把自家的代码移植好了，但到 9 月 27 日为止还没有取得发布的许可，因此改成把 Pixel 的固件、内核驱动与硬件抽象层从 QPR1 移回 Android 17。9 月 17 日的版本先移植了 QPR1 的移动网络调制解调器固件，19 日再补上对应的运营商设置。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 另外写到，9 月的 Pixel 更新公告里有几项通用 Android 组件的补丁，没有出现在同月的 Android 安全公告，其他厂商要等 12 月的 QPR2。GrapheneOS 也写到，9 月 1 日向 Google 索取的 GPL 源代码，隔了两周多才取得。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;Android 的开放建立在 AOSP 上，没有 GMS 授权的厂商与 GrapheneOS 等项目，都从同一份源代码构建系统。源代码改成半年发布一次之后，Pixel 先取得新 API 与部分安全补丁，其他设备的用户要多等几个月。&lt;/p&gt;
-&lt;p&gt;在中国大陆，Google 的开发者文档写到，为中国开发 App 要考虑没有预装 Google Play 服务的手机。华为的 HarmonyOS NEXT 据 CNBC 报道已不再使用 Android 的开源代码，AOSP 的发布时程对它没有直接影响。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 以 OSI 认可的开源授权发布，只支持 Pixel，9 月仍陆续推出新版本。GrapheneOS 写到，可以用逆向工程的方式提前补上 Pixel 公告里的补丁，也预期支持即将推出的 Motorola 新机会比支持 Pixel 容易，因为会取得官方提供的固件与驱动程序。&lt;/p&gt;
-&lt;p&gt;想刷 GrapheneOS 保护隐私的人，在 Motorola 新机推出之前只能选 Pixel，官方支持的机型列在 GrapheneOS 的 FAQ。官方的网页安装程序需要一台至少有 2GB 可用内存与 32GB 可用空间的电脑和一根 USB 线，浏览器要用 Chrome、Edge 这类官方支持的浏览器，安装说明是英文。可能由运营商锁定销售的机型，要先联网让原厂系统确认手机没有被锁定，才能解锁 bootloader。解锁 bootloader 与安装系统都会清除手机上的所有数据，而且换成 GrapheneOS 之后，要等到 QPR2 才有原厂系统已经提供的 QPR1 新 API。&lt;/p&gt;
-&lt;p&gt;用其他品牌手机的人不必做任何设置，QPR1 新增的 API 与部分补丁要等手机厂商推送 QPR2 之后才会收到。12 月可以留意 Google 发布 QPR2 时有没有把 QPR1 的 API 与补丁一起放进 AOSP，以及 GrapheneOS 与其他厂商何时取得。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117282080803799576&#34;&gt;Android 17 QPR1 is the first release since Android Honeycomb (3.x) adding new APIs for app developers without a release to the Android Open Source Project&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/sdk/api_diff/37.1/changes/changes-summary&#34;&gt;Android API Differences Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/09/15/android-17-qpr1-pixel/&#34;&gt;Google rolling out Android 17 QPR1 for Pixel&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.androidauthority.com/android-16-qpr1-source-code-available-3614853/&#34;&gt;Android 16 QPR1&amp;#39;s source code is now available on AOSP&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Authority&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-11&#34;&gt;2025 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.androidauthority.com/google-android-development-aosp-3538503/&#34;&gt;Exclusive: Google will develop the Android OS fully in private, here&amp;#39;s why&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Authority&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-26&#34;&gt;2025 年 3 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases&#34;&gt;GrapheneOS changelog&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/training/wearables/creating-app-china&#34;&gt;Create Wear OS apps for China&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnbc.com/2024/11/26/huawei-mate-70-launch-harmonyos-next-details-specs-price-.html&#34;&gt;Huawei Mate 70 launch: HarmonyOS Next details, specs, price&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CNBC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-26&#34;&gt;2024 年 11 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web install&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

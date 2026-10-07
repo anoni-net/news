@@ -6,7 +6,94 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 07 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>A four-country study of technology-facilitated violence against environmental defenders</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/apc-frontline-communities/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/apc-frontline-communities</guid>
+<pubDate>Thu, 08 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>APC previews research from Brazil, Kenya, Mexico and the Philippines on the disinformation, harassment and surveillance facing environmental defenders, and on how their communities respond. The full reports launch online on 8 October. Readers elsewhere can borrow the approach of protecting households and communities together.</description>
+<content:encoded>&lt;p&gt;Based on 9 sources, including APC, Human Rights Watch, EFF&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;APC (the Association for Progressive Communications, an international network of civil society organisations) published a preview on 22 September of research from Brazil, Kenya, Mexico and the Philippines. It covers environmental defenders resisting mining, energy and other extractive projects, many of them from Indigenous and traditional communities, and the online attacks they face. The full reports launch at an online event at 13:00 UTC on 8 October (21:00 Taipei time), which requires registration and offers interpretation in English, Spanish and Portuguese. The research is limited to those four countries; what readers elsewhere can take from it is how communities respond to harassment and disinformation together.&lt;/p&gt;
+&lt;p&gt;The studies use the term technology-facilitated violence for harm committed, assisted or intensified through digital platforms. The Kenyan study documents hate speech, cyberbullying, surveillance, disinformation, impersonation, doxing and direct cyberattacks. The summary reports, released in June, note that attacks reach defenders&#39; families, friends and colleagues too, creating a chilling effect. APC&#39;s article argues that perpetrators benefit from the design and algorithms of major platforms, and that Big Tech&#39;s dominance of internet services has contributed to the impact of disinformation where local media have been decimated.&lt;/p&gt;
+&lt;p&gt;All four studies found a digital divide, with limited internet access, devices and skills leaving communities more exposed to disinformation, fraud, surveillance and attacks. The research began in 2024 with more than 20 Indigenous communities across the four countries, using feminist participatory methods with community researchers at every stage. Responses documented include communities running their own radio station, social media accounts and intranet, and setting their own digital protection practices. One conclusion is that the true cost of outside digital technologies and infrastructure for such communities needs better evaluation, taking into account their relationship with their environment and culture.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The research team behind one of the reports found that in many cases a single phone is shared among family members, neighbours and co-workers, so they treat digital security as a matter for the household, neighbourhood and community, not only the individual. Participants named only a few protective practices, such as setting social media profiles to private and avoiding topics that could provoke attacks, which the report notes is itself a form of silencing.&lt;/p&gt;
+&lt;p&gt;On a shared phone, logged-in apps, notifications and SMS verification codes are visible to whoever picks it up. Whether an account is safe then depends on more than the owner&#39;s own settings, and the people sharing the phone need to agree on how they protect it.&lt;/p&gt;
+&lt;p&gt;Running a community radio station or social media accounts lets a community answer disinformation in its own voice. The same research records a case where a community radio station&#39;s content was taken down by a platform, and anything hosted on someone else&#39;s platform is subject to that platform&#39;s rules. A self-hosted intranet is outside those rules, but it only works inside the community, and the community carries the cost of equipment, power and maintenance. Answering disinformation that circulates beyond the community still takes a radio station or accounts that reach people outside it.&lt;/p&gt;
+&lt;p&gt;In the Philippines, the one Asian country in the study, the summary report describes red-tagging, labelling people as communist insurgents or terrorists without substantial evidence, as a central mechanism of repression that social media amplifies. According to Human Rights Watch, the Philippine Supreme Court declared on 8 May 2024 that red-tagging threatens the rights to life, liberty and security. The ruling overturned a lower court&#39;s dismissal of a petition for a writ of amparo, a court remedy that can include protection orders.&lt;/p&gt;
+&lt;p&gt;In the Kenyan survey, 60% of defenders who experienced online attacks reported them to technology companies and 29% blocked the perpetrators. In focus group discussions, a significant number said they took no action, citing attackers hidden behind anonymous or fake accounts, the absence of clear reporting channels, fear of retaliation and distrust of local authorities and police. Even when they suspected who was responsible, they lacked the tools, support or legal mechanisms to pursue it. Reporting and blocking can only deal with accounts and content already on a platform, so when an attacker returns under a new account, the target has to start reporting again.&lt;/p&gt;
+&lt;p&gt;The same report recommends a security risk assessment that identifies threats and vulnerabilities, followed by a security plan suited to the defenders&#39; circumstances, alongside community and peer support networks. For anyone planning with family and co-workers, we suggest starting with EFF&#39;s Surveillance Self-Defense guide Your Security Plan. It walks through six questions: what you want to protect, from whom, how bad the consequences of failure would be, how likely they are, how much trouble you are willing to take, and who your allies are.&lt;/p&gt;
+&lt;p&gt;As of 1 October, the guide is free and needs no account, and the site is available in 14 languages, including Simplified Chinese, updated on the same date as the English version, 27 October 2023. EFF&#39;s translations page also links to a community translation in Traditional Chinese last updated in 2019. GreatFire, which tests website blocking in mainland China, recorded a single conclusive test of &lt;code&gt;ssd.eff.org&lt;/code&gt; between July and September, and it connected normally.&lt;/p&gt;
+&lt;p&gt;The guide also notes that there is no perfect option for security, since people differ in their priorities, concerns and access to resources. A plan can change as your situation changes, so it is worth revisiting often.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/blog/frontline-communities-identify-and-resist-technology-facilitated-violence-and-disinformation&#34;&gt;Frontline communities identify and resist technology-facilitated violence and disinformation in their territories&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/pubs/summary-reports-resistance-and-resilience-collaborative-responses-online-attacks-environmental&#34;&gt;Summary reports - Resistance and resilience: Collaborative responses to online attacks on environmental defenders&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;8 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/event/research-launch-and-discussion-resistance-and-resilience-collaborative-responses-online&#34;&gt;Research launch and discussion - Resistance and Resilience: Collaborative responses to online attacks on environmental defenders in Brazil, Kenya, Mexico and the Philippines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-04&#34;&gt;4 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/about&#34;&gt;Who we are&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hrw.org/news/2024/05/08/philippines-supreme-court-rejects-red-tagging&#34;&gt;Philippines: Supreme Court Rejects &amp;#39;Red-Tagging&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Human Rights Watch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-05-08&#34;&gt;8 May 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/your-security-plan&#34;&gt;Your Security Plan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;27 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/zh-hans/module/your-security-plan&#34;&gt;制定安全计划&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;27 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/pages/other-translations&#34;&gt;Other Translations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/ssd.eff.org&#34;&gt;Is https://ssd.eff.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Surveillance technologies in migration and border control</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/privacy-international-migrant-surveillance/</link>
@@ -2012,100 +2099,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中华人民共和国国务院&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-24&#34;&gt;24 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Pixel-only APIs in Android 17 QPR1</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/android-17-qpr1-pixel-only-apis/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/android-17-qpr1-pixel-only-apis</guid>
-<pubDate>Mon, 28 Sep 2026 07:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Android 17 QPR1 adds new APIs for app developers without releasing the source to AOSP, so non-Pixel phones and systems such as GrapheneOS wait until QPR2 in December.</description>
-<content:encoded>&lt;p&gt;Based on 11 sources, including Google, GrapheneOS, Android Developers&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Android 17 QPR1, which Google began rolling out on 15 September to every Pixel from the Pixel 6 through the Pixel 11 series, adds new APIs for app developers at API level 37.1, including a new &lt;code&gt;android.hardware.hid&lt;/code&gt; package. Its source code has not been released to the Android Open Source Project (AOSP). According to GrapheneOS, no release since Android 3.x has added new APIs without going through AOSP. Non-Pixel phones and AOSP-based systems will get them with Android 17 QPR2 in December.&lt;/p&gt;
-&lt;p&gt;GrapheneOS&#39;s announcement says it had ported its code to QPR1 before the release but as of 27 September did not have permission to ship it, so it is backporting Pixel firmware, kernel drivers and HALs to Android 17 instead. It also says the September Pixel Update Bulletin carries patches to standard Android components that were missing from the September Android Security Bulletin, and that a GPL source request it made on 1 September took more than two weeks to be answered.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;This follows from how Google now ships Android. In March 2025 Google confirmed to Android Authority that Android development would move fully in private, with the internal branch restricted to companies holding a Google Mobile Services (GMS) licence. The AOSP site states that from 2026 source code is published only in Q2 and Q4. Android 16 QPR1 still reached AOSP, weeks late. As of 27 September, AOSP has only the Android 17 release branch and nothing for QPR1. Anyone building from AOSP, whether a phone maker without a GMS licence or a project like GrapheneOS, now works months behind Pixels, and non-Google makers who want patches on time need Google&#39;s security preview access, which GrapheneOS says it has through another manufacturer.&lt;/p&gt;
-&lt;p&gt;Across Asia, the effect depends on what a phone is built on. Google&#39;s own developer guide for China tells app makers to account for handsets without Google Play services pre-installed. Huawei&#39;s HarmonyOS NEXT, according to CNBC, reportedly no longer uses Android&#39;s open-source code at all, so the AOSP schedule does not bind it. For the other Android makers in the region, GrapheneOS writes that non-Google manufacturers can ship the yearly and QPR2 releases along with security backports. The QPR1 APIs therefore reach their phones only with QPR2 in December, and after that whenever each manufacturer pushes the update.&lt;/p&gt;
-&lt;p&gt;For privacy-focused users the options are narrow. GrapheneOS is released under OSI-approved open source licences, supports only Pixels officially, and has kept shipping updates through September, including a 17 September build that backported QPR1 modem firmware and a 19 September build adding matching carrier settings. GrapheneOS&#39;s posts say it can ship some of the withheld patches early by reverse engineering them. The project also writes that Pixels are now significantly harder to support than many other devices, and that upcoming Motorola phones will be easier because it will receive official firmware and driver code.&lt;/p&gt;
-&lt;p&gt;Until those Motorola phones arrive, anyone who wants GrapheneOS needs a Pixel, and the supported models are listed in the GrapheneOS FAQ. The official web installer needs a computer with at least 2GB of free memory and 32GB of free storage, a USB cable and a supported browser such as Chrome or Edge, and its instructions are in English. On models that carriers can sell locked, enabling OEM unlocking needs an internet connection so the stock OS can check the phone was not sold locked. Unlocking the bootloader and installing the OS both wipe all data on the phone, and until QPR2 arrives, GrapheneOS lacks the QPR1 APIs that the stock OS already has.&lt;/p&gt;
-&lt;p&gt;People on non-Pixel Android phones have nothing to change in the meantime. In December, watch whether QPR2 brings the QPR1 APIs and patches to AOSP, and how soon GrapheneOS and other manufacturers ship them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://source.android.com/&#34;&gt;Android Open Source Project&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117282080803799576&#34;&gt;Android 17 QPR1 is the first release since Android Honeycomb (3.x) adding new APIs for app developers without a release to the Android Open Source Project&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/sdk/api_diff/37.1/changes/changes-summary&#34;&gt;Android API Differences Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/09/15/android-17-qpr1-pixel/&#34;&gt;Google rolling out Android 17 QPR1 for Pixel&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.androidauthority.com/android-16-qpr1-source-code-available-3614853/&#34;&gt;Android 16 QPR1&amp;#39;s source code is now available on AOSP&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Authority&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-11&#34;&gt;11 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.androidauthority.com/google-android-development-aosp-3538503/&#34;&gt;Exclusive: Google will develop the Android OS fully in private, here&amp;#39;s why&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Authority&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-26&#34;&gt;26 March 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases&#34;&gt;GrapheneOS changelog&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/training/wearables/creating-app-china&#34;&gt;Create Wear OS apps for China&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnbc.com/2024/11/26/huawei-mate-70-launch-harmonyos-next-details-specs-price-.html&#34;&gt;Huawei Mate 70 launch: HarmonyOS Next details, specs, price&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CNBC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-26&#34;&gt;26 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web install&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
