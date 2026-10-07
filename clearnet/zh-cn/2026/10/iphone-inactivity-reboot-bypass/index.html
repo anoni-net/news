@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/iphone-inactivity-reboot-bypass/">
 <link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/iphone-inactivity-reboot-bypass/">
 <meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/iphone-inactivity-reboot-bypass/">
-<link rel="stylesheet" href="/news/css/news.css?v=d91c5ec696">
+<link rel="stylesheet" href="/news/css/news.css?v=7be8a2159f">
 <link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="https://anoni.net/news/zh-cn/feed.xml">
 <meta property="og:site_name" content="anoni.net 新闻导读">
@@ -197,12 +197,13 @@
   ]
 }
 </script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
 <script data-anoni="before-send">
 (function () {
   // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
   var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
   // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
-  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
+  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "listen-click": {}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
 
   function scrubUrl(url) {
     if (typeof url !== "string" || !url) return url;
@@ -309,6 +310,19 @@
       <span>导读：anoni.net 社区</span>
     </p>
 <nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/news/2026/10/iphone-inactivity-reboot-bypass/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/news/en/2026/10/iphone-inactivity-reboot-bypass/" hreflang="en" lang="en">English</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="朗读这篇" data-label-playing="暂停" data-label-paused="继续朗读" data-anoni-event="listen-click"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>朗读这篇</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>调整</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>语音</span> <select class="listen__select" data-voice data-group-tw="普通话（台湾）" data-group-cn="普通话（中国）" data-group-zh="普通话" data-group-yue="粤语"></select></label>
+          <label class="listen__field"><span>语速</span> <select class="listen__select" data-rate><option value="0.8">0.8 倍</option><option value="1" selected>1 倍</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label>
+        </div>
+        <p class="listen__note">用这台设备内置的语音朗读，文章不会传到其他服务器。选择的语音与语速只保存在这个浏览器里。<a href="/news/zh-cn/reading/#listening">朗读的完整说明</a></p>
+      </div>
+    </aside>
   </header>
   <div class="story__body content">
 <p>404 Media 在 10 月 1 日的报道写到，他们取得了一段 Magnet Forensics 的视频，该公司的 Graykey 是卖给执法部门、用来解锁手机并提取数据的工具。视频里的 Magnet 员工说，Graykey Preserve 设备与 Graykey 的 Evidence Preservation Mode 能让扣押的 iPhone 停留在较容易提取数据的状态，即使手机因各种原因重启或断电也一样。404 Media 的报道把这项技术写成用来绕过 iOS 18.1 起的“自动重启”（英文报道多称 Inactivity Reboot）。据 9to5Mac 引述 404 Media 的内容，这是专给执法人员的培训视频，看起来在 2025 年初制作。</p>

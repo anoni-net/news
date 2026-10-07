@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="https://anoni.net/news/en/about/">
 <link rel="alternate" hreflang="x-default" href="https://anoni.net/news/about/">
 <meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/about/">
-<link rel="stylesheet" href="/news/css/news.css?v=d91c5ec696">
+<link rel="stylesheet" href="/news/css/news.css?v=7be8a2159f">
 <link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="https://anoni.net/news/zh-cn/feed.xml">
 <meta property="og:site_name" content="anoni.net 新闻导读">
@@ -31,7 +31,7 @@
   // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
   var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
   // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
-  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
+  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "listen-click": {}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
 
   function scrubUrl(url) {
     if (typeof url !== "string" || !url) return url;
@@ -184,9 +184,9 @@
 <h2 id="display">字号、配色与阅读模式</h2>
 <p>字号、深色模式与阅读模式的调整方法见<a href="../reading/#display">阅读说明</a>。</p>
 <h2 id="listening">朗读</h2>
-<p>用浏览器与设备内置的功能朗读导读，方法见<a href="../reading/#listening">阅读说明</a>。</p>
+<p>用文章页的朗读按钮或浏览器与设备内置的功能朗读导读，方法见<a href="../reading/#listening">阅读说明</a>。</p>
 <h2 id="privacy">阅读量与隐私</h2>
-<p>本站用自建的 Umami 统计阅读量，不使用 cookie，浏览器开启「请勿追踪」或 GPC 时不发送。除了页面浏览，也统计三种点击：原文区块的链接、订阅入口（记录渠道是 RSS、电子报或 Bluesky，位置在刊头、文章末尾或页脚）、首页的文章链接（记录来自焦点或时间轴）。点击事件不包含链接的网址。页面不需要 JavaScript，也不加载站外的字体与资源。onion 版本不加载统计，地址在每一页的页脚。</p>
+<p>本站用自建的 Umami 统计阅读量，不使用 cookie，浏览器开启「请勿追踪」或 GPC 时不发送。除了页面浏览，也统计四种点击：原文区块的链接、订阅入口（记录渠道是 RSS、电子报或 Bluesky，位置在刊头、文章末尾或页脚）、首页的文章链接（记录来自焦点或时间轴）、文章页的朗读按钮（每次浏览只记第一次）。点击事件不包含链接的网址。阅读页面不需要 JavaScript，也不加载站外的字体与资源。onion 版本不加载统计，地址在每一页的页脚。</p>
 <h2 id="license">许可</h2>
 <p>文章以 CC BY 4.0 许可发布，欢迎转载与引用，请注明出处。引用的原文版权属于原作者。</p>
   </div>

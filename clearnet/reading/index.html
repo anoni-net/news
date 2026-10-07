@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>閱讀說明 | anoni.net 新聞導讀</title>
-<meta name="description" content="調整字級、深色模式與閱讀模式，以及用瀏覽器與裝置內建的功能朗讀導讀。">
+<meta name="description" content="調整字級、深色模式與閱讀模式，以及用文章頁的朗讀按鈕或裝置內建的功能朗讀導讀。">
 <link rel="canonical" href="https://anoni.net/news/reading/">
 <link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/reading/">
 <link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/">
 <link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/">
 <link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/">
 <meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/reading/">
-<link rel="stylesheet" href="/news/css/news.css?v=d91c5ec696">
+<link rel="stylesheet" href="/news/css/news.css?v=7be8a2159f">
 <link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="https://anoni.net/news/feed.xml">
 <meta property="og:site_name" content="anoni.net 新聞導讀">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="website">
 <meta property="og:title" content="閱讀說明">
-<meta property="og:description" content="調整字級、深色模式與閱讀模式，以及用瀏覽器與裝置內建的功能朗讀導讀。">
+<meta property="og:description" content="調整字級、深色模式與閱讀模式，以及用文章頁的朗讀按鈕或裝置內建的功能朗讀導讀。">
 <meta property="og:url" content="https://anoni.net/news/reading/">
 <meta property="og:image" content="https://anoni.net/news/og.png?v=970cfc6f1d">
 <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
   // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
   var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
   // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
-  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
+  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "listen-click": {}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
 
   function scrubUrl(url) {
     if (typeof url !== "string" || !url) return url;
@@ -130,16 +130,18 @@
 <article class="site-page">
   <header class="story__head">
     <h1 class="story__title">閱讀說明</h1>
-    <p class="story__dek">調整字級、深色模式與閱讀模式，以及用瀏覽器與裝置內建的功能朗讀導讀。</p>
+    <p class="story__dek">調整字級、深色模式與閱讀模式，以及用文章頁的朗讀按鈕或裝置內建的功能朗讀導讀。</p>
 <nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/reading/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/reading/" hreflang="en" lang="en">English</a></nav>
   </header>
   <div class="story__body content">
-<p>字級、配色、閱讀模式與朗讀都使用瀏覽器與裝置內建的功能，本站沒有另外放設定選單與朗讀按鈕。兩者都需要 JavaScript，設定選單還要把讀者的選擇存在瀏覽器裡。頁面本身不需要 JavaScript，Tor Browser 的安全等級設成「最安全」時，文章的文字一樣能正常閱讀。</p>
+<p>字級、配色與閱讀模式都使用瀏覽器與裝置內建的功能，本站沒有另外放設定選單。文章頁有一個朗讀按鈕，只在瀏覽器支援、裝置上也有本機語音時出現。頁面本身不需要 JavaScript，Tor Browser 的安全等級設成「最安全」時，文章的文字一樣能正常閱讀。</p>
 <h2 id="display">字級、配色與閱讀模式</h2>
 <p>電腦的瀏覽器可以在設定裡調大預設字級，整個網站會一起放大，也可以直接縮放頁面。在 iPhone 的 Safari 裡可以單獨調整網頁的文字大小，Android 的 Chrome 則在設定的無障礙項目裡有文字縮放。裝置切換成深色模式時，網站也會換成深色的配色。</p>
 <p>只想看文章本身時，可以開啟瀏覽器的閱讀模式。Firefox 的閱讀畫面只會保留文章頁的導讀，略過原文清單與頁尾。</p>
 <h2 id="listening">朗讀</h2>
-<p>想用聽的讀者，可以使用瀏覽器與作業系統內建的朗讀功能。iPhone 的 Safari 有「聆聽網頁」，文章頁的結構讓它只念導讀本身，跳過原文清單與頁尾。這個選項會依頁面與裝置的語言決定是否出現，看不到時可以到「設定 &gt; 輔助使用 &gt; 閱讀與朗讀」開啟「朗讀螢幕」，它會連同頁首與頁尾一起念。部分瀏覽器的朗讀使用線上語音，文章內容會送到瀏覽器廠商的伺服器，在意的話請選擇裝置本機的語音。</p>
+<p>文章頁標題區的「其他語言」下方有「朗讀這篇」按鈕，會用裝置內建的語音從標題念到導讀觀點，正在念的段落加上底色。按旁邊的「調整」可以選語音與速度，選擇只存在這個瀏覽器裡，換頁之後沿用，不會傳到伺服器。按鈕只使用裝置本機的語音，文章不會傳到其他伺服器，裝置上沒有本機語音時不會出現。Tor Browser 關掉了瀏覽器的語音功能，onion 版本也不放這個按鈕。</p>
+<p>iPhone 預設只裝了體積較小的語音，音質比較普通。到「設定 &gt; 輔助使用 &gt; 閱讀與朗讀 &gt; 聲音」選擇語言與聲音，可以下載音質較好的版本。檔案可能超過 100 MB，建議連上 Wi-Fi 再下載。下載完重新整理文章頁，朗讀按鈕就會改用音質最好的那個版本。</p>
+<p>沒看到按鈕時，可以使用瀏覽器與作業系統內建的朗讀功能。iPhone 的 Safari 有「聆聽網頁」，文章頁的結構讓它只念導讀本身，跳過原文清單與頁尾。這個選項會依頁面與裝置的語言決定是否出現，看不到時可以到「設定 &gt; 輔助使用 &gt; 閱讀與朗讀」開啟「朗讀螢幕」，它會連同頁首與頁尾一起念。部分瀏覽器的朗讀使用線上語音，文章內容會送到瀏覽器廠商的伺服器，在意的話請選擇裝置本機的語音。</p>
   </div>
 </article>
 </main>

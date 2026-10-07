@@ -708,6 +708,155 @@ p {
     font-weight: 600;
 }
 
+/* 朗讀按鈕，在「其他語言」那一行的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」。
+   平常只有「朗讀」與「調整」一列，按「調整」才展開語音、速度與說明。
+   按鈕出現時，標題區的粗線從語系那一行移到這裡，粗線之後直接接內文。
+   沒有 JavaScript 或找不到本機語音時按鈕是 hidden，粗線留在原處 */
+.listen {
+    /* 按鈕的觸控範圍往上撐 0.375rem，語系連結往下也有 0.375rem，留 0.75rem 兩者才不重疊 */
+    margin: 0.75rem 0 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+}
+
+.story__langs:has(+ .listen:not([hidden])) {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.listen[hidden],
+.listen__panel[hidden],
+.listen__field[hidden] {
+    display: none;
+}
+
+/* 小螢幕上分成好幾列時，列與列之間留得跟左右一樣寬 */
+.listen__bar,
+.listen__panel,
+.listen__options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.listen__panel {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+}
+
+.listen__bar {
+    gap: 0.5rem;
+}
+
+/* 兩顆按鈕一樣大，字級跟語系那一行相同。外觀只有 2rem 高，
+   觸控範圍用 ::before 往上下撐到 --touch，手指照樣點得到 */
+.listen__button,
+.listen__toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    min-height: 2rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-surface);
+    color: var(--c-link);
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.listen__button::before,
+.listen__toggle::before {
+    content: "";
+    position: absolute;
+    top: calc((2rem - var(--touch)) / 2);
+    bottom: calc((2rem - var(--touch)) / 2);
+    left: 0;
+    right: 0;
+}
+
+/* 「調整」是次要的按鈕，不放底色，展開時才跟面板一樣有底色 */
+.listen__toggle {
+    background: transparent;
+    font-weight: 400;
+}
+
+.listen__toggle[aria-expanded="true"] {
+    background: var(--c-surface);
+}
+
+.listen__button:hover,
+.listen__toggle:hover {
+    border-color: var(--c-link);
+}
+
+.listen__button:focus-visible,
+.listen__toggle:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+/* 圖示依狀態切換：沒在念時是喇叭，念的時候是暫停 */
+.listen__pause,
+.listen__button[data-state="playing"] .listen__play {
+    display: none;
+}
+
+.listen__button[data-state="playing"] .listen__pause {
+    display: inline;
+}
+
+.listen__field {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.listen__select {
+    min-height: var(--touch);
+    max-width: 9.5em;
+    padding: 0 0.5rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font: inherit;
+}
+
+.listen__select:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+.listen__note {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* 連到閱讀說明的連結夾在小字裡，跟語系那一行一樣只加上下的留白放大觸控範圍 */
+.listen__note a {
+    display: inline-block;
+    padding: 0.375rem 0;
+}
+
+/* 正在念的段落，底色跟原文區塊相同。用 outline 往外延伸底色，不改變版面，文字不會跳動 */
+.is-reading {
+    background: var(--c-surface);
+    outline: 0.375rem solid var(--c-surface);
+}
+
 /* 同一事件的導讀：整條事件線由舊到新，日期在上、標題在下，本篇不連結 */
 .thread {
     margin: 2rem 0 0;

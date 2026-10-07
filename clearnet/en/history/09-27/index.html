@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/09-27/">
 <link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/09-27/">
 <meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/09-27/">
-<link rel="stylesheet" href="/news/css/news.css?v=d91c5ec696">
+<link rel="stylesheet" href="/news/css/news.css?v=7be8a2159f">
 <link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="anoni.net News" href="https://anoni.net/news/en/feed.xml">
 <meta property="og:site_name" content="anoni.net News">
@@ -32,7 +32,7 @@
   // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
   var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
   // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
-  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
+  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "listen-click": {}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
 
   function scrubUrl(url) {
     if (typeof url !== "string" || !url) return url;
