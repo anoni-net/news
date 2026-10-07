@@ -10,7 +10,7 @@
 
 ### CN-1　國際聯網只能走國家指定的出入口信道，適用單位與個人
 
-- 事實：《計算機信息網絡國際聯網管理暫行規定》第六條規定，直接國際聯網的計算機信息網絡必須使用國家公用電信網提供的國際出入口信道，任何單位和個人不得自行建立或使用其他信道。條文沒有出現 VPN 一詞，適用對象寫明是「單位和個人」
+- 事實：《計算機信息網絡國際聯網管理暫行規定》第六條規定，直接國際聯網的電腦網路必須使用國家公用電信網提供的國際出入口信道，任何單位和個人不得自行建立或使用其他信道。條文沒有出現 VPN 一詞，適用對象寫明是「單位和個人」 <!-- docs-style-lint: disable-line -->
 - 照錄：「计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。」、「任何单位和个人不得自行建立或者使用其他信道进行国际联网。」
 - 文件：《中华人民共和国计算机信息网络国际联网管理暂行规定》，1996 年 2 月 1 日国务院令第 195 号发布，1997 年 5 月 20 日修正
 - 網址：<https://www.cac.gov.cn/1996-02/02/c_126468621.htm>（國家網信辦網站轉載，另存 WIPO Lex 的副本 <https://www.wipo.int/wipolex/en/text/199708>，未逐句比對）
@@ -269,9 +269,9 @@
 
 ### HK-4　國安法實施細則附表 4，警方可要求服務商移除或封鎖危害國家安全的訊息
 
-- 事實：《香港特別行政區維護國家安全法第四十三條實施細則》（2020 年第 139 號法律公告，2020-07-06 訂立，2020-07-07 實施）附表 4 讓警務處處長在保安局局長批准下授權指定人員，要求發布者移除訊息、要求平台服務商、主機服務商，在前兩者不遵從或不可行時要求網絡服務商採取「禁制行動」。禁制行動包含移除訊息或限制、停止他人的存取。服務商不遵從的罰則是罰款十萬元與監禁六個月。適用範圍是相當可能構成危害國家安全罪行的電子訊息，與版權無關，由警方行政要求，條文沒有要求法院裁定
-- 照錄：「network service provider (網絡服務商) means a person that supplies an internet service, or a specified network service, to the public or a section of the public.」
-- 照錄：「specified network service (指明網絡服務) means a carriage service that enables end-users to access an electronic platform via a connection tunnelled through one or more electronic communication networks.」（附表 4 第 4(2) 條）
+- 事實：《香港特別行政區維護國家安全法第四十三條實施細則》（2020 年第 139 號法律公告，2020-07-06 訂立，2020-07-07 實施）附表 4 讓警務處處長在保安局局長批准下授權指定人員，要求發布者移除訊息、要求平台服務商、主機服務商，在前兩者不遵從或不可行時要求網路服務供應商採取「禁制行動」。禁制行動包含移除訊息或限制、停止他人的存取。服務商不遵從的罰則是罰款十萬元與監禁六個月。適用範圍是相當可能構成危害國家安全罪行的電子訊息，與版權無關，由警方行政要求，條文沒有要求法院裁定
+- 照錄：「network service provider (網絡服務商) means a person that supplies an internet service, or a specified network service, to the public or a section of the public.」 <!-- docs-style-lint: disable-line -->
+- 照錄：「specified network service (指明網絡服務) means a carriage service that enables end-users to access an electronic platform via a connection tunnelled through one or more electronic communication networks.」（附表 4 第 4(2) 條） <!-- docs-style-lint: disable-line -->
 - 照錄：「If a service provider fails to comply with a requirement issued under section 7 or 9(3) of this Schedule, the service provider commits an offence and is liable on conviction on indictment to a fine of $100,000 and to imprisonment for 6 months.」（附表 4 第 12(1) 條）
 - 註記：條文沒有出現 VPN 一詞，「經由隧道連線存取電子平台」的描述是否對應 VPN 類服務，是本筆記的推論，引用時不要寫成條文明指 VPN。2020 年公布版本之後有沒有修訂與目前生效版本，沒有核對
 - 文件：Implementation Rules for Article 43 of the Law of the People's Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region（L.N. 139 of 2020），Schedule 4 Rules on Removing Messages Endangering National Security and on Requiring Assistance
@@ -280,7 +280,7 @@
 
 ### HK-5　香港對 VPN 的專門法律規範：查不到
 
-- 事實：本次沒有找到規範 VPN 業者或使用者的香港法例或政府聲明。僅有的相關法條文字是 HK-4 對「指明網絡服務」的定義。搜尋到的資料多是 VPN 業者與媒體的二手說法，沒有取得可引用的官方說明
+- 事實：本次沒有找到規範 VPN 業者或使用者的香港法例或政府聲明。僅有的相關法條文字是 HK-4 對 specified network service 的定義。搜尋到的資料多是 VPN 業者與媒體的二手說法，沒有取得可引用的官方說明
 - 一手與二手都沒有可引用的來源
 
 ## 未能取得或需要再確認的項目
