@@ -119,6 +119,10 @@ from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
 
+[hosts."chinadigitaltimes.net"]
+icon = "chinadigitaltimes.net-eb24e633.png"
+from = "https://chinadigitaltimes.net/wp-content/themes/CDT-EN/images/favicon.png"
+
 [hosts."chinalawtranslate.com"]
 icon = "chinalawtranslate.com-bb85a1d1.png"
 from = "https://www.chinalawtranslate.com/wp-content/uploads/2015/06/cropped-bao80-300x300.jpg"
@@ -178,6 +182,10 @@ from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico
 icon = "courtlistener.com-9d872fbc.png"
 from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e6d.png"
 
+[hosts."cpr.dk"]
+icon = "cpr.dk-c81c529e.png"
+from = "https://cdn9.cpr.dk/cpr/media/12019/cpr-favicon.png?width=196&height=196"
+
 [hosts."cronkitenews.azpbs.org"]
 icon = "cronkitenews.azpbs.org-fc11a7ee.png"
 from = "https://i0.wp.com/cronkitenews.azpbs.org/wp-content/uploads/2026/02/favicon1.png?fit=85%2C85&ssl=1"
@@ -208,6 +216,10 @@ from = "https://curia.europa.eu/site/plugins/CURIA2MainPlugin/images/icons/favic
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
+
+[hosts."datatilsynet.dk"]
+icon = "datatilsynet.dk-17e6925e.png"
+from = "https://cdn.datatilsynet.dk/datatilsynet/media/7887/favicon.png?width=196&height=196"
 
 [hosts."dawo.community"]
 icon = "dawo.community-cf7a3078.png"
@@ -245,6 +257,10 @@ from = "https://cdn.digitaltoday.co.kr/image/logo/favicon.ico"
 icon = "discord.com-891ddcd3.png"
 from = "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico"
 
+[hosts."discourse.ubuntu.com"]
+icon = "discourse.ubuntu.com-ce5cea47.png"
+from = "https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/optimized/3X/f/3/f38b9c7e7decc51bc26320541c441bfa28f99298_2_180x180.png"
+
 [hosts."docplanner.com"]
 icon = "docplanner.com-c257216b.png"
 from = "https://www.docplanner.com/favicon/apple-touch-icon.png"
@@ -254,6 +270,10 @@ same_as = "cryptpad.org"
 
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
+
+[hosts."documentation.ubuntu.com"]
+icon = "documentation.ubuntu.com-23ab024d.png"
+from = "https://documentation.ubuntu.com/favicon.ico"
 
 [hosts."doj.gov.hk"]
 icon = "doj.gov.hk-54bc34f1.png"
@@ -523,6 +543,9 @@ from = "https://www.mohw.gov.tw/xslGip/Unit001/images/favicon.ico"
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
 
+[hosts."mopsov.twse.com.tw"]
+same_as = "twse.com.tw"
+
 [hosts."mouse.dev"]
 icon = "mouse.dev-69b682f3.png"
 from = "https://mouse.dev/favicon-192.png"
@@ -590,6 +613,10 @@ from = "https://www.pbs.org/favicons/favicon-180x180.png"
 [hosts."pcpd.org.hk"]
 icon = "pcpd.org.hk-dc297a73.png"
 from = "https://www.pcpd.org.hk/favicon.ico"
+
+[hosts."pdpc.gov.sg"]
+icon = "pdpc.gov.sg-8c36e1a3.png"
+from = "https://www.pdpc.gov.sg/favicon.ico"
 
 [hosts."pib.gov.in"]
 icon = "pib.gov.in-fffa8d37.png"
@@ -709,6 +736,10 @@ from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
 icon = "techcrunch.com-72f4a02d.png"
 from = "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=192"
 
+[hosts."technologyreview.com"]
+icon = "technologyreview.com-d5d95b15.png"
+from = "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93ddf5feb5405dd4cc.ico"
+
 [hosts."techspot.com"]
 icon = "techspot.com-5fd11eb4.png"
 from = "https://www.techspot.com/images/ts3mobile-badge.png"
@@ -736,6 +767,14 @@ from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/app
 [hosts."theregister.com"]
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
+
+[hosts."twse.com.tw"]
+icon = "twse.com.tw-3d3dcc50.png"
+from = "https://web.archive.org/web/20261007id_/https://twse.com.tw/favicon.ico"
+
+[hosts."ufm.dk"]
+icon = "ufm.dk-7092b75f.png"
+from = "https://ufm.dk/media/5ljdlabz/favicon.png?rmode=pad&width=180&height=180&format=png&bgcolor=transparent&v=1dc4cd92ab32530"
 
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
