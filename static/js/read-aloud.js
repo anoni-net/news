@@ -43,18 +43,36 @@
     if (rateSelect.options[r].value === String(saved.rate)) rateSelect.value = saved.rate;
   }
 
-  // 語音的語言代碼各家寫法不同：zh-TW、zh_TW、cmn-Hant-TW、yue-HK。數字越小越優先，-1 是不能用。
-  // 中文頁先找同一種字的普通話語音，再找另一種字的普通話，粵語排最後
-  function rank(tag) {
-    tag = String(tag || "").toLowerCase().replace(/_/g, "-");
+  // 語音的語言代碼各家寫法不同：zh-TW、zh_TW、cmn-Hant-TW、yue-HK。回傳選單上的分組與排序，
+  // rank 越小越優先，null 是不能用。中文頁先列同一種字的普通話語音，再列另一種字的普通話，粵語排最後
+  function classify(lang) {
+    var tag = String(lang || "").toLowerCase().replace(/_/g, "-");
     var main = tag.split("-")[0];
-    if (pageEnglish) return main === "en" ? 0 : -1;
-    if (main === "yue" || /-(hk|mo)\b/.test(tag)) return 3;
-    if (main !== "zh" && main !== "cmn") return -1;
+    if (pageEnglish) return main === "en" ? { rank: 0, group: tag } : null;
+    if (main === "yue" || /-(hk|mo)\b/.test(tag)) return { rank: 3, group: "yue" };
+    if (main !== "zh" && main !== "cmn") return null;
     var hans = /-(hans|cn|sg)\b/.test(tag);
     var hant = /-(hant|tw)\b/.test(tag);
-    if (pageHans) return hans ? 0 : hant ? 1 : 2;
-    return hant ? 0 : hans ? 1 : 2;
+    var group = hant ? "tw" : hans ? "cn" : "zh";
+    var order = pageHans ? { cn: 0, tw: 1, zh: 2 } : { tw: 0, cn: 1, zh: 2 };
+    return { rank: order[group], group: group };
+  }
+
+  // 語音的名稱多半是人名，看不出是哪一種語言，選單依語言分組。中文的組名寫在 HTML 的 data-group-*，
+  // 英文用瀏覽器內建的語言名稱，例如 American English、British English
+  var englishNames = null;
+  try {
+    englishNames = new Intl.DisplayNames(["en"], { type: "language" });
+  } catch (err) {
+    // 舊瀏覽器沒有 Intl.DisplayNames，組名改用語言代碼
+  }
+  function groupLabel(group) {
+    if (!pageEnglish) return voiceSelect.getAttribute("data-group-" + group) || group;
+    try {
+      return (englishNames && englishNames.of(group)) || group;
+    } catch (err) {
+      return group;
+    }
   }
 
   function voiceId(v) {
@@ -66,20 +84,35 @@
   var voice = null;
   var state = "idle";
 
-  // 可選的語音：本機、語言符合頁面，依 rank 排序，同一級裡系統預設的排前面
+  // 可選的語音：本機、語言符合頁面，依 rank 排序。同一級裡系統預設的排前面，
+  // Apple 的 Eloquence 語音（Eddy、Flo 這一組）是舊式的合成音，排在同一組的最後
   function pickVoice() {
     var list = synth.getVoices() || [];
     var found = [];
+    var seen = {};
     for (var i = 0; i < list.length; i++) {
+      var v = list[i];
       // 線上語音（Chrome 的 Google 語音、Edge 的 Natural 語音）會把全文送到廠商的伺服器，一律不用
-      if (list[i].localService !== true) continue;
-      var r = rank(list[i].lang);
-      if (r >= 0) found.push({ v: list[i], r: r, i: i });
+      if (v.localService !== true) continue;
+      var c = classify(v.lang);
+      if (!c) continue;
+      // 有些瀏覽器每次回報清單都把同一個語音多列一次，去掉重複，選單才不會越來越長
+      var id = voiceId(v) + "\n" + v.lang;
+      if (seen[id]) continue;
+      seen[id] = true;
+      found.push({ v: v, c: c, i: i, old: /eloquence/i.test(v.voiceURI || "") ? 1 : 0 });
+    }
+    // 英文的各組 rank 相同，系統預設語音所在的那一組排第一，其餘依組名
+    var home = null;
+    for (var d = 0; d < found.length; d++) {
+      if (found[d].v["default"]) home = found[d].c.group;
     }
     found.sort(function (a, b) {
-      return a.r - b.r || (b.v["default"] ? 1 : 0) - (a.v["default"] ? 1 : 0) || a.i - b.i;
+      return a.c.rank - b.c.rank || (b.c.group === home ? 1 : 0) - (a.c.group === home ? 1 : 0) ||
+        (a.c.group < b.c.group ? -1 : a.c.group > b.c.group ? 1 : 0) ||
+        a.old - b.old || (b.v["default"] ? 1 : 0) - (a.v["default"] ? 1 : 0) || a.i - b.i;
     });
-    var key = found.map(function (f) { return voiceId(f.v); }).join("\n");
+    var key = found.map(function (f) { return voiceId(f.v) + "\n" + f.v.lang; }).join("\n");
     // 清單沒變就不重填選單，讀者正打開選單時不會被關掉
     if (key === listed) return;
     listed = key;
@@ -88,17 +121,24 @@
     var keep = voice ? voiceId(voice) : saved.voice;
     voice = null;
     for (var j = 0; j < voices.length; j++) {
-      if (voiceId(voices[j]) === keep) voice = voices[j];
+      if (!voice && voiceId(voices[j]) === keep) voice = voices[j];
     }
     if (!voice) voice = voices[0] || null;
 
     voiceSelect.textContent = "";
-    for (var k = 0; k < voices.length; k++) {
+    var optgroup = null;
+    for (var k = 0; k < found.length; k++) {
+      if (!optgroup || optgroup.getAttribute("data-group") !== found[k].c.group) {
+        optgroup = document.createElement("optgroup");
+        optgroup.setAttribute("data-group", found[k].c.group);
+        optgroup.label = groupLabel(found[k].c.group);
+        voiceSelect.appendChild(optgroup);
+      }
       var option = document.createElement("option");
       option.value = String(k);
       option.textContent = voices[k].name;
       option.selected = voices[k] === voice;
-      voiceSelect.appendChild(option);
+      optgroup.appendChild(option);
     }
     // 只有一個可選時不顯示語音選單
     voiceField.hidden = voices.length < 2;

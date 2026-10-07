@@ -40,6 +40,10 @@ FAKE = r"""
   window.__spoken = [];
   const queue = [];
   let cur = null;
+  // 模擬每次回報都把同一批語音多列一次的瀏覽器：__grow() 之後 getVoices() 多一份重複的清單
+  let copies = 1;
+  const listeners = [];
+  window.__grow = function () { copies += 1; listeners.forEach(f => f()); };
   function next() {
     if (cur || !queue.length) return;
     cur = queue.shift();
@@ -54,7 +58,7 @@ FAKE = r"""
   };
   window.__queued = function () { return queue.length + (cur ? 1 : 0); };
   Object.defineProperty(window, "speechSynthesis", { configurable: true, value: {
-    getVoices() { return voices; },
+    getVoices() { let out = []; for (let i = 0; i < copies; i++) out = out.concat(voices); return out; },
     speak(u) { queue.push(u); next(); },
     cancel() {
       queue.length = 0;
@@ -62,7 +66,7 @@ FAKE = r"""
       cur = null;
       if (u && u.onerror) u.onerror({ error: "interrupted" });
     },
-    addEventListener() {},
+    addEventListener(type, f) { if (type === "voiceschanged") listeners.push(f); },
   }});
 })();
 """
@@ -174,6 +178,10 @@ async def scenarios(ws_url, base):
         voices = [TW_REMOTE, HK_LOCAL, TW_LOCAL, CN_LOCAL, EN_LOCAL, TW_LOCAL_2]
         await b.open(POST, voices)
         results["選單"] = await b.eval("[...document.querySelectorAll('[data-voice] option')].map(o => o.textContent)")
+        results["分組"] = await b.eval(
+            "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
+        await b.eval("__grow(); __grow(); __grow()")
+        results["重複回報之後"] = await b.eval("[...document.querySelectorAll('[data-voice] option')].map(o => o.textContent)")
         results["選單顯示"] = await b.eval("!document.querySelector('[data-voice-field]').hidden")
         await b.eval(CLICK)
         await b.eval("__advance()")
@@ -184,6 +192,18 @@ async def scenarios(ws_url, base):
         results["換設定時的段落"] = await b.eval(f"__spoken[{before} - 1].text")
         results["儲存"] = await b.eval("JSON.parse(localStorage.getItem('anoni-news-listen'))")
         results["其他鍵"] = await b.eval("Object.keys(localStorage)")
+
+        # 英文頁依瀏覽器內建的語言名稱分組，系統預設語音所在的那一組排第一
+        await b.open("en/" + POST, [
+            {"name": "Karen", "lang": "en-AU", "localService": True},
+            {"name": "Daniel", "lang": "en-GB", "localService": True, "default": True},
+            {"name": "Samantha", "lang": "en-US", "localService": True},
+            {"name": "Eddy", "voiceURI": "com.apple.eloquence.en-US.Eddy", "lang": "en-US", "localService": True},
+            {"name": "Alex", "lang": "en-US", "localService": True},
+            TW_LOCAL,
+        ])
+        results["英文分組"] = await b.eval(
+            "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
 
         # 換頁之後沿用
         await b.open("2026/09/zkp-age-verification/", voices)
@@ -276,6 +296,21 @@ def test_voice_menu_lists_local_voices_for_page_language(results):
     assert results["選單顯示"] is True
     # 台灣的兩個在前，接著中國的普通話，粵語最後。線上語音與英文語音不列
     assert results["選單"] == ["Meijia", "Meijia（加強版）", "Tingting", "Sinji"]
+
+
+def test_voice_menu_is_grouped_by_language(results):
+    s = build.strings()["zh-TW"]
+    # 語音名稱多半是人名，分組才看得出是哪一種語言
+    assert results["分組"] == [[s["listen_group_tw"], ["Meijia", "Meijia（加強版）"]],
+                               [s["listen_group_cn"], ["Tingting"]],
+                               [s["listen_group_yue"], ["Sinji"]]]
+    assert results["英文分組"] == [["British English", ["Daniel"]],
+                                 ["Australian English", ["Karen"]],
+                                 ["American English", ["Samantha", "Alex", "Eddy"]]]
+
+
+def test_repeated_voice_reports_do_not_grow_menu(results):
+    assert results["重複回報之後"] == results["選單"]
 
 
 def test_change_voice_and_rate_while_playing(results):

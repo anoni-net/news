@@ -4,7 +4,8 @@
 # 文章末尾那一句話裡，英文的大小寫不同。newsletter_url 是訂閱表單，中文與英文各有一份。
 # 頁面上的 RSS 連結指向同語系的訂閱頁 subscribe/，不寫在這裡。規則見 SPEC.md「RSS」。
 # about 與 reading 是頁尾到關於頁與閱讀說明頁的連結，report 與 report_url 是回報錯誤的連結，三個語系都指向 GitHub 的 issue 表單。
-# listen 開頭的是文章頁的朗讀按鈕、語音與速度的選單和下方的說明，按鈕文字依狀態切換，見 SPEC.md「朗讀按鈕」。
+# listen 開頭的是文章頁的朗讀按鈕、語音與速度的選單和下方的說明，按鈕文字依狀態切換。listen_group_* 是語音選單的分組名稱，
+# 英文頁的英文語音改用瀏覽器內建的語言名稱。見 SPEC.md「朗讀按鈕」。
 
 ["zh-TW"]
 # 社群的用字是「正體中文」，不寫「繁體中文」，見文件站「為什麼我們用「正體中文」而非「繁體中文」」
@@ -66,6 +67,10 @@ listen_note = "用這台裝置內建的語音朗讀，文章不會傳到其他�
 listen_voice = "語音"
 listen_rate = "速度"
 listen_rate_option = "{rate} 倍"
+listen_group_tw = "華語（台灣）"
+listen_group_cn = "華語（中國）"
+listen_group_zh = "華語"
+listen_group_yue = "粵語"
 publisher = "出處"
 source_date = "原文日期"
 source_one = "原文來自 {publishers}"
@@ -162,6 +167,10 @@ listen_note = "用这台设备内置的语音朗读，文章不会传到其他�
 listen_voice = "语音"
 listen_rate = "语速"
 listen_rate_option = "{rate} 倍"
+listen_group_tw = "普通话（台湾）"
+listen_group_cn = "普通话（中国）"
+listen_group_zh = "普通话"
+listen_group_yue = "粤语"
 publisher = "出处"
 source_date = "原文日期"
 source_one = "原文来自 {publishers}"
@@ -258,6 +267,10 @@ listen_note = "Read aloud with a voice built into this device. The text is not s
 listen_voice = "Voice"
 listen_rate = "Speed"
 listen_rate_option = "{rate}×"
+listen_group_tw = "Mandarin (Taiwan)"
+listen_group_cn = "Mandarin (China)"
+listen_group_zh = "Mandarin"
+listen_group_yue = "Cantonese"
 publisher = "Publisher"
 source_date = "Published"
 source_one = "From {publishers}"
