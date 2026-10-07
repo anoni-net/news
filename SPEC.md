@@ -17,7 +17,7 @@
 
 | 原則 | 怎麼驗證 |
 |---|---|
-| 不依賴 JavaScript | 閱讀與導覽都不需要 JavaScript。產物裡可執行的 `<script>` 只有 clearnet 的流量統計（見「流量統計」），onion 一支都沒有。`type="application/ld+json"` 的結構化資料不會被執行，不算在內 |
+| 不依賴 JavaScript | 閱讀與導覽都不需要 JavaScript。產物裡可執行的 `<script>` 只有 clearnet 的流量統計（見「流量統計」）與文章頁的朗讀按鈕（見「朗讀按鈕」），onion 一支都沒有。`type="application/ld+json"` 的結構化資料不會被執行，不算在內 |
 | 不對外請求 | 產物的 `src`、`<link href>`、CSS 的 `url()` 只能指向站內路徑。例外同上，clearnet 的流量統計從 anoni.net 底下的子網域載入 |
 | clearnet 與 onion 分開產出 | onion 產物裡沒有任何 `https://anoni.net` 開頭的連結 |
 | 網址一經公開就不改 | 網址合約，移除或改名會讓 CI 失敗 |
@@ -564,7 +564,7 @@ Material 的 blog 設定 `post_url_format: "{date}/{slug}"` 加 `post_url_date_f
 
 clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網首頁的產品卡片也照這個寫法列出。onion 用子網域，讓每個服務在 onion 那一側各自獨立，跟 `docs.<onion 位址>` 一致。
 
-用路徑的代價是 news 跟官網首頁、文件站共用同一個 origin，瀏覽器的 localStorage 與 IndexedDB 彼此讀得到。文件站有幾支工具把資料存在瀏覽器裡，news 不放任何 JavaScript，同源也讀不到那些資料。日後 news 要加入 JavaScript 時，先重新評估這一點，必要時改成子網域。
+用路徑的代價是 news 跟官網首頁、文件站共用同一個 origin，瀏覽器的 localStorage 與 IndexedDB 彼此讀得到。文件站有幾支工具把資料存在瀏覽器裡，news 自己的 JavaScript 只有朗讀按鈕一支。2026-10 加入它時評估過，腳本是本 repo 裡的一個檔案，沒有第三方相依。瀏覽器儲存只用 localStorage 的 `anoni-news-listen` 一個鍵，存讀者選的語音與速度，不讀其他鍵，也不碰 cookie 與 IndexedDB，測試會檢查程式碼只用這個鍵。文件站的工具讀得到這個鍵，內容只有語音名稱與速度，所以維持用路徑。日後要加入會讀其他鍵、存更多資料或載入第三方程式碼的 JavaScript（例如站內搜尋）時，先重新評估這一點，必要時改成子網域。
 
 ### 網址合約
 
@@ -632,6 +632,7 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 | `robots.txt` | 由官網 repo 產生，列出 `/news/sitemap.xml` | 本站產生，列出 onion 版的 sitemap |
 | `<meta http-equiv="onion-location">` | 有 | 無 |
 | 流量統計 | 待定（見「待決定的事」） | 無 |
+| 文章頁的朗讀按鈕 | 有（見「朗讀按鈕」） | 無，產物裡沒有任何 `.js` 檔 |
 
 改寫在 Markdown 轉成 HTML 之後，對 `href` 屬性做，不對內文做字串取代，避免改到程式碼區塊或照錄的網址文字。改寫規則寫在 `site.toml` 的 `rewrites`，由上往下比對，第一條比對到的就套用，所以 `/news/`、`/docs/` 與 `form.` 排在官網那條前面。
 
@@ -648,22 +649,23 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 - 設定寫在 `site.toml` 的 `[targets.clearnet.analytics]`，網站是 Umami 上的 `anoni-net-news`，跟文件站分開，兩邊的報告不會混在一起
 - `data-domains` 限定 `anoni.net`，本機預覽與 CI 的版面檢查不會送出資料
-- 送出前經過 `templates/_analytics.html.j2` 的過濾。送頁面瀏覽與下面三種點擊事件，不送效能資料。網址只留 `utm_source`、`utm_medium`、`utm_campaign`、`utm_content`，其餘 query 與 `#` 之後的片段拿掉。螢幕尺寸捨去到百位。瀏覽器開啟「請勿追蹤」或 Global Privacy Control 時整筆不送
-- 頁尾寫明本站用 Umami 計算閱讀量與點擊、不使用 cookie、onion 版本不載入，關於頁列出三種點擊事件與它們帶的值
+- 送出前經過 `templates/_analytics.html.j2` 的過濾。送頁面瀏覽與下面四種點擊事件，不送效能資料。網址只留 `utm_source`、`utm_medium`、`utm_campaign`、`utm_content`，其餘 query 與 `#` 之後的片段拿掉。螢幕尺寸捨去到百位。瀏覽器開啟「請勿追蹤」或 Global Privacy Control 時整筆不送
+- 頁尾寫明本站用 Umami 計算閱讀量與點擊、不使用 cookie、onion 版本不載入，關於頁列出四種點擊事件與它們帶的值
 
-點擊事件用來回答三個問題：讀者讀完導讀會不會點原文、哪個訂閱入口有人用、首頁的焦點有沒有作用。2026-10 上線前只送頁面瀏覽，一週約 230 次瀏覽。照這個量推估，單篇的點擊多半是個位數，所以只看全站合計，一個月後再評估是否保留。
+點擊事件用來回答四個問題：讀者讀完導讀會不會點原文、哪個訂閱入口有人用、首頁的焦點有沒有作用、朗讀按鈕有沒有人用。2026-10 上線前只送頁面瀏覽，一週約 230 次瀏覽。照這個量推估，單篇的點擊多半是個位數，所以只看全站合計，一個月後再評估是否保留。
 
 | 事件 | 放在哪裡 | 帶的值 |
 |---|---|---|
 | `source-click` | 文章頁原文區塊的每一個連結 | 不帶值，從事件附帶的頁面網址可以判斷是哪一篇 |
 | `subscribe-click` | 首頁刊頭、文章末的訂閱列、頁尾的 RSS、電子報與 Bluesky | `channel`：`rss`、`newsletter`、`bluesky`。`where`：`masthead`、`article`、`footer` |
 | `home-story-click` | 首頁第一頁的文章標題，第二頁起與封存頁不送 | `section`：`featured`、`timeline` |
+| `listen-click` | 文章頁的朗讀按鈕，一次瀏覽只記第一次點擊，暫停與繼續不再計算 | 不帶值 |
 
 - 事件與每個欄位能帶的值寫在 `build.py` 的 `ANALYTICS_EVENTS`，模板用 `track()` 產生 `data-anoni-event` 屬性，送出前的過濾也讀同一份清單。名稱不在清單、欄位多了或少了、值不在清單裡的事件整筆不送，送出的事件也不帶連結的網址
 - 點擊由 `_analytics.html.j2` 裡的 listener 呼叫 `umami.track()`，不擋換頁。不用 Umami 內建的 `data-umami-event`。它會先擋下換頁，等統計請求完成才跳轉，而且沒有逾時。統計端點連不上時，讀者點原文或訂閱連結會停在原頁。Umami 送出時帶 `keepalive`，換頁之後請求照樣完成
 - onion 與 RSS 不輸出這些屬性。`build.py --check` 逐個標籤檢查，沒有載入流量統計的產物只要出現 `data-anoni-event` 就失敗，clearnet 的事件名稱、欄位與值要跟清單完全相符
 
-`build.py --check` 對 script 的檢查只放行兩支：帶 `data-anoni="before-send"` 的內嵌過濾，以及來源、網站 ID、`data-domains` 與 `data-before-send` 都跟 `site.toml` 相符的 Umami。onion 產物照舊不能有任何可執行的 script，也不能出現 `aa.anoni.net`。 <!-- docs-style-lint: disable-line -->
+`build.py --check` 對 script 的檢查放行流量統計的兩支：帶 `data-anoni="before-send"` 的內嵌過濾，以及來源、網站 ID、`data-domains` 與 `data-before-send` 都跟 `site.toml` 相符的 Umami。另外放行朗讀按鈕那一支，條件見「朗讀按鈕」。onion 產物照舊不能有任何可執行的 script，也不能出現 `aa.anoni.net`。 <!-- docs-style-lint: disable-line -->
 
 ## 頁面
 
@@ -674,7 +676,7 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 
 ### 閱讀模式與朗讀
 
-想用聽的讀者，靠瀏覽器與作業系統內建的功能，例如 Safari 的閱讀器、Chrome 與 Edge 的朗讀、螢幕閱讀器。news 不自己放朗讀按鈕，那需要 JavaScript，而 Chrome 桌機版預設的中文語音是線上語音，全文會送到 Google 的伺服器。
+想用聽的讀者，可以用瀏覽器與作業系統內建的功能，例如 Safari 的閱讀器、Chrome 與 Edge 的朗讀、螢幕閱讀器。不知道這些功能的讀者，可以用文章頁的朗讀按鈕（見「朗讀按鈕」）。
 
 這些功能多半先把正文抽出來再念，文章頁的標記要讓它們抽得乾淨：
 
@@ -684,6 +686,25 @@ clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪
 - 導讀歷史的日期頁正文只有一兩段，中文常低於 Readability 的 500 字門檻。低於門檻時它會放寬條件重抓，`role="navigation"` 跟著失效，2026-10-02 曾把語系連結、原文清單與「寫於、導讀」那一行都抓進正文，署名也抓成兩行。所以日期頁的語系連結與每一段下方的原文、署名都包在 `<aside>` 裡，Readability 不論門檻一律移除。`<aside>` 放在 `<article>` 或 `<section>` 裡、不加名稱，輔助科技不會把它當成地標。署名改由 `<meta name="author">` 提供。索引頁的語系連結與日曆格子同樣包在 `<aside>` 裡，閱讀模式只留各月的日期加標題清單
 
 iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出現。2026-09-28 在介面設成中文的 iPhone 上實測，正體中文的文章頁有這個選項，同一篇的英文版沒有。英文版在 Readability 的判定下比中文版更容易抽出正文，所以判斷是 Safari 依語言決定，跟本站的標記無關。閱讀說明頁的「朗讀」一節因此另外寫了不受語言限制的「朗讀螢幕」，設定路徑照 Apple 支援頁各語系的用字：「輔助使用 > 閱讀與朗讀」、「无障碍 > 阅读与朗读」、「Accessibility > Read & Speak」。
+
+### 朗讀按鈕
+
+瀏覽器與裝置內建的朗讀功能，很多讀者不知道在哪裡。文章頁在標題區下方放一個朗讀按鈕，給這些讀者使用，已經在用內建功能的讀者不受影響。2026-10-08 起「不依賴 JavaScript」的原則放寬到這支腳本，條件是只用裝置本機的語音。
+
+- 用瀏覽器的 Web Speech API（`speechSynthesis`），只挑 `localService` 為 `true` 的語音。Chrome 的 Google 語音與 Edge 的 Natural 語音在雲端合成，選了就會把全文送到廠商的伺服器，一律不用。找不到符合頁面語系的本機語音時不顯示按鈕，也不退回瀏覽器預設的語音
+- 語音的語言依頁面語系挑選。正體中文頁先找正體或台灣的普通話語音，再找簡體或中國的普通話語音，粵語排最後。簡體中文頁先找簡體或中國的普通話語音。英文頁只用英文語音。同一級裡有多個時，優先用系統預設的那一個
+- 按鈕在 HTML 裡預設是 `hidden`，腳本確認瀏覽器支援、也找到本機語音之後才顯示。沒有 JavaScript、用 Tor Browser（它關掉了語音 API）或找不到本機語音的讀者，頁面跟加入按鈕之前相同
+- 按鈕放在標題區「其他語言」那一行的下方。按鈕出現時，標題區的粗線從語系那一行移到按鈕下方，粗線之後直接接內文。按鈕是 `hidden` 時粗線留在原處，用 `:has()` 判斷，不支援的瀏覽器會多出一條線，不影響閱讀
+- 朗讀按鈕旁有一顆「調整」按鈕（`aria-expanded`），按下去才展開語音、速度與說明的面板，平常只占一列。兩顆按鈕一樣大，字級跟語系那一行相同，外觀 2rem 高，觸控範圍用 `::before` 撐到 2.75rem（見「小螢幕」）。面板裡可以選語音與速度。語音選單列出所有符合條件的本機語音，排序同上，只有一個時不顯示。語音的名稱多半是人名，看不出是哪一種語言，選單依語言分組（`<optgroup>`），中文的組名寫在 `strings.toml` 的 `listen_group_*`，例如「華語（台灣）」、「粵語」，英文用瀏覽器內建的語言名稱，例如 American English。Apple 的 Eloquence 語音（Eddy、Flo 這一組）是舊式的合成音，排在同一組的最後。同一個語音可能被列好幾次。2026-10-08 在 iPhone 15 Pro、iOS 27 的 Safari 實測，每個中文語音都有 `compact` 與 `super-compact` 兩個版本，名稱相同，只有 `voiceURI` 不同，而且全部標成系統預設。所以依名稱與語言合併成一項，留音質最好的版本（premium、enhanced、compact、super-compact 依序），讀者存過被合併掉的那個 `voiceURI` 也對應得到。系統預設分散在好幾組時，不拿來決定英文各組的順序。速度有 0.8、1、1.25、1.5 倍，選項寫在模板裡。念到一半換掉，從正在念的那一段用新的設定重念
+- 選擇存在 localStorage 的 `anoni-news-listen`，內容是語音的 `voiceURI` 與速度，換頁之後沿用。存的語音不在這台裝置上、速度不在選項裡，或讀不到儲存（無痕模式、關掉儲存）時，回到預設值。按鈕下方的說明寫明選擇只存在這個瀏覽器裡
+- 朗讀標題、副標與內文，範圍跟閱讀模式抽出的正文相同，程式碼區塊跳過，表格一列念成一句。正在念的段落加上底色
+- 所有段落在點擊當下一次排進佇列，iOS 只允許使用者操作觸發的朗讀。暫停用 `cancel()`，繼續時從同一段重新念。各家瀏覽器的 `pause()` 行為不一致，Android 上等於停止
+- 兩顆按鈕、面板與說明都包在 `<aside>` 裡，閱讀模式不會把它們當成正文（見「閱讀模式與朗讀」）。說明寫明用的是裝置內建的語音、文章不會傳到其他伺服器，最後連到閱讀說明頁的「朗讀」一節（`reading/#listening`），那裡有下載音質較好的語音與看不到按鈕時的做法
+- 腳本是 `static/js/read-aloud.js`，由 `site.toml` 的 `read_aloud` 決定哪個目標放，目前只有 clearnet。onion 不放，產物裡連檔案都沒有。腳本不發出網路請求，沒有第三方相依，儲存只用上面那一個鍵，測試會檢查程式碼裡沒有其他儲存與網路請求的名稱
+- `build.py --check` 只放行站內這一支：`src` 是 `js/read-aloud.js` 加上目前內容的版本號，而且標上 `data-anoni="read-aloud"`。onion 的產物出現它，或任何一個產物出現其他 `.js` 檔，就檢查失敗
+- 第一次點擊記成 `listen-click` 事件（見「流量統計」），上線一個月後看使用量，再決定是否保留
+
+頁面的語音清單在 headless Chrome 裡是空的，CI 測不到朗讀本身。`tests/test_read_aloud.py` 在頁面載入前替換掉 `speechSynthesis`，由測試指定語音清單、推進每一段，確認只挑本機語音、選單的內容與排序、暫停與換設定後從同一段繼續、選擇換頁沿用、念完回到初始狀態。改腳本之後，再到至少一台實機上聽一次。
 
 ### 關於頁
 
@@ -698,7 +719,7 @@ iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出
 
 ### 閱讀說明頁
 
-網站不放設定選單與朗讀按鈕（那需要 JavaScript，見「原則」），字級、深色模式、閱讀模式與朗讀交給瀏覽器與裝置，閱讀說明頁寫明如何調整。網址是各語系首頁底下的 `reading/`，內容寫在 `pages/reading.md` 與兩個語系目錄，入口在頁尾，規則跟關於頁相同。
+網站不放字級與配色的設定選單，瀏覽器與裝置已經做得到，字級、深色模式與閱讀模式交給它們，閱讀說明頁寫明如何調整。朗讀的部分寫文章頁的朗讀按鈕、語音與速度的選擇存在哪裡、iPhone 下載音質較好的語音的路徑，以及看不到按鈕時可用的內建功能。路徑照 Apple 說明頁各語系的用字（iOS 27）：「設定 > 輔助使用 > 閱讀與朗讀 > 聲音」、「设置 > 无障碍 > 阅读与朗读 > 声音」、「Settings > Accessibility > Read & Speak > Voices」。網址是各語系首頁底下的 `reading/`，內容寫在 `pages/reading.md` 與兩個語系目錄，入口在頁尾，規則跟關於頁相同。
 
 2026-10-03 以前這兩節放在關於頁。會點進關於頁的人多半想判斷能不能相信、能不能引用，設定路徑跟這件事無關，所以移出來。關於頁的 `#display` 與 `#listening` 已經在網址合約裡，兩個小標題留在原處，各用一句話連到閱讀說明頁的同名錨點，分享出去的舊連結仍可以連到對應的段落。
 
@@ -822,7 +843,7 @@ iPhone Safari 的「聆聽網頁」會依頁面與裝置的語言決定是否出
 1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）。`sources` 的每個主機都在 `favicons.toml` 裡，圖示的格式與尺寸符合規定（見「原文的網站圖示」）。導讀歷史的路徑、欄位與內文（見「導讀歷史」的「建置時檢查」）
 2. 內文的錨點
 3. 文章、固定頁面與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。訂閱頁連到的 RSS 訂閱入門搬家或改名，這一項會擋下來
-4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源
+4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源。clearnet 的流量統計與朗讀按鈕照各自一節的條件放行。`.js` 檔只能有 `js/read-aloud.js`，而且只在設定了 `read_aloud` 的目標
 5. onion 產物沒有 clearnet 的 anoni.net 連結
 6. 本站的網址合約
 7. 每頁都有 `<title>`、`description` 與 Open Graph 欄位，封存頁、第二頁起的列表頁與 404 頁帶 `noindex`

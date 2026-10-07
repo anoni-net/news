@@ -1406,6 +1406,8 @@ class Target:
     rewrites: list[tuple[str, str]]
     # 流量統計的設定（src、website_id、domains），沒有就不載入，onion 一律沒有
     analytics: dict | None = None
+    # 文章頁的朗讀按鈕（static/js/read-aloud.js），onion 不放，見 SPEC.md「朗讀按鈕」
+    read_aloud: bool = False
 
     def url(self, rel: str = "") -> str:
         return self.prefix + rel
@@ -1438,6 +1440,7 @@ def load_config(path: Path) -> tuple[dict, dict[str, Target]]:
             clearnet=t["clearnet"],
             rewrites=[tuple(pair) for pair in t["rewrites"]],
             analytics=t.get("analytics"),
+            read_aloud=bool(t.get("read_aloud", False)),
         )
     return config, targets
 
@@ -1521,7 +1524,8 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     沒有就不產生導讀歷史。"""
     if target.out.exists():
         shutil.rmtree(target.out)
-    shutil.copytree(ROOT / "static", target.out)
+    # 沒有朗讀按鈕的目標連腳本檔都不放，onion 產物裡沒有任何 JavaScript
+    shutil.copytree(ROOT / "static", target.out, ignore=None if target.read_aloud else shutil.ignore_patterns("js"))
     for asset in (store.assets.values() if store else []):
         dest = target.out / "assets" / asset.rel
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -1861,6 +1865,8 @@ ANALYTICS_EVENTS: dict[str, dict[str, list[str]]] = {
     "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]},
     # 首頁第一頁的文章連結來自焦點還是時間軸
     "home-story-click": {"section": ["featured", "timeline"]},
+    # 文章頁的朗讀按鈕，一次瀏覽只記第一次點擊
+    "listen-click": {},
 }
 # 點擊事件用自己的屬性，由 _analytics.html.j2 的 listener 呼叫 umami.track()。
 # 不用 Umami 內建的 data-umami-event，它會先擋下換頁、等統計請求完成才跳轉，端點連不上時連結會卡住
@@ -2146,6 +2152,17 @@ def is_analytics_script(attrs: dict[str, str], analytics: dict | None) -> bool:
             and attrs.get("data-before-send") == "anoniBeforeSend")
 
 
+READ_ALOUD_JS = "js/read-aloud.js"
+
+
+def is_read_aloud_script(attrs: dict[str, str], target: Target) -> bool:
+    """朗讀按鈕的腳本：站內的 static/js/read-aloud.js，網址要帶目前內容的版本號。onion 一律不准。"""
+    if not target.read_aloud:
+        return False
+    return (attrs.get("data-anoni") == "read-aloud"
+            and attrs.get("src") == f"{target.url(READ_ALOUD_JS)}?v={static_version(READ_ALOUD_JS)}")
+
+
 def check_output(target: Target, pages: list[Page]) -> list[str]:
     """第 4、5、7 項：script、對外資源、onion 的 clearnet 連結、SEO 欄位與 noindex。"""
     problems = []
@@ -2161,7 +2178,7 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
                 except ValueError:
                     problems.append(f"{where}：JSON-LD 無法解析成 JSON")
                 continue
-            if not is_analytics_script(attrs, target.analytics):
+            if not (is_analytics_script(attrs, target.analytics) or is_read_aloud_script(attrs, target)):
                 problems.append(f"{where}：有可執行的 <script>")
 
         for tag, raw in RESOURCE_TAG_RE.findall(text):
@@ -2210,6 +2227,11 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
         for value in CSS_URL_RE.findall(css.read_text(encoding="utf-8")):
             if is_external(value.strip()):
                 problems.append(f"{target.name}:{css.relative_to(target.out)}：url() 指向站外 {value}")
+    # 腳本檔只有朗讀按鈕那一支，而且只放在有朗讀按鈕的目標
+    allowed_js = {READ_ALOUD_JS} if target.read_aloud else set()
+    for js in target.out.rglob("*.js"):
+        if js.relative_to(target.out).as_posix() not in allowed_js:
+            problems.append(f"{target.name}:{js.relative_to(target.out)}：產物裡有不在清單上的腳本檔")
     return problems
 
 

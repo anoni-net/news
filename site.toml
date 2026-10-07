@@ -21,6 +21,9 @@ base_url = "https://anoni.net/news/"
 prefix = "/news/"
 clearnet = true
 rewrites = []
+# 文章頁的朗讀按鈕，只用裝置本機的語音。onion 不放，Tor Browser 也關掉了語音 API。
+# 規則見 SPEC.md「朗讀按鈕」
+read_aloud = true
 
 # 流量統計，只放 clearnet，onion 不載入。規則見 SPEC.md「流量統計」。
 # website_id 是 aa.anoni.net 上的 anoni-net-news，跟文件站的網站分開。
