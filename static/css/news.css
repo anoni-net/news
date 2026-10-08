@@ -35,8 +35,10 @@
     --c-mark-bg: var(--brand-cyan-100);
     --c-mark-text: #1d2b31;
 
+    /* 明體的第一個是 clearnet 自架的標題字型（css/fonts.css，見 SPEC.md「標題字型」）。
+       onion 沒有載入它，直接往下找系統字型 */
     --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    --font-serif: "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --font-serif: "anoni news serif TC", "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
 
     --touch: 2.75rem;
     /* 內文欄。扣掉左右留白約 40rem，桌機 18px 的字級下一行大約 36 個中文字 */
@@ -50,7 +52,7 @@
 html:lang(zh-Hans),
 .not-found:lang(zh-Hans) {
     --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-    --font-serif: "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+    --font-serif: "anoni news serif SC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
 }
 
 html:lang(en) {

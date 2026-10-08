@@ -19,6 +19,10 @@
 <meta http-equiv="onion-location" content="{{ onion_url }}">
 {% endif %}
 <link rel="stylesheet" href="{{ asset('css/news.css') }}">
+{# 標題的自架字型，onion 與 en 不放。版本號等全部頁面產生之後由 build.py 換上，見 SPEC.md「標題字型」 #}
+{% if target.fonts and lang.html in font_scripts %}
+<link rel="stylesheet" href="{{ url('css/fonts-' ~ font_scripts[lang.html] ~ '.css') }}?v=%FONTS_CSS_VERSION%">
+{% endif %}
 <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="{{ s.site_name }}" href="{{ target.abs_url(home ~ 'feed.xml') }}">
 <meta property="og:site_name" content="{{ s.site_name }}">

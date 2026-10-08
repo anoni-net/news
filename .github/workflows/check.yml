@@ -16,6 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
 
+      # 標題字型的原始檔（約 40 MB），build.py 下載後會比對 sha256。版本固定，key 跟著
+      # build.py 的 FONT_BASE_URL 換。子集化很快，只快取原始檔，見 SPEC.md「標題字型」
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .cache/fonts/SubsetOTF
+            .cache/fonts/LICENSE
+          key: fonts-noto-serif-cjk-2.003
+
       - name: pytest
         run: uv run --group dev pytest -q
 
