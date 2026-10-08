@@ -99,6 +99,10 @@ from = "https://www.hkma.gov.hk/favicon.jpg"
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
 
+[hosts."bughunters.google.com"]
+icon = "bughunters.google.com-c9acb948.png"
+from = "https://bughunters.google.com/static/icon-192.png"
+
 [hosts."bworldonline.com"]
 icon = "bworldonline.com-d9edf818.png"
 from = "https://bworldonline.com/wp-content/uploads/2024/09/cropped-bworld_icon-1-192x192.png"
@@ -252,6 +256,10 @@ from = "https://www.docplanner.com/favicon/apple-touch-icon.png"
 [hosts."docs.cryptpad.org"]
 same_as = "cryptpad.org"
 
+[hosts."docs.github.com"]
+icon = "docs.github.com-60b60398.png"
+from = "https://docs.github.com/assets/cb-345/images/site/favicon.png"
+
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
 
@@ -327,6 +335,10 @@ same_as = "cs.umd.edu"
 [hosts."git.mills.io"]
 icon = "git.mills.io-ed49de22.png"
 from = "https://git.mills.io/favicon.ico"
+
+[hosts."github.blog"]
+icon = "github.blog-b1af9b96.png"
+from = "https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=192%2C192"
 
 [hosts."github.com"]
 icon = "github.com-90043607.png"
@@ -426,6 +438,10 @@ same_as = "gov.hk"
 [hosts."interseclab.org"]
 icon = "interseclab.org-cfaee2eb.png"
 from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-Logo-192x192.png"
+
+[hosts."ipa.go.jp"]
+icon = "ipa.go.jp-d88935f7.png"
+from = "https://www.ipa.go.jp/apple-touch-icon-180x180.png"
 
 [hosts."irrawaddy.com"]
 icon = "irrawaddy.com-eceea825.png"
@@ -634,6 +650,10 @@ same_as = "pipepipe.dev"
 icon = "quad9.net-ff6922f7.png"
 from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 
+[hosts."radicle.dev"]
+icon = "radicle.dev-e034932a.png"
+from = "手動提供的檔案 radicle.png"
+
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
@@ -657,6 +677,10 @@ from = "https://securedrop.org/apple-touch-icon.png"
 [hosts."security.googleblog.com"]
 icon = "security.googleblog.com-624359af.png"
 from = "https://security.googleblog.com/favicon.ico"
+
+[hosts."securitylab.github.com"]
+icon = "securitylab.github.com-ad3eceb3.png"
+from = "https://securitylab.github.com/assets/img/favicons/apple-touch-icon.png"
 
 [hosts."sheriffs.org"]
 icon = "sheriffs.org-fd44e411.png"
@@ -725,6 +749,10 @@ from = "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2025/09/croppe
 icon = "theguardian.com-04032708.png"
 from = "https://assets.guim.co.uk/static/frontend/icons/homescreen/apple-touch-icon-512.png"
 
+[hosts."thehackernews.com"]
+icon = "thehackernews.com-bf20e9d2.png"
+from = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s196-e365/thn.jpg"
+
 [hosts."thelocal.no"]
 icon = "thelocal.no-231a147a.png"
 from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
@@ -736,6 +764,10 @@ from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/app
 [hosts."theregister.com"]
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
+
+[hosts."twcert.org.tw"]
+icon = "twcert.org.tw-29afd0d6.png"
+from = "https://www.twcert.org.tw/favicon.ico"
 
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
