@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meta Muse 与 OpenAI Dots 的记忆与权限设计 | anoni.net 新闻导读</title>
+<meta name="description" content="Meta 的 Muse 与 OpenAI 的 Dots 都在 9 月推出，在云端常驻、读取连接的应用数据并整理成记忆。截至 10 月 2 日，OpenAI 的支持清单不含中国大陆，Muse 在中国大陆的 App Store 没有上架，在海外使用 ChatGPT 或 Mac 的人可以先检查记忆与权限设置。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/muse-dots-agent-memory-permissions/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/muse-dots-agent-memory-permissions/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/muse-dots-agent-memory-permissions/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/muse-dots-agent-memory-permissions/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/muse-dots-agent-memory-permissions/">
+<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml">
+<meta property="og:site_name" content="anoni.net 新闻导读">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Meta Muse 与 OpenAI Dots 的记忆与权限设计">
+<meta property="og:description" content="Meta 的 Muse 与 OpenAI 的 Dots 都在 9 月推出，在云端常驻、读取连接的应用数据并整理成记忆。截至 10 月 2 日，OpenAI 的支持清单不含中国大陆，Muse 在中国大陆的 App Store 没有上架，在海外使用 ChatGPT 或 Mac 的人可以先检查记忆与权限设置。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/muse-dots-agent-memory-permissions/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png?v=74a0aa1c7b">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net 新闻导读">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net 新闻导读">
+<meta property="article:published_time" content="2026-10-09T00:05:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Meta Muse 与 OpenAI Dots 的记忆与权限设计",
+  "description": "Meta 的 Muse 与 OpenAI 的 Dots 都在 9 月推出，在云端常驻、读取连接的应用数据并整理成记忆。截至 10 月 2 日，OpenAI 的支持清单不含中国大陆，Muse 在中国大陆的 App Store 没有上架，在海外使用 ChatGPT 或 Mac 的人可以先检查记忆与权限设置。",
+  "datePublished": "2026-10-09T00:05:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/muse-dots-agent-memory-permissions/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/muse-dots-agent-memory-permissions/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png",
+  "inLanguage": "zh-Hans",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "How to manage your Muse data",
+      "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Introducing dots",
+      "url": "https://openai.com/index/introducing-dots/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Dots privacy, security, and safety FAQs",
+      "url": "https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Getting started with your dot",
+      "url": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Meta’s Muse AI surprises users — but not in a good way",
+      "url": "https://freedom.press/digisec/blog/metas-muse-ai-surprises-users-but-not-in-a-good-way/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day",
+      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "I asked Meta’s Muse for its filesystem and it sent me 6.8 GB",
+      "url": "https://mouse.dev/blog/muse-runtime-export/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Yeah, don't give Meta's Muse app access to your Mac",
+      "url": "https://9to5mac.com/2026/09/28/yeah-dont-give-metas-muse-app-access-to-your-mac/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Meta's Muse AI Agent Read a User's Private iMessages. Then It Lied About How",
+      "url": "https://decrypt.co/379122/metas-muse-ai-agent-user-private-imessages-lied-how"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ChatGPT can now send texts for you with new Apple Messages plug-in",
+      "url": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ChatGPT gets all up in your iMessages",
+      "url": "https://freedom.press/digisec/blog/chatgpt-gets-all-up-in-your-imessages/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Memory in ChatGPT",
+      "url": "https://help.openai.com/en/articles/8590148-memory-faq"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Data controls in ChatGPT",
+      "url": "https://help.openai.com/en/articles/7730893-data-controls-faq"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "在 Mac 上更改「隱私權與安全性」設定",
+      "url": "https://support.apple.com/zh-tw/guide/mac-help/mchl211c911f/mac"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Premium seats are coming to ChatGPT Business",
+      "url": "https://openai.com/index/premium-seats-chatgpt-business/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "允許輔助使用 App 取用 Mac",
+      "url": "https://support.apple.com/zh-tw/guide/mac-help/mh43185/mac"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "允许无障碍 App 访问你的 Mac",
+      "url": "https://support.apple.com/zh-cn/guide/mac-help/mh43185/mac"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Muse from Meta App",
+      "url": "https://apps.apple.com/us/app/muse-from-meta/id6760173601"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Warning sources against using AI chatbots",
+      "url": "https://securedrop.org/news/updated-landing-page-guidance/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "在 Mac 上更改隐私与安全设置",
+      "url": "https://support.apple.com/zh-cn/guide/mac-help/mchl211c911f/mac"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ChatGPT Supported Countries",
+      "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "OONI Explorer: chatgpt.com, China",
+      "url": "https://explorer.ooni.org/chart/mat?probe_cc=CN&test_name=web_connectivity&domain=chatgpt.com&since=2026-09-01&until=2026-10-01&axis_x=measurement_start_day"
+    }
+  ],
+  "articleSection": "追踪与个人数据"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新闻导读",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "追踪与个人数据",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/category/tracking/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Meta Muse 与 OpenAI Dots 的记忆与权限设计"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/zh-cn/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新闻导读</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新闻导读：" data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/muse-dots-agent-memory-permissions/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--tracking" href="/zh-cn/category/tracking/">追踪与个人数据</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-09T00:05:00+08:00">2026 年 10 月 9 日 星期五</time></p>
+    <h1 class="story__title">Meta Muse 与 OpenAI Dots 的记忆与权限设计</h1>
+    <p class="story__dek">Meta 的 Muse 与 OpenAI 的 Dots 都在 9 月推出，在云端常驻、读取连接的应用数据并整理成记忆。截至 10 月 2 日，OpenAI 的支持清单不含中国大陆，Muse 在中国大陆的 App Store 没有上架，在海外使用 ChatGPT 或 Mac 的人可以先检查记忆与权限设置。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/meta.com-1115e2bb.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/openai.com-c5ef3d83.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/freedom.press-d782bdb6.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 23 篇原文，来自 Meta、OpenAI、Freedom of the Press Foundation 等 12 个出处</span></a></span>
+      <span>导读：anoni.net 社区</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/muse-dots-agent-memory-permissions/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/muse-dots-agent-memory-permissions/" hreflang="en" lang="en">English</a></nav>
+  </header>
+  <div class="story__body content">
+<p>Meta 在 9 月 8 日推出 Muse，OpenAI 在 9 月 29 日推出 Dots。两者都是 AI 智能体，也就是能自行替用户执行一连串工作的 AI 助手。它们在云端持续运行，读取用户连接的应用与服务、整理成记忆，再主动处理事情。Meta 的公告写明 Muse 先在美国推出，Dots 截至 10 月 2 日只开放给 ChatGPT 的 Pro 与 Business Premium 方案。</p>
+<p>Muse 有 iPhone、Android 与网页版，Meta 的公告写到大部分功能免费，另有付费方案，美国 App Store 页面列出的界面语言包含简体与繁体中文。新闻自由组织 Freedom of the Press Foundation（FPF）的电子报转述一位用户的说法，Muse 替用户在 Facebook Marketplace 卖键盘时接受了用户不满意的价格，把住址给了买家，买家上门时也没有通知用户。截至 10 月 2 日，我们没有看到 Meta 对这个案例的回应。FPF 也提醒，Muse 默认会用用户的互动记录训练 Meta 的模型。</p>
+<p>9to5Mac 与 Decrypt 报道了一位科技专栏作者在 Mac 上测试 Muse 的经过。作者在设置时拒绝了「信息」权限，之后 Muse 的建议却用到作者与节目搭档的对话。Decrypt 写到读取 Mac 的「信息」数据库需要完全磁盘访问权限。Meta 一位主管在 Threads 回应「信息」访问是需要用户自行开启的功能，作者则表示拒绝之后 Muse 的设置里仍显示该访问为开启。</p>
+<p>研究者也找到 Muse 的其他问题。Ars Technica 9 月 21 日报道一个让其他应用与终端命令可以控制 Muse 的漏洞，并写到 Meta 在报道刊出约 12 小时后发布修复。另一位研究者取得了 Muse 所在的整个云端运行环境，解压后有 6.8 GB。这位研究者通过 Meta 的漏洞奖励计划提交发现，Meta 标为不适用，回复列出几种可能的理由，但没有指明适用哪一种。</p>
+<p>Dots 的每个 dot 是一个独立的助手，有自己的云端电脑，通过插件连接其他应用。依 OpenAI 的帮助页面，用户没有交办工作时，dot 会读取已连接的数据并写进自己的笔记，这个阶段不能发消息、修改内容或操作浏览器。截至 10 月 2 日，帮助页面写明单条记忆无法查看、删除或直接修改，要删只能删掉整个 dot。删掉 dot 时，它创建的文件与对话另外存放，不会一起删除。</p>
+<p>帮助页面也谈到提示注入，也就是网页、电子邮件或文件里藏着要 dot 执行用户没交办动作的指令，OpenAI 写的是防护能降低风险，但无法消除。OpenAI 也写明在支持的登录流程里，密码经由独立的表单送进浏览器环境、不经过模型，在聊天、文件或插件里提供的密码则不在保护范围。Dots 只能在电脑上创建，未满 18 岁不能使用。截至 10 月 2 日，Dots 的说明只见于 OpenAI 自己的文件，还没有独立的检验报告。</p>
+<h2 id="perspective">导读观点</h2>
+<p>两个产品都替用户在云端开一台常驻的电脑，连接的数据在后台被读取、整理成记忆，之后的回答与行动都以这份记忆为基础。截至 10 月 2 日，Dots 的记忆只能连同整个 dot 一起删除。Muse 的记忆存在一个可以直接查看与编辑的文件里，但 Meta 的帮助页面写明，删除之后 Muse 仍可能记得从中学到的内容。</p>
+<p>两者的训练设置也不同。Muse 的「Help improve our AI models」在第一次使用时默认开启，Meta 写明关闭之后也适用于过去的互动。OpenAI 的公告写明，个人方案可以控制 dot 的对话与工作是否用于改进模型。ChatGPT 一般对话的训练设置是「Improve the model for everyone」，OpenAI 的帮助页面写明关闭之后只对新对话生效，但没有写这个设置在个人方案的默认值。</p>
+<p>截至 10 月 2 日，OpenAI 的支持国家与地区清单里没有中国大陆、香港与澳门，Muse 在中国大陆的 App Store 也没有上架，网页版是否可用我们没有查证。测量网络审查的项目 OONI 在 9 月从中国大陆对 <code>chatgpt.com</code> 做了 57 次连接测试，44 次出现异常，12 次测量失败，1 次正常。异常代表有受到干扰的迹象，不等于确认被封锁，测量失败则是测试本身没有完成。境内读者不需要为这两个产品调整设置。</p>
+<p>OpenAI 8 月推出的 ChatGPT「信息」插件，能读取、摘要、草拟与发送 Mac「信息」应用里的消息，设置时要开启完全磁盘访问权限。TechCrunch 转述 OpenAI 的说明，消息内容存在用户的电脑上、不存到服务器，FPF 则提醒使用 ChatGPT 时 OpenAI 仍会处理对话内容。Apple 的帮助页面写明，完全磁盘访问权限让应用读取电脑上的所有文件，包括「信息」等其他应用的数据。</p>
+<p>依 OpenAI 的帮助页面，断开应用只停止 dot 之后的访问，已经整理进 dot 的数据要删掉整个 dot 才清得掉。关闭 ChatGPT 的记忆也只停止之后与 dot 的共享，dot 已经收到的信息不会删除。「信息」数据库里也有别人发来的消息，依 Meta 与 OpenAI 的说明推论，收消息的人开启这类权限时，发消息给他的人无法控制这些消息被 AI 读取。</p>
+<p>在海外使用 ChatGPT 的人，可以在设置的「Personalization」查看记忆。OpenAI 写明只删掉对话，不一定会删掉由该对话产生的记忆，要另外删除。训练设置在「Data controls」，关闭之后只对新对话生效，OpenAI 的帮助页面以英文界面写出这两个位置。</p>
+<p>用 Mac 且授权过 AI 应用的人，可以在「系统设置」的「隐私与安全性」，查看「完全磁盘访问权限」与「辅助功能」有哪些应用取得权限。Apple 的帮助页面写明，取得辅助功能权限的应用也能访问联系人、日历等数据。</p>
+<p>想试用 Muse 或 Dots 的人，FPF 建议等技术更成熟，或用一台只放必要数据的设备，代价是要另外准备设备。截至 10 月 2 日，Dots 需要付费方案，其中 Business Premium 每人每月 125 美元。SecureDrop 在 9 月 24 日的公告建议，准备联系媒体披露信息的人不要在登录状态下使用 AI 聊天服务，提示词的记录可能被用来识别身份。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（23 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"><img class="source-slip__icon" src="/assets/favicons/meta.com-1115e2bb.png" width="16" height="16" alt="" loading="lazy" decoding="async">Introducing Muse: The World’s First Personal AI Agent Built for Everyone</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Meta</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-08">2026 年 9 月 8 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.meta.com/help/artificial-intelligence/2225571704857152/"><img class="source-slip__icon" src="/assets/favicons/meta.com-1115e2bb.png" width="16" height="16" alt="" loading="lazy" decoding="async">How to manage your Muse data</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Meta</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://openai.com/index/introducing-dots/"><img class="source-slip__icon" src="/assets/favicons/openai.com-c5ef3d83.png" width="16" height="16" alt="" loading="lazy" decoding="async">Introducing dots</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-29">2026 年 9 月 29 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs"><img class="source-slip__icon" src="/assets/favicons/help.openai.com-cb2858c5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Dots privacy, security, and safety FAQs</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"><img class="source-slip__icon" src="/assets/favicons/help.openai.com-cb2858c5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Getting started with your dot</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://freedom.press/digisec/blog/metas-muse-ai-surprises-users-but-not-in-a-good-way/"><img class="source-slip__icon" src="/assets/favicons/freedom.press-d782bdb6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Meta’s Muse AI surprises users — but not in a good way</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Freedom of the Press Foundation</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-30">2026 年 9 月 30 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/"><img class="source-slip__icon" src="/assets/favicons/arstechnica.com-18386f32.png" width="16" height="16" alt="" loading="lazy" decoding="async">Muse, Meta&#39;s extraordinarily privileged AI assistant, has a serious 0-day</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Ars Technica</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-21">2026 年 9 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://mouse.dev/blog/muse-runtime-export/"><img class="source-slip__icon" src="/assets/favicons/mouse.dev-69b682f3.png" width="16" height="16" alt="" loading="lazy" decoding="async">I asked Meta’s Muse for its filesystem and it sent me 6.8 GB</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>mouse.dev</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-22">2026 年 9 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://9to5mac.com/2026/09/28/yeah-dont-give-metas-muse-app-access-to-your-mac/"><img class="source-slip__icon" src="/assets/favicons/9to5mac.com-02276a1f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Yeah, don&#39;t give Meta&#39;s Muse app access to your Mac</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>9to5Mac</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-28">2026 年 9 月 28 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://decrypt.co/379122/metas-muse-ai-agent-user-private-imessages-lied-how"><img class="source-slip__icon" src="/assets/favicons/decrypt.co-136239ed.png" width="16" height="16" alt="" loading="lazy" decoding="async">Meta&#39;s Muse AI Agent Read a User&#39;s Private iMessages. Then It Lied About How</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Decrypt</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-23">2026 年 9 月 23 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/"><img class="source-slip__icon" src="/assets/favicons/techcrunch.com-72f4a02d.png" width="16" height="16" alt="" loading="lazy" decoding="async">ChatGPT can now send texts for you with new Apple Messages plug-in</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>TechCrunch</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-08-20">2026 年 8 月 20 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://freedom.press/digisec/blog/chatgpt-gets-all-up-in-your-imessages/"><img class="source-slip__icon" src="/assets/favicons/freedom.press-d782bdb6.png" width="16" height="16" alt="" loading="lazy" decoding="async">ChatGPT gets all up in your iMessages</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Freedom of the Press Foundation</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-08-26">2026 年 8 月 26 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://help.openai.com/en/articles/8590148-memory-faq"><img class="source-slip__icon" src="/assets/favicons/help.openai.com-cb2858c5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Memory in ChatGPT</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://help.openai.com/en/articles/7730893-data-controls-faq"><img class="source-slip__icon" src="/assets/favicons/help.openai.com-cb2858c5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Data controls in ChatGPT</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-tw/guide/mac-help/mchl211c911f/mac"><img class="source-slip__icon" src="/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">在 Mac 上更改「隱私權與安全性」設定</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://openai.com/index/premium-seats-chatgpt-business/"><img class="source-slip__icon" src="/assets/favicons/openai.com-c5ef3d83.png" width="16" height="16" alt="" loading="lazy" decoding="async">Premium seats are coming to ChatGPT Business</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-tw/guide/mac-help/mh43185/mac"><img class="source-slip__icon" src="/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">允許輔助使用 App 取用 Mac</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-cn/guide/mac-help/mh43185/mac"><img class="source-slip__icon" src="/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">允许无障碍 App 访问你的 Mac</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://apps.apple.com/us/app/muse-from-meta/id6760173601"><img class="source-slip__icon" src="/assets/favicons/apps.apple.com-21ded518.png" width="16" height="16" alt="" loading="lazy" decoding="async">Muse from Meta App</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>App Store</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://securedrop.org/news/updated-landing-page-guidance/"><img class="source-slip__icon" src="/assets/favicons/securedrop.org-903dcbd4.png" width="16" height="16" alt="" loading="lazy" decoding="async">Warning sources against using AI chatbots</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>SecureDrop</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-24">2026 年 9 月 24 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.apple.com/zh-cn/guide/mac-help/mchl211c911f/mac"><img class="source-slip__icon" src="/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">在 Mac 上更改隐私与安全设置</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://help.openai.com/en/articles/7947663-chatgpt-supported-countries"><img class="source-slip__icon" src="/assets/favicons/help.openai.com-cb2858c5.png" width="16" height="16" alt="" loading="lazy" decoding="async">ChatGPT Supported Countries</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OpenAI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://explorer.ooni.org/chart/mat?probe_cc=CN&amp;test_name=web_connectivity&amp;domain=chatgpt.com&amp;since=2026-09-01&amp;until=2026-10-01&amp;axis_x=measurement_start_day"><img class="source-slip__icon" src="/assets/favicons/ooni.org-01981e09.png" width="16" height="16" alt="" loading="lazy" decoding="async">OONI Explorer: chatgpt.com, China</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>OONI</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--tracking" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分类的其他导读</h2>
+  <p class="brief__category"><a class="cat cat--tracking" href="/zh-cn/category/tracking/">追踪与个人数据</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-04T00:00:00+08:00">2026 年 10 月 4 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/doctoralia-health-tracking-pixels/">医疗预约网站把就诊信息发给社交平台的追踪代码</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-01T00:00:00+08:00">2026 年 10 月 1 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/mobile-location-data-brokers/">手机位置数据与数据经纪商手上的个人档案</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-09-27T03:21:00+08:00">2026 年 9 月 27 日</time>
+      <a class="thread__title" href="/zh-cn/2026/09/ios27-siri-ai-data-access/">iOS 27 Siri AI 的数据访问设置</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/zh-cn/category/tracking/">「追踪与个人数据」的全部 5 篇导读</a></p>
+</nav>
+<p class="subscribe">想收到新的导读：<a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>订阅电子报</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 关注</span></a></p>
+<nav class="pager pager--story" aria-label="文章导览">
+  <a class="pager__item pager__item--newer" href="/zh-cn/2026/10/gmail-attachment-preview-phishing/"><span class="pager__label"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg> 较新的一篇</span> <span class="pager__title">冒充 Gmail 附件预览的钓鱼邮件</span></a>
+  <a class="pager__item pager__item--older" href="/zh-cn/2026/10/fdroid-2-android-developer-verification/"><span class="pager__label">较旧的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">F-Droid 2.0 与 Google 的 Android 开发者验证</span></a>
+  <a class="pager__all" href="/zh-cn/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 订阅电子报</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 关注</a>
+      <a href="/zh-cn/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 导读历史</a>
+      <a href="/zh-cn/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 关于新闻导读</a>
+      <a href="/zh-cn/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 阅读说明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/muse-dots-agent-memory-permissions/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/muse-dots-agent-memory-permissions/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
+  </div>
+</footer>
+</body>
+</html>
