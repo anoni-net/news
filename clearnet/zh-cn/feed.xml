@@ -6,7 +6,163 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>F-Droid 2.0 与 Google 的 Android 开发者验证</title>
+<link>https://anoni.net/news/zh-cn/2026/10/fdroid-2-android-developer-verification/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/fdroid-2-android-developer-verification</guid>
+<pubDate>Fri, 09 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>开源应用商店 F-Droid 9 月 24 日推出全面重写的 2.0，最低需要 Android 7。Google 9 月 30 日起在巴西、印度尼西亚、新加坡、泰国要求七家商店的应用由验证身份的开发者注册，2027 年扩大到全球的认证 Android 设备。截至 10 月 2 日，各地从 F-Droid 安装应用都不受影响。</description>
+<content:encoded>&lt;p&gt;整理 19 篇原文，来自 F-Droid、Google、Conversations 等 6 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;开源的 Android 应用商店 F-Droid 在 9 月 24 日推出 2.0，客户端整个重写，最低需要 Android 7。9 月 30 日起，Google 在巴西、印度尼西亚、新加坡、泰国要求 Google Play 与六家手机厂商商店上架的应用由验证过身份的开发者注册，预计 2027 年扩大到全球的认证 Android 设备。截至 10 月 2 日，各地的读者从 F-Droid 或网站直接下载安装应用都不受影响。&lt;/p&gt;
+&lt;p&gt;F-Droid 只收录开源应用，依 F-Droid 的说明，团队会审查公开的源代码、确认没有广告与追踪器，再自行构建发布。2.0 改用 Kotlin 与 Jetpack Compose 编写，界面缩减为发现、搜索与我的应用三个标签页。应用更新改为默认自动下载安装，已经调整过的偏好设置会保留。F-Droid 的 2.0 公告也写到搜索改善了中文、日文、韩文的支持。&lt;/p&gt;
+&lt;p&gt;2.0 经过独立的安全审查，公告写明完整报告确认可以发表后才会公开。原本的「使用 Tor」改成一般的代理设置，公告建议改用 Tor VPN。紧急删除应用的功能暂时移除了，公告建议依赖这项功能的人推迟更新。截至 10 月 2 日，F-Droid 首页提供下载的是 2.0.1，软件包页面则仍把 2.0 标为测试版，建议版本是 1.23.2。&lt;/p&gt;
+&lt;p&gt;开源即时通信应用 Conversations 的开发者 9 月 24 日在博客写到 Google Play 一再退回应用的更新、应用也被下架过两次，文章发表时还有一个更新已经等了 14 天审核。开发者认为 Google 不区分功能更新与安全更新，安全更新延迟数日是危险的。关于 Google Play 的审核，截至 10 月 2 日只看到开发者一方的说法。&lt;/p&gt;
+&lt;p&gt;Conversations 开发者的文章也写明 F-Droid 已成为主要的分发渠道，F-Droid 上的版本改为可重现构建（任何人都能从源代码构建出相同的文件），由开发者自己的密钥签名。原本收费的 Google Play 版本截至 10 月 2 日已改为免费。&lt;/p&gt;
+&lt;p&gt;Google 的开发者验证要求开发者证明身份，并以私钥签名的安装包（APK）登记包名，Google 借此把应用对应到开发者账号。截至 10 月 2 日，Google 的常见问题写明第一阶段只限七家参与的商店，其他商店与侧载（不经商店直接安装）不受影响。2027 年扩大后，认证设备上没有注册的应用只能用开发者工具 ADB 安装，或通过 Google 称为 advanced flow 的流程开放安装。Google 的帮助中心另外写明 AOSP（Android 开源项目）的设备、未经认证的设备，以及 Google 移动服务不支持的地区都不适用这项要求。&lt;/p&gt;
+&lt;p&gt;advanced flow 要先在系统设置开启开发者模式，并确认自己没有被人在旁指导操作，接着重启手机并重新验证身份。之后有一次性的一天等待期。期满后用指纹、人脸识别或 PIN 确认，就能选择开放 7 天或无限期安装未验证开发者的应用。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;两种做法对「这个应用能不能信任」有不同的答案。Google 要求开发者证明身份，F-Droid 的信任则来自公开的源代码，应用由 F-Droid 的密钥签名，可重现构建的应用则改用原开发者的密钥。依 Google 的规则，包名要由开发者本人注册。F-Droid 在 2025 年 9 月的公告表示无法要求开发者向 Google 注册，也不能替开源应用接管包名。&lt;/p&gt;
+&lt;p&gt;Google 在 2025 年 8 月的公告写到，依 Google 自己的分析，网络侧载来源的恶意软件是 Google Play 上的 50 倍以上。公告也写明第一阶段选在受诈骗应用影响的国家，并引述印度尼西亚、泰国主管机关的正面评价。F-Droid 在 2026 年 7 月的文章则指出，Android 开发者控制台的条款写明分发恶意软件可以终止账号，但没有定义什么是恶意软件。&lt;/p&gt;
+&lt;p&gt;多个自由软件与数字权利组织参与的 Keep Android Open 列出 advanced flow 的九个步骤，并指出这个流程由 Google Play 服务提供、不在 Android 系统本身，因此 Google 可以随时更改。Google 的常见问题写明一天的等待期是为了打断诈骗者在电话上催促受害者立刻更改安全设置。常见问题也写明开启 advanced flow 之后不必保持开发者模式，用 ADB 安装也不受等待期限制。&lt;/p&gt;
+&lt;p&gt;F-Droid 在 2026 年 2 月发表公开信，建议开发者现在与将来都不要注册。F-Droid 在 2025 年的公告也表示，这项规定会终结 F-Droid 与其他开源分发渠道现在的运作方式。Google 则为开源平台写了注册指南。依指南，开发者以自己的账号登记包名，会重新签名的平台另外提供平台密钥的指纹，用户就能维持现在的安装方式。&lt;/p&gt;
+&lt;p&gt;截至 10 月 2 日，Google Play 不在中国大陆提供服务，Google 的帮助中心也没有逐一列出哪些地区属于 Google 移动服务不支持的范围，没有写明中国大陆是否适用这项要求。F-Droid 本身在中国大陆能否连上是另一个问题。网络审查观测项目 OONI 在 2026 年 6 月 1 日到 10 月 2 日之间，从中国大陆对 &lt;code&gt;f-droid.org&lt;/code&gt; 做了 1506 次连接测试，其中 1179 次出现异常，288 次测量失败，37 次正常，另有 2 次被 OONI 确认遭到封锁。&lt;/p&gt;
+&lt;p&gt;清华大学 TUNA 协会提供 F-Droid 的镜像，截至 10 月 1 日与官方仓库保持同步，帮助页面说明可以在客户端里添加这个镜像。TUNA 的帮助页面也引述了 F-Droid 的提醒：第一次安装时 &lt;code&gt;f-droid.org&lt;/code&gt; 是官方下载地址，从其他来源下载要提防伪造的客户端。&lt;/p&gt;
+&lt;p&gt;截至 10 月 2 日，F-Droid 2.0 的界面与分类名称都有完整的简体中文，依赖紧急删除应用功能的人可以先使用软件包页面建议的 1.23.2。在中国大陆第一次安装的人如果连不上官方地址，可以改用 TUNA 帮助页面列出、由 F-Droid 团队提供的替代下载来源，包括 GitLab 与 GitHub 上的发布页面。&lt;/p&gt;
+&lt;p&gt;在海外使用 Google Play 的读者，可以在 Google Play 商店点右上方的个人资料图标，在「设置」的「关于」查看设备是否通过 Play 保护机制认证。依 Google 的计划，2027 年之后在认证设备上安装未注册开发者的应用，要提前一天开启 advanced flow，关闭 advanced flow 之后，这些应用会无法更新。截至 10 月 2 日，Google 只写了 2027 年扩大到全球，月份与各地的先后顺序都没有公布。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（19 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html&#34;&gt;F-Droid 2.0: A New Chapter for Android Freedom&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification/guides&#34;&gt;Android developer verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-18&#34;&gt;2026 年 8 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification/guides/faq&#34;&gt;Frequently asked questions | Android developer verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/17065026&#34;&gt;Learn about Android developer verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification/guides/open-source-app-registration&#34;&gt;Register your app on open source platforms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://android-developers.googleblog.com/2026/06/android-developer-verification.html&#34;&gt;Android developer verification: Building a safer ecosystem together&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-18&#34;&gt;2026 年 6 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://android-developers.googleblog.com/2025/08/elevating-android-security.html&#34;&gt;A new layer of security for certified Android devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-08-25&#34;&gt;2025 年 8 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gultsch.de/posts/breaking-up-with-google-play/&#34;&gt;Breaking Up with Google Play: Why Conversations Is Now Free&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Conversations&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2025/09/29/google-developer-registration-decree.html&#34;&gt;F-Droid and Google&amp;#39;s Developer Registration Decree&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-29&#34;&gt;2025 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2026/02/24/open-letter-opposing-developer-verification.html&#34;&gt;An Open Letter Opposing Android Developer Verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-24&#34;&gt;2026 年 2 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2026/07/01/adv-malware.html&#34;&gt;What We Talk About When We Talk About Malware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-01&#34;&gt;2026 年 7 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://keepandroidopen.org/&#34;&gt;Keep Android Open&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Keep Android Open&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/packages/org.fdroid.fdroid/&#34;&gt;F-Droid&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/answer/2812853&#34;&gt;Use Google Play Protect to help keep your apps safe &amp;amp; your data private&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/answer/2812853?hl=zh-Hans&#34;&gt;利用 Google Play 保护机制保障应用的安全性和数据的私密性&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=CN&amp;amp;test_name=web_connectivity&amp;amp;domain=f-droid.org&amp;amp;since=2026-06-01&amp;amp;until=2026-10-02&amp;amp;axis_x=measurement_start_day&#34;&gt;OONI Explorer: f-droid.org, China&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/&#34;&gt;F-Droid 镜像使用帮助&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;清华大学 TUNA 协会&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://f-droid.org/zh_Hans/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html&#34;&gt;F-Droid 2.0：Android 自由的新篇章&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/answer/2843119?hl=zh-Hans&#34;&gt;Google Play 中应用和数字内容的推出国家/地区&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>iPhone 自动重启与取证工具的绕过说法</title>
 <link>https://anoni.net/news/zh-cn/2026/10/iphone-inactivity-reboot-bypass/</link>
@@ -2118,75 +2274,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rCN/strings.xml&#34;&gt;frameworks/base/packages/SettingsLib/res/values-zh-rCN/strings.xml&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>西班牙对 archive.today 的行政封锁</title>
-<link>https://anoni.net/news/zh-cn/2026/09/spain-blocks-archive-today/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/09/spain-blocks-archive-today</guid>
-<pubDate>Tue, 29 Sep 2026 07:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>西班牙文化部的知识产权委员会以行政决定封锁网页存档服务 archive.today 与它的镜像域名，没有经过法院，OONI 的测量也看得到异常。</description>
-<content:encoded>&lt;p&gt;整理 7 篇原文，来自 Ministerio de Cultura、Reclaim The Net、Banda Ancha 等 6 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;西班牙文化部下属的知识产权委员会第二组，下令电信运营商封锁网页存档服务 archive.today。文化部 9 月 25 日更新的清单列出 7 个域名，除了 archive.today，还有 archive.is、archive.ph、archive.li 等镜像。封锁是依一位没有具名的权利人投诉做出的行政决定，没有经过法院。西班牙以外的网络不受这次封锁影响。&lt;/p&gt;
-&lt;p&gt;西班牙网站 Banda Ancha 最早报道了封锁。封锁 8 月中先在部分运营商生效，到 Banda Ancha 9 月 17 日报道时，已扩大到所有参与知识产权保护协议的运营商。用 HTTPS 连接时会出现连接错误，改用 HTTP 则会被导到文化部的页面，告知这是「非法」网站。&lt;/p&gt;
-&lt;p&gt;Reclaim The Net 写到，协议由文化部、权利人与大型电信运营商在 2021 年签署，运营商在接到技术委员会通知后 24 小时内封锁镜像网站。为了一则侵权内容封锁整个服务，在西班牙并不是第一次，体育转播网站也被这样封锁过。&lt;/p&gt;
-&lt;p&gt;OONI 的测量结果也出现变化。9 月 1 日到 27 日，西班牙对 archive.ph 的 641 次测量中有 205 次异常，同期 Internet Archive 的 web.archive.org 在 410 次测量中只有 2 次异常。异常不等于确认封锁，只代表连接结果跟对照组不同。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;archive.today 存下网页的快照，让人在原页面被删除或修改之后，仍然可以读到当时的内容。西班牙封锁了整个域名，存在上面的所有快照在多数运营商的网络上都无法打开。程序是行政决定加上运营商的协议，不需要法院介入，范围又扩及镜像域名。&lt;/p&gt;
-&lt;p&gt;OONI 6 月到 9 月的测量显示，中国大陆早就连不上这类存档服务，archive.ph 的 308 次测量有 273 次异常。GreatFire 也记录 web.archive.org 从 2016 年起在中国大陆持续被封锁。在印度尼西亚，archive.is 有 155 次测量被 OONI 确认为封锁。&lt;/p&gt;
-&lt;p&gt;在境内需要保存网页证据的人，与其依赖公开的存档服务，不如把证据存在自己手上。开源的浏览器扩展 SingleFile（AGPL-3.0 授权，9 月 24 日发布新版）可以把整页存成一个 HTML 文件，支持 Chrome、Firefox、Edge 与 Safari。界面有简体中文，安装之后在要保存的页面点击工具栏上的按钮即可。身在境外的人可以另外存到 Wayback Machine，多留一份公开的快照。&lt;/p&gt;
-&lt;p&gt;需要大量存档的团队，可以自建开源的 ArchiveBox（MIT 授权，9 月 26 日发布新版）。安装方式是在 Linux 或 macOS 上用 Docker 或 pip 执行命令。存在自己手上的文件不受服务封锁影响，但要自行负责备份，也无法像公开的存档服务那样让别人独立验证页面当时的样子。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cultura.gob.es/cultura/propiedadintelectual/lucha-contra-la-pirateria/s2cpi/listadowebs.html&#34;&gt;Nombres de dominios Web objeto de resolución final firme de la S2CPI (2012 – 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ministerio de Cultura&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors&#34;&gt;Spain orders blocks on Archive.today and its mirrors&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Reclaim The Net&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bandaancha.eu/articulos/archive-today-pasa-ser-web-ilegal-espana-11923&#34;&gt;Archive.today pasa a ser una una web &amp;#34;ilegal&amp;#34; en España por orden del Ministerio de Cultura&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Banda Ancha&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/web.archive.org&#34;&gt;Is http://web.archive.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gildas-lormeau/SingleFile&#34;&gt;SingleFile&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ArchiveBox/ArchiveBox&#34;&gt;ArchiveBox&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

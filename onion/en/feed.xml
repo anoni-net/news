@@ -6,7 +6,156 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>F-Droid 2.0 and Google&#39;s Android developer verification</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/fdroid-2-android-developer-verification/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/fdroid-2-android-developer-verification</guid>
+<pubDate>Fri, 09 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>F-Droid, the open-source Android app store, released 2.0, a rewrite that requires Android 7, on 24 September. From 30 September Google began requiring apps on seven stores in Brazil, Indonesia, Singapore and Thailand to be registered by identity-verified developers, with a global expansion to certified Android devices planned for 2027. As of 2 October, installing apps from F-Droid is unaffected anywhere.</description>
+<content:encoded>&lt;p&gt;Based on 18 sources, including F-Droid, Google, Conversations&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;F-Droid, an Android app store that carries only open-source apps, released version 2.0 on 24 September, a full rewrite of its client that requires Android 7. From 30 September, Google began requiring apps on Google Play and six phone makers&#39; stores in Brazil, Indonesia, Singapore and Thailand to be registered by developers who have verified their identity, and plans to extend the requirement to all certified Android devices worldwide in 2027. As of 2 October, installing apps from F-Droid or directly from a website is unaffected everywhere.&lt;/p&gt;
+&lt;p&gt;According to F-Droid, its team reviews each app&#39;s public source code for ads and trackers before building and publishing it. Version 2.0 is rebuilt in Kotlin and Jetpack Compose with three tabs, installs app updates automatically by default while keeping existing preferences, and improves search in Chinese, Japanese and Korean. Version 2.0 has been through an independent security review, and the announcement says the full report will be published once it is cleared for publication.&lt;/p&gt;
+&lt;p&gt;F-Droid&#39;s 2.0 announcement recommends Tor VPN in place of the old &#34;Use Tor&#34; option, which became generic proxy settings. The panic-triggered app wipe was removed for the time being, and the announcement advises people who rely on it to postpone updating. As of 2 October the download on F-Droid&#39;s homepage is 2.0.1, while the package page still labels 2.0 as beta and suggests 1.23.2.&lt;/p&gt;
+&lt;p&gt;On 24 September, the developer of the open-source messaging app Conversations wrote that Google Play had repeatedly rejected the app&#39;s updates and twice removed it, and that one update had been waiting 14 days for review when the post was published. The developer argues that Google does not distinguish feature updates from security updates and that delaying security updates is dangerous. The post says F-Droid has become the app&#39;s main channel, with reproducible builds signed by the developer&#39;s own key. As of 2 October the previously paid Google Play version is free. As of the same date we had found only the developer&#39;s account of Google Play&#39;s review process.&lt;/p&gt;
+&lt;p&gt;Google&#39;s verification asks developers to prove their identity and register package names with an APK signed by their private key. As of 2 October, Google&#39;s FAQ says the first phase covers only the seven participating stores, and that other stores and sideloading (installing outside a store) are not affected. Under Google&#39;s plan, from 2027 unregistered apps on certified devices can be installed only with the developer tool ADB or through what Google calls the advanced flow.&lt;/p&gt;
+&lt;p&gt;The advanced flow involves turning on developer mode, confirming no one is coaching you, restarting and re-authenticating, then waiting one day before confirming with a fingerprint, face or PIN to allow unverified apps for 7 days or indefinitely. Google&#39;s help page says the requirement does not apply to devices running AOSP (the Android Open Source Project), uncertified devices or regions where Google Mobile Services are unsupported.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The two models answer &#34;can I trust this app?&#34; differently. Google asks developers to prove who they are, while F-Droid relies on public source code and signs apps with its own key, or with the original developer&#39;s key when the build is reproducible. Under Google&#39;s rules, only the developer can register a package name. F-Droid wrote in September 2025 that it cannot require developers to register with Google or take over the package names of the open-source apps it distributes.&lt;/p&gt;
+&lt;p&gt;Google&#39;s August 2025 announcement says its own analysis found over 50 times more malware from internet-sideloaded sources than on Google Play, and that the first phase targets countries specifically affected by fraudulent app scams. In July 2026 F-Droid argued that the Android Developer Console terms let Google terminate accounts for distributing malware without defining the word anywhere in the document.&lt;/p&gt;
+&lt;p&gt;Keep Android Open, a campaign joined by free software and digital rights groups, counts nine steps in the advanced flow and notes that the flow runs through Google Play services rather than Android itself, which in its view means Google can change it at any time. Google&#39;s FAQ says the one-day wait exists to break the urgency of scammers coaching victims over a live call, that developer mode need not stay on afterwards, and that ADB installs are not subject to the wait.&lt;/p&gt;
+&lt;p&gt;In an open letter in February 2026, F-Droid advised developers against signing up, now or ever. F-Droid&#39;s 2025 statement said the requirement would end F-Droid and similar open-source distribution as they work today. Google has published a registration guide for open-source platforms: developers register package names under their own accounts, and platforms that re-sign apps add their key&#39;s fingerprint. The guide says users then keep today&#39;s install experience.&lt;/p&gt;
+&lt;p&gt;Three of the four first-phase countries are in Southeast Asia. Google&#39;s 2025 announcement quotes Indonesia&#39;s Ministry of Communications and Digital Affairs calling the plan a &#34;balanced approach&#34;, and Thailand&#39;s Ministry of Digital Economy and Society calling it a &#34;positive and proactive measure&#34;. Singapore had already hosted a 2024 Google pilot, run with the Cyber Security Agency of Singapore, in which Play Protect blocked internet-sideloaded apps that request sensitive permissions. As of 2 October we could not find a public statement from the Singapore government on developer verification itself.&lt;/p&gt;
+&lt;p&gt;As of 2 October Google Play does not operate in mainland China, and Google&#39;s help page exempts regions where Google Mobile Services are unsupported without saying whether mainland China is one of them. Reaching F-Droid is a separate problem there. OONI, which measures internet censorship, recorded 1,506 tests of &lt;code&gt;f-droid.org&lt;/code&gt; from mainland China between 1 June and 2 October 2026, of which 1,179 showed anomalies, 288 failed, 37 were normal and 2 were confirmed as blocked by OONI. A mirror run by Tsinghua University&#39;s TUNA association was in sync with the official repository on 1 October.&lt;/p&gt;
+&lt;p&gt;As of 2 October, people who install apps through F-Droid or a website do not need to change anything. Anyone who wants to try F-Droid can download the roughly 12.5 MB APK from its homepage and allow the browser to install unknown apps. As of 2 October the client is fully translated into Simplified Chinese, while 2.0&#39;s new category names are only about 40% translated into Traditional Chinese.&lt;/p&gt;
+&lt;p&gt;To see whether a phone would fall under the 2027 rules, open the Google Play Store, tap the profile icon, then Settings and About, and check for Play Protect certification. On a certified phone, installing apps from unregistered developers would mean turning on the advanced flow a day ahead, and switching it off later stops those apps from updating. As of 2 October Google had published no month or country order for the 2027 expansion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (18)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html&#34;&gt;F-Droid 2.0: A New Chapter for Android Freedom&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification/guides&#34;&gt;Android developer verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-18&#34;&gt;18 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification/guides/faq&#34;&gt;Frequently asked questions | Android developer verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;30 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/17065026&#34;&gt;Learn about Android developer verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification/guides/open-source-app-registration&#34;&gt;Register your app on open source platforms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;30 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://android-developers.googleblog.com/2026/06/android-developer-verification.html&#34;&gt;Android developer verification: Building a safer ecosystem together&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-18&#34;&gt;18 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://android-developers.googleblog.com/2025/08/elevating-android-security.html&#34;&gt;A new layer of security for certified Android devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-08-25&#34;&gt;25 August 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gultsch.de/posts/breaking-up-with-google-play/&#34;&gt;Breaking Up with Google Play: Why Conversations Is Now Free&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Conversations&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2025/09/29/google-developer-registration-decree.html&#34;&gt;F-Droid and Google&amp;#39;s Developer Registration Decree&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-29&#34;&gt;29 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2026/02/24/open-letter-opposing-developer-verification.html&#34;&gt;An Open Letter Opposing Android Developer Verification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-24&#34;&gt;24 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/2026/07/01/adv-malware.html&#34;&gt;What We Talk About When We Talk About Malware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-01&#34;&gt;1 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://keepandroidopen.org/&#34;&gt;Keep Android Open&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Keep Android Open&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/packages/org.fdroid.fdroid/&#34;&gt;F-Droid&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/answer/2812853&#34;&gt;Use Google Play Protect to help keep your apps safe &amp;amp; your data private&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://security.googleblog.com/2024/02/piloting-new-ways-to-protect-Android-users-from%20financial-fraud.html&#34;&gt;Piloting new ways to protect Android users from financial fraud&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-02-06&#34;&gt;6 February 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=CN&amp;amp;test_name=web_connectivity&amp;amp;domain=f-droid.org&amp;amp;since=2026-06-01&amp;amp;until=2026-10-02&amp;amp;axis_x=measurement_start_day&#34;&gt;OONI Explorer: f-droid.org, China&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/&#34;&gt;F-Droid 镜像使用帮助&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TUNA, Tsinghua University&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/answer/2843119?hl=en&#34;&gt;Country availability for Google Play apps &amp;amp; digital content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>iPhone Automatic Restart and a forensic vendor&#39;s bypass claim</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/iphone-inactivity-reboot-bypass/</link>
@@ -2099,74 +2248,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/aosp-mirror/platform_frameworks_base/blob/main/packages/SettingsLib/res/values-zh-rTW/strings.xml&#34;&gt;frameworks/base/packages/SettingsLib/res/values-zh-rTW/strings.xml&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Spain’s administrative block on archive.today</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/09/spain-blocks-archive-today/</link>
-<guid isPermaLink="false">anoni-news:en/2026/09/spain-blocks-archive-today</guid>
-<pubDate>Tue, 29 Sep 2026 07:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>A commission under Spain&#39;s Ministry of Culture has ordered ISPs to block the archive.today web archive and its mirror domains without any court ruling, and OONI measurements show the effect.</description>
-<content:encoded>&lt;p&gt;Based on 7 sources, including Ministerio de Cultura, Reclaim The Net, Banda Ancha&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The Second Section of Spain&#39;s Intellectual Property Commission, part of the Ministry of Culture, has ordered telecom operators to block the web archive archive.today. The ministry&#39;s list, updated on 25 September, names seven domains: archive.today and its mirrors archive.fo, archive.is, archive.li, archive.md, archive.ph and archive.vn. The block is an administrative decision on a complaint from an unnamed rights holder, not a court ruling. Networks outside Spain are not affected by this block.&lt;/p&gt;
-&lt;p&gt;Spanish site Banda Ancha, which first reported the block, reports that it took effect at some operators in mid-August and has since spread to every operator in the intellectual property protocol. Over HTTPS the sites fail with a connection error, and over plain HTTP users are redirected to a ministry page calling the site &#34;illegal&#34;. According to Reclaim The Net, that protocol, signed in 2021 by the ministry, rights holders and major ISPs, commits operators to block mirror sites within 24 hours of notice from a technical committee. The domains were missing from the ministry&#39;s published list of blocked sites when the first reports appeared, after its 11 September update, and were added in the update of 25 September.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;archive.today saves snapshots of web pages so that people can still read them after the original is removed or altered. Spain blocked the whole service rather than a single snapshot, which, according to Reclaim The Net, is not new there: the same method has been used against sites carrying sports broadcasts. Everything stored on the service is now unreachable for most users in Spain, through a procedure that needs no court and extends to mirrors.&lt;/p&gt;
-&lt;p&gt;OONI data shows the effect. Between 1 and 27 September, 205 of 641 measurements of archive.ph from Spain were anomalous, against 2 of 410 for the Internet Archive&#39;s web.archive.org. An anomaly is not a confirmed block, only a result that differs from the control.&lt;/p&gt;
-&lt;p&gt;Across Asia, access to web archives already varies widely. From June to September, 273 of 308 OONI measurements of archive.ph in mainland China were anomalous, and GreatFire records web.archive.org as continuously blocked there since 2016. In Indonesia, OONI confirmed 155 measurements of archive.is as blocked. In Taiwan, only 41 of 1,183 measurements of archive.ph were anomalous.&lt;/p&gt;
-&lt;p&gt;Anyone who cites archived pages as evidence should avoid relying on a single archive, since whether readers can open an archived copy depends on where they are. Where the Wayback Machine is reachable, saving a copy there as well adds a public snapshot. To keep evidence in your own hands, the open-source browser extension SingleFile, licensed under AGPL-3.0 and updated on 24 September, saves a whole page as one HTML file. It works in Chrome, Firefox, Edge and Safari, its interface includes Traditional and Simplified Chinese, and saving a page takes one click on its toolbar button.&lt;/p&gt;
-&lt;p&gt;Teams archiving at scale can self-host ArchiveBox, which takes lists of URLs, browser history or bookmarks and saves HTML, JavaScript, PDFs and media. It is MIT-licensed, was updated on 26 September, and installs with Docker or pip on Linux or macOS. Copies you keep yourself cannot be blocked, but you are responsible for backing them up, and others cannot verify them independently the way they can check a public archive.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cultura.gob.es/cultura/propiedadintelectual/lucha-contra-la-pirateria/s2cpi/listadowebs.html&#34;&gt;Nombres de dominios Web objeto de resolución final firme de la S2CPI (2012 – 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministerio de Cultura&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors&#34;&gt;Spain orders blocks on Archive.today and its mirrors&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Reclaim The Net&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bandaancha.eu/articulos/archive-today-pasa-ser-web-ilegal-espana-11923&#34;&gt;Archive.today pasa a ser una una web &amp;#34;ilegal&amp;#34; en España por orden del Ministerio de Cultura&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Banda Ancha&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;17 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/web.archive.org&#34;&gt;Is http://web.archive.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gildas-lormeau/SingleFile&#34;&gt;SingleFile&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ArchiveBox/ArchiveBox&#34;&gt;ArchiveBox&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
