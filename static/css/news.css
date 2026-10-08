@@ -1619,6 +1619,36 @@ p {
     }
 }
 
+/* ---------------------------------------------------------------- 增加對比 */
+
+/* iPhone 與 Mac 開了「增加對比」時，瀏覽器送出 prefers-contrast: more。只改顏色與底線粗細，
+   間距與尺寸都不動，版面跟平常相同。見 SPEC.md「高對比模式」 */
+@media (prefers-contrast: more) {
+    :root {
+        /* 次要文字（日期、署名、出處、說明）跟內文同色，6.19 → 14.56 */
+        --c-muted: var(--c-text);
+        /* 連結改用最深的品牌色，5.76 → 11.5 */
+        --c-link: var(--brand-cyan-900);
+        /* 邊框與分隔線加深，1.36 → 4.69 */
+        --c-border: #5d7883;
+        /* 裝飾線與焦點框改用墨色，cyan-500 在白底上只有 2.47 */
+        --c-rule: var(--brand-cyan-900);
+    }
+
+    a {
+        text-decoration-thickness: 2px;
+    }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+    :root {
+        --c-muted: var(--c-text);
+        --c-link: var(--brand-cyan-100);
+        --c-border: #7f9fac;
+        --c-rule: var(--brand-cyan-300);
+    }
+}
+
 /* ---------------------------------------------------------------- 列印 */
 
 /* 研究者與記者會列印或另存成 PDF 引用導讀。拿掉導覽與按鈕，原文與內文連結後面印出完整網址，

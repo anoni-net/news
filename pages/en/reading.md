@@ -7,7 +7,7 @@ Text size, colours and reader mode are all handled by your browser and device. W
 
 ## Text size, colours and reader mode {#display}
 
-In a desktop browser you can raise the default font size in its settings, and the whole site scales with it, or simply zoom the page. On iPhone you can change the text size of a page in Safari, and Chrome on Android has text scaling under Accessibility in its settings. When your device switches to dark mode, the site switches to dark colours too.
+In a desktop browser you can raise the default font size in its settings, and the whole site scales with it, or simply zoom the page. On iPhone you can change the text size of a page in Safari, and Chrome on Android has text scaling under Accessibility in its settings. When your device switches to dark mode, the site switches to dark colours too. If you turn on Increase Contrast in Settings > Accessibility > Display & Text Size on iPhone, secondary text, links and dividers get darker, and the layout stays the same.
 
 If you only want the story itself, turn on your browser's reader mode. In Firefox's Reader View, story pages show only the story, without the source list and footer.
 

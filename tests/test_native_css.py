@@ -64,6 +64,22 @@ async def scenarios(ws_url, base):
         results["高對比色塊"] = await b.eval(style(".cat", "background-color", "::before"))
         results["高對比字色"] = await b.eval(style("body", "color"))
 
+        # 增加對比：只改顏色，版面不變。比對同一頁在一般與增加對比時，每個元素的位置與大小
+        await b.call("Emulation.setDeviceMetricsOverride", width=390, height=900, deviceScaleFactor=1, mobile=True)
+        rects = "[...document.querySelectorAll('body *')].map(e => { const r = e.getBoundingClientRect(); return [r.x, r.y, r.width, r.height].map(Math.round).join(','); }).join(';')"
+        colors = (f"[{style('body', 'color')}, {style('.story__byline', 'color')}, {style('.source-slip__item + .source-slip__item', 'border-top-color')},"
+                  f" {style('.story__body a, .story__byline a', 'color')}, {style('body', 'background-color')}]")
+        for scheme in ("light", "dark"):
+            await b.call("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": scheme}])
+            await b.open(POST, "real")
+            normal = (await b.eval(rects), await b.eval(colors))
+            await b.call("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": scheme},
+                                                                  {"name": "prefers-contrast", "value": "more"}])
+            await b.open(POST, "real")
+            more = (await b.eval(rects), await b.eval(colors))
+            results[f"增加對比-{scheme}"] = {"版面相同": normal[0] == more[0], "一般": normal[1], "增加對比": more[1],
+                                          "底線": await b.eval(style(".story__body a", "text-decoration-thickness"))}
+
         # 一般畫面：長列表與引用段落的標示色
         await b.call("Emulation.setEmulatedMedia", features=[])
         await b.open("", "real")
@@ -135,3 +151,23 @@ def test_target_text_has_brand_highlight(results):
 def test_mark_colors_are_checked_for_contrast():
     assert ("--c-mark-text", "--c-mark-bg") in build.CONTRAST_PAIRS
     assert build.check_contrast(ROOT / "static" / "css" / "news.css") == []
+
+
+def rgb_hex(value):
+    r, g, b = (int(x) for x in value[value.index("(") + 1:value.index(")")].split(",")[:3])
+    return f"#{r:02x}{g:02x}{b:02x}"
+
+
+@pytest.mark.parametrize("scheme", ["light", "dark"])
+def test_more_contrast_changes_colors_only(results, scheme):
+    r = results[f"增加對比-{scheme}"]
+    # 間距與尺寸都不動，每個元素的位置與大小跟平常相同
+    assert r["版面相同"] is True
+    text, muted, border, link, bg = (rgb_hex(v) for v in r["增加對比"])
+    # 次要文字跟內文同色
+    assert muted == text
+    assert rgb_hex(r["一般"][1]) != text
+    # 邊框至少 3:1（非文字元件的標準），連結至少 7:1
+    assert build.contrast(border, bg) >= 3 > build.contrast(rgb_hex(r["一般"][2]), bg)
+    assert build.contrast(link, bg) >= 7
+    assert r["底線"] == "2px"
