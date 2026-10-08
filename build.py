@@ -2243,6 +2243,7 @@ CONTRAST_PAIRS = [
     ("--c-text", "--c-surface"), ("--c-muted", "--c-surface"), ("--c-link", "--c-surface"),
     ("--c-headline", "--c-bg"), ("--c-headline", "--c-surface"),
     ("--c-header-text", "--c-header-bg"), ("--c-header-link", "--c-header-bg"),
+    ("--c-mark-text", "--c-mark-bg"),
 ]
 
 

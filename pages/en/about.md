@@ -60,3 +60,5 @@ We count readership with a self-hosted Umami instance that sets no cookies and s
 ## Licence {#license}
 
 Articles are published under CC BY 4.0; you are welcome to republish and quote them with attribution. Copyright in the quoted originals belongs to their authors.
+
+To quote a particular sentence, select it in Chrome, Edge or Safari and copy a link to the highlighted text from the right-click or long-press menu. The link opens the page scrolled to that passage, with the passage highlighted. When you print a story or save it as a PDF, the page address is printed at the end, and external links in the story and its sources are followed by their full addresses.

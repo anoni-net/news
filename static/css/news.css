@@ -31,6 +31,9 @@
     --c-header-bg: var(--brand-cyan-900);
     --c-header-text: #ffffff;
     --c-header-link: var(--brand-cyan-50);
+    /* 文字片段連結（#:~:text=）標出的段落 */
+    --c-mark-bg: var(--brand-cyan-100);
+    --c-mark-text: #1d2b31;
 
     --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
     --font-serif: "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
@@ -78,6 +81,8 @@ html:lang(en) .site-header__product {
         --c-header-bg: var(--brand-cyan-900);
         --c-header-text: #ffffff;
         --c-header-link: var(--brand-cyan-50);
+        --c-mark-bg: var(--brand-cyan-800);
+        --c-mark-text: #ffffff;
     }
 }
 
@@ -1551,4 +1556,186 @@ p {
     max-width: var(--measure);
     margin: 0 0 1.5rem;
     color: var(--c-muted);
+}
+
+/* ---------------------------------------------------------------- 引用段落的連結 */
+
+/* 網址帶 #:~:text=某段文字 時，瀏覽器捲到那段文字並標出來。標示色換成品牌色，
+   引用導讀的某一句時，讀者一眼看得到是哪裡。見 SPEC.md「引用段落的連結」 */
+::target-text {
+    background: var(--c-mark-bg);
+    color: var(--c-mark-text);
+}
+
+/* ---------------------------------------------------------------- 長列表 */
+
+/* 時間軸的每一天與導讀歷史的每個月，捲到附近才計算版面，手機打開長列表比較快。
+   2026-10 在 CPU 降速 4 倍的手機模擬下，首頁的版面計算從 11.5ms 降到 7.1ms。
+   畫面外的區塊先用 contain-intrinsic-size 估一個高度，算過一次之後記住實際的高度。
+   估計值取 2026-10 實測的中位數，差太多時捲軸會在捲動途中跳動，版面大改之後要重新量 */
+.day {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 60rem;
+}
+
+.history-month {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 18rem;
+}
+
+@media (min-width: 48em) {
+    .day {
+        contain-intrinsic-size: auto 44rem;
+    }
+
+    .history-month {
+        contain-intrinsic-size: auto 9rem;
+    }
+}
+
+/* ---------------------------------------------------------------- 高對比模式 */
+
+/* Windows 的高對比模式會把顏色換成系統色，只靠底色區分的元件要補回來。見 SPEC.md「高對比模式」 */
+@media (forced-colors: active) {
+    /* 頁首的 logo 是白色的圖，底色被換掉就看不見，頁首與刊頭保留品牌色。白字在 cyan-900 上的對比是 11.5 */
+    .site-header {
+        forced-color-adjust: none;
+    }
+
+    /* 分類的色塊是底色，會被換成背景色而消失，改用文字色 */
+    .cat::before {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+
+    /* 正在朗讀的段落只靠底色，改用系統的選取色畫框 */
+    .is-reading {
+        outline: 2px solid Highlight;
+    }
+
+    ::target-text {
+        background: Highlight;
+        color: HighlightText;
+    }
+}
+
+/* ---------------------------------------------------------------- 列印 */
+
+/* 研究者與記者會列印或另存成 PDF 引用導讀。拿掉導覽與按鈕，原文與內文連結後面印出完整網址，
+   文章最後印出這一頁的網址，紙本上也查得到出處。放在檔案最後，蓋過前面的深色模式與桌機版面。
+   見 SPEC.md「列印」 */
+@media print {
+    :root {
+        --c-bg: #ffffff;
+        --c-surface: #ffffff;
+        --c-border: #b0b0b0;
+        --c-text: #000000;
+        --c-muted: #333333;
+        --c-headline: #000000;
+        --c-link: #000000;
+        --c-rule: #000000;
+    }
+
+    @page {
+        margin: 16mm 14mm;
+    }
+
+    body {
+        font-size: 11pt;
+        line-height: 1.6;
+    }
+
+    .site-header,
+    .site-footer,
+    .story__langs,
+    .listen,
+    .subscribe,
+    .pager,
+    .thread,
+    .related,
+    .masthead__bar {
+        display: none !important;
+    }
+
+    /* 語系那一行不印，標題區的粗線改由署名那一行畫 */
+    .story__byline:not(:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #000000;
+    }
+
+    /* 桌機的兩欄與停在頂端的區塊都改回一欄，原文區塊不能在區塊內捲動，否則下半部印不出來 */
+    .story {
+        display: block;
+    }
+
+    .source-slip,
+    .day__date {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .source-slip {
+        margin-top: 1.5rem;
+        border-top: 2px solid #000000;
+    }
+
+    .source-slip__item,
+    .content img,
+    .content figure,
+    .content table,
+    .content pre {
+        break-inside: avoid;
+    }
+
+    .content h2,
+    .content h3 {
+        break-after: avoid;
+    }
+
+    .content pre {
+        white-space: pre-wrap;
+        overflow: visible;
+    }
+
+    .is-reading {
+        background: none;
+        outline: 0;
+    }
+
+    /* 分類色在深色模式是淺色，印在白紙上太淡，列印時一律用黑色 */
+    .cat {
+        --cat: #000000;
+    }
+
+    /* 站外連結後面印出網址。站內連結不印，路徑在紙本上沒有用 */
+    .source-slip a[href^="http"]::after {
+        content: " " attr(href);
+        display: block;
+        font-weight: 400;
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+
+    .story__body a[href^="http"]::after {
+        content: "（" attr(href) "）";
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+
+    html:lang(en) .story__body a[href^="http"]::after {
+        content: " (" attr(href) ")";
+    }
+
+    /* 文章最後印出出處與網址，網址來自 <article> 的 data-print-url，不在頁面文字裡，
+       閱讀模式與朗讀都不會讀到 */
+    .story[data-print-url]::after {
+        content: attr(data-print-label) attr(data-print-url);
+        display: block;
+        margin-top: 1.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #000000;
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
 }
