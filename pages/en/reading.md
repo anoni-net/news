@@ -1,6 +1,6 @@
 ---
 title: Reading options
-description: How to change text size, dark mode and reader mode, and how to listen to stories with the Listen button or the read-aloud features built into your browser and device.
+description: How to change text size, dark mode and reader mode, listen to stories with the Listen button or your device's read-aloud features, and share a link to a passage.
 ---
 
 Text size, colours and reader mode are all handled by your browser and device. We do not offer a settings menu of our own. Story pages have a Listen button, which appears only when your browser supports it and your device has a voice installed locally. The pages themselves need no JavaScript, so with Tor Browser's security level set to Safest, the text of each piece stays readable.
@@ -18,3 +18,7 @@ Story pages have a Listen button below the "Also in" line under the headline. It
 An iPhone comes with small, basic-quality voices. To download better-sounding ones, go to Settings > Accessibility > Read & Speak > Voices and choose a language and voice. These downloads can be over 100 MB, so connect to Wi-Fi first. Reload the story page afterwards and the Listen button will use the best-quality version.
 
 If you do not see the button, use the read-aloud feature built into your browser or operating system. Safari on iPhone has Listen to Page, and story pages are marked up so it reads the story itself and skips the source list and footer. Whether the option appears depends on the page's language and your device's language settings. If it is missing, turn on Speak Screen in Settings > Accessibility > Read & Speak on iPhone, which reads everything on screen, header and footer included. Some browsers read aloud with online voices, which sends the text to the browser vendor's servers; if that matters to you, choose a voice that runs on your device.
+
+## Links to a passage {#quote}
+
+To share a particular sentence, select it in Chrome, Edge or Safari and choose Copy link to highlight (Chrome and Edge) or Copy Link with Highlight (Safari) from the right-click or long-press menu. The link opens the page scrolled to that passage, with the passage highlighted. The highlight is described in the part of the link after `#`, which your browser never sends to the server, so the site cannot see which sentence you shared.

@@ -280,6 +280,7 @@
 /en/reading/
 	#display
 	#listening
+	#quote
 /en/subscribe/
 	#more
 	#steps
@@ -314,6 +315,7 @@
 /reading/
 	#display
 	#listening
+	#quote
 /subscribe/
 	#more
 	#steps
@@ -471,6 +473,7 @@
 /zh-cn/reading/
 	#display
 	#listening
+	#quote
 /zh-cn/subscribe/
 	#more
 	#steps
