@@ -1,0 +1,383 @@
+"""朗讀按鈕（static/js/read-aloud.js）在瀏覽器裡的行為。規則見 SPEC.md「朗讀按鈕」。
+
+headless Chrome 的語音清單是空的，測不到真正的朗讀。這裡在頁面載入前換掉 speechSynthesis，
+語音清單由測試指定，每一段要不要念完也由測試推進，不靠計時，CI 上不會因為機器快慢而不穩。
+找不到 Chrome 時略過，跟版面檢查相同。
+"""
+
+from __future__ import annotations
+
+import asyncio
+import functools
+import json
+import sys
+import tempfile
+import threading
+from http.server import ThreadingHTTPServer
+from pathlib import Path
+
+import pytest
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+import build  # noqa: E402
+import layout_check  # noqa: E402
+
+FIXTURES = ROOT / "tests" / "fixtures"
+POST = "2026/09/layout-stress-test/"
+
+# 假的 speechSynthesis：speak() 排進佇列，__advance() 念完目前這一段，cancel() 清空佇列。
+# voices 是 null 時整個 API 拿掉，模擬不支援的瀏覽器
+FAKE = r"""
+(() => {
+  const voices = __VOICES__;
+  if (voices === null) {
+    Object.defineProperty(window, "speechSynthesis", { value: undefined, configurable: true });
+    return;
+  }
+  window.SpeechSynthesisUtterance = function (text) { this.text = text; this.voice = null; this.lang = ""; this.rate = 1; };
+  window.__spoken = [];
+  const queue = [];
+  let cur = null;
+  // 模擬每次回報都把同一批語音多列一次的瀏覽器：__grow() 之後 getVoices() 多一份重複的清單
+  let copies = 1;
+  const listeners = [];
+  window.__grow = function () { copies += 1; listeners.forEach(f => f()); };
+  function next() {
+    if (cur || !queue.length) return;
+    cur = queue.shift();
+    window.__spoken.push({ text: cur.text, voice: cur.voice && cur.voice.name, uri: cur.voice && cur.voice.voiceURI, lang: cur.lang, rate: cur.rate });
+    if (cur.onstart) cur.onstart({});
+  }
+  window.__advance = function () {
+    const u = cur;
+    cur = null;
+    if (u && u.onend) u.onend({});
+    next();
+  };
+  window.__queued = function () { return queue.length + (cur ? 1 : 0); };
+  Object.defineProperty(window, "speechSynthesis", { configurable: true, value: {
+    getVoices() { let out = []; for (let i = 0; i < copies; i++) out = out.concat(voices); return out; },
+    speak(u) { queue.push(u); next(); },
+    cancel() {
+      queue.length = 0;
+      const u = cur;
+      cur = null;
+      if (u && u.onerror) u.onerror({ error: "interrupted" });
+    },
+    addEventListener(type, f) { if (type === "voiceschanged") listeners.push(f); },
+  }});
+})();
+"""
+
+TW_REMOTE = {"name": "Google 國語（臺灣）", "lang": "zh-TW", "localService": False, "default": True}
+TW_LOCAL = {"name": "Meijia", "lang": "zh-TW", "localService": True, "default": False}
+TW_LOCAL_2 = {"name": "Meijia（加強版）", "voiceURI": "com.apple.voice.enhanced.zh-TW.Meijia", "lang": "zh-TW", "localService": True, "default": False}
+CN_LOCAL = {"name": "Tingting", "lang": "zh_CN", "localService": True, "default": False}
+HK_LOCAL = {"name": "Sinji", "lang": "zh-HK", "localService": True, "default": False}
+EN_LOCAL = {"name": "Samantha", "lang": "en-US", "localService": True, "default": False}
+
+# iPhone 15 Pro、iOS 27 的 Safari 實際回報的中文語音（2026-10-08）：每個語音有 compact 與
+# super-compact 兩個版本，名稱相同，全部標成預設
+IOS_VOICES = [
+    {"name": n, "lang": lang, "voiceURI": f"com.apple.voice.{size}.{uri}.{en}", "localService": True, "default": True}
+    for size in ("compact", "super-compact")
+    for n, lang, uri, en in [("美佳", "zh-TW", "zh-TW", "Meijia"), ("婷婷", "zh-CN", "zh-CN", "Tingting"),
+                             ("善怡", "yue-HK", "zh-HK", "Sinji")]
+] + [{"name": "Samantha", "lang": "en-US", "voiceURI": "com.apple.voice.compact.en-US.Samantha",
+      "localService": True, "default": True}]
+
+VISIBLE = "!document.querySelector('[data-read-aloud]').hidden"
+STATE = """({
+  state: document.querySelector('.listen__button').dataset.state,
+  label: document.querySelector('[data-label]').textContent,
+  reading: (document.querySelector('.is-reading') || {}).textContent || null,
+  tracked: document.querySelector('.listen__button').hasAttribute('data-anoni-event'),
+})"""
+CLICK = "document.querySelector('.listen__button').click()"
+
+
+class Browser:
+    def __init__(self, ws, base):
+        self.ws, self.base, self.counter, self.script = ws, base, 0, None
+
+    async def call(self, method, **params):
+        self.counter += 1
+        message_id = self.counter
+        await self.ws.send(json.dumps({"id": message_id, "method": method, "params": params}))
+        while True:
+            reply = json.loads(await self.ws.recv())
+            if reply.get("id") == message_id:
+                if "error" in reply:
+                    raise RuntimeError(f"{method}: {reply['error']}")
+                return reply.get("result", {})
+
+    async def eval(self, expression):
+        result = await self.call("Runtime.evaluate", expression=expression, returnByValue=True, awaitPromise=True)
+        return result["result"].get("value")
+
+    async def open(self, rel, voices="real"):
+        """voices 是語音清單、None（沒有語音 API），或 "real"（不替換，用 headless Chrome 自己的）。"""
+        if self.script:
+            await self.call("Page.removeScriptToEvaluateOnNewDocument", identifier=self.script)
+            self.script = None
+        if voices != "real":
+            source = FAKE.replace("__VOICES__", json.dumps(voices))
+            self.script = (await self.call("Page.addScriptToEvaluateOnNewDocument", source=source))["identifier"]
+        await self.call("Page.navigate", url=self.base + rel)
+        for _ in range(50):
+            if await self.eval("document.readyState") == "complete":
+                break
+            await asyncio.sleep(0.1)
+        # 腳本是 defer，load 之後才一定執行過。等到兩個畫格之後再看按鈕
+        await self.eval("new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))")
+
+
+async def scenarios(ws_url, base):
+    import websockets
+
+    async with websockets.connect(ws_url, max_size=None) as ws:
+        b = Browser(ws, base)
+        await b.call("Page.enable")
+        results = {}
+        await b.open(POST, None)
+        await b.eval("localStorage.clear()")
+
+        for name, rel, voices in [
+            ("headless 的語音清單", POST, "real"),
+            ("沒有語音 API", POST, None),
+            ("只有線上語音", POST, [TW_REMOTE]),
+            ("英文頁只有中文語音", "en/" + POST, [TW_LOCAL, CN_LOCAL]),
+        ]:
+            await b.open(rel, voices)
+            results[name] = await b.eval(VISIBLE)
+
+        for name, rel, voices in [
+            ("正體頁", POST, [TW_REMOTE, HK_LOCAL, CN_LOCAL, TW_LOCAL]),
+            ("正體頁沒有台灣語音", POST, [HK_LOCAL, CN_LOCAL, TW_REMOTE]),
+            ("簡體頁", "zh-cn/" + POST, [TW_LOCAL, HK_LOCAL, CN_LOCAL]),
+            ("英文頁", "en/" + POST, [TW_LOCAL, EN_LOCAL]),
+        ]:
+            await b.open(rel, voices)
+            await b.eval(CLICK)
+            results[name] = await b.eval("__spoken[0].voice")
+
+        # 一篇完整念過：開始、念兩段、暫停、繼續、念完
+        await b.open(POST, [TW_REMOTE, TW_LOCAL])
+        results["開始前"] = await b.eval(STATE)
+        await b.eval(CLICK)
+        results["開始"] = await b.eval(STATE)
+        results["title"] = await b.eval("document.querySelector('.story__title').textContent.trim()")
+        await b.eval("__advance(); __advance()")
+        results["第三段"] = await b.eval(STATE)
+        await b.eval(CLICK)
+        results["暫停"] = await b.eval(STATE)
+        results["暫停後的佇列"] = await b.eval("__queued()")
+        await b.eval(CLICK)
+        results["繼續"] = await b.eval(STATE)
+        results["繼續的第一段"] = await b.eval("__spoken[__spoken.length - 1].text")
+        await b.eval("for (let i = 0; i < 200 && __queued(); i++) __advance()")
+        results["念完"] = await b.eval(STATE)
+        results["念過的段落"] = await b.eval("__spoken.map(s => s.text)")
+        results["語音"] = await b.eval("[...new Set(__spoken.map(s => s.voice + '|' + s.lang))]")
+        results["一個語音時的選單"] = await b.eval("document.querySelector('[data-voice-field]').hidden")
+        results["沒選過時的儲存"] = await b.eval("localStorage.getItem('anoni-news-listen')")
+
+        # 選語音與速度：選單只列本機、語言符合的語音，念到一半換掉就從同一段用新設定重念
+        voices = [TW_REMOTE, HK_LOCAL, TW_LOCAL, CN_LOCAL, EN_LOCAL, TW_LOCAL_2]
+        await b.open(POST, voices)
+        panel = "[document.querySelector('#listen-panel').hidden, document.querySelector('[data-listen-toggle]').getAttribute('aria-expanded')]"
+        results["面板預設"] = await b.eval(panel)
+        await b.eval("document.querySelector('[data-listen-toggle]').click()")
+        results["面板展開"] = await b.eval(panel)
+        results["展開後看得到選單"] = await b.eval("document.querySelector('[data-voice]').getBoundingClientRect().height > 0")
+        await b.eval("document.querySelector('[data-listen-toggle]').click()")
+        results["面板收起"] = await b.eval(panel)
+        results["選單"] = await b.eval("[...document.querySelectorAll('[data-voice] option')].map(o => o.textContent)")
+        results["分組"] = await b.eval(
+            "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
+        await b.eval("__grow(); __grow(); __grow()")
+        results["重複回報之後"] = await b.eval("[...document.querySelectorAll('[data-voice] option')].map(o => o.textContent)")
+        results["選單顯示"] = await b.eval("!document.querySelector('[data-voice-field]').hidden")
+        await b.eval(CLICK)
+        await b.eval("__advance()")
+        before = await b.eval("__spoken.length")
+        await b.eval("const s = document.querySelector('[data-voice]'); s.value = '1'; s.dispatchEvent(new Event('change'))")
+        await b.eval("const r = document.querySelector('[data-rate]'); r.value = '1.5'; r.dispatchEvent(new Event('change'))")
+        results["換設定後"] = await b.eval(f"__spoken.slice({before}).map(s => [s.voice, s.rate, s.text])")
+        results["換設定時的段落"] = await b.eval(f"__spoken[{before} - 1].text")
+        results["儲存"] = await b.eval("JSON.parse(localStorage.getItem('anoni-news-listen'))")
+        results["其他鍵"] = await b.eval("Object.keys(localStorage)")
+
+        # 英文頁依瀏覽器內建的語言名稱分組，系統預設語音所在的那一組排第一
+        await b.open("en/" + POST, [
+            {"name": "Karen", "lang": "en-AU", "localService": True},
+            {"name": "Daniel", "lang": "en-GB", "localService": True, "default": True},
+            {"name": "Samantha", "lang": "en-US", "localService": True},
+            {"name": "Eddy", "voiceURI": "com.apple.eloquence.en-US.Eddy", "lang": "en-US", "localService": True},
+            {"name": "Alex", "lang": "en-US", "localService": True},
+            TW_LOCAL,
+        ])
+        results["英文分組"] = await b.eval(
+            "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
+
+        # iOS：同名的不同音質版本合併成一項，留 compact，存過 super-compact 的也對應得到
+        stash = await b.eval("localStorage.getItem('anoni-news-listen')")
+        await b.eval("localStorage.removeItem('anoni-news-listen')")
+        await b.open(POST, IOS_VOICES)
+        results["iOS 分組"] = await b.eval(
+            "[...document.querySelectorAll('[data-voice] optgroup')].map(g => [g.label, [...g.children].map(o => o.textContent)])")
+        await b.eval(CLICK)
+        results["iOS 念的語音"] = await b.eval("__spoken[0].uri")
+        await b.eval("localStorage.setItem('anoni-news-listen', JSON.stringify({voice: 'com.apple.voice.super-compact.zh-CN.Tingting', rate: '1'}))")
+        await b.open(POST, IOS_VOICES)
+        results["iOS 存過 super-compact"] = await b.eval("document.querySelector('[data-voice] option:checked').textContent")
+        await b.eval(f"localStorage.setItem('anoni-news-listen', {json.dumps(stash)})")
+
+        # 換頁之後沿用
+        await b.open("2026/09/zkp-age-verification/", voices)
+        results["換頁後的選單"] = await b.eval(
+            "[document.querySelector('[data-voice] option:checked').textContent, document.querySelector('[data-rate]').value]")
+        await b.eval(CLICK)
+        results["換頁後念的"] = await b.eval("[__spoken[0].voice, __spoken[0].rate]")
+
+        # 存的語音不在這台裝置上、速度不在選項裡時，回到預設
+        await b.eval("localStorage.setItem('anoni-news-listen', JSON.stringify({voice: 'gone', rate: '9'}))")
+        await b.open(POST, voices)
+        results["存的值無效"] = await b.eval(
+            "[document.querySelector('[data-voice] option:checked').textContent, document.querySelector('[data-rate]').value]")
+        await b.eval("localStorage.setItem('anoni-news-listen', '{not json')")
+        await b.open(POST, voices)
+        results["存的值壞掉"] = await b.eval(VISIBLE)
+        return results
+
+
+@pytest.fixture(scope="module")
+def results(tmp_path_factory):
+    chrome = layout_check.find_chrome()
+    if not chrome:
+        pytest.skip("沒有找到 Chrome")
+    out = tmp_path_factory.mktemp("site")
+    targets, _, _ = build.build(FIXTURES / "posts", out, ["clearnet"])
+    serve = tmp_path_factory.mktemp("serve")
+    (serve / "news").symlink_to(targets["clearnet"].out.resolve())
+    server = ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(layout_check.QuietHandler, directory=serve))
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    process, ws_url = layout_check.launch(chrome, Path(tempfile.mkdtemp()))
+    try:
+        if not ws_url:
+            pytest.skip("Chrome 沒有開出偵錯連接埠")
+        return asyncio.run(scenarios(ws_url, f"http://127.0.0.1:{server.server_address[1]}/news/"))
+    finally:
+        process.terminate()
+        process.wait(timeout=10)
+        server.shutdown()
+
+
+@pytest.mark.parametrize("case", ["headless 的語音清單", "沒有語音 API", "只有線上語音", "英文頁只有中文語音"])
+def test_button_hidden_without_local_voice(results, case):
+    assert results[case] is False
+
+
+@pytest.mark.parametrize("case, voice", [
+    ("正體頁", "Meijia"),
+    # 沒有台灣的語音時用中國的普通話，粵語排最後
+    ("正體頁沒有台灣語音", "Tingting"),
+    ("簡體頁", "Tingting"),
+    ("英文頁", "Samantha"),
+])
+def test_picks_local_voice_for_page_language(results, case, voice):
+    assert results[case] == voice
+
+
+def test_never_uses_online_voice(results):
+    assert results["語音"] == ["Meijia|zh-TW"]
+
+
+def test_play_pause_resume_finish(results):
+    s = build.strings()["zh-TW"]
+    assert results["開始前"] == {"state": "idle", "label": s["listen"], "reading": None, "tracked": True}
+    # 第一次點擊之後拿掉統計事件，暫停與繼續不再計算
+    assert results["開始"]["state"] == "playing" and results["開始"]["label"] == s["listen_pause"]
+    assert results["開始"]["tracked"] is False
+    assert results["開始"]["reading"].strip() == results["title"]
+    third = results["第三段"]["reading"]
+    assert results["暫停"]["state"] == "paused" and results["暫停"]["label"] == s["listen_resume"]
+    assert results["暫停"]["reading"] == third
+    assert results["暫停後的佇列"] == 0
+    # 從暫停的那一段重新念
+    assert results["繼續"]["state"] == "playing"
+    assert results["繼續的第一段"] == " ".join(third.split())
+    assert results["念完"]["state"] == "idle" and results["念完"]["reading"] is None
+
+
+def test_reads_title_body_and_tables_but_not_code(results):
+    spoken = results["念過的段落"]
+    assert spoken[0] == results["title"]
+    assert not any("ooniprobe run" in text for text in spoken)
+    assert any(text.startswith("Spain，1,234，554,500，5.8%") for text in spoken)
+    # 原文清單、語系連結與訂閱行不在朗讀範圍
+    assert not any(text.startswith(("其他語言", "想收到新的導讀")) for text in spoken)
+
+
+def test_voice_menu_lists_local_voices_for_page_language(results):
+    assert results["一個語音時的選單"] is True
+    assert results["選單顯示"] is True
+    # 台灣的兩個在前，接著中國的普通話，粵語最後。線上語音與英文語音不列
+    assert results["選單"] == ["Meijia", "Meijia（加強版）", "Tingting", "Sinji"]
+
+
+def test_voice_menu_is_grouped_by_language(results):
+    s = build.strings()["zh-TW"]
+    # 語音名稱多半是人名，分組才看得出是哪一種語言
+    assert results["分組"] == [[s["listen_group_tw"], ["Meijia", "Meijia（加強版）"]],
+                               [s["listen_group_cn"], ["Tingting"]],
+                               [s["listen_group_yue"], ["Sinji"]]]
+    assert results["英文分組"] == [["British English", ["Daniel"]],
+                                 ["Australian English", ["Karen"]],
+                                 ["American English", ["Samantha", "Alex", "Eddy"]]]
+
+
+def test_repeated_voice_reports_do_not_grow_menu(results):
+    assert results["重複回報之後"] == results["選單"]
+
+
+def test_change_voice_and_rate_while_playing(results):
+    changed = results["換設定後"]
+    # 每換一次就從同一段重念：先換語音，再換速度
+    assert [c[:2] for c in changed] == [["Meijia（加強版）", 1], ["Meijia（加強版）", 1.5]]
+    assert all(c[2] == results["換設定時的段落"] for c in changed)
+
+
+def test_choice_is_stored_under_one_key_only(results):
+    assert results["沒選過時的儲存"] is None
+    assert results["儲存"] == {"voice": "com.apple.voice.enhanced.zh-TW.Meijia", "rate": "1.5"}
+    assert results["其他鍵"] == ["anoni-news-listen"]
+
+
+def test_choice_carries_to_next_page(results):
+    assert results["換頁後的選單"] == ["Meijia（加強版）", "1.5"]
+    assert results["換頁後念的"] == ["Meijia（加強版）", 1.5]
+
+
+def test_invalid_stored_choice_falls_back(results):
+    assert results["存的值無效"] == ["Meijia", "1"]
+    assert results["存的值壞掉"] is True
+
+
+def test_ios_quality_variants_merge_into_one(results):
+    s = build.strings()["zh-TW"]
+    assert results["iOS 分組"] == [[s["listen_group_tw"], ["美佳"]], [s["listen_group_cn"], ["婷婷"]],
+                                  [s["listen_group_yue"], ["善怡"]]]
+    # 留音質較好的 compact，不用 super-compact
+    assert results["iOS 念的語音"] == "com.apple.voice.compact.zh-TW.Meijia"
+    assert results["iOS 存過 super-compact"] == "婷婷"
+
+
+def test_options_panel_collapsed_until_toggled(results):
+    # 平常只有朗讀與調整兩顆按鈕，語音、速度與說明按「調整」才展開
+    assert results["面板預設"] == [True, "false"]
+    assert results["面板展開"] == [False, "true"]
+    assert results["展開後看得到選單"] is True
+    assert results["面板收起"] == [True, "false"]

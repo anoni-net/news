@@ -51,12 +51,14 @@ See [Reading options](../reading/#display) for changing text size, dark mode and
 
 ## Listening {#listening}
 
-See [Reading options](../reading/#listening) for listening to stories with the read-aloud features built into your browser and device.
+See [Reading options](../reading/#listening) for listening to stories with the Listen button on story pages or the read-aloud features built into your browser and device.
 
 ## Analytics and privacy {#privacy}
 
-We count readership with a self-hosted Umami instance that sets no cookies and sends nothing when your browser has Do Not Track or GPC enabled. Besides page views, it counts three kinds of clicks: links in the Sources section, subscription links (recording the channel (RSS, newsletter or Bluesky) and whether the link sits in the masthead, at the end of a story or in the footer), and front-page story links (recording whether the click came from the featured story or the timeline). Click events do not include the link's address. Pages need no JavaScript and load no third-party fonts or resources. The onion version loads no analytics; its address is in the footer of every page.
+We count readership with a self-hosted Umami instance that sets no cookies and sends nothing when your browser has Do Not Track or GPC enabled. Besides page views, it counts four kinds of clicks: links in the Sources section, subscription links (recording the channel (RSS, newsletter or Bluesky) and whether the link sits in the masthead, at the end of a story or in the footer), front-page story links (recording whether the click came from the featured story or the timeline), and the Listen button on story pages (only the first click per page view). Click events do not include the link's address. Reading the pages needs no JavaScript, and they load no third-party fonts or resources. The onion version loads no analytics; its address is in the footer of every page.
 
 ## Licence {#license}
 
 Articles are published under CC BY 4.0; you are welcome to republish and quote them with attribution. Copyright in the quoted originals belongs to their authors.
+
+To quote a particular sentence, select it in Chrome, Edge or Safari and copy a link to the highlighted text from the right-click or long-press menu. The link opens the page scrolled to that passage, with the passage highlighted. When you print a story or save it as a PDF, the page address is printed at the end, and external links in the story and its sources are followed by their full addresses.

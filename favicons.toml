@@ -111,6 +111,10 @@ from = "https://www.cac.gov.cn/favicon.ico"
 icon = "canada.ca-6be11ced.png"
 from = "https://www.canada.ca/favicon.ico"
 
+[hosts."cas.go.jp"]
+icon = "cas.go.jp-247cfca9.png"
+from = "https://www.cas.go.jp/jp/images/kanboufav.ico"
+
 [hosts."cbsnews.com"]
 icon = "cbsnews.com-5afd5cc8.png"
 from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
@@ -118,6 +122,10 @@ from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
+
+[hosts."cert-in.org.in"]
+icon = "cert-in.org.in-28a53557.png"
+from = "https://web.archive.org/web/20261007id_/https://www.cert-in.org.in/favicon.ico"
 
 [hosts."chinadigitaltimes.net"]
 icon = "chinadigitaltimes.net-eb24e633.png"
@@ -356,6 +364,10 @@ from = "https://github.githubassets.com/favicons/favicon.png"
 icon = "globalencryption.org-6a2f17a9.png"
 from = "https://www.globalencryption.org/wp-content/uploads/2020/05/cropped-GEC-graphics-01-192x192.png"
 
+[hosts."globalfreedomofexpression.columbia.edu"]
+icon = "globalfreedomofexpression.columbia.edu-75a352b3.png"
+from = "https://globalfreedomofexpression.columbia.edu/wp-content/themes/gfe/favicon.ico"
+
 [hosts."globalnews.ca"]
 icon = "globalnews.ca-1e432260.png"
 from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_square-144.png"
@@ -451,9 +463,17 @@ from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-L
 icon = "irrawaddy.com-eceea825.png"
 from = "https://www.irrawaddy.com/favicon.ico"
 
+[hosts."issa.house.gov"]
+icon = "issa.house.gov-9acaf926.png"
+from = "https://issa.house.gov/profiles/evo/assets/images/favicon.ico"
+
 [hosts."ithome.com.tw"]
 icon = "ithome.com.tw-bd791a4e.png"
 from = "https://www.ithome.com.tw/favicon.ico"
+
+[hosts."itif.org"]
+icon = "itif.org-80d5619a.png"
+from = "https://itif.org/icons/apple-touch-icon.png"
 
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
@@ -466,6 +486,10 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 [hosts."keepandroidopen.org"]
 icon = "keepandroidopen.org-32ba658c.png"
 from = "https://keepandroidopen.org/favicon.ico"
+
+[hosts."ksl.com"]
+icon = "ksl.com-620fb1b6.png"
+from = "https://img.ksl.com/slc/2951/295162/29516202.png"
 
 [hosts."landing.google.com"]
 icon = "landing.google.com-53ae8c75.png"
@@ -483,6 +507,10 @@ from = "https://www.lawfaremedia.org/assets/icons/apple-touch-icon.png"
 icon = "laws.e-gov.go.jp-1d3e542a.png"
 from = "https://laws.e-gov.go.jp/favicon.ico"
 
+[hosts."le.utah.gov"]
+icon = "le.utah.gov-bfd1677b.png"
+from = "https://web.archive.org/web/20261007id_/https://le.utah.gov/images/apple-touch-icon.png"
+
 [hosts."legislation.gov.uk"]
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
@@ -490,6 +518,10 @@ from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-tou
 [hosts."letsencrypt.org"]
 icon = "letsencrypt.org-005fa57a.png"
 from = "https://letsencrypt.org/favicon.ico"
+
+[hosts."lofgren.house.gov"]
+icon = "lofgren.house.gov-9acaf926.png"
+from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
 
 [hosts."ly.gov.tw"]
 icon = "ly.gov.tw-c284cb73.png"
@@ -523,6 +555,10 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
 
+[hosts."miit.gov.cn"]
+icon = "miit.gov.cn-754fc1e4.png"
+from = "https://www.miit.gov.cn/favicon.ico"
+
 [hosts."minister.defence.gov.au"]
 icon = "minister.defence.gov.au-5336c074.png"
 from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
@@ -545,6 +581,10 @@ from = "https://www.moj.go.jp/content/001428634.ico"
 
 [hosts."mopsov.twse.com.tw"]
 same_as = "twse.com.tw"
+
+[hosts."motionpictures.org"]
+icon = "motionpictures.org-3ad0d22f.png"
+from = "https://www.motionpictures.org/wp-content/uploads/2018/04/favicon.png"
 
 [hosts."mouse.dev"]
 icon = "mouse.dev-69b682f3.png"
@@ -598,6 +638,10 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
+
+[hosts."osborneclarke.com"]
+icon = "osborneclarke.com-446be60d.png"
+from = "https://www.osborneclarke.com/themes/custom/osborneclarke/assets/images/icon.png"
 
 [hosts."oscca.gov.cn"]
 same_as = "gov.cn"
@@ -672,6 +716,10 @@ from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
+
+[hosts."rules.utah.gov"]
+icon = "rules.utah.gov-a146b234.png"
+from = "https://rules.utah.gov/wp-content/uploads/site-icon-512-300x300.png"
 
 [hosts."sec.gov"]
 icon = "sec.gov-8ecd49c8.png"
@@ -779,6 +827,10 @@ from = "https://ufm.dk/media/5ljdlabz/favicon.png?rmode=pad&width=180&height=180
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
 from = "https://www.verizon.com/favicon.ico"
+
+[hosts."wap.miit.gov.cn"]
+icon = "wap.miit.gov.cn-754fc1e4.png"
+from = "https://wap.miit.gov.cn/favicon.ico"
 
 [hosts."web.archive.org"]
 icon = "web.archive.org-32e1e194.png"

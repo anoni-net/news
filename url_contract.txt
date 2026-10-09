@@ -96,6 +96,9 @@
 /2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/2026/10/utah-vpn-ruling-site-blocking-bills/
+	#perspective
+	#sources
 /2026/10/weekly-brief-2026-w40/
 	#au-algorithm-opt-out
 	#cambridge-analytica
@@ -229,6 +232,9 @@
 /en/2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/en/2026/10/utah-vpn-ruling-site-blocking-bills/
+	#perspective
+	#sources
 /en/2026/10/weekly-brief-2026-w40/
 	#au-algorithm-opt-out
 	#cambridge-analytica
@@ -298,6 +304,7 @@
 /en/reading/
 	#display
 	#listening
+	#quote
 /en/subscribe/
 	#more
 	#steps
@@ -332,6 +339,7 @@
 /reading/
 	#display
 	#listening
+	#quote
 /subscribe/
 	#more
 	#steps
@@ -429,6 +437,9 @@
 /zh-cn/2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/zh-cn/2026/10/utah-vpn-ruling-site-blocking-bills/
+	#perspective
+	#sources
 /zh-cn/2026/10/weekly-brief-2026-w40/
 	#au-algorithm-opt-out
 	#cambridge-analytica
@@ -498,6 +509,7 @@
 /zh-cn/reading/
 	#display
 	#listening
+	#quote
 /zh-cn/subscribe/
 	#more
 	#steps
