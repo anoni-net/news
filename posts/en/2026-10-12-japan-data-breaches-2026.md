@@ -46,6 +46,10 @@ sources:
     url: https://www.digital.go.jp/news/2026-0911-01
     publisher: デジタル庁
     date: 2026-09-11
+  - title: 国の業務IT環境GSSで不正アクセス、個人情報約24万6000件が漏洩した可能性
+    url: https://xtech.nikkei.com/atcl/nxt/column/18/01157/100600170/
+    publisher: 日経クロステック
+    date: 2026-10-09
   - title: 「タイムズカーWebシステム」への不正アクセスに関する調査結果および今後の対応について（第2報）※追記あり
     url: https://share.timescar.jp/news/2026/0928/1815.html
     publisher: タイムズカー
@@ -170,7 +174,9 @@ authors:
 
 Since mid-September, Japanese services for image sharing, car sharing, convenience stores, restaurants, second-hand books and travel booking have disclosed breaches of their websites or apps, with the largest ranging from several million to over 20 million records. Car-sharing service Times Car said data from about 6.6 million accounts was taken, and that about 1.6 million of those included ID images such as driver's licences. JPCERT/CC, Japan's computer emergency response coordination centre, issued an alert on 8 October about a run of breaches around September, and on 9 October the Japanese government asked businesses handling large amounts of personal data to review their security promptly. As of 9 October we found no official attribution, and readers outside Japan are affected only if they hold accounts with these services.
 
-On 6 August, the BI tool (software that turns databases into reports and charts) Metabase disclosed an SQL injection flaw that could give an unauthenticated attacker administrator access, and said it had been exploited. Japan's Digital Agency said on 11 September that attackers had used a VPN device flaw to break into a government system, after spotting unusual access in June, possibly exposing about 246,000 records on ministry staff and others involved in the work. JGC Digital said on 18 September that its Metabase instance had been breached, and VOISING reported from 18 August that a BI tool, which it did not name, was breached through a known flaw.
+On 6 August, the BI tool (software that turns databases into reports and charts) Metabase disclosed an SQL injection flaw that could give an unauthenticated attacker administrator access, and said it had been exploited. JGC Digital said on 18 September that its Metabase instance had been breached, and VOISING reported from 18 August that a BI tool, which it did not name, was breached through a known flaw.
+
+Japan's Digital Agency said on 11 September that attackers had used a VPN device flaw to break into a government system, possibly exposing about 246,000 records on ministry staff and others involved in the work. The agency's notice says it detected unusual access on 25 June and identified the entry point on 9 July, but does not say when the intrusion began. According to Nikkei xTECH on 9 October, the intrusion began in late May, and the disclosure came about two and a half months after detection.
 
 A research centre at Japanese security firm Macnica counted 119 public cases of personal data leaking from Japanese companies' web systems in 2026 up to 6 October, 81 of them disclosed from July onwards. Its count excludes ransomware and cases the author attributes to other groups, such as logins with credentials leaked from other sites. We found no count published by the Japanese government or JPCERT/CC.
 
