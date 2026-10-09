@@ -759,7 +759,7 @@ clearnet 的中文標題用自架的思源宋體（Noto Serif CJK），內文與
 
 ### 品牌與配色
 
-沿用文件站[品牌素材](https://anoni.net/docs/community/brand-assets/)的 logo 與色票，不新增色相。news 的產品色是品牌色盤裡最深的 `cyan-900`（`#003e57`），跟文件站頁首的亮藍 `cyan-500` 一眼分得出來，墨色的調性也接近新聞。品牌素材頁把 cyan-900 底列為 mono white 版 logo 的建議背景，頁首與預覽圖直接照用。
+沿用社群[品牌素材](https://anoni.net/brand/)的 logo 與色票，不新增色相。news 的產品色是品牌色盤裡最深的 `cyan-900`（`#003e57`），跟文件站頁首的亮藍 `cyan-500` 一眼分得出來，墨色的調性也接近新聞。品牌素材頁把 cyan-900 底列為 mono white 版 logo 的建議背景，頁首與預覽圖直接照用。
 
 圖示跟文件站用同一套，一般圖示用 Material Design Icons，Tor 這類品牌圖示用 Simple Icons。只放用到的 SVG 在 `templates/icons/`，由 `build.py` 的 `icon()` 內嵌進 HTML，不載入字型或外部檔案，onion 版本一樣可用。圖示只放在有辨識用途的連結前面：RSS、訂閱電子報、官網首頁、onion 版本、原文，以及前後篇的方向。來源與授權記在 `templates/icons/README.md`。
 
