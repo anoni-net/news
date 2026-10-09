@@ -60,7 +60,7 @@ uv run tools/make_cards.py --dry-run    # 維護者：產生還沒有或已過�
 
 ## 寫作規則
 
-寫作與協作的規則以[貢獻者百科](https://anoni.net/docs/community/contributor-handbook/)為準，英文版照[英文的貢獻者百科](https://anoni.net/docs/en/community/contributor-handbook/)，要調整規則時改百科，不要在這裡另存一份。檢查工具沿用文件站的 `tools/docs_style_lint.py`。
+寫作規則以社群首頁的[寫作風格規範](https://anoni.net/join/writing-style/)為準，英文版照[英文的寫作風格規範](https://anoni.net/en/join/writing-style/)，要調整規則時改那一頁（原始檔在 `anoni-net/www`），不要在這裡另存一份。檢查工具沿用文件站的 `tools/docs_style_lint.py`。
 
 導讀另有三條界線：
 
