@@ -56,6 +56,10 @@ from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-
 icon = "arxiv.org-c4f5309f.png"
 from = "https://arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png"
 
+[hosts."asahi-kasei.co.jp"]
+icon = "asahi-kasei.co.jp-4ca1fb09.png"
+from = "https://www.asahi-kasei.co.jp/pharma/favicon.ico"
+
 [hosts."assets.publishing.service.gov.uk"]
 icon = "assets.publishing.service.gov.uk-a7b0c84b.png"
 from = "https://assets.publishing.service.gov.uk/favicon.ico"
@@ -170,6 +174,14 @@ from = "https://cons.judicial.gov.tw/appiconmaker.co/size/favicon-196x196.png"
 icon = "consumer.huawei.com-dddcd8b6.png"
 from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawei-logo.png"
 
+[hosts."corp.helpfeel.com"]
+icon = "corp.helpfeel.com-bbd6adad.png"
+from = "https://storage.googleapis.com/production-os-assets/assets/c63b1285-25e6-4ecb-8205-5ba7ade6158b"
+
+[hosts."corp.timescar.jp"]
+icon = "corp.timescar.jp-9a42d6ac.png"
+from = "https://corp.timescar.jp/favicon.ico"
+
 [hosts."court.gov.cn"]
 icon = "court.gov.cn-1db19351.png"
 from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico"
@@ -205,6 +217,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favic
 icon = "curia.europa.eu-6c6c445d.png"
 from = "https://curia.europa.eu/site/plugins/CURIA2MainPlugin/images/icons/favicon.ico?v=2026-09-23_14-17"
 
+[hosts."cyber.go.jp"]
+icon = "cyber.go.jp-58e1884f.png"
+from = "https://www.cyber.go.jp/img/favicon.ico"
+
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
@@ -237,6 +253,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
 
+[hosts."digital.go.jp"]
+icon = "digital.go.jp-ea26cfc6.png"
+from = "https://www.digital.go.jp/themes/custom/gov_theme_da_2023/favicon.ico"
+
 [hosts."digitaltoday.co.kr"]
 icon = "digitaltoday.co.kr-a149a2e1.png"
 from = "https://cdn.digitaltoday.co.kr/image/logo/favicon.ico"
@@ -258,6 +278,9 @@ same_as = "quad9.net"
 [hosts."doj.gov.hk"]
 icon = "doj.gov.hk-54bc34f1.png"
 from = "https://www.doj.gov.hk/favicon.ico"
+
+[hosts."dspdp.gov.mo"]
+same_as = "gov.mo"
 
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
@@ -281,6 +304,9 @@ same_as = "gov.hk"
 [hosts."en.greatfire.org"]
 icon = "en.greatfire.org-cbbba5a5.png"
 from = "https://en.greatfire.org/apple-touch-icon.png"
+
+[hosts."epark-relax.co.jp"]
+none = "網站沒有圖示"
 
 [hosts."esafety.gov.au"]
 icon = "esafety.gov.au-8abaddf2.png"
@@ -321,6 +347,10 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 icon = "frontex.europa.eu-bda9fadf.png"
 from = "https://www.frontex.europa.eu/favicon.ico"
 
+[hosts."fsa.go.jp"]
+icon = "fsa.go.jp-c4a1f9c1.png"
+from = "https://www.fsa.go.jp/images/apple-touch-icon.png"
+
 [hosts."geneva.cs.umd.edu"]
 same_as = "cs.umd.edu"
 
@@ -354,6 +384,10 @@ from = "https://www.gov.cn/images/trs_favicon.ico"
 [hosts."gov.hk"]
 icon = "gov.hk-62222f7e.png"
 from = "https://web.archive.org/web/20260927id_/https://gov.hk/favicon.ico"
+
+[hosts."gov.mo"]
+icon = "gov.mo-5192cb96.png"
+from = "https://www.gov.mo/zh-hant/wp-content/static/favicon/android-icon-192x192.png"
 
 [hosts."government.ru"]
 icon = "government.ru-28901b86.png"
@@ -427,6 +461,10 @@ same_as = "gov.hk"
 icon = "interseclab.org-cfaee2eb.png"
 from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-Logo-192x192.png"
 
+[hosts."ipa.go.jp"]
+icon = "ipa.go.jp-d88935f7.png"
+from = "https://www.ipa.go.jp/apple-touch-icon-180x180.png"
+
 [hosts."irrawaddy.com"]
 icon = "irrawaddy.com-eceea825.png"
 from = "https://www.irrawaddy.com/favicon.ico"
@@ -438,6 +476,17 @@ from = "https://www.ithome.com.tw/favicon.ico"
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."japantimes.co.jp"]
+none = "網站擋自動抓取"
+
+[hosts."jgc-digital.com"]
+icon = "jgc-digital.com-e48bf47a.png"
+from = "https://jgc-digital.com/apple-touch-icon.png"
+
+[hosts."jpcert.or.jp"]
+icon = "jpcert.or.jp-a2f016e7.png"
+from = "https://www.jpcert.or.jp/favicon.ico"
 
 [hosts."justiceformyanmar.org"]
 icon = "justiceformyanmar.org-db7870eb.png"
@@ -451,6 +500,10 @@ from = "https://keepandroidopen.org/favicon.ico"
 icon = "landing.google.com-53ae8c75.png"
 from = "https://landing.google.com/favicon.ico"
 
+[hosts."law.go.kr"]
+icon = "law.go.kr-1a0ed2ef.png"
+from = "https://www.law.go.kr/LSW/images/ico_favorites.ico"
+
 [hosts."law.moj.gov.tw"]
 icon = "law.moj.gov.tw-ac2a3ab3.png"
 from = "https://law.moj.gov.tw/favicon.png"
@@ -462,6 +515,13 @@ from = "https://www.lawfaremedia.org/assets/icons/apple-touch-icon.png"
 [hosts."laws.e-gov.go.jp"]
 icon = "laws.e-gov.go.jp-1d3e542a.png"
 from = "https://laws.e-gov.go.jp/favicon.ico"
+
+[hosts."lawson.co.jp"]
+icon = "lawson.co.jp-510e993a.png"
+from = "https://www.lawson.co.jp/favicon.ico"
+
+[hosts."legco.gov.hk"]
+same_as = "gov.hk"
 
 [hosts."legislation.gov.uk"]
 icon = "legislation.gov.uk-4d9dd818.png"
@@ -503,6 +563,10 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
 
+[hosts."metabase.com"]
+icon = "metabase.com-f3a925eb.png"
+from = "https://cdn.metabase.com/images/apple-touch-icon.png"
+
 [hosts."minister.defence.gov.au"]
 icon = "minister.defence.gov.au-5336c074.png"
 from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov.au/themes/custom/custom/defence8ui/favicon.ico"
@@ -522,6 +586,10 @@ from = "https://www.mohw.gov.tw/xslGip/Unit001/images/favicon.ico"
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
+
+[hosts."monogatari.co.jp"]
+icon = "monogatari.co.jp-9c5901bf.png"
+from = "https://www.monogatari.co.jp/wp-content/themes/monogatari/img/common/icon/touch-icon.png"
 
 [hosts."mouse.dev"]
 icon = "mouse.dev-69b682f3.png"
@@ -550,9 +618,17 @@ from = "https://www.news.cn/favicon.ico"
 icon = "news.mtn.co.kr-5e21f499.png"
 from = "https://news.mtn.co.kr/images/favicon.png"
 
+[hosts."news.mynavi.jp"]
+icon = "news.mynavi.jp-c3f92159.png"
+from = "https://news.mynavi.jp/favicon.ico"
+
 [hosts."news.risky.biz"]
 icon = "news.risky.biz-8a82d4e1.png"
 from = "https://storage.ghost.io/c/16/e9/16e9a748-ca66-4b3c-8590-85537131f696/content/images/size/w256h256/2024/01/rbicon.png"
+
+[hosts."news.web.nhk"]
+icon = "news.web.nhk-67057775.png"
+from = "https://news.web.nhk/apple-touch-icon.png"
 
 [hosts."nhi.gov.tw"]
 icon = "nhi.gov.tw-f4da548a.png"
@@ -591,9 +667,17 @@ from = "https://www.pbs.org/favicons/favicon-180x180.png"
 icon = "pcpd.org.hk-dc297a73.png"
 from = "https://www.pcpd.org.hk/favicon.ico"
 
+[hosts."pdpc.gov.sg"]
+icon = "pdpc.gov.sg-8c36e1a3.png"
+from = "https://www.pdpc.gov.sg/favicon.ico"
+
 [hosts."pib.gov.in"]
 icon = "pib.gov.in-fffa8d37.png"
 from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
+
+[hosts."pipc.go.kr"]
+icon = "pipc.go.kr-ce881236.png"
+from = "https://www.pipc.go.kr/np/resources/images/common/gov.ico"
 
 [hosts."pipepipe.dev"]
 icon = "pipepipe.dev-ef8b4c05.png"
@@ -610,6 +694,10 @@ from = "https://www.gstatic.com/policies/favicon.ico"
 [hosts."politiet.no"]
 icon = "politiet.no-3b14f30b.png"
 from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
+
+[hosts."ppc.go.jp"]
+icon = "ppc.go.jp-f5d71b42.png"
+from = "https://www.ppc.go.jp/common_module/favicon.ico"
 
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
@@ -638,6 +726,9 @@ from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
 
+[hosts."release.tdnet.info"]
+none = "東京證券交易所的適時揭露系統"
+
 [hosts."rfc-editor.org"]
 icon = "rfc-editor.org-39c23b26.png"
 from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
@@ -645,6 +736,14 @@ from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
+
+[hosts."sakura.ad.jp"]
+icon = "sakura.ad.jp-92f8aa2b.png"
+from = "https://www.sakura.ad.jp/resource/favicon/sakura_logo.png"
+
+[hosts."scala-com.jp"]
+icon = "scala-com.jp-2478aaf7.png"
+from = "https://scala-com.jp/assets/img/android-touch-icon.png"
 
 [hosts."sec.gov"]
 icon = "sec.gov-8ecd49c8.png"
@@ -657,6 +756,14 @@ from = "https://securedrop.org/apple-touch-icon.png"
 [hosts."security.googleblog.com"]
 icon = "security.googleblog.com-624359af.png"
 from = "https://security.googleblog.com/favicon.ico"
+
+[hosts."security.macnica.co.jp"]
+icon = "security.macnica.co.jp-fc3bfb51.png"
+from = "https://security.macnica.co.jp/upload/favicon.ico"
+
+[hosts."share.timescar.jp"]
+icon = "share.timescar.jp-b71684b4.png"
+from = "https://share.timescar.jp/favicon-apple.png"
 
 [hosts."sheriffs.org"]
 icon = "sheriffs.org-fd44e411.png"
@@ -677,6 +784,9 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 [hosts."ssd.eff.org"]
 icon = "ssd.eff.org-88f6a486.png"
 from = "https://ssd.eff.org/favicon.ico"
+
+[hosts."ssl4.eir-parts.net"]
+none = "上市公司公告的託管平台"
 
 [hosts."sso.agc.gov.sg"]
 icon = "sso.agc.gov.sg-7300262d.png"
@@ -741,6 +851,10 @@ from = "https://www.theregister.com/view-resources/dachser2/public/theregister/f
 icon = "verizon.com-6ec72a34.png"
 from = "https://www.verizon.com/favicon.ico"
 
+[hosts."voising-official.com"]
+icon = "voising-official.com-9385d7b2.png"
+from = "https://voising-official.com/apple-icon.png"
+
 [hosts."web.archive.org"]
 icon = "web.archive.org-32e1e194.png"
 from = "https://archive.org/apple-touch-icon.png（本機 DNS 解析不到，用 1.1.1.1 解析後下載）"
@@ -756,6 +870,10 @@ from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
 from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
+
+[hosts."ws.pdpc.gov.tw"]
+icon = "ws.pdpc.gov.tw-9f612ccd.png"
+from = "https://ws.pdpc.gov.tw/favicon.ico"
 
 [hosts."x.com"]
 icon = "x.com-17d5ac31.png"

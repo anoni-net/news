@@ -72,6 +72,9 @@
 /2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/2026/10/japan-data-breaches-2026/
+	#perspective
+	#sources
 /2026/10/mobile-location-data-brokers/
 	#perspective
 	#sources
@@ -194,6 +197,9 @@
 	#perspective
 	#sources
 /en/2026/10/iphone-inactivity-reboot-bypass/
+	#perspective
+	#sources
+/en/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
 /en/2026/10/mobile-location-data-brokers/
@@ -387,6 +393,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/iphone-inactivity-reboot-bypass/
+	#perspective
+	#sources
+/zh-cn/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
 /zh-cn/2026/10/mobile-location-data-brokers/
