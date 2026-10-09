@@ -37,7 +37,7 @@
 
 ## 寫作規則
 
-照[貢獻者百科](https://anoni.net/docs/community/contributor-handbook/)的寫作風格規範，本 repo 不另外寫一份。給 AI 協作工具的說明在 [`AGENTS.md`](./AGENTS.md)。
+照社群首頁的[寫作風格規範](https://anoni.net/join/writing-style/)，本 repo 不另外寫一份。給 AI 協作工具的說明在 [`AGENTS.md`](./AGENTS.md)。
 
 ## 授權
 
