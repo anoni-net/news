@@ -6,7 +6,133 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 09 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>GLM-5.3&#39;s exploit-writing ability and open-weight safeguards</title>
+<link>https://anoni.net/news/en/2026/10/glm-5-3-cyber-capabilities/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/glm-5-3-cyber-capabilities</guid>
+<pubDate>Sat, 10 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Anthropic&#39;s report on Zhipu&#39;s open-weight model GLM-5.3, published on 29 September, says the model can write working browser exploits and that, in simulated tests, cover stories and similar techniques got past its safeguards. Zhipu&#39;s release notes say the public weights carry only the model&#39;s own safeguards and that strong defensive capability should not stay with a few organisations. What most readers can do is restart their browser promptly after updates.</description>
+<content:encoded>&lt;p&gt;Based on 14 sources, including Anthropic, Z.ai, NIST&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 29 September, the US AI company Anthropic published tests of GLM-5.3, a language model released in August by China&#39;s Zhipu (known outside China as Z.ai). The report concludes that GLM-5.3 can find software vulnerabilities and turn them into working exploits on its own, close to the level of Claude Mythos Preview, which Anthropic offers only to vetted cyber defenders. It also found that, in a simulated environment, simple techniques such as cover stories got past GLM-5.3&#39;s safeguards. Most readers will never use the model directly, and what they can do has not changed: restart the browser promptly after updates.&lt;/p&gt;
+&lt;p&gt;GLM-5.3&#39;s weights, the model&#39;s parameters, have been public since late August, so anyone can download and modify them. Zhipu&#39;s notes posted on X on 14 August state that, once weights are public, no developer can guarantee control over every downstream modification or use, and that strong defensive capability cannot stay with a few well-resourced organisations.&lt;/p&gt;
+&lt;p&gt;Anthropic ran GLM-5.3 on ExploitBench, a benchmark built on known flaws in V8, Chrome&#39;s JavaScript engine, where GLM-5.3 produced end-to-end exploits in 50 of 410 attempts, against 56 for Mythos Preview. On Anthropic&#39;s internal benchmark of open-source projects, GLM-5.3 achieved a full control-flow hijack in 4% of trials, against 6% for Mythos Preview and none for earlier models such as Claude Opus 4.6 and GLM-5.2. NIST&#39;s Center for AI Standards and Innovation (CAISI) assessed on 17 September that GLM-5.3 was the most cyber-capable open-weight model released up to that point. On an aggregate of CAISI&#39;s cyber benchmarks, it trailed the US frontier, which includes models released only to vetted users, by about four months.&lt;/p&gt;
+&lt;p&gt;Over about a day and with limited human attention, a researcher used GLM-5.3 to find several unknown flaws in the JavaScript engine of a popular browser, which the report does not name. The model chained them into a web page that reads arbitrary files from the computer of anyone who opens it in the browser&#39;s Linux build. Anthropic believes other platforms may also be affected, though exploitation there may be harder. The flaws have been reported to the maintainer.&lt;/p&gt;
+&lt;p&gt;In a second session, the smaller GLM-5.3-Flash chained public details of the Chrome flaw &lt;code&gt;CVE-2026-11645&lt;/code&gt; and another known flaw into a working exploit, using 20 minutes of a researcher&#39;s attention and eight hours of model time, about US$20.40 at Zhipu&#39;s API prices; Google fixed &lt;code&gt;CVE-2026-11645&lt;/code&gt; on 8 June and said an exploit for it exists in the wild.&lt;/p&gt;
+&lt;p&gt;According to the report, the exploit-writing tasks did not trigger refusals; refusals came when the model was asked to build malware or attack remote targets. In a simulation, GLM-5.3 refused every direct request to attack a remote system. A red-team cover story got it to start connecting to the target 64% of the time and prefilling its reasoning 92%, while &#34;abliteration&#34;, a change to the weights that strips out refusals, brought the rate to 100%.&lt;/p&gt;
+&lt;p&gt;Anthropic&#39;s first abliteration took about 2,200 GPU hours (roughly US$4,400), and it estimates an experienced team would need about 600 (roughly US$1,200). The modified model scored the same on a general science test and a few percent lower on a sampled cyber benchmark. The report says several developers released abliterated versions within days of the model&#39;s release.&lt;/p&gt;
+&lt;p&gt;In Anthropic&#39;s own testing, safeguarded Claude models used through the API blocked the cover story, and the other two techniques are not generally feasible against Claude, since its API offers no way to prefill reasoning and its weights are not released. No model-generated code ran in these bypass tests, which the report calls an imperfect measure of real-world behaviour.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;A model&#39;s tendency to refuse harmful requests is trained into the same weights as everything else it can do. When a model is served through an API, its developer can add filters and monitoring around it. Once the weights are public, people run the model on their own machines without those outer layers, and nobody needs the developer&#39;s permission to change the weights.&lt;/p&gt;
+&lt;p&gt;Zhipu&#39;s notes describe three layers of protection: a request classifier, a monitor that assesses risk during task execution, and the model&#39;s own safety training. The first two apply to Zhipu&#39;s hosted services and do not come with the model when people run it themselves, so the public weights carry only the third. The notes add that model-level safeguards raise the barrier to abuse but cannot provide absolute control.&lt;/p&gt;
+&lt;p&gt;Citing the dual-use risk, Zhipu planned a staged release starting with vetted security partners. Its launch blog, published on 14 August, said the weights would follow two weeks later, once safety evaluation and hardening were complete.&lt;/p&gt;
+&lt;p&gt;Anthropic&#39;s report assesses that GLM-5.3 was released without meaningful safeguards, unlike other similarly capable models, all of which shipped with safeguards or through limited-access programmes. It also says governments should safety-test sufficiently capable models, including GLM-5.3&#39;s successors. As of 5 October, we could not find a public response from Zhipu to the report.&lt;/p&gt;
+&lt;p&gt;Anthropic writes that defenders should have frontier models at least as good as their adversaries&#39;, and it is widening access for vetted defenders through programmes such as Project Glasswing. Zhipu, which writes that strong defensive capability should reach open-source maintainers and independent researchers, launched the OpenVuln initiative alongside GLM-5.3, working with maintainers to audit important open-source projects and support disclosure and fixes.&lt;/p&gt;
+&lt;p&gt;The UK&#39;s AI Security Institute set out both the benefits and the risks in July. Open-weight models can be hosted privately with no data returning to the provider, and cannot be changed or withdrawn by it, but released safeguards can be removed and copies cannot be recalled. Testing GLM-5.2 and other models released by June, the institute measured open models trailing the closed frontier on cyber tasks by 4 to 7 months, down from 6 to 10 months for most of 2025. It describes that gap as preparation time for defenders with access to the most capable closed models.&lt;/p&gt;
+&lt;p&gt;Who tests models like these, and for what, differs between South Korea and Taiwan. South Korea&#39;s AI Safety Institute assessed 34 models from January to August, 19 of them open-weight and 11 of those Chinese, including Zhipu&#39;s GLM, and depending on the model its checks covered cybersecurity and web exploits. Digital Today reported on 18 September that the institute ran its in-house assessments on 16 Nvidia H200 GPUs and was short of staff and computing for the number of models it needed to cover. In Taiwan, where we are based, the Ministry of Digital Affairs published a model evaluation on 2 September that measures understanding of Taiwanese language, society and values; the announcement does not mention cyber capability.&lt;/p&gt;
+&lt;p&gt;Readers cannot control who uses these models, but they can shorten the time between a fix being published and their own browser installing it. In the experiment above, GLM-5.3-Flash needed eight hours of run time to turn public details of known flaws, one of them patched in June, into an exploit. Chrome prepares updates in the background but applies them only on restart. Under Help, About Google Chrome, a Relaunch button means an update has not been applied yet.&lt;/p&gt;
+&lt;p&gt;Updates do not help against flaws that have not been fixed, so people who often visit unfamiliar sites can also limit what web page code can use. In Chrome, under Privacy and security, Security, &#34;Manage JavaScript optimization &amp;amp; security&#34; can be set to &#34;Automatically disable JavaScript optimizers on unfamiliar sites&#34;, which may make some sites slower. In Tor Browser, the Safer level disables JavaScript on non-HTTPS sites and Safest disables it by default on all sites, and some sites will break. These settings narrow attacks that use web page code against the browser, and do nothing against a phishing page that asks for your password.&lt;/p&gt;
+&lt;p&gt;Questions worth following: what level of safeguards is enough for an open-weight model, and whether governments should test such models for cyber capability, and who. Whether the preparation time the AI Security Institute describes is long enough for flaws to be fixed first. And whether under-resourced open-source projects can get tools on a par with those their attackers use.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (14)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities&#34;&gt;GLM-5.3 and the spread of advanced cyber capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;29 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/Zai_org/article/2088280509474320693&#34;&gt;Preparing GLM-5.3 for Open Release: A Responsible Path to Cyber Defense&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Z.ai&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-14&#34;&gt;14 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://z.ai/blog/glm-5.3&#34;&gt;GLM-5.3: Frontier Coding with Emergent Cyber Capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Z.ai&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-14&#34;&gt;14 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities&#34;&gt;CAISI’s Assessment of Z.ai’s GLM-5.3 Cyber Capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;17 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber&#34;&gt;How Far Behind the Frontier are Leading Open Weight Models on Cyber?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;AI Security Institute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;17 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.digitaltoday.co.kr/en/view/105031/more-than-half-of-ai-safety-institute-assessed-models-are-open-weight-58-percent-chinese&#34;&gt;More than half of AI Safety Institute assessed models are open-weight, 58 percent Chinese&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Digital Today&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://moda.gov.tw/ADI/news/latest-news/20538&#34;&gt;讓你的AI懂臺灣！數位發展部公布臺灣主權AI評測結果，攜手產官打造可信任AI生態系&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Administration for Digital Industries, Ministry of Digital Affairs&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html&#34;&gt;Stable Channel Update for Desktop&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;8 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95414?hl=en&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;Update Google Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/10468685?hl=en&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;Manage Chrome safety and security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tor-browser/features/security-levels/&#34;&gt;Adjusting security levels in Tor Browser to balance privacy and usability&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95414?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;更新 Google Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/10468685?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;管理 Chrome 的安全性&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.torproject.org/zh-TW/tor-browser/features/security-levels/&#34;&gt;調整 Tor Browser 安全等級以平衡隱私與可用性&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Phishing emails that fake Gmail&#39;s attachment preview</title>
 <link>https://anoni.net/news/en/2026/10/gmail-attachment-preview-phishing/</link>
@@ -2193,153 +2319,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Commerce and Economic Development Bureau, Hong Kong&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-01-19&#34;&gt;19 January 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Mobile location data and the files data brokers keep on you</title>
-<link>https://anoni.net/news/en/2026/10/mobile-location-data-brokers/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/mobile-location-data-brokers</guid>
-<pubDate>Thu, 01 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The Markup and Consumer Reports obtained data broker files on US residents showing more than a thousand inferences and over a hundred buyers. The Freedom of the Press Foundation lists two phone settings that cut the location data a phone leaks, in any country.</description>
-<content:encoded>&lt;p&gt;Based on 20 sources, including Freedom of the Press Foundation, The Markup, Laws &amp;amp; Regulations Database of Taiwan&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;On 16 September the news outlet The Markup and the consumer organisation Consumer Reports published what volunteers received when they used new privacy laws in several US states to request their files from data brokers, companies that collect and resell personal data. The files cover US residents. Each typically contained names, addresses and Social Security numbers, plus more than a thousand guesses about the person&#39;s traits and habits. The same month, the press freedom organisation Freedom of the Press Foundation (FPF) set out two phone settings, usable outside the US too, that reduce the location data a phone gives away.&lt;/p&gt;
-&lt;p&gt;Acxiom, a data broker based in Arkansas, claims data on billions of people worldwide, including profiles on roughly 95% of US adults. In the files the reporters reviewed, it made predictions in more than 3,000 categories, from the ages and genders of people&#39;s children to their estimated &#34;alcohol usage&#34;. Relatively new laws in states including Minnesota and Oregon require companies to disclose who ultimately bought the data, and the Acxiom files listed more than 100 buyers, among them insurers, banks, drug makers, General Motors and Disney.&lt;/p&gt;
-&lt;p&gt;Brokers can hold a phone&#39;s advertising ID, a smart TV&#39;s tracking identifier, a home IP address and a car&#39;s vehicle identification number (VIN). A researcher quoted in the report said location data might reveal visits to a military base, a school or a medical specialist.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The Markup reports that opting out of one broker removes your data from that broker only, not from the copies already sold to others. A request to see what a company holds has the same limit, covering one company at a time. Several places in Asia grant that right.&lt;/p&gt;
-&lt;p&gt;Taiwan&#39;s Personal Data Protection Act lets people ask an organisation to answer inquiries, allow review or provide copies of their data (Article 10). A decision is due within 15 days, extendable by up to 15 more (Article 13), and a fee for necessary costs is allowed (Article 14). In Hong Kong, section 18 of the Personal Data (Privacy) Ordinance lets individuals ask a data user, meaning an organisation that holds their data, for a copy, and section 19 requires compliance within 40 days. Section 21 of Singapore&#39;s Personal Data Protection Act requires organisations, on request, to provide the personal data they hold and information about how it has been or may have been used or disclosed within the year before the request.&lt;/p&gt;
-&lt;p&gt;According to FPF, ad-based location tracking often runs through real-time bidding and software development kits (SDKs) embedded in apps, and a substantial amount of it is tied back to individual devices through advertising IDs. FPF also notes that after reports earlier in 2026 that troops had been targeted using commercial location data, Pentagon officials told Reuters and members of Congress that ad-based location tracking on troops&#39; phones and computers had been disabled.&lt;/p&gt;
-&lt;p&gt;FPF&#39;s first step is to keep apps from reading the advertising ID. On iPhone, go to Settings &amp;gt; Privacy &amp;amp; Security &amp;gt; Tracking and turn off &#34;Allow Apps to Request to Track&#34;. According to Apple&#39;s support page, apps then cannot access the advertising identifier (IDFA), and apps keep their full capabilities. On Android, the path on Google&#39;s Privacy &amp;amp; Terms page is Settings &amp;gt; Privacy &amp;gt; Ads &amp;gt; &#34;Delete advertising ID&#34;; on phones with another menu layout, Ads sits under Security &amp;amp; privacy &amp;gt; Privacy &amp;gt; Privacy controls.&lt;/p&gt;
-&lt;p&gt;The second step is to switch off location access for every app that does not need it, keeping it for something like a maps app, and to turn it back on when needed. On iPhone that is under Privacy &amp;amp; Security &amp;gt; Location Services; on Android, under Security &amp;amp; privacy &amp;gt; Privacy &amp;gt; Permission manager &amp;gt; Location. The tracking setting requires iOS 14.5 or later, the Android advertising ID is provided by Google Play services, and as of 29 September both companies&#39; help pages were available in English and Chinese. Both steps take a few minutes and limit what can be collected from now on, but records already sold are not deleted.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (20)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/claw-back-your-mobile-location-data/&#34;&gt;Claw back your mobile location data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-09&#34;&gt;9 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/privacy/2026/09/16/data-brokers-have-detailed-files-on-you-heres-whats-in-them-and-how-it-impacts-you&#34;&gt;Data brokers have detailed files on you. Here’s what’s in them — and how it impacts you&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get&#34;&gt;Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;16 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;Personal Data Protection Act&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.elegislation.gov.hk/hk/cap486!en&#34;&gt;Cap. 486 Personal Data (Privacy) Ordinance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong e-Legislation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/DAR_QnA_e.pdf&#34;&gt;Exercising Your Data Access Rights under the Personal Data (Privacy) Ordinance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data, Hong Kong&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=pr21-&#34;&gt;Personal Data Protection Act 2012&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Statutes Online&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102420&#34;&gt;If an app asks to track your activity&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102647&#34;&gt;Turn Location Services and GPS on or off on your iPhone, iPad, or iPod touch&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/technologies/ads?hl=en&#34;&gt;Advertising&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Privacy &amp;amp; Terms&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=en&#34;&gt;Advertising ID&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Play Console Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/9431959?hl=en&#34;&gt;Change app permissions on your Android phone&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.elegislation.gov.hk/hk/cap486!zh-Hant-HK&#34;&gt;第 486 章《個人資料（私隱）條例》&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;電子版香港法例&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/tc_chi/resources_centre/publications/files/DAR_QnA_c.pdf&#34;&gt;如何行使你在《個人資料（私隱）條例》下的查閱個人資料權（常問問題及答案）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;個人資料私隱專員公署&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102420&#34;&gt;如果 App 要求追蹤你的活動&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102647&#34;&gt;開啟或關閉 iPhone、iPad 或 iPod touch 上的「定位服務」和 GPS 功能&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://policies.google.com/technologies/ads?hl=zh-TW&#34;&gt;廣告&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google 隱私權與條款&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant&#34;&gt;廣告 ID&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Play 管理中心說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/9431959?hl=zh-Hant&#34;&gt;在 Android 手機上變更應用程式權限&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android 說明&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

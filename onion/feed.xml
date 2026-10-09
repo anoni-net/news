@@ -6,7 +6,109 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 09 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>GLM-5.3 的漏洞利用能力與開放權重的防護</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/glm-5-3-cyber-capabilities/</link>
+<guid isPermaLink="false">anoni-news:2026/10/glm-5-3-cyber-capabilities</guid>
+<pubDate>Sat, 10 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Anthropic 9 月 29 日發表對智譜開放權重模型 GLM-5.3 的測試報告，模型能寫出攻擊瀏覽器的程式。在報告的模擬測試裡，偽裝情境等手法可以繞過防護。智譜的發布說明寫到，公開的權重只帶著模型本身的防護，強大的防禦能力也不該只留在少數組織。一般讀者能做的是瀏覽器更新後盡快重新啟動。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，來自 Anthropic、Z.ai、NIST 等 7 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美國 AI 公司 Anthropic 9 月 29 日發表測試報告，對象是中國的智譜（中國以外稱 Z.ai）8 月推出的語言模型 GLM-5.3。報告的結論是，GLM-5.3 能自行找出軟體漏洞並寫成可用的攻擊程式，能力接近 Anthropic 只提供給篩選過的資安防禦方的 Claude Mythos Preview。報告也寫到，在模擬測試裡，偽裝情境等簡單的手法就能繞過 GLM-5.3 的防護。一般讀者不會直接用到這個模型，能做的事跟以往相同，瀏覽器更新後盡快重新啟動。&lt;/p&gt;
+&lt;p&gt;GLM-5.3 的權重（模型本身的參數）8 月底公開，任何人都能下載與修改。智譜 8 月 14 日在 X 發表的說明寫到，權重公開之後，沒有開發者能保證控制每一種後續的修改與用途。同一份說明還寫到，強大的防禦能力不能只留在少數資源充足的組織，開源專案維護者與獨立研究者也需要。&lt;/p&gt;
+&lt;p&gt;在 Anthropic 執行的 ExploitBench 基準測試裡（題目是 Chrome 的 JavaScript 引擎 V8 的已知漏洞），GLM-5.3 嘗試 410 次，有 50 次寫出完整的攻擊程式。Claude Mythos Preview 在同一項測試是 56 次。在另一項以開源專案為對象的內部測試裡，GLM-5.3 有 4% 的嘗試能完全控制程式的執行流程，Mythos Preview 是 6%。Claude Opus 4.6、GLM-5.2 等較早的模型一次都沒有成功。&lt;/p&gt;
+&lt;p&gt;美國國家標準暨技術研究院（NIST）轄下的 AI 標準與創新中心（CAISI）9 月 17 日的評估寫到，GLM-5.3 是到當時資安能力最強的開放權重模型，綜合多項測驗落後美國最前沿的模型約四個月。CAISI 對照的美國模型包括只提供給篩選過的使用者的版本。&lt;/p&gt;
+&lt;p&gt;一位研究者花了大約一天、投入有限的人力，讓 GLM-5.3 在一款常用瀏覽器的 JavaScript 引擎找到數個未知的漏洞。模型把這些漏洞串成一個網頁，訪客用該瀏覽器的 Linux 版本打開，網頁就能讀取訪客電腦上的任意檔案。Anthropic 在報告裡寫到，其他平台也可能受影響，在那些平台上利用的路徑或許更複雜。報告沒有寫出是哪一款瀏覽器，只寫到漏洞已經回報給維護者。&lt;/p&gt;
+&lt;p&gt;另一位研究者讓較小的 GLM-5.3-Flash 根據 Chrome 漏洞 &lt;code&gt;CVE-2026-11645&lt;/code&gt; 與另一個已知漏洞的公開資料，寫出串連兩者的攻擊程式。研究者投入 20 分鐘，模型執行 8 小時，依智譜的 API 價格換算約 20.40 美元。Google 在 6 月 8 日的 Chrome 更新修補了 &lt;code&gt;CVE-2026-11645&lt;/code&gt;，公告寫明已有攻擊程式在外流傳。&lt;/p&gt;
+&lt;p&gt;報告寫到，上面這些寫攻擊程式的任務沒有觸發 GLM-5.3 的拒絕。要求協助開發惡意程式或攻擊遠端目標時，模型則會拒絕。&lt;/p&gt;
+&lt;p&gt;Anthropic 另外在模擬環境要求 GLM-5.3 攻擊遠端系統，直接提出時模型全部拒絕。告訴模型它在演練中扮演紅隊（模擬攻擊方的測試人員）時，模型有 64% 的情況開始嘗試連線目標系統，預先填入模型的思考內容、讓它看起來已經決定執行時是 92%。用 abliteration 這種手法修改權重、移除拒絕行為之後，開始嘗試連線的比例是 100%。&lt;/p&gt;
+&lt;p&gt;Anthropic 第一次用 abliteration 修改權重，花了約 2,200 個 GPU 小時、約 4,400 美元，估計熟悉手法的團隊約需 600 個 GPU 小時、約 1,200 美元。修改後的模型在一般科學能力測驗的分數不變，從資安測驗抽樣的題目分數略低。報告也寫到，GLM-5.3 發布後幾天內，已有數個開發者公開了移除拒絕行為的版本。&lt;/p&gt;
+&lt;p&gt;在 Anthropic 自己的測試裡，透過 API 使用、帶防護的 Claude 擋下了偽裝成紅隊的請求。另外兩種手法對 Claude 一般無法施行，因為 Claude 的 API 不提供預填思考內容的方式，權重也沒有公開。繞過防護的這組測試在模擬環境進行，模型產生的程式碼沒有實際執行，報告寫明模擬無法完整反映真實情況。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;模型拒絕惡意請求的能力是訓練出來的，跟模型的其他能力存在同一組權重裡。透過 API 提供模型時，模型開發者可以在模型外面另外加上過濾與監控。權重公開之後，使用者在自己的電腦上執行，外面那幾層就不存在。修改權重也不需要模型開發者同意。&lt;/p&gt;
+&lt;p&gt;智譜在 X 的說明寫到 GLM-5.3 有三層防護，分別是請求分類器、評估執行過程風險的監控，以及模型本身的安全訓練。前兩層部署在智譜自己的服務，不會自動跟著模型進到使用者自行架設的環境，公開的權重只帶著第三層。說明也寫到，模型層的防護能提高濫用的門檻，但無法做到絕對的控制。&lt;/p&gt;
+&lt;p&gt;智譜在同一份說明裡寫到這類能力可攻可守，因此計畫分階段發布，先讓篩選過的資安合作夥伴測試。智譜 8 月 14 日的發布部落格寫到，權重在兩週後、完成安全評估與強化之後公開。&lt;/p&gt;
+&lt;p&gt;Anthropic 在報告裡的評估是，GLM-5.3 發布時沒有足以限制濫用的防護。報告寫到，同等能力的其他模型發布時都帶有防護，或只透過限制存取的計畫提供。報告也寫到，政府應該對能力足夠的模型做安全測試。到 10 月 5 日為止，查不到智譜針對這份報告的公開回應。&lt;/p&gt;
+&lt;p&gt;Anthropic 的報告寫到，防禦方應該取得至少跟攻擊方一樣好的模型。Anthropic 透過 Project Glasswing 等計畫把模型提供給篩選過的防禦方，並寫到正在擴大提供的範圍。智譜的說明寫到，防禦能力不能只留在少數組織。智譜的做法是隨 GLM-5.3 推出 OpenVuln 計畫，跟維護者合作審查重要的開源專案，協助通報與修補漏洞。&lt;/p&gt;
+&lt;p&gt;英國 AI 安全研究所（AISI）7 月的分析寫到，開放權重模型可以私下架設、資料不必回傳給模型開發者，也不會被開發者改版或下架。同一份分析也寫到，權重公開之後防護可以被移除、複製出去的模型也收不回來。AISI 以 6 月推出的 GLM-5.2 等模型測得，開放權重模型的資安能力落後最前沿的封閉模型 4 到 7 個月，2025 年多數時候是 6 到 10 個月。AISI 把這段落差視為能用到最前沿封閉模型的防禦方的準備時間。&lt;/p&gt;
+&lt;p&gt;讀者無法控制誰使用這些模型，能縮短的是漏洞修補之後、自己的瀏覽器還沒更新的這段時間。在報告的實驗裡，GLM-5.3-Flash 根據已公開的漏洞資料，執行 8 小時就寫出攻擊程式。Chrome 會在背景準備更新，要重新啟動才會套用。長時間不關瀏覽器的人可以到「說明」的「關於 Google Chrome」檢查，出現「重新啟動」按鈕代表更新還沒套用。&lt;/p&gt;
+&lt;p&gt;更新擋不住還沒修補的漏洞，常造訪陌生網站的人可以再減少網頁程式能用的瀏覽器功能。在 Chrome「隱私權和安全性」的「安全性」裡，可以把「管理 JavaScript 最佳化和安全性」設成「自動在不熟悉的網站上停用 JavaScript 最佳化工具」，部分網站可能因此變慢。Tor Browser 的「較安全」等級會在非 HTTPS 的網站停用 JavaScript，「最安全」在所有網站預設停用，部分網站會無法正常運作。這些設定縮小的是網頁程式攻擊瀏覽器的機會，無法擋下騙你輸入密碼的釣魚網頁。&lt;/p&gt;
+&lt;p&gt;之後可以留意，開放權重模型的防護要做到什麼程度才算足夠。台灣數位發展部 9 月 2 日公布的 AI 模型評測涵蓋語言、社會文化與價值觀的理解，模型的資安能力要不要也納入政府的測試、由哪個單位負責。AISI 所說的準備時間，是否足夠讓漏洞先被修補。人力不足的開源專案，能否用到跟攻擊方同級的工具。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities&#34;&gt;GLM-5.3 and the spread of advanced cyber capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/Zai_org/article/2088280509474320693&#34;&gt;Preparing GLM-5.3 for Open Release: A Responsible Path to Cyber Defense&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Z.ai&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-14&#34;&gt;2026 年 8 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://z.ai/blog/glm-5.3&#34;&gt;GLM-5.3: Frontier Coding with Emergent Cyber Capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Z.ai&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-14&#34;&gt;2026 年 8 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities&#34;&gt;CAISI’s Assessment of Z.ai’s GLM-5.3 Cyber Capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber&#34;&gt;How Far Behind the Frontier are Leading Open Weight Models on Cyber?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;AI Security Institute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;2026 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html&#34;&gt;Stable Channel Update for Desktop&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95414?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;更新 Google Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/10468685?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;管理 Chrome 的安全性&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.torproject.org/zh-TW/tor-browser/features/security-levels/&#34;&gt;調整 Tor Browser 安全等級以平衡隱私與可用性&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://moda.gov.tw/ADI/news/latest-news/20538&#34;&gt;讓你的AI懂臺灣！數位發展部公布臺灣主權AI評測結果，攜手產官打造可信任AI生態系&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;數位發展部數位產業署&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>冒充 Gmail 附件預覽的釣魚信</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/gmail-attachment-preview-phishing/</link>
@@ -1748,101 +1850,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/signalapp/Signal-iOS/tree/main/Signal/translations/zh_TW.lproj&#34;&gt;Signal-iOS zh_TW.lproj&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Signal&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>手機位置資料與資料仲介手上的個人檔案</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/mobile-location-data-brokers/</link>
-<guid isPermaLink="false">anoni-news:2026/10/mobile-location-data-brokers</guid>
-<pubDate>Thu, 01 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>美國的 The Markup 與 Consumer Reports 取得資料仲介的個人檔案，裡面有上千項推測與上百個買家。Freedom of the Press Foundation 整理了兩個減少手機洩漏位置資料的設定，美國以外也能照做。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，來自 Freedom of the Press Foundation、The Markup、全國法規資料庫 等 9 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國媒體 The Markup 與消費者組織 Consumer Reports 在 9 月 16 日發表報導，整理志工依幾個州的新隱私法，向資料仲介（data broker，蒐集並轉賣個人資料的公司）申請到的個人檔案。檔案對象是美國居民，通常有姓名、地址、社會安全號碼與上千項推測。同一個月，新聞自由組織 Freedom of the Press Foundation（FPF）整理了兩個減少手機洩漏位置資料的設定，美國以外也適用。&lt;/p&gt;
-&lt;p&gt;資料仲介 Acxiom 自稱握有全球數十億人的資料，其中包括約 95% 美國成年人。報導檢視的檔案裡，Acxiom 在超過 3,000 個類別做出推測，從子女的年齡、性別到估計的飲酒量都有。&lt;/p&gt;
-&lt;p&gt;明尼蘇達、奧勒岡等州較新的隱私法，要求業者揭露資料賣給誰。報導檢視的 Acxiom 檔案合計列出超過 100 個買家，包括保險公司、銀行、藥廠、通用汽車與迪士尼。&lt;/p&gt;
-&lt;p&gt;仲介可能取得手機的廣告識別碼、智慧電視的追蹤識別碼、家中的 IP 位址與車輛識別號碼。受訪研究者提到，握有位置資料的仲介可能看出一個人去過軍事基地、學校或專科診所。&lt;/p&gt;
-&lt;p&gt;FPF 的文章提到，2026 年稍早傳出軍人因商業位置資料被鎖定為目標。美國國防部官員之後向路透社與國會議員表示，已停用軍人手機與電腦上的廣告位置追蹤。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;台灣《個人資料保護法》第 10 條讓當事人請求查詢、閱覽或取得複製本，第 13 條要求 15 天內決定，必要時可延長 15 天。香港《個人資料（私隱）條例》第 18、19 條讓個人向資料使用者（持有個人資料的機構）索取資料複本，一般要在 40 日內依從。&lt;/p&gt;
-&lt;p&gt;查閱只能看到一家業者的紀錄，台灣的業者還可以酌收成本費用。The Markup 的報導寫到，退出一家仲介只會刪除那一家的資料，已賣出的副本不會跟著刪除。&lt;/p&gt;
-&lt;p&gt;FPF 的文章寫到，位置追蹤常透過廣告的即時競價（real-time bidding，廣告顯示前即時出價）與 App 內建的軟體開發套件（SDK）進行。其中相當多是用廣告識別碼連結到個別裝置。&lt;/p&gt;
-&lt;p&gt;FPF 列出的第一步是不讓 App 取得廣告識別碼。在 iPhone 上到「設定」依序點「隱私權與安全性」、「追蹤」，關閉「允許 App 發出追蹤請求」。Apple 的說明頁寫明，關閉後 App 無法存取廣告識別碼（IDFA），功能照常可用。在 Android 上依 Google 的說明到「設定」點「隱私權」、「廣告」、「刪除廣告 ID」，另一種選單的「廣告」在「安全性與隱私權」、「隱私權」、「隱私權控制項」底下。&lt;/p&gt;
-&lt;p&gt;第二步是關閉定位權限，只留給地圖這類必要的 App，使用時再打開。iPhone 的路徑是「隱私權與安全性」、「定位服務」，Android 是「安全性與隱私權」、「隱私權」、「權限管理工具」裡的「位置」。第一步的追蹤設定需要 iOS 14.5 以上，Android 的廣告 ID 設定需要 Google Play 服務，Apple 與 Google 的說明頁都有正體中文版（9 月 29 日查證）。兩步幾分鐘就能完成，往後被蒐集的位置資料會減少，已經賣出的紀錄則無法收回。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/claw-back-your-mobile-location-data/&#34;&gt;Claw back your mobile location data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-09&#34;&gt;2026 年 9 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/privacy/2026/09/16/data-brokers-have-detailed-files-on-you-heres-whats-in-them-and-how-it-impacts-you&#34;&gt;Data brokers have detailed files on you. Here’s what’s in them — and how it impacts you&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get&#34;&gt;Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.elegislation.gov.hk/hk/cap486!zh-Hant-HK&#34;&gt;第 486 章《個人資料（私隱）條例》&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;電子版香港法例&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/tc_chi/resources_centre/publications/files/DAR_QnA_c.pdf&#34;&gt;如何行使你在《個人資料（私隱）條例》下的查閱個人資料權（常問問題及答案）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;個人資料私隱專員公署&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102420&#34;&gt;如果 App 要求追蹤你的活動&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102647&#34;&gt;開啟或關閉 iPhone、iPad 或 iPod touch 上的「定位服務」和 GPS 功能&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://policies.google.com/technologies/ads?hl=zh-TW&#34;&gt;廣告&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google 隱私權與條款&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant&#34;&gt;廣告 ID&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Play 管理中心說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/9431959?hl=zh-Hant&#34;&gt;在 Android 手機上變更應用程式權限&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android 說明&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
