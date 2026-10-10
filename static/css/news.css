@@ -31,9 +31,14 @@
     --c-header-bg: var(--brand-cyan-900);
     --c-header-text: #ffffff;
     --c-header-link: var(--brand-cyan-50);
+    /* 文字片段連結（#:~:text=）標出的段落 */
+    --c-mark-bg: var(--brand-cyan-100);
+    --c-mark-text: #1d2b31;
 
+    /* 明體的第一個是 clearnet 自架的標題字型（css/fonts.css，見 SPEC.md「標題字型」）。
+       onion 沒有載入它，直接往下找系統字型 */
     --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    --font-serif: "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+    --font-serif: "anoni news serif TC", "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
 
     --touch: 2.75rem;
     /* 內文欄。扣掉左右留白約 40rem，桌機 18px 的字級下一行大約 36 個中文字 */
@@ -47,7 +52,7 @@
 html:lang(zh-Hans),
 .not-found:lang(zh-Hans) {
     --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-    --font-serif: "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+    --font-serif: "anoni news serif SC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
 }
 
 html:lang(en) {
@@ -78,6 +83,8 @@ html:lang(en) .site-header__product {
         --c-header-bg: var(--brand-cyan-900);
         --c-header-text: #ffffff;
         --c-header-link: var(--brand-cyan-50);
+        --c-mark-bg: var(--brand-cyan-800);
+        --c-mark-text: #ffffff;
     }
 }
 
@@ -706,6 +713,155 @@ p {
 
 .story__followup a {
     font-weight: 600;
+}
+
+/* 朗讀按鈕，在「其他語言」那一行的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」。
+   平常只有「朗讀」與「調整」一列，按「調整」才展開語音、速度與說明。
+   按鈕出現時，標題區的粗線從語系那一行移到這裡，粗線之後直接接內文。
+   沒有 JavaScript 或找不到本機語音時按鈕是 hidden，粗線留在原處 */
+.listen {
+    /* 按鈕的觸控範圍往上撐 0.375rem，語系連結往下也有 0.375rem，留 0.75rem 兩者才不重疊 */
+    margin: 0.75rem 0 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+}
+
+.story__langs:has(+ .listen:not([hidden])) {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.listen[hidden],
+.listen__panel[hidden],
+.listen__field[hidden] {
+    display: none;
+}
+
+/* 小螢幕上分成好幾列時，列與列之間留得跟左右一樣寬 */
+.listen__bar,
+.listen__panel,
+.listen__options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.listen__panel {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+}
+
+.listen__bar {
+    gap: 0.5rem;
+}
+
+/* 兩顆按鈕一樣大，字級跟語系那一行相同。外觀只有 2rem 高，
+   觸控範圍用 ::before 往上下撐到 --touch，手指照樣點得到 */
+.listen__button,
+.listen__toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    min-height: 2rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-surface);
+    color: var(--c-link);
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.listen__button::before,
+.listen__toggle::before {
+    content: "";
+    position: absolute;
+    top: calc((2rem - var(--touch)) / 2);
+    bottom: calc((2rem - var(--touch)) / 2);
+    left: 0;
+    right: 0;
+}
+
+/* 「調整」是次要的按鈕，不放底色，展開時才跟面板一樣有底色 */
+.listen__toggle {
+    background: transparent;
+    font-weight: 400;
+}
+
+.listen__toggle[aria-expanded="true"] {
+    background: var(--c-surface);
+}
+
+.listen__button:hover,
+.listen__toggle:hover {
+    border-color: var(--c-link);
+}
+
+.listen__button:focus-visible,
+.listen__toggle:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+/* 圖示依狀態切換：沒在念時是喇叭，念的時候是暫停 */
+.listen__pause,
+.listen__button[data-state="playing"] .listen__play {
+    display: none;
+}
+
+.listen__button[data-state="playing"] .listen__pause {
+    display: inline;
+}
+
+.listen__field {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.listen__select {
+    min-height: var(--touch);
+    max-width: 9.5em;
+    padding: 0 0.5rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font: inherit;
+}
+
+.listen__select:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+.listen__note {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* 連到閱讀說明的連結夾在小字裡，跟語系那一行一樣只加上下的留白放大觸控範圍 */
+.listen__note a {
+    display: inline-block;
+    padding: 0.375rem 0;
+}
+
+/* 正在念的段落，底色跟原文區塊相同。用 outline 往外延伸底色，不改變版面，文字不會跳動 */
+.is-reading {
+    background: var(--c-surface);
+    outline: 0.375rem solid var(--c-surface);
 }
 
 /* 同一事件的導讀：整條事件線由舊到新，日期在上、標題在下，本篇不連結 */
@@ -1402,4 +1558,216 @@ p {
     max-width: var(--measure);
     margin: 0 0 1.5rem;
     color: var(--c-muted);
+}
+
+/* ---------------------------------------------------------------- 引用段落的連結 */
+
+/* 網址帶 #:~:text=某段文字 時，瀏覽器捲到那段文字並標出來。標示色換成品牌色，
+   引用導讀的某一句時，讀者一眼看得到是哪裡。見 SPEC.md「引用段落的連結」 */
+::target-text {
+    background: var(--c-mark-bg);
+    color: var(--c-mark-text);
+}
+
+/* ---------------------------------------------------------------- 長列表 */
+
+/* 時間軸的每一天與導讀歷史的每個月，捲到附近才計算版面，手機打開長列表比較快。
+   2026-10 在 CPU 降速 4 倍的手機模擬下，首頁的版面計算從 11.5ms 降到 7.1ms。
+   畫面外的區塊先用 contain-intrinsic-size 估一個高度，算過一次之後記住實際的高度。
+   估計值取 2026-10 實測的中位數，差太多時捲軸會在捲動途中跳動，版面大改之後要重新量 */
+.day {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 60rem;
+}
+
+.history-month {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 18rem;
+}
+
+@media (min-width: 48em) {
+    .day {
+        contain-intrinsic-size: auto 44rem;
+    }
+
+    .history-month {
+        contain-intrinsic-size: auto 9rem;
+    }
+}
+
+/* ---------------------------------------------------------------- 高對比模式 */
+
+/* Windows 的高對比模式會把顏色換成系統色，只靠底色區分的元件要補回來。見 SPEC.md「高對比模式」 */
+@media (forced-colors: active) {
+    /* 頁首的 logo 是白色的圖，底色被換掉就看不見，頁首與刊頭保留品牌色。白字在 cyan-900 上的對比是 11.5 */
+    .site-header {
+        forced-color-adjust: none;
+    }
+
+    /* 分類的色塊是底色，會被換成背景色而消失，改用文字色 */
+    .cat::before {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+
+    /* 正在朗讀的段落只靠底色，改用系統的選取色畫框 */
+    .is-reading {
+        outline: 2px solid Highlight;
+    }
+
+    ::target-text {
+        background: Highlight;
+        color: HighlightText;
+    }
+}
+
+/* ---------------------------------------------------------------- 增加對比 */
+
+/* iPhone 與 Mac 開了「增加對比」時，瀏覽器送出 prefers-contrast: more。只改顏色與底線粗細，
+   間距與尺寸都不動，版面跟平常相同。見 SPEC.md「高對比模式」 */
+@media (prefers-contrast: more) {
+    :root {
+        /* 次要文字（日期、署名、出處、說明）跟內文同色，6.19 → 14.56 */
+        --c-muted: var(--c-text);
+        /* 連結改用最深的品牌色，5.76 → 11.5 */
+        --c-link: var(--brand-cyan-900);
+        /* 邊框與分隔線加深，1.36 → 4.69 */
+        --c-border: #5d7883;
+        /* 裝飾線與焦點框改用墨色，cyan-500 在白底上只有 2.47 */
+        --c-rule: var(--brand-cyan-900);
+    }
+
+    a {
+        text-decoration-thickness: 2px;
+    }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+    :root {
+        --c-muted: var(--c-text);
+        --c-link: var(--brand-cyan-100);
+        --c-border: #7f9fac;
+        --c-rule: var(--brand-cyan-300);
+    }
+}
+
+/* ---------------------------------------------------------------- 列印 */
+
+/* 研究者與記者會列印或另存成 PDF 引用導讀。拿掉導覽與按鈕，原文與內文連結後面印出完整網址，
+   文章最後印出這一頁的網址，紙本上也查得到出處。放在檔案最後，蓋過前面的深色模式與桌機版面。
+   見 SPEC.md「列印」 */
+@media print {
+    :root {
+        --c-bg: #ffffff;
+        --c-surface: #ffffff;
+        --c-border: #b0b0b0;
+        --c-text: #000000;
+        --c-muted: #333333;
+        --c-headline: #000000;
+        --c-link: #000000;
+        --c-rule: #000000;
+    }
+
+    @page {
+        margin: 16mm 14mm;
+    }
+
+    body {
+        font-size: 11pt;
+        line-height: 1.6;
+    }
+
+    .site-header,
+    .site-footer,
+    .story__langs,
+    .listen,
+    .subscribe,
+    .pager,
+    .thread,
+    .related,
+    .masthead__bar {
+        display: none !important;
+    }
+
+    /* 語系那一行不印，標題區的粗線改由署名那一行畫 */
+    .story__byline:not(:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #000000;
+    }
+
+    /* 桌機的兩欄與停在頂端的區塊都改回一欄，原文區塊不能在區塊內捲動，否則下半部印不出來 */
+    .story {
+        display: block;
+    }
+
+    .source-slip,
+    .day__date {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .source-slip {
+        margin-top: 1.5rem;
+        border-top: 2px solid #000000;
+    }
+
+    .source-slip__item,
+    .content img,
+    .content figure,
+    .content table,
+    .content pre {
+        break-inside: avoid;
+    }
+
+    .content h2,
+    .content h3 {
+        break-after: avoid;
+    }
+
+    .content pre {
+        white-space: pre-wrap;
+        overflow: visible;
+    }
+
+    .is-reading {
+        background: none;
+        outline: 0;
+    }
+
+    /* 分類色在深色模式是淺色，印在白紙上太淡，列印時一律用黑色 */
+    .cat {
+        --cat: #000000;
+    }
+
+    /* 站外連結後面印出網址。站內連結不印，路徑在紙本上沒有用 */
+    .source-slip a[href^="http"]::after {
+        content: " " attr(href);
+        display: block;
+        font-weight: 400;
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+
+    .story__body a[href^="http"]::after {
+        content: "（" attr(href) "）";
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+
+    html:lang(en) .story__body a[href^="http"]::after {
+        content: " (" attr(href) ")";
+    }
+
+    /* 文章最後印出出處與網址，網址來自 <article> 的 data-print-url，不在頁面文字裡，
+       閱讀模式與朗讀都不會讀到 */
+    .story[data-print-url]::after {
+        content: attr(data-print-label) attr(data-print-url);
+        display: block;
+        margin-top: 1.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #000000;
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
 }
