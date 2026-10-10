@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 11 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>通訊軟體的端對端加密與執法存取</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-11/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-11/2026</guid>
+<pubDate>Sun, 11 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你用 LINE 傳的一對一文字訊息預設是端對端加密，只有收發雙方的裝置能解開。這一天，包括日本與印度在內的七個國家發表聲明，呼籲科技公司讓執法單位在合法授權下可以讀取加密內容。</description>
+<content:encoded>&lt;p&gt;你用 LINE 傳的一對一文字訊息預設是端對端加密，只有收發雙方的裝置能解開內容，LINE 的說明頁也寫明這項功能無法關閉。美、英、澳、紐、加與印度、日本在 2020 年 10 月 11 日發表聯合聲明，表示支持強加密，同時呼籲科技公司在合法授權下讓執法單位可以讀取內容。印度《2021 年資訊科技（中介者指引與數位媒體倫理守則）規則》要求大型訊息服務依法院或主管機關的命令找出訊息的第一位發送者，WhatsApp 以追溯會破壞端對端加密為由，向德里高等法院提告。印度電子資訊科技部 2021 年的新聞稿寫到追溯只在其他方法無效時才使用，依 The Tribune 的報導，WhatsApp 的律師 2024 年則在法庭上表示被迫破解加密的話會退出印度。本站到 2026 年 10 月 10 日仍查不到這起訴訟的判決，台灣的讀者不需要另外設定 LINE，但群組的語音與視訊通話、相簿與記事本不在端對端加密的範圍內。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>維基百科在中國大陸的連線</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-10/#y2026</link>

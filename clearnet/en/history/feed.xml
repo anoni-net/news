@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 11 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>End-to-end encryption and law enforcement access in messaging apps</title>
+<link>https://anoni.net/news/en/history/10-11/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-11/2026</guid>
+<pubDate>Sun, 11 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the two devices involved can read them. On this day, seven countries including Japan and India issued a statement calling on technology companies to let law enforcement read encrypted content under lawful authorisation.</description>
+<content:encoded>&lt;p&gt;Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the sender&#39;s and the recipient&#39;s devices can unlock them, and LINE&#39;s help page reads that the feature cannot be turned off. On 11 October 2020, the US, UK, Australia, New Zealand and Canada, together with India and Japan (listed in the statement by country name only), declared support for strong encryption while calling on technology companies to let law enforcement read content under lawful authorisation. India&#39;s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 require large messaging services to enable identification of the first originator of a message on the order of a court or competent authority, and WhatsApp sued in the Delhi High Court, arguing that tracing would break end-to-end encryption. India&#39;s Ministry of Electronics and Information Technology wrote in a 2021 press release that tracing is a last resort for when other remedies have proven ineffective, and according to The Tribune, WhatsApp&#39;s lawyer told the court in 2024 that WhatsApp would leave India if forced to break encryption. As of 10 October 2026 we could not find a judgment in the case, and LINE users need no extra setting because Letter Sealing cannot be turned off, though group voice and video calls, albums and Notes are outside end-to-end encryption.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Wikipedia access in mainland China</title>
 <link>https://anoni.net/news/en/history/10-10/#y2026</link>
