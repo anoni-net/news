@@ -6,7 +6,25 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>維基百科在中國大陸的連線</title>
+<link>https://anoni.net/news/history/10-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-10/2026</guid>
+<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在台灣可以直接讀維基百科，在中國大陸 2026 年 10 月的連線量測則幾乎都是異常或失敗。這一天，中國大陸的使用者回報被封鎖將近一年的英文維基百科可以連上了。</description>
+<content:encoded>&lt;p&gt;你在台灣可以直接讀維基百科，維基媒體基金會 2019 年 5 月的聲明則寫明維基百科在中國大陸所有語言版本都遭到封鎖。中文維基百科的貢獻者在 2006 年 10 月 10 日向基金會的郵件列表回報英文版在中國大陸可以連上了，中文版仍然被封。維基百科的社群通訊寫到這次封鎖始於 2005 年 10 月，官方也沒有說明解封的原因，無國界記者 11 月的通知則寫中文版約在 11 月 13 日解封。OONI 在 2026 年 9 月 10 日到 10 月 10 日於中國大陸量測中英文維基百科各 33 筆，全部是異常（跟對照量測不符，不等於確認封鎖）或失敗。台灣的讀者可以用 OONI Probe 量測自己的網路有沒有封鎖網站，量測結果會自動公開。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>App Store 應政府要求下架的 App</title>
+<link>https://anoni.net/news/history/10-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-09/2026</guid>
+<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在 App Store 能下載哪些 App，會依帳號所屬的國家或地區而不同。這一天，Apple 從 App Store 下架顯示香港警察位置的群眾地圖 App。</description>
+<content:encoded>&lt;p&gt;你在 App Store 能下載哪些 App 取決於帳號設定的國家或地區，Apple 2025 年的透明度報告也寫明應政府要求下架的 App 只從當地的商店移除。Apple 在 2019 年 10 月 9 日（美國時間，CNN 依香港時間記為 10 日）從 App Store 下架顯示香港警察位置的群眾地圖 App HKmap.live，路透社的報導寫到這次是全球下架。Apple 發給媒體的聲明寫明已向香港警方的網絡安全及科技罪案調查科查證這個 App 曾被用來針對與伏擊警察，也寫到 App 違反 App Store 的規範與當地法律。開發者隨後在推特反駁沒有任何證據支持這項指控，並表示下架是壓制香港自由與人權的政治決定。讀者可以在同一份透明度報告查到各地應政府要求下架的 App 數量，2025 年中國大陸有 196 個、香港 1 個，台灣不在清單上。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>香港的起底刪除機制</title>
 <link>https://anoni.net/news/history/10-08/#y2026</link>

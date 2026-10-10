@@ -6,7 +6,25 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Wikipedia access in mainland China</title>
+<link>https://anoni.net/news/en/history/10-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-10/2026</guid>
+<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>You can read Wikipedia from Taiwan, but in mainland China every OONI measurement in the month to 10 October 2026 was an anomaly or a failure. On this day, users in mainland China reported that English Wikipedia, blocked for nearly a year, could be reached again.</description>
+<content:encoded>&lt;p&gt;You can read Wikipedia from Taiwan, while a May 2019 statement from the Wikimedia Foundation reads that Wikipedia was blocked across all language versions in mainland China. On 10 October 2006, contributors to Chinese Wikipedia reported on the foundation&#39;s mailing list that English Wikipedia could be reached from mainland China, while the Chinese version remained blocked. The Wikipedia Signpost, the community newsletter, reported that the block began in October 2005 and that no official explanation was available for lifting it, and a November notice from Reporters Without Borders puts the unblocking of the Chinese version at around 13 November. OONI recorded 33 measurements each of Chinese and English Wikipedia from mainland China between 10 September and 10 October 2026, and all of them were anomalies (a mismatch with the control measurement, which does not by itself confirm blocking) or failures. OONI&#39;s measurements from Hong Kong over the six months to 10 October 2026 were all normal, and anyone can run OONI Probe to check which sites their own network blocks, though OONI&#39;s FAQ reads that running it can potentially be risky depending on the country.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Apps removed from the App Store at government request</title>
+<link>https://anoni.net/news/en/history/10-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-09/2026</guid>
+<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your App Store account&#39;s country or region determines which apps you can download. On this day, Apple removed a crowd-sourced map app showing Hong Kong police locations from the App Store.</description>
+<content:encoded>&lt;p&gt;Which apps you can download from the App Store depends on the country or region set on your account, and Apple&#39;s 2025 transparency report reads that an app removed at a government&#39;s demand is removed only from that country or region. On 9 October 2019 (US time; CNN, using Hong Kong time, dates it 10 October), Apple removed HKmap.live, a crowd-sourced map app showing the locations of Hong Kong police, from the App Store, and Reuters reported that the removal was global. Apple&#39;s written statement to the media reads that it had verified with the Hong Kong police&#39;s Cyber Security and Technology Crime Bureau that the app had been used to target and ambush police, and that the app violated its guidelines and local laws. The developer replied on Twitter that there was no evidence for that accusation and that the removal was a political decision to suppress freedom and human rights in Hong Kong. The same transparency report lists apps removed at government demand in 2025 by country or region, with 196 in mainland China, 335 in Vietnam, 108 in South Korea, 54 in India, 25 in Japan and 1 in Hong Kong, and Taiwan does not appear on the list.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Hong Kong&#39;s anti-doxxing removal powers</title>
 <link>https://anoni.net/news/en/history/10-08/#y2026</link>

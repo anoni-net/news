@@ -6,7 +6,25 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 08 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>维基百科在中国大陆的访问</title>
+<link>https://anoni.net/news/zh-cn/history/10-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-10/2026</guid>
+<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在中国大陆访问维基百科，2026 年 10 月的测量结果几乎都是异常或失败。这一天，中国大陆的用户反映被封锁将近一年的英文维基百科可以连上了。</description>
+<content:encoded>&lt;p&gt;维基媒体基金会 2019 年 5 月的声明写明，维基百科在中国大陆所有语言版本都遭到封锁。中文维基百科的贡献者在 2006 年 10 月 10 日向基金会的邮件列表反映英文版在中国大陆可以连上了，中文版仍然被封。维基百科的社区通讯写到这次封锁始于 2005 年 10 月，官方也没有说明解封的原因，无国界记者 11 月的通知则写中文版约在 11 月 13 日解封。OONI 在 2026 年 9 月 10 日到 10 月 10 日于中国大陆测量中英文维基百科各 33 条，全部是异常（跟对照测量不符，不等于确认封锁）或失败。海外的读者可以用 OONI Probe 测量自己的网络有没有封锁网站，测量结果会自动公开，在中国大陆运行则可能有风险（OONI 的常见问题写明监控网络的人可能看到你在运行它，建议向当地律师咨询）。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>App Store 应政府要求下架的 App</title>
+<link>https://anoni.net/news/zh-cn/history/10-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-09/2026</guid>
+<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在 App Store 能下载哪些 App，会依账号所属的国家或地区而不同。这一天，Apple 从 App Store 下架显示香港警察位置的群众地图 App。</description>
+<content:encoded>&lt;p&gt;你在 App Store 能下载哪些 App 取决于账号设置的国家或地区，Apple 2025 年的透明度报告也写明应政府要求下架的 App 只从当地的商店移除。Apple 在 2019 年 10 月 9 日（美国时间，CNN 依香港时间记为 10 日）从 App Store 下架显示香港警察位置的群众地图 App HKmap.live，路透社的报道写到这次是全球下架。Apple 发给媒体的声明写明已向香港警方的网络安全及科技罪案调查科查证这个 App 曾被用来针对与伏击警察，也写到 App 违反 App Store 的规范与当地法律。开发者随后在推特反驳没有任何证据支持这项指控，并表示下架是压制香港自由与人权的政治决定。同一份透明度报告列出各地应政府要求下架的 App 数量，2025 年中国大陆的 App Store 有 196 个、香港 1 个，台湾不在清单上。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>香港的起底删除机制</title>
 <link>https://anoni.net/news/zh-cn/history/10-08/#y2026</link>
