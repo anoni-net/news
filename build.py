@@ -15,6 +15,7 @@ import functools
 import hashlib
 import html
 import html.parser
+import io
 import json
 import re
 import shutil
@@ -23,6 +24,7 @@ import tempfile
 import tomllib
 import urllib.parse
 import urllib.request
+from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
@@ -31,6 +33,8 @@ from pathlib import Path
 import markdown
 import yaml
 from PIL import Image
+from fontTools import subset as font_subset
+from fontTools.ttLib import TTFont
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, pass_context
 from markupsafe import Markup
 
@@ -1406,6 +1410,10 @@ class Target:
     rewrites: list[tuple[str, str]]
     # 流量統計的設定（src、website_id、domains），沒有就不載入，onion 一律沒有
     analytics: dict | None = None
+    # 文章頁的朗讀按鈕（static/js/read-aloud.js），onion 不放，見 SPEC.md「朗讀按鈕」
+    read_aloud: bool = False
+    # 標題的自架字型（fonts/ 與 css/fonts.css），onion 不放，見 SPEC.md「標題字型」
+    fonts: bool = False
 
     def url(self, rel: str = "") -> str:
         return self.prefix + rel
@@ -1438,6 +1446,8 @@ def load_config(path: Path) -> tuple[dict, dict[str, Target]]:
             clearnet=t["clearnet"],
             rewrites=[tuple(pair) for pair in t["rewrites"]],
             analytics=t.get("analytics"),
+            read_aloud=bool(t.get("read_aloud", False)),
+            fonts=bool(t.get("fonts", False)),
         )
     return config, targets
 
@@ -1516,12 +1526,13 @@ def json_script(data: dict) -> str:
 def build_target(target: Target, posts: list[Post], config: dict, env: Environment,
                  store: AssetStore | None = None, site_pages: dict[str, dict[str, dict]] | None = None,
                  history: tuple[list[HistoryDay], dict[str, dict]] | None = None,
-                 include_scheduled: bool = False) -> list[Page]:
+                 include_scheduled: bool = False, font_dir: Path | None = None) -> list[Page]:
     """posts 是 zh-TW 的文章，其他語系從 translations 取。history 是 load_history 的結果，
-    沒有就不產生導讀歷史。"""
+    沒有就不產生導讀歷史。font_dir 是標題字型的原始檔目錄，沒有就用下載到快取的那一份。"""
     if target.out.exists():
         shutil.rmtree(target.out)
-    shutil.copytree(ROOT / "static", target.out)
+    # 沒有朗讀按鈕的目標連腳本檔都不放，onion 產物裡沒有任何 JavaScript
+    shutil.copytree(ROOT / "static", target.out, ignore=None if target.read_aloud else shutil.ignore_patterns("js"))
     for asset in (store.assets.values() if store else []):
         dest = target.out / "assets" / asset.rel
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -1755,6 +1766,9 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
     if not target.clearnet:
         robots = env.get_template("robots.txt.j2").render(sitemap=target.abs_url("sitemap.xml"))
         (target.out / "robots.txt").write_text(robots, encoding="utf-8")
+    # 網址合約用的那一份只看網址，不產生字型
+    if target.fonts and not include_scheduled:
+        build_fonts(target, pages, posts, font_dir)
     return pages
 
 
@@ -1851,6 +1865,294 @@ def static_version(rel: str) -> str:
     return hashlib.sha256((ROOT / "static" / rel).read_bytes()).hexdigest()[:10]
 
 
+# ---------------------------------------------------------------- 標題字型
+
+# clearnet 的標題用自架的思源宋體（Noto Serif CJK），建置時只取網站用到的字，內文維持系統黑體。
+# 規則見 SPEC.md「標題字型」。原始檔固定在 Serif2.003 這一版，下載後比對 sha256
+FONT_BASE_URL = "https://raw.githubusercontent.com/notofonts/noto-cjk/9b0f1436e455d902de067a2501422e5dc71ad16b/Serif/"
+FONT_CACHE = ROOT / ".cache" / "fonts"
+FONT_LICENSE = ("LICENSE", "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2")
+# 每套字一份，頁面只載入自己語系的那一份，en 頁面不載入
+FONTS_CSS = "css/fonts-{script}.css"
+FONTS_DIR = "fonts/"
+# 模板先寫這個記號，所有頁面產生之後才知道 fonts-*.css 的內容，再換成它的版本號
+FONTS_VERSION_PLACEHOLDER = "%FONTS_CSS_VERSION%"
+# 子集的做法改了就換這個值，快取裡的舊子集不再沿用
+FONT_SUBSET_REVISION = "1"
+
+
+@dataclass(frozen=True)
+class FontSource:
+    script: str               # tc 或 sc，對應 <html lang> 的 zh-Hant 與 zh-Hans
+    weight: int
+    file: str                 # 相對於 FONT_BASE_URL
+    sha256: str
+    style: str                # 子集改名之後的字重名稱
+    local: tuple[str, ...]    # 讀者裝置上已經有同一套字型時，@font-face 先用 local() 找，找到就不下載
+
+
+FONT_SOURCES = [
+    FontSource("tc", 700, "SubsetOTF/TC/NotoSerifTC-Bold.otf", "3ca2b3294ec84b795d0a45695e78e3612a44dce50f9fc776cd40206340a5768d", "Bold",
+               ("Noto Serif CJK TC Bold", "NotoSerifCJKtc-Bold", "Noto Serif TC Bold", "NotoSerifTC-Bold",
+                "Source Han Serif TC Bold", "SourceHanSerifTC-Bold")),
+    FontSource("tc", 900, "SubsetOTF/TC/NotoSerifTC-Black.otf", "55c68df309e702cdb56b9ffd6b8185468afc0cb070aa9c2f14099de0cae64d12", "Black",
+               ("Noto Serif CJK TC Black", "NotoSerifCJKtc-Black", "Noto Serif TC Black", "NotoSerifTC-Black",
+                "Source Han Serif TC Heavy", "SourceHanSerifTC-Heavy")),
+    FontSource("sc", 700, "SubsetOTF/SC/NotoSerifSC-Bold.otf", "24693d48bdb9152f0a06b02af625638a1097abd6de4010ebba027f6e82710527", "Bold",
+               ("Noto Serif CJK SC Bold", "NotoSerifCJKsc-Bold", "Noto Serif SC Bold", "NotoSerifSC-Bold",
+                "Source Han Serif SC Bold", "SourceHanSerifSC-Bold")),
+    FontSource("sc", 900, "SubsetOTF/SC/NotoSerifSC-Black.otf", "91dde57622845beeb663f300813999febdb7fcd5e451bde199d7c954a9740cb4", "Black",
+               ("Noto Serif CJK SC Black", "NotoSerifCJKsc-Black", "Noto Serif SC Black", "NotoSerifSC-Black",
+                "Source Han Serif SC Heavy", "SourceHanSerifSC-Heavy")),
+]
+# 子集裡的字型名稱與 CSS 的 font-family。改過的字型依 OFL 不能沿用原作者保留的名稱，
+# 名稱也要跟 news.css 的 --font-serif 一致
+FONT_FAMILIES = {"tc": "anoni news serif TC", "sc": "anoni news serif SC"}
+# <html lang> 用哪一套字。en 的標題用 Georgia，不放中文字型
+FONT_SCRIPTS = {"zh-Hant": "tc", "zh-Hans": "sc"}
+# news.css 裡用 --font-serif 的元素與字重，tests/test_fonts.py 會跟 news.css 對照，兩邊要一起改
+SERIF_WEIGHTS = {
+    "site-header__product": 700, "masthead__title": 900, "list-heading": 700, "featured__title": 700,
+    "brief__title": 700, "story__title": 700, "thread__title": 700, "pager__title": 700,
+    "snapshot__title": 700, "history-month__name": 700,
+}
+# .content 裡的 h2 也用明體，字重是 h2 預設的粗體
+CONTENT_H2_WEIGHT = 700
+# 導讀的標題與小標題的字重。只有這個字重的分片依月份切，其他字重（刊頭的 900）只用在介面文字，
+# 全部放在 site 分片
+POST_HEADING_WEIGHT = 700
+# 沒有發布月份的字（固定頁面、導讀歷史、介面文字）放在這個分片
+FONT_SITE_KEY = "site"
+VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
+H2_RE = re.compile(r"<h2\b[^>]*>(.*?)</h2>", re.S)
+TAG_RE = re.compile(r"<[^>]+>")
+
+
+class _SerifTextCollector(html.parser.HTMLParser):
+    """從產出的頁面收集用明體顯示的字，依字型（tc、sc）與字重分開。"""
+
+    def __init__(self) -> None:
+        super().__init__()
+        # 每一層：(標籤, 字型, 字重, 是否在 .content 裡)
+        self.stack: list[tuple[str, str | None, int | None, bool]] = []
+        self.chars: dict[tuple[str, int], set[str]] = defaultdict(set)
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in VOID_TAGS:
+            return
+        values = dict(attrs)
+        classes = set((values.get("class") or "").split())
+        script, weight, content = self.stack[-1][1:] if self.stack else (None, None, False)
+        # 跟 news.css 一樣只看 <html> 與 404 頁的語系段落，頁面裡標了 lang 的原文標題沿用整頁的字型
+        lang = values.get("lang") or ""
+        if tag == "html":
+            script = FONT_SCRIPTS.get(lang)
+        elif "not-found" in classes and lang in FONT_SCRIPTS:
+            script = FONT_SCRIPTS[lang]
+        if hits := classes & SERIF_WEIGHTS.keys():
+            weight = SERIF_WEIGHTS[min(hits)]
+        elif tag == "h2" and content:
+            weight = CONTENT_H2_WEIGHT
+        self.stack.append((tag, script, weight, content or "content" in classes))
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        pass
+
+    def handle_endtag(self, tag: str) -> None:
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                del self.stack[i:]
+                return
+
+    def handle_data(self, data: str) -> None:
+        if self.stack and self.stack[-1][1] and self.stack[-1][2]:
+            _, script, weight, _ = self.stack[-1]
+            self.chars[(script, weight)].update(c for c in data if not c.isspace())
+
+
+def serif_chars(texts: list[str]) -> dict[tuple[str, int], set[str]]:
+    """頁面裡用明體顯示的字，鍵是（字型, 字重）。"""
+    needed: dict[tuple[str, int], set[str]] = defaultdict(set)
+    for text in texts:
+        collector = _SerifTextCollector()
+        collector.feed(text)
+        for key, chars in collector.chars.items():
+            needed[key] |= chars
+    return needed
+
+
+def font_owners(posts: list[Post]) -> dict[str, dict[str, str]]:
+    """每個字歸到最早用到它的導讀的發布月份，只看導讀自己的標題與小標題。
+
+    列表頁與前後篇的連結也會出現別篇的標題，那些字跟著別篇走。新文章帶進來的字落在
+    新的月份，過去月份的分片內容不變，讀者快取過的檔案可以一直沿用。"""
+    owners: dict[str, dict[str, str]] = {script: {} for script in FONT_FAMILIES}
+    for post in posts:
+        script = FONT_SCRIPTS.get(post.lang.html)
+        if script is None:
+            continue
+        key = f"{post.created:%Y-%m}"
+        headings = [html.unescape(TAG_RE.sub("", h2)) for h2 in H2_RE.findall(post.html)]
+        for char in post.title + "".join(headings):
+            if not char.isspace() and key < owners[script].get(char, FONT_SITE_KEY):
+                owners[script][char] = key
+    return owners
+
+
+def font_buckets(needed: dict[tuple[str, int], set[str]],
+                 owners: dict[str, dict[str, str]]) -> dict[tuple[str, int, str], set[str]]:
+    """分片：（字型, 字重, 月份或 site）對應到這個分片收的字。"""
+    buckets: dict[tuple[str, int, str], set[str]] = defaultdict(set)
+    for (script, weight), chars in needed.items():
+        owned = owners.get(script, {}) if weight == POST_HEADING_WEIGHT else {}
+        for char in chars:
+            buckets[(script, weight, owned.get(char, FONT_SITE_KEY))].add(char)
+    return buckets
+
+
+@functools.cache
+def file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def font_file(rel: str, sha256: str, font_dir: Path | None) -> Path:
+    """字型原始檔的本機路徑。測試用的目錄有自己的小字型，正式建置時從 GitHub 下載到快取。"""
+    if font_dir is not None:
+        return font_dir / rel
+    path = FONT_CACHE / rel
+    if path.exists() and file_sha256(path) == sha256:
+        return path
+    try:
+        with urllib.request.urlopen(FONT_BASE_URL + rel, timeout=120) as response:
+            data = response.read()
+    except OSError as error:
+        raise BuildError([f"抓不到標題字型的原始檔 {rel}（{error}）"])
+    if hashlib.sha256(data).hexdigest() != sha256:
+        raise BuildError([f"標題字型的原始檔 {rel} 跟記錄的 sha256 不符"])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    file_sha256.cache_clear()
+    return path
+
+
+def rename_font(font: TTFont, family: str, style: str) -> None:
+    """子集換掉原本的字型名稱。"""
+    full = f"{family} {style}"
+    postscript = f"{family.replace(' ', '')}-{style}"
+    table = font["name"]
+    for name_id, value in ((1, family), (3, postscript), (4, full), (6, postscript), (16, family), (17, style)):
+        table.removeNames(nameID=name_id)
+        table.setName(value, name_id, 3, 1, 0x409)
+    if "CFF " in font:
+        cff = font["CFF "].cff
+        cff.fontNames = [postscript]
+        top = cff.topDictIndex[0]
+        for attr, value in (("FullName", full), ("FamilyName", family)):
+            if hasattr(top, attr):
+                setattr(top, attr, value)
+
+
+def subset_font(path: Path, chars: set[str], family: str, style: str) -> tuple[bytes, set[str]]:
+    """只留下 chars 的 woff2，回傳檔案內容與字型裡沒有的字。
+
+    同一份原始檔、同一組字的結果放在 .cache/fonts/subsets/，過去月份的分片每次建置都一樣，
+    不必重新子集化。輸出不帶時間戳記，同樣的輸入每次產生同樣的檔案，build 分支才不會白白變動。"""
+    text = "".join(sorted(chars))
+    key = hashlib.sha256(f"{FONT_SUBSET_REVISION}\n{file_sha256(path)}\n{family}\n{style}\n{text}".encode()).hexdigest()
+    cached = FONT_CACHE / "subsets" / f"{key}.woff2"
+    cached_missing = cached.with_suffix(".missing")
+    if cached.exists() and cached_missing.exists():
+        return cached.read_bytes(), set(cached_missing.read_text(encoding="utf-8"))
+
+    font = TTFont(path, recalcTimestamp=False)
+    cmap = font.getBestCmap()
+    missing = {char for char in chars if ord(char) not in cmap}
+    options = font_subset.Options()
+    options.flavor = "woff2"
+    # 標題的字大，用不到小字號的微調。共用片段展開之後 Brotli 壓得比較小
+    options.hinting = False
+    options.desubroutinize = True
+    # 版權與授權（0、13、14）照原樣留著
+    options.name_IDs = [0, 1, 2, 3, 4, 5, 6, 13, 14, 16, 17]
+    subsetter = font_subset.Subsetter(options)
+    subsetter.populate(unicodes=[ord(char) for char in chars if char not in missing])
+    subsetter.subset(font)
+    rename_font(font, family, style)
+    font.flavor = "woff2"
+    buffer = io.BytesIO()
+    font.save(buffer)
+    data = buffer.getvalue()
+
+    cached.parent.mkdir(parents=True, exist_ok=True)
+    cached.write_bytes(data)
+    cached_missing.write_text("".join(sorted(missing)), encoding="utf-8")
+    return data, missing
+
+
+def unicode_ranges(chars: set[str]) -> str:
+    codes = sorted(ord(char) for char in chars)
+    ranges: list[list[int]] = []
+    for code in codes:
+        if ranges and code == ranges[-1][1] + 1:
+            ranges[-1][1] = code
+        else:
+            ranges.append([code, code])
+    return ", ".join(f"U+{a:X}" if a == b else f"U+{a:X}-{b:X}" for a, b in ranges)
+
+
+FONTS_CSS_HEADER = """\
+/* 標題用的思源宋體（Noto Serif CJK），只收網站用到的字，由 build.py 產生，不要手改。
+   每個分片收一個月份的導讀第一次用到的字，舊的分片內容不變。授權見 fonts/OFL.txt */
+"""
+
+
+def build_fonts(target: Target, pages: list[Page], posts: list[Post], font_dir: Path | None) -> None:
+    """產生 fonts/ 的分片與 css/fonts-*.css，再把頁面裡的版本號換成各自 CSS 的內容雜湊。"""
+    texts = {page.file: (target.out / page.file).read_text(encoding="utf-8") for page in pages}
+    buckets = font_buckets(serif_chars(list(texts.values())), font_owners(all_versions(posts)))
+    sources = {(source.script, source.weight): source for source in FONT_SOURCES}
+    out_dir = target.out / FONTS_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+    rules: dict[str, list[str]] = {script: [] for script in FONT_FAMILIES}
+    missing: set[str] = set()
+    for (script, weight, key), chars in sorted(buckets.items()):
+        source = sources.get((script, weight))
+        if source is None:
+            missing |= chars
+            continue
+        family = FONT_FAMILIES[script]
+        data, absent = subset_font(font_file(source.file, source.sha256, font_dir), chars, family, source.style)
+        missing |= absent
+        if not chars - absent:
+            continue
+        name = f"{script}-{weight}-{key}.woff2"
+        (out_dir / name).write_bytes(data)
+        version = hashlib.sha256(data).hexdigest()[:10]
+        local = ", ".join(f'local("{n}")' for n in source.local)
+        rules[script].append(
+            f"@font-face {{\n"
+            f"    font-family: \"{family}\";\n"
+            f"    font-weight: {weight};\n"
+            f"    font-display: fallback;\n"
+            f"    src: {local}, url(\"{target.url(FONTS_DIR + name)}?v={version}\") format(\"woff2\");\n"
+            f"    unicode-range: {unicode_ranges(chars - absent)};\n"
+            f"}}\n")
+    shutil.copyfile(font_file(FONT_LICENSE[0], FONT_LICENSE[1], font_dir), out_dir / "OFL.txt")
+    versions = {}
+    for script, script_rules in rules.items():
+        css = FONTS_CSS_HEADER + "\n" + "\n".join(script_rules)
+        (target.out / FONTS_CSS.format(script=script)).write_text(css, encoding="utf-8")
+        versions[script] = hashlib.sha256(css.encode("utf-8")).hexdigest()[:10]
+    for file, text in texts.items():
+        for script, version in versions.items():
+            linked = FONTS_CSS.format(script=script) + "?v="
+            text = text.replace(linked + FONTS_VERSION_PLACEHOLDER, linked + version)
+        (target.out / file).write_text(text, encoding="utf-8")
+    if missing:
+        shown = "".join(sorted(missing))
+        print(f"注意：標題字型裡沒有這些字，會用系統字型顯示：{shown}", file=sys.stderr)
+
+
 # 點擊事件，只有載入流量統計的 clearnet 會送。事件名稱與每個欄位能帶的值都列在這裡，
 # 模板產生屬性、送出前的過濾與 --check 的檢查共用這一份，不在清單上的事件與值不會送出。
 # 見 SPEC.md「流量統計」
@@ -1861,6 +2163,8 @@ ANALYTICS_EVENTS: dict[str, dict[str, list[str]]] = {
     "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]},
     # 首頁第一頁的文章連結來自焦點還是時間軸
     "home-story-click": {"section": ["featured", "timeline"]},
+    # 文章頁的朗讀按鈕，一次瀏覽只記第一次點擊
+    "listen-click": {},
 }
 # 點擊事件用自己的屬性，由 _analytics.html.j2 的 listener 呼叫 umami.track()。
 # 不用 Umami 內建的 data-umami-event，它會先擋下換頁、等統計請求完成才跳轉，端點連不上時連結會卡住
@@ -1946,6 +2250,7 @@ def make_env() -> Environment:
     env.globals["categories"] = categories_table()
     env.globals["track"] = track
     env.globals["analytics_events"] = ANALYTICS_EVENTS
+    env.globals["font_scripts"] = FONT_SCRIPTS
     return env
 
 
@@ -1980,12 +2285,15 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
         if problems:
             raise BuildError(problems)
     published = posts if include_scheduled else [post for post in posts if not post.scheduled]
+    # 測試用的文章目錄旁邊有 font-sources/ 時用裡面的小字型，不必下載
+    font_dir = posts_dir.parent / "font-sources"
     env = make_env()
     pages = {}
     for name, target in targets.items():
         if only and name not in only:
             continue
-        pages[name] = build_target(target, published, config, env, store, site_pages, history, include_scheduled)
+        pages[name] = build_target(target, published, config, env, store, site_pages, history, include_scheduled,
+                                   font_dir if font_dir.exists() else None)
     return targets, pages, posts
 
 
@@ -2146,6 +2454,17 @@ def is_analytics_script(attrs: dict[str, str], analytics: dict | None) -> bool:
             and attrs.get("data-before-send") == "anoniBeforeSend")
 
 
+READ_ALOUD_JS = "js/read-aloud.js"
+
+
+def is_read_aloud_script(attrs: dict[str, str], target: Target) -> bool:
+    """朗讀按鈕的腳本：站內的 static/js/read-aloud.js，網址要帶目前內容的版本號。onion 一律不准。"""
+    if not target.read_aloud:
+        return False
+    return (attrs.get("data-anoni") == "read-aloud"
+            and attrs.get("src") == f"{target.url(READ_ALOUD_JS)}?v={static_version(READ_ALOUD_JS)}")
+
+
 def check_output(target: Target, pages: list[Page]) -> list[str]:
     """第 4、5、7 項：script、對外資源、onion 的 clearnet 連結、SEO 欄位與 noindex。"""
     problems = []
@@ -2161,7 +2480,7 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
                 except ValueError:
                     problems.append(f"{where}：JSON-LD 無法解析成 JSON")
                 continue
-            if not is_analytics_script(attrs, target.analytics):
+            if not (is_analytics_script(attrs, target.analytics) or is_read_aloud_script(attrs, target)):
                 problems.append(f"{where}：有可執行的 <script>")
 
         for tag, raw in RESOURCE_TAG_RE.findall(text):
@@ -2210,6 +2529,21 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
         for value in CSS_URL_RE.findall(css.read_text(encoding="utf-8")):
             if is_external(value.strip()):
                 problems.append(f"{target.name}:{css.relative_to(target.out)}：url() 指向站外 {value}")
+    # 標題字型只放在設定了 fonts 的目標，onion 產物裡沒有字型檔
+    if target.fonts:
+        for page in pages:
+            if FONTS_VERSION_PLACEHOLDER in (target.out / page.file).read_text(encoding="utf-8"):
+                problems.append(f"{target.name}:{page.file}：fonts-*.css 的版本號沒有換上")
+    else:
+        extra = [path for path in target.out.rglob("*") if path.suffix in {".woff2", ".woff", ".otf", ".ttf"}]
+        extra += list(target.out.glob(FONTS_CSS.format(script="*")))
+        for path in extra:
+            problems.append(f"{target.name}:{path.relative_to(target.out)}：沒有設定 fonts 的目標不能有字型檔")
+    # 腳本檔只有朗讀按鈕那一支，而且只放在有朗讀按鈕的目標
+    allowed_js = {READ_ALOUD_JS} if target.read_aloud else set()
+    for js in target.out.rglob("*.js"):
+        if js.relative_to(target.out).as_posix() not in allowed_js:
+            problems.append(f"{target.name}:{js.relative_to(target.out)}：產物裡有不在清單上的腳本檔")
     return problems
 
 
@@ -2221,6 +2555,7 @@ CONTRAST_PAIRS = [
     ("--c-text", "--c-surface"), ("--c-muted", "--c-surface"), ("--c-link", "--c-surface"),
     ("--c-headline", "--c-bg"), ("--c-headline", "--c-surface"),
     ("--c-header-text", "--c-header-bg"), ("--c-header-link", "--c-header-bg"),
+    ("--c-mark-text", "--c-mark-bg"),
 ]
 
 

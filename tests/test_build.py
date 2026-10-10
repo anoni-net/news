@@ -440,6 +440,65 @@ def test_onion_rejects_analytics_script(tmp_path):
     assert any("clearnet 的連結" in p for p in problems), problems
 
 
+def test_read_aloud_only_on_clearnet_posts(fixture_site):
+    """朗讀按鈕只放在 clearnet 的文章頁，預設 hidden，腳本檔也只放進 clearnet 的產物。見 SPEC.md「朗讀按鈕」。"""
+    targets, _, _ = fixture_site
+    clearnet, onion = targets["clearnet"].out, targets["onion"].out
+    post = (clearnet / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert re.search(r'<script defer src="/news/js/read-aloud\.js\?v=[0-9a-f]{10}" data-anoni="read-aloud">', post)
+    assert '<aside class="listen" data-read-aloud hidden>' in post
+    assert 'data-anoni-event="listen-click"' in post
+    # 面板的說明連到閱讀說明頁的「朗讀」一節
+    assert '<a href="/news/reading/#listening">' in post
+    assert (clearnet / "js" / "read-aloud.js").exists()
+    assert "read-aloud" not in (clearnet / "index.html").read_text(encoding="utf-8")
+    onion_post = (onion / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert "read-aloud" not in onion_post
+    assert not list(onion.rglob("*.js"))
+
+
+@pytest.mark.parametrize("old, new", [
+    # 版本號對不上內容、換成別的路徑，都不再是允許的那一支
+    ("read-aloud.js?v=", "read-aloud.js?v=0"),
+    ('src="/news/js/read-aloud.js', 'src="/news/js/other.js'),
+    ('data-anoni="read-aloud"', 'data-anoni="before-send"'),
+])
+def test_read_aloud_exception_is_narrow(tmp_path, old, new):
+    targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["clearnet"])
+    target = targets["clearnet"]
+    tamper(target, "2026/09/zkp-age-verification/index.html", old, new)
+    problems = build.check_output(target, pages["clearnet"])
+    assert any("可執行的 <script>" in p for p in problems), problems
+
+
+def test_onion_rejects_read_aloud(tmp_path):
+    targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["clearnet", "onion"])
+    clearnet, target = targets["clearnet"], targets["onion"]
+    tag = re.search(r'<script defer src="/news/js/read-aloud[^>]*></script>',
+                    (clearnet.out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")).group(0)
+    tamper(target, "index.html", "</head>", tag.replace("/news/", "/") + "</head>")
+    (target.out / "js").mkdir()
+    shutil.copy(clearnet.out / "js" / "read-aloud.js", target.out / "js" / "read-aloud.js")
+    problems = build.check_output(target, pages["onion"])
+    assert any("可執行的 <script>" in p for p in problems), problems
+    assert any("不在清單上的腳本檔" in p for p in problems), problems
+
+
+def test_read_aloud_uses_local_voices_only():
+    """線上語音會把全文送到廠商的伺服器，腳本只能挑 localService 為 true 的語音。
+    瀏覽器儲存只用 localStorage 的一個鍵，存讀者選的語音與速度，其他儲存與網路請求一律不用。"""
+    script = (ROOT / "static" / "js" / "read-aloud.js").read_text(encoding="utf-8")
+    # 註解裡會寫到這些名稱，只看程式碼
+    script = re.sub(r"/\*.*?\*/|//[^\n]*", "", script, flags=re.S)
+    assert "localService !== true" in script
+    for banned in ("sessionStorage", "indexedDB", "document.cookie", "fetch(", "XMLHttpRequest", "sendBeacon", "WebSocket"):
+        assert banned not in script, banned
+    assert re.search(r'var STORE_KEY = "anoni-news-listen";', script)
+    uses = re.findall(r"localStorage\.(\w+)\(([^,)]*)", script)
+    assert uses == [("getItem", "STORE_KEY"), ("setItem", "STORE_KEY")], uses
+    assert script.count("localStorage") == 2
+
+
 def test_onion_check_catches_clearnet_link(tmp_path):
     targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["onion"])
     target = targets["onion"]
