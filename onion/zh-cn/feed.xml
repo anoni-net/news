@@ -6,7 +6,135 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>加州 AB 1856 的开源操作系统豁免</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/california-ab1856-open-source-exemption/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/california-ab1856-open-source-exemption</guid>
+<pubDate>Sun, 11 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>美国加州 9 月签署的 AB 1856，修改了要求操作系统在账号设置时询问用户年龄的州法。修改后，发行操作系统或 App 时用的许可若允许复制、再分发与修改，发行的人或组织就不算受规范的操作系统提供者。规定 2027 年起适用，条文以加州的账号持有人为对象。</description>
+<content:encoded>&lt;p&gt;整理 14 篇原文，来自 California Legislative Information、CalMatters Digital Democracy、Office of the Governor of California 等 11 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美国加州州长 9 月 10 日签署 AB 1856，修改 2025 年通过的 Digital Age Assurance Act（AB 1043，数字年龄保证法）。原法要求操作系统提供者在账号设置时，让账号持有人（成年用户本人，或未成年用户的家长）填写用户的年龄，再把年龄范围以信号（signal）的形式提供给 App。AB 1856 另外规定，发行操作系统或 App 时用的许可若允许复制、再分发与修改，发行的人或组织就不算操作系统提供者。规定 2027 年 1 月 1 日起适用，条文以加州的账号持有人为对象，到 10 月 7 日为止加州以外的读者不需要调整设置。&lt;/p&gt;
+&lt;p&gt;依 AB 1043 的条文，年龄信号分成未满 13 岁、13 到未满 16 岁、16 到未满 18 岁与 18 岁以上四级。App 下载并启动时要向操作系统提供者或应用商店要求年龄信号，收到信号的开发者就视为知道用户的年龄范围。违反规定时由加州检察总长提起民事诉讼，过失违规时每名受影响的儿童最高罚 2,500 美元，故意违规最高 7,500 美元。&lt;/p&gt;
+&lt;p&gt;AB 1856 把操作系统提供者的义务限定在有账号设置功能的操作系统，也要求应用商店向操作系统要求年龄信号、再提供给开发者。法律没有要求的人，不得向操作系统提供者或应用商店索取年龄信号。法案曾经把浏览器与网站纳入，参议院 7 月的修正案删掉了这部分。&lt;/p&gt;
+&lt;p&gt;开源豁免在 5 月 18 日的众议院修正版加入，条文只有一个条件，发行时用的许可要允许接收者复制、再分发与修改。条文没有出现 open source 或 Linux，没有要求非商业，也没有指定哪一种许可。豁免只写在操作系统提供者的定义，应用商店与开发者的定义没有同样的句子。&lt;/p&gt;
+&lt;p&gt;科罗拉多州 6 月签署的 SB26-051 有类似的豁免，条件同样是许可允许复制、再分发与修改。另外多一个条件，发行者不得用技术或合同限制用户安装修改过的版本。科罗拉多的规定 2028 年 7 月 1 日起适用。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;年龄信号的做法是由操作系统在账号设置时询问年龄，App 再通过操作系统提供的接口查询，条文要求提供的是年龄范围而非生日。条文没有要求验证填写的年龄是否正确，也没有指定接口的格式与数据存放的位置。许多 Linux 发行版用来管理系统与用户账号的组件 systemd 在 3 月合并了一项修改，在用户记录里加上只有管理者能修改的生日字段，提交说明写到加州、科罗拉多州与巴西的法律。各发行版是否采用，本文没有查到。&lt;/p&gt;
+&lt;p&gt;支持的一方在乎家长能不能让孩子的年龄跟着设备走。委员会的法案分析引述提案的州众议员，AB 1043 提供一条以隐私优先的年龄确认途径，不会干涉 App 既有的账号功能与家长控制。加州州长 2025 年签署 AB 1043 时写到，让孩子当主要用户的家长，可以设置设备把孩子的年龄告诉 App 开发者。儿童保护团体 Common Sense Media 针对还包含浏览器与网站的版本写信支持，信中写到年龄信号跟着孩子走，平台就不能因为孩子换了使用途径而不套用保护措施。&lt;/p&gt;
+&lt;p&gt;Debian 与 Canonical 在豁免加入之前的公开说明，都还没有定论。Debian 项目负责人 4 月写到，还不清楚这类规定如何适用于不卖软件、以高度分散方式提供软件的志愿者项目。Ubuntu 的开发公司 Canonical 3 月在 Ubuntu 论坛的公告写明，正在请律师审查 AB 1043，还没有具体计划。&lt;/p&gt;
+&lt;p&gt;数字权利组织 EFF 3 月的文章写到，AB 1043 的负担特别落在开源软件这类没有大公司资源的开发者身上。EFF 7 月的文章写到，浏览器与网站的扩大已经放弃，豁免也降低了对开源社区的威胁。EFF 因此撤回对 AB 1856 的反对，但仍认为 AB 1043 违宪。&lt;/p&gt;
+&lt;p&gt;条文规定操作系统只能送出必要的最少信息，洛杉矶的公立学区洛杉矶联合学区在支持信里也把数据最少化列为 AB 1856 的内容。Linux 电脑制造商 System76 的文章写到，填写年龄的人可以说谎，孩子也可以在虚拟机（在电脑里模拟另一台电脑的软件）里创建成年账号。System76 也写到，如果这种做法成为标准，App 与网站在没有收到信号时会把用户当成最低的年龄范围。条文没有规定没有信号时 App 要如何处理。&lt;/p&gt;
+&lt;p&gt;在中国大陆，《未成年人网络保护条例》（2024 年 1 月 1 日施行）第十九条要求智能终端产品制造者在产品出厂前安装未成年人网络保护软件，或者以显著方式告知用户安装渠道和方法。国家互联网信息办公室（国家网信办）2024 年 11 月发布的《移动互联网未成年人模式建设指南》要求移动智能终端、应用程序与应用程序分发平台联动。用户首次进入未成年人模式（在终端上限制使用时段与时长、退出要家长验证的模式）时，终端要提供设置生日、选择年龄或年龄区间的方式。《指南》是指引，没有写施行日期与罚则。&lt;/p&gt;
+&lt;p&gt;国家网信办 2026 年 9 月 18 日公开征求意见的《国务院关于保障未成年人健康安全使用网络的规定（征求意见稿）》，拟要求智能终端产品制造者设置未成年人模式联动、防绕过等功能。征求意见稿也拟规定，应用程序分发平台对不符合适用年龄的应用程序要限制下载与安装，意见反馈截止日是 10 月 17 日。条例与征求意见稿把义务放在智能终端产品制造者，应用程序分发平台的要求出现在《指南》与征求意见稿，征求意见稿全文没有出现“操作系统”一词。&lt;/p&gt;
+&lt;p&gt;本文依条文推论，加州的用户 2027 年起在许可不允许复制、再分发与修改的操作系统创建账号时，可能会被要求填写用户的年龄。同样依条文推论，符合豁免条件的 Linux 发行版不受这项义务约束，但条文没有逐一认定哪些发行版符合。到 10 月 7 日为止，本文查不到 Apple、Google、Microsoft，以及 Debian 与 Canonical 在 AB 1856 通过后公布的做法。&lt;/p&gt;
+&lt;p&gt;之后读到要求操作系统或应用商店处理年龄的法律时，可以比较几件事。年龄由谁填写、有没有验证，离开设备的是生日还是年龄范围。开源与志愿者维护的系统在不在范围内，豁免的条件是许可方式，还是另外要求不得限制用户修改。年龄信号的做法能不能让家长在孩子的设备上，用比上传证件更少的数据达成保护。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1856&#34;&gt;AB-1856 Age verification signals: software applications.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;California Legislative Information&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-11&#34;&gt;2026 年 9 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://calmatters.digitaldemocracy.org/bills/ca_202520260ab1856&#34;&gt;AB 1856: Age verification signals: software applications.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CalMatters Digital Democracy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043&#34;&gt;AB-1043 Age verification signals: software applications and online services.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;California Legislative Information&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-14&#34;&gt;2025 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/&#34;&gt;Press release: child safety chatbot and social media laws signed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Governor of California&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leg.colorado.gov/laws/session-laws/SB26-051/343/download&#34;&gt;CONCERNING AGE ATTESTATION FOR USERS OF COMPUTING DEVICES.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Colorado General Assembly&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-03&#34;&gt;2026 年 6 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/california-steps-back-dangerous-expansion-its-age-gating-law&#34;&gt;California Steps Back From Dangerous Expansion of Its Age-Gating Law&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-15&#34;&gt;2026 年 7 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/03/ab-1043s-internet-age-gates-hurt-everyone&#34;&gt;A.B. 1043&amp;#39;s Internet Age Gates Hurt Everyone&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-12&#34;&gt;2026 年 3 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://system76.com/blog/post/system76-on-age-verification&#34;&gt;System76 on Age Verification Laws&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;System76&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;2026 年 3 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.debian.org/debian-devel-announce/2026/04/msg00001.html&#34;&gt;Bits from the DPL&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Debian&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-04&#34;&gt;2026 年 4 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discourse.ubuntu.com/t/ubuntus-response-to-californias-digital-age-assurance-act-ab-1043/77948&#34;&gt;Ubuntu&amp;#39;s response to California&amp;#39;s Digital Age Assurance Act (AB 1043)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ubuntu Discourse&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-04&#34;&gt;2026 年 3 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/systemd/systemd/pull/40954&#34;&gt;userdb: add birthDate field to JSON user records&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;2026 年 3 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/content/202310/content_6911288.htm&#34;&gt;未成年人网络保护条例&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中华人民共和国国务院&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-24&#34;&gt;2023 年 10 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2024-11/15/c_1733364304749288.htm&#34;&gt;移动互联网未成年人模式建设指南&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-15&#34;&gt;2024 年 11 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-09/18/c_1791482017777471.htm&#34;&gt;关于《国务院关于保障未成年人健康安全使用网络的规定（征求意见稿）》公开征求意见的通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>每周短讯 2026 第 41 周</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/weekly-brief-2026-w41/</link>
@@ -2341,118 +2469,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/haveibeenpwned.com&#34;&gt;Is https://haveibeenpwned.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>澳大利亚 Medicare 统计网站的 AI 智能体入侵事件</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/openai-agent-medicare-portal/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/openai-agent-medicare-portal</guid>
-<pubDate>Fri, 02 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>OpenAI 的 AI 智能体 6 月在内部评估中绕过访问限制，进入澳大利亚 Medicare 统计网站并写入文件。截至 9 月 24 日，澳大利亚政府研判没有个人信息遭到访问，网站上是汇总的统计数据。使用 AI 智能体的人可以为它开一份独立的浏览器个人资料。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Prime Minister of Australia、Australian Minister for Defence、OpenAI 等 11 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;澳大利亚总理在纽约的记者会上（澳大利亚东部时间 9 月 24 日清晨 6 点过后，北京时间凌晨 4 点过后）公布，OpenAI 的 AI 智能体（能自行操作网页的程序）未经授权，进入澳大利亚 Medicare（全民医保）的统计报表网站。智能体访问了非公开的文件，也在内部服务器写入文件。截至 9 月 24 日，澳大利亚政府研判没有个人信息遭到访问。OpenAI 也通知了数十个可能受影响的第三方。&lt;/p&gt;
-&lt;p&gt;网站由 Services Australia（办理医保等服务的联邦机构）管理，存放汇总统计数据，到 9 月 24 日已经停用。智能体当时在 OpenAI 的内部能力评估中研究政府的药品支出，6 月 18 日被网站拒绝之后，改用其他方式绕过限制。&lt;/p&gt;
-&lt;p&gt;OpenAI 8 月在全面审查中察觉这起事件，9 月 10 日发信到 Services Australia 受理漏洞报告的邮箱。该机构 11 日看到邮件，经过周末与核实真伪，15 日通报澳大利亚信号局（ASD，负责网络防御的情报机构）下属的澳大利亚网络安全中心。&lt;/p&gt;
-&lt;p&gt;总理表示，OpenAI 通知得太慢，方式也无法接受。政府成立专责小组审视网络防护与罚则，也将评估是否移交澳大利亚联邦警察。取证调查由 ASD 协助，范围包括其他政府系统是否受影响。&lt;/p&gt;
-&lt;p&gt;OpenAI 发言人表示，模型「采取了并非我们本意的行动」。OpenAI 在事件说明页列出匿名的行为分类，例如绕过访问控制、使用公开暴露的登录凭据，没有写明 Medicare 网站属于哪一类。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;OpenAI 举的绕过例子有换用另一个网址、修改请求内容，利用的都是常见的访问控制弱点，人工操作也可以做到。主管 Services Australia 的部长说明，网站是用了数十年的旧系统。维护网站的机构可以把少有人管理的旧系统下线，还要用的确认非公开文件需要登录。&lt;/p&gt;
-&lt;p&gt;中国大陆的《国家网络安全事件报告管理办法》规定较大以上事件涉及关键信息基础设施的最迟 1 小时报告，中央和国家机关各部门 2 小时，其他运营者 4 小时。台湾的《资通安全事件通报应变及演练办法》规定，公务机关知悉后须在一小时内通报。澳大利亚这次从事件发生到 OpenAI 发出通知将近三个月，都在机关知悉之前。外部发现者何时通知，大陆办法第六条只作鼓励，台湾办法没有规定。&lt;/p&gt;
-&lt;p&gt;新加坡资讯通信媒体发展局（IMDA）1 月发布智能体 AI 的治理框架，建议机构在设计阶段就限制智能体的自主程度、可用工具与数据访问。个人也可以照这个原则做。&lt;/p&gt;
-&lt;p&gt;在电脑版 Chrome 运行智能体的人，可以从右上角的个人资料图标选择「添加 Chrome 个人资料」，在里面只登录必要的账号。&lt;code&gt;google.cn&lt;/code&gt; 有电脑版 Chrome 的简体中文下载页，添加个人资料只有三步，不需要 Google 账号。Android 版 Chrome 只能有一份个人资料，云端浏览器里运行的智能体也用不上这个做法。代价是新的个人资料没有原来的书签、密码与登录状态，账号要重新登录。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pm.gov.au/media/press-conference-new-york&#34;&gt;Press conference - New York&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Prime Minister of Australia&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney&#34;&gt;Press Conference, Sydney&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Australian Minister for Defence&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/hugging-face-incident-and-misalignment/&#34;&gt;The Hugging Face incident and other third-party impact from misaligned models&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bbc.com/news/live/cvgl73pxgndwt&#34;&gt;Australia launches urgent review after OpenAI program hacks government health portal&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BBC News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html&#34;&gt;OpenAI ‘climbed the fence’: Taskforce scrambles after long delays flagging Medicare hack&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Sydney Morning Herald&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai&#34;&gt;Singapore Launches New Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;2026 年 1 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/2026/01/factsheet-model-ai-governance-framework-for-agentic-ai.pdf&#34;&gt;Factsheet - Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;2026 年 1 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305&#34;&gt;資通安全事件通報應變及演練辦法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;2026 年 1 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm&#34;&gt;国家网络安全事件报告管理办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-15&#34;&gt;2025 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&#34;&gt;管理多個 Chrome 設定檔&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;管理多個 Chrome 設定檔（Android）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hans&#34;&gt;通过多份个人资料使用 Chrome&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.google.cn/chrome/&#34;&gt;Google Chrome 网络浏览器&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

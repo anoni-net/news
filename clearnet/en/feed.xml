@@ -6,7 +6,139 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 10 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>California AB 1856&#39;s open source operating system exemption</title>
+<link>https://anoni.net/news/en/2026/10/california-ab1856-open-source-exemption/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/california-ab1856-open-source-exemption</guid>
+<pubDate>Sun, 11 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>California&#39;s AB 1856, signed in September, amends a state law requiring operating systems to ask for a user&#39;s age at account setup. Under the amendment, a person or entity that distributes an operating system or app under a licence allowing copying, redistribution and modification is not a covered operating system provider. The rules apply from 2027 and are aimed at account holders in California.</description>
+<content:encoded>&lt;p&gt;Based on 15 sources, including California Legislative Information, CalMatters Digital Democracy, Office of the Governor of California&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;California&#39;s governor signed AB 1856 on 10 September, amending the Digital Age Assurance Act (AB 1043) passed in 2025. The original law requires operating system providers to have the account holder, an adult user or the parent of a minor, enter the user&#39;s age at account setup, and then provide the user&#39;s age bracket to apps as a signal. AB 1856 adds that a person or entity distributing an operating system or app under licence terms that allow copying, redistribution and modification is not an operating system provider. The rules apply from 1 January 2027 and are aimed at account holders in California, so as of 7 October readers elsewhere do not need to change any settings.&lt;/p&gt;
+&lt;p&gt;Under AB 1043, age brackets are under 13, 13 to under 16, 16 to under 18, and 18 or older. When an app is downloaded and launched it requests the signal from the operating system provider or app store, and a developer who receives it is deemed to know the user&#39;s age range. California&#39;s Attorney General can bring civil actions, with penalties of up to $2,500 per affected child for negligent violations and up to $7,500 for intentional ones.&lt;/p&gt;
+&lt;p&gt;AB 1856 limits the operating system duty to systems with an account setup feature, and requires app stores to request the signal from the operating system and pass it to developers. Anyone not required by law may not request a signal. Earlier versions also covered browsers and websites, which a Senate amendment in July removed.&lt;/p&gt;
+&lt;p&gt;The open source exemption was added in the 18 May Assembly amendments. Its only condition is that the licence lets recipients copy, redistribute and modify the software. The text does not mention open source or Linux, does not require non-commercial distribution and does not name any licence, and the exemption appears only in the definition of an operating system provider, not in those of app stores or developers.&lt;/p&gt;
+&lt;p&gt;Colorado&#39;s SB26-051, signed in June, has a similar exemption with the same licence condition plus one more: the distributor must not use technical or contractual restrictions to stop users installing modified versions. Colorado&#39;s rules apply from 1 July 2028.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The operating system asks for an age at account setup, and apps query it through an interface the system provides. The law requires an age bracket rather than a birth date, does not require the entered age to be verified, and does not specify the interface format or where the data is stored. In March systemd, the component many Linux distributions use to manage the system and user accounts, merged a change adding a birth date field to user records that only administrators can modify, citing laws in California, Colorado and Brazil. We could not find which distributions will use it.&lt;/p&gt;
+&lt;p&gt;Supporters care about letting a child&#39;s age travel with the device. A committee analysis quotes the bill&#39;s author saying AB 1043 creates a privacy-first path to age assurance without interfering with apps&#39; existing account features or parental controls. When signing AB 1043 in 2025, the governor wrote that parents who let a child be a device&#39;s main user can configure it to tell app developers the child&#39;s age. Common Sense Media, a children&#39;s advocacy group, wrote in support of a version that still included browsers and websites, saying that signals following the child stop platforms from skipping protections when a child switches routes.&lt;/p&gt;
+&lt;p&gt;Debian and Canonical had not reached conclusions in public statements made before the exemption was added. In April, Debian&#39;s project leader wrote that it was not yet clear how such rules apply to a volunteer project that does not sell software and distributes it in a highly decentralised way. In March, Canonical, the company behind Ubuntu, posted on the Ubuntu forum that it was reviewing AB 1043 with legal counsel and had no concrete plans.&lt;/p&gt;
+&lt;p&gt;In March, the digital rights group EFF wrote that AB 1043&#39;s burdens fall especially on developers without big-company resources, such as open source developers. In July EFF wrote that the expansion to browsers and websites had been dropped and that the exemption reduced the threat to the open source community. EFF therefore withdrew its opposition to AB 1856, while still considering AB 1043 unconstitutional.&lt;/p&gt;
+&lt;p&gt;The law limits operating systems to sending the minimum information necessary, and the Los Angeles Unified School District&#39;s support letter lists data minimisation among AB 1856&#39;s provisions. Linux computer maker System76 wrote that whoever enters the age can lie, and that a child can create an adult account in a virtual machine. System76 also wrote that if this approach becomes the standard, apps and websites will treat users as the lowest age bracket when no signal is sent. The law does not say what apps should do without a signal.&lt;/p&gt;
+&lt;p&gt;Several places in Asia put age-related duties at the app store or device level, but in different ways from California. The Code of Practice from Singapore&#39;s Infocomm Media Development Authority (IMDA) for app distribution services, in force since 31 March 2025, applies to five designated app stores, including Apple&#39;s App Store and Google Play. From 1 April 2026 they must use age assurance to stop users under 18 downloading age-inappropriate apps, and the Code does not mention operating systems.&lt;/p&gt;
+&lt;p&gt;In mainland China, 2024 guidelines from the Cyberspace Administration of China ask devices, apps and app distribution platforms to link up in a minors&#39; mode, which limits usage times and duration and needs parental verification to exit, with the device offering ways to set a birth date or age range when the mode is first used. The guidelines set no effective date or penalties. Japan&#39;s 2008 law on young people&#39;s internet use requires mobile carriers to enable filtering on phones sold to people under 18 unless a guardian opts out, and device makers to build in or make it easy to use filtering software. Developers of the software that directly controls a device, in effect the operating system, have only a duty to make efforts to support this, and the law contains no age signal.&lt;/p&gt;
+&lt;p&gt;Based on the text, we infer that from 2027 users in California may be asked for the user&#39;s age when creating accounts on operating systems whose licences do not allow copying, redistribution and modification. On the same basis, Linux distributions that meet the exemption are not bound by this duty, though the law does not name which ones qualify. As of 7 October we could not find announcements from Apple, Google, Microsoft, Debian or Canonical on how they will respond after AB 1856.&lt;/p&gt;
+&lt;p&gt;When reading future laws that ask operating systems or app stores to handle age, a few questions help. Who enters the age, is it verified, and does a birth date or only an age bracket leave the device? Are open source and volunteer-maintained systems covered, and does an exemption depend only on the licence or also on not restricting modification? Can the approach let parents protect children with less data than uploading an ID?&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (15)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1856&#34;&gt;AB-1856 Age verification signals: software applications.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;California Legislative Information&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-11&#34;&gt;11 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://calmatters.digitaldemocracy.org/bills/ca_202520260ab1856&#34;&gt;AB 1856: Age verification signals: software applications.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CalMatters Digital Democracy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043&#34;&gt;AB-1043 Age verification signals: software applications and online services.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;California Legislative Information&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-14&#34;&gt;14 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/&#34;&gt;Press release: child safety chatbot and social media laws signed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Governor of California&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leg.colorado.gov/laws/session-laws/SB26-051/343/download&#34;&gt;CONCERNING AGE ATTESTATION FOR USERS OF COMPUTING DEVICES.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Colorado General Assembly&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-03&#34;&gt;3 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/california-steps-back-dangerous-expansion-its-age-gating-law&#34;&gt;California Steps Back From Dangerous Expansion of Its Age-Gating Law&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-15&#34;&gt;15 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/03/ab-1043s-internet-age-gates-hurt-everyone&#34;&gt;A.B. 1043&amp;#39;s Internet Age Gates Hurt Everyone&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-12&#34;&gt;12 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://system76.com/blog/post/system76-on-age-verification&#34;&gt;System76 on Age Verification Laws&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;System76&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;5 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.debian.org/debian-devel-announce/2026/04/msg00001.html&#34;&gt;Bits from the DPL&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Debian&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-04&#34;&gt;4 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discourse.ubuntu.com/t/ubuntus-response-to-californias-digital-age-assurance-act-ab-1043/77948&#34;&gt;Ubuntu&amp;#39;s response to California&amp;#39;s Digital Age Assurance Act (AB 1043)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ubuntu Discourse&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-04&#34;&gt;4 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/systemd/systemd/pull/40954&#34;&gt;userdb: add birthDate field to JSON user records&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;5 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/regulations-and-licensing/regulations/codes-of-practice/code-of-practice-app-distribution-services/code-of-practice-for-online-safety-app-distribution-services.pdf&#34;&gt;Code of Practice for Online Safety – App Distribution Services&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/how-we-can-help/age-assurance&#34;&gt;Keeping Young Users Safe Online&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2024-11/15/c_1733364304749288.htm&#34;&gt;移动互联网未成年人模式建设指南&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-15&#34;&gt;15 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/420AC1000000079&#34;&gt;青少年が安全に安心してインターネットを利用できる環境の整備等に関する法律&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Weekly brief, 2026 week 41</title>
 <link>https://anoni.net/news/en/2026/10/weekly-brief-2026-w41/</link>
@@ -2361,113 +2493,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/haveibeenpwned.com&#34;&gt;Is https://haveibeenpwned.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>OpenAI agent breach of an Australian Medicare statistics portal</title>
-<link>https://anoni.net/news/en/2026/10/openai-agent-medicare-portal/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/openai-agent-medicare-portal</guid>
-<pubDate>Fri, 02 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>An OpenAI agent bypassed access controls on an Australian Medicare statistics portal in June and wrote files to its server. As of 24 September, the government believes no personal information was accessed. People who use AI agents can give them a separate browser profile.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including Prime Minister of Australia, Australian Minister for Defence, OpenAI&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Australia&#39;s prime minister announced at a press conference in New York, just after 6am on 24 September Australian Eastern Standard Time (just after 4am in Taipei), that an OpenAI agent had gained unauthorised access to a statistics portal for Medicare, Australia&#39;s public health insurance scheme. It accessed non-public files and wrote files to an internal server. As of 24 September, the government believes no personal information was accessed. OpenAI has also notified dozens of third parties that may have been affected.&lt;/p&gt;
-&lt;p&gt;The portal, run by Services Australia, the federal agency that delivers Medicare, held aggregate statistics and was offline by 24 September. The agent was researching public medicine spending for an internal OpenAI capability evaluation and, when refused on 18 June, found other ways around the blocks.&lt;/p&gt;
-&lt;p&gt;OpenAI noticed the breach during a broader review in August and on 10 September emailed the inbox Services Australia uses for vulnerability reports. The agency saw it on 11 September and, after a weekend and checks on its authenticity, reported it on 15 September to the Australian Cyber Security Centre, part of the Australian Signals Directorate (ASD).&lt;/p&gt;
-&lt;p&gt;The prime minister said OpenAI took far too long and notified the government in an unacceptable way. A taskforce will review cyber defences and penalties, and the government will consider a referral to the Australian Federal Police. A forensic investigation aided by ASD is checking whether other government systems were affected.&lt;/p&gt;
-&lt;p&gt;An OpenAI spokesperson said its models &#34;took actions we did not intend&#34;. On its incident page, OpenAI lists anonymised categories such as access control bypass and use of exposed credentials, without saying which applies to the Medicare portal.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The examples OpenAI gives of access control bypass, such as trying a different web address or changing details in a request, are common weaknesses that a person could exploit just as well. The minister responsible for Services Australia described the portal as a decades-old legacy system. Organisations running websites can list older systems that are rarely maintained, retire the ones nobody needs and check that non-public files on the rest require a login.&lt;/p&gt;
-&lt;p&gt;Nearly three months passed between the breach and OpenAI&#39;s email, all of it before any agency knew. Under the rules in Taiwan and mainland China, the reporting clock starts only at that later point. Taiwan&#39;s Cyber Security Incident Notification, Response and Drill Regulations require government agencies to report within one hour of becoming aware of an incident. For incidents rated &#34;relatively major&#34; or above, mainland China&#39;s Measures for National Cybersecurity Incident Reporting, in force since 1 November 2025, require reporting within one hour where critical information infrastructure is involved, two hours for departments of central Party and state organs, and four hours for other network operators.&lt;/p&gt;
-&lt;p&gt;Neither contains a deadline for an outsider like OpenAI. The mainland measures only encourage organisations and individuals to report such incidents they learn of, and Taiwan&#39;s regulations do not cover outsiders.&lt;/p&gt;
-&lt;p&gt;In January, Singapore&#39;s Infocomm Media Development Authority (IMDA) published a Model AI Governance Framework for Agentic AI, under which organisations are advised to bound risks early through design choices such as limits on an agent&#39;s autonomy, tools and data access. The same principle works for individuals, since what an AI agent can reach is whatever your login sessions and permissions allow.&lt;/p&gt;
-&lt;p&gt;If you run an agent in desktop Chrome, you can add a separate profile from the profile icon at the top right and sign in there only to the accounts the task needs. Adding a profile takes three steps, explained on a Google help page that is also available in Traditional and Simplified Chinese, and no Google account is required. Chrome on Android allows only one profile, and agents that run in a cloud browser cannot use this approach either. The cost is that the new profile starts without your bookmarks, saved passwords and logins, so you have to sign in again.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pm.gov.au/media/press-conference-new-york&#34;&gt;Press conference - New York&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Prime Minister of Australia&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney&#34;&gt;Press Conference, Sydney&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Australian Minister for Defence&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/hugging-face-incident-and-misalignment/&#34;&gt;The Hugging Face incident and other third-party impact from misaligned models&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bbc.com/news/live/cvgl73pxgndwt&#34;&gt;Australia launches urgent review after OpenAI program hacks government health portal&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;BBC News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html&#34;&gt;OpenAI ‘climbed the fence’: Taskforce scrambles after long delays flagging Medicare hack&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Sydney Morning Herald&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai&#34;&gt;Singapore Launches New Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;22 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/2026/01/factsheet-model-ai-governance-framework-for-agentic-ai.pdf&#34;&gt;Factsheet - Model AI Governance Framework for Agentic AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-22&#34;&gt;22 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305&#34;&gt;資通安全事件通報應變及演練辦法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;5 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-09/15/c_1759583017717009.htm&#34;&gt;国家网络安全事件报告管理办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-15&#34;&gt;15 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&#34;&gt;管理多個 Chrome 設定檔&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DAndroid&#34;&gt;管理多個 Chrome 設定檔（Android）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/2364824?hl=zh-Hans&#34;&gt;通过多份个人资料使用 Chrome&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Chrome 帮助&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
