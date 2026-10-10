@@ -13,6 +13,10 @@ from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-non
 icon = "9to5mac.com-02276a1f.png"
 from = "https://9to5mac.com/wp-content/uploads/sites/6/2019/10/cropped-cropped-mac1-1.png?w=192"
 
+[hosts."abc.net.au"]
+icon = "abc.net.au-be7c5ab1.png"
+from = "https://www.abc.net.au/news-assets/touchicon-abc.png"
+
 [hosts."about.fb.com"]
 same_as = "meta.com"
 
@@ -39,6 +43,10 @@ from = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa39
 [hosts."apc.org"]
 icon = "apc.org-89de3e1b.png"
 from = "https://www.apc.org/themes/custom/apc_barrio/apple-touch-icon.png"
+
+[hosts."apple.com"]
+icon = "apple.com-573bbc30.png"
+from = "https://www.apple.com/apple-touch-icon.png"
 
 [hosts."apps.apple.com"]
 icon = "apps.apple.com-21ded518.png"
@@ -79,6 +87,9 @@ from = "https://blog.archive.org/wp-content/uploads/2023/03/ia-logo-sq-300x300.p
 [hosts."blog.cloudflare.com"]
 icon = "blog.cloudflare.com-71ae303d.png"
 from = "https://blog.cloudflare.com/favicon.ico"
+
+[hosts."blog.cryptographyengineering.com"]
+none = "網站與網頁封存都取不到圖示"
 
 [hosts."blog.cryptpad.org"]
 same_as = "cryptpad.org"
@@ -225,6 +236,10 @@ from = "https://curia.europa.eu/site/plugins/CURIA2MainPlugin/images/icons/favic
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
 
+[hosts."daringfireball.net"]
+icon = "daringfireball.net-c13824c2.png"
+from = "https://daringfireball.net/graphics/apple-touch-icon.png"
+
 [hosts."datatilsynet.dk"]
 icon = "datatilsynet.dk-17e6925e.png"
 from = "https://cdn.datatilsynet.dk/datatilsynet/media/7887/favicon.png?width=196&height=196"
@@ -291,6 +306,10 @@ from = "https://www.doj.gov.hk/favicon.ico"
 icon = "ec.europa.eu-8c67fe09.png"
 from = "https://ec.europa.eu/favicon.ico"
 
+[hosts."edition.cnn.com"]
+icon = "edition.cnn.com-ae11d4e1.png"
+from = "https://edition.cnn.com/media/sites/cnn/apple-touch-icon.png"
+
 [hosts."edri.org"]
 icon = "edri.org-9b49c818.png"
 from = "https://edri.org/wp-content/uploads/2023/01/favicon1-20y-192x192.png"
@@ -309,6 +328,10 @@ same_as = "gov.hk"
 [hosts."en.greatfire.org"]
 icon = "en.greatfire.org-cbbba5a5.png"
 from = "https://en.greatfire.org/apple-touch-icon.png"
+
+[hosts."en.wikipedia.org"]
+icon = "en.wikipedia.org-6d780b78.png"
+from = "https://en.wikipedia.org/static/apple-touch/wikipedia.png"
 
 [hosts."esafety.gov.au"]
 icon = "esafety.gov.au-8abaddf2.png"
@@ -479,13 +502,24 @@ from = "https://itif.org/icons/apple-touch-icon.png"
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
 
+[hosts."justice.gov"]
+icon = "justice.gov-5506ec60.png"
+from = "https://www.justice.gov/themes/custom/usdoj_uswds/images/touch-icons/apple-touch-icon-precomposed-114x114.png"
+
 [hosts."justiceformyanmar.org"]
 icon = "justiceformyanmar.org-db7870eb.png"
 from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd428e35b04b8c_jfm_logo_256_square.png"
 
+[hosts."kb.cert.org"]
+none = "網站圖示只有 16 像素，放大後無法辨識"
+
 [hosts."keepandroidopen.org"]
 icon = "keepandroidopen.org-32ba658c.png"
 from = "https://keepandroidopen.org/favicon.ico"
+
+[hosts."krackattacks.com"]
+icon = "krackattacks.com-40830c9b.png"
+from = "https://www.krackattacks.com/images/favicon.ico"
 
 [hosts."ksl.com"]
 icon = "ksl.com-620fb1b6.png"
@@ -519,6 +553,9 @@ from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-tou
 icon = "letsencrypt.org-005fa57a.png"
 from = "https://letsencrypt.org/favicon.ico"
 
+[hosts."lists.wikimedia.org"]
+same_as = "wikimediafoundation.org"
+
 [hosts."lofgren.house.gov"]
 icon = "lofgren.house.gov-9acaf926.png"
 from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
@@ -550,6 +587,10 @@ from = "https://www.mas.gov.sg/html/site/_favicon/apple-touch-icon.png"
 [hosts."mcmc.gov.my"]
 icon = "mcmc.gov.my-7010665f.png"
 from = "https://www.mcmc.gov.my/favicon.ico"
+
+[hosts."meity.gov.in"]
+icon = "meity.gov.in-533aec3e.png"
+from = "https://www.meity.gov.in/favicon.ico"
 
 [hosts."meta.com"]
 icon = "meta.com-1115e2bb.png"
@@ -604,6 +645,13 @@ from = "https://naehrdine.blogspot.com/favicon.ico"
 [hosts."nbcdfw.com"]
 icon = "nbcdfw.com-eece2dd2.png"
 from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quality=85&strip=all"
+
+[hosts."nbcnews.com"]
+icon = "nbcnews.com-ef4ad526.png"
+from = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/nbcnews/all-other-sizes-PNG.ico/android-icon-192x192.png"
+
+[hosts."news.bbc.co.uk"]
+same_as = "bbc.com"
 
 [hosts."news.cn"]
 icon = "news.cn-db68823e.png"
@@ -662,6 +710,10 @@ from = "https://www.pcpd.org.hk/favicon.ico"
 icon = "pdpc.gov.sg-8c36e1a3.png"
 from = "https://www.pdpc.gov.sg/favicon.ico"
 
+[hosts."pdpc.gov.tw"]
+icon = "pdpc.gov.tw-5b8e23ff.png"
+from = "https://ws.pdpc.gov.tw/FS01/FilePath/3/sites/pagebackimage/favicon.ico"
+
 [hosts."pib.gov.in"]
 icon = "pib.gov.in-fffa8d37.png"
 from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
@@ -717,6 +769,10 @@ from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
 
+[hosts."rsf.org"]
+icon = "rsf.org-905ab8f8.png"
+from = "https://rsf.org/themes/custom/rsf/favicons/android-icon-192x192.png"
+
 [hosts."rules.utah.gov"]
 icon = "rules.utah.gov-a146b234.png"
 from = "https://rules.utah.gov/wp-content/uploads/site-icon-512-300x300.png"
@@ -749,6 +805,10 @@ from = "https://www.smh.com.au/apple-touch-icons/smh.png"
 icon = "source.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
 
+[hosts."sprs.parl.gov.sg"]
+icon = "sprs.parl.gov.sg-3f13f797.png"
+from = "https://sprs.parl.gov.sg/favicon.ico"
+
 [hosts."ssd.eff.org"]
 icon = "ssd.eff.org-88f6a486.png"
 from = "https://ssd.eff.org/favicon.ico"
@@ -775,6 +835,10 @@ from = "https://web.archive.org/web/20260927id_/https://support.signal.org/hc/th
 [hosts."support.torproject.org"]
 icon = "support.torproject.org-f88d6334.png"
 from = "https://support.torproject.org/images/favicon/favicon-192x192.png?h=a118bd0b"
+
+[hosts."support.zoom.com"]
+icon = "support.zoom.com-520d8e65.png"
+from = "https://support.zoom.com/favicon-192x192.png"
 
 [hosts."supremecourt.uk"]
 icon = "supremecourt.uk-75b9325d.png"
@@ -816,6 +880,10 @@ from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/app
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
 
+[hosts."tribuneindia.com"]
+icon = "tribuneindia.com-833ff492.png"
+from = "https://www.tribuneindia.com/sortd-service/assets/v22-12/dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9kZXNpZ246YXBwaWNvbjc3ZWNhMzgwLTNlMzItMTFmMS1iY2RlLTFiNjYwODRiY2YzMQ=="
+
 [hosts."twse.com.tw"]
 icon = "twse.com.tw-3d3dcc50.png"
 from = "https://web.archive.org/web/20261007id_/https://twse.com.tw/favicon.ico"
@@ -840,9 +908,17 @@ from = "https://archive.org/apple-touch-icon.png（本機 DNS 解析不到，用
 icon = "weblate.cryptpad.org-676939f0.png"
 from = "https://weblate.cryptpad.org/favicon.ico"
 
+[hosts."wi-fi.org"]
+icon = "wi-fi.org-eb8459fa.png"
+from = "https://www.wi-fi.org/sites/default/files/public/logo.png"
+
 [hosts."wicg.github.io"]
 icon = "wicg.github.io-bf155846.png"
 from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
+
+[hosts."wikimediafoundation.org"]
+icon = "wikimediafoundation.org-61a8556d.png"
+from = "https://wikimediafoundation.org/wp-content/uploads/2018/05/cropped-wikimedia-logo_black-svg-2.png?w=192"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
@@ -863,6 +939,10 @@ from = "https://docs.z.ai/mintlify-assets/_mintlify/favicons/zhipu-32152247/ksfq
 [hosts."zhonglun.com"]
 icon = "zhonglun.com-c0e89dfa.png"
 from = "https://www.zhonglun.com/upload/static/images/icon.png"
+
+[hosts."zoom.com"]
+icon = "zoom.com-7e0948ce.png"
+from = "https://st1.zoom.us/homepage/20260930-1234/primary/favicon.ico"
 
 [hosts."zuckoff.app"]
 icon = "zuckoff.app-284bd984.png"
