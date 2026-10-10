@@ -45,6 +45,9 @@
 /2026/10/apple-threat-notifications/
 	#perspective
 	#sources
+/2026/10/california-ab1856-open-source-exemption/
+	#perspective
+	#sources
 /2026/10/canada-c22-lawful-access/
 	#perspective
 	#sources
@@ -84,6 +87,9 @@
 /2026/10/openai-agent-medicare-portal/
 	#perspective
 	#sources
+/2026/10/oss-vulnerability-disclosure/
+	#perspective
+	#sources
 /2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -99,6 +105,9 @@
 /2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/2026/10/utah-vpn-ruling-site-blocking-bills/
+	#perspective
+	#sources
 /2026/10/weekly-brief-2026-w40/
 	#au-algorithm-opt-out
 	#cambridge-analytica
@@ -107,6 +116,15 @@
 	#parley
 	#sources
 	#wayback-access
+/2026/10/weekly-brief-2026-w41/
+	#border-towers
+	#cdt-404
+	#denmark-cpr
+	#flock-ruling
+	#llm-reasoning
+	#member-data-leaks
+	#sources
+	#ubuntu-sequoia
 /404.html
 /about/
 	#byline
@@ -172,6 +190,9 @@
 /en/2026/10/apple-threat-notifications/
 	#perspective
 	#sources
+/en/2026/10/california-ab1856-open-source-exemption/
+	#perspective
+	#sources
 /en/2026/10/canada-c22-lawful-access/
 	#perspective
 	#sources
@@ -211,6 +232,9 @@
 /en/2026/10/openai-agent-medicare-portal/
 	#perspective
 	#sources
+/en/2026/10/oss-vulnerability-disclosure/
+	#perspective
+	#sources
 /en/2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -226,6 +250,9 @@
 /en/2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/en/2026/10/utah-vpn-ruling-site-blocking-bills/
+	#perspective
+	#sources
 /en/2026/10/weekly-brief-2026-w40/
 	#au-algorithm-opt-out
 	#cambridge-analytica
@@ -234,6 +261,15 @@
 	#parley
 	#sources
 	#wayback-access
+/en/2026/10/weekly-brief-2026-w41/
+	#border-towers
+	#cdt-404
+	#denmark-cpr
+	#flock-ruling
+	#llm-reasoning
+	#member-data-leaks
+	#sources
+	#ubuntu-sequoia
 /en/about/
 	#byline
 	#corrections
@@ -282,6 +318,22 @@
 	#y2026
 /en/history/10-08/
 	#y2026
+/en/history/10-09/
+	#y2026
+/en/history/10-10/
+	#y2026
+/en/history/10-11/
+	#y2026
+/en/history/10-12/
+	#y2026
+/en/history/10-13/
+	#y2026
+/en/history/10-14/
+	#y2026
+/en/history/10-15/
+	#y2026
+/en/history/10-16/
+	#y2026
 /en/page/2/
 /en/reading/
 	#display
@@ -316,6 +368,22 @@
 /history/10-07/
 	#y2026
 /history/10-08/
+	#y2026
+/history/10-09/
+	#y2026
+/history/10-10/
+	#y2026
+/history/10-11/
+	#y2026
+/history/10-12/
+	#y2026
+/history/10-13/
+	#y2026
+/history/10-14/
+	#y2026
+/history/10-15/
+	#y2026
+/history/10-16/
 	#y2026
 /page/2/
 /reading/
@@ -368,6 +436,9 @@
 /zh-cn/2026/10/apple-threat-notifications/
 	#perspective
 	#sources
+/zh-cn/2026/10/california-ab1856-open-source-exemption/
+	#perspective
+	#sources
 /zh-cn/2026/10/canada-c22-lawful-access/
 	#perspective
 	#sources
@@ -407,6 +478,9 @@
 /zh-cn/2026/10/openai-agent-medicare-portal/
 	#perspective
 	#sources
+/zh-cn/2026/10/oss-vulnerability-disclosure/
+	#perspective
+	#sources
 /zh-cn/2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -422,6 +496,9 @@
 /zh-cn/2026/10/us-flock-alpr-arrest/
 	#perspective
 	#sources
+/zh-cn/2026/10/utah-vpn-ruling-site-blocking-bills/
+	#perspective
+	#sources
 /zh-cn/2026/10/weekly-brief-2026-w40/
 	#au-algorithm-opt-out
 	#cambridge-analytica
@@ -430,6 +507,15 @@
 	#parley
 	#sources
 	#wayback-access
+/zh-cn/2026/10/weekly-brief-2026-w41/
+	#border-towers
+	#cdt-404
+	#denmark-cpr
+	#flock-ruling
+	#llm-reasoning
+	#member-data-leaks
+	#sources
+	#ubuntu-sequoia
 /zh-cn/about/
 	#byline
 	#corrections
@@ -477,6 +563,22 @@
 /zh-cn/history/10-07/
 	#y2026
 /zh-cn/history/10-08/
+	#y2026
+/zh-cn/history/10-09/
+	#y2026
+/zh-cn/history/10-10/
+	#y2026
+/zh-cn/history/10-11/
+	#y2026
+/zh-cn/history/10-12/
+	#y2026
+/zh-cn/history/10-13/
+	#y2026
+/zh-cn/history/10-14/
+	#y2026
+/zh-cn/history/10-15/
+	#y2026
+/zh-cn/history/10-16/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/reading/
