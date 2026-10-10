@@ -84,6 +84,9 @@
 /2026/10/openai-agent-medicare-portal/
 	#perspective
 	#sources
+/2026/10/oss-vulnerability-disclosure/
+	#perspective
+	#sources
 /2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -221,6 +224,9 @@
 	#perspective
 	#sources
 /en/2026/10/openai-agent-medicare-portal/
+	#perspective
+	#sources
+/en/2026/10/oss-vulnerability-disclosure/
 	#perspective
 	#sources
 /en/2026/10/pipepipe-youtube-client/
@@ -461,6 +467,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/openai-agent-medicare-portal/
+	#perspective
+	#sources
+/zh-cn/2026/10/oss-vulnerability-disclosure/
 	#perspective
 	#sources
 /zh-cn/2026/10/pipepipe-youtube-client/
