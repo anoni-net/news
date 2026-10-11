@@ -63,6 +63,9 @@
 /2026/10/fdroid-2-android-developer-verification/
 	#perspective
 	#sources
+/2026/10/firefox-tls-keylog-warning/
+	#perspective
+	#sources
 /2026/10/glm-5-3-cyber-capabilities/
 	#perspective
 	#sources
@@ -206,6 +209,9 @@
 	#perspective
 	#sources
 /en/2026/10/fdroid-2-android-developer-verification/
+	#perspective
+	#sources
+/en/2026/10/firefox-tls-keylog-warning/
 	#perspective
 	#sources
 /en/2026/10/glm-5-3-cyber-capabilities/
@@ -452,6 +458,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/fdroid-2-android-developer-verification/
+	#perspective
+	#sources
+/zh-cn/2026/10/firefox-tls-keylog-warning/
 	#perspective
 	#sources
 /zh-cn/2026/10/glm-5-3-cyber-capabilities/
