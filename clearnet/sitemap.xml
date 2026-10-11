@@ -22,6 +22,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/10/japan-data-breaches-2026/</loc>
+<lastmod>2026-10-12</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/japan-data-breaches-2026/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/10/firefox-tls-keylog-warning/</loc>
 <lastmod>2026-10-12</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/firefox-tls-keylog-warning/"/>
@@ -501,6 +509,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-11/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/history/10-12/</loc>
+<lastmod>2026-10-12</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-12/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -520,6 +536,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/japan-data-breaches-2026/</loc>
+<lastmod>2026-10-12</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/japan-data-breaches-2026/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/10/firefox-tls-keylog-warning/</loc>
@@ -1001,6 +1025,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-11/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/history/10-12/</loc>
+<lastmod>2026-10-12</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-12/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -1020,6 +1052,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/japan-data-breaches-2026/</loc>
+<lastmod>2026-10-12</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/japan-data-breaches-2026/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/japan-data-breaches-2026/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/10/firefox-tls-keylog-warning/</loc>
@@ -1499,6 +1539,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-11/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-11/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-11/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/history/10-12/</loc>
+<lastmod>2026-10-12</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-12/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-12/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/about/</loc>

@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 11 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 12 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>BBC 中文網在中國大陸的連線</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-12/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-12/2026</guid>
+<pubDate>Mon, 12 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在台灣可以直接打開 BBC 的網站，在中國大陸連 BBC 中文網簡體版的量測則幾乎都是異常或失敗。這一天，BBC 報導北京的網路業者疑似封鎖了 BBC 的網站。</description>
+<content:encoded>&lt;p&gt;你在台灣連 BBC 的網站，OONI 在 2026 年 7 月 10 日到 10 月 10 日量到 919 筆裡有 873 筆正常，中國大陸連 BBC 中文網簡體版的 210 筆只有 6 筆正常。BBC 在 1998 年 10 月 12 日報導北京主要的國營網路業者 China Net 疑似封鎖了 www.bbc.co.uk，北京的使用者因此無法收聽 BBC 中文台的線上廣播。報導引述北京電信的官員證實網站無法連線但不知道原因，也引述西方專家說警方會把禁止的網站清單交給網路業者。BBC 在 2019 年推出可用 Tor（隱藏連線路徑的匿名網路）開啟的國際新聞網站，2025 年也透過無國界記者的鏡像計畫提供 43 種語言的網站，公告沒有寫明是否包含中文網。想了解各地封鎖現況的讀者，可以在 OONI Explorer 查詢網站在各國的量測結果，沒有人量測過的網址則沒有資料。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>通訊軟體的端對端加密與執法存取</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-11/#y2026</link>

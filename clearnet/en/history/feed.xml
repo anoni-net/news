@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sun, 11 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 12 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>BBC Chinese access in mainland China</title>
+<link>https://anoni.net/news/en/history/10-12/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-12/2026</guid>
+<pubDate>Mon, 12 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>You can open the BBC website normally from Taiwan, while OONI&#39;s measurements of BBC Chinese from mainland China are nearly all anomalies or failures. On this day, the BBC reported that an internet provider in Beijing appeared to be blocking its website.</description>
+<content:encoded>&lt;p&gt;You can open the BBC website normally from Taiwan or Hong Kong, where 873 of 919 and 1,322 of 1,329 of OONI&#39;s measurements from 10 July to 10 October 2026 were normal, while only 6 of 210 measurements of the simplified-character edition of BBC Chinese from mainland China were. On 12 October 1998, the BBC reported that China Net, the main state-controlled internet service provider in Beijing, was believed to be blocking www.bbc.co.uk, so users in Beijing could not listen to the BBC&#39;s Mandarin broadcast online. The report quotes an official at Beijing Telecom confirming that the site was not accessible but saying he did not know why, and Western experts saying that police give internet providers lists of banned sites. The BBC launched a version of its international news site reachable through Tor (an anonymity network that hides the route of a connection) in 2019, and in 2025 a Reporters Without Borders mirror project made its site available in 43 languages, though the announcement does not specify whether this includes the Chinese site. OONI Explorer shows how a website has been measured in each country, though some addresses, such as the traditional-character edition of BBC Chinese, had no measurements from mainland China in this period.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>End-to-end encryption and law enforcement access in messaging apps</title>
 <link>https://anoni.net/news/en/history/10-11/#y2026</link>
