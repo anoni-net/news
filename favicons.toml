@@ -118,6 +118,9 @@ from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/co
 icon = "bughunters.google.com-c9acb948.png"
 from = "https://bughunters.google.com/static/icon-192.png"
 
+[hosts."bugzilla.mozilla.org"]
+same_as = "blog.mozilla.org"
+
 [hosts."bworldonline.com"]
 icon = "bworldonline.com-d9edf818.png"
 from = "https://bworldonline.com/wp-content/uploads/2024/09/cropped-bworld_icon-1-192x192.png"
@@ -973,6 +976,9 @@ from = "https://support.apple.com/apple-touch-icon.png"
 [hosts."support.google.com"]
 icon = "support.google.com-cb930f6f.png"
 from = "https://support.google.com/favicon.png"
+
+[hosts."support.mozilla.org"]
+same_as = "blog.mozilla.org"
 
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
