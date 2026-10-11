@@ -6,7 +6,63 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sun, 11 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 12 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Firefox 157&#39;s TLS key logging warning</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/firefox-tls-keylog-warning/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/firefox-tls-keylog-warning</guid>
+<pubDate>Mon, 12 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Firefox 157 for desktop, released on 29 September, shows a warning when the computer is set up to record encryption keys. Mozilla&#39;s support page says antivirus or security software is the most likely cause and the warning does not mean the computer is infected. If sites fail to load, check that software&#39;s HTTPS scanning first.</description>
+<content:encoded>&lt;p&gt;Based on 5 sources, including Mozilla, Mozilla Bugzilla, RFC Editor&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Firefox 157, released on 29 September, shows a warning in the site information panel (the shield icon in the address bar) and in Settings when the computer is set up to record its encryption keys. The release notes list the change for desktop only, and the Android and iOS release notes for 157 do not mention it. Mozilla&#39;s support page says the warning does not mean the computer is infected, and that antivirus or security software inspecting encrypted connections is the most likely cause. For developers, it may simply mean a debugging tool is running.&lt;/p&gt;
+&lt;p&gt;According to the support page, the trigger is the &lt;code&gt;SSLKEYLOGFILE&lt;/code&gt; environment variable (a setting the operating system passes to programs), which makes Firefox save the keys for its HTTPS connections to a file. Software that can read that file may be able to decrypt and inspect HTTPS traffic, and depending on how it uses the keys, intercept connections, impersonate servers and modify data. Some network error pages also gain a &#34;Your connection may not be private&#34; banner linking to the same page. A Mozilla bug report filed in April 2026 says a number of antivirus products seem to use the variable to decrypt HTTPS traffic, sometimes breaking connections, and cites Mozilla usage data showing it on about 10% of Windows users&#39; computers.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Each HTTPS connection negotiates its own keys, which normally stay only with the browser and the website&#39;s server. &lt;code&gt;SSLKEYLOGFILE&lt;/code&gt; was meant for developers debugging their own traffic. Once the keys are written to a file, a program that can read the file and has captured the encrypted traffic may be able to decrypt those connections. RFC 9850, published by the IETF (the body that sets internet technical standards) in July 2026, documents the file format as an informational document and states that it is only for systems where TLS protects test data, never for production.&lt;/p&gt;
+&lt;p&gt;If you see the warning and sites fail to load, the support page suggests looking in your antivirus or security software for features such as &#34;HTTPS scanning&#34;, &#34;Encrypted traffic monitoring&#34; or &#34;Web protection&#34;, and temporarily turning them off if the software allows it to see whether the problem remains. While they are off, that software no longer inspects encrypted web content. The page also says that if you trust that software to see everything you do online, this is not necessarily cause for concern. You usually do not need to disable your antivirus, since Firefox has Safe Browsing built in, and whether an extra layer of HTTPS inspection is worth it is up to you.&lt;/p&gt;
+&lt;p&gt;As of 11 October, the support page has Traditional and Simplified Chinese versions, both marked at the top as unreviewed machine translations. In mainland China, the Beijing company that ran part of Firefox&#39;s local business announced on 27 July 2025 that it would end that work after 29 September 2025, and that Mozilla would continue it itself or through authorised third parties. The notice states that the browser itself remains available and updated, with downloads moved to Mozilla&#39;s firefox.com/download, and the 157 release notes list no regional limits, so the desktop release from there should carry the same warning.&lt;/p&gt;
+&lt;p&gt;If you have no such software and are not debugging network traffic, another program may have set the variable, or someone may have set it by hand. That is our inference from the causes the support page lists, and the page has no steps for this case. We suggest asking someone familiar with computers to check the system&#39;s environment variables.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (5)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.firefox.com/en-US/firefox/157.0/releasenotes/&#34;&gt;Firefox 157.0, See All New Features, Updates and Fixes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;29 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.mozilla.org/en-US/kb/sslkeylogfile-warning&#34;&gt;Troubleshoot network errors when TLS key logging is enabled&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-25&#34;&gt;25 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2035411&#34;&gt;Add a warning to about:neterror when SSLKEYLOGFILE is in use&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-28&#34;&gt;28 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc9850.html&#34;&gt;RFC 9850 - The SSLKEYLOGFILE Format for TLS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;RFC Editor&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20250728090400/https://www.firefox.com.cn/farewell/&#34;&gt;关于 Firefox 在中国持续运营但北京火狐关闭及 Firefox 账户服务终止的重要公告&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;北京谋智火狐信息技术有限公司&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-27&#34;&gt;27 July 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Vulnerability disclosure and reporting channels in open source projects</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/oss-vulnerability-disclosure/</link>
@@ -2426,128 +2482,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://git.mills.io/prologic/parley&#34;&gt;parley&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;git.mills.io&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>PipePipe 5.4.0, an open-source YouTube client</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/pipepipe-youtube-client/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/pipepipe-youtube-client</guid>
-<pubDate>Sat, 03 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>PipePipe, an Android fork of NewPipe, plays YouTube, NicoNico and BiliBili without an account or Google Play. Version 5.4.0 improves TV controls and fixes 12 bugs.</description>
-<content:encoded>&lt;p&gt;Based on 15 sources, including PipePipe, GitHub, F-Droid&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;PipePipe, a GPL-3.0 open-source Android client for YouTube, the Japanese video platform NicoNico and China&#39;s BiliBili, released version 5.4.0 on 24 September (UTC) and installs without Google Play. The release improves TV controls, adds quality selection for live streams and fixes 12 bugs, including subtitles vanishing in fullscreen.&lt;/p&gt;
-&lt;p&gt;The developer forked NewPipe, an earlier open-source YouTube client, in early 2022 to create PipePipe, and the two projects have not synced changes since. The website lists no account, no ads, no trackers and no data collection. The app integrates SponsorBlock, a crowd-sourced service for skipping sponsored segments, along with keyword and channel filters, Shorts blocking, background play and whole-playlist downloads.&lt;/p&gt;
-&lt;p&gt;It is available from F-Droid, a repository of open-source Android apps, and IzzyOnDroid, a third-party repository for F-Droid clients. Both flag the NonFreeNet anti-feature because the app depends on non-free network services. As of 29 September, IzzyOnDroid carries 5.4.0, while F-Droid still offers 5.3.1, added on 12 September. APKs are on the GitHub releases page, where the notes say &lt;code&gt;arm64-v8a&lt;/code&gt; suits most devices.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;With a third-party client you need no Google account, but requests still go straight to YouTube. When YouTube restricts an anonymous request, the app shows &#34;Sign in to confirm you&#39;re not a bot&#34;. The community-maintained PipePipe Wiki&#39;s fix is to retry once, then try another network or VPN exit.&lt;/p&gt;
-&lt;p&gt;PipePipe supports signing in, and its README states that the YouTube login cookie is used only to retrieve playback streams. Those requests then carry the cookie and can be tied to your account. According to the Wiki, login is best kept for IP blocks, age-restricted videos and channel-member content, at the cost of audio-only downloads and rewinding live streams in progress.&lt;/p&gt;
-&lt;p&gt;The developer&#39;s pinned GitHub issue &lt;code&gt;#2757&lt;/code&gt; lists the domains PipePipe needs: &lt;code&gt;googleapis.com&lt;/code&gt;, &lt;code&gt;google.com&lt;/code&gt; and their subdomains. A DNS ad filter that blocks them can make YouTube playback fail, and the Wiki&#39;s fix is to allowlist them rather than switch filtering off.&lt;/p&gt;
-&lt;p&gt;GreatFire, which monitors censorship in mainland China, found &lt;code&gt;youtube.com&lt;/code&gt; unreachable in all of its last three conclusive tests, most recently on 21 September, and &lt;code&gt;google.com&lt;/code&gt; blocked in 87% of its last 23, most recently on 27 September. Its last three tests of &lt;code&gt;googleapis.com&lt;/code&gt;, the latest on 16 August, all showed interference. PipePipe is therefore unlikely to play YouTube on a mainland network.&lt;/p&gt;
-&lt;p&gt;OONI (Open Observatory of Network Interference) collected 909 measurements of &lt;code&gt;www.youtube.com&lt;/code&gt; from Hong Kong between 29 August and 27 September, and 4,966 from Taiwan, 574 of which failed to complete. Hong Kong had 3 anomalies, results that differ from a control measurement, and Taiwan had 1. Neither had a confirmed block.&lt;/p&gt;
-&lt;p&gt;The Wiki&#39;s developer guide describes SABR (Server Adaptive BitRate), which YouTube increasingly uses, as a session where the client reports playback state and receives media in small pieces. PipePipe downloads a playback policy from a public GitHub repository and runs it only after checking its Ed25519 signature, confirming it came unaltered from the developer, plus its validity window and revision number. It falls back to the built-in version on failure. By design, the developer can adjust playback without a new release, and the policy source is public, but the app executes code fetched from the network.&lt;/p&gt;
-&lt;p&gt;For bug reports, the Wiki&#39;s guidance is to keep cookies, tokens, account emails, screen recordings of a login and IP addresses out of public issues. Your sign-in state and the error you saw are enough for a first report.&lt;/p&gt;
-&lt;p&gt;To try it you need an Android phone running 6.0 or later, per F-Droid&#39;s listing, and the quickest route is the &lt;code&gt;arm64-v8a&lt;/code&gt; APK from GitHub. Installing through an F-Droid client gives you update notifications. The official F-Droid repository lacks 5.4.0 so far; the IzzyOnDroid repository, added by hand in the official client, has it. According to the project&#39;s translation guide, the interface&#39;s Simplified and Traditional Chinese are AI-assisted; the Wiki and issue tracker are mostly in English.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (15)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.4.0&#34;&gt;PipePipe v5.4.0&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pipepipe.dev&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe&#34;&gt;InfinityLoop1308/PipePipe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/packages/InfinityLoop1309.NewPipeEnhanced/&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced&#34;&gt;PipePipe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IzzyOnDroid&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipeSabrPolicies&#34;&gt;PipePipe SABR policies&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://priveetee.github.io/Docs-PipePipe/issues/youtube-playback.html&#34;&gt;YouTube playback, network, and sign-in&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe Wiki&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/blob/main/TRANSLATION.md&#34;&gt;TRANSLATION.md&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/issues/2757&#34;&gt;[Important] YouTube playback will fail if your DNS blocks googleapis.com or google.com&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-24&#34;&gt;24 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://priveetee.github.io/Docs-PipePipe/developer-guide/introduction.html&#34;&gt;SABR&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PipePipe Wiki&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/youtube.com&#34;&gt;Is http://youtube.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/google.com&#34;&gt;Is http://google.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;27 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/googleapis.com&#34;&gt;Is http://googleapis.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-16&#34;&gt;16 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?test_name=web_connectivity&amp;amp;domain=www.youtube.com&amp;amp;probe_cc=HK&amp;amp;since=2026-08-29&amp;amp;until=2026-09-28&amp;amp;axis_x=measurement_start_day&amp;amp;time_grain=day&#34;&gt;OONI Explorer: www.youtube.com, Hong Kong&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?test_name=web_connectivity&amp;amp;domain=www.youtube.com&amp;amp;probe_cc=TW&amp;amp;since=2026-08-29&amp;amp;until=2026-09-28&amp;amp;axis_x=measurement_start_day&amp;amp;time_grain=day&#34;&gt;OONI Explorer: www.youtube.com, Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
