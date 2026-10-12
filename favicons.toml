@@ -106,6 +106,10 @@ none = "網站與網頁封存都取不到圖示"
 [hosts."blog.cryptpad.org"]
 same_as = "cryptpad.org"
 
+[hosts."blog.google"]
+icon = "blog.google-328dadd5.png"
+from = "https://blog.google/static/blogv2/images/apple-touch-icon.png?version=pr20261009-1701"
+
 [hosts."blog.mozilla.org"]
 icon = "blog.mozilla.org-f0f07a35.png"
 from = "https://blog.mozilla.org/wp-content/themes/foxtail/assets/images/favicons/apple-touch-icon.png"
@@ -197,9 +201,17 @@ from = "https://chromereleases.googleblog.com/favicon.ico"
 icon = "chromestatus.com-1338ffe4.png"
 from = "https://chromestatus.com/static/img/crstatus_192.png"
 
+[hosts."chromium.org"]
+icon = "chromium.org-682a9ae9.png"
+from = "https://www.chromium.org/apple-touch-icon.png"
+
 [hosts."cht.com.tw"]
 icon = "cht.com.tw-301eb8ae.png"
 from = "https://web-eshop.cdn.hinet.net/web/images/favicon.ico"
+
+[hosts."circleid.com"]
+icon = "circleid.com-fef09846.png"
+from = "https://circleid.com/favicon.ico"
 
 [hosts."cisa.gov"]
 none = "原站與 Internet Archive 都擋下自動抓取，存檔只有 16px 的圖示"
@@ -223,6 +235,13 @@ from = "https://www.cnbc.com/apple-touch-icon.png"
 [hosts."cnn.com"]
 icon = "cnn.com-ae11d4e1.png"
 from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
+
+[hosts."cnnic.net.cn"]
+none = "網站在抓取時無法連線，頁面沒有宣告圖示"
+
+[hosts."community.letsencrypt.org"]
+icon = "community.letsencrypt.org-e3f802a1.png"
+from = "https://global.discourse-cdn.com/letsencrypt/optimized/3X/c/a/ca6c06ea1ea201324bba7048c6841ce60236468d_2_180x180.png"
 
 [hosts."community.signalusers.org"]
 icon = "community.signalusers.org-34c4e8e9.png"
@@ -322,6 +341,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24c
 [hosts."developer.apple.com"]
 icon = "developer.apple.com-30fa6887.png"
 from = "https://developer.apple.com/favicon.ico"
+
+[hosts."developers.cloudflare.com"]
+icon = "developers.cloudflare.com-20b93244.png"
+from = "https://developers.cloudflare.com/favicon.png"
 
 [hosts."developers.google.com"]
 icon = "developers.google.com-ce307183.png"
@@ -560,6 +583,10 @@ from = "https://help.yahoo.com/favicon.ico"
 icon = "helpnetsecurity.com-eb4f8b13.png"
 from = "https://img.helpnetsecurity.com/wp-content/uploads/2019/09/09093400/cropped-hns2-192x192.png"
 
+[hosts."hkdnr.hk"]
+icon = "hkdnr.hk-4024b7ae.png"
+from = "https://www.hkdnr.hk/favicon.ico"
+
 [hosts."home-affairs.ec.europa.eu"]
 icon = "home-affairs.ec.europa.eu-3712d20c.png"
 from = "https://home-affairs.ec.europa.eu/themes/contrib/oe_theme/images/favicons/ec/favicon.png"
@@ -609,6 +636,10 @@ from = "https://www.ithome.com.tw/favicon.ico"
 [hosts."itif.org"]
 icon = "itif.org-80d5619a.png"
 from = "https://itif.org/icons/apple-touch-icon.png"
+
+[hosts."itnews.com.au"]
+icon = "itnews.com.au-c44b1e39.png"
+from = "https://www.itnews.com.au/images/favicon/apple-touch-icon.png"
 
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
@@ -971,6 +1002,9 @@ from = "手動提供的檔案 radicle.png"
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
 
+[hosts."registrylock.tw"]
+same_as = "twnic.tw"
+
 [hosts."relay.firefox.com"]
 same_as = "firefox.com"
 
@@ -1059,6 +1093,10 @@ from = "https://ssd.eff.org/favicon.ico"
 
 [hosts."ssl4.eir-parts.net"]
 none = "上市公司公告的託管平台"
+
+[hosts."sslmate.com"]
+icon = "sslmate.com-5e35444e.png"
+from = "https://sslmate.com/assets/@9e36fda1926f2047cead1adb754d0fe2.png"
 
 [hosts."sso.agc.gov.sg"]
 icon = "sso.agc.gov.sg-7300262d.png"
@@ -1160,6 +1198,10 @@ from = "https://www.twca.com.tw/images/icon/twca_favicon.png"
 [hosts."twcert.org.tw"]
 icon = "twcert.org.tw-29afd0d6.png"
 from = "https://www.twcert.org.tw/favicon.ico"
+
+[hosts."twnic.tw"]
+icon = "twnic.tw-1a242089.png"
+from = "手動提供的檔案 twnic-fav.ico"
 
 [hosts."twse.com.tw"]
 icon = "twse.com.tw-3d3dcc50.png"
