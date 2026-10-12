@@ -612,6 +612,10 @@ none = "網站圖示只有 16 像素，放大後無法辨識"
 icon = "keepandroidopen.org-32ba658c.png"
 from = "https://keepandroidopen.org/favicon.ico"
 
+[hosts."kevinboone.me"]
+icon = "kevinboone.me-9b4c77b8.png"
+from = "https://kevinboone.me/img/favicon.ico"
+
 [hosts."korea.kr"]
 icon = "korea.kr-a57e1712.png"
 from = "https://www.korea.kr/images/common/favicon.ico"
