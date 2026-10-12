@@ -1059,6 +1059,9 @@ from = "https://releases.ict-online.ru/old/favicons/releases.ict-online.ru/apple
 icon = "rfc-editor.org-39c23b26.png"
 from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 
+[hosts."robbietilton.com"]
+none = "網站圖示是作者本人的照片，不放個人肖像"
+
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"

@@ -66,6 +66,9 @@
 /2026/10/cctld-hijack-counterfeit-certs/
 	#perspective
 	#sources
+/2026/10/compositor-image-editor/
+	#perspective
+	#sources
 /2026/10/cryptpad-summer-2026-status/
 	#perspective
 	#sources
@@ -245,6 +248,9 @@
 	#perspective
 	#sources
 /en/2026/10/cctld-hijack-counterfeit-certs/
+	#perspective
+	#sources
+/en/2026/10/compositor-image-editor/
 	#perspective
 	#sources
 /en/2026/10/cryptpad-summer-2026-status/
@@ -529,6 +535,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/cctld-hijack-counterfeit-certs/
+	#perspective
+	#sources
+/zh-cn/2026/10/compositor-image-editor/
 	#perspective
 	#sources
 /zh-cn/2026/10/cryptpad-summer-2026-status/
