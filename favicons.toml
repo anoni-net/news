@@ -545,6 +545,10 @@ same_as = "court.gov.cn"
 icon = "google.cn-b463ba0d.png"
 from = "https://www.google.cn/chrome/static/images/favicons/android-icon-192x192.png"
 
+[hosts."googleblog.blogspot.com"]
+icon = "googleblog.blogspot.com-067dca83.png"
+from = "https://googleblog.blogspot.com/favicon.ico"
+
 [hosts."gov.ca.gov"]
 icon = "gov.ca.gov-a08db90b.png"
 from = "https://www.gov.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
@@ -633,6 +637,9 @@ from = "https://www.ilovepdf.com/img/app-icon.png"
 [hosts."imda.gov.sg"]
 icon = "imda.gov.sg-8b6918ac.png"
 from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
+
+[hosts."indiacode.nic.in"]
+none = "網站在抓取時無法連線"
 
 [hosts."info.gov.hk"]
 same_as = "gov.hk"
@@ -921,6 +928,10 @@ from = "https://news.web.nhk/apple-touch-icon.png"
 [hosts."news.ycombinator.com"]
 icon = "news.ycombinator.com-c204850a.png"
 from = "https://news.ycombinator.com/apple-touch-icon.png"
+
+[hosts."newsonair.gov.in"]
+icon = "newsonair.gov.in-6cb1c7c3.png"
+from = "https://newsonair.gov.in/wp-content/uploads/2024/01/cropped-logo-192x192.png"
 
 [hosts."nhi.gov.tw"]
 icon = "nhi.gov.tw-f4da548a.png"
@@ -1325,6 +1336,10 @@ from = "https://docs.z.ai/mintlify-assets/_mintlify/favicons/zhipu-32152247/ksfq
 [hosts."zhonglun.com"]
 icon = "zhonglun.com-c0e89dfa.png"
 from = "https://www.zhonglun.com/upload/static/images/icon.png"
+
+[hosts."ziyuan.baidu.com"]
+icon = "ziyuan.baidu.com-18c0d0b0.png"
+from = "https://ziyuan.baidu.com/favicon.ico"
 
 [hosts."zoom.com"]
 icon = "zoom.com-7e0948ce.png"
