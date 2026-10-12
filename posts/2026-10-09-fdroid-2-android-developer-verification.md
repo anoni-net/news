@@ -63,6 +63,7 @@ watch:
     note: F-Droid 2.0 的安全審查報告是否公開，套件頁是否把 2.0 改為建議版本
   - date: 2026-12-15
     note: Google 是否公布 2027 年全球適用的月份與國別時程，F-Droid 用戶端與開源 App 的註冊情況
+pin: 2026-10-28
 authors:
   - anoni-net
 ---
