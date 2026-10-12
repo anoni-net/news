@@ -118,6 +118,10 @@ from = "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/co
 icon = "blog.torproject.org-e64b086c.png"
 from = "https://blog.torproject.org/static/images/favicon/favicon.ico"
 
+[hosts."blogs.windows.com"]
+icon = "blogs.windows.com-54de371c.png"
+from = "https://blogs.windows.com/wp-content/uploads/2022/09/cropped-Windows11IconTransparent512-192x192.png"
+
 [hosts."brave.app"]
 icon = "brave.app-793e8faa.png"
 from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
