@@ -66,6 +66,9 @@
 /2026/10/cctld-hijack-counterfeit-certs/
 	#perspective
 	#sources
+/2026/10/compositor-image-editor/
+	#perspective
+	#sources
 /2026/10/cryptpad-summer-2026-status/
 	#perspective
 	#sources
@@ -152,6 +155,15 @@
 	#member-data-leaks
 	#sources
 	#ubuntu-sequoia
+/2026/10/weekly-brief-2026-w42/
+	#bitwarden
+	#esp32-adblock
+	#india-shutdown
+	#lineageos-24
+	#nitter
+	#psiphon-c-22
+	#sources
+	#telegram-desktop
 /404.html
 /about/
 	#byline
@@ -236,6 +248,9 @@
 	#perspective
 	#sources
 /en/2026/10/cctld-hijack-counterfeit-certs/
+	#perspective
+	#sources
+/en/2026/10/compositor-image-editor/
 	#perspective
 	#sources
 /en/2026/10/cryptpad-summer-2026-status/
@@ -324,6 +339,15 @@
 	#member-data-leaks
 	#sources
 	#ubuntu-sequoia
+/en/2026/10/weekly-brief-2026-w42/
+	#bitwarden
+	#esp32-adblock
+	#india-shutdown
+	#lineageos-24
+	#nitter
+	#psiphon-c-22
+	#sources
+	#telegram-desktop
 /en/about/
 	#byline
 	#corrections
@@ -519,6 +543,9 @@
 /zh-cn/2026/10/cctld-hijack-counterfeit-certs/
 	#perspective
 	#sources
+/zh-cn/2026/10/compositor-image-editor/
+	#perspective
+	#sources
 /zh-cn/2026/10/cryptpad-summer-2026-status/
 	#perspective
 	#sources
@@ -605,6 +632,15 @@
 	#member-data-leaks
 	#sources
 	#ubuntu-sequoia
+/zh-cn/2026/10/weekly-brief-2026-w42/
+	#bitwarden
+	#esp32-adblock
+	#india-shutdown
+	#lineageos-24
+	#nitter
+	#psiphon-c-22
+	#sources
+	#telegram-desktop
 /zh-cn/about/
 	#byline
 	#corrections
