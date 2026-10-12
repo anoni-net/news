@@ -6,7 +6,114 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Mon, 12 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Beeline&#39;s AI voice personas for scam calls</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/beeline-ai-scam-call-assistant/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/beeline-ai-scam-call-assistant</guid>
+<pubDate>Tue, 13 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Russian carrier Beeline said on 6 October that it has routed 19.1 million scam calls to AI voice personas since the start of 2026, according to its own figures. The service runs only on Beeline&#39;s network in Russia. In South Korea, Singapore and Taiwan, the examples we found are call warnings, filtering and on-device detection.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including Beeline, ict-online, 動區動趨&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Russian mobile carrier Beeline said on 6 October that its anti-fraud platform has routed 19.1 million scam calls to a set of AI voice personas since the start of 2026. Beeline calls them its &#34;cyber family&#34;, and according to the press release, scammers have spent about 140,000 hours talking to them, close to 6,000 days. The service runs only on Beeline&#39;s network in Russia, and all figures are self-reported without independent verification.&lt;/p&gt;
+&lt;p&gt;Beeline began small-scale tests of a &#34;cyber granny&#34; in November 2025 with a single voice, and the release at the time said suspicious calls to older female customers would be routed to it. The system analyses what the scammer says, then a large language model generates a reply from the conversation&#39;s context and turns it into speech. A teenage persona was added in June 2026, and in August Beeline announced ten voices in total, with almost all scam calls on its network now sent to them. The AI picks a voice based on the number being called, and a scammer who calls the same number again within five hours reaches the same persona.&lt;/p&gt;
+&lt;p&gt;Beeline&#39;s June 2026 release says the service is part of the free basic tier of its &#34;My Security&#34; (Моя безопасность) service. The chief executive said on 6 October that these calls are also a large body of material for retraining the models. The releases do not say whether the protected customer&#39;s phone rings, whether customers can switch the service off, or what happens when a real person&#39;s call is misrouted to the AI.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;According to Beeline&#39;s releases, its anti-fraud platform decides which calls look suspicious and where to send them, without publishing the criteria. The point of stalling scammers is to use up their time so they make fewer calls to real people. O2 in the UK launched a similar AI granny, Daisy, in November 2024, and its press release says Daisy kept scammers on the line for up to 40 minutes at a time, without saying how many calls it took.&lt;/p&gt;
+&lt;p&gt;Both the decision and the routing happen on the carrier&#39;s side, and as of 12 October Beeline has not published how misrouted calls are handled. The releases say the calls are used for retraining but not whether recordings or transcripts are kept, for how long, or on what legal basis. South Korea offers a contrast. According to the government&#39;s policy news site, the Ministry of Science and ICT said in July 2025 that a scammer&#39;s voice counts as sensitive information under Korea&#39;s Personal Information Protection Act, so the carrier KT needed a regulatory sandbox exemption (a trial scheme that temporarily exempts a limited use from existing rules) to use such voice data without consent for an AI service that detects scams during calls.&lt;/p&gt;
+&lt;p&gt;In the three places we checked, South Korea, Singapore and Taiwan, we found no carrier offering AI personas that answer scam calls as of 12 October, only call warnings, filtering and on-device detection. In February 2026 Korea&#39;s science ministry urged people to use AI scam-call detection from Samsung and the three mobile carriers, noting that call analysis runs on the phone itself rather than on outside servers. Singapore&#39;s ScamShield combines an app that helps people check, block and filter scams with a 24/7 helpline at 1799. In Taiwan, Chunghwa Telecom introduced a spoken warning in July 2023 for international calls showing a &#34;+886 9&#34; prefix on landlines.&lt;/p&gt;
+&lt;p&gt;Wherever you are, the advice from Taiwan&#39;s Criminal Investigation Bureau, relayed by the Ministry of the Interior, is to hang up first and then verify through an official channel. In Taiwan, a caller who asks you to dial 165, the anti-fraud hotline, without hanging up first is a scammer. The 165 hotline and the 165 website take enquiries and reports. Carrier-side call interception like Beeline&#39;s only handles incoming phone calls, so in our view scams that start in messaging apps still need checking yourself.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/moshenniki-obshchalis-s-kibersemyey-bilayna-6-tys-dney/&#34;&gt;Мошенники общались с «киберсемьёй» Билайна 6 тыс. дней&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;6 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/kiberbabushka-beeline/&#34;&gt;«Кибербабушка» поможет Билайну бороться с мошенниками&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-13&#34;&gt;13 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/kiberpatsan-beeline/&#34;&gt;«Киберпацан» Билайна поможет «Кибербабушке» бороться с мошенниками&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-03&#34;&gt;3 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://releases.ict-online.ru/news/S-nachala-iyulya-kibersem-ya-otrazila-okolo-5-mln-moshennicheskikh-zvonkov-napravlennykh-kliyentam-Bilaina-331033&#34;&gt;С начала июля &amp;#34;киберсемья&amp;#34; отразила около 5 млн мошеннических звонков, направленных клиентам Билайна&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ict-online&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;17 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.blocktempo.com/beeline-ai-cyber-family-voice-assistants-scam-callers-6000-days/&#34;&gt;俄國電信商把詐騙電話轉給「AI 假民眾」接聽，今年陪聊 14 萬小時&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;動區動趨&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.virginmediao2.co.uk/o2-unveils-daisy-the-ai-granny-wasting-scammers-time/&#34;&gt;O2 unveils Daisy, the AI granny wasting scammers&amp;#39; time&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Virgin Media O2&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-14&#34;&gt;14 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.korea.kr/news/policyNewsView.do?newsId=148946841&#34;&gt;통화 중 보이스피싱 범죄 잡아내는 AI 탐지 서비스 개시&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;대한민국 정책브리핑&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-30&#34;&gt;30 July 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cht.com.tw/zh-tw/home/cht/messages/2023/0717-0900&#34;&gt;中華電信配合政府遏止詐騙 率先推出全國首創「固網國際來話語音警示服務」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中華電信&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-17&#34;&gt;17 July 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.moi.gov.tw/News_Content.aspx?n=4&amp;amp;s=323333&#34;&gt;通話中直接撥打165?小心詐騙集團假冒警察&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;內政部&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-24&#34;&gt;24 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.npa.gov.tw/ch/app/faq/view?module=faq&amp;amp;id=2144&amp;amp;serno=A1078837&#34;&gt;撥打165反詐騙諮詢專線需要通話費用嗎?受騙報案除可撥打165外，還有其他方式嗎?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;內政部警政署&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-11-01&#34;&gt;1 November 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.korea.kr/news/policyNewsView.do?newsId=148959497&#34;&gt;인공지능으로 통화 중에 &amp;#39;보이스피싱&amp;#39; 잡는다&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;대한민국 정책브리핑&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-12&#34;&gt;12 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tech.gov.sg/products-and-services/for-citizens/scam-prevention/scamshield/&#34;&gt;ScamShield&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GovTech Singapore&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-28&#34;&gt;28 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Website and app breaches in Japan since September 2026</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/japan-data-breaches-2026/</link>
@@ -2632,107 +2739,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;27 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Tracking pixels that sent doctors&#39; appointments to social platforms</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/doctoralia-health-tracking-pixels/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/doctoralia-health-tracking-pixels</guid>
-<pubDate>Sun, 04 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Doctoralia&#39;s sites in Brazil, Colombia, Mexico and elsewhere in Latin America sent specialties, doctors&#39; names and appointment times to Google, TikTok and LinkedIn. Its parent company does not operate in mainland China, Hong Kong, Macau or Taiwan.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including The Markup, Docplanner, GitHub&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;US outlet The Markup and Agência Pública, a Brazilian investigative nonprofit, reported on 14 September that booking platform Doctoralia sent appointment information to Google, TikTok and LinkedIn for advertising from its sites in Brazil, Colombia, Mexico and elsewhere in Latin America. Parent company Docplanner lists 13 markets in Europe, Turkey and Latin America, none in mainland China, Hong Kong, Macau or Taiwan.&lt;/p&gt;
-&lt;p&gt;In Brazil, the site sent searched specialties such as gynaecology to Google, then the doctor&#39;s name and appointment time after booking. In Colombia, it sent the doctor&#39;s name and appointment time for any specialist to LinkedIn, and bookings in Colombia and Mexico also went to TikTok. Tracking started before visitors entered a name or email. Doctoralia also appeared to use Facebook trackers, though in the cases reviewed Meta received less sensitive information than the others did.&lt;/p&gt;
-&lt;p&gt;Doctoralia is based in Spain, where the EU&#39;s General Data Protection Regulation applies, and its Spanish site sent no searches to outside companies in testing. Docplanner&#39;s similar German platform offers a pop-up to switch off tracking cookies, while the Latin American sites&#39; cookie notices offered no immediate opt-out.&lt;/p&gt;
-&lt;p&gt;Docplanner&#39;s statement said the trackers measured its own social media campaigns and that it does not sell personal data. As of 14 September it was conducting a technical and legal review. LinkedIn&#39;s response said its policies prohibit its Insight Tag on pages collecting sensitive data, Google&#39;s response pointed to policies against collecting private health information, and TikTok did not respond.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;A tracking pixel is code an ad platform gives a website. The visitor&#39;s browser sends what they view and click back to the platform, often with a unique ID, and according to social media companies, such IDs can be tied to a person&#39;s profile. On a medical site, the specialty someone searches for or the doctor they book can reveal aspects of their health.&lt;/p&gt;
-&lt;p&gt;Two Brazilian regulators disagree on whether this counts as health data. The Federal Council of Medicine, which licenses and regulates doctors, holds that booking an appointment involves no medical confidentiality. The National Supplementary Health Agency, which regulates private health insurance, takes the view that the specialty sought and other booking details may reveal aspects of a person&#39;s health.&lt;/p&gt;
-&lt;p&gt;Taiwan&#39;s Personal Data Protection Act, Article 6, bars collecting, processing or using medical records, medical care and health check data except in listed cases. Mainland China&#39;s Personal Information Protection Law lists medical and health information as sensitive personal information in Article 28 and requires separate consent to process it in Article 29. Neither law spells out booking data.&lt;/p&gt;
-&lt;p&gt;The Markup&#39;s Blacklight scanner tests a URL for data sent to TikTok, Google Analytics and others. A scan normally takes 30 seconds to a minute, the interface is in English only, and scans run from Ohio, California or Europe. Only the entered address is scanned, so data sent later in a booking may not show up. Part of its code is on GitHub under the GPL-3.0 licence, with a release on 4 June.&lt;/p&gt;
-&lt;p&gt;In tests published in June 2025 on US state health-insurance exchange sites, The Markup found that stricter Firefox and Safari settings, the Brave and DuckDuckGo browsers, and the Privacy Badger and uBlock Origin Lite extensions blocked the LinkedIn, Snapchat and Google trackers it examined. TikTok&#39;s tracker was not tested, the extensions were tested on desktop, and a VPN or private browsing did not help.&lt;/p&gt;
-&lt;p&gt;In desktop Firefox, a first step is to switch Enhanced Tracking Protection from Standard to Strict under Settings, Privacy and security. The change needs no account, and Firefox comes in Traditional and Simplified Chinese. The trade-off appears on the same page as the warning &#34;Some sites may break with strict tracking protection.&#34; On a Mac, users can set &#34;Use advanced tracking and fingerprinting protection&#34; in Safari&#39;s Advanced settings to cover all browsing; according to Apple&#39;s help page, some website features may be affected.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/pixel-hunt/2026/09/14/how-tiktok-and-google-ended-up-with-information-about-doctors-appointments-around-the-world&#34;&gt;How TikTok and Google ended up with information about doctors’ appointments around the world&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.docplanner.com/&#34;&gt;Docplanner Group&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Docplanner&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/the-breakdown/2025/06/17/this-is-how-you-stop-data-trackers-from-sucking-up-your-health-data&#34;&gt;This is how you stop data trackers from sucking up your health data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-17&#34;&gt;17 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://themarkup.org/blacklight&#34;&gt;Blacklight&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Markup&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/the-markup/blacklight-collector&#34;&gt;the-markup/blacklight-collector&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=6&#34;&gt;個人資料保護法 第 6 條&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全国人民代表大会&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-l10n/firefox-l10n/blob/main/zh-TW/browser/browser/preferences/preferences.ftl&#34;&gt;Firefox 正體中文介面字串 preferences.ftl&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-l10n/firefox-l10n/blob/main/zh-CN/browser/browser/preferences/preferences.ftl&#34;&gt;Firefox 简体中文界面字符串 preferences.ftl&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-firefox/firefox/blob/main/browser/locales/en-US/browser/preferences/preferences.ftl&#34;&gt;Firefox en-US interface strings preferences.ftl&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/safari/ibrw1069/mac&#34;&gt;在 Mac 上的 Safari 中進行私密瀏覽&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac&#34;&gt;Browse privately in Safari on Mac&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
