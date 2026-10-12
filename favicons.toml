@@ -84,6 +84,14 @@ from = "https://bandaancha.eu/apple-touch-icon.png"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."beelinenow.ru"]
+icon = "beelinenow.ru-299b3ad9.png"
+from = "https://moskva.beeline.ru/favicon.ico"
+
+[hosts."blocktempo.com"]
+icon = "blocktempo.com-ccb2ccb4.png"
+from = "https://image.blocktempo.com/2019/04/cropped-%E9%BB%91%E5%AD%97%E7%99%BD%E6%A1%86%E5%8B%95%E5%8D%80Logo_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F-1-750x750-2-2-e1555450212503-1-32x32.png"
+
 [hosts."blog.archive.org"]
 icon = "blog.archive.org-f5b4b9c3.png"
 from = "https://blog.archive.org/wp-content/uploads/2023/03/ia-logo-sq-300x300.png"
@@ -168,6 +176,10 @@ from = "https://chromereleases.googleblog.com/favicon.ico"
 [hosts."chromestatus.com"]
 icon = "chromestatus.com-1338ffe4.png"
 from = "https://chromestatus.com/static/img/crstatus_192.png"
+
+[hosts."cht.com.tw"]
+icon = "cht.com.tw-301eb8ae.png"
+from = "https://web-eshop.cdn.hinet.net/web/images/favicon.ico"
 
 [hosts."cisa.gov"]
 none = "原站與 Internet Archive 都擋下自動抓取，存檔只有 16px 的圖示"
@@ -397,6 +409,10 @@ from = "https://www.fdot.gov/favicon.ico"
 icon = "firefox.com-cf4f5299.png"
 from = "https://www.firefox.com/media/img/favicons/firefox/browser/favicon-196x196.59e3822720be.png"
 
+[hosts."fj.gov.cn"]
+icon = "fj.gov.cn-749843a4.png"
+from = "https://fj.gov.cn/favicon.ico"
+
 [hosts."flocksafety.com"]
 icon = "flocksafety.com-b8c9ee48.png"
 from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
@@ -416,6 +432,13 @@ from = "https://www.frontex.europa.eu/favicon.ico"
 [hosts."fsa.go.jp"]
 icon = "fsa.go.jp-c4a1f9c1.png"
 from = "https://www.fsa.go.jp/images/apple-touch-icon.png"
+
+[hosts."gaj.ankang.gov.cn"]
+icon = "gaj.ankang.gov.cn-5d932336.png"
+from = "https://gaj.ankang.gov.cn/favicon.ico"
+
+[hosts."gat.fj.gov.cn"]
+same_as = "fj.gov.cn"
 
 [hosts."geneva.cs.umd.edu"]
 same_as = "cs.umd.edu"
@@ -593,6 +616,10 @@ from = "https://keepandroidopen.org/favicon.ico"
 icon = "kevinboone.me-9b4c77b8.png"
 from = "https://kevinboone.me/img/favicon.ico"
 
+[hosts."korea.kr"]
+icon = "korea.kr-a57e1712.png"
+from = "https://www.korea.kr/images/common/favicon.ico"
+
 [hosts."krackattacks.com"]
 icon = "krackattacks.com-40830c9b.png"
 from = "https://www.krackattacks.com/images/favicon.ico"
@@ -719,6 +746,10 @@ from = "https://moda.gov.tw/assets/img/touch-icon.png"
 icon = "mohw.gov.tw-5e72f012.png"
 from = "https://www.mohw.gov.tw/xslGip/Unit001/images/favicon.ico"
 
+[hosts."moi.gov.tw"]
+icon = "moi.gov.tw-1042432d.png"
+from = "https://ws.moi.gov.tw/001/Upload/400/sites/pagebackimage/ef9b9560-7f3e-4f12-86e4-e4f196ebb4c4.png"
+
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
@@ -776,6 +807,10 @@ from = "https://news.mynavi.jp/favicon.ico"
 icon = "news.risky.biz-8a82d4e1.png"
 from = "https://storage.ghost.io/c/16/e9/16e9a748-ca66-4b3c-8590-85537131f696/content/images/size/w256h256/2024/01/rbicon.png"
 
+[hosts."news.virginmediao2.co.uk"]
+icon = "news.virginmediao2.co.uk-33a369e2.png"
+from = "https://news.virginmediao2.co.uk/apple-touch-icon.png"
+
 [hosts."news.web.nhk"]
 icon = "news.web.nhk-67057775.png"
 from = "https://news.web.nhk/apple-touch-icon.png"
@@ -786,6 +821,10 @@ from = "https://www.nhi.gov.tw/favicon.ico"
 
 [hosts."nist.gov"]
 none = "官方 favicon 是透明底的黑色字樣，深色模式下無法辨識"
+
+[hosts."npa.gov.tw"]
+icon = "npa.gov.tw-e27d4458.png"
+from = "https://www.npa.gov.tw/static/images/favicon.ico?v=20260723"
 
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
@@ -890,6 +929,10 @@ from = "https://reclaimthenet.org/apple-touch-icon.png"
 
 [hosts."release.tdnet.info"]
 none = "東京證券交易所的適時揭露系統"
+
+[hosts."releases.ict-online.ru"]
+icon = "releases.ict-online.ru-f72911b5.png"
+from = "https://releases.ict-online.ru/old/favicons/releases.ict-online.ru/apple-touch-icon.png?v=kP3Wrq4xww1"
 
 [hosts."rfc-editor.org"]
 icon = "rfc-editor.org-39c23b26.png"
@@ -1003,6 +1046,10 @@ from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
 [hosts."system76.com"]
 icon = "system76.com-3462b304.png"
 from = "https://cdn11.bigcommerce.com/s-pywjnxrcr2/product_images/system76_logo-fav-32x32.png?t=1711381758"
+
+[hosts."tech.gov.sg"]
+icon = "tech.gov.sg-c90cc384.png"
+from = "https://isomer-user-content.by.gov.sg/85/a5ba3d15-6f87-41cf-9954-f07a2e7405fe/GovTech-Favicon-33x32.png"
 
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
