@@ -88,6 +88,10 @@ from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4
 icon = "beelinenow.ru-299b3ad9.png"
 from = "https://moskva.beeline.ru/favicon.ico"
 
+[hosts."bentopdf.com"]
+icon = "bentopdf.com-ac64137c.png"
+from = "https://www.bentopdf.com/images/favicon-512x512.png"
+
 [hosts."blocktempo.com"]
 icon = "blocktempo.com-ccb2ccb4.png"
 from = "https://image.blocktempo.com/2019/04/cropped-%E9%BB%91%E5%AD%97%E7%99%BD%E6%A1%86%E5%8B%95%E5%8D%80Logo_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F-1-750x750-2-2-e1555450212503-1-32x32.png"
@@ -365,6 +369,10 @@ same_as = "quad9.net"
 icon = "documentation.ubuntu.com-23ab024d.png"
 from = "https://documentation.ubuntu.com/favicon.ico"
 
+[hosts."doit.gov.taipei"]
+icon = "doit.gov.taipei-0f5e20a8.png"
+from = "https://doit.gov.taipei/images/favicon.ico"
+
 [hosts."doj.gov.hk"]
 icon = "doj.gov.hk-54bc34f1.png"
 from = "https://www.doj.gov.hk/favicon.ico"
@@ -579,6 +587,10 @@ from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-ic
 icon = "ico.org.uk-8989c7e1.png"
 from = "https://ico.org.uk/media2/lhphq55z/favicon.ico"
 
+[hosts."ilovepdf.com"]
+icon = "ilovepdf.com-20557442.png"
+from = "https://www.ilovepdf.com/img/app-icon.png"
+
 [hosts."imda.gov.sg"]
 icon = "imda.gov.sg-8b6918ac.png"
 from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
@@ -616,6 +628,10 @@ from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-
 
 [hosts."japantimes.co.jp"]
 none = "網站擋自動抓取"
+
+[hosts."jcgov.gov.cn"]
+icon = "jcgov.gov.cn-601cdb41.png"
+from = "https://jcgov.gov.cn/images/favicon.png"
 
 [hosts."jgc-digital.com"]
 icon = "jgc-digital.com-e48bf47a.png"
@@ -1040,6 +1056,10 @@ from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
 [hosts."simplelogin.io"]
 icon = "simplelogin.io-188729b5.png"
 from = "https://simplelogin.io/favicon.ico"
+
+[hosts."smallpdf.com"]
+icon = "smallpdf.com-b8979d33.png"
+from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
 
 [hosts."smh.com.au"]
 icon = "smh.com.au-a36eafab.png"
