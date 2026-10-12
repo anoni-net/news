@@ -71,7 +71,6 @@ sources:
   - title: Country availability for Google Play apps & digital content
     url: https://support.google.com/googleplay/answer/2843119?hl=en
     publisher: Google
-pin: 2026-10-28
 authors:
   - anoni-net
 ---

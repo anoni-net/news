@@ -74,7 +74,6 @@ sources:
   - title: Google Play 中应用和数字内容的推出国家/地区
     url: https://support.google.com/googleplay/answer/2843119?hl=zh-Hans
     publisher: Google
-pin: 2026-10-28
 authors:
   - anoni-net
 ---
