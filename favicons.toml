@@ -145,6 +145,10 @@ same_as = "blog.mozilla.org"
 icon = "bworldonline.com-d9edf818.png"
 from = "https://bworldonline.com/wp-content/uploads/2024/09/cropped-bworld_icon-1-192x192.png"
 
+[hosts."cabforum.org"]
+icon = "cabforum.org-288bc7fe.png"
+from = "手動提供的檔案 cabforum.png"
+
 [hosts."cac.gov.cn"]
 icon = "cac.gov.cn-ce2d7d32.png"
 from = "https://www.cac.gov.cn/favicon.ico"
@@ -617,6 +621,10 @@ from = "https://jgc-digital.com/apple-touch-icon.png"
 icon = "jpcert.or.jp-a2f016e7.png"
 from = "https://www.jpcert.or.jp/favicon.ico"
 
+[hosts."jprs.jp"]
+icon = "jprs.jp-a1af08a6.png"
+from = "https://jprs.jp/resources/ja/icon/favicon_jp.ico"
+
 [hosts."justice.gov"]
 icon = "justice.gov-5506ec60.png"
 from = "https://www.justice.gov/themes/custom/usdoj_uswds/images/touch-icons/apple-touch-icon-precomposed-114x114.png"
@@ -635,6 +643,10 @@ from = "https://keepandroidopen.org/favicon.ico"
 [hosts."kevinboone.me"]
 icon = "kevinboone.me-9b4c77b8.png"
 from = "https://kevinboone.me/img/favicon.ico"
+
+[hosts."kicassl.com"]
+icon = "kicassl.com-c7df4f0c.png"
+from = "https://www.kicassl.com/favicon.ico"
 
 [hosts."korea.kr"]
 icon = "korea.kr-a57e1712.png"
@@ -1136,6 +1148,10 @@ from = "https://www.torproject.org/static/images/favicon/favicon.ico"
 [hosts."tribuneindia.com"]
 icon = "tribuneindia.com-833ff492.png"
 from = "https://www.tribuneindia.com/sortd-service/assets/v22-12/dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9kZXNpZ246YXBwaWNvbjc3ZWNhMzgwLTNlMzItMTFmMS1iY2RlLTFiNjYwODRiY2YzMQ=="
+
+[hosts."twca.com.tw"]
+icon = "twca.com.tw-37c5fffa.png"
+from = "https://www.twca.com.tw/images/icon/twca_favicon.png"
 
 [hosts."twcert.org.tw"]
 icon = "twcert.org.tw-29afd0d6.png"
