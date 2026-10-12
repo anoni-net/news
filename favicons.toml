@@ -114,6 +114,10 @@ from = "https://blog.mozilla.org/wp-content/themes/foxtail/assets/images/favicon
 icon = "blog.talosintelligence.com-74ce512f.png"
 from = "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/size/w256h256/2022/07/talos_o_square.png"
 
+[hosts."blog.torproject.org"]
+icon = "blog.torproject.org-e64b086c.png"
+from = "https://blog.torproject.org/static/images/favicon/favicon.ico"
+
 [hosts."brave.app"]
 icon = "brave.app-793e8faa.png"
 from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
@@ -421,9 +425,17 @@ from = "https://www.firefox.com/media/img/favicons/firefox/browser/favicon-196x1
 icon = "fj.gov.cn-749843a4.png"
 from = "https://fj.gov.cn/favicon.ico"
 
+[hosts."flamman.se"]
+icon = "flamman.se-e8398eda.png"
+from = "手動提供的檔案 flamman.png"
+
 [hosts."flocksafety.com"]
 icon = "flocksafety.com-b8c9ee48.png"
 from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
+
+[hosts."forum.torproject.org"]
+icon = "forum.torproject.org-b958972b.png"
+from = "https://forum.torproject.org/uploads/default/optimized/2X/d/d3424bed34f4ec18b2e99178c2801ba6dfb655d6_2_180x180.png"
 
 [hosts."foxnews.com"]
 icon = "foxnews.com-69c2c6ef.png"
@@ -823,6 +835,10 @@ from = "https://news.virginmediao2.co.uk/apple-touch-icon.png"
 icon = "news.web.nhk-67057775.png"
 from = "https://news.web.nhk/apple-touch-icon.png"
 
+[hosts."news.ycombinator.com"]
+icon = "news.ycombinator.com-c204850a.png"
+from = "https://news.ycombinator.com/apple-touch-icon.png"
+
 [hosts."nhi.gov.tw"]
 icon = "nhi.gov.tw-f4da548a.png"
 from = "https://www.nhi.gov.tw/favicon.ico"
@@ -1112,6 +1128,10 @@ from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/app
 [hosts."theregister.com"]
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
+
+[hosts."torproject.org"]
+icon = "torproject.org-e64b086c.png"
+from = "https://www.torproject.org/static/images/favicon/favicon.ico"
 
 [hosts."tribuneindia.com"]
 icon = "tribuneindia.com-833ff492.png"
