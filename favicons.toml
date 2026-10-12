@@ -114,6 +114,14 @@ from = "https://blog.mozilla.org/wp-content/themes/foxtail/assets/images/favicon
 icon = "blog.talosintelligence.com-74ce512f.png"
 from = "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/size/w256h256/2022/07/talos_o_square.png"
 
+[hosts."brave.app"]
+icon = "brave.app-793e8faa.png"
+from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
+
+[hosts."brave.com"]
+icon = "brave.com-793e8faa.png"
+from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
+
 [hosts."brdr.hkma.gov.hk"]
 icon = "brdr.hkma.gov.hk-e2b6d0cb.png"
 from = "https://www.hkma.gov.hk/favicon.jpg"
@@ -833,6 +841,10 @@ same_as = "gov.cn"
 icon = "nrk.no-a87b9a82.png"
 from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
 
+[hosts."ofca.gov.hk"]
+icon = "ofca.gov.hk-b810d10c.png"
+from = "https://www.ofca.gov.hk/favicon.ico"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -927,6 +939,9 @@ from = "手動提供的檔案 radicle.png"
 icon = "reclaimthenet.org-ebe7368e.png"
 from = "https://reclaimthenet.org/apple-touch-icon.png"
 
+[hosts."relay.firefox.com"]
+same_as = "firefox.com"
+
 [hosts."release.tdnet.info"]
 none = "東京證券交易所的適時揭露系統"
 
@@ -990,6 +1005,10 @@ from = "https://www.sheriffs.org/wp-content/uploads/2024/01/nsa-logo.png"
 icon = "signal.org-c81c8229.png"
 from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
 
+[hosts."simplelogin.io"]
+icon = "simplelogin.io-188729b5.png"
+from = "https://simplelogin.io/favicon.ico"
+
 [hosts."smh.com.au"]
 icon = "smh.com.au-a36eafab.png"
 from = "https://www.smh.com.au/apple-touch-icons/smh.png"
@@ -1019,6 +1038,9 @@ same_as = "courtlistener.com"
 [hosts."support.apple.com"]
 icon = "support.apple.com-573bbc30.png"
 from = "https://support.apple.com/apple-touch-icon.png"
+
+[hosts."support.brave.app"]
+same_as = "brave.app"
 
 [hosts."support.google.com"]
 icon = "support.google.com-cb930f6f.png"
