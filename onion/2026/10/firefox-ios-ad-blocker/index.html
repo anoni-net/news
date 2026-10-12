@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firefox iOS 版的內建廣告封鎖與 Android 的系統層做法 | anoni.net 新聞導讀</title>
+<meta name="description" content="iPhone 與 iPad 上的 Firefox 內建廣告封鎖，9 月中的 156 版版本說明首次列出。功能預設關閉，要自己到設定開啟。Android 版 Firefox 本來就能裝擴充套件。一篇個人部落格整理的 Android 系統層做法多半要信任提供服務的業者或 App。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/firefox-ios-ad-blocker/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/firefox-ios-ad-blocker/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/">
+<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml">
+<meta property="og:site_name" content="anoni.net 新聞導讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Firefox iOS 版的內建廣告封鎖與 Android 的系統層做法">
+<meta property="og:description" content="iPhone 與 iPad 上的 Firefox 內建廣告封鎖，9 月中的 156 版版本說明首次列出。功能預設關閉，要自己到設定開啟。Android 版 Firefox 本來就能裝擴充套件。一篇個人部落格整理的 Android 系統層做法多半要信任提供服務的業者或 App。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og.png?v=970cfc6f1d">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net 新聞導讀">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net 新聞導讀">
+<meta property="article:published_time" content="2026-10-13T00:05:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Firefox iOS 版的內建廣告封鎖與 Android 的系統層做法",
+  "description": "iPhone 與 iPad 上的 Firefox 內建廣告封鎖，9 月中的 156 版版本說明首次列出。功能預設關閉，要自己到設定開啟。Android 版 Firefox 本來就能裝擴充套件。一篇個人部落格整理的 Android 系統層做法多半要信任提供服務的業者或 App。",
+  "datePublished": "2026-10-13T00:05:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og.png",
+  "inLanguage": "zh-Hant",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Introducing Ad Blocker for Firefox on iOS: More control, fewer distractions",
+      "url": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "156.0 Firefox for iOS Release",
+      "url": "https://www.firefox.com/en-US/firefox/ios/156.0/releasenotes/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "System-level ad-blocking in Android in 2026",
+      "url": "https://kevinboone.me/adblock.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "在 Android 手機上管理進階網路設定",
+      "url": "https://support.google.com/android/answer/9654714?hl=zh-Hant"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Mozilla adds ad blocking to Firefox for iOS",
+      "url": "https://www.theregister.com/software/2026/08/17/mozilla-adds-ad-blocking-to-firefox-for-ios/5288585"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Firefox 快速隱私瀏覽器",
+      "url": "https://apps.apple.com/tw/app/firefox-private-safe-browser/id989804926"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "App Review Guidelines",
+      "url": "https://developer.apple.com/app-store/review/guidelines/"
+    }
+  ],
+  "articleSection": "手機與 App"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新聞導讀",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "手機與 App",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/category/mobile/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Firefox iOS 版的內建廣告封鎖與 Android 的系統層做法"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新聞導讀</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新聞導讀：" data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--mobile" href="/category/mobile/">手機與 App</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-13T00:05:00+08:00">2026 年 10 月 13 日 星期二</time></p>
+    <h1 class="story__title">Firefox iOS 版的內建廣告封鎖與 Android 的系統層做法</h1>
+    <p class="story__dek">iPhone 與 iPad 上的 Firefox 內建廣告封鎖，9 月中的 156 版版本說明首次列出。功能預設關閉，要自己到設定開啟。Android 版 Firefox 本來就能裝擴充套件。一篇個人部落格整理的 Android 系統層做法多半要信任提供服務的業者或 App。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/blog.mozilla.org-f0f07a35.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/kevinboone.me-9b4c77b8.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 7 篇原文，來自 Mozilla、Kevin Boone、Google 等 6 個出處</span></a></span>
+      <span>導讀：anoni.net 社群</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/zh-cn/2026/10/firefox-ios-ad-blocker/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/en/2026/10/firefox-ios-ad-blocker/" hreflang="en" lang="en">English</a></nav>
+  </header>
+  <div class="story__body content">
+<p>Mozilla 9 月 1 日公告，iPhone 與 iPad 上的 Firefox 內建廣告封鎖，預設關閉。使用者要自己到設定的瀏覽（Browsing）區開啟，原始碼裡的正體中文介面字串寫作「廣告封鎖」。版本說明在 9 月 15 日發布的 156 版首次列出這項功能。依外電轉述的 Mozilla 說法，功能是逐步開放的，到 10 月 12 日 App Store 上的最新版是 158.0。</p>
+<p>公告寫明，廣告封鎖用 Apple 的 WebKit 內容封鎖技術與 EasyList 過濾清單，在許多第三方廣告與廣告相關的追蹤器載入之前擋掉。Mozilla 的說法是，iOS 上的擴充套件運作方式跟其他平台不同，所以直接把功能做進瀏覽器。公告也寫明廣告支撐許多網站，所以功能設計成可選用。網站自己直接放的廣告、搜尋結果裡的廣告與 Firefox 新分頁上的贊助捷徑，都不受這項功能影響。</p>
+<p>電腦版與 Android 版的 Firefox 本來就能安裝廣告封鎖的擴充套件，這次的變更只影響 iOS 版。想在 Android 整支手機擋廣告的人，有另一套做法。10 月 1 日一篇個人部落格的作者整理了 2026 年在 Android 系統層封鎖廣告的四種做法，分別是封鎖型的 DNS（把網域名稱轉成 IP 位址的服務）服務、附廣告封鎖的 VPN 服務、不需要 root 的本機 VPN App，以及需要 root（取得手機系統的最高權限）改寫系統 hosts 檔的做法。就作者所知，這幾種都是改寫 DNS 的行為，把已知廣告商的主機名稱對應到假的 IP 位址。</p>
+<h2 id="perspective">導讀觀點</h2>
+<p>兩邊都是在連線之前擋掉已知的廣告網址，差在作用的範圍。iOS 版的廣告封鎖只作用在 Firefox 開啟的網頁，用的是 WebKit 的內容封鎖技術，Apple 的審核指南也規定瀏覽網頁的 App 要使用 WebKit（歐盟與日本另有申請例外的辦法）。Android 的系統層做法作用在所有 App。依作者的說明，廣告內建在 App 裡、或 App 直接用 IP 位址連線（作者寫明目前還少見）時，改寫 DNS 就擋不住。</p>
+<p>依本文的推論，前三種做法要信任提供服務的那一方，因為所有 App 查詢的網域都會經過它。作者提醒，惡意的 DNS 或 VPN 業者甚至可能把網路銀行的連線導到自己的代理伺服器，在意隱私的人可以挑不留紀錄、支援加密 DNS 的服務。本機 VPN App 會讓所有流量經過同一個 App，作者建議只用開源的。需要 root 的做法不必信任外部業者，作者寫的取捨是要自行檢查寫進 hosts 檔的內容。</p>
+<p>用 iPhone 或 iPad 的讀者把 Firefox 更新到最新版，設定的瀏覽區應該就有廣告封鎖的開關，App Store 標示需要 iOS 15.0 以上。正體中文介面的說明寫明，使用後網站出現異常時，可以試著關閉。開啟之後，網站自己放的廣告、搜尋結果的廣告與新分頁的贊助內容仍會出現。</p>
+<p>主要在意網頁廣告的 Android 使用者，作者認為最簡單的做法可能是改用支援廣告封鎖的瀏覽器，不必動到系統設定。想連 App 裡的廣告一起擋，可以在設定的「網路與網際網路」裡找到「私人 DNS」（不同廠牌的選單位置可能不同），填入封鎖型 DNS 服務的主機名稱。作者寫明這類服務價格不一，多數有免費試用。填了之後，所有 App 的網域查詢都會交給那家業者處理，要先確認它的紀錄保存政策。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（7 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/"><img class="source-slip__icon" src="/assets/favicons/blog.mozilla.org-f0f07a35.png" width="16" height="16" alt="" loading="lazy" decoding="async">Introducing Ad Blocker for Firefox on iOS: More control, fewer distractions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Mozilla</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-01">2026 年 9 月 1 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.firefox.com/en-US/firefox/ios/156.0/releasenotes/"><img class="source-slip__icon" src="/assets/favicons/firefox.com-cf4f5299.png" width="16" height="16" alt="" loading="lazy" decoding="async">156.0 Firefox for iOS Release</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Mozilla</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-15">2026 年 9 月 15 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://kevinboone.me/adblock.html"><img class="source-slip__icon" src="/assets/favicons/kevinboone.me-9b4c77b8.png" width="16" height="16" alt="" loading="lazy" decoding="async">System-level ad-blocking in Android in 2026</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Kevin Boone</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-01">2026 年 10 月 1 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.google.com/android/answer/9654714?hl=zh-Hant"><img class="source-slip__icon" src="/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">在 Android 手機上管理進階網路設定</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.theregister.com/software/2026/08/17/mozilla-adds-ad-blocking-to-firefox-for-ios/5288585"><img class="source-slip__icon" src="/assets/favicons/theregister.com-315165b2.png" width="16" height="16" alt="" loading="lazy" decoding="async">Mozilla adds ad blocking to Firefox for iOS</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>The Register</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-08-17">2026 年 8 月 17 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://apps.apple.com/tw/app/firefox-private-safe-browser/id989804926"><img class="source-slip__icon" src="/assets/favicons/apps.apple.com-21ded518.png" width="16" height="16" alt="" loading="lazy" decoding="async">Firefox 快速隱私瀏覽器</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>App Store</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://developer.apple.com/app-store/review/guidelines/"><img class="source-slip__icon" src="/assets/favicons/developer.apple.com-30fa6887.png" width="16" height="16" alt="" loading="lazy" decoding="async">App Review Guidelines</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Apple</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-06-08">2026 年 6 月 8 日</time></dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--mobile" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分類的其他導讀</h2>
+  <p class="brief__category"><a class="cat cat--mobile" href="/category/mobile/">手機與 App</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-08T00:10:00+08:00">2026 年 10 月 8 日</time>
+      <a class="thread__title" href="/2026/10/iphone-inactivity-reboot-bypass/">iPhone 自動重新啟動與鑑識工具的繞過宣稱</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-03T00:05:00+08:00">2026 年 10 月 3 日</time>
+      <a class="thread__title" href="/2026/10/pipepipe-youtube-client/">開源 YouTube 用戶端 PipePipe 5.4.0</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-09-30T00:00:00+08:00">2026 年 9 月 30 日</time>
+      <a class="thread__title" href="/2026/09/mullvad-android-leak-and-dns-shutdown/">Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/category/mobile/">「手機與 App」的全部 5 篇導讀</a></p>
+</nav>
+<p class="subscribe">想收到新的導讀：<a href="/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>訂閱電子報</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 追蹤</span></a></p>
+<nav class="pager pager--story" aria-label="文章導覽">
+  <a class="pager__item pager__item--older" href="/2026/10/beeline-ai-scam-call-assistant/"><span class="pager__label">較舊的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Beeline 接聽詐騙電話的 AI 語音角色</span></a>
+  <a class="pager__all" href="/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="頁尾">
+      <a href="/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 訂閱電子報</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 追蹤</a>
+      <a href="/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 導讀歷史</a>
+      <a href="/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 關於新聞導讀</a>
+      <a href="/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 閱讀說明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 回報錯誤</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首頁</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/zh-cn/2026/10/firefox-ios-ad-blocker/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/en/2026/10/firefox-ios-ad-blocker/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+  </div>
+</footer>
+</body>
+</html>

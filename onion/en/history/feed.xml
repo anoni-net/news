@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Mon, 12 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 13 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Safari fraudulent website warning and Tencent Safe Browsing</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-13/2026</guid>
+<pubDate>Tue, 13 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your iPhone&#39;s Safari fraudulent website warning may use Tencent&#39;s Safe Browsing service when the region is set to mainland China or Hong Kong. On this day, a researcher wrote on a blog that Safari&#39;s feature appeared to pass part of users&#39; browsing information to Tencent.</description>
+<content:encoded>&lt;p&gt;On your iPhone, Safari&#39;s Fraudulent Website Warning may send information calculated from the website address to Google and Apple for comparison, and Apple&#39;s Safari &amp;amp; Privacy page reads that Tencent Safe Browsing may also be used when the region is set to mainland China or Hong Kong. A cryptography researcher wrote in a blog post on 13 October 2019 that Safari on iOS 13 appeared to share part of users&#39; browsing history with Tencent, and that the feature appeared to be on by default. According to Apple&#39;s statement as quoted by MacRumors and other outlets on 14 October 2019, only devices with the region set to mainland China obtain the list of malicious sites from Tencent, and the actual URLs are not shared with the provider. The Apple page quoted by Daring Fireball at the time reads that providers may log your IP address, and the page as checked on 10 October 2026 still reads that Google and Tencent may do so, with Hong Kong now listed alongside mainland China for Tencent. The page lists Tencent only for the mainland China and Hong Kong region settings, and readers with either setting can turn the warning off under Settings &amp;gt; Apps &amp;gt; Safari, at the cost of one less prompt when opening phishing sites.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>BBC Chinese access in mainland China</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-12/#y2026</link>

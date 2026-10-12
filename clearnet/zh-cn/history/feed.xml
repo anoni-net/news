@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 12 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 13 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Safari 欺骗性网站警告与腾讯安全浏览</title>
+<link>https://anoni.net/news/zh-cn/history/10-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-13/2026</guid>
+<pubDate>Tue, 13 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的 iPhone 地区设为中国大陆或香港时，Safari 的欺骗性网站警告可能用到腾讯的安全浏览服务。这一天，一位研究者在博客写到 Safari 的这项功能看来会把部分浏览信息交给腾讯。</description>
+<content:encoded>&lt;p&gt;你的 iPhone 上，Safari 的「欺骗性网站警告」可能把从网址算出的信息发送给 Google 与 Apple 比对，地区设为中国大陆或香港时还可能用到腾讯的安全浏览服务。一位密码学研究者在 2019 年 10 月 13 日的博客文章推测 iOS 13 的 Safari 会把部分浏览信息交给腾讯，这项功能也看来是默认开启。依 MacRumors 等媒体在 2019 年 10 月 14 日刊出的 Apple 声明，只有地区设为中国大陆的设备会从腾讯取得恶意网站清单，实际的网址不会交给服务提供商。Daring Fireball 当时引述的 Apple 说明页写到提供商可能记录 IP 地址，2026 年 10 月 10 日查证的说明页仍写到 Google 与腾讯可能记录 IP 地址，使用腾讯的地区也比 2019 年的声明多了香港。说明页只列出中国大陆与香港两个使用腾讯的地区，地区设为这两处的读者可以到「设置」&amp;gt; App &amp;gt;「Safari浏览器」关闭这项警告，代价是打开钓鱼网站时少了一道提醒。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>BBC 中文网在中国大陆的访问</title>
 <link>https://anoni.net/news/zh-cn/history/10-12/#y2026</link>

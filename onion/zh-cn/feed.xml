@@ -6,7 +6,102 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 13 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Firefox iOS 版的内置广告拦截与 Android 的系统层做法</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/firefox-ios-ad-blocker/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/firefox-ios-ad-blocker</guid>
+<pubDate>Tue, 13 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>iPhone 与 iPad 上的 Firefox 内置广告拦截，9 月中的 156 版版本说明首次列出。功能默认关闭，要自己到设置开启。一篇个人博客整理的 Android 系统层做法多半要信任提供服务的运营方或 App。</description>
+<content:encoded>&lt;p&gt;整理 11 篇原文，来自 Mozilla、Kevin Boone、Google 等 7 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Mozilla 9 月 1 日公告，iPhone 与 iPad 上的 Firefox 内置广告拦截，默认关闭。用户要自己到设置的浏览（Browsing）区开启，源代码里的简体中文界面字符串写作「广告拦截器」。版本说明在 9 月 15 日发布的 156 版首次列出这项功能。依外媒转述的 Mozilla 说法，功能是逐步开放的，到 10 月 12 日 App Store 上的最新版是 158.0。&lt;/p&gt;
+&lt;p&gt;公告写明，广告拦截用 Apple 的 WebKit 内容拦截技术与 EasyList 过滤列表，在许多第三方广告与广告相关的跟踪器加载之前拦下。Mozilla 的说法是，iOS 上的扩展运作方式跟其他平台不同，所以直接把功能做进浏览器。公告也写明广告支撑许多网站，所以功能设计成可选用。网站自己直接放的广告、搜索结果里的广告与 Firefox 新标签页上的赞助快捷方式，都不受这项功能影响。&lt;/p&gt;
+&lt;p&gt;电脑版与 Android 版的 Firefox 本来就能安装广告拦截的扩展，这次的变更只影响 iOS 版。想在 Android 整台手机拦广告的人，有另一套做法。10 月 1 日一篇个人博客的作者整理了 2026 年在 Android 系统层拦截广告的四种做法，分别是拦截型的 DNS（把域名转成 IP 地址的服务）服务、附广告拦截的 VPN 服务、不需要 root 的本地 VPN App，以及需要 root（取得手机系统的最高权限）改写系统 hosts 文件的做法。就作者所知，这几种都是改写 DNS 的行为，把已知广告商的主机名对应到假的 IP 地址。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;两边都是在连接之前拦下已知的广告网址，差在作用的范围。iOS 版的广告拦截只作用在 Firefox 打开的网页，用的是 WebKit 的内容拦截技术，Apple 的审核指南也规定浏览网页的 App 要使用 WebKit（欧盟与日本另有申请例外的办法）。Android 的系统层做法作用在所有 App。依作者的说明，广告内置在 App 里、或 App 直接用 IP 地址连接（作者写明目前还少见）时，改写 DNS 就拦不住。&lt;/p&gt;
+&lt;p&gt;依本文的推论，前三种做法要信任提供服务的那一方，因为所有 App 查询的域名都会经过它。作者提醒，恶意的 DNS 或 VPN 运营方甚至可能把网上银行的连接导到自己的代理服务器，在意隐私的人可以挑不留记录、支持加密 DNS 的服务。本地 VPN App 会让所有流量经过同一个 App，作者建议只用开源的。需要 root 的做法不必信任外部运营方，作者写的取舍是要自行检查写进 hosts 文件的内容。&lt;/p&gt;
+&lt;p&gt;Firefox 同样在 App Store 中国区上架，10 月 12 日的版本也是 158.0，商店页的宣传文字就是这项广告拦截。10 月 12 日查询第三方监测网站 GreatFire 时，AdGuard DNS 默认服务器的 HTTPS 网址近期只有 2 次有效测试且都无法打开，F-Droid 最近 5 次也都失败。GreatFire 量的是网址能否打开，不是 Android 设置里专用 DNS（用来指定 DNS 服务主机名的设置）的实际连接方式，测试次数也少。本文依此推断，在中国大陆用专用 DNS 填入境外的拦截型服务可能连不上，从 F-Droid 取得本地 VPN App 也有同样的问题。&lt;/p&gt;
+&lt;p&gt;用 iPhone 或 iPad 的读者把 Firefox 更新到最新版，设置的浏览区应该就有广告拦截的开关，App Store 标示需要 iOS 15.0 以上。简体中文界面的说明写明，网站功能异常时可以尝试关闭。开启之后，网站自己放的广告、搜索结果的广告与新标签页的赞助内容仍会出现。&lt;/p&gt;
+&lt;p&gt;主要在意网页广告的 Android 用户，作者认为最简单的做法可能是改用支持广告拦截的浏览器，不必动到系统设置。想连 App 里的广告一起拦，可以在设置的「网络和互联网」里找到专用 DNS（部分说明页称「私人 DNS」，不同品牌的菜单位置可能不同），填入拦截型 DNS 服务的主机名。作者写明这类服务价格不一，多数有免费试用。填了之后，所有 App 的域名查询都会交给那家运营方处理，要先确认它的日志保存政策。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/&#34;&gt;Introducing Ad Blocker for Firefox on iOS: More control, fewer distractions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-01&#34;&gt;2026 年 9 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.firefox.com/en-US/firefox/ios/156.0/releasenotes/&#34;&gt;156.0 Firefox for iOS Release&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://kevinboone.me/adblock.html&#34;&gt;System-level ad-blocking in Android in 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Kevin Boone&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/9654714?hl=zh-Hant&#34;&gt;在 Android 手機上管理進階網路設定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/9654714?hl=zh-Hans&#34;&gt;在 Android 手机上管理高级网络设置&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://apps.apple.com/cn/app/firefox-private-safe-browser/id989804926&#34;&gt;Firefox 快速隐私浏览器&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/software/2026/08/17/mozilla-adds-ad-blocking-to-firefox-for-ios/5288585&#34;&gt;Mozilla adds ad blocking to Firefox for iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;2026 年 8 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://apps.apple.com/tw/app/firefox-private-safe-browser/id989804926&#34;&gt;Firefox 快速隱私瀏覽器&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/&#34;&gt;App Review Guidelines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/dns.adguard-dns.com&#34;&gt;Is https://dns.adguard-dns.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/f-droid.org&#34;&gt;Is https://f-droid.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Beeline 接听诈骗电话的 AI 语音角色</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/beeline-ai-scam-call-assistant/</link>
@@ -2604,72 +2699,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/freedomofpress/dangerzone&#34;&gt;Dangerzone&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>战时人权记录与技术工具的取舍</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/huridocs-sudan-documentation-technology/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/huridocs-sudan-documentation-technology</guid>
-<pubDate>Sun, 04 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>HURIDOCS 整理苏丹战时人权记录的专家会议。在高风险环境做记录的团体，引进新工具前要评估成本是否值得，以及数据能否与合作伙伴互通。一般用户不需要调整设置。</description>
-<content:encoded>&lt;p&gt;整理 6 篇原文，来自 HURIDOCS、GitHub、Access Now 等 4 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;协助人权组织管理记录的 HURIDOCS 在 9 月 15 日发表文章，整理 9 月在内罗毕讨论苏丹战时人权记录的专家会议。在苏丹的记录者面对流离失所、安全威胁、时断时续的网络与设备不足。文中建议适用于在战争与高风险环境做人权记录的团体，一般用户不需要调整设置。&lt;/p&gt;
-&lt;p&gt;会议讨论信息如何从记录者传到研究者，之后可能交给检察官。记录可能用于刑事追诉时（例如国际刑事法院），作者认为最糟的结果是多年后才发现记录不能使用，因为当初没有完全符合可预见的证据标准或证据保管链（chain of custody，证据每次经手的记录）的要求。&lt;/p&gt;
-&lt;p&gt;作者列出技术能做的事，包括离线且安全地收集信息、保存出处记录（provenance），以及连接不同系统的数据。但新工具都要花时间学习，需要培训、设备、网络与维护，还可能造成对厂商或基础设施的依赖。在高风险环境也可能带来新的安全问题。作者的评估标准是成本是否值得技术带来的效益。&lt;/p&gt;
-&lt;p&gt;作者认为延续性是需要更多关注的挑战之一，比创新更值得留意。延续性是让三种知识能够衔接，包括人权运动的经验、记录者对自身处境的了解，以及日后可能使用数据的机构的需求。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;据数字权利组织 Access Now 的统计，2025 年苏丹在内战期间断网三次，其中一次在 7 月考试期间。全球最多的是缅甸 95 次（含跨境断网），其次是印度 65 次、巴基斯坦 20 次，中国也有 2 次。在这些地方，必须联网的工具断网时就无法使用。&lt;/p&gt;
-&lt;p&gt;断网之外，证据还需要出处记录与保管链，记下每份文件的来源、取得时间与经手人。取得时计算哈希值（依内容产生的指纹），日后重算比对就知道是否被改过。&lt;/p&gt;
-&lt;p&gt;作者把互通性（interoperability）视为人权工作基础设施的一部分，不求所有人共用一个系统。各系统能导出、导入共同格式，数据才能在机构间流动。&lt;/p&gt;
-&lt;p&gt;HURIDOCS 维护的 Uwazi 是浏览器操作的人权记录数据库，代码以 MIT 许可证（允许自由使用与修改）在 GitHub 开源，9 月 28 日仍有新版本。操作日志（activity log）记下每次变更，数据可以导出成 CSV。&lt;/p&gt;
-&lt;p&gt;Uwazi 可以免费自行部署，需要 Elasticsearch（全文搜索引擎）等组件与至少 4 GB 内存，也可以用 HURIDOCS 托管。据检测中国网络审查的 GreatFire，到 9 月 27 日为止，从中国大陆连接 github.com 近七成受到干扰。境内部署时，下载代码可能受阻。&lt;/p&gt;
-&lt;p&gt;评估工具时可逐项检查学习与维护要多少人力、能否与伙伴交换数据、能否保存出处记录，以及断网时能否继续记录。想试 Uwazi 可以用官方 demo 页的公开账号登录。界面内置 11 种语言，包括阿拉伯文但没有中文，中文界面要自行翻译。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huridocs.org/2026/09/what-wartime-documentation-demands-of-technology-lessons-from-sudan/&#34;&gt;What wartime documentation demands of technology: Lessons from Sudan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HURIDOCS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huridocs.org/technology/uwazi/&#34;&gt;Uwazi&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HURIDOCS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/huridocs/uwazi&#34;&gt;huridocs/uwazi&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-28&#34;&gt;2026 年 9 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/wp-content/uploads/2026/03/KeepItOn-Internet-Shutdowns-2025-Annual-Report.pdf&#34;&gt;Rising repression meets global resistance: Internet shutdowns in 2025&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-31&#34;&gt;2026 年 3 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://demo.uwazi.io/&#34;&gt;Welcome to the Uwazi demo!&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HURIDOCS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/github.com&#34;&gt;Is https://github.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-27&#34;&gt;2026 年 9 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

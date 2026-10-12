@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 12 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 13 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Safari 詐騙網站警告與騰訊安全瀏覽</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-13/2026</guid>
+<pubDate>Tue, 13 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的 iPhone 地區設為中國大陸或香港時，Safari 的詐騙網站警告可能用到騰訊的安全瀏覽服務。這一天，一位研究者在部落格寫到 Safari 的這項功能看來會把部分瀏覽資訊交給騰訊。</description>
+<content:encoded>&lt;p&gt;你的 iPhone 上，Safari 的「詐騙網站警告」可能把從網址算出的資訊送給 Google 與 Apple 比對，地區設為中國大陸或香港時還可能用到騰訊的安全瀏覽服務。一位密碼學研究者在 2019 年 10 月 13 日的部落格文章推測 iOS 13 的 Safari 會把部分瀏覽資訊交給騰訊，這項功能也看來是預設開啟。依 MacRumors 等媒體在 2019 年 10 月 14 日刊出的 Apple 聲明，只有地區設為中國大陸的裝置會從騰訊取得惡意網站清單，實際的網址不會交給服務供應商。Daring Fireball 當時引述的 Apple 說明頁寫到供應商可能記錄 IP 位址，2026 年 10 月 10 日查證的說明頁仍寫到 Google 與騰訊可能記錄 IP 位址，使用騰訊的地區也比 2019 年的聲明多了香港。說明頁列出的地區不包括台灣，地區設為中國大陸或香港的讀者可以到「設定」&amp;gt; App &amp;gt; Safari 關閉這項警告，代價是開啟釣魚網站時少了一道提醒。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>BBC 中文網在中國大陸的連線</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-12/#y2026</link>
