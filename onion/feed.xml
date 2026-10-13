@@ -6,7 +6,104 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 14 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Brave 的電子郵件別名</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/brave-email-aliases/</link>
+<guid isPermaLink="false">anoni-news:2026/10/brave-email-aliases</guid>
+<pubDate>Wed, 14 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Brave 桌面版從 1.94 起提供電子郵件別名，註冊網站時用轉寄信箱取代真實信箱。每人免費 5 個，要先建立 Brave 帳號。到 10 月 12 日為止手機版還沒有，別名能否回信官方沒有寫。</description>
+<content:encoded>&lt;p&gt;整理 11 篇原文，來自 Brave、GitHub、Apple 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Brave 8 月 27 日推出電子郵件別名（Email Aliases），桌面版從 1.94 起可以在註冊網站時改用轉寄信箱，不交出真實信箱。每人免費 5 個，要先建立 Brave 帳號，這個帳號跟訂閱 Brave VPN 等服務的 Premium 帳號分開。到 10 月 12 日為止，Android 與 iOS 版的版本紀錄都還沒有這項功能，說明頁只有英文與日文。&lt;/p&gt;
+&lt;p&gt;在網站的信箱欄位會出現建立別名的提示，沒出現時可以在欄位上按右鍵選「New Email Alias」，寄到別名的信會轉寄到 Brave 帳號登記的信箱。Brave 的發布頁與隱私政策寫明，Brave 不讀信件內容，只做一般的垃圾信與病毒過濾。轉寄成功後信件數秒內從伺服器刪除，主信箱暫時收不到時最多重試 24 小時，轉寄服務用的是 Amazon Web Services。發布頁也提醒，初期部分轉寄信可能會被分到垃圾信匣。&lt;/p&gt;
+&lt;p&gt;同一天推出的 Brave 帳號用 OPAQUE 協定登入，這種協定讓伺服器不必持有密碼也能驗證使用者，2025 年 7 月發布為 RFC 9807。Brave 帳號的部落格文章寫明，密碼本身不會送到 Brave 的伺服器。同一篇文章也寫明，OPAQUE 本身擋不了釣魚網站，也不會讓弱密碼變強。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;Brave 的發布頁把信箱稱為長期且通用的識別碼，並以 Meta、Google、LinkedIn 的廣告功能為例，廣告主可以上傳客戶的信箱來比對使用者。這種比對在伺服器之間進行，瀏覽器擋追蹤器擋不到。每個網站用不同的別名，網站之間就無法用信箱比對出同一個人。&lt;/p&gt;
+&lt;p&gt;發布頁寫明 Brave 會加密保存帳號信箱與產生的每個別名，別名與真實信箱的對應存在 Brave 的伺服器上。說明頁寫明為了除錯會記錄收信時間與部分信件標頭，但不記錄信件內容與寄件人資訊，隱私政策寫這些紀錄最長 14 天內刪除。隱私政策也寫明，除非有效的法律要求使 Brave 有義務揭露，否則不會揭露帳號關聯的信箱與別名。官方頁面沒有寫能不能從別名回信，也沒有寫別名用哪個網域。&lt;/p&gt;
+&lt;p&gt;一份網站用來擋拋棄式信箱的開源名單，9 月在回報議題裡把 &lt;code&gt;bravealias.com&lt;/code&gt; 當成 Brave 別名的網域，列入較嚴格的分級。維護者寫明這是轉寄服務、不是拋棄式信箱，跟 Firefox Relay、SimpleLogin 屬於同一類。所以只列入較嚴格的分級，採用這一級的網站才會擋。&lt;/p&gt;
+&lt;p&gt;Apple 的「隱藏電子郵件地址」包含在 iCloud+ 付費方案，可以直接回覆。Firefox Relay 免費提供 5 個，匿名回信列在付費方案，付費方案的供應地區名單沒有台灣與香港。SimpleLogin 是開源專案，免費方案有 10 個別名並可從別名回信。&lt;/p&gt;
+&lt;p&gt;用 Brave 桌面版的讀者更新到 1.94 以上，在網址列輸入 &lt;code&gt;brave://settings/email-aliases&lt;/code&gt; 建立帳號，就能產生別名。原始碼裡的正體中文介面字串寫作「電子郵件別名」。別名保護的只是信箱這個識別碼，用手機號碼、真實姓名或付款資料註冊時，網站仍然可以用這些資料比對出同一個人。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/privacy-updates/39-email-aliases/&#34;&gt;Brave launches Email Aliases to keep your personal email address private from websites&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;2026 年 8 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/brave-accounts/&#34;&gt;Brave Accounts: your password never leaves your device, ever.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;2026 年 8 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.brave.app/hc/en-us/articles/45530506862349-What-is-a-Brave-Email-Alias&#34;&gt;What is a Brave Email Alias?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/privacy/browser/&#34;&gt;Brave Browser Privacy Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/50818&#34;&gt;[Email Aliases] Bubble UI for mobiles&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-13&#34;&gt;2025 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/latest/&#34;&gt;Brave Release Notes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb&#34;&gt;brave_components_resources_zh-TW.xtb&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/disposable/disposable/issues/288&#34;&gt;Block bravealias.com disposable email domain&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-29&#34;&gt;2026 年 8 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102548&#34;&gt;如何在 iPhone 或 iPad 上使用 iCloud+ 的「隱藏電子郵件地址」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-30&#34;&gt;2025 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://relay.firefox.com/&#34;&gt;Firefox Relay&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://simplelogin.io/pricing/&#34;&gt;SimpleLogin Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SimpleLogin&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tor Project 與 Mullvad 合作關係的決定與爭議</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/tor-mullvad-relationship/</link>
@@ -2240,85 +2337,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hans/&#34;&gt;Chinese (Simplified Han script)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>加拿大 C-22 合法存取法案與加密</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/canada-c22-lawful-access/</link>
-<guid isPermaLink="false">anoni-news:2026/10/canada-c22-lawful-access</guid>
-<pubDate>Mon, 05 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>加拿大的 C-22 法案已在眾議院三讀通過，政府能要求通訊與網路服務業者建立協助執法的技術能力、保存詮釋資料，部分加拿大以外的業者也在範圍內。加拿大以外的讀者現在不需要調整設定。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Parliament of Canada、Access Now、Citizen Lab 等 6 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;加拿大的《合法存取法》（Bill C-22）6 月 18 日在眾議院三讀通過，到 9 月 29 日為止，參議院的二讀還沒有完成。法案讓政府能要求通訊與網路服務業者建立協助執法的技術能力，部分加拿大以外的業者也在適用範圍內。數位權利組織 Access Now 與多個歐洲公民團體 9 月致信歐盟要求介入，新聞稿寫到法案最快可能在 10 月成為法律。加拿大以外的讀者現在不需要調整設定。&lt;/p&gt;
-&lt;p&gt;技術能力的要求分成兩層，第一層適用於「核心業者」（core providers），這些業者要依法規具備指定的能力。第二層是公共安全部長的命令，可以要求任何業者建立特定能力。命令只需要獨立的情報專員（Intelligence Commissioner）核准，不必經過法院。收到命令的業者不得透露命令的存在與內容。&lt;/p&gt;
-&lt;p&gt;法案也允許以法規要求業者保存詮釋資料（metadata，通訊內容以外的紀錄）。最長保存期限在初版是一年，眾議院通過的版本改成六個月。依多倫多大學研究單位 Citizen Lab 6 月初的分析，詮釋資料很可能包括每個人跟誰聯絡、行動軌跡，以及用過哪些 App。&lt;/p&gt;
-&lt;p&gt;條文寫明，業者不必遵守會「引入系統性漏洞」的要求。使用者自行加密、業者手上沒有金鑰的資料，業者也不必解密。&lt;/p&gt;
-&lt;p&gt;Signal 6 月出席眾議院委員會作證，立場是被迫在背叛使用者與離開市場之間選擇時，會離開加拿大。DuckDuckGo 也向加拿大媒體 Global News 確認，法案若照 6 月初、眾議院修正前的版本通過，會在加拿大下架 VPN 服務。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;端對端加密的金鑰只存在通訊雙方的裝置上，營運 Signal 這類服務的業者沒有金鑰，照條文的文字應該落在解密例外之內。爭議集中在部長命令能要求的範圍，依 Citizen Lab 的分析，可能包括改變服務的運作方式與在服務裡嵌入監控工具。&lt;/p&gt;
-&lt;p&gt;英國政府 2025 年 1 月依《調查權力法》，對 Apple 發出了同類的技術能力通知（EFF 2025 年 10 月的文章）。Apple 選擇在英國撤下 iCloud 進階資料保護，沒有建立後門，Apple 的說明頁也寫明英國的新使用者不能開啟。&lt;/p&gt;
-&lt;p&gt;到 9 月 29 日為止，法案還需要參議院二讀、三讀與御准（Royal Assent，成為法律前的最後程序）。實際影響要看部長對哪些業者下命令。業者握有金鑰的資料不在解密例外之內，例如沒有端對端加密的雲端備份。&lt;/p&gt;
-&lt;p&gt;想讓雲端備份也改用端對端加密的 iPhone 使用者，可以開啟 iCloud 的進階資料保護，iCloud 備份與照片等大部分資料都會納入。條件是帳號已開啟雙重認證、登入同一帳號的所有裝置都更新到 iOS 16.2、macOS 13.1 等對應版本以上，管理式帳號與兒童帳號不能使用。開啟前要設定復原聯絡人或 28 個字元的復原密鑰，因為 Apple 無法協助找回端對端加密的資料。在「設定」點你的姓名，再依序點「iCloud」與「進階資料保護」即可開啟（Apple 的說明頁有正體中文版）。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) Lawful Access Act, 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/documentviewer/en/45-1/bill/C-22/third-reading&#34;&gt;Bill C-22, Third Reading&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/press-release/the-eu-must-act-now-canadas-overreaching-bill-c-22/&#34;&gt;The EU must act now to protect privacy and encryption from Canada’s overreaching Bill C-22&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/&#34;&gt;Analysis of Proposed Surveillance Law Expansion under Bill C-22&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-02&#34;&gt;2026 年 6 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://globalnews.ca/news/11886905/lawful-access-bill-c-22-companies-services-canada/&#34;&gt;Signal, DuckDuckGo among firms weighing Canada exit over lawful access bill&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Global News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;2026 年 6 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users&#34;&gt;The UK Is Still Trying to Backdoor Encryption for Apple Users&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-01&#34;&gt;2025 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;2025 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟「iCloud 進階資料保護」&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;2026 年 4 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

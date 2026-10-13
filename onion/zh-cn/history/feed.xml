@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 13 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 14 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Zoom 会议的端到端加密</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-14/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-14/2026</guid>
+<pubDate>Wed, 14 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在 Zoom 开的会议默认不是端到端加密，主持人要自己开启。这一天，Zoom 宣布推出端到端加密的技术预览。</description>
+<content:encoded>&lt;p&gt;你在 Zoom 开的会议默认不是端到端加密，Zoom 的说明文档写明这类会议的加密密钥由 Zoom 的服务器生成与管理（2026 年 10 月 10 日查证）。2020 年 10 月 14 日，Zoom 宣布下周起推出端到端加密的技术预览，免费与付费账号都能使用。公告写明开启之后密钥改由与会者的设备生成，Zoom 的服务器只转发数据、不会取得解密会议内容所需的密钥。依 Zoom 现行的说明文档，开启端到端加密之后无法使用电话拨入、网页版、云录制、实时转录与 AI 功能，文档也建议只在需要额外保护的会议开启。主持人可以先在 Zoom 网页入口的设置开启 Allow use of end-to-end encryption 选项，排定会议时再选择端到端加密，免费账号的主持人要先用短信验证手机号码。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Safari 欺骗性网站警告与腾讯安全浏览</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-13/#y2026</link>

@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 13 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 14 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Zoom 會議的端對端加密</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-14/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-14/2026</guid>
+<pubDate>Wed, 14 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在 Zoom 開的會議預設不是端對端加密，主持人要自己開啟。這一天，Zoom 宣布推出端對端加密的技術預覽。</description>
+<content:encoded>&lt;p&gt;你在 Zoom 開的會議預設不是端對端加密，Zoom 的說明文件寫明這類會議的加密金鑰由 Zoom 的伺服器產生與管理（2026 年 10 月 10 日查證）。2020 年 10 月 14 日，Zoom 宣布下週起推出端對端加密的技術預覽，免費與付費帳號都能使用。公告寫明開啟之後金鑰改由與會者的裝置產生，Zoom 的伺服器只轉送資料、不會取得解密會議內容所需的金鑰。依 Zoom 現行的說明文件，開啟端對端加密之後無法使用電話撥入、網頁版、雲端錄影、即時轉錄與 AI 功能，文件也建議只在需要額外保護的會議開啟。主持人可以先在 Zoom 網頁入口的設定開啟 Allow use of end-to-end encryption 選項，排定會議時再選擇端對端加密，免費帳號的主持人要先用簡訊驗證手機號碼。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Safari 詐騙網站警告與騰訊安全瀏覽</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-13/#y2026</link>

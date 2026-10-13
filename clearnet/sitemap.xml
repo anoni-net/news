@@ -22,6 +22,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/10/brave-email-aliases/</loc>
+<lastmod>2026-10-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/brave-email-aliases/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/10/tor-mullvad-relationship/</loc>
 <lastmod>2026-10-14</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/tor-mullvad-relationship/"/>
@@ -549,6 +557,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-13/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/history/10-14/</loc>
+<lastmod>2026-10-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-14/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -568,6 +584,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/brave-email-aliases/</loc>
+<lastmod>2026-10-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/brave-email-aliases/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/10/tor-mullvad-relationship/</loc>
@@ -1097,6 +1121,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-13/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/history/10-14/</loc>
+<lastmod>2026-10-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-14/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -1116,6 +1148,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/brave-email-aliases/</loc>
+<lastmod>2026-10-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/brave-email-aliases/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/brave-email-aliases/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/10/tor-mullvad-relationship/</loc>
@@ -1643,6 +1683,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-13/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-13/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-13/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/history/10-14/</loc>
+<lastmod>2026-10-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-14/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-14/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/about/</loc>
