@@ -168,6 +168,7 @@ sources:
     date: 2026-07-08
 regions:
   - JP
+pin: 2026-10-28
 authors:
   - anoni-net
 ---

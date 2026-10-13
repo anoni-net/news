@@ -157,6 +157,7 @@ sources:
     date: 2025-09-15
 regions:
   - JP
+pin: 2026-10-28
 authors:
   - anoni-net
 ---
