@@ -6,7 +6,108 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 13 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Tor Project 與 Mullvad 合作關係的決定與爭議</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/tor-mullvad-relationship/</link>
+<guid isPermaLink="false">anoni-news:2026/10/tor-mullvad-relationship</guid>
+<pubDate>Wed, 14 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>VPN 服務商 Mullvad 一位共同創辦人的政治捐款引發爭議後，Tor Project 10 月 9 日說明不終止合作，但暫停共同品牌宣傳並修改 Mullvad Browser 的描述。兩款瀏覽器沒有停止維護的公告，聲明下的留言看法分歧。</description>
+<content:encoded>&lt;p&gt;整理 11 篇原文，來自 Tor Project、Tor Project Forum、Mullvad 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;VPN 服務商 Mullvad 一位共同創辦人的政治捐款引發爭議之後，Tor Project 10 月 9 日發布聲明，決定不終止跟 Mullvad 的關係。聲明寫明要設下清楚的界線，技術合作照雙方範圍很窄的協議繼續，主動的共同品牌宣傳暫停。Tor 自己的管道也修改了 Mullvad Browser 的描述。到 10 月 12 日為止，Tor Browser 與 Mullvad Browser 最近的穩定版都是 9 月底發布的 15.0.24，沒有停止維護的公告。&lt;/p&gt;
+&lt;p&gt;爭議源自瑞典媒體 Flamman 6 月 26 日的報導，一位共同創辦人 2025 年以個人名義捐出 500 萬瑞典克朗給瑞典的政黨 Örebropartiet，占該黨 2025 年收入的 72%。Flamman 稱該黨為民粹政黨，並形容它主張大規模遣返移民。Mullvad 7 月 20 日在部落格寫明這是個人捐款、公司沒有參與，對捐款「不認可也不譴責」，也寫這很可能是個壞主意。&lt;/p&gt;
+&lt;p&gt;Tor 的聲明寫明，這項合作改善了 Tor Browser 程式碼的結構、可維護性與可稽核性，也讓更多人多一個免費的開源隱私工具。依 Tor 公開的 2023 年 7 月到 2024 年 6 月美國國稅局（IRS）990 表，Mullvad 提供約 140 萬美元，是企業來源中最大的一筆。聲明本身沒有寫金額，到 10 月 12 日為止，Tor 財務報告頁最新只到 2024 年 6 月的會計年度。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;Mullvad Browser 是 2023 年 4 月推出的瀏覽器，由 Mullvad 發布，Tor 的說法是「不走 Tor 網路的 Tor Browser」。兩者的版本號與發布日期同步，Mullvad Browser 也由 Tor Browser 的開發者簽章，本文的推論是兩者大部分程式碼共用。差別在連線方式，Tor Browser 走 Tor 網路、可以連 onion 服務並內建規避審查的功能，Mullvad Browser 則搭配使用者自己信任的 VPN 或直接連線。&lt;/p&gt;
+&lt;p&gt;Tor 的聲明寫明，它捍衛言論自由，但強烈反對威脅其他人權與自由的言論。聲明也寫明，隱私工作的資源嚴重不足，有時需要做困難的妥協。Mullvad 的部落格則寫明公司主張言論自由、資訊自由與隱私權，並把創辦人個人的看法跟公司的使命分開。營運一座 Snowflake 橋接器（讓網路受封鎖的人連上 Tor 的入口之一）的志工小組（自稱不屬於 Tor Project）8 月 5 日宣布拒收 Mullvad 的捐款，理由是捐款對象是他們所稱「危險的民粹政黨」，即使所需年度開銷因此只剩約四分之一有著落。&lt;/p&gt;
+&lt;p&gt;Tor 部落格這篇聲明底下的論壇留言，到 10 月 12 日共 8 則，支持維持合作與批評或譴責的各 3 則（留言是自願發言的少數，不代表社群整體）。支持的留言寫到 Mullvad 的使命跟 Tor 一致，失去 Mullvad Browser 會傷害使用者。&lt;/p&gt;
+&lt;p&gt;批評的一方有留言直接表示譴責。一則自稱前 Tor Browser 開發者的留言寫，Mullvad 沒有開發者參與、只提供資金，「技術合作」的說法有誤導之嫌。Tor 的支援頁寫這款瀏覽器由 Tor Project 與 Mullvad 合作開發，Mullvad 的公告寫由 Tor 的工程師開發，兩邊都沒有寫 Mullvad 是否派人參與。&lt;/p&gt;
+&lt;p&gt;Tor 的聲明寫明，決定之前做過社群、員工與董事會的討論、員工調查與財務分析，但沒有公開調查結果與財務數字。論壇有一則留言要求公開 Mullvad 占預算的比例，也問是否所有捐款都經過同樣的審查。到 10 月 12 日為止，Tor Project 人員沒有在留言中回應，Mullvad 的部落格也沒有針對這份聲明的新文章。&lt;/p&gt;
+&lt;p&gt;Hacker News 上同一篇聲明的討論串到 10 月 12 日有 353 則留言，看得到內容的頂層留言有 22 則（另有 11 則被標記而看不到內容），這些留言同樣不代表社群整體。表示理解或支持維持合作的頂層留言有 4 則，其中兩則的理由是這類工具的資金難得，斷絕關係不見得比較有利於使命。有 5 則反對聲明劃出的言論界線，例如主張言論自由本質上是絕對的，回覆裡的反駁則認為 Tor 只是不想跟這些言論連在一起。另有 3 則批評聲明沒有交代捐款與政黨的細節或語氣像公關稿，也有頂層留言擔心 Tor 依賴 Mullvad 的資金之後，獨立性會受影響。&lt;/p&gt;
+&lt;p&gt;用 Tor Browser 或 Mullvad Browser 的讀者，到 10 月 12 日為止不必做任何設定。這次的爭議在資金與組織的立場，兩款瀏覽器的隱私保護機制沒有因此改變，這是本文依聲明「技術合作照協議繼續」的推論。介意資金來源的讀者可以留意，兩款瀏覽器都由 Tor Project 的工程師維護，改用另一款不會改變 Tor 與 Mullvad 之間的資金關係。之後可以留意共同品牌宣傳的暫停是否有期限、Tor 是否公開 Mullvad 近年的資金比例，以及下一份財務報告。&lt;/p&gt;
+&lt;p&gt;比較這件事時可以問，隱私工具的開發組織接受企業資金時用什麼標準審查捐款者、標準是否一體適用，公司與創辦人個人的政治捐款又能否分開看待。暫停宣傳與修改描述，是否足以讓使用者分辨合作的範圍與組織的立場。斷絕合作之後，一款仍在維護的開源瀏覽器能否找到其他資金繼續發布。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/on-tor-relationship-with-mullvad/&#34;&gt;A statement on the Tor Project&amp;#39;s relationship with Mullvad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forum.torproject.org/t/a-statement-on-the-tor-projects-relationship-with-mullvad/22247&#34;&gt;A statement on the Tor Project&amp;#39;s relationship with Mullvad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mullvad.net/en/blog/donation-controversy&#34;&gt;Donation controversy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-20&#34;&gt;2026 年 7 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.flamman.se/techprofil-ger-miljoner-till-orebropartiet/&#34;&gt;Techprofil ger miljoner till Örebropartiet&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Flamman&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-26&#34;&gt;2026 年 6 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/releasing-mullvad-browser/&#34;&gt;We&amp;#39;ve Teamed Up With Mullvad VPN to Launch the Mullvad Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-04-03&#34;&gt;2023 年 4 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mullvad.net/en/blog/mullvad-vpn-and-the-tor-project-team-up-to-release-the-mullvad-browser&#34;&gt;MULLVAD VPN AND THE TOR PROJECT TEAM UP TO RELEASE THE MULLVAD BROWSER.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-04-03&#34;&gt;2023 年 4 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/mullvad-browser/faqs/what-is-mullvad-browser/&#34;&gt;What is Mullvad Browser?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mullvad/mullvad-browser/releases&#34;&gt;Releases · mullvad/mullvad-browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.torproject.org/static/findoc/2023-2024-TheTorProject-PublicDisclosureForm990.pdf&#34;&gt;2023-7-1 thru 2024-6-30 IRS Form 990&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forum.torproject.org/t/snowflake-daily-operations-2026-july-update-and-a-statement-about-mullvad-donations/21954&#34;&gt;Snowflake Daily Operations 2026 July update, and a statement about Mullvad donations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-05&#34;&gt;2026 年 8 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=50022266&#34;&gt;A statement on the Tor Project&amp;#39;s relationship with Mullvad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Hacker News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Firefox iOS 版的內建廣告封鎖與 Android 的系統層做法</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/firefox-ios-ad-blocker/</link>
@@ -2218,71 +2319,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;2026 年 4 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>AI 輔助的釣魚攻擊與防範方式</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/ai-phishing-defenses/</link>
-<guid isPermaLink="false">anoni-news:2026/10/ai-phishing-defenses</guid>
-<pubDate>Mon, 05 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Freedom of the Press Foundation 整理 AI 被用在釣魚攻擊的研究，信件寫得更通順、更個人化，但辨識的警訊與防禦方式沒有改變。建議適用於每個收 Email 與簡訊的人。</description>
-<content:encoded>&lt;p&gt;整理 6 篇原文，來自 Freedom of the Press Foundation、Verizon、Monetary Authority of Singapore 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國新聞自由組織 Freedom of the Press Foundation（FPF）的數位安全訓練團隊 2026 年 8 月 27 日在專欄整理 AI 被用在釣魚攻擊的研究。釣魚訊息除了 Email，也會透過簡訊、QR code、語音與視訊通話送達。FPF 的結論是 AI 讓釣魚訊息更有說服力，每個人該做的防禦卻沒有改變。&lt;/p&gt;
-&lt;p&gt;FPF 引用的報告裡，資安意識訓練公司 KnowBe4 估計 2025 年 10 月到 2026 年 3 月之間，用到 AI 的釣魚攻擊增加約 86%。Microsoft 2025 年的報告寫到，AI 自動化的釣魚信點擊率是 54%，一般的釣魚信是 12%。&lt;/p&gt;
-&lt;p&gt;電信公司 Verizon 在 2026 年的資料外洩調查報告分析一家 AI 公司平台上的濫用紀錄，在攻擊者借助 AI 的初始入侵手法裡，釣魚約占 44%（FPF 誤寫成事件比例）。同一份報告也寫到，Verizon 的事件資料裡以釣魚入侵的比例這幾年幾乎沒有變化。&lt;/p&gt;
-&lt;p&gt;FPF 引用的研究裡，自動化的手法包括蒐集目標資料、寫出更個人化的內容、在主旨做細微變化來躲過偵測，以及寫出多種語言的版本。信件因此像是專門寫給收件人，例如冒充同事。&lt;/p&gt;
-&lt;p&gt;FPF 列出四個警訊：寄件地址與冒充對象不符或只是相似、連結指向跟服務無關的網址、訊息製造急迫感，以及不請自來的附件。連結可以不點，自行輸入網址。可疑附件可以用 Google 雲端硬碟預覽，或用 Dangerzone 轉成安全的副本。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;大型語言模型擅長模仿語氣，中文釣魚信也可能寫得通順。靠錯字辨認詐騙信會越來越不可靠，FPF 的四個警訊則都跟文筆無關。&lt;/p&gt;
-&lt;p&gt;常開啟陌生附件的人可以用開源的 Dangerzone（AGPL-3.0 授權，2026 年 7 月發布 0.11.0）。它在斷網的沙箱裡把文件轉成像素，再到沙箱外重建成沒有文字層的 PDF，要開啟文字辨識（OCR）才能搜尋。支援 Windows、macOS 與 Linux，介面只有英文，Windows 版需要電腦支援並開啟硬體虛擬化。&lt;/p&gt;
-&lt;p&gt;FPF 建議開啟兩步驟驗證，舉的例子是寄到手機的一次性密碼（OTP）。新加坡金融管理局與當地銀行公會 2024 年 7 月宣布，主要零售銀行三個月內逐步停止讓已啟用數位令牌（digital token）的客戶用 OTP 登入，改由令牌驗證。公告的理由是 OTP 容易被騙走，例如透過仿冒的銀行網站。&lt;/p&gt;
-&lt;p&gt;密碼金鑰（passkey，以指紋、臉孔或螢幕鎖定取代密碼）同樣不必輸入可被騙走的代碼。Google 的安全性網誌寫到，裝置只把登入簽章交給 Google 的網站與 App，不會交給釣魚網站。代價是能解鎖裝置的人就能登入帳戶，說明頁因此寫明只在自己專用的裝置上建立。&lt;/p&gt;
-&lt;p&gt;現在能做的第一步，是替最常用的帳號建立密碼金鑰。以 Google 帳戶為例，電腦要 Windows 10、macOS Ventura 以上，手機要 Android 9、iOS 16 以上並開啟螢幕鎖定。瀏覽器要 Chrome 或 Edge 109、Safari 16、Firefox 122 以上，iPhone 與 Mac 要開啟 iCloud 鑰匙圈。密碼金鑰建立後可能要 7 天才能用來登入，說明頁有正體中文版。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/ask-a-security-trainer-does-ai-make-phishing-worse/&#34;&gt;Ask a security trainer: Does AI make phishing worse?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;2026 年 8 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.verizon.com/business/resources/T459/reports/2026-dbir-data-breach-investigations-report.pdf&#34;&gt;2026 Data Breach Investigations Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Verizon&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mas.gov.sg/news/media-releases/2024/banks-in-singapore-to-strengthen-resilience-against-phishing-scams&#34;&gt;Banks in Singapore to Strengthen Resilience Against Phishing Scams&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Monetary Authority of Singapore&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-07-09&#34;&gt;2024 年 7 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/13548313?hl=zh-Hant&#34;&gt;以密碼金鑰登入，不必再用密碼&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html&#34;&gt;So long passwords, thanks for all the phish&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-05-03&#34;&gt;2023 年 5 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/freedomofpress/dangerzone&#34;&gt;Dangerzone&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -6,7 +6,121 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 13 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>The Tor Project&#39;s decision on its relationship with Mullvad, and the debate around it</title>
+<link>https://anoni.net/news/en/2026/10/tor-mullvad-relationship/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/tor-mullvad-relationship</guid>
+<pubDate>Wed, 14 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>After a political donation by a co-founder of VPN provider Mullvad drew criticism, the Tor Project said on 9 October that it would keep working with Mullvad but pause co-branding and revise how it describes Mullvad Browser. Neither browser has announced a halt in maintenance, and comments on the statement are divided.</description>
+<content:encoded>&lt;p&gt;Based on 13 sources, including Tor Project, Tor Project Forum, Mullvad&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;After a political donation by a co-founder of VPN provider Mullvad drew criticism, the Tor Project published a statement on 9 October saying it would not end its relationship with Mullvad. The statement says it is setting clear boundaries: technical collaboration continues under the two parties&#39; narrowly scoped agreement, proactive co-branding is paused, and Tor has revised how its own channels describe Mullvad Browser. As of 12 October, the latest stable release of both Tor Browser and Mullvad Browser is 15.0.24 from late September, and neither has announced a halt in maintenance.&lt;/p&gt;
+&lt;p&gt;The controversy began with a 26 June report by Swedish outlet Flamman: in 2025 one co-founder personally gave 5 million Swedish kronor to the Swedish party Örebropartiet, 72% of the party&#39;s income that year. Flamman calls it a populist party that advocates large-scale remigration. In a 20 July blog post, Mullvad said it was a private donation the company was not involved in, that it &#34;does not condone it, nor condemn it&#34;, and that it &#34;most likely was a bad idea&#34;.&lt;/p&gt;
+&lt;p&gt;Tor&#39;s statement says the collaboration improved the structure, maintainability and auditability of Tor Browser&#39;s code and gave more people another free, open-source privacy tool. Tor&#39;s IRS Form 990 for July 2023 to June 2024 lists about US$1.4 million from Mullvad, the largest corporate source. The statement gives no figures, and as of 12 October Tor&#39;s financials page only goes up to the year ending June 2024.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Mullvad Browser launched in April 2023 and is distributed by Mullvad; Tor describes it as &#34;Tor Browser without the Tor Network&#34;. The two share version numbers and release dates, and Mullvad Browser is signed by the Tor Browser developers, so in our reading they share most of their code. The difference is the connection: Tor Browser uses the Tor network, reaches onion services and has built-in censorship circumvention, while Mullvad Browser is meant to be used with a VPN the user trusts, or without one.&lt;/p&gt;
+&lt;p&gt;Tor&#39;s statement says it defends free speech but strongly opposes rhetoric that threatens other human rights and freedoms, and that privacy work is severely under-resourced and sometimes requires difficult compromises. Mullvad&#39;s post says the company stands for freedom of speech, freedom of information and privacy, and keeps its mission separate from its founders&#39; personal views. A volunteer group that runs one Snowflake bridge (an entry point to Tor for people on censored networks), and says it is not part of the Tor Project, announced on 5 August that it would refuse Mullvad&#39;s donations because they went to what it called a &#34;dangerous populist political party&#34;, even though that leaves only about a quarter of what it needs to cover annual expenses.&lt;/p&gt;
+&lt;p&gt;The forum comments under Tor&#39;s blog post numbered eight as of 12 October, three supporting the continued relationship and three critical or condemning (comments are a small, self-selected group and do not represent the community as a whole). Supporters wrote that Mullvad&#39;s mission aligns with Tor&#39;s and that losing Mullvad Browser would harm users.&lt;/p&gt;
+&lt;p&gt;On the critical side, one comment condemned the decision outright. Another, from someone who says they are a former Tor Browser developer, wrote that Mullvad has no developers on the browser and only provides money, so calling it &#34;technical collaboration&#34; is misleading. Tor&#39;s support page says the browser is developed by the Tor Project in collaboration with Mullvad, and Mullvad&#39;s announcement says Tor&#39;s engineers develop it; neither says whether Mullvad staff take part.&lt;/p&gt;
+&lt;p&gt;Tor&#39;s statement says the decision followed discussions with the community, staff and board, a staff survey and financial analysis, but it has not published the survey results or the figures. One forum comment asked what share of the budget comes from Mullvad and whether all donations get the same scrutiny. As of 12 October, no Tor Project staff had replied in the thread, and Mullvad&#39;s blog had no new post about the statement.&lt;/p&gt;
+&lt;p&gt;On Hacker News, the thread about the statement had 353 comments by 12 October, with 22 visible top-level comments (another 11 were flagged and hidden), which are likewise not representative. Four top-level comments understood or supported the decision, two of them arguing that funding for such tools is scarce and cutting ties may not serve the mission better. Five disputed the line the statement draws on speech, for example arguing that free speech is absolute, while replies countered that Tor simply does not want to be associated with that speech. Three criticised the statement for leaving out the details of the donation and party or for sounding like corporate PR, and one worried that relying on Mullvad&#39;s money could affect Tor&#39;s independence.&lt;/p&gt;
+&lt;p&gt;As of 12 October, GreatFire&#39;s third-party monitoring showed mullvad.net failing its last 16 conclusive tests in mainland China, and www.torproject.org failing both of its only two conclusive tests, the latest about two months earlier. In our reading, getting either browser in mainland China means getting around the block first, and Tor&#39;s decision does not change that.&lt;/p&gt;
+&lt;p&gt;Readers using Tor Browser or Mullvad Browser do not need to change anything as of 12 October. The dispute is about funding and organisational positions, and in our reading, given that the technical collaboration continues under the agreement, the browsers&#39; privacy protections are unaffected. Readers who mind the funding should note that Tor Project engineers maintain both browsers, so switching from one to the other does not change the money flowing between Tor and Mullvad. Things to watch are whether the co-branding pause has an end date, whether Tor discloses Mullvad&#39;s recent share of its funding, and the next financial report.&lt;/p&gt;
+&lt;p&gt;Questions for comparison: what standard should a privacy-tool developer use to vet corporate funders, and is it applied consistently; can a company be judged separately from a founder&#39;s personal political donation; do pausing promotion and revising descriptions let users tell the scope of a collaboration from an organisation&#39;s position; and could an open-source browser still in maintenance find other funding if the collaboration ended?&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/on-tor-relationship-with-mullvad/&#34;&gt;A statement on the Tor Project&amp;#39;s relationship with Mullvad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;9 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forum.torproject.org/t/a-statement-on-the-tor-projects-relationship-with-mullvad/22247&#34;&gt;A statement on the Tor Project&amp;#39;s relationship with Mullvad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;9 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mullvad.net/en/blog/donation-controversy&#34;&gt;Donation controversy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-20&#34;&gt;20 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.flamman.se/techprofil-ger-miljoner-till-orebropartiet/&#34;&gt;Techprofil ger miljoner till Örebropartiet&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Flamman&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-26&#34;&gt;26 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/releasing-mullvad-browser/&#34;&gt;We&amp;#39;ve Teamed Up With Mullvad VPN to Launch the Mullvad Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-04-03&#34;&gt;3 April 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mullvad.net/en/blog/mullvad-vpn-and-the-tor-project-team-up-to-release-the-mullvad-browser&#34;&gt;MULLVAD VPN AND THE TOR PROJECT TEAM UP TO RELEASE THE MULLVAD BROWSER.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-04-03&#34;&gt;3 April 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/mullvad-browser/faqs/what-is-mullvad-browser/&#34;&gt;What is Mullvad Browser?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mullvad/mullvad-browser/releases&#34;&gt;Releases · mullvad/mullvad-browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.torproject.org/static/findoc/2023-2024-TheTorProject-PublicDisclosureForm990.pdf&#34;&gt;2023-7-1 thru 2024-6-30 IRS Form 990&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forum.torproject.org/t/snowflake-daily-operations-2026-july-update-and-a-statement-about-mullvad-donations/21954&#34;&gt;Snowflake Daily Operations 2026 July update, and a statement about Mullvad donations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-05&#34;&gt;5 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=50022266&#34;&gt;A statement on the Tor Project&amp;#39;s relationship with Mullvad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hacker News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;9 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/mullvad.net&#34;&gt;Is https://mullvad.net blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/www.torproject.org&#34;&gt;Is https://www.torproject.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Firefox for iOS&#39;s built-in ad blocker and system-level blocking on Android</title>
 <link>https://anoni.net/news/en/2026/10/firefox-ios-ad-blocker/</link>
@@ -2672,89 +2786,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-17&#34;&gt;17 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>AI-assisted phishing and the defences that still work</title>
-<link>https://anoni.net/news/en/2026/10/ai-phishing-defenses/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/ai-phishing-defenses</guid>
-<pubDate>Mon, 05 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Freedom of the Press Foundation rounds up research on attackers using AI to write more fluent, personalised phishing. The warning signs and defences have not changed, and they apply to anyone who receives email or text messages.</description>
-<content:encoded>&lt;p&gt;Based on 9 sources, including Freedom of the Press Foundation, Verizon, Monetary Authority of Singapore&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;In an advice column on 27 August 2026, the digital security training team at the Freedom of the Press Foundation (FPF), a US press freedom organisation, rounded up research on AI-assisted phishing. Lures arrive by email, text message, QR code, and voice and video calls. FPF&#39;s answer is that AI makes them more convincing while the defences everyone should use stay the same.&lt;/p&gt;
-&lt;p&gt;FPF cites KnowBe4, a security awareness training company, which estimates AI-assisted phishing rose roughly 86% between October 2025 and March 2026. A 2025 Microsoft report put the click-through rate of AI-automated phishing emails at 54%, against 12% for standard ones. In Verizon&#39;s 2026 Data Breach Investigations Report, which draws on misuse records from an AI company&#39;s platform, phishing made up about 44% of AI-assisted initial access techniques (FPF misreports this as a share of incidents). In Verizon&#39;s incident data, the share of breaches starting with phishing has barely moved in years.&lt;/p&gt;
-&lt;p&gt;The automated techniques in this research include reconnaissance on targets, more personalised lures, small variations such as in subject lines to avoid detection, and lures in several languages. The result reads as if written for the recipient, for example impersonating a colleague.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Large language models imitate a voice well, so spotting scams by bad grammar or clumsy translation is likely becoming unreliable, in Chinese as in English. FPF&#39;s four red flags do not depend on the writing: a sender address that does not match, or merely resembles, the claimed organisation; links unrelated to the service; pressure or urgency; and unsolicited attachments. FPF suggests typing addresses yourself and previewing dubious files in Google Drive or converting them with Dangerzone.&lt;/p&gt;
-&lt;p&gt;People who often open unsolicited documents can use Dangerzone, open-source software under AGPL-3.0; version 0.11.0 came out in July 2026. It renders a document to pixels in a sandbox with no network access and rebuilds a PDF outside it, with no text layer unless you turn on optical character recognition (OCR). It runs on Windows, macOS and Linux in English only; Windows PCs must support and enable hardware virtualisation.&lt;/p&gt;
-&lt;p&gt;FPF recommends two-factor authentication, such as a code sent to your phone. In July 2024 the Monetary Authority of Singapore and the Association of Banks in Singapore announced that major retail banks would, within three months, progressively phase out one-time passwords (OTPs) for logins by customers who use a digital token. The announcement says OTPs had become easier to phish, for example through fake bank websites.&lt;/p&gt;
-&lt;p&gt;In an April 2025 circular, the Hong Kong Monetary Authority (HKMA) asked banks to make in-app approval on a bound device, not SMS codes, the default for logins and high-risk transactions. The circular says there are early signs that some fraudsters may have tried to use AI and deepfakes, and that card issuers that implemented an earlier measure, a bound-device default for online card payments required since late 2024, saw fraud rates fall by nearly 80%.&lt;/p&gt;
-&lt;p&gt;A passkey (a sign-in that uses your fingerprint, face or screen lock instead of a password) likewise needs no code that can be stolen. According to Google&#39;s security blog, the device shares its sign-in signature only with Google&#39;s websites and apps, never with a phishing site in between. The trade-off is that anyone who can unlock the device can get into the account, so Google&#39;s help page says to create them only on devices you personally own and use.&lt;/p&gt;
-&lt;p&gt;A first step is to add a passkey to your most-used account. For a Google Account (GreatFire, a censorship monitor, listed &lt;code&gt;google.com&lt;/code&gt; as mostly blocked in mainland China as of 29 September 2026), that means Windows 10, macOS Ventura, Android 9 or iOS 16 or later, a phone screen lock, Chrome or Edge 109, Safari 16 or Firefox 122 or later, and iCloud Keychain on Apple devices. A new passkey may take 7 days to work for sign-in, and the help page is available in Chinese.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/ask-a-security-trainer-does-ai-make-phishing-worse/&#34;&gt;Ask a security trainer: Does AI make phishing worse?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;27 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.verizon.com/business/resources/T459/reports/2026-dbir-data-breach-investigations-report.pdf&#34;&gt;2026 Data Breach Investigations Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Verizon&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mas.gov.sg/news/media-releases/2024/banks-in-singapore-to-strengthen-resilience-against-phishing-scams&#34;&gt;Banks in Singapore to Strengthen Resilience Against Phishing Scams&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Monetary Authority of Singapore&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-07-09&#34;&gt;9 July 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brdr.hkma.gov.hk/eng/doc-ldg/docId/getPdf/20250411-1-EN/20250411-1-EN.pdf&#34;&gt;New Anti-Digital Fraud Measures: “E-Banking Security ABC”&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Monetary Authority&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-14&#34;&gt;14 April 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/13548313?hl=en&#34;&gt;Sign in with a passkey instead of a password&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/13548313?hl=zh-Hant&#34;&gt;以密碼金鑰登入，不必再用密碼&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html&#34;&gt;So long passwords, thanks for all the phish&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-05-03&#34;&gt;3 May 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/google.com&#34;&gt;Is http://google.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/freedomofpress/dangerzone&#34;&gt;Dangerzone&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
