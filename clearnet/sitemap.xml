@@ -22,6 +22,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/10/letsencrypt-64-day-certs/</loc>
+<lastmod>2026-10-15</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/letsencrypt-64-day-certs/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/10/apple-full-disk-access/</loc>
 <lastmod>2026-10-15</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/apple-full-disk-access/"/>
@@ -573,6 +581,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-14/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/history/10-15/</loc>
+<lastmod>2026-10-15</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-15/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -592,6 +608,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/letsencrypt-64-day-certs/</loc>
+<lastmod>2026-10-15</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/letsencrypt-64-day-certs/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/10/apple-full-disk-access/</loc>
@@ -1145,6 +1169,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-14/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/history/10-15/</loc>
+<lastmod>2026-10-15</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-15/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -1164,6 +1196,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/letsencrypt-64-day-certs/</loc>
+<lastmod>2026-10-15</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/letsencrypt-64-day-certs/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/letsencrypt-64-day-certs/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/10/apple-full-disk-access/</loc>
@@ -1715,6 +1755,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-14/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-14/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-14/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/history/10-15/</loc>
+<lastmod>2026-10-15</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-15/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-15/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/about/</loc>

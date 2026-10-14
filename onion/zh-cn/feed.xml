@@ -6,7 +6,116 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 15 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 15 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Let&#39;s Encrypt 默认证书的 64 天有效期</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/letsencrypt-64-day-certs/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/letsencrypt-64-day-certs</guid>
+<pubDate>Thu, 15 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Let&#39;s Encrypt 公告 2027 年 2 月 10 日起，默认签发的证书有效期从 90 天缩短为 64 天。用它搭建网站或自建服务的人，要确认自动续期不是写死在固定天数，公告没有针对一般访问者的说明。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Let&amp;#39;s Encrypt、CA/Browser Forum、Ars Technica 等 7 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Let&#39;s Encrypt 10 月 7 日公告，2027 年 2 月 10 日起签发与续期的证书，默认有效期从 90 天缩短为 64 天。最后一张 90 天证书预计 2027 年 5 月 11 日到期，现有的有效证书不会被吊销。公告只对搭建网站与自建服务的人提出要求，没有针对一般访问者的说明。&lt;/p&gt;
+&lt;p&gt;测试环境（staging）10 月 14 日先改发 64 天证书，Let&#39;s Encrypt 建议正式生效前先在这里测试。依 2025 年 12 月的公告，2028 年 2 月 16 日默认有效期会再缩短为 45 天。想提早改用的人，现在就可以选 45 天或 6 天的证书类型（profile，申请时指定的一组证书规格）。&lt;/p&gt;
+&lt;p&gt;Let&#39;s Encrypt 写明缩短有效期是为了降低密钥泄露与证书误签发的风险。CA/Browser Forum（证书机构与浏览器厂商共同制定证书规范的组织）2025 年 4 月通过的决议，把证书有效期上限从 398 天逐步缩短，2026 年 3 月 15 日起 200 天、2027 年 3 月 15 日起 100 天、2029 年 3 月 15 日起 47 天。64 天比 2027 年的上限更短，本文依两份公告的时间表推论，这是 Let&#39;s Encrypt 在 2029 年 47 天上限之前自定的中间阶段。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;证书用来证明「这个网站就是它声称的那一个」，密钥泄露或被误签发的证书，在到期之前都可能被拿来冒充网站。有效期越短，出事之后能被冒用的时间就越短（依 Let&#39;s Encrypt 2015 年的说明，这也是当初选择 90 天的理由之一）。代价是续期变得更频繁，Let&#39;s Encrypt 2 月的说明预期有效期缩到 45 天时每天的续期请求会翻倍。2025 年 12 月的公告写明不建议手动续期，10 月的公告也写明速率限制不受影响。&lt;/p&gt;
+&lt;p&gt;负责申请与续期证书的程序称为 ACME 客户端，例如 Certbot。已经自动续期、而且客户端支持 ARI（ACME Renewal Information，让证书机构告诉客户端何时该续期的机制，2025 年成为 RFC 9773）的人，依公告不必做任何改动，Certbot 从 2025 年 6 月的 4.1.0 版起默认会检查 ARI。把续期时间写死在固定天数的人，Let&#39;s Encrypt 建议改成在有效期约三分之二时续期。不确定有没有写死的，可以在定时任务、脚本与运维手册里找 83、80、60 这类数字。&lt;/p&gt;
+&lt;p&gt;第三方监测网站 GreatFire 的页面（10 月 12 日查阅，最近一次测试在 9 月中旬，9 月几次连接被拒绝已不再算作封锁的证据）显示，letsencrypt.org 与签发证书用的 ACME 接口在中国大陆都可以连接。2015 年修订的《电子认证服务管理办法》规范电子签名认证，条文没有写是否适用网站的 TLS 证书。截至 10 月 12 日，本文也没有找到针对境外机构签发 TLS 证书的明文规定。中国大陆的证书机构 iTrusChina、SHECA、TrustAsia 在 CA/Browser Forum 那次投票中都投了赞成票。&lt;/p&gt;
+&lt;p&gt;用 Let&#39;s Encrypt 搭建网站的读者现在可以先确认客户端是否支持 ARI，10 月 14 日之后用测试环境执行一次续期，并照公告的建议加上续期失败的通知。只能通过网页界面手动上传证书的设备，公告没有专门的说明。依本文推算，每张证书用满 64 天一年也要换 6 次，照公告建议在约三分之二时更换约要 9 次。Let&#39;s Encrypt 的客户端列表页说明不列浏览器内的 ACME 客户端，理由是它们鼓励手动续期，会增加漏掉续期的风险。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2026/10/07/64-day-certs.html&#34;&gt;64-Day Certificate Lifetimes Coming Feb 2027&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2025/12/02/from-90-to-45.html&#34;&gt;Decreasing Certificate Lifetimes to 45 Days&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-02&#34;&gt;2025 年 12 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2026/02/24/rate-limits-45-day-certs.html&#34;&gt;Shorter Certificate Lifetimes and Rate Limits&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-24&#34;&gt;2026 年 2 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2025/09/16/ari-rfc.html&#34;&gt;ACME Renewal Information (ARI) Published as RFC 9773&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-16&#34;&gt;2025 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/&#34;&gt;Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CA/Browser Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-11&#34;&gt;2025 年 4 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/gadgets/2026/10/lets-encrypt-cuts-certificate-lifetimes-to-64-days-starting-february-2027/&#34;&gt;Let&amp;#39;s Encrypt cuts certificate lifetimes to 64 days starting February 2027&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2015/11/09/why-90-days.html&#34;&gt;Why ninety-day lifetimes for certificates?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2015-11-09&#34;&gt;2015 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/docs/client-options/&#34;&gt;ACME Client Implementations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/docs/profiles/&#34;&gt;Profiles&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/certbot/certbot/blob/main/certbot/CHANGELOG.md&#34;&gt;certbot/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.twca.com.tw/news_detail/04f741de-2258-431d-be3a-992268cd5d72&#34;&gt;重要通知─配合國際規範 TWCA SSL / TLS 憑證調整重要通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TWCA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-02&#34;&gt;2025 年 12 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/acme-v02.api.letsencrypt.org&#34;&gt;Is https://acme-v02.api.letsencrypt.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/2022-08/23/content_5722726.htm&#34;&gt;电子认证服务管理办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国政府网&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Apple 对 Mac「完全磁盘访问权限」的授权预告</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/apple-full-disk-access/</link>
@@ -2647,101 +2756,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>英国最高法院的间谍软件国家豁免判决</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/uk-supreme-court-spyware-state-immunity/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/uk-supreme-court-spyware-state-immunity</guid>
-<pubDate>Tue, 06 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>巴林政府被控从国外用间谍软件入侵英国境内的电脑、造成原告精神伤害，英国最高法院判决它不能以外国政府不受别国法院审理为由挡下这场诉讼。判决只决定英国法院能否受理，入侵是否属实还没审。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，来自 UK Supreme Court、legislation.gov.uk、Citizen Lab 等 8 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;英国最高法院 7 月 27 日以三比二驳回巴林政府的上诉，两位住在英国的原告可以继续告巴林。一般情况下外国政府不能在别国法院被告，这叫国家豁免，巴林主张自己享有这项豁免。原告主张巴林用 FinSpy（间谍软件）入侵他们的电脑，巴林否认指控。判决只决定英国法院能不能受理，英国以外的法院按各自的法律判断。&lt;/p&gt;
-&lt;p&gt;《1978 年国家豁免法》第 5 条规定，外国政府在英国做的事造成死亡、人身伤害或有形财物损坏时，不能主张豁免。原告主张的是人身伤害，也就是得知遭入侵后出现精神伤害。只有数据泄露或经济损失、没有人身伤害或财物损坏的索赔，不在这个例外内。&lt;/p&gt;
-&lt;p&gt;案子的核心问题是黑客从国外远程操作、入侵在英国的电脑，算不算在英国做的事。按原告的主张，操作者可能人在国外，通过位于巴林的控制服务器下指令。&lt;/p&gt;
-&lt;p&gt;英国加入了《欧洲国家豁免公约》，公约有类似的例外，另外要求加害者当时人在法院所在的国家。双方都承认，按原告的主张，本案不符合公约的这项条件。但英国《国家豁免法》第 5 条的条文没有明写这个条件，所以争点变成第 5 条要不要按公约的条件来读。&lt;/p&gt;
-&lt;p&gt;五位大法官里，三位多数大法官认为，议会有意不把公约的这项要求写进第 5 条。他们还认为通过软件或设备远程操作的动作也算在英国做的事，所以从国外操控英国境内的电脑符合例外。另外两位持不同意见的少数大法官则认为，第 5 条应该按公约的条件来读，也就是要求加害者当时人在英国。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;巴林主张，造成伤害的是在国外输入的指令，电脑上发生的事只是后续结果。其中一位少数大法官以隔着界河开枪为例，认为下指令的动作跟开枪一样发生在巴林这一岸，摄像头在英国打开只是结果。原告列出十类发生在英国的动作，例如传送安装文件、打开麦克风和摄像头、记录键盘输入。多数大法官认为，这些动作合起来就是在英国进行的监控。&lt;/p&gt;
-&lt;p&gt;多数大法官举例，外国政府派人入境杀人时不能主张豁免，巴林也同意这一点。按巴林的解释，改用国外遥控的无人机杀人却可以主张豁免，多数大法官认为这种差别不合理。同一位少数大法官回应，1978 年立法时没人想得到无人机和网络入侵，法律要按立法当时的背景解读。他也认为，以加害者所在地为准比较明确，容易判断。&lt;/p&gt;
-&lt;p&gt;另一个争点是放宽例外会不会让英国违反国际法。国际法除了公约，还有各国长期一致遵行、当成义务的做法，称为习惯国际法。多数大法官认为公约允许各国放宽例外，英国把例外用在外国政府行使国家权力的行为上，也有习惯国际法上的合理依据。行使国家权力的行为指政府以国家身份做的事，相对于一般的商业往来，本案指控的入侵双方都同意属于前者。&lt;/p&gt;
-&lt;p&gt;巴林主张放宽例外会让英国违反公约和习惯国际法。同一位少数大法官也同意，因为公约允许的放宽不能超出习惯国际法。他指出，习惯国际法只容许加害者身在当地时的例外，也找不到任何一个国家在加害者不在当地时不给豁免。&lt;/p&gt;
-&lt;p&gt;中国 2024 年起施行的《外国国家豁免法》有类似的例外，条文同样没有写明加害者要不要人在中国。日本 2009 年制定的相关法律则明文要求加害者当时人在日本。条文没写明加害者要不要在场时，能不能读出这个条件，正是英国两派大法官分歧的地方。&lt;/p&gt;
-&lt;p&gt;案子回到一审的高等法院后才会审入侵是否属实，原告要证明入侵出自巴林，也要证明入侵造成了伤害。Citizen Lab 与 Access Now 的研究者在 Lawfare 的文章提到英国另一起案件，原告靠专家取证证明手机遭另一款间谍软件 Pegasus 入侵。被告国在法院认定不能主张豁免之后就不再参与诉讼，法院最后判原告胜诉。研究者也写到，外国政府实际出庭答辩时，这类诉讼的结果仍难预料。&lt;/p&gt;
-&lt;p&gt;原告就算胜诉，外国政府的财产原则上也不能扣押来执行判决。依《国家豁免法》，只有财产用于商业或该国书面同意时，原告才能扣押。&lt;/p&gt;
-&lt;p&gt;怀疑设备遭间谍软件入侵的人，可以写信给 Access Now 的免费数字安全热线，截至 9 月 29 日说明页写明两小时内回复。受理前会先确认是否在服务范围，热线支持的十种语言没有中文，可以用英文联系。OONI（网络干扰观测项目）9 月 1 日至 29 日在中国境内测量 Access Now 网站 76 次，73 次未见干扰迹象。比较各地的法律时，可以问远程入侵算不算当地发生的事、要证明到什么程度才算外国政府所为、放宽豁免的例外会不会违反国际法，以及判决能不能执行。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/cases/uksc-2024-0152&#34;&gt;[2026] UKSC 25, Case UKSC/2024/0152&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;2026 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/uploads/uksc_2024_0152_judgment_a1ae6cd3a5.pdf&#34;&gt;Judgment (PDF)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;2026 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://supremecourt.uk/uploads/uksc_2024_0152_press_summary_800976eda1.pdf&#34;&gt;Press summary (PDF)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;UK Supreme Court&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-27&#34;&gt;2026 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.uk/ukpga/1978/33&#34;&gt;State Immunity Act 1978&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;legislation.gov.uk&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/uk-supreme-court-opens-door-for-spyware-victims-to-sue-foreign-states/&#34;&gt;U.K. Supreme Court Opens Door for Spyware Victims to Sue Foreign States&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.lawfaremedia.org/article/u.k.-supreme-court-opens-door-for-spyware-victims-to-sue-foreign-states&#34;&gt;U.K. Supreme Court Opens Door for Spyware Victims to Sue Foreign States&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Lawfare&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/help/&#34;&gt;Digital Security Helpline&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202309/t20230901_431424.html&#34;&gt;中华人民共和国外国国家豁免法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-09-01&#34;&gt;2023 年 9 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/421AC0000000024&#34;&gt;外国等に対する我が国の民事裁判権に関する法律&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=CN&amp;amp;since=2026-09-01&amp;amp;until=2026-09-29&amp;amp;time_grain=day&amp;amp;axis_x=measurement_start_day&amp;amp;test_name=web_connectivity&amp;amp;domain=www.accessnow.org&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
