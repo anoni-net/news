@@ -6,7 +6,123 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 14 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 15 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Apple 對 Mac「完全取用磁碟」權限的授權預告</title>
+<link>https://anoni.net/news/2026/10/apple-full-disk-access/</link>
+<guid isPermaLink="false">anoni-news:2026/10/apple-full-disk-access</guid>
+<pubDate>Thu, 15 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Apple 10 月 2 日預告之後會讓 Mac 使用者只能透過非常明確的操作授予「完全取用磁碟」權限。理由包括部分開發者的用法可能讓使用者資料暴露，以及 AI 代理程式會讓風險增加。Apple 沒有寫版本與上線時間，到 10 月 12 日為止版本說明都沒有寫到這項控制。</description>
+<content:encoded>&lt;p&gt;整理 14 篇原文，來自 Apple、TechCrunch、Decrypt 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Apple 10 月 2 日在開發者新聞預告，之後會為 macOS 的「完全取用磁碟」加入額外的控制，讓真的想授予這項權限的使用者只能透過非常明確的操作完成。Apple 沒有寫是哪個版本、何時上線、介面長什麼樣子，也沒有寫已經授權的 App 要不要重新確認。到 10 月 12 日為止，macOS 27 與 27.2 第三個測試版的版本說明都沒有寫到這項新控制。&lt;/p&gt;
+&lt;p&gt;Apple 的預告寫明，為了讓備份 App 在 Mac 上正常運作，完全取用磁碟大致繞過了保護使用者資料的其他控制。Apple 也寫到，有些開發者使用這項權限的方式，可能讓使用者在不完全知情下暴露檔案、郵件、訊息甚至瀏覽紀錄。預告也寫明，AI 代理程式（能代替使用者操作電腦、讀取檔案與 App 的 AI 程式）越來越能自主行動，這類權限的風險會大幅增加。TechCrunch 的報導發出後補了更正，把原本寫的「限制權限」改成增加知情同意的步驟，並寫明這不是新的限制。&lt;/p&gt;
+&lt;p&gt;預告發出前幾天，依 TechCrunch 與 Decrypt 的轉述，一位專欄作者表示 Meta 的 AI 代理程式 Muse 的 Mac 版在完全取用磁碟關閉時讀到他的私人訊息（10 月 9 日的導讀寫過這件事）。依 Decrypt 的轉述，作者設定時拒絕給訊息權限，之後發現 Muse 已同步了 Mac 本機的訊息資料庫。Meta 傳播副總裁 9 月 30 日在 X 表示，要同時開啟完全取用磁碟與 Muse 內的訊息連接器，Muse 才能讀取訊息。Apple 的預告沒有點名任何 App 或開發者，把兩者寫成互相反駁的，是 Ars Technica 與 iThome 的解讀。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;完全取用磁碟是作業系統層級的權限，Apple 的說明頁寫明它讓 App 取用電腦上所有檔案，包括「郵件」、「訊息」等其他 App 的資料與「時光機」備份。Ars Technica 引述的一位 macOS 資安專家表示，取得這項權限的程式讀得到瀏覽紀錄、瀏覽器 cookie 與聊天內容等檔案。Meta 一位主管則表示，讀取訊息要經過 App 內的權限設定與 macOS 系統層級的保護，即使 App 有錯誤也無法繞過（TechCrunch 的轉述）。Apple 的說明頁與資安專家描述的是取得權限後 App 讀得到什麼，Meta 的說法描述的是 Muse 要經過哪些授權步驟。&lt;/p&gt;
+&lt;p&gt;Microsoft 10 月 7 日發布的 Microsoft Execution Containers（MXC）是另一種做法。依 Microsoft 的部落格，開發者或 IT 管理者用政策定義 AI 代理程式能讀寫哪些檔案、連到哪些網路，政策放在代理程式能控制的範圍之外。MXC 以 MIT 授權開源，在 macOS 上使用 Seatbelt 沙盒（限制程式能存取哪些資源的機制）。README 寫明它是嵌進 App 的套件，Microsoft 列出已支援的工具有 GitHub Copilot、OpenAI Codex 等（名單裡沒有 Muse 或 ChatGPT），本文推論一般使用者不會直接設定它。&lt;/p&gt;
+&lt;p&gt;Microsoft 與 Apple 的文件都沒有提到對方，本文把兩者並列，差別在由誰把關。Apple 預告的做法是在授權那一刻讓使用者更清楚自己給出了什麼，MXC 則是由開發者事先限定代理程式能碰的範圍。Apple 的預告沒有寫到新控制會不會改變完全取用磁碟能讀到的範圍。之後可以留意 macOS 的版本說明何時出現這項控制，以及已授權的 App 要不要重新確認。&lt;/p&gt;
+&lt;p&gt;用 Mac 的讀者現在就可以打開「系統設定」的「隱私權與安全性」，在「完全取用磁碟」查看哪些 App 取得了這項權限。看到不認得的 App，可以先查清楚它為什麼需要這項權限，備份類的 App 正是 Apple 預告寫明的用途。Apple 的說明頁只寫了加入 App 的步驟，Meta 則表示 Muse 的授權可以隨時撤銷。授權之前可以先想清楚，這項權限讓 App 讀得到別人傳給你的訊息與瀏覽紀錄，這部分的判斷 Apple 的新控制上線之後仍然要由使用者自己做。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/news/?id=p6zjojqw&#34;&gt;Updates to Full Disk Access in macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/mac-help/mchl211c911f/mac&#34;&gt;在 Mac 上更改「隱私權與安全性」設定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes&#34;&gt;macOS 27 Golden Gate Release Notes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/macos-release-notes/macos-27_2-release-notes&#34;&gt;macOS 27.2 Golden Gate Beta 3 Release Notes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/&#34;&gt;Meta disputes claim that Muse read a user&amp;#39;s private messages without permission&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://decrypt.co/379868/meta-muse-ai-agent-read-messages-without-permission&#34;&gt;Meta Pushes Back on Claim That Muse AI Read a User&amp;#39;s Messages Without Consent&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Decrypt&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/&#34;&gt;Apple says it&amp;#39;s tightening macOS &amp;#39;Full Disk Access&amp;#39; controls due to new risks from AI agents&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/&#34;&gt;Apple changes full-disk access permissions to curb abuse from AI agents&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179400&#34;&gt;蘋果將增加macOS完全磁碟存取的開關控制&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/06/apple-tightens-full-disk-access-permission-on-macos-in-light-of-ai-agent-security-concerns/&#34;&gt;Apple Tightens &amp;#34;Full Disk Access&amp;#34; Permission on macOS in Light of AI Agent Security Concerns&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/andymstone/status/2105107596734849423&#34;&gt;Meta VP of Communications on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/&#34;&gt;Microsoft Execution Containers: Policy-driven containment for AI agents&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/microsoft/mxc&#34;&gt;Microsoft eXecution Container (MXC)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/muse-from-meta/id6760173601&#34;&gt;Muse from Meta App - App Store&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Brave 的電子郵件別名</title>
 <link>https://anoni.net/news/2026/10/brave-email-aliases/</link>
@@ -2211,132 +2327,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.accessnow.org/help/&#34;&gt;Digital Security Helpline&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Access Now&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>CryptPad 2026 夏季進度與後量子加密的瓶頸</title>
-<link>https://anoni.net/news/2026/10/cryptpad-summer-2026-status/</link>
-<guid isPermaLink="false">anoni-news:2026/10/cryptpad-summer-2026-status</guid>
-<pubDate>Tue, 06 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>端對端加密協作套件 CryptPad 訂出新的資安政策，漏洞修正發布後至少 90 天才公開細節。後量子加密的實驗讓部分功能慢到難以使用，瀏覽器內建新的演算法之後可望改善。使用公開實例的人不必調整設定，自行架設的管理者要跟上新版。</description>
-<content:encoded>&lt;p&gt;整理 15 篇原文，來自 CryptPad、GitHub、WICG 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;CryptPad 在 9 月 15 日發布夏季進度報告，交代新的資安政策、後量子加密研究與 cryptpad.fr 的客服異動。CryptPad 是開源（AGPL-3.0）的端對端加密協作套件，可以在瀏覽器裡共同編輯文件與試算表。使用者可以用公開實例（開放大眾使用的伺服器），也可以自行架設。使用公開實例的人不必調整設定，自行架設的管理者要留意升級。&lt;/p&gt;
-&lt;p&gt;依 6 月公布的新資安政策，漏洞修正發布後至少保密 90 天，之後才以 CVE（通用的漏洞編號）公開細節。嚴重程度改用 CVSS 4.0（漏洞嚴重度評分）。版本說明不列出修正了哪些漏洞，只標出其中最高的 CVSS 分數與升級提醒。建議的版本一律是最新版，新版每季發布。&lt;/p&gt;
-&lt;p&gt;依 6 月的事後檢討，伺服器先前沒有限制 WebSocket 連線（瀏覽器與伺服器交換資料的通道）的傳送頻率，有人反覆送出大量訊息就能耗盡資源。官方實例 cryptpad.fr 在 1 月 28 日因此遭到分散式阻斷服務攻擊，不到 3 小時就恢復服務，修正收錄在 3 月 27 日發布的 2026.2.1。&lt;/p&gt;
-&lt;p&gt;團隊原本打算保密 90 天，但當時的政策沒有寫清楚保密期。回報漏洞的人因此提出異議，CVE 在 2026.2.1 發布後第 34 天就公開了。&lt;/p&gt;
-&lt;p&gt;後量子加密是能抵擋量子電腦攻擊的演算法。團隊選定美國標準機構 NIST 制定的 ML-KEM 與 ML-DSA，前者用來交換金鑰，後者用來做數位簽章。實驗中兩者與原本的公開金鑰加密混合使用，多數功能運作正常，部分功能卻慢到難以使用。&lt;/p&gt;
-&lt;p&gt;瀏覽器內建的加密介面 Web Cryptography API 有一份草案，要直接加入這兩種演算法。據進度報告估計，速度約是從外部載入函式庫的 100 倍。&lt;/p&gt;
-&lt;p&gt;進度報告寫明客服團隊已經沒有會說法文的成員，cryptpad.fr 將停止提供法文客服。秋季版會包含相當於兩個版本的改進，到 9 月 29 日還沒有公布發布日期。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;CryptPad 在瀏覽器裡加密文件，伺服器無法取得文件內容。使用說明列出的信任前提有幾項，包括實例執行與 GitHub 公開版本相同的程式碼，以及分享連結不會落入不該取得的人手中。這些前提都成立時，管理者無法讀取或修改文件。使用說明也寫明匿名性較弱，管理者可以看到使用者的 IP 位址與瀏覽器資訊，需要時可以透過 Tor 連線。&lt;/p&gt;
-&lt;p&gt;修正要等實例的管理者升級之後才會生效。依資安政策，90 天的保密期是留給管理者升級的時間。漏洞公開之後，攻擊者也可能開始利用。公開實例清單只收錄通過檢查、版本最新的實例，挑選實例時可以從清單開始。&lt;/p&gt;
-&lt;p&gt;Web Cryptography API 的草案由 WICG（W3C 討論新規格的社群小組）維護，到 9 月 29 日還沒進入 W3C 的正式標準流程。瀏覽器實作草案之後，後量子版的 CryptPad 可能比較可行。團隊已先把程式改成可抽換加密函式庫的架構（加密敏捷性，crypto-agility）。&lt;/p&gt;
-&lt;p&gt;依事後檢討，用 nginx 並以官方進階範例設定為基礎的管理者，要盡快依最新版的範例更新自己的設定。新版範例加上了連線頻率限制。依資安政策，每個版本的支援期是 90 天。到 9 月 29 日為止，最新版是 5 月 26 日的 2026.5.1。&lt;/p&gt;
-&lt;p&gt;開啟 cryptpad.fr 或清單上的其他實例就能試用，瀏覽器要啟用 JavaScript。到 9 月 29 日為止，清單上的 13 個實例都在歐洲與北美。不註冊也能共同編輯，但不能上傳圖片、影片與 PDF，文件連續 3 個月沒有使用也不再保留。&lt;/p&gt;
-&lt;p&gt;註冊只需要使用者名稱與密碼，不必填電子郵件。管理者無法查看、找回或重設密碼，使用說明寫明要把密碼另外記在安全的地方。介面有正體與簡體中文，使用說明沒有中文版。各實例的客服頁面會標出管理者使用的語言。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/09/15/status-2026-09/&#34;&gt;Summer 2026 status&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/06/24/2026.2-security-issues/&#34;&gt;2026.2 security fixes and our new security policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-24&#34;&gt;2026 年 6 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.org/security/&#34;&gt;CryptPad Security Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-23&#34;&gt;2026 年 6 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1&#34;&gt;Winter fix release (2026.2.1)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;2026 年 3 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.5.1&#34;&gt;Spring fix release (2026.5.1)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-26&#34;&gt;2026 年 5 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/milestone/20&#34;&gt;Autumn Release&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2025/09/05/status-2025-08/&#34;&gt;Summer 2025 status&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-05&#34;&gt;2025 年 9 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://wicg.github.io/webcrypto-modern-algos/&#34;&gt;Modern Algorithms in the Web Cryptography API&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;WICG&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.fr/&#34;&gt;CryptPad: Collaboration suite, encrypted and open-source&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/security.html&#34;&gt;Security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/user_account.html&#34;&gt;User Account&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.cryptpad.org/en/user_guide/support.html&#34;&gt;Support&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cryptpad.org/instances/&#34;&gt;Public instances&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hant/&#34;&gt;Chinese (Traditional Han script)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://weblate.cryptpad.org/projects/cryptpad/app/zh_Hans/&#34;&gt;Chinese (Simplified Han script)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad Weblate&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
