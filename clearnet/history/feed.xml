@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 15 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 16 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Wi-Fi 加密弱點的修補</title>
+<link>https://anoni.net/news/history/10-16/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-16/2026</guid>
+<pubDate>Fri, 16 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的手機連上 Wi-Fi 時用的加密，有弱點時要靠系統更新修補。這一天，研究者公開 WPA2 Wi-Fi 加密的弱點 KRACK。</description>
+<content:encoded>&lt;p&gt;你的手機連上有密碼的 Wi-Fi 時，手機與無線基地台（路由器）之間傳的資料會加密，常見的加密標準是 WPA2 與較新的 WPA3。2017 年 10 月 16 日，研究者公開 WPA2 的弱點 KRACK，在 Wi-Fi 訊號範圍內的攻擊者可以讀取原本以為已經加密的資料。研究者的網站寫明弱點出在 Wi-Fi 標準本身，支援 Wi-Fi 的裝置很可能都受影響，改 Wi-Fi 密碼也無法防範。Android 2017 年 11 月的安全性更新與 Apple 同年 10 月底的 iOS 11.1 都修補了這個弱點，研究者的網站也寫到家用路由器多半不受影響，仍建議更新路由器韌體。仍在用多年前舊手機的讀者，可以在設定查看 Android 的安全性修補程式等級是否在 2017 年 11 月 6 日以後，iPhone 則看系統是否在 iOS 11.1 以後。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>個資外洩的通報窗口</title>
 <link>https://anoni.net/news/history/10-15/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你如果還在用 iPhone X 或更早的機型，手機落到別人手上時資料要靠解鎖密碼保護。這一天，研究者公開了能利用 iPhone 開機漏洞的程式 checkm8。</description>
 <content:encoded>&lt;p&gt;你如果還在用 iPhone X 或更早的機型，手機裡有一個無法用軟體更新修補的開機漏洞。2019 年 9 月 27 日，一位研究者公開了能利用這個漏洞的程式 checkm8，它攻擊的是寫在晶片唯讀記憶體裡、開機時最先執行的程式碼。Ars Technica 的專訪寫明，checkm8 影響從 iPhone 4S 到 iPhone X 共 11 代 iPhone，而且必須實際接觸到手機才能使用。研究者在同一篇專訪提到，有安全隔離區的機型，不知道解鎖密碼的人用這個漏洞也無法讀取資料。還在用 iPhone X 或更早機型的人可以確認手機設了解鎖密碼，iPhone 8 與 iPhone X 到 2026 年 5 月仍有安全更新，也要裝上最新版本。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>App 用通訊錄找朋友時的隱私</title>
-<link>https://anoni.net/news/history/09-26/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/09-26/2026</guid>
-<pubDate>Sat, 26 Sep 2026 01:30:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的號碼存在別人的通訊錄裡，對方的 LINE 就可能自動把你加為好友。這一天，Signal 公開了讓伺服器無法得知通訊錄內容的比對方式。</description>
-<content:encoded>&lt;p&gt;你的電話號碼只要存在別人的手機通訊錄裡，對方的 LINE 就可能自動把你加為好友，因為 App 會把通訊錄裡的號碼上傳到伺服器比對。2017 年 9 月 26 日，Signal 公開一種新的比對方式，讓伺服器比對時無法得知通訊錄的內容。Signal 在同一篇文章寫明，所有可能的號碼數量太少，就算把號碼轉成看不出原號碼的代碼（雜湊值）再上傳也幾乎都能反推回去。Signal 在 2024 年 2 月加上讓別人無法用號碼找到你的設定，2026 年 9 月的 Android 測試版更可以不用電話號碼註冊（見&lt;a href=&#34;https://anoni.net/news/2026/09/signal-numberless-registration/&#34;&gt;Signal 免電話號碼註冊的 Android 測試版&lt;/a&gt;）。不想讓知道你號碼的人自動把你加為 LINE 好友，可以在「設定 &amp;gt; 好友」關閉「允許被加入好友」。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

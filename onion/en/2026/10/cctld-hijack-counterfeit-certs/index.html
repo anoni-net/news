@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Country-code top-level domain hijacks and unauthorized HTTPS certificates | anoni.net News</title>
+<meta name="description" content="Google announced on 6 October that the .gh, .sl and .as country-code top-level domains were hijacked and attackers obtained HTTPS certificates for Google and other organizations. Chrome has blocked the certificates it found; domain owners can monitor Certificate Transparency logs.">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/cctld-hijack-counterfeit-certs/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/cctld-hijack-counterfeit-certs/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/cctld-hijack-counterfeit-certs/">
+<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net News" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml">
+<meta property="og:site_name" content="anoni.net News">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Country-code top-level domain hijacks and unauthorized HTTPS certificates">
+<meta property="og:description" content="Google announced on 6 October that the .gh, .sl and .as country-code top-level domains were hijacked and attackers obtained HTTPS certificates for Google and other organizations. Chrome has blocked the certificates it found; domain owners can monitor Certificate Transparency logs.">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-en.png?v=2c12b09487">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net News">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net News">
+<meta property="article:published_time" content="2026-10-16T00:05:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Country-code top-level domain hijacks and unauthorized HTTPS certificates",
+  "description": "Google announced on 6 October that the .gh, .sl and .as country-code top-level domains were hijacked and attackers obtained HTTPS certificates for Google and other organizations. Chrome has blocked the certificates it found; domain owners can monitor Certificate Transparency logs.",
+  "datePublished": "2026-10-16T00:05:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-en.png",
+  "inLanguage": "en",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Chrome's Response to Recent ccTLD Registry Hijacks",
+      "url": "https://blog.google/security/chromes-response-to-recent-cctld-registry-hijacks/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Chrome's Response to Recent ccTLD Registry Hijacks",
+      "url": "https://community.letsencrypt.org/t/chromes-response-to-recent-cctld-registry-hijacks/251941"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Hackers obtain counterfeit TLS certificates for Google and other large services",
+      "url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Hackers Impersonate Google and Other Large Services With Counterfeit TLS Certificates",
+      "url": "https://www.privacyguides.org/news/2026/10/08/hackers-impersonate-google-and-other-large-services-with-counterfeit-tls-certificates/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "3個國碼頂級網域遭劫持，攻擊者取得Google等組織HTTPS憑證",
+      "url": "https://www.ithome.com.tw/news/179500"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Attackers hijack ccTLDs to fake certs for Google",
+      "url": "https://www.itnews.com.au/news/attackers-hijack-cctlds-to-fake-certs-for-google-629504"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "DNS Hijacks Across Three ccTLDs Linked to 32 Unauthorized HTTPS Certificates",
+      "url": "https://circleid.com/posts/dns-hijacks-across-three-cctlds-linked-to-32-unauthorized-https-certificates"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "CRLSets",
+      "url": "https://www.chromium.org/Home/chromium-security/crlsets/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Certificate Transparency Monitoring",
+      "url": "https://developers.cloudflare.com/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cert Spotter - Certificate Transparency Monitor - Detect Security and Availability Problems",
+      "url": "https://sslmate.com/certspotter/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Certification Authority Authorization (CAA)",
+      "url": "https://letsencrypt.org/docs/caa/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "將您的域名「鎖」上——Registry Lock",
+      "url": "https://twnic.tw/blog/contents.php?id=25&lang=zh-tw"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": ".tw 域名安全鎖服務 Registry Lock Service",
+      "url": "https://registrylock.tw/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "レジストリロックサービス",
+      "url": "https://jprs.jp/about/dom-rule/registry-lock/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "HKIRC Launches .hk LOCK",
+      "url": "https://www.hkdnr.hk/en/hkirc-launches-hk-lock/"
+    }
+  ],
+  "articleSection": "Security & Scams"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "News",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Security & Scams",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Country-code top-level domain hijacks and unauthorized HTTPS certificates"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/en/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">News</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="From anoni.net News: " data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--security" href="/en/category/security/">Security &amp; Scams</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-16T00:05:00+08:00">Friday, 16 October 2026</time></p>
+    <h1 class="story__title">Country-code top-level domain hijacks and unauthorized HTTPS certificates</h1>
+    <p class="story__dek">Google announced on 6 October that the .gh, .sl and .as country-code top-level domains were hijacked and attackers obtained HTTPS certificates for Google and other organizations. Chrome has blocked the certificates it found; domain owners can monitor Certificate Transparency logs.</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/community.letsencrypt.org-e3f802a1.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/arstechnica.com-18386f32.png" width="16" height="16" alt="" decoding="async"></span> <span>Based on 15 sources, including Google, Let&#39;s Encrypt Community Forum, Ars Technica</span></a></span>
+      <span>By anoni.net community</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/2026/10/cctld-hijack-counterfeit-certs/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/zh-cn/2026/10/cctld-hijack-counterfeit-certs/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+  </header>
+  <div class="story__body content">
+<p>Google announced on 6 October that the .gh (Ghana), .sl (Sierra Leone) and .as (American Samoa) country-code top-level domains (ccTLDs) had been hijacked, and that attackers used this to obtain HTTPS certificates for several Google domains and for domains of other organizations. The announcement says the domains at risk are those ending in these three codes, and that Google's own systems were not compromised. Chrome has blocked the certificates Google found, and the announcement says Chrome users do not need to take any action.</p>
+<p>According to Google, the attackers compromised these three third-party-operated ccTLDs and modified authoritative DNS records, the records that say where a domain points. The announcement does not say where the attackers got in, for example the operator's systems or a registrar account, or when the hijacks began, and as of 12 October we, a community based in Taiwan, could not find any statement from the three operators. Ars Technica reports that control of the DNS records let the attackers pass certificate authorities' domain control validation (DCV), the check that an applicant really controls a domain, while iThome writes that they may have passed it this way. Google writes that it has no reason to believe the issuing certificate authorities did anything wrong.</p>
+<p>Google first blocked the certificates for its own domains through CRLSets, Chrome's emergency certificate blocklist, and asked the issuing CAs to revoke them. Certificate Transparency (CT) logs, public logs that record every issued certificate, then revealed other organizations believed to be affected by the same attacks, including leading global brands and widely used online services, and Chrome blocked those certificates as well. A Let's Encrypt staff member confirmed on its forum that it had issued certificates for Google and YouTube and that they have been revoked. iTnews compared CT logs against Chrome's blocklist and found 32 certificates issued to the attackers between 22 and 27 September, a count CircleID notes has not been independently reproduced.</p>
+<h2 id="perspective">Perspective</h2>
+<p>An HTTPS certificate vouches that a site is the one it claims to be. Before issuing one, a certificate authority checks that the applicant controls the domain, and one way is to ask the applicant to publish a specific DNS record. DNS is delegated downward from the top-level domain, so we infer that when the layer above is hijacked, an attacker can pass validation even though the owner of the domain below did nothing wrong. Google's announcement notes that CAs may reuse earlier validation results, and lists shorter certificate lifetimes and shorter validation reuse periods among its long-term improvements.</p>
+<p>The other possibly affected organizations were found by Google in Certificate Transparency logs. Chrome and Safari require publicly trusted certificates to be recorded in public logs that anyone can search. The certificates Google found were all found in those logs. Our reading is that CT lets such certificates be discovered after issuance and does not stop them at the moment of issuance.</p>
+<p>Google also writes that Chrome's blocking does not reliably protect users of other browsers, and that it cannot guarantee it identified every affected domain. The announcement says the certificates for Google domains were revoked with the CAs' help, but for other organizations it only says Chrome blocked them, while iTnews reports that the CAs have revoked the bogus certificates it found. Privacy Guides writes that Firefox handles them with CRLite, its revocation checking mechanism, and as of 12 October we found nothing from Safari or Edge. CircleID notes that, as of 8 October, how much traffic may have been intercepted had not been established publicly.</p>
+<p>Google recommends that domain owners continuously monitor CT logs for all of their domains, including parked and regional ccTLD domains, and that anyone with a .gh, .sl or .as domain review recent entries for unexpected certificates. Services such as Cloudflare and Cert Spotter send alerts when a new certificate is issued. Cloudflare's alerts are switched on from its Edge Certificates page and are off by default, and Cert Spotter's site lists a 30-day free trial. Google also recommends CAA records, which name the CAs allowed to issue for a domain, ideally bound to specific ACME accounts (ACME being the protocol Let's Encrypt and others use for automated issuance).</p>
+<p>Google writes that CAA cannot prevent issuance during an active DNS hijack. Its value comes after DNS control is restored, when it stops an attacker from using earlier validation results to obtain new certificates. CT monitoring likewise helps owners find out sooner after the fact, and Google's recommendations include nothing a domain owner can do to block this kind of upstream hijack in advance.</p>
+<p>Several registries in Asia offer registry-level locks, which add update, transfer and delete prohibitions to a domain. In Taiwan, TWNIC's Registry Lock lists NT$6,000 per domain per year, with a NT$4,800 first-year price for new applications until 31 December 2026, as of 12 October. Japan's JPRS offers its registry lock only through designated registrars, whose offerings vary. Hong Kong's HKIRC announced .hk LOCK in 2014, with each change verified by human contact, and we could not confirm its current terms.</p>
+<p>These locks guard against unauthorized changes to registration data, and TWNIC writes that its lock still protects a domain even if the registrar is compromised. We found no official description of a registry lock from South Korea's KRNIC. We found no official statement on whether a lock helps when the registry operator itself is breached, and Google's recommendations do not mention locks.</p>
+<p>As of 12 October, we found no disclosure from the three operators, the issuing CAs or the Asian registries above about how the attackers got in, and no full list of the certificates. It is worth checking again in mid-November for any incident report that explains the point of entry.</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">Sources (15)</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.google/security/chromes-response-to-recent-cctld-registry-hijacks/"><img class="source-slip__icon" src="/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Chrome&#39;s Response to Recent ccTLD Registry Hijacks</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Google</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-06">6 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://community.letsencrypt.org/t/chromes-response-to-recent-cctld-registry-hijacks/251941"><img class="source-slip__icon" src="/assets/favicons/community.letsencrypt.org-e3f802a1.png" width="16" height="16" alt="" loading="lazy" decoding="async">Chrome&#39;s Response to Recent ccTLD Registry Hijacks</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Let&#39;s Encrypt Community Forum</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-07">7 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/"><img class="source-slip__icon" src="/assets/favicons/arstechnica.com-18386f32.png" width="16" height="16" alt="" loading="lazy" decoding="async">Hackers obtain counterfeit TLS certificates for Google and other large services</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Ars Technica</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-06">6 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.privacyguides.org/news/2026/10/08/hackers-impersonate-google-and-other-large-services-with-counterfeit-tls-certificates/"><img class="source-slip__icon" src="/assets/favicons/privacyguides.org-9c0b097f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Hackers Impersonate Google and Other Large Services With Counterfeit TLS Certificates</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Privacy Guides</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-08">8 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.ithome.com.tw/news/179500"><img class="source-slip__icon" src="/assets/favicons/ithome.com.tw-bd791a4e.png" width="16" height="16" alt="" loading="lazy" decoding="async">3個國碼頂級網域遭劫持，攻擊者取得Google等組織HTTPS憑證</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>iThome</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-09">9 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.itnews.com.au/news/attackers-hijack-cctlds-to-fake-certs-for-google-629504"><img class="source-slip__icon" src="/assets/favicons/itnews.com.au-c44b1e39.png" width="16" height="16" alt="" loading="lazy" decoding="async">Attackers hijack ccTLDs to fake certs for Google</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>iTnews</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-08">8 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://circleid.com/posts/dns-hijacks-across-three-cctlds-linked-to-32-unauthorized-https-certificates"><img class="source-slip__icon" src="/assets/favicons/circleid.com-fef09846.png" width="16" height="16" alt="" loading="lazy" decoding="async">DNS Hijacks Across Three ccTLDs Linked to 32 Unauthorized HTTPS Certificates</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>CircleID</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-08">8 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.chromium.org/Home/chromium-security/crlsets/"><img class="source-slip__icon" src="/assets/favicons/chromium.org-682a9ae9.png" width="16" height="16" alt="" loading="lazy" decoding="async">CRLSets</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>The Chromium Projects</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://developers.cloudflare.com/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/"><img class="source-slip__icon" src="/assets/favicons/developers.cloudflare.com-20b93244.png" width="16" height="16" alt="" loading="lazy" decoding="async">Certificate Transparency Monitoring</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Cloudflare</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://sslmate.com/certspotter/"><img class="source-slip__icon" src="/assets/favicons/sslmate.com-5e35444e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cert Spotter - Certificate Transparency Monitor - Detect Security and Availability Problems</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>SSLMate</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://letsencrypt.org/docs/caa/"><img class="source-slip__icon" src="/assets/favicons/letsencrypt.org-005fa57a.png" width="16" height="16" alt="" loading="lazy" decoding="async">Certification Authority Authorization (CAA)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Let&#39;s Encrypt</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://twnic.tw/blog/contents.php?id=25&amp;lang=zh-tw"><img class="source-slip__icon" src="/assets/favicons/twnic.tw-1a242089.png" width="16" height="16" alt="" loading="lazy" decoding="async">將您的域名「鎖」上——Registry Lock</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>TWNIC</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2025-09-12">12 September 2025</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://registrylock.tw/"><img class="source-slip__icon" src="/assets/favicons/twnic.tw-1a242089.png" width="16" height="16" alt="" loading="lazy" decoding="async">.tw 域名安全鎖服務 Registry Lock Service</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>TWNIC</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://jprs.jp/about/dom-rule/registry-lock/"><img class="source-slip__icon" src="/assets/favicons/jprs.jp-a1af08a6.png" width="16" height="16" alt="" loading="lazy" decoding="async">レジストリロックサービス</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>JPRS</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.hkdnr.hk/en/hkirc-launches-hk-lock/"><img class="source-slip__icon" src="/assets/favicons/hkdnr.hk-4024b7ae.png" width="16" height="16" alt="" loading="lazy" decoding="async">HKIRC Launches .hk LOCK</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>HKDNR</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2014-01-15">15 January 2014</time></dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--security" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">More in this category</h2>
+  <p class="brief__category"><a class="cat cat--security" href="/en/category/security/">Security &amp; Scams</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-13T00:00:00+08:00">13 October 2026</time>
+      <a class="thread__title" href="/en/2026/10/beeline-ai-scam-call-assistant/">Beeline&#39;s AI voice personas for scam calls</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-12T00:05:00+08:00">12 October 2026</time>
+      <a class="thread__title" href="/en/2026/10/japan-data-breaches-2026/">Website and app breaches in Japan since September 2026</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-12T00:00:00+08:00">12 October 2026</time>
+      <a class="thread__title" href="/en/2026/10/firefox-tls-keylog-warning/">Firefox 157&#39;s TLS key logging warning</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/en/category/security/">All 10 stories in Security &amp; Scams</a></p>
+</nav>
+<p class="subscribe">Get new stories by <a href="/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>, <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>newsletter</span></a> or <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>Bluesky</span></a></p>
+<nav class="pager pager--story" aria-label="Story navigation">
+  <a class="pager__item pager__item--older" href="/en/2026/10/bentopdf-local-pdf-tools/"><span class="pager__label">Older story <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">BentoPDF, an open-source toolkit for processing PDFs locally in the browser</span></a>
+  <a class="pager__all" href="/en/">All stories</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> Newsletter</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> Follow on Bluesky</a>
+      <a href="/en/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> Same Day, Years Apart</a>
+      <a href="/en/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> About</a>
+      <a href="/en/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> Reading options</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> Report an error</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net home</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/2026/10/cctld-hijack-counterfeit-certs/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/zh-cn/2026/10/cctld-hijack-counterfeit-certs/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <p>Stories are licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>. Copyright in the quoted sources stays with their authors.</p>
+  </div>
+</footer>
+</body>
+</html>

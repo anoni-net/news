@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 15 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 16 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Wi-Fi 加密弱点的修补</title>
+<link>https://anoni.net/news/zh-cn/history/10-16/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-16/2026</guid>
+<pubDate>Fri, 16 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的手机连上 Wi-Fi 时用的加密，有弱点时要靠系统更新修补。这一天，研究者公开 WPA2 Wi-Fi 加密的弱点 KRACK。</description>
+<content:encoded>&lt;p&gt;你的手机连上有密码的 Wi-Fi 时，手机与路由器（无线接入点）之间传的数据会加密，常见的加密标准是 WPA2 与较新的 WPA3。2017 年 10 月 16 日，研究者公开 WPA2 的弱点 KRACK，在 Wi-Fi 信号范围内的攻击者可以读取原本以为已经加密的数据。研究者的网站写明弱点出在 Wi-Fi 标准本身，支持 Wi-Fi 的设备很可能都受影响，改 Wi-Fi 密码也无法防范。Android 2017 年 11 月的安全更新与 Apple 同年 10 月底的 iOS 11.1 都修补了这个弱点，研究者的网站也写到家用路由器多半不受影响，仍建议更新路由器固件。仍在用多年前旧手机的读者，可以在设置查看 Android 的安全补丁级别是否在 2017 年 11 月 6 日以后，iPhone 则看系统是否在 iOS 11.1 以后。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>个人信息泄露的通报窗口</title>
 <link>https://anoni.net/news/zh-cn/history/10-15/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你如果还在用 iPhone X 或更早的机型，手机落到别人手上时数据要靠解锁密码保护。这一天，研究者公开了能利用 iPhone 开机漏洞的程序 checkm8。</description>
 <content:encoded>&lt;p&gt;你如果还在用 iPhone X 或更早的机型，手机里有一个无法用软件更新修补的开机漏洞。2019 年 9 月 27 日，一位研究者公开了能利用这个漏洞的程序 checkm8，它攻击的是写在芯片只读存储器里、开机时最先执行的代码。Ars Technica 的专访写明，checkm8 影响从 iPhone 4S 到 iPhone X 共 11 代 iPhone，而且必须实际接触到手机才能使用。研究者在同一篇专访提到，有安全隔区的机型，不知道解锁密码的人用这个漏洞也无法读取数据。还在用 iPhone X 或更早机型的人可以确认手机设了解锁密码，iPhone 8 与 iPhone X 到 2026 年 5 月仍有安全更新，也要装上最新版本。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>App 用通讯录找朋友时的隐私</title>
-<link>https://anoni.net/news/zh-cn/history/09-26/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/09-26/2026</guid>
-<pubDate>Sat, 26 Sep 2026 01:30:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>知道你手机号码的人，就可能让 LINE 这类聊天 App 自动把你加为好友。这一天，Signal 公开了让服务器无法得知通讯录内容的比对方式。</description>
-<content:encoded>&lt;p&gt;你的手机号码只要存在别人的手机通讯录里，对方的 LINE 这类聊天 App 就可能自动把你加为好友，因为 App 会把通讯录里的号码上传到服务器比对。2017 年 9 月 26 日，Signal 公开一种新的比对方式，让服务器比对时无法得知通讯录的内容。Signal 在同一篇文章写明，所有可能的号码数量太少，就算把号码转成看不出原号码的代码（哈希值）再上传也几乎都能反推回去。Signal 在 2024 年 2 月加上让别人无法用号码找到你的设置，2026 年 9 月的 Android 测试版更可以不用手机号码注册（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/09/signal-numberless-registration/&#34;&gt;Signal 免手机号注册的 Android 测试版&lt;/a&gt;）。在常用的聊天 App 里，可以检查是否允许别人通过手机号添加你，LINE 的设置在「设置 &amp;gt; 好友」的「允许被加入好友」。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

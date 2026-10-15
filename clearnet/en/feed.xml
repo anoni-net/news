@@ -6,7 +6,133 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 16 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 16 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Country-code top-level domain hijacks and unauthorized HTTPS certificates</title>
+<link>https://anoni.net/news/en/2026/10/cctld-hijack-counterfeit-certs/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/cctld-hijack-counterfeit-certs</guid>
+<pubDate>Fri, 16 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Google announced on 6 October that the .gh, .sl and .as country-code top-level domains were hijacked and attackers obtained HTTPS certificates for Google and other organizations. Chrome has blocked the certificates it found; domain owners can monitor Certificate Transparency logs.</description>
+<content:encoded>&lt;p&gt;Based on 15 sources, including Google, Let&amp;#39;s Encrypt Community Forum, Ars Technica&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Google announced on 6 October that the .gh (Ghana), .sl (Sierra Leone) and .as (American Samoa) country-code top-level domains (ccTLDs) had been hijacked, and that attackers used this to obtain HTTPS certificates for several Google domains and for domains of other organizations. The announcement says the domains at risk are those ending in these three codes, and that Google&#39;s own systems were not compromised. Chrome has blocked the certificates Google found, and the announcement says Chrome users do not need to take any action.&lt;/p&gt;
+&lt;p&gt;According to Google, the attackers compromised these three third-party-operated ccTLDs and modified authoritative DNS records, the records that say where a domain points. The announcement does not say where the attackers got in, for example the operator&#39;s systems or a registrar account, or when the hijacks began, and as of 12 October we, a community based in Taiwan, could not find any statement from the three operators. Ars Technica reports that control of the DNS records let the attackers pass certificate authorities&#39; domain control validation (DCV), the check that an applicant really controls a domain, while iThome writes that they may have passed it this way. Google writes that it has no reason to believe the issuing certificate authorities did anything wrong.&lt;/p&gt;
+&lt;p&gt;Google first blocked the certificates for its own domains through CRLSets, Chrome&#39;s emergency certificate blocklist, and asked the issuing CAs to revoke them. Certificate Transparency (CT) logs, public logs that record every issued certificate, then revealed other organizations believed to be affected by the same attacks, including leading global brands and widely used online services, and Chrome blocked those certificates as well. A Let&#39;s Encrypt staff member confirmed on its forum that it had issued certificates for Google and YouTube and that they have been revoked. iTnews compared CT logs against Chrome&#39;s blocklist and found 32 certificates issued to the attackers between 22 and 27 September, a count CircleID notes has not been independently reproduced.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;An HTTPS certificate vouches that a site is the one it claims to be. Before issuing one, a certificate authority checks that the applicant controls the domain, and one way is to ask the applicant to publish a specific DNS record. DNS is delegated downward from the top-level domain, so we infer that when the layer above is hijacked, an attacker can pass validation even though the owner of the domain below did nothing wrong. Google&#39;s announcement notes that CAs may reuse earlier validation results, and lists shorter certificate lifetimes and shorter validation reuse periods among its long-term improvements.&lt;/p&gt;
+&lt;p&gt;The other possibly affected organizations were found by Google in Certificate Transparency logs. Chrome and Safari require publicly trusted certificates to be recorded in public logs that anyone can search. The certificates Google found were all found in those logs. Our reading is that CT lets such certificates be discovered after issuance and does not stop them at the moment of issuance.&lt;/p&gt;
+&lt;p&gt;Google also writes that Chrome&#39;s blocking does not reliably protect users of other browsers, and that it cannot guarantee it identified every affected domain. The announcement says the certificates for Google domains were revoked with the CAs&#39; help, but for other organizations it only says Chrome blocked them, while iTnews reports that the CAs have revoked the bogus certificates it found. Privacy Guides writes that Firefox handles them with CRLite, its revocation checking mechanism, and as of 12 October we found nothing from Safari or Edge. CircleID notes that, as of 8 October, how much traffic may have been intercepted had not been established publicly.&lt;/p&gt;
+&lt;p&gt;Google recommends that domain owners continuously monitor CT logs for all of their domains, including parked and regional ccTLD domains, and that anyone with a .gh, .sl or .as domain review recent entries for unexpected certificates. Services such as Cloudflare and Cert Spotter send alerts when a new certificate is issued. Cloudflare&#39;s alerts are switched on from its Edge Certificates page and are off by default, and Cert Spotter&#39;s site lists a 30-day free trial. Google also recommends CAA records, which name the CAs allowed to issue for a domain, ideally bound to specific ACME accounts (ACME being the protocol Let&#39;s Encrypt and others use for automated issuance).&lt;/p&gt;
+&lt;p&gt;Google writes that CAA cannot prevent issuance during an active DNS hijack. Its value comes after DNS control is restored, when it stops an attacker from using earlier validation results to obtain new certificates. CT monitoring likewise helps owners find out sooner after the fact, and Google&#39;s recommendations include nothing a domain owner can do to block this kind of upstream hijack in advance.&lt;/p&gt;
+&lt;p&gt;Several registries in Asia offer registry-level locks, which add update, transfer and delete prohibitions to a domain. In Taiwan, TWNIC&#39;s Registry Lock lists NT$6,000 per domain per year, with a NT$4,800 first-year price for new applications until 31 December 2026, as of 12 October. Japan&#39;s JPRS offers its registry lock only through designated registrars, whose offerings vary. Hong Kong&#39;s HKIRC announced .hk LOCK in 2014, with each change verified by human contact, and we could not confirm its current terms.&lt;/p&gt;
+&lt;p&gt;These locks guard against unauthorized changes to registration data, and TWNIC writes that its lock still protects a domain even if the registrar is compromised. We found no official description of a registry lock from South Korea&#39;s KRNIC. We found no official statement on whether a lock helps when the registry operator itself is breached, and Google&#39;s recommendations do not mention locks.&lt;/p&gt;
+&lt;p&gt;As of 12 October, we found no disclosure from the three operators, the issuing CAs or the Asian registries above about how the attackers got in, and no full list of the certificates. It is worth checking again in mid-November for any incident report that explains the point of entry.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (15)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/chromes-response-to-recent-cctld-registry-hijacks/&#34;&gt;Chrome&amp;#39;s Response to Recent ccTLD Registry Hijacks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;6 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.letsencrypt.org/t/chromes-response-to-recent-cctld-registry-hijacks/251941&#34;&gt;Chrome&amp;#39;s Response to Recent ccTLD Registry Hijacks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt Community Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;7 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/&#34;&gt;Hackers obtain counterfeit TLS certificates for Google and other large services&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;6 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/08/hackers-impersonate-google-and-other-large-services-with-counterfeit-tls-certificates/&#34;&gt;Hackers Impersonate Google and Other Large Services With Counterfeit TLS Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179500&#34;&gt;3個國碼頂級網域遭劫持，攻擊者取得Google等組織HTTPS憑證&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;9 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.itnews.com.au/news/attackers-hijack-cctlds-to-fake-certs-for-google-629504&#34;&gt;Attackers hijack ccTLDs to fake certs for Google&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iTnews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://circleid.com/posts/dns-hijacks-across-three-cctlds-linked-to-32-unauthorized-https-certificates&#34;&gt;DNS Hijacks Across Three ccTLDs Linked to 32 Unauthorized HTTPS Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CircleID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.chromium.org/Home/chromium-security/crlsets/&#34;&gt;CRLSets&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Chromium Projects&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/&#34;&gt;Certificate Transparency Monitoring&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sslmate.com/certspotter/&#34;&gt;Cert Spotter - Certificate Transparency Monitor - Detect Security and Availability Problems&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SSLMate&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/docs/caa/&#34;&gt;Certification Authority Authorization (CAA)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://twnic.tw/blog/contents.php?id=25&amp;amp;lang=zh-tw&#34;&gt;將您的域名「鎖」上——Registry Lock&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TWNIC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-12&#34;&gt;12 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://registrylock.tw/&#34;&gt;.tw 域名安全鎖服務 Registry Lock Service&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TWNIC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://jprs.jp/about/dom-rule/registry-lock/&#34;&gt;レジストリロックサービス&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;JPRS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hkdnr.hk/en/hkirc-launches-hk-lock/&#34;&gt;HKIRC Launches .hk LOCK&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;HKDNR&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2014-01-15&#34;&gt;15 January 2014&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>BentoPDF, an open-source toolkit for processing PDFs locally in the browser</title>
 <link>https://anoni.net/news/en/2026/10/bentopdf-local-pdf-tools/</link>
@@ -2681,115 +2807,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/ssd.eff.org&#34;&gt;Is https://ssd.eff.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Surveillance technologies in migration and border control</title>
-<link>https://anoni.net/news/en/2026/10/privacy-international-migrant-surveillance/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/privacy-international-migrant-surveillance</guid>
-<pubDate>Wed, 07 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Privacy International published a guide in September to 12 categories of technology used by immigration and border authorities, including phone extraction, drones, GPS tagging and algorithmic decision-making. Migrants and asylum seekers are directly affected, and the fingerprint and face checks travellers meet at borders fall into one category. Public documents from UK, German, Canadian and EU bodies set out their purposes and safeguards.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including Privacy International, Bundesamt für Migration und Flüchtlinge, Frontex&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;On 21 September, Privacy International (PI), a UK privacy advocacy group, published a guide to 12 categories of surveillance technology used by immigration and border authorities, from mobile phone extraction, drones and facial recognition to GPS tagging and algorithmic decision-making. It draws on a 2022 PI survey of immigration lawyers, advocates and organisers around the world, and the report says the list is not exhaustive. Migrants, asylum seekers and the people who help them are directly affected, while the fingerprints and face photos that ordinary travellers give at borders belong to the biometrics category.&lt;/p&gt;
-&lt;p&gt;For each category the report covers how the technology works, its risks, companies reported to be involved and examples by country. Phone extraction can recover photos, contacts, social media accounts, deleted content and metadata such as where a photo was taken, and survey responses describe its use to assess asylum claims, build risk profiles and prosecute. The report names Cellebrite and cites the company&#39;s website saying its UFED phone extraction device can get past encryption and other locks.&lt;/p&gt;
-&lt;p&gt;GPS tagging uses ankle tags, smartwatches or other devices, and some forms let authorities see a wearer&#39;s live location at all times. Citing earlier PI research, the report says GPS tag accuracy appears limited to around 10 metres, with errors of 100 metres or more when signals bounce off tall buildings. Such errors could lead to misreadings of a person&#39;s movements and so risk unjust detention or deportation.&lt;/p&gt;
-&lt;p&gt;The report also says most algorithmic tools in migration cases are highly secretive, so it is unclear how far officers are involved or whether people can meaningfully contest the outcome.&lt;/p&gt;
-&lt;p&gt;Other categories include dialect recognition software used to infer a person&#39;s country of origin, which critics cited in the report say is unreliable because dialects do not always follow borders, and bone and dental scans for age assessment. According to the report, bones and teeth do not mature at a constant rate, so scans have no sound scientific basis for age and risk treating a child as an adult.&lt;/p&gt;
-&lt;p&gt;The PDF cover is dated February, and some of it has moved on since. The report describes plans to add faces to Eurodac, the EU database that compares asylum seekers&#39; fingerprints. eu-LISA, which runs it, announced that the new Eurodac went live on 12 June handling both fingerprints and facial images.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;PI&#39;s report says data from a phone may be out of context or out of date, and a second-hand or shared phone may even hold someone else&#39;s data. It adds that the power imbalance between officials and the person concerned could undermine meaningful consent. Germany&#39;s Federal Office for Migration and Refugees (BAMF) says on its identity management page that it reads phone metadata, such as the countries called and location data from certain apps, only when identity cannot be established by less intrusive means such as identity documents. The same page says these technical aids do not replace the applicant&#39;s own account or BAMF experts&#39; assessment of all the evidence.&lt;/p&gt;
-&lt;p&gt;Frontex, the EU border agency, says on its search and rescue page that its planes and drones patrol selected areas beyond the EU&#39;s external borders as an early warning mechanism, and that it alerts the responsible national rescue authority when it spots a boat in distress. In studies cited by PI, aerial surveillance does not simply deter crossings but also pushes people into more dangerous areas and routes, raising the risk of injury or death. The report also says drones can facilitate pushbacks, forcing people back across a border and frustrating their right to seek asylum.&lt;/p&gt;
-&lt;p&gt;The UK Home Office&#39;s immigration bail guidance, updated in September, says bail conditions should let the Home Office keep in contact with a person and reduce the risk of absconding, and that electronic monitoring must not be imposed on anyone under 18. Under the guidance, location trail data is held by the monitoring contractor and accessed by the Home Office only in listed cases such as a breach of bail conditions, loss of contact or a specific request from a law enforcement agency, with regular reviews of whether monitoring is still necessary. PI&#39;s report says people who are tagged reportedly suffer stress, sleeplessness and anxiety, and devices can cause bruises and blisters.&lt;/p&gt;
-&lt;p&gt;In March 2024 the Information Commissioner&#39;s Office (ICO), the UK data protection regulator, found that a Home Office pilot tagging up to 600 people who had arrived in the UK breached data protection law. In the ICO&#39;s finding, the Home Office had not sufficiently assessed the privacy intrusion and could not justify the pilot as necessary. The ICO also said it was for the Home Office to decide what measures are necessary.&lt;/p&gt;
-&lt;p&gt;PI&#39;s report says Canada uses automated decision-making at various stages of visa processing, on questions including whether an application is complete, whether the applicant is a risk and whether the stated basis is truthful. Immigration, Refugees and Citizenship Canada (IRCC) said in January 2022 that for temporary resident visa applications from outside Canada the system sorts files, letting routine ones be assessed 87% faster. According to IRCC, the system can find an applicant eligible but never refuses or recommends refusing an application, and officers can overturn an eligibility finding.&lt;/p&gt;
-&lt;p&gt;The EU and several places in East Asia also collect biometrics from ordinary foreign visitors, outside any asylum procedure. According to the European Commission, the EU&#39;s Entry/Exit System (EES), which began progressive operations on 12 October 2025 and became fully operational on 10 April 2026, records fingerprints and facial images of non-EU nationals on short stays in 29 European countries. In Taiwan, under Article 91 of the Immigration Act, the National Immigration Agency may collect biometric data from foreign nationals and several other groups when they cross the border or apply for residence, with under-14s exempt and entry refusable if a person declines. Japan requires foreign nationals applying for landing to provide fingerprints and a facial photograph unless exempted by law, and mainland China began fingerprinting foreign nationals aged 14 to 70 at entry in 2017, according to an August 2017 Xinhua report.&lt;/p&gt;
-&lt;p&gt;The stated purposes also differ. The Commission says the EES replaces passport stamps so that overstayers are detected automatically, and that it helps prevent irregular migration and catch people using forged documents, while eu-LISA describes Eurodac as a tool for identifying asylum seekers and irregular migrants. Japan&#39;s Immigration Services Agency describes landing examination as a way to stop the landing of undesirable foreign nationals, including those whose purpose of entry is doubtful. Taiwan&#39;s Article 91 sets out who is covered and leaves the details of collection, management and use to implementing rules.&lt;/p&gt;
-&lt;p&gt;Most readers have nothing to change. People who help migrants or asylum seekers through legal procedures can start with the PDF, which runs to 47 pages in English only and needs no registration. PI&#39;s copyright page permits non-commercial distribution, including translation, with credit to PI. The guide draws on a survey PI sent to immigration lawyers and advocates in 2022 and covers the most common technologies, not every one in use.&lt;/p&gt;
-&lt;p&gt;On privacy, compare how long data is kept, who can access it, and whether people are told and can challenge the outcome. On the stated aims, compare whether these tools actually make identity checks and visa processing faster and more accurate, whether biometric entry checks catch overstays and forged documents, and whether monitoring helps rescues or reduces absconding.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/report/5866/arsenal-surveillance-guide-technologies-harming-migrants&#34;&gt;An Arsenal of Surveillance: A Guide to the Technologies Harming Migrants&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/sites/default/files/2026-09/An%20Arsenal%20of%20Surveillance_0.pdf&#34;&gt;An Arsenal of Surveillance (PDF)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bamf.de/DE/Themen/Sicherheit/Identitaetsmanagement/identitaetsmanagement-node.html&#34;&gt;Identitätsmanagement&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Bundesamt für Migration und Flüchtlinge&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.frontex.europa.eu/what-we-do/operations/search-and-rescue/&#34;&gt;Search and Rescue&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Frontex&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://assets.publishing.service.gov.uk/media/68514c37f2ccfcfd2f823f5b/Immigration+bail.pdf&#34;&gt;Immigration bail (version 23.0)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/03/ico-finds-the-home-office-s-pilot-of-gps-electronic-monitoring-of-migrants-breached-uk-data-protection-law/&#34;&gt;ICO finds the Home Office&amp;#39;s pilot of GPS electronic monitoring of migrants breached UK data protection law&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Information Commissioner&amp;#39;s Office&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-03-01&#34;&gt;1 March 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/analytics-help-process-trv-applications.html&#34;&gt;Advanced data analytics to help IRCC officers sort and process temporary resident visa applications&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Immigration, Refugees and Citizenship Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-24&#34;&gt;24 January 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eulisa.europa.eu/news-and-events/news/new-eurodac-enters-operation&#34;&gt;New Eurodac enters into operation&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eu-LISA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-12&#34;&gt;12 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&amp;amp;flno=91&#34;&gt;入出國及移民法第 91 條&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.moj.go.jp/isa/immigration/procedures/zyouriku_00001.html&#34;&gt;入国・帰国手続＜外国人の上陸手続（入管法第6・7・10・11条）＞&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;出入国在留管理庁&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.xinhuanet.com/world/2017-08/12/c_129679094.htm&#34;&gt;为何外国人入境须留存指纹——规范管理 优化服务&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;新华网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2017-08-12&#34;&gt;12 August 2017&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/smart-borders/entry-exit-system_en&#34;&gt;Entry/Exit System (EES)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
