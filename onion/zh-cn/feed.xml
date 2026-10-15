@@ -6,7 +6,150 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 15 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 16 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>在浏览器本地处理 PDF 的开源工具 BentoPDF</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/bentopdf-local-pdf-tools/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/bentopdf-local-pdf-tools</guid>
+<pubDate>Fri, 16 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>开源的 PDF 工具集 BentoPDF 依官方说明在浏览器里完成合并、压缩、OCR 与删除元数据，不必把文件上传到在线转换网站。打开官网就能用，界面有简体中文，部分功能使用时要从第三方网站 jsDelivr 下载程序。</description>
+<content:encoded>&lt;p&gt;整理 18 篇原文，来自 BentoPDF、GitHub、It&amp;#39;s FOSS 等 8 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;It&#39;s FOSS 10 月 10 日介绍开源的 PDF 工具集 BentoPDF，官网写有 100 多项工具。依官方说明，合并、拆分、压缩、OCR（光学字符识别，把扫描的图片转成可以搜索的文字）、加密与删除元数据都在浏览器里处理，不必把文件上传到服务器。打开官网就能用，不必注册，界面有简体中文与繁体中文。到 10 月 12 日为止，最新版是 8 月 29 日发布的 2.8.8。&lt;/p&gt;
+&lt;p&gt;官方隐私政策写明，处理由在用户设备上运行的 JavaScript 与 WebAssembly 库完成，文件不会上传。政策也写明网站不使用 cookie 与统计分析服务。压缩、PDF 转 Word 等功能用到的 PyMuPDF 这类组件不包含在 BentoPDF 的源代码里，README 写明它们在使用时由浏览器从 jsDelivr 下载（jsDelivr 是替网站分发程序文件的第三方服务）。OCR 工具页也写明第一次使用时要下载 OCR 引擎与所选的语言包，扫描的页面与识别出的文字留在设备上。&lt;/p&gt;
+&lt;p&gt;源代码以 AGPL-3.0 许可证公开在 GitHub，另有 79 美元一次买断的商业许可，给要用在闭源产品的人。项目由一位开发者发起，官网的介绍页写已有 60 多人贡献代码、翻译与修正。不想用官网的人，可以用 Docker（把整套程序打包成一个可以直接运行的软件包）在自己的电脑或服务器上部署。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;在线转换网站把文件传到自己的服务器处理再传回，文件在对方手上多久，要看各家的政策。iLovePDF 的隐私政策写明处理后两小时内删除，电子签名服务除外。Smallpdf 的隐私声明写明，没有登录的用户的文件通常在最后一次打开后的合理期间内删除（重新打开会延长），官方博客则写免费使用的文件一小时后删除。台北市政府资讯局 2023 年也提醒工作人员避免使用在线转换与加解密服务，理由是无法确保这些服务取得资料后如何保存与使用。&lt;/p&gt;
+&lt;p&gt;BentoPDF 的隐私政策写明，本地处理避开的是传输途中与服务器上的泄露。本文的推论是，要信任的对象因此换成网页上的程序。用官网版本时，运行的是官网当下提供的那一份，更新不需要用户同意。高级功能还会从 jsDelivr 加载代码，官方 FAQ 另外写明少数需要外部数据的工具可能需要联网。&lt;/p&gt;
+&lt;p&gt;项目在 GitHub 公开的安全公告中有一则，导入特制的工作流文件会把 PDF 的 SHA-256 哈希值（由文件内容算出的一串摘要，不是文件本身）发送到攻击者的服务器。公告列的影响范围是 2.8.6 与更早的版本，到 10 月 12 日为止没有列出修复版本。&lt;/p&gt;
+&lt;p&gt;文件在本地处理，PDF 本身仍可能带着作者、创建时间这类隐藏的属性。BentoPDF 的删除元数据工具可以清掉它们，「Sanitize PDF」工具另外删除注释与脚本，分享文件之前可以先处理一次。&lt;/p&gt;
+&lt;p&gt;需要合并或转换含个人信息的文件、又不想上传到在线服务的人，可以直接用官网，所有工具免费。官方 FAQ 写明没有设文件大小的限制，上限取决于自己电脑的性能。&lt;/p&gt;
+&lt;p&gt;想固定版本的人可以照 README 用 Docker 自行部署，需要先安装 Docker、会操作命令行。不能联网的环境要另外照 README 的离线部署步骤，先在能联网的电脑打包需要的组件再搬进去。隐私政策也写明，文件的安全取决于自己的电脑与浏览器。依本文的推论，电脑本身被入侵时，本地处理保护不到。&lt;/p&gt;
+&lt;p&gt;到 10 月 12 日，GreatFire 还没有测试过 bentopdf.com 在中国大陆能否连接，官网能否直接打开查不到。压缩这类功能要从 jsDelivr 下载组件，GreatFire 对 cdn.jsdelivr.net 最近两次测试都正常连接。这项测试只代表 cdn.jsdelivr.net 这个主机名，没有测具体的组件路径，同一页也显示 jsdelivr.net 底下另有网址被封锁。依 BentoPDF 的源代码，OCR 文字层的字体来自 rawcdn.githack.com，GreatFire 最后一次测试（2026 年 3 月 2 日）显示遭到封锁。&lt;/p&gt;
+&lt;p&gt;国家安全部 2024 年 8 月的提示列出网上办公平台的格式转化等功能，要求涉密岗位人员不得把涉密文件上传互联网、使用文字识别时不得输入涉密文件。提示的对象是涉密人员，没有针对一般用户或 PDF 转换网站。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（18 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/privacy&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-29&#34;&gt;2026 年 8 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/faq&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/ocr-pdf&#34;&gt;OCR PDF Free Online - Make Scanned PDFs Searchable | BentoPDF&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/remove-metadata&#34;&gt;Remove Metadata - Strip Hidden Data from PDF - BentoPDF&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/alam00000/bentopdf/blob/main/README.md&#34;&gt;bentopdf/README.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/licensing&#34;&gt;Licensing for BentoPDF&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/about&#34;&gt;About BentoPDF - Privacy-First Free PDF Tools | Our Story&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/alam00000/bentopdf/security/advisories/GHSA-cx8x-7rrr-r9x8&#34;&gt;Workflow Import Allows Unvalidated TSA URL Leading to PDF Hash Exfiltration via RFC 3161 Requests&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-23&#34;&gt;2026 年 8 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/bentopdf/&#34;&gt;BentoPDF Handles PDFs Locally, So You Don’t Have to Upload Them to Websites&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilovepdf.com/help/privacy&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iLovePDF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-19&#34;&gt;2026 年 2 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://smallpdf.com/privacy&#34;&gt;Privacy Notice&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Smallpdf&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-29&#34;&gt;2025 年 7 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://smallpdf.com/blog/is-smallpdf-safe&#34;&gt;Is Smallpdf Safe?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Smallpdf&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-14&#34;&gt;2026 年 7 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://doit.gov.taipei/News_Content.aspx?n=9B8993131395DA3F&amp;amp;sms=93D47212F58C7A57&amp;amp;s=46FD091DEE0322E4&#34;&gt;請同仁避免使用線上轉檔、加解密服務，以防資安事件發生&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;臺北市政府資訊局&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-17&#34;&gt;2023 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/bentopdf.com&#34;&gt;https://bentopdf.com — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/cdn.jsdelivr.net&#34;&gt;Is https://cdn.jsdelivr.net blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/alam00000/bentopdf/blob/main/src/js/config/font-mappings.ts&#34;&gt;bentopdf/src/js/config/font-mappings.ts&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/rawcdn.githack.com&#34;&gt;Is https://rawcdn.githack.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://jcgov.gov.cn/dtxx/zxts/202408/t20240805_2016583.shtml&#34;&gt;涉“文件传输助手”，国安部紧急提醒&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;晋城市人民政府&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-08-05&#34;&gt;2024 年 8 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Let&#39;s Encrypt 默认证书的 64 天有效期</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/letsencrypt-64-day-certs/</link>
@@ -2635,127 +2778,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/smart-borders/entry-exit-system_en&#34;&gt;Entry/Exit System (EES)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>美国警方的车牌识别与一起逮捕案</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/us-flock-alpr-arrest/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/us-flock-alpr-arrest</guid>
-<pubDate>Wed, 07 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>美国警方使用的 Flock 车牌识别摄像头 8、9 月接连有新进展。Flock 缩短默认的数据保存期限，参议院小组委员会举行听证，佛罗里达州与得州也限制使用。一位被捕后获不起诉的女性则对州警提起诉讼。做法都在美国境内，其他地方的读者不受直接影响。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Florida Department of Transportation、National Sheriffs&amp;#39; Association、Flock Safety 等 12 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美国参议院的一个小组委员会 9 月 23 日针对 Flock Safety 的车牌识别网络举行听证。出席作证的一位女性曾被逮捕，案情涉及车牌识别的记录，后来检方决定不起诉。车牌识别摄像头（ALPR）会自动拍下经过的车辆，记下车牌、时间和地点，警察之后可以查某辆车去过哪里。中国的《个人信息保护法》限定公共场所的图像采集设备只能用于维护公共安全，台湾的交通执法也用车牌识别系统，台湾立法院 2022 年的一份研究报告讨论过这些数据能不能挪作他用。&lt;/p&gt;
-&lt;p&gt;美国的数字权利组织 EFF 向各地机关申请公开 Flock 系统的查询记录，9 月 14 日发表分析。警察查询时应该填写原因，EFF 找到的记录里有 &lt;code&gt;LOL&lt;/code&gt;（大笑）、&lt;code&gt;idk&lt;/code&gt;（不知道）、&lt;code&gt;TBD&lt;/code&gt;（待定）或乱按键盘的字符串。其中 30 多个机关以 &lt;code&gt;TBD&lt;/code&gt; 为原因查询了 6,300 多次。&lt;/p&gt;
-&lt;p&gt;据 Texas Tribune 报道，得州州长 8 月 27 日晚间下令州政府机关暂停资助 Flock 摄像头。佛罗里达州交通部 8 月 31 日发出备忘录，要求 30 天内拆除州公路上的车牌识别器，之后也不再核发设置许可。据 EFF 的整理，佛州市区道路和私人土地上的摄像头不在范围内，得州的地方机关也仍可用其他经费设置。&lt;/p&gt;
-&lt;p&gt;出席听证会的女性，是因 2025 年 10 月佛州州际公路 I-4 的一起肇事逃逸被捕，事故造成三人死亡。据她向联邦法院提交的起诉状，Flock 摄像头在事故前两分钟拍到她的黑色 Dodge Durango 往东行驶，位置在事故地点西边约三英里。按起诉状以时间和距离的推算，事故发生时她已经往东开过事故路段。州警扣押她的车，2026 年 4 月以包括三项车祸致死罪在内的八项重罪逮捕她，她在看守所待了 13 天。&lt;/p&gt;
-&lt;p&gt;检方 5 月 22 日决定不起诉她，执法机关随后逮捕另一位女性，检方指控这位女性驾驶的是一辆暗红色的 Durango。当事人 6 月对两位负责调查的州警提起联邦民权诉讼，指控州警在逮捕令的宣誓书和出庭证词声称她的车有损伤。她也指控州警在宣誓书里没有提到一通 911 报警电话，报警人描述的是暗红色的 Durango，还报出部分车牌。截至 10 月 1 日，读不到两位州警对这些指控的回应，佛州公路巡逻队也没有回复 Fox News 的询问。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;据 Flock 8 月 13 日的公告，系统用机器学习模型识别各州的车牌样式，每条结果附上可信度的分数。可信度低的结果不会向警察发出警报。据 Texas Tribune 报道，Flock 的摄像头除了车牌也记录品牌、车型和颜色，加入 Flock 全国查询计划的机关可以从各地查询彼此的数据。Flock 在同一份公告把建议和默认的保存期限从 30 天改为 7 天，现有客户可以维持原来的设置。&lt;/p&gt;
-&lt;p&gt;十个执法团体 8 月 25 日的联合声明提到，车牌识别提供调查线索但不确立有罪，采取执法行动前必须先核实。据 Flock 给 Fox News 的声明，摄像头不负责指认加害者或决定逮捕，这起案子的记录也准确显示当事人的车在事故前两分钟位于三英里外。佛州公路巡逻队的专责小组后来应检方要求检查她的车，没有发现碰撞痕迹。当事人受访时把问题归到警方如何解读摄像头的数据。&lt;/p&gt;
-&lt;p&gt;EFF 的文章提到，Flock 在 2025 年底把查询原因从自由填写改成下拉菜单，选了哪个选项也不必证明与实际用途相符。EFF 询问的机关里，有的回复已告诫警员或改为要求填写案号，也有警长办公室回复以 &lt;code&gt;idk&lt;/code&gt; 为原因的查询都对应到正在进行的调查。据 Flock 的公告，年底前每次查询都要填写案件编号。系统也会自动找出异常的查询，交给各机关的管理员检查。&lt;/p&gt;
-&lt;p&gt;据执法团体的联合声明，跨辖区共享和查询对找人、找嫌犯很重要，应该用访问控制、审计和问责来规范。Flock 在给亚利桑那州一位县警长的信里主张，固定式摄像头在特定时刻拍下公共道路上清晰可见的车辆，不违反宪法第四修正案（禁止不合理搜查和扣押的条款）。EFF 的文章则提到，警察查询手机位置记录要向法官申请令状（warrant），查询车牌识别数据库则不需要。公益律师事务所 Institute for Justice 9 月发布修订的示范法案（供各州立法参考的条文范本），多数情况下要先取得令状才能查询历史位置数据，事务所出席听证会的法律顾问表示这不会妨碍寻找失踪儿童或被盗车辆。&lt;/p&gt;
-&lt;p&gt;佛州交通部的备忘录把撤除的理由写成部署数量急剧增加，加上滥用的报告、数据隐私的疑虑和监控计划。据 Flock 给 Texas Tribune 的声明，这项技术协助侦破重大犯罪、寻找失踪者和找回被盗车辆，Flock 的公告也提到 7 月检测到超过 1,000 名失踪者和 2 万多辆被盗车辆。亚利桑那州一位县警长 8 月终止了与 Flock 的合同，在听证会作证时表示，公司对新机型有没有使用 AI 的说明与实际不符。县里反走私小组的车辆和拖车仍使用非 Flock 的车牌识别器。&lt;/p&gt;
-&lt;p&gt;中国的《个人信息保护法》把行踪轨迹列为敏感个人信息，只有在具有特定目的和充分必要性时才能处理。在公共场所安装图像采集、身份识别设备须为维护公共安全所必需，收集的信息只能用于维护公共安全。国家机关履行法定职责时要依照法定权限和程序处理个人信息，并负有告知义务，但告知会妨碍履行职责时除外。美国的争论集中在查询前要不要由法官核准，这部法律则从用途限制与法定权限着手。&lt;/p&gt;
-&lt;p&gt;台湾的《警察职权行使法》允许警察在犯罪常发生或可能发生的公共场所用监视器或其他科技工具收集数据，除了调查需要保存的以外，最晚一年内销毁。台湾立法院 2022 年 1 月的一份研究报告把车牌号码列为可间接识别的个人数据，并检讨行政执行署与警察合作、在苏花改公路用车牌识别系统拦截查扣欠缴罚款车辆的试点。报告的结论是，交通执法的系统要改作其他用途，应该先修法写明目的与要件。和美国的令状之争相比，这份报告着重在数据能不能挪作他用。&lt;/p&gt;
-&lt;p&gt;在美国生活的读者可以查所在地的警察机关有没有公开 Flock 的透明度页面。据 Flock 的公告，已有超过 1,500 个机关公开，页面以机关自己的说明列出政策、保存期限、共享对象和查询活动。页面由各机关自行决定是否公开，没有公开的机关就查不到。&lt;/p&gt;
-&lt;p&gt;中国境内和其他地方的读者没有需要调整的设置。之后可以留意佛州民事诉讼的调解与审理进展、参议院小组委员会主席 8 月宣布的调查，以及 Flock 承诺年底前强制采用的案件编号与异常查询检测是否落实。&lt;/p&gt;
-&lt;p&gt;比较各地的做法时，隐私方面可以问查询是否需要法官核准、记录保存多久。问责方面可以问查询记录有没有人审计、滥用能不能被发现。治安方面可以问系统实际协助找到多少失踪者和被盗车辆，以及撤除之后的破案情况有没有改变。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/design/bulletins/eom26-01.pdf&#34;&gt;Engineering and Operations Memorandum No. 26-01: Revocation of General Use Permits for Automated License Plate Readers&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Florida Department of Transportation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-31&#34;&gt;2026 年 8 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.sheriffs.org/wp-content/uploads/2026/08/Final-Joint-Law-Enforcement-Statement-on-ALPR-August-25-2026.pdf&#34;&gt;Joint Statement on Automated License Plate Recognition (ALPR) Technology&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;National Sheriffs&amp;#39; Association&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-25&#34;&gt;2026 年 8 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency&#34;&gt;Flock Updates Privacy, Accountability, Security, and Transparency Safeguards&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Flock Safety&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-13&#34;&gt;2026 年 8 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://storage.courtlistener.com/recap/gov.uscourts.flmd.461176/gov.uscourts.flmd.461176.1.0.pdf&#34;&gt;Complaint, Case No. 6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke&#34;&gt;The High Crime of “LMAO”: How Cops Are Treating Flock&amp;#39;s Mass Surveillance As a Joke&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/09/texas-and-florida-step-back-alprs&#34;&gt;Texas and Florida Step Back from ALPRs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.foxnews.com/tech/innocent-woman-says-police-use-flock-camera-led-13-days-jail&#34;&gt;Innocent woman says police use of Flock camera led to 13 days in jail&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Fox News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-09&#34;&gt;2026 年 9 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texastribune.org/2026/08/28/texas-greg-abbott-flock-cameras-order-state-money/&#34;&gt;Abbott blocks state agencies from spending money on Flock cameras&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Texas Tribune&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://rollcall.com/2026/09/23/flock-cameras-draw-bipartisan-concerns-at-senate-hearing/&#34;&gt;Flock cameras draw bipartisan concerns at Senate hearing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Roll Call&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cronkitenews.azpbs.org/2026/09/24/flock-dishonesty-pinal-sheriff/&#34;&gt;Pinal County sheriff accuses Flock of ‘dishonesty’ about its cameras&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Cronkite News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080145&#34;&gt;警察職權行使法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&amp;amp;pid=217015&#34;&gt;運用科技執法查扣車輛之問題探討&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;立法院&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-26&#34;&gt;2022 年 1 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
