@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 16 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 17 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>通訊攔截與解密命令的核發者</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-17/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-17/2026</guid>
+<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在台灣的通訊要被監察時，偵查中要由法院核發通訊監察書。這一天，印度《資訊科技法》施行，政府可以下令攔截通訊並要求協助解密。</description>
+<content:encoded>&lt;p&gt;你在台灣的電話與網路通訊要被監察時，依《通訊保障及監察法》，偵查中由檢察官向法院聲請、由法院核發通訊監察書。2000 年 10 月 17 日，印度政府依公報指定《資訊科技法》從這一天施行，原始版第 69 條讓主管官員可以下令政府機關攔截電腦傳輸的資訊。被要求的人要提供解密協助，不配合最高可處 7 年徒刑。2009 年生效的修正把第 69 條擴大成攔截、監控與解密，並新增第 69A 條讓政府可以下令封鎖資訊，2020 年 6 月電子與資訊科技部就依第 69A 條封鎖了包括 TikTok、微信在內的 59 個 App。台灣的讀者在國內不需要調整設定，到印度時，2020 年被封鎖的 App 在當地可能無法使用（印度官方到 2025 年 8 月仍表示沒有解除 TikTok 的封鎖）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Wi-Fi 加密弱點的修補</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-16/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你用手機開 Facebook 不必每次輸入密碼，靠的是一組保持登入的憑證。這一天，Facebook 公布攻擊者利用漏洞偷走了大量帳號的這類憑證。</description>
 <content:encoded>&lt;p&gt;你用手機打開 Facebook 時不必每次輸入密碼，靠的是一組讓你保持登入的憑證，Facebook 的公告把它比喻成數位鑰匙。Facebook 在 2018 年 9 月 28 日公布「View As」功能有漏洞，這個功能讓使用者預覽自己的個人頁面在別人眼中的樣子，攻擊者可以藉此偷走這類憑證並在不需要密碼的情況下接管帳號。Facebook 當天估計約 5,000 萬個帳號受影響，並讓約 9,000 萬人重新登入。Facebook 在 10 月的後續公告把數字修正為約 3,000 萬人的憑證實際被偷，菲律賓的 BusinessWorld 報導其中有 755,973 個菲律賓帳號。想確認帳號沒有被別人登入，可以在 Facebook 的設定裡查看目前登入的裝置，Facebook 當年的公告也建議從這裡一次登出全部裝置。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>無法用軟體更新修補的 iPhone 開機漏洞</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/09-27/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/09-27/2026</guid>
-<pubDate>Sun, 27 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你如果還在用 iPhone X 或更早的機型，手機落到別人手上時資料要靠解鎖密碼保護。這一天，研究者公開了能利用 iPhone 開機漏洞的程式 checkm8。</description>
-<content:encoded>&lt;p&gt;你如果還在用 iPhone X 或更早的機型，手機裡有一個無法用軟體更新修補的開機漏洞。2019 年 9 月 27 日，一位研究者公開了能利用這個漏洞的程式 checkm8，它攻擊的是寫在晶片唯讀記憶體裡、開機時最先執行的程式碼。Ars Technica 的專訪寫明，checkm8 影響從 iPhone 4S 到 iPhone X 共 11 代 iPhone，而且必須實際接觸到手機才能使用。研究者在同一篇專訪提到，有安全隔離區的機型，不知道解鎖密碼的人用這個漏洞也無法讀取資料。還在用 iPhone X 或更早機型的人可以確認手機設了解鎖密碼，iPhone 8 與 iPhone X 到 2026 年 5 月仍有安全更新，也要裝上最新版本。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

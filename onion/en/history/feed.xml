@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Fri, 16 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 17 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Apps blocked in India and the law behind them</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-17/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-17/2026</guid>
+<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Some apps on your phone may not work if you travel to India. On this day, India&#39;s Information Technology Act came into force, letting the government order interception of communications and assistance with decryption.</description>
+<content:encoded>&lt;p&gt;If you travel to India, some apps on your phone may not work there. On 17 October 2000, India&#39;s government appointed that day, by official notification, for the Act to come into force, and its original Section 69 let a designated official order government agencies to intercept information sent through computers. Anyone called on had to help decrypt it, with up to seven years in prison for refusing (in Taiwan, interception during an investigation needs a court-issued warrant). An amendment that took effect in 2009 widened Section 69 to interception, monitoring and decryption and added Section 69A to let the government order information blocked, which the Ministry of Electronics and Information Technology used in June 2020 to block 59 apps, including TikTok and WeChat. India&#39;s government said in August 2025 that no order had been issued to lift the TikTok ban, so before a trip, check that you have a way to keep in touch that works there.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Patching of Wi-Fi encryption weaknesses</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-16/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Facebook on your phone keeps you logged in with a stored credential instead of your password. On this day, Facebook disclosed that attackers had used a bug to steal these credentials from a large number of accounts.</description>
 <content:encoded>&lt;p&gt;Facebook on your phone does not ask for your password every time, because it keeps you logged in with a stored credential that Facebook&#39;s announcement compared to a digital key. On 28 September 2018, Facebook disclosed a bug in &#34;View As&#34;, a feature for previewing how your profile looks to others, which let attackers steal these credentials and take over accounts without a password. Facebook estimated that day that about 50 million accounts were affected, and made about 90 million people log back in. In an October update Facebook revised the figure to about 30 million people whose credentials were actually stolen, and the Philippine newspaper BusinessWorld reported that 755,973 of the affected accounts were in the Philippines. To make sure no one else is logged into your account, check the list of logged-in devices in Facebook&#39;s settings, where Facebook&#39;s 2018 announcement also recommended logging out of every device at once.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>An iPhone startup flaw that updates cannot fix</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/09-27/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/09-27/2026</guid>
-<pubDate>Sun, 27 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>If you still use an iPhone X or older, your data depends on your passcode if the phone ends up in someone else&#39;s hands. On this day, a researcher released checkm8, an exploit for an iPhone startup flaw.</description>
-<content:encoded>&lt;p&gt;If you still use an iPhone X or an older model, your phone has a startup flaw that no software update can fix. On 27 September 2019, a researcher released checkm8, an exploit that targets the first code an iPhone runs at startup, which sits in read-only memory on the chip. Ars Technica&#39;s interview with the researcher reported that it works on 11 generations of iPhones, from the 4S to the X, and needs physical access to the phone. In the same interview, the researcher said that on models with a Secure Enclave, anyone without the passcode cannot read the data even with this exploit. If you still use one of these models, make sure it has a passcode, and on an iPhone 8 or iPhone X, which were still getting security updates as of May 2026, install the latest one.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

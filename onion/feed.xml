@@ -6,7 +6,167 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 17 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 17 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>每週短訊 2026 第 42 週</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/weekly-brief-2026-w42/</link>
+<guid isPermaLink="false">anoni-news:2026/10/weekly-brief-2026-w42</guid>
+<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>10 月 3 日到 10 月 11 日的 7 則新聞，包括 Telegram Desktop 已修正的檔案讀取漏洞、Bitwarden 商店版的授權變更、以 Android 17 為基礎的 LineageOS 24、Nitter 的資金與法律協助、以 ESP32-C3 製作的 DNS 廣告封鎖器、印度新德里的行動網路關閉與平台通知，以及 Psiphon 因加拿大 C-22 法案考慮離開。</description>
+<content:encoded>&lt;p&gt;整理 18 篇原文，來自 beaksec、GitHub、Bitwarden Community Forums 等 12 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;這一期收 7 則，涵蓋 10 月 3 日到 10 月 11 日。&lt;/p&gt;
+&lt;h3 id=&#34;telegram-desktop&#34;&gt;Telegram Desktop 的檔案讀取漏洞&lt;/h3&gt;
+&lt;p&gt;研究者 10 月 3 日公開 Telegram Desktop 7.2.8 及更早版本的漏洞，在 Telegram 以外的地方點一次特製連結，就可能讓本機檔案被送到攻擊者手上。被送出的檔案可能包括登入資訊，攻擊者可以藉此接管帳號，研究者只在 Windows 上確認過。研究者寫 Telegram 9 月 16 日在 GitHub 的一筆 commit 修正了這個問題，9 月 17 日發布的 7.2.9 包含這項修正，官方版本說明只寫了另一項顯示問題的修正。&lt;/p&gt;
+&lt;p&gt;用 Telegram Desktop 的人可以確認版本是 7.2.9 或更新的版本。研究者另建議設定本機密碼，但寫明它只能讓被偷的登入資訊無法使用，擋不住檔案被讀取。&lt;/p&gt;
+&lt;h3 id=&#34;bitwarden&#34;&gt;Bitwarden 商店版的授權變更&lt;/h3&gt;
+&lt;p&gt;Bitwarden 員工 10 月 9 日在社群論壇公告，下一個版本起，各 App 商店上架的是商業授權的版本。員工在回覆中也寫，官網下載頁的版本同樣改用商業授權。公告寫 GPLv3 的開源版本會繼續在 GitHub 更新與發布，目前所有功能兩個版本都有，但員工的回覆也寫未來有些元件會以商業授權發布、只存在於商業版。&lt;/p&gt;
+&lt;p&gt;另一位員工在論壇寫，這次調整只影響重新包裝轉售 Bitwarden 的人，自架不受影響。到 10 月 12 日，GitHub 上的授權檔最後一次修改在 2025 年。內容仍是 GPLv3，加上只用於 &lt;code&gt;bitwarden_license&lt;/code&gt; 目錄的 Bitwarden License。商業版的授權文字在官網查不到。&lt;/p&gt;
+&lt;h3 id=&#34;lineageos-24&#34;&gt;LineageOS 24&lt;/h3&gt;
+&lt;p&gt;LineageOS 是以 Android 開源程式碼為基礎、可以自行刷進手機的作業系統，10 月 11 日在官方部落格宣布以 Android 17 為基礎的 24.0。24.0 先支援一部分裝置，其他裝置符合要求後陸續加入。使用 Linux 核心 4.4 與 4.9 的裝置，官方只收 22.2 的版本。部落格寫 22.2 會持續每月合併安全性修補，直到 Google 停止為 Android 15 發布官方安全公告。&lt;/p&gt;
+&lt;p&gt;已經在用官方版本的人照裝置的升級指南操作，除非裝置的 wiki 頁面另有說明，不必清除資料。&lt;/p&gt;
+&lt;h3 id=&#34;nitter&#34;&gt;Nitter 的資金與法律協助&lt;/h3&gt;
+&lt;p&gt;依專案的 README，Nitter 是注重隱私的開源 X（Twitter）替代前端。維護者 10 月 10 日在 nitter.net 公告，X Corp. 8 月 24 日與 9 月 8 日兩度寄出律師函，要求永久撤下 Nitter 實例與程式碼儲存庫。公告寫，維護者 9 月 7 日說已有律師代表，依據的是後來證實不實的保證。到 10 月 10 日的公告為止，Nitter 沒有法律顧問，維護者正在徵求資金與法律協助。&lt;/p&gt;
+&lt;p&gt;TechCrunch 8 月的報導寫，信中指控 Nitter 不法使用與規避 X 的 API。到 10 月 12 日，nitter.net 只剩公告頁。&lt;/p&gt;
+&lt;h3 id=&#34;esp32-adblock&#34;&gt;以 ESP32-C3 製作的 DNS 廣告封鎖器&lt;/h3&gt;
+&lt;p&gt;GitHub 上的開源專案 esp32-c3-adblock 把類似 Pi-hole 的 DNS 廣告封鎖放進 ESP32-C3 開發板，README 寫這塊板子約 2 美元，以 MIT 授權發布。到 10 月 6 日專案仍有更新，README 寫明封鎖清單上的網域查詢一律回答 0.0.0.0，其他查詢轉送到上游的 DNS。使用方式是把裝置的 DNS 指向這塊開發板，README 的安裝步驟是自行編譯再燒錄。&lt;/p&gt;
+&lt;p&gt;README 也提醒沒改掉預設密碼的話，管理介面的密碼等於公開，而且管理介面只有一般的 HTTP。本文在 10 月 12 日讀 main 分支程式碼的結果是，預設以未加密的 DNS 轉送到公共 DNS 服務 Quad9。&lt;/p&gt;
+&lt;h3 id=&#34;india-shutdown&#34;&gt;印度新德里的行動網路關閉與平台通知&lt;/h3&gt;
+&lt;p&gt;依 Deccan Herald 的報導，印度內政部授權在新德里 Janpath 與 Kartavya Path 路口周圍半徑 4 公里內暫停行動上網服務，涵蓋所有行動網路技術。時間是印度時間 10 月 9 日 22:00（台北時間 10 月 10 日 00:30）到 10 月 10 日 22:00（台北時間 10 月 11 日 00:30），與一場抗議重疊。MediaNama 的報導寫明這份命令標示最高機密、沒有寫明理由。到 10 月 12 日更新的報導為止，內政部沒有正式公開命令。&lt;/p&gt;
+&lt;p&gt;依 MediaNama 照錄的通知全文，電子與資訊科技部 10 月 8 日另發通知。通知建議社群平台對可能影響公共秩序的不實與誤導內容加強注意，並優先處理授權政府機關的檢舉。到 10 月 12 日，部會網站查不到這份通知。&lt;/p&gt;
+&lt;p&gt;數位權利組織 SFLC.IN 認為這次關閉不符比例原則，也認為命令沒有事前公布，違反 2024 年電信（暫時停止服務）規則的公布要求。SFLC.IN 另認為通知的用語廣泛模糊，可能讓平台為了保住責任豁免而過度刪除合法言論。&lt;/p&gt;
+&lt;h3 id=&#34;psiphon-c-22&#34;&gt;Psiphon 與加拿大 C-22 法案&lt;/h3&gt;
+&lt;p&gt;The Globe and Mail 10 月 4 日報導，協助使用者繞過網路審查的多倫多業者 Psiphon 對報社表示已開始規劃，合法存取法案 C-22（Lawful Access Act, 2026）照現行版本通過就把業務移出加拿大。Citizen Lab 的頁面寫，法案通過後會要求電子服務業者秘密修改系統，讓警方與情報機關具備監控能力。Psiphon 的副總裁在給報社的電郵回覆中寫，開源的程式碼沒辦法偷偷加入後門，每一行都是公開的。到 10 月 12 日，Psiphon 自己的網站沒有另發公告。&lt;/p&gt;
+&lt;p&gt;同一篇報導中，公共安全部長的發言人回應，合法存取的框架本身不會讓業者無法在加拿大經營安全、保護隱私的服務。報導也寫眾議院在暑假休會前修正法案，其中一項修正保護端對端加密。到 10 月 12 日，加拿大國會的 LEGISinfo 顯示法案在參議院二讀。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（18 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/&#34;&gt;Telegram Desktop: one-click account takeover via IPC injection&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;beaksec&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-03&#34;&gt;2026 年 10 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/telegramdesktop/tdesktop/commit/db3405699f8fc3ae28a58d2348b7d13a43c0590a&#34;&gt;Remove legacy interpret path helper.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-16&#34;&gt;2026 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/telegramdesktop/tdesktop/releases/tag/v7.2.9&#34;&gt;v 7.2.9&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.bitwarden.com/t/published-version-update-in-app-stores/102750&#34;&gt;Published version update in app stores&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitwarden Community Forums&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/bitwarden/clients/blob/main/LICENSE.txt&#34;&gt;clients/LICENSE.txt&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lineageos.org/Changelog-32/&#34;&gt;Changelog 32 - Slick Seventeen, Awesome Applications, Universal USB Tools&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;LineageOS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-11&#34;&gt;2026 年 10 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nitter.net/&#34;&gt;nitter.net&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Nitter&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/zedeus/nitter/blob/master/README.md&#34;&gt;nitter/README.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/08/25/x-sends-cease-and-desist-to-open-source-project-nitter-over-alleged-scraping/&#34;&gt;X sends cease-and-desist to open source project Nitter over alleged scraping&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-25&#34;&gt;2026 年 8 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/M-Abozaid/esp32-c3-adblock&#34;&gt;esp32-c3-adblock&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.deccanherald.com/india/delhi/cjp-delhi-protest-govt-orders-internet-shut-down-around-jantar-mantar-from-10-pm-tonight-4176750&#34;&gt;CJP Delhi protest | Govt orders internet shut down around Jantar Mantar from 10 pm tonight&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Deccan Herald&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.medianama.com/2026/10/223-internet-shutdown-new-delhi-jantar-mantar/&#34;&gt;Internet shutdown ordered around New Delhi’s Jantar Mantar&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MediaNama&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.medianama.com/2026/10/223-meity-labelling-social-media-synthetic-content/&#34;&gt;Exclusive: Amid protests, MeitY widens labelling for social media beyond synthetic content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MediaNama&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-ins-statement-on-the-internet-shutdown-imposed-in-new-delhi/&#34;&gt;SFLC.IN’s Statement on the Internet Shutdown imposed in New Delhi&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.IN&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/statement-on-meitys-advisory-to-social-media-intermediaries-regarding-prevention-of-dissemination-of-misinformation-and-other-unlawful-content-having-potential-to-affect-public-order/&#34;&gt;Statement on MeitY’s Advisory to Social Media Intermediaries regarding prevention of dissemination of misinformation and other unlawful content having potential to affect public order.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.IN&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-psiphon-vpn-provider-plans-to-quit-canada-over-lawful-access-bill/&#34;&gt;Toronto-based VPN provider plans to quit Canada over lawful-access bill&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-04&#34;&gt;2026 年 10 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/toronto-based-vpn-provider-plans-to-quit-canada-over-lawful-access-bill/&#34;&gt;Toronto-Based VPN Provider Plans to Quit Canada Over Lawful-Access Bill&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;LEGISinfo&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>開源影像編輯軟體 Compositor 與 AI 生成程式碼的維護和稽核</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/compositor-image-editor/</link>
@@ -2302,116 +2462,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/answer/2812853&#34;&gt;Use Google Play Protect to help keep your apps safe &amp;amp; your data private&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>iPhone 自動重新啟動與鑑識工具的繞過宣稱</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/iphone-inactivity-reboot-bypass/</link>
-<guid isPermaLink="false">anoni-news:2026/10/iphone-inactivity-reboot-bypass</guid>
-<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>iOS 18.1 起，iPhone 長時間沒有解鎖會自動重新啟動，讓資料回到較難取出的狀態。一支約在 2025 年初製作的鑑識廠商影片裡，員工說扣押的手機即使重新啟動也能保留解鎖過一次的狀態。這項手法對最新版 iOS 是否有效，到 10 月 7 日為止並不清楚。Apple 沒有回覆報導的詢問，擔心手機被扣押取證的人可以留意後續。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，來自 Apple、404 Media、Privacy Guides 等 8 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;404 Media 在 10 月 1 日的報導寫到，他們取得了一支 Magnet Forensics 的影片，該公司的 Graykey 是賣給執法單位、用來解鎖手機並取出資料的工具。影片裡的 Magnet 員工說，Graykey Preserve 裝置與 Graykey 的 Evidence Preservation Mode 能讓扣押的 iPhone 停留在較容易取出資料的狀態，即使手機因各種原因重新啟動或斷電也一樣。404 Media 的報導把這項技術寫成用來繞過 iOS 18.1 起的「自動重新啟動」（英文報導多稱 Inactivity Reboot）。依 9to5Mac 引述 404 Media 的內容，這是專給執法人員的教學影片，看起來在 2025 年初製作。&lt;/p&gt;
-&lt;p&gt;TechSpot 在 10 月 2 日的報導寫明，這項宣稱尚未經過獨立驗證。9to5Mac 也寫到，這項技術提供給執法單位多久、是否用在實際案件，以及對最新版的 iOS 是否有效都不清楚。依 9to5Mac 與 Privacy Guides 的轉述，404 Media 向 Apple 與 Magnet 詢問，兩家都沒有回覆。到 10 月 7 日為止，本文查到的來源裡沒有 Apple 對這項宣稱的回應。&lt;/p&gt;
-&lt;p&gt;TechCrunch 2024 年 11 月的報導寫到兩種狀態的差別。手機開機之後還沒輸入過密碼的狀態稱為「首次解鎖前」（BFU）。依 TechCrunch 的說法，這時使用者資料完全加密，不知道密碼幾乎無法取出。輸入過一次密碼之後是「首次解鎖後」（AFU），即使手機鎖著也有部分資料沒有加密，某些鑑識工具可能比較容易取出。&lt;/p&gt;
-&lt;p&gt;Apple 的安全性指南寫明，iOS 18.1 與 iPadOS 18.1 起的「自動重新啟動」由「安全隔離區」（晶片裡專門處理密鑰的獨立子系統）監控裝置的解鎖事件，裝置長時間維持鎖定就會自動重新啟動。重新啟動會讓裝置從 AFU 轉為 BFU，並從記憶體清除敏感的密鑰與暫存資料。iOS 18.4 起，裝置管理者可以開關這項機制，受監管的裝置（公司或學校透過裝置管理統一設定的 iPhone）預設關閉。Apple 的文件沒有寫出要鎖定多久，研究者 2024 年 11 月的實測是 72 小時，TechCrunch 當時的報導也寫到 Magnet 確認了這個數字。&lt;/p&gt;
-&lt;p&gt;Privacy Guides 轉述影片的說法，Evidence Preservation Mode 會在 AFU 狀態「捕捉」iPhone，重新啟動之後 AFU 狀態也不會消失。依 TechSpot 的轉述，影片裡的員工說，Graykey 在取得初步存取、進入保存狀態之後會關閉手機的無線電（Wi-Fi、藍牙與行動網路）。員工也說 Graykey Preserve 能保留快取的位置資料、最近刪除的照片與 iMessage，這些資料原本會在一段時間後清除。依 Privacy Guides 的轉述，影片沒有說明技術細節。&lt;/p&gt;
-&lt;p&gt;Magnet 官網的 Graykey 產品頁到 10 月 7 日為止寫到，Graykey 能保護資料擷取不受自動重新啟動計時器影響。同一頁對 Graykey Preserve 的說明只提到 iOS。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;2024 年的逆向分析寫到，竊賊沒有資源在三天內取得最新的破解手法，自動重新啟動很可能讓他們完全取不到資料。同一篇也寫到，執法單位因此多了時間壓力。Magnet 的說法如果屬實，取得初步存取並開始保存的手機，72 小時到期時 AFU 狀態也不會消失。&lt;/p&gt;
-&lt;p&gt;本文引用的來源都沒有寫到一般使用者能做什麼來擋下 Magnet 的手法。依 iPhone 使用手冊，開機或重新開機之後一律要輸入密碼。本文從 BFU 的定義推論，關機之後再開機的手機會處於 BFU，擔心手機被扣押取證的人因此可以在手機可能離開自己身邊之前關機。影片沒有說明 Magnet 的手法能不能用在已經是 BFU 的手機。&lt;/p&gt;
-&lt;p&gt;依影片的說法，保存開始之後即使斷電，AFU 狀態也不會消失。關機的代價是期間收不到電話與訊息，手機在使用中被拿走時也來不及關機。&lt;/p&gt;
-&lt;p&gt;Apple 的「密碼」說明寫到，攻擊者即使取得裝置，沒有密碼也無法存取特定保護類別的資料。同一份說明也寫到密碼越長越能抵擋暴力破解，較長的數字密碼與較短的英數密碼相比更便於輸入，也可提供類似的安全性。這份說明沒有談到密碼長度對 Magnet 手法的影響。&lt;/p&gt;
-&lt;p&gt;在「設定」的「Face ID 與密碼」（或「Touch ID 與密碼」）點「更改密碼」，再點「密碼選項」就能更換。iPhone 使用手冊把「自訂英數密碼」與「自訂數字密碼」列為最安全的選項。長密碼的代價是開機或重新開機之後，以及超過 48 小時沒有解鎖時，都要輸入較長的字串。&lt;/p&gt;
-&lt;p&gt;Magnet 宣稱的手法跟執法單位扣押手機之後的取證有關，沒有手機被扣押疑慮的人不必改變設定。依 Apple 的安全性指南，受監管的 iPhone 預設不啟用自動重新啟動，使用這類手機的人不能假設有 72 小時的保護。&lt;/p&gt;
-&lt;p&gt;Apple 的「Apple 安全性發布」頁面寫明，在調查並公開提供修補程式或版本之前，不會揭露、討論或確認安全性問題。到 10 月 7 日為止，Magnet 的手法對最新版 iOS 是否有效並不清楚。11 月可以回頭看 iOS 的更新說明有沒有相關修補，以及有沒有研究者獨立驗證。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/security/protecting-user-data-in-the-face-of-attack-secf5549a4f5/web&#34;&gt;Protecting user data in the face of attack&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/security/secf5549a4f5/web&#34;&gt;遭遇攻擊時保護使用者資料&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/&#34;&gt;Cops Can Bypass iPhone’s Automatic Reboot to Get Into Locked Phones, Leaked Video Claims&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/01/leaked-video-shows-that-police-can-bypass-iphones-automatic-reboot-feature/&#34;&gt;Leaked Video Shows That Police Can Bypass iPhones&amp;#39; Automatic Reboot Feature&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5mac.com/2026/10/01/graykey-maker-can-reportedly-bypass-the-iphones-inactivity-reboot-security-feature/&#34;&gt;GrayKey maker can reportedly bypass the iPhone’s ‘Inactivity Reboot’ security feature&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;9to5Mac&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.techspot.com/news/114070-new-graykey-feature-police-stop-seized-iphones-becoming.html&#34;&gt;A forensic tool claims it can stop seized iPhones from locking down after 72 hours&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechSpot&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.magnetforensics.com/products/magnet-graykey/&#34;&gt;Access the critical iOS and Android evidence you need&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Magnet Forensics&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2024/11/14/new-apple-security-feature-reboots-iphones-after-3-days-researchers-confirm&#34;&gt;New Apple security feature reboots iPhones after 3 days, researchers confirm&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-14&#34;&gt;2024 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://naehrdine.blogspot.com/2024/11/reverse-engineering-ios-18-inactivity.html&#34;&gt;Reverse Engineering iOS 18 Inactivity Reboot&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;naehrdine&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-17&#34;&gt;2024 年 11 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/security/sec20230a10d/web&#34;&gt;密碼&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-19&#34;&gt;2024 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/iphone/iph14a867ae/ios&#34;&gt;在 iPhone 上設定密碼&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/100100&#34;&gt;Apple 安全性發布&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
