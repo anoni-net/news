@@ -6,7 +6,163 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 16 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 17 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Compositor, an open-source image editor, and maintaining and auditing AI-generated code</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/compositor-image-editor/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/compositor-image-editor</guid>
+<pubDate>Sat, 17 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>A designer released Compositor, a free, open-source image editor for the Mac that needs no account, and says AI wrote all of its code. The criticism we found centers on the phrase &#34;I built&#34; and on who reviews and maintains AI-written code. As of 12 October it runs only on Apple silicon Macs with macOS 26 or later.</description>
+<content:encoded>&lt;p&gt;Based on 19 sources, including Compositor, GitHub, X&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;A designer released Compositor, an image editor for the Mac, on GitHub on 16 September (UTC) and introduced it on X on 18 September. It is open source under the MIT license, free to download and needs no account, and the developer&#39;s launch post says it started as a tool for his own use, to get off an Adobe subscription. As of 12 October the latest release is 1.4.10 from 11 October (UTC), it runs only on Apple silicon Macs with macOS 26 or later, and the interface is English only, with translations not being accepted for now.&lt;/p&gt;
+&lt;p&gt;The launch post had about 2.4 million views by 12 October, but we could not retrieve the replies under it, so what follows draws only on a small number of public posts on X. A concept artist quoted the launch post to criticize calling AI-written software &#34;I built&#34;, describing such work as vibe coding, meaning having AI write code from natural-language instructions. Replying to that post, the developer wrote &#34;AI wrote every line of this&#34; and &#34;Code was always the painful part, never the important part.&#34; By our count of the GitHub commit history (the record of each change to the code) on 12 October, 282 of 451 commits carry a co-author credit for an AI coding tool.&lt;/p&gt;
+&lt;p&gt;A developer who builds creative tools, using the project to explore how AI will change the business of creative tools, wrote on X that its code is &#34;decidedly not for human consumption&#34;, and asked what would keep the developer maintaining it over the next six months or two years. The developer replied that he will keep maintaining it because he uses it every day. He maintains only the Mac version and wrote on X that he has not tested any of the Windows or Linux ports others have made.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;On GitHub the developer describes Compositor as &#34;a local, single-user editor with no network path&#34;. The release notes separately say it checks for updates at most once a day when opened, and updates wait for the user to install them. Reading the app&#39;s configuration, we confirmed that the update feed it checks is hosted on GitHub. On X the developer also wrote &#34;no login, no account, no tracking&#34;.&lt;/p&gt;
+&lt;p&gt;An outside contributor submitted a pull request (a proposed code change) adding generative fill, which would send images out only if the user turned it on, supplied their own key for Google&#39;s Gemini AI service and pressed generate. The pull request itself says this would be the first feature to send user content off the Mac. The developer commented that he wanted to think about how AI should fit into Compositor long term, and the pull request was later closed without being merged. On a separate on-device AI upscaling feature, he wrote that he would rather rethink AI features as a whole, possibly in a v2.&lt;/p&gt;
+&lt;p&gt;Being open source means these claims can be checked rather than taken on trust. On 12 October we searched the main branch for keywords and found no network requests or analytics code apart from the update check, which is not a full audit. By our count the app has about 37,000 lines of Swift, most of it AI-generated judging by the commit credits. The creative-tools developer&#39;s description of that code is &#34;decidedly not for human consumption&#34;.&lt;/p&gt;
+&lt;p&gt;On 19 September an outside contributor opened eight patch pull requests based on a security scan, one of which said crafted project values outside the expected range could make the inspector or adjustment editor stop working. The developer closed them as a batch, writing that the app is used locally by one person with no untrusted input, so these were &#34;robustness questions rather than security ones&#34;. His comment does not say whether opening a project file someone else sent you counts as untrusted input.&lt;/p&gt;
+&lt;p&gt;His closing comment also explains that import, resizing and export are already capped at 100 megapixels and 30,000 pixels per side, and that the added limits risked refusing valid documents. It adds that the pull requests revealed the automated tests had not run for a while, and that after the fix there are 362 tests. He asked anyone who had actually reproduced a crash to open an issue (a problem report on the project) with the file and steps.&lt;/p&gt;
+&lt;p&gt;The developer says he will keep maintaining a tool he uses himself, and that people who want other platforms can port it under the MIT license, as other developers have done for Windows and other platforms. The creative-tools developer questions whether the author will keep maintaining features users ask for but he does not use himself, adding that software for ordinary users doesn&#39;t seem to have the consulting income, from services sold to companies, that supports many open-source projects. The contributor behind a separate Simplified Chinese fork (an independently modified copy) wrote in an issue on the original project that the fork removed automatic updates, so users are not updated back to the English build and do not hit the original update feed.&lt;/p&gt;
+&lt;p&gt;Anyone with an Apple silicon Mac on macOS 26 or later can try it from GitHub or Homebrew. Downloading requires no sign-up, though reporting problems requires a GitHub account. Based on the developer&#39;s statements and our keyword search, editing images involves no network access apart from the update check, which is on by default and leaves installation to the user. We have not fully audited the code, and the developer has not said whether opening project files from others carries any risk.&lt;/p&gt;
+&lt;p&gt;The official download and update feed are hosted on GitHub, which may matter to readers in mainland China. As of its last tests on 11 and 8 October, GreatFire reports interference in 64% of 56 conclusive tests of github.com over the past 90 days, and in all of its last 4 tests of raw.githubusercontent.com, where the update feed is hosted, a small sample. These are third-party measurements of host names, not of the specific download paths. The interface is English only, and the one Simplified Chinese fork we found is maintained by an outside contributor; we found no Taiwanese news coverage of Compositor and no source linking it to any regulation in Asia.&lt;/p&gt;
+&lt;p&gt;When comparing tools like this, a few questions apply. The developer values running locally, no login and freedom to modify the code, and those claims can be checked against the source and actual network connections. The critics care about maintenance and what happens to a feature you rely on if a sole maintainer stops updating it. Whether anyone has read the AI-written code, and how outside reports are handled, can also be seen in a project&#39;s issues and pull requests.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (19)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://robbietilton.com/compositor&#34;&gt;Compositor – The Photoshop alternative for Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Compositor&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/blob/main/README.md&#34;&gt;Compositor/README.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2100946395972976843&#34;&gt;Compositor launch post on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2101334715513106496&#34;&gt;Compositor developer&amp;#39;s reply on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;19 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2101093572720148574&#34;&gt;Quote post by a concept artist on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103514110843551887&#34;&gt;Thread by a creative tools developer on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103514716962501046&#34;&gt;Thread by a creative tools developer on X (continued)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103523639685738691&#34;&gt;Thread by a creative tools developer on X (follow-up)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103520923697733898&#34;&gt;Compositor developer&amp;#39;s post on ports on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103519019282358348&#34;&gt;Compositor developer&amp;#39;s reply on maintenance on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;25 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2108977298905133319&#34;&gt;Compositor developer&amp;#39;s reply on tracking on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;10 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/releases&#34;&gt;Compositor releases&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/pull/58&#34;&gt;Add Generative Fill, Remove and Expand (optional, with the user&amp;#39;s own Gemini key)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/pull/73&#34;&gt;Add Enlarger, AI upscaling with Real-ESRGAN&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/pull/10&#34;&gt;Fix unsafe formatting of persisted rotation and hue angles&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;19 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/issues/23&#34;&gt;Feature request: Windows version of Compositor&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;19 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/issues/222&#34;&gt;FYI: Simplified Chinese localization fork (compositor-cn)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;7 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/github.com&#34;&gt;Is https://github.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/raw.githubusercontent.com&#34;&gt;Is https://raw.githubusercontent.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Country-code top-level domain hijacks and unauthorized HTTPS certificates</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/cctld-hijack-counterfeit-certs/</link>
@@ -2720,93 +2876,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Xinhua&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-22&#34;&gt;22 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>A four-country study of technology-facilitated violence against environmental defenders</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/apc-frontline-communities/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/apc-frontline-communities</guid>
-<pubDate>Thu, 08 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>APC previews research from Brazil, Kenya, Mexico and the Philippines on the disinformation, harassment and surveillance facing environmental defenders, and on how their communities respond. The full reports launch online on 8 October. Readers elsewhere can borrow the approach of protecting households and communities together.</description>
-<content:encoded>&lt;p&gt;Based on 9 sources, including APC, Human Rights Watch, EFF&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;APC (the Association for Progressive Communications, an international network of civil society organisations) published a preview on 22 September of research from Brazil, Kenya, Mexico and the Philippines. It covers environmental defenders resisting mining, energy and other extractive projects, many of them from Indigenous and traditional communities, and the online attacks they face. The full reports launch at an online event at 13:00 UTC on 8 October (21:00 Taipei time), which requires registration and offers interpretation in English, Spanish and Portuguese. The research is limited to those four countries; what readers elsewhere can take from it is how communities respond to harassment and disinformation together.&lt;/p&gt;
-&lt;p&gt;The studies use the term technology-facilitated violence for harm committed, assisted or intensified through digital platforms. The Kenyan study documents hate speech, cyberbullying, surveillance, disinformation, impersonation, doxing and direct cyberattacks. The summary reports, released in June, note that attacks reach defenders&#39; families, friends and colleagues too, creating a chilling effect. APC&#39;s article argues that perpetrators benefit from the design and algorithms of major platforms, and that Big Tech&#39;s dominance of internet services has contributed to the impact of disinformation where local media have been decimated.&lt;/p&gt;
-&lt;p&gt;All four studies found a digital divide, with limited internet access, devices and skills leaving communities more exposed to disinformation, fraud, surveillance and attacks. The research began in 2024 with more than 20 Indigenous communities across the four countries, using feminist participatory methods with community researchers at every stage. Responses documented include communities running their own radio station, social media accounts and intranet, and setting their own digital protection practices. One conclusion is that the true cost of outside digital technologies and infrastructure for such communities needs better evaluation, taking into account their relationship with their environment and culture.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The research team behind one of the reports found that in many cases a single phone is shared among family members, neighbours and co-workers, so they treat digital security as a matter for the household, neighbourhood and community, not only the individual. Participants named only a few protective practices, such as setting social media profiles to private and avoiding topics that could provoke attacks, which the report notes is itself a form of silencing.&lt;/p&gt;
-&lt;p&gt;On a shared phone, logged-in apps, notifications and SMS verification codes are visible to whoever picks it up. Whether an account is safe then depends on more than the owner&#39;s own settings, and the people sharing the phone need to agree on how they protect it.&lt;/p&gt;
-&lt;p&gt;Running a community radio station or social media accounts lets a community answer disinformation in its own voice. The same research records a case where a community radio station&#39;s content was taken down by a platform, and anything hosted on someone else&#39;s platform is subject to that platform&#39;s rules. A self-hosted intranet is outside those rules, but it only works inside the community, and the community carries the cost of equipment, power and maintenance. Answering disinformation that circulates beyond the community still takes a radio station or accounts that reach people outside it.&lt;/p&gt;
-&lt;p&gt;In the Philippines, the one Asian country in the study, the summary report describes red-tagging, labelling people as communist insurgents or terrorists without substantial evidence, as a central mechanism of repression that social media amplifies. According to Human Rights Watch, the Philippine Supreme Court declared on 8 May 2024 that red-tagging threatens the rights to life, liberty and security. The ruling overturned a lower court&#39;s dismissal of a petition for a writ of amparo, a court remedy that can include protection orders.&lt;/p&gt;
-&lt;p&gt;In the Kenyan survey, 60% of defenders who experienced online attacks reported them to technology companies and 29% blocked the perpetrators. In focus group discussions, a significant number said they took no action, citing attackers hidden behind anonymous or fake accounts, the absence of clear reporting channels, fear of retaliation and distrust of local authorities and police. Even when they suspected who was responsible, they lacked the tools, support or legal mechanisms to pursue it. Reporting and blocking can only deal with accounts and content already on a platform, so when an attacker returns under a new account, the target has to start reporting again.&lt;/p&gt;
-&lt;p&gt;The same report recommends a security risk assessment that identifies threats and vulnerabilities, followed by a security plan suited to the defenders&#39; circumstances, alongside community and peer support networks. For anyone planning with family and co-workers, we suggest starting with EFF&#39;s Surveillance Self-Defense guide Your Security Plan. It walks through six questions: what you want to protect, from whom, how bad the consequences of failure would be, how likely they are, how much trouble you are willing to take, and who your allies are.&lt;/p&gt;
-&lt;p&gt;As of 1 October, the guide is free and needs no account, and the site is available in 14 languages, including Simplified Chinese, updated on the same date as the English version, 27 October 2023. EFF&#39;s translations page also links to a community translation in Traditional Chinese last updated in 2019. GreatFire, which tests website blocking in mainland China, recorded a single conclusive test of &lt;code&gt;ssd.eff.org&lt;/code&gt; between July and September, and it connected normally.&lt;/p&gt;
-&lt;p&gt;The guide also notes that there is no perfect option for security, since people differ in their priorities, concerns and access to resources. A plan can change as your situation changes, so it is worth revisiting often.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/blog/frontline-communities-identify-and-resist-technology-facilitated-violence-and-disinformation&#34;&gt;Frontline communities identify and resist technology-facilitated violence and disinformation in their territories&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;22 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/pubs/summary-reports-resistance-and-resilience-collaborative-responses-online-attacks-environmental&#34;&gt;Summary reports - Resistance and resilience: Collaborative responses to online attacks on environmental defenders&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;8 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/event/research-launch-and-discussion-resistance-and-resilience-collaborative-responses-online&#34;&gt;Research launch and discussion - Resistance and Resilience: Collaborative responses to online attacks on environmental defenders in Brazil, Kenya, Mexico and the Philippines&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-04&#34;&gt;4 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/about&#34;&gt;Who we are&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hrw.org/news/2024/05/08/philippines-supreme-court-rejects-red-tagging&#34;&gt;Philippines: Supreme Court Rejects &amp;#39;Red-Tagging&amp;#39;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Human Rights Watch&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-05-08&#34;&gt;8 May 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/your-security-plan&#34;&gt;Your Security Plan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;27 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/zh-hans/module/your-security-plan&#34;&gt;制定安全计划&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;27 October 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/pages/other-translations&#34;&gt;Other Translations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/ssd.eff.org&#34;&gt;Is https://ssd.eff.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

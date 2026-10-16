@@ -6,7 +6,163 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Fri, 16 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 17 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>开源图像编辑软件 Compositor 与 AI 生成代码的维护和审计</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/compositor-image-editor/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/compositor-image-editor</guid>
+<pubDate>Sat, 17 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>一位设计师 9 月发布 Mac 上的开源图像编辑软件 Compositor，免费、不用账号，作者写明代码全由 AI 写成。本文读到的批评集中在「我做的」这个说法，以及 AI 写的代码由谁检查、谁维护。到 10 月 12 日只支持 Apple 芯片、macOS 26 以上的 Mac。</description>
+<content:encoded>&lt;p&gt;整理 19 篇原文，来自 Compositor、GitHub、X 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;一位设计师 9 月 16 日（UTC）在 GitHub 发布 Mac 上的图像编辑软件 Compositor，9 月 18 日在 X 公开介绍。软件以 MIT 许可证开源、免费下载，不需要账号，作者的发布帖子写起初是为了摆脱 Adobe 的订阅而做给自己用。到 10 月 12 日为止，最新版是 10 月 11 日（UTC）发布的 1.4.10，只支持搭载 Apple 芯片、macOS 26 以上的 Mac。界面只有英文，作者也暂时不接受翻译。&lt;/p&gt;
+&lt;p&gt;发布帖子到 10 月 12 日累计约 240 万次浏览，帖子下面的回复本文没有取得，以下只根据 X 上少数公开帖子。一位影视概念设计师引用发布帖子，批评把 AI 写成的软件说成「I built」（我做的），认为这类作品都是 vibe coding（用自然语言指示 AI 写代码）。作者回复这则帖子时写「AI wrote every line of this」，也写「Code was always the painful part, never the important part.」依本文 10 月 12 日统计 GitHub 的 commit（代码的每一次修改记录），451 个有 282 个带 AI 编程工具的共同作者署名。&lt;/p&gt;
+&lt;p&gt;另一位开发创作工具的开发者在 X 借这个项目探讨 AI 如何改变创作工具的生态，写这个项目的代码「decidedly not for human consumption」，并问作者接下来半年、两年维护它的动力在哪里。作者回复会继续维护，因为自己每天都在用。作者只维护 Mac 版，在 X 写其他人做的 Windows 与 Linux 移植他都没有测试。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;作者在 GitHub 写 Compositor 是「a local, single-user editor with no network path」。发布说明另外写明会检查更新，打开时每天最多一次，更新要用户自行确认才安装。本文读配置文件确认，检查的对象是 GitHub 上的更新清单。作者也在 X 写「no login, no account, no tracking」。&lt;/p&gt;
+&lt;p&gt;外部贡献者曾提交 PR（向项目提出的代码修改）加入生成式填充，默认关闭，用户要自备 Google 的 Gemini AI 服务密钥、按下生成才会把图片发送出去。PR 正文自己写明这是第一个让用户内容离开电脑的功能。作者留言要再想想长期如何在 Compositor 加入 AI，这个 PR 之后关闭、没有合并。另一个在本地运行的 AI 放大功能，作者留言宁可整体重新规划 AI 功能（可能在 v2），不要一项一项加。&lt;/p&gt;
+&lt;p&gt;开源让这些主张可以被检查，不必只听作者的说法。本文 10 月 12 日用关键词搜索过主分支的源代码，除了更新检查之外没有找到网络请求或统计分析的代码，这不是完整的审计。依本文计算，Swift 代码约 3.7 万行，从 commit 署名推论大多由 AI 生成。前述开发者对这些代码的说法是「decidedly not for human consumption」。&lt;/p&gt;
+&lt;p&gt;9 月 19 日有外部开发者依一份安全扫描提出八个修补 PR，其中一个写明特制的项目文件数值超出范围时，会让程序的属性面板或调整编辑器停止运行。作者把这批 PR 一起关闭，留言写软件在本地单人使用、没有不受信任的输入，这些属于程序稳定性的范围（「robustness questions rather than security ones」）。作者的留言没有说明，打开别人传来的项目文件算不算不受信任的输入。&lt;/p&gt;
+&lt;p&gt;作者的关闭留言也写，导入、缩放与导出都已统一限制在 1 亿像素、单边 3 万像素，新加的限制可能拒绝正常的文件。留言另外写到，这批 PR 让作者发现自动测试已经有一段时间无法运行，修好之后有 362 个测试。作者请提交者在实际复现崩溃时，附上文件与步骤另开 issue（项目的问题反馈）。&lt;/p&gt;
+&lt;p&gt;作者的说法是自用的工具会持续维护，需要其他平台的人可以依 MIT 许可证自行移植，已有其他开发者做出 Windows 等平台的移植版。前述开发者怀疑作者是否会持续维护用户要求、作者自己不用的功能，也写面向一般用户的软件似乎没有开源项目常见的咨询收入（为企业提供服务、支撑开发的收入）。另有开发者做了简体中文的分支（另外复制一份、自行修改的版本），在原项目的 issue 写分支移除了自动更新。理由是避免用户被更新回英文版，也不连接原项目的更新清单。&lt;/p&gt;
+&lt;p&gt;用搭载 Apple 芯片、macOS 26 以上的 Mac 处理图片的人，可以从 GitHub 或 Homebrew 下载试用。下载不必注册，反馈问题要有 GitHub 账号。依作者的说法与本文的关键词搜索，编辑图片时除了更新检查不会联网，更新检查默认开启、装不装由用户决定。本文没有完整审计代码，作者也没有说明打开别人传来的项目文件是否有风险。&lt;/p&gt;
+&lt;p&gt;Compositor 官方的安装文件与更新清单都放在 GitHub。到 10 月 11 日的最后一次测试，GreatFire 对 github.com 最近 90 天内 56 次有结论的测试中 64% 受到干扰。存放更新清单的 raw.githubusercontent.com，到 10 月 8 日最近 4 次测试全部受到干扰，样本只有 4 次。这是第三方对主机名的量测，没有测具体的下载路径。&lt;/p&gt;
+&lt;p&gt;比较这类工具时，可以从几个方面问。作者重视的是软件在本地运行、不用登录、可以自行修改，这些主张能不能从源代码与实际的网络连接确认。批评的一方在意的是维护，维护者只有一人时，自己需要的功能停止更新要怎么办。AI 写成的代码有没有人读过，外部报告的问题又如何处理，也可以从项目的 issue 与 PR 看出来。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（19 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://robbietilton.com/compositor&#34;&gt;Compositor – The Photoshop alternative for Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Compositor&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/blob/main/README.md&#34;&gt;Compositor/README.md&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2100946395972976843&#34;&gt;Compositor launch post on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2101334715513106496&#34;&gt;Compositor developer&amp;#39;s reply on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;2026 年 9 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2101093572720148574&#34;&gt;Quote post by a concept artist on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103514110843551887&#34;&gt;Thread by a creative tools developer on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103514716962501046&#34;&gt;Thread by a creative tools developer on X (continued)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103523639685738691&#34;&gt;Thread by a creative tools developer on X (follow-up)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103520923697733898&#34;&gt;Compositor developer&amp;#39;s post on ports on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2103519019282358348&#34;&gt;Compositor developer&amp;#39;s reply on maintenance on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/i/status/2108977298905133319&#34;&gt;Compositor developer&amp;#39;s reply on tracking on X&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/releases&#34;&gt;Compositor releases&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/pull/58&#34;&gt;Add Generative Fill, Remove and Expand (optional, with the user&amp;#39;s own Gemini key)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/pull/73&#34;&gt;Add Enlarger, AI upscaling with Real-ESRGAN&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/pull/10&#34;&gt;Fix unsafe formatting of persisted rotation and hue angles&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;2026 年 9 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/issues/23&#34;&gt;Feature request: Windows version of Compositor&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;2026 年 9 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/robbietilton/Compositor/issues/222&#34;&gt;FYI: Simplified Chinese localization fork (compositor-cn)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/github.com&#34;&gt;Is https://github.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/raw.githubusercontent.com&#34;&gt;Is https://raw.githubusercontent.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>国家代码顶级域名劫持事件与未经授权的 HTTPS 证书</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/cctld-hijack-counterfeit-certs/</link>
@@ -2690,87 +2846,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;China Law Translate&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-01&#34;&gt;2026 年 6 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>环境捍卫者与技术助长暴力的四国研究</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/apc-frontline-communities/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/apc-frontline-communities</guid>
-<pubDate>Thu, 08 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>APC 预告巴西、肯尼亚、墨西哥与菲律宾四国的研究，记录环境捍卫者遭受的虚假信息、骚扰与监控，以及社区自己的应对方式。完整报告在北京时间 10 月 8 日晚间在线发布。四国以外的读者可以参考的是以家庭与社区为单位的防护做法。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，来自 APC、EFF、GreatFire&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;APC（Association for Progressive Communications，以公民团体为会员的国际组织）在 9 月 22 日发表文章，预告巴西、肯尼亚、墨西哥与菲律宾四国的研究报告。研究对象是反对采矿、能源工程等开采项目的环境捍卫者，许多来自原住民与传统社区，研究记录他们在网上遭受的攻击与社区的应对。四国的完整报告在 UTC 时间 10 月 8 日 13:00（北京时间 21:00）的在线活动发布，需先报名，提供英语、西班牙语与葡萄牙语口译。研究以四国为范围，其他地方的读者可以参考的是社区集体应对骚扰与虚假信息的做法。&lt;/p&gt;
-&lt;p&gt;研究使用「技术助长的暴力」（technology-facilitated violence）一词，指通过数字平台进行、协助或加剧的伤害。肯尼亚的研究记录到的形式有仇恨言论、网络霸凌、监控、虚假信息、冒名、人肉搜索（公开他人的个人信息）与直接的网络攻击。6 月先公开的摘要报告写到，攻击也延伸到当事人的家人、朋友与同事，在社区里造成寒蝉效应。APC 在文章里的看法是，加害者得益于大型平台的设计与算法的运作方式。&lt;/p&gt;
-&lt;p&gt;四国的研究都发现数字鸿沟，网络、设备与使用技能不足，让社区更容易受到虚假信息、诈骗、监控与网络攻击。APC 的文章也写到，在本地媒体大量消失的地方，大型科技公司对互联网服务的主导加重了虚假信息的影响。研究的结论之一，是需要更仔细地评估外来的数字技术与基础设施对这些社区的实际代价，把社区与环境、文化的关系一并纳入考虑。&lt;/p&gt;
-&lt;p&gt;研究从 2024 年开始，与四国 20 多个原住民社区合作。研究采用女性主义的参与式方法，社区的研究者参与每个阶段。报告记录了社区的应对，例如自己经营广播电台、社交媒体账号与内部网络（只在社区里连接的局域网），并订出社区自己的数字保护做法。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;其中一份报告的研究团队发现，在许多情况下，一部手机由家人、邻居与同事共用。团队因此认为数字安全不只看个人，也要看家庭、邻里与社区。受访者能说出的防护做法很少，例如把社交媒体账号设为不公开，以及避开可能招来攻击的话题。报告写到，避开话题本身也是一种噤声。&lt;/p&gt;
-&lt;p&gt;一部手机由好几个人共用时，已登录的 App、通知与短信验证码都是共用的，每个拿起手机的人都能看到。账号是否安全因此不只看机主自己的设置，防护做法需要共用手机的人一起约定。&lt;/p&gt;
-&lt;p&gt;自己经营电台与账号，可以在虚假信息流传时提出社区自己的说法。报告也记录到，有社区电台放到社交平台上的内容被下架，放在别人平台上的内容要受平台的规则约束。自建的内部网络不受平台规则管辖，但只能在社区内部连接，设备、电力与维护也要社区自己负担。要回应在社区以外流传的虚假信息，还是需要能触及社区以外的电台与账号。&lt;/p&gt;
-&lt;p&gt;肯尼亚研究的问卷里，遭受过网络攻击的人有六成向科技公司举报，29% 拉黑对方。在焦点小组（研究者邀请一小群受访者一起座谈）的讨论里，也有不少人没有采取任何行动。原因包括攻击来自匿名或假账号、缺少明确的投诉渠道、担心报复，以及不信任地方当局与执法部门。&lt;/p&gt;
-&lt;p&gt;受访者即使怀疑是谁，也缺少工具、支持或法律途径可以追究。举报与拉黑只能处理平台上已经出现的账号与内容，攻击者换一个账号再来时，受害者又要从头举报一次。&lt;/p&gt;
-&lt;p&gt;同一份报告的建议包括先做安全风险评估，找出威胁与弱点之后制定量身定制的安全计划，并建立社区与同伴的支持网络。想和家人、同事一起规划的人，我们建议从 EFF（美国的数字权利组织电子前哨基金会）监控自我防卫指南的「制定安全计划」（Your Security Plan）开始。指南列出六个问题，包括要保护什么、防范谁、后果多严重、发生的可能性多高、愿意付出多少代价，最后一题是有谁可以一起帮忙。&lt;/p&gt;
-&lt;p&gt;10 月 1 日核查时，指南可以免费阅读、不需要注册，网站有 14 种语言，简体中文版与英文版同样在 2023 年 10 月 27 日更新。EFF 的翻译页另外列出一份社区翻译的正体中文版，内容停在 2019 年。GreatFire（测试中国大陆网址封锁状况的网站）在 7 月到 9 月之间对 &lt;code&gt;ssd.eff.org&lt;/code&gt; 只有一次有结果的测试，连接正常，境内能否稳定访问仍需实际测试确认。&lt;/p&gt;
-&lt;p&gt;指南里也写到，不存在完美的安全方案，每个人在乎的事与能取得的资源都不同。安全计划要与时俱进，有必要经常回顾。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/blog/frontline-communities-identify-and-resist-technology-facilitated-violence-and-disinformation&#34;&gt;Frontline communities identify and resist technology-facilitated violence and disinformation in their territories&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-22&#34;&gt;2026 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/pubs/summary-reports-resistance-and-resilience-collaborative-responses-online-attacks-environmental&#34;&gt;Summary reports - Resistance and resilience: Collaborative responses to online attacks on environmental defenders&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/event/research-launch-and-discussion-resistance-and-resilience-collaborative-responses-online&#34;&gt;Research launch and discussion - Resistance and Resilience: Collaborative responses to online attacks on environmental defenders in Brazil, Kenya, Mexico and the Philippines&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-04&#34;&gt;2026 年 9 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apc.org/en/about&#34;&gt;Who we are&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;APC&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/your-security-plan&#34;&gt;Your Security Plan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;2023 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/zh-hans/module/your-security-plan&#34;&gt;制定安全计划&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-27&#34;&gt;2023 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/pages/other-translations&#34;&gt;Other Translations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/ssd.eff.org&#34;&gt;Is https://ssd.eff.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
