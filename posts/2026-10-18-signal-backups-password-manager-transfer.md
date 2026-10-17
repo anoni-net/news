@@ -1,7 +1,7 @@
 ---
 title: Signal 的跨平台加密備份與 Android 的密碼管理器搬移
 description: Signal 9 月 28 日發布 iOS 8.30，加密備份 Signal Secure Backups 可以在 Android 與 iPhone 之間還原，換手機時能把對話帶到另一個平台。Google 9 月在 Android 推出密碼管理器之間的搬移流程，不必匯出檔案，公告列出四款支援的密碼管理器。
-date: 2026-10-18T12:00:00+08:00
+date: 2026-10-18T02:15:00+08:00
 slug: signal-backups-password-manager-transfer
 categories:
   - mobile
