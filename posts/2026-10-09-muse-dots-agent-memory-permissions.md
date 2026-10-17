@@ -1,6 +1,6 @@
 ---
 title: Meta Muse 與 OpenAI Dots 的記憶與權限設計
-description: Meta 的 Muse 與 OpenAI 的 Dots 都在 9 月推出，在雲端常駐、讀取連上的 App 資料並整理成記憶。到 10 月 2 日為止，台灣的 App Store 沒有 Muse，Dots 只開放給 ChatGPT 的 Pro 與 Business Premium 方案，用 ChatGPT 或 Mac 的人可以先檢查記憶與權限設定。
+description: Meta 的 Muse 與 OpenAI 的 Dots 都在 9 月推出，在雲端常駐、讀取連上的 App 資料並整理成記憶。到 10 月 2 日為止，台灣的 App Store 沒有 Muse，Dots 只開放給 ChatGPT 的 Pro 與 Business Premium 方案。用 ChatGPT 或 Mac 的人可以先檢查記憶與權限設定。
 date: 2026-10-09T00:05:00+08:00
 slug: muse-dots-agent-memory-permissions
 categories:
@@ -80,17 +80,23 @@ authors:
   - anoni-net
 ---
 
-Meta 在 9 月 8 日推出 Muse，OpenAI 在 9 月 29 日推出 Dots。兩者都是 AI agent，也就是能自行替使用者執行一連串工作的 AI 助理。它們在雲端持續運作，讀取使用者連上的 App 與服務、整理成記憶，再主動處理事情。依 Meta 的公告，Muse 先在美國推出，到 10 月 2 日為止台灣的 App Store 沒有上架。同一天為止，Dots 只開放給 ChatGPT 的 Pro 與 Business Premium 方案。
+Meta 在 9 月 8 日推出 Muse，OpenAI 在 9 月 29 日推出 Dots。兩者都是 AI agent，也就是能自行替使用者執行一連串工作的 AI 助理。它們在雲端持續運作，讀取使用者連上的 App 與服務、整理成記憶，再主動處理事情。
 
-Muse 有 iPhone、Android 與網頁版，Meta 的公告寫到大部分功能免費，另有付費方案，美國 App Store 頁面列出的介面語言包含正體與簡體中文。新聞自由組織 Freedom of the Press Foundation（FPF）的電子報轉述一位使用者的說法，Muse 替使用者在 Facebook Marketplace 賣鍵盤時接受了使用者不滿意的價格，把住址給了買家，買家上門時也沒有通知使用者。到 10 月 2 日為止，我們沒有看到 Meta 對這個案例的回應。FPF 也提醒，Muse 預設會用使用者的互動紀錄訓練 Meta 的模型。
+依 Meta 的公告，Muse 先在美國推出，到 10 月 2 日為止台灣的 App Store 沒有上架。同一天為止，Dots 只開放給 ChatGPT 的 Pro 與 Business Premium 方案。
+
+Muse 有 iPhone、Android 與網頁版。Meta 的公告寫到大部分功能免費，另有付費方案，美國 App Store 頁面列出的介面語言包含正體與簡體中文。
+
+新聞自由組織 Freedom of the Press Foundation（FPF）的電子報轉述一位使用者的說法：Muse 替使用者在 Facebook Marketplace 賣鍵盤時接受了使用者不滿意的價格，把住址給了買家，買家上門時也沒有通知使用者。到 10 月 2 日為止，我們沒有看到 Meta 對這個案例的回應。FPF 也提醒，Muse 預設會用使用者的互動紀錄訓練 Meta 的模型。
 
 9to5Mac 與 Decrypt 報導了一位科技專欄作者在 Mac 上測試 Muse 的經過。作者在設定時拒絕了訊息權限，之後 Muse 的建議卻用到作者與節目搭檔的對話。Decrypt 寫到讀取 Mac 的訊息資料庫需要完全取用磁碟權限。Meta 一位主管在 Threads 回應訊息存取是需要使用者自行開啟的功能，作者則表示拒絕之後 Muse 的設定裡仍顯示訊息存取為開啟。
 
-研究者也找到 Muse 的其他問題。Ars Technica 9 月 21 日報導一個讓其他 App 與終端機指令可以控制 Muse 的漏洞，並寫到 Meta 在報導刊出約 12 小時後發布修補。另一位研究者取得了 Muse 所在的整個雲端執行環境，解壓後有 6.8 GB。這位研究者透過 Meta 的漏洞獎勵計畫提交發現，Meta 標為不適用，回覆列出幾種可能的理由，但沒有指明適用哪一種。
+研究者也找到 Muse 的其他問題。Ars Technica 9 月 21 日報導一個讓其他 App 與終端機指令可以控制 Muse 的漏洞，並寫到 Meta 在報導刊出約 12 小時後發布修補。
 
-Dots 的每個 dot 是一個獨立的助理，有自己的雲端電腦，透過外掛連上其他 App。依 OpenAI 的說明頁，使用者沒有交辦工作時，dot 會讀取已連上的資料並寫進自己的筆記，這個階段不能傳訊息、修改內容或操作瀏覽器。到 10 月 2 日為止，個別記憶無法查看、刪除或直接修改，要刪只能刪掉整個 dot。刪掉 dot 時，它建立的檔案與對話另外存放，不會一起刪除。
+另一位研究者取得了 Muse 所在的整個雲端執行環境，解壓後有 6.8 GB。這位研究者透過 Meta 的漏洞獎勵計畫提交發現。Meta 將提交標為不適用，回覆列出幾種可能的理由，但沒有指明適用哪一種。
 
-說明頁也談到提示注入，也就是網頁、Email 或文件裡藏著要 dot 執行使用者沒交辦動作的指令，OpenAI 寫的是防護能降低風險，但無法消除。OpenAI 的說明也提到在支援的登入流程裡，密碼經由獨立的表單送進瀏覽器環境、不經過模型，在聊天、文件或外掛裡提供的密碼則不在保護範圍。Dots 只能在電腦上建立，未滿 18 歲不能使用。到 10 月 2 日為止，Dots 的說明只見於 OpenAI 自己的文件，還沒有獨立的檢驗報告。
+Dots 的每個 dot 是一個獨立的助理，有自己的雲端電腦，透過外掛連上其他 App。依 OpenAI 的說明頁，使用者沒有交辦工作時，dot 會讀取已連上的資料並寫進自己的筆記（這個階段不能傳訊息、修改內容或操作瀏覽器）。到 10 月 2 日為止，個別記憶無法查看、刪除或直接修改，要刪只能刪掉整個 dot。刪掉 dot 時，它建立的檔案與對話另外存放，不會一起刪除。
+
+說明頁也談到提示注入（網頁、Email 或文件裡藏著要 dot 執行使用者沒交辦動作的指令），OpenAI 寫的是防護能降低風險，但無法消除。OpenAI 的說明也提到在支援的登入流程裡，密碼經由獨立的表單送進瀏覽器環境、不經過模型，在聊天、文件或外掛裡提供的密碼則不在保護範圍。Dots 只能在電腦上建立，未滿 18 歲不能使用。到 10 月 2 日為止，Dots 的說明只見於 OpenAI 自己的文件，還沒有獨立的檢驗報告。
 
 ## 導讀觀點 {#perspective}
 
@@ -100,10 +106,10 @@ Dots 的每個 dot 是一個獨立的助理，有自己的雲端電腦，透過�
 
 OpenAI 8 月推出的 ChatGPT 訊息外掛，能讀取、摘要、草擬與傳送 Mac「訊息」App 裡的訊息，設定時要開啟完全取用磁碟。TechCrunch 轉述 OpenAI 的說明，訊息內容存在使用者的電腦上、不存到伺服器，FPF 則提醒使用 ChatGPT 時 OpenAI 仍會處理對話內容。在 Apple 的說明頁裡，完全取用磁碟讓 App 讀取電腦上的所有檔案，包括「訊息」等其他 App 的資料。
 
-依 OpenAI 的說明頁，斷開 App 只停止 dot 之後的存取，已經整理進 dot 的資料要刪掉整個 dot 才清得掉。關閉 ChatGPT 的記憶也只停止之後與 dot 的分享，dot 已經收到的資訊不會刪除。訊息資料庫裡也有別人傳來的訊息，依 Meta 與 OpenAI 的說明推論，收訊息的人開啟這類權限時，寄訊息給他的人無法控制這些訊息被 AI 讀取。
+依 OpenAI 的說明頁，斷開 App 只停止 dot 之後的存取，已經整理進 dot 的資料要刪掉整個 dot 才清得掉。關閉 ChatGPT 的記憶也只停止之後與 dot 的分享，dot 已經收到的資訊不會刪除。訊息資料庫裡也有別人傳來的訊息。依 Meta 與 OpenAI 的說明推論，收訊息的人開啟這類權限時，寄訊息給他的人無法控制這些訊息被 AI 讀取。
 
 用 ChatGPT 的人，可以在設定的「Personalization」查看記憶。根據 OpenAI 的說明，只刪掉對話不一定會刪掉由該對話產生的記憶，要另外刪除。訓練設定在「Data controls」，關閉之後只對新對話生效，OpenAI 的說明頁以英文介面寫出這兩個位置。
 
 用 Mac 且授權過 AI App 的人，可以在「系統設定」的「隱私權與安全性」，查看「完全取用磁碟」與「輔助使用」有哪些 App 取得權限。Apple 的說明頁提到，取得輔助使用權限的 App 也能取用聯絡資訊、行事曆等資料。
 
-想試用 Muse 或 Dots 的人，FPF 建議等技術更成熟，或用一台只放必要資料的裝置，代價是要另外準備裝置。到 10 月 2 日為止，Dots 需要付費方案，其中 Business Premium 每人每月 125 美元。SecureDrop 在 9 月 24 日的公告建議，準備聯絡媒體揭露資訊的人不要在登入狀態下使用 AI 聊天服務，提示詞的紀錄可能被用來辨識身分。
+想試用 Muse 或 Dots 的人，FPF 建議等技術更成熟，或用一台只放必要資料的裝置。後者的代價是要另外準備裝置。到 10 月 2 日為止，Dots 需要付費方案，其中 Business Premium 每人每月 125 美元。SecureDrop 在 9 月 24 日的公告建議，準備聯絡媒體揭露資訊的人不要在登入狀態下使用 AI 聊天服務，提示詞的紀錄可能被用來辨識身分。
