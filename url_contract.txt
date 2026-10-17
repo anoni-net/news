@@ -123,6 +123,9 @@
 /2026/10/privacy-international-migrant-surveillance/
 	#perspective
 	#sources
+/2026/10/signal-backups-password-manager-transfer/
+	#perspective
+	#sources
 /2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
@@ -307,6 +310,9 @@
 /en/2026/10/privacy-international-migrant-surveillance/
 	#perspective
 	#sources
+/en/2026/10/signal-backups-password-manager-transfer/
+	#perspective
+	#sources
 /en/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
@@ -411,8 +417,11 @@
 /en/history/10-15/
 	#y2026
 /en/history/10-16/
+	#y2026
 /en/history/10-17/
+	#y2026
 /en/history/10-18/
+	#y2026
 /en/history/10-19/
 	#y2026
 /en/page/2/
@@ -466,8 +475,11 @@
 /history/10-15/
 	#y2026
 /history/10-16/
+	#y2026
 /history/10-17/
+	#y2026
 /history/10-18/
+	#y2026
 /history/10-19/
 	#y2026
 /page/2/
@@ -600,6 +612,9 @@
 /zh-cn/2026/10/privacy-international-migrant-surveillance/
 	#perspective
 	#sources
+/zh-cn/2026/10/signal-backups-password-manager-transfer/
+	#perspective
+	#sources
 /zh-cn/2026/10/telenor-myanmar-investigation/
 	#perspective
 	#sources
@@ -704,8 +719,11 @@
 /zh-cn/history/10-15/
 	#y2026
 /zh-cn/history/10-16/
+	#y2026
 /zh-cn/history/10-17/
+	#y2026
 /zh-cn/history/10-18/
+	#y2026
 /zh-cn/history/10-19/
 	#y2026
 /zh-cn/page/2/
