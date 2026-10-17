@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 17 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 18 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>公共 Wi-Fi 上的搜索关键词</title>
+<link>https://anoni.net/news/zh-cn/history/10-18/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-18/2026</guid>
+<pubDate>Sun, 18 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在公共 Wi-Fi 上搜索时，关键词是否加密要看搜索服务。这一天，Google 宣布登录的用户默认改用 HTTPS 搜索。</description>
+<content:encoded>&lt;p&gt;你在咖啡店或车站连上公共 Wi-Fi 搜索时，关键词在传输途中是否加密取决于搜索服务，百度在搜索资源平台一篇未标日期的说明里写已经全站实现 https。2011 年 10 月 18 日，Google 宣布登录账号的用户在接下来几周会被导向 HTTPS 的 google.com，官方博客写明这在网吧 Wi-Fi 这类不安全的网络上特别重要。Google 2010 年的博客写明加密搜索不会减少发送给 Google 的数据，只是让第三方看不到，2011 年的公告也写点击广告时浏览器仍会把搜索词传给广告主。在中国大陆，第三方封锁监测网站 GreatFire 截至 2026 年 10 月 8 日的最近 17 次有结论的测试中，有 16 次连不上 www.google.com。在海外用 Google 搜索的读者不需要另外设置，Chrome 团队的公告写明 2026 年 10 月的 154 版起会在打开没有 HTTPS 的公开网站前默认先询问。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>在印度无法使用的 App 与《信息技术法》</title>
 <link>https://anoni.net/news/zh-cn/history/10-17/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>用 iPhone 的 Safari 上网时，网络运营商仍可以看到你连到哪个网站。这一天，Cloudflare 让使用它服务的网站都能加密网站名称。</description>
 <content:encoded>&lt;p&gt;用 iPhone 的 Safari 上网时，网络运营商仍可以看到你连到哪个网站，2026 年 8 月还有开发者在 Apple 的开发者论坛反馈 Safari 发出的网站名称没有加密。地址栏的小锁图标只代表网页内容加密，连接一开始发出的网站名称要靠另一项技术 Encrypted Client Hello（ECH）加密。2023 年 9 月 29 日，Cloudflare 宣布所有方案的网站都可以启用 ECH，Chrome 在电脑与 Android 上也默认使用。中国在 2020 年 7 月封锁了 ECH 的早期版本，俄罗斯的通信监管机构也从 2024 年 11 月起封锁使用 ECH 的连接。想知道自己的浏览器有没有加密网站名称，可以打开 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-cn/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 页面检查。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>保持登录的 Facebook 账号</title>
-<link>https://anoni.net/news/zh-cn/history/09-28/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/09-28/2026</guid>
-<pubDate>Mon, 28 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你用手机打开 Facebook 不必每次输入密码，靠的是一组保持登录的凭证。这一天，Facebook 公布攻击者利用漏洞偷走了大量账号的这类凭证。</description>
-<content:encoded>&lt;p&gt;你用手机打开 Facebook 时不必每次输入密码，靠的是一组让你保持登录的凭证，Facebook 的公告把它比喻成数字钥匙。Facebook 在 2018 年 9 月 28 日公布「View As」功能有漏洞，这个功能让用户预览自己的个人主页在别人眼中的样子，攻击者可以借此偷走这类凭证并在不需要密码的情况下接管账号。Facebook 当天估计约 5,000 万个账号受影响，并让约 9,000 万人重新登录。Facebook 在 10 月的后续公告把数字修正为约 3,000 万人的凭证实际被偷，菲律宾的 BusinessWorld 报道其中有 755,973 个菲律宾账号。在海外使用 Facebook 的人想确认账号没有被别人登录，可以在 Facebook 的设置里查看目前登录的设备，Facebook 当年的公告也建议从这里一次退出所有设备上的登录。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

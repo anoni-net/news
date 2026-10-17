@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sat, 17 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 18 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Search terms on public Wi-Fi</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-18/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-18/2026</guid>
+<pubDate>Sun, 18 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>When you search on Google over https on public Wi-Fi, the words you type are encrypted in transit. On this day, Google announced that signed-in users would search over HTTPS by default.</description>
+<content:encoded>&lt;p&gt;When you search on Google over https on Wi-Fi in a café or a train station, your search terms and results page are encrypted in transit, so others on the same network cannot see them. On 18 October 2011, Google announced on its official blog that users signed in to a Google Account would be redirected to HTTPS on google.com over the following weeks, noting that this matters especially on unsecured connections such as an internet café&#39;s Wi-Fi. Google&#39;s 2010 blog post says encrypted search does not reduce the data sent to Google but only hides it from third parties, and the 2011 announcement adds that clicking an ad still passes the search query to the advertiser. In mainland China, 16 of the censorship monitor GreatFire&#39;s last 17 conclusive tests, up to 8 October 2026, could not reach www.google.com, while an undated page on Baidu&#39;s webmaster platform says its whole site runs on HTTPS. Elsewhere in Asia, readers do not need to change any settings to search Google, and according to the Chrome team&#39;s announcement, from Chrome 154 in October 2026 the browser asks by default before opening a public site without HTTPS.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Apps blocked in India and the law behind them</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-17/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>On Safari for iPhone, your internet provider can still see which site you visit. On this day, Cloudflare let sites on its network encrypt their names.</description>
 <content:encoded>&lt;p&gt;If you browse with Safari on an iPhone, your internet provider can still see which site you are visiting, and in August 2026 a developer reported on Apple&#39;s developer forums that Safari still sends the site name unencrypted. The padlock in the address bar only means the page content is encrypted, and the site name sent at the start of each connection needs a separate technology, Encrypted Client Hello (ECH). On 29 September 2023, Cloudflare made ECH available to sites on all of its plans, and as of 1 October 2026 Chrome uses it by default on desktop and Android. China blocked an earlier version of ECH in July 2020, according to researchers from Geneva, GFW Report and iYouPort, and Russia&#39;s telecom regulator has blocked ECH connections since November 2024. To see whether your browser encrypts the site name, open Cloudflare&#39;s &lt;a href=&#34;https://www.cloudflare.com/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; page.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Facebook accounts that stay logged in</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/09-28/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/09-28/2026</guid>
-<pubDate>Mon, 28 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Facebook on your phone keeps you logged in with a stored credential instead of your password. On this day, Facebook disclosed that attackers had used a bug to steal these credentials from a large number of accounts.</description>
-<content:encoded>&lt;p&gt;Facebook on your phone does not ask for your password every time, because it keeps you logged in with a stored credential that Facebook&#39;s announcement compared to a digital key. On 28 September 2018, Facebook disclosed a bug in &#34;View As&#34;, a feature for previewing how your profile looks to others, which let attackers steal these credentials and take over accounts without a password. Facebook estimated that day that about 50 million accounts were affected, and made about 90 million people log back in. In an October update Facebook revised the figure to about 30 million people whose credentials were actually stolen, and the Philippine newspaper BusinessWorld reported that 755,973 of the affected accounts were in the Philippines. To make sure no one else is logged into your account, check the list of logged-in devices in Facebook&#39;s settings, where Facebook&#39;s 2018 announcement also recommended logging out of every device at once.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 17 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 18 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>公共 Wi-Fi 上的搜尋關鍵字</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-18/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-18/2026</guid>
+<pubDate>Sun, 18 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在公共 Wi-Fi 上用網址 https 開頭的 Google 搜尋時，關鍵字在傳輸途中有加密。這一天，Google 宣布登入的使用者預設改用 HTTPS 搜尋。</description>
+<content:encoded>&lt;p&gt;你在咖啡店或車站的公共 Wi-Fi 上用網址 https 開頭的 Google 搜尋時，輸入的關鍵字與結果頁在傳輸途中有加密，同一個網路上的人看不到。2011 年 10 月 18 日，Google 宣布登入帳號的使用者在接下來幾週會被導向 HTTPS 的 google.com，官方部落格寫明這在網咖 Wi-Fi 這類不安全的網路上特別重要。Google 2010 年的部落格寫明加密搜尋不會減少送到 Google 的資料，只是讓第三方看不到，2011 年的公告也寫點擊廣告時瀏覽器仍會把搜尋字詞傳給廣告主。台灣的讀者用 Google 搜尋不需要另外設定。Chrome 團隊 2025 年 10 月的公告也寫明，從 2026 年 10 月的 154 版起，打開沒有 HTTPS 的公開網站前會預設先詢問。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>通訊攔截與解密命令的核發者</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-17/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站。這一天，Cloudflare 讓使用它服務的網站都能加密網站名稱。</description>
 <content:encoded>&lt;p&gt;用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站，2026 年 8 月還有開發者在 Apple 的開發者論壇回報 Safari 送出的網站名稱沒有加密。網址列的鎖頭只代表網頁內容加密，連線一開始送出的網站名稱要靠另一項技術 Encrypted Client Hello（ECH）加密。2023 年 9 月 29 日，Cloudflare 宣布所有方案的網站都可以啟用 ECH，Chrome 在電腦與 Android 上也預設使用。中國在 2020 年 7 月封鎖了 ECH 的早期版本，俄羅斯的通訊監管機構也從 2024 年 11 月起封鎖使用 ECH 的連線。想知道自己的瀏覽器有沒有加密網站名稱，可以打開 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-tw/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 頁面檢查。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>保持登入的 Facebook 帳號</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/09-28/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/09-28/2026</guid>
-<pubDate>Mon, 28 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你用手機開 Facebook 不必每次輸入密碼，靠的是一組保持登入的憑證。這一天，Facebook 公布攻擊者利用漏洞偷走了大量帳號的這類憑證。</description>
-<content:encoded>&lt;p&gt;你用手機打開 Facebook 時不必每次輸入密碼，靠的是一組讓你保持登入的憑證，Facebook 的公告把它比喻成數位鑰匙。Facebook 在 2018 年 9 月 28 日公布「View As」功能有漏洞，這個功能讓使用者預覽自己的個人頁面在別人眼中的樣子，攻擊者可以藉此偷走這類憑證並在不需要密碼的情況下接管帳號。Facebook 當天估計約 5,000 萬個帳號受影響，並讓約 9,000 萬人重新登入。Facebook 在 10 月的後續公告把數字修正為約 3,000 萬人的憑證實際被偷，菲律賓的 BusinessWorld 報導其中有 755,973 個菲律賓帳號。想確認帳號沒有被別人登入，可以在 Facebook 的設定裡查看目前登入的裝置，Facebook 當年的公告也建議從這裡一次登出全部裝置。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
