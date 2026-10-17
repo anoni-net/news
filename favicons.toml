@@ -468,6 +468,10 @@ from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR
 icon = "fdotwww.blob.core.windows.net-7d319a66.png"
 from = "https://www.fdot.gov/favicon.ico"
 
+[hosts."fidoalliance.org"]
+icon = "fidoalliance.org-5927c7ce.png"
+from = "https://fidoalliance.org/wp-content/uploads/2023/12/cropped-FIDO_Passkey_mark_B-1-192x192.png"
+
 [hosts."firefox.com"]
 icon = "firefox.com-cf4f5299.png"
 from = "https://www.firefox.com/media/img/favicons/firefox/browser/favicon-196x196.59e3822720be.png"
@@ -590,6 +594,10 @@ from = "https://haveibeenpwned.com/apple-touch-icon.png"
 [hosts."hawksley.dev"]
 icon = "hawksley.dev-4e52ebdb.png"
 from = "https://hawksley.dev/favicons/v2/apple-touch-icon.png"
+
+[hosts."heise.de"]
+icon = "heise.de-b8b25202.png"
+from = "https://www.heise.de/icons/ho/touch-icons/apple-touch-icon-180x180.png"
 
 [hosts."help.line.me"]
 icon = "help.line.me-18d4298b.png"
@@ -722,6 +730,10 @@ from = "https://www.kicassl.com/favicon.ico"
 icon = "korea.kr-a57e1712.png"
 from = "https://www.korea.kr/images/common/favicon.ico"
 
+[hosts."korea.net"]
+icon = "korea.net-7241a798.png"
+from = "https://www.korea.net/favicon.ico"
+
 [hosts."krackattacks.com"]
 icon = "krackattacks.com-40830c9b.png"
 from = "https://www.krackattacks.com/images/favicon.ico"
@@ -847,6 +859,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov
 [hosts."mirrors.tuna.tsinghua.edu.cn"]
 icon = "mirrors.tuna.tsinghua.edu.cn-4a3f6ec5.png"
 from = "https://mirrors.tuna.tsinghua.edu.cn/static/img/favicon.png"
+
+[hosts."mobileid.go.kr"]
+icon = "mobileid.go.kr-440b052c.png"
+from = "https://www.mobileid.go.kr/resources/images/main/mdl_ico_homepage.ico"
 
 [hosts."moda.gov.tw"]
 icon = "moda.gov.tw-99fb4327.png"

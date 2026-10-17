@@ -13,3 +13,16 @@
     - 照錄：「GreatFire has recorded interference with https://mail.google.com from mainland China since 2011-12-27.」
     - 照錄：「As of the last test on 2026-10-04, https://gmail.com is 94% disrupted in mainland China」
     - 來源：GreatFire，<https://en.greatfire.org/https/mail.google.com>、<https://en.greatfire.org/https/gmail.com>
+
+## Google Play
+
+查證日期 2026-10-18，寫 anoni-net/news 的 Signal 備份與 Android 密碼管理器搬移那篇時補上。
+
+- 事實：GreatFire 到 2026 年 10 月 11 日的最後一次測試，`https://play.google.com` 在中國大陸 100% 被封鎖，從 2012 年 3 月 10 日起就有干擾紀錄。這是第三方的量測，量的是網址能不能連線
+    - 照錄：「As of the last test on 2026-10-11, https://play.google.com is 100% blocked in mainland China, based on GreatFire's live Great Firewall measurements.」
+    - 照錄：「GreatFire has recorded interference with https://play.google.com from mainland China since 2012-03-10.」
+    - 來源：GreatFire，<https://en.greatfire.org/https/play.google.com>
+- 事實：Android 的密碼管理器搬移（Credential Manager 的 Credentials Transfer API），開發者文件寫的呼叫端檢查以 Google Play 服務的系統元件為準。文件沒有寫沒有 Google Play 服務的手機能不能使用
+    - 照錄：「the trusted system credential selector framework (on Android devices with Google Play services, "com.google.android.gms")」
+    - 來源：Credential transfer，Android Developers，<https://developer.android.com/identity/sign-in/credential-transfer>，頁尾寫 Last updated 2026-10-16
+- 查不到：Google 官方文件直接寫「中國大陸銷售的 Android 手機沒有 Google Play 服務」的頁面。找到的只有 2021 年的二手報導，描述特定廠商，也有說法指部分機型內建，所以不寫「中國大陸的 Android 手機都沒有 Google Play 服務」
