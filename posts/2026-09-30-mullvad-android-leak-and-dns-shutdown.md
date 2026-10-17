@@ -67,7 +67,7 @@ VPN 業者 Mullvad 9 月的兩則公告，分別影響在 Android 上使用 VPN 
 
 研究者 5 月 15 日把漏洞回報給 Google 的 Android 漏洞獎勵計畫，之後被標記為重複回報。公開前，Google 沒有告知修正或配發 CVE（公開漏洞的統一編號）。Mullvad 9 月 10 日的公告寫到，Google 不太可能處理。
 
-9 月 3 日關於 DNS 的公告寫明，經營注重隱私的公開 DNS 需要高度專業，Mullvad 決定改為資助 Quad9 基金會（提供公開 DNS 的瑞士非營利組織）。使用 Mullvad VPN 的人不受影響，查詢由 VPN 伺服器處理。使用預設設定的 Mullvad Browser 會自動改用 Quad9，手動選過其他 Mullvad DNS 變體的人要改回預設。iOS 與 macOS 上 Mullvad 的 DNS 描述檔則會失效。
+依 9 月 3 日關於 DNS 的公告，經營注重隱私的公開 DNS 需要高度專業，Mullvad 決定改為資助 Quad9 基金會（提供公開 DNS 的瑞士非營利組織）。使用 Mullvad VPN 的人不受影響，查詢由 VPN 伺服器處理。使用預設設定的 Mullvad Browser 會自動改用 Quad9，手動選過其他 Mullvad DNS 變體的人要改回預設。iOS 與 macOS 上 Mullvad 的 DNS 描述檔則會失效。
 
 ## 導讀觀點 {#perspective}
 
@@ -77,6 +77,6 @@ Mullvad 的建議是只安裝信任的 App，可以的話改用 GrapheneOS 這�
 
 真實 IP 一旦外洩就有風險的人，可以參考 CyberInsider 報導的做法，讓手機連上強制走 VPN 的路由器。前提是關閉行動網路等其他連線路徑。手機離開這台路由器就失去保護。
 
-手動設定過 Mullvad 加密 DNS 的人要在 11 月 2 日前更換，可以改用 Quad9。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁（沒有中文版）下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 `dns.quad9.net`，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 `https://dns.quad9.net/dns-query`。同時使用其他 VPN 的人，描述檔與私人 DNS 通常不會生效，說明頁寫明要改在 VPN App 的自訂 DNS 設定 Quad9。
+手動設定過 Mullvad 加密 DNS 的人要在 11 月 2 日前更換，可以改用 Quad9。iPhone（iOS 14 以上）與 Mac（Big Sur 以上）要用 Safari 從 Quad9 說明頁（沒有中文版）下載描述檔，2027 年 1 月 19 日到期後需重新安裝。Android 9 以上在「私人 DNS」填入主機名稱 `dns.quad9.net`，這個欄位走 DoT（DNS over TLS），不能填 DoH（DNS over HTTPS）網址 `https://dns.quad9.net/dns-query`。同時使用其他 VPN 的人，描述檔與私人 DNS 通常不會生效，說明頁提醒要改在 VPN App 的自訂 DNS 設定 Quad9。
 
-Quad9 的隱私政策寫明使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。
+根據 Quad9 的隱私政策，使用者的 IP 只在處理查詢的極短時間內留在記憶體。政策也寫到會保留依地區、電信網路與協定分類的統計，不含個別的 IP。改用之後，DNS 查詢仍集中在同一個營運者手上。
