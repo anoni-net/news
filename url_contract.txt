@@ -36,6 +36,9 @@
 	#perspective
 	#sources
 /2026/10/
+/2026/10/adfection-targeted-ads-spyware/
+	#perspective
+	#sources
 /2026/10/ai-phishing-defenses/
 	#perspective
 	#sources
@@ -120,6 +123,9 @@
 /2026/10/oss-vulnerability-disclosure/
 	#perspective
 	#sources
+/2026/10/passkey-attestation-debate/
+	#perspective
+	#sources
 /2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -133,6 +139,9 @@
 	#perspective
 	#sources
 /2026/10/tor-mullvad-relationship/
+	#perspective
+	#sources
+/2026/10/tuta-nextcloud-integration/
 	#perspective
 	#sources
 /2026/10/uk-supreme-court-spyware-state-immunity/
@@ -226,6 +235,9 @@
 	#perspective
 	#sources
 /en/2026/10/
+/en/2026/10/adfection-targeted-ads-spyware/
+	#perspective
+	#sources
 /en/2026/10/ai-phishing-defenses/
 	#perspective
 	#sources
@@ -310,6 +322,9 @@
 /en/2026/10/oss-vulnerability-disclosure/
 	#perspective
 	#sources
+/en/2026/10/passkey-attestation-debate/
+	#perspective
+	#sources
 /en/2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -323,6 +338,9 @@
 	#perspective
 	#sources
 /en/2026/10/tor-mullvad-relationship/
+	#perspective
+	#sources
+/en/2026/10/tuta-nextcloud-integration/
 	#perspective
 	#sources
 /en/2026/10/uk-supreme-court-spyware-state-immunity/
@@ -531,6 +549,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/
+/zh-cn/2026/10/adfection-targeted-ads-spyware/
+	#perspective
+	#sources
 /zh-cn/2026/10/ai-phishing-defenses/
 	#perspective
 	#sources
@@ -615,6 +636,9 @@
 /zh-cn/2026/10/oss-vulnerability-disclosure/
 	#perspective
 	#sources
+/zh-cn/2026/10/passkey-attestation-debate/
+	#perspective
+	#sources
 /zh-cn/2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -628,6 +652,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/tor-mullvad-relationship/
+	#perspective
+	#sources
+/zh-cn/2026/10/tuta-nextcloud-integration/
 	#perspective
 	#sources
 /zh-cn/2026/10/uk-supreme-court-spyware-state-immunity/
