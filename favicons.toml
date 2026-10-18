@@ -52,6 +52,10 @@ from = "https://www.apple.com/apple-touch-icon.png"
 icon = "apps.apple.com-21ded518.png"
 from = "https://apps.apple.com/assets/favicon/favicon-180.png"
 
+[hosts."apps.nextcloud.com"]
+icon = "apps.nextcloud.com-e6c92eae.png"
+from = "https://apps.nextcloud.com/static/assets/img/favicon-180.png"
+
 [hosts."apt.izzysoft.de"]
 icon = "apt.izzysoft.de-3d40667a.png"
 from = "https://apt.izzysoft.de/favicon.ico"
@@ -79,6 +83,10 @@ from = "https://www.BAMF.de/SiteGlobals/Frontend/Images/favicon-180x180.png?__bl
 [hosts."bandaancha.eu"]
 icon = "bandaancha.eu-5be72bee.png"
 from = "https://bandaancha.eu/apple-touch-icon.png"
+
+[hosts."barandbench.com"]
+icon = "barandbench.com-a045e16f.png"
+from = "https://www.barandbench.com/favicon.ico"
 
 [hosts."bbc.com"]
 icon = "bbc.com-0c3f441e.png"
@@ -397,6 +405,10 @@ same_as = "cryptpad.org"
 icon = "docs.github.com-60b60398.png"
 from = "https://docs.github.com/assets/cb-345/images/site/favicon.png"
 
+[hosts."docs.nextcloud.com"]
+icon = "docs.nextcloud.com-ac52d787.png"
+from = "https://nextcloud.com/c/uploads/2022/03/favicon.png"
+
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
 
@@ -651,6 +663,9 @@ none = "網站在抓取時無法連線"
 
 [hosts."info.gov.hk"]
 same_as = "gov.hk"
+
+[hosts."internetfreedom.in"]
+none = "白色透明底的圖示，淺色模式看不見"
 
 [hosts."interseclab.org"]
 icon = "interseclab.org-cfaee2eb.png"
@@ -948,6 +963,13 @@ from = "https://news.ycombinator.com/apple-touch-icon.png"
 [hosts."newsonair.gov.in"]
 icon = "newsonair.gov.in-6cb1c7c3.png"
 from = "https://newsonair.gov.in/wp-content/uploads/2024/01/cropped-logo-192x192.png"
+
+[hosts."nextcloud-talk.readthedocs.io"]
+same_as = "nextcloud.com"
+
+[hosts."nextcloud.com"]
+icon = "nextcloud.com-ac52d787.png"
+from = "https://nextcloud.com/c/uploads/2022/03/favicon.png"
 
 [hosts."nhi.gov.tw"]
 icon = "nhi.gov.tw-f4da548a.png"
@@ -1272,6 +1294,10 @@ from = "https://www.torproject.org/static/images/favicon/favicon.ico"
 [hosts."tribuneindia.com"]
 icon = "tribuneindia.com-833ff492.png"
 from = "https://www.tribuneindia.com/sortd-service/assets/v22-12/dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9kZXNpZ246YXBwaWNvbjc3ZWNhMzgwLTNlMzItMTFmMS1iY2RlLTFiNjYwODRiY2YzMQ=="
+
+[hosts."tuta.com"]
+icon = "tuta.com-99011c09.png"
+from = "https://tuta.com/favicon/logo-favicon-192.png"
 
 [hosts."twca.com.tw"]
 icon = "twca.com.tw-37c5fffa.png"

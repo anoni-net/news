@@ -132,6 +132,9 @@
 /2026/10/tor-mullvad-relationship/
 	#perspective
 	#sources
+/2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
 /2026/10/uk-supreme-court-spyware-state-immunity/
 	#perspective
 	#sources
@@ -317,6 +320,9 @@
 	#perspective
 	#sources
 /en/2026/10/tor-mullvad-relationship/
+	#perspective
+	#sources
+/en/2026/10/tuta-nextcloud-integration/
 	#perspective
 	#sources
 /en/2026/10/uk-supreme-court-spyware-state-immunity/
@@ -619,6 +625,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/tor-mullvad-relationship/
+	#perspective
+	#sources
+/zh-cn/2026/10/tuta-nextcloud-integration/
 	#perspective
 	#sources
 /zh-cn/2026/10/uk-supreme-court-spyware-state-immunity/
