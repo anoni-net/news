@@ -28,6 +28,10 @@ from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192
 icon = "aisi.gov.uk-d819a7e1.png"
 from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf52818a86a4f9f86_AISI%20icon%20256.png"
 
+[hosts."aljazeera.com"]
+icon = "aljazeera.com-ea349389.png"
+from = "https://www.aljazeera.com/favicon_aje.ico"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -1156,6 +1160,10 @@ from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
 [hosts."smh.com.au"]
 icon = "smh.com.au-a36eafab.png"
 from = "https://www.smh.com.au/apple-touch-icons/smh.png"
+
+[hosts."soumu.go.jp"]
+icon = "soumu.go.jp-84973196.png"
+from = "https://www.soumu.go.jp/favicon.ico"
 
 [hosts."source.android.com"]
 icon = "source.android.com-56e81a95.png"
