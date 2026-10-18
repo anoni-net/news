@@ -28,6 +28,10 @@ from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192
 icon = "aisi.gov.uk-d819a7e1.png"
 from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf52818a86a4f9f86_AISI%20icon%20256.png"
 
+[hosts."aljazeera.com"]
+icon = "aljazeera.com-ea349389.png"
+from = "https://www.aljazeera.com/favicon_aje.ico"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -51,6 +55,10 @@ from = "https://www.apple.com/apple-touch-icon.png"
 [hosts."apps.apple.com"]
 icon = "apps.apple.com-21ded518.png"
 from = "https://apps.apple.com/assets/favicon/favicon-180.png"
+
+[hosts."apps.nextcloud.com"]
+icon = "apps.nextcloud.com-e6c92eae.png"
+from = "https://apps.nextcloud.com/static/assets/img/favicon-180.png"
 
 [hosts."apt.izzysoft.de"]
 icon = "apt.izzysoft.de-3d40667a.png"
@@ -79,6 +87,10 @@ from = "https://www.BAMF.de/SiteGlobals/Frontend/Images/favicon-180x180.png?__bl
 [hosts."bandaancha.eu"]
 icon = "bandaancha.eu-5be72bee.png"
 from = "https://bandaancha.eu/apple-touch-icon.png"
+
+[hosts."barandbench.com"]
+icon = "barandbench.com-a045e16f.png"
+from = "https://www.barandbench.com/favicon.ico"
 
 [hosts."bbc.com"]
 icon = "bbc.com-0c3f441e.png"
@@ -404,6 +416,10 @@ same_as = "cryptpad.org"
 icon = "docs.github.com-60b60398.png"
 from = "https://docs.github.com/assets/cb-345/images/site/favicon.png"
 
+[hosts."docs.nextcloud.com"]
+icon = "docs.nextcloud.com-ac52d787.png"
+from = "https://nextcloud.com/c/uploads/2022/03/favicon.png"
+
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
 
@@ -666,6 +682,9 @@ none = "網站在抓取時無法連線"
 
 [hosts."info.gov.hk"]
 same_as = "gov.hk"
+
+[hosts."internetfreedom.in"]
+none = "白色透明底的圖示，淺色模式看不見"
 
 [hosts."interseclab.org"]
 icon = "interseclab.org-cfaee2eb.png"
@@ -968,6 +987,13 @@ from = "https://news.ycombinator.com/apple-touch-icon.png"
 icon = "newsonair.gov.in-6cb1c7c3.png"
 from = "https://newsonair.gov.in/wp-content/uploads/2024/01/cropped-logo-192x192.png"
 
+[hosts."nextcloud-talk.readthedocs.io"]
+same_as = "nextcloud.com"
+
+[hosts."nextcloud.com"]
+icon = "nextcloud.com-ac52d787.png"
+from = "https://nextcloud.com/c/uploads/2022/03/favicon.png"
+
 [hosts."nhi.gov.tw"]
 icon = "nhi.gov.tw-f4da548a.png"
 from = "https://www.nhi.gov.tw/favicon.ico"
@@ -1187,6 +1213,10 @@ from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
 icon = "smh.com.au-a36eafab.png"
 from = "https://www.smh.com.au/apple-touch-icons/smh.png"
 
+[hosts."soumu.go.jp"]
+icon = "soumu.go.jp-84973196.png"
+from = "https://www.soumu.go.jp/favicon.ico"
+
 [hosts."source.android.com"]
 icon = "source.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
@@ -1310,6 +1340,10 @@ from = "https://www.torproject.org/static/images/favicon/favicon.ico"
 [hosts."tribuneindia.com"]
 icon = "tribuneindia.com-833ff492.png"
 from = "https://www.tribuneindia.com/sortd-service/assets/v22-12/dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9kZXNpZ246YXBwaWNvbjc3ZWNhMzgwLTNlMzItMTFmMS1iY2RlLTFiNjYwODRiY2YzMQ=="
+
+[hosts."tuta.com"]
+icon = "tuta.com-99011c09.png"
+from = "https://tuta.com/favicon/logo-favicon-192.png"
 
 [hosts."twca.com.tw"]
 icon = "twca.com.tw-37c5fffa.png"
