@@ -6,7 +6,124 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 19 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>通行金鑰的證明機制爭議</title>
+<link>https://anoni.net/news/2026/10/passkey-attestation-debate/</link>
+<guid isPermaLink="false">anoni-news:2026/10/passkey-attestation-debate</guid>
+<pubDate>Mon, 19 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>10 月 10 日一篇評論主張不要使用通行金鑰，理由是網站可以用證明（attestation）機制限制使用者能用的裝置與軟體，10 月 14 日有作者撰文回應。雙方都同意通行金鑰在多數情況下綁定網域、能防釣魚，爭點在證明會不會成為限制，以及該繼續用通行金鑰還是改用其他方式。</description>
+<content:encoded>&lt;p&gt;整理 14 篇原文，來自 Non-Functional、scotthelme.co.uk、W3C 等 11 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;通行金鑰（passkey）用手機或電腦的螢幕鎖定取代密碼登入，每組金鑰只能用在建立它的網域。10 月 10 日刊在 Substack 的一篇評論以「Passkeys are a trap. Do not use them.」為題，主張網站可以透過證明（attestation，存放金鑰的裝置或軟體向網站出示自身來歷的機制）逐步限制使用者能用的裝置與軟體。10 月 14 日有作者以「Passkeys Are Not a Trap」撰文回應，主張多數人用的同步通行金鑰（存在密碼管理器、會在裝置之間同步）不提供證明。兩篇都同意密碼不安全、通行金鑰在多數情況下綁定網域，爭點集中在證明，以及該繼續用通行金鑰還是改用其他方式。&lt;/p&gt;
+&lt;p&gt;評論的作者先指出，能否複製、存在硬體或軟體裡各不相同的東西都叫通行金鑰，並推測這個命名是刻意讓使用者不去細看。作者的核心論點是網站可以藉證明確認使用者用的是核准的密碼管理器，等到大多數使用者都不受影響，就能開始拒絕沒有證明的通行金鑰。作者寫到證明需要加密處理器、密碼管理器、作業系統與韌體都通過檢查（例如為了延續舊手機而改裝 LineageOS 的人可能無法通過）。作者也寫到證明有正當用途、多數網站目前不要求，正文建議改用驗證 App 產生的一次性密碼（TOTP），文末的補充段落另外推薦 YubiKey 這類硬體安全金鑰。&lt;/p&gt;
+&lt;p&gt;回應文章的作者寫到，網站就算要求證明，iCloud 鑰匙圈、Google 密碼管理工具、1Password 或 Bitwarden 裡的同步通行金鑰也只會回傳「none」（表示沒有證明）。依這位作者的推論，消費者網站如果只收有證明的通行金鑰，會立刻擋掉幾乎所有使用者。回應文章也提到，證明只告訴網站驗證器（存放金鑰的手機、密碼管理器或安全金鑰）的廠牌與型號，不包含作業系統、瀏覽器、擴充功能、韌體版本或手機是否越獄。對 YubiKey 的建議，作者的回應是每支 YubiKey 出廠都帶有 Yubico 簽發的證明憑證，擔心證明的人反而會被推向證明。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;W3C 2026 年 8 月發布的 WebAuthn Level 3 規格把證明的預設值定為 none，證明的格式由驗證器決定。網站可以表達偏好，也可以依自己的政策決定接受哪些證明。規格以 AAGUID（標示驗證器型號的 128 位元識別碼）標示類型，也提醒證明憑證可能被用來追蹤使用者（緩解方式包括大量裝置共用同一張憑證、交給匿名化的憑證機構）。規格裡已列為棄用的 Android SafetyNet 格式，證明內容包含平台健康狀態的資訊（回應文章說證明不含作業系統狀態，依本文的整理要看格式而定）。&lt;/p&gt;
+&lt;p&gt;依同一份規格，可能包含能識別個別裝置資訊的企業證明（enterprise），要瀏覽器或驗證器的設定允許該網站時才會提供。美國國家標準與技術研究院（NIST）給聯邦機關的身分驗證指引（SP 800-63-4）提到，面向大眾的服務不應因為取得不到證明而擋下同步通行金鑰，否則使用者可能被推向容易被釣魚的方式。同一份指引也建議有證明時服務端應該用它判斷信任程度，聯邦機關的內部系統應實作證明。服務端也可以依「可備份」旗標（標示金鑰能否同步或備份的欄位）限制同步通行金鑰。&lt;/p&gt;
+&lt;p&gt;回應文章從 2026 年 10 月的現況出發，消費者網站多半不要求證明，主要的同步服務也不提供。回應文章也寫到，如果消費者網站真的開始要求證明，值得大聲反對。評論擔心的則是之後的走向，作者的推論是受影響的只有改裝系統的少數人，網站因此能在不引起注意的情況下逐步收緊。&lt;/p&gt;
+&lt;p&gt;回應文章的作者寫到 TOTP 可能被輸入到假網站，Evilginx 這類釣魚工具（架在使用者與真網站之間的轉送伺服器）能即時轉送密碼與驗證碼。NIST 的指引把需要手動輸入的一次性密碼排除在防釣魚驗證器之外，設定正確的同步通行金鑰則列為能防釣魚。評論的正文建議 TOTP，理由是使用者可以自由選擇軟體與硬體。文末的補充段落提到通行金鑰在多數情況下綁定網域、能抵擋中間人攻擊，並推薦安全金鑰。&lt;/p&gt;
+&lt;p&gt;兩篇都只帶過換裝置與搬移，評論提到換手機時要能帶走金鑰，回應文章則建議想搬移的人挑支援搬移的提供者。依 FIDO 聯盟的說明，同步通行金鑰經端對端加密在裝置之間同步。依兩家的說明頁，Apple 用 iCloud 鑰匙圈的託管紀錄復原，Google 要用密碼管理工具的 PIN 或舊 Android 裝置的螢幕鎖定。兩家的正體中文說明頁用詞不同，Apple 寫「通行密鑰」，Google 寫「密碼金鑰」。&lt;/p&gt;
+&lt;p&gt;到 10 月 18 日為止，Bitwarden 與 1Password 能透過 FIDO 的憑證交換協定直接匯出通行金鑰，這套協定仍是草案。兩家都需要 iOS 26 或 Android 14 以上（Bitwarden 的匯出頁寫 Android 10 以上），對方的 App 也要支援。KeePassXC 則把通行金鑰匯出成沒有加密的檔案。&lt;/p&gt;
+&lt;p&gt;依回應文章，到 10 月 18 日為止消費者網站多半不要求證明，已經在用同步通行金鑰的人登入不受影響。依 NIST 的指引，設定正確的通行金鑰登入時，假網站無法取得可重複使用的登入資訊。帳號原有的密碼與驗證碼仍可能被釣走，Google 的說明頁也提到新增通行金鑰不會移除既有的驗證方式。擔心被綁在某個平台的人，可以挑能直接匯出通行金鑰的密碼管理器。&lt;/p&gt;
+&lt;p&gt;在意證明的人可以比較兩種做法。依回應文章，同步通行金鑰不提供證明，YubiKey 則出廠帶有 Yubico 簽發的證明憑證。&lt;/p&gt;
+&lt;p&gt;NIST 建議服務端讓使用者綁定多個驗證方式供復原，依本文的推論，對使用者來說就是保留兩種以上的登入或復原方式。Microsoft 的說明也提醒，只存在單一裝置的通行金鑰，裝置遺失又沒有其他復原方式時就會失去它。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them&#34;&gt;Passkeys are a trap. Do not use them.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Non-Functional&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://scotthelme.co.uk/passkeys-are-not-a-trap/&#34;&gt;Passkeys Are Not a Trap&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;scotthelme.co.uk&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.w3.org/TR/webauthn-3/&#34;&gt;Web Authentication: An API for accessing Public Key Credentials - Level 3&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;W3C&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-25&#34;&gt;2026 年 8 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pages.nist.gov/800-63-4/sp800-63b.html&#34;&gt;NIST Special Publication 800-63B&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pages.nist.gov/800-63-4/sp800-63b/syncable/&#34;&gt;Syncable Authenticators&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fidoalliance.org/passkeys/&#34;&gt;Passkeys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;FIDO Alliance&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fidoalliance.org/download-credential-exchange-specifications/&#34;&gt;Download Credential Exchange Specifications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;FIDO Alliance&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102195&#34;&gt;關於通行密鑰的安全性&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-09-27&#34;&gt;2024 年 9 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/13548313?hl=zh-Hant&#34;&gt;以密碼金鑰登入，不必再用密碼&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/technology/safety-security/google-password-manager-passkeys-update-september-2024/&#34;&gt;Sync passkeys securely across your devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-09-19&#34;&gt;2024 年 9 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.microsoft.com/en-us/accounts-billing/security/what-are-passkeys-why-they-matter&#34;&gt;What are passkeys and why they matter&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bitwarden.com/help/export-your-data/&#34;&gt;Export Vault Data&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitwarden&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.1password.com/export/&#34;&gt;How to export your data from the 1Password apps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;1Password&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://keepassxc.org/docs/KeePassXC_UserGuide&#34;&gt;KeePassXC: User Guide&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;KeePassXC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>定向廣告投遞的零點擊間諜軟體</title>
 <link>https://anoni.net/news/2026/10/adfection-targeted-ads-spyware/</link>
@@ -2343,108 +2460,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;KSL&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-25&#34;&gt;2026 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>GLM-5.3 的漏洞利用能力與開放權重的防護</title>
-<link>https://anoni.net/news/2026/10/glm-5-3-cyber-capabilities/</link>
-<guid isPermaLink="false">anoni-news:2026/10/glm-5-3-cyber-capabilities</guid>
-<pubDate>Sat, 10 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Anthropic 9 月 29 日發表對智譜開放權重模型 GLM-5.3 的測試報告，模型能寫出攻擊瀏覽器的程式。在報告的模擬測試裡，偽裝情境等手法可以繞過防護。智譜的發布說明寫到，公開的權重只帶著模型本身的防護，強大的防禦能力也不該只留在少數組織。一般讀者能做的是瀏覽器更新後盡快重新啟動。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，來自 Anthropic、Z.ai、NIST 等 7 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國 AI 公司 Anthropic 9 月 29 日發表測試報告，對象是中國的智譜（中國以外稱 Z.ai）8 月推出的語言模型 GLM-5.3。報告的結論是，GLM-5.3 能自行找出軟體漏洞並寫成可用的攻擊程式，能力接近 Anthropic 只提供給篩選過的資安防禦方的 Claude Mythos Preview。報告也寫到，在模擬測試裡，偽裝情境等簡單的手法就能繞過 GLM-5.3 的防護。一般讀者不會直接用到這個模型，能做的事跟以往相同，瀏覽器更新後盡快重新啟動。&lt;/p&gt;
-&lt;p&gt;GLM-5.3 的權重（模型本身的參數）8 月底公開，任何人都能下載與修改。智譜 8 月 14 日在 X 發表的說明寫到，權重公開之後，沒有開發者能保證控制每一種後續的修改與用途。同一份說明還寫到，強大的防禦能力不能只留在少數資源充足的組織，開源專案維護者與獨立研究者也需要。&lt;/p&gt;
-&lt;p&gt;在 Anthropic 執行的 ExploitBench 基準測試裡（題目是 Chrome 的 JavaScript 引擎 V8 的已知漏洞），GLM-5.3 嘗試 410 次，有 50 次寫出完整的攻擊程式。Claude Mythos Preview 在同一項測試是 56 次。在另一項以開源專案為對象的內部測試裡，GLM-5.3 有 4% 的嘗試能完全控制程式的執行流程，Mythos Preview 是 6%。Claude Opus 4.6、GLM-5.2 等較早的模型一次都沒有成功。&lt;/p&gt;
-&lt;p&gt;美國國家標準暨技術研究院（NIST）轄下的 AI 標準與創新中心（CAISI）9 月 17 日的評估寫到，GLM-5.3 是到當時資安能力最強的開放權重模型，綜合多項測驗落後美國最前沿的模型約四個月。CAISI 對照的美國模型包括只提供給篩選過的使用者的版本。&lt;/p&gt;
-&lt;p&gt;一位研究者花了大約一天、投入有限的人力，讓 GLM-5.3 在一款常用瀏覽器的 JavaScript 引擎找到數個未知的漏洞。模型把這些漏洞串成一個網頁，訪客用該瀏覽器的 Linux 版本打開，網頁就能讀取訪客電腦上的任意檔案。Anthropic 在報告裡寫到，其他平台也可能受影響，在那些平台上利用的路徑或許更複雜。報告沒有寫出是哪一款瀏覽器，只寫到漏洞已經回報給維護者。&lt;/p&gt;
-&lt;p&gt;另一位研究者讓較小的 GLM-5.3-Flash 根據 Chrome 漏洞 &lt;code&gt;CVE-2026-11645&lt;/code&gt; 與另一個已知漏洞的公開資料，寫出串連兩者的攻擊程式。研究者投入 20 分鐘，模型執行 8 小時，依智譜的 API 價格換算約 20.40 美元。Google 在 6 月 8 日的 Chrome 更新修補了 &lt;code&gt;CVE-2026-11645&lt;/code&gt;，公告寫明已有攻擊程式在外流傳。&lt;/p&gt;
-&lt;p&gt;報告寫到，上面這些寫攻擊程式的任務沒有觸發 GLM-5.3 的拒絕。要求協助開發惡意程式或攻擊遠端目標時，模型則會拒絕。&lt;/p&gt;
-&lt;p&gt;Anthropic 另外在模擬環境要求 GLM-5.3 攻擊遠端系統，直接提出時模型全部拒絕。告訴模型它在演練中扮演紅隊（模擬攻擊方的測試人員）時，模型有 64% 的情況開始嘗試連線目標系統，預先填入模型的思考內容、讓它看起來已經決定執行時是 92%。用 abliteration 這種手法修改權重、移除拒絕行為之後，開始嘗試連線的比例是 100%。&lt;/p&gt;
-&lt;p&gt;Anthropic 第一次用 abliteration 修改權重，花了約 2,200 個 GPU 小時、約 4,400 美元，估計熟悉手法的團隊約需 600 個 GPU 小時、約 1,200 美元。修改後的模型在一般科學能力測驗的分數不變，從資安測驗抽樣的題目分數略低。報告也寫到，GLM-5.3 發布後幾天內，已有數個開發者公開了移除拒絕行為的版本。&lt;/p&gt;
-&lt;p&gt;在 Anthropic 自己的測試裡，透過 API 使用、帶防護的 Claude 擋下了偽裝成紅隊的請求。另外兩種手法對 Claude 一般無法施行，因為 Claude 的 API 不提供預填思考內容的方式，權重也沒有公開。繞過防護的這組測試在模擬環境進行，模型產生的程式碼沒有實際執行，報告寫明模擬無法完整反映真實情況。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;模型拒絕惡意請求的能力是訓練出來的，跟模型的其他能力存在同一組權重裡。透過 API 提供模型時，模型開發者可以在模型外面另外加上過濾與監控。權重公開之後，使用者在自己的電腦上執行，外面那幾層就不存在。修改權重也不需要模型開發者同意。&lt;/p&gt;
-&lt;p&gt;智譜在 X 的說明寫到 GLM-5.3 有三層防護，分別是請求分類器、評估執行過程風險的監控，以及模型本身的安全訓練。前兩層部署在智譜自己的服務，不會自動跟著模型進到使用者自行架設的環境，公開的權重只帶著第三層。說明也寫到，模型層的防護能提高濫用的門檻，但無法做到絕對的控制。&lt;/p&gt;
-&lt;p&gt;智譜在同一份說明裡寫到這類能力可攻可守，因此計畫分階段發布，先讓篩選過的資安合作夥伴測試。智譜 8 月 14 日的發布部落格寫到，權重在兩週後、完成安全評估與強化之後公開。&lt;/p&gt;
-&lt;p&gt;Anthropic 在報告裡的評估是，GLM-5.3 發布時沒有足以限制濫用的防護。報告寫到，同等能力的其他模型發布時都帶有防護，或只透過限制存取的計畫提供。報告也寫到，政府應該對能力足夠的模型做安全測試。到 10 月 5 日為止，查不到智譜針對這份報告的公開回應。&lt;/p&gt;
-&lt;p&gt;Anthropic 的報告寫到，防禦方應該取得至少跟攻擊方一樣好的模型。Anthropic 透過 Project Glasswing 等計畫把模型提供給篩選過的防禦方，並寫到正在擴大提供的範圍。智譜的說明寫到，防禦能力不能只留在少數組織。智譜的做法是隨 GLM-5.3 推出 OpenVuln 計畫，跟維護者合作審查重要的開源專案，協助通報與修補漏洞。&lt;/p&gt;
-&lt;p&gt;英國 AI 安全研究所（AISI）7 月的分析寫到，開放權重模型可以私下架設、資料不必回傳給模型開發者，也不會被開發者改版或下架。同一份分析也寫到，權重公開之後防護可以被移除、複製出去的模型也收不回來。AISI 以 6 月推出的 GLM-5.2 等模型測得，開放權重模型的資安能力落後最前沿的封閉模型 4 到 7 個月，2025 年多數時候是 6 到 10 個月。AISI 把這段落差視為能用到最前沿封閉模型的防禦方的準備時間。&lt;/p&gt;
-&lt;p&gt;讀者無法控制誰使用這些模型，能縮短的是漏洞修補之後、自己的瀏覽器還沒更新的這段時間。在報告的實驗裡，GLM-5.3-Flash 根據已公開的漏洞資料，執行 8 小時就寫出攻擊程式。Chrome 會在背景準備更新，要重新啟動才會套用。長時間不關瀏覽器的人可以到「說明」的「關於 Google Chrome」檢查，出現「重新啟動」按鈕代表更新還沒套用。&lt;/p&gt;
-&lt;p&gt;更新擋不住還沒修補的漏洞，常造訪陌生網站的人可以再減少網頁程式能用的瀏覽器功能。在 Chrome「隱私權和安全性」的「安全性」裡，可以把「管理 JavaScript 最佳化和安全性」設成「自動在不熟悉的網站上停用 JavaScript 最佳化工具」，部分網站可能因此變慢。Tor Browser 的「較安全」等級會在非 HTTPS 的網站停用 JavaScript，「最安全」在所有網站預設停用，部分網站會無法正常運作。這些設定縮小的是網頁程式攻擊瀏覽器的機會，無法擋下騙你輸入密碼的釣魚網頁。&lt;/p&gt;
-&lt;p&gt;之後可以留意，開放權重模型的防護要做到什麼程度才算足夠。台灣數位發展部 9 月 2 日公布的 AI 模型評測涵蓋語言、社會文化與價值觀的理解，模型的資安能力要不要也納入政府的測試、由哪個單位負責。AISI 所說的準備時間，是否足夠讓漏洞先被修補。人力不足的開源專案，能否用到跟攻擊方同級的工具。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities&#34;&gt;GLM-5.3 and the spread of advanced cyber capabilities&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/Zai_org/article/2088280509474320693&#34;&gt;Preparing GLM-5.3 for Open Release: A Responsible Path to Cyber Defense&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Z.ai&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-14&#34;&gt;2026 年 8 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://z.ai/blog/glm-5.3&#34;&gt;GLM-5.3: Frontier Coding with Emergent Cyber Capabilities&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Z.ai&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-14&#34;&gt;2026 年 8 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities&#34;&gt;CAISI’s Assessment of Z.ai’s GLM-5.3 Cyber Capabilities&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-17&#34;&gt;2026 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber&#34;&gt;How Far Behind the Frontier are Leading Open Weight Models on Cyber?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;AI Security Institute&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;2026 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_0153744567.html&#34;&gt;Stable Channel Update for Desktop&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95414?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;更新 Google Chrome&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/10468685?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;管理 Chrome 的安全性&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.torproject.org/zh-TW/tor-browser/features/security-levels/&#34;&gt;調整 Tor Browser 安全等級以平衡隱私與可用性&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://moda.gov.tw/ADI/news/latest-news/20538&#34;&gt;讓你的AI懂臺灣！數位發展部公布臺灣主權AI評測結果，攜手產官打造可信任AI生態系&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;數位發展部數位產業署&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-02&#34;&gt;2026 年 9 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sun, 18 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 19 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>IP addresses logged by websites as personal data</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-19/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-19/2026</guid>
+<pubDate>Mon, 19 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Every time you go online, websites can log the IP address you connect from. On this day, according to the court&#39;s press release, the EU&#39;s Court of Justice ruled that a dynamic IP address is personal data when a website has legal means to identify the visitor.</description>
+<content:encoded>&lt;p&gt;Every time you open a website, its servers can log the IP address you connect from; an address that changes with each new connection is called a dynamic IP address. On 19 October 2016, according to the court&#39;s press release, the EU&#39;s Court of Justice ruled that a dynamic IP address is personal data for a website operator that has legal means to obtain additional information from the internet provider to identify the visitor. The same judgment also accepted that a website may have a legitimate interest in storing certain visitor data to protect itself against cyberattacks. In Asia, Taiwan&#39;s National Development Council cited the ruling in a 2020 interpretation, noting the court&#39;s view that a dynamic IP address is personal data when it can reasonably be matched with other data to identify someone, while Singapore&#39;s data protection guidelines revised in May 2024 say an IP address may not be personal data on its own but becomes more likely to identify someone as more data points are tied to it. To find out whether the sites you use keep your IP address, start with their privacy policies.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Search terms on public Wi-Fi</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-18/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>If your phone is stuck on Android 7.0 or earlier, sites that use Let&#39;s Encrypt certificates show warnings. On this day, the trust Let&#39;s Encrypt had borrowed in its early years expired, and older Android versions kept working for three more years through another certificate.</description>
 <content:encoded>&lt;p&gt;If your phone, or a family member&#39;s, is stuck on Android 7.0 or earlier, websites that use Let&#39;s Encrypt certificates show certificate warnings. Let&#39;s Encrypt is a free service that issues HTTPS certificates, and a phone accepts them only if its built-in list includes the Let&#39;s Encrypt root certificate, the top-level certificate used to check the others. On 30 September 2021, the trust Let&#39;s Encrypt had borrowed from another certificate authority expired, and older Android versions kept working for three more years through a special certificate valid until 30 September 2024. In 2023 Let&#39;s Encrypt advised owners of those phones to switch to Firefox, and in September 2025 Mozilla announced that they would be left on a version that no longer receives security updates. To check whether your phone is affected, look up its Android version in Settings. If it is 7.0 or earlier, the last Firefox version for these phones can still open these sites, but it no longer receives security updates.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>The site name the padlock does not hide</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/09-29/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/09-29/2026</guid>
-<pubDate>Tue, 29 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>On Safari for iPhone, your internet provider can still see which site you visit. On this day, Cloudflare let sites on its network encrypt their names.</description>
-<content:encoded>&lt;p&gt;If you browse with Safari on an iPhone, your internet provider can still see which site you are visiting, and in August 2026 a developer reported on Apple&#39;s developer forums that Safari still sends the site name unencrypted. The padlock in the address bar only means the page content is encrypted, and the site name sent at the start of each connection needs a separate technology, Encrypted Client Hello (ECH). On 29 September 2023, Cloudflare made ECH available to sites on all of its plans, and as of 1 October 2026 Chrome uses it by default on desktop and Android. China blocked an earlier version of ECH in July 2020, according to researchers from Geneva, GFW Report and iYouPort, and Russia&#39;s telecom regulator has blocked ECH connections since November 2024. To see whether your browser encrypts the site name, open Cloudflare&#39;s &lt;a href=&#34;https://www.cloudflare.com/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; page.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

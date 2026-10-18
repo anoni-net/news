@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 18 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 19 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>網站記錄的 IP 位址與個人資料</title>
+<link>https://anoni.net/news/history/10-19/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-19/2026</guid>
+<pubDate>Mon, 19 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你每次上網，網站都可能記下連線的 IP 位址。這一天，依法院的新聞稿，歐盟法院判決動態 IP 位址在網站有合法管道識別訪客時屬於個人資料。</description>
+<content:encoded>&lt;p&gt;你每次打開網站，網站的伺服器都可以記下連線用的 IP 位址（每次連線都會換的叫動態 IP 位址）。依法院的新聞稿，歐盟法院 2016 年 10 月 19 日判決網站營運者若有合法管道從網路業者取得額外資料來識別訪客，動態 IP 位址對它來說就屬於個人資料。同一份判決也承認網站為了防範網路攻擊，可以有保存訪客某些個人資料的正當利益。國家發展委員會 2020 年處理另一件個資案的函釋引用這份判決，轉述動態 IP 位址在能以合理方式對照其他資料、識別特定的人時屬於個人資料，台灣的個資法條文本身沒有點名 IP 位址。可以先看常用網站的隱私權政策是否保存 IP 位址，依本文的推論，網站能用 IP 位址識別到你時才可能適用個資法第 3 條的查詢與刪除權。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>公共 Wi-Fi 上的搜尋關鍵字</title>
 <link>https://anoni.net/news/history/10-18/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你的手機如果停在 Android 7.0 或更早的版本，打開使用 Let&#39;s Encrypt 憑證的網站會跳出警告。這一天，Let&#39;s Encrypt 早年借來的信任到期，舊版 Android 靠另一張憑證又能正常連線三年。</description>
 <content:encoded>&lt;p&gt;你或家人的手機如果停在 Android 7.0 或更早的版本，打開使用 Let&#39;s Encrypt 憑證的網站會跳出憑證警告。Let&#39;s Encrypt 是免費發出 HTTPS 憑證的服務，手機內建的清單裡要有它的根憑證（用來驗證其他憑證的最上層憑證），才會接受它發出的憑證。2021 年 9 月 30 日，它早年向另一家憑證機構借來的信任到期，舊版 Android 靠一張效期到 2024 年 9 月 30 日的特別憑證又能正常連線三年。Let&#39;s Encrypt 在 2023 年建議這些手機的使用者改用 Firefox，Mozilla 則在 2025 年 9 月公告，這些手機只能用到不再收到安全更新的版本。可以在設定裡查看 Android 版本，停在 7.0 或更早的話仍可以用最後一個支援的 Firefox 版本開啟這些網站，但要承擔沒有安全更新的風險。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>網址列鎖頭以外的網站名稱</title>
-<link>https://anoni.net/news/history/09-29/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/09-29/2026</guid>
-<pubDate>Tue, 29 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站。這一天，Cloudflare 讓使用它服務的網站都能加密網站名稱。</description>
-<content:encoded>&lt;p&gt;用 iPhone 的 Safari 上網時，網路業者仍可以看到你連去哪個網站，2026 年 8 月還有開發者在 Apple 的開發者論壇回報 Safari 送出的網站名稱沒有加密。網址列的鎖頭只代表網頁內容加密，連線一開始送出的網站名稱要靠另一項技術 Encrypted Client Hello（ECH）加密。2023 年 9 月 29 日，Cloudflare 宣布所有方案的網站都可以啟用 ECH，Chrome 在電腦與 Android 上也預設使用。中國在 2020 年 7 月封鎖了 ECH 的早期版本，俄羅斯的通訊監管機構也從 2024 年 11 月起封鎖使用 ECH 的連線。想知道自己的瀏覽器有沒有加密網站名稱，可以打開 Cloudflare 的 &lt;a href=&#34;https://www.cloudflare.com/zh-tw/ssl/encrypted-sni/&#34;&gt;Browser Check&lt;/a&gt; 頁面檢查。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
