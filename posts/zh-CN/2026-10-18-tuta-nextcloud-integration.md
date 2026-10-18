@@ -1,7 +1,7 @@
 ---
 title: Tuta 加密邮件与 Nextcloud 的集成
 description: Tuta 与 Nextcloud 10 月 1 日推出集成，可以在 Nextcloud 里使用 Tuta，把收到的附件存进 Nextcloud、在 Tuta 日历创建 Nextcloud Talk 会议链接。App 要由 Nextcloud 管理员安装，到 10 月 18 日为止，两家的公告都没有交代附件存进 Nextcloud 之后的加密状态。
-date: 2026-10-18T12:00:00+08:00
+date: 2026-10-18T13:59:00+08:00
 slug: tuta-nextcloud-integration
 categories:
   - encryption

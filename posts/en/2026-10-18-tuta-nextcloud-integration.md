@@ -1,7 +1,7 @@
 ---
 title: Tuta encrypted email and its Nextcloud integration
 description: Tuta and Nextcloud launched an integration on 1 October that lets you use Tuta inside Nextcloud, save received attachments to Nextcloud and create Nextcloud Talk meeting links from Tuta Calendar. A Nextcloud administrator has to install the app, and as of 18 October neither announcement explains how attachments are protected once they are in Nextcloud.
-date: 2026-10-18T12:00:00+08:00
+date: 2026-10-18T13:59:00+08:00
 slug: tuta-nextcloud-integration
 categories:
   - encryption
