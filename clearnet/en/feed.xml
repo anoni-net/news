@@ -6,7 +6,153 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sun, 18 Oct 2026 13:59:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Zero-click spyware delivered through targeted ads</title>
+<link>https://anoni.net/news/en/2026/10/adfection-targeted-ads-spyware/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/adfection-targeted-ads-spyware</guid>
+<pubDate>Mon, 19 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Citizen Lab published a report on 15 October linking, with high confidence, attacks on at least 45 Al Jazeera devices between 2024 and 2025 to targeted ads from the Israeli ad firm Discover-Tech and spyware from Candiru. Al Jazeera is the only confirmed target, and the exploited vulnerabilities are not described. The advice for general readers is to block ads and limit advertising IDs, which according to the report lowers only part of the risk.</description>
+<content:encoded>&lt;p&gt;Based on 18 sources, including Citizen Lab, IAB Europe, Adtimizer&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Online ads from the Israeli ad firm Discover-Tech were used to deliver mercenary spyware, the commercial spyware sold to government clients, and an ad only had to appear on screen to trigger it, according to Citizen Lab&#39;s AdFection report published on 15 October. Citizen Lab links attacks on Al Jazeera between 2024 and 2025 with high confidence to spyware from the Israeli vendor Candiru, with at least 45 devices targeted. Al Jazeera is the only confirmed target in the report, while Discover-Tech&#39;s ads appeared on nearly 200,000 websites and apps, and an ad impression on its own does not mean someone was targeted. The exploited vulnerabilities and affected versions are not described, the sample the researchers obtained was a Windows executable isolated from one victim&#39;s device, and the report does not confirm that any phone was infected.&lt;/p&gt;
+&lt;p&gt;Most online ads are sold through real-time bidding (RTB), an auction held each time an ad is about to be shown, in which advertisers bid to show a given ad to a particular user, and an ad can carry code that runs inside an app or browser. According to the report, many Discover-Tech ads carried a tag that, when displayed, connected back to the company&#39;s server and sent the user&#39;s advertising ID or cookie ID. The server returned code only for chosen targets, which customers of Discover-Tech&#39;s platform could select by a phone&#39;s advertising ID, a browser&#39;s cookie ID or an IP address, and everyone else received an empty response; in the report&#39;s assessment, those customers include spyware vendors such as Candiru. Per the report, this design meant Discover-Tech never had to hand the malicious code, or even a link to it, to the platforms that ran its ads.&lt;/p&gt;
+&lt;p&gt;The researchers found two world-readable databases on Discover-Tech&#39;s website holding about 3.77 billion bid records from March to June 2026, of which about 440 million appear to have been won. At least 720 million of the bids were for ads that, judging by their names, carried a tag connecting back to these servers, and more than 70 percent of all the bids were in apps. The networks where the ads were shown, as listed in the report, include those of NATO, the United Nations, the European Parliament and the governments of more than 20 countries. In Citizen Lab&#39;s assessment, these impressions at least let Discover-Tech profile the devices and in some cases may have let other vendors&#39; code run on them, but an impression is not confirmation of targeting or infection.&lt;/p&gt;
+&lt;p&gt;According to the companies&#39; replies attached to the report, Google ended Discover-Tech&#39;s bidding and ad serving on its ad exchange and uses Safe Browsing to show warnings for known domains. Beeswax, Vungle (Liftoff) and Eskimi also stopped or paused their work with the company. According to IAB Europe&#39;s letter, Discover-Tech has been suspended since 8 October from the vendor list (GVL) of its Transparency and Consent Framework after an audit found breaches of framework policy, while the report&#39;s main text describes it as removed. Discover-Tech and Candiru did not respond by the report&#39;s deadline, and as of 18 October we could find no public statement from either.&lt;/p&gt;
+&lt;p&gt;Two more companies, Adtimizer and Volasim, are named in the report. Adtimizer&#39;s reply states that it only assigned some subdomains for general advertising use and that those subdomains were used only within Discover-Tech&#39;s infrastructure. Volasim&#39;s reply states that Discover-Tech was one of several outside advertising agencies it hired to promote its products, and that it is willing to provide its source code for independent review under a non-disclosure agreement. Citizen Lab sees links between both firms and Discover-Tech but notes that there is no firm evidence either took part knowingly.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The surveillance industry calls platforms that use advertising data to identify and track specific people advertising intelligence (ADINT). According to the report, a company with access to bidding data can follow one person&#39;s movement across places and networks from bid requests carrying the same identifier, and in our reading AdFection connects this kind of identification to attack code. Citizen Lab&#39;s view is that these industry vendor lists appear to rely mostly on vendors&#39; self-declarations. IAB Europe&#39;s letter, for its part, states that being listed does not mean IAB Europe certifies that all of a company&#39;s activities comply with the GDPR, and that it has neither the capacity nor the mandate for forensic or criminal investigations.&lt;/p&gt;
+&lt;p&gt;Citizen Lab&#39;s advice for general users is to install a trusted ad-blocking browser extension, switch to a browser that blocks tracking, regularly reset the phone&#39;s advertising ID and turn off ad tracking, and block ads at the home router or through a trusted VPN service. For security staff at organisations, its judgement is that the most practical defence for now is to block targeted ads at the network&#39;s egress (the gateway), until the industry shows it can reliably stop this technique. With no exploited vulnerability named in the report, there is no way to tell which update fixes it, and Ars Technica separately advises installing updates promptly.&lt;/p&gt;
+&lt;p&gt;Rules on the data behind targeted ads vary across Asia. Taiwan&#39;s Personal Data Protection Act has no provision on advertising identifiers, real-time bidding or targeted ads. Its Article 20 does require a non-government entity that markets with personal data to stop once the person objects, and to offer a way to object the first time it markets to them (we read the current text of the statute as of 18 October, not its enforcement rules or regulators&#39; interpretations; amendments passed on 11 November 2025 take effect on a date the Executive Yuan has yet to set). South Korea&#39;s Personal Information Protection Commission published a policy plan on 31 January 2024 to protect the online behavioural data used in targeted ads, though as of 18 October we could not find whether its revised guidelines are in force.&lt;/p&gt;
+&lt;p&gt;Japan amended its Telecommunications Business Act in June 2022. According to the Ministry of Internal Affairs and Communications page, which shows no update date, websites and apps that send user data to outside parties through tags or information-collection modules must give notice of what is sent, publish it, obtain consent or offer a way to stop it. The rule does not ban targeted ads, and it covers online information services such as messaging, social media, search and news rather than corporate websites or personal blogs. In mainland China, the censorship-monitoring project GreatFire found Citizen Lab&#39;s own site, &lt;code&gt;citizenlab.ca&lt;/code&gt;, where the report is published, fully blocked in tests up to 16 October, based on the last two conclusive tests, with interference recorded since 20 July 2017.&lt;/p&gt;
+&lt;p&gt;Citizen Lab advises people at higher risk because of their work or identity to seek expert help. Everyone else can start by limiting advertising IDs. On iPhone, go to Settings → Privacy &amp;amp; Security → Tracking and turn off Allow Apps to Request to Track (iOS 14.5 or later). On Android, Google&#39;s instructions are Settings → Privacy → Ads → Delete Advertising ID (this requires Google Play services), and we checked both companies&#39; help pages on 18 October.&lt;/p&gt;
+&lt;p&gt;According to the report, these steps lower only part of the risk. In its advice to organisational security staff, Citizen Lab notes that blocking advertising IDs stops Discover-Tech&#39;s current method, but the researchers suspect this kind of attack reaches further. In our reading, resetting a phone&#39;s advertising ID does nothing against targets picked by cookie ID or IP address. The vulnerabilities have not been disclosed, so there is no way to tell which update would fix them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (18)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/&#34;&gt;Exposing AdFection: How Discover-Tech Turned Targeted Ads Into a Pipeline for Zero-Click Mercenary Spyware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/exposing-adfection-executive-summary/&#34;&gt;Exposing AdFection Executive Summary&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/wp-content/uploads/2026/10/Citizen-Lab-Right-to-Reply-IAB.pdf&#34;&gt;Re: Citizen Lab Right to Reply&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IAB Europe&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/wp-content/uploads/2026/10/Adtimizer-Response-to-Request-for-Comment.pdf&#34;&gt;Re: Citizen Lab Report Right to Reply&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Adtimizer&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-11&#34;&gt;11 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/wp-content/uploads/2026/10/Volasim-Response-to-Request-for-Comment.pdf&#34;&gt;Citizen Lab Right of Reply&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Volasim&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;12 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aljazeera.com/news/2026/10/15/israeli-ad-tech-firm-helped-spy-on-al-jazeera-devices&#34;&gt;Israeli ad-tech firm helped place spyware on Al Jazeera devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Al Jazeera&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/&#34;&gt;Targeted ads delivered 0-click exploits to install mercenary malware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theguardian.com/technology/2026/oct/15/israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say&#34;&gt;Online ads weaponised to deliver ‘zero-click’ spyware, researchers say&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Guardian&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/16/first-mercenary-spyware-delivered-via-targeted-ads-uncovered-by-citizenlab/&#34;&gt;First Zero-Click Mercenary Spyware Delivered Via Targeted Ads Uncovered by CitizenLab&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179747&#34;&gt;以色列廣告業者利用定向廣告發動零點擊攻擊，半島電視臺裝置遭間諜軟體入侵&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102420&#34;&gt;如果 App 要求追蹤你的活動&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant&#34;&gt;廣告 ID&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Play 管理中心說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102420&#34;&gt;If an app asks to track your activity&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=en&#34;&gt;Advertising ID&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Play Console Help&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of the Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.soumu.go.jp/main_sosiki/joho_tsusin/d_syohi/gaibusoushin_kiritsu.html&#34;&gt;自分に関する情報が第三者に送信される場合、 自身で確認できるようになります。&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Internal Affairs and Communications&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;amp;mCode=C020010000&amp;amp;nttId=9888&#34;&gt;맞춤형 광고에 쓰이는 “행태정보” 처리, 적법성과 투명성 높인다&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal Information Protection Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-01-31&#34;&gt;31 January 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/citizenlab.ca&#34;&gt;Is https://citizenlab.ca blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tuta encrypted email and its Nextcloud integration</title>
 <link>https://anoni.net/news/en/2026/10/tuta-nextcloud-integration/</link>
@@ -2718,106 +2864,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.torproject.org/zh-TW/tor-browser/features/security-levels/&#34;&gt;調整 Tor Browser 安全等級以平衡隱私與可用性&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Phishing emails that fake Gmail&#39;s attachment preview</title>
-<link>https://anoni.net/news/en/2026/10/gmail-attachment-preview-phishing/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/gmail-attachment-preview-phishing</guid>
-<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Cisco Talos found phishing emails sent to Taiwan&#39;s academic, think tank and civil society policy community that use images in the message body to imitate Gmail&#39;s attachment card, starting an infection on Windows when clicked. Opened in a browser, the fake card is nearly indistinguishable from a real attachment, so people who often receive speaking invitations or institutional mail may want to watch for it.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources from Cisco Talos, iThome, Google&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Cisco Talos published a report on 30 September about a cyber-espionage cluster it tracks as UAT-11587 and assesses with high confidence to be China-nexus. According to the report, spear-phishing emails sent in March 2026 to Taiwan&#39;s academic, think tank and civil society policy community used images in the message body to imitate Gmail&#39;s attachment preview, and clicking the fake card started an infection on Windows computers. Talos writes that when the message is opened in a browser, the fake card is visually indistinguishable from a genuine Gmail attachment preview.&lt;/p&gt;
-&lt;p&gt;Talos&#39;s report says the attacker built the card from four inline PNG images and wrapped the whole card in a link to an attacker-controlled Cloudflare Pages address. Clicking it downloads an HTA file, run by Windows&#39;s mshta.exe, which leads through a five-stage chain to a Rust-based backdoor called Antino while a decoy PDF is shown to the victim. The sample email, written in traditional Chinese, invited the recipient to speak at a workshop for about 50 minutes for a NT$3,500 fee, and one decoy document copied a public ruling from Taiwan&#39;s Ministry of Finance on legislators&#39; expenses word for word.&lt;/p&gt;
-&lt;p&gt;Talos also writes that the visible sender impersonated an institution the recipient trusted. In one message Talos reviewed, the envelope sender used the attacker&#39;s own domain and passed SPF but failed DMARC, both checks that receiving servers use to verify the sending domain. The impersonated institution&#39;s domain had a DMARC policy that was not enforced, so the message was still delivered.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Talos&#39;s report says Gmail rendered the attacker&#39;s HTML faithfully in the browser, which is why an image in the body can look exactly like an attachment card. iThome reported that the fake card sits below the message text, and Gmail&#39;s help page places real attachments at the bottom of the message, so in our reading position alone does not tell them apart. According to Gmail&#39;s help page, hovering over a real attachment shows a Download icon and an Add to Drive icon.&lt;/p&gt;
-&lt;p&gt;From that, we infer that a card which shows neither icon on hover may simply be an image link inside the message. We have not tested this, it may stop working if Gmail changes its interface, and it applies only to the desktop version, since Talos&#39;s report does not describe how the message appears on phones. Gmail&#39;s help page also advises hovering over links before clicking on a computer, and treating a link whose address does not match its description as possible phishing.&lt;/p&gt;
-&lt;p&gt;Gmail&#39;s help page says that clicking the down arrow under the sender&#39;s name shows &#34;Mailed by&#34; and &#34;Signed by&#34; headers with their domains for authenticated messages, and a question mark next to the sender&#39;s name for messages that are not authenticated. The page counts a message as authenticated if it passes SPF or DKIM, and the message Talos reviewed passed SPF, so we infer that the question mark may not appear.&lt;/p&gt;
-&lt;p&gt;The &#34;Mailed by&#34; header shows the sending domain, which is different from the sender name at the top of the email, and in our reading it is worth checking whether that domain matches the institution the email claims to come from. As of 7 October, the help page does not say how Gmail displays messages that fail DMARC.&lt;/p&gt;
-&lt;p&gt;People who often receive speaking invitations, official documents or institutional mail may want to watch for fake attachment cards. On a computer, a suspicious message can be reported from the More menu next to Reply by clicking Report phishing.&lt;/p&gt;
-&lt;p&gt;According to Google, people at risk of targeted online attacks can enrol in the Advanced Protection Program, which as of 7 October is free to use. Sign-in then always requires a passkey or security key, and Chrome checks downloads more closely. The cost is setting up a passkey or buying a security key, and apps that rely on app passwords are blocked. As of 7 October, Google&#39;s pages do not say whether Advanced Protection stops a fake attachment card inside the message body.&lt;/p&gt;
-&lt;p&gt;Talos&#39;s targeting assessment extends well beyond Taiwan. Talos assesses with moderate-to-high confidence that it targeted organisations in Taiwan, India, the Philippines, Cambodia, Pakistan, Thailand, Myanmar and Syria, and as of July 2026 it had identified at least 16 affected or targeted institutions and about 350 compromised endpoints. Talos lists likely audiences for the lure titles, for example the Philippine public sector for a title about the Bajo de Masinloc chart, and it recovered a decoy document about an Indo-Pacific policy forum, though it notes that titles alone do not confirm delivery or compromise. The largest single wave Talos observed came on 8 and 9 June, with around 57 newly observed endpoints associated with India.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/&#34;&gt;China-nexus UAT-11587 targets government and policy organizations across Asia with Antino backdoor&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cisco Talos&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;30 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179344&#34;&gt;中國駭客UAT-11587鎖定臺灣學術界與智庫，以圖片仿製Gmail附件預覽介面並用政府文件作為誘餌&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;1 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/8253?hl=zh-Hant&#34;&gt;防範及檢舉網路釣魚電子郵件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/30719?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;在 Gmail 中開啟及下載附件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/180707?hl=zh-Hant&#34;&gt;檢查 Gmail 郵件是否通過驗證&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://landing.google.com/intl/zh-TW/advancedprotection/&#34;&gt;Google 最強大的安全防禦機制，可確保私人資訊的安全。&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/7539956?hl=zh-Hant&#34;&gt;進階保護計畫常見問題&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/8253?hl=en&#34;&gt;Avoid &amp;amp; report phishing emails&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/30719?hl=en&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;Open &amp;amp; download attachments in Gmail&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/180707?hl=en&#34;&gt;Check if your Gmail message is authenticated&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://landing.google.com/intl/en/advancedprotection/&#34;&gt;Google&amp;#39;s strongest security helps keep your private information safe.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/7539956?hl=en&#34;&gt;Common questions with Advanced Protection Program&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

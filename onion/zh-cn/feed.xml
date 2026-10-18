@@ -6,7 +6,133 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 18 Oct 2026 13:59:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>定向广告投放的零点击间谍软件</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/adfection-targeted-ads-spyware/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/adfection-targeted-ads-spyware</guid>
+<pubDate>Mon, 19 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Citizen Lab 10 月 15 日发表报告，以高信心把半岛电视台至少 45 台设备在 2024 到 2025 年遭到的攻击，关联到以色列广告公司 Discover-Tech 的定向广告与 Candiru 的间谍软件。报告确认的锁定对象只有半岛电视台，也没有说明被利用的漏洞。给一般读者的建议是屏蔽广告与限制广告标识符，报告也提到这些做法只能降低部分风险。</description>
+<content:encoded>&lt;p&gt;整理 15 篇原文，来自 Citizen Lab、IAB Europe、Adtimizer 等 13 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;依 Citizen Lab 10 月 15 日发表的 AdFection 报告，以色列广告公司 Discover-Tech 的在线广告被用来投放雇佣兵间谍软件（卖给政府客户的商业间谍软件），广告显示在屏幕上就能触发。报告以高信心把半岛电视台（Al Jazeera）在 2024 到 2025 年遭到的攻击关联到以色列厂商 Candiru 的间谍软件，至少 45 台设备遭到锁定。报告确认的锁定对象只有半岛电视台，Discover-Tech 的广告则出现在近 20 万个网站与 App，广告曝光本身不代表遭到锁定。报告没有说明被利用的漏洞与受影响的版本，研究者取得的样本是从一台受害设备分离出来的 Windows 程序文件，报告没有确认手机遭到感染。&lt;/p&gt;
+&lt;p&gt;在线广告大多通过实时竞价（RTB，每次显示广告前即时进行的拍卖）决定，广告主出价争取把某则广告显示给特定用户，广告里也可以带着在 App 或浏览器里运行的代码。依报告，Discover-Tech 的许多广告带有一段标签，显示时会连回它的服务器并发送用户的广告标识符或 cookie 标识符。服务器只对选定的目标返回代码，Discover-Tech 平台的客户（报告认为包括 Candiru 这类间谍软件厂商）可以用手机的广告标识符、浏览器的 cookie 标识符或 IP 地址挑选目标，其他人收到的是空白响应。依报告，这个设计让 Discover-Tech 不必把恶意代码、甚至指向它的链接交给替它投放广告的平台。&lt;/p&gt;
+&lt;p&gt;研究者在 Discover-Tech 的网站找到两个公开可读的数据库，2026 年 3 到 6 月的竞价记录约 37.7 亿笔，看起来中标约 4.4 亿笔。其中至少 7.2 亿笔竞价的广告从名称判断带有连回这类服务器的标签，七成以上的竞价发生在 App 里。报告列出曾有广告曝光的网络，包括北约、联合国、欧洲议会与二十多个国家的政府网络。报告评估这些曝光至少让 Discover-Tech 能剖析设备，部分情况可能让其他厂商的代码在设备上运行，但曝光不等于确认遭到锁定或感染。&lt;/p&gt;
+&lt;p&gt;依报告附的各家回复，Google 终止了 Discover-Tech 在广告交易平台的出价与投放，并用安全浏览（Safe Browsing）对已知的域名显示警告。Beeswax、Vungle（Liftoff）与 Eskimi 也停止或暂停了合作。依 IAB Europe 的回信，Discover-Tech 从 10 月 8 日起在供应商名录（GVL，参与其透明度与同意框架的厂商清单）遭到暂停（报告正文写的是移除），原因是审核发现违反框架政策。Discover-Tech 与 Candiru 没有在报告给的期限内回复，到 10 月 18 日也查不到两家的公开声明。&lt;/p&gt;
+&lt;p&gt;报告另外点名 Adtimizer 与 Volasim 两家公司。Adtimizer 的回信表示只把一些子域名分配给一般广告用途，那些子域名只在 Discover-Tech 的基础设施里使用。Volasim 的回信表示 Discover-Tech 是它委托推广产品的外部广告商之一，并愿意在保密协议下提供源代码供独立审查。报告认为两家与 Discover-Tech 有关联，但也提到没有确切证据显示两家知情参与。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;监控产业把利用广告数据识别与追踪特定人的平台称为广告情报（ADINT）。依报告，能取得竞价数据的公司可以从同一个标识符的出价请求看出一个人在不同地点与网络之间的移动，AdFection 则把这套识别接上了攻击程序（本文的理解）。报告的评价是这些广告业名录看起来大多靠厂商自我声明。IAB Europe 的回信则表示，列入名录不代表 IAB Europe 认证该公司的所有活动都符合 GDPR，该组织也没有能力与职权做取证或刑事调查。&lt;/p&gt;
+&lt;p&gt;Citizen Lab 给一般用户的建议是在浏览器安装可信的广告拦截扩展、改用会拦截追踪的浏览器、定期重置手机的广告标识符并关闭广告追踪，也可以在家中的路由器或可信的 VPN 服务屏蔽广告。给组织安全人员的建议，报告判断目前最可行的防护是在组织网络的出口（网关）屏蔽定向广告，直到业界证明能可靠拦下这类手法。报告没有写出被利用的漏洞，无法判断更新到哪个版本能修补，Ars Technica 另外提醒及时安装更新。&lt;/p&gt;
+&lt;p&gt;在中国大陆，第三方测量项目 GreatFire 到 10 月 16 日的最后一次测试显示 &lt;code&gt;citizenlab.ca&lt;/code&gt; 被完全封锁（依据最近 2 次有结论的测试），从 2017 年 7 月 20 日起就有干扰记录。报告按 IP 地理位置统计带有这类标签的竞价，中国约 3,007 万笔、排第六（报告提醒 IP 地理位置可能不准确，竞价也不等于锁定或感染）。Discover-Tech 也通过中国的广告科技公司 Sunteng 投放广告，占它竞价平台出价的 0.03%，Sunteng 没有在报告给的期限内回复。&lt;/p&gt;
+&lt;p&gt;因工作或身份而面临较高风险的人，报告建议寻求专家协助。一般读者可以先限制广告标识符。iPhone 到「设置」的「隐私与安全性」、「跟踪」，关闭「允许 App 请求跟踪」（iOS 14.5 及以上）。Android 依 Google 的说明到「设置」的「隐私」、「广告」选「删除广告 ID」（需要 Google Play 服务，中国大陆销售的各款手机是否预装，本文没有查证），两家的说明页都有简体中文版（10 月 18 日查证）。&lt;/p&gt;
+&lt;p&gt;依报告，这些做法降低的是部分风险。报告在给组织安全人员的建议里提到，屏蔽广告标识符能挡下 Discover-Tech 目前的做法，但研究者推测这类攻击的范围更大。依本文的理解，重置手机的广告标识符挡不到用 cookie 标识符或 IP 地址挑选的目标。漏洞没有公开，更新到哪个版本能修补也无从判断。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/&#34;&gt;Exposing AdFection: How Discover-Tech Turned Targeted Ads Into a Pipeline for Zero-Click Mercenary Spyware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/exposing-adfection-executive-summary/&#34;&gt;Exposing AdFection Executive Summary&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/wp-content/uploads/2026/10/Citizen-Lab-Right-to-Reply-IAB.pdf&#34;&gt;Re: Citizen Lab Right to Reply&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IAB Europe&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/wp-content/uploads/2026/10/Adtimizer-Response-to-Request-for-Comment.pdf&#34;&gt;Re: Citizen Lab Report Right to Reply&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Adtimizer&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-11&#34;&gt;2026 年 10 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/wp-content/uploads/2026/10/Volasim-Response-to-Request-for-Comment.pdf&#34;&gt;Citizen Lab Right of Reply&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Volasim&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aljazeera.com/news/2026/10/15/israeli-ad-tech-firm-helped-spy-on-al-jazeera-devices&#34;&gt;Israeli ad-tech firm helped place spyware on Al Jazeera devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Al Jazeera&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/targeted-ads-delivered-0-click-exploits-to-install-mercenary-malware/&#34;&gt;Targeted ads delivered 0-click exploits to install mercenary malware&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theguardian.com/technology/2026/oct/15/israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say&#34;&gt;Online ads weaponised to deliver ‘zero-click’ spyware, researchers say&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Guardian&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/16/first-mercenary-spyware-delivered-via-targeted-ads-uncovered-by-citizenlab/&#34;&gt;First Zero-Click Mercenary Spyware Delivered Via Targeted Ads Uncovered by CitizenLab&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179747&#34;&gt;以色列廣告業者利用定向廣告發動零點擊攻擊，半島電視臺裝置遭間諜軟體入侵&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102420&#34;&gt;如果 App 要求追蹤你的活動&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant&#34;&gt;廣告 ID&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Play 管理中心說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/102420&#34;&gt;如果 App 请求跟踪你的活动&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hans&#34;&gt;广告 ID&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Play 管理中心帮助&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/citizenlab.ca&#34;&gt;Is https://citizenlab.ca blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tuta 加密邮件与 Nextcloud 的集成</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/tuta-nextcloud-integration/</link>
@@ -2637,122 +2763,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/10468685?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;管理 Chrome 的安全性&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>冒充 Gmail 附件预览的钓鱼邮件</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/gmail-attachment-preview-phishing/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/gmail-attachment-preview-phishing</guid>
-<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Cisco Talos 披露一批发给台湾学术界、智库与公民社会政策社群的钓鱼邮件。邮件用图片在正文仿制 Gmail 的附件卡片，点击后会在 Windows 电脑上启动感染。在浏览器打开时假卡片与真附件几乎分不出来，经常收到演讲邀请或机构来信的人可以留意。</description>
-<content:encoded>&lt;p&gt;整理 14 篇原文，来自 Cisco Talos、iThome、Google 等 6 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Cisco Talos 在 9 月 30 日公开一份网络间谍活动的报告，代号 UAT-11587。据报告的内容，2026 年 3 月有一批鱼叉式网络钓鱼邮件（针对特定对象量身写成的钓鱼邮件）发给台湾学术界、智库与公民社会的政策社区。邮件在正文用图片仿制了 Gmail 的附件预览，点击后会在 Windows 电脑上启动感染流程。Talos 提到，在浏览器打开 Gmail 时，假卡片与真正的附件预览在外观上几乎分不出来。&lt;/p&gt;
-&lt;p&gt;Talos 的报告写到，攻击者用四张内嵌的 PNG 图片拼出 Gmail 附件卡片的样式，再把整张卡片做成链接。链接指向攻击者控制的 Cloudflare Pages 网址，点击后会下载一个 HTA 文件（由 Windows 的 mshta.exe 执行的程序文件）。接着经过五个阶段的感染，最后放入以 Rust 写成的后门 Antino。过程中会打开一份 PDF 诱饵文档给受害者看，后门则在后台安装。&lt;/p&gt;
-&lt;p&gt;Talos 公布的邮件样本以繁体中文写成，邀请收件人担任工作坊讲师，信中写课程约 50 分钟、讲师费 3,500 元。Talos 取得的诱饵文档之一是以“Taiwan Information Warfare”为题的工作坊说明，Talos 提到另一份完整复制了台湾财政部公开的函释《立法委员行使职务支领之各项费用征免税原则》。Talos 也写到，邮件显示的发件人冒用收件人信任的机构。&lt;/p&gt;
-&lt;p&gt;Talos 检视的一封邮件用攻击者自己的域名作为信封上的发件人，通过了 SPF 验证，但没有通过 DMARC 验证。SPF 与 DMARC 都是收件端核对发件域名的机制。被冒用机构的域名把 DMARC 策略设为不强制执行，所以邮件仍然送达。&lt;/p&gt;
-&lt;p&gt;Talos 从 2025 年 9 月开始观察 UAT-11587 的活动。到 2026 年 7 月为止，Talos 找到至少 16 个受害或被锁定的机构，约 350 个受感染的终端（电脑或服务器）。Talos 以中到高的置信度评估，锁定的对象分布在台湾、印度、菲律宾、柬埔寨、巴基斯坦、泰国、缅甸与叙利亚八个国家和地区，包括政府、外交、国防、立法机关、智库、大学与公民社会组织。Talos 也以高置信度评估攻击者与中国有关联（原文为 China-nexus）。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;Talos 的报告写到，Gmail 在浏览器显示邮件时照实呈现了攻击者写的 HTML，所以正文里的图片可以长得与附件卡片一样。iThome 的报道写到假卡片放在邮件正文下方，Gmail 帮助页写的真正附件则在邮件底部。本文推论两者都在邮件下半部，单看位置不容易分辨。据 Gmail 帮助页，将鼠标悬停在真正的附件上时，会出现“下载”与“添加到云端硬盘”图标。&lt;/p&gt;
-&lt;p&gt;本文从帮助页写的悬停图标推论，鼠标悬停在卡片上却没有出现“下载”与“添加到云端硬盘”图标的，可能只是正文里的图片链接。本文没有实测，Gmail 改版后也可能不适用。推论只适用于电脑版，Talos 的报告没有写手机上的显示情况。Gmail 帮助页另外建议在电脑上点击链接前先悬停查看网址，网址与链接说明不匹配时，链接可能导向钓鱼网站。&lt;/p&gt;
-&lt;p&gt;据 Gmail 帮助页，点击发件人名字下方的向下箭头时，通过身份验证的邮件会显示“发件人”与“签名者”两个标头和对应的域名。没有通过身份验证时，发件人名字旁会出现问号。邮件通过 SPF 或 DKIM 任一项就算通过验证，Talos 检视的那封邮件 SPF 通过，本文推论可能不会出现问号。&lt;/p&gt;
-&lt;p&gt;展开后的“发件人”标头（英文界面为 Mailed by，与邮件顶端的发件人名字不同）显示发送邮件的域名，本文推论可以比对它与邮件中自称的机构是否一致。到 10 月 7 日为止，帮助页没有写 DMARC 验证失败的邮件会如何显示。&lt;/p&gt;
-&lt;p&gt;经常收到演讲邀请、公文或机构来信的人，可以特别留意假附件卡片的手法。收到可疑邮件时，电脑版 Gmail 可以在“回复”图标旁的“更多”图标点击“举报钓鱼邮件”。&lt;/p&gt;
-&lt;p&gt;据 Google 的说明，容易成为针对性网络攻击目标的人可以加入“高级保护计划”，到 10 月 7 日为止免费使用。登录时一律要用通行密钥或安全密钥，Chrome 下载文件前也会做更严格的检查。代价是要准备通行密钥或另外购买安全密钥，需要应用专用密码的应用会无法使用。到 10 月 7 日为止，Google 的帮助页没有写高级保护计划能否挡下正文里的假附件卡片。&lt;/p&gt;
-&lt;p&gt;据 PBS 与 CSMonitor 2014 年 12 月 29 日的报道，Google 透明度报告显示 Gmail 在中国的流量在 2014 年 12 月底降到接近零，CSMonitor 也写到使用 VPN 仍然可以连接。长期测量防火长城的 GreatFire 显示，到 2026 年 10 月 1 日的最后一次测试为止，mail.google.com 在中国大陆完全受到干扰。上面的辨识方式适用于能连上 Gmail 的读者，例如在海外使用的人。到 10 月 7 日为止，本文没有查到翻墙工具现在能否连上 Gmail。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/&#34;&gt;China-nexus UAT-11587 targets government and policy organizations across Asia with Antino backdoor&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Cisco Talos&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179344&#34;&gt;中國駭客UAT-11587鎖定臺灣學術界與智庫，以圖片仿製Gmail附件預覽介面並用政府文件作為誘餌&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/8253?hl=zh-Hant&#34;&gt;防範及檢舉網路釣魚電子郵件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/30719?hl=zh-Hant&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;在 Gmail 中開啟及下載附件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/180707?hl=zh-Hant&#34;&gt;檢查 Gmail 郵件是否通過驗證&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://landing.google.com/intl/zh-TW/advancedprotection/&#34;&gt;Google 最強大的安全防禦機制，可確保私人資訊的安全。&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/7539956?hl=zh-Hant&#34;&gt;進階保護計畫常見問題&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/8253?hl=zh-Hans&#34;&gt;防范和举报钓鱼邮件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/30719?hl=zh-Hans&amp;amp;co=GENIE.Platform%3DDesktop&#34;&gt;打开和下载 Gmail 中的附件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/180707?hl=zh-Hans&#34;&gt;检查 Gmail 邮件是否通过身份验证&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/accounts/answer/7539956?hl=zh-Hans&#34;&gt;关于高级保护计划的常见问题&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pbs.org/newshour/world/gmail-access-blocked-china&#34;&gt;Gmail and Google Search access blocked in China&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PBS NewsHour&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2014-12-29&#34;&gt;2014 年 12 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.csmonitor.com/Technology/2014/1229/Gmail-gets-burned-by-China-s-Great-Firewall&#34;&gt;Gmail gets burned by China&amp;#39;s &amp;#39;Great Firewall&amp;#39;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CSMonitor&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2014-12-29&#34;&gt;2014 年 12 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/mail.google.com&#34;&gt;Is https://mail.google.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
