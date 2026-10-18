@@ -781,6 +781,10 @@ same_as = "gov.hk"
 icon = "leginfo.legislature.ca.gov-78ee4ac7.png"
 from = "https://web.archive.org/web/20261007id_/https://leginfo.legislature.ca.gov/favicon.ico"
 
+[hosts."legislation.gov.au"]
+icon = "legislation.gov.au-25819006.png"
+from = "https://www.legislation.gov.au/favicon.ico"
+
 [hosts."legislation.gov.uk"]
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
@@ -1057,6 +1061,10 @@ from = "https://privacyinternational.org/sites/default/files/fav/android-icon-19
 [hosts."priveetee.github.io"]
 same_as = "pipepipe.dev"
 
+[hosts."publicsafety.gc.ca"]
+icon = "publicsafety.gc.ca-6be11ced.png"
+from = "https://publicsafety.gc.ca/dist/assets/favicon.ico"
+
 [hosts."quad9.net"]
 icon = "quad9.net-ff6922f7.png"
 from = "https://quad9.net/icons/icon_512x512.a811cc.png"
@@ -1128,6 +1136,10 @@ from = "https://security.macnica.co.jp/upload/favicon.ico"
 [hosts."securitylab.github.com"]
 icon = "securitylab.github.com-ad3eceb3.png"
 from = "https://securitylab.github.com/assets/img/favicons/apple-touch-icon.png"
+
+[hosts."sencanada.ca"]
+icon = "sencanada.ca-3cf43f98.png"
+from = "https://sencanada.ca/favicon.ico"
 
 [hosts."sflc.in"]
 icon = "sflc.in-e1e6722e.png"
