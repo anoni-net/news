@@ -6,7 +6,86 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 20 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>加拿大 C-22 法案的參議院二讀與業者的表態</title>
+<link>https://anoni.net/news/2026/10/canada-c22-senate-debate/</link>
+<guid isPermaLink="false">anoni-news:2026/10/canada-c22-senate-debate</guid>
+<pubDate>Tue, 20 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>加拿大的 C-22 合法存取法案 10 月 8 日在參議院進行二讀辯論，到 10 月 18 日為止還沒有二讀通過。Signal 的副總裁在座談上表示，若被命令蒐集更多詮釋資料就只能撤出加拿大，公共安全部長辦公室則表示法案不要求解密端對端加密的資訊。加拿大以外的讀者現在不需要調整設定。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Parliament of Canada、Senate of Canada、Public Safety Canada 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;加拿大的《合法存取法》（Bill C-22）6 月在眾議院三讀通過，參議院 10 月 8 日進行二讀辯論後休會，下次開會是 10 月 20 日。依加拿大國會的法案資料庫 LEGISinfo，到 10 月 18 日為止法案還沒有二讀通過，也沒有交付委員會或御准（總督簽署成為法律）的紀錄。10 月 4 日到 16 日之間，Signal、審查規避工具 Psiphon 與多倫多大學的研究室 Citizen Lab 都公開提出反對的理由，代表政府在參議院推動法案的參議員（提案人）則在二讀演說中說明法案的保障。法案尚未通過、業者的撤出也都附有條件，依本文的判斷，加拿大以外的讀者現在不需要調整設定。&lt;/p&gt;
+&lt;p&gt;Signal 的策略與全球事務副總裁 10 月 5 日在網際網路協會加拿大分會的座談上發言，《環球郵報》（The Globe and Mail）隔天報導。依報導，這位副總裁主張法律對加密的保護要涵蓋用金鑰解密以外的情況，被要求大幅改動軟體同樣會抵銷加密的目的。Signal 只保存使用者的電話號碼、加入日期與最後登入資訊，若被命令蒐集更多詮釋資料（通訊內容以外的紀錄）並保存最長六個月，就只能撤出加拿大。到 10 月 18 日為止，Signal 的部落格與 Bluesky 帳號沒有發表關於 C-22 的書面聲明。&lt;/p&gt;
+&lt;p&gt;Psiphon 10 月 2 日向《環球郵報》表示已開始擬定把營運搬出加拿大的計畫，條件是法案照現狀通過。公司的副總裁在書面回覆中寫到，開源程式碼的每一行都公開，法案若要求建立存取能力就會被全世界看到（包括使用者想躲避的威權政府）。Citizen Lab 一位資深研究員 10 月 9 日在同一份報紙發表評論，主張不存在只讓執法單位進得去、其他攻擊者卻沒有機會利用的設計，Citizen Lab 10 月 16 日在網站上轉載了摘要。&lt;/p&gt;
+&lt;p&gt;依提案人 10 月 8 日的二讀演說，法案第二部分規範業者技術能力的新法，本身不會給執法單位或加拿大安全情報局（CSIS）新的取得資訊權力。部長命令要經情報專員（審查情報授權的獨立官員）核准、接受獨立審查，效期最長兩年。詮釋資料保存限於指定的類別、最長六個月，不包含通訊內容與瀏覽紀錄。公共安全部長辦公室的發言人向《環球郵報》表示，法案明文不要求解密端對端加密的資訊，也不允許或強迫業者引入系統性漏洞或後門。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依公共安全部 5 月的委員會備詢資料，業者評估某項要求無法在不引入系統性漏洞（影響整類產品或大量使用者、不只針對單一目標的漏洞）的情況下遵守時就不必遵守，政府用這個詞劃出業者不必遵守的範圍。提案人在演說中也提到，委員會要聽取技術證據，了解一項能力被描述成針對特定目標、卻可能影響整個產品或更新系統時這個詞如何運作。Psiphon 被一位參議員引用的意見則是開源軟體裡任何法定的存取機制都會公開，無法只限於加拿大機關或單一調查。&lt;/p&gt;
+&lt;p&gt;監督方式是另一個爭點。一位參議員在辯論中批評部長命令被排除在《法定文書法》（規定法規送交國會審查的法律）之外，另一位參議員引用 Citizen Lab 與一個公民自由團體的聯合意見書，寫到法案的義務可以在沒有司法授權的情況下施加。提案人在演說中則提到，命令與佐證資料要送交國家安全與情報審查機構（NSIRA，審查情報與安全機關的獨立機構），並引用警察團體代表對法案的支持。&lt;/p&gt;
+&lt;p&gt;公共安全部的備詢資料提到澳洲有類似的保障。澳洲 2018 年的《協助與存取法》同樣規定，技術能力通知（要求業者建立特定能力的書面命令）不得要求業者建立系統性弱點或系統性漏洞。澳洲法把系統性弱點定義為影響整類技術的弱點，不包括只針對特定人刻意引入的弱點（若會危及他人的資訊安全仍算）。Citizen Lab 研究員的評論則引用澳洲的經驗，寫到一家公司表示信任流失造成約 10 億澳幣的經濟損失。&lt;/p&gt;
+&lt;p&gt;比較各地做法時，可以問命令由誰核准、需不需要法院，以及業者能不能公開命令的存在。系統性漏洞由誰判斷、詮釋資料保存的範圍與期限，也是可以對照的地方。另外可以問政策想達成的調查目的，能不能在不削弱加密的情況下做到。&lt;/p&gt;
+&lt;p&gt;Signal 與 Psiphon 的撤出都附有條件，到 10 月 18 日為止兩家都沒有宣布撤出的日期。參議院 10 月 20 日復會後的二讀表決，以及法案交付哪個委員會，是接下來可以觀察的進度。在加拿大的讀者會受什麼影響，要看法案最後的條文與業者的決定。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sencanada.ca/en/content/sen/chamber/451/debates/092db_2026-10-08-e&#34;&gt;Debates, Issue 92 (October 8, 2026)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Senate of Canada&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20260828-1/index-en.aspx&#34;&gt;Parliamentary Committee Notes: appearance before the Standing Committee on Public Safety and National Security (SECU)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Public Safety Canada&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;2026 年 5 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-messaging-service-signal-says-ministers-changes-to-lawful-access-bill/&#34;&gt;Messaging service Signal says minister’s changes to lawful access bill will not persuade it to stay in Canada&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-psiphon-vpn-provider-plans-to-quit-canada-over-lawful-access-bill/&#34;&gt;Toronto-based VPN provider plans to quit Canada over lawful-access bill&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-04&#34;&gt;2026 年 10 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/opinion/article-the-lawful-access-act-threatens-to-blow-a-hole-in-canadas-national/&#34;&gt;The Lawful Access Act threatens to blow a hole in Canada’s national security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/the-lawful-access-acts-threats-to-canadas-national-security/&#34;&gt;The Lawful Access Act’s threats to Canada’s national security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.au/C2018A00148/latest/text&#34;&gt;Telecommunications and Other Legislation Amendment (Assistance and Access) Act 2018&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Federal Register of Legislation&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Android 的自動電話號碼驗證與多帳號連結</title>
 <link>https://anoni.net/news/2026/10/android-phone-number-verification/</link>
@@ -2175,196 +2254,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;2026 年 3 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>每週短訊 2026 第 41 週</title>
-<link>https://anoni.net/news/2026/10/weekly-brief-2026-w41/</link>
-<guid isPermaLink="false">anoni-news:2026/10/weekly-brief-2026-w41</guid>
-<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>9 月 13 日到 10 月 6 日的 7 則新聞，包括摩斯漢堡的疑似個資外洩與新加坡美珍香的會員信箱外洩、丹麥人口登記系統約 880 萬人的資料外洩、Ubuntu 26.10 收錄 Sequoia PGP、一篇質疑大型語言模型推理過程的評論、美國法院對車牌辨識搜尋的判決、美國邊境的自動監控塔，以及中國平台的刪文封存與敏感詞清單。</description>
-<content:encoded>&lt;p&gt;整理 22 篇原文，來自 公開資訊觀測站、Personal Data Protection Commission Singapore、iThome 等 14 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;這一期收了 7 則 9 月 13 日到 10 月 6 日之間的新聞，題材寫不成一篇完整的導讀。&lt;/p&gt;
-&lt;h3 id=&#34;member-data-leaks&#34;&gt;摩斯漢堡的疑似個資外洩與美珍香的會員信箱外洩&lt;/h3&gt;
-&lt;p&gt;經營台灣摩斯漢堡的安心食品 10 月 1 日發布重大訊息，表示接獲少數消費者反映。依公告，委外廠商管理的平台疑似有第三方不當取得資料，再以電子郵件聯繫消費者。公告寫明這個平台不是自家的 MOS 訂餐 App，已要求廠商修補，也在官網與 App 加強反詐騙宣導。公告沒有寫外洩的人數與欄位。&lt;/p&gt;
-&lt;p&gt;新加坡個人資料保護委員會（PDPC）公布新加坡食品業者美珍香提出的自願承擔（企業向主管機關提出的改善承諾），內容是 4 月 25 日寄給 95,364 名會員的行銷郵件每 1,000 人一批，同一批的收件人看得到彼此的電子郵件地址。PDPC 轉述美珍香的調查，原因是員工用生成式 AI 寫的寄信程式少了一個括號。給 AI 的提示沒有要求隱藏其他收件人，不是 AI 工具的故障。到 10 月 5 日的報導為止，美珍香事件的公告與報導沒有提到台灣的會員。&lt;/p&gt;
-&lt;h3 id=&#34;denmark-cpr&#34;&gt;丹麥人口登記系統的資料外洩&lt;/h3&gt;
-&lt;p&gt;丹麥人口登記系統（CPR）的管理單位 10 月 5 日公告，有人濫用一家丹麥企業合法的查詢權限，取得約 880 萬名登記者的姓名、地址與 CPR 號碼（丹麥的個人身分號碼）等資料。依丹麥研究、教育與數位化部的新聞稿，系統登記了約 1,100 萬人，外洩的範圍包括在世、移居國外與已故的人。選擇姓名與地址保護的人，姓名與地址不在外洩的範圍內。丹麥資料保護署的公告引述 CPR 的通報，據稱有人做了大量自動化查詢，用來辨識有效的 CPR 號碼。&lt;/p&gt;
-&lt;p&gt;部會的新聞稿提醒民眾，即使對方看似知道自己的姓名、地址與 CPR 號碼，也不要在電話或電子郵件裡交出密碼與其他機密資訊。到 10 月 5 日的新聞稿為止，警方的調查還在初期，還無法說明是誰做的。&lt;/p&gt;
-&lt;h3 id=&#34;ubuntu-sequoia&#34;&gt;Ubuntu 26.10 收錄 Sequoia PGP&lt;/h3&gt;
-&lt;p&gt;依 Ubuntu 26.10 的發行說明，這個版本把以 Rust 寫成的 OpenPGP（加密與簽署電子郵件和檔案的標準）實作 Sequoia PGP 收進 main 套件庫，提供官方支援。Sequoia 的 &lt;code&gt;sq&lt;/code&gt; 與 &lt;code&gt;sqv&lt;/code&gt; 分別對應 Linux 上常用的 OpenPGP 工具 GnuPG 的 &lt;code&gt;gpg&lt;/code&gt; 與 &lt;code&gt;gpgv&lt;/code&gt;。到 10 月 7 日，&lt;code&gt;gpg&lt;/code&gt; 與 &lt;code&gt;gpgv&lt;/code&gt; 仍留在 main 套件庫，兩套並存。&lt;/p&gt;
-&lt;p&gt;Ubuntu 論壇 10 月 1 日的 Rust 月報寫到，Sequoia 之後可能成為 Ubuntu 預設的 OpenPGP 工具。依 10 月 7 日查到的官方時程，26.10 預定 10 月 15 日發布。&lt;/p&gt;
-&lt;h3 id=&#34;llm-reasoning&#34;&gt;大型語言模型推理過程的評論&lt;/h3&gt;
-&lt;p&gt;MIT Technology Review 10 月 2 日刊出一篇評論，作者以 AlphaGo 為例主張大型語言模型列出的推理過程（chain of thought）仍是同一套逐字預測拉長執行，AlphaGo 則另有一套搜尋機制。作者列出三個缺點，模型沒有可以檢視的假設與證據紀錄、知識與推理混在模型的權重裡，以及有研究顯示模型列出的推理常是事後寫的。原文在第三點附了兩篇論文的連結。依兩篇的摘要，主題分別是從商用模型的 API 取出加密的推理內容與推理過程難以閱讀，沒有談到事後補寫推理。&lt;/p&gt;
-&lt;p&gt;本期另外查到 Anthropic 2025 年 5 月的論文〈Reasoning Models Don&#39;t Always Say What They Think〉，研究模型列出的推理是否說出它實際用到的提示。依論文，模型用到提示時，推理裡說出提示的比例常低於 20%。論文的結論是，監看推理過程是在訓練與評估時發現問題的可行方法，但不足以排除問題。&lt;/p&gt;
-&lt;h3 id=&#34;flock-ruling&#34;&gt;美國法院對車牌辨識搜尋的判決&lt;/h3&gt;
-&lt;p&gt;美國奧克拉荷馬州北區聯邦地方法院 10 月 1 日在一件刑事案件裡，准許被告排除證據的聲請。判決書寫到，警員查詢車牌辨識系統（包括美國車牌辨識業者 Flock 的系統）時只知道車子掛加州車牌，查詢取得被告一個月內在全國各地的 50 多筆行蹤紀錄。法院認定這次查詢屬於憲法第四修正案（禁止不合理的搜索與扣押）所說的搜索。法官在判決書稱這類系統是「一種無差別的大規模監控」。&lt;/p&gt;
-&lt;p&gt;依 404 Media 的報導，這份判決沒有拘束其他法院的效力。Flock 的發言人告訴 404 Media，公司不是案件的當事人，並預期判決會被上訴與推翻。&lt;/p&gt;
-&lt;p&gt;依 404 Media 的報導，三位國會議員 10 月 2 日公布 Ban Flock Act 法案，內容是禁止聯邦機關使用車牌辨識。同一篇報導寫到，一位共和黨參議員 9 月底宣布將提出 Stop Flock Abuse Act，要求機關 10 天後刪除駕駛的資料（進行中的調查除外）。到 10 月 7 日，兩份法案都無法確認編號。&lt;/p&gt;
-&lt;h3 id=&#34;border-towers&#34;&gt;美國邊境的自動監控塔&lt;/h3&gt;
-&lt;p&gt;MIT Technology Review 9 月 21 日的調查報導比對遺體的發現地點與監控塔的位置，找到 2015 年到 2026 年初超過 1,050 人死在監控塔宣稱的偵測範圍內。依同一篇報導，政府 2023 年估計塔整個使用年限的計畫成本為 62 億美元，到報導當天塔有 803 座。海關及邊境保護局（CBP）計畫到 2034 年再花 10 億美元增建 1,497 座。&lt;/p&gt;
-&lt;p&gt;CBP 的回應寫到，塔用 AI 偵測與通報，執法的決定由邊境巡邏人員做。部分自動監控塔的製造商 Anduril 的發言人表示，附近發生事件不代表塔漏掉偵測，實際的監視範圍依地形而異。&lt;/p&gt;
-&lt;p&gt;MIT Technology Review 9 月 23 日報導，一位眾議員宣布將提出 Reimagining Safety Act 終止邊境監控塔計畫。提案的範圍更大，要以新部會取代國土安全部，邊境監控塔是其中一項。到報導當天還沒有公布法案文字。報導的判斷是提案在國會會面臨很大的阻力。&lt;/p&gt;
-&lt;h3 id=&#34;cdt-404&#34;&gt;中國平台的刪文封存與敏感詞清單&lt;/h3&gt;
-&lt;p&gt;長期記錄中國網路審查的網站 China Digital Times（CDT）每月整理從微信、微博、抖音等中國平台被刪除的內容，收進「404 刪文封存」。CDT 的摘要寫到，7 月新增 47 篇、8 月新增 35 篇，主要來自微信。到 10 月 2 日的 8 月摘要為止，封存共 2,662 篇。CDT 也寫明，這只是每天從中國網路消失的內容裡的一小部分。&lt;/p&gt;
-&lt;p&gt;CDT 9 月 19 日另外公開一份 5,241 個詞的敏感詞清單，CDT 的說法是出自字節跳動 2020 年上半年外流的內部審核文件。CDT 列出的類型包括政治人物與事件、宗教與人權組織，以及 VPN 與翻牆工具的名稱。到 10 月 7 日為止，這篇文章沒有寫到獨立的驗證或字節跳動的回應。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（22 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://mopsov.twse.com.tw/mops/web/ajax_t05sr01_1?firstin=true&amp;amp;stp=1&amp;amp;step=1&amp;amp;SEQ_NO=2&amp;amp;SPOKE_TIME=174120&amp;amp;SPOKE_DATE=20261001&amp;amp;COMPANY_ID=1259&#34;&gt;本公司接獲消費者反應疑似個資外洩事件&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;公開資訊觀測站&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pdpc.gov.sg/organisations/regulations-decisions/enforcement-decisions/voluntary-undertaking-by-bee-cheng-hiang-marketing-pte-ltd&#34;&gt;Voluntary Undertaking by Bee Cheng Hiang Marketing Pte. Ltd.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Personal Data Protection Commission Singapore&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179402&#34;&gt;管理員下AI提示出錯，致美珍香洩露近10萬會員資料&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger&#34;&gt;Omfattende uautoriseret adgang til borgeres CPR-oplysninger&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CPR&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ufm.dk/aktuelt/pressemeddelelser/2026/oktober/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger/&#34;&gt;Omfattende uautoriseret adgang til borgeres CPR-oplysninger&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Forsknings-, Uddannelses- og Digitaliseringsministeriet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2026/okt/datatilsynet-er-opmaerksom-paa-sag-om-opslag-i-cpr&#34;&gt;Datatilsynet er opmærksom på sag om opslag i CPR&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://documentation.ubuntu.com/release-notes/26.10/&#34;&gt;Ubuntu 26.10 release notes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ubuntu&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://documentation.ubuntu.com/release-notes/26.10/schedule/&#34;&gt;Ubuntu Stonking Stingray Release Schedule&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ubuntu&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discourse.ubuntu.com/t/rust-on-ubuntu-2026-10/88671&#34;&gt;Rust on Ubuntu 2026-10&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ubuntu Discourse&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/news/ubuntu-sequoia-pgp-inclusion/&#34;&gt;Ubuntu 26.10 Will Have a Rust-based GnuPG Replacement&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.technologyreview.com/2026/10/02/1145639/dont-be-fooled-llms-dont-reason/&#34;&gt;Don’t be fooled—LLMs don’t reason&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MIT Technology Review&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2608.09867&#34;&gt;Stealing Reasoning Traces from Proprietary LLM APIs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;arXiv&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-10&#34;&gt;2026 年 8 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2510.27338&#34;&gt;Reasoning Models Sometimes Output Illegible Chains of Thought&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;arXiv&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-31&#34;&gt;2025 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2505.05410&#34;&gt;Reasoning Models Don&amp;#39;t Always Say What They Think&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;arXiv&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-05-08&#34;&gt;2025 年 5 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://storage.courtlistener.com/recap/gov.uscourts.oknd.76981/gov.uscourts.oknd.76981.62.0.pdf&#34;&gt;Opinion and Order, No. 26-CR-00189-SEH&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;United States District Court, Northern District of Oklahoma&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/federal-judge-rules-a-flock-search-was-indiscriminate-mass-surveillance-and-unconstitutional/&#34;&gt;Federal Judge Rules a Flock Search Was ‘Indiscriminate Mass Surveillance’ and Unconstitutional&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/lawmakers-introduce-multiple-laws-to-curb-flock-after-404-media-coverage/&#34;&gt;Lawmakers Introduce Multiple Laws to Curb Flock After 404 Media Coverage&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/&#34;&gt;The US spent billions on border surveillance. Why can’t it catch people before they die?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MIT Technology Review&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.technologyreview.com/2026/09/23/1145002/a-congressional-representative-just-proposed-killing-americas-border-tower-program/&#34;&gt;A congressional representative just proposed killing America’s border tower program&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MIT Technology Review&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/10/cdts-404-deleted-content-archive-summary-for-august-2026/&#34;&gt;CDT’s “404 Deleted Content Archive” Summary for August 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/09/cdts-404-deleted-content-archive-summary-for-july-2026/&#34;&gt;CDT’s “404 Deleted Content Archive” Summary for July 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-13&#34;&gt;2026 年 9 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/09/minitrue-bytedance-censors-list-of-5241-sensitive-terms/&#34;&gt;MiniTrue: ByteDance Censors&amp;#39; List of 5,241 Sensitive Terms&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;2026 年 9 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
