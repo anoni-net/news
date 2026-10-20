@@ -36,6 +36,10 @@ from = "https://www.aljazeera.com/favicon_aje.ico"
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
 
+[hosts."android.googlesource.com"]
+icon = "android.googlesource.com-f4ae33d1.png"
+from = "https://android.googlesource.com/+static/apple-touch-icon.png"
+
 [hosts."androidauthority.com"]
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
@@ -133,6 +137,10 @@ same_as = "cryptpad.org"
 [hosts."blog.google"]
 icon = "blog.google-328dadd5.png"
 from = "https://blog.google/static/blogv2/images/apple-touch-icon.png?version=pr20261009-1701"
+
+[hosts."blog.logcat.ai"]
+icon = "blog.logcat.ai-34b60622.png"
+from = "https://blog.logcat.ai/apple-touch-icon.png"
 
 [hosts."blog.mozilla.org"]
 icon = "blog.mozilla.org-f0f07a35.png"
@@ -396,6 +404,10 @@ from = "https://www.digital.go.jp/themes/custom/gov_theme_da_2023/favicon.ico"
 [hosts."digitaltoday.co.kr"]
 icon = "digitaltoday.co.kr-a149a2e1.png"
 from = "https://cdn.digitaltoday.co.kr/image/logo/favicon.ico"
+
+[hosts."digitaltrends.com"]
+icon = "digitaltrends.com-020e2b12.png"
+from = "https://www.digitaltrends.com/favicon.ico"
 
 [hosts."discord.com"]
 icon = "discord.com-891ddcd3.png"
