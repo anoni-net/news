@@ -926,6 +926,10 @@ from = "https://www.mcmc.gov.my/favicon.ico"
 icon = "medianama.com-00191229.png"
 from = "https://www.medianama.com/wp-content/uploads/2024/04/cropped-favicon-192x192.png"
 
+[hosts."meduza.io"]
+icon = "meduza.io-e004edbe.png"
+from = "https://meduza.io/apple-touch-icon-1024.png"
+
 [hosts."meity.gov.in"]
 icon = "meity.gov.in-533aec3e.png"
 from = "https://www.meity.gov.in/favicon.ico"
@@ -1380,6 +1384,10 @@ from = "https://www.techspot.com/images/ts3mobile-badge.png"
 icon = "tee.fail-c874eed7.png"
 from = "https://tee.fail/img/favicon.png"
 
+[hosts."telegram.org"]
+icon = "telegram.org-a6b238d2.png"
+from = "https://telegram.org/img/apple-touch-icon.png"
+
 [hosts."telenor.com"]
 icon = "telenor.com-5bb71714.png"
 from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
@@ -1423,6 +1431,9 @@ from = "https://www.tibane.net/favicon.png"
 [hosts."torproject.org"]
 icon = "torproject.org-e64b086c.png"
 from = "https://www.torproject.org/static/images/favicon/favicon.ico"
+
+[hosts."translations.telegram.org"]
+same_as = "telegram.org"
 
 [hosts."tribuneindia.com"]
 icon = "tribuneindia.com-833ff492.png"
