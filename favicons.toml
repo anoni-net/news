@@ -71,6 +71,10 @@ from = "https://apps.nextcloud.com/static/assets/img/favicon-180.png"
 icon = "apt.izzysoft.de-3d40667a.png"
 from = "https://apt.izzysoft.de/favicon.ico"
 
+[hosts."archive.epic.org"]
+icon = "archive.epic.org-d417717b.png"
+from = "https://archive.epic.org/favicon2.ico"
+
 [hosts."arstechnica.com"]
 icon = "arstechnica.com-18386f32.png"
 from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-300x300.png"
@@ -586,6 +590,10 @@ from = "https://gaj.ankang.gov.cn/favicon.ico"
 [hosts."gat.fj.gov.cn"]
 same_as = "fj.gov.cn"
 
+[hosts."gazette.nat.gov.tw"]
+icon = "gazette.nat.gov.tw-6a897fd2.png"
+from = "https://gazette.nat.gov.tw/egFront/images/basic/favicon.png"
+
 [hosts."geneva.cs.umd.edu"]
 same_as = "cs.umd.edu"
 
@@ -791,6 +799,10 @@ from = "https://jcgov.gov.cn/images/favicon.png"
 icon = "jgc-digital.com-e48bf47a.png"
 from = "https://jgc-digital.com/apple-touch-icon.png"
 
+[hosts."join.gov.tw"]
+icon = "join.gov.tw-57bc43b4.png"
+from = "https://join.gov.tw/images/favicon.ico"
+
 [hosts."jpcert.or.jp"]
 icon = "jpcert.or.jp-a2f016e7.png"
 from = "https://www.jpcert.or.jp/favicon.ico"
@@ -798,6 +810,10 @@ from = "https://www.jpcert.or.jp/favicon.ico"
 [hosts."jprs.jp"]
 icon = "jprs.jp-a1af08a6.png"
 from = "https://jprs.jp/resources/ja/icon/favicon_jp.ico"
+
+[hosts."jrf.org.tw"]
+icon = "jrf.org.tw-8ba160c8.png"
+from = "https://www.jrf.org.tw/images/apple-icon-144x144.png"
 
 [hosts."justice.gov"]
 icon = "justice.gov-5506ec60.png"
@@ -838,6 +854,10 @@ from = "https://www.korea.net/favicon.ico"
 icon = "krackattacks.com-40830c9b.png"
 from = "https://www.krackattacks.com/images/favicon.ico"
 
+[hosts."krebsonsecurity.com"]
+icon = "krebsonsecurity.com-b3fa1a15.png"
+from = "https://krebsonsecurity.com/favicon.ico"
+
 [hosts."ksl.com"]
 icon = "ksl.com-620fb1b6.png"
 from = "https://img.ksl.com/slc/2951/295162/29516202.png"
@@ -845,6 +865,10 @@ from = "https://img.ksl.com/slc/2951/295162/29516202.png"
 [hosts."landing.google.com"]
 icon = "landing.google.com-53ae8c75.png"
 from = "https://landing.google.com/favicon.ico"
+
+[hosts."law.cornell.edu"]
+icon = "law.cornell.edu-c329472e.png"
+from = "https://www.law.cornell.edu/sites/www.law.cornell.edu/files/favicon_1.ico"
 
 [hosts."law.go.kr"]
 icon = "law.go.kr-1a0ed2ef.png"
@@ -1017,6 +1041,10 @@ from = "https://www.motionpictures.org/wp-content/uploads/2018/04/favicon.png"
 [hosts."mouse.dev"]
 icon = "mouse.dev-69b682f3.png"
 from = "https://mouse.dev/favicon-192.png"
+
+[hosts."mozilla.org"]
+icon = "mozilla.org-d6fbe12a.png"
+from = "https://www.mozilla.org/media/img/favicons/mozilla/favicon-196x196.e143075360ea.png"
 
 [hosts."msa-alliance.cn"]
 none = "網站沒有 favicon，https 憑證為自簽"
@@ -1195,6 +1223,10 @@ from = "https://www.privacyguides.org/content/images/size/w256h256/2024/01/pg-ye
 [hosts."privacyinternational.org"]
 icon = "privacyinternational.org-3b35f25d.png"
 from = "https://privacyinternational.org/sites/default/files/fav/android-icon-192x192.png"
+
+[hosts."privacysandbox.google.com"]
+icon = "privacysandbox.google.com-6d649f1e.png"
+from = "https://www.gstatic.com/devrel-devsite/prod/v9ce9cb5b22b62a465ff52c45061a0a6a2d86a80b685e9aa8a182b203fdfbf420/privacysandbox/images/favicon.png"
 
 [hosts."priveetee.github.io"]
 same_as = "pipepipe.dev"
@@ -1393,6 +1425,10 @@ from = "https://support.torproject.org/images/favicon/favicon-192x192.png?h=a118
 icon = "support.zoom.com-520d8e65.png"
 from = "https://support.zoom.com/favicon-192x192.png"
 
+[hosts."supremecourt.gov"]
+icon = "supremecourt.gov-dd380316.png"
+from = "https://www.supremecourt.gov/apple-touch-icon.png"
+
 [hosts."supremecourt.uk"]
 icon = "supremecourt.uk-75b9325d.png"
 from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
@@ -1519,6 +1555,10 @@ from = "https://wap.miit.gov.cn/favicon.ico"
 [hosts."web.archive.org"]
 icon = "web.archive.org-32e1e194.png"
 from = "https://archive.org/apple-touch-icon.png（本機 DNS 解析不到，用 1.1.1.1 解析後下載）"
+
+[hosts."webkit.org"]
+icon = "webkit.org-b3602cf9.png"
+from = "https://webkit.org/apple-touch-icon.png"
 
 [hosts."weblate.cryptpad.org"]
 icon = "weblate.cryptpad.org-676939f0.png"
