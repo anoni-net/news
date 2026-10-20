@@ -6,7 +6,100 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 20 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 21 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Brave Leo 的端對端加密對話與機密運算</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/brave-leo-e2ee-confidential-computing/</link>
+<guid isPermaLink="false">anoni-news:2026/10/brave-leo-e2ee-confidential-computing</guid>
+<pubDate>Wed, 21 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Brave 的 AI 助理 Leo 10 月 15 日起，選用 GLM 5.3 Flash 模型的對話會在瀏覽器端加密，只在硬體隔離的運算區裡解密處理。其他模型不在範圍內，運算區的證明到 10 月 20 日為止仍由 Brave 的伺服器代為檢查，iOS 版查不到支援的說明。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，來自 Brave、GitHub、Hugging Face 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Brave 10 月 15 日宣布，AI 助理 Leo 跟 GLM 5.3 Flash 模型的對話改成端對端加密，GLM 5.3 Flash 是 Z.ai 以 MIT 授權公開權重的模型。對話在瀏覽器端加密，只在 NEAR AI 營運的可信執行環境（TEE，處理器與 GPU 裡跟主機其他部分隔離的運算區）裡解密與產生回答。加密要在 Leo 的模型選單手動選 GLM 5.3 Flash 才會生效，Leo 的其他模型不在範圍內，到 10 月 20 日為止 GLM 5.3 Flash 也還標示為測試階段。依部落格，正式版與 Nightly、Beta 兩個測試通道都已提供，所有 Brave 使用者都能選用。&lt;/p&gt;
+&lt;p&gt;部落格沒有寫支援哪些平台。GitHub 上的開發議題只標了桌機與 Android，iPhone 版到 10 月 20 日為止查不到支援的說明。&lt;/p&gt;
+&lt;p&gt;依 Brave 的部落格，瀏覽器用網際網路標準組織 IETF 制定的 Oblivious HTTP（OHTTP）加密每一則提問與分享給 Leo 的網頁，解密用的金鑰只存在 TEE 裡。加密後的訊息先送到 Brave 自己營運的 AI Gateway，再轉給 NEAR AI。Brave 看得到使用者的 IP 位址、讀不到內容，NEAR AI 營運的 TEE 在運算區裡解密、看不到 IP 位址，部落格也提到 NEAR AI 與雲端主機的營運者都讀不到運算區的內容。每一輪對話都用新的一次性金鑰重新加密整段紀錄，紀錄只存在使用者的裝置上，Brave 與 NEAR AI 都不保存。&lt;/p&gt;
+&lt;p&gt;部落格接著說明部署前的檢查，NEAR AI 的每一次部署都要先通過 Brave 檢查程式的檢查才會被核准。檢查的項目包括 Intel 與 Nvidia 簽署的證明（attestation，由硬體簽署、證明運算區是真品並記錄裡面執行哪一份程式的憑據），以及從原始碼重新建置、確認跟線上的程式一致。AI Gateway 轉送每一則訊息前會再核對一次，採用的驗證結果不超過一小時，不通過就不轉送。檢查程式 &lt;code&gt;near-tee-verifier&lt;/code&gt; 以開源授權公開，有 NEAR AI 的 API 金鑰就能自行對線上服務執行驗證。&lt;/p&gt;
+&lt;p&gt;Brave 2025 年 11 月在 Nightly 試行過第一版，部落格提到當時的保護建立在政策上，檢查也要信任 Brave。新版的檢查程式公開，有 API 金鑰就能自行執行。到 10 月 20 日為止，瀏覽器端的檢查仍由 Brave 的伺服器代為處理。&lt;/p&gt;
+&lt;p&gt;到 10 月 20 日為止，說明中心沒有 GLM 5.3 Flash 端對端加密的文章。Leo 的模型說明頁列的仍是 GLM 4.7 Flash，也寫所有模型都由 Brave 自行營運。開發議題標了不列入版本紀錄，各平台的版本紀錄都沒有提到端對端加密。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;一般的 AI 對話服務在伺服器上解開提問，營運者在技術上讀得到內容，使用者只能相信隱私政策。OHTTP 把「誰在問」跟「問了什麼」拆給兩方，轉送的一方只知道 IP 位址，處理的一方只看到內容。TEE 的設計是讓主機的營運者也讀不到運算區的記憶體，attestation 讓外界確認裡面執行的是公開過的程式。Brave 的部落格把 Leo 的新做法描述成從政策承諾改成密碼學的證明。&lt;/p&gt;
+&lt;p&gt;根據部落格，10 月 15 日發布時瀏覽器仍依賴 Brave 的 AI Gateway 做檢查，之後才會分階段改成由瀏覽器直接驗證硬體的證明。部落格也列出整條驗證鏈最後要信任的對象，包括 Intel 與 Nvidia、TEE 的作業系統 dstack、建置紀錄的 Sigstore、GitHub、Hugging Face 與公共 DNS。&lt;code&gt;near-tee-verifier&lt;/code&gt; 的說明則提醒，重新建置只證明線上程式來自指定的版本，不能證明那個版本裡沒有後門。執行模型的推論軟體是第三方套件，依部落格與 &lt;code&gt;near-tee-verifier&lt;/code&gt; 的說明沒有從原始碼重新建置，改用硬體證明的部署紀錄鎖定版本。&lt;/p&gt;
+&lt;p&gt;資安會議 IEEE S&amp;amp;P 2026 收錄的論文 TEE.fail 中，研究者在伺服器的 DDR5 記憶體匯流排接入監聽裝置，在部分情況下取出 Intel TDX（Intel 處理器上的 TEE 技術）簽署證明用的金鑰。用這把金鑰偽造的證明可以通過驗證，也能用來攻破 Nvidia GPU 的機密運算。依研究網站，攻擊需要實體接觸伺服器，Intel 不把這類實體攻擊列入 TDX 要防範的範圍。研究者也寫到，就他們所知還沒有被實際利用。&lt;/p&gt;
+&lt;p&gt;研究網站另有一節示範 dstack，惡意的伺服器提供者可以偽造全部證明，也能借用別處 Nvidia GPU 的證明。網站給 dstack 使用者的建議是留意自己要信任實際管理 TDX 硬體的營運者。論文沒有分析 Brave 與 NEAR AI 的部署，本文 10 月 20 日搜尋時也沒有找到針對 Leo 的獨立分析。&lt;/p&gt;
+&lt;p&gt;依 &lt;code&gt;near-tee-verifier&lt;/code&gt; 的說明，GPU 的證明沒有綁進 TDX 的證明裡，無法確認回答來自哪一張 GPU。要排除這個缺口，需要 NEAR AI 補上兩者的綁定。&lt;/p&gt;
+&lt;p&gt;想在 AI 對話裡處理不願讓服務業者讀到的文字或網頁內容，可以在 Brave 桌機版或 Android 版打開 Leo，從模型選單選 GLM 5.3 Flash。依原始碼開發分支的正體中文翻譯，模型選單在 GLM 5.3 Flash 旁顯示「以 NEAR AI TEE 驗證隱私」，回答旁有「已驗證」的標章。依原始碼與部落格推論，標章反映的是 Brave 伺服器的檢查結果，到 10 月 20 日為止瀏覽器本身還沒有驗證。Leo 不需要帳號，說明頁提到免費版有使用次數的限制，但沒有列出數字。&lt;/p&gt;
+&lt;p&gt;Brave 沒有寫 Leo 的回答支援哪些語言，Hugging Face 上 GLM 5.3 Flash 的模型說明頁（模型卡）標示的語言是英文與中文。依部落格的說明，加密只及於對話內容，轉送訊息的 Brave 仍看得到 IP 位址。模型產生的搜尋查詢也會離開 TEE 送到 Brave Search（不綁 IP 位址）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/browser-ai-e2ee/&#34;&gt;Another Brave User-First AI Win: Leo adds End-to-end Encryption, Oblivious HTTP, and Verifiable Confidential Computing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/near-verifier&#34;&gt;near-tee-verifier&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/55247&#34;&gt;[AI Chat] Add support for end-to-end encryption with NEAR models&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;2026 年 5 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.brave.app/hc/en-us/articles/26727364100493&#34;&gt;What are the differences between Leo&amp;#39;s AI Models?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/leo/&#34;&gt;Brave Leo AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/browser-ai-tee/&#34;&gt;Verifiable Privacy and Transparency: A new frontier for Brave AI privacy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-20&#34;&gt;2025 年 11 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/zai-org/GLM-5.3-Flash&#34;&gt;GLM-5.3-Flash&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Hugging Face&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb&#34;&gt;brave_components_resources_zh-TW.xtb&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/brave-adds-end-to-end-encryption-to-chats-with-ai-assistant-leo/&#34;&gt;Brave adds end-to-end encryption to chats with AI assistant Leo&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tee.fail/&#34;&gt;TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TEE.fail&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>加拿大 C-22 法案的參議院二讀與業者的表態</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/canada-c22-senate-debate/</link>
@@ -2149,111 +2242,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories&#34;&gt;About repository security advisories&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub Docs&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>加州 AB 1856 的開源作業系統豁免</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/california-ab1856-open-source-exemption/</link>
-<guid isPermaLink="false">anoni-news:2026/10/california-ab1856-open-source-exemption</guid>
-<pubDate>Sun, 11 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>美國加州 9 月簽署的 AB 1856，修改了要求作業系統在帳號設定時詢問使用者年齡的州法。修改後，發行作業系統或 App 時用的授權若允許複製、再散布與修改，發行的人或組織就不算受規範的作業系統業者。規定 2027 年起適用，條文以加州的帳號持有人為對象。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，來自 California Legislative Information、CalMatters Digital Democracy、Office of the Governor of California 等 9 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國加州州長 9 月 10 日簽署 AB 1856，修改 2025 年通過的 Digital Age Assurance Act（AB 1043，數位年齡確認法）。原法要求作業系統業者在帳號設定時，讓帳號持有人（成年使用者本人，或未成年使用者的家長）填寫使用者的年齡，再把年齡範圍以訊號（signal）的形式提供給 App。AB 1856 另外規定，發行作業系統或 App 時用的授權若允許複製、再散布與修改，發行的人或組織就不算作業系統業者。規定 2027 年 1 月 1 日起適用，條文以加州的帳號持有人為對象，到 10 月 7 日為止加州以外的讀者不需要調整設定。&lt;/p&gt;
-&lt;p&gt;依 AB 1043 的條文，年齡訊號分成未滿 13 歲、13 到未滿 16 歲、16 到未滿 18 歲與 18 歲以上四級。App 下載並啟動時要向作業系統業者或 App 商店要求年齡訊號，收到訊號的開發者就視為知道使用者的年齡範圍。違反規定時由加州檢察總長提起民事訴訟，過失違規時每名受影響的兒童最高罰 2,500 美元，故意違規最高 7,500 美元。&lt;/p&gt;
-&lt;p&gt;AB 1856 把作業系統業者的義務限定在有帳號設定功能的作業系統，也要求 App 商店向作業系統要求年齡訊號、再提供給開發者。法律沒有要求的人，不得向作業系統業者或 App 商店索取年齡訊號。法案曾經把瀏覽器與網站納入，參議院 7 月的修正案刪掉了這部分。&lt;/p&gt;
-&lt;p&gt;開源豁免在 5 月 18 日的眾議院修正版加入，條文只有一個條件，發行時用的授權要允許接收者複製、再散布與修改。條文沒有出現 open source 或 Linux，沒有要求非商業，也沒有指定哪一種授權。豁免只寫在作業系統業者的定義，App 商店與開發者的定義沒有同樣的句子。&lt;/p&gt;
-&lt;p&gt;科羅拉多州 6 月簽署的 SB26-051 有類似的豁免，條件同樣是授權允許複製、再散布與修改。另外多一個條件，發行者不得用技術或契約限制使用者安裝修改過的版本。科羅拉多的規定 2028 年 7 月 1 日起適用。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;年齡訊號的做法是由作業系統在帳號設定時詢問年齡，App 再透過作業系統提供的介面查詢，條文要求提供的是年齡範圍而非生日。條文沒有要求驗證填寫的年齡是否正確，也沒有指定介面的格式與資料存放的位置。許多 Linux 發行版用來管理系統與使用者帳號的元件 systemd 在 3 月合併了一項修改，在使用者紀錄裡加上只有管理者能修改的生日欄位，提交說明寫到加州、科羅拉多州與巴西的法律。各發行版是否採用，本文沒有查到。&lt;/p&gt;
-&lt;p&gt;支持的一方在乎家長能不能讓孩子的年齡跟著裝置走。委員會的法案分析引述提案的州眾議員，AB 1043 提供一條以隱私優先的年齡確認途徑，不會干涉 App 既有的帳號功能與家長控制。加州州長 2025 年簽署 AB 1043 時寫到，讓孩子當主要使用者的家長，可以設定裝置把孩子的年齡告訴 App 開發者。兒少團體 Common Sense Media 針對還包含瀏覽器與網站的版本寫信支持，信中寫到年齡訊號跟著孩子走，平台就不能因為孩子換了使用途徑而不套用保護措施。&lt;/p&gt;
-&lt;p&gt;Debian 與 Canonical 在豁免加入之前的公開說明，都還沒有定論。Debian 專案負責人 4 月寫到，還不清楚這類規定如何適用於不賣軟體、以高度分散方式提供軟體的志工專案。Ubuntu 的開發公司 Canonical 3 月在 Ubuntu 論壇的公告寫明，正在請律師檢視 AB 1043，還沒有具體計畫。&lt;/p&gt;
-&lt;p&gt;數位權利組織 EFF 3 月的文章寫到，AB 1043 的負擔特別落在開源軟體這類沒有大公司資源的開發者身上。EFF 7 月的文章寫到，瀏覽器與網站的擴大已經放棄，豁免也降低了對開源社群的威脅。EFF 因此撤回對 AB 1856 的反對，但仍認為 AB 1043 違憲。&lt;/p&gt;
-&lt;p&gt;條文規定作業系統只能送出必要的最少資訊，洛杉磯的公立學區洛杉磯聯合學區在支持信裡也把資料最少化列為 AB 1856 的內容。Linux 電腦製造商 System76 的文章寫到，填寫年齡的人可以說謊，孩子也可以在虛擬機器（在電腦裡模擬另一台電腦的軟體）裡建立成年帳號。System76 也寫到，如果這種做法成為標準，App 與網站在沒有收到訊號時會把使用者當成最低的年齡範圍。條文沒有規定沒有訊號時 App 要如何處理。&lt;/p&gt;
-&lt;p&gt;本文依條文推論，加州的使用者 2027 年起在授權不允許複製、再散布與修改的作業系統建立帳號時，可能會被要求填寫使用者的年齡。同樣依條文推論，符合豁免條件的 Linux 發行版不受這項義務約束，但條文沒有逐一認定哪些發行版符合。到 10 月 7 日為止，本文查不到 Apple、Google、Microsoft，以及 Debian 與 Canonical 在 AB 1856 通過後公布的做法。&lt;/p&gt;
-&lt;p&gt;之後讀到要求作業系統或 App 商店處理年齡的法律時，可以比較幾件事。年齡由誰填寫、有沒有驗證，離開裝置的是生日還是年齡範圍。開源與志工維護的系統在不在範圍內，豁免的條件是授權方式，還是另外要求不得限制使用者修改。年齡訊號的做法能不能讓家長在孩子的裝置上，用比上傳證件更少的資料達成保護。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1856&#34;&gt;AB-1856 Age verification signals: software applications.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;California Legislative Information&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-11&#34;&gt;2026 年 9 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://calmatters.digitaldemocracy.org/bills/ca_202520260ab1856&#34;&gt;AB 1856: Age verification signals: software applications.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CalMatters Digital Democracy&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043&#34;&gt;AB-1043 Age verification signals: software applications and online services.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;California Legislative Information&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-14&#34;&gt;2025 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/&#34;&gt;Press release: child safety chatbot and social media laws signed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Office of the Governor of California&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://leg.colorado.gov/laws/session-laws/SB26-051/343/download&#34;&gt;CONCERNING AGE ATTESTATION FOR USERS OF COMPUTING DEVICES.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Colorado General Assembly&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-03&#34;&gt;2026 年 6 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/california-steps-back-dangerous-expansion-its-age-gating-law&#34;&gt;California Steps Back From Dangerous Expansion of Its Age-Gating Law&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-15&#34;&gt;2026 年 7 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/03/ab-1043s-internet-age-gates-hurt-everyone&#34;&gt;A.B. 1043&amp;#39;s Internet Age Gates Hurt Everyone&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-12&#34;&gt;2026 年 3 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://system76.com/blog/post/system76-on-age-verification&#34;&gt;System76 on Age Verification Laws&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;System76&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;2026 年 3 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.debian.org/debian-devel-announce/2026/04/msg00001.html&#34;&gt;Bits from the DPL&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Debian&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-04&#34;&gt;2026 年 4 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discourse.ubuntu.com/t/ubuntus-response-to-californias-digital-age-assurance-act-ab-1043/77948&#34;&gt;Ubuntu&amp;#39;s response to California&amp;#39;s Digital Age Assurance Act (AB 1043)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ubuntu Discourse&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-04&#34;&gt;2026 年 3 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/systemd/systemd/pull/40954&#34;&gt;userdb: add birthDate field to JSON user records&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-05&#34;&gt;2026 年 3 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
