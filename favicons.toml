@@ -111,6 +111,10 @@ from = "https://moskva.beeline.ru/favicon.ico"
 icon = "bentopdf.com-ac64137c.png"
 from = "https://www.bentopdf.com/images/favicon-512x512.png"
 
+[hosts."bitquery.io"]
+icon = "bitquery.io-5227abab.png"
+from = "https://bitquery.io/favicon/favicon-192x192.png"
+
 [hosts."bitwarden.com"]
 icon = "bitwarden.com-51d609a8.png"
 from = "https://bitwarden.com/icons/icon-512x512.png"
@@ -266,6 +270,10 @@ from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
 [hosts."cnnic.net.cn"]
 none = "網站在抓取時無法連線，頁面沒有宣告圖示"
 
+[hosts."cointelegraph.com"]
+icon = "cointelegraph.com-c888aa49.png"
+from = "https://cointelegraph.com/apple-touch-icon.png"
+
 [hosts."community.bitwarden.com"]
 icon = "community.bitwarden.com-e00b6948.png"
 from = "https://us1.discourse-cdn.com/flex001/uploads/bitwarden1/optimized/1X/a499e237d3b459cb4e0f722f024ad44b4a4755d6_2_180x180.png"
@@ -313,6 +321,10 @@ from = "https://cdn9.cpr.dk/cpr/media/12019/cpr-favicon.png?width=196&height=196
 [hosts."cronkitenews.azpbs.org"]
 icon = "cronkitenews.azpbs.org-fc11a7ee.png"
 from = "https://i0.wp.com/cronkitenews.azpbs.org/wp-content/uploads/2026/02/favicon1.png?fit=85%2C85&ssl=1"
+
+[hosts."crypto.news"]
+icon = "crypto.news-f39ff486.png"
+from = "https://media.crypto.news/2024/11/cryptonews-icon-300x300.png"
 
 [hosts."cryptpad.fr"]
 same_as = "cryptpad.org"
@@ -387,6 +399,9 @@ from = "https://developers.cloudflare.com/favicon.png"
 [hosts."developers.google.com"]
 icon = "developers.google.com-ce307183.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/touchicon-180-new.png"
+
+[hosts."developers.openai.com"]
+same_as = "help.openai.com"
 
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
@@ -490,6 +505,10 @@ same_as = "ooni.org"
 icon = "f-droid.org-1354c66e.png"
 from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR9o-_ufR__1wNdJY=.png"
 
+[hosts."facebook.com"]
+icon = "facebook.com-de7506c8.png"
+from = "https://web.archive.org/web/20261020id_/https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico"
+
 [hosts."fdotwww.blob.core.windows.net"]
 icon = "fdotwww.blob.core.windows.net-7d319a66.png"
 from = "https://www.fdot.gov/favicon.ico"
@@ -559,6 +578,10 @@ from = "https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-51
 [hosts."github.com"]
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
+
+[hosts."gizmodo.com"]
+icon = "gizmodo.com-4fc42cec.png"
+from = "https://gizmodo.com/apple-touch-icon.png?v1"
 
 [hosts."globalencryption.org"]
 icon = "globalencryption.org-6a2f17a9.png"
@@ -664,6 +687,10 @@ from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.i
 [hosts."hrw.org"]
 none = "官方圖示是沒有圖案的純色方塊"
 
+[hosts."huggingface.co"]
+icon = "huggingface.co-5acaea69.png"
+from = "https://huggingface.co/favicon.ico"
+
 [hosts."huridocs.org"]
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
@@ -720,6 +747,9 @@ from = "https://www.itnews.com.au/images/favicon/apple-touch-icon.png"
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."itunes.apple.com"]
+same_as = "apple.com"
 
 [hosts."japaneselawtranslation.go.jp"]
 icon = "japaneselawtranslation.go.jp-9c43f621.png"
@@ -815,6 +845,9 @@ from = "https://www.lawson.co.jp/favicon.ico"
 icon = "le.utah.gov-bfd1677b.png"
 from = "https://web.archive.org/web/20261007id_/https://le.utah.gov/images/apple-touch-icon.png"
 
+[hosts."ledger.com"]
+same_as = "support.ledger.com"
+
 [hosts."leg.colorado.gov"]
 icon = "leg.colorado.gov-6606b55f.png"
 from = "https://leg.colorado.gov/assets/apple-touch-icon-c8ff93a2e70b52915d8cc0b6132070db2484e4ea64b52289069a7610a280289e.png"
@@ -856,6 +889,10 @@ from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
 [hosts."ly.gov.tw"]
 icon = "ly.gov.tw-c284cb73.png"
 from = "https://www.ly.gov.tw/images/favicon.ico"
+
+[hosts."m.gmw.cn"]
+icon = "m.gmw.cn-bb0fc659.png"
+from = "https://m.gmw.cn/favicon.ico"
 
 [hosts."m.thepaper.cn"]
 icon = "m.thepaper.cn-b6907a6e.png"
@@ -1212,6 +1249,14 @@ from = "https://securitylab.github.com/assets/img/favicons/apple-touch-icon.png"
 icon = "sencanada.ca-3cf43f98.png"
 from = "https://sencanada.ca/favicon.ico"
 
+[hosts."sfb.gov.tw"]
+icon = "sfb.gov.tw-7666e10e.png"
+from = "https://www.sfb.gov.tw/favicon.ico"
+
+[hosts."sfc.hk"]
+icon = "sfc.hk-e3a9ede6.png"
+from = "https://www.sfc.hk/assets/favicon.png"
+
 [hosts."sflc.in"]
 icon = "sflc.in-e1e6722e.png"
 from = "https://sflc.in/wp-content/uploads/2022/01/cropped-download-1-192x192.png"
@@ -1223,6 +1268,9 @@ from = "https://share.timescar.jp/favicon-apple.png"
 [hosts."sheriffs.org"]
 icon = "sheriffs.org-fd44e411.png"
 from = "https://www.sheriffs.org/wp-content/uploads/2024/01/nsa-logo.png"
+
+[hosts."shop.ledger.com"]
+same_as = "support.ledger.com"
 
 [hosts."signal.org"]
 icon = "signal.org-c81c8229.png"
@@ -1285,6 +1333,10 @@ same_as = "brave.app"
 icon = "support.google.com-cb930f6f.png"
 from = "https://support.google.com/favicon.png"
 
+[hosts."support.ledger.com"]
+icon = "support.ledger.com-81a9f846.png"
+from = "https://support.ledger.com/sfsites/c/cms/delivery/media/MC3DX4Y6X325CALHLL77QYJ3YJVY?width=180&height=180"
+
 [hosts."support.microsoft.com"]
 icon = "support.microsoft.com-a45db4a8.png"
 from = "https://support.microsoft.com/apple-touch-icon.png"
@@ -1328,6 +1380,10 @@ from = "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93dd
 icon = "techspot.com-5fd11eb4.png"
 from = "https://www.techspot.com/images/ts3mobile-badge.png"
 
+[hosts."tee.fail"]
+icon = "tee.fail-c874eed7.png"
+from = "https://tee.fail/img/favicon.png"
+
 [hosts."telegram.org"]
 icon = "telegram.org-a6b238d2.png"
 from = "https://telegram.org/img/apple-touch-icon.png"
@@ -1360,9 +1416,17 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
 
+[hosts."therecord.media"]
+icon = "therecord.media-6dc9e82c.png"
+from = "https://therecord.media/favicon-192.png"
+
 [hosts."theregister.com"]
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
+
+[hosts."tibane.net"]
+icon = "tibane.net-8223110f.png"
+from = "https://www.tibane.net/favicon.png"
 
 [hosts."torproject.org"]
 icon = "torproject.org-e64b086c.png"
@@ -1458,6 +1522,10 @@ from = "https://xtech.nikkei.com/apple-touch-icon.png"
 [hosts."z.ai"]
 icon = "z.ai-e7bc4841.png"
 from = "https://docs.z.ai/mintlify-assets/_mintlify/favicons/zhipu-32152247/ksfquWFAc8TQf_Hb/_generated/favicon/apple-touch-icon.png"
+
+[hosts."zetter-zeroday.com"]
+icon = "zetter-zeroday.com-60706310.png"
+from = "https://www.zetter-zeroday.com/favicon.ico"
 
 [hosts."zhonglun.com"]
 icon = "zhonglun.com-c0e89dfa.png"
