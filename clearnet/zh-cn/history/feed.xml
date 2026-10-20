@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 19 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 20 Oct 2026 11:35:00 +0800</lastBuildDate>
+<item>
+<title>登录页弹出的证书警告</title>
+<link>https://anoni.net/news/zh-cn/history/10-20/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-20/2026</guid>
+<pubDate>Tue, 20 Oct 2026 11:35:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你登录网站时弹出的证书警告，可能代表有人在连接中间冒充那个网站。这一天，监测中国网络审查的 GreatFire 发文指中国当局用假证书冒充 iCloud 网站，拦截用户的连接。</description>
+<content:encoded>&lt;p&gt;你登录网站时弹出的证书警告，代表网站出示、用来证明身份的证书没有通过浏览器的核对，连接中间可能有人冒充那个网站。2014 年 10 月 20 日，监测中国网络审查的 GreatFire 发文指中国当局用没有任何证书机构背书、自行签署的假证书冒充 iCloud 网站，从连接中间拦截内容（中间人攻击）。依 MacTrast 的报道，中国外交部发言人表示北京坚决反对黑客行为。Apple 隔天在支持页面提醒用户不要在弹出证书警告的网站输入 Apple 账户（当时叫 Apple ID）与密码，页面里没有提到中国。依 Apple 2025 年 4 月发布的说明（2026 年 10 月查证），中国大陆的 iCloud 由云上贵州（云上艾珀（贵州）技术有限公司）运营，不同时是中国公民又居住在中国大陆的用户可以把 Apple 账户的国家或地区改成目前所在地。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>网站记录的 IP 地址与个人数据</title>
 <link>https://anoni.net/news/zh-cn/history/10-19/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在中国的平台跟帖评论，账号背后要对应到真实身份。这一天，中国的跟帖评论实名规定开始施行。</description>
 <content:encoded>&lt;p&gt;在中国的网站与 App 跟帖评论，账号背后都要对应到真实身份，豆瓣从 2022 年 4 月起也要求境外用户绑定中国大陆手机号码或提供证件。2017 年 10 月 1 日施行的《互联网跟帖评论服务管理规定》要求平台的后台能对应到真实身份，评论时可以只显示昵称（规定称为「后台实名、前台自愿」），2022 年 12 月的修订版再写明用手机号码或身份证件号码认证。2025 年 7 月起，公安部、国家网信办等六部门的《国家网络身份认证公共服务管理办法》开始施行，用户可以选择用国家签发的网号与网证向平台核验身份。办法写明，除法律、行政法规另有规定或者用户同意外，选用的人不必再以明文向平台提供身份信息。办法也写明，法律、行政法规规定应当履行协助义务时，国家网络身份认证公共服务平台要提供网号对应的真实身份信息与认证日志。不使用中国平台的海外读者，不受这些规定影响。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>旧手机的 HTTPS 证书警告</title>
-<link>https://anoni.net/news/zh-cn/history/09-30/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/09-30/2026</guid>
-<pubDate>Wed, 30 Sep 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你的手机如果停在 Android 7.0 或更早的版本，打开使用 Let&#39;s Encrypt 证书的网站会弹出警告。这一天，Let&#39;s Encrypt 早年借来的信任到期，旧版 Android 靠另一张证书又能正常连接三年。</description>
-<content:encoded>&lt;p&gt;你或家人的手机如果停在 Android 7.0 或更早的版本，打开使用 Let&#39;s Encrypt 证书的网站会弹出证书警告。Let&#39;s Encrypt 是免费签发 HTTPS 证书的服务，手机内置的列表里要有它的根证书（用来验证其他证书的最上层证书），才会接受它签发的证书。2021 年 9 月 30 日，它早年向另一家证书机构借来的信任到期，旧版 Android 靠一张有效期到 2024 年 9 月 30 日的特别证书又能正常连接三年。Let&#39;s Encrypt 在 2023 年建议这些手机的用户改用 Firefox，Mozilla 则在 2025 年 9 月公告，这些手机只能用到不再收到安全更新的版本。可以在设置里查看 Android 版本，停在 7.0 或更早的话仍可以用最后一个支持的 Firefox 版本打开这些网站，但要承担没有安全更新的风险。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
