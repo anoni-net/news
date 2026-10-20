@@ -238,6 +238,62 @@ def test_rewrite_only_touches_href():
     assert "<code>https://anoni.net/docs/</code>" in out
 
 
+# ---------------------------------------------------------------- IPFS 鏡像
+
+def ipfs_target():
+    _, targets = build.load_config(ROOT / "site.toml")
+    return targets["ipfs"]
+
+
+@pytest.mark.parametrize("url, expected", [
+    ("https://anoni.net/news/2026/09/x/", "/news/2026/09/x/"),
+    ("https://anoni.net/docs/tools/", "/docs/tools/"),
+    ("https://anoni.net/", "/"),
+    # 不在鏡像裡的網站維持 clearnet
+    ("https://anoni.net/gears/", "https://anoni.net/gears/"),
+    ("https://anoni.net/api/readme", "https://anoni.net/api/readme"),
+    ("https://form.anoni.net/s/abc", "https://form.anoni.net/s/abc"),
+])
+def test_ipfs_rewrite(url, expected):
+    assert ipfs_target().rewrite(url) == expected
+
+
+def test_ipfs_rewrite_skips_head_and_fragments():
+    """<head> 的 canonical 與 hreflang 維持完整網址。沒有 <body> 的片段（RSS 的全文）整段不改。"""
+    page = ('<head><link rel="canonical" href="https://anoni.net/news/x/"></head>'
+            '<body><a href="https://anoni.net/docs/">x</a></body>')
+    out = ipfs_target().rewrite_html(page)
+    assert '<link rel="canonical" href="https://anoni.net/news/x/">' in out
+    assert '<a href="/docs/">' in out
+    fragment = '<p><a href="https://anoni.net/docs/">x</a></p>'
+    assert ipfs_target().rewrite_html(fragment) == fragment
+
+
+def test_ipfs_output_keeps_absolute_urls_for_crawlers(fixture_site):
+    targets, _, _ = fixture_site
+    index = (targets["ipfs"].out / "index.html").read_text(encoding="utf-8")
+    head, _, body = index.partition("<body")
+    assert '<link rel="canonical" href="https://anoni.net/news/">' in head
+    assert 'href="https://anoni.net/' not in body
+    assert "aa.anoni.net" not in index
+    feed = (targets["ipfs"].out / "feed.xml").read_text(encoding="utf-8")
+    assert "<link>https://anoni.net/news/</link>" in feed
+    assert not (targets["ipfs"].out / "robots.txt").exists()
+
+
+@pytest.mark.parametrize("old, new, expected", [
+    ("</header>", '<a href="https://anoni.net/join/">x</a></header>', "連結沒有改寫 https://anoni.net/join/"),
+    ('<link rel="canonical" href="https://anoni.net/news/', '<link rel="canonical" href="https://ipfs.anoni.net/news/',
+     "canonical 沒有指向"),
+])
+def test_ipfs_check_catches(tmp_path, old, new, expected):
+    targets, pages, _ = build.build(FIXTURES / "posts", tmp_path, ["ipfs"])
+    target = targets["ipfs"]
+    tamper(target, "index.html", old, new)
+    problems = build.check_output(target, pages["ipfs"])
+    assert any(expected in p for p in problems), problems
+
+
 # ---------------------------------------------------------------- 產物檢查
 
 @pytest.fixture(scope="module")

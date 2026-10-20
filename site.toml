@@ -1,5 +1,5 @@
-# 兩個輸出目標的差異。模板裡的連結一律寫 clearnet 的網址，onion 產物由
-# rewrites 在 HTML 產生之後改寫 href。規則見 SPEC.md「clearnet 與 onion」。
+# 三個輸出目標的差異。模板裡的連結一律寫 clearnet 的網址，onion 與 ipfs 產物由
+# rewrites 在 HTML 產生之後改寫 href。規則見 SPEC.md「clearnet 與 onion」與「IPFS 鏡像」。
 
 onion_host = "anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion"
 per_page = 20
@@ -47,4 +47,23 @@ rewrites = [
     ["https://anoni.net/docs/", "http://docs.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
     ["https://form.anoni.net/", "http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
     ["https://anoni.net/", "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
+]
+
+# anoni.net 的 IPFS 鏡像（toomore/anoni-net-ws#422），整個網站掛在閘道的根目錄，本站在 /news/。
+# 鏡像是備援，canonical、hreflang、og、JSON-LD、RSS 與 sitemap 都維持 clearnet 的完整網址，
+# 只改寫 <body> 裡的連結（links_only）。朗讀按鈕與標題字型照樣放，不載入流量統計。
+[targets.ipfs]
+out = "public/ipfs"
+base_url = "https://anoni.net/news/"
+prefix = "/news/"
+clearnet = true
+links_only = true
+read_aloud = true
+fonts = true
+# 由上往下比對，第一條比對到的就套用。改寫成原樣的規則保留那個網址：
+# Gears 與 API 不在鏡像裡，連結維持 clearnet
+rewrites = [
+    ["https://anoni.net/gears", "https://anoni.net/gears"],
+    ["https://anoni.net/api", "https://anoni.net/api"],
+    ["https://anoni.net/", "/"],
 ]

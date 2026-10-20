@@ -1,6 +1,7 @@
 name: deploy
 
-# main 更新時建置兩份產物，推到 build 分支的 clearnet/ 與 onion/。伺服器拉 build 分支上線。
+# main 更新時建置三份產物，推到 build 分支的 clearnet/、onion/ 與 ipfs/。伺服器拉 build 分支上線，
+# ipfs/ 由 anoni-net/ipfs-mirror 組進 anoni.net 的 IPFS 鏡像。
 # build 分支保留歷史，出問題時可以退回上一個 commit。
 #
 # 排程發布：date 還沒到的文章先不產出（見 SPEC.md「排程發布」），重建之後時間到的文章才會出現。
