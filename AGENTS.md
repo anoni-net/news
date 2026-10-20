@@ -25,7 +25,7 @@
 
 ```bash
 uv sync
-uv run build.py                    # 產生 public/clearnet 與 public/onion
+uv run build.py                    # 產生 public/clearnet、public/onion 與 public/ipfs
 uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
 uv run build.py --update-contract  # 新增網址之後，把它們收進 url_contract.txt
 uv run build.py --watch            # 列出快到期、還沒有後續稿的追蹤事件，貼進每週候選票

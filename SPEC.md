@@ -52,7 +52,7 @@ templates/               # Jinja2 模板
   feed.xml.j2
   sitemap.xml.j2
   robots.txt.j2          # 只輸出到 onion，clearnet 的 robots.txt 在官網 repo
-static/                  # 兩份產物共用的檔案
+static/                  # 各份產物共用的檔案
   css/news.css
   favicon.svg            # 文件站的 logo-tonal.svg
   logo-wordmark-white.svg  # 文件站的 mono white wordmark，放在頁首
@@ -76,7 +76,7 @@ url_contract.txt         # 網址合約，由 build.py --update-contract 產生
 og_cards.toml            # 預覽卡片的登記表，由 tools/make_cards.py 寫入
 ```
 
-產物寫到 `public/clearnet/` 與 `public/onion/`，不進 `main`，由 CI 推到 `build` 分支（見「部署」）。
+產物寫到 `public/clearnet/`、`public/onion/` 與 `public/ipfs/`，不進 `main`，由 CI 推到 `build` 分支（見「部署」）。
 
 ## 一篇的格式
 
@@ -644,6 +644,27 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 上線後用 `curl -I` 確認標頭指向的網址在 onion 那一側回 200。
 
+## IPFS 鏡像 {#ipfs}
+
+第三份產物 `ipfs` 給 anoni.net 的 IPFS 鏡像（`ipfs.anoni.net`，規劃見 toomore/anoni-net-ws#422）。鏡像把社群首頁、文件站、新聞導讀與隱私推理遊戲組成同一個目錄，路徑照 clearnet 排列，本站在 `/news/`。組裝與發布由 `anoni-net/ipfs-mirror` 在 m6 上進行，讀的是 `build` 分支的 `ipfs/`。
+
+鏡像是 clearnet 停擺或內容被下架時的備援，所以給搜尋引擎與社群平台讀的完整網址都維持 clearnet，只改寫讀者會點的連結：
+
+| 項目 | ipfs |
+|---|---|
+| 站內連結的前綴 | `/news/`，跟 clearnet 相同 |
+| `<body>` 裡的連結 `https://anoni.net/…` | 改寫成根目錄的相對路徑，例如 `/docs/…` |
+| Gears 與 API 的連結 | 原樣，這兩個網站不在鏡像裡 |
+| `<head>` 的 canonical、hreflang、og、JSON-LD | 維持 clearnet 的完整網址 |
+| RSS 與 sitemap | 跟 clearnet 相同，全文的連結也不改寫 |
+| `robots.txt` | 不產生，鏡像的根目錄是社群首頁的那一份 |
+| 流量統計 | 無 |
+| 朗讀按鈕、標題字型 | 有，跟 clearnet 相同 |
+
+改寫規則一樣寫在 `site.toml` 的 `rewrites`，第一條比對到的就套用，改寫成原樣的規則用來保留網址。`links_only` 讓改寫只作用在整頁的 `<body>`，文章內文這類沒有 `<body>` 的片段不改寫，所以 RSS 的全文維持完整網址。
+
+鏡像要掛在閘道的根目錄，`/news/` 這個前綴才找得到檔案。`ipfs.anoni.net`、DNSLink 與 subdomain gateway 都符合。
+
 ## 流量統計
 
 clearnet 以自架的 Umami（`aa.anoni.net`）計算閱讀量，用來判斷哪些題目有人讀、讀者從哪個社群平台進來。onion 不載入，理由跟文件站相同，onion 讀者的請求不能送到 clearnet 的端點。 <!-- docs-style-lint: disable-line -->
@@ -886,13 +907,13 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 
 ## 驗證與 CI
 
-`uv run build.py` 產出兩份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
+`uv run build.py` 產出三份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
 
 1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）。`sources` 的每個主機都在 `favicons.toml` 裡，圖示的格式與尺寸符合規定（見「原文的網站圖示」）。導讀歷史的路徑、欄位與內文（見「導讀歷史」的「建置時檢查」）
 2. 內文的錨點
 3. 文章、固定頁面與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。訂閱頁連到的 RSS 訂閱入門搬家或改名，這一項會擋下來
 4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源。clearnet 的流量統計與朗讀按鈕照各自一節的條件放行。`.js` 檔只能有 `js/read-aloud.js`，而且只在設定了 `read_aloud` 的目標。字型檔與 `css/fonts-*.css` 只在設定了 `fonts` 的目標，頁面裡 `fonts-*.css` 的版本號都換上了
-5. onion 產物沒有 clearnet 的 anoni.net 連結
+5. onion 產物沒有 clearnet 的 anoni.net 連結。ipfs 產物 `<body>` 裡的連結都照 `rewrites` 改寫過，canonical 指向 clearnet
 6. 本站的網址合約
 7. 每頁都有 `<title>`、`description` 與 Open Graph 欄位，封存頁、第二頁起的列表頁與 404 頁帶 `noindex`
 8. 版面：用 headless Chrome 以 320、390、1280 三種寬度開啟三個語系的列表頁、一篇文章與導讀歷史的一個日期頁，以及 404 頁，每頁的 `scrollWidth` 不得超過設定的寬度，並存下截圖。要跟設定的寬度比，不能跟 `window.innerWidth` 比：手機模式下頁面被撐寬時，Chrome 會自動縮小畫面去容納內容，`innerWidth` 跟著變大，兩邊永遠一樣寬
@@ -906,7 +927,7 @@ GitHub Actions 在 PR 上執行 `--check`、`pytest`，並用文件站的 `docs_
 
 ## 部署
 
-1. `main` 有新的 commit 時，CI 執行 `--check` 後建置兩份產物，推到 `build` 分支，目錄是 `clearnet/` 與 `onion/`。`build` 分支保留歷史，出問題時可以退回上一個 commit
+1. `main` 有新的 commit 時，CI 執行 `--check` 後建置三份產物，推到 `build` 分支，目錄是 `clearnet/`、`onion/` 與 `ipfs/`。`ipfs/` 不由 nginx 提供，由 IPFS 鏡像組裝（見「IPFS 鏡像」）。`build` 分支保留歷史，出問題時可以退回上一個 commit
 2. 伺服器上 clone `build` 分支。nginx 在 clearnet 的 `anoni.net` server block 加一條 `location /news/` 指向 `clearnet/`，onion 那一側新增一個 `news.<onion 位址>` 的 server block，根目錄指向 `onion/`。子網域共用同一個 onion service，由 nginx 依主機名稱分流，跟 `docs.<onion 位址>` 相同，Tor 的設定不用改
 3. 官網 repo 的 `robots.txt` 模板補上 `/news/sitemap.xml`，跟 news 上線同一天合併。2026-09-26 上線時漏了這一步，隔天由 toomore/anoni-net#7 補上，clearnet 與 onion 兩份都列
 4. `static/` 的檔案（樣式、favicon、頁首 logo、預覽圖）在網址後面帶內容雜湊，例如 `css/news.css?v=3f9a1c2b7e`。HTML 不讓瀏覽器快取，內容改了網址就跟著變，瀏覽器與 Cloudflare 會當成新檔案去抓，部署之後不必清這些檔案的快取

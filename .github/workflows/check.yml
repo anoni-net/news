@@ -28,7 +28,7 @@ jobs:
       - name: pytest
         run: uv run --group dev pytest -q
 
-      # 產生兩份產物並執行 SPEC.md「驗證與 CI」的九項檢查。runner 上有 Chrome，版面檢查會實際執行
+      # 產生三份產物並執行 SPEC.md「驗證與 CI」的九項檢查。runner 上有 Chrome，版面檢查會實際執行
       - name: build.py --check
         run: uv run build.py --check
 

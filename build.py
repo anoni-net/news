@@ -1,6 +1,6 @@
-"""產生 anoni.net/news 的 clearnet 與 onion 兩份靜態產物。
+"""產生 anoni.net/news 的 clearnet、onion 與 ipfs 三份靜態產物。
 
-    uv run build.py                    # 產生 public/clearnet 與 public/onion
+    uv run build.py                    # 產生 public/clearnet、public/onion 與 public/ipfs
     uv run build.py --check            # 產生之後執行 SPEC.md「驗證與 CI」的九項檢查
     uv run build.py --update-contract  # 認可目前的網址，寫回 url_contract.txt
     uv run build.py --history          # 列出導讀歷史要重新查證現況的快照與還沒有快照的日期
@@ -1414,6 +1414,8 @@ class Target:
     read_aloud: bool = False
     # 標題的自架字型（fonts/ 與 css/fonts.css），onion 不放，見 SPEC.md「標題字型」
     fonts: bool = False
+    # 只改寫 <body> 裡的連結，<head> 與 RSS 維持完整網址。IPFS 鏡像用，見 SPEC.md「IPFS 鏡像」
+    links_only: bool = False
 
     def url(self, rel: str = "") -> str:
         return self.prefix + rel
@@ -1430,7 +1432,14 @@ class Target:
     def rewrite_html(self, text: str) -> str:
         if not self.rewrites:
             return text
-        return HREF_RE.sub(lambda m: f'{m.group(1)}="{html.escape(self.rewrite(html.unescape(m.group(2))))}"', text)
+        head = ""
+        if self.links_only:
+            # 文章內文這類片段沒有 <body>，整頁寫檔時才改寫，RSS 的全文也就維持完整網址
+            head, mark, body = text.partition("<body")
+            if not mark:
+                return text
+            head, text = head + mark, body
+        return head + HREF_RE.sub(lambda m: f'{m.group(1)}="{html.escape(self.rewrite(html.unescape(m.group(2))))}"', text)
 
 
 def load_config(path: Path) -> tuple[dict, dict[str, Target]]:
@@ -1448,6 +1457,7 @@ def load_config(path: Path) -> tuple[dict, dict[str, Target]]:
             analytics=t.get("analytics"),
             read_aloud=bool(t.get("read_aloud", False)),
             fonts=bool(t.get("fonts", False)),
+            links_only=bool(t.get("links_only", False)),
         )
     return config, targets
 
@@ -1467,7 +1477,7 @@ def chunk(items: list, size: int) -> list[list]:
 
 def jsonld(post: Post, target: Target, config: dict, image: str | None = None) -> str:
     """文章頁的 NewsArticle 與麵包屑。image 是這篇的預覽圖，跟 og:image 相同。見 SPEC.md「結構化資料」。"""
-    homepage = target.rewrite(config["homepage"])
+    homepage = config["homepage"] if target.links_only else target.rewrite(config["homepage"])
     organization = {"@type": "Organization", "name": "anoni.net", "url": homepage,
                     "logo": {"@type": "ImageObject", "url": target.abs_url("logo-512.png"), "width": 512, "height": 512}}
     authors = []
@@ -2294,7 +2304,8 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
             continue
         pages[name] = build_target(target, published, config, env, store, site_pages, history, include_scheduled,
                                    font_dir if font_dir.exists() else None)
-    return targets, pages, posts
+    # 只回傳這次建置的目標，跟 pages 對得上
+    return {name: targets[name] for name in pages}, pages, posts
 
 
 def contract_pages(posts_dir: Path = ROOT / "posts") -> list[Page]:
@@ -2501,6 +2512,15 @@ def check_output(target: Target, pages: list[Page]) -> list[str]:
                 for found in CLEARNET_HOST_RE.findall(value):
                     problems.append(f"{where}：onion 產物裡有 clearnet 的連結 {found}")
 
+        if target.links_only:
+            head, _, body = text.partition("<body")
+            for value in hrefs(body):
+                if target.rewrite(value) != value:
+                    problems.append(f"{where}：連結沒有改寫 {value}")
+            for value in re.findall(r'<link rel="canonical" href="([^"]*)"', head):
+                if not html.unescape(value).startswith(target.base_url):
+                    problems.append(f"{where}：canonical 沒有指向 {target.base_url}")
+
         for needle, label in [("<title>", "<title>"), ('name="description"', "description"),
                               ('property="og:title"', "og:title"), ('property="og:description"', "og:description"),
                               ('property="og:url"', "og:url"), ('property="og:image"', "og:image"),
@@ -2664,7 +2684,7 @@ def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
     note = f"，另有 {len(scheduled)} 篇排程中：" + "、".join(
         f"{post.slug}（{post.created:%m-%d %H:%M}）" for post in scheduled) if scheduled else ""
     print(f"檢查通過：{len(posts) - len(scheduled)} 篇文章各 {len(LANGS)} 個語系，"
-          f"clearnet 與 onion 各 {len(pages['clearnet'])} 頁{note}")
+          f"{'、'.join(targets)} 各 {len(pages['clearnet'])} 頁{note}")
     return 0
 
 
