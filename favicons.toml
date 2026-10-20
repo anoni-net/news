@@ -75,6 +75,9 @@ from = "https://apt.izzysoft.de/favicon.ico"
 icon = "arstechnica.com-18386f32.png"
 from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-300x300.png"
 
+[hosts."arti.torproject.org"]
+same_as = "torproject.org"
+
 [hosts."arxiv.org"]
 icon = "arxiv.org-c4f5309f.png"
 from = "https://arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png"
@@ -294,6 +297,10 @@ from = "https://global.discourse-cdn.com/letsencrypt/optimized/3X/c/a/ca6c06ea1e
 icon = "community.signalusers.org-34c4e8e9.png"
 from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f6508f46697f97d1bfd84073649ebd0d7d3_2_180x180.png"
 
+[hosts."community.torproject.org"]
+icon = "community.torproject.org-e64b086c.png"
+from = "https://community.torproject.org/static/images/favicon.ico?h=2192192d"
+
 [hosts."congress.gov"]
 icon = "congress.gov-1737b801.png"
 from = "https://www.congress.gov/apple-touch-icon.png"
@@ -375,6 +382,9 @@ from = "https://daringfireball.net/graphics/apple-touch-icon.png"
 [hosts."datatilsynet.dk"]
 icon = "datatilsynet.dk-17e6925e.png"
 from = "https://cdn.datatilsynet.dk/datatilsynet/media/7887/favicon.png?width=196&height=196"
+
+[hosts."david.alvarezrosa.com"]
+none = "個人網站的圖示是作者的姓名縮寫"
 
 [hosts."dawo.community"]
 icon = "dawo.community-cf7a3078.png"
@@ -590,6 +600,9 @@ from = "https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-51
 [hosts."github.com"]
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
+
+[hosts."gitlab.torproject.org"]
+same_as = "torproject.org"
 
 [hosts."gizmodo.com"]
 icon = "gizmodo.com-4fc42cec.png"
@@ -954,6 +967,10 @@ from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc
 icon = "metabase.com-f3a925eb.png"
 from = "https://cdn.metabase.com/images/apple-touch-icon.png"
 
+[hosts."metrics.torproject.org"]
+icon = "metrics.torproject.org-9ec5d801.png"
+from = "https://metrics.torproject.org/images/android-icon.png"
+
 [hosts."miit.gov.cn"]
 icon = "miit.gov.cn-754fc1e4.png"
 from = "https://www.miit.gov.cn/favicon.ico"
@@ -1092,6 +1109,10 @@ from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-ico
 icon = "ofca.gov.hk-b810d10c.png"
 from = "https://www.ofca.gov.hk/favicon.ico"
 
+[hosts."onionservices.torproject.org"]
+icon = "onionservices.torproject.org-7707876d.png"
+from = "https://onionservices.torproject.org/assets/favicon.png"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -1210,6 +1231,10 @@ from = "https://releases.ict-online.ru/old/favicons/releases.ict-online.ru/apple
 [hosts."rfc-editor.org"]
 icon = "rfc-editor.org-39c23b26.png"
 from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
+
+[hosts."riseup.net"]
+icon = "riseup.net-b2500dd4.png"
+from = "https://riseup.net/assets/images/favicon.png"
 
 [hosts."robbietilton.com"]
 none = "網站圖示是作者本人的照片，不放個人肖像"
