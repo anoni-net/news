@@ -63,6 +63,9 @@
 /2026/10/brave-email-aliases/
 	#perspective
 	#sources
+/2026/10/brave-leo-e2ee-confidential-computing/
+	#perspective
+	#sources
 /2026/10/california-ab1856-open-source-exemption/
 	#perspective
 	#sources
@@ -268,6 +271,9 @@
 /en/2026/10/brave-email-aliases/
 	#perspective
 	#sources
+/en/2026/10/brave-leo-e2ee-confidential-computing/
+	#perspective
+	#sources
 /en/2026/10/california-ab1856-open-source-exemption/
 	#perspective
 	#sources
@@ -460,6 +466,8 @@
 	#y2026
 /en/history/10-19/
 	#y2026
+/en/history/10-20/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/reading/
@@ -517,6 +525,8 @@
 /history/10-18/
 	#y2026
 /history/10-19/
+	#y2026
+/history/10-20/
 	#y2026
 /page/2/
 /page/3/
@@ -586,6 +596,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/brave-email-aliases/
+	#perspective
+	#sources
+/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/
 	#perspective
 	#sources
 /zh-cn/2026/10/california-ab1856-open-source-exemption/
@@ -779,6 +792,8 @@
 /zh-cn/history/10-18/
 	#y2026
 /zh-cn/history/10-19/
+	#y2026
+/zh-cn/history/10-20/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/

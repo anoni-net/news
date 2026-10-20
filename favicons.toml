@@ -48,6 +48,9 @@ from = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa39
 icon = "apc.org-89de3e1b.png"
 from = "https://www.apc.org/themes/custom/apc_barrio/apple-touch-icon.png"
 
+[hosts."api.ooni.org"]
+same_as = "ooni.org"
+
 [hosts."apple.com"]
 icon = "apple.com-573bbc30.png"
 from = "https://www.apple.com/apple-touch-icon.png"
@@ -673,6 +676,10 @@ from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.i
 [hosts."hrw.org"]
 none = "官方圖示是沒有圖案的純色方塊"
 
+[hosts."huggingface.co"]
+icon = "huggingface.co-5acaea69.png"
+from = "https://huggingface.co/favicon.ico"
+
 [hosts."huridocs.org"]
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
@@ -729,6 +736,9 @@ from = "https://www.itnews.com.au/images/favicon/apple-touch-icon.png"
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."itunes.apple.com"]
+same_as = "apple.com"
 
 [hosts."japaneselawtranslation.go.jp"]
 icon = "japaneselawtranslation.go.jp-9c43f621.png"
@@ -884,6 +894,10 @@ from = "https://macanorak.com/content/images/size/w256h256/2026/09/MA-Staff-Badg
 [hosts."macrumors.com"]
 icon = "macrumors.com-6643c49b.png"
 from = "https://images.macrumors.com/images-new/apple-touch-icon-blue.png"
+
+[hosts."mactrast.com"]
+icon = "mactrast.com-5fa08fa0.png"
+from = "https://www.mactrast.com/wp-content/uploads/2018/10/cropped-cropped-icon-2-1-192x192.jpg"
 
 [hosts."magnetforensics.com"]
 icon = "magnetforensics.com-3a08e791.png"
@@ -1350,6 +1364,10 @@ from = "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93dd
 [hosts."techspot.com"]
 icon = "techspot.com-5fd11eb4.png"
 from = "https://www.techspot.com/images/ts3mobile-badge.png"
+
+[hosts."tee.fail"]
+icon = "tee.fail-c874eed7.png"
+from = "https://tee.fail/img/favicon.png"
 
 [hosts."telenor.com"]
 icon = "telenor.com-5bb71714.png"

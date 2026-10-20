@@ -55,6 +55,7 @@
 "2026-10-19-passkey-attestation-debate" = { "en" = "og/2026/10/passkey-attestation-debate-en-3cdffdb2.png", "zh-CN" = "og/2026/10/passkey-attestation-debate-zh-cn-4d03335b.png", "zh-TW" = "og/2026/10/passkey-attestation-debate-zh-tw-38047588.png" }
 "2026-10-20-android-phone-number-verification" = { "en" = "og/2026/10/android-phone-number-verification-en-70301d5b.png", "zh-CN" = "og/2026/10/android-phone-number-verification-zh-cn-5eadf323.png", "zh-TW" = "og/2026/10/android-phone-number-verification-zh-tw-e6291f22.png" }
 "2026-10-20-canada-c22-senate-debate" = { "en" = "og/2026/10/canada-c22-senate-debate-en-eac4fdbc.png", "zh-CN" = "og/2026/10/canada-c22-senate-debate-zh-cn-cc38eb13.png", "zh-TW" = "og/2026/10/canada-c22-senate-debate-zh-tw-90f094a2.png" }
+"2026-10-21-brave-leo-e2ee-confidential-computing" = { "en" = "og/2026/10/brave-leo-e2ee-confidential-computing-en-71fb63bc.png", "zh-CN" = "og/2026/10/brave-leo-e2ee-confidential-computing-zh-cn-78ab95b2.png", "zh-TW" = "og/2026/10/brave-leo-e2ee-confidential-computing-zh-tw-83145f99.png" }
 "2026-10-21-ledger-hardware-wallet-implant" = { "en" = "og/2026/10/ledger-hardware-wallet-implant-en-2fb8a9aa.png", "zh-CN" = "og/2026/10/ledger-hardware-wallet-implant-zh-cn-bd436d5b.png", "zh-TW" = "og/2026/10/ledger-hardware-wallet-implant-zh-tw-56d0efa0.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-f1b37c7c.png", "zh-CN" = "og/history/09-26-zh-cn-f38b40e8.png", "zh-TW" = "og/history/09-26-zh-tw-d873b539.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-c875310d.png", "zh-CN" = "og/history/09-27-zh-cn-cb1e8c42.png", "zh-TW" = "og/history/09-27-zh-tw-6e156cbd.png" }
@@ -80,3 +81,4 @@
 "history/10-17" = { "en" = "og/history/10-17-en-2f84f6f3.png", "zh-CN" = "og/history/10-17-zh-cn-9acdc595.png", "zh-TW" = "og/history/10-17-zh-tw-5444a416.png" }
 "history/10-18" = { "en" = "og/history/10-18-en-eaa5dce3.png", "zh-CN" = "og/history/10-18-zh-cn-5465ab01.png", "zh-TW" = "og/history/10-18-zh-tw-bffad5c8.png" }
 "history/10-19" = { "en" = "og/history/10-19-en-256dd334.png", "zh-CN" = "og/history/10-19-zh-cn-fe7984da.png", "zh-TW" = "og/history/10-19-zh-tw-039a34f0.png" }
+"history/10-20" = { "en" = "og/history/10-20-en-d7b08b77.png", "zh-CN" = "og/history/10-20-zh-cn-c0498e29.png", "zh-TW" = "og/history/10-20-zh-tw-bc95ee77.png" }
