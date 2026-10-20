@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 20 Oct 2026 11:35:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>家用网络摄像头的默认密码</title>
+<link>https://anoni.net/news/zh-cn/history/10-21/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-21/2026</guid>
+<pubDate>Wed, 21 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你家里的网络摄像头如果还用出厂的默认密码，可能被他人用来攻击其他网站。这一天，大批被入侵的摄像头与录像主机被用来攻击替许多网站处理网址查询的 Dyn，美国东岸许多网站一度无法访问。</description>
+<content:encoded>&lt;p&gt;你家里的网络摄像头如果还用出厂的默认密码，又能从外部网络直接访问，别人可能登录后用它攻击其他网站。DNS（把网址转换成服务器地址的服务）服务商 Dyn 在 2016 年 10 月 21 日遭到两波大量流量攻击，依新加坡网络安全局的说明，美国东岸许多网站因此一度无法访问。Dyn 在事后分析中确认相当部分的流量来自 Mirai 恶意程序控制的设备，依 KrebsOnSecurity 当天引述的安全公司说法，受控的设备主要是雄迈制造或采用雄迈零件的录像主机与网络摄像头。这家安全公司也表示部分型号的密码写死在固件里、用户无法更改，雄迈则表示多数问题出在用户没有更改默认密码，并宣布召回早期在美国销售的部分摄像头。2026 年 7 月 1 日起施行的《网络安全标识管理办法》列举的基础级（最低一级）要求包括不存在弱口令或通用默认口令，消费类网联摄像头可依实施规则自愿申请，已经在用摄像头的读者可以照美国政府安全通报单位 US-CERT 2016 年的警示换掉默认密码、有补丁时更新固件。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>登录页弹出的证书警告</title>
 <link>https://anoni.net/news/zh-cn/history/10-20/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。这一天，Netflix 为了竞赛公开超过 1 亿条去除身份信息的会员评分。</description>
 <content:encoded>&lt;p&gt;你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。2006 年 10 月 2 日，Netflix 为了推荐算法竞赛公开 48 万多名会员的超过 1 亿条电影评分，规则写明会员编号都换成了随机的代号。两周后，研究者把这份数据跟 IMDb 上公开的评分比对并认出了特定会员，论文写明还可以推断出他们可能的政治倾向等敏感信息。台湾的宪法法庭在 2022 年 8 月判决健保数据的目的外利用缺少让当事人请求停止的规定而部分违宪，台湾立法院在 2025 年 12 月三读通过《全民健康保险资料管理条例》补上请求停止的程序与例外情形。用户这一端能做的，是留意 App 与网站的隐私政策写了哪些数据会提供给第三方，台湾的读者可以通过健保快易通 App 申请停止健保数据的目的外利用。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>中国平台跟帖评论的实名认证</title>
-<link>https://anoni.net/news/zh-cn/history/10-01/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-01/2026</guid>
-<pubDate>Thu, 01 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你在中国的平台跟帖评论，账号背后要对应到真实身份。这一天，中国的跟帖评论实名规定开始施行。</description>
-<content:encoded>&lt;p&gt;在中国的网站与 App 跟帖评论，账号背后都要对应到真实身份，豆瓣从 2022 年 4 月起也要求境外用户绑定中国大陆手机号码或提供证件。2017 年 10 月 1 日施行的《互联网跟帖评论服务管理规定》要求平台的后台能对应到真实身份，评论时可以只显示昵称（规定称为「后台实名、前台自愿」），2022 年 12 月的修订版再写明用手机号码或身份证件号码认证。2025 年 7 月起，公安部、国家网信办等六部门的《国家网络身份认证公共服务管理办法》开始施行，用户可以选择用国家签发的网号与网证向平台核验身份。办法写明，除法律、行政法规另有规定或者用户同意外，选用的人不必再以明文向平台提供身份信息。办法也写明，法律、行政法规规定应当履行协助义务时，国家网络身份认证公共服务平台要提供网号对应的真实身份信息与认证日志。不使用中国平台的海外读者，不受这些规定影响。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

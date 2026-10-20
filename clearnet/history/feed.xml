@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 20 Oct 2026 11:35:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>家用網路攝影機的預設密碼</title>
+<link>https://anoni.net/news/history/10-21/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-21/2026</guid>
+<pubDate>Wed, 21 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你家裡的網路攝影機若還用出廠的預設密碼，可能被他人用來攻擊其他網站。這一天，大批被入侵的攝影機與錄影主機被用來攻擊替許多網站處理網址查詢的 Dyn，美國東岸許多網站一度無法連線。</description>
+<content:encoded>&lt;p&gt;你家裡的網路攝影機若還用出廠的預設密碼，又能從外部網路直接連到，別人可能登入後用它攻擊其他網站。DNS（把網址轉成伺服器位址的服務）業者 Dyn 在 2016 年 10 月 21 日遭到兩波大量流量攻擊，依新加坡網路安全局的說明，美國東岸許多網站因此一度無法連線。Dyn 在事後分析中確認相當部分的流量來自 Mirai 惡意程式控制的裝置，依 KrebsOnSecurity 當天引述的資安公司說法，受控的裝置主要是雄邁製造或採用雄邁零件的錄影主機與網路攝影機。這家資安公司也表示部分機種的密碼寫死在韌體裡、使用者無法更改，雄邁則表示多數問題出在使用者沒有更改預設密碼，並宣布召回早期在美國銷售的部分攝影機。經濟部標準檢驗局 2026 年 10 月 2 日公告進口與國內製造的連網數位攝影機要增列資安檢驗標準（原有標準到 2028 年 7 月才停用），已經在用攝影機的讀者可以照美國政府資安通報單位 US-CERT 2016 年的警示換掉預設密碼、有修補程式時更新韌體。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>登入頁跳出的憑證警告</title>
 <link>https://anoni.net/news/history/10-20/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你的健保就醫紀錄去除姓名後會提供研究使用，跟其他資料比對時仍可能被認出是誰的。這一天，Netflix 為了競賽公開超過 1 億筆去除身分的會員評分。</description>
 <content:encoded>&lt;p&gt;你在台灣的健保就醫紀錄，去除姓名等身分資訊後會提供學術研究等健保以外的用途。2006 年 10 月 2 日，Netflix 為了推薦演算法競賽公開 48 萬多名會員的超過 1 億筆電影評分，規則寫明會員編號都換成了隨機的代號。兩週後，研究者把這份資料跟 IMDb 上公開的評分比對並認出了特定會員，論文寫明還可以推斷出他們可能的政治傾向等敏感資訊。台灣的憲法法庭在 2022 年 8 月判決健保資料的目的外利用缺少讓當事人請求停止的規定而部分違憲，立法院在 2025 年 12 月三讀通過《全民健康保險資料管理條例》補上請求停止的程序與例外情形。不想讓自己的健保資料用在研究的人，可以透過健保快易通 App 的「健保資料停止目的外利用」專區，或到健保署的服務窗口申請。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>中國平台留言的實名認證</title>
-<link>https://anoni.net/news/history/10-01/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-01/2026</guid>
-<pubDate>Thu, 01 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在中國的平台留言，帳號背後要對應到真實身分。這一天，中國的留言實名規定開始施行。</description>
-<content:encoded>&lt;p&gt;你如果在台灣使用中國的平台留言，帳號背後要對應到真實身分，豆瓣從 2022 年 4 月起也要求境外使用者綁定中國大陸手機號碼或提供證件。2017 年 10 月 1 日施行的《互聯網跟帖評論服務管理規定》要求平台的後台能對應到真實身分，留言時可以只顯示暱稱（規定稱為「後台實名、前台自願」），2022 年 12 月的修訂版再寫明用手機號碼或身分證件號碼認證。2025 年 7 月起，公安部、國家網信辦等六個部門的辦法開始施行，使用者可以選擇用國家核發的網路身分代號與憑證（網號、網證）向平台核驗身分。辦法寫明，除法律、行政法規另有規定或使用者同意外，選用的人不必再向平台提供可以直接讀出的身分資料。辦法也寫明，法律規定需要協助時，國家的認證平台要提供網號對應的真實身分與認證紀錄。不使用中國平台的讀者，不受這些規定影響。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
