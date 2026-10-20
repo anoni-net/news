@@ -66,6 +66,9 @@
 /2026/10/brave-email-aliases/
 	#perspective
 	#sources
+/2026/10/brave-leo-e2ee-confidential-computing/
+	#perspective
+	#sources
 /2026/10/california-ab1856-open-source-exemption/
 	#perspective
 	#sources
@@ -76,6 +79,9 @@
 	#perspective
 	#sources
 /2026/10/cctld-hijack-counterfeit-certs/
+	#perspective
+	#sources
+/2026/10/chatgpt-ads-customer-lists/
 	#perspective
 	#sources
 /2026/10/compositor-image-editor/
@@ -114,6 +120,9 @@
 /2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
+/2026/10/ledger-hardware-wallet-implant/
+	#perspective
+	#sources
 /2026/10/letsencrypt-64-day-certs/
 	#perspective
 	#sources
@@ -139,6 +148,9 @@
 	#perspective
 	#sources
 /2026/10/signal-backups-password-manager-transfer/
+	#perspective
+	#sources
+/2026/10/telegram-data-us-court/
 	#perspective
 	#sources
 /2026/10/telenor-myanmar-investigation/
@@ -271,6 +283,9 @@
 /en/2026/10/brave-email-aliases/
 	#perspective
 	#sources
+/en/2026/10/brave-leo-e2ee-confidential-computing/
+	#perspective
+	#sources
 /en/2026/10/california-ab1856-open-source-exemption/
 	#perspective
 	#sources
@@ -281,6 +296,9 @@
 	#perspective
 	#sources
 /en/2026/10/cctld-hijack-counterfeit-certs/
+	#perspective
+	#sources
+/en/2026/10/chatgpt-ads-customer-lists/
 	#perspective
 	#sources
 /en/2026/10/compositor-image-editor/
@@ -319,6 +337,9 @@
 /en/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
+/en/2026/10/ledger-hardware-wallet-implant/
+	#perspective
+	#sources
 /en/2026/10/letsencrypt-64-day-certs/
 	#perspective
 	#sources
@@ -344,6 +365,9 @@
 	#perspective
 	#sources
 /en/2026/10/signal-backups-password-manager-transfer/
+	#perspective
+	#sources
+/en/2026/10/telegram-data-us-court/
 	#perspective
 	#sources
 /en/2026/10/telenor-myanmar-investigation/
@@ -595,6 +619,9 @@
 /zh-cn/2026/10/brave-email-aliases/
 	#perspective
 	#sources
+/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/
+	#perspective
+	#sources
 /zh-cn/2026/10/california-ab1856-open-source-exemption/
 	#perspective
 	#sources
@@ -605,6 +632,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/cctld-hijack-counterfeit-certs/
+	#perspective
+	#sources
+/zh-cn/2026/10/chatgpt-ads-customer-lists/
 	#perspective
 	#sources
 /zh-cn/2026/10/compositor-image-editor/
@@ -643,6 +673,9 @@
 /zh-cn/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
+/zh-cn/2026/10/ledger-hardware-wallet-implant/
+	#perspective
+	#sources
 /zh-cn/2026/10/letsencrypt-64-day-certs/
 	#perspective
 	#sources
@@ -668,6 +701,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/signal-backups-password-manager-transfer/
+	#perspective
+	#sources
+/zh-cn/2026/10/telegram-data-us-court/
 	#perspective
 	#sources
 /zh-cn/2026/10/telenor-myanmar-investigation/
