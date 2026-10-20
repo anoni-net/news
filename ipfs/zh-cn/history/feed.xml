@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>导读历史 | anoni.net 新闻导读</title>
+<link>https://anoni.net/news/zh-cn/history/</link>
+<atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
+<description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
+<language>zh-CN</language>
+<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>家用网络摄像头的默认密码</title>
+<link>https://anoni.net/news/zh-cn/history/10-21/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-21/2026</guid>
+<pubDate>Wed, 21 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你家里的网络摄像头如果还用出厂的默认密码，可能被他人用来攻击其他网站。这一天，大批被入侵的摄像头与录像主机被用来攻击替许多网站处理网址查询的 Dyn，美国东岸许多网站一度无法访问。</description>
+<content:encoded>&lt;p&gt;你家里的网络摄像头如果还用出厂的默认密码，又能从外部网络直接访问，别人可能登录后用它攻击其他网站。DNS（把网址转换成服务器地址的服务）服务商 Dyn 在 2016 年 10 月 21 日遭到两波大量流量攻击，依新加坡网络安全局的说明，美国东岸许多网站因此一度无法访问。Dyn 在事后分析中确认相当部分的流量来自 Mirai 恶意程序控制的设备，依 KrebsOnSecurity 当天引述的安全公司说法，受控的设备主要是雄迈制造或采用雄迈零件的录像主机与网络摄像头。这家安全公司也表示部分型号的密码写死在固件里、用户无法更改，雄迈则表示多数问题出在用户没有更改默认密码，并宣布召回早期在美国销售的部分摄像头。2026 年 7 月 1 日起施行的《网络安全标识管理办法》列举的基础级（最低一级）要求包括不存在弱口令或通用默认口令，消费类网联摄像头可依实施规则自愿申请，已经在用摄像头的读者可以照美国政府安全通报单位 US-CERT 2016 年的警示换掉默认密码、有补丁时更新固件。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>登录页弹出的证书警告</title>
+<link>https://anoni.net/news/zh-cn/history/10-20/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-20/2026</guid>
+<pubDate>Tue, 20 Oct 2026 11:35:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你登录网站时弹出的证书警告，可能代表有人在连接中间冒充那个网站。这一天，监测中国网络审查的 GreatFire 发文指中国当局用假证书冒充 iCloud 网站，拦截用户的连接。</description>
+<content:encoded>&lt;p&gt;你登录网站时弹出的证书警告，代表网站出示、用来证明身份的证书没有通过浏览器的核对，连接中间可能有人冒充那个网站。2014 年 10 月 20 日，监测中国网络审查的 GreatFire 发文指中国当局用没有任何证书机构背书、自行签署的假证书冒充 iCloud 网站，从连接中间拦截内容（中间人攻击）。依 MacTrast 的报道，中国外交部发言人表示北京坚决反对黑客行为。Apple 隔天在支持页面提醒用户不要在弹出证书警告的网站输入 Apple 账户（当时叫 Apple ID）与密码，页面里没有提到中国。依 Apple 2025 年 4 月发布的说明（2026 年 10 月查证），中国大陆的 iCloud 由云上贵州（云上艾珀（贵州）技术有限公司）运营，不同时是中国公民又居住在中国大陆的用户可以把 Apple 账户的国家或地区改成目前所在地。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>网站记录的 IP 地址与个人数据</title>
+<link>https://anoni.net/news/zh-cn/history/10-19/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-19/2026</guid>
+<pubDate>Mon, 19 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你每次上网，网站都可能记下连接的 IP 地址。这一天，依法院的新闻稿，欧盟法院判决动态 IP 地址在网站有合法渠道识别访客时属于个人数据。</description>
+<content:encoded>&lt;p&gt;你每次打开网站，网站的服务器都可以记下连接用的 IP 地址（每次连接都会换的叫动态 IP 地址）。依法院的新闻稿，欧盟法院 2016 年 10 月 19 日判决网站运营者若有合法渠道从网络运营商取得额外数据来识别访客，动态 IP 地址对它来说就属于个人数据。同一份判决也承认网站为了防范网络攻击，可以有保存访客某些个人数据的正当利益。《中华人民共和国个人信息保护法》以「已识别或者可识别」定义个人信息，条文没有点名 IP 地址。想知道常用的网站会不会保存 IP 地址，可以先看它的隐私政策。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>公共 Wi-Fi 上的搜索关键词</title>
+<link>https://anoni.net/news/zh-cn/history/10-18/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-18/2026</guid>
+<pubDate>Sun, 18 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在公共 Wi-Fi 上搜索时，关键词是否加密要看搜索服务。这一天，Google 宣布登录的用户默认改用 HTTPS 搜索。</description>
+<content:encoded>&lt;p&gt;你在咖啡店或车站连上公共 Wi-Fi 搜索时，关键词在传输途中是否加密取决于搜索服务，百度在搜索资源平台一篇未标日期的说明里写已经全站实现 https。2011 年 10 月 18 日，Google 宣布登录账号的用户在接下来几周会被导向 HTTPS 的 google.com，官方博客写明这在网吧 Wi-Fi 这类不安全的网络上特别重要。Google 2010 年的博客写明加密搜索不会减少发送给 Google 的数据，只是让第三方看不到，2011 年的公告也写点击广告时浏览器仍会把搜索词传给广告主。在中国大陆，第三方封锁监测网站 GreatFire 截至 2026 年 10 月 8 日的最近 17 次有结论的测试中，有 16 次连不上 www.google.com。在海外用 Google 搜索的读者不需要另外设置，Chrome 团队的公告写明 2026 年 10 月的 154 版起会在打开没有 HTTPS 的公开网站前默认先询问。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>在印度无法使用的 App 与《信息技术法》</title>
+<link>https://anoni.net/news/zh-cn/history/10-17/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-17/2026</guid>
+<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你到印度时，手机上的部分 App 在当地可能无法使用。这一天，印度《信息技术法》施行，政府可以下令拦截通信并要求协助解密。</description>
+<content:encoded>&lt;p&gt;你到印度出差或旅行时，手机上的部分 App 在当地可能无法使用。2000 年 10 月 17 日，印度政府依公报指定《信息技术法》从这一天施行，原始版第 69 条让主管官员可以下令拦截计算机传输的信息。被要求的人要提供解密协助，不配合最高可处 7 年徒刑（台湾侦查中的通讯监察，则由检察官向法院声请、法院核发通讯监察书）。2009 年生效的修正把第 69 条扩大成拦截、监控与解密，并新增第 69A 条让政府可以下令封锁信息，2020 年 6 月电子和信息技术部依第 69A 条封锁了包括 TikTok、微信与微博在内的 59 个 App。印度官方到 2025 年 8 月仍表示没有解除 TikTok 的封锁，出发前可以先准备在当地也能使用的联络方式。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Wi-Fi 加密弱点的修补</title>
+<link>https://anoni.net/news/zh-cn/history/10-16/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-16/2026</guid>
+<pubDate>Fri, 16 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的手机连上 Wi-Fi 时用的加密，有弱点时要靠系统更新修补。这一天，研究者公开 WPA2 Wi-Fi 加密的弱点 KRACK。</description>
+<content:encoded>&lt;p&gt;你的手机连上有密码的 Wi-Fi 时，手机与路由器（无线接入点）之间传的数据会加密，常见的加密标准是 WPA2 与较新的 WPA3。2017 年 10 月 16 日，研究者公开 WPA2 的弱点 KRACK，在 Wi-Fi 信号范围内的攻击者可以读取原本以为已经加密的数据。研究者的网站写明弱点出在 Wi-Fi 标准本身，支持 Wi-Fi 的设备很可能都受影响，改 Wi-Fi 密码也无法防范。Android 2017 年 11 月的安全更新与 Apple 同年 10 月底的 iOS 11.1 都修补了这个弱点，研究者的网站也写到家用路由器多半不受影响，仍建议更新路由器固件。仍在用多年前旧手机的读者，可以在设置查看 Android 的安全补丁级别是否在 2017 年 11 月 6 日以后，iPhone 则看系统是否在 iOS 11.1 以后。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>个人信息泄露的通报窗口</title>
+<link>https://anoni.net/news/zh-cn/history/10-15/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-15/2026</guid>
+<pubDate>Thu, 15 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的个人信息如果被台湾的业者泄露，业者要向个人资料保护委员会通报的修正条文还没有施行。这一天，新加坡国会通过规定设立个资保护委员会的《个人资料保护法》。</description>
+<content:encoded>&lt;p&gt;你的个人信息如果被台湾的业者泄露，台湾 2025 年 11 月公布的《个人资料保护法》修正规定符合一定通报范围的泄露要通报，日后由个人资料保护委员会（个资会）统一受理。个资会筹备处 2025 年 10 月的公告写明个资会要等组织法通过才能成立，全国法规资料库到 2026 年 10 月 10 日查不到这部组织法，也仍标示修正条文的生效日期未定。新加坡国会在 2012 年 10 月 15 日三读通过《个人资料保护法》，新加坡的个人资料保护委员会在 2013 年 1 月 2 日成立，让民众登记拒收营销电话与短信的拒绝来电名单条文在 2014 年 1 月 2 日生效。台湾的筹备处设有个资法咨询专线，公告没有写明它能不能受理泄露申诉，要求查处时可以向业者的目的事业主管机关或地方政府反映（现行条文第 22 条规定这些机关可以检查业者）。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Zoom 会议的端到端加密</title>
+<link>https://anoni.net/news/zh-cn/history/10-14/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-14/2026</guid>
+<pubDate>Wed, 14 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在 Zoom 开的会议默认不是端到端加密，主持人要自己开启。这一天，Zoom 宣布推出端到端加密的技术预览。</description>
+<content:encoded>&lt;p&gt;你在 Zoom 开的会议默认不是端到端加密，Zoom 的说明文档写明这类会议的加密密钥由 Zoom 的服务器生成与管理（2026 年 10 月 10 日查证）。2020 年 10 月 14 日，Zoom 宣布下周起推出端到端加密的技术预览，免费与付费账号都能使用。公告写明开启之后密钥改由与会者的设备生成，Zoom 的服务器只转发数据、不会取得解密会议内容所需的密钥。依 Zoom 现行的说明文档，开启端到端加密之后无法使用电话拨入、网页版、云录制、实时转录与 AI 功能，文档也建议只在需要额外保护的会议开启。主持人可以先在 Zoom 网页入口的设置开启 Allow use of end-to-end encryption 选项，排定会议时再选择端到端加密，免费账号的主持人要先用短信验证手机号码。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Safari 欺骗性网站警告与腾讯安全浏览</title>
+<link>https://anoni.net/news/zh-cn/history/10-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-13/2026</guid>
+<pubDate>Tue, 13 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的 iPhone 地区设为中国大陆或香港时，Safari 的欺骗性网站警告可能用到腾讯的安全浏览服务。这一天，一位研究者在博客写到 Safari 的这项功能看来会把部分浏览信息交给腾讯。</description>
+<content:encoded>&lt;p&gt;你的 iPhone 上，Safari 的「欺骗性网站警告」可能把从网址算出的信息发送给 Google 与 Apple 比对，地区设为中国大陆或香港时还可能用到腾讯的安全浏览服务。一位密码学研究者在 2019 年 10 月 13 日的博客文章推测 iOS 13 的 Safari 会把部分浏览信息交给腾讯，这项功能也看来是默认开启。依 MacRumors 等媒体在 2019 年 10 月 14 日刊出的 Apple 声明，只有地区设为中国大陆的设备会从腾讯取得恶意网站清单，实际的网址不会交给服务提供商。Daring Fireball 当时引述的 Apple 说明页写到提供商可能记录 IP 地址，2026 年 10 月 10 日查证的说明页仍写到 Google 与腾讯可能记录 IP 地址，使用腾讯的地区也比 2019 年的声明多了香港。说明页只列出中国大陆与香港两个使用腾讯的地区，地区设为这两处的读者可以到「设置」&amp;gt; App &amp;gt;「Safari浏览器」关闭这项警告，代价是打开钓鱼网站时少了一道提醒。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>BBC 中文网在中国大陆的访问</title>
+<link>https://anoni.net/news/zh-cn/history/10-12/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-12/2026</guid>
+<pubDate>Mon, 12 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在中国大陆访问 BBC 中文网简体版，2026 年 10 月的测量结果几乎都是异常或失败。这一天，BBC 报道北京的网络运营商疑似封锁了 BBC 的网站。</description>
+<content:encoded>&lt;p&gt;你在中国大陆访问 BBC 中文网简体版，OONI 在 2026 年 7 月 10 日到 10 月 10 日的 210 条测量只有 6 条正常。BBC 在 1998 年 10 月 12 日报道北京主要的国营网络运营商 China Net 疑似封锁了 www.bbc.co.uk，北京的用户因此无法收听 BBC 中文台的在线广播。报道引述北京电信的官员证实网站无法连接但不知道原因，也引述西方专家说警方会把禁止的网站清单交给网络运营商。BBC 在 2019 年推出可用 Tor（隐藏连接路径的匿名网络）打开的国际新闻网站，2025 年也通过无国界记者的镜像计划提供 43 种语言的网站，公告没有写明是否包含中文网。海外的读者可以在 OONI Explorer 查询网站在各国的测量结果，没有人测量过的网址则没有数据，在中国大陆运行 OONI Probe 则可能有风险（OONI 的常见问题写明监控网络的人可能看到你在运行它）。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>通讯软件的端到端加密与执法访问</title>
+<link>https://anoni.net/news/zh-cn/history/10-11/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-11/2026</guid>
+<pubDate>Sun, 11 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你用 LINE 发的一对一文字消息默认是端到端加密，只有收发双方的设备能解开。这一天，包括日本与印度在内的七个国家发表声明，呼吁科技公司让执法部门在合法授权下可以读取加密内容。</description>
+<content:encoded>&lt;p&gt;你用 LINE 发的一对一文字消息默认是端到端加密，只有收发双方的设备能解开内容，LINE 的说明页也写明这项功能无法关闭。美国、英国、澳大利亚、新西兰、加拿大与印度、日本在 2020 年 10 月 11 日发表联合声明，表示支持强加密，同时呼吁科技公司在合法授权下让执法部门可以读取内容。印度《2021 年信息技术（中介者指引与数字媒体伦理守则）规则》要求大型消息服务按法院或主管部门的命令找出消息的第一位发送者，WhatsApp 以追溯会破坏端到端加密为由，向德里高等法院提起诉讼。印度电子信息技术部 2021 年的新闻稿写到追溯只在其他方法无效时才使用，依 The Tribune 的报道，WhatsApp 的律师 2024 年则在法庭上表示被迫破解加密的话会退出印度。本站到 2026 年 10 月 10 日仍查不到这起诉讼的判决，使用 LINE 的读者不需要另外设置，但群组的语音与视频通话、相册与记事本不在端到端加密的范围内。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>维基百科在中国大陆的访问</title>
+<link>https://anoni.net/news/zh-cn/history/10-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-10/2026</guid>
+<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在中国大陆访问维基百科，2026 年 10 月的测量结果几乎都是异常或失败。这一天，中国大陆的用户反映被封锁将近一年的英文维基百科可以连上了。</description>
+<content:encoded>&lt;p&gt;维基媒体基金会 2019 年 5 月的声明写明，维基百科在中国大陆所有语言版本都遭到封锁。中文维基百科的贡献者在 2006 年 10 月 10 日向基金会的邮件列表反映英文版在中国大陆可以连上了，中文版仍然被封。维基百科的社区通讯写到这次封锁始于 2005 年 10 月，官方也没有说明解封的原因，无国界记者 11 月的通知则写中文版约在 11 月 13 日解封。OONI 在 2026 年 9 月 10 日到 10 月 10 日于中国大陆测量中英文维基百科各 33 条，全部是异常（跟对照测量不符，不等于确认封锁）或失败。海外的读者可以用 OONI Probe 测量自己的网络有没有封锁网站，测量结果会自动公开，在中国大陆运行则可能有风险（OONI 的常见问题写明监控网络的人可能看到你在运行它，建议向当地律师咨询）。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>App Store 应政府要求下架的 App</title>
+<link>https://anoni.net/news/zh-cn/history/10-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-09/2026</guid>
+<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在 App Store 能下载哪些 App，会依账号所属的国家或地区而不同。这一天，Apple 从 App Store 下架显示香港警察位置的群众地图 App。</description>
+<content:encoded>&lt;p&gt;你在 App Store 能下载哪些 App 取决于账号设置的国家或地区，Apple 2025 年的透明度报告也写明应政府要求下架的 App 只从当地的商店移除。Apple 在 2019 年 10 月 9 日（美国时间，CNN 依香港时间记为 10 日）从 App Store 下架显示香港警察位置的群众地图 App HKmap.live，路透社的报道写到这次是全球下架。Apple 发给媒体的声明写明已向香港警方的网络安全及科技罪案调查科查证这个 App 曾被用来针对与伏击警察，也写到 App 违反 App Store 的规范与当地法律。开发者随后在推特反驳没有任何证据支持这项指控，并表示下架是压制香港自由与人权的政治决定。同一份透明度报告列出各地应政府要求下架的 App 数量，2025 年中国大陆的 App Store 有 196 个、香港 1 个，台湾不在清单上。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>香港的起底删除机制</title>
+<link>https://anoni.net/news/zh-cn/history/10-08/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-08/2026</guid>
+<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你如果在香港遭人公开个人资料，可以请香港的个人资料私隐专员公署要求平台删除。这一天，香港的反起底条文开始生效。</description>
+<content:encoded>&lt;p&gt;你如果在香港遭人公开个人资料，可以请个人资料私隐专员公署要求平台删除，境外的社交平台也在范围内。2021 年 10 月 8 日，香港《2021 年个人资料（私隐）（修订）条例》生效，把起底（即人肉搜索）列为罪行。公署的公告写明，修订是为了打击侵犯个人资料私隐的起底行为，公署也取得刑事调查与发出停止披露通知的权力。条文通过前，成员包括 Apple、Facebook、Google 的亚洲互联网联盟曾去信表达疑虑，The Register 引述信中写到起诉平台本地员工的可能性会带来不确定性。公署的统计写明，到 2025 年底共向 57 个网络平台发出 2,104 份停止披露通知，配合删除的整体比例超过 96%。这项条例是香港的法律，其他地方的读者遇到人肉搜索时，可以参考本站 10 月 3 日的导读&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/eff-doxxing-safety/&#34;&gt;人肉搜索的预防与应对&lt;/a&gt;。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>手机加密功能的进口规定</title>
+<link>https://anoni.net/news/zh-cn/history/10-07/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-07/2026</guid>
+<pubDate>Wed, 07 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你手机与笔记本电脑里的加密功能，在中国大陆属于不实行进口许可的大众消费类产品。这一天，中国国务院发布当年要求加密产品经国家认可的《商用密码管理条例》。</description>
+<content:encoded>&lt;p&gt;你手机与笔记本电脑里的加密功能，在中国大陆属于不实行进口许可的大众消费类产品。这项分类出自国务院在 1999 年 10 月 7 日发布、2023 年修订的《商用密码管理条例》，《密码法》规定商用密码用于保护不属于国家秘密的信息。中伦律师事务所的文章引用了 1999 年版的条文，当时任何单位或者个人只能使用经国家密码管理机构认可的商用密码产品，不得使用自行研制的或者境外生产的密码产品。2023 年的修订版则写明，大众消费类产品所采用的商用密码不实行进口许可和出口管制制度。条例的进口许可只适用于列入商用密码进口许可清单的商品，在中国大陆以外使用手机的读者不受这份条例影响。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>手机通信记录的保存</title>
+<link>https://anoni.net/news/zh-cn/history/10-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-06/2026</guid>
+<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你打的每个电话，双方号码与时间都会留在电信运营商的记录里。这一天，欧盟法院判决成员国原则上不能要求运营商全面保存所有人的通信与位置数据。</description>
+<content:encoded>&lt;p&gt;你用手机打的每一个电话，双方号码、日期与起止时间都会留下通信记录。保存多久依各地法规而定，以台湾为例，《电信事业处理有关机关查询电信通信纪录实施办法》规定移动通信的记录保存最近六个月。2020 年 10 月 6 日，欧盟法院大法庭判决成员国原则上不能为了一般犯罪侦查或维护国家安全，要求电信运营商全面、无差别地保存或交出用户的通信与位置数据。判决同时写明，国家安全面临真实、当下或可预见的严重威胁时，成员国仍可以要求运营商在必要且可延长的期间内全面保存。通信记录由运营商依法保存，用户这一端没有可以自行关闭的设置。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>电信网络里预留的监听能力</title>
+<link>https://anoni.net/news/zh-cn/history/10-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-05/2026</guid>
+<pubDate>Mon, 05 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你手机上的普通短信没有端到端加密。这一天，美国众议院通过要求电信运营商预留监听能力的法案。</description>
+<content:encoded>&lt;p&gt;你手机上的普通短信没有端到端加密（只有收发双方能读的加密），Google Messages 的说明页写明，这种加密只适用于新一代的 RCS 消息。美国众议院在 1994 年 10 月 5 日通过《通信协助执法法》（CALEA），法案要求电信运营商让设备具备协助执法监听的能力，10 月 25 日经总统签署成为法律。条文另外写明，运营商不必替用户自行加密的通信解密，除非加密是运营商提供、而且运营商握有解密所需的信息。台湾的《通讯保障及监察法》也规定经指定的电信运营商的通信系统要具有配合执行监察的功能，本站同一天导读介绍的加拿大 C-22 法案也提出类似的要求（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/canada-c22-lawful-access/&#34;&gt;加拿大 C-22 合法访问法案与加密&lt;/a&gt;）。需要保密的对话可以改用端到端加密的通讯 App，用 Android 的 Google Messages 时，发送键出现锁头图标就代表对话有端到端加密。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>手机上的权限使用记录</title>
+<link>https://anoni.net/news/zh-cn/history/10-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-04/2026</guid>
+<pubDate>Sun, 04 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你可以在 Android 手机的隐私信息中心，看到最近哪些 App 用过麦克风、相机与位置。这一天，Google 公开了加入这项功能的 Android 12 源代码。</description>
+<content:encoded>&lt;p&gt;你可以在 Android 手机的隐私信息中心，查看最近 24 小时或 7 天内有哪些 App 用过麦克风、相机与位置。2021 年 10 月 4 日，Google 把 Android 12 的源代码发布到 Android 开源项目（AOSP），开发者博客写明新的隐私信息中心让用户更清楚 App 何时访问麦克风、相机与位置。两年后的同一天，Google 在 Android 14 的位置权限弹窗加上一段说明，App 的开发者申报会把位置分享给第三方时就会显示。这两项功能只涵盖 App 的行为，网站里的追踪代码不在范围内，本站同一天的导读写的是网站把就诊信息发给第三方的情况（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;医疗预约网站把就诊信息发给社交平台的追踪代码&lt;/a&gt;）。使用原生 Android 的读者可以依序进入「设置」、「安全与隐私」或「隐私」、「隐私信息中心」，使用中国大陆品牌手机的人如果找不到这个页面，可以在设置里搜索「隐私」或「权限」。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>旧账号里的密码与密保问题</title>
+<link>https://anoni.net/news/zh-cn/history/10-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-03/2026</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在其他网站用过的密码与密保问题，可能早就跟着一个旧账号外泄。这一天，Yahoo 公布早年的一次入侵影响了当时所有的账号。</description>
+<content:encoded>&lt;p&gt;你如果在不同网站重复使用同一组密码或密保问题，只要其中一个网站的数据外泄，其他账号也跟着有风险。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影响了所有用户账号，台湾中央社报道的数字约为原先估计 3 倍的 30 亿个。Yahoo 的说明页写明，外泄的信息可能包括姓名、电子邮箱、电话、生日、经过哈希处理（转成看不出原文的代码）的密码，部分账号还有密保问题与答案。姓名、电话与生日也是人肉搜索时用来拼凑个人信息的材料，本站同一天的导读整理了预防的做法（见&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/eff-doxxing-safety/&#34;&gt;人肉搜索的预防与应对&lt;/a&gt;）。Yahoo 建议，在其他账号用过相同或类似密码与密保问题的人，都要一起更换。&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>去掉姓名后仍可被识别的数据</title>
+<link>https://anoni.net/news/zh-cn/history/10-02/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-02/2026</guid>
+<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。这一天，Netflix 为了竞赛公开超过 1 亿条去除身份信息的会员评分。</description>
+<content:encoded>&lt;p&gt;你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。2006 年 10 月 2 日，Netflix 为了推荐算法竞赛公开 48 万多名会员的超过 1 亿条电影评分，规则写明会员编号都换成了随机的代号。两周后，研究者把这份数据跟 IMDb 上公开的评分比对并认出了特定会员，论文写明还可以推断出他们可能的政治倾向等敏感信息。台湾的宪法法庭在 2022 年 8 月判决健保数据的目的外利用缺少让当事人请求停止的规定而部分违宪，台湾立法院在 2025 年 12 月三读通过《全民健康保险资料管理条例》补上请求停止的程序与例外情形。用户这一端能做的，是留意 App 与网站的隐私政策写了哪些数据会提供给第三方，台湾的读者可以通过健保快易通 App 申请停止健保数据的目的外利用。&lt;/p&gt;</content:encoded>
+</item>
+</channel>
+</rss>

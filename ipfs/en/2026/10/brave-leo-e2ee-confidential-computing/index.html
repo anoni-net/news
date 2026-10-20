@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>End-to-end Encrypted Chats and Confidential Computing in Brave Leo | anoni.net News</title>
+<meta name="description" content="From 15 October, Brave&#39;s AI assistant Leo encrypts chats with the GLM 5.3 Flash model in the browser and decrypts them only inside hardware-isolated enclaves. Other models are not covered. As of 20 October, Brave&#39;s servers still check the enclaves&#39; attestations for the browser, and we found no statement of iOS support.">
+<link rel="canonical" href="https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/brave-leo-e2ee-confidential-computing/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/brave-leo-e2ee-confidential-computing/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/brave-leo-e2ee-confidential-computing/">
+<link rel="stylesheet" href="/news/css/news.css?v=4219b38e67">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net News" href="https://anoni.net/news/en/feed.xml">
+<meta property="og:site_name" content="anoni.net News">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="End-to-end Encrypted Chats and Confidential Computing in Brave Leo">
+<meta property="og:description" content="From 15 October, Brave&#39;s AI assistant Leo encrypts chats with the GLM 5.3 Flash model in the browser and decrypts them only inside hardware-isolated enclaves. Other models are not covered. As of 20 October, Brave&#39;s servers still check the enclaves&#39; attestations for the browser, and we found no statement of iOS support.">
+<meta property="og:url" content="https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/10/brave-leo-e2ee-confidential-computing-en-71fb63bc.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="End-to-end Encrypted Chats and Confidential Computing in Brave Leo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="End-to-end Encrypted Chats and Confidential Computing in Brave Leo">
+<meta property="article:published_time" content="2026-10-21T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "End-to-end Encrypted Chats and Confidential Computing in Brave Leo",
+  "description": "From 15 October, Brave's AI assistant Leo encrypts chats with the GLM 5.3 Flash model in the browser and decrypts them only inside hardware-isolated enclaves. Other models are not covered. As of 20 October, Brave's servers still check the enclaves' attestations for the browser, and we found no statement of iOS support.",
+  "datePublished": "2026-10-21T00:00:00+08:00",
+  "url": "https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/",
+  "mainEntityOfPage": "https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/",
+  "image": "https://assets.anoni.net/news/og/2026/10/brave-leo-e2ee-confidential-computing-en-71fb63bc.png",
+  "inLanguage": "en",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "https://anoni.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anoni.net/news/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Another Brave User-First AI Win: Leo adds End-to-end Encryption, Oblivious HTTP, and Verifiable Confidential Computing",
+      "url": "https://brave.com/blog/browser-ai-e2ee/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "near-tee-verifier",
+      "url": "https://github.com/brave/near-verifier"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "[AI Chat] Add support for end-to-end encryption with NEAR models",
+      "url": "https://github.com/brave/brave-browser/issues/55247"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "What are the differences between Leo's AI Models?",
+      "url": "https://support.brave.app/hc/en-us/articles/26727364100493"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Brave Leo AI",
+      "url": "https://brave.com/leo/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Verifiable Privacy and Transparency: A new frontier for Brave AI privacy",
+      "url": "https://brave.com/blog/browser-ai-tee/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "GLM-5.3-Flash",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ai_chat_ui_strings.grdp",
+      "url": "https://github.com/brave/brave-core/blob/master/components/resources/ai_chat_ui_strings.grdp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "brave_components_resources_zh-TW.xtb",
+      "url": "https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Brave adds end-to-end encryption to chats with AI assistant Leo",
+      "url": "https://cyberinsider.com/brave-adds-end-to-end-encryption-to-chats-with-ai-assistant-leo/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition",
+      "url": "https://tee.fail/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Is https://brave.com blocked in mainland China?",
+      "url": "https://en.greatfire.org/https/brave.com"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Is https://laptop-updates.brave.com blocked in mainland China?",
+      "url": "https://en.greatfire.org/https/laptop-updates.brave.com"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "OONI API",
+      "url": "https://api.ooni.org/api/v1/measurements?probe_cc=CN&test_name=web_connectivity&domain=ai-chat.bsg.brave.com&since=2026-07-20&until=2026-10-20"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "iTunes lookup API (cn)",
+      "url": "https://itunes.apple.com/lookup?id=1052879175&country=cn"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "iTunes lookup API (tw)",
+      "url": "https://itunes.apple.com/lookup?id=1052879175&country=tw"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "brave_components_resources_zh-CN.xtb",
+      "url": "https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-CN.xtb"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "brave_components_resources_ja.xtb",
+      "url": "https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ja.xtb"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "brave_components_resources_ko.xtb",
+      "url": "https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ko.xtb"
+    }
+  ],
+  "articleSection": "Encryption & Messaging"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "News",
+      "item": "https://anoni.net/news/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Encryption & Messaging",
+      "item": "https://anoni.net/news/en/category/encryption/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "End-to-end Encrypted Chats and Confidential Computing in Brave Leo"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/en/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">News</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="From anoni.net News: " data-print-url="https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--encryption" href="/news/en/category/encryption/">Encryption &amp; Messaging</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-21T00:00:00+08:00">Wednesday, 21 October 2026</time></p>
+    <h1 class="story__title">End-to-end Encrypted Chats and Confidential Computing in Brave Leo</h1>
+    <p class="story__dek">From 15 October, Brave&#39;s AI assistant Leo encrypts chats with the GLM 5.3 Flash model in the browser and decrypts them only inside hardware-isolated enclaves. Other models are not covered. As of 20 October, Brave&#39;s servers still check the enclaves&#39; attestations for the browser, and we found no statement of iOS support.</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/brave.com-793e8faa.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" decoding="async"></span> <span>Based on 19 sources, including Brave, GitHub, Hugging Face</span></a></span>
+      <span>By anoni.net community</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/10/brave-leo-e2ee-confidential-computing/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="Listen" data-label-playing="Pause" data-label-paused="Resume"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>Listen</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>Options</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>Voice</span> <select class="listen__select" data-voice data-group-tw="Mandarin (Taiwan)" data-group-cn="Mandarin (China)" data-group-zh="Mandarin" data-group-yue="Cantonese"></select></label>
+          <label class="listen__field"><span>Speed</span> <select class="listen__select" data-rate><option value="0.8">0.8×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label>
+        </div>
+        <p class="listen__note">Read aloud with a voice built into this device. The text is not sent to any server, and your voice and speed choices stay in this browser. <a href="/news/en/reading/#listening">More about listening</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="story__body content">
+<p>Brave announced on 15 October that chats between its AI assistant Leo and the GLM 5.3 Flash model are now end-to-end encrypted. GLM 5.3 Flash is a model whose weights Z.ai publishes under the MIT licence. Chats are encrypted in the browser and decrypted and answered only inside trusted execution environments (TEEs, compute areas in the processor and GPU isolated from the rest of the host) run by NEAR AI. The encryption applies only when you pick GLM 5.3 Flash by hand in Leo's model menu, Leo's other models are not covered, and as of 20 October GLM 5.3 Flash is still labelled as in testing.</p>
+<p>According to the blog, the feature is available to all Brave users in the release version and in the Nightly and Beta test channels, but the blog does not say which platforms. The GitHub development issue is tagged only for desktop and Android, and as of 20 October we found no statement of support for the iPhone version.</p>
+<p>According to Brave's blog, the browser encrypts each prompt, and any web page shared with Leo, with Oblivious HTTP (OHTTP), a standard from the Internet Engineering Task Force (IETF), and the decryption keys exist only inside the TEE. Encrypted messages go first to Brave's own AI Gateway and are then relayed to NEAR AI. Brave can see the user's IP address but not the content, NEAR AI's TEE decrypts the content without seeing the IP address, and according to the blog neither NEAR AI nor the cloud host operators can read inside the enclave. Each turn re-encrypts the whole conversation with a new one-time key, and the history stays only on the user's device, stored by neither Brave nor NEAR AI.</p>
+<p>The blog then describes the checks before deployment, under which every NEAR AI deployment has to pass Brave's verifier before it is approved. The checks cover attestations signed by Intel and Nvidia (credentials signed by the hardware that prove the enclave is genuine and record which program runs inside it), and a rebuild from source to confirm it matches the program in production. The AI Gateway checks again before relaying each message, accepts verification results no more than an hour old, and does not relay anything that fails. The verifier, <code>near-tee-verifier</code>, is released under an open-source licence, and anyone with a NEAR AI API key can run it against the live service.</p>
+<p>Brave trialled a first version in Nightly in November 2025, and according to the blog that protection rested on policy, with the checks also requiring trust in Brave. The new verifier is public and anyone with an API key can run it. As of 20 October, the browser-side check is still handled by Brave's servers.</p>
+<p>As of 20 October, the help centre has no article on end-to-end encryption with GLM 5.3 Flash. Leo's model page still lists GLM 4.7 Flash and says all models are run by Brave itself. The development issue is marked to be left out of release notes, and none of the platforms' release notes mention end-to-end encryption.</p>
+<h2 id="perspective">Perspective</h2>
+<p>A typical AI chat service decrypts prompts on its servers, so the operator can technically read them and users have to rely on the privacy policy. OHTTP splits "who is asking" from "what is asked" between two parties, so the relay knows only the IP address and the processor sees only the content. TEEs are designed so that even the host operator cannot read the enclave's memory, and attestation lets outsiders confirm that what runs inside is a published program. Brave's blog describes Leo's new approach as a move from policy promises to cryptographic proof.</p>
+<p>According to the blog, at launch on 15 October the browser still relied on Brave's AI Gateway for the checks, with the browser to verify the hardware attestations directly in later stages. Also according to the blog, the whole chain ultimately rests on trust in Intel and Nvidia, dstack (the TEE's operating system), Sigstore for build records, GitHub, Hugging Face and public DNS. The <code>near-tee-verifier</code> documentation adds a caveat that a rebuild proves only that the live program comes from a specified version, not that the version has no backdoor. The inference software that runs the model is a third-party package, which according to the blog and the <code>near-tee-verifier</code> documentation is not rebuilt from source but pinned to a version through deployment records covered by the hardware attestation.</p>
+<p>In TEE.fail, a paper accepted at the security conference IEEE S&amp;P 2026, researchers attached an interposition device to a server's DDR5 memory bus and, in some cases, extracted the key that Intel TDX (the TEE technology on Intel processors) uses to sign attestations. Attestations forged with that key can pass verification, and the key can also be used to break confidential computing on Nvidia GPUs. According to the research site, the attack requires physical access to the server, and Intel does not count such physical attacks among the threats TDX is meant to defend against. The researchers also write that, to their knowledge, it has not been exploited in the wild.</p>
+<p>Another section of the research site demonstrates against dstack that a malicious server provider can forge all the attestations and can also borrow attestations from Nvidia GPUs elsewhere. The site's advice to dstack users is to be aware that they have to trust the operator who actually manages the TDX hardware. The paper does not analyse the Brave and NEAR AI deployment, and when we searched on 20 October we found no independent analysis of Leo.</p>
+<p>According to the <code>near-tee-verifier</code> documentation, the GPU attestation is not bound into the TDX attestation, so there is no way to confirm which GPU an answer came from. Closing that gap would need NEAR AI to add the binding between the two.</p>
+<p>In mainland China, GreatFire's last test, on 18 October, found <code>brave.com</code> 100% blocked, with interference recorded since 13 May 2017, and its most recent valid test of <code>laptop-updates.brave.com</code>, used for downloads and updates, was also blocked. Leo's backend, <code>ai-chat.bsg.brave.com</code>, has no measurements, since OONI's public API holds no Web Connectivity measurement of it from China between 20 July and 20 October and GreatFire has not tested it, so we found no direct evidence on whether Leo is reachable there. Apple's iTunes lookup API returns no Brave listing in the mainland China App Store (we did not check Google Play), which is a lookup result rather than an announcement of removal by Brave or Apple.</p>
+<p>The same lookup finds Brave 1.96 (6 October) in the Taiwan, Hong Kong, Japan, South Korea and Singapore App Stores. Brave's help centre has no clause restricting where Leo can be used and does not say whether Leo is offered in mainland China, and the Leo page says Leo is available on desktop and mobile. Brave's development branch already has strings for Leo's end-to-end encryption in Traditional Chinese, Simplified Chinese, Japanese and Korean, though translation files in the development branch do not mean the release version offers them.</p>
+<p>People who want to use an AI chat for text or web pages they would rather the service provider not read can open Leo in Brave on desktop or Android and choose GLM 5.3 Flash from the model menu. According to the English strings in the source code's development branch, the model menu shows "Verifiably Private With NEAR AI TEE" next to GLM 5.3 Flash, and answers carry a "Verified" badge. Inferring from the source code and the blog, the badge reflects the result of Brave's server-side check, and as of 20 October the browser itself does not yet verify the attestations. Leo needs no account, and the help page mentions a usage limit on the free tier without giving a number.</p>
+<p>Brave has not published which languages Leo's answers support, and the GLM 5.3 Flash model card on Hugging Face lists English and Chinese. According to the blog, the encryption covers only the chat content, and Brave, which relays the messages, can still see the IP address. Search queries generated by the model also leave the TEE and go to Brave Search (not tied to the IP address).</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">Sources (19)</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://brave.com/blog/browser-ai-e2ee/"><img class="source-slip__icon" src="/news/assets/favicons/brave.com-793e8faa.png" width="16" height="16" alt="" loading="lazy" decoding="async">Another Brave User-First AI Win: Leo adds End-to-end Encryption, Oblivious HTTP, and Verifiable Confidential Computing</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Brave</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-15">15 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/near-verifier"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">near-tee-verifier</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-browser/issues/55247"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">[AI Chat] Add support for end-to-end encryption with NEAR models</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-05-05">5 May 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.brave.app/hc/en-us/articles/26727364100493"><img class="source-slip__icon" src="/news/assets/favicons/brave.app-793e8faa.png" width="16" height="16" alt="" loading="lazy" decoding="async">What are the differences between Leo&#39;s AI Models?</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Brave</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://brave.com/leo/"><img class="source-slip__icon" src="/news/assets/favicons/brave.com-793e8faa.png" width="16" height="16" alt="" loading="lazy" decoding="async">Brave Leo AI</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Brave</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://brave.com/blog/browser-ai-tee/"><img class="source-slip__icon" src="/news/assets/favicons/brave.com-793e8faa.png" width="16" height="16" alt="" loading="lazy" decoding="async">Verifiable Privacy and Transparency: A new frontier for Brave AI privacy</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Brave</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2025-11-20">20 November 2025</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://huggingface.co/zai-org/GLM-5.3-Flash"><img class="source-slip__icon" src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" loading="lazy" decoding="async">GLM-5.3-Flash</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Hugging Face</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-core/blob/master/components/resources/ai_chat_ui_strings.grdp"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">ai_chat_ui_strings.grdp</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">brave_components_resources_zh-TW.xtb</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://cyberinsider.com/brave-adds-end-to-end-encryption-to-chats-with-ai-assistant-leo/"><img class="source-slip__icon" src="/news/assets/favicons/cyberinsider.com-f4b1bbac.png" width="16" height="16" alt="" loading="lazy" decoding="async">Brave adds end-to-end encryption to chats with AI assistant Leo</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>CyberInsider</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-16">16 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://tee.fail/"><img class="source-slip__icon" src="/news/assets/favicons/tee.fail-c874eed7.png" width="16" height="16" alt="" loading="lazy" decoding="async">TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>TEE.fail</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://en.greatfire.org/https/brave.com"><img class="source-slip__icon" src="/news/assets/favicons/en.greatfire.org-cbbba5a5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Is https://brave.com blocked in mainland China?</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GreatFire</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://en.greatfire.org/https/laptop-updates.brave.com"><img class="source-slip__icon" src="/news/assets/favicons/en.greatfire.org-cbbba5a5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Is https://laptop-updates.brave.com blocked in mainland China?</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GreatFire</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://api.ooni.org/api/v1/measurements?probe_cc=CN&amp;test_name=web_connectivity&amp;domain=ai-chat.bsg.brave.com&amp;since=2026-07-20&amp;until=2026-10-20"><img class="source-slip__icon" src="/news/assets/favicons/ooni.org-01981e09.png" width="16" height="16" alt="" loading="lazy" decoding="async">OONI API</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>OONI</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://itunes.apple.com/lookup?id=1052879175&amp;country=cn"><img class="source-slip__icon" src="/news/assets/favicons/apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">iTunes lookup API (cn)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://itunes.apple.com/lookup?id=1052879175&amp;country=tw"><img class="source-slip__icon" src="/news/assets/favicons/apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">iTunes lookup API (tw)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-CN.xtb"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">brave_components_resources_zh-CN.xtb</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ja.xtb"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">brave_components_resources_ja.xtb</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ko.xtb"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">brave_components_resources_ko.xtb</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--encryption" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">More in this category</h2>
+  <p class="brief__category"><a class="cat cat--encryption" href="/news/en/category/encryption/">Encryption &amp; Messaging</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-18T13:59:00+08:00">18 October 2026</time>
+      <a class="thread__title" href="/news/en/2026/10/tuta-nextcloud-integration/">Tuta encrypted email and its Nextcloud integration</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-15T00:05:00+08:00">15 October 2026</time>
+      <a class="thread__title" href="/news/en/2026/10/letsencrypt-64-day-certs/">Let&#39;s Encrypt&#39;s 64-day default certificate lifetime</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-06T00:00:00+08:00">6 October 2026</time>
+      <a class="thread__title" href="/news/en/2026/10/cryptpad-summer-2026-status/">CryptPad&#39;s summer 2026 status and the post-quantum bottleneck</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/news/en/category/encryption/">All 9 stories in Encryption &amp; Messaging</a></p>
+</nav>
+<p class="subscribe">Get new stories by <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>, <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>newsletter</span></a> or <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>Bluesky</span></a></p>
+<nav class="pager pager--story" aria-label="Story navigation">
+  <a class="pager__item pager__item--newer" href="/news/en/2026/10/ledger-hardware-wallet-implant/"><span class="pager__label"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg> Newer story</span> <span class="pager__title">Implanted chips in Ledger hardware wallets</span></a>
+  <a class="pager__item pager__item--older" href="/news/en/2026/10/canada-c22-senate-debate/"><span class="pager__label">Older story <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Senate second reading of Canada&#39;s Bill C-22 and providers&#39; responses</span></a>
+  <a class="pager__all" href="/news/en/">All stories</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> Newsletter</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> Follow on Bluesky</a>
+      <a href="/news/en/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> Same Day, Years Apart</a>
+      <a href="/news/en/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> About</a>
+      <a href="/news/en/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> Reading options</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> Report an error</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net home</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/brave-leo-e2ee-confidential-computing/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> Onion version</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/10/brave-leo-e2ee-confidential-computing/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <p>Stories are licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>. Copyright in the quoted sources stays with their authors.</p>
+  </div>
+</footer>
+</body>
+</html>

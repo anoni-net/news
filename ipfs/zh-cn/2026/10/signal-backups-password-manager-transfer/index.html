@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal 的跨平台加密备份与 Android 的密码管理器迁移 | anoni.net 新闻导读</title>
+<meta name="description" content="Signal 9 月 28 日发布 iOS 8.30，加密备份 Signal Secure Backups 可以在 Android 与 iPhone 之间恢复，换手机时能把聊天记录带到另一个平台。Google 9 月在 Android 推出密码管理器之间的迁移流程，不必导出文件，公告列出四款支持的密码管理器。">
+<link rel="canonical" href="https://anoni.net/news/zh-cn/2026/10/signal-backups-password-manager-transfer/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/signal-backups-password-manager-transfer/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/signal-backups-password-manager-transfer/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/signal-backups-password-manager-transfer/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/signal-backups-password-manager-transfer/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/signal-backups-password-manager-transfer/">
+<link rel="stylesheet" href="/news/css/news.css?v=4219b38e67">
+<link rel="stylesheet" href="/news/css/fonts-sc.css?v=644fb94aaa">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="https://anoni.net/news/zh-cn/feed.xml">
+<meta property="og:site_name" content="anoni.net 新闻导读">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Signal 的跨平台加密备份与 Android 的密码管理器迁移">
+<meta property="og:description" content="Signal 9 月 28 日发布 iOS 8.30，加密备份 Signal Secure Backups 可以在 Android 与 iPhone 之间恢复，换手机时能把聊天记录带到另一个平台。Google 9 月在 Android 推出密码管理器之间的迁移流程，不必导出文件，公告列出四款支持的密码管理器。">
+<meta property="og:url" content="https://anoni.net/news/zh-cn/2026/10/signal-backups-password-manager-transfer/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/10/signal-backups-password-manager-transfer-zh-cn-fa242553.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Signal 的跨平台加密备份与 Android 的密码管理器迁移">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Signal 的跨平台加密备份与 Android 的密码管理器迁移">
+<meta property="article:published_time" content="2026-10-18T02:15:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Signal 的跨平台加密备份与 Android 的密码管理器迁移",
+  "description": "Signal 9 月 28 日发布 iOS 8.30，加密备份 Signal Secure Backups 可以在 Android 与 iPhone 之间恢复，换手机时能把聊天记录带到另一个平台。Google 9 月在 Android 推出密码管理器之间的迁移流程，不必导出文件，公告列出四款支持的密码管理器。",
+  "datePublished": "2026-10-18T02:15:00+08:00",
+  "url": "https://anoni.net/news/zh-cn/2026/10/signal-backups-password-manager-transfer/",
+  "mainEntityOfPage": "https://anoni.net/news/zh-cn/2026/10/signal-backups-password-manager-transfer/",
+  "image": "https://assets.anoni.net/news/og/2026/10/signal-backups-password-manager-transfer-zh-cn-fa242553.png",
+  "inLanguage": "zh-Hans",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "https://anoni.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anoni.net/news/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Back to Backups: A Year in Review",
+      "url": "https://signal.org/blog/backup-improvements/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Signal Secure Backups",
+      "url": "https://support.signal.org/hc/en-us/articles/9708267671322-Signal-Secure-Backups"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Signal 安全備份",
+      "url": "https://support.signal.org/hc/zh-tw/articles/9708267671322"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Backups and Device Transfers on Signal",
+      "url": "https://support.signal.org/hc/en-us/articles/10074659364122-Backups-and-Device-Transfers-on-Signal"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Troubleshooting Signal Secure Backups",
+      "url": "https://support.signal.org/hc/en-us/articles/10075139325850-Troubleshooting-Signal-Secure-Backups"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "iOS to iOS Device Transfer",
+      "url": "https://support.signal.org/hc/en-us/articles/10045771316762-iOS-to-iOS-Device-Transfer"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Switching password managers is easy and safe on Android",
+      "url": "https://blog.google/products-and-platforms/platforms/android/switch-password-managers/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Credential transfer",
+      "url": "https://developer.android.com/identity/sign-in/credential-transfer"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Import or export passwords and passkeys with Chrome",
+      "url": "https://support.google.com/chrome/answer/13068232?co=GENIE.Platform%3DAndroid"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Android offers password manager switching tool",
+      "url": "https://freedom.press/digisec/blog/android-offers-password-manager-switching-tool/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Password managers on Android: Switch without manual export",
+      "url": "https://www.heise.de/en/news/Password-managers-on-Android-Switch-without-manual-export-11450892.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Credential Exchange Format",
+      "url": "https://fidoalliance.org/specs/cx/cxf-v1.0-ps-20250814.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ASCredentialExportManager",
+      "url": "https://developer.apple.com/documentation/authenticationservices/ascredentialexportmanager"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "What’s new in passkeys",
+      "url": "https://developer.apple.com/videos/play/wwdc2025/279/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Export passwords to another password manager on iPhone",
+      "url": "https://support.apple.com/guide/iphone/export-passwords-iphf28f2e93e/ios"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Is https://signal.org blocked in mainland China? — GreatFire",
+      "url": "https://en.greatfire.org/https/signal.org"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Is https://play.google.com blocked in mainland China? — GreatFire",
+      "url": "https://en.greatfire.org/https/play.google.com"
+    }
+  ],
+  "articleSection": "手机与 App"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新闻导读",
+      "item": "https://anoni.net/news/zh-cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "手机与 App",
+      "item": "https://anoni.net/news/zh-cn/category/mobile/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Signal 的跨平台加密备份与 Android 的密码管理器迁移"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/zh-cn/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新闻导读</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新闻导读：" data-print-url="https://anoni.net/news/zh-cn/2026/10/signal-backups-password-manager-transfer/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--mobile" href="/news/zh-cn/category/mobile/">手机与 App</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-18T02:15:00+08:00">2026 年 10 月 18 日 星期日</time></p>
+    <h1 class="story__title">Signal 的跨平台加密备份与 Android 的密码管理器迁移</h1>
+    <p class="story__dek">Signal 9 月 28 日发布 iOS 8.30，加密备份 Signal Secure Backups 可以在 Android 与 iPhone 之间恢复，换手机时能把聊天记录带到另一个平台。Google 9 月在 Android 推出密码管理器之间的迁移流程，不必导出文件，公告列出四款支持的密码管理器。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/signal.org-c81c8229.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/developer.android.com-56e81a95.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 17 篇原文，来自 Signal、Google、Android Developers 等 8 个出处</span></a></span>
+      <span>导读：anoni.net 社区</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/news/2026/10/signal-backups-password-manager-transfer/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/news/en/2026/10/signal-backups-password-manager-transfer/" hreflang="en" lang="en">English</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="朗读这篇" data-label-playing="暂停" data-label-paused="继续朗读"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>朗读这篇</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>调整</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>语音</span> <select class="listen__select" data-voice data-group-tw="普通话（台湾）" data-group-cn="普通话（中国）" data-group-zh="普通话" data-group-yue="粤语"></select></label>
+          <label class="listen__field"><span>语速</span> <select class="listen__select" data-rate><option value="0.8">0.8 倍</option><option value="1" selected>1 倍</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label>
+        </div>
+        <p class="listen__note">用这台设备内置的语音朗读，文章不会传到其他服务器。选择的语音与语速只保存在这个浏览器里。<a href="/news/zh-cn/reading/#listening">朗读的完整说明</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="story__body content">
+<p>Signal 9 月 28 日发布 iOS 8.30，依博客的公告，从这一版起加密备份可以在 Android、iOS 与桌面版之间创建与恢复。支持中心的说明把范围限定在 Signal Secure Backups，可以在 Android 与 iPhone 之间恢复，换手机时能把聊天记录带到另一个平台。Google 9 月 10 日也在 Android 推出密码管理器之间的迁移流程，密码与通行密钥（passkey，取代密码的登录方式）可以直接迁移到另一款 App，不必先下载成文件。这个流程 Android 8 以上可用，公告列出 Google 密码管理工具、1Password、Bitwarden 与 Dashlane 四款，之后还会增加。</p>
+<p>根据支持中心的说明，Signal Secure Backups 由 Signal 托管，开启时会生成一组 64 个字符的恢复密钥（recovery key）。这组密钥不会交给 Signal 的服务，丢失就再也无法恢复备份，Signal 也无法协助找回。到 10 月 18 日为止，免费方案备份全部文字消息与最近 45 天的媒体文件，每月 1.99 美元的付费方案可以存到 100 GB 的媒体。只能查看一次的消息，以及 24 小时内就会消失的消息，都不会备份。</p>
+<p>博客提到，托管的备份每 24 小时生成一份新的，前一份自动删除。支持中心的故障排除页提醒，备份只能在第一次设置 Signal 时恢复，而且要用同一个电话号码注册。</p>
+<p>新旧两部手机都在手边、又是同一个平台时，也可以用设备间迁移。聊天记录会从旧手机移到新手机，旧手机不保留。依博客的介绍，iOS 8.30 改用 Wi-Fi Aware 在两部 iPhone 之间建立端到端加密的本地连接，速度与稳定性都有提高。</p>
+<p>另一种是存在自己设备上的备份文件，博客写 Android、iOS 与桌面版都能创建，格式跨平台。到 10 月 18 日为止，支持中心各页的写法跟博客不同，彼此也不一致。10 月 11 日更新的备份与迁移说明页写三个平台都有、但只能在同一个平台恢复，10 月 3 日更新的故障排除页则写只限 Android 之间。备份与迁移说明页和桌面版备份页都提到，Android 或桌面版的备份文件不能在 iPhone 恢复。</p>
+<p>依 Google 的公告，Android 的密码迁移从新的密码管理器开始，在新 App 选择从其他服务导入。Android 会列出手机上可以导出的密码管理器，用户接着在旧的那款里选择要迁移的项目并授权。根据 Google 的开发者文档，迁移在同一部手机的两个 App 之间进行，原始凭据不会暴露给 Android 系统或未经验证的 App。这套流程采用 FIDO 联盟（制定通行密钥等登录标准的产业组织）的凭据交换格式（Credential Exchange Format，CXF），可以迁移密码、通行密钥、地址与自定义字段。</p>
+<p>Apple 从 iOS 26 与 macOS 26 起提供给密码管理器用的同类导出与导入 API。开发者文档里的流程由操作系统居中确认双方 App 的身份，过程不写入任何文件。WWDC25 的开发者讲座提到，数据格式是跟 FIDO 联盟的成员合作制定。Apple 支持网站的 iPhone 使用手册里，密码导出与导入的两页到 10 月 18 日为止都只有 CSV 文件的做法，导出页并警告导出的密码没有加密。</p>
+<h2 id="perspective">导读观点</h2>
+<p>Signal 的备份由用户手上的恢复密钥加密，没有这组密钥，包括 Signal 在内都无法读取或恢复备份。iCloud 备份也带不走 Signal 的聊天记录，支持中心的常见问题把两者列为不兼容。</p>
+<p>Signal Secure Backups 另外加了一把每天更换的辅助密钥，存放在 Signal 托管服务那一端的可信执行环境（TEE，处理器里隔离出来的安全区）。这把密钥没有恢复密钥就解不开备份，博客提到它唯一的用途是提供前向保密（forward secrecy，日后密钥泄露时，过去的数据仍无法被解开）。存在自己设备上的备份，无法靠同一套 TEE 取得前向保密。TEE 在博客里被称为目前保护这把密钥最好的方式，之后可能随研究进展而改变。</p>
+<p>根据 Google 的公告，以前迁移密码要先下载成没有加密的文本文件，通行密钥则完全无法迁移。新的做法在 Apple 那一侧不写入文件系统。Android 那一侧用受保护的内容 URI（Content URI）在两个 App 之间传递，背后是临时的缓存文件。开发者文档给的理由是，整个密码库可能超过 Android 进程间单次传输 1MB 的上限。</p>
+<p>依 heise 的报道，密码能不能整个迁移过去，要看新旧两个 App 是否都实现了这套标准。Google 的帮助页列出导入到 Google 密码管理工具的条件，要登录另一款密码管理器，导入通行密钥时可能还要输入恢复密钥。帮助页也提醒，导入前要确认信任对方的密码管理器。</p>
+<p>在中国大陆，第三方测量项目 GreatFire 到 10 月 11 日的测试显示，<code>signal.org</code> 与 <code>play.google.com</code> 两个网站都被完全封锁。GreatFire 测的是网址能否连上，不是 Signal App 的消息连接。Android 开发者文档里，这套迁移流程对调用方的检查以 Google Play 服务的系统组件为准，没有提到没有 Google Play 服务的手机能否使用。</p>
+<p>打算换手机的 Signal 用户，可以在旧手机的 Signal 设置里开启备份，把恢复密钥保存好再换机。密钥可以存进密码管理器或手动保存，存进密码管理器的人，换机时要能在新手机或其他设备打开密码管理器（本文依设置流程推论）。Signal Secure Backups 保护的是手机丢失或换平台时的聊天记录，换电话号码时无法恢复，博客也提醒恢复密钥不要交给任何人。</p>
+<p>想在 Android 换一款密码管理器的人，打开新的 App 找导入的选项，新旧两款都要支持这套流程。Google 9 月 10 日的公告列出的是 Google 密码管理工具、1Password、Bitwarden 与 Dashlane。导入到 Google 密码管理工具时，还要用手机的屏幕锁定验证身份。iPhone 用户用 CSV 文件迁移时，Apple 的使用手册警告导出的文件没有加密，任何取得文件的人都能读到内容。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（17 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://signal.org/blog/backup-improvements/"><img class="source-slip__icon" src="/news/assets/favicons/signal.org-c81c8229.png" width="16" height="16" alt="" loading="lazy" decoding="async">Back to Backups: A Year in Review</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Signal</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-28">2026 年 9 月 28 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.signal.org/hc/en-us/articles/9708267671322-Signal-Secure-Backups"><img class="source-slip__icon" src="/news/assets/favicons/support.signal.org-ac934b40.png" width="16" height="16" alt="" loading="lazy" decoding="async">Signal Secure Backups</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Signal</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://support.signal.org/hc/zh-tw/articles/9708267671322"><img class="source-slip__icon" src="/news/assets/favicons/support.signal.org-ac934b40.png" width="16" height="16" alt="" loading="lazy" decoding="async">Signal 安全備份</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Signal</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.signal.org/hc/en-us/articles/10074659364122-Backups-and-Device-Transfers-on-Signal"><img class="source-slip__icon" src="/news/assets/favicons/support.signal.org-ac934b40.png" width="16" height="16" alt="" loading="lazy" decoding="async">Backups and Device Transfers on Signal</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Signal</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.signal.org/hc/en-us/articles/10075139325850-Troubleshooting-Signal-Secure-Backups"><img class="source-slip__icon" src="/news/assets/favicons/support.signal.org-ac934b40.png" width="16" height="16" alt="" loading="lazy" decoding="async">Troubleshooting Signal Secure Backups</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Signal</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.signal.org/hc/en-us/articles/10045771316762-iOS-to-iOS-Device-Transfer"><img class="source-slip__icon" src="/news/assets/favicons/support.signal.org-ac934b40.png" width="16" height="16" alt="" loading="lazy" decoding="async">iOS to iOS Device Transfer</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Signal</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.google/products-and-platforms/platforms/android/switch-password-managers/"><img class="source-slip__icon" src="/news/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Switching password managers is easy and safe on Android</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-10">2026 年 9 月 10 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://developer.android.com/identity/sign-in/credential-transfer"><img class="source-slip__icon" src="/news/assets/favicons/developer.android.com-56e81a95.png" width="16" height="16" alt="" loading="lazy" decoding="async">Credential transfer</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Android Developers</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/chrome/answer/13068232?co=GENIE.Platform%3DAndroid"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Import or export passwords and passkeys with Chrome</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://freedom.press/digisec/blog/android-offers-password-manager-switching-tool/"><img class="source-slip__icon" src="/news/assets/favicons/freedom.press-d782bdb6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android offers password manager switching tool</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Freedom of the Press Foundation</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-16">2026 年 9 月 16 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.heise.de/en/news/Password-managers-on-Android-Switch-without-manual-export-11450892.html"><img class="source-slip__icon" src="/news/assets/favicons/heise.de-b8b25202.png" width="16" height="16" alt="" loading="lazy" decoding="async">Password managers on Android: Switch without manual export</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>heise online</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-11">2026 年 9 月 11 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://fidoalliance.org/specs/cx/cxf-v1.0-ps-20250814.html"><img class="source-slip__icon" src="/news/assets/favicons/fidoalliance.org-5927c7ce.png" width="16" height="16" alt="" loading="lazy" decoding="async">Credential Exchange Format</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>FIDO Alliance</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-08-14">2025 年 8 月 14 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://developer.apple.com/documentation/authenticationservices/ascredentialexportmanager"><img class="source-slip__icon" src="/news/assets/favicons/developer.apple.com-30fa6887.png" width="16" height="16" alt="" loading="lazy" decoding="async">ASCredentialExportManager</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://developer.apple.com/videos/play/wwdc2025/279/"><img class="source-slip__icon" src="/news/assets/favicons/developer.apple.com-30fa6887.png" width="16" height="16" alt="" loading="lazy" decoding="async">What’s new in passkeys</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-06-09">2025 年 6 月 9 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/guide/iphone/export-passwords-iphf28f2e93e/ios"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Export passwords to another password manager on iPhone</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://en.greatfire.org/https/signal.org"><img class="source-slip__icon" src="/news/assets/favicons/en.greatfire.org-cbbba5a5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Is https://signal.org blocked in mainland China? — GreatFire</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>GreatFire</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://en.greatfire.org/https/play.google.com"><img class="source-slip__icon" src="/news/assets/favicons/en.greatfire.org-cbbba5a5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Is https://play.google.com blocked in mainland China? — GreatFire</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>GreatFire</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--mobile" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分类的其他导读</h2>
+  <p class="brief__category"><a class="cat cat--mobile" href="/news/zh-cn/category/mobile/">手机与 App</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-13T00:05:00+08:00">2026 年 10 月 13 日</time>
+      <a class="thread__title" href="/news/zh-cn/2026/10/firefox-ios-ad-blocker/">Firefox iOS 版的内置广告拦截与 Android 的系统层做法</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-08T00:10:00+08:00">2026 年 10 月 8 日</time>
+      <a class="thread__title" href="/news/zh-cn/2026/10/iphone-inactivity-reboot-bypass/">iPhone 自动重启与取证工具的绕过说法</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-03T00:05:00+08:00">2026 年 10 月 3 日</time>
+      <a class="thread__title" href="/news/zh-cn/2026/10/pipepipe-youtube-client/">开源 YouTube 客户端 PipePipe 5.4.0</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/news/zh-cn/category/mobile/">「手机与 App」的全部 6 篇导读</a></p>
+</nav>
+<p class="subscribe">想收到新的导读：<a href="/news/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>订阅电子报</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 关注</span></a></p>
+<nav class="pager pager--story" aria-label="文章导览">
+  <a class="pager__item pager__item--newer" href="/news/zh-cn/2026/10/tuta-nextcloud-integration/"><span class="pager__label"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg> 较新的一篇</span> <span class="pager__title">Tuta 加密邮件与 Nextcloud 的集成</span></a>
+  <a class="pager__item pager__item--older" href="/news/zh-cn/2026/10/weekly-brief-2026-w42/"><span class="pager__label">较旧的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">每周短讯 2026 第 42 周</span></a>
+  <a class="pager__all" href="/news/zh-cn/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/news/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 订阅电子报</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 关注</a>
+      <a href="/news/zh-cn/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 导读历史</a>
+      <a href="/news/zh-cn/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 关于新闻导读</a>
+      <a href="/news/zh-cn/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 阅读说明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/signal-backups-password-manager-transfer/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> onion 版本</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/news/2026/10/signal-backups-password-manager-transfer/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/news/en/2026/10/signal-backups-password-manager-transfer/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
+  </div>
+</footer>
+</body>
+</html>

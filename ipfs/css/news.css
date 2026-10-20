@@ -1,0 +1,1773 @@
+/* anoni.net 新聞導讀。規則見 SPEC.md「頁面」一節。
+   樣式從手機寬度開始寫，桌機再放寬。不載入任何站外資源，字型只用系統字型。
+   --c-* 是實際使用的顏色，build.py --check 會檢查這幾組文字與背景的對比度。
+
+   版面的兩個主軸：
+   - 列表是依發布日分組的時間軸，日期在捲動時停在頂端（position: sticky，不需要 JS）
+   - 文章頁把原文與導讀分成兩條，桌機時原文條在右欄，手機時在內文上方
+   標題用明體、字色用品牌墨色 cyan-900，跟文件站的黑體黑字分開。 */
+
+:root {
+    /* 品牌色票，照抄文件站 docs/zh-TW/stylesheets/extra.css，不自己調 */
+    --brand-cyan-50:  #e0f4ff;
+    --brand-cyan-100: #b3e3ff;
+    --brand-cyan-200: #80d1ff;
+    --brand-cyan-300: #4dbfff;
+    --brand-cyan-400: #26b3ff;
+    --brand-cyan-500: #00aeff;
+    --brand-cyan-600: #009ee6;
+    --brand-cyan-700: #0089bf;
+    --brand-cyan-800: #006d99;
+    --brand-cyan-900: #003e57;
+
+    --c-bg: #ffffff;
+    --c-surface: #eef6f9;
+    --c-border: #cfe0e7;
+    --c-text: #1d2b31;
+    --c-muted: #52646b;
+    --c-headline: var(--brand-cyan-900);
+    --c-link: var(--brand-cyan-800);
+    --c-rule: var(--brand-cyan-500);
+    --c-header-bg: var(--brand-cyan-900);
+    --c-header-text: #ffffff;
+    --c-header-link: var(--brand-cyan-50);
+    /* 文字片段連結（#:~:text=）標出的段落 */
+    --c-mark-bg: var(--brand-cyan-100);
+    --c-mark-text: #1d2b31;
+
+    /* 明體的第一個是 clearnet 自架的標題字型（css/fonts.css，見 SPEC.md「標題字型」）。
+       onion 沒有載入它，直接往下找系統字型 */
+    --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    --font-serif: "anoni news serif TC", "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
+
+    --touch: 2.75rem;
+    /* 內文欄。扣掉左右留白約 40rem，桌機 18px 的字級下一行大約 36 個中文字 */
+    --measure: 42rem;
+    /* 列表的時間軸與文章頁的原文條需要更寬的外框 */
+    --frame: 64rem;
+}
+
+/* 依整頁的語系換字型，只看 <html>，頁面裡標了 lang 的原文標題不受影響。簡體頁先找簡體字型，
+   避免用正體字型的字形顯示簡體字。英文頁的標題用西文襯線體，中文字型排在後面備用 */
+html:lang(zh-Hans),
+.not-found:lang(zh-Hans) {
+    --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --font-serif: "anoni news serif SC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+}
+
+html:lang(en) {
+    --font-serif: Georgia, "Times New Roman", "Noto Serif", "Noto Serif TC", "Songti TC", serif;
+}
+
+/* 中文標題的字距拉開是為了方塊字的節奏，放在拉丁字母上會散開 */
+html:lang(en) .masthead__title,
+html:lang(en) .site-header__product {
+    letter-spacing: 0;
+}
+
+/* 404 三種語言各一段，簡體那一段要自己套上面換過的字型 */
+.not-found {
+    font-family: var(--font-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c-bg: #0c1b22;
+        --c-surface: #132a34;
+        --c-border: #24414d;
+        --c-text: #e8f9ff;
+        --c-muted: #a3bcc6;
+        --c-headline: var(--brand-cyan-100);
+        --c-link: var(--brand-cyan-300);
+        --c-rule: var(--brand-cyan-600);
+        --c-header-bg: var(--brand-cyan-900);
+        --c-header-text: #ffffff;
+        --c-header-link: var(--brand-cyan-50);
+        --c-mark-bg: var(--brand-cyan-800);
+        --c-mark-text: #ffffff;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    font-variant-numeric: tabular-nums;
+}
+
+a {
+    color: var(--c-link);
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+p {
+    margin: 0 0 1.1em;
+}
+
+.wrap,
+.story-wrap,
+.list-wrap {
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+.wrap,
+.story-wrap {
+    max-width: var(--measure);
+}
+
+.list-wrap {
+    max-width: var(--frame);
+}
+
+/* ---------------------------------------------------------------- 頁首與刊頭 */
+
+.site-header {
+    background: var(--c-header-bg);
+    color: var(--c-header-text);
+}
+
+.site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 1rem;
+    max-width: var(--frame);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-header a {
+    color: var(--c-header-text);
+    text-decoration: none;
+}
+
+.site-header__inner a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+}
+
+/* flex 會吞掉標誌與產品名之間的空格，用 gap 補回跟分隔線的距離 */
+.site-header__home {
+    gap: 1rem;
+}
+
+.site-header__logo {
+    display: block;
+    height: 1.625rem;
+    width: auto;
+}
+
+.site-header__product {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: 0.08em;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* 語系切換靠右。窄螢幕放不下時換到標誌下方，不會壓到產品名 */
+.site-header__langs {
+    display: flex;
+    align-items: center;
+    gap: 0 0.25rem;
+    margin-left: auto;
+    color: var(--c-header-link);
+    font-size: 0.9375rem;
+}
+
+.site-header__langs .icon {
+    margin-right: 0.25rem;
+}
+
+.site-header__inner .site-header__langs a {
+    padding: 0 0.5rem;
+    color: var(--c-header-link);
+}
+
+/* 360px 的手機上，標誌、產品名與兩個語系放進同一列：拿掉翻譯圖示、收窄間距 */
+@media (max-width: 24rem) {
+    .site-header__inner {
+        gap: 0 0.75rem;
+    }
+
+    .site-header__langs .icon {
+        display: none;
+    }
+
+    .site-header__inner .site-header__langs a {
+        padding: 0 0.375rem;
+    }
+}
+
+.site-header a:hover,
+.site-header a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+/* 首頁的刊頭，跟頁首接在同一塊墨色底上 */
+.masthead {
+    max-width: var(--frame);
+    margin: 0 auto;
+    padding: 1.75rem 1rem 1.5rem;
+}
+
+.masthead__title {
+    font-family: var(--font-serif);
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.75rem;
+}
+
+/* 標語只在標點後換行，「國際隱私」這類詞組不會被拆到兩行，每行長度再平均分配。
+   標語裡最長的一段是十個字，320px 也放得下 */
+.masthead__tagline {
+    color: var(--c-header-link);
+    max-width: 32em;
+    margin: 0 0 1rem;
+    word-break: keep-all;
+    text-wrap: balance;
+}
+
+.masthead__tagline a {
+    color: var(--c-header-text);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+}
+
+/* 刊頭最底下一列：左邊是最後更新，右邊是訂閱。窄螢幕放不下時訂閱換到下一行 */
+.masthead__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.25rem 1.5rem;
+}
+
+.masthead__subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+}
+
+.masthead__subscribe a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    min-height: var(--touch);
+    padding: 0 0.25rem;
+    color: var(--c-header-text);
+    text-decoration: none;
+    text-underline-offset: 0.3em;
+}
+
+.masthead__updated {
+    display: inline-block;
+    margin: 0;
+    padding-top: 0.6rem;
+    border-top: 3px solid var(--c-rule);
+    color: var(--c-header-link);
+    font-size: 0.9375rem;
+}
+
+/* ---------------------------------------------------------------- 列表：頭條與時間軸 */
+
+.list-heading {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.75rem;
+    line-height: 1.35;
+    margin: 0.25rem 0 1.5rem;
+}
+
+/* 焦點：維護者用 front matter 的 pin 指定一篇放在首頁最上方。
+   同一篇也照樣出現在時間軸自己的日期底下，日期分組不會被拆開 */
+.featured {
+    padding-bottom: 1.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid var(--c-headline);
+}
+
+.featured__label {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding-top: 0.4rem;
+    border-top: 3px solid var(--c-rule);
+    color: var(--c-headline);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.featured__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    background: var(--c-surface);
+}
+
+.featured__title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.75rem;
+}
+
+.featured__title a,
+.brief__title a {
+    color: var(--c-headline);
+    text-decoration: none;
+}
+
+.featured__title a:hover,
+.brief__title a:hover,
+.featured__title a:focus-visible,
+.brief__title a:focus-visible {
+    text-decoration: underline;
+}
+
+.featured__dek {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.featured__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.day {
+    border-top: 1px solid var(--c-border);
+}
+
+/* 焦點底下已經有一條粗線，緊接的第一天不再疊一條細線 */
+.featured + .day {
+    border-top: 0;
+}
+
+/* 日期標題在捲動時停在頂端，讀者隨時知道自己讀到哪一天 */
+.day__date {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0.6rem 0;
+    background: var(--c-bg);
+    color: var(--c-headline);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.day__date time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.75rem;
+}
+
+.day__md {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.day__meta {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.brief {
+    padding: 0.5rem 0 1.25rem;
+}
+
+.brief + .brief {
+    border-top: 1px dashed var(--c-border);
+    padding-top: 1rem;
+}
+
+/* 時間軸的導讀標題：手機 22px、平板以上 24px，夾在焦點的 28px 與日期的 20px 之間 */
+.brief__title {
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 0.4rem;
+}
+
+@media (min-width: 48em) {
+    .brief__title {
+        font-size: 1.5rem;
+    }
+}
+
+.brief__dek {
+    margin: 0 0 0.35rem;
+}
+
+.brief__source {
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+/* 導讀歷史的「同一天還有」那一行是連結，顏色跟導讀的出處行一樣用次要色，滑過才加底線 */
+.brief__source .past__also {
+    color: var(--c-muted);
+    text-decoration: none;
+}
+
+.brief__source .past__also:hover,
+.brief__source .past__also:focus-visible {
+    text-decoration: underline;
+}
+
+.empty {
+    padding: 2rem 0;
+    font-size: 1.125rem;
+}
+
+/* ---------------------------------------------------------------- 文章頁 */
+
+.story__date {
+    margin: 0 0 0.5rem;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.story__title {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.75rem;
+}
+
+.story__dek {
+    font-size: 1.1875rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+/* 原文清單：外文原文的標題、出處與日期。手機放在文末，桌機移到右欄。
+   頂端署名旁有一行出處連到這裡 */
+.source-slip {
+    margin: 2rem 0 1.5rem;
+    scroll-margin-top: 1rem;
+    padding: 1rem 1rem 0.25rem;
+    background: var(--c-surface);
+    border-top: 3px solid var(--c-rule);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.source-slip__heading {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-size: 1rem;
+}
+
+.source-slip__item {
+    padding-bottom: 0.75rem;
+}
+
+.source-slip__item + .source-slip__item {
+    border-top: 1px solid var(--c-border);
+    padding-top: 0.75rem;
+}
+
+.source-slip__title {
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+}
+
+/* 原文網站的圖示，沒有登記圖示的網站用通用的地球圖示，兩者對齊文字。
+   白色圓角底讓透明底的深色圖示在深色模式也看得見 */
+.source-slip__icon,
+.source-slip__title .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-inline-end: 0.4em;
+    vertical-align: -0.15em;
+}
+
+.source-slip__icon {
+    box-sizing: content-box;
+    padding: 1px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.source-slip__meta {
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.source-slip__meta div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.source-slip__meta dt {
+    flex: none;
+}
+
+.source-slip__meta dd {
+    margin: 0;
+    color: var(--c-text);
+}
+
+.story__body {
+    margin-top: 1.5rem;
+}
+
+/* ---------------------------------------------------------------- 內文 */
+
+/* 原文標題與網址常是一長串英文，沒寫成連結、直接貼在內文裡的網址也一樣，
+   整段都允許在任何位置斷行，不然手機上會把整頁撐寬 */
+.content,
+.source-slip,
+.brief__title,
+.featured__title {
+    overflow-wrap: anywhere;
+}
+
+.content h2 {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-size: 1.375rem;
+    line-height: 1.45;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.content h3 {
+    color: var(--c-headline);
+    font-size: 1.125rem;
+    margin: 1.75rem 0 0.5rem;
+}
+
+/* 表格改成 display: block 才能自己捲動，代價是欄寬會被壓到最小，一欄只剩一個字寬。
+   每欄給最小寬度，放不下時讓表格在自己的範圍內橫向捲動 */
+.content table,
+.content pre {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.content table {
+    border-collapse: collapse;
+    margin: 0 0 1.25rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.content th,
+.content td {
+    min-width: 6em;
+    border-bottom: 1px solid var(--c-border);
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: normal;
+}
+
+.content th {
+    color: var(--c-headline);
+    border-bottom: 2px solid var(--c-headline);
+}
+
+/* 手機上畫面外的欄位如果照樣換行，會把每一列撐高，看起來像一片空白。
+   窄螢幕改成不換行，讀者左右滑動看表格 */
+@media (max-width: 47.99em) {
+    .content th,
+    .content td {
+        white-space: nowrap;
+    }
+}
+
+.content pre {
+    background: var(--c-surface);
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+}
+
+.content code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* 行內的程式碼（cookie 名稱、主機名稱這類識別碼）加上底色與細框，跟前後的文字分得開。
+   底色與框線沿用原文區塊的 surface 與 border，文字與連結色在 surface 上的對比度已由建置檢查。
+   長的主機名稱在手機上可以斷行，斷行後每一行都保留自己的底色與框線 */
+.content :not(pre) > code {
+    padding: 0.1em 0.3em;
+    border: 1px solid var(--c-border);
+    border-radius: 0.25em;
+    background: var(--c-surface);
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* 圖片最寬到內文欄，寬高由建置程式補上，載入時版面不跳動 */
+.content figure {
+    margin: 1.75rem 0;
+}
+
+.content figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background: var(--c-surface);
+}
+
+.content figcaption {
+    margin-top: 0.5rem;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content blockquote {
+    margin: 0 0 1.1em;
+    padding-left: 1rem;
+    border-left: 3px solid var(--c-rule);
+    color: var(--c-muted);
+}
+
+/* 署名下方列出另外兩個語系的同一篇。有這一行時，署名下方的粗線移到這一行 */
+.story__byline:not(:last-child) {
+    padding-bottom: 0.25rem;
+    border-bottom: 0;
+}
+
+.story__langs {
+    margin: 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+/* 語言名稱夾在句子裡，跟訂閱提示一樣只加上下的留白放大觸控範圍 */
+.story__langs a,
+.site-footer__langs a {
+    display: inline-block;
+    padding: 0.375rem 0;
+}
+
+/* 這件事有更新的導讀時，標題區最後一行提示最新的一篇 */
+.story__followup {
+    margin: 1rem 0 0;
+    padding: 0.75rem 1rem;
+    background: var(--c-surface);
+    border-left: 3px solid var(--c-rule);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.story__followup a {
+    font-weight: 600;
+}
+
+/* 朗讀按鈕，在「其他語言」那一行的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」。
+   平常只有「朗讀」與「調整」一列，按「調整」才展開語音、速度與說明。
+   按鈕出現時，標題區的粗線從語系那一行移到這裡，粗線之後直接接內文。
+   沒有 JavaScript 或找不到本機語音時按鈕是 hidden，粗線留在原處 */
+.listen {
+    /* 按鈕的觸控範圍往上撐 0.375rem，語系連結往下也有 0.375rem，留 0.75rem 兩者才不重疊 */
+    margin: 0.75rem 0 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 3px solid var(--c-headline);
+}
+
+.story__langs:has(+ .listen:not([hidden])) {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.listen[hidden],
+.listen__panel[hidden],
+.listen__field[hidden] {
+    display: none;
+}
+
+/* 小螢幕上分成好幾列時，列與列之間留得跟左右一樣寬 */
+.listen__bar,
+.listen__panel,
+.listen__options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.listen__panel {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+}
+
+.listen__bar {
+    gap: 0.5rem;
+}
+
+/* 兩顆按鈕一樣大，字級跟語系那一行相同。外觀只有 2rem 高，
+   觸控範圍用 ::before 往上下撐到 --touch，手指照樣點得到 */
+.listen__button,
+.listen__toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    min-height: 2rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-surface);
+    color: var(--c-link);
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.listen__button::before,
+.listen__toggle::before {
+    content: "";
+    position: absolute;
+    top: calc((2rem - var(--touch)) / 2);
+    bottom: calc((2rem - var(--touch)) / 2);
+    left: 0;
+    right: 0;
+}
+
+/* 「調整」是次要的按鈕，不放底色，展開時才跟面板一樣有底色 */
+.listen__toggle {
+    background: transparent;
+    font-weight: 400;
+}
+
+.listen__toggle[aria-expanded="true"] {
+    background: var(--c-surface);
+}
+
+.listen__button:hover,
+.listen__toggle:hover {
+    border-color: var(--c-link);
+}
+
+.listen__button:focus-visible,
+.listen__toggle:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+/* 圖示依狀態切換：沒在念時是喇叭，念的時候是暫停 */
+.listen__pause,
+.listen__button[data-state="playing"] .listen__play {
+    display: none;
+}
+
+.listen__button[data-state="playing"] .listen__pause {
+    display: inline;
+}
+
+.listen__field {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+.listen__select {
+    min-height: var(--touch);
+    max-width: 9.5em;
+    padding: 0 0.5rem;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font: inherit;
+}
+
+.listen__select:focus-visible {
+    outline: 2px solid var(--c-rule);
+    outline-offset: 2px;
+}
+
+.listen__note {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* 連到閱讀說明的連結夾在小字裡，跟語系那一行一樣只加上下的留白放大觸控範圍 */
+.listen__note a {
+    display: inline-block;
+    padding: 0.375rem 0;
+}
+
+/* 正在念的段落，底色跟原文區塊相同。用 outline 往外延伸底色，不改變版面，文字不會跳動 */
+.is-reading {
+    background: var(--c-surface);
+    outline: 0.375rem solid var(--c-surface);
+}
+
+/* 同一事件的導讀：整條事件線由舊到新，日期在上、標題在下，本篇不連結 */
+.thread {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 3px solid var(--c-rule);
+}
+
+.thread__heading {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-size: 1rem;
+}
+
+.thread__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.thread__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding: 0.5rem 0;
+}
+
+.thread__item + .thread__item {
+    border-top: 1px solid var(--c-border);
+}
+
+.thread__date {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.thread__title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.thread__item--current .thread__title {
+    color: var(--c-headline);
+}
+
+.thread__here {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+/* 同分類的其他導讀，上緣用分類的顏色，跟同一事件的導讀區分 */
+.related {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 3px solid var(--cat);
+}
+
+.related__all {
+    margin: 0.5rem 0 0;
+    font-size: 0.9375rem;
+}
+
+/* 文章頁最後的訂閱提示 */
+.subscribe {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--c-border);
+}
+
+/* 連結夾在句子裡，只加上下的留白放大觸控範圍，左右不留，頓號才不會被隔開 */
+.subscribe a {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.subscribe + .pager {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+/* ---------------------------------------------------------------- 圖示 */
+
+/* templates/icons/ 內嵌的 SVG，大小跟字級、顏色跟文字。
+   圖示跟文字之間的距離靠 HTML 裡的空格，閱讀器模式、複製文字或 CSS 沒載入時一樣分得開。
+   flex 版面會吞掉空白字元，那幾處（刊頭與頁尾的連結）另外用 gap 補回同樣的距離 */
+.icon {
+    display: inline-block;
+    flex: none;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.2em;
+    position: relative;
+}
+
+/* 外框對齊之後，中文與英文字母的筆畫重心仍比圖示低（放大四倍截圖量筆畫範圍的結果）。
+   行內文字裡偏高約 1.3px，頁尾的 flex 連結偏高約 0.5px，各自往下移補回。
+   刊頭與前後篇本來就在 ±0.5px 內，不動 */
+.subscribe .icon,
+.story__sources .icon,
+.story__langs .icon,
+.site-footer__langs .icon {
+    top: 0.08em;
+}
+
+/* 署名旁出處行的網站圖示並排成一串。原本做成重疊的，16px 的圖示被下一個蓋掉一半就認不出來，
+   同一家的兩個網站（例如 Signal 的說明中心與論壇）尤其分不開。每個墊白色圓角底，
+   沒有圖示的網站用地球圖示，在白底上改用品牌墨色 */
+.favicon-stack {
+    display: inline-flex;
+    gap: 0.2rem;
+    vertical-align: -0.2em;
+}
+
+.favicon-stack img,
+.favicon-stack .icon {
+    box-sizing: content-box;
+    width: 1rem;
+    height: 1rem;
+    padding: 1px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.favicon-stack .icon {
+    top: 0;
+    color: var(--brand-cyan-900);
+}
+
+/* 行內文字裡的連結，圖示與文字之間的空格也會畫到底線，底線改畫在文字的 span 上 */
+.subscribe a,
+.story__sources a {
+    text-decoration: none;
+}
+
+.subscribe a > span,
+.story__sources a > span {
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+}
+
+.site-footer__links .icon {
+    top: 0.03em;
+}
+
+/* ---------------------------------------------------------------- 分頁與頁尾 */
+
+/* 文章頁的前後篇：手機上下排，桌機較新在左、較舊在右，「所有文章」自成一列 */
+/* 跟下方通用的 .pager 同一個權重會被它的 display: flex 蓋掉，所以寫成兩個 class */
+.pager.pager--story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem 1.5rem;
+}
+
+.pager .pager__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+.pager__label {
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.pager__title {
+    font-family: var(--font-serif);
+    color: var(--c-headline);
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.pager__item:hover .pager__title,
+.pager__item:focus-visible .pager__title {
+    text-decoration: underline;
+}
+
+.pager--story .pager__all {
+    justify-self: start;
+    padding: 0;
+}
+
+@media (min-width: 48em) {
+    .pager.pager--story {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pager .pager__item--older {
+        grid-column: 2;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .pager--story .pager__all {
+        grid-column: 1 / -1;
+    }
+}
+
+.pager {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--c-border);
+}
+
+.pager a,
+/* 獨立成列的導覽連結：刊頭與頁尾的連結、所有文章、列表頁的翻頁。排成一列又帶著圖示，
+   不靠底線也看得出能點，平常不畫，滑過或鍵盤選到時才出現，跟文章標題的做法一致。
+   夾在句子裡的連結（內文、原文、訂閱行、署名旁的原文、頁尾說明）維持底線。
+   前後篇整塊是一個連結，底線只畫在標題上，另外處理 */
+.site-footer__links a,
+.pager a:not(.pager__item) {
+    text-decoration: none;
+}
+
+.masthead__subscribe a:hover,
+.masthead__subscribe a:focus-visible,
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible,
+.pager a:not(.pager__item):hover,
+.pager a:not(.pager__item):focus-visible {
+    text-decoration: underline;
+}
+
+.site-footer__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    min-height: var(--touch);
+    padding: 0 0.25rem;
+}
+
+.site-footer {
+    border-top: 3px solid var(--c-headline);
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* 頁尾的說明文字是短短的附註，不用內文的行高與段距 */
+.site-footer p,
+.site-footer__langs {
+    margin: 0 0 0.5rem;
+}
+
+.site-footer .wrap {
+    max-width: var(--frame);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* 連結高度維持觸控範圍。四個連結加上圖示約需 413px，手機放不下一行，
+   窄螢幕排成兩列兩欄，避免最後一個單獨掉到下一行，30em 以上排成一行。
+   連結左右各有 0.25rem 的留白，整列往左移同樣的距離，跟下面的文字對齊 */
+.site-footer__links {
+    display: grid;
+    /* 右欄可以縮，比較長的連結文字在 320px 放不下一行時在格子裡換行 */
+    grid-template-columns: max-content minmax(0, max-content);
+    gap: 0 1rem;
+    margin: 0 0 0.25rem -0.25rem;
+}
+
+@media (min-width: 30em) {
+    .site-footer__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 0.75rem;
+    }
+}
+
+/* ---------------------------------------------------------------- 寬螢幕 */
+
+@media (min-width: 48em) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    .masthead {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .masthead__title {
+        font-size: 4rem;
+    }
+
+    .featured__title {
+        font-size: 2.25rem;
+    }
+
+    /* 有圖時文字在左、圖在右，圖約佔三分之一 */
+    .featured--image {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        grid-template-areas:
+            "label label"
+            "text image";
+        gap: 0 2rem;
+    }
+
+    .featured--image .featured__label {
+        grid-area: label;
+        justify-self: start;
+    }
+
+    .featured--image .featured__image {
+        grid-area: image;
+        margin-bottom: 0;
+    }
+
+    .featured--image .featured__text {
+        grid-area: text;
+    }
+
+    .story__title {
+        font-size: 2.375rem;
+    }
+
+    /* 時間軸：日期在左欄，停在頂端跟著捲動 */
+    .day {
+        display: grid;
+        grid-template-columns: 10rem minmax(0, 1fr);
+        gap: 0 2rem;
+    }
+
+    .day__date {
+        align-self: start;
+        top: 1rem;
+        padding-top: 1.1rem;
+    }
+
+    .day__date time {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .day__md {
+        font-size: 1.5rem;
+    }
+
+    .day__briefs {
+        padding-top: 0.75rem;
+        max-width: var(--measure);
+    }
+}
+
+@media (min-width: 64em) {
+    /* 文章頁：導讀在左、原文條在右，兩條並排 */
+    .story-wrap {
+        max-width: var(--frame);
+    }
+
+    .story {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 18rem;
+        grid-template-areas:
+            "head head"
+            "body slip";
+        gap: 0 3rem;
+    }
+
+    .story__head {
+        grid-area: head;
+        max-width: 48rem;
+    }
+
+    .story__body {
+        grid-area: body;
+        max-width: 40rem;
+    }
+
+    /* 原文多的時候區塊會比畫面高，停在頂端就看不到下半部，超過畫面高度改在區塊內捲動 */
+    .source-slip {
+        grid-area: slip;
+        align-self: start;
+        margin-top: 1.5rem;
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+
+    .story ~ .thread,
+    .story ~ .related,
+    .story ~ .subscribe,
+    .story ~ .pager {
+        max-width: 40rem;
+    }
+}
+
+/* ---------------------------------------------------------------- 導讀歷史 */
+
+/* 時間軸上的快照放在當天導讀的後面。標題與說明沿用 .brief，靠這一行標籤跟導讀分開。
+   字級跟「焦點」標籤一樣是 16px，標題放大到 22–24px 之後，14px 的標籤顯得太小 */
+.past__label {
+    margin: 0 0 0.375rem;
+    color: var(--c-link);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.past__label a {
+    color: var(--c-link);
+    text-decoration: none;
+}
+
+.past__label a:hover,
+.past__label a:focus-visible {
+    text-decoration: underline;
+}
+
+.past__label time {
+    font-weight: 400;
+}
+
+.past__label .icon {
+    vertical-align: -0.125em;
+}
+
+.history-day__column {
+    color: var(--c-link);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.snapshot {
+    padding: 1.5rem 0 0.5rem;
+    scroll-margin-top: 1rem;
+}
+
+.snapshot + .snapshot {
+    border-top: 1px solid var(--c-border);
+}
+
+.snapshot__year {
+    margin: 0 0 0.25rem;
+    color: var(--c-muted);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.snapshot__title {
+    margin: 0 0 0.25rem;
+    color: var(--c-headline);
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    line-height: 1.45;
+}
+
+.snapshot__event {
+    margin: 0 0 0.75rem;
+    color: var(--c-muted);
+    font-size: 0.9375rem;
+}
+
+/* 同一天還有：比那一段輕，年份當行首的標籤，來源另起一行 */
+.snapshot__also {
+    margin: 1.25rem 0 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--c-surface);
+    border-left: 3px solid var(--c-rule);
+}
+
+.snapshot__also-heading {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--c-headline);
+}
+
+.snapshot__also-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.snapshot__also-list li {
+    margin: 0 0 0.6rem;
+    line-height: 1.7;
+}
+
+.snapshot__also-list li:last-child {
+    margin-bottom: 0;
+}
+
+.snapshot__also-year {
+    margin-right: 0.35rem;
+    color: var(--c-link);
+    font-weight: 700;
+}
+
+.snapshot__also-source {
+    display: block;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.snapshot__sources {
+    margin: 0 0 0.5rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9375rem;
+    overflow-wrap: anywhere;
+}
+
+.snapshot__sources li {
+    margin: 0 0 0.25rem;
+}
+
+.snapshot__sources img,
+.snapshot__sources .icon {
+    margin-right: 0.35rem;
+    vertical-align: -0.15em;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.snapshot__sources-label {
+    margin: 0.5rem 0 0.25rem;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.history-month__grid .is-today a,
+.history-month__grid .is-today span {
+    outline: 2px solid var(--c-rule);
+    outline-offset: -2px;
+}
+
+.snapshot__publisher {
+    margin-left: 0.5rem;
+    color: var(--c-muted);
+}
+
+.snapshot__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.875rem;
+}
+
+.history-month {
+    margin-top: 2rem;
+}
+
+.history-month__name {
+    margin: 0 0 0.5rem;
+    color: var(--c-headline);
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+}
+
+.history-month__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--touch), 1fr));
+    gap: 0.25rem;
+    margin: 0 0 0.75rem;
+    padding: 0;
+    list-style: none;
+}
+
+.history-month__grid a,
+.history-month__grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--touch);
+    border-radius: 4px;
+    font-size: 0.9375rem;
+}
+
+.history-month__grid span {
+    color: var(--c-muted);
+}
+
+.history-month__grid a {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    color: var(--c-link);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.history-month__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-month__list li {
+    margin: 0 0 0.35rem;
+}
+
+.history-month__date {
+    margin-right: 0.5rem;
+    color: var(--c-muted);
+}
+
+/* ---------------------------------------------------------------- 分類標籤
+
+   每篇導讀一個分類，見 categories.toml。標籤放在標題上方與文章頁的日期前面，用色系區分，
+   文字顏色在淺色底上至少 4.5:1，深色模式改用較亮的同色系。每週短訊是格式，用中性色 */
+.cat--encryption { --cat: #0f766e; }
+.cat--tracking { --cat: #b45309; }
+.cat--surveillance { --cat: #b91c1c; }
+.cat--censorship { --cat: #7e22ce; }
+.cat--mobile { --cat: #1d4ed8; }
+.cat--security { --cat: #be185d; }
+.cat--civil-society { --cat: #15803d; }
+.cat--brief { --cat: #4b5563; }
+
+@media (prefers-color-scheme: dark) {
+    .cat--encryption { --cat: #5eead4; }
+    .cat--tracking { --cat: #fcd34d; }
+    .cat--surveillance { --cat: #fca5a5; }
+    .cat--censorship { --cat: #d8b4fe; }
+    .cat--mobile { --cat: #93c5fd; }
+    .cat--security { --cat: #f9a8d4; }
+    .cat--civil-society { --cat: #86efac; }
+    .cat--brief { --cat: #cbd5e1; }
+}
+
+/* 字級與間距跟「導讀歷史 · 年份」的標籤相同，同一天的導讀與導讀歷史，標題上方那一行對得齊 */
+.brief__category {
+    margin: 0 0 0.375rem;
+    font-size: 1rem;
+}
+
+.cat {
+    color: var(--cat);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* 色塊讓色系在掃視時就分得出來，文字本身也帶顏色，不只靠色塊 */
+.cat::before {
+    content: "";
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-right: 0.4em;
+    border-radius: 2px;
+    background: var(--cat);
+    vertical-align: 0.05em;
+}
+
+.cat:hover,
+.cat:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.story__date .cat {
+    font-size: 0.875rem;
+}
+
+/* 關於頁「報導範圍」的分類清單，名稱用分類標籤，說明接在下一行 */
+.coverage {
+    margin: 0 0 1.25rem;
+}
+
+.coverage dt {
+    margin-top: 1rem;
+}
+
+.coverage dt:first-child {
+    margin-top: 0;
+}
+
+.coverage dd {
+    margin: 0.25rem 0 0;
+}
+
+.list-heading--category {
+    padding-left: 0.75rem;
+    border-left: 6px solid var(--cat);
+    margin-bottom: 0.5rem;
+}
+
+/* 分類頁標題下的說明，寫這一類收什麼，也是這一頁的 description */
+.list-intro {
+    max-width: var(--measure);
+    margin: 0 0 1.5rem;
+    color: var(--c-muted);
+}
+
+/* ---------------------------------------------------------------- 引用段落的連結 */
+
+/* 網址帶 #:~:text=某段文字 時，瀏覽器捲到那段文字並標出來。標示色換成品牌色，
+   引用導讀的某一句時，讀者一眼看得到是哪裡。見 SPEC.md「引用段落的連結」 */
+::target-text {
+    background: var(--c-mark-bg);
+    color: var(--c-mark-text);
+}
+
+/* ---------------------------------------------------------------- 長列表 */
+
+/* 時間軸的每一天與導讀歷史的每個月，捲到附近才計算版面，手機打開長列表比較快。
+   2026-10 在 CPU 降速 4 倍的手機模擬下，首頁的版面計算從 11.5ms 降到 7.1ms。
+   畫面外的區塊先用 contain-intrinsic-size 估一個高度，算過一次之後記住實際的高度。
+   估計值取 2026-10 實測的中位數，差太多時捲軸會在捲動途中跳動，版面大改之後要重新量 */
+.day {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 60rem;
+}
+
+.history-month {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 18rem;
+}
+
+@media (min-width: 48em) {
+    .day {
+        contain-intrinsic-size: auto 44rem;
+    }
+
+    .history-month {
+        contain-intrinsic-size: auto 9rem;
+    }
+}
+
+/* ---------------------------------------------------------------- 高對比模式 */
+
+/* Windows 的高對比模式會把顏色換成系統色，只靠底色區分的元件要補回來。見 SPEC.md「高對比模式」 */
+@media (forced-colors: active) {
+    /* 頁首的 logo 是白色的圖，底色被換掉就看不見，頁首與刊頭保留品牌色。白字在 cyan-900 上的對比是 11.5 */
+    .site-header {
+        forced-color-adjust: none;
+    }
+
+    /* 分類的色塊是底色，會被換成背景色而消失，改用文字色 */
+    .cat::before {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+
+    /* 正在朗讀的段落只靠底色，改用系統的選取色畫框 */
+    .is-reading {
+        outline: 2px solid Highlight;
+    }
+
+    ::target-text {
+        background: Highlight;
+        color: HighlightText;
+    }
+}
+
+/* ---------------------------------------------------------------- 增加對比 */
+
+/* iPhone 與 Mac 開了「增加對比」時，瀏覽器送出 prefers-contrast: more。只改顏色與底線粗細，
+   間距與尺寸都不動，版面跟平常相同。見 SPEC.md「高對比模式」 */
+@media (prefers-contrast: more) {
+    :root {
+        /* 次要文字（日期、署名、出處、說明）跟內文同色，6.19 → 14.56 */
+        --c-muted: var(--c-text);
+        /* 連結改用最深的品牌色，5.76 → 11.5 */
+        --c-link: var(--brand-cyan-900);
+        /* 邊框與分隔線加深，1.36 → 4.69 */
+        --c-border: #5d7883;
+        /* 裝飾線與焦點框改用墨色，cyan-500 在白底上只有 2.47 */
+        --c-rule: var(--brand-cyan-900);
+    }
+
+    a {
+        text-decoration-thickness: 2px;
+    }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+    :root {
+        --c-muted: var(--c-text);
+        --c-link: var(--brand-cyan-100);
+        --c-border: #7f9fac;
+        --c-rule: var(--brand-cyan-300);
+    }
+}
+
+/* ---------------------------------------------------------------- 列印 */
+
+/* 研究者與記者會列印或另存成 PDF 引用導讀。拿掉導覽與按鈕，原文與內文連結後面印出完整網址，
+   文章最後印出這一頁的網址，紙本上也查得到出處。放在檔案最後，蓋過前面的深色模式與桌機版面。
+   見 SPEC.md「列印」 */
+@media print {
+    :root {
+        --c-bg: #ffffff;
+        --c-surface: #ffffff;
+        --c-border: #b0b0b0;
+        --c-text: #000000;
+        --c-muted: #333333;
+        --c-headline: #000000;
+        --c-link: #000000;
+        --c-rule: #000000;
+    }
+
+    @page {
+        margin: 16mm 14mm;
+    }
+
+    body {
+        font-size: 11pt;
+        line-height: 1.6;
+    }
+
+    .site-header,
+    .site-footer,
+    .story__langs,
+    .listen,
+    .subscribe,
+    .pager,
+    .thread,
+    .related,
+    .masthead__bar {
+        display: none !important;
+    }
+
+    /* 語系那一行不印，標題區的粗線改由署名那一行畫 */
+    .story__byline:not(:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #000000;
+    }
+
+    /* 桌機的兩欄與停在頂端的區塊都改回一欄，原文區塊不能在區塊內捲動，否則下半部印不出來 */
+    .story {
+        display: block;
+    }
+
+    .source-slip,
+    .day__date {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .source-slip {
+        margin-top: 1.5rem;
+        border-top: 2px solid #000000;
+    }
+
+    .source-slip__item,
+    .content img,
+    .content figure,
+    .content table,
+    .content pre {
+        break-inside: avoid;
+    }
+
+    .content h2,
+    .content h3 {
+        break-after: avoid;
+    }
+
+    .content pre {
+        white-space: pre-wrap;
+        overflow: visible;
+    }
+
+    .is-reading {
+        background: none;
+        outline: 0;
+    }
+
+    /* 分類色在深色模式是淺色，印在白紙上太淡，列印時一律用黑色 */
+    .cat {
+        --cat: #000000;
+    }
+
+    /* 站外連結後面印出網址。站內連結不印，路徑在紙本上沒有用 */
+    .source-slip a[href^="http"]::after {
+        content: " " attr(href);
+        display: block;
+        font-weight: 400;
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+
+    .story__body a[href^="http"]::after {
+        content: "（" attr(href) "）";
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+
+    html:lang(en) .story__body a[href^="http"]::after {
+        content: " (" attr(href) ")";
+    }
+
+    /* 文章最後印出出處與網址，網址來自 <article> 的 data-print-url，不在頁面文字裡，
+       閱讀模式與朗讀都不會讀到 */
+    .story[data-print-url]::after {
+        content: attr(data-print-label) attr(data-print-url);
+        display: block;
+        margin-top: 1.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #000000;
+        font-size: 9pt;
+        overflow-wrap: anywhere;
+    }
+}

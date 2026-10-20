@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Same Day, Years Apart | anoni.net News</title>
+<link>https://anoni.net/news/en/history/</link>
+<atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
+<description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
+<language>en</language>
+<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Default passwords on home security cameras</title>
+<link>https://anoni.net/news/en/history/10-21/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-21/2026</guid>
+<pubDate>Wed, 21 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>If the internet camera in your home still uses its factory default password, others may be able to use it to attack other websites. On this day, large numbers of hijacked cameras and video recorders were used to attack Dyn, which handles web address lookups for many websites, and many websites on the US East Coast became unreachable.</description>
+<content:encoded>&lt;p&gt;If the internet camera in your home still uses its factory default password and can be reached directly from the internet, others may be able to log in and use it to attack other websites. On 21 October 2016, Dyn, a provider of DNS, the service that turns web addresses into server addresses, was hit by two waves of heavy traffic, and according to Singapore&#39;s Cyber Security Agency, much of the internet on the US East Coast became inaccessible. Dyn&#39;s own analysis later confirmed that a significant share of the traffic came from devices controlled by the Mirai malware, and a security firm quoted by KrebsOnSecurity that day said most of them were video recorders and internet cameras made by China&#39;s Xiongmai or built with its parts. The same firm said some models had a password built into the firmware that users could not change, while Xiongmai said most problems came from users not changing default passwords and announced a recall of some early cameras sold in the US. Singapore&#39;s Cybersecurity Labelling Scheme now covers IP cameras and lists unique default passwords among its basic-level requirements, and if you already have a camera at home, the US government&#39;s 2016 US-CERT alert advises changing the default password and installing security patches when they are available.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Certificate warnings on sign-in pages</title>
+<link>https://anoni.net/news/en/history/10-20/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-20/2026</guid>
+<pubDate>Tue, 20 Oct 2026 11:35:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>A certificate warning when you sign in to a website can mean someone is impersonating that site in the middle of your connection. On this day, GreatFire, which monitors censorship in China, said the Chinese authorities were using a fake certificate to impersonate the iCloud website and intercept users&#39; connections.</description>
+<content:encoded>&lt;p&gt;When you sign in to a website and see a certificate warning, the certificate the site presented to prove its identity did not pass your browser&#39;s check, and someone in the middle of the connection may be impersonating the site. On 20 October 2014, GreatFire, which monitors censorship in China, said the Chinese authorities were impersonating the iCloud website with a fake certificate that no certificate authority had vouched for (a self-signed one) and intercepting traffic, which is known as a man-in-the-middle attack. According to MacTrast, a spokesperson for China&#39;s Foreign Ministry said Beijing was resolutely opposed to hacking. The next day, Apple posted a support page that did not mention China but told users never to enter their Apple Account details (then called an Apple ID) or password on a site that shows a certificate warning. Wherever you are in Asia, do not enter a password on any site that shows a certificate warning, and check under Settings &amp;gt; Sign-In &amp;amp; Security on your iPhone that two-factor authentication is on for your Apple Account, so that a leaked password alone is not enough to get in (as of October 2026, Apple requires it for all new accounts).&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>IP addresses logged by websites as personal data</title>
+<link>https://anoni.net/news/en/history/10-19/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-19/2026</guid>
+<pubDate>Mon, 19 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Every time you go online, websites can log the IP address you connect from. On this day, according to the court&#39;s press release, the EU&#39;s Court of Justice ruled that a dynamic IP address is personal data when a website has legal means to identify the visitor.</description>
+<content:encoded>&lt;p&gt;Every time you open a website, its servers can log the IP address you connect from; an address that changes with each new connection is called a dynamic IP address. On 19 October 2016, according to the court&#39;s press release, the EU&#39;s Court of Justice ruled that a dynamic IP address is personal data for a website operator that has legal means to obtain additional information from the internet provider to identify the visitor. The same judgment also accepted that a website may have a legitimate interest in storing certain visitor data to protect itself against cyberattacks. In Asia, Taiwan&#39;s National Development Council cited the ruling in a 2020 interpretation, noting the court&#39;s view that a dynamic IP address is personal data when it can reasonably be matched with other data to identify someone, while Singapore&#39;s data protection guidelines revised in May 2024 say an IP address may not be personal data on its own but becomes more likely to identify someone as more data points are tied to it. To find out whether the sites you use keep your IP address, start with their privacy policies.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Search terms on public Wi-Fi</title>
+<link>https://anoni.net/news/en/history/10-18/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-18/2026</guid>
+<pubDate>Sun, 18 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>When you search on Google over https on public Wi-Fi, the words you type are encrypted in transit. On this day, Google announced that signed-in users would search over HTTPS by default.</description>
+<content:encoded>&lt;p&gt;When you search on Google over https on Wi-Fi in a café or a train station, your search terms and results page are encrypted in transit, so others on the same network cannot see them. On 18 October 2011, Google announced on its official blog that users signed in to a Google Account would be redirected to HTTPS on google.com over the following weeks, noting that this matters especially on unsecured connections such as an internet café&#39;s Wi-Fi. Google&#39;s 2010 blog post says encrypted search does not reduce the data sent to Google but only hides it from third parties, and the 2011 announcement adds that clicking an ad still passes the search query to the advertiser. In mainland China, 16 of the censorship monitor GreatFire&#39;s last 17 conclusive tests, up to 8 October 2026, could not reach www.google.com, while an undated page on Baidu&#39;s webmaster platform says its whole site runs on HTTPS. Elsewhere in Asia, readers do not need to change any settings to search Google, and according to the Chrome team&#39;s announcement, from Chrome 154 in October 2026 the browser asks by default before opening a public site without HTTPS.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Apps blocked in India and the law behind them</title>
+<link>https://anoni.net/news/en/history/10-17/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-17/2026</guid>
+<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Some apps on your phone may not work if you travel to India. On this day, India&#39;s Information Technology Act came into force, letting the government order interception of communications and assistance with decryption.</description>
+<content:encoded>&lt;p&gt;If you travel to India, some apps on your phone may not work there. On 17 October 2000, India&#39;s government appointed that day, by official notification, for the Act to come into force, and its original Section 69 let a designated official order government agencies to intercept information sent through computers. Anyone called on had to help decrypt it, with up to seven years in prison for refusing (in Taiwan, interception during an investigation needs a court-issued warrant). An amendment that took effect in 2009 widened Section 69 to interception, monitoring and decryption and added Section 69A to let the government order information blocked, which the Ministry of Electronics and Information Technology used in June 2020 to block 59 apps, including TikTok and WeChat. India&#39;s government said in August 2025 that no order had been issued to lift the TikTok ban, so before a trip, check that you have a way to keep in touch that works there.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Patching of Wi-Fi encryption weaknesses</title>
+<link>https://anoni.net/news/en/history/10-16/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-16/2026</guid>
+<pubDate>Fri, 16 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your phone depends on system updates to fix weaknesses in the encryption it uses on Wi-Fi. On this day, a researcher disclosed KRACK, a weakness in WPA2 Wi-Fi encryption.</description>
+<content:encoded>&lt;p&gt;When your phone joins a Wi-Fi network with a password, the data between the phone and the wireless access point (the router) is encrypted, most commonly with the WPA2 standard or the newer WPA3. On 16 October 2017, a researcher disclosed KRACK, a weakness in WPA2 that lets an attacker within Wi-Fi range read information that was assumed to be encrypted. The researcher&#39;s website reads that the weakness is in the Wi-Fi standard itself, that any device supporting Wi-Fi is most likely affected, and that changing the Wi-Fi password does not prevent the attack. Android&#39;s November 2017 security bulletin and Apple&#39;s iOS 11.1, released at the end of October 2017, both carry fixes, and the website reads that home routers are mostly not affected, though it still recommends updating router firmware. Readers still using an old phone can check in Settings whether the Android security patch level is 6 November 2017 or later, and on an iPhone whether iOS is 11.1 or later.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Reporting channel for personal data breaches</title>
+<link>https://anoni.net/news/en/history/10-15/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-15/2026</guid>
+<pubDate>Thu, 15 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your personal data in Taiwan falls under amendments that would require companies to report leaks to a Personal Data Protection Commission, but the amendments have no effective date yet. On this day, Singapore&#39;s Parliament passed the Personal Data Protection Act, which provides for a Personal Data Protection Commission.</description>
+<content:encoded>&lt;p&gt;If a company leaks your personal data, Taiwan&#39;s Personal Data Protection Act, as amended and promulgated in November 2025, requires leaks within a defined reporting scope to be reported, and the Personal Data Protection Commission is to receive such reports. The commission&#39;s preparatory office announced in October 2025 that the commission can be established only after its organic act passes, and as of 10 October 2026 we could not find that act in the national Laws &amp;amp; Regulations Database, which still marks the effective date of the amendments as undetermined. Singapore&#39;s Parliament passed the Personal Data Protection Act on 15 October 2012, its Personal Data Protection Commission was established on 2 January 2013, and the Do Not Call Registry provisions, which let people register to opt out of marketing calls and messages, took effect on 2 January 2014. Taiwan&#39;s preparatory office runs a consultation line on the personal data law, though its announcement does not specify whether the line accepts breach complaints. To request an investigation in Taiwan, readers can contact the authority responsible for the company&#39;s sector or the local government, which Article 22 of the current Act empowers to inspect companies, while in Singapore the commission&#39;s website has a menu entry for reporting a data protection concern.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>End-to-end encryption in Zoom meetings</title>
+<link>https://anoni.net/news/en/history/10-14/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-14/2026</guid>
+<pubDate>Wed, 14 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your Zoom meetings are not end-to-end encrypted by default, and the host has to turn the option on. On this day, Zoom announced a technical preview of end-to-end encryption.</description>
+<content:encoded>&lt;p&gt;Your Zoom meetings are not end-to-end encrypted by default, and Zoom&#39;s support documentation reads that for these meetings the encryption keys are generated and managed by Zoom&#39;s servers (checked on 10 October 2026). On 14 October 2020, Zoom announced that end-to-end encryption would be available as a technical preview from the following week, to free and paid users around the world. The announcement reads that with it turned on, the keys are generated by the participants&#39; devices, and Zoom&#39;s servers only relay data without obtaining the keys needed to decrypt the meeting. According to Zoom&#39;s current documentation, turning on end-to-end encryption disables joining by telephone, the web app, cloud recording, live transcription and AI features, and the documentation recommends using it only for meetings that need extra protection. A host first turns on the &#34;Allow use of end-to-end encryption&#34; setting in the Zoom web portal and then chooses end-to-end encryption when scheduling a meeting, and hosts on free accounts must first verify a phone number by SMS.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Safari fraudulent website warning and Tencent Safe Browsing</title>
+<link>https://anoni.net/news/en/history/10-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-13/2026</guid>
+<pubDate>Tue, 13 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your iPhone&#39;s Safari fraudulent website warning may use Tencent&#39;s Safe Browsing service when the region is set to mainland China or Hong Kong. On this day, a researcher wrote on a blog that Safari&#39;s feature appeared to pass part of users&#39; browsing information to Tencent.</description>
+<content:encoded>&lt;p&gt;On your iPhone, Safari&#39;s Fraudulent Website Warning may send information calculated from the website address to Google and Apple for comparison, and Apple&#39;s Safari &amp;amp; Privacy page reads that Tencent Safe Browsing may also be used when the region is set to mainland China or Hong Kong. A cryptography researcher wrote in a blog post on 13 October 2019 that Safari on iOS 13 appeared to share part of users&#39; browsing history with Tencent, and that the feature appeared to be on by default. According to Apple&#39;s statement as quoted by MacRumors and other outlets on 14 October 2019, only devices with the region set to mainland China obtain the list of malicious sites from Tencent, and the actual URLs are not shared with the provider. The Apple page quoted by Daring Fireball at the time reads that providers may log your IP address, and the page as checked on 10 October 2026 still reads that Google and Tencent may do so, with Hong Kong now listed alongside mainland China for Tencent. The page lists Tencent only for the mainland China and Hong Kong region settings, and readers with either setting can turn the warning off under Settings &amp;gt; Apps &amp;gt; Safari, at the cost of one less prompt when opening phishing sites.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>BBC Chinese access in mainland China</title>
+<link>https://anoni.net/news/en/history/10-12/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-12/2026</guid>
+<pubDate>Mon, 12 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>You can open the BBC website normally from Taiwan, while OONI&#39;s measurements of BBC Chinese from mainland China are nearly all anomalies or failures. On this day, the BBC reported that an internet provider in Beijing appeared to be blocking its website.</description>
+<content:encoded>&lt;p&gt;You can open the BBC website normally from Taiwan or Hong Kong, where 873 of 919 and 1,322 of 1,329 of OONI&#39;s measurements from 10 July to 10 October 2026 were normal, while only 6 of 210 measurements of the simplified-character edition of BBC Chinese from mainland China were. On 12 October 1998, the BBC reported that China Net, the main state-controlled internet service provider in Beijing, was believed to be blocking www.bbc.co.uk, so users in Beijing could not listen to the BBC&#39;s Mandarin broadcast online. The report quotes an official at Beijing Telecom confirming that the site was not accessible but saying he did not know why, and Western experts saying that police give internet providers lists of banned sites. The BBC launched a version of its international news site reachable through Tor (an anonymity network that hides the route of a connection) in 2019, and in 2025 a Reporters Without Borders mirror project made its site available in 43 languages, though the announcement does not specify whether this includes the Chinese site. OONI Explorer shows how a website has been measured in each country, though some addresses, such as the traditional-character edition of BBC Chinese, had no measurements from mainland China in this period.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>End-to-end encryption and law enforcement access in messaging apps</title>
+<link>https://anoni.net/news/en/history/10-11/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-11/2026</guid>
+<pubDate>Sun, 11 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the two devices involved can read them. On this day, seven countries including Japan and India issued a statement calling on technology companies to let law enforcement read encrypted content under lawful authorisation.</description>
+<content:encoded>&lt;p&gt;Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the sender&#39;s and the recipient&#39;s devices can unlock them, and LINE&#39;s help page reads that the feature cannot be turned off. On 11 October 2020, the US, UK, Australia, New Zealand and Canada, together with India and Japan (listed in the statement by country name only), declared support for strong encryption while calling on technology companies to let law enforcement read content under lawful authorisation. India&#39;s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 require large messaging services to enable identification of the first originator of a message on the order of a court or competent authority, and WhatsApp sued in the Delhi High Court, arguing that tracing would break end-to-end encryption. India&#39;s Ministry of Electronics and Information Technology wrote in a 2021 press release that tracing is a last resort for when other remedies have proven ineffective, and according to The Tribune, WhatsApp&#39;s lawyer told the court in 2024 that WhatsApp would leave India if forced to break encryption. As of 10 October 2026 we could not find a judgment in the case, and LINE users need no extra setting because Letter Sealing cannot be turned off, though group voice and video calls, albums and Notes are outside end-to-end encryption.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Wikipedia access in mainland China</title>
+<link>https://anoni.net/news/en/history/10-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-10/2026</guid>
+<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>You can read Wikipedia from Taiwan, but in mainland China every OONI measurement in the month to 10 October 2026 was an anomaly or a failure. On this day, users in mainland China reported that English Wikipedia, blocked for nearly a year, could be reached again.</description>
+<content:encoded>&lt;p&gt;You can read Wikipedia from Taiwan, while a May 2019 statement from the Wikimedia Foundation reads that Wikipedia was blocked across all language versions in mainland China. On 10 October 2006, contributors to Chinese Wikipedia reported on the foundation&#39;s mailing list that English Wikipedia could be reached from mainland China, while the Chinese version remained blocked. The Wikipedia Signpost, the community newsletter, reported that the block began in October 2005 and that no official explanation was available for lifting it, and a November notice from Reporters Without Borders puts the unblocking of the Chinese version at around 13 November. OONI recorded 33 measurements each of Chinese and English Wikipedia from mainland China between 10 September and 10 October 2026, and all of them were anomalies (a mismatch with the control measurement, which does not by itself confirm blocking) or failures. OONI&#39;s measurements from Hong Kong over the six months to 10 October 2026 were all normal, and anyone can run OONI Probe to check which sites their own network blocks, though OONI&#39;s FAQ reads that running it can potentially be risky depending on the country.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Apps removed from the App Store at government request</title>
+<link>https://anoni.net/news/en/history/10-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-09/2026</guid>
+<pubDate>Fri, 09 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your App Store account&#39;s country or region determines which apps you can download. On this day, Apple removed a crowd-sourced map app showing Hong Kong police locations from the App Store.</description>
+<content:encoded>&lt;p&gt;Which apps you can download from the App Store depends on the country or region set on your account, and Apple&#39;s 2025 transparency report reads that an app removed at a government&#39;s demand is removed only from that country or region. On 9 October 2019 (US time; CNN, using Hong Kong time, dates it 10 October), Apple removed HKmap.live, a crowd-sourced map app showing the locations of Hong Kong police, from the App Store, and Reuters reported that the removal was global. Apple&#39;s written statement to the media reads that it had verified with the Hong Kong police&#39;s Cyber Security and Technology Crime Bureau that the app had been used to target and ambush police, and that the app violated its guidelines and local laws. The developer replied on Twitter that there was no evidence for that accusation and that the removal was a political decision to suppress freedom and human rights in Hong Kong. The same transparency report lists apps removed at government demand in 2025 by country or region, with 196 in mainland China, 335 in Vietnam, 108 in South Korea, 54 in India, 25 in Japan and 1 in Hong Kong, and Taiwan does not appear on the list.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Hong Kong&#39;s anti-doxxing removal powers</title>
+<link>https://anoni.net/news/en/history/10-08/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-08/2026</guid>
+<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>If your personal details are posted online in Hong Kong, you can ask the Privacy Commissioner for Personal Data to have platforms remove them. On this day, Hong Kong&#39;s anti-doxxing provisions took effect.</description>
+<content:encoded>&lt;p&gt;If your personal details are posted online in Hong Kong, you can ask the Office of the Privacy Commissioner for Personal Data to have platforms remove them, including social media platforms based overseas. On 8 October 2021, the Personal Data (Privacy) (Amendment) Ordinance 2021 took effect and made doxxing a criminal offence. The commissioner&#39;s announcement said the amendment aimed to combat doxxing acts that intrude on personal data privacy, and the amendment gave the office powers to conduct criminal investigations and issue cessation notices. Before the law passed, the Asia Internet Coalition, whose members include Apple, Facebook and Google, wrote that the possibility of prosecuting local staff would create uncertainty for businesses, as quoted by The Register. Figures the office published show that by the end of 2025 it had issued 2,104 cessation notices to 57 online platforms, with an overall compliance rate above 96%. The ordinance is Hong Kong law, so if you face doxxing elsewhere, see &lt;a href=&#34;https://anoni.net/news/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;, published on 3 October.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Import rules for the encryption in your phone</title>
+<link>https://anoni.net/news/en/history/10-07/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-07/2026</guid>
+<pubDate>Wed, 07 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, exempt from import licensing. On this day, China&#39;s State Council issued the Regulations on the Administration of Commercial Cryptography, which once required encryption products to be state-approved.</description>
+<content:encoded>&lt;p&gt;In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, which is exempt from import licensing. That classification comes from the Regulations on the Administration of Commercial Cryptography, which China&#39;s State Council issued on 7 October 1999 and revised in 2023. China&#39;s Cryptography Law defines commercial cryptography as encryption used to protect information that is not a state secret. As quoted by the law firm Zhong Lun, the 1999 version allowed organisations and individuals to use only commercial cryptography products approved by the state cryptography authority. It also barred them from using products they had developed themselves or that were made abroad. The 2023 revision states that commercial cryptography used in mass-market consumer products is not subject to import licensing or export controls. Import licensing applies only to commercial cryptography on the import licence list, and readers who use their phones outside mainland China are not affected by these regulations.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>How long your phone records are kept</title>
+<link>https://anoni.net/news/en/history/10-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-06/2026</guid>
+<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Every call you make leaves a record of both numbers and the time, which carriers in Taiwan must keep for six months. On this day, the EU&#39;s top court ruled that member states generally cannot require carriers to keep everyone&#39;s traffic and location data.</description>
+<content:encoded>&lt;p&gt;Every call you make leaves a record of both numbers, the date and the start and end times. In Taiwan, the regulations on agencies&#39; queries of telecom records (電信事業處理有關機關查詢電信通信紀錄實施辦法) set the retention period for mobile call records at six months. On 6 October 2020, the Grand Chamber of the Court of Justice of the European Union ruled that member states generally cannot require telecom providers to retain or hand over everyone&#39;s traffic and location data across the board, whether to fight crime in general or to safeguard national security. A member state facing a genuine and present or foreseeable serious threat to national security can still require such retention, but only for a period limited to what is strictly necessary, which may be extended while the threat persists. Call records are kept by carriers under the law, and there is no setting on your side that turns them off.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Wiretap capability built into phone networks</title>
+<link>https://anoni.net/news/en/history/10-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-05/2026</guid>
+<pubDate>Mon, 05 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Ordinary text messages on your phone are not end-to-end encrypted. On this day, the US House passed the bill requiring carriers to build in wiretap capability.</description>
+<content:encoded>&lt;p&gt;Ordinary text messages on your phone are not end-to-end encrypted, the kind of encryption that only the sender and recipient can read, and Google&#39;s help page for Google Messages says this encryption covers only the newer RCS messages. On 5 October 1994, the US House of Representatives passed the Communications Assistance for Law Enforcement Act (CALEA), which requires telecom carriers to make their equipment capable of assisting law enforcement wiretaps. It was signed into law on 25 October, and the law also says a carrier need not decrypt communications a subscriber encrypted unless the carrier provided the encryption and holds the information needed to decrypt it. Taiwan&#39;s Communication Security and Surveillance Act likewise requires designated carriers to equip their systems to carry out interception, and Canada&#39;s Bill C-22, in our story the same day, would impose a similar requirement (see &lt;a href=&#34;https://anoni.net/news/en/2026/10/canada-c22-lawful-access/&#34;&gt;Canada&#39;s Bill C-22, lawful access and encryption&lt;/a&gt;). For conversations you need to keep private, use an end-to-end encrypted messaging app, and in Google Messages on Android, a lock on the send button means the conversation is end-to-end encrypted.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Permission usage history on your phone</title>
+<link>https://anoni.net/news/en/history/10-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-04/2026</guid>
+<pubDate>Sun, 04 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On an Android phone, the Privacy Dashboard shows you which apps recently used the microphone, camera and location. On this day, Google released the Android 12 source code that introduced it.</description>
+<content:encoded>&lt;p&gt;On an Android phone, you can open the Privacy Dashboard to see which apps used the microphone, camera and location in the past 24 hours or 7 days. On 4 October 2021, Google released Android 12 to the Android Open Source Project (AOSP), and its developer blog said the new dashboard gives users better visibility into when apps access the microphone, camera and location. Two years later to the day, Google added a section to the location permission dialog in Android 14, shown when an app&#39;s developer has declared that the app shares location data with third parties. Both cover only what apps do, not tracking code on websites, which is what our story the same day is about (see &lt;a href=&#34;https://anoni.net/news/en/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;Tracking pixels that sent doctors&#39; appointments to social platforms&lt;/a&gt;). To see which apps have used these permissions recently, open Settings, tap Security &amp;amp; privacy or Privacy, and then tap Privacy dashboard.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Passwords and security questions in old accounts</title>
+<link>https://anoni.net/news/en/history/10-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-03/2026</guid>
+<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Passwords and security questions you have reused elsewhere may have leaked long ago along with an old account. On this day, Yahoo disclosed that an earlier breach had affected every account it had at the time.</description>
+<content:encoded>&lt;p&gt;If you reuse a password, or the same security questions for account recovery, across different sites, a leak at any one of them puts the others at risk too. On 3 October 2017, Yahoo announced that a breach in August 2013 had affected all of its user accounts. Taiwan&#39;s Central News Agency reported the next day that this came to about 3 billion, three times the earlier estimate. Yahoo&#39;s FAQ says the stolen information may have included names, email addresses, phone numbers, dates of birth, hashed passwords and, in some accounts, security questions and answers. Names, phone numbers and birthdays are also what doxxers piece together, and our story the same day covers how to guard against that (see &lt;a href=&#34;https://anoni.net/news/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;). Yahoo advised anyone who had used the same or similar passwords and security questions on other accounts to change them as well.&lt;/p&gt;</content:encoded>
+</item>
+<item>
+<title>Data that can still identify you after names are removed</title>
+<link>https://anoni.net/news/en/history/10-02/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-02/2026</guid>
+<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Health records with your name removed may be shared for research and can still be matched against other data to work out who they belong to. On this day, Netflix released over 100 million de-identified member ratings for a contest.</description>
+<content:encoded>&lt;p&gt;If you are covered by Taiwan&#39;s National Health Insurance, your medical records are used for research and other purposes beyond insurance once names and other identifiers are removed. On 2 October 2006, Netflix launched a contest to improve its recommendation algorithm and released more than 100 million movie ratings from over 480,000 members. The contest rules stated that customer IDs had been replaced by randomly assigned ones, but two weeks later researchers matched the data against public ratings on IMDb, identified the records of known users and, as their paper put it, uncovered their apparent political preferences and other potentially sensitive information. Taiwan&#39;s Constitutional Court ruled in August 2022 that using health insurance data beyond its original purpose, without a way for people to ask for it to stop, was partly unconstitutional. The National Health Insurance Data Management Act, passed in December 2025, sets out how to make that request and the cases where it can be refused. If you are enrolled in Taiwan&#39;s National Health Insurance and do not want your data used for research, you can apply through the 健保快易通 app&#39;s section for stopping secondary use (健保資料停止目的外利用) or at a National Health Insurance Administration service counter.&lt;/p&gt;</content:encoded>
+</item>
+</channel>
+</rss>
