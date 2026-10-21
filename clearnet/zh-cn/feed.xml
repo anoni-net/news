@@ -6,7 +6,112 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 21 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>ChatGPT 广告的客户名单比对与对话内容</title>
+<link>https://anoni.net/news/zh-cn/2026/10/chatgpt-ads-customer-lists/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/chatgpt-ads-customer-lists</guid>
+<pubDate>Thu, 22 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>ChatGPT 的广告主可以上传电子邮件、电话号码或手机广告识别码的名单，让广告只出现在名单上的用户面前。广告只显示给 Free 与 Go 方案，台湾 9 月 23 日起陆续推出。依 OpenAI 到 10 月 20 日的帮助页，关闭广告个性化之后，ChatGPT 仍会依当前的对话内容挑选广告。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，来自 OpenAI、404 Media、Gizmodo 等 5 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;404 Media 10 月 15 日报道，ChatGPT 的广告主可以上传电子邮件、电话号码或手机广告识别码的名单，让广告只出现在名单上的用户面前。OpenAI 面向广告主的帮助页也列出这项功能，名称是自定义受众（Custom Audiences）。ChatGPT 的广告只显示给 Free 与较低价的付费方案 Go，台湾 9 月 23 日起陆续推出，Plus、Pro、Business 等方案没有广告。依 OpenAI 到 10 月 20 日的用户帮助页，关闭广告个性化之后，ChatGPT 仍会依当前的对话内容挑选广告。&lt;/p&gt;
+&lt;p&gt;根据自定义受众的帮助页，名单可以是电子邮件、电话号码、两者的 SHA-256 哈希值，或 Google 广告 ID（GAID，Android 手机上的广告识别码）。哈希是把数据转成固定长度字符串的单向运算。上传时也可以用没有哈希的原始数据，上传的文件通常在 24 小时内删除。OpenAI 把名单跟 ChatGPT 的用户比对，比对到的人才算进受众。&lt;/p&gt;
+&lt;p&gt;名单可以用来只对受众投放、排除受众，或提高、降低对受众的出价（广告主愿意为一次曝光或点击支付的价格）。只对受众投放与调整出价时，比对到的用户至少要 25,000 人，排除用的名单可以少于 25,000 人。广告管理工具也不会显示比对到哪些人。&lt;/p&gt;
+&lt;p&gt;依 Gizmodo 转述 404 Media 的报道，404 Media 自己在 ChatGPT 投放了两组广告活动测试这套系统。依同一篇转述，OpenAI 收到没有哈希的原始数据后会不会再哈希，并不清楚。404 Media 的报道有付费墙，付费墙之前公开的只有开头两段，其余细节依 Gizmodo 的转述。&lt;/p&gt;
+&lt;p&gt;依 OpenAI 的用户帮助页，OpenAI 不会把用户的对话、记忆、姓名、电子邮件、精确位置与 IP 地址交给广告主，广告主只会收到观看与点击次数这类汇总的效果数据。用户通过广告给广告主发消息时，广告主看得到那些消息。个人健康、心理健康与政治等敏感话题的对话附近不放广告，被判断为未满 18 岁的账号与临时对话也不显示广告。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;用客户名单投放广告在业界很常见，Google 的 Customer Match 与 Meta 的客户名单自定义受众都是同类功能。依 Meta 的帮助页，Meta 会先哈希名单再比对，Google 的帮助页则写 Google 不接收实际的电子邮件地址。OpenAI 的帮助页列出的上传格式包含没有哈希的原始数据。404 Media 的报道也提到，ChatGPT 的广告还会依用户输入的提示词挑选。&lt;/p&gt;
+&lt;p&gt;依 OpenAI 面向广告主的 Ad Tools Terms（广告工具条款），名单只能是广告主自己收集的第一方数据，不得取自数据经纪商（收集并转售个人数据的商家）。广告主要保证已依规定告知当事人，并取得必要的同意或其他法律依据，条款没有写 OpenAI 如何核实。到 10 月 20 日，用户帮助页没有提到能不能查自己在哪些广告主的名单里。广告菜单里有「About this ad」可以了解为什么看到某则广告，帮助页没有提到它会不会显示客户名单。&lt;/p&gt;
+&lt;p&gt;9 月 26 日那篇导读写的是像素（广告主装在自己网站上的追踪代码），它会把其他网站的浏览数据发回 OpenAI。OpenAI 的隐私政策（EEA、英国与瑞士以外的版本）提到，OpenAI 可能从广告主收到用户在广告主那里的购买记录这类信息，用来显示更相关的广告。&lt;/p&gt;
+&lt;p&gt;到 10 月 20 日，中国大陆、香港与澳门不在 OpenAI 列出的 ChatGPT 支持国家和地区清单内，API 的支持清单同样没有列出。依 ChatGPT 的清单页，在清单以外的地方使用可能导致账号被封锁或停用。ChatGPT 广告 9 月 23 日起在印尼、马来西亚、菲律宾、新加坡、泰国、越南与台湾陆续推出，在这之前亚太地区已在澳大利亚、新西兰、日本、韩国与印度推出。下面的设置写给在广告已推出的地方使用 Free 或 Go 方案的人。&lt;/p&gt;
+&lt;p&gt;用 Free 或 Go 方案的人，可以到 ChatGPT 的「Settings」、「Ad Controls」关闭「Personalize ads」，也可以关闭「Past chats and memory」这个只影响广告的开关（选项名称照英文版帮助页）。同一处也可以删除广告数据，最多 30 天后从服务器移除。帮助页提到手机 App 看不到这个选项时，要先更新到最新版。关闭个性化不会移除广告，系统仍会依当前的对话挑选广告。&lt;/p&gt;
+&lt;p&gt;不想看到广告的人可以改用 Plus 或 Pro，Free 方案也有无广告的选项，帮助页提到供应情况可能因地区和时间而不同。无广告选项的代价是每天能发的消息较少，也不能使用图片生成等工具，Go 方案的用户要先切回 Free 才能使用。帮助中心有简体中文版，切换步骤以英文版的「Change plan to go ad-free」为准。依帮助页「Temporary Chats will not show ads」，本文推论不想让某段对话影响广告的人可以改用临时对话。&lt;/p&gt;
+&lt;p&gt;名单可以包含电子邮件、电话号码与 GAID，OpenAI 没有说明比对时用的是账号的哪些数据。若比对的是账号登记的邮箱与电话（本文的推论），跟购物、会员用的不同时，名单可能比对不到。OpenAI 之后会不会说明收到原始数据后如何处理、关闭个性化是否也排除名单比对，是接下来可以留意的地方。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/20001346-set-up-custom-audiences-for-your-campaign&#34;&gt;Set up Custom Audiences for your Campaign&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://help.openai.com/zh-hant/articles/20001047-ads-in-chatgpt&#34;&gt;ChatGPT 中的廣告&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/20001047-ads-in-chatgpt&#34;&gt;Ads in ChatGPT&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/policies/ad-tools-terms/&#34;&gt;Ad Tools Terms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-24&#34;&gt;2026 年 8 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/policies/privacy-policy/&#34;&gt;Privacy policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-30&#34;&gt;2026 年 7 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/&#34;&gt;ChatGPT Ads expands to Southeast Asia and Taiwan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.openai.com/api/docs/supported-countries&#34;&gt;Supported countries and territories&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/how-chatgpt-targets-ads-to-you-based-on-your-prompts-phone-number-and-email/&#34;&gt;How ChatGPT Targets Ads To You Based On Your Prompts, Phone Number, and Email&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gizmodo.com/heres-how-chatgpt-is-targeting-you-with-ads-2000826457&#34;&gt;Here&amp;#39;s How ChatGPT Is Targeting You With Ads&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Gizmodo&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.facebook.com/business/help/341425252616329&#34;&gt;About customer list custom audiences&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/google-ads/answer/6334160&#34;&gt;How Google uses Customer Match data&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Ledger 硬件钱包的植入芯片事件</title>
 <link>https://anoni.net/news/zh-cn/2026/10/ledger-hardware-wallet-implant/</link>
@@ -2553,64 +2658,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-15&#34;&gt;2025 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Firefox 157 的 TLS 密钥记录警告</title>
-<link>https://anoni.net/news/zh-cn/2026/10/firefox-tls-keylog-warning/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/firefox-tls-keylog-warning</guid>
-<pubDate>Mon, 12 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>桌面版 Firefox 157（9 月 29 日发布）在电脑被设置成记录加密密钥时会显示警告。Mozilla 的帮助页提到多半是杀毒或安全软件设置的，出现警告不代表电脑中毒，打不开网站时可以先检查这类软件的 HTTPS 扫描功能。</description>
-<content:encoded>&lt;p&gt;整理 5 篇原文，来自 Mozilla、Mozilla Bugzilla、RFC Editor 等 4 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Firefox 9 月 29 日发布的 157 版，在电脑被设置成记录加密密钥时，会在地址栏盾牌图标的网站信息面板与设置页显示警告。版本说明只在桌面版列出此项变更，Android 与 iOS 的 157 版版本说明没有提到。根据 Mozilla 的帮助页，出现警告不代表电脑中毒，多半是杀毒或安全软件在检查加密连接。&lt;/p&gt;
-&lt;p&gt;依帮助页，触发警告的是 &lt;code&gt;SSLKEYLOGFILE&lt;/code&gt; 这个环境变量（操作系统提供给程序读取的设置值），它会让 Firefox 把 HTTPS 连接用的加密密钥存成文件。能读到该文件的软件可能可以解密并查看 HTTPS 流量。视软件的用法，也可能拦截连接、冒充网站的服务器并修改数据。部分连接错误页也会多一条横幅，英文界面显示「Your connection may not be private」，链接到同一份帮助页。&lt;/p&gt;
-&lt;p&gt;Mozilla 2026 年 4 月在 bug 跟踪系统建立的记录提到改动的原因，建立者写到似乎有不少杀毒软件用该变量解密 HTTPS 流量，有时会让连接以意想不到的方式出错。同一则记录引用 Mozilla 的使用统计，Windows 上约一成用户的电脑有该变量。依帮助页的介绍，软件开发者看到警告，可能是调试工具开着。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;HTTPS 每次连接都会协商出一组密钥，平常只留在浏览器与网站服务器两端，连接经过的网络设备看不到内容。&lt;code&gt;SSLKEYLOGFILE&lt;/code&gt; 原本是给开发者调试用的。密钥写进文件之后，读得到文件、又取得那段加密流量的程序，就有机会解开这些连接。IETF（制定互联网技术标准的组织）2026 年 7 月发布的参考性文件 RFC 9850 记载了密钥文件的格式，同时提醒它只该用在保护测试数据的系统，不能用在正式环境。&lt;/p&gt;
-&lt;p&gt;看到警告又打不开网站时，帮助页建议先到杀毒或安全软件的设置里找「HTTPS 扫描」、「加密流量监控」、「网页防护」这类功能。软件允许的话先暂时关掉，再看连接问题是否还在。关掉的期间，那套软件也不会再检查加密的网页内容。帮助页有简体中文版，页首标示是机器翻译，没有经过人工校对。&lt;/p&gt;
-&lt;p&gt;杀毒软件的 HTTPS 扫描要读得到所有加密连接才能检查网页内容，要不要让它看到，是用户要做的取舍。依帮助页，只要信任那套软件看到你在网上做的一切，就不一定需要担心。帮助页也提到通常不必停用杀毒软件，Firefox 本身有 Safe Browsing，会警告已知的恶意与诈骗网站。&lt;/p&gt;
-&lt;p&gt;北京谋智火狐 2025 年 7 月 27 日的公告提到，它在 2025 年 9 月 29 日之后终止自己负责的 Firefox 中国大陆业务，Mozilla 将自行或通过授权的第三方继续负责。公告也提到浏览器本身在大陆继续可用并保持更新，下载改到 Mozilla 的 firefox.com/download。157 版的版本说明没有写区域限制，从那里下载的桌面版应同样带有此项警告。&lt;/p&gt;
-&lt;p&gt;没有安装这类软件、也没有在做网络调试的人看到警告，可能是其他程序设置了该变量，也可能是有人手动设置过。这是本文依帮助页列出的原因推断的，帮助页没有提供这种情况的处理步骤。本文的建议是请熟悉电脑的人协助检查系统的环境变量设置。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.firefox.com/en-US/firefox/157.0/releasenotes/&#34;&gt;Firefox 157.0, See All New Features, Updates and Fixes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.mozilla.org/en-US/kb/sslkeylogfile-warning&#34;&gt;Troubleshoot network errors when TLS key logging is enabled&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-25&#34;&gt;2026 年 6 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2035411&#34;&gt;Add a warning to about:neterror when SSLKEYLOGFILE is in use&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-28&#34;&gt;2026 年 4 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc9850.html&#34;&gt;RFC 9850 - The SSLKEYLOGFILE Format for TLS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;RFC Editor&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20250728090400/https://www.firefox.com.cn/farewell/&#34;&gt;关于 Firefox 在中国持续运营但北京火狐关闭及 Firefox 账户服务终止的重要公告&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;北京谋智火狐信息技术有限公司&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-27&#34;&gt;2025 年 7 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
