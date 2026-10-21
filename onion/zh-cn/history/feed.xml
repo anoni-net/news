@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>看内容前的年龄验证</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-22/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-22/2026</guid>
+<pubDate>Thu, 22 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在网站或 App 被要求验证年龄时，常要交出信用卡、证件或其他能识别身份的信息。这一天，美国的公民自由团体起诉挑战刚签署的《儿童在线保护法》，主张验证年龄与身份的要求会让读者无法匿名阅读。</description>
+<content:encoded>&lt;p&gt;你在网站或 App 被要求验证年龄时，常要交出信用卡、证件或其他能识别身份的信息。1998 年 10 月 22 日，美国公民自由联盟、电子前哨基金会等 17 个原告在费城的联邦法院挑战前一天签署的《儿童在线保护法》（COPA），主张验证年龄与身份的要求会让读者无法匿名阅读。COPA 让在网络上以商业目的提供对未成年人有害内容的经营者负刑责，经营者以信用卡、成人访问码等方式限制未成年人获取，可以作为抗辩。COPA 从 1999 年起受法院禁令阻挡、一直没有施行，美国最高法院 2025 年审理得州的法律时，判决要求色情网站验证访客满 18 岁的规定合宪。在中国大陆，2024 年施行的《未成年人网络保护条例》要求网络游戏服务提供者通过统一的未成年人网络游戏电子身份认证系统等手段验证未成年用户的真实身份（2026 年 10 月查证）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>家用网络摄像头的默认密码</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-21/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在其他网站用过的密码与密保问题，可能早就跟着一个旧账号外泄。这一天，Yahoo 公布早年的一次入侵影响了当时所有的账号。</description>
 <content:encoded>&lt;p&gt;你如果在不同网站重复使用同一组密码或密保问题，只要其中一个网站的数据外泄，其他账号也跟着有风险。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影响了所有用户账号，台湾中央社报道的数字约为原先估计 3 倍的 30 亿个。Yahoo 的说明页写明，外泄的信息可能包括姓名、电子邮箱、电话、生日、经过哈希处理（转成看不出原文的代码）的密码，部分账号还有密保问题与答案。姓名、电话与生日也是人肉搜索时用来拼凑个人信息的材料，本站同一天的导读整理了预防的做法（见&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/eff-doxxing-safety/&#34;&gt;人肉搜索的预防与应对&lt;/a&gt;）。Yahoo 建议，在其他账号用过相同或类似密码与密保问题的人，都要一起更换。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>去掉姓名后仍可被识别的数据</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-02/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-02/2026</guid>
-<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。这一天，Netflix 为了竞赛公开超过 1 亿条去除身份信息的会员评分。</description>
-<content:encoded>&lt;p&gt;你的数据即使去掉姓名，跟其他公开数据比对时仍可能被认出是谁的。2006 年 10 月 2 日，Netflix 为了推荐算法竞赛公开 48 万多名会员的超过 1 亿条电影评分，规则写明会员编号都换成了随机的代号。两周后，研究者把这份数据跟 IMDb 上公开的评分比对并认出了特定会员，论文写明还可以推断出他们可能的政治倾向等敏感信息。台湾的宪法法庭在 2022 年 8 月判决健保数据的目的外利用缺少让当事人请求停止的规定而部分违宪，台湾立法院在 2025 年 12 月三读通过《全民健康保险资料管理条例》补上请求停止的程序与例外情形。用户这一端能做的，是留意 App 与网站的隐私政策写了哪些数据会提供给第三方，台湾的读者可以通过健保快易通 App 申请停止健保数据的目的外利用。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

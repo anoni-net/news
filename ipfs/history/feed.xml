@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>看內容前的年齡驗證</title>
+<link>https://anoni.net/news/history/10-22/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-22/2026</guid>
+<pubDate>Thu, 22 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在網站或 App 被要求驗證年齡時，常要交出信用卡、證件或其他能辨識身分的資料。這一天，美國的公民自由團體提告挑戰剛簽署的《兒童線上保護法》，主張驗證年齡與身分的要求會讓讀者無法匿名閱讀。</description>
+<content:encoded>&lt;p&gt;你在網站或 App 被要求驗證年齡時，常要交出信用卡、證件或其他能辨識身分的資料。1998 年 10 月 22 日，美國公民自由聯盟、電子前哨基金會等 17 個原告在費城的聯邦法院挑戰前一天簽署的《兒童線上保護法》（COPA），主張驗證年齡與身分的要求會讓讀者無法匿名閱讀。COPA 讓在網路上以商業目的提供對未成年人有害內容的業者負刑責，業者以信用卡、成人存取碼等方式限制未成年人取得，可以作為抗辯。COPA 從 1999 年起受法院禁制令阻擋、一直沒有施行，美國最高法院 2025 年審理德州的法律時，判決要求色情網站驗證訪客滿 18 歲的規定合憲。台灣現行的《兒童及少年福利與權益保障法》沒有點名要求驗證年齡，衛福部 2026 年 4 月預告的修正草案（依民間司法改革基金會轉錄的第 59 條）要求平台與內容提供者採取適齡識別或其他可行的必要措施（標準與方式由主管機關另訂），讀者目前不需要因此調整設定（2026 年 10 月查證）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>家用網路攝影機的預設密碼</title>
 <link>https://anoni.net/news/history/10-21/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在其他網站用過的密碼與提示問題，可能早就跟著一個舊帳號外洩。這一天，Yahoo 公布早年的一次入侵影響了當時所有的帳號。</description>
 <content:encoded>&lt;p&gt;你如果在不同網站重複使用同一組密碼或提示問題，只要其中一個網站的資料外洩，其他帳號也跟著有風險。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影響了所有使用者帳號，中央社報導的數字約為原先估計 3 倍的 30 億個。Yahoo 的說明頁寫明，外洩的資料可能包括姓名、Email、電話、生日、經過雜湊處理（轉成看不出原文的代碼）的密碼，部分帳號還有安全提示問題與答案。姓名、電話與生日也是肉搜時用來拼湊個人資料的材料，本站同一天的導讀整理了預防的做法（見&lt;a href=&#34;https://anoni.net/news/2026/10/eff-doxxing-safety/&#34;&gt;肉搜的預防與應變&lt;/a&gt;）。Yahoo 建議，在其他帳號用過相同或類似密碼與提示問題的人，都要一起更換。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>去除姓名後仍可被辨識的資料</title>
-<link>https://anoni.net/news/history/10-02/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-02/2026</guid>
-<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的健保就醫紀錄去除姓名後會提供研究使用，跟其他資料比對時仍可能被認出是誰的。這一天，Netflix 為了競賽公開超過 1 億筆去除身分的會員評分。</description>
-<content:encoded>&lt;p&gt;你在台灣的健保就醫紀錄，去除姓名等身分資訊後會提供學術研究等健保以外的用途。2006 年 10 月 2 日，Netflix 為了推薦演算法競賽公開 48 萬多名會員的超過 1 億筆電影評分，規則寫明會員編號都換成了隨機的代號。兩週後，研究者把這份資料跟 IMDb 上公開的評分比對並認出了特定會員，論文寫明還可以推斷出他們可能的政治傾向等敏感資訊。台灣的憲法法庭在 2022 年 8 月判決健保資料的目的外利用缺少讓當事人請求停止的規定而部分違憲，立法院在 2025 年 12 月三讀通過《全民健康保險資料管理條例》補上請求停止的程序與例外情形。不想讓自己的健保資料用在研究的人，可以透過健保快易通 App 的「健保資料停止目的外利用」專區，或到健保署的服務窗口申請。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

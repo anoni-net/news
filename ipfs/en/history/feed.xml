@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Wed, 21 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Age checks before you can see content</title>
+<link>https://anoni.net/news/en/history/10-22/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-22/2026</guid>
+<pubDate>Thu, 22 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>When a website or app asks you to verify your age, you often have to hand over a credit card, an ID document or other information that identifies you. On this day, US civil liberties groups went to court to challenge the newly signed Child Online Protection Act, arguing that its age verification and identification requirements would stop readers from accessing speech anonymously.</description>
+<content:encoded>&lt;p&gt;When a website or app asks you to verify your age, you often have to hand over a credit card, an ID document or other information that identifies you. On 22 October 1998, 17 plaintiffs including the American Civil Liberties Union and the Electronic Frontier Foundation went to the federal court in Philadelphia to challenge the Child Online Protection Act (COPA), signed the day before, arguing that its age verification and identification requirements would stop readers from accessing speech anonymously. COPA made commercial providers of material harmful to minors on the web criminally liable, though restricting minors&#39; access through means such as a credit card or an adult access code could be raised as a defense. COPA was blocked by court injunctions from 1999 and never took effect, and in 2025, in a case about a Texas law, the US Supreme Court upheld a requirement for pornography sites to verify that visitors are at least 18. In Asia-Pacific, Australia&#39;s under-16 social media rule has applied since 10 December 2025 and requires information collected for age checks to be destroyed after use, while Malaysia&#39;s child protection code, which took effect on 1 June 2026 with a grace period for providers to complete verification, bars children under 16 from registering social media accounts.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Default passwords on home security cameras</title>
 <link>https://anoni.net/news/en/history/10-21/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Passwords and security questions you have reused elsewhere may have leaked long ago along with an old account. On this day, Yahoo disclosed that an earlier breach had affected every account it had at the time.</description>
 <content:encoded>&lt;p&gt;If you reuse a password, or the same security questions for account recovery, across different sites, a leak at any one of them puts the others at risk too. On 3 October 2017, Yahoo announced that a breach in August 2013 had affected all of its user accounts. Taiwan&#39;s Central News Agency reported the next day that this came to about 3 billion, three times the earlier estimate. Yahoo&#39;s FAQ says the stolen information may have included names, email addresses, phone numbers, dates of birth, hashed passwords and, in some accounts, security questions and answers. Names, phone numbers and birthdays are also what doxxers piece together, and our story the same day covers how to guard against that (see &lt;a href=&#34;https://anoni.net/news/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;). Yahoo advised anyone who had used the same or similar passwords and security questions on other accounts to change them as well.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Data that can still identify you after names are removed</title>
-<link>https://anoni.net/news/en/history/10-02/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-02/2026</guid>
-<pubDate>Fri, 02 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Health records with your name removed may be shared for research and can still be matched against other data to work out who they belong to. On this day, Netflix released over 100 million de-identified member ratings for a contest.</description>
-<content:encoded>&lt;p&gt;If you are covered by Taiwan&#39;s National Health Insurance, your medical records are used for research and other purposes beyond insurance once names and other identifiers are removed. On 2 October 2006, Netflix launched a contest to improve its recommendation algorithm and released more than 100 million movie ratings from over 480,000 members. The contest rules stated that customer IDs had been replaced by randomly assigned ones, but two weeks later researchers matched the data against public ratings on IMDb, identified the records of known users and, as their paper put it, uncovered their apparent political preferences and other potentially sensitive information. Taiwan&#39;s Constitutional Court ruled in August 2022 that using health insurance data beyond its original purpose, without a way for people to ask for it to stop, was partly unconstitutional. The National Health Insurance Data Management Act, passed in December 2025, sets out how to make that request and the cases where it can be refused. If you are enrolled in Taiwan&#39;s National Health Insurance and do not want your data used for research, you can apply through the 健保快易通 app&#39;s section for stopping secondary use (健保資料停止目的外利用) or at a National Health Insurance Administration service counter.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
