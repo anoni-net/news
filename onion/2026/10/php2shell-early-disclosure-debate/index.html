@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PHP 漏洞的協調揭露與修補前的提前公開 | anoni.net 新聞導讀</title>
+<meta name="description" content="PHP 兩個漏洞在協調揭露期間消息外流。10 月 21 日修補發布之前，有研究者公開據稱完整的技術細節，發行業者提前推出含修補的映像檔。資安業者也替客戶提前部署了防護，這篇整理各方對禁令與提前公開的看法，以及美國、歐盟與中國大陸的相關說明與法規。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-early-disclosure-debate/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/php2shell-early-disclosure-debate/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/">
+<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml">
+<meta property="og:site_name" content="anoni.net 新聞導讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP 漏洞的協調揭露與修補前的提前公開">
+<meta property="og:description" content="PHP 兩個漏洞在協調揭露期間消息外流。10 月 21 日修補發布之前，有研究者公開據稱完整的技術細節，發行業者提前推出含修補的映像檔。資安業者也替客戶提前部署了防護，這篇整理各方對禁令與提前公開的看法，以及美國、歐盟與中國大陸的相關說明與法規。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og.png?v=970cfc6f1d">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net 新聞導讀">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net 新聞導讀">
+<meta property="article:published_time" content="2026-10-23T00:10:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "PHP 漏洞的協調揭露與修補前的提前公開",
+  "description": "PHP 兩個漏洞在協調揭露期間消息外流。10 月 21 日修補發布之前，有研究者公開據稱完整的技術細節，發行業者提前推出含修補的映像檔。資安業者也替客戶提前部署了防護，這篇整理各方對禁令與提前公開的看法，以及美國、歐盟與中國大陸的相關說明與法規。",
+  "datePublished": "2026-10-23T00:10:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og.png",
+  "inLanguage": "zh-Hant",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Today's PHP Security Release, and How We're Strengthening PHP Security",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP blames supply chain security biz Chainguard for putting huge chunks of the web at risk",
+      "url": "https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP says AI review of critical bugs first sparked alarm in August, but signs surfaced in 2024",
+      "url": "https://therecord.media/php-foundation-statement-critical-vulnerabilities"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Critical flaws strike PHP as disclosure embargo is broken",
+      "url": "https://www.itnews.com.au/news/critical-flaws-strike-php-as-disclosure-embargo-is-broken-629794"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot",
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP2Shell: PHP Remote Code Execution Exploited",
+      "url": "https://watchtowr.com/intelligence/php-remote-code-execution-php2shell/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cloudflare deploys protections against php2shell vulnerability",
+      "url": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Vulnerability Disclosure Policy",
+      "url": "https://certcc.github.io/certcc_disclosure_policy"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "This Guide in a Nutshell",
+      "url": "https://certcc.github.io/CERT-Guide-to-CVD/tutorials/cvd_in_a_nutshell/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Guidelines and Practices for Multi-Party Vulnerability Coordination and Disclosure",
+      "url": "https://www.first.org/global/sigs/vulnerability-coordination/multiparty/guidelines-v1.1"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "mailing-lists:distros",
+      "url": "https://oss-security.openwall.org/wiki/mailing-lists/distros"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Coders' Rights Project Vulnerability Reporting FAQ",
+      "url": "https://www.eff.org/issues/coders/vulnerability-reporting-faq"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Article 7 Tools used for committing offences",
+      "url": "https://www.legislation.gov.uk/eudr/2013/40/article/7/data.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "三部门关于印发网络产品安全漏洞管理规定的通知",
+      "url": "https://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Today's PHP security release, and how we're strengthening security",
+      "url": "https://news.ycombinator.com/item?id=50182987"
+    }
+  ],
+  "articleSection": "資安與詐騙"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新聞導讀",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "資安與詐騙",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PHP 漏洞的協調揭露與修補前的提前公開"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新聞導讀</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新聞導讀：" data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-early-disclosure-debate/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--security" href="/category/security/">資安與詐騙</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-23T00:10:00+08:00">2026 年 10 月 23 日 星期五</time></p>
+    <h1 class="story__title">PHP 漏洞的協調揭露與修補前的提前公開</h1>
+    <p class="story__dek">PHP 兩個漏洞在協調揭露期間消息外流。10 月 21 日修補發布之前，有研究者公開據稱完整的技術細節，發行業者提前推出含修補的映像檔。資安業者也替客戶提前部署了防護，這篇整理各方對禁令與提前公開的看法，以及美國、歐盟與中國大陸的相關說明與法規。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/thephp.foundation-c6860153.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/theregister.com-315165b2.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/therecord.media-6dc9e82c.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 15 篇原文，來自 The PHP Foundation、The Register、The Record 等 14 個出處</span></a></span>
+      <span>導讀：anoni.net 社群</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/zh-cn/2026/10/php2shell-early-disclosure-debate/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/en/2026/10/php2shell-early-disclosure-debate/" hreflang="en" lang="en">English</a></nav>
+  </header>
+  <div class="story__body content">
+<p>PHP 10 月 21 日修補的兩個漏洞（CVE-2026-109618、CVE-2026-109619），可能讓沒有登入的攻擊者在網站伺服器上執行程式碼，消息在協調揭露期間外流。修補發布之前，有研究者公開據稱完整的技術細節，也有業者提前推出修補或替客戶部署防護。資安社群因此爭論修補發布之前，能不能、該不該提前公開，或提前保護一部分人。網站用 PHP 架設的組織先照前一篇導讀向主機商或外包商確認已套用修補，這場爭論關係到之後的漏洞會在什麼時候、先讓哪些人知道。</p>
+<p>協調揭露（coordinated vulnerability disclosure）是發現漏洞的人先私下通知開發者，約定公開的日期。公開日之前的保密期間稱為禁令（embargo），讓開發者與下游的發行業者（把 PHP 這類軟體打包給使用者安裝的業者）有時間準備修補。</p>
+<p>依 PHP Foundation 10 月 21 日的部落格，這次的協調揭露直到預定發布日的兩天前都運作正常。UTC 10 月 20 日 15:00 前後（台北時間 23:00 前後），漏洞編號開始在網路上流傳。PHP 在 UTC 19:30（台北時間 10 月 21 日 03:30）發出公告，預告修補改在 10 月 21 日發布，比原定提前一天。</p>
+<p>同一篇部落格寫到，預告發出後，一家回報漏洞的資安公司誤公開了示範影片。PHP 從 UTC 10 月 20 日 23:00 前後（台北時間 10 月 21 日 07:00）起提供給少數關鍵基礎設施業者的緩解建議，也可能外流了。發行業者 Chainguard 跟其他發行業者一樣事先收到了修補，在 UTC 10 月 21 日 07:41（台北時間 15:41）公開含修補的容器映像檔（打包好、可以直接部署的軟體環境）。時間比提前後的發布時間早六個多小時，部落格的說法是，攻擊者因此可以在其他使用者還在等待時研究修補的內容。</p>
+<p>依 iTnews 10 月 21 日的報導，漏洞編號在社群網站出現幾個小時後，一位研究者在網路上公開了據稱完整的技術細節。iTnews 沒有獨立確認內容是否有效。資安業者 watchTowr 的頁面寫到，它的平台客戶在 PHP 發布修補前 24 小時就有主動防禦。Cloudflare 的部落格寫到，對應的防火牆規則比公開揭露早約 9 小時，對免費與付費客戶預設啟用。</p>
+<p>Amazon 10 月 21 日的威脅情報文章寫到，它的誘捕系統（故意放在網路上、用來觀察攻擊的系統）在 10 月 17 日就觀察到利用嘗試，比漏洞編號外流還早。文章也寫到不確定這些嘗試在真實系統上會不會成功，以及不清楚對方如何在揭露前取得資訊。</p>
+<h2 id="perspective">導讀觀點</h2>
+<p>美國的漏洞協調中心 CERT/CC 的揭露政策，是收到通報 45 天後公開，有實際利用等情況時可能提前或延後。CERT/CC 的指南寫到，參與的人越多、禁令拖得越久，外流的可能就越高。</p>
+<p>發行版之間共用的 distros 郵件列表規定禁令最長 14 天，偏好少於 7 天。成員不能把資訊分享給團隊以外的人，也不能先替客戶部署未說明的修補。PHP 有沒有透過 distros 通知發行版，到 10 月 22 日查不到。</p>
+<p>外流之後要不要提前公開是第一個爭點，Chainguard 的執行長對 The Register 表示公司沒有洩漏。他說官方揭露前已經有人遭到攻擊，所以決定先推出修補。執行長說「It's coordinated vulnerability disclosure, unless there's evidence of active exploits in the wild」（除非有實際利用的證據，否則就是協調揭露）。到 10 月 22 日，本文沒有查到 Chainguard 自己發布的書面說明。</p>
+<p>資安事件應變團隊的國際組織 FIRST 的多方協調指引，把合理的禁令期間限定在沒有事先公開、包括沒有實際利用的明確證據時。修補發布前，Amazon 的誘捕系統觀察到利用嘗試，但不確定能否在真實系統上成功。Cloudflare 的部落格也寫到，外洩期間觀察到針對客戶的攻擊流量。</p>
+<p>依 PHP Foundation 的部落格，Chainguard 單方面打破禁令，無視多方數週的協調。依 The Register 的報導，Chainguard 的執行長則事先通知了 PHP 的協調管道。Hacker News 上有留言認為打破禁令沒有後果就會一再發生，也有留言認為這次已經損害了協調揭露的信任。PHP Foundation 的部落格也寫到，到公開發布時，PHP 安全團隊在流傳的概念驗證程式裡沒有找到能實際運作的利用程式。</p>
+<p>提前保護給誰是第二個爭點，Hacker News 上替提前公開辯護的意見認為，協調揭露讓一般使用者無法自保。watchTowr 的平台客戶比 PHP 發布修補早 24 小時受到保護，Cloudflare 的防護規則則對免費與付費客戶都預設啟用。依 The Register 的報導，Chainguard 的映像檔任何人都能取得。</p>
+<p>PHP 的部落格寫到，發行業者與長期支援的業者事先收到修補，緩解建議則交給少數關鍵基礎設施業者。部落格說明沒有在外流後立刻發布，是因為發行業者還在打包修補，立刻發布會讓許多使用者沒有簡便的更新方式。到 10 月 22 日，本文沒有查到針對提前通知名單的公開批評。</p>
+<p>Chainguard 的執行長也對 The Register 表示，光是知道某個軟體有漏洞就足以找到它，他認為這是新的常態。Amazon 的文章同樣認為禁令只在別人找到同一個漏洞之前有效，但協調揭露仍然是正確的模式。文章提醒防守的一方，不應假設公開日就是最早被利用的日子，AI 輔助的分析讓從修補或公告做出可用的攻擊程式變得更便宜。</p>
+<p>修補前公開漏洞細節是否違法，各地的規定不同。數位權利倡議組織 EFF 在寫給美國研究者的 FAQ 裡的立場是，法律應該很少管到揭露，「負責任揭露」模式之外的揭露也可能合法。FAQ 註明內容不是法律意見。同一份 FAQ 也寫到，揭露裡可以直接執行的程式碼越多，法律風險越高。</p>
+<p>中國大陸 2021 年 9 月起施行的《网络产品安全漏洞管理规定》，適用於境內的網路產品提供者，以及從事漏洞發現、收集、發布的組織或個人。條文沒有寫明「境內」是否也限定後者。規定禁止在產品提供者推出修補措施之前發布漏洞資訊，認為有必要提前發布時，要與提供者協商並報工業和信息化部、公安部評估後發布。規定也禁止發布專門用於利用漏洞、從事危害網路安全活動的程式與工具。</p>
+<p>歐盟《資訊系統攻擊指令》（Directive 2013/40/EU）第 7 條，要求會員國處罰意圖用於犯罪、未經授權而製作或提供主要為犯罪設計的程式，至少針對非輕微的案件。各會員國如何納入國內法，以及歐盟對公開漏洞資訊本身的指引，到 10 月 22 日查不到。本文比較 EFF 的整理與歐盟指令，兩者看的是意圖與內容。中國大陸的規定除了內容，也直接限制公開的時間點。</p>
+<p>本文的建議是，網站用 PHP 架設的組織請主機商或外包商確認已套用修補，並檢查紀錄。Amazon 建議檢查紀錄時至少從 10 月 17 日查起，因為它在那一天就觀察到利用嘗試。Amazon 建議面向網際網路的系統遇到嚴重漏洞時，以小時計算修補與緩解的時程，認為 7 天或 30 天的處理期限已經不夠。要問主機商或外包商的問題，以及修補後的檢查，見文件站的<a href="http://docs.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/scenarios/org-website-vulnerability/" target="_blank">組織網站遇到重大漏洞時的確認與應對</a>。</p>
+<p>PHP Foundation 的部落格提到正在調整安全團隊的決策流程，讓卡在困難取捨的漏洞更早交到領導層。Chainguard 的執行長則對 The Record 表示，業界要想辦法更快、更協調地處理這類情況。到 10 月 22 日為止，部落格沒有提到修改禁令的長度、提前通知的名單或對打破禁令者的處理。FIRST 的指引建議分享資訊的社群可以對破壞信任的成員設罰則，例如移出名單。</p>
+<p>比較各方的做法時，讀者可以問幾個問題。禁令保護的是哪些人，提前收到通知與防護的名單如何決定，一般使用者在禁令期間有沒有自保的方法。提前推出修補時，還在等待的多數使用者是否先暴露給攻擊者。若如 Amazon 所說，AI 輔助的分析讓攻擊程式更快完成，禁令還能爭取到多少時間。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（15 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"><img class="source-slip__icon" src="/assets/favicons/thephp.foundation-c6860153.png" width="16" height="16" alt="" loading="lazy" decoding="async">Today&#39;s PHP Security Release, and How We&#39;re Strengthening PHP Security</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>The PHP Foundation</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611"><img class="source-slip__icon" src="/assets/favicons/theregister.com-315165b2.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP blames supply chain security biz Chainguard for putting huge chunks of the web at risk</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>The Register</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-22">2026 年 10 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://therecord.media/php-foundation-statement-critical-vulnerabilities"><img class="source-slip__icon" src="/assets/favicons/therecord.media-6dc9e82c.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP says AI review of critical bugs first sparked alarm in August, but signs surfaced in 2024</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>The Record</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.itnews.com.au/news/critical-flaws-strike-php-as-disclosure-embargo-is-broken-629794"><img class="source-slip__icon" src="/assets/favicons/itnews.com.au-c44b1e39.png" width="16" height="16" alt="" loading="lazy" decoding="async">Critical flaws strike PHP as disclosure embargo is broken</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>iTnews</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"><img class="source-slip__icon" src="/assets/favicons/aws.amazon.com-cd35f68e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Amazon</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://watchtowr.com/intelligence/php-remote-code-execution-php2shell/"><img class="source-slip__icon" src="/assets/favicons/watchtowr.com-8d05eca9.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP2Shell: PHP Remote Code Execution Exploited</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>watchTowr</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.cloudflare.com/php-vulnerabilities-waf-protection/"><img class="source-slip__icon" src="/assets/favicons/blog.cloudflare.com-71ae303d.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cloudflare deploys protections against php2shell vulnerability</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Cloudflare</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://certcc.github.io/certcc_disclosure_policy"><img class="source-slip__icon" src="/assets/favicons/certcc.github.io-f1607469.png" width="16" height="16" alt="" loading="lazy" decoding="async">Vulnerability Disclosure Policy</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>CERT/CC</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://certcc.github.io/CERT-Guide-to-CVD/tutorials/cvd_in_a_nutshell/"><img class="source-slip__icon" src="/assets/favicons/certcc.github.io-f1607469.png" width="16" height="16" alt="" loading="lazy" decoding="async">This Guide in a Nutshell</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>CERT/CC</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.first.org/global/sigs/vulnerability-coordination/multiparty/guidelines-v1.1"><img class="source-slip__icon" src="/assets/favicons/first.org-35d6cd33.png" width="16" height="16" alt="" loading="lazy" decoding="async">Guidelines and Practices for Multi-Party Vulnerability Coordination and Disclosure</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>FIRST</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://oss-security.openwall.org/wiki/mailing-lists/distros"><img class="source-slip__icon" src="/assets/favicons/oss-security.openwall.org-c05dca8e.png" width="16" height="16" alt="" loading="lazy" decoding="async">mailing-lists:distros</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Openwall</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.eff.org/issues/coders/vulnerability-reporting-faq"><img class="source-slip__icon" src="/assets/favicons/eff.org-4545a257.png" width="16" height="16" alt="" loading="lazy" decoding="async">Coders&#39; Rights Project Vulnerability Reporting FAQ</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>EFF</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.legislation.gov.uk/eudr/2013/40/article/7/data.html"><img class="source-slip__icon" src="/assets/favicons/legislation.gov.uk-4d9dd818.png" width="16" height="16" alt="" loading="lazy" decoding="async">Article 7 Tools used for committing offences</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>legislation.gov.uk（Directive 2013/40/EU）</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm"><img class="source-slip__icon" src="/assets/favicons/gov.cn-1db19351.png" width="16" height="16" alt="" loading="lazy" decoding="async">三部门关于印发网络产品安全漏洞管理规定的通知</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>中国政府网</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://news.ycombinator.com/item?id=50182987"><img class="source-slip__icon" src="/assets/favicons/news.ycombinator.com-c204850a.png" width="16" height="16" alt="" loading="lazy" decoding="async">Today&#39;s PHP security release, and how we&#39;re strengthening security</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Hacker News</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="thread" role="navigation" aria-labelledby="thread-heading">
+  <h2 class="thread__heading" id="thread-heading">同一事件的導讀</h2>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:05:00+08:00">2026 年 10 月 23 日</time>
+      <a class="thread__title" href="/2026/10/php2shell-leaked-rce/">修補前消息外流的 PHP 遠端執行程式碼漏洞</a>
+    </li>
+    <li class="thread__item thread__item--current">
+      <time class="thread__date" datetime="2026-10-23T00:10:00+08:00">2026 年 10 月 23 日</time>
+      <span><span class="thread__title">PHP 漏洞的協調揭露與修補前的提前公開</span> <span class="thread__here">本篇</span></span>
+    </li>
+  </ol>
+</nav>
+<nav class="related cat--security" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分類的其他導讀</h2>
+  <p class="brief__category"><a class="cat cat--security" href="/category/security/">資安與詐騙</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:00:00+08:00">2026 年 10 月 23 日</time>
+      <a class="thread__title" href="/2026/10/emudhra-weak-ca-keys/">eMudhra 八張中繼憑證的弱私鑰事件</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-21T00:05:00+08:00">2026 年 10 月 21 日</time>
+      <a class="thread__title" href="/2026/10/ledger-hardware-wallet-implant/">Ledger 硬體錢包的植入晶片事件</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-19T00:05:00+08:00">2026 年 10 月 19 日</time>
+      <a class="thread__title" href="/2026/10/passkey-attestation-debate/">通行金鑰的證明機制爭議</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/category/security/">「資安與詐騙」的全部 15 篇導讀</a></p>
+</nav>
+<p class="subscribe">想收到新的導讀：<a href="/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>訂閱電子報</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 追蹤</span></a></p>
+<nav class="pager pager--story" aria-label="文章導覽">
+  <a class="pager__item pager__item--older" href="/2026/10/php2shell-leaked-rce/"><span class="pager__label">較舊的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">修補前消息外流的 PHP 遠端執行程式碼漏洞</span></a>
+  <a class="pager__all" href="/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="頁尾">
+      <a href="/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 訂閱電子報</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 追蹤</a>
+      <a href="/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 導讀歷史</a>
+      <a href="/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 關於新聞導讀</a>
+      <a href="/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 閱讀說明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 回報錯誤</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首頁</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/zh-cn/2026/10/php2shell-early-disclosure-debate/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/en/2026/10/php2shell-early-disclosure-debate/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+  </div>
+</footer>
+</body>
+</html>

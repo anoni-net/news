@@ -22,6 +22,22 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/2026/10/php2shell-leaked-rce/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/php2shell-leaked-rce/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/10/emudhra-weak-ca-keys/</loc>
 <lastmod>2026-10-23</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/emudhra-weak-ca-keys/"/>
@@ -765,6 +781,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-22/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/history/10-23/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-23/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -784,6 +808,22 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/php2shell-early-disclosure-debate/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/php2shell-leaked-rce/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/php2shell-leaked-rce/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/10/emudhra-weak-ca-keys/</loc>
@@ -1529,6 +1569,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-22/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/history/10-23/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-23/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -1548,6 +1596,22 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/php2shell-early-disclosure-debate/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/php2shell-early-disclosure-debate/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/php2shell-early-disclosure-debate/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/php2shell-leaked-rce/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/php2shell-leaked-rce/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/php2shell-leaked-rce/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/10/emudhra-weak-ca-keys/</loc>
@@ -2291,6 +2355,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-22/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-22/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-22/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/history/10-23/</loc>
+<lastmod>2026-10-23</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-23/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-23/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/about/</loc>

@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Thu, 22 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 23 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Third-party tracking cookies in your browser</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-23/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-23/2026</guid>
+<pubDate>Fri, 23 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>If you keep seeing the same ad on different websites, an advertiser may be using third-party cookies to recognize you across sites. On this day, Mozilla released Firefox 63 with content blocking, letting users choose to block third-party tracking cookies.</description>
+<content:encoded>&lt;p&gt;If you keep seeing the same ad on different websites, an advertiser may be using third-party cookies (small files stored in your browser by ad or analytics services embedded in web pages) to recognize you across sites. Firefox 63, released on 23 October 2018, added content blocking, letting users turn on blocking of third-party tracking cookies or of all trackers. Mozilla said that day it aimed to block third-party tracking cookies by default in Firefox 65, and version 69 in September 2019 did so for all desktop and Android users (new users from June), while Safari has fully blocked third-party cookies by default since March 2020. According to Google&#39;s April 2025 announcement, Chrome will not show a separate prompt about third-party cookies, and its help page (checked in October 2026) shows that users can block them under Privacy and security in the settings. In Japan, the privacy regulator&#39;s guidelines give an individual&#39;s browsing history collected through cookies as an example of personally referable information, a category the law defines separately from personal information.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Age checks before you can see content</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-22/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>On an Android phone, the Privacy Dashboard shows you which apps recently used the microphone, camera and location. On this day, Google released the Android 12 source code that introduced it.</description>
 <content:encoded>&lt;p&gt;On an Android phone, you can open the Privacy Dashboard to see which apps used the microphone, camera and location in the past 24 hours or 7 days. On 4 October 2021, Google released Android 12 to the Android Open Source Project (AOSP), and its developer blog said the new dashboard gives users better visibility into when apps access the microphone, camera and location. Two years later to the day, Google added a section to the location permission dialog in Android 14, shown when an app&#39;s developer has declared that the app shares location data with third parties. Both cover only what apps do, not tracking code on websites, which is what our story the same day is about (see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;Tracking pixels that sent doctors&#39; appointments to social platforms&lt;/a&gt;). To see which apps have used these permissions recently, open Settings, tap Security &amp;amp; privacy or Privacy, and then tap Privacy dashboard.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Passwords and security questions in old accounts</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-03/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-03/2026</guid>
-<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Passwords and security questions you have reused elsewhere may have leaked long ago along with an old account. On this day, Yahoo disclosed that an earlier breach had affected every account it had at the time.</description>
-<content:encoded>&lt;p&gt;If you reuse a password, or the same security questions for account recovery, across different sites, a leak at any one of them puts the others at risk too. On 3 October 2017, Yahoo announced that a breach in August 2013 had affected all of its user accounts. Taiwan&#39;s Central News Agency reported the next day that this came to about 3 billion, three times the earlier estimate. Yahoo&#39;s FAQ says the stolen information may have included names, email addresses, phone numbers, dates of birth, hashed passwords and, in some accounts, security questions and answers. Names, phone numbers and birthdays are also what doxxers piece together, and our story the same day covers how to guard against that (see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;). Yahoo advised anyone who had used the same or similar passwords and security questions on other accounts to change them as well.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

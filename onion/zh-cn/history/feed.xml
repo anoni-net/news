@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 22 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 23 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>浏览器里的第三方跟踪 Cookie</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-23/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-23/2026</guid>
+<pubDate>Fri, 23 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在不同网站一再看到同一则广告，可能是广告商用第三方 Cookie 在各网站认出了你。这一天，Mozilla 发布的 Firefox 63 新增内容拦截功能，用户可以选择拦截第三方跟踪 Cookie。</description>
+<content:encoded>&lt;p&gt;你在不同网站一再看到同一则广告，可能是广告商用第三方 Cookie（网页里嵌入的广告或分析服务存进浏览器的小文件）在各网站认出了你。2018 年 10 月 23 日发布的 Firefox 63 新增内容拦截功能，用户可以自行开启拦截第三方跟踪 Cookie 或所有跟踪器，Mozilla 同一天说明目标是在 Firefox 65 默认拦截第三方跟踪 Cookie。Firefox 在 2019 年 9 月的 69 版对桌面与 Android 的所有用户默认拦截跟踪器清单里的第三方 Cookie（新用户从 6 月起已默认），Safari 则从 2020 年 3 月起默认完整拦截第三方 Cookie。依 Google 2025 年 4 月的公告，Chrome 不会另外弹出询问第三方 Cookie 的画面，用户可在「隐私和安全」设置里自行选择（2026 年 10 月依 Chrome 帮助页面查证）。在中国大陆，《中华人民共和国个人信息保护法》第二十四条（2021 年 11 月施行）要求通过自动化决策方式向个人推送信息、商业营销时提供不针对个人特征的选项或便捷的拒绝方式，条文没有提到 Cookie。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>看内容前的年龄验证</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-22/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你可以在 Android 手机的隐私信息中心，看到最近哪些 App 用过麦克风、相机与位置。这一天，Google 公开了加入这项功能的 Android 12 源代码。</description>
 <content:encoded>&lt;p&gt;你可以在 Android 手机的隐私信息中心，查看最近 24 小时或 7 天内有哪些 App 用过麦克风、相机与位置。2021 年 10 月 4 日，Google 把 Android 12 的源代码发布到 Android 开源项目（AOSP），开发者博客写明新的隐私信息中心让用户更清楚 App 何时访问麦克风、相机与位置。两年后的同一天，Google 在 Android 14 的位置权限弹窗加上一段说明，App 的开发者申报会把位置分享给第三方时就会显示。这两项功能只涵盖 App 的行为，网站里的追踪代码不在范围内，本站同一天的导读写的是网站把就诊信息发给第三方的情况（见&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;医疗预约网站把就诊信息发给社交平台的追踪代码&lt;/a&gt;）。使用原生 Android 的读者可以依序进入「设置」、「安全与隐私」或「隐私」、「隐私信息中心」，使用中国大陆品牌手机的人如果找不到这个页面，可以在设置里搜索「隐私」或「权限」。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>旧账号里的密码与密保问题</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-03/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-03/2026</guid>
-<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你在其他网站用过的密码与密保问题，可能早就跟着一个旧账号外泄。这一天，Yahoo 公布早年的一次入侵影响了当时所有的账号。</description>
-<content:encoded>&lt;p&gt;你如果在不同网站重复使用同一组密码或密保问题，只要其中一个网站的数据外泄，其他账号也跟着有风险。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影响了所有用户账号，台湾中央社报道的数字约为原先估计 3 倍的 30 亿个。Yahoo 的说明页写明，外泄的信息可能包括姓名、电子邮箱、电话、生日、经过哈希处理（转成看不出原文的代码）的密码，部分账号还有密保问题与答案。姓名、电话与生日也是人肉搜索时用来拼凑个人信息的材料，本站同一天的导读整理了预防的做法（见&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/eff-doxxing-safety/&#34;&gt;人肉搜索的预防与应对&lt;/a&gt;）。Yahoo 建议，在其他账号用过相同或类似密码与密保问题的人，都要一起更换。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

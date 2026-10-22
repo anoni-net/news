@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 22 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 23 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>瀏覽器裡的第三方追蹤 Cookie</title>
+<link>https://anoni.net/news/history/10-23/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-23/2026</guid>
+<pubDate>Fri, 23 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在不同網站一再看到同一則廣告，可能是廣告商用第三方 Cookie 在各網站認出了你。這一天，Mozilla 釋出的 Firefox 63 新增內容封鎖功能，使用者可以選擇封鎖第三方追蹤 Cookie。</description>
+<content:encoded>&lt;p&gt;你在不同網站一再看到同一則廣告，可能是廣告商用第三方 Cookie（網頁裡嵌入的廣告或分析服務存進瀏覽器的小檔案）在各網站認出了你。2018 年 10 月 23 日釋出的 Firefox 63 新增內容封鎖功能，使用者可以自行開啟封鎖第三方追蹤 Cookie 或所有追蹤器，Mozilla 同一天說明目標是在 Firefox 65 預設封鎖第三方追蹤 Cookie。Firefox 在 2019 年 9 月的 69 版對桌機與 Android 的所有使用者預設封鎖追蹤器清單裡的第三方 Cookie（新使用者從 6 月起已預設），Safari 則從 2020 年 3 月起預設完整封鎖第三方 Cookie。依 Google 2025 年 4 月的公告，Chrome 不會另外跳出詢問第三方 Cookie 的畫面，使用者仍在設定裡自行選擇。依 Chrome 的說明頁（2026 年 10 月查證），用 Chrome 的讀者可以在「隱私權和安全性」的「第三方 Cookie」設定裡封鎖第三方 Cookie。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>看內容前的年齡驗證</title>
 <link>https://anoni.net/news/history/10-22/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你可以在 Android 手機的隱私資訊主頁，看到最近哪些 App 用過麥克風、相機與位置。這一天，Google 公開了加入這項功能的 Android 12 原始碼。</description>
 <content:encoded>&lt;p&gt;你可以在 Android 手機的隱私資訊主頁，查看最近 24 小時或 7 天內有哪些 App 用過麥克風、相機與位置。2021 年 10 月 4 日，Google 把 Android 12 的原始碼公開到 Android 開放原始碼專案（AOSP），開發者部落格寫明新的隱私資訊主頁讓使用者更清楚 App 何時存取麥克風、相機與位置。兩年後的同一天，Google 在 Android 14 的位置權限視窗加上一段說明，App 的開發者申報會把位置分享給第三方時就會顯示。這兩項功能只涵蓋 App 的行為，網站裡的追蹤碼不在範圍內，本站同一天的導讀寫的是網站把看診資訊送給第三方的情況（見&lt;a href=&#34;https://anoni.net/news/2026/10/doctoralia-health-tracking-pixels/&#34;&gt;醫療預約網站把看診資訊送給社群平台的追蹤碼&lt;/a&gt;）。想看看最近有哪些 App 用了這些權限，可以在「設定」輕觸「安全性與隱私權」或「隱私權」，再輕觸「隱私資訊主頁」。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>舊帳號裡的密碼與提示問題</title>
-<link>https://anoni.net/news/history/10-03/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-03/2026</guid>
-<pubDate>Sat, 03 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在其他網站用過的密碼與提示問題，可能早就跟著一個舊帳號外洩。這一天，Yahoo 公布早年的一次入侵影響了當時所有的帳號。</description>
-<content:encoded>&lt;p&gt;你如果在不同網站重複使用同一組密碼或提示問題，只要其中一個網站的資料外洩，其他帳號也跟著有風險。Yahoo 在 2017 年 10 月 3 日宣布，2013 年 8 月的一次入侵影響了所有使用者帳號，中央社報導的數字約為原先估計 3 倍的 30 億個。Yahoo 的說明頁寫明，外洩的資料可能包括姓名、Email、電話、生日、經過雜湊處理（轉成看不出原文的代碼）的密碼，部分帳號還有安全提示問題與答案。姓名、電話與生日也是肉搜時用來拼湊個人資料的材料，本站同一天的導讀整理了預防的做法（見&lt;a href=&#34;https://anoni.net/news/2026/10/eff-doxxing-safety/&#34;&gt;肉搜的預防與應變&lt;/a&gt;）。Yahoo 建議，在其他帳號用過相同或類似密碼與提示問題的人，都要一起更換。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -59,6 +59,16 @@
   <h2 class="day__date"><time datetime="2026-10-23"><span class="day__md">10 月 23 日</span> <span class="day__meta">2026 年，星期五</span></time></h2>
   <div class="day__briefs">
 <article class="brief">
+  <h3 class="brief__title"><a href="/2026/10/php2shell-early-disclosure-debate/">PHP 漏洞的協調揭露與修補前的提前公開</a></h3>
+  <p class="brief__dek">PHP 兩個漏洞在協調揭露期間消息外流。10 月 21 日修補發布之前，有研究者公開據稱完整的技術細節，發行業者提前推出含修補的映像檔。資安業者也替客戶提前部署了防護，這篇整理各方對禁令與提前公開的看法，以及美國、歐盟與中國大陸的相關說明與法規。</p>
+  <p class="brief__source">整理 15 篇原文，來自 The PHP Foundation、The Register、The Record 等 14 個出處</p>
+</article>
+<article class="brief">
+  <h3 class="brief__title"><a href="/2026/10/php2shell-leaked-rce/">修補前消息外流的 PHP 遠端執行程式碼漏洞</a></h3>
+  <p class="brief__dek">PHP 10 月 21 日發布 8.5.12、8.4.27、8.3.36、8.2.35，修補兩個可能讓未登入的攻擊者在網站伺服器上執行程式碼的漏洞。漏洞編號在預定揭露前兩天外流，PHP 把發布提前一天。漏洞在 PHP 本身，要更新的是伺服器上的 PHP，租用主機的人可以向業者確認。</p>
+  <p class="brief__source">整理 21 篇原文，來自 PHP、The PHP Foundation、WordPress.org 等 18 個出處</p>
+</article>
+<article class="brief">
   <h3 class="brief__title"><a href="/2026/10/emudhra-weak-ca-keys/">eMudhra 八張中繼憑證的弱私鑰事件</a></h3>
   <p class="brief__dek">印度憑證機構 eMudhra 有八張中繼憑證的私鑰小於 256，任何人都能立刻算出來，再用來替別人的網站簽發 HTTPS 憑證。研究者 10 月 17 日通報後，Chrome 與 Firefox 在幾個小時內自動封鎖，一般使用者的瀏覽器不必另外設定。不經過瀏覽器的程式各自帶著信任清單，Node.js、Python 的 certifi、Go、Java 與 Linux 發行版從 10 月 19 日起陸續推出更新（到 10 月 22 日還沒全部完成），自行寫程式或維護伺服器的人要逐一更新。</p>
   <p class="brief__source">整理 13 篇原文，來自 Mozilla dev-security-policy、Mozilla Bugzilla、Google 等 12 個出處</p>

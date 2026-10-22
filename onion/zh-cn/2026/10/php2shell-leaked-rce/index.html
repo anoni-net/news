@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>修补前消息外泄的 PHP 远程代码执行漏洞 | anoni.net 新闻导读</title>
+<meta name="description" content="PHP 10 月 21 日发布 8.5.12、8.4.27、8.3.36、8.2.35，修补两个可能让未登录的攻击者在网站服务器上执行代码的漏洞。漏洞编号在预定披露前两天外泄，PHP 把发布提前一天。漏洞在 PHP 本身，要更新的是服务器上的 PHP，租用主机的人可以向服务商确认。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-leaked-rce/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-leaked-rce/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-leaked-rce/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/php2shell-leaked-rce/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/php2shell-leaked-rce/">
+<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml">
+<meta property="og:site_name" content="anoni.net 新闻导读">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修补前消息外泄的 PHP 远程代码执行漏洞">
+<meta property="og:description" content="PHP 10 月 21 日发布 8.5.12、8.4.27、8.3.36、8.2.35，修补两个可能让未登录的攻击者在网站服务器上执行代码的漏洞。漏洞编号在预定披露前两天外泄，PHP 把发布提前一天。漏洞在 PHP 本身，要更新的是服务器上的 PHP，租用主机的人可以向服务商确认。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-leaked-rce/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png?v=74a0aa1c7b">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net 新闻导读">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net 新闻导读">
+<meta property="article:published_time" content="2026-10-23T00:05:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "修补前消息外泄的 PHP 远程代码执行漏洞",
+  "description": "PHP 10 月 21 日发布 8.5.12、8.4.27、8.3.36、8.2.35，修补两个可能让未登录的攻击者在网站服务器上执行代码的漏洞。漏洞编号在预定披露前两天外泄，PHP 把发布提前一天。漏洞在 PHP 本身，要更新的是服务器上的 PHP，租用主机的人可以向服务商确认。",
+  "datePublished": "2026-10-23T00:05:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-leaked-rce/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-leaked-rce/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png",
+  "inLanguage": "zh-Hans",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Security advisory: Critical remote code execution vulnerabilities, update now",
+      "url": "https://www.php.net/archive/2026.php#2026-10-21-5"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "RCE via OOM corruption",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "RCE via stale global state",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Today's PHP Security Release, and How We're Strengthening PHP Security",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP: Supported Versions",
+      "url": "https://www.php.net/supported-versions.php"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Critical PHP Security Release",
+      "url": "https://wordpress.org/news/2026/10/critical-php-security-release/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Your Sites Are Protected Against the PHP2Shell Vulnerabilities",
+      "url": "https://automattic.com/2026/10/21/php2shell/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Request handling memory corruption - php (CVE-2026-109618, CVE-2026-109619) - \"php2shell\"",
+      "url": "https://access.redhat.com/security/vulnerabilities/RHSB-2026-013"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP2Shell — AI uncovers critical vulnerabilities in the backbone of the web",
+      "url": "https://www.php2shell.com/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "CVE-2026-109618",
+      "url": "https://ubuntu.com/security/CVE-2026-109618"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP 存在2個重大資安漏洞(CVE-2026-109618 和 CVE-2026-109619)",
+      "url": "https://www.twcert.org.tw/tw/cp-169-11303-1d68a-1.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "【事前準備のお願い】PHPのセキュリティリリース公開予定について",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」",
+      "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002483/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHPの2件の深刻な脆弱性(CVE-2026-109618、CVE-2026-109619)についてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/10/21/174516"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "【速報】札幌市、PHPで公式ホームページ一時停止",
+      "url": "https://www.47news.jp/15117775.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "札幌市公式ホームページ",
+      "url": "https://www.city.sapporo.jp/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PHP 보안취약점(PHP2Shell) 관련 기업 보안 대응 수칙",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72228"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "網站開發程式語言PHP釋出緊急安全更新 資安署呼籲儘速完成修補",
+      "url": "https://moda.gov.tw/ACS/press/news/press/21134"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cloudflare deploys protections against php2shell vulnerability",
+      "url": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Rapid Response: php2shell, Leaked Critical PHP Vulnerabilities (CVE-2026-109618 & CVE-2026-109619)",
+      "url": "https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Usage Statistics and Market Share of PHP for Websites, October 2026",
+      "url": "https://w3techs.com/technologies/details/pl-php"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "三部门关于印发网络产品安全漏洞管理规定的通知",
+      "url": "https://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm"
+    }
+  ],
+  "articleSection": "安全与诈骗"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新闻导读",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "安全与诈骗",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "修补前消息外泄的 PHP 远程代码执行漏洞"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/zh-cn/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新闻导读</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新闻导读：" data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/php2shell-leaked-rce/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--security" href="/zh-cn/category/security/">安全与诈骗</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-23T00:05:00+08:00">2026 年 10 月 23 日 星期五</time></p>
+    <h1 class="story__title">修补前消息外泄的 PHP 远程代码执行漏洞</h1>
+    <p class="story__dek">PHP 10 月 21 日发布 8.5.12、8.4.27、8.3.36、8.2.35，修补两个可能让未登录的攻击者在网站服务器上执行代码的漏洞。漏洞编号在预定披露前两天外泄，PHP 把发布提前一天。漏洞在 PHP 本身，要更新的是服务器上的 PHP，租用主机的人可以向服务商确认。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/php.net-d77f1342.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/thephp.foundation-c6860153.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/wordpress.org-14053384.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 22 篇原文，来自 PHP、The PHP Foundation、WordPress.org 等 19 个出处</span></a></span>
+      <span>导读：anoni.net 社区</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/php2shell-leaked-rce/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/php2shell-leaked-rce/" hreflang="en" lang="en">English</a></nav>
+    <p class="story__followup">后续发展：<a href="/zh-cn/2026/10/php2shell-early-disclosure-debate/">PHP 漏洞的协调披露与修补前的提前公开</a>（2026 年 10 月 23 日）</p>
+  </header>
+  <div class="story__body content">
+<p>PHP 10 月 21 日发布 8.5.12、8.4.27、8.3.36 与 8.2.35，修补两个漏洞 CVE-2026-109618 与 CVE-2026-109619（CVE 是公开漏洞的统一编号），研究者与媒体称这组漏洞为 php2shell。php.net 的公告写两者可能让没有登录的攻击者在服务器上远程执行代码，所有处理网页请求的 PHP 都有风险，建议立刻更新。依 W3Techs 10 月 21 日的统计，在查得到服务器端语言的网站里，69.3% 使用 PHP。WordPress.org 的公告则说明这不是 WordPress 本身的漏洞，不会为此发布 WordPress 更新，要更新的是服务器上的 PHP。</p>
+<p>依 PHP Foundation 10 月 21 日的博客，两个漏洞编号在 UTC 10 月 20 日 15:00（北京时间 23:00）前后开始在论坛与社交网站流传。流传的消息附上错误的发布时间与错误的严重度评分（CVSS，满分 10）10.0，PHP 评定的是 9.2，技术细节没有外泄。PHP 在 UTC 19:30（北京时间 10 月 21 日 03:30）提前发出预告，把发布从 UTC 10 月 22 日 14:00 提前到 10 月 21 日 14:00（北京时间 10 月 21 日 22:00）。没有马上发布的原因，是 Linux 发行版（Debian、Ubuntu、Red Hat 这类操作系统）还在打包修补，马上发布会让许多用户没有简便的更新方式。</p>
+<p>同一篇博客提到，预告发出后，报告漏洞的一家安全公司误公开了一段演示视频。视频的副本随即在社交网站流传。博客写到，视频是各方加快开发概念验证程序（PoC，证明漏洞能被利用的程序）的原因之一。到公开发布时，PHP 安全团队在流传的 PoC 里没有找到能实际运行的利用程序。</p>
+<p>Cloudflare 10 月 21 日的博客写到，外泄期间已观察到针对客户的攻击流量，对应的 WAF（网站应用防火墙）规则从 UTC 10 月 21 日 03:02（北京时间 11:02）起对免费与付费客户默认启用。安全公司 Huntress 到美东时间 10 月 21 日 16:30（北京时间 10 月 22 日 04:30）为止，没有在合作伙伴的系统观察到实际利用。修补版发布之后，台湾电脑网络危机处理暨协调中心（TWCERT/CC）在 10 月 22 日的警讯提到网上已出现 PoC。</p>
+<p>日本信息处理推进机构（IPA）10 月 21 日预告修补的公开时间。据 ITmedia NEWS 报道，日本首相当晚在 X 呼吁各方准备更新到修补版本。首相也写到修补有困难时，暂时停止网站是降低风险的有效方法之一。</p>
+<p>依安全博客 piyolog 整理各组织公告与报道的统计，到日本时间 10 月 22 日 1 点多（北京时间 0 点多）日本有 211 个组织停止服务或发布紧急维护，其中有国家机关 2 个、地方政府 4 个。札幌市 10 月 21 日晚间暂停官方网站。到 10 月 22 日查证时，临时首页写到没有确认到非法访问或篡改，停站是预防措施。</p>
+<p>韩国互联网振兴院（KISA）10 月 22 日发布企业应对守则，建议无法更新、也无法采取临时设置时，考虑切断外部连接或暂停服务。守则也请企业更新后至少检查 10 月 20 日以后的记录，更新前曾对互联网开放的服务器，建议更换数据库密码、API 密钥与管理员密码。</p>
+<p>台湾的数字发展部资通安全署同一天发布新闻稿，请各单位盘点与修补，没有要求暂停服务。到 10 月 22 日为止，本文没有查到台湾单位因这次漏洞停机的公告，日本、韩国、台湾也都没有查到确认的入侵案例。</p>
+<h2 id="perspective">导读观点</h2>
+<p>依 PHP Foundation 的博客，两个漏洞都位于几乎每个请求都会用到的内存管理与错误处理。依 php.net 的公告，第一个漏洞发生在内存用量达到上限时，PHP 可能在内部数据只初始化了一部分时中断。之后的清理步骤可能把这些数据当成有效的。</p>
+<p>第二个漏洞是前一个请求留下的内部状态，在内存已经释放之后，可能被同一个工作进程之后处理的请求使用。php.net 的公告把 Apache 搭配 mod_php（把 PHP 直接加载进网页服务器的运行方式）列为风险最高，已有演示能让未登录的请求在网站程序执行前触发攻击。</p>
+<p>依研究者架设的说明网站 php2shell.com，漏洞出在 PHP 本身，网站程序写得安全也可能受影响。只输出「Hello World」的简单网站也一样。WordPress.com 的运营公司 Automattic 也说明这是运行环境的修补，只更新 WordPress、主题或插件保护不到。</p>
+<p>PHP Foundation 的博客也检讨了修补为什么花了这么久。2024 年的外部安全审计期间，PHP 的开发者已经发现第一个漏洞的早期迹象，当时还不知道有远程执行代码的路径。当时想到的几种修法各有代价，可能破坏兼容性、造成拒绝服务（让网站无法正常运行），或需要改动大量第三方扩展。以共识决运作的安全团队迟迟没有决定，博客的说法是延误属于结构性的失败（structural failure），原因是决策流程与资源不足。</p>
+<p>依博客，AI 辅助的漏洞研究让 PHP 收到的报告比以前多很多。7 月 1 日以来，安全团队发布了 15 个 CVE，另外处理了超过 100 件无效、重复或无法重现的报告。PHP Foundation 正在调整流程，让卡在困难取舍的严重漏洞更早交到领导层手上。</p>
+<p>以下只整理中国大陆的制度内容，本文没有判断这次事件如何适用。《网络产品安全漏洞管理规定》从 2021 年 9 月 1 日起施行，到本文 10 月 8 日查证时没有查到修订版。规定适用于中国境内的网络产品提供者与网络运营者，以及从事漏洞发现、收集、发布的组织或个人。网络产品提供者发现或获知漏洞后，要在 2 日内向工业和信息化部的网络安全威胁和漏洞信息共享平台报送。</p>
+<p>向社会发布漏洞信息的组织或个人，不得在提供者提供修补措施之前发布。认为有必要提前发布的，要与提供者共同评估协商并向工业和信息化部、公安部报告，由两部组织评估后发布。规定没有定义开源项目的维护者是否属于网络产品提供者，本文也查不到规定对境外项目的维护者或境外的发现者是否适用。</p>
+<p>组织网站与博客常用 WordPress 这类 PHP 程序架设。依 Automattic，放在 WordPress.com 等自家托管服务的网站已经受到保护，管理者不必另外调整设置。WordPress.org 的公告建议租用主机的人向服务商确认更新，也列出在后台的「Tools &gt; Site Health &gt; Info &gt; Server」（英文界面）可以看到 PHP 版本。这个版本号可以对照上面的修补版本，但发行版自行移植修补时会误判，原因见下一段。</p>
+<p>自行管理服务器的人，用发行版软件包安装的 PHP 要看发行版的安全公告。有些发行版把修补移植到原本的版本，例如 Ubuntu 24.04 修补后的软件包是 8.3.6-0ubuntu0.24.04.13，只对照 PHP 的版本号会误判。Red Hat 10 月 21 日的公告写 Red Hat Enterprise Linux 默认使用 PHP-FPM（由独立进程运行 PHP 的方式），实际利用比较困难，部分更新还在准备中。PHP Foundation 的博客则提到，第一个漏洞也确认过能经由网站程序本身的处理流程，在 PHP-FPM 上远程执行代码。</p>
+<p>依 php.net 的支持版本页，PHP 8.1 以下已经结束支持，8.2 则在 2026 年 12 月 31 日结束支持。这次 PHP 另外为 7.4、8.0、8.1 提供最小的源代码修补给自行编译的人，7.3 以下没有。TWCERT/CC 的警讯列出的受影响版本从 5.4 起。还没办法更新的，php.net 列出几项调整设置的做法可以缩小部分攻击路径，但公告也提醒只有更新能完整解决。</p>
+<p>两个漏洞是否出现确认的实际入侵、是否列入美国网络安全和基础设施安全局（CISA）的已遭利用漏洞清单，以及 Red Hat 等发行版的更新是否补齐，是接下来可以留意的地方。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（22 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.php.net/archive/2026.php#2026-10-21-5"><img class="source-slip__icon" src="/assets/favicons/php.net-d77f1342.png" width="16" height="16" alt="" loading="lazy" decoding="async">Security advisory: Critical remote code execution vulnerabilities, update now</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>PHP</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">RCE via OOM corruption</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>PHP</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">RCE via stale global state</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>PHP</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"><img class="source-slip__icon" src="/assets/favicons/thephp.foundation-c6860153.png" width="16" height="16" alt="" loading="lazy" decoding="async">Today&#39;s PHP Security Release, and How We&#39;re Strengthening PHP Security</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>The PHP Foundation</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.php.net/supported-versions.php"><img class="source-slip__icon" src="/assets/favicons/php.net-d77f1342.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP: Supported Versions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>PHP</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://wordpress.org/news/2026/10/critical-php-security-release/"><img class="source-slip__icon" src="/assets/favicons/wordpress.org-14053384.png" width="16" height="16" alt="" loading="lazy" decoding="async">Critical PHP Security Release</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>WordPress.org</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://automattic.com/2026/10/21/php2shell/"><img class="source-slip__icon" src="/assets/favicons/automattic.com-dc7f18bd.png" width="16" height="16" alt="" loading="lazy" decoding="async">Your Sites Are Protected Against the PHP2Shell Vulnerabilities</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Automattic</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://access.redhat.com/security/vulnerabilities/RHSB-2026-013"><img class="source-slip__icon" src="/assets/favicons/access.redhat.com-d7063640.png" width="16" height="16" alt="" loading="lazy" decoding="async">Request handling memory corruption - php (CVE-2026-109618, CVE-2026-109619) - &#34;php2shell&#34;</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Red Hat</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.php2shell.com/"><img class="source-slip__icon" src="/assets/favicons/php2shell.com-70184835.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP2Shell — AI uncovers critical vulnerabilities in the backbone of the web</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>php2shell.com</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://ubuntu.com/security/CVE-2026-109618"><img class="source-slip__icon" src="/assets/favicons/ubuntu.com-68e2fdd1.png" width="16" height="16" alt="" loading="lazy" decoding="async">CVE-2026-109618</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Ubuntu</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.twcert.org.tw/tw/cp-169-11303-1d68a-1.html"><img class="source-slip__icon" src="/assets/favicons/twcert.org.tw-29afd0d6.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP 存在2個重大資安漏洞(CVE-2026-109618 和 CVE-2026-109619)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>TWCERT/CC</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-22">2026 年 10 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html"><img class="source-slip__icon" src="/assets/favicons/ipa.go.jp-d88935f7.png" width="16" height="16" alt="" loading="lazy" decoding="async">【事前準備のお願い】PHPのセキュリティリリース公開予定について</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>IPA</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.itmedia.co.jp/news/article/2610/22/2000002483/"><img class="source-slip__icon" src="/assets/favicons/itmedia.co.jp-0d9d345b.png" width="16" height="16" alt="" loading="lazy" decoding="async">総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>ITmedia NEWS</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-22">2026 年 10 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://piyolog.hatenadiary.jp/entry/2026/10/21/174516"><img class="source-slip__icon" src="/assets/favicons/piyolog.hatenadiary.jp-8b3395eb.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHPの2件の深刻な脆弱性(CVE-2026-109618、CVE-2026-109619)についてまとめてみた</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>piyolog</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.47news.jp/15117775.html"><img class="source-slip__icon" src="/assets/favicons/47news.jp-89c1e17c.png" width="16" height="16" alt="" loading="lazy" decoding="async">【速報】札幌市、PHPで公式ホームページ一時停止</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>47NEWS</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.city.sapporo.jp/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>札幌市公式ホームページ</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>札幌市</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&amp;menuNo=205020&amp;nttId=72228"><img class="source-slip__icon" src="/assets/favicons/boho.or.kr-35ff434f.png" width="16" height="16" alt="" loading="lazy" decoding="async">PHP 보안취약점(PHP2Shell) 관련 기업 보안 대응 수칙</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>KISA</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-22">2026 年 10 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://moda.gov.tw/ACS/press/news/press/21134"><img class="source-slip__icon" src="/assets/favicons/moda.gov.tw-99fb4327.png" width="16" height="16" alt="" loading="lazy" decoding="async">網站開發程式語言PHP釋出緊急安全更新 資安署呼籲儘速完成修補</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>台湾数字发展部资通安全署</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-22">2026 年 10 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.cloudflare.com/php-vulnerabilities-waf-protection/"><img class="source-slip__icon" src="/assets/favicons/blog.cloudflare.com-71ae303d.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cloudflare deploys protections against php2shell vulnerability</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Cloudflare</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities"><img class="source-slip__icon" src="/assets/favicons/huntress.com-bc463299.png" width="16" height="16" alt="" loading="lazy" decoding="async">Rapid Response: php2shell, Leaked Critical PHP Vulnerabilities (CVE-2026-109618 &amp; CVE-2026-109619)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Huntress</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-20">2026 年 10 月 20 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://w3techs.com/technologies/details/pl-php"><img class="source-slip__icon" src="/assets/favicons/w3techs.com-181e8142.png" width="16" height="16" alt="" loading="lazy" decoding="async">Usage Statistics and Market Share of PHP for Websites, October 2026</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>W3Techs</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm"><img class="source-slip__icon" src="/assets/favicons/gov.cn-1db19351.png" width="16" height="16" alt="" loading="lazy" decoding="async">三部门关于印发网络产品安全漏洞管理规定的通知</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>中国政府网</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2021-07-14">2021 年 7 月 14 日</time></dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="thread" role="navigation" aria-labelledby="thread-heading">
+  <h2 class="thread__heading" id="thread-heading">同一事件的导读</h2>
+  <ol class="thread__list">
+    <li class="thread__item thread__item--current">
+      <time class="thread__date" datetime="2026-10-23T00:05:00+08:00">2026 年 10 月 23 日</time>
+      <span><span class="thread__title">修补前消息外泄的 PHP 远程代码执行漏洞</span> <span class="thread__here">本篇</span></span>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:10:00+08:00">2026 年 10 月 23 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/php2shell-early-disclosure-debate/">PHP 漏洞的协调披露与修补前的提前公开</a>
+    </li>
+  </ol>
+</nav>
+<nav class="related cat--security" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分类的其他导读</h2>
+  <p class="brief__category"><a class="cat cat--security" href="/zh-cn/category/security/">安全与诈骗</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-21T00:05:00+08:00">2026 年 10 月 21 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/ledger-hardware-wallet-implant/">Ledger 硬件钱包的植入芯片事件</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-19T00:05:00+08:00">2026 年 10 月 19 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/passkey-attestation-debate/">通行密钥的证明机制争议</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-16T00:05:00+08:00">2026 年 10 月 16 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/cctld-hijack-counterfeit-certs/">国家代码顶级域名劫持事件与未经授权的 HTTPS 证书</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/zh-cn/category/security/">「安全与诈骗」的全部 15 篇导读</a></p>
+</nav>
+<p class="subscribe">想收到新的导读：<a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>订阅电子报</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 关注</span></a></p>
+<nav class="pager pager--story" aria-label="文章导览">
+  <a class="pager__item pager__item--newer" href="/zh-cn/2026/10/php2shell-early-disclosure-debate/"><span class="pager__label"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg> 较新的一篇</span> <span class="pager__title">PHP 漏洞的协调披露与修补前的提前公开</span></a>
+  <a class="pager__item pager__item--older" href="/zh-cn/2026/10/emudhra-weak-ca-keys/"><span class="pager__label">较旧的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">eMudhra 八张中间证书的弱私钥事件</span></a>
+  <a class="pager__all" href="/zh-cn/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 订阅电子报</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 关注</a>
+      <a href="/zh-cn/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 导读历史</a>
+      <a href="/zh-cn/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 关于新闻导读</a>
+      <a href="/zh-cn/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 阅读说明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/php2shell-leaked-rce/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/php2shell-leaked-rce/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
+  </div>
+</footer>
+</body>
+</html>
