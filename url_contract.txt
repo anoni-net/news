@@ -144,6 +144,9 @@
 /2026/10/passkey-attestation-debate/
 	#perspective
 	#sources
+/2026/10/php2shell-leaked-rce/
+	#perspective
+	#sources
 /2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -367,6 +370,9 @@
 /en/2026/10/passkey-attestation-debate/
 	#perspective
 	#sources
+/en/2026/10/php2shell-leaked-rce/
+	#perspective
+	#sources
 /en/2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -506,6 +512,7 @@
 	#y2026
 /en/page/2/
 /en/page/3/
+/en/page/4/
 /en/reading/
 	#display
 	#listening
@@ -572,6 +579,7 @@
 	#y2026
 /page/2/
 /page/3/
+/page/4/
 /reading/
 	#display
 	#listening
@@ -721,6 +729,9 @@
 /zh-cn/2026/10/passkey-attestation-debate/
 	#perspective
 	#sources
+/zh-cn/2026/10/php2shell-leaked-rce/
+	#perspective
+	#sources
 /zh-cn/2026/10/pipepipe-youtube-client/
 	#perspective
 	#sources
@@ -860,6 +871,7 @@
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
+/zh-cn/page/4/
 /zh-cn/reading/
 	#display
 	#listening

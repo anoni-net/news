@@ -5,6 +5,10 @@
 icon = "404media.co-96a9d826.png"
 from = "https://www.404media.co/favicon.ico"
 
+[hosts."47news.jp"]
+icon = "47news.jp-89c1e17c.png"
+from = "https://www.47news.jp/lib/common/img/apple-touch-icon.png"
+
 [hosts."9to5google.com"]
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
@@ -19,6 +23,10 @@ from = "https://www.abc.net.au/news-assets/touchicon-abc.png"
 
 [hosts."about.fb.com"]
 same_as = "meta.com"
+
+[hosts."access.redhat.com"]
+icon = "access.redhat.com-d7063640.png"
+from = "https://access.redhat.com/favicon.ico"
 
 [hosts."accessnow.org"]
 icon = "accessnow.org-8d11dfe8.png"
@@ -93,6 +101,10 @@ from = "https://www.asahi-kasei.co.jp/pharma/favicon.ico"
 [hosts."assets.publishing.service.gov.uk"]
 icon = "assets.publishing.service.gov.uk-a7b0c84b.png"
 from = "https://assets.publishing.service.gov.uk/favicon.ico"
+
+[hosts."automattic.com"]
+icon = "automattic.com-dc7f18bd.png"
+from = "https://automattic.com/wp-content/uploads/2026/10/a8c-favicon-1.png?w=192"
 
 [hosts."bamf.de"]
 icon = "bamf.de-c1ab8b4d.png"
@@ -171,6 +183,10 @@ from = "https://blog.torproject.org/static/images/favicon/favicon.ico"
 [hosts."blogs.windows.com"]
 icon = "blogs.windows.com-54de371c.png"
 from = "https://blogs.windows.com/wp-content/uploads/2022/09/cropped-Windows11IconTransparent512-192x192.png"
+
+[hosts."boho.or.kr"]
+icon = "boho.or.kr-35ff434f.png"
+from = "https://www.boho.or.kr/images/homepage/www/kr/favicon.ico"
 
 [hosts."brave.app"]
 icon = "brave.app-793e8faa.png"
@@ -273,6 +289,9 @@ none = "原站與 Internet Archive 都擋下自動抓取，存檔只有 16px 的
 [hosts."citizenlab.ca"]
 icon = "citizenlab.ca-a8596c5e.png"
 from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-192x192.png"
+
+[hosts."city.sapporo.jp"]
+none = "官網暫停中的臨時首頁，沒有圖示"
 
 [hosts."cloudflare.com"]
 icon = "cloudflare.com-71ae303d.png"
@@ -750,6 +769,10 @@ none = "官方圖示是沒有圖案的純色方塊"
 icon = "huggingface.co-5acaea69.png"
 from = "https://huggingface.co/favicon.ico"
 
+[hosts."huntress.com"]
+icon = "huntress.com-bc463299.png"
+from = "https://www.huntress.com/assets/apple-touch-icon-DudXUahm.png"
+
 [hosts."huridocs.org"]
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
@@ -798,6 +821,10 @@ from = "https://www.ithome.com.tw/favicon.ico"
 [hosts."itif.org"]
 icon = "itif.org-80d5619a.png"
 from = "https://itif.org/icons/apple-touch-icon.png"
+
+[hosts."itmedia.co.jp"]
+icon = "itmedia.co.jp-0d9d345b.png"
+from = "https://www.itmedia.co.jp/favicon.ico"
 
 [hosts."itnews.com.au"]
 icon = "itnews.com.au-c44b1e39.png"
@@ -1214,6 +1241,14 @@ from = "https://www.pdpc.gov.sg/favicon.ico"
 icon = "pdpc.gov.tw-5b8e23ff.png"
 from = "https://ws.pdpc.gov.tw/FS01/FilePath/3/sites/pagebackimage/favicon.ico"
 
+[hosts."php.net"]
+icon = "php.net-d77f1342.png"
+from = "https://www.php.net/favicon-196x196.png?v=2"
+
+[hosts."php2shell.com"]
+icon = "php2shell.com-70184835.png"
+from = "https://www.php2shell.com/apple-icon.png?apple-icon.3hw9e6l41ubyq.png"
+
 [hosts."pib.gov.in"]
 icon = "pib.gov.in-fffa8d37.png"
 from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
@@ -1225,6 +1260,10 @@ from = "https://www.pipc.go.kr/np/resources/images/common/gov.ico"
 [hosts."pipepipe.dev"]
 icon = "pipepipe.dev-ef8b4c05.png"
 from = "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/main/assets/logo.png"
+
+[hosts."piyolog.hatenadiary.jp"]
+icon = "piyolog.hatenadiary.jp-8b3395eb.png"
+from = "https://piyolog.hatenadiary.jp/icon/link"
 
 [hosts."pm.gov.au"]
 icon = "pm.gov.au-6ab35cff.png"
@@ -1523,6 +1562,10 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
 
+[hosts."thephp.foundation"]
+icon = "thephp.foundation-c6860153.png"
+from = "手動提供的檔案 phpf.png"
+
 [hosts."therecord.media"]
 icon = "therecord.media-6dc9e82c.png"
 from = "https://therecord.media/favicon-192.png"
@@ -1566,6 +1609,10 @@ from = "手動提供的檔案 twnic-fav.ico"
 icon = "twse.com.tw-3d3dcc50.png"
 from = "https://web.archive.org/web/20261007id_/https://twse.com.tw/favicon.ico"
 
+[hosts."ubuntu.com"]
+icon = "ubuntu.com-68e2fdd1.png"
+from = "https://assets.ubuntu.com/v1/f38b9c7e-COF%20apple-touch-icon.png"
+
 [hosts."ufm.dk"]
 icon = "ufm.dk-7092b75f.png"
 from = "https://ufm.dk/media/5ljdlabz/favicon.png?rmode=pad&width=180&height=180&format=png&bgcolor=transparent&v=1dc4cd92ab32530"
@@ -1581,6 +1628,10 @@ from = "https://voising-official.com/apple-icon.png"
 [hosts."w3.org"]
 icon = "w3.org-bf155846.png"
 from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
+
+[hosts."w3techs.com"]
+icon = "w3techs.com-181e8142.png"
+from = "https://w3techs.com/favicon.ico"
 
 [hosts."wap.miit.gov.cn"]
 icon = "wap.miit.gov.cn-754fc1e4.png"
@@ -1613,6 +1664,10 @@ from = "https://wikimediafoundation.org/wp-content/uploads/2018/05/cropped-wikim
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
 from = "https://www.wired.me/verso/static/wired-me/assets/favicon.ico"
+
+[hosts."wordpress.org"]
+icon = "wordpress.org-14053384.png"
+from = "https://s.w.org/images/wmark.png"
 
 [hosts."ws.pdpc.gov.tw"]
 icon = "ws.pdpc.gov.tw-9f612ccd.png"
