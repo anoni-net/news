@@ -6,7 +6,130 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 22 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>eMudhra 八張中繼憑證的弱私鑰事件</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/emudhra-weak-ca-keys/</link>
+<guid isPermaLink="false">anoni-news:2026/10/emudhra-weak-ca-keys</guid>
+<pubDate>Fri, 23 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>印度憑證機構 eMudhra 有八張中繼憑證的私鑰小於 256，任何人都能立刻算出來，再用來替別人的網站簽發 HTTPS 憑證。研究者 10 月 17 日通報後，Chrome 與 Firefox 在幾個小時內自動封鎖，一般使用者的瀏覽器不必另外設定。不經過瀏覽器的程式各自帶著信任清單，Node.js、Python 的 certifi、Go、Java 與 Linux 發行版從 10 月 19 日起陸續推出更新（到 10 月 22 日還沒全部完成），自行寫程式或維護伺服器的人要逐一更新。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，來自 Mozilla dev-security-policy、Mozilla Bugzilla、Google 等 12 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;印度的憑證機構 eMudhra（憑證品牌 emSign）有八張中繼憑證的私鑰簡單到可以直接算出來。中繼憑證位在根憑證之下，是實際用來簽發網站憑證的那一層。一位研究者在 UTC 10 月 17 日 18:05（台北時間 10 月 18 日 02:05）通報 Apple、Chrome、Microsoft、Mozilla 與 eMudhra，附上用八把私鑰各自簽出的證明。依 Mozilla 10 月 20 日在 dev-security-policy 郵件群組的貼文，取得私鑰的人可以替自己不擁有的網站簽發 HTTPS 憑證。&lt;/p&gt;
+&lt;p&gt;Chrome 與 Firefox 在通報後幾個小時內就用自動推送的封鎖清單擋下六張 TLS 中繼，多數使用者不必更新或重新啟動瀏覽器。受影響比較大的是不經過瀏覽器的程式，例如用 Node.js、Python、Go 或 Java 寫成的工具與伺服器，各自要等更新才會停止信任。Mozilla 10 月 20 日在事故單上補充，已經有好幾個人各自算出私鑰，其中有些人公開了這件事。&lt;/p&gt;
+&lt;p&gt;依 Mozilla 工程師在 Bugzilla 事故單的初步分析，八把都是 P-384 橢圓曲線的私鑰，本來應該是一個隨機挑選、長達 384 位元的整數。實際的值卻都小於 256，依序試過 256 個數字就能找出來。八張裡有六張用來簽發網站的 TLS 憑證，受 Chrome、Mozilla、Microsoft 與 Apple 信任。另外兩張用來簽署程式碼，受 Microsoft 信任。&lt;/p&gt;
+&lt;p&gt;eMudhra 的聲明寫到，八張中繼憑證在 2025 年 4 月 30 日的金鑰產生儀式建立，問題經過約 18 個月、兩次獨立稽核都沒有被發現。依 eMudhra 在事故單上的初步說明，儀式使用的程式有缺陷，在原本的金鑰之外多產生了一組弱金鑰。兩組金鑰的標籤相近，弱金鑰被誤用來申請憑證。eMudhra 10 月 21 日更新的聲明也提到，確切的根本原因還在調查。&lt;/p&gt;
+&lt;p&gt;依同一份聲明，八張中有七張從沒用在正式環境，正在使用的那一張沒有簽發過任何憑證。eMudhra 也不知道有人在公開之前算出弱金鑰的證據。依 Google 10 月 20 日的部落格，封鎖之前憑證透明度（Certificate Transparency，CT，公開記錄每一張憑證的日誌）裡沒有六張中繼簽出的網站憑證。Chrome 預設只接受記進 CT 的憑證，所以 Google 判斷偽造憑證騙不過 Chrome，也騙不過目標為最新 SDK 或自行啟用 CT 檢查的 Android App。&lt;/p&gt;
+&lt;p&gt;一位 Mozilla 工程師為事件架設的說明頁另外提到，很多瀏覽器以外的程式不檢查 CT。說明頁也寫到，從 2025 年 4 月憑證建立起就有被濫用的可能，目前不知道攻擊者有沒有利用弱金鑰攻擊這些程式。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;瀏覽器信任一個 HTTPS 網站，是因為網站的憑證由一串憑證機構逐層簽署，最上層的根憑證預先放在瀏覽器或作業系統的信任清單裡。中繼憑證的私鑰可以簽出任何網域的憑證。依 FreeBSD 10 月 21 日的安全公告，能攔截網路流量的攻擊者可以用被算出的私鑰冒充任何 TLS 伺服器，讀取或修改連線內容而不被發現。&lt;/p&gt;
+&lt;p&gt;Chrome 的 CRLSet 與 Firefox 的 OneCRL 都是瀏覽器在背景自動下載的封鎖清單，可以單獨擋下特定的中繼憑證。再加上 CT 的要求，Chrome 與 Firefox 這一端在通報當天就有兩層保護。依 Mozilla 的發行說明與事故單，停用了自動下載清單（Remote Settings）的 Firefox 要更新到 158.0.1。部分 Android 版 Firefox 的設定檔沒有在啟動時套用清單，要更新到 158.0.2。&lt;/p&gt;
+&lt;p&gt;依 Bugzilla 事故單，eMudhra 在 UTC 10 月 18 日把八張中繼標為撤銷。依 Mozilla 在事故單上的說法，有些程式不讀撤銷資訊，或沒有機制單獨撤回特定的中繼。NSS 是 Mozilla 維護的加密函式庫，許多程式與發行版沿用它的根憑證清單。為了保護前述的程式，Mozilla 在 10 月 20 日的 NSS 3.131.1 移除六張 TLS 中繼往上連到的根憑證 emSign ECC Root CA - G3。&lt;/p&gt;
+&lt;p&gt;Node.js 10 月 21 日的 22.23.4、24.22.1、26.12.1 換上了新清單，Go 也發布了 1.27.3 與 1.26.10。依說明頁的修補清單，Python 的 certifi 2026.10.19 與 curl 的 CA bundle 也已更新。依 Ubuntu 的追蹤單，到 10 月 22 日為止 22.04、24.04、26.04 與 26.10 已發布 ca-certificates 的更新，20.04 以前的版本還沒有。Fedora 已送出更新，依 Red Hat Bugzilla 的 bug 單，到 10 月 22 日為止這批更新仍信任簽發兩張程式碼簽署中繼的根憑證。&lt;/p&gt;
+&lt;p&gt;依說明頁的建議，一般使用者儘快把瀏覽器與作業系統更新到最新版。依 Google 的部落格，Android 裝置在 UTC 10 月 19 日 22:00 前後（台北時間 10 月 20 日 06:00）透過 Google Play 服務收到同樣的封鎖。Google 寫大多數 Android 裝置已經收到，還沒收到的重新開機就能馬上套用。沒有 Google Play 服務的 Android 裝置不在 Google 這段說明的範圍內，本文沒有查到 Android 系統本身的更新。&lt;/p&gt;
+&lt;p&gt;自行寫程式、維護伺服器或在電腦上執行命令列工具的人，要更新的是各自的執行環境。Go 的修補在標準函式庫的 &lt;code&gt;crypto/x509&lt;/code&gt; 套件，Go 程式編譯時會把標準函式庫包進執行檔，所以要用新版重新編譯。Python 的 certifi 是個別安裝的套件，每個虛擬環境與容器各有一份，要分別更新。依說明頁，macOS 內建的 curl、python3 等指令讀取 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 時不檢查撤銷，到 10 月 22 日這個檔案還沒更新。&lt;/p&gt;
+&lt;p&gt;依 OpenJDK 10 月 21 日的公告，作業系統套件提供的 Java 多半使用系統的憑證，更新系統就夠。自行安裝的 Java，以及 FreeBSD 與 Homebrew 的套件，要直接更新。&lt;/p&gt;
+&lt;p&gt;Cloudflare 的部落格提醒，更新之後如果出現憑證錯誤，不要用關閉憑證驗證的方式解決。說明頁準備了用受影響的中繼簽發的測試網址，用 curl 連線出現憑證錯誤，代表 curl 已經不信任這些憑證。Cloudflare 的部落格也寫到，這類測試只代表測到的那個程式，使用其他驗證方式的程式要個別確認。&lt;/p&gt;
+&lt;p&gt;移除根憑證可以保護不讀撤銷資訊的程式，代價是部分正當網站的憑證也跟著失效。eMudhra 在事故單上估計約 3 萬張憑證需要換掉，聲明寫影響範圍限於美國的單一客戶生態系。Chrome 在事故單上依到 10 月 21 日的 CT 資料統計，這個根底下約 3 萬 800 筆還沒過期的憑證紀錄，有 99.9% 由 Internet2 與 InCommon 的兩張從屬中繼簽發。依 Google 的部落格，Chrome 預計在太平洋時間 10 月 27 日上午從 Chrome Root Store 移除同一個根，也在評估 eMudhra 其他憑證是否繼續信任。&lt;/p&gt;
+&lt;p&gt;說明頁寫 Apple 裝置從 10 月 19 日起封鎖，Microsoft 平台從 10 月 20 日起封鎖。到 10 月 22 日為止，本文沒有找到兩家自己的公告。依 Bugzilla 事故單，到 UTC 10 月 21 日深夜為止，eMudhra 還沒有提交正式的事故報告。正式報告、eMudhra 對 Chrome 在事故單上所提問題的回覆，以及 Chrome 對 eMudhra 其他憑證的決定，是接下來可以留意的地方。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/0R3XLJL6FuE&#34;&gt;Compromised eMudhra Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla dev-security-policy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/press-release/emudhra-statement-distrust-global-tls-intermediate-root-ca&#34;&gt;eMudhra Statement on distrust of select Global TLS Intermediate and one Root CA&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nodejs.org/en/blog/vulnerability/october-2026-security-releases&#34;&gt;Wednesday, October 21, 2026 Security Releases&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Node.js&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/golang/go/issues/82345&#34;&gt;crypto/x509: mitigation for security concerns with a specific Certificate Authority&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Go&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openjdk.org/groups/vulnerability/advisories/2026-10-21&#34;&gt;OpenJDK Vulnerability Advisory: 2026/10/21&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenJDK&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugs.launchpad.net/ubuntu/+source/ca-certificates/+bug/2171507&#34;&gt;Bug&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Launchpad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=2556376&#34;&gt;2556376 – Update to mitigate current issues with eMudhra&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Red Hat Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.freebsd.org/security/advisories/FreeBSD-SA-26:73.caroot.asc&#34;&gt;FreeBSD-SA-26:73.caroot&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;FreeBSD&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cloudflare.com/emudhra-certificate-compromise/&#34;&gt;8 eMudhra certificates are compromised. Here&amp;#39;s what you need to know&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Telegram 交給美國執法單位的使用者資料</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/telegram-data-us-court/</link>
@@ -1989,99 +2112,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-08&#34;&gt;2026 年 6 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Beeline 接聽詐騙電話的 AI 語音角色</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/beeline-ai-scam-call-assistant/</link>
-<guid isPermaLink="false">anoni-news:2026/10/beeline-ai-scam-call-assistant</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>俄羅斯電信業者 Beeline 10 月 6 日公布，2026 年以來把 1,910 萬通詐騙電話轉給 AI 語音角色接聽，數字都是業者自報。這項服務只在俄羅斯的 Beeline 網路上運作。台灣讀者接到可疑電話時，仍是先掛斷再查證，可撥 165 反詐騙諮詢專線。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，來自 Beeline、ict-online、動區動趨 等 8 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;俄羅斯電信業者 Beeline 10 月 6 日公布，網路內的反詐平台把詐騙電話轉給一組 AI 語音角色接聽，2026 年以來轉接了 1,910 萬通。Beeline 稱這組角色為「cyber family」。依新聞稿，詐騙者與它們合計通話約 14 萬小時，相當於將近 6,000 天。這項服務只在俄羅斯的 Beeline 網路上運作，數字都是業者自己公布的，沒有第三方查證。&lt;/p&gt;
-&lt;p&gt;Beeline 2025 年 11 月開始小量測試「cyber 奶奶」，當時只用一個聲音，新聞稿寫上線後打給年長女性客戶的可疑來電會轉給它。運作方式是 AI 先分析詐騙者的話，再由大型語言模型依對話脈絡產生回應、轉成語音。2026 年 6 月加入扮成青少年的角色，8 月對外公布 cyber family 共有十個聲音，業者網路裡幾乎所有詐騙電話都轉給它們。AI 依被打的號碼挑選聲音，同一個詐騙者五小時內再打同一個號碼，接電話的會是同一個角色。&lt;/p&gt;
-&lt;p&gt;2026 年 6 月的新聞稿寫明，這項服務含在「我的安全」（Моя безопасность）的免費基本方案內。執行長在 10 月 6 日的發表中提到，這些通話也是再訓練模型的大量素材。新聞稿沒有寫被保護的客戶手機會不會響、能不能自行關閉，也沒有寫真人來電被誤判轉給 AI 時如何處理。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 Beeline 的新聞稿，反詐平台先判定哪些是可疑來電，再決定轉給誰。判定的依據沒有公開。拖住詐騙者的用意是占用他們的時間，讓他們少打給真人。英國 O2 2024 年 11 月推出的 AI 奶奶 Daisy 是同類做法，O2 的新聞稿寫它曾讓詐騙者一次通話長達 40 分鐘，但沒有公布接過多少通。&lt;/p&gt;
-&lt;p&gt;判定與轉接都在業者端，到 10 月 12 日為止，Beeline 也沒有公開誤判的處理方式。Beeline 用來再訓練模型的是這些通話，新聞稿沒有寫保留的是錄音還是文字、保存多久、依據什麼法律處理。南韓政府的政策新聞網站轉述科學技術情報通信部 2025 年 7 月的說明，詐騙者的聲音在南韓《個人資訊保護法》下屬於敏感資訊。電信業者 KT 開發通話中偵測詐騙的 AI 服務，要透過法規沙盒（限定範圍內暫時豁免既有法規的試驗制度）取得特例，才能不經詐騙者同意使用這些聲音資料。&lt;/p&gt;
-&lt;p&gt;到 10 月 12 日為止，我們沒有找到台灣電信業者提供同類的 AI 代接服務。中華電信 2023 年 7 月推出市話的國際來話警示，用戶接到「+886 9」開頭的國際來話時會先聽到國台語的警示語音，聽完再決定是否接聽。&lt;/p&gt;
-&lt;p&gt;台灣的讀者接到可疑電話時，可以照內政部轉述的刑事警察局提醒「一聽、二掛、三查證」，先掛斷電話再查證。對方要求不掛斷、直接撥 165 查證的，就是詐騙電話。查證與報案可以撥 165 反詐騙諮詢專線，或上 165 全民防騙網。Beeline 這類業者端的語音攔截只處理打進來的電話，從通訊軟體開始的詐騙不會經過它，本文的判斷是這類訊息仍要自行查證。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/moshenniki-obshchalis-s-kibersemyey-bilayna-6-tys-dney/&#34;&gt;Мошенники общались с «киберсемьёй» Билайна 6 тыс. дней&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/kiberbabushka-beeline/&#34;&gt;«Кибербабушка» поможет Билайну бороться с мошенниками&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-13&#34;&gt;2025 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/kiberpatsan-beeline/&#34;&gt;«Киберпацан» Билайна поможет «Кибербабушке» бороться с мошенниками&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-03&#34;&gt;2026 年 6 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://releases.ict-online.ru/news/S-nachala-iyulya-kibersem-ya-otrazila-okolo-5-mln-moshennicheskikh-zvonkov-napravlennykh-kliyentam-Bilaina-331033&#34;&gt;С начала июля &amp;#34;киберсемья&amp;#34; отразила около 5 млн мошеннических звонков, направленных клиентам Билайна&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ict-online&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;2026 年 8 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.blocktempo.com/beeline-ai-cyber-family-voice-assistants-scam-callers-6000-days/&#34;&gt;俄國電信商把詐騙電話轉給「AI 假民眾」接聽，今年陪聊 14 萬小時&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;動區動趨&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.virginmediao2.co.uk/o2-unveils-daisy-the-ai-granny-wasting-scammers-time/&#34;&gt;O2 unveils Daisy, the AI granny wasting scammers&amp;#39; time&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Virgin Media O2&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-14&#34;&gt;2024 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.korea.kr/news/policyNewsView.do?newsId=148946841&#34;&gt;통화 중 보이스피싱 범죄 잡아내는 AI 탐지 서비스 개시&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;대한민국 정책브리핑&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-30&#34;&gt;2025 年 7 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cht.com.tw/zh-tw/home/cht/messages/2023/0717-0900&#34;&gt;中華電信配合政府遏止詐騙 率先推出全國首創「固網國際來話語音警示服務」&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;中華電信&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-17&#34;&gt;2023 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.moi.gov.tw/News_Content.aspx?n=4&amp;amp;s=323333&#34;&gt;通話中直接撥打165?小心詐騙集團假冒警察&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;內政部&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-24&#34;&gt;2024 年 11 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.npa.gov.tw/ch/app/faq/view?module=faq&amp;amp;id=2144&amp;amp;serno=A1078837&#34;&gt;撥打165反詐騙諮詢專線需要通話費用嗎?受騙報案除可撥打165外，還有其他方式嗎?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;內政部警政署&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-11-01&#34;&gt;2022 年 11 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

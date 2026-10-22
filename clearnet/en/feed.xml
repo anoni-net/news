@@ -6,7 +6,137 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 22 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Weak private keys in eight eMudhra intermediate certificates</title>
+<link>https://anoni.net/news/en/2026/10/emudhra-weak-ca-keys/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/emudhra-weak-ca-keys</guid>
+<pubDate>Fri, 23 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Eight intermediate certificates from the Indian certificate authority eMudhra had private keys smaller than 256, which anyone could compute at once and use to issue HTTPS certificates for other people&#39;s websites. After a researcher reported it on 17 October, Chrome and Firefox blocked them automatically within hours, with nothing for ordinary browser users to set up. Programs that do not go through a browser carry their own trust lists, and Node.js, Python&#39;s certifi, Go, Java and Linux distributions have been shipping updates since 19 October (not all complete as of 22 October), so people who write their own code or run servers need to update each one.</description>
+<content:encoded>&lt;p&gt;Based on 14 sources, including Mozilla dev-security-policy, Mozilla Bugzilla, Google&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The Indian certificate authority eMudhra (certificate brand emSign) had eight intermediate certificates whose private keys were simple enough to calculate directly. Intermediate certificates sit below the root and are the layer actually used to sign website certificates. A researcher reported the problem to Apple, Chrome, Microsoft, Mozilla and eMudhra at 18:05 UTC on 17 October (02:05 on 18 October Taipei time), attaching proofs signed with each of the eight keys. According to Mozilla&#39;s 20 October post on the dev-security-policy mailing list, anyone holding the keys could issue HTTPS certificates for websites they do not own.&lt;/p&gt;
+&lt;p&gt;Chrome and Firefox blocked the six TLS intermediates within hours of the report through automatically pushed blocklists, so most users did not need to update or restart their browsers. The bigger exposure is in programs that do not go through a browser, such as tools and servers written in Node.js, Python, Go or Java, which each keep trusting the certificates until they are updated. Mozilla added on the incident ticket on 20 October that several people had independently computed the keys, and that some of them had made this public.&lt;/p&gt;
+&lt;p&gt;According to the preliminary analysis by Mozilla engineers on the Bugzilla incident ticket, all eight are P-384 elliptic-curve keys, each of which should be a randomly chosen 384-bit integer. The actual values were all below 256, so trying 256 numbers in turn is enough to find them. Six of the eight sign TLS certificates for websites and are trusted by Chrome, Mozilla, Microsoft and Apple, while the other two sign code and are trusted by Microsoft.&lt;/p&gt;
+&lt;p&gt;eMudhra&#39;s statement says the eight intermediates were created at a key generation ceremony on 30 April 2025, and the problem went unnoticed for about 18 months and through two independent audits. In eMudhra&#39;s preliminary explanation on the incident ticket, the software used in the ceremony was flawed and generated a set of weak keys alongside the intended ones. The two sets had similar labels, and the weak keys were mistakenly used to request the certificates. eMudhra&#39;s statement, updated on 21 October, also says the exact root cause is still under investigation.&lt;/p&gt;
+&lt;p&gt;According to the same statement, seven of the eight were never used in production, and the one in use had issued no certificates. eMudhra also says it knows of no evidence that anyone computed the weak keys before disclosure. Google&#39;s 20 October blog post says that before the block, Certificate Transparency (CT, the public logs that record every certificate) held no website certificates signed by the six intermediates. Because Chrome by default accepts only certificates logged in CT, Google concluded that forged certificates could not fool Chrome, nor Android apps that target the latest SDK or have opted in to CT checks.&lt;/p&gt;
+&lt;p&gt;An explainer page that a Mozilla engineer set up for the incident adds that many programs outside the browser do not check CT. The page also says the keys could have been abused ever since the certificates were created in April 2025, and that it is not known whether attackers used the weak keys against such programs.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;A browser trusts an HTTPS site because the site&#39;s certificate is signed layer by layer by a chain of certificate authorities, with the root certificate at the top preinstalled in the trust list of the browser or operating system. The private key of an intermediate certificate can sign a certificate for any domain. FreeBSD&#39;s 21 October security advisory says an attacker able to intercept network traffic could use the computed keys to impersonate any TLS server and read or modify the connection without being detected.&lt;/p&gt;
+&lt;p&gt;Chrome&#39;s CRLSet and Firefox&#39;s OneCRL are blocklists that the browsers download automatically in the background, and they can block a specific intermediate certificate on its own. Together with the CT requirement, Chrome and Firefox had two layers of protection on the day of the report. According to Mozilla&#39;s release notes and the incident ticket, Firefox installations with automatic list downloads (Remote Settings) disabled need to update to 158.0.1. Some Firefox for Android profiles did not apply the list at startup and need 158.0.2.&lt;/p&gt;
+&lt;p&gt;According to the Bugzilla incident ticket, eMudhra marked the eight intermediates as revoked on 18 October UTC. Mozilla wrote on the ticket that some programs do not read revocation information, or have no mechanism for distrusting a particular intermediate on its own. NSS is the cryptographic library maintained by Mozilla, and many programs and distributions reuse its root certificate list. To protect those programs, Mozilla removed emSign ECC Root CA - G3, the root that the six TLS intermediates chain up to, in NSS 3.131.1 on 20 October.&lt;/p&gt;
+&lt;p&gt;Node.js shipped the new list in 22.23.4, 24.22.1 and 26.12.1 on 21 October, and Go released 1.27.3 and 1.26.10. The explainer page&#39;s list of fixes shows that Python&#39;s certifi 2026.10.19 and curl&#39;s CA bundle have been updated as well. Ubuntu&#39;s tracking bug shows ca-certificates updates released for 22.04, 24.04, 26.04 and 26.10 as of 22 October, with nothing yet for 20.04 and earlier. Fedora has submitted updates, but according to the Red Hat Bugzilla bug, as of 22 October they still trust the root that issued the two code-signing intermediates.&lt;/p&gt;
+&lt;p&gt;The explainer page advises ordinary users to update their browsers and operating systems to the latest version as soon as possible. According to Google&#39;s blog, Android devices received the same block through Google Play services around 22:00 UTC on 19 October (06:00 on 20 October Taipei time). Google says most Android devices have already received it, and those that have not can apply it immediately by restarting. Android devices without Google Play services fall outside what Google describes there, and we found no update to the Android system itself.&lt;/p&gt;
+&lt;p&gt;When we checked on 18 October, the third-party monitor GreatFire&#39;s last test (on 11 October) found &lt;code&gt;play.google.com&lt;/code&gt; fully blocked in mainland China, with interference recorded since 10 March 2012. GreatFire measures whether websites can be reached, not whether Google Play services on a device can receive updates. We, a community based in Taiwan, infer from Google&#39;s description that Android devices without Google Play services, or whose Google Play services cannot connect, are not covered by the block it describes, while the CRLSet and OneCRL lists that browsers download themselves do not go through Google Play services. The explanation page&#39;s advice to ordinary users is to update the browser and system to the latest version, but none of the sources says whether that is enough for such devices, and we did not check whether the two lists download reliably in mainland China.&lt;/p&gt;
+&lt;p&gt;People who write their own code, run servers or use command-line tools on their computers need to update each runtime they use. Go&#39;s fix is in the standard library&#39;s &lt;code&gt;crypto/x509&lt;/code&gt; package, and because Go compiles the standard library into the executable, programs have to be rebuilt with the new version. Python&#39;s certifi is a separately installed package with its own copy in every virtual environment and container, so each copy needs updating. According to the explainer page, the curl, python3 and other commands built into macOS do not check revocation when reading &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;, and the file had not been updated as of 22 October.&lt;/p&gt;
+&lt;p&gt;OpenJDK&#39;s 21 October advisory says Java provided by operating system packages mostly uses the system certificates, so updating the system is enough. Java installed separately, along with the FreeBSD and Homebrew packages, needs to be updated directly.&lt;/p&gt;
+&lt;p&gt;Cloudflare&#39;s blog warns against switching off certificate validation to get rid of certificate errors that appear after updating. The explainer page provides test URLs signed by the affected intermediates, and a certificate error when connecting with curl means curl no longer trusts those certificates. Cloudflare&#39;s blog also notes that such a test speaks only for the program tested, and programs that validate certificates in other ways need to be checked separately.&lt;/p&gt;
+&lt;p&gt;Removing the root protects programs that do not read revocation information, at the cost of invalidating some legitimate sites&#39; certificates as well. eMudhra estimated on the incident ticket that about 30,000 certificates need replacing, and its statement says the impact is limited to a single customer ecosystem in the United States. From CT data up to 21 October, Chrome counted on the ticket about 30,800 unexpired certificate entries under this root, 99.9% of them issued by two subordinate intermediates of Internet2 and InCommon. According to Google&#39;s blog, Chrome plans to remove the same root from the Chrome Root Store on the morning of 27 October Pacific Time, and is assessing whether to keep trusting eMudhra&#39;s other certificates.&lt;/p&gt;
+&lt;p&gt;The explainer page says Apple devices have blocked the certificates since 19 October and Microsoft platforms since 20 October. As of 22 October, we had not found announcements from either company. According to the Bugzilla incident ticket, eMudhra had not filed a formal incident report as of late on 21 October UTC. The formal report, eMudhra&#39;s answers to Chrome&#39;s questions on the ticket, and Chrome&#39;s decision on eMudhra&#39;s other certificates are the things to watch next.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (14)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/0R3XLJL6FuE&#34;&gt;Compromised eMudhra Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla dev-security-policy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;18 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/press-release/emudhra-statement-distrust-global-tls-intermediate-root-ca&#34;&gt;eMudhra Statement on distrust of select Global TLS Intermediate and one Root CA&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nodejs.org/en/blog/vulnerability/october-2026-security-releases&#34;&gt;Wednesday, October 21, 2026 Security Releases&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Node.js&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/golang/go/issues/82345&#34;&gt;crypto/x509: mitigation for security concerns with a specific Certificate Authority&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Go&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;19 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openjdk.org/groups/vulnerability/advisories/2026-10-21&#34;&gt;OpenJDK Vulnerability Advisory: 2026/10/21&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OpenJDK&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugs.launchpad.net/ubuntu/+source/ca-certificates/+bug/2171507&#34;&gt;Bug&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Launchpad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=2556376&#34;&gt;2556376 – Update to mitigate current issues with eMudhra&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Red Hat Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.freebsd.org/security/advisories/FreeBSD-SA-26:73.caroot.asc&#34;&gt;FreeBSD-SA-26:73.caroot&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;FreeBSD&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cloudflare.com/emudhra-certificate-compromise/&#34;&gt;8 eMudhra certificates are compromised. Here&amp;#39;s what you need to know&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/play.google.com&#34;&gt;Is https://play.google.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>User data Telegram handed over to US law enforcement</title>
 <link>https://anoni.net/news/en/2026/10/telegram-data-us-court/</link>
@@ -2532,113 +2662,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/developer-verification&#34;&gt;Android developer verification&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Beeline&#39;s AI voice personas for scam calls</title>
-<link>https://anoni.net/news/en/2026/10/beeline-ai-scam-call-assistant/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/beeline-ai-scam-call-assistant</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Russian carrier Beeline said on 6 October that it has routed 19.1 million scam calls to AI voice personas since the start of 2026, according to its own figures. The service runs only on Beeline&#39;s network in Russia. In South Korea, Singapore and Taiwan, the examples we found are call warnings, filtering and on-device detection.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including Beeline, ict-online, 動區動趨&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Russian mobile carrier Beeline said on 6 October that its anti-fraud platform has routed 19.1 million scam calls to a set of AI voice personas since the start of 2026. Beeline calls them its &#34;cyber family&#34;, and according to the press release, scammers have spent about 140,000 hours talking to them, close to 6,000 days. The service runs only on Beeline&#39;s network in Russia, and all figures are self-reported without independent verification.&lt;/p&gt;
-&lt;p&gt;Beeline began small-scale tests of a &#34;cyber granny&#34; in November 2025 with a single voice, and the release at the time said suspicious calls to older female customers would be routed to it. The system analyses what the scammer says, then a large language model generates a reply from the conversation&#39;s context and turns it into speech. A teenage persona was added in June 2026, and in August Beeline announced ten voices in total, with almost all scam calls on its network now sent to them. The AI picks a voice based on the number being called, and a scammer who calls the same number again within five hours reaches the same persona.&lt;/p&gt;
-&lt;p&gt;Beeline&#39;s June 2026 release says the service is part of the free basic tier of its &#34;My Security&#34; (Моя безопасность) service. The chief executive said on 6 October that these calls are also a large body of material for retraining the models. The releases do not say whether the protected customer&#39;s phone rings, whether customers can switch the service off, or what happens when a real person&#39;s call is misrouted to the AI.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to Beeline&#39;s releases, its anti-fraud platform decides which calls look suspicious and where to send them, without publishing the criteria. The point of stalling scammers is to use up their time so they make fewer calls to real people. O2 in the UK launched a similar AI granny, Daisy, in November 2024, and its press release says Daisy kept scammers on the line for up to 40 minutes at a time, without saying how many calls it took.&lt;/p&gt;
-&lt;p&gt;Both the decision and the routing happen on the carrier&#39;s side, and as of 12 October Beeline has not published how misrouted calls are handled. The releases say the calls are used for retraining but not whether recordings or transcripts are kept, for how long, or on what legal basis. South Korea offers a contrast. According to the government&#39;s policy news site, the Ministry of Science and ICT said in July 2025 that a scammer&#39;s voice counts as sensitive information under Korea&#39;s Personal Information Protection Act, so the carrier KT needed a regulatory sandbox exemption (a trial scheme that temporarily exempts a limited use from existing rules) to use such voice data without consent for an AI service that detects scams during calls.&lt;/p&gt;
-&lt;p&gt;In the three places we checked, South Korea, Singapore and Taiwan, we found no carrier offering AI personas that answer scam calls as of 12 October, only call warnings, filtering and on-device detection. In February 2026 Korea&#39;s science ministry urged people to use AI scam-call detection from Samsung and the three mobile carriers, noting that call analysis runs on the phone itself rather than on outside servers. Singapore&#39;s ScamShield combines an app that helps people check, block and filter scams with a 24/7 helpline at 1799. In Taiwan, Chunghwa Telecom introduced a spoken warning in July 2023 for international calls showing a &#34;+886 9&#34; prefix on landlines.&lt;/p&gt;
-&lt;p&gt;Wherever you are, the advice from Taiwan&#39;s Criminal Investigation Bureau, relayed by the Ministry of the Interior, is to hang up first and then verify through an official channel. In Taiwan, a caller who asks you to dial 165, the anti-fraud hotline, without hanging up first is a scammer. The 165 hotline and the 165 website take enquiries and reports. Carrier-side call interception like Beeline&#39;s only handles incoming phone calls, so in our view scams that start in messaging apps still need checking yourself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/moshenniki-obshchalis-s-kibersemyey-bilayna-6-tys-dney/&#34;&gt;Мошенники общались с «киберсемьёй» Билайна 6 тыс. дней&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;6 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/kiberbabushka-beeline/&#34;&gt;«Кибербабушка» поможет Билайну бороться с мошенниками&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-13&#34;&gt;13 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://beelinenow.ru/articles/kiberpatsan-beeline/&#34;&gt;«Киберпацан» Билайна поможет «Кибербабушке» бороться с мошенниками&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Beeline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-03&#34;&gt;3 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://releases.ict-online.ru/news/S-nachala-iyulya-kibersem-ya-otrazila-okolo-5-mln-moshennicheskikh-zvonkov-napravlennykh-kliyentam-Bilaina-331033&#34;&gt;С начала июля &amp;#34;киберсемья&amp;#34; отразила около 5 млн мошеннических звонков, направленных клиентам Билайна&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ict-online&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;17 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.blocktempo.com/beeline-ai-cyber-family-voice-assistants-scam-callers-6000-days/&#34;&gt;俄國電信商把詐騙電話轉給「AI 假民眾」接聽，今年陪聊 14 萬小時&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;動區動趨&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.virginmediao2.co.uk/o2-unveils-daisy-the-ai-granny-wasting-scammers-time/&#34;&gt;O2 unveils Daisy, the AI granny wasting scammers&amp;#39; time&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Virgin Media O2&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-14&#34;&gt;14 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.korea.kr/news/policyNewsView.do?newsId=148946841&#34;&gt;통화 중 보이스피싱 범죄 잡아내는 AI 탐지 서비스 개시&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;대한민국 정책브리핑&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-30&#34;&gt;30 July 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cht.com.tw/zh-tw/home/cht/messages/2023/0717-0900&#34;&gt;中華電信配合政府遏止詐騙 率先推出全國首創「固網國際來話語音警示服務」&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中華電信&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-17&#34;&gt;17 July 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.moi.gov.tw/News_Content.aspx?n=4&amp;amp;s=323333&#34;&gt;通話中直接撥打165?小心詐騙集團假冒警察&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;內政部&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-24&#34;&gt;24 November 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.npa.gov.tw/ch/app/faq/view?module=faq&amp;amp;id=2144&amp;amp;serno=A1078837&#34;&gt;撥打165反詐騙諮詢專線需要通話費用嗎?受騙報案除可撥打165外，還有其他方式嗎?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;內政部警政署&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-11-01&#34;&gt;1 November 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.korea.kr/news/policyNewsView.do?newsId=148959497&#34;&gt;인공지능으로 통화 중에 &amp;#39;보이스피싱&amp;#39; 잡는다&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;대한민국 정책브리핑&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-12&#34;&gt;12 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tech.gov.sg/products-and-services/for-citizens/scam-prevention/scamshield/&#34;&gt;ScamShield&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GovTech Singapore&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-28&#34;&gt;28 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
