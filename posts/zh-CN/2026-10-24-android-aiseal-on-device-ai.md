@@ -1,7 +1,7 @@
 ---
 title: Android 17 端侧 AI 的隔离执行环境 AISeal
 description: Google 10 月 7 日说明 Android 17 的 AISeal，把端侧 AI 使用的个人数据放进跟操作系统隔离的受保护虚拟机。依公告，第一阶段推出的是个人数据的存储，模型推理与 AI 智能体要等之后。到 10 月 20 日为止，Google 没有公布哪些机型、哪些地区已经启用，Google 的公告与帮助页没有提到用户需要调整的设置。
-date: 2026-10-23T00:00:00+08:00
+date: 2026-10-24T00:00:00+08:00
 slug: android-aiseal-on-device-ai
 categories:
   - mobile

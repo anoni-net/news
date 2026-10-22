@@ -1,7 +1,7 @@
 ---
 title: AISeal, the isolated environment for on-device AI in Android 17
 description: On 7 October Google described AISeal in Android 17, which keeps the personal data used by on-device AI in a protected virtual machine isolated from the operating system. According to the announcement, the first phase covers storing personal data, with model inference and AI agents to follow. As of 20 October, Google had not said which devices or regions have it enabled, and there is nothing in Google's announcement or help pages about settings that users need to change.
-date: 2026-10-23T00:00:00+08:00
+date: 2026-10-24T00:00:00+08:00
 slug: android-aiseal-on-device-ai
 categories:
   - mobile

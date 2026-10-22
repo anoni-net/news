@@ -1,7 +1,7 @@
 ---
 title: Tor 洋蔥服務的靜態網站架設
 description: 架設洋蔥服務不需要固定 IP、網域或開放連接埠，用 tor 加上一般的網頁伺服器就能把靜態網站放上 Tor 網路。tor 6 月到 10 月連續發布四個安全更新，其中三個的修補涉及洋蔥服務，到 10 月 20 日為止最新版是 0.4.9.14。網站的訪客要透過 Tor 連線，例如用 Tor Browser。
-date: 2026-10-23T00:05:00+08:00
+date: 2026-10-24T00:05:00+08:00
 slug: tor-onion-service-static-site
 categories:
   - censorship

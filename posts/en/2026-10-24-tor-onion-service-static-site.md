@@ -1,7 +1,7 @@
 ---
 title: A static website hosted as a Tor onion service
 description: Hosting an onion service needs no fixed IP address, domain name or open port, and tor plus an ordinary web server is enough to put a static site on the Tor network. tor shipped four security updates between June and October, three with fixes involving onion services, and as of 20 October the latest is 0.4.9.14. Visitors need to connect through Tor, for example with Tor Browser.
-date: 2026-10-23T00:05:00+08:00
+date: 2026-10-24T00:05:00+08:00
 slug: tor-onion-service-static-site
 categories:
   - censorship
