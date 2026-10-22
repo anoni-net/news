@@ -5,6 +5,10 @@
 icon = "404media.co-96a9d826.png"
 from = "https://www.404media.co/favicon.ico"
 
+[hosts."47news.jp"]
+icon = "47news.jp-89c1e17c.png"
+from = "https://www.47news.jp/lib/common/img/apple-touch-icon.png"
+
 [hosts."9to5google.com"]
 icon = "9to5google.com-ccc4033a.png"
 from = "https://9to5google.com/wp-content/uploads/sites/4/2017/03/favicon-bg-none-face-white.png?w=192"
@@ -180,6 +184,10 @@ from = "https://blog.torproject.org/static/images/favicon/favicon.ico"
 icon = "blogs.windows.com-54de371c.png"
 from = "https://blogs.windows.com/wp-content/uploads/2022/09/cropped-Windows11IconTransparent512-192x192.png"
 
+[hosts."boho.or.kr"]
+icon = "boho.or.kr-35ff434f.png"
+from = "https://www.boho.or.kr/images/homepage/www/kr/favicon.ico"
+
 [hosts."brave.app"]
 icon = "brave.app-793e8faa.png"
 from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
@@ -273,6 +281,9 @@ none = "原站與 Internet Archive 都擋下自動抓取，存檔只有 16px 的
 [hosts."citizenlab.ca"]
 icon = "citizenlab.ca-a8596c5e.png"
 from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-192x192.png"
+
+[hosts."city.sapporo.jp"]
+none = "官網暫停中的臨時首頁，沒有圖示"
 
 [hosts."cloudflare.com"]
 icon = "cloudflare.com-71ae303d.png"
@@ -785,6 +796,10 @@ from = "https://www.ithome.com.tw/favicon.ico"
 icon = "itif.org-80d5619a.png"
 from = "https://itif.org/icons/apple-touch-icon.png"
 
+[hosts."itmedia.co.jp"]
+icon = "itmedia.co.jp-0d9d345b.png"
+from = "https://www.itmedia.co.jp/favicon.ico"
+
 [hosts."itnews.com.au"]
 icon = "itnews.com.au-c44b1e39.png"
 from = "https://www.itnews.com.au/images/favicon/apple-touch-icon.png"
@@ -1211,6 +1226,10 @@ from = "https://www.pipc.go.kr/np/resources/images/common/gov.ico"
 [hosts."pipepipe.dev"]
 icon = "pipepipe.dev-ef8b4c05.png"
 from = "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/main/assets/logo.png"
+
+[hosts."piyolog.hatenadiary.jp"]
+icon = "piyolog.hatenadiary.jp-8b3395eb.png"
+from = "https://piyolog.hatenadiary.jp/icon/link"
 
 [hosts."pm.gov.au"]
 icon = "pm.gov.au-6ab35cff.png"

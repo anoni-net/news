@@ -48,6 +48,33 @@ sources:
     url: https://www.twcert.org.tw/tw/cp-169-11303-1d68a-1.html
     publisher: TWCERT/CC
     date: 2026-10-22
+  - title: 【事前準備のお願い】PHPのセキュリティリリース公開予定について
+    url: https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html
+    publisher: IPA
+    date: 2026-10-21
+  - title: 総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」
+    url: https://www.itmedia.co.jp/news/article/2610/22/2000002483/
+    publisher: ITmedia NEWS
+    date: 2026-10-22
+  - title: PHPの2件の深刻な脆弱性(CVE-2026-109618、CVE-2026-109619)についてまとめてみた
+    url: https://piyolog.hatenadiary.jp/entry/2026/10/21/174516
+    publisher: piyolog
+    date: 2026-10-21
+  - title: 【速報】札幌市、PHPで公式ホームページ一時停止
+    url: https://www.47news.jp/15117775.html
+    publisher: 47NEWS
+    date: 2026-10-21
+  - title: 札幌市公式ホームページ
+    url: https://www.city.sapporo.jp/
+    publisher: 札幌市
+  - title: PHP 보안취약점(PHP2Shell) 관련 기업 보안 대응 수칙
+    url: https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72228
+    publisher: KISA
+    date: 2026-10-22
+  - title: 網站開發程式語言PHP釋出緊急安全更新 資安署呼籲儘速完成修補
+    url: https://moda.gov.tw/ACS/press/news/press/21134
+    publisher: 數位發展部資通安全署
+    date: 2026-10-22
   - title: Cloudflare deploys protections against php2shell vulnerability
     url: https://blog.cloudflare.com/php-vulnerabilities-waf-protection/
     publisher: Cloudflare
@@ -73,6 +100,14 @@ PHP 10 月 21 日發布 8.5.12、8.4.27、8.3.36 與 8.2.35，修補兩個漏洞
 同一篇部落格提到，預告發出後，回報漏洞的一家資安公司誤公開了一段示範影片。影片的副本隨即在社群網站流傳。部落格寫到，影片是各方加快開發概念驗證程式（PoC，證明漏洞能被利用的程式）的原因之一。到公開發布時，PHP 安全團隊在流傳的 PoC 裡沒有找到能實際運作的利用程式。
 
 Cloudflare 10 月 21 日的部落格寫到，外洩期間已觀察到針對客戶的攻擊流量，對應的 WAF（網站應用程式防火牆）規則從 UTC 10 月 21 日 03:02（台北時間 11:02）起對免費與付費客戶預設啟用。資安公司 Huntress 到美東時間 10 月 21 日 16:30（台北時間 10 月 22 日 04:30）為止，沒有在合作夥伴的系統觀察到實際利用。修補版發布之後，台灣電腦網路危機處理暨協調中心（TWCERT/CC）在 10 月 22 日的警訊提到網路上已出現 PoC。
+
+日本資訊處理推進機構（IPA）10 月 21 日預告修補的公開時間。依 ITmedia NEWS 的報導，日本首相當晚在 X 呼籲各方準備套用修補。首相也寫到修補有困難時，暫時停止網站是降低風險的有效方法之一。
+
+依資安部落格 piyolog 整理各組織公告與報導的統計，到日本時間 10 月 22 日 1 點多（台北時間 0 點多）日本有 211 個組織停止服務或發布緊急維護，其中有國家機關 2 個、地方政府 4 個。札幌市 10 月 21 日晚間暫停官方網站。到 10 月 22 日查證時，臨時首頁寫到沒有確認到不當存取或竄改，停站是預防措施。
+
+韓國網路振興院（KISA）10 月 22 日發布企業應對守則，建議無法更新、也無法套用暫時設定時，考慮切斷外部連線或暫停服務。守則也請企業更新後至少檢查 10 月 20 日以後的紀錄，更新前曾對網際網路開放的伺服器，建議更換資料庫密碼、API 金鑰與管理者密碼。
+
+台灣的數位發展部資通安全署同一天發布新聞稿，請各單位盤點與修補，沒有要求暫停服務。到 10 月 22 日為止，本文沒有查到台灣單位因這次漏洞停機的公告，日本、韓國、台灣也都沒有查到確認的入侵案例。
 
 ## 導讀觀點 {#perspective}
 

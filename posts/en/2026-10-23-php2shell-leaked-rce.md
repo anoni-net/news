@@ -48,6 +48,33 @@ sources:
     url: https://www.twcert.org.tw/tw/cp-169-11303-1d68a-1.html
     publisher: TWCERT/CC
     date: 2026-10-22
+  - title: 【事前準備のお願い】PHPのセキュリティリリース公開予定について
+    url: https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html
+    publisher: IPA
+    date: 2026-10-21
+  - title: 総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」
+    url: https://www.itmedia.co.jp/news/article/2610/22/2000002483/
+    publisher: ITmedia NEWS
+    date: 2026-10-22
+  - title: PHPの2件の深刻な脆弱性(CVE-2026-109618、CVE-2026-109619)についてまとめてみた
+    url: https://piyolog.hatenadiary.jp/entry/2026/10/21/174516
+    publisher: piyolog
+    date: 2026-10-21
+  - title: 【速報】札幌市、PHPで公式ホームページ一時停止
+    url: https://www.47news.jp/15117775.html
+    publisher: 47NEWS
+    date: 2026-10-21
+  - title: 札幌市公式ホームページ
+    url: https://www.city.sapporo.jp/
+    publisher: 札幌市
+  - title: PHP 보안취약점(PHP2Shell) 관련 기업 보안 대응 수칙
+    url: https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000133&menuNo=205020&nttId=72228
+    publisher: KISA
+    date: 2026-10-22
+  - title: 網站開發程式語言PHP釋出緊急安全更新 資安署呼籲儘速完成修補
+    url: https://moda.gov.tw/ACS/press/news/press/21134
+    publisher: Administration for Cyber Security, Ministry of Digital Affairs (Taiwan)
+    date: 2026-10-22
   - title: Cloudflare deploys protections against php2shell vulnerability
     url: https://blog.cloudflare.com/php-vulnerabilities-waf-protection/
     publisher: Cloudflare
@@ -98,11 +125,19 @@ The PHP Foundation's post also looks at why the fix took so long. During an exte
 
 The same post says AI-assisted vulnerability research has brought PHP far more reports than before. Since 1 July the security team has published 15 CVEs and handled more than 100 reports that were invalid, duplicates or could not be reproduced. The PHP Foundation is changing its process so that serious vulnerabilities stuck on hard trade-offs reach its leadership sooner.
 
-We, a community based in Taiwan, compared the rules on disclosure timing in mainland China, Japan and Taiwan as of 8 October. What follows summarises each system, and we have not assessed how any of them would apply to this incident.
+Japan's Information-technology Promotion Agency (IPA) announced on 21 October when the fix would be published. That evening, according to ITmedia NEWS, Japan's prime minister urged organisations on X to prepare to apply it, adding that temporarily taking a website offline is one effective way to reduce the risk where patching is difficult.
+
+According to a tally by the security blog piyolog, compiled from organisations' notices and news reports, 211 organisations in Japan had suspended services or announced emergency maintenance by just after 1 a.m. Japan time on 22 October (just after midnight Taipei time), including 2 national government bodies and 4 local governments. Sapporo took its official website offline on the evening of 21 October. As of 22 October, its temporary home page said no unauthorised access or tampering had been found and that the shutdown was a precaution.
+
+On 22 October the Korea Internet & Security Agency (KISA) published guidance for companies, recommending that those unable to update or to apply interim settings consider blocking external access or temporarily suspending services. It also asks companies to check logs from at least 20 October onwards after updating, and recommends changing database passwords, API keys and administrator passwords on servers that were exposed to the internet before the update.
+
+Taiwan's Administration for Cyber Security, under the Ministry of Digital Affairs, issued a press release the same day asking organisations to take stock of their PHP systems and patch them, without asking anyone to suspend services. As of 22 October we, a community based in Taiwan, found no notices of Taiwanese organisations going offline over these flaws, and no confirmed intrusions in Japan, South Korea or Taiwan.
+
+We also compared the rules on disclosure timing in mainland China, Japan and Taiwan as of 8 October. What follows summarises each system, and we have not assessed how any of them would apply to this incident.
 
 In mainland China, the Regulations on the Management of Network Product Security Vulnerabilities, in force since September 2021, apply to network product providers and operators in mainland China and to those who discover, collect or publish vulnerabilities. They require providers to report a vulnerability to a platform run by the Ministry of Industry and Information Technology (MIIT) within two days of discovering or learning of it. Anyone publishing vulnerability information may not do so before the provider offers a fix, and those who think early publication is necessary must consult the provider and report to MIIT and the Ministry of Public Security, which assess the case and publish. The regulations do not define whether open source maintainers count as providers, and we could not find whether they apply to maintainers of projects abroad or to researchers outside mainland China.
 
-Under the 2026 edition of the guidelines for Japan's Information Security Early Warning Partnership, published on 1 October, the Information-technology Promotion Agency (IPA) receives reports, and JPCERT/CC, the designated coordination body, contacts developers and arranges when information is published. The target, which is not a legal deadline, is 45 days after JPCERT/CC first tries to reach the developer, taking into account the time a fix needs, coordination with counterparts abroad, the risk of the information leaking and the risk of exploitation. For open source software, JPCERT/CC also notifies distributors and the developers of products that include it when necessary. IPA does not require reporters to keep the information secret, nor does it require developers to fix the flaw.
+Under the 2026 edition of the guidelines for Japan's Information Security Early Warning Partnership, published on 1 October, IPA receives reports, and JPCERT/CC, the designated coordination body, contacts developers and arranges when information is published. The target, which is not a legal deadline, is 45 days after JPCERT/CC first tries to reach the developer, taking into account the time a fix needs, coordination with counterparts abroad, the risk of the information leaking and the risk of exploitation. For open source software, JPCERT/CC also notifies distributors and the developers of products that include it when necessary. IPA does not require reporters to keep the information secret, nor does it require developers to fix the flaw.
 
 In Taiwan, TWCERT/CC's vulnerability disclosure policy (version 2.2, March 2025) says it publishes a report's basic details within 90 calendar days of confirming that the report is complete, though it may delay publication after assessing the impact. The full details go on its Taiwan Vulnerability Note (TVN) platform only after the reporter, TWCERT/CC and the vendor all confirm that a fix or mitigation is in place. The policy does not say whether it covers open source projects based abroad, and we did not check reporting obligations under Taiwan's laws such as the Cyber Security Management Act.
 
