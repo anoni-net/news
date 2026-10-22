@@ -1,7 +1,7 @@
 ---
 title: Android 17 裝置端 AI 的隔離執行環境 AISeal
 description: Google 10 月 7 日說明 Android 17 的 AISeal，把裝置端 AI 使用的個人資料放進跟作業系統隔離的受保護虛擬機器。依公告，第一階段推出的是個人資料的儲存，模型推論與 AI 代理程式要等之後。到 10 月 20 日為止，Google 沒有公布哪些機型、哪些地區已經啟用，Google 的公告與說明頁沒有提到使用者需要調整的設定。
-date: 2026-10-23T00:00:00+08:00
+date: 2026-10-24T00:00:00+08:00
 slug: android-aiseal-on-device-ai
 categories:
   - mobile

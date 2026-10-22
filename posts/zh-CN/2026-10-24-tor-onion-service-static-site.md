@@ -1,7 +1,7 @@
 ---
 title: Tor onion 服务的静态网站搭建
 description: 搭建 onion 服务不需要固定 IP、域名或开放端口，用 tor 加上一般的网页服务器就能把静态网站放上 Tor 网络。tor 6 月到 10 月连续发布四个安全更新，其中三个的修补涉及 onion 服务，到 10 月 20 日为止最新版是 0.4.9.14。网站的访客要通过 Tor 连接，例如用 Tor Browser。
-date: 2026-10-23T00:05:00+08:00
+date: 2026-10-24T00:05:00+08:00
 slug: tor-onion-service-static-site
 categories:
   - censorship
