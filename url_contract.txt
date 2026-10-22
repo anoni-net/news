@@ -96,6 +96,9 @@
 /2026/10/eff-doxxing-safety/
 	#perspective
 	#sources
+/2026/10/emudhra-weak-ca-keys/
+	#perspective
+	#sources
 /2026/10/fdroid-2-android-developer-verification/
 	#perspective
 	#sources
@@ -319,6 +322,9 @@
 /en/2026/10/eff-doxxing-safety/
 	#perspective
 	#sources
+/en/2026/10/emudhra-weak-ca-keys/
+	#perspective
+	#sources
 /en/2026/10/fdroid-2-android-developer-verification/
 	#perspective
 	#sources
@@ -506,6 +512,7 @@
 	#y2026
 /en/page/2/
 /en/page/3/
+/en/page/4/
 /en/reading/
 	#display
 	#listening
@@ -572,6 +579,7 @@
 	#y2026
 /page/2/
 /page/3/
+/page/4/
 /reading/
 	#display
 	#listening
@@ -671,6 +679,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/eff-doxxing-safety/
+	#perspective
+	#sources
+/zh-cn/2026/10/emudhra-weak-ca-keys/
 	#perspective
 	#sources
 /zh-cn/2026/10/fdroid-2-android-developer-verification/
@@ -860,6 +871,7 @@
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
+/zh-cn/page/4/
 /zh-cn/reading/
 	#display
 	#listening
