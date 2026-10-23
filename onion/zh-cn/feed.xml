@@ -6,7 +6,135 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 24 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Tor onion 服务的静态网站搭建</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/tor-onion-service-static-site/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/tor-onion-service-static-site</guid>
+<pubDate>Sat, 24 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>搭建 onion 服务不需要固定 IP、域名或开放端口，用 tor 加上一般的网页服务器就能把静态网站放上 Tor 网络。tor 6 月到 10 月连续发布四个安全更新，其中三个的修补涉及 onion 服务，到 10 月 20 日为止最新版是 0.4.9.14。网站的访客要通过 Tor 连接，例如用 Tor Browser。</description>
+<content:encoded>&lt;p&gt;整理 16 篇原文，来自 Tor Project、Riseup、个人博客 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;一位作者 6 月在个人博客记录，把自己的静态网站放上 Tor 的 onion 服务（onion service，只能通过 Tor 连接、服务器位置受到保护的网站）。搭建用的是 tor（Tor Project 的主程序）与 nginx（网页服务器软件）。根据 Tor Project 的特性说明，onion 服务不需要固定 IP、域名，也不需要开放端口。tor 6 月 25 日到 10 月 7 日之间连续发布 0.4.9.11 到 0.4.9.14 四个安全更新，其中三个的修补涉及 onion 服务，到 10 月 20 日为止最新版是 0.4.9.14。&lt;/p&gt;
+&lt;p&gt;已经在运营 onion 服务的人要更新到最新版。网站的访客要通过 Tor 连接，例如用 Tor Browser。&lt;/p&gt;
+&lt;p&gt;依原文与官方的设置指南，做法是在 tor 的配置文件 &lt;code&gt;torrc&lt;/code&gt; 指定一个存放密钥的目录与要转发的本机端口。重新启动 tor 之后，目录里的 &lt;code&gt;hostname&lt;/code&gt; 文件就是网站的 .onion 地址。网页服务器只在本机监听，原文提到 Tor 本身就会加密连接，不需要另外配置 TLS（HTTPS 用的加密）。&lt;/p&gt;
+&lt;p&gt;同时经营一般网站的人要留意，静态网站生成器会把网址写进站内链接。原文因此另外生成一份以 .onion 地址为基准的版本，避免访客从 onion 服务点链接又回到一般网址。&lt;/p&gt;
+&lt;p&gt;设置指南另外建议把转发的目标从本机的网络端口改成 Unix socket（同一台电脑里程序之间交换数据的通道），避免服务泄露到局域网。指南也提醒，照这样设置的 onion 服务，任何知道地址的人都能读取。只想让特定的人连接时，可以设置客户端授权（client authorization），只有持有私钥的人连得上。Onion-Location 说明页提到，已经有 HTTPS 网站的人可以加上这个响应头，让 Tor Browser 打开原本的网站时在地址栏提示 .onion 版本。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;官方说明提到，onion 服务的名称就是用来验证连接的公钥，所以不需要证书颁发机构（替网站签发 HTTPS 证书的机构）。连接由 Tor 从用户端一路加密到服务端。服务只对外建立连接、可以穿过 NAT（家用与机构网络共用对外 IP 的机制），学校或办公室这类不能开端口的网络也能搭建。根据特性说明，连得上 Tor 网络、服务也在线时就能连到 onion 服务，不受 DNS 与 IP 封锁的影响。&lt;/p&gt;
+&lt;p&gt;依官方的 Operational Security 页，服务器位置能否保持隐藏，要看搭建的人如何维护系统。网页服务器可能透露自己的种类与操作系统，电脑不是一直在线也会泄露信息。服务运行越久，位置被找到的风险也越高。同一页建议加装 Vanguards（降低入口节点被追查风险的附加组件）防范高级攻击。&lt;/p&gt;
+&lt;p&gt;设置指南也写，要让服务器不透露位置「not an easy task」（并不容易），并列出 Operational Security 页与 Riseup 的指南当参考。Riseup 的指南建议用 NTP（网络校时）自动校正服务器时间，避免时间误差被用来识别服务器。没有搭建过网页服务器的人，设置指南提到可以试试有图形界面、设置比较少的 OnionShare。Tor Project 的 Onionspray 则是替既有的公开网站加上 onion 服务入口，说明文档列出它不适合纯 onion 网站，也不保护网站的位置。&lt;/p&gt;
+&lt;p&gt;用 Rust 编程语言重写的 Arti，文档对能不能搭建 onion 服务说法不一。到 10 月 20 日为止，Arti 的项目页写已经实现，能力与限制页却写只完成一部分、默认关闭。Onionspray 的说明也写在 Arti 有替代方案之前仍依赖 C 语言实现的 tor，依这几份文档推论，正式搭建时以 tor 比较稳妥。&lt;/p&gt;
+&lt;p&gt;一般网站被封锁、但连得上 Tor 的读者，也能读到架在 onion 服务上的网站。依 Operational Security 页推论，搭建需要一台能长时间开机的主机。官方示例以 Debian 为主，过程是在命令行编辑配置文件、不需要写代码，设置指南有正体中文翻译（到 10 月 20 日为止部分段落仍是英文）。&lt;/p&gt;
+&lt;p&gt;在中国大陆访问 onion 服务，要先连上 Tor 网络。Tor Project 关于从受审查地区连接的支持页有简体中文版本，页面提到部分国家的网络运营商或国家防火墙会封锁直接连接 Tor 网络。页面对中国大陆的建议是先让 Tor Browser 的 Connection Assist（连接辅助功能）自动尝试网桥或 Snowflake，不行再改用 WebTunnel 网桥，其次是 Snowflake 与 meek（meek 带宽有限、速度较慢）。页面只说明连上 Tor 网络的方法，没有写 onion 服务在中国大陆能否访问。&lt;/p&gt;
+&lt;p&gt;根据 Tor Metrics 的估计，10 月 11 日到 17 日从中国大陆直接连接的日均用户约 1,055 人（只是估计值，不含经网桥连接的用户）。&lt;/p&gt;
+&lt;p&gt;OONI（网络干扰观测项目）9 月 18 日到 10 月 18 日在中国大陆的 Tor 测试有 301 笔，其中 293 笔标为异常、确认封锁 0 笔。异常不等于确认封锁，OONI 的 Tor 测试检查 Tor 运行所需的服务器能否连上，与 onion 服务本身无关。到 10 月 20 日为止，查不到中国大陆针对搭建 onion 服务的专门规范。&lt;/p&gt;
+&lt;p&gt;特性说明也列出，用户登录之后网站仍然记录得到数据。依 Operational Security 页推论，网站内容本身透露的信息要靠搭建的人自行把关。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（16 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/setup/&#34;&gt;Set up Your Onion Service&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/overview/&#34;&gt;How do Onion Services work?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/opsec/&#34;&gt;Operational Security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/client-auth/&#34;&gt;Client Authorization&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/onion-location/&#34;&gt;Onion-Location&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionservices.torproject.org/technology/properties/&#34;&gt;Onion Services Properties&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.torproject.org/tpo/core/tor/-/raw/tor-0.4.9.14/ReleaseNotes&#34;&gt;Changes in version 0.4.9.14 - 2026-10-07&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionservices.torproject.org/apps/web/onionspray/&#34;&gt;Onionspray&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/https/&#34;&gt;HTTPS for your Onion Service&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arti.torproject.org/guides/capability-limitations/&#34;&gt;Capability and Limitations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.torproject.org/tpo/core/arti&#34;&gt;Arti&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://riseup.net/en/security/network-security/tor/onionservices-best-practices&#34;&gt;Best Practices for Hosting Onion Services&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Riseup&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/&#34;&gt;Self-Hosting on the Dark Web&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;个人博客&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-01&#34;&gt;2026 年 6 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/&#34;&gt;How to bypass censorship and connect to Tor from different countries or regions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://metrics.torproject.org/userstats-relay-country.html&#34;&gt;Users – Tor Metrics&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Android 17 端侧 AI 的隔离执行环境 AISeal</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/</link>
@@ -2440,142 +2568,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/2022-08/23/content_5722726.htm&#34;&gt;电子认证服务管理办法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国政府网&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Apple 对 Mac「完全磁盘访问权限」的授权预告</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/apple-full-disk-access/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/apple-full-disk-access</guid>
-<pubDate>Thu, 15 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Apple 10 月 2 日预告之后会让 Mac 用户只能通过非常明确的操作授予「完全磁盘访问权限」。理由包括部分开发者的用法可能让用户数据暴露，以及 AI 智能体会让风险增加。Apple 没有写版本与上线时间，到 10 月 12 日为止版本说明都没有写到这项控制。</description>
-<content:encoded>&lt;p&gt;整理 17 篇原文，来自 Apple、TechCrunch、Decrypt 等 12 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 10 月 2 日在开发者新闻预告，之后会为 macOS 的「完全磁盘访问权限」加入额外的控制，让真的想授予这项权限的用户只能通过非常明确的操作完成。Apple 没有写是哪个版本、何时上线、界面是什么样子，也没有写已经授权的 App 要不要重新确认。到 10 月 12 日为止，macOS 27 与 27.2 第三个测试版的版本说明都没有写到这项新控制。&lt;/p&gt;
-&lt;p&gt;Apple 的预告提到，为了让备份 App 在 Mac 上正常运行，完全磁盘访问权限大致绕过了保护用户数据的其他控制。Apple 也写到，有些开发者使用这项权限的方式，可能让用户在不完全知情下暴露文件、邮件、消息甚至浏览记录。预告也提到，AI 智能体（能代替用户操作电脑、读取文件与 App 的 AI 程序）越来越能自主行动，这类权限的风险会大幅增加。TechCrunch 的报道发出后补了更正，把原本写的「限制权限」改成增加知情同意的步骤，并注明这不是新的限制。&lt;/p&gt;
-&lt;p&gt;预告发出前几天，依 TechCrunch 与 Decrypt 的转述，一位专栏作者声称 Meta 的 AI 智能体 Muse 的 Mac 版在完全磁盘访问权限关闭时读到他的私人消息（10 月 9 日的导读写过这件事）。依 Decrypt 的转述，作者设置时拒绝给消息权限，之后发现 Muse 已同步了 Mac 本机的「信息」App 数据库。Meta 传播副总裁 9 月 30 日在 X 表示，要同时开启完全磁盘访问权限与 Muse 内的 Messages 连接器，Muse 才能读取消息。Apple 的预告没有点名任何 App 或开发者，把两者写成互相反驳的，是 Ars Technica 与 iThome 的解读。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;完全磁盘访问权限是操作系统层级的权限，Apple 的帮助页介绍它让 App 访问电脑上所有文件，包括「邮件」、「信息」等其他 App 的数据与时间机器备份。Ars Technica 引述的一位 macOS 安全专家表示，取得这项权限的程序读得到浏览记录、浏览器 cookie 与聊天内容等文件。Meta 一位主管则表示，读取消息要经过 App 内的权限设置与 macOS 系统层级的保护，即使 App 有错误也无法绕过（TechCrunch 的转述）。Apple 的帮助页与安全专家描述的是取得权限后 App 读得到什么，Meta 的说法描述的是 Muse 要经过哪些授权步骤。&lt;/p&gt;
-&lt;p&gt;Microsoft 10 月 7 日发布的 Microsoft Execution Containers（MXC）是另一种做法。依 Microsoft 的博客，开发者或 IT 管理员用策略定义 AI 智能体能读写哪些文件、连到哪些网络，策略放在智能体能控制的范围之外。MXC 以 MIT 许可证开源，在 macOS 上使用 Seatbelt 沙盒（限制程序能访问哪些资源的机制）。README 的描述是嵌进 App 的套件，Microsoft 列出已支持的工具有 GitHub Copilot、OpenAI Codex 等（名单里没有 Muse 或 ChatGPT），本文推论一般用户不会直接配置它。&lt;/p&gt;
-&lt;p&gt;Microsoft 与 Apple 的文件都没有提到对方，本文把两者并列，差别在由谁把关。Apple 预告的做法是在授权那一刻让用户更清楚自己给出了什么，MXC 则是由开发者事先限定智能体能碰的范围。Apple 的预告没有写到新控制会不会改变完全磁盘访问权限能读到的范围。之后可以留意 macOS 的版本说明何时出现这项控制，以及已授权的 App 要不要重新确认。&lt;/p&gt;
-&lt;p&gt;Muse 的 App Store 页面只有美国区，中国大陆区的同一网址打不开，Meta 的公告也只写 Muse 在美国推出。ChatGPT 的支持国家与地区名单（OpenAI 说明页 10 月 11 日的存档）没有中国大陆、香港与澳门。国家网信办等七部门的《生成式人工智能服务管理暂行办法》2023 年 8 月 15 日施行，规范向境内公众提供的生成式 AI 服务，第二十条规定境外服务不符合规定时应采取技术措施予以处置。本文没有查这些服务未在中国大陆提供的原因，也没有查是否有服务依此条被处置。&lt;/p&gt;
-&lt;p&gt;用 Mac 的读者现在就可以打开「系统设置」的「隐私与安全」，在「完全磁盘访问权限」查看哪些 App 取得了这项权限。看到不认识的 App，可以先查清楚它为什么需要这项权限，备份类的 App 正是 Apple 预告提到的用途。Apple 的帮助页只写了添加 App 的步骤，Meta 则表示 Muse 的授权可以随时撤销。授权之前可以先想清楚，这项权限让 App 读得到别人发给你的消息与浏览记录，这部分的判断 Apple 的新控制上线之后仍然要由用户自己做。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（17 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/news/?id=p6zjojqw&#34;&gt;Updates to Full Disk Access in macOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/mac-help/mchl211c911f/mac&#34;&gt;在 Mac 上更改「隱私權與安全性」設定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes&#34;&gt;macOS 27 Golden Gate Release Notes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/macos-release-notes/macos-27_2-release-notes&#34;&gt;macOS 27.2 Golden Gate Beta 3 Release Notes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/&#34;&gt;Meta disputes claim that Muse read a user&amp;#39;s private messages without permission&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://decrypt.co/379868/meta-muse-ai-agent-read-messages-without-permission&#34;&gt;Meta Pushes Back on Claim That Muse AI Read a User&amp;#39;s Messages Without Consent&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Decrypt&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/&#34;&gt;Apple says it&amp;#39;s tightening macOS &amp;#39;Full Disk Access&amp;#39; controls due to new risks from AI agents&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechCrunch&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/&#34;&gt;Apple changes full-disk access permissions to curb abuse from AI agents&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179400&#34;&gt;蘋果將增加macOS完全磁碟存取的開關控制&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/06/apple-tightens-full-disk-access-permission-on-macos-in-light-of-ai-agent-security-concerns/&#34;&gt;Apple Tightens &amp;#34;Full Disk Access&amp;#34; Permission on macOS in Light of AI Agent Security Concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://x.com/andymstone/status/2105107596734849423&#34;&gt;Meta VP of Communications on X&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;X&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/&#34;&gt;Microsoft Execution Containers: Policy-driven containment for AI agents&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/microsoft/mxc&#34;&gt;Microsoft eXecution Container (MXC)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/guide/mac-help/mchl211c911f/mac&#34;&gt;在 Mac 上更改隐私与安全设置&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20261011164107/https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm&#34;&gt;生成式人工智能服务管理暂行办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/muse-from-meta/id6760173601&#34;&gt;Muse from Meta App - App Store&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;App Store&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
