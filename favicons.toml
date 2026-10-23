@@ -830,6 +830,10 @@ same_as = "gov.hk"
 [hosts."internetfreedom.in"]
 none = "白色透明底的圖示，淺色模式看不見"
 
+[hosts."internetsociety.org"]
+icon = "internetsociety.org-842c446f.png"
+from = "https://www.internetsociety.org/wp-content/themes/isoc/dist/images/favicon/android-icon-192x192.png"
+
 [hosts."interseclab.org"]
 icon = "interseclab.org-cfaee2eb.png"
 from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-Logo-192x192.png"
@@ -1435,6 +1439,10 @@ from = "https://security.macnica.co.jp/upload/favicon.ico"
 icon = "securitylab.github.com-ad3eceb3.png"
 from = "https://securitylab.github.com/assets/img/favicons/apple-touch-icon.png"
 
+[hosts."senalnews.com"]
+icon = "senalnews.com-e91f6e84.png"
+from = "https://senalnews.com/assets/favicon.ico"
+
 [hosts."sencanada.ca"]
 icon = "sencanada.ca-3cf43f98.png"
 from = "https://sencanada.ca/favicon.ico"
@@ -1634,6 +1642,10 @@ from = "https://www.tibane.net/favicon.png"
 icon = "torproject.org-e64b086c.png"
 from = "https://www.torproject.org/static/images/favicon/favicon.ico"
 
+[hosts."torrentfreak.com"]
+icon = "torrentfreak.com-18555ce1.png"
+from = "https://torrentfreak.com/apple-touch-icon.png"
+
 [hosts."translations.telegram.org"]
 same_as = "telegram.org"
 
@@ -1728,6 +1740,9 @@ from = "https://s.w.org/images/wmark.png"
 [hosts."ws.pdpc.gov.tw"]
 icon = "ws.pdpc.gov.tw-9f612ccd.png"
 from = "https://ws.pdpc.gov.tw/favicon.ico"
+
+[hosts."www-api.moda.gov.tw"]
+same_as = "moda.gov.tw"
 
 [hosts."x.com"]
 icon = "x.com-17d5ac31.png"
