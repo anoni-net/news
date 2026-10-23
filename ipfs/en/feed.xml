@@ -6,7 +6,117 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 23 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>AISeal, the isolated environment for on-device AI in Android 17</title>
+<link>https://anoni.net/news/en/2026/10/android-aiseal-on-device-ai/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/android-aiseal-on-device-ai</guid>
+<pubDate>Sat, 24 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On 7 October Google described AISeal in Android 17, which keeps the personal data used by on-device AI in a protected virtual machine isolated from the operating system. According to the announcement, the first phase covers storing personal data, with model inference and AI agents to follow. As of 20 October, Google had not said which devices or regions have it enabled, and there is nothing in Google&#39;s announcement or help pages about settings that users need to change.</description>
+<content:encoded>&lt;p&gt;Based on 13 sources, including Google, Android Open Source Project, Android Developers&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 7 October, Google described on its official blog how AISeal (Android on-device AI seal) in Android 17 puts the personal data that on-device AI uses into a protected virtual machine isolated from the Android operating system. According to the announcement, it is designed so that personal data stays cryptographically isolated even if the whole operating system is compromised. The first phase covers only storing personal data, with model inference and AI agents (AI that carries out multi-step tasks on the user&#39;s behalf) to come later. As of 20 October, Google had not said which devices or regions have it enabled, and there is nothing in Google&#39;s announcement or help pages about settings that users need to change.&lt;/p&gt;
+&lt;p&gt;According to the announcement, AISeal is built on the Android Virtualization Framework (AVF) and pKVM, a hypervisor (the low-level software that partitions and isolates virtual machines). The protected space is designed to hold three kinds of services at once: an encrypted personal database, model inference running on the device, and AI agents that combine the two. In the announcement&#39;s example, an assistant queries the personal database and summarizes your schedule inside the isolated space, and outbound controls are designed to let only the final answer return to the operating system (something only possible once inference moves into AISeal). According to the Android Open Source Project (AOSP) documentation, even if the host (the Android system that normally runs apps) is compromised, it cannot read the protected virtual machine&#39;s memory.&lt;/p&gt;
+&lt;p&gt;On the chip side, according to the announcement, MediaTek has announced support on the Dimensity 9600 Pro, and Qualcomm&#39;s Snapdragon chipsets will support AISeal through AVF. pKVM itself received SESIP (a security evaluation scheme) Level 5 certification in 2025, described in the announcement as the highest vulnerability testing tier under ISO 15408 (the announcement does not say AISeal itself is certified). According to the source code tagged Android 17, AOSP already includes the AISeal framework. In the same source code, the service is off by default and only starts once the device property &lt;code&gt;service.aiseal.enable&lt;/code&gt; is set to 1, a step that by our inference the phone maker takes.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Android&#39;s existing isolation consists of the app sandbox, SELinux policies and Private Compute Core. According to the Private Compute Services documentation, features inside Private Compute Core cannot connect to the network directly and reach it only through a set of open-source APIs. What AISeal adds is a layer of memory isolation carved out by the hypervisor. According to the AVF security documentation, the part of pKVM that runs at the hypervisor level is roughly 10,000 lines of code, against roughly 20 million for the whole Linux kernel (an attack surface three orders of magnitude smaller).&lt;/p&gt;
+&lt;p&gt;According to the same security documentation, companies that handle the supply chain, such as phone makers and chip vendors, still have to be trusted, and the host can affect whether a virtual machine runs normally. Encrypted storage, per the same document, has no rollback protection at the block level (there is no way to detect encrypted data being swapped back to an older version). These are design limits of pKVM and protected virtual machines, and by our inference they apply equally to AISeal, which is built on top of them.&lt;/p&gt;
+&lt;p&gt;According to a technical blog post analysing the Android 17 source code, the host can still see data at the moment it is collected, before it is stored in AISeal. By the same analysis, AISeal does not separate the data from the AI service provider the user chooses.&lt;/p&gt;
+&lt;p&gt;In the source code tagged Android 17, AISeal&#39;s management interface requires the &lt;code&gt;signature|privileged&lt;/code&gt; permission, which by our inference ordinary third-party apps cannot obtain. Gemini Nano, Google&#39;s on-device model available to developers, runs in AICore, the system service that manages on-device models, and integrating AICore with AISeal is listed in the announcement as a future plan. Digital Trends cautioned that chip support for AISeal does not mean the assistant on a phone actually runs inside AISeal, since that depends on how the phone maker implements it.&lt;/p&gt;
+&lt;p&gt;According to Google&#39;s help pages, as of 20 October both the Gemini web app and the Gemini mobile apps are available in Hong Kong, Japan, Macau, Singapore, South Korea and Taiwan. Mainland China is missing from the mobile app list and limited to Workspace accounts on the web.&lt;/p&gt;
+&lt;p&gt;We found no list of the devices, countries or languages where AISeal is enabled in Google&#39;s announcement, the AOSP documentation or news coverage, so Gemini&#39;s availability in a place is no indication of AISeal there. Other features&#39; regional lists are no guide either. According to its help page, Magic Cue, Pixel&#39;s personal suggestions feature, lists Japan but not Taiwan, Hong Kong, South Korea or mainland China, and nothing on that page says Magic Cue uses AISeal.&lt;/p&gt;
+&lt;p&gt;Readers do not need to change any settings now, and as of 20 October there is no user-facing switch in Google&#39;s announcement or help pages. What is worth watching is when Google or phone makers publish the devices and regions where AISeal is enabled, and when model inference and AI agents move into it.&lt;/p&gt;
+&lt;p&gt;Following Digital Trends&#39; caveat, our inference is that when buying a phone you can check whether the maker&#39;s specifications and help pages state that AI features run inside AISeal. Per the technical blog analysis cited above, even with features running inside AISeal, data at the moment of collection and the AI service provider the user chooses remain outside the isolation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/enabling-the-next-gen-enclave-architecture-for-on-device-ai-on-android/&#34;&gt;Android&amp;#39;s Next-Gen Enclave for On-Device AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;7 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://source.android.com/docs/core/virtualization&#34;&gt;Android Virtualization Framework (AVF) overview&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://source.android.com/docs/core/virtualization/security&#34;&gt;Security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/android-pkvm-certified-sesip-level-5/&#34;&gt;Android’s pKVM Becomes First Globally Certified Software to Achieve Prestigious SESIP Level 5 Security Certification&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-08-12&#34;&gt;12 August 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-17.0.0_r1/core/java/android/aiseal/&#34;&gt;core/java/android/aiseal - platform/frameworks/base - Git at Google&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Open Source Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/google/private-compute-services&#34;&gt;Private Compute Services&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/ai/gemini-nano&#34;&gt;Gemini Nano&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/09/android-on-device-ai-gets-a-security-bump-with-next-gen-enclaves/&#34;&gt;Android On-Device AI Gets a Security Bump With &amp;#34;Next-Gen&amp;#34; Enclaves&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;9 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.digitaltrends.com/phones/google-is-building-a-black-box-for-android-ai-but-the-agents-arent-inside-yet/&#34;&gt;Google is building a “black box” for Android AI, but the agents aren’t inside yet&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Digital Trends&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.logcat.ai/2026/06/25/android-17-built-a-sealed-room-for-on-device-ai/&#34;&gt;Android 17 Built a Sealed Room for On-Device AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;logcat.ai&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-25&#34;&gt;25 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13575153?hl=en&#34;&gt;Where you can use the Gemini web app&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/14579026?hl=en&#34;&gt;Gemini mobile app availability&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/pixelphone/answer/16508057?hl=en&#34;&gt;Get personal suggestions on your Pixel with Magic Cue&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Coordinated disclosure of the PHP vulnerabilities and publication before the fix</title>
 <link>https://anoni.net/news/en/2026/10/php2shell-early-disclosure-debate/</link>
@@ -2712,124 +2822,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/mac-help/mchl211c911f/mac&#34;&gt;Change Privacy &amp;amp; Security settings on Mac&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Brave&#39;s Email Aliases</title>
-<link>https://anoni.net/news/en/2026/10/brave-email-aliases/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/brave-email-aliases</guid>
-<pubDate>Wed, 14 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Brave&#39;s desktop browser offers email aliases from version 1.94, letting you sign up with a forwarding address instead of your real one. Everyone gets five free, with a Brave account required. As of 12 October there is no mobile version, and Brave does not say whether you can reply from an alias.</description>
-<content:encoded>&lt;p&gt;Based on 14 sources, including Brave, GitHub, Apple&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Brave launched Email Aliases on 27 August. From desktop version 1.94, you can sign up for websites with a forwarding address instead of your real email. Everyone gets five for free, but you first need a Brave account, which is separate from the Premium account used for services such as Brave VPN. As of 12 October, the Android and iOS release notes do not include the feature, and the help page exists only in English and Japanese.&lt;/p&gt;
-&lt;p&gt;A prompt to create an alias appears in a site&#39;s email field, and if it does not, you can right-click the field and choose &#34;New Email Alias&#34;. Brave&#39;s announcement and privacy policy say Brave does not read the emails and only performs standard spam and virus filtering. Messages are deleted within seconds of delivery, failed deliveries are retried for up to 24 hours, and the forwarding runs on Amazon Web Services. The announcement also warns that some forwarded mail may land in spam at first.&lt;/p&gt;
-&lt;p&gt;The Brave account launched the same day signs in with OPAQUE, a protocol that lets a server verify a user without holding the password, published as RFC 9807 in July 2025. Brave&#39;s post says the password itself is never sent to its servers. The same post says OPAQUE does not stop phishing on its own and does not make weak passwords strong.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Brave&#39;s announcement calls an email address a durable, universal identifier and cites ad tools from Meta, Google and LinkedIn that let advertisers upload customer emails to match users. That matching happens between servers, so tracker blocking in the browser cannot stop it. With a different alias for each site, sites cannot use your email to match you across them.&lt;/p&gt;
-&lt;p&gt;The announcement says Brave stores the account email and every alias, encrypted at rest, so the link between aliases and the real address sits on Brave&#39;s servers. The help page says Brave logs receipt times and some headers for debugging but not message content or sender information, and the privacy policy says these logs are deleted within 14 days at most. The policy also says Brave will not reveal the emails or aliases tied to an account unless obliged by a valid legal request. Brave&#39;s pages do not say whether you can reply from an alias or which domain the aliases use.&lt;/p&gt;
-&lt;p&gt;An open-source list that sites use to block disposable email added &lt;code&gt;bravealias.com&lt;/code&gt;, reported in an issue as Brave&#39;s alias domain, to its stricter tier in September. The maintainer noted that it is a forwarding relay rather than disposable mail, that it belongs in the same category as Firefox Relay and SimpleLogin, which is why it went only into the stricter tier, and only sites that use that tier block such domains.&lt;/p&gt;
-&lt;p&gt;Apple&#39;s Hide My Email comes with a paid iCloud+ plan and supports replies. Firefox Relay gives five free masks, with anonymous replies on the paid plan, whose list of countries does not include Taiwan or Hong Kong. SimpleLogin is open source, and its free plan offers ten aliases with replies.&lt;/p&gt;
-&lt;p&gt;In Hong Kong, Taiwan and mainland China, aliases do nothing for sites that ask for a phone number at sign-up, because a phone number there is tied to a real name. As of 12 October we found no rules in these places aimed specifically at email aliases or forwarding addresses.&lt;/p&gt;
-&lt;p&gt;Under Hong Kong&#39;s Telecommunications (Registration of SIM Cards) Regulation, all SIM cards have had to be registered under a real name since 2022. Article 77 of Taiwan&#39;s Regulations Governing Mobile Broadband Services (in the version we checked) requires carriers to record subscribers&#39; names, addresses and two ID numbers before activation, prepaid cards included. Mainland China&#39;s Cybersecurity Law, amended in October 2025, requires operators of services including messaging and posting to collect users&#39; real identity information.&lt;/p&gt;
-&lt;p&gt;Desktop Brave users on 1.94 or later can type &lt;code&gt;brave://settings/email-aliases&lt;/code&gt; into the address bar, create an account and start generating aliases. Brave&#39;s source code already includes a Traditional Chinese translation of the setting. An alias protects only the email address, so sites can still match you through a phone number, real name or payment details used at sign-up.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (14)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/privacy-updates/39-email-aliases/&#34;&gt;Brave launches Email Aliases to keep your personal email address private from websites&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;27 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/brave-accounts/&#34;&gt;Brave Accounts: your password never leaves your device, ever.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-27&#34;&gt;27 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.brave.app/hc/en-us/articles/45530506862349-What-is-a-Brave-Email-Alias&#34;&gt;What is a Brave Email Alias?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/privacy/browser/&#34;&gt;Brave Browser Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;23 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/50818&#34;&gt;[Email Aliases] Bubble UI for mobiles&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-13&#34;&gt;13 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/latest/&#34;&gt;Brave Release Notes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb&#34;&gt;brave_components_resources_zh-TW.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/disposable/disposable/issues/288&#34;&gt;Block bravealias.com disposable email domain&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-29&#34;&gt;29 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102548&#34;&gt;如何在 iPhone 或 iPad 上使用 iCloud+ 的「隱藏電子郵件地址」&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-30&#34;&gt;30 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://relay.firefox.com/&#34;&gt;Firefox Relay&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://simplelogin.io/pricing/&#34;&gt;SimpleLogin Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SimpleLogin&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ofca.gov.hk/en/consumer_focus/guide/hot_topics/sim_registration/index.html&#34;&gt;Real-name Registration Programme for Subscriber Identification Module (SIM) Cards&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OFCA&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060091&#34;&gt;行動寬頻業務管理規則&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm&#34;&gt;中华人民共和国网络安全法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-29&#34;&gt;29 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

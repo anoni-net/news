@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android 17 端侧 AI 的隔离执行环境 AISeal | anoni.net 新闻导读</title>
+<meta name="description" content="Google 10 月 7 日说明 Android 17 的 AISeal，把端侧 AI 使用的个人数据放进跟操作系统隔离的受保护虚拟机。依公告，第一阶段推出的是个人数据的存储，模型推理与 AI 智能体要等之后。到 10 月 20 日为止，Google 没有公布哪些机型、哪些地区已经启用，Google 的公告与帮助页没有提到用户需要调整的设置。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/android-aiseal-on-device-ai/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/android-aiseal-on-device-ai/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/android-aiseal-on-device-ai/">
+<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml">
+<meta property="og:site_name" content="anoni.net 新闻导读">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 17 端侧 AI 的隔离执行环境 AISeal">
+<meta property="og:description" content="Google 10 月 7 日说明 Android 17 的 AISeal，把端侧 AI 使用的个人数据放进跟操作系统隔离的受保护虚拟机。依公告，第一阶段推出的是个人数据的存储，模型推理与 AI 智能体要等之后。到 10 月 20 日为止，Google 没有公布哪些机型、哪些地区已经启用，Google 的公告与帮助页没有提到用户需要调整的设置。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png?v=74a0aa1c7b">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net 新闻导读">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net 新闻导读">
+<meta property="article:published_time" content="2026-10-24T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Android 17 端侧 AI 的隔离执行环境 AISeal",
+  "description": "Google 10 月 7 日说明 Android 17 的 AISeal，把端侧 AI 使用的个人数据放进跟操作系统隔离的受保护虚拟机。依公告，第一阶段推出的是个人数据的存储，模型推理与 AI 智能体要等之后。到 10 月 20 日为止，Google 没有公布哪些机型、哪些地区已经启用，Google 的公告与帮助页没有提到用户需要调整的设置。",
+  "datePublished": "2026-10-24T00:00:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png",
+  "inLanguage": "zh-Hans",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Android's Next-Gen Enclave for On-Device AI",
+      "url": "https://blog.google/security/enabling-the-next-gen-enclave-architecture-for-on-device-ai-on-android/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Android Virtualization Framework (AVF) overview",
+      "url": "https://source.android.com/docs/core/virtualization"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Security",
+      "url": "https://source.android.com/docs/core/virtualization/security"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Android’s pKVM Becomes First Globally Certified Software to Achieve Prestigious SESIP Level 5 Security Certification",
+      "url": "https://blog.google/security/android-pkvm-certified-sesip-level-5/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "core/java/android/aiseal - platform/frameworks/base - Git at Google",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-17.0.0_r1/core/java/android/aiseal/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Private Compute Services",
+      "url": "https://github.com/google/private-compute-services"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Gemini Nano",
+      "url": "https://developer.android.com/ai/gemini-nano"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Android On-Device AI Gets a Security Bump With \"Next-Gen\" Enclaves",
+      "url": "https://www.privacyguides.org/news/2026/10/09/android-on-device-ai-gets-a-security-bump-with-next-gen-enclaves/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Google is building a “black box” for Android AI, but the agents aren’t inside yet",
+      "url": "https://www.digitaltrends.com/phones/google-is-building-a-black-box-for-android-ai-but-the-agents-arent-inside-yet/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Android 17 Built a Sealed Room for On-Device AI",
+      "url": "https://blog.logcat.ai/2026/06/25/android-17-built-a-sealed-room-for-on-device-ai/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Gemini mobile app availability",
+      "url": "https://support.google.com/gemini/answer/14579026?hl=en"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Where you can use the Gemini web app",
+      "url": "https://support.google.com/gemini/answer/13575153?hl=en"
+    }
+  ],
+  "articleSection": "手机与 App"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新闻导读",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "手机与 App",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/category/mobile/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Android 17 端侧 AI 的隔离执行环境 AISeal"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/zh-cn/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新闻导读</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新闻导读：" data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/android-aiseal-on-device-ai/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--mobile" href="/zh-cn/category/mobile/">手机与 App</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-24T00:00:00+08:00">2026 年 10 月 24 日 星期六</time></p>
+    <h1 class="story__title">Android 17 端侧 AI 的隔离执行环境 AISeal</h1>
+    <p class="story__dek">Google 10 月 7 日说明 Android 17 的 AISeal，把端侧 AI 使用的个人数据放进跟操作系统隔离的受保护虚拟机。依公告，第一阶段推出的是个人数据的存储，模型推理与 AI 智能体要等之后。到 10 月 20 日为止，Google 没有公布哪些机型、哪些地区已经启用，Google 的公告与帮助页没有提到用户需要调整的设置。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/source.android.com-56e81a95.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/developer.android.com-56e81a95.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 12 篇原文，来自 Google、Android Open Source Project、Android Developers 等 6 个出处</span></a></span>
+      <span>导读：anoni.net 社区</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/android-aiseal-on-device-ai/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/android-aiseal-on-device-ai/" hreflang="en" lang="en">English</a></nav>
+  </header>
+  <div class="story__body content">
+<p>Google 10 月 7 日在官方博客说明 Android 17 的 AISeal（Android on-device AI seal），把端侧 AI 会用到的个人数据，放进一个跟 Android 操作系统隔离的受保护虚拟机。依公告，设计目标是即使整个操作系统被入侵，个人数据仍然保持加密隔离。第一阶段推出的只有个人数据的存储，模型推理与 AI 智能体（代替用户执行多步骤任务的 AI）要等之后。到 10 月 20 日为止，Google 没有公布哪些机型、哪些地区已经启用，Google 的公告与帮助页没有提到用户需要调整的设置。</p>
+<p>根据公告，AISeal 建立在 Android 虚拟化框架（AVF）与 pKVM 这个虚拟机监控程序（hypervisor，负责切分与隔离虚拟机的底层软件）上。这个受保护的空间在设计上可以同时放三类服务，包括加密的个人数据库、在设备上运行的模型推理，以及结合两者的 AI 智能体。公告举的例子是助手在隔离空间里查询个人数据库、整理日程摘要，对外的管控设计成只让最后的答案回到操作系统，这要等推理移进 AISeal 之后才做得到。Android 开源项目（AOSP）的说明文档写到，即使主系统（host，也就是平常运行 App 的 Android）被入侵，主系统也读不到受保护虚拟机的内存。</p>
+<p>芯片方面，公告提到 MediaTek 的 Dimensity 9600 Pro 已宣布支持，Qualcomm 的 Snapdragon 也会通过 AVF 支持。pKVM 本身 2025 年取得 SESIP（一套信息安全评估制度）第 5 级的认证，公告称这是 ISO 15408 下最高的漏洞测试等级（公告没有写 AISeal 本身通过认证）。依 Android 17 标签的源代码，AOSP 已经包含 AISeal 的框架。依同一份源代码，服务默认关闭，要把设备属性 <code>service.aiseal.enable</code> 设为 1 才会启用（依本文的推论由手机厂商设置）。</p>
+<h2 id="perspective">导读观点</h2>
+<p>Android 既有的隔离是 App 沙箱、SELinux 规则，以及 Private Compute Core。根据 Private Compute Services 的说明，Private Compute Core 里的功能不能直接联网，只能通过一组开源的 API 对外。AISeal 多加的一层是虚拟机监控程序切出的内存隔离。AVF 的安全文档列出，pKVM 在虚拟机监控程序那一层运行的部分约 1 万行，整个 Linux 内核约 2,000 万行（攻击面小了三个数量级）。</p>
+<p>同一份安全文档提到，手机厂商与芯片厂商这些经手供应链的企业仍然要被信任，主系统可以影响虚拟机能不能正常运行。文档也写到，加密存储没有块级别的防回滚保护（无法察觉加密数据被换回旧的版本）。这些是 pKVM 与受保护虚拟机的设计限制，依本文的推论，建立在上面的 AISeal 同样适用。</p>
+<p>分析 Android 17 源代码的一篇技术博客提到，数据在存进 AISeal 之前的收集当下主系统仍然看得到。同一篇也提到，AISeal 没有把数据跟用户选用的 AI 服务提供商隔开。</p>
+<p>Android 17 标签的源代码显示，AISeal 的管理接口需要 <code>signature|privileged</code> 权限，依本文的推论一般第三方 App 无法取得。开发者可以用的 Gemini Nano 是 Google 的端侧模型，运行在 AICore 这个负责管理端侧模型的系统服务里，公告把 AICore 与 AISeal 的整合写成未来的计划。Digital Trends 的报道提醒，芯片支持 AISeal 不代表手机上的助手真的在 AISeal 里运行，要看手机厂商如何实现。</p>
+<p>AISeal 启用的机型、国家与语言，Google 的公告、AOSP 文档与相关报道都没有列出。作为同一家公司服务的对照，到 10 月 20 日为止 Google 帮助页列出的 Gemini 移动 App 支持地区包括香港、澳门、台湾、日本、韩国与新加坡，没有中国大陆（网页版在中国大陆只限 Workspace 账号使用）。Gemini 可以使用的地区不能拿来推论 AISeal 的地区。</p>
+<p>读者现在不需要调整任何设置，到 10 月 20 日为止，Google 的公告与帮助页也没有提到给用户的开关。可以留意的是 Google 或手机厂商何时公布启用的机型与地区，以及模型推理与 AI 智能体什么时候移进 AISeal。</p>
+<p>依 Digital Trends 的提醒推论，之后选购手机时，可以看厂商的规格与说明页有没有写明 AI 功能在 AISeal 里运行。依前述技术博客的分析，即使在 AISeal 里运行，数据收集的当下与用户选用的 AI 服务提供商仍然不在隔离的范围内。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（12 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.google/security/enabling-the-next-gen-enclave-architecture-for-on-device-ai-on-android/"><img class="source-slip__icon" src="/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android&#39;s Next-Gen Enclave for On-Device AI</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-07">2026 年 10 月 7 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://source.android.com/docs/core/virtualization"><img class="source-slip__icon" src="/assets/favicons/source.android.com-56e81a95.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android Virtualization Framework (AVF) overview</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Android Open Source Project</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://source.android.com/docs/core/virtualization/security"><img class="source-slip__icon" src="/assets/favicons/source.android.com-56e81a95.png" width="16" height="16" alt="" loading="lazy" decoding="async">Security</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Android Open Source Project</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.google/security/android-pkvm-certified-sesip-level-5/"><img class="source-slip__icon" src="/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android’s pKVM Becomes First Globally Certified Software to Achieve Prestigious SESIP Level 5 Security Certification</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-08-12">2025 年 8 月 12 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-17.0.0_r1/core/java/android/aiseal/"><img class="source-slip__icon" src="/assets/favicons/android.googlesource.com-f4ae33d1.png" width="16" height="16" alt="" loading="lazy" decoding="async">core/java/android/aiseal - platform/frameworks/base - Git at Google</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Android Open Source Project</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/google/private-compute-services"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Private Compute Services</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://developer.android.com/ai/gemini-nano"><img class="source-slip__icon" src="/assets/favicons/developer.android.com-56e81a95.png" width="16" height="16" alt="" loading="lazy" decoding="async">Gemini Nano</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Android Developers</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.privacyguides.org/news/2026/10/09/android-on-device-ai-gets-a-security-bump-with-next-gen-enclaves/"><img class="source-slip__icon" src="/assets/favicons/privacyguides.org-9c0b097f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android On-Device AI Gets a Security Bump With &#34;Next-Gen&#34; Enclaves</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Privacy Guides</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-09">2026 年 10 月 9 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.digitaltrends.com/phones/google-is-building-a-black-box-for-android-ai-but-the-agents-arent-inside-yet/"><img class="source-slip__icon" src="/assets/favicons/digitaltrends.com-020e2b12.png" width="16" height="16" alt="" loading="lazy" decoding="async">Google is building a “black box” for Android AI, but the agents aren’t inside yet</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Digital Trends</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-08">2026 年 10 月 8 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.logcat.ai/2026/06/25/android-17-built-a-sealed-room-for-on-device-ai/"><img class="source-slip__icon" src="/assets/favicons/blog.logcat.ai-34b60622.png" width="16" height="16" alt="" loading="lazy" decoding="async">Android 17 Built a Sealed Room for On-Device AI</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>logcat.ai</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-06-25">2026 年 6 月 25 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/gemini/answer/14579026?hl=en"><img class="source-slip__icon" src="/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Gemini mobile app availability</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/gemini/answer/13575153?hl=en"><img class="source-slip__icon" src="/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Where you can use the Gemini web app</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--mobile" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分类的其他导读</h2>
+  <p class="brief__category"><a class="cat cat--mobile" href="/zh-cn/category/mobile/">手机与 App</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-18T02:15:00+08:00">2026 年 10 月 18 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/signal-backups-password-manager-transfer/">Signal 的跨平台加密备份与 Android 的密码管理器迁移</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-13T00:05:00+08:00">2026 年 10 月 13 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/firefox-ios-ad-blocker/">Firefox iOS 版的内置广告拦截与 Android 的系统层做法</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-08T00:10:00+08:00">2026 年 10 月 8 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/iphone-inactivity-reboot-bypass/">iPhone 自动重启与取证工具的绕过说法</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/zh-cn/category/mobile/">「手机与 App」的全部 7 篇导读</a></p>
+</nav>
+<p class="subscribe">想收到新的导读：<a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>订阅电子报</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 关注</span></a></p>
+<nav class="pager pager--story" aria-label="文章导览">
+  <a class="pager__item pager__item--older" href="/zh-cn/2026/10/php2shell-early-disclosure-debate/"><span class="pager__label">较旧的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">PHP 漏洞的协调披露与修补前的提前公开</span></a>
+  <a class="pager__all" href="/zh-cn/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 订阅电子报</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 关注</a>
+      <a href="/zh-cn/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 导读历史</a>
+      <a href="/zh-cn/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 关于新闻导读</a>
+      <a href="/zh-cn/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 阅读说明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/android-aiseal-on-device-ai/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/android-aiseal-on-device-ai/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
+  </div>
+</footer>
+</body>
+</html>
