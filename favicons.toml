@@ -372,6 +372,10 @@ from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico
 icon = "courtlistener.com-9d872fbc.png"
 from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e6d.png"
 
+[hosts."coveryourtracks.eff.org"]
+icon = "coveryourtracks.eff.org-18aa39f8.png"
+from = "https://coveryourtracks.eff.org/static/favicon.ico"
+
 [hosts."cpr.dk"]
 icon = "cpr.dk-c81c529e.png"
 from = "https://cdn9.cpr.dk/cpr/media/12019/cpr-favicon.png?width=196&height=196"
@@ -487,6 +491,10 @@ from = "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb4
 [hosts."discourse.ubuntu.com"]
 icon = "discourse.ubuntu.com-ce5cea47.png"
 from = "https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/optimized/3X/f/3/f38b9c7e7decc51bc26320541c441bfa28f99298_2_180x180.png"
+
+[hosts."discuss.grapheneos.org"]
+icon = "discuss.grapheneos.org-5378d298.png"
+from = "https://discuss.grapheneos.org/apple-touch-icon.png"
 
 [hosts."docplanner.com"]
 icon = "docplanner.com-c257216b.png"
@@ -1068,6 +1076,10 @@ from = "https://cdn.metabase.com/images/apple-touch-icon.png"
 icon = "metrics.torproject.org-9ec5d801.png"
 from = "https://metrics.torproject.org/images/android-icon.png"
 
+[hosts."microsoft.com"]
+icon = "microsoft.com-c8d29fbb.png"
+from = "https://www.microsoft.com/favicon.ico?v2"
+
 [hosts."miit.gov.cn"]
 icon = "miit.gov.cn-754fc1e4.png"
 from = "https://www.miit.gov.cn/favicon.ico"
@@ -1371,6 +1383,10 @@ none = "網站圖示是作者本人的照片，不放個人肖像"
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
+
+[hosts."royfish.dev"]
+icon = "royfish.dev-bbea822f.png"
+from = "https://royfish.dev/public/favicon.ico"
 
 [hosts."rsf.org"]
 icon = "rsf.org-905ab8f8.png"
