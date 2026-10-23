@@ -117,6 +117,9 @@
 /2026/10/gmail-attachment-preview-phishing/
 	#perspective
 	#sources
+/2026/10/grapheneos-clipboard-toggle/
+	#perspective
+	#sources
 /2026/10/huridocs-sudan-documentation-technology/
 	#perspective
 	#sources
@@ -347,6 +350,9 @@
 	#perspective
 	#sources
 /en/2026/10/gmail-attachment-preview-phishing/
+	#perspective
+	#sources
+/en/2026/10/grapheneos-clipboard-toggle/
 	#perspective
 	#sources
 /en/2026/10/huridocs-sudan-documentation-technology/
@@ -712,6 +718,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/gmail-attachment-preview-phishing/
+	#perspective
+	#sources
+/zh-cn/2026/10/grapheneos-clipboard-toggle/
 	#perspective
 	#sources
 /zh-cn/2026/10/huridocs-sudan-documentation-technology/

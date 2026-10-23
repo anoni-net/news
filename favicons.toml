@@ -488,6 +488,10 @@ from = "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb4
 icon = "discourse.ubuntu.com-ce5cea47.png"
 from = "https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/optimized/3X/f/3/f38b9c7e7decc51bc26320541c441bfa28f99298_2_180x180.png"
 
+[hosts."discuss.grapheneos.org"]
+icon = "discuss.grapheneos.org-5378d298.png"
+from = "https://discuss.grapheneos.org/apple-touch-icon.png"
+
 [hosts."docplanner.com"]
 icon = "docplanner.com-c257216b.png"
 from = "https://www.docplanner.com/favicon/apple-touch-icon.png"
@@ -1063,6 +1067,10 @@ from = "https://cdn.metabase.com/images/apple-touch-icon.png"
 [hosts."metrics.torproject.org"]
 icon = "metrics.torproject.org-9ec5d801.png"
 from = "https://metrics.torproject.org/images/android-icon.png"
+
+[hosts."microsoft.com"]
+icon = "microsoft.com-c8d29fbb.png"
+from = "https://www.microsoft.com/favicon.ico?v2"
 
 [hosts."miit.gov.cn"]
 icon = "miit.gov.cn-754fc1e4.png"
