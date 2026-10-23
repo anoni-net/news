@@ -368,6 +368,10 @@ from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico
 icon = "courtlistener.com-9d872fbc.png"
 from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e6d.png"
 
+[hosts."coveryourtracks.eff.org"]
+icon = "coveryourtracks.eff.org-18aa39f8.png"
+from = "https://coveryourtracks.eff.org/static/favicon.ico"
+
 [hosts."cpr.dk"]
 icon = "cpr.dk-c81c529e.png"
 from = "https://cdn9.cpr.dk/cpr/media/12019/cpr-favicon.png?width=196&height=196"
@@ -1363,6 +1367,10 @@ none = "網站圖示是作者本人的照片，不放個人肖像"
 [hosts."rollcall.com"]
 icon = "rollcall.com-c436aa3d.png"
 from = "https://rollcall.com/app/uploads/2022/02/cropped-rollcall-placeholder-image-1-192x192.png"
+
+[hosts."royfish.dev"]
+icon = "royfish.dev-bbea822f.png"
+from = "https://royfish.dev/public/favicon.ico"
 
 [hosts."rsf.org"]
 icon = "rsf.org-905ab8f8.png"
