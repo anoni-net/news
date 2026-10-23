@@ -7,6 +7,7 @@
 - 事實：GreatFire 到 2026 年 10 月 18 日的最後一次測試，`https://brave.com` 在中國大陸 100% 被封鎖，從 2017 年 5 月 13 日起就有干擾紀錄。這是第三方的量測，量的是網址能不能連線
     - 照錄：「As of the last test on 2026-10-18, https://brave.com is 100% blocked in mainland China, based on GreatFire's live Great Firewall measurements.」
     - 照錄：「GreatFire has recorded interference with https://brave.com from mainland China since 2017-05-13.」
+    - 照錄：「It's blocked — 100% of the last 14 conclusive tests failed in mainland China.」（2026-10-23 查詢，最近 14 次有結論的測試都被封鎖） <!-- docs-style-lint: disable-line -->
     - 來源：GreatFire，<https://en.greatfire.org/https/brave.com>
 - 事實：同一個量測裡，下載與更新用的 `laptop-updates.brave.com` 最近一次有效測試也是封鎖
     - 來源：GreatFire，<https://en.greatfire.org/https/laptop-updates.brave.com>
