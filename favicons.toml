@@ -180,6 +180,10 @@ from = "https://blog.mozilla.org/wp-content/themes/foxtail/assets/images/favicon
 icon = "blog.talosintelligence.com-74ce512f.png"
 from = "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/size/w256h256/2022/07/talos_o_square.png"
 
+[hosts."blog.thunderbird.net"]
+icon = "blog.thunderbird.net-e61199c8.png"
+from = "https://blog.thunderbird.net/wp-content/themes/thunderblog/assets/favicon-196.png"
+
 [hosts."blog.torproject.org"]
 icon = "blog.torproject.org-e64b086c.png"
 from = "https://blog.torproject.org/static/images/favicon/favicon.ico"
@@ -646,6 +650,10 @@ from = "https://gazette.nat.gov.tw/egFront/images/basic/favicon.png"
 
 [hosts."geneva.cs.umd.edu"]
 same_as = "cs.umd.edu"
+
+[hosts."getsession.org"]
+icon = "getsession.org-bcdaa238.png"
+from = "https://getsession.org/apple-touch-icon.png"
 
 [hosts."git.mills.io"]
 icon = "git.mills.io-ed49de22.png"
@@ -1553,6 +1561,10 @@ from = "https://telegram.org/img/apple-touch-icon.png"
 [hosts."telenor.com"]
 icon = "telenor.com-5bb71714.png"
 from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
+
+[hosts."testflight.apple.com"]
+icon = "testflight.apple.com-ab5d2c9e.png"
+from = "https://testflight.apple.com/images/testflight-1200_40.jpg"
 
 [hosts."texastribune.org"]
 icon = "texastribune.org-90fb8aad.png"
