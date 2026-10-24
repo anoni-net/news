@@ -6,7 +6,247 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>每週短訊 2026 第 43 週</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/weekly-brief-2026-w43/</link>
+<guid isPermaLink="false">anoni-news:2026/10/weekly-brief-2026-w43</guid>
+<pubDate>Sun, 25 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>10 月 1 日到 10 月 22 日的 5 則新聞與後續，包括 Session 通訊協定 v2 的進度、Thunderbird for iOS 的開發進度、CryptPad 2026.10.0、PipePipe 5.5.0，以及美國佛州州警遭訴的民權訴訟的案卷動態。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，來自 Session、Thunderbird、GitHub 等 8 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;這一期收 5 則，3 則是之前導讀的後續，涵蓋 10 月 1 日到 10 月 22 日。&lt;/p&gt;
+&lt;h3 id=&#34;session-v2&#34;&gt;Session 通訊協定 v2 的進度&lt;/h3&gt;
+&lt;p&gt;不需要手機號碼就能註冊的通訊 App Session，10 月 13 日的部落格文章說明了新版通訊協定 v2 的進度。一對一訊息的前向保密（金鑰外洩時，過去的訊息仍無法解開）與後量子加密（能抵擋未來量子電腦攻擊的加密），已在共用函式庫 libsession 實作，後量子的部分會採用後量子演算法與現行演算法的混合設計。App 端到 10 月 23 日已發布的只有向前相容的處理，收到 v2 格式的訊息時會顯示要求更新的佔位訊息，還不能送出 v2 訊息。&lt;/p&gt;
+&lt;p&gt;依同一篇文章，裝置群組（加入、移除與成員管理）還在開發，現有帳號的遷移計畫還在設計。帳號要等所有連結的裝置都支援 v2 才能切換，屆時可能需要手動確認。Session 10 月 8 日的募款文章寫 v2 還沒有發布日期。&lt;/p&gt;
+&lt;p&gt;Session 10 月 19 日的另一篇文章提到，Session 日後版本連上節點網路時要用的洋蔥路由層 Session Router 1.1，已加入前向保密與後量子的金鑰交換。節點營運者目前可自行選擇是否升級，官方建議升級。v2 的文章寫 Session Router 之後會成為 v2 的主要傳輸層。&lt;/p&gt;
+&lt;h3 id=&#34;thunderbird-ios&#34;&gt;Thunderbird for iOS 的開發進度&lt;/h3&gt;
+&lt;p&gt;開源郵件軟體 Thunderbird 10 月 1 日在官方部落格公開 iPhone 版的設計方向，文章寫目標是在接下來幾個月內推出給社群測試的第一個版本。到 10 月 23 日，App Store 上還沒有這個 App，GitHub 儲存庫的說明寫專案還在早期開發、尚不能使用。公開的 TestFlight（Apple 發放測試版 App 的平台）測試頁 10 月 23 日顯示名額已滿。&lt;/p&gt;
+&lt;p&gt;依團隊在文章留言區的回覆，iCloud 信箱可以用 IMAP 帳號密碼登入。Google 與 Microsoft 帳號的登入方式，到 10 月 18 日在 GitHub 上仍是開啟中的工作項目。到 10 月 23 日，儲存庫與文章都查不到 OpenPGP（端對端加密電子郵件的標準）的支援，程式碼以 MPL-2.0 授權發布。&lt;/p&gt;
+&lt;h3 id=&#34;cryptpad&#34;&gt;CryptPad 2026.10.0&lt;/h3&gt;
+&lt;p&gt;端對端加密協作套件 CryptPad 在夏季進度報告預告的秋季版（見前一篇導讀），10 月 21 日在 GitHub 以 2026.10.0 發布。發布說明寫這一版重寫了 CryptPad 的伺服器，辦公文件的編輯器也從 OnlyOffice 換成相容的 Euro Office。自架的管理者升級前要讀升級說明，升級會涉及反向代理的設定，設定檔也拆成兩個。&lt;/p&gt;
+&lt;p&gt;到 10 月 23 日，官方部落格還沒有這一版的公告。夏季進度報告提到的 cryptpad.fr 停止法文客服，到同一天仍查不到停止的日期。&lt;/p&gt;
+&lt;h3 id=&#34;pipepipe&#34;&gt;PipePipe 5.5.0&lt;/h3&gt;
+&lt;p&gt;前一篇導讀介紹的開源 YouTube 用戶端 PipePipe，10 月 21 日在 GitHub 發布 5.5.0。發布說明列出清單頁的多選、關鍵字篩選支援正規表示式，以及依關鍵字、使用者名稱或按讚數篩選留言。第三方軟體庫 IzzyOnDroid 同一天更新到 5.5.0，F-Droid 的套件頁到 10 月 23 日顯示的仍是 5.4.0。&lt;/p&gt;
+&lt;h3 id=&#34;flock-lawsuit&#34;&gt;佛州州警遭訴的民權訴訟&lt;/h3&gt;
+&lt;p&gt;前一篇導讀寫到佛羅里達州中區聯邦地方法院的一起民權訴訟，原告曾因一起肇事逃逸案被捕、後來獲不起訴，案情牽涉車牌辨識的紀錄。她對兩位州警提起訴訟，法院 8 月 3 日裁定停止審理，讓雙方進行調解。&lt;/p&gt;
+&lt;p&gt;CourtListener（收錄美國法院案卷的免費資料庫）的案卷列出 9 月 21 日的一筆調解報告與 10 月 22 日的一筆裁定。兩筆紀錄的內容在免費的公開來源都查不到。到 10 月 23 日，也沒有查到報導調解結果或恢復審理的新聞。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/session-protocol-v2-update&#34;&gt;Session Protocol v2: An Update on PFS, Post-Quantum and Linked Devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/smaller-nodes-stronger-encryption&#34;&gt;Smaller nodes, stronger encryption: Oxen 11.7, Storage Server 2.12 and Session Router 1.1&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/session-octant-privacy-round&#34;&gt;Session is taking part in Octant&amp;#39;s Epoch 13 privacy round&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/&#34;&gt;Thunderbird for iOS: A First Look at the Native iPhone Email App in Development&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Thunderbird&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/thunderbird/thunderbird-ios&#34;&gt;thunderbird-ios&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://testflight.apple.com/join/ER3hRBSz&#34;&gt;Join the Thunderbird: Free Your Inbox beta - TestFlight - Apple&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0&#34;&gt;🍂 Autumn Release (2026.10.0)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/09/15/status-2026-09/&#34;&gt;Summer 2026 status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.5.0&#34;&gt;v5.5.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/packages/InfinityLoop1309.NewPipeEnhanced/&#34;&gt;PipePipe | F-Droid - Free and Open Source Android App Repository&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced&#34;&gt;PipePipe - IzzyOnDroid F-Droid Repository&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IzzyOnDroid&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.courtlistener.com/docket/73454649/&#34;&gt;6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>GrapheneOS 的剪貼簿讀取開關</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/grapheneos-clipboard-toggle/</link>
+<guid isPermaLink="false">anoni-news:2026/10/grapheneos-clipboard-toggle</guid>
+<pubDate>Sun, 25 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>官方只支援 Pixel 的隱私強化手機系統 GrapheneOS，9 月 18 日公告的版本加入 Secure Paste，可以逐一設定哪些 App 不能讀取其他 App 複製的內容。到 10 月 23 日功能預設沒有開啟，要自己到設定調整，GrapheneOS 自己新增的設定也只有英文。一般 Android 手機在 App 讀取剪貼簿之後才通知，iPhone 則在 App 用程式讀取前請使用者同意。複製密碼之後讓密碼管理器自動清除剪貼簿，是兩邊都能做的一步。</description>
+<content:encoded>&lt;p&gt;整理 16 篇原文，來自 GrapheneOS、GrapheneOS Discussion Forum、GitHub 等 8 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;GrapheneOS 是以 Android 開源程式碼為基礎的隱私強化手機系統，到 10 月 23 日官方支援的機型是 Pixel 6 到 Pixel 10a。9 月 18 日官方論壇公告的 2026091700 版，加入名為 Secure Paste 的剪貼簿控制。依發布紀錄，使用者可以逐一關閉 App 讀取剪貼簿的權限，也可以用全域開關把所有第三方 App 預設為關閉。關閉之後，使用者仍可以透過系統的選取工具列、鍵盤、鍵盤快捷鍵或無障礙服務，把內容貼進這些 App。&lt;/p&gt;
+&lt;p&gt;依 GrapheneOS 的功能介紹頁，Android 只允許目前取得焦點、正在操作的 App 與鍵盤讀取剪貼簿。App 讀到其他 App 複製的內容時 Android 會顯示通知，但通知出現時內容已經被讀走了。開啟 Secure Paste 之後，App 讀不到其他 App 複製的內容，仍可讀取自己複製的內容。&lt;/p&gt;
+&lt;p&gt;Secure Paste 預設不阻擋讀取，GrapheneOS 在 Mastodon 的回覆說明這是要自己開啟的功能，設定程式碼的預設值也是允許讀取。依設定程式碼，開關在「Settings &amp;gt; Security &amp;amp; privacy &amp;gt; Privacy controls &amp;gt; Clipboard access」，官方的使用說明沒有寫路徑。全域預設的選項是「Allow」與「Blocked」，每個 App 另外可以選「Allow」、「Paste only」，或用「Follow system clipboard access setting」跟著全域預設。設定程式碼的說明文字也提醒，改成 Paste only 可能讓某些 App 無法正常運作。&lt;/p&gt;
+&lt;p&gt;之後的 2026091900 版把擋下讀取時的通知間隔從 1 分鐘縮短為 6 秒，這則通知可以逐 App 關閉。2026092500 版改善了設定畫面，到 10 月 21 日的 2026102100 版，發布紀錄沒有再列出剪貼簿相關的條目。&lt;/p&gt;
+&lt;p&gt;依設定程式碼的說明文字，全域開關不套用到系統 App。目前使用的鍵盤以及部分 App 與系統功能，一律可以讀取剪貼簿。&lt;/p&gt;
+&lt;p&gt;App 仍可看到剪貼簿有沒有內容、內容類型與複製時間，能檢視並操作畫面內容的無障礙服務也可以觸發貼上，並可能取得貼上的內容。依功能介紹頁，設成 Paste only 之後，要貼到自行實作選取工具列的 App（例如用 Flutter 這套跨平台開發框架寫的 App）需改用鍵盤上的貼上按鈕。依官方論壇的回覆，GrapheneOS 在預設鍵盤加了這個按鈕，Gboard 原本就有。使用其他鍵盤的人要先確認有沒有貼上功能。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 Microsoft 2023 年的資安部落格，手機使用者常用剪貼簿複製密碼、付款資訊這類敏感內容。Android 的 App 讀寫剪貼簿不需要使用者同意，也不需要特定權限。&lt;/p&gt;
+&lt;p&gt;Microsoft 在同一篇文章公布調查結果，一款購物 App 的舊版本會定期讀取剪貼簿，內容符合特定格式就傳回伺服器。文中也提到並未得知特定的惡意意圖，該行為在 2022 年 5 月已移除。Android 10 起背景 App 不能讀剪貼簿，但這項限制擋不住前景的 App。&lt;/p&gt;
+&lt;p&gt;依 Android 開發者文件，Android 12 起 App 第一次讀取其他 App 複製的內容時，系統會顯示通知。Android 13 另外在複製時顯示預覽，用來確認複製成功。依 Apple 的開發者文件，iOS 16 起 App 用程式讀取剪貼簿時，系統會先請使用者同意。MacRumors 2022 年的報導提到，iOS 16.1 起要求過貼上的 App 在設定裡多了「Paste from Other Apps」選項，本文沒有在現行 iOS 核對。&lt;/p&gt;
+&lt;p&gt;本文建議用 GrapheneOS 的讀者先挑幾個 App 改成 Paste only，再視情況把全域預設改成 Blocked，貼上時改用工具列或鍵盤（先確認自己的鍵盤有貼上鍵）。設定程式碼的提醒與官方列出的限制都顯示，一次全部擋下比較容易遇到無法正常運作的 App。改了之後某個 App 無法正常運作，可以把那個 App 改回 Allow。&lt;/p&gt;
+&lt;p&gt;依 GrapheneOS 的功能介紹頁，Secure Paste 取代了桌機與手機系統的標準做法，一般 Android 手機沒有逐 App 的開關。iPhone 則是 App 用程式讀取時會先詢問，兩邊都可以先調整密碼管理器，1Password 的說明頁寫各平台複製出去的密碼預設 90 秒後自動清除。本文建議用其他密碼管理器的人，在設定裡找清除剪貼簿的選項。定時清除只縮短內容留在剪貼簿的時間，清除之前取得焦點的 App 仍可讀取。&lt;/p&gt;
+&lt;p&gt;想安裝 GrapheneOS 的人要先有一支支援的 Pixel，官方 FAQ 提醒電信業者鎖定的機型無法安裝，主要發生在美國的電信業者。依官方網頁安裝器的說明，執行安裝器的裝置要有至少 2GB 可用記憶體與 32GB 可用空間，電腦或 Android 手機、平板都可以。依 10 月 23 日查到的設定程式碼目錄推斷，GrapheneOS 自己新增的設定與 App 只有英文，系統其他部分沿用 Android 的正體中文。&lt;/p&gt;
+&lt;p&gt;已經在用 GrapheneOS 的人改成 Paste only 之後，擋下的是 App 自行讀取，擋不到已開啟的無障礙服務與目前使用的鍵盤。代價是部分 App 要改用鍵盤的貼上鍵。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（16 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases#2026091700&#34;&gt;Releases | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/42090-grapheneos-version-2026091700-released&#34;&gt;GrapheneOS version 2026091700 released&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/features#secure-paste&#34;&gt;Features overview | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#supported-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web installer | Install | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117292361749585692&#34;&gt;GrapheneOS: &amp;#34;It&amp;#39;s an opt-in feature wit…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_packages_apps_Settings/blob/2026102100/res/values/strings_ext.xml&#34;&gt;platform_packages_apps_Settings/res/values/strings_ext.xml&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_frameworks_base/blob/2026102100/core/res/res/values/config_ext.xml&#34;&gt;platform_frameworks_base/core/res/res/values/config_ext.xml&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/5030-grapheneos-translate-to-other-languages&#34;&gt;GrapheneOS translate to other languages - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/10/privacy/changes&#34;&gt;Privacy changes in Android 10&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/12/behavior-changes-all&#34;&gt;Behavior changes: all apps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/13/features&#34;&gt;Features and APIs Overview&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/uikit/uipastecontrol&#34;&gt;UIPasteControl&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple Developer Documentation&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2022/10/17/ios-16-1-paste-from-other-apps-settings/&#34;&gt;iOS 16.1 Introduces New Copy-and-Paste Permission Settings on Per-App Basis&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-10-17&#34;&gt;2022 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/security/blog/2023/03/06/protecting-android-clipboard-content-from-unintended-exposure/&#34;&gt;Protecting Android clipboard content from unintended exposure&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft Security Blog&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-03-06&#34;&gt;2023 年 3 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.1password.com/copy-passwords/&#34;&gt;Copy and fill passwords into apps that don&amp;#39;t work with 1Password&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;1Password Support&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;2026 年 8 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>瀏覽器指紋與各家瀏覽器的防護</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/browser-fingerprinting-cookies/</link>
@@ -2088,215 +2328,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>國碼頂級網域劫持事件與未經授權的 HTTPS 憑證</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/cctld-hijack-counterfeit-certs/</link>
-<guid isPermaLink="false">anoni-news:2026/10/cctld-hijack-counterfeit-certs</guid>
-<pubDate>Fri, 16 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Google 10 月 6 日公告，迦納、獅子山與美屬薩摩亞的國碼頂級網域遭到劫持，攻擊者取得 Google 與其他組織網域的 HTTPS 憑證。Chrome 已封鎖找到的憑證，自己管理網域的人可以監控憑證透明度紀錄。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，來自 Google、Let&amp;#39;s Encrypt 社群論壇、Ars Technica 等 11 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Google 10 月 6 日公告，.gh（迦納）、.sl（獅子山）與 .as（美屬薩摩亞）三個國碼頂級網域遭到劫持，攻擊者藉此取得多個 Google 網域與其他組織網域的 HTTPS 憑證。國碼頂級網域（ccTLD）是代表國家或地區的頂級網域，例如台灣的 .tw。公告提到有風險的是以這三個代碼結尾的網域，Google 自家的系統沒有遭到入侵。Chrome 已封鎖找到的憑證，公告也提醒 Chrome 使用者不必採取任何行動。&lt;/p&gt;
-&lt;p&gt;依 Google 的公告，攻擊者入侵的是由第三方營運的這三個頂級網域，改動了權威 DNS 記錄（決定一個網域該連到哪裡的那一份記錄）。公告沒有寫攻擊者從哪個環節入侵（例如營運單位的系統或註冊商帳號）、劫持從何時開始，到 10 月 12 日為止也查不到三個營運單位的說明。Ars Technica 的報導提到攻擊者控制 DNS 記錄之後通過了憑證機構的網域控制驗證（DCV，確認申請者確實掌控網域的程序），iThome 寫的是可能藉此通過。Google 的公告則寫沒有理由認為簽發憑證的憑證機構做錯了什麼。&lt;/p&gt;
-&lt;p&gt;Google 先用 CRLSets（Chrome 緊急封鎖特定憑證用的清單）封鎖 Google 網域的憑證，並請簽發的憑證機構撤銷。之後從憑證透明度（CT，公開記錄每一張已簽發憑證的日誌）找到可能受同一波攻擊影響的其他組織，包括幾個全球大型品牌與廣泛使用的線上服務，也在 Chrome 封鎖了這些憑證。&lt;/p&gt;
-&lt;p&gt;Let&#39;s Encrypt 的工作人員在論壇確認，該機構簽發過 Google 與 YouTube 的憑證，已經撤銷。澳洲媒體 iTnews 自行比對 CT 紀錄與 Chrome 的封鎖清單，找到 9 月 22 日到 27 日之間發給攻擊者的 32 張憑證。CircleID 註明這個數字還沒有經過其他人獨立重現。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;HTTPS 憑證用來證明「這個網站就是它聲稱的那一個」，憑證機構簽發之前確認的是申請者能不能掌控網域，其中一種做法是請申請者在 DNS 加上一筆指定的記錄。DNS 從頂級網域一路往下委派，依這個機制推論，上層被劫持時攻擊者一樣能讓驗證通過。底下網域的擁有者即使沒有犯任何錯，也擋不住這種情況。依 Google 的公告，憑證機構可以重用先前完成的驗證結果，縮短憑證效期與驗證結果的重用期間是 Google 列出的長期改善方向。&lt;/p&gt;
-&lt;p&gt;其他可能受影響的組織，是 Google 從憑證透明度的日誌找到的。Chrome 與 Safari 都要求公開信任的憑證登錄在公開的日誌裡，任何人都能查詢。Google 找到的憑證都是從日誌查到的。依本文的理解，CT 讓這類憑證在簽發之後被發現，簽發當下並不會擋下。&lt;/p&gt;
-&lt;p&gt;Google 的公告也提醒，Chrome 的封鎖無法可靠地保護其他瀏覽器的使用者，Google 也不能保證已經找出每一個受影響的網域。公告提到 Google 網域的憑證已請憑證機構撤銷，其他組織的憑證只寫了在 Chrome 封鎖，iTnews 的報導則寫它找到的偽造憑證已由憑證機構撤銷。Privacy Guides 的報導寫 Firefox 用 CRLite（Firefox 檢查憑證是否已撤銷的機制）處理，Safari 與 Edge 到 10 月 12 日查不到相關說明。被攔截的連線有多少，CircleID 寫到 10 月 8 日都還沒有公開的資料。&lt;/p&gt;
-&lt;p&gt;Google 建議自己管理網域的人持續監控手上所有網域的 CT 紀錄，包括停放中或各地區的國碼網域，使用 .gh、.sl 或 .as 網域的人要回頭檢查近期有沒有非預期的憑證。Cloudflare 與 Cert Spotter 等服務會在有新憑證簽發時發出通知。Cloudflare 的通知要在它的 Edge Certificates 頁面開啟，預設是關閉的，Cert Spotter 的網站列的是 30 天免費試用。Google 也建議設定 CAA 記錄（DNS 裡指定哪些憑證機構可以簽發的記錄），最好綁定特定的 ACME（Let&#39;s Encrypt 等機構自動簽發憑證用的協定）帳號。&lt;/p&gt;
-&lt;p&gt;Google 的說明內容是 CAA 擋不住劫持進行中的簽發，它的作用在 DNS 控制權恢復之後，可以防止攻擊者拿先前通過的驗證結果繼續申請新憑證。CT 監控同樣是讓人在事後早一點發現，Google 的建議裡沒有網域擁有者能事先擋下這類上層劫持的做法。&lt;/p&gt;
-&lt;p&gt;到 10 月 12 日，查不到三個營運單位或簽發的憑證機構公布入侵的環節與完整的憑證清單。11 月中可以再查一次，看看有沒有事故報告說明攻擊者從哪裡入侵。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/chromes-response-to-recent-cctld-registry-hijacks/&#34;&gt;Chrome&amp;#39;s Response to Recent ccTLD Registry Hijacks&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.letsencrypt.org/t/chromes-response-to-recent-cctld-registry-hijacks/251941&#34;&gt;Chrome&amp;#39;s Response to Recent ccTLD Registry Hijacks&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt 社群論壇&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/&#34;&gt;Hackers obtain counterfeit TLS certificates for Google and other large services&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/08/hackers-impersonate-google-and-other-large-services-with-counterfeit-tls-certificates/&#34;&gt;Hackers Impersonate Google and Other Large Services With Counterfeit TLS Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/179500&#34;&gt;3個國碼頂級網域遭劫持，攻擊者取得Google等組織HTTPS憑證&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.itnews.com.au/news/attackers-hijack-cctlds-to-fake-certs-for-google-629504&#34;&gt;Attackers hijack ccTLDs to fake certs for Google&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iTnews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://circleid.com/posts/dns-hijacks-across-three-cctlds-linked-to-32-unauthorized-https-certificates&#34;&gt;DNS Hijacks Across Three ccTLDs Linked to 32 Unauthorized HTTPS Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CircleID&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.chromium.org/Home/chromium-security/crlsets/&#34;&gt;CRLSets&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Chromium Projects&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/&#34;&gt;Certificate Transparency Monitoring&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sslmate.com/certspotter/&#34;&gt;Cert Spotter - Certificate Transparency Monitor - Detect Security and Availability Problems&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SSLMate&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/docs/caa/&#34;&gt;Certification Authority Authorization (CAA)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>在瀏覽器本機處理 PDF 的開源工具 BentoPDF</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/bentopdf-local-pdf-tools/</link>
-<guid isPermaLink="false">anoni-news:2026/10/bentopdf-local-pdf-tools</guid>
-<pubDate>Fri, 16 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>開源的 PDF 工具組 BentoPDF 依官方說明在瀏覽器裡完成合併、壓縮、OCR 與移除中繼資料，不必把檔案上傳到線上轉檔網站。打開官網就能用，介面有正體中文，部分功能使用時要從第三方網站 jsDelivr 下載程式。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，來自 BentoPDF、GitHub、It&amp;#39;s FOSS 等 6 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;It&#39;s FOSS 10 月 10 日介紹開源的 PDF 工具組 BentoPDF，官網寫有 100 多項工具。依官方說明，合併、分割、壓縮、OCR（光學字元辨識，把掃描的圖片轉成可以搜尋的文字）、加密與移除中繼資料都在瀏覽器裡處理，不必把檔案上傳到伺服器。打開官網就能用，不必註冊，介面有正體中文與簡體中文。到 10 月 12 日為止，最新版是 8 月 29 日發布的 2.8.8。&lt;/p&gt;
-&lt;p&gt;根據官方隱私權政策，處理由在使用者裝置上執行的 JavaScript 與 WebAssembly 函式庫完成，檔案不會上傳。政策另外提到網站不使用 cookie 與統計分析服務。壓縮、PDF 轉 Word 等功能用到的 PyMuPDF 這類元件不包含在 BentoPDF 的原始碼裡，README 的說明是它們在使用時由瀏覽器從 jsDelivr 下載（jsDelivr 是替網站分送程式檔的第三方服務）。OCR 工具頁也提醒第一次使用時要下載 OCR 引擎與選擇的語言包，掃描的頁面與辨識出的文字留在裝置上。&lt;/p&gt;
-&lt;p&gt;程式碼以 AGPL-3.0 授權公開在 GitHub，另有 79 美元一次買斷的商業授權，給要用在閉源產品的人。專案由一位開發者起頭，官網的介紹頁寫已有 60 多人貢獻程式碼、翻譯與修正。不想用官網的人，可以用 Docker（把整套程式包成一個可以直接執行的套件）在自己的電腦或伺服器上架設。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;線上轉檔網站把檔案傳到自己的伺服器處理再傳回，檔案在對方手上多久，要看各家的政策。依 iLovePDF 的隱私權政策，處理後兩小時內刪除，電子簽署服務除外。Smallpdf 的隱私權聲明提到，沒有登入的使用者的檔案通常在最後一次開啟後的合理期間內刪除（重新開啟會延長），官方部落格則寫免費使用的檔案一小時後刪除。臺北市政府資訊局 2023 年也提醒同仁避免使用線上轉檔與加解密服務，理由是無法確保這些服務取得資料後如何保存與使用。&lt;/p&gt;
-&lt;p&gt;依 BentoPDF 的隱私權政策，本機處理避開的是傳輸途中與伺服器上的外洩。本文的推論是，要信任的對象因此換成網頁上的程式。用官網版本時，執行的是官網當下提供的那一份，更新不需要使用者同意。進階功能還會從 jsDelivr 載入程式碼，官方 FAQ 另外提醒少數需要外部資料的工具可能需要連線。&lt;/p&gt;
-&lt;p&gt;專案在 GitHub 公開的資安公告中有一則，匯入特製的工作流程檔會把 PDF 的 SHA-256 雜湊值（由檔案內容算出的一串摘要，不是檔案本身）送到攻擊者的伺服器。公告列的影響範圍是 2.8.6 與更早的版本，到 10 月 12 日為止沒有列出修正版本。&lt;/p&gt;
-&lt;p&gt;檔案在本機處理，PDF 本身仍可能帶著作者、建立時間這類隱藏的屬性。BentoPDF 的移除中繼資料工具可以清掉它們，「Sanitize PDF」工具另外移除註解與腳本，分享檔案之前可以先處理一次。&lt;/p&gt;
-&lt;p&gt;需要合併或轉換含個資的文件、又不想上傳到線上服務的人，可以直接用官網，所有工具免費。依官方 FAQ，沒有設檔案大小的限制，上限取決於自己電腦的效能。&lt;/p&gt;
-&lt;p&gt;想固定版本的人可以照 README 用 Docker 自架，需要先安裝 Docker、會操作命令列。不能連外的環境要另外照 README 的離線部署步驟，先在能連網的電腦打包需要的元件再搬進去。隱私權政策也提到，檔案的安全取決於自己的電腦與瀏覽器。依本文的推論，電腦本身被入侵時，本機處理保護不到。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/privacy&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-29&#34;&gt;2026 年 8 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/faq&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/ocr-pdf&#34;&gt;OCR PDF Free Online - Make Scanned PDFs Searchable | BentoPDF&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/remove-metadata&#34;&gt;Remove Metadata - Strip Hidden Data from PDF - BentoPDF&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/alam00000/bentopdf/blob/main/README.md&#34;&gt;bentopdf/README.md&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/licensing&#34;&gt;Licensing for BentoPDF&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bentopdf.com/about&#34;&gt;About BentoPDF - Privacy-First Free PDF Tools | Our Story&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BentoPDF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/alam00000/bentopdf/security/advisories/GHSA-cx8x-7rrr-r9x8&#34;&gt;Workflow Import Allows Unvalidated TSA URL Leading to PDF Hash Exfiltration via RFC 3161 Requests&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-23&#34;&gt;2026 年 8 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itsfoss.com/bentopdf/&#34;&gt;BentoPDF Handles PDFs Locally, So You Don’t Have to Upload Them to Websites&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;It&amp;#39;s FOSS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilovepdf.com/help/privacy&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iLovePDF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-19&#34;&gt;2026 年 2 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://smallpdf.com/privacy&#34;&gt;Privacy Notice&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Smallpdf&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-29&#34;&gt;2025 年 7 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://smallpdf.com/blog/is-smallpdf-safe&#34;&gt;Is Smallpdf Safe?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Smallpdf&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-14&#34;&gt;2026 年 7 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://doit.gov.taipei/News_Content.aspx?n=9B8993131395DA3F&amp;amp;sms=93D47212F58C7A57&amp;amp;s=46FD091DEE0322E4&#34;&gt;請同仁避免使用線上轉檔、加解密服務，以防資安事件發生&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;臺北市政府資訊局&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-17&#34;&gt;2023 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

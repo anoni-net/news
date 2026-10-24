@@ -22,6 +22,22 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/10/weekly-brief-2026-w43/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/weekly-brief-2026-w43/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/10/browser-fingerprinting-cookies/</loc>
 <lastmod>2026-10-25</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/browser-fingerprinting-cookies/"/>
@@ -821,6 +837,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-24/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/history/10-25/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-25/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -840,6 +864,22 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/weekly-brief-2026-w43/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/weekly-brief-2026-w43/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/10/grapheneos-clipboard-toggle/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/10/browser-fingerprinting-cookies/</loc>
@@ -1641,6 +1681,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-24/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/history/10-25/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-25/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -1660,6 +1708,22 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/weekly-brief-2026-w43/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/weekly-brief-2026-w43/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/weekly-brief-2026-w43/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/10/grapheneos-clipboard-toggle/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/grapheneos-clipboard-toggle/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/10/browser-fingerprinting-cookies/</loc>
@@ -2459,6 +2523,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-24/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-24/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-24/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/history/10-25/</loc>
+<lastmod>2026-10-25</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/10-25/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/10-25/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/about/</loc>
