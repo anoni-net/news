@@ -36,6 +36,10 @@ from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192
 icon = "advox.globalvoices.org-61131b5e.png"
 from = "https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-advox/favicon-196x196.png"
 
+[hosts."ai-act-service-desk.ec.europa.eu"]
+icon = "ai-act-service-desk.ec.europa.eu-3712d20c.png"
+from = "https://ai-act-service-desk.ec.europa.eu/themes/contrib/oe_theme/images/favicons/ec/favicon.png"
+
 [hosts."aisi.gov.uk"]
 icon = "aisi.gov.uk-d819a7e1.png"
 from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf52818a86a4f9f86_AISI%20icon%20256.png"
@@ -141,6 +145,10 @@ from = "https://moskva.beeline.ru/favicon.ico"
 [hosts."bentopdf.com"]
 icon = "bentopdf.com-ac64137c.png"
 from = "https://www.bentopdf.com/images/favicon-512x512.png"
+
+[hosts."berlin.de"]
+icon = "berlin.de-3a60d8d4.png"
+from = "https://www.berlin.de/favicon/apple-touch-icon.png"
 
 [hosts."beuc.eu"]
 icon = "beuc.eu-c77c3d2f.png"
@@ -798,6 +806,10 @@ same_as = "grapheneos.org"
 [hosts."groups.google.com"]
 same_as = "google.com"
 
+[hosts."gruene-bw.de"]
+icon = "gruene-bw.de-9811e4d3.png"
+from = "https://www.gruene-bw.de/wp-content/uploads/2025/09/cropped-GrueneBW_Favicon-192x192.png"
+
 [hosts."gultsch.de"]
 icon = "gultsch.de-8aabebf2.png"
 from = "https://gultsch.de/favicon.ico"
@@ -876,6 +888,10 @@ from = "https://ico.org.uk/media2/lhphq55z/favicon.ico"
 [hosts."ilovepdf.com"]
 icon = "ilovepdf.com-20557442.png"
 from = "https://www.ilovepdf.com/img/app-icon.png"
+
+[hosts."im.baden-wuerttemberg.de"]
+icon = "im.baden-wuerttemberg.de-5df9041d.png"
+from = "手動提供的檔案 bw.png"
 
 [hosts."imda.gov.sg"]
 icon = "imda.gov.sg-8b6918ac.png"
@@ -1002,6 +1018,9 @@ from = "https://www.kicassl.com/favicon.ico"
 [hosts."klri.re.kr"]
 icon = "klri.re.kr-ee870944.png"
 from = "https://klri.re.kr/favicon.ico"
+
+[hosts."kokkai.ndl.go.jp"]
+same_as = "ndl.go.jp"
 
 [hosts."korea.kr"]
 icon = "korea.kr-a57e1712.png"
@@ -1238,6 +1257,10 @@ from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quali
 icon = "nbcnews.com-ef4ad526.png"
 from = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/nbcnews/all-other-sizes-PNG.ico/android-icon-192x192.png"
 
+[hosts."ndl.go.jp"]
+icon = "ndl.go.jp-7107fbd7.png"
+from = "https://ndl.go.jp/assets/hp/favicon/apple-touch-icon.png"
+
 [hosts."nettsteder.regjeringen.no"]
 icon = "nettsteder.regjeringen.no-d4b34e7a.png"
 from = "https://nettsteder.regjeringen.no/wp-content/uploads/2019/10/cropped-favicon_loeve_512_512_hvit_-192x192.png"
@@ -1371,6 +1394,10 @@ from = "https://www.openwall.com/favicon.ico"
 [hosts."pages.nist.gov"]
 icon = "pages.nist.gov-17d61c32.png"
 from = "https://pages.nist.gov/favicon.ico"
+
+[hosts."pardok.parlament-berlin.de"]
+icon = "pardok.parlament-berlin.de-6a4c487f.png"
+from = "https://pardok.parlament-berlin.de/favicon.ico"
 
 [hosts."parl.ca"]
 icon = "parl.ca-cc71bd4e.png"
