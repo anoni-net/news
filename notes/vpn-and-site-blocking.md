@@ -162,6 +162,8 @@
 - 網址：<https://globalfreedomofexpression.columbia.edu/wp-content/uploads/2019/07/UTV-Software-Communications-Ltd.-v.-1337X.TO_.pdf>（哥倫比亞大學 Global Freedom of Expression 網站放的判決全文）
 - 一手（判決書，第三方網站轉載）
 - 判決全文只有在引用他國研究的統計時提到 VPN（寫到封鎖後 VPN 網站的訪問增加百分之三十，基數很小），沒有針對 VPN 業者的命令
+- 判決的命令對象是 ISP 與 DoT、MeitY，沒有點名公共 DNS 解析服務。判決引述的研究文字提到使用者可以改連不受封鎖命令約束的其他 DNS 伺服器，這是引述，不是法院的命令（2026-10-23 對判決全文查核）
+- 照錄：「Users are able to circumvent this process by using another domain name server (e.g., users could use a virtual private network to connect to an alternative DNS server not subject to the blocking orders).」
 
 ## 日本
 

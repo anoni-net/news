@@ -102,6 +102,9 @@
 /2026/10/emudhra-weak-ca-keys/
 	#perspective
 	#sources
+/2026/10/eu-digital-omnibus-ai-training/
+	#perspective
+	#sources
 /2026/10/fdroid-2-android-developer-verification/
 	#perspective
 	#sources
@@ -111,6 +114,9 @@
 /2026/10/firefox-tls-keylog-warning/
 	#perspective
 	#sources
+/2026/10/germany-police-facial-recognition/
+	#perspective
+	#sources
 /2026/10/glm-5-3-cyber-capabilities/
 	#perspective
 	#sources
@@ -118,6 +124,9 @@
 	#perspective
 	#sources
 /2026/10/grapheneos-clipboard-toggle/
+	#perspective
+	#sources
+/2026/10/hong-kong-mall-cctv-police/
 	#perspective
 	#sources
 /2026/10/huridocs-sudan-documentation-technology/
@@ -162,6 +171,9 @@
 /2026/10/privacy-international-migrant-surveillance/
 	#perspective
 	#sources
+/2026/10/quad9-exit-france/
+	#perspective
+	#sources
 /2026/10/signal-backups-password-manager-transfer/
 	#perspective
 	#sources
@@ -169,6 +181,9 @@
 	#perspective
 	#sources
 /2026/10/telegram-data-us-court/
+	#perspective
+	#sources
+/2026/10/telenor-myanmar-data-lawsuit/
 	#perspective
 	#sources
 /2026/10/telenor-myanmar-investigation/
@@ -347,6 +362,9 @@
 /en/2026/10/emudhra-weak-ca-keys/
 	#perspective
 	#sources
+/en/2026/10/eu-digital-omnibus-ai-training/
+	#perspective
+	#sources
 /en/2026/10/fdroid-2-android-developer-verification/
 	#perspective
 	#sources
@@ -356,6 +374,9 @@
 /en/2026/10/firefox-tls-keylog-warning/
 	#perspective
 	#sources
+/en/2026/10/germany-police-facial-recognition/
+	#perspective
+	#sources
 /en/2026/10/glm-5-3-cyber-capabilities/
 	#perspective
 	#sources
@@ -363,6 +384,9 @@
 	#perspective
 	#sources
 /en/2026/10/grapheneos-clipboard-toggle/
+	#perspective
+	#sources
+/en/2026/10/hong-kong-mall-cctv-police/
 	#perspective
 	#sources
 /en/2026/10/huridocs-sudan-documentation-technology/
@@ -407,6 +431,9 @@
 /en/2026/10/privacy-international-migrant-surveillance/
 	#perspective
 	#sources
+/en/2026/10/quad9-exit-france/
+	#perspective
+	#sources
 /en/2026/10/signal-backups-password-manager-transfer/
 	#perspective
 	#sources
@@ -414,6 +441,9 @@
 	#perspective
 	#sources
 /en/2026/10/telegram-data-us-court/
+	#perspective
+	#sources
+/en/2026/10/telenor-myanmar-data-lawsuit/
 	#perspective
 	#sources
 /en/2026/10/telenor-myanmar-investigation/
@@ -733,6 +763,9 @@
 /zh-cn/2026/10/emudhra-weak-ca-keys/
 	#perspective
 	#sources
+/zh-cn/2026/10/eu-digital-omnibus-ai-training/
+	#perspective
+	#sources
 /zh-cn/2026/10/fdroid-2-android-developer-verification/
 	#perspective
 	#sources
@@ -742,6 +775,9 @@
 /zh-cn/2026/10/firefox-tls-keylog-warning/
 	#perspective
 	#sources
+/zh-cn/2026/10/germany-police-facial-recognition/
+	#perspective
+	#sources
 /zh-cn/2026/10/glm-5-3-cyber-capabilities/
 	#perspective
 	#sources
@@ -749,6 +785,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/grapheneos-clipboard-toggle/
+	#perspective
+	#sources
+/zh-cn/2026/10/hong-kong-mall-cctv-police/
 	#perspective
 	#sources
 /zh-cn/2026/10/huridocs-sudan-documentation-technology/
@@ -793,6 +832,9 @@
 /zh-cn/2026/10/privacy-international-migrant-surveillance/
 	#perspective
 	#sources
+/zh-cn/2026/10/quad9-exit-france/
+	#perspective
+	#sources
 /zh-cn/2026/10/signal-backups-password-manager-transfer/
 	#perspective
 	#sources
@@ -800,6 +842,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/telegram-data-us-court/
+	#perspective
+	#sources
+/zh-cn/2026/10/telenor-myanmar-data-lawsuit/
 	#perspective
 	#sources
 /zh-cn/2026/10/telenor-myanmar-investigation/
