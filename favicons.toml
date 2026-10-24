@@ -138,6 +138,10 @@ from = "https://moskva.beeline.ru/favicon.ico"
 icon = "bentopdf.com-ac64137c.png"
 from = "https://www.bentopdf.com/images/favicon-512x512.png"
 
+[hosts."beuc.eu"]
+icon = "beuc.eu-c77c3d2f.png"
+from = "https://www.beuc.eu/themes/custom/beuc/favicon.ico"
+
 [hosts."bitquery.io"]
 icon = "bitquery.io-5227abab.png"
 from = "https://bitquery.io/favicon/favicon-192x192.png"
@@ -255,6 +259,9 @@ from = "https://www.cas.go.jp/jp/images/kanboufav.ico"
 icon = "cbsnews.com-5afd5cc8.png"
 from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
 
+[hosts."cdn.netzpolitik.org"]
+same_as = "netzpolitik.org"
+
 [hosts."cedb.gov.hk"]
 icon = "cedb.gov.hk-62222f7e.png"
 from = "https://www.cedb.gov.hk/assets/favicon.ico"
@@ -352,6 +359,9 @@ from = "https://www.congress.gov/apple-touch-icon.png"
 icon = "cons.judicial.gov.tw-5b9fcfc7.png"
 from = "https://cons.judicial.gov.tw/appiconmaker.co/size/favicon-196x196.png"
 
+[hosts."consilium.europa.eu"]
+same_as = "europa.eu"
+
 [hosts."consumer.huawei.com"]
 icon = "consumer.huawei.com-dddcd8b6.png"
 from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawei-logo.png"
@@ -425,6 +435,10 @@ from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Inside
 [hosts."daringfireball.net"]
 icon = "daringfireball.net-c13824c2.png"
 from = "https://daringfireball.net/graphics/apple-touch-icon.png"
+
+[hosts."data.consilium.europa.eu"]
+icon = "data.consilium.europa.eu-f2d19d01.png"
+from = "https://europa.eu/favicon.ico"
 
 [hosts."datatilsynet.dk"]
 icon = "datatilsynet.dk-17e6925e.png"
@@ -537,6 +551,10 @@ from = "https://ec.europa.eu/favicon.ico"
 icon = "edition.cnn.com-ae11d4e1.png"
 from = "https://edition.cnn.com/media/sites/cnn/apple-touch-icon.png"
 
+[hosts."edpb.europa.eu"]
+icon = "edpb.europa.eu-bb749190.png"
+from = "https://www.edpb.europa.eu/themes/custom/frontend/favicon.ico"
+
 [hosts."edri.org"]
 icon = "edri.org-9b49c818.png"
 from = "https://edri.org/wp-content/uploads/2023/01/favicon1-20y-192x192.png"
@@ -577,6 +595,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.esafety.gov.au/theme
 [hosts."eulisa.europa.eu"]
 icon = "eulisa.europa.eu-6d263dc5.png"
 from = "https://www.eulisa.europa.eu/sites/default/files/favicons/apple-touch-icon.png"
+
+[hosts."europa.eu"]
+icon = "europa.eu-f2d19d01.png"
+from = "https://europa.eu/favicon.ico"
 
 [hosts."explorer.ooni.org"]
 same_as = "ooni.org"
@@ -869,6 +891,10 @@ from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-
 [hosts."itunes.apple.com"]
 same_as = "apple.com"
 
+[hosts."ivsz.hu"]
+icon = "ivsz.hu-f52451da.png"
+from = "https://ivsz.hu/wp-content/uploads/2025/10/cropped-IVSZ-Favicon-1-192x192.png"
+
 [hosts."japaneselawtranslation.go.jp"]
 icon = "japaneselawtranslation.go.jp-9c43f621.png"
 from = "https://www.japaneselawtranslation.go.jp/favicon.ico"
@@ -1008,6 +1034,10 @@ from = "https://letsencrypt.org/favicon.ico"
 [hosts."lineageos.org"]
 icon = "lineageos.org-a48b3dd2.png"
 from = "https://lineageos.org/images/logo.webp"
+
+[hosts."linkedin.com"]
+icon = "linkedin.com-b03bcded.png"
+from = "https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca"
 
 [hosts."lists.debian.org"]
 icon = "lists.debian.org-aef258f5.png"
@@ -1158,12 +1188,20 @@ from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quali
 icon = "nbcnews.com-ef4ad526.png"
 from = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/nbcnews/all-other-sizes-PNG.ico/android-icon-192x192.png"
 
+[hosts."netzpolitik.org"]
+icon = "netzpolitik.org-c62fff3a.png"
+from = "https://cdn.netzpolitik.org/wp-upload/2025/01/cropped-NP_logo_3z_v2-192x192.png"
+
 [hosts."news.bbc.co.uk"]
 same_as = "bbc.com"
 
 [hosts."news.cn"]
 icon = "news.cn-db68823e.png"
 from = "https://www.news.cn/favicon.ico"
+
+[hosts."news.europawire.eu"]
+icon = "news.europawire.eu-6c7d96e4.png"
+from = "https://news.europawire.eu/wp-content/uploads/fbrfg/apple-touch-icon.png"
 
 [hosts."news.mtn.co.kr"]
 icon = "news.mtn.co.kr-5e21f499.png"
@@ -1219,6 +1257,10 @@ from = "https://nodejs.org/static/images/favicons/favicon.png"
 icon = "nonfunctional.substack.com-5324e146.png"
 from = "https://substackcdn.com/icons/substack/apple-touch-icon.png"
 
+[hosts."noyb.eu"]
+icon = "noyb.eu-4d028ab0.png"
+from = "https://noyb.eu/themes/chives/images/ao_canvas/apple-touch-icon.png"
+
 [hosts."npa.gov.tw"]
 icon = "npa.gov.tw-e27d4458.png"
 from = "https://www.npa.gov.tw/static/images/favicon.ico?v=20260723"
@@ -1229,6 +1271,10 @@ same_as = "gov.cn"
 [hosts."nrk.no"]
 icon = "nrk.no-a87b9a82.png"
 from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
+
+[hosts."oeil.secure.europarl.europa.eu"]
+icon = "oeil.secure.europarl.europa.eu-865fc6c6.png"
+from = "https://evokits.europarl.europa.eu/evostrap/7.0.0/lib/dist/assets/img/favicon.ico"
 
 [hosts."ofca.gov.hk"]
 icon = "ofca.gov.hk-b810d10c.png"
