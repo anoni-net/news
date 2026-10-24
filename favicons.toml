@@ -166,6 +166,10 @@ from = "https://bitquery.io/favicon/favicon-192x192.png"
 icon = "bitwarden.com-51d609a8.png"
 from = "https://bitwarden.com/icons/icon-512x512.png"
 
+[hosts."bjnews.com.cn"]
+icon = "bjnews.com.cn-12b0be0a.png"
+from = "https://www.bjnews.com.cn/favicon.ico"
+
 [hosts."blocktempo.com"]
 icon = "blocktempo.com-ccb2ccb4.png"
 from = "https://image.blocktempo.com/2019/04/cropped-%E9%BB%91%E5%AD%97%E7%99%BD%E6%A1%86%E5%8B%95%E5%8D%80Logo_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F-1-750x750-2-2-e1555450212503-1-32x32.png"
@@ -979,9 +983,17 @@ none = "網站擋自動抓取"
 icon = "jcgov.gov.cn-601cdb41.png"
 from = "https://jcgov.gov.cn/images/favicon.png"
 
+[hosts."jdih.komdigi.go.id"]
+icon = "jdih.komdigi.go.id-87a2d455.png"
+from = "https://jdih.komdigi.go.id/images/favicon-komdigi.ico"
+
 [hosts."jgc-digital.com"]
 icon = "jgc-digital.com-e48bf47a.png"
 from = "https://jgc-digital.com/apple-touch-icon.png"
+
+[hosts."jiemian.com"]
+icon = "jiemian.com-8b615bd0.png"
+from = "https://www.jiemian.com/favicon.ico"
 
 [hosts."join.gov.tw"]
 icon = "join.gov.tw-57bc43b4.png"
@@ -998,6 +1010,10 @@ from = "https://jprs.jp/resources/ja/icon/favicon_jp.ico"
 [hosts."jrf.org.tw"]
 icon = "jrf.org.tw-8ba160c8.png"
 from = "https://www.jrf.org.tw/images/apple-icon-144x144.png"
+
+[hosts."judiciary.house.gov"]
+icon = "judiciary.house.gov-c08fed39.png"
+from = "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/favicon.png"
 
 [hosts."justice.gov"]
 icon = "justice.gov-5506ec60.png"
@@ -1133,6 +1149,9 @@ same_as = "wikimediafoundation.org"
 [hosts."lofgren.house.gov"]
 icon = "lofgren.house.gov-9acaf926.png"
 from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
+
+[hosts."luk.tsipil.ugm.ac.id"]
+same_as = "tsipil.ugm.ac.id"
 
 [hosts."ly.gov.tw"]
 icon = "ly.gov.tw-c284cb73.png"
@@ -1279,6 +1298,10 @@ from = "https://media.nbcdfw.com/2019/09/cropped-NBC_DFW.png?fit=192%2C192&quali
 [hosts."nbcnews.com"]
 icon = "nbcnews.com-ef4ad526.png"
 from = "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/nbcnews/all-other-sizes-PNG.ico/android-icon-192x192.png"
+
+[hosts."nbd.com.cn"]
+icon = "nbd.com.cn-2425d4d4.png"
+from = "https://static.nbd.com.cn/favicon.ico"
 
 [hosts."ndl.go.jp"]
 icon = "ndl.go.jp-7107fbd7.png"
@@ -1576,6 +1599,10 @@ from = "https://rsf.org/themes/custom/rsf/favicons/android-icon-192x192.png"
 icon = "rules.utah.gov-a146b234.png"
 from = "https://rules.utah.gov/wp-content/uploads/site-icon-512-300x300.png"
 
+[hosts."sakigake.jp"]
+icon = "sakigake.jp-e9870319.png"
+from = "https://www.sakigake.jp/assets/img/favicon_192@2x.png"
+
 [hosts."sakura.ad.jp"]
 icon = "sakura.ad.jp-92f8aa2b.png"
 from = "https://www.sakura.ad.jp/resource/favicon/sakura_logo.png"
@@ -1808,6 +1835,10 @@ from = "https://assets.guim.co.uk/static/frontend/icons/homescreen/apple-touch-i
 icon = "thehackernews.com-bf20e9d2.png"
 from = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s196-e365/thn.jpg"
 
+[hosts."thejakartapost.com"]
+icon = "thejakartapost.com-fdf212bc.png"
+from = "https://www.thejakartapost.com/favicon.ico"
+
 [hosts."thelocal.no"]
 icon = "thelocal.no-231a147a.png"
 from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
@@ -1847,6 +1878,10 @@ same_as = "telegram.org"
 icon = "tribuneindia.com-833ff492.png"
 from = "https://www.tribuneindia.com/sortd-service/assets/v22-12/dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9kZXNpZ246YXBwaWNvbjc3ZWNhMzgwLTNlMzItMTFmMS1iY2RlLTFiNjYwODRiY2YzMQ=="
 
+[hosts."tsipil.ugm.ac.id"]
+icon = "tsipil.ugm.ac.id-74c4a909.png"
+from = "https://tsipil.ugm.ac.id/wp-content/uploads/sites/4/2022/01/favicon.png"
+
 [hosts."tuta.com"]
 icon = "tuta.com-99011c09.png"
 from = "https://tuta.com/favicon/logo-favicon-192.png"
@@ -1882,6 +1917,10 @@ from = "https://ufm.dk/media/5ljdlabz/favicon.png?rmode=pad&width=180&height=180
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
 from = "https://www.verizon.com/favicon.ico"
+
+[hosts."viva.co.id"]
+icon = "viva.co.id-ad57dca6.png"
+from = "https://www.viva.co.id/favicon-196x196.png"
 
 [hosts."voising-official.com"]
 icon = "voising-official.com-9385d7b2.png"
@@ -1967,6 +2006,10 @@ same_as = "facebook.com"
 
 [hosts."zh-tw.facebook.com"]
 same_as = "facebook.com"
+
+[hosts."zh.wikisource.org"]
+icon = "zh.wikisource.org-97bddbfa.png"
+from = "https://zh.wikisource.org/static/favicon/wikisource.ico"
 
 [hosts."zhonglun.com"]
 icon = "zhonglun.com-c0e89dfa.png"
