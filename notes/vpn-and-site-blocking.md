@@ -1,8 +1,8 @@
 # VPN 的法律規範與法院或行政機關命令封鎖網站的制度
 
-範圍是六個地方（中國大陸、新加坡、印度、日本、台灣、香港）對 VPN 業者或使用者的法律規範，以及法院或行政機關命令網路業者封鎖網站的制度，重點放在盜版網站。只寫法規、官方文件與判決，不寫哪個地區、哪個族群的人在用什麼工具，也不寫人名（來源文件裡的當事人與提案人姓名一律略去）。
+範圍是七個地方（中國大陸、新加坡、印度、日本、台灣、香港、印尼）對 VPN 業者或使用者的法律規範，以及法院或行政機關命令網路業者封鎖網站的制度，重點放在盜版網站。只寫法規、官方文件與判決，不寫哪個地區、哪個族群的人在用什麼工具，也不寫人名（來源文件裡的當事人與提案人姓名一律略去）。
 
-第一次整理是寫 anoni-net/news 的猶他州所在地條款與美國網站封鎖法案那篇導讀的時候。查證日期 2026-10-07，下面每一條都是這天查到的內容。
+第一次整理是寫 anoni-net/news 的猶他州所在地條款與美國網站封鎖法案那篇導讀的時候。查證日期 2026-10-07，下面每一條都是這天查到的內容，只有「印尼」與「自行檢測網站封鎖」兩節是寫 10/26、10/27 的導讀歷史時在 2026-10-24 補上的。
 
 來源分一手與二手：一手是法規原文、政府或法院的公告與判決，二手是媒體、律師事務所與百科的整理。照錄的句子保留原文語言與標點，PDF 與網頁轉文字時多出來的空白已經去掉。
 
@@ -284,6 +284,34 @@
 
 - 事實：本次沒有找到規範 VPN 業者或使用者的香港法例或政府聲明。僅有的相關法條文字是 HK-4 對 specified network service 的定義。搜尋到的資料多是 VPN 業者與媒體的二手說法，沒有取得可引用的官方說明
 - 一手與二手都沒有可引用的來源
+
+## 印尼
+
+### ID-1　政府可以切斷存取或命令電子系統業者切斷存取，2024 年修正後加上內容審核
+
+- 事實：2016 年第 19 號法律修正《資訊與電子交易法》時增訂第 40 條第 (2a)、(2b) 項，政府有義務防止法規禁止的電子資訊散布，並有權自行切斷存取，或命令電子系統業者切斷存取違法內容。2024 年第 1 號法律（第二次修正）修改第 (2b) 項並增訂兩項。第 (2c) 項規定，對色情、賭博與其他法規所定的內容，依第 (2b) 項發給業者的命令，形式是切斷存取或業者自行內容審核（moderasi konten secara mandiri），附「技術上可行」的限定。第 (2d) 項規定，政府有權命令業者對危害個人或公眾生命安全或健康的內容做內容審核。這些是政府的行政權限，條文沒有要求法院裁定
+- 照錄：「(2b) Dalam melakukan pencegahan sebagaimana dimaksud pada ayat (2a), Pemerintah berwenang melakukan pemutusan Akses dan/atau memerintahkan kepada Penyelenggara Sistem Elektronik untuk melakukan pemutusan Akses terhadap Informasi Elektronik dan/atau Dokumen Elektronik yang memiliki muatan yang melanggar hukum.」 <!-- docs-style-lint: disable-line -->
+- 照錄：「(2c) Perintah kepada Penyelenggara Sistem Elektronik sebagaimana dimaksud pada ayat (2b) berupa pemutusan Akses dan/atau moderasi konten secara mandiri terhadap Informasi Elektronik dan/atau Dokumen Elektronik yang memiliki muatan pornografi, perjudian, atau muatan lain sebagaimana dimaksud dalam ketentuan peraturan perundang-undangan sepanjang dimungkinkan secara teknologi.」 <!-- docs-style-lint: disable-line -->
+- 照錄：「(2d) Dalam melakukan pencegahan sebagaimana dimaksud pada ayat (2a), Pemerintah berwenang memerintahkan kepada Penyelenggara Sistem Elektronik untuk melakukan moderasi konten terhadap Informasi Elektronik dan/atau Dokumen Elektronik yang memiliki muatan berbahaya bagi keselamatan nyawa atau kesehatan individu atau masyarakat.」 <!-- docs-style-lint: disable-line -->
+- 立法說明（Penjelasan）對第 (2b) 項的「切斷存取」寫的是封鎖存取、關閉帳號與刪除內容，也包含封鎖社群媒體帳號。對第 (2d) 項舉的例子是呈現自殺或危險挑戰的內容。引用第 40 條時，「切斷存取」的範圍照這段說明寫，不要只寫成封鎖網站
+- 照錄：「Yang dimaksud dengan "pemutusan Akses" adalah tindakan pemblokiran Akses, penutupan akun, dan/atau penghapusan konten. Termasuk dalam "melakukan pemutusan Akses" adalah melakukan pemblokiran terhadap akun media sosial.」（第 40 條第 (2b) 項的說明） <!-- docs-style-lint: disable-line -->
+- 文件：Undang-Undang Republik Indonesia Nomor 1 Tahun 2024 tentang Perubahan Kedua atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik（2024-01-02 簽署與公布，Lembaran Negara 2024 Nomor 1，公布日施行）。2016 年的條文見 Undang-Undang Nomor 19 Tahun 2016
+- 網址：印尼通訊與數位事務部法規資料網（JDIH Kemkomdigi）<https://jdih.komdigi.go.id/produk_hukum/view/id/884/t/undang-undang-nomor-1-tahun-2024>，PDF 是官方的 SALINAN 掃描本，文字層有 OCR 錯字，照錄的句子修正了明顯的 OCR 錯字（例如「l2cl」是 (2c)、「Penyeleprggara」是 Penyelenggara），沒有逐字對照掃描影像。2016 年第 19 號法律 <https://luk.tsipil.ugm.ac.id/atur/UU19-2016TransaksiElektronik.pdf>（加查馬達大學網站轉載的官方掃描本）
+- 一手（法律原文，政府網站）
+- 查證日期：2026-10-24
+- 查不到：2016 年增訂的第 26 條第 (3) 到 (5) 項（法院裁定後刪除不相關資訊）的施行細則原文，二手說法寫在 2019 年第 71 號政府規章，原文沒有取得。2024 年第 1 號法律沒有修改第 26 條（官方 PDF 的文字層搜尋不到「Pasal 26」，OCR 可能漏字，引用前看一次掃描影像）。誹謗條文在新刑法 2026-01-02 生效後的適用範圍沒有確認
+
+## 自行檢測網站封鎖
+
+### OONI-1　OONI Probe 的網路連線測試與執行的風險
+
+- 事實：OONI 的網路連線測試（Web Connectivity）會判斷網站是否因 DNS 竄改、TCP/IP 阻斷或 HTTP 層的干擾而無法連上，結果是跟對照量測比對，異常不等於確認封鎖。OONI 的常見問題寫明，執行 OONI Probe 可能有風險，取決於使用者的威脅模型與所在國家，OONI Probe 不是隱私工具，監控網路的人（例如政府、網路業者、雇主）可能看到你在執行它。OONI 不提供法律建議，另外列出可以詢問律師的問題
+- 照錄：「Running OONI Probe can potentially be risky, depending on your threat model and the country you’re running OONI Probe from.」
+- 照錄：「OONI Probe is not a privacy tool. Anyone monitoring your internet activity (e.g. government, ISP, employer) may see that you are running OONI Probe」
+- 文件：Web Connectivity 與 Frequently Asked Questions (FAQ)，OONI
+- 網址：<https://ooni.org/nettest/web-connectivity/>、<https://ooni.org/support/faq/>（風險的完整說明在 <https://ooni.org/about/risks/>，這次沒有讀）
+- 一手（專案官方頁面）
+- 查證日期：2026-10-24
 
 ## 未能取得或需要再確認的項目
 
