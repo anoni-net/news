@@ -498,6 +498,10 @@ from = "https://cdn.digitaltoday.co.kr/image/logo/favicon.ico"
 icon = "digitaltrends.com-020e2b12.png"
 from = "https://www.digitaltrends.com/favicon.ico"
 
+[hosts."dimsumdaily.hk"]
+icon = "dimsumdaily.hk-cf2d57f0.png"
+from = "https://cdn.dimsumdaily.hk/wp-content/uploads/2024/04/27185518/cropped-ds-120--192x192.png"
+
 [hosts."discord.com"]
 icon = "discord.com-891ddcd3.png"
 from = "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico"
@@ -804,6 +808,10 @@ from = "https://help.yahoo.com/favicon.ico"
 icon = "helpnetsecurity.com-eb4f8b13.png"
 from = "https://img.helpnetsecurity.com/wp-content/uploads/2019/09/09093400/cropped-hns2-192x192.png"
 
+[hosts."hk01.com"]
+icon = "hk01.com-41717201.png"
+from = "https://www.hk01.com/apple-touch-icon.png?v=5AeznpzBEm"
+
 [hosts."hkdnr.hk"]
 icon = "hkdnr.hk-4024b7ae.png"
 from = "https://www.hkdnr.hk/favicon.ico"
@@ -815,6 +823,10 @@ from = "https://home-affairs.ec.europa.eu/themes/contrib/oe_theme/images/favicon
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
+
+[hosts."hongkongfp.com"]
+icon = "hongkongfp.com-b422655b.png"
+from = "https://hongkongfp.com/wp-content/uploads/2025/06/TINY-FAVICON-do-not-use-200x200.jpg?crop=1"
 
 [hosts."hrw.org"]
 none = "官方圖示是沒有圖案的純色方塊"
@@ -1203,6 +1215,10 @@ from = "https://www.news.cn/favicon.ico"
 icon = "news.europawire.eu-6c7d96e4.png"
 from = "https://news.europawire.eu/wp-content/uploads/fbrfg/apple-touch-icon.png"
 
+[hosts."news.gov.hk"]
+icon = "news.gov.hk-c90135cf.png"
+from = "https://www.news.gov.hk/web/images/favicon/android-icon-192x192.png"
+
 [hosts."news.mtn.co.kr"]
 icon = "news.mtn.co.kr-5e21f499.png"
 from = "https://news.mtn.co.kr/images/favicon.png"
@@ -1358,6 +1374,9 @@ from = "https://piyolog.hatenadiary.jp/icon/link"
 [hosts."pm.gov.au"]
 icon = "pm.gov.au-6ab35cff.png"
 from = "https://www.pm.gov.au/themes/custom/pearly/favicon.ico"
+
+[hosts."police.gov.hk"]
+same_as = "gov.hk"
 
 [hosts."policies.google.com"]
 icon = "policies.google.com-53ae8c75.png"
@@ -1551,6 +1570,10 @@ from = "https://sslmate.com/assets/@9e36fda1926f2047cead1adb754d0fe2.png"
 icon = "sso.agc.gov.sg-7300262d.png"
 from = "https://sso.agc.gov.sg/CMS/Content/icons/apple-icon-180x180.png"
 
+[hosts."stheadline.com"]
+icon = "stheadline.com-089691d0.png"
+from = "https://www.sthlstatic.com/sthl/assets/favicon/android-icon-192x192.png"
+
 [hosts."storage.courtlistener.com"]
 same_as = "courtlistener.com"
 
@@ -1639,6 +1662,10 @@ from = "https://testflight.apple.com/images/testflight-1200_40.jpg"
 [hosts."texastribune.org"]
 icon = "texastribune.org-90fb8aad.png"
 from = "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2025/09/cropped-cropped-texas-tribune-favicon.png?fit=192%2C192&ssl=1"
+
+[hosts."thecollectivehk.com"]
+icon = "thecollectivehk.com-bfe0aab9.png"
+from = "https://thecollectivehk.com/wp-content/uploads/2022/12/cropped-thecollectivehk-site-icon-192x192.jpg"
 
 [hosts."theglobeandmail.com"]
 icon = "theglobeandmail.com-8770125d.png"
