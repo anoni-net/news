@@ -60,6 +60,10 @@ from = "https://android.googlesource.com/+static/apple-touch-icon.png"
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
 
+[hosts."anoni.net"]
+icon = "anoni.net-e7cf54e0.png"
+from = "手動提供的檔案 anoni-favicon.png"
+
 [hosts."anthropic.com"]
 icon = "anthropic.com-c45fad63.png"
 from = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa394792257596c5_webclip.png"
@@ -1027,6 +1031,9 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 icon = "justiceinitiative.org-987979f3.png"
 from = "https://www.justiceinitiative.org/dist/images/favicons/favicon-152.png"
 
+[hosts."kaba.cx"]
+none = "個人網站沒有提供圖示"
+
 [hosts."kb.cert.org"]
 none = "網站圖示只有 16 像素，放大後無法辨識"
 
@@ -1143,6 +1150,9 @@ from = "https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca"
 icon = "lists.debian.org-aef258f5.png"
 from = "https://web.archive.org/web/20261007id_/https://lists.debian.org/favicon.ico"
 
+[hosts."lists.torproject.org"]
+same_as = "torproject.org"
+
 [hosts."lists.wikimedia.org"]
 same_as = "wikimediafoundation.org"
 
@@ -1180,6 +1190,10 @@ from = "https://www.mactrast.com/wp-content/uploads/2018/10/cropped-cropped-icon
 [hosts."magnetforensics.com"]
 icon = "magnetforensics.com-3a08e791.png"
 from = "https://www.magnetforensics.com/wp-content/uploads/2025/05/cropped-MF_Favicon_48x48-2024-192x192.png"
+
+[hosts."man.openbsd.org"]
+icon = "man.openbsd.org-6c007872.png"
+from = "https://man.openbsd.org/favicon.ico"
 
 [hosts."marketing-interactive.com"]
 icon = "marketing-interactive.com-f72720fd.png"
@@ -1953,6 +1967,10 @@ from = "https://webkit.org/apple-touch-icon.png"
 [hosts."weblate.cryptpad.org"]
 icon = "weblate.cryptpad.org-676939f0.png"
 from = "https://weblate.cryptpad.org/favicon.ico"
+
+[hosts."welivesecurity.com"]
+icon = "welivesecurity.com-3a9e33db.png"
+from = "https://www.welivesecurity.com/favicon.ico"
 
 [hosts."wi-fi.org"]
 icon = "wi-fi.org-eb8459fa.png"
