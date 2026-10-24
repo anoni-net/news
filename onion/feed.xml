@@ -6,7 +6,167 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 24 Oct 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>瀏覽器指紋與各家瀏覽器的防護</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/browser-fingerprinting-cookies/</link>
+<guid isPermaLink="false">anoni-news:2026/10/browser-fingerprinting-cookies</guid>
+<pubDate>Sun, 25 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>瀏覽器指紋是網站讀取視窗大小、字型與繪圖的細微差異這類特徵，組合出可以重複認出同一個瀏覽器的識別，清除 cookie 或連 VPN 都擋不住。依英國資訊專員辦公室的說明，Google 從 2025 年 2 月起不再禁止廣告客戶使用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。本文 10 月 23 日查看的 Chrome 官方狀態頁，列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料。</description>
+<content:encoded>&lt;p&gt;整理 20 篇原文，來自 Information Commissioner&amp;#39;s Office、Google Marketing Platform Help、Google 等 13 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;一篇個人部落格文章以「Fingerprints are the new cookies」為題，整理網站在 cookie 之外辨識瀏覽器的方式。依 W3C 隱私工作小組 2025 年 9 月的文件，瀏覽器指紋是網站透過設定或其他可觀察的特徵辨識訪客、瀏覽器或裝置的能力，例如視窗大小、字型與繪圖的細微差異。依英國資訊專員辦公室（ICO）2024 年 12 月 19 日的說明，Google 從 2025 年 2 月 16 日起不再禁止使用它廣告產品的組織採用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。&lt;/p&gt;
+&lt;p&gt;同一份 W3C 文件提到，清除 cookie 或使用 VPN 都無法阻止進一步的關聯，指紋通常也無法清除或重設。依同一份文件，面對有決心的追蹤者，單靠已經廣泛部署的技術手段很難完全消除指紋。文件也認為規格可以減少指紋。&lt;/p&gt;
+&lt;p&gt;Google 2019 年的部落格寫到，使用者無法清除指紋，也就無法控制資訊如何被收集。Google 當時認為用指紋追蹤使用者是錯的。Google 2024 年 12 月對廣告客戶的公告，寫這次政策更新是為了配合隱私強化技術與連網電視等新的廣告管道，公告與 2025 年 2 月的政策更新頁都沒有提到指紋。「不再禁止」是 ICO 轉述 Google 對廣告客戶的通知，Google 的兩份公開頁面都沒有這個說法，ICO 也形容這項變更不負責任。&lt;/p&gt;
+&lt;p&gt;ICO 另外提醒，依英國《隱私與電子通訊規則》（PECR）等資料保護法規，業者使用指紋技術之前要給使用者公平的選擇並在必要時取得同意。這些規定適用於英國，台灣有沒有針對裝置指紋的專門規範，本文沒有查到。&lt;/p&gt;
+&lt;p&gt;Google 原本計畫在 Chrome 淘汰第三方 cookie（網頁裡嵌入的廣告或分析服務存進瀏覽器、用來跨網站認出使用者的小檔案），2024 年 7 月 22 日改提議由使用者自行選擇。2025 年 4 月 22 日，Google 宣布不再推出額外的提示視窗，使用者繼續在 Chrome 的隱私權與安全性設定裡選擇。2025 年 10 月 17 日，Google 又宣布淘汰多數 Privacy Sandbox（Google 為取代第三方 cookie 提出的一組瀏覽器技術），其中包括遮蔽 IP 位址的 IP Protection。本文 10 月 23 日查看的 Privacy Sandbox 狀態頁（2026 年 8 月 14 日更新），列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料，例如瀏覽器版本與作業系統的字串。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;WebKit 2024 年介紹 Safari 私密瀏覽的文章，把擋指紋的做法分成兩種。一種讓很多使用者共用同一個指紋，另一種讓每個網站看到的指紋都不同。Tor Browser 走的是前一種，它的支援頁說明要讓所有使用者完全相同實際上不可能，目標是減少每一項特徵可以分辨的組數。&lt;/p&gt;
+&lt;p&gt;Brave 兩種都用。依 Brave 的說明，它一方面讓各個 Brave 盡量看起來相似，一方面加入少量隨機的雜訊。雜訊的種子每個工作階段、每個網站都不同，網站之間就難以把同一個人串起來，Brave 的說明中心也列出 Shields 預設開啟封鎖指紋。&lt;/p&gt;
+&lt;p&gt;Mozilla 2025 年 11 月的公告說明，Firefox 145 新增的指紋防護先在私密瀏覽與加強型追蹤保護的嚴格模式開啟，公告當時寫正在讓它變成預設。WebKit 2025 年 9 月介紹 Safari 26.0 的文章提到，Safari 會阻止已知的指紋腳本可靠地讀取螢幕尺寸、音訊等可能透露裝置特徵的資訊。&lt;/p&gt;
+&lt;p&gt;Safari 另有一項進階指紋保護，可以只用在私密瀏覽或套用到全部瀏覽。Apple 2025 年 6 月的 iOS 26 新聞稿寫這項保護預設擴及全部瀏覽，Apple 的 Safari 說明頁則沒有寫預設值，本文建議自己打開設定確認。依 WebKit 2024 年那篇文章，iPhone 的位置是英文介面的「Settings &amp;gt; Apps &amp;gt; Safari &amp;gt; Advanced &amp;gt; Advanced Tracking and Fingerprinting Protection」，選「All Browsing」。Mac 是 Safari 設定的「進階」，開啟「使用進階追蹤和指紋保護」並選擇套用到所有瀏覽。&lt;/p&gt;
+&lt;p&gt;用桌機版 Firefox 的讀者，可以在「隱私權與安全性」把「加強型追蹤保護」從「標準」改成「嚴格」，取得 145 版新增的防護。手機版的預設本文沒有查到。&lt;/p&gt;
+&lt;p&gt;需要更強保護、能接受較慢連線的人，可以改用 Tor Browser，本文 10 月 23 日查看的 EFF 說明頁也把它列為最實際的選擇。Tor Project 的指紋保護說明頁有正體中文版。依文件站的整理，Android 有官方的 Tor Browser，iPhone 沒有。&lt;/p&gt;
+&lt;p&gt;想知道自己的瀏覽器有多容易被認出，可以打開 EFF 的 Cover Your Tracks，本文查到的頁面都是英文。頁面說明只收集匿名資料，比較的對象是最近來測試的訪客，各瀏覽器防護做法的差別也整理在文件站的&lt;a href=&#34;http://docs.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/basics/browser-fingerprinting/&#34; target=&#34;_blank&#34;&gt;瀏覽器指紋是什麼，為什麼很難擺脫&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;防護越強，網站越容易出問題。Mozilla 的公告提醒，更激進的封鎖一定會破壞正常的網站功能，例如行事曆與會議工具需要真實的時區。Tor 的支援頁提到，特徵不一致可能讓防機器人系統把 Tor 使用者當成機器人，EFF 的說明頁也提醒防護本身有時會變成指紋的一部分。&lt;/p&gt;
+&lt;p&gt;本文的推論是，這些設定減少的是網站在讀者沒有登入時認出同一個人的能力，Brave 的做法則特別針對跨網站與跨工作階段的串聯。登入同一個帳號的網站，仍然知道是誰在瀏覽。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（20 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/12/our-response-to-google-s-policy-change-on-fingerprinting/&#34;&gt;Our response to Google&amp;#39;s policy change on fingerprinting&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Information Commissioner&amp;#39;s Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-19&#34;&gt;2024 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/marketingplatform/answer/15732590&#34;&gt;Updating our platform policies to reflect innovations in the ads ecosystem&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Marketing Platform Help&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacysandbox.google.com/blog/privacy-sandbox-update&#34;&gt;A new path for Privacy Sandbox on the web&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-07-22&#34;&gt;2024 年 7 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacysandbox.google.com/overview/status&#34;&gt;Privacy Sandbox feature status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/products-and-platforms/products/chrome/building-a-more-private-web/&#34;&gt;Building a more private web&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-08-22&#34;&gt;2019 年 8 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/platformspolicy/answer/15738904&#34;&gt;Overview of the Platforms programs policies update (February 2025)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacysandbox.google.com/blog/privacy-sandbox-next-steps&#34;&gt;Next steps for Privacy Sandbox and tracking protections in Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-22&#34;&gt;2025 年 4 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacysandbox.google.com/blog/update-on-plans-for-privacy-sandbox-technologies&#34;&gt;Update on Plans for Privacy Sandbox Technologies&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-17&#34;&gt;2025 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.w3.org/TR/fingerprinting-guidance/&#34;&gt;Mitigating Browser Fingerprinting in Web Specifications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;W3C&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-25&#34;&gt;2025 年 9 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.mozilla.org/en/firefox/fingerprinting-protections/&#34;&gt;Firefox expands fingerprint protections: advancing towards a more private web&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-10&#34;&gt;2025 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://webkit.org/blog/15697/private-browsing-2-0/&#34;&gt;Private Browsing 2.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;WebKit&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-07-16&#34;&gt;2024 年 7 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://webkit.org/blog/17333/webkit-features-in-safari-26-0/&#34;&gt;WebKit Features in Safari 26.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;WebKit&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-15&#34;&gt;2025 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/&#34;&gt;Apple elevates the iPhone experience with iOS 26&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-09&#34;&gt;2025 年 6 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/advanced-ibrw1075/mac&#34;&gt;Change Advanced settings in Safari on Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple Support&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections&#34;&gt;Fingerprinting Protections&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing&#34;&gt;How do I use Shields while browsing?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave Help Center&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tor-browser/features/fingerprinting-protections/&#34;&gt;Fingerprinting protections - Features - Tor Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://coveryourtracks.eff.org/&#34;&gt;Cover Your Tracks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://coveryourtracks.eff.org/learn&#34;&gt;Cover Your Tracks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://royfish.dev/fingerprints-are-the-new-cookies&#34;&gt;Fingerprints are the new cookies&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;royfish.dev&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tor 洋蔥服務的靜態網站架設</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/tor-onion-service-static-site/</link>
@@ -2137,103 +2297,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;臺北市政府資訊局&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-17&#34;&gt;2023 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Let&#39;s Encrypt 預設憑證的 64 天效期</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/letsencrypt-64-day-certs/</link>
-<guid isPermaLink="false">anoni-news:2026/10/letsencrypt-64-day-certs</guid>
-<pubDate>Thu, 15 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Let&#39;s Encrypt 公告 2027 年 2 月 10 日起，預設簽發的憑證效期從 90 天縮短為 64 天。用它架站或自架服務的人，要確認自動更新不是寫死在固定天數，公告沒有針對一般瀏覽者的說明。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，來自 Let&amp;#39;s Encrypt、CA/Browser Forum、Ars Technica 等 5 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Let&#39;s Encrypt 10 月 7 日公告，2027 年 2 月 10 日起簽發與更新的憑證，預設效期從 90 天縮短為 64 天。最後一張 90 天憑證預計 2027 年 5 月 11 日到期，現有的有效憑證不會被撤銷。公告只對架站與自架服務的人提出要求，沒有針對一般瀏覽者的說明。&lt;/p&gt;
-&lt;p&gt;測試環境（staging）10 月 14 日先改發 64 天憑證，Let&#39;s Encrypt 建議正式生效前先在這裡測試。依 2025 年 12 月的公告，2028 年 2 月 16 日預設效期會再縮短為 45 天。想提早改用的人，現在就可以選 45 天或 6 天的憑證類型（profile，申請時指定的一組憑證規格）。&lt;/p&gt;
-&lt;p&gt;依 Let&#39;s Encrypt 的說明，縮短效期是為了降低金鑰外洩與憑證誤發的風險。CA/Browser Forum（憑證機構與瀏覽器廠商共同制定憑證規範的組織）2025 年 4 月通過的決議，把憑證效期上限從 398 天逐步縮短，2026 年 3 月 15 日起 200 天、2027 年 3 月 15 日起 100 天、2029 年 3 月 15 日起 47 天。64 天比 2027 年的上限更短，本文依兩份公告的時程推論，這是 Let&#39;s Encrypt 在 2029 年 47 天上限之前自訂的中間階段。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;憑證用來證明「這個網站就是它聲稱的那一個」，金鑰外洩或被誤發的憑證，在到期之前都可能被拿來冒充網站。效期越短，出事之後能被冒用的時間就越短（依 Let&#39;s Encrypt 2015 年的說明，這也是當初選擇 90 天的理由之一）。代價是更新變得更頻繁，Let&#39;s Encrypt 2 月的說明預期效期縮到 45 天時每天的更新請求會倍增。2025 年 12 月的公告提到不建議手動更新，10 月的公告也提到速率限制不受影響。&lt;/p&gt;
-&lt;p&gt;負責申請與更新憑證的程式稱為 ACME 用戶端，例如 Certbot。已經自動更新、而且用戶端支援 ARI（ACME Renewal Information，讓憑證機構告訴用戶端何時該更新的機制，2025 年成為 RFC 9773）的人，依公告不必做任何改動，Certbot 從 2025 年 6 月的 4.1.0 版起預設會檢查 ARI。把更新時間寫死在固定天數的人，Let&#39;s Encrypt 建議改成在效期約三分之二時更新。不確定有沒有寫死的，可以在排程、腳本與作業手冊裡找 83、80、60 這類數字。&lt;/p&gt;
-&lt;p&gt;臺灣網路認證（TWCA）2025 年 12 月配合 CA/Browser Forum 的決議公告，自 2026 年 3 月 9 日起憑證效期設為 198 天，一年要申請兩次。&lt;/p&gt;
-&lt;p&gt;用 Let&#39;s Encrypt 架站的讀者現在可以先確認用戶端是否支援 ARI，10 月 14 日之後用測試環境執行一次更新，並照公告的建議加上更新失敗的通知。只能透過網頁介面手動上傳憑證的設備，公告沒有專門的說明。依本文推算，每張憑證用滿 64 天一年也要換 6 次，照公告建議在約三分之二時更換約要 9 次。Let&#39;s Encrypt 的用戶端清單頁說明不列瀏覽器內的 ACME 用戶端，理由是它們鼓勵手動更新，會增加漏掉更新的風險。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2026/10/07/64-day-certs.html&#34;&gt;64-Day Certificate Lifetimes Coming Feb 2027&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2025/12/02/from-90-to-45.html&#34;&gt;Decreasing Certificate Lifetimes to 45 Days&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-02&#34;&gt;2025 年 12 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2026/02/24/rate-limits-45-day-certs.html&#34;&gt;Shorter Certificate Lifetimes and Rate Limits&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-24&#34;&gt;2026 年 2 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2025/09/16/ari-rfc.html&#34;&gt;ACME Renewal Information (ARI) Published as RFC 9773&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-16&#34;&gt;2025 年 9 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/&#34;&gt;Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CA/Browser Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-11&#34;&gt;2025 年 4 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/gadgets/2026/10/lets-encrypt-cuts-certificate-lifetimes-to-64-days-starting-february-2027/&#34;&gt;Let&amp;#39;s Encrypt cuts certificate lifetimes to 64 days starting February 2027&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/2015/11/09/why-90-days.html&#34;&gt;Why ninety-day lifetimes for certificates?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2015-11-09&#34;&gt;2015 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/docs/client-options/&#34;&gt;ACME Client Implementations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://letsencrypt.org/docs/profiles/&#34;&gt;Profiles&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Let&amp;#39;s Encrypt&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/certbot/certbot/blob/main/certbot/CHANGELOG.md&#34;&gt;certbot/CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.twca.com.tw/news_detail/04f741de-2258-431d-be3a-992268cd5d72&#34;&gt;重要通知─配合國際規範 TWCA SSL / TLS 憑證調整重要通知&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TWCA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-02&#34;&gt;2025 年 12 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

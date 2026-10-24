@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>瀏覽器指紋與各家瀏覽器的防護 | anoni.net 新聞導讀</title>
+<meta name="description" content="瀏覽器指紋是網站讀取視窗大小、字型與繪圖的細微差異這類特徵，組合出可以重複認出同一個瀏覽器的識別，清除 cookie 或連 VPN 都擋不住。依英國資訊專員辦公室的說明，Google 從 2025 年 2 月起不再禁止廣告客戶使用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。本文 10 月 23 日查看的 Chrome 官方狀態頁，列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料。">
+<link rel="canonical" href="https://anoni.net/news/2026/10/browser-fingerprinting-cookies/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/browser-fingerprinting-cookies/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/browser-fingerprinting-cookies/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/browser-fingerprinting-cookies/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/browser-fingerprinting-cookies/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/browser-fingerprinting-cookies/">
+<link rel="stylesheet" href="/news/css/news.css?v=4219b38e67">
+<link rel="stylesheet" href="/news/css/fonts-tc.css?v=c585126767">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="https://anoni.net/news/feed.xml">
+<meta property="og:site_name" content="anoni.net 新聞導讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="瀏覽器指紋與各家瀏覽器的防護">
+<meta property="og:description" content="瀏覽器指紋是網站讀取視窗大小、字型與繪圖的細微差異這類特徵，組合出可以重複認出同一個瀏覽器的識別，清除 cookie 或連 VPN 都擋不住。依英國資訊專員辦公室的說明，Google 從 2025 年 2 月起不再禁止廣告客戶使用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。本文 10 月 23 日查看的 Chrome 官方狀態頁，列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料。">
+<meta property="og:url" content="https://anoni.net/news/2026/10/browser-fingerprinting-cookies/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/10/browser-fingerprinting-cookies-zh-tw-b1d40ad8.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="瀏覽器指紋與各家瀏覽器的防護">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="瀏覽器指紋與各家瀏覽器的防護">
+<meta property="article:published_time" content="2026-10-25T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "瀏覽器指紋與各家瀏覽器的防護",
+  "description": "瀏覽器指紋是網站讀取視窗大小、字型與繪圖的細微差異這類特徵，組合出可以重複認出同一個瀏覽器的識別，清除 cookie 或連 VPN 都擋不住。依英國資訊專員辦公室的說明，Google 從 2025 年 2 月起不再禁止廣告客戶使用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。本文 10 月 23 日查看的 Chrome 官方狀態頁，列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料。",
+  "datePublished": "2026-10-25T00:00:00+08:00",
+  "url": "https://anoni.net/news/2026/10/browser-fingerprinting-cookies/",
+  "mainEntityOfPage": "https://anoni.net/news/2026/10/browser-fingerprinting-cookies/",
+  "image": "https://assets.anoni.net/news/og/2026/10/browser-fingerprinting-cookies-zh-tw-b1d40ad8.png",
+  "inLanguage": "zh-Hant",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "https://anoni.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anoni.net/news/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Our response to Google's policy change on fingerprinting",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/12/our-response-to-google-s-policy-change-on-fingerprinting/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Updating our platform policies to reflect innovations in the ads ecosystem",
+      "url": "https://support.google.com/marketingplatform/answer/15732590"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "A new path for Privacy Sandbox on the web",
+      "url": "https://privacysandbox.google.com/blog/privacy-sandbox-update"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Privacy Sandbox feature status",
+      "url": "https://privacysandbox.google.com/overview/status"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Building a more private web",
+      "url": "https://blog.google/products-and-platforms/products/chrome/building-a-more-private-web/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Overview of the Platforms programs policies update (February 2025)",
+      "url": "https://support.google.com/platformspolicy/answer/15738904"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Next steps for Privacy Sandbox and tracking protections in Chrome",
+      "url": "https://privacysandbox.google.com/blog/privacy-sandbox-next-steps"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Update on Plans for Privacy Sandbox Technologies",
+      "url": "https://privacysandbox.google.com/blog/update-on-plans-for-privacy-sandbox-technologies"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Mitigating Browser Fingerprinting in Web Specifications",
+      "url": "https://www.w3.org/TR/fingerprinting-guidance/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Firefox expands fingerprint protections: advancing towards a more private web",
+      "url": "https://blog.mozilla.org/en/firefox/fingerprinting-protections/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Private Browsing 2.0",
+      "url": "https://webkit.org/blog/15697/private-browsing-2-0/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "WebKit Features in Safari 26.0",
+      "url": "https://webkit.org/blog/17333/webkit-features-in-safari-26-0/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Apple elevates the iPhone experience with iOS 26",
+      "url": "https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Change Advanced settings in Safari on Mac",
+      "url": "https://support.apple.com/guide/safari/advanced-ibrw1075/mac"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Fingerprinting Protections",
+      "url": "https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "How do I use Shields while browsing?",
+      "url": "https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Fingerprinting protections - Features - Tor Browser",
+      "url": "https://support.torproject.org/tor-browser/features/fingerprinting-protections/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cover Your Tracks",
+      "url": "https://coveryourtracks.eff.org/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cover Your Tracks",
+      "url": "https://coveryourtracks.eff.org/learn"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Fingerprints are the new cookies",
+      "url": "https://royfish.dev/fingerprints-are-the-new-cookies"
+    }
+  ],
+  "articleSection": "追蹤與個人資料"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新聞導讀",
+      "item": "https://anoni.net/news/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "追蹤與個人資料",
+      "item": "https://anoni.net/news/category/tracking/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "瀏覽器指紋與各家瀏覽器的防護"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新聞導讀</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新聞導讀：" data-print-url="https://anoni.net/news/2026/10/browser-fingerprinting-cookies/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--tracking" href="/news/category/tracking/">追蹤與個人資料</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-25T00:00:00+08:00">2026 年 10 月 25 日 星期日</time></p>
+    <h1 class="story__title">瀏覽器指紋與各家瀏覽器的防護</h1>
+    <p class="story__dek">瀏覽器指紋是網站讀取視窗大小、字型與繪圖的細微差異這類特徵，組合出可以重複認出同一個瀏覽器的識別，清除 cookie 或連 VPN 都擋不住。依英國資訊專員辦公室的說明，Google 從 2025 年 2 月起不再禁止廣告客戶使用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。本文 10 月 23 日查看的 Chrome 官方狀態頁，列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/ico.org.uk-8989c7e1.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/privacysandbox.google.com-6d649f1e.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 20 篇原文，來自 Information Commissioner&#39;s Office、Google Marketing Platform Help、Google 等 13 個出處</span></a></span>
+      <span>導讀：anoni.net 社群</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/2026/10/browser-fingerprinting-cookies/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/2026/10/browser-fingerprinting-cookies/" hreflang="en" lang="en">English</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="朗讀這篇" data-label-playing="暫停" data-label-paused="繼續朗讀"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>朗讀這篇</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>調整</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>語音</span> <select class="listen__select" data-voice data-group-tw="華語（台灣）" data-group-cn="華語（中國）" data-group-zh="華語" data-group-yue="粵語"></select></label>
+          <label class="listen__field"><span>速度</span> <select class="listen__select" data-rate><option value="0.8">0.8 倍</option><option value="1" selected>1 倍</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label>
+        </div>
+        <p class="listen__note">用這台裝置內建的語音朗讀，文章不會傳到其他伺服器。選擇的語音與速度只存在這個瀏覽器裡。<a href="/news/reading/#listening">朗讀的完整說明</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="story__body content">
+<p>一篇個人部落格文章以「Fingerprints are the new cookies」為題，整理網站在 cookie 之外辨識瀏覽器的方式。依 W3C 隱私工作小組 2025 年 9 月的文件，瀏覽器指紋是網站透過設定或其他可觀察的特徵辨識訪客、瀏覽器或裝置的能力，例如視窗大小、字型與繪圖的細微差異。依英國資訊專員辦公室（ICO）2024 年 12 月 19 日的說明，Google 從 2025 年 2 月 16 日起不再禁止使用它廣告產品的組織採用指紋技術。能擋下多少取決於用哪個瀏覽器，Firefox、Safari、Brave 與 Tor Browser 各有做法。</p>
+<p>同一份 W3C 文件提到，清除 cookie 或使用 VPN 都無法阻止進一步的關聯，指紋通常也無法清除或重設。依同一份文件，面對有決心的追蹤者，單靠已經廣泛部署的技術手段很難完全消除指紋。文件也認為規格可以減少指紋。</p>
+<p>Google 2019 年的部落格寫到，使用者無法清除指紋，也就無法控制資訊如何被收集。Google 當時認為用指紋追蹤使用者是錯的。Google 2024 年 12 月對廣告客戶的公告，寫這次政策更新是為了配合隱私強化技術與連網電視等新的廣告管道，公告與 2025 年 2 月的政策更新頁都沒有提到指紋。「不再禁止」是 ICO 轉述 Google 對廣告客戶的通知，Google 的兩份公開頁面都沒有這個說法，ICO 也形容這項變更不負責任。</p>
+<p>ICO 另外提醒，依英國《隱私與電子通訊規則》（PECR）等資料保護法規，業者使用指紋技術之前要給使用者公平的選擇並在必要時取得同意。這些規定適用於英國，台灣有沒有針對裝置指紋的專門規範，本文沒有查到。</p>
+<p>Google 原本計畫在 Chrome 淘汰第三方 cookie（網頁裡嵌入的廣告或分析服務存進瀏覽器、用來跨網站認出使用者的小檔案），2024 年 7 月 22 日改提議由使用者自行選擇。2025 年 4 月 22 日，Google 宣布不再推出額外的提示視窗，使用者繼續在 Chrome 的隱私權與安全性設定裡選擇。2025 年 10 月 17 日，Google 又宣布淘汰多數 Privacy Sandbox（Google 為取代第三方 cookie 提出的一組瀏覽器技術），其中包括遮蔽 IP 位址的 IP Protection。本文 10 月 23 日查看的 Privacy Sandbox 狀態頁（2026 年 8 月 14 日更新），列出的指紋相關項目只有限縮瀏覽器隨每個請求自動附帶的資料，例如瀏覽器版本與作業系統的字串。</p>
+<h2 id="perspective">導讀觀點</h2>
+<p>WebKit 2024 年介紹 Safari 私密瀏覽的文章，把擋指紋的做法分成兩種。一種讓很多使用者共用同一個指紋，另一種讓每個網站看到的指紋都不同。Tor Browser 走的是前一種，它的支援頁說明要讓所有使用者完全相同實際上不可能，目標是減少每一項特徵可以分辨的組數。</p>
+<p>Brave 兩種都用。依 Brave 的說明，它一方面讓各個 Brave 盡量看起來相似，一方面加入少量隨機的雜訊。雜訊的種子每個工作階段、每個網站都不同，網站之間就難以把同一個人串起來，Brave 的說明中心也列出 Shields 預設開啟封鎖指紋。</p>
+<p>Mozilla 2025 年 11 月的公告說明，Firefox 145 新增的指紋防護先在私密瀏覽與加強型追蹤保護的嚴格模式開啟，公告當時寫正在讓它變成預設。WebKit 2025 年 9 月介紹 Safari 26.0 的文章提到，Safari 會阻止已知的指紋腳本可靠地讀取螢幕尺寸、音訊等可能透露裝置特徵的資訊。</p>
+<p>Safari 另有一項進階指紋保護，可以只用在私密瀏覽或套用到全部瀏覽。Apple 2025 年 6 月的 iOS 26 新聞稿寫這項保護預設擴及全部瀏覽，Apple 的 Safari 說明頁則沒有寫預設值，本文建議自己打開設定確認。依 WebKit 2024 年那篇文章，iPhone 的位置是英文介面的「Settings &gt; Apps &gt; Safari &gt; Advanced &gt; Advanced Tracking and Fingerprinting Protection」，選「All Browsing」。Mac 是 Safari 設定的「進階」，開啟「使用進階追蹤和指紋保護」並選擇套用到所有瀏覽。</p>
+<p>用桌機版 Firefox 的讀者，可以在「隱私權與安全性」把「加強型追蹤保護」從「標準」改成「嚴格」，取得 145 版新增的防護。手機版的預設本文沒有查到。</p>
+<p>需要更強保護、能接受較慢連線的人，可以改用 Tor Browser，本文 10 月 23 日查看的 EFF 說明頁也把它列為最實際的選擇。Tor Project 的指紋保護說明頁有正體中文版。依文件站的整理，Android 有官方的 Tor Browser，iPhone 沒有。</p>
+<p>想知道自己的瀏覽器有多容易被認出，可以打開 EFF 的 Cover Your Tracks，本文查到的頁面都是英文。頁面說明只收集匿名資料，比較的對象是最近來測試的訪客，各瀏覽器防護做法的差別也整理在文件站的<a href="/docs/basics/browser-fingerprinting/" target="_blank">瀏覽器指紋是什麼，為什麼很難擺脫</a>。</p>
+<p>防護越強，網站越容易出問題。Mozilla 的公告提醒，更激進的封鎖一定會破壞正常的網站功能，例如行事曆與會議工具需要真實的時區。Tor 的支援頁提到，特徵不一致可能讓防機器人系統把 Tor 使用者當成機器人，EFF 的說明頁也提醒防護本身有時會變成指紋的一部分。</p>
+<p>本文的推論是，這些設定減少的是網站在讀者沒有登入時認出同一個人的能力，Brave 的做法則特別針對跨網站與跨工作階段的串聯。登入同一個帳號的網站，仍然知道是誰在瀏覽。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（20 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/12/our-response-to-google-s-policy-change-on-fingerprinting/"><img class="source-slip__icon" src="/news/assets/favicons/ico.org.uk-8989c7e1.png" width="16" height="16" alt="" loading="lazy" decoding="async">Our response to Google&#39;s policy change on fingerprinting</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Information Commissioner&#39;s Office</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2024-12-19">2024 年 12 月 19 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/marketingplatform/answer/15732590"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Updating our platform policies to reflect innovations in the ads ecosystem</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google Marketing Platform Help</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://privacysandbox.google.com/blog/privacy-sandbox-update"><img class="source-slip__icon" src="/news/assets/favicons/privacysandbox.google.com-6d649f1e.png" width="16" height="16" alt="" loading="lazy" decoding="async">A new path for Privacy Sandbox on the web</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2024-07-22">2024 年 7 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://privacysandbox.google.com/overview/status"><img class="source-slip__icon" src="/news/assets/favicons/privacysandbox.google.com-6d649f1e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Privacy Sandbox feature status</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.google/products-and-platforms/products/chrome/building-a-more-private-web/"><img class="source-slip__icon" src="/news/assets/favicons/blog.google-328dadd5.png" width="16" height="16" alt="" loading="lazy" decoding="async">Building a more private web</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2019-08-22">2019 年 8 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.google.com/platformspolicy/answer/15738904"><img class="source-slip__icon" src="/news/assets/favicons/support.google.com-cb930f6f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Overview of the Platforms programs policies update (February 2025)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://privacysandbox.google.com/blog/privacy-sandbox-next-steps"><img class="source-slip__icon" src="/news/assets/favicons/privacysandbox.google.com-6d649f1e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Next steps for Privacy Sandbox and tracking protections in Chrome</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-04-22">2025 年 4 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://privacysandbox.google.com/blog/update-on-plans-for-privacy-sandbox-technologies"><img class="source-slip__icon" src="/news/assets/favicons/privacysandbox.google.com-6d649f1e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Update on Plans for Privacy Sandbox Technologies</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Google</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-10-17">2025 年 10 月 17 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.w3.org/TR/fingerprinting-guidance/"><img class="source-slip__icon" src="/news/assets/favicons/w3.org-bf155846.png" width="16" height="16" alt="" loading="lazy" decoding="async">Mitigating Browser Fingerprinting in Web Specifications</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>W3C</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-09-25">2025 年 9 月 25 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://blog.mozilla.org/en/firefox/fingerprinting-protections/"><img class="source-slip__icon" src="/news/assets/favicons/blog.mozilla.org-f0f07a35.png" width="16" height="16" alt="" loading="lazy" decoding="async">Firefox expands fingerprint protections: advancing towards a more private web</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Mozilla</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-11-10">2025 年 11 月 10 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://webkit.org/blog/15697/private-browsing-2-0/"><img class="source-slip__icon" src="/news/assets/favicons/webkit.org-b3602cf9.png" width="16" height="16" alt="" loading="lazy" decoding="async">Private Browsing 2.0</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>WebKit</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2024-07-16">2024 年 7 月 16 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://webkit.org/blog/17333/webkit-features-in-safari-26-0/"><img class="source-slip__icon" src="/news/assets/favicons/webkit.org-b3602cf9.png" width="16" height="16" alt="" loading="lazy" decoding="async">WebKit Features in Safari 26.0</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>WebKit</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-09-15">2025 年 9 月 15 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/"><img class="source-slip__icon" src="/news/assets/favicons/apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Apple elevates the iPhone experience with iOS 26</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Apple</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-06-09">2025 年 6 月 9 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/guide/safari/advanced-ibrw1075/mac"><img class="source-slip__icon" src="/news/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Change Advanced settings in Safari on Mac</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Apple Support</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/brave/brave-browser/wiki/Fingerprinting-Protections"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Fingerprinting Protections</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Brave</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing"><img class="source-slip__icon" src="/news/assets/favicons/brave.app-793e8faa.png" width="16" height="16" alt="" loading="lazy" decoding="async">How do I use Shields while browsing?</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Brave Help Center</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.torproject.org/tor-browser/features/fingerprinting-protections/"><img class="source-slip__icon" src="/news/assets/favicons/support.torproject.org-f88d6334.png" width="16" height="16" alt="" loading="lazy" decoding="async">Fingerprinting protections - Features - Tor Browser</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Tor Project</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://coveryourtracks.eff.org/"><img class="source-slip__icon" src="/news/assets/favicons/coveryourtracks.eff.org-18aa39f8.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cover Your Tracks</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>EFF</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://coveryourtracks.eff.org/learn"><img class="source-slip__icon" src="/news/assets/favicons/coveryourtracks.eff.org-18aa39f8.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cover Your Tracks</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>EFF</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://royfish.dev/fingerprints-are-the-new-cookies"><img class="source-slip__icon" src="/news/assets/favicons/royfish.dev-bbea822f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Fingerprints are the new cookies</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>royfish.dev</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--tracking" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分類的其他導讀</h2>
+  <p class="brief__category"><a class="cat cat--tracking" href="/news/category/tracking/">追蹤與個人資料</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-22T00:00:00+08:00">2026 年 10 月 22 日</time>
+      <a class="thread__title" href="/news/2026/10/chatgpt-ads-customer-lists/">ChatGPT 廣告的客戶名單比對與對話內容</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-20T00:00:00+08:00">2026 年 10 月 20 日</time>
+      <a class="thread__title" href="/news/2026/10/android-phone-number-verification/">Android 的自動電話號碼驗證與多帳號連結</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-17T00:00:00+08:00">2026 年 10 月 17 日</time>
+      <a class="thread__title" href="/news/2026/10/compositor-image-editor/">開源影像編輯軟體 Compositor 與 AI 生成程式碼的維護和稽核</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/news/category/tracking/">「追蹤與個人資料」的全部 11 篇導讀</a></p>
+</nav>
+<p class="subscribe">想收到新的導讀：<a href="/news/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>訂閱電子報</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 追蹤</span></a></p>
+<nav class="pager pager--story" aria-label="文章導覽">
+  <a class="pager__item pager__item--older" href="/news/2026/10/tor-onion-service-static-site/"><span class="pager__label">較舊的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Tor 洋蔥服務的靜態網站架設</span></a>
+  <a class="pager__all" href="/news/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="頁尾">
+      <a href="/news/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 訂閱電子報</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 追蹤</a>
+      <a href="/news/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 導讀歷史</a>
+      <a href="/news/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 關於新聞導讀</a>
+      <a href="/news/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 閱讀說明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 回報錯誤</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首頁</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/browser-fingerprinting-cookies/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> onion 版本</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/2026/10/browser-fingerprinting-cookies/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/2026/10/browser-fingerprinting-cookies/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+  </div>
+</footer>
+</body>
+</html>
