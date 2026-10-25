@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 25 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 26 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>打不开的网站与域名封锁</title>
+<link>https://anoni.net/news/zh-cn/history/10-26/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-26/2026</guid>
+<pubDate>Mon, 26 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你连不上某个网站时，原因之一可能是网络运营商让网址查不到对应的服务器地址。这一天，美国众议院司法委员会主席提出《禁止网络盗版法案》，要求网络运营商依法院命令采取让境外侵权网站域名无法解析等措施。</description>
+<content:encoded>&lt;p&gt;你连不上某个网站时，原因之一可能是网络运营商让网络的电话簿（DNS）查不到这个网址的服务器地址。美国众议院司法委员会主席在 2011 年 10 月 26 日提出《禁止网络盗版法案》（SOPA），要求网络运营商收到法院命令后 5 天内或法院另定的期限内，采取让境外侵权网站域名无法解析等措施。2012 年 1 月提案的主席宣布打算删除 DNS 封锁条款，维基百科也停止服务 24 小时抗议，委员会之后推迟审议。中国大陆 2025 年修正的《网络安全法》第五十二条规定国家网信部门和有关部门发现来源于境外的禁止信息时，应当通知有关机构采取技术措施阻断传播，条文由行政机关执行、没有写到法院程序。海外的读者在所在地的网络打不开某个网站时，可以用 OONI Probe 的网络连接测试分出 DNS、连接与网页内容的异常（异常不一定代表封锁），运行的风险取决于你的处境与所在地（OONI 的常见问题写明监控网络的人可能看到你在运行它）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>用 Facebook 账号登录的第三方 App</title>
 <link>https://anoni.net/news/zh-cn/history/10-25/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你手机与笔记本电脑里的加密功能，在中国大陆属于不实行进口许可的大众消费类产品。这一天，中国国务院发布当年要求加密产品经国家认可的《商用密码管理条例》。</description>
 <content:encoded>&lt;p&gt;你手机与笔记本电脑里的加密功能，在中国大陆属于不实行进口许可的大众消费类产品。这项分类出自国务院在 1999 年 10 月 7 日发布、2023 年修订的《商用密码管理条例》，《密码法》规定商用密码用于保护不属于国家秘密的信息。中伦律师事务所的文章引用了 1999 年版的条文，当时任何单位或者个人只能使用经国家密码管理机构认可的商用密码产品，不得使用自行研制的或者境外生产的密码产品。2023 年的修订版则写明，大众消费类产品所采用的商用密码不实行进口许可和出口管制制度。条例的进口许可只适用于列入商用密码进口许可清单的商品，在中国大陆以外使用手机的读者不受这份条例影响。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>手机通信记录的保存</title>
-<link>https://anoni.net/news/zh-cn/history/10-06/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-06/2026</guid>
-<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你打的每个电话，双方号码与时间都会留在电信运营商的记录里。这一天，欧盟法院判决成员国原则上不能要求运营商全面保存所有人的通信与位置数据。</description>
-<content:encoded>&lt;p&gt;你用手机打的每一个电话，双方号码、日期与起止时间都会留下通信记录。保存多久依各地法规而定，以台湾为例，《电信事业处理有关机关查询电信通信纪录实施办法》规定移动通信的记录保存最近六个月。2020 年 10 月 6 日，欧盟法院大法庭判决成员国原则上不能为了一般犯罪侦查或维护国家安全，要求电信运营商全面、无差别地保存或交出用户的通信与位置数据。判决同时写明，国家安全面临真实、当下或可预见的严重威胁时，成员国仍可以要求运营商在必要且可延长的期间内全面保存。通信记录由运营商依法保存，用户这一端没有可以自行关闭的设置。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 25 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 26 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>打不開的網站與網域名稱封鎖</title>
+<link>https://anoni.net/news/history/10-26/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-26/2026</guid>
+<pubDate>Mon, 26 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你連不上某個網站時，原因之一可能是網路業者讓網址查不到對應的伺服器位址。這一天，美國眾議院司法委員會主席提出《禁止網路盜版法案》，要求網路業者依法院命令採取讓境外侵權網站網域名稱無法解析等措施。</description>
+<content:encoded>&lt;p&gt;你連不上某個網站時，原因之一可能是網路業者讓網路的電話簿（DNS）查不到這個網址的伺服器位址。美國眾議院司法委員會主席在 2011 年 10 月 26 日提出《禁止網路盜版法案》（SOPA），要求網路業者收到法院命令後 5 天內或法院另定的期限內，採取讓境外侵權網站網域名稱無法解析等措施。2012 年 1 月提案的主席宣布打算拿掉 DNS 封鎖條款，維基百科也停止服務 24 小時抗議，委員會之後延後審議。在台灣 2022 年 6 月修正的著作權法裡，我們沒有找到讓著作權人聲請封鎖網站的條文，其他理由的封鎖本文沒有查。網站在你的網路上打不開時，可以用 OONI Probe 的網路連線測試分出 DNS、連線與網頁內容的異常，但異常不一定代表封鎖。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>用 Facebook 帳號登入的第三方 App</title>
 <link>https://anoni.net/news/history/10-25/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你手機與筆電裡的加密功能，在中國大陸屬於不實行進口許可的大眾消費類產品。這一天，中國國務院發布當年要求加密產品經國家認可的《商用密碼管理條例》。</description>
 <content:encoded>&lt;p&gt;你手機與筆電裡的加密功能，在中國大陸屬於不實行進口許可的大眾消費類產品。這項分類出自中國國務院在 1999 年 10 月 7 日發布、2023 年修訂的《商用密碼管理條例》，中國 2019 年的《密碼法》規定，商用密碼用於保護不屬於國家秘密的資訊。中倫律師事務所的文章引用了 1999 年版的條文，當時任何單位或個人只能使用經國家密碼管理機構認可的商用密碼產品，不得使用自行研製或境外生產的產品。2023 年的修訂版則寫明，大眾消費類產品採用的商用密碼不實行進口許可與出口管制。條例的進口許可只適用於列入進口許可清單的商用密碼，在台灣使用手機的讀者不受這份條例影響。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>手機通信紀錄的保存</title>
-<link>https://anoni.net/news/history/10-06/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-06/2026</guid>
-<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你每通電話的雙方號碼與時間，電信業者依規定保存最近六個月。這一天，歐盟法院判決會員國原則上不能要求業者全面保存所有人的通信與位置資料。</description>
-<content:encoded>&lt;p&gt;你用手機打的每一通電話，雙方號碼、日期與起迄時間都會留下通信紀錄。台灣的《電信事業處理有關機關查詢電信通信紀錄實施辦法》規定，行動通信的紀錄保存最近六個月。2020 年 10 月 6 日，歐盟法院大法庭判決會員國原則上不能為了一般犯罪偵查或維護國家安全，要求電信業者全面、無差別地保存或交出使用者的通信與位置資料。判決同時寫明，國家安全面臨真實、當下或可預見的嚴重威脅時，會員國仍可以要求業者在必要且可延長的期間內全面保存。通信紀錄由電信業者依法保存，台灣的讀者目前沒有可以自行關閉的設定。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

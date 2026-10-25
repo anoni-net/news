@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sun, 25 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 26 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Websites that fail to load and domain name blocking</title>
+<link>https://anoni.net/news/en/history/10-26/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-26/2026</guid>
+<pubDate>Mon, 26 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>When a website will not load for you, one possible reason is that your internet provider has made its address impossible to look up. On this day, the chair of the US House Judiciary Committee introduced the Stop Online Piracy Act, under which internet providers acting on a court order were to take measures such as stopping the domain names of foreign infringing sites from resolving.</description>
+<content:encoded>&lt;p&gt;When a website will not load for you, one possible reason is that your internet provider has stopped the internet&#39;s phone book (DNS) from returning the address of the server behind it. On 26 October 2011, the chair of the US House Judiciary Committee introduced the Stop Online Piracy Act (SOPA), under which an internet provider served with a court order was to take measures within 5 days, or within a period set by the court, including stopping the domain name of a foreign infringing site from resolving. In January 2012 the chair announced plans to remove the DNS blocking provision, Wikipedia went dark for 24 hours in protest, and the committee later put off action on the bill. In Asia, Singapore&#39;s Copyright Act 2021 lets the High Court order a network connection provider to take reasonable steps to disable access to a flagrantly infringing online location, while according to a Japanese government anti-piracy plan, reissued in August 2026, legislation on blocking will be considered in light of how other measures work and the extent of the damage, and we found no provision in Taiwan&#39;s Copyright Act, as amended in June 2022, that lets rights holders seek site blocking (we did not look into blocking on other grounds). If a site will not load on your network, the Web Connectivity test in OONI Probe, the app from OONI (Open Observatory of Network Interference), can separate DNS, connection and page-content anomalies, though an anomaly does not always mean blocking, and according to OONI&#39;s FAQ, running the app can potentially be risky depending on your threat model and the country.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Third-party apps you signed in to with Facebook</title>
 <link>https://anoni.net/news/en/history/10-25/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, exempt from import licensing. On this day, China&#39;s State Council issued the Regulations on the Administration of Commercial Cryptography, which once required encryption products to be state-approved.</description>
 <content:encoded>&lt;p&gt;In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, which is exempt from import licensing. That classification comes from the Regulations on the Administration of Commercial Cryptography, which China&#39;s State Council issued on 7 October 1999 and revised in 2023. China&#39;s Cryptography Law defines commercial cryptography as encryption used to protect information that is not a state secret. As quoted by the law firm Zhong Lun, the 1999 version allowed organisations and individuals to use only commercial cryptography products approved by the state cryptography authority. It also barred them from using products they had developed themselves or that were made abroad. The 2023 revision states that commercial cryptography used in mass-market consumer products is not subject to import licensing or export controls. Import licensing applies only to commercial cryptography on the import licence list, and readers who use their phones outside mainland China are not affected by these regulations.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>How long your phone records are kept</title>
-<link>https://anoni.net/news/en/history/10-06/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-06/2026</guid>
-<pubDate>Tue, 06 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Every call you make leaves a record of both numbers and the time, which carriers in Taiwan must keep for six months. On this day, the EU&#39;s top court ruled that member states generally cannot require carriers to keep everyone&#39;s traffic and location data.</description>
-<content:encoded>&lt;p&gt;Every call you make leaves a record of both numbers, the date and the start and end times. In Taiwan, the regulations on agencies&#39; queries of telecom records (電信事業處理有關機關查詢電信通信紀錄實施辦法) set the retention period for mobile call records at six months. On 6 October 2020, the Grand Chamber of the Court of Justice of the European Union ruled that member states generally cannot require telecom providers to retain or hand over everyone&#39;s traffic and location data across the board, whether to fight crime in general or to safeguard national security. A member state facing a genuine and present or foreseeable serious threat to national security can still require such retention, but only for a period limited to what is strictly necessary, which may be extended while the threat persists. Call records are kept by carriers under the law, and there is no setting on your side that turns them off.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
