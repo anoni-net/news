@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 26 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 27 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>搜尋結果裡的個人資料與移除申請</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-27/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-27/2026</guid>
+<pubDate>Tue, 27 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你可以請 Google 不再於搜尋結果列出含有你電話、地址或身分證字號的網頁。這一天，印尼國會通過《資訊與電子交易法》修正案，網站與平台業者須依法院裁定刪除當事人請求的不相關資訊。</description>
+<content:encoded>&lt;p&gt;你可以請 Google 不再於搜尋結果列出含有你電話、地址或身分證字號的網頁，網頁本身則要另外聯絡網站擁有者。印尼國會在 2016 年 10 月 27 日通過《資訊與電子交易法》修正案，網站與平台業者須依當事人請求與法院裁定刪除不相關資訊。雅加達郵報引述通訊資訊部長說這是好事，因為印尼先前沒有被遺忘權，同一篇報導也寫到這項條文與網路霸凌條文被視為特別嚴苛的規定。負責修法的國會小組召集議員表示，第 40 條讓政府有權命令業者切斷違法內容的存取以防止違法資訊散布，報導也寫到規範政府控制電子資訊權力的條文很少。台灣的《個人資料保護法》讓當事人可以向蒐集者請求刪除違法蒐集的個人資料，不想跟網站擁有者交涉時可以先只申請移除搜尋結果。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>打不開的網站與網域名稱封鎖</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-26/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你如果在香港遭人公開個人資料，可以請香港的個人資料私隱專員公署要求平台刪除。這一天，香港的反起底條文開始生效。</description>
 <content:encoded>&lt;p&gt;你如果在香港遭人公開個人資料，可以請個人資料私隱專員公署要求平台刪除，境外的社群平台也在範圍內。2021 年 10 月 8 日，香港《2021 年個人資料（私隱）（修訂）條例》生效，把起底（公開他人的個人資料，台灣常說肉搜）列為罪行。公署的公告寫明，修訂是為了打擊侵犯個人資料私隱的起底行為，公署也取得刑事調查與發出停止披露通知的權力。條文通過前，成員包括 Apple、Facebook、Google 的亞洲網際網路聯盟曾去信表達疑慮，The Register 引述信中寫到起訴平台本地員工的可能性會帶來不確定性。公署的統計寫明，到 2025 年底共向 57 個網路平台發出 2,104 份停止披露通知，配合刪除的整體比例超過 96%。這項條例是香港的法律，台灣的讀者遇到肉搜時，可以參考本站 10 月 3 日的導讀&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/eff-doxxing-safety/&#34;&gt;肉搜的預防與應變&lt;/a&gt;。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>手機加密功能的進口規定</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-07/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-07/2026</guid>
-<pubDate>Wed, 07 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你手機與筆電裡的加密功能，在中國大陸屬於不實行進口許可的大眾消費類產品。這一天，中國國務院發布當年要求加密產品經國家認可的《商用密碼管理條例》。</description>
-<content:encoded>&lt;p&gt;你手機與筆電裡的加密功能，在中國大陸屬於不實行進口許可的大眾消費類產品。這項分類出自中國國務院在 1999 年 10 月 7 日發布、2023 年修訂的《商用密碼管理條例》，中國 2019 年的《密碼法》規定，商用密碼用於保護不屬於國家秘密的資訊。中倫律師事務所的文章引用了 1999 年版的條文，當時任何單位或個人只能使用經國家密碼管理機構認可的商用密碼產品，不得使用自行研製或境外生產的產品。2023 年的修訂版則寫明，大眾消費類產品採用的商用密碼不實行進口許可與出口管制。條例的進口許可只適用於列入進口許可清單的商用密碼，在台灣使用手機的讀者不受這份條例影響。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

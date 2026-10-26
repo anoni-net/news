@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Mon, 26 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 27 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Personal information in search results and removal requests</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-27/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-27/2026</guid>
+<pubDate>Tue, 27 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>You can ask Google to stop listing pages that contain your phone number, home address or ID number in its search results. On this day, Indonesia&#39;s House of Representatives passed amendments to the Electronic Information and Transactions Law, requiring website and platform operators to delete irrelevant information at a person&#39;s request on the basis of a court ruling.</description>
+<content:encoded>&lt;p&gt;You can ask Google to stop listing pages that contain your phone number, home address or ID number in its search results, though removing the page itself means contacting the site owner. On 27 October 2016, Indonesia&#39;s House of Representatives passed amendments to the Electronic Information and Transactions (ITE) Law, under which website and platform operators must delete irrelevant information at the request of the person concerned, on the basis of a court ruling. The Jakarta Post quoted the information and telecommunications minister as calling this good because Indonesia previously had no right to be forgotten, and the paper reported that this provision and the articles on cyberbullying were regarded as particularly draconian. The lawmaker who led the House team on the amendments highlighted Article 40, which authorizes the government to cut off access to unlawful content or order providers to do so, saying the aim is to make the government responsible for preventing the spread of prohibited information, while the paper reported that the law has little in the way of provisions regulating the use of this power. That power remains in the second amendment, Law No. 1 of 2024, which adds that for pornography, gambling and other content defined by regulation such an order can take the form of cutting off access or having the provider moderate the content itself, as far as technically possible; if you would rather not deal with a site owner, you can start by asking Google to remove only the search result.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Websites that fail to load and domain name blocking</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-26/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>If your personal details are posted online in Hong Kong, you can ask the Privacy Commissioner for Personal Data to have platforms remove them. On this day, Hong Kong&#39;s anti-doxxing provisions took effect.</description>
 <content:encoded>&lt;p&gt;If your personal details are posted online in Hong Kong, you can ask the Office of the Privacy Commissioner for Personal Data to have platforms remove them, including social media platforms based overseas. On 8 October 2021, the Personal Data (Privacy) (Amendment) Ordinance 2021 took effect and made doxxing a criminal offence. The commissioner&#39;s announcement said the amendment aimed to combat doxxing acts that intrude on personal data privacy, and the amendment gave the office powers to conduct criminal investigations and issue cessation notices. Before the law passed, the Asia Internet Coalition, whose members include Apple, Facebook and Google, wrote that the possibility of prosecuting local staff would create uncertainty for businesses, as quoted by The Register. Figures the office published show that by the end of 2025 it had issued 2,104 cessation notices to 57 online platforms, with an overall compliance rate above 96%. The ordinance is Hong Kong law, so if you face doxxing elsewhere, see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;, published on 3 October.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Import rules for the encryption in your phone</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-07/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-07/2026</guid>
-<pubDate>Wed, 07 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, exempt from import licensing. On this day, China&#39;s State Council issued the Regulations on the Administration of Commercial Cryptography, which once required encryption products to be state-approved.</description>
-<content:encoded>&lt;p&gt;In mainland China, the encryption built into your phone or laptop counts as part of a mass-market consumer product, which is exempt from import licensing. That classification comes from the Regulations on the Administration of Commercial Cryptography, which China&#39;s State Council issued on 7 October 1999 and revised in 2023. China&#39;s Cryptography Law defines commercial cryptography as encryption used to protect information that is not a state secret. As quoted by the law firm Zhong Lun, the 1999 version allowed organisations and individuals to use only commercial cryptography products approved by the state cryptography authority. It also barred them from using products they had developed themselves or that were made abroad. The 2023 revision states that commercial cryptography used in mass-market consumer products is not subject to import licensing or export controls. Import licensing applies only to commercial cryptography on the import licence list, and readers who use their phones outside mainland China are not affected by these regulations.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
