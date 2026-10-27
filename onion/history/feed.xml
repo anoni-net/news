@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 27 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 28 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>門禁與入場時登錄的臉部資料</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-28/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-28/2026</guid>
+<pubDate>Wed, 28 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在門禁或會員入場時登錄的臉部資料，跟指紋一樣能認出你是誰。這一天，中國大陸一位大學副教授向法院起訴杭州一家動物園，園方把年票的入園方式從指紋改成人臉辨識。</description>
+<content:encoded>&lt;p&gt;你在門禁或會員入場時登錄的臉部資料，跟指紋一樣能認出你是誰。中國大陸一位大學副教授在 2019 年 10 月 28 日向杭州市富陽區法院起訴一家動物園，原因是園方把年票的入園方式從原本登記的指紋改成人臉辨識。一審在 2020 年認為核驗方式本身合法，但雙方約定的是指紋入園且園方沒有告知拍照的用途，判園方刪除臉部資訊。2021 年的二審維持判決，並因園方已停用指紋閘門另外判刪除指紋資訊。台灣的《個人資料保護法》第 2 條把特徵、指紋列入個人資料（臉部算不算特徵是本文的推論），特定目的消失時可以請求刪除（業者因業務必須者除外），被要求掃臉時也可以先問有沒有卡片或 QR 碼等其他方式。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>搜尋結果裡的個人資料與移除申請</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-27/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在 App Store 能下載哪些 App，會依帳號所屬的國家或地區而不同。這一天，Apple 從 App Store 下架顯示香港警察位置的群眾地圖 App。</description>
 <content:encoded>&lt;p&gt;你在 App Store 能下載哪些 App 取決於帳號設定的國家或地區，Apple 2025 年的透明度報告也寫明應政府要求下架的 App 只從當地的商店移除。Apple 在 2019 年 10 月 9 日（美國時間，CNN 依香港時間記為 10 日）從 App Store 下架顯示香港警察位置的群眾地圖 App HKmap.live，路透社的報導寫到這次是全球下架。Apple 發給媒體的聲明寫明已向香港警方的網絡安全及科技罪案調查科查證這個 App 曾被用來針對與伏擊警察，也寫到 App 違反 App Store 的規範與當地法律。開發者隨後在推特反駁沒有任何證據支持這項指控，並表示下架是壓制香港自由與人權的政治決定。讀者可以在同一份透明度報告查到各地應政府要求下架的 App 數量，2025 年中國大陸有 196 個、香港 1 個，台灣不在清單上。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>香港的起底刪除機制</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-08/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-08/2026</guid>
-<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你如果在香港遭人公開個人資料，可以請香港的個人資料私隱專員公署要求平台刪除。這一天，香港的反起底條文開始生效。</description>
-<content:encoded>&lt;p&gt;你如果在香港遭人公開個人資料，可以請個人資料私隱專員公署要求平台刪除，境外的社群平台也在範圍內。2021 年 10 月 8 日，香港《2021 年個人資料（私隱）（修訂）條例》生效，把起底（公開他人的個人資料，台灣常說肉搜）列為罪行。公署的公告寫明，修訂是為了打擊侵犯個人資料私隱的起底行為，公署也取得刑事調查與發出停止披露通知的權力。條文通過前，成員包括 Apple、Facebook、Google 的亞洲網際網路聯盟曾去信表達疑慮，The Register 引述信中寫到起訴平台本地員工的可能性會帶來不確定性。公署的統計寫明，到 2025 年底共向 57 個網路平台發出 2,104 份停止披露通知，配合刪除的整體比例超過 96%。這項條例是香港的法律，台灣的讀者遇到肉搜時，可以參考本站 10 月 3 日的導讀&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/eff-doxxing-safety/&#34;&gt;肉搜的預防與應變&lt;/a&gt;。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Tue, 27 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 28 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Face data registered for building access and venue entry</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-28/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-28/2026</guid>
+<pubDate>Wed, 28 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Face data you register for building access or member entry can identify you just as a fingerprint can. On this day, a university associate professor in mainland China sued a Hangzhou zoo that had switched its annual-pass entry from fingerprints to facial recognition.</description>
+<content:encoded>&lt;p&gt;Face data you register for building access or member entry can identify you just as a fingerprint can. On 28 October 2019, a university associate professor in mainland China filed a lawsuit with the Fuyang District People&#39;s Court in Hangzhou against a zoo, because the zoo had switched entry for annual-pass holders from fingerprints, which the professor had registered, to facial recognition. In 2020 the first-instance court found that checking visitors by fingerprint or facial recognition was lawful in itself, but because the two sides had agreed on fingerprint entry and the zoo had not told the plaintiff what the photos were for, the court ordered the zoo to delete the plaintiff&#39;s facial data, and in 2021 the appeal court upheld the ruling and also ordered the zoo to delete the plaintiff&#39;s fingerprint data, since the zoo had stopped using its fingerprint gates. In Japan, according to a report in the Akita Sakigake Shimpo in October 2025, JR East had in July stopped using face-recognition security cameras at some Tokyo-area stations (meant to detect wanted suspects and alert the police); the Japan Federation of Bar Associations had asked it to stop using them over privacy concerns, and JR East gave its reason as the end of a contract with an outside company and a review of the cameras&#39; effectiveness. Wherever you are, when you are asked to register your face you can first ask whether a card or QR code would work instead.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Personal information in search results and removal requests</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-27/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Your App Store account&#39;s country or region determines which apps you can download. On this day, Apple removed a crowd-sourced map app showing Hong Kong police locations from the App Store.</description>
 <content:encoded>&lt;p&gt;Which apps you can download from the App Store depends on the country or region set on your account, and Apple&#39;s 2025 transparency report reads that an app removed at a government&#39;s demand is removed only from that country or region. On 9 October 2019 (US time; CNN, using Hong Kong time, dates it 10 October), Apple removed HKmap.live, a crowd-sourced map app showing the locations of Hong Kong police, from the App Store, and Reuters reported that the removal was global. Apple&#39;s written statement to the media reads that it had verified with the Hong Kong police&#39;s Cyber Security and Technology Crime Bureau that the app had been used to target and ambush police, and that the app violated its guidelines and local laws. The developer replied on Twitter that there was no evidence for that accusation and that the removal was a political decision to suppress freedom and human rights in Hong Kong. The same transparency report lists apps removed at government demand in 2025 by country or region, with 196 in mainland China, 335 in Vietnam, 108 in South Korea, 54 in India, 25 in Japan and 1 in Hong Kong, and Taiwan does not appear on the list.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Hong Kong&#39;s anti-doxxing removal powers</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-08/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-08/2026</guid>
-<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>If your personal details are posted online in Hong Kong, you can ask the Privacy Commissioner for Personal Data to have platforms remove them. On this day, Hong Kong&#39;s anti-doxxing provisions took effect.</description>
-<content:encoded>&lt;p&gt;If your personal details are posted online in Hong Kong, you can ask the Office of the Privacy Commissioner for Personal Data to have platforms remove them, including social media platforms based overseas. On 8 October 2021, the Personal Data (Privacy) (Amendment) Ordinance 2021 took effect and made doxxing a criminal offence. The commissioner&#39;s announcement said the amendment aimed to combat doxxing acts that intrude on personal data privacy, and the amendment gave the office powers to conduct criminal investigations and issue cessation notices. Before the law passed, the Asia Internet Coalition, whose members include Apple, Facebook and Google, wrote that the possibility of prosecuting local staff would create uncertainty for businesses, as quoted by The Register. Figures the office published show that by the end of 2025 it had issued 2,104 cessation notices to 57 online platforms, with an overall compliance rate above 96%. The ordinance is Hong Kong law, so if you face doxxing elsewhere, see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/eff-doxxing-safety/&#34;&gt;Doxxing prevention and incident response&lt;/a&gt;, published on 3 October.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

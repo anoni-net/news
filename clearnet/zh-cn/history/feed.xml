@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 27 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 28 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>门禁与入场时登记的人脸信息</title>
+<link>https://anoni.net/news/zh-cn/history/10-28/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/10-28/2026</guid>
+<pubDate>Wed, 28 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在门禁或会员入场时登记的人脸信息，跟指纹一样能认出你是谁。这一天，一位大学副教授向法院起诉杭州一家动物园，园方把年卡的入园方式从指纹改成人脸识别。</description>
+<content:encoded>&lt;p&gt;你在门禁或会员入场时登记的人脸信息，跟指纹一样能认出你是谁。一位大学副教授在 2019 年 10 月 28 日向杭州市富阳区法院起诉一家动物园，原因是园方把年卡的入园方式从原本登记的指纹改成人脸识别。一审在 2020 年认为以指纹或人脸识别核验本身合法，但双方约定的是指纹入园且园方没有告知拍照的用途，判园方删除面部特征信息。2021 年的二审维持判决，并因园方已停用指纹闸机另外判删除指纹识别信息。中国大陆的《个人信息保护法》（2021 年 11 月施行）把生物识别列为处理须取得单独同意的敏感个人信息，《人脸识别技术应用安全管理办法》（2025 年 6 月施行）第十条也规定个人不同意用人脸验证身份时处理者应当提供其他合理、便捷的方式（国家另有规定的除外），你在中国大陆被要求刷脸时可以据此要求改用其他方式（在海外则可以先问有没有卡片或二维码）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>搜索结果里的个人信息与移除申请</title>
 <link>https://anoni.net/news/zh-cn/history/10-27/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在 App Store 能下载哪些 App，会依账号所属的国家或地区而不同。这一天，Apple 从 App Store 下架显示香港警察位置的群众地图 App。</description>
 <content:encoded>&lt;p&gt;你在 App Store 能下载哪些 App 取决于账号设置的国家或地区，Apple 2025 年的透明度报告也写明应政府要求下架的 App 只从当地的商店移除。Apple 在 2019 年 10 月 9 日（美国时间，CNN 依香港时间记为 10 日）从 App Store 下架显示香港警察位置的群众地图 App HKmap.live，路透社的报道写到这次是全球下架。Apple 发给媒体的声明写明已向香港警方的网络安全及科技罪案调查科查证这个 App 曾被用来针对与伏击警察，也写到 App 违反 App Store 的规范与当地法律。开发者随后在推特反驳没有任何证据支持这项指控，并表示下架是压制香港自由与人权的政治决定。同一份透明度报告列出各地应政府要求下架的 App 数量，2025 年中国大陆的 App Store 有 196 个、香港 1 个，台湾不在清单上。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>香港的起底删除机制</title>
-<link>https://anoni.net/news/zh-cn/history/10-08/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-08/2026</guid>
-<pubDate>Thu, 08 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你如果在香港遭人公开个人资料，可以请香港的个人资料私隐专员公署要求平台删除。这一天，香港的反起底条文开始生效。</description>
-<content:encoded>&lt;p&gt;你如果在香港遭人公开个人资料，可以请个人资料私隐专员公署要求平台删除，境外的社交平台也在范围内。2021 年 10 月 8 日，香港《2021 年个人资料（私隐）（修订）条例》生效，把起底（即人肉搜索）列为罪行。公署的公告写明，修订是为了打击侵犯个人资料私隐的起底行为，公署也取得刑事调查与发出停止披露通知的权力。条文通过前，成员包括 Apple、Facebook、Google 的亚洲互联网联盟曾去信表达疑虑，The Register 引述信中写到起诉平台本地员工的可能性会带来不确定性。公署的统计写明，到 2025 年底共向 57 个网络平台发出 2,104 份停止披露通知，配合删除的整体比例超过 96%。这项条例是香港的法律，其他地方的读者遇到人肉搜索时，可以参考本站 10 月 3 日的导读&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/eff-doxxing-safety/&#34;&gt;人肉搜索的预防与应对&lt;/a&gt;。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
