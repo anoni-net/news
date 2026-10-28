@@ -740,6 +740,16 @@ def test_multi_source_post_renders(fixture_site):
     assert len(data["citation"]) == 5
 
 
+def test_citation_rewritten_for_onion(tmp_path):
+    # 原文是官網的頁面時，onion 產物的 JSON-LD 也要改寫成 onion 網址，否則 --check 會擋下 clearnet 連結
+    post = source_post(tmp_path, "sources:\n  - title: Pulse\n    url: https://anoni.net/projects/pulse/sg/\n")
+    _, targets = build.load_config(ROOT / "site.toml")
+    onion = first_jsonld(build.jsonld(post, targets["onion"], {"homepage": "https://anoni.net/"}))
+    assert onion["citation"][0]["url"] == f"http://{ONION_HOST}/projects/pulse/sg/"
+    clearnet = first_jsonld(build.jsonld(post, targets["clearnet"], {"homepage": "https://anoni.net/"}))
+    assert clearnet["citation"][0]["url"] == "https://anoni.net/projects/pulse/sg/"
+
+
 # ---------------------------------------------------------------- 圖片
 
 ASSET = "https://assets.anoni.net/news/2026/09/test-post/"
