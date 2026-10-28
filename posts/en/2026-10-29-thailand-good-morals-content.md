@@ -1,7 +1,7 @@
 ---
 title: The lawsuit to revoke Thailand's notification on urgent takedowns of online content
 description: In July, Thailand's Ministry of Digital Economy and Society published a notification defining the online data that may be the subject of an urgent court petition for suspension or removal under the Computer Crime Act, including 14 categories contrary to public order or good morals. On 14 October, Thai Lawyers for Human Rights and iLaw asked the Central Administrative Court to revoke the definition of "urgent necessity" and the two categories on the monarchy and on hatred. As of 29 October, the ministry's explanations had cited only examples such as scams and e-cigarette advertising, and we found no response on the two categories or the lawsuit.
-date: 2026-10-29T12:05:00+08:00
+date: 2026-10-29T01:25:00+08:00
 slug: thailand-good-morals-content
 categories:
   - censorship
