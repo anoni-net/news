@@ -298,6 +298,9 @@ from = "https://web.archive.org/web/20261007id_/https://www.cert-in.org.in/favic
 icon = "certcc.github.io-f1607469.png"
 from = "https://certcc.github.io/assets/images/favicon.png"
 
+[hosts."channelnews.com.au"]
+none = "圖示檔擋自動抓取"
+
 [hosts."chinadigitaltimes.net"]
 icon = "chinadigitaltimes.net-eb24e633.png"
 from = "https://chinadigitaltimes.net/wp-content/themes/CDT-EN/images/favicon.png"
@@ -352,6 +355,10 @@ from = "https://imgcdn.cna.com.tw/www/website/img/fav-icon.png"
 icon = "cnbc.com-f77120b6.png"
 from = "https://www.cnbc.com/apple-touch-icon.png"
 
+[hosts."cnil.fr"]
+icon = "cnil.fr-384fdf1c.png"
+from = "https://www.cnil.fr/themes/custom/bootstrap_cnil/favicon.ico"
+
 [hosts."cnn.com"]
 icon = "cnn.com-ae11d4e1.png"
 from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
@@ -405,6 +412,10 @@ from = "https://corp.taiwanmobile.com/images/favicon/favicon_180.png"
 [hosts."corp.timescar.jp"]
 icon = "corp.timescar.jp-9a42d6ac.png"
 from = "https://corp.timescar.jp/favicon.ico"
+
+[hosts."correctiv.org"]
+icon = "correctiv.org-a1b75091.png"
+from = "https://correctiv.org/wp-content/uploads/2026/04/favicon-57.png"
 
 [hosts."court.gov.cn"]
 icon = "court.gov.cn-1db19351.png"
@@ -1368,6 +1379,10 @@ from = "https://news.web.nhk/apple-touch-icon.png"
 icon = "news.ycombinator.com-c204850a.png"
 from = "https://news.ycombinator.com/apple-touch-icon.png"
 
+[hosts."newsis.com"]
+icon = "newsis.com-a8787be3.png"
+from = "https://image.newsis.com/n_www/images/ci/2024/favicon.png"
+
 [hosts."newsonair.gov.in"]
 icon = "newsonair.gov.in-6cb1c7c3.png"
 from = "https://newsonair.gov.in/wp-content/uploads/2024/01/cropped-logo-192x192.png"
@@ -1525,6 +1540,10 @@ from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 [hosts."ppc.go.jp"]
 icon = "ppc.go.jp-f5d71b42.png"
 from = "https://www.ppc.go.jp/common_module/favicon.ico"
+
+[hosts."ppc.land"]
+icon = "ppc.land-ddc11ce5.png"
+from = "https://ppc.land/content/images/2024/03/ppc.ico"
 
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
@@ -1805,6 +1824,10 @@ from = "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93dd
 icon = "techpolicy.press-8f806d7c.png"
 from = "https://cdn.sanity.io/images/3tzzh18d/production/9a2224d300c1699fc1b87235aac36318e2c76cec-867x867.png"
 
+[hosts."techradar.com"]
+icon = "techradar.com-fa7b5c39.png"
+from = "https://vanilla.futurecdn.net/techradar/1797608/apple-touch-icon.png"
+
 [hosts."techspot.com"]
 icon = "techspot.com-5fd11eb4.png"
 from = "https://www.techspot.com/images/ts3mobile-badge.png"
@@ -1860,6 +1883,10 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 [hosts."themarkup.org"]
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
+
+[hosts."thenextweb.com"]
+icon = "thenextweb.com-788e75eb.png"
+from = "https://static.thenextweb.com/assets/img/favicon/favicon-194x194.png"
 
 [hosts."thephp.foundation"]
 icon = "thephp.foundation-c6860153.png"
