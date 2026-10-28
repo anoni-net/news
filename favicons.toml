@@ -464,6 +464,10 @@ from = "https://www.cyber.go.jp/img/favicon.ico"
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
 
+[hosts."dailynews.co.th"]
+icon = "dailynews.co.th-44aab499.png"
+from = "https://www.dailynews.co.th/wp-content/uploads/2024/12/dailynews-favicon-2024.jpg"
+
 [hosts."daringfireball.net"]
 icon = "daringfireball.net-c13824c2.png"
 from = "https://daringfireball.net/graphics/apple-touch-icon.png"
@@ -900,9 +904,17 @@ from = "https://www.huntress.com/assets/apple-touch-icon-DudXUahm.png"
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
 
+[hosts."i.win.org.tw"]
+icon = "i.win.org.tw-3c9efd99.png"
+from = "https://i.win.org.tw/favicon.png"
+
 [hosts."ico.org.uk"]
 icon = "ico.org.uk-8989c7e1.png"
 from = "https://ico.org.uk/media2/lhphq55z/favicon.ico"
+
+[hosts."ilaw.or.th"]
+icon = "ilaw.or.th-4c0b5e40.png"
+from = "https://www.ilaw.or.th/wp-content/uploads/2024/01/logo-large@2x.png"
 
 [hosts."ilovepdf.com"]
 icon = "ilovepdf.com-20557442.png"
@@ -1119,6 +1131,10 @@ same_as = "support.ledger.com"
 icon = "leg.colorado.gov-6606b55f.png"
 from = "https://leg.colorado.gov/assets/apple-touch-icon-c8ff93a2e70b52915d8cc0b6132070db2484e4ea64b52289069a7610a280289e.png"
 
+[hosts."legal500.com"]
+icon = "legal500.com-e2f1b377.png"
+from = "https://www.legal500.com/apple-icon.png?9aebdb461841f006"
+
 [hosts."legco.gov.hk"]
 same_as = "gov.hk"
 
@@ -1235,6 +1251,10 @@ from = "https://cdn.metabase.com/images/apple-touch-icon.png"
 icon = "metrics.torproject.org-9ec5d801.png"
 from = "https://metrics.torproject.org/images/android-icon.png"
 
+[hosts."mgronline.com"]
+icon = "mgronline.com-158e1357.png"
+from = "https://mgronline.com/images/favicon.ico"
+
 [hosts."microsoft.com"]
 icon = "microsoft.com-c8d29fbb.png"
 from = "https://www.microsoft.com/favicon.ico?v2"
@@ -1304,6 +1324,10 @@ from = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7YVWz03dawww
 [hosts."naehrdine.blogspot.com"]
 icon = "naehrdine.blogspot.com-624359af.png"
 from = "https://naehrdine.blogspot.com/favicon.ico"
+
+[hosts."nationthailand.com"]
+icon = "nationthailand.com-39704d7e.png"
+from = "https://media.nationthailand.com/images/3.0/icon-192.png"
 
 [hosts."nbcdfw.com"]
 icon = "nbcdfw.com-eece2dd2.png"
@@ -1526,6 +1550,10 @@ from = "https://www.politiet.no/core/assets/images/apple-touch-icon.png"
 icon = "ppc.go.jp-f5d71b42.png"
 from = "https://www.ppc.go.jp/common_module/favicon.ico"
 
+[hosts."prachataienglish.com"]
+icon = "prachataienglish.com-bc8a9b34.png"
+from = "https://prachataienglish.com/sites/default/files/english-fav.png"
+
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
 from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-touch-icon-192x192.png"
@@ -1564,6 +1592,9 @@ from = "手動提供的檔案 radicle.png"
 [hosts."rankingdigitalrights.org"]
 icon = "rankingdigitalrights.org-a18e2e95.png"
 from = "https://rankingdigitalrights.org/wp-content/uploads/2022/01/header-no-text.png"
+
+[hosts."ratchakitcha.soc.go.th"]
+none = "網站擋自動抓取"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
@@ -1876,6 +1907,10 @@ from = "https://www.theregister.com/view-resources/dachser2/public/theregister/f
 [hosts."tibane.net"]
 icon = "tibane.net-8223110f.png"
 from = "https://www.tibane.net/favicon.png"
+
+[hosts."tlhr2014.com"]
+icon = "tlhr2014.com-2a284765.png"
+from = "https://tlhr2014.com/wp-content/uploads/2019/04/cropped-TLHRicon-01-192x192.png"
 
 [hosts."torproject.org"]
 icon = "torproject.org-e64b086c.png"
