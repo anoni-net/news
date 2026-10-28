@@ -96,6 +96,9 @@
 /2026/10/doctoralia-health-tracking-pixels/
 	#perspective
 	#sources
+/2026/10/edpb-smart-glasses/
+	#perspective
+	#sources
 /2026/10/eff-doxxing-safety/
 	#perspective
 	#sources
@@ -362,6 +365,9 @@
 /en/2026/10/doctoralia-health-tracking-pixels/
 	#perspective
 	#sources
+/en/2026/10/edpb-smart-glasses/
+	#perspective
+	#sources
 /en/2026/10/eff-doxxing-safety/
 	#perspective
 	#sources
@@ -600,6 +606,8 @@
 	#y2026
 /en/history/10-28/
 	#y2026
+/en/history/10-29/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
@@ -676,6 +684,8 @@
 /history/10-27/
 	#y2026
 /history/10-28/
+	#y2026
+/history/10-29/
 	#y2026
 /page/2/
 /page/3/
@@ -779,6 +789,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/doctoralia-health-tracking-pixels/
+	#perspective
+	#sources
+/zh-cn/2026/10/edpb-smart-glasses/
 	#perspective
 	#sources
 /zh-cn/2026/10/eff-doxxing-safety/
@@ -1018,6 +1031,8 @@
 /zh-cn/history/10-27/
 	#y2026
 /zh-cn/history/10-28/
+	#y2026
+/zh-cn/history/10-29/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
