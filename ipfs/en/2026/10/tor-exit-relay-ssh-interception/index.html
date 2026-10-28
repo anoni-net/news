@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSH login interception through compromised Tor exit relays | anoni.net News</title>
+<meta name="description" content="In early October the settings of more than 300 Tor exit relays were altered so that SSH connections through them went to interception servers. According to The Hacker News, anyone who logged in to SSH over Tor with a password between 1 and 5 October after accepting an unfamiliar or changed host key should treat that password as stolen. The relays were gone from Tor&#39;s list of usable relays by 01:00 on 6 October Taipei time, and according to the person who found them, encrypted web traffic was passed on as usual.">
+<link rel="canonical" href="https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/10/tor-exit-relay-ssh-interception/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/10/tor-exit-relay-ssh-interception/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/10/tor-exit-relay-ssh-interception/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/tor-exit-relay-ssh-interception/">
+<link rel="stylesheet" href="/news/css/news.css?v=4219b38e67">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net News" href="https://anoni.net/news/en/feed.xml">
+<meta property="og:site_name" content="anoni.net News">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSH login interception through compromised Tor exit relays">
+<meta property="og:description" content="In early October the settings of more than 300 Tor exit relays were altered so that SSH connections through them went to interception servers. According to The Hacker News, anyone who logged in to SSH over Tor with a password between 1 and 5 October after accepting an unfamiliar or changed host key should treat that password as stolen. The relays were gone from Tor&#39;s list of usable relays by 01:00 on 6 October Taipei time, and according to the person who found them, encrypted web traffic was passed on as usual.">
+<meta property="og:url" content="https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/10/tor-exit-relay-ssh-interception-en-3a388c55.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SSH login interception through compromised Tor exit relays">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="SSH login interception through compromised Tor exit relays">
+<meta property="article:published_time" content="2026-10-29T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "SSH login interception through compromised Tor exit relays",
+  "description": "In early October the settings of more than 300 Tor exit relays were altered so that SSH connections through them went to interception servers. According to The Hacker News, anyone who logged in to SSH over Tor with a password between 1 and 5 October after accepting an unfamiliar or changed host key should treat that password as stolen. The relays were gone from Tor's list of usable relays by 01:00 on 6 October Taipei time, and according to the person who found them, encrypted web traffic was passed on as usual.",
+  "datePublished": "2026-10-29T00:00:00+08:00",
+  "url": "https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/",
+  "mainEntityOfPage": "https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/",
+  "image": "https://assets.anoni.net/news/og/2026/10/tor-exit-relay-ssh-interception-en-3a388c55.png",
+  "inLanguage": "en",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "https://anoni.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anoni.net/news/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Security incident affecting some relay operators",
+      "url": "https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/thread/WOHPLKCSHYXFTBRZXDENDKJZMBMPLMG5/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Ebury 1.8.3 on two Quetzalcoatl relay servers: timeline, lessons, open questions",
+      "url": "https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/thread/QHRD6YOX6RZRDR7NCHNDO7GLCEA6VFM6/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Re: Ebury 1.8.3 on two Quetzalcoatl relay servers: timeline, lessons, open questions",
+      "url": "https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/message/Z2B6XYKJZBBQADU77MSNL6FJP7MHZHIV/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "How I got over 300 Tor exit nodes removed",
+      "url": "https://kaba.cx/posts/20261020_Tor/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+      "url": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "How to bypass censorship and connect to Tor from different countries or regions",
+      "url": "https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Ebury is alive but unseen: 400k Linux servers compromised for cryptotheft and financial gain",
+      "url": "https://www.welivesecurity.com/en/eset-research/ebury-alive-unseen-400k-linux-servers-compromised-cryptotheft-financial-gain/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ssh(1) - OpenBSD manual pages",
+      "url": "https://man.openbsd.org/ssh"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "ssh_config(5) - OpenBSD manual pages",
+      "url": "https://man.openbsd.org/ssh_config"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Tor relays in Singapore",
+      "url": "https://anoni.net/projects/pulse/sg/"
+    }
+  ],
+  "articleSection": "Security & Scams"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "News",
+      "item": "https://anoni.net/news/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Security & Scams",
+      "item": "https://anoni.net/news/en/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SSH login interception through compromised Tor exit relays"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/en/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">News</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="From anoni.net News: " data-print-url="https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--security" href="/news/en/category/security/">Security &amp; Scams</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-10-29T00:00:00+08:00">Thursday, 29 October 2026</time></p>
+    <h1 class="story__title">SSH login interception through compromised Tor exit relays</h1>
+    <p class="story__dek">In early October the settings of more than 300 Tor exit relays were altered so that SSH connections through them went to interception servers. According to The Hacker News, anyone who logged in to SSH over Tor with a password between 1 and 5 October after accepting an unfamiliar or changed host key should treat that password as stolen. The relays were gone from Tor&#39;s list of usable relays by 01:00 on 6 October Taipei time, and according to the person who found them, encrypted web traffic was passed on as usual.</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/torproject.org-e64b086c.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/torproject.org-e64b086c.png" width="16" height="16" alt="" decoding="async"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg></span> <span>Based on 10 sources, including Tor Project, tor-relays, kaba.cx</span></a></span>
+      <span>By anoni.net community</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/10/tor-exit-relay-ssh-interception/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/10/tor-exit-relay-ssh-interception/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="Listen" data-label-playing="Pause" data-label-paused="Resume"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>Listen</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>Options</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>Voice</span> <select class="listen__select" data-voice data-group-tw="Mandarin (Taiwan)" data-group-cn="Mandarin (China)" data-group-zh="Mandarin" data-group-yue="Cantonese"></select></label>
+          <label class="listen__field"><span>Speed</span> <select class="listen__select" data-rate><option value="0.8">0.8×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label>
+        </div>
+        <p class="listen__note">Read aloud with a voice built into this device. The text is not sent to any server, and your voice and speed choices stay in this browser. <a href="/news/en/reading/#listening">More about listening</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="story__body content">
+<p>In early October 2026 the settings of more than 300 Tor exit relays (the last hop, which carries Tor traffic to its destination) were altered, and SSH connections (the protocol used to log in to and manage servers remotely) passing through them were sent to interception servers. Users who accepted a fake host key (the key a server uses to prove its identity) and typed a password had it captured. People logging in over SSH through Tor were affected, and people fetching mail over unencrypted connections through Tor may have been too. The relays were gone from Tor's list of usable relays by 01:00 on 6 October Taipei time, and according to the person who found them, encrypted web traffic was passed on as usual.</p>
+<p>The finder, a user connecting to SSH over Tor, saw a changed-host-key warning on 2 October. They then scanned all of the roughly 3,000 exits and found 333 that either presented a fake host key or forwarded connections to interception servers, and reported it to the Tor Project that night. Around a dozen presented a fake host key themselves, and over 300 forwarded SSH to the same 12 interception servers.</p>
+<p>According to the finder's write-up, once a user went on to log in, the interception server took the password and relayed the session to the real server, so every command typed passed through it. It then logged in to the server the user had meant to reach with the same password and tried to install Ebury, a backdoor that lets attackers log in again later; the finder did not see the installation complete. Ebury sits inside OpenSSH, the server's SSH software, and records the credentials typed at login. ESET's 2024 report counts about 400,000 servers compromised since 2009.</p>
+<p>The Tor Network Health team, which monitors the network, posted a notice at 17:50 UTC on 5 October (01:50 on 6 October Taipei time) saying the attacker had gained access to Linux hosts and edited Tor's configuration, even turning non-exits into exits. From the evening of 4 October UTC (early on 5 October Taipei time), the Tor directory authorities (the servers that publish the list of usable relays, known as the consensus) began flagging the affected relays as unusable as exits.</p>
+<p>A relay operator comparing public directory data found 377 relays from 59 operators that adopted the same exit policy, the setting that says which ports a relay will connect to, between 1 and 4 October. The analyst notes that this is a settings match and proves neither that every host was compromised nor that every relay intercepted SSH. At the peak these relays held about 7% of usable exit weight (the share of traffic the directory assigns each exit), and since clients pick exits roughly by weight, we estimate a Tor connection had about a 7% chance of using one.</p>
+<p>277 of them belonged to one relay family (a set of relays one operator declares together). The family's operator wrote in a post-mortem that server logins, admin rights (sudo) and backups shared one password, and that the management server accepted password logins. How the attackers first got that password is not known. Ebury was found on the two servers the operator examined, and the public data does not show whether other affected hosts carry it.</p>
+<h2 id="perspective">Perspective</h2>
+<p>Tor only encrypts traffic inside its own network, so an exit relay can read what is sent to the destination. HTTPS and SSH carry their own encryption and authentication; unencrypted mail protocols do not.</p>
+<p>SSH uses the host key to confirm that the server is the real one. Per the OpenSSH manual pages, when a host key changes <code>ssh</code> shows a warning, disables password authentication and, under the default settings, refuses to connect. A password prompt only appears after the user deletes the old key record themselves. A server contacted for the first time has no record to compare against, so the user only sees the usual prompt, and accepting it means accepting the interception server's key.</p>
+<p>The Hacker News infers from the SSH specification that only password logins had credentials taken. With a key login (proving identity with a private key on your own computer, without sending a password to the server), each proof is valid only for that session, so the interceptor cannot reuse it against the real server. The report also notes that the interceptor could still accept a key login and show a fake command line. Our inference is that a sudo or other admin password typed there could leak too.</p>
+<p>The Hacker News advises anyone who logged in with a password over Tor between 1 and 5 October after accepting an unfamiliar or changed host key to treat that password as stolen. The family's servers had unexplained hidden processes from 30 September, and the operator cannot tell whether those were intercepting SSH too, so earlier logins cannot be ruled out.</p>
+<p>The family's operator warns that Ebury records any password typed on an infected server. Checks should be done with a key login or by booting a rescue system, a maintenance environment that does not start the original system.</p>
+<p>Other services that used the exposed password can be changed first, and the server that was logged in to after it has been checked. ESET's detection script runs on the server's command line, and only the update merged on 9 October detects this Ebury version; a clean result is no guarantee.</p>
+<p>For future administration over Tor, the finder recommends key-based logins. On first connection, the host key fingerprint (a string identifying the key, shown when connecting) can be checked against one obtained from the administrator.</p>
+<p>Another option is running SSH as an onion service (a service reachable only through Tor, whose connections never leave the Tor network), which avoids exit relays and so cannot be intercepted by one. The cost is that a private key has to be kept safe and set up again after changing or losing a computer. An onion service needs tor running on the server, one more step than exposing SSH directly.</p>
+<p>According to the analyst, most affected relays closed the encrypted mail ports and left the unencrypted ones open, so mail fetched through them travelled in plaintext. No source confirms that mail was actually read, but anyone fetching mail over Tor should still check that their client uses an encrypted connection.</p>
+<p>Tor relays are run by volunteers and anyone can join, so finding compromised or malicious relays relies on the Network Health team's scans and user reports. From the finder's report on 2 October to the last affected relay leaving the consensus at 17:00 UTC on 5 October took about three days.</p>
+<p>Clients choose exits without regard to where the user is, so a relay's country says nothing about whether a reader was exposed. We, a community based in Taiwan, matched the 377 relays against geolocation data: none was in Taiwan, Japan, South Korea or Hong Kong, while Singapore had 24, all from the one family (geolocation data may contain errors). Our Tor relay dashboard shows exits in Singapore falling from 34 on 3 October to 9 on 4 October (daily snapshots in UTC), which we take to be the flagging. From 3 to 5 October Taiwan had two or three exits, Japan two or three, South Korea two and Hong Kong seven, none of them affected.</p>
+<p>For mainland China, the Tor Project's support page recommends letting Tor Browser's Connection Assist try bridges or Snowflake first, then WebTunnel bridges, since direct connections to Tor are blocked in some countries. A bridge replaces only the first hop, and traffic still leaves through an exit relay, so the same advice applies to anyone connecting through one.</p>
+<p>People who only use Tor Browser to visit HTTPS sites, and do not use SSH or fetch mail over Tor, need not change anything. As of 24 October we had found no explanation on the Tor Project's blog, status page or mailing lists of why the other 58 operators' relays adopted the same policy. ESET's Ebury researcher wrote on the relay operators' mailing list that there are most likely other compromised relays still unnoticed. Around 25 November is a good time to check whether the Tor Project has published how these relays were compromised, or found any more.</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">Sources (10)</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/thread/WOHPLKCSHYXFTBRZXDENDKJZMBMPLMG5/"><img class="source-slip__icon" src="/news/assets/favicons/torproject.org-e64b086c.png" width="16" height="16" alt="" loading="lazy" decoding="async">Security incident affecting some relay operators</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Tor Project</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-05">5 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/thread/QHRD6YOX6RZRDR7NCHNDO7GLCEA6VFM6/"><img class="source-slip__icon" src="/news/assets/favicons/torproject.org-e64b086c.png" width="16" height="16" alt="" loading="lazy" decoding="async">Ebury 1.8.3 on two Quetzalcoatl relay servers: timeline, lessons, open questions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>tor-relays</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-07">7 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/message/Z2B6XYKJZBBQADU77MSNL6FJP7MHZHIV/"><img class="source-slip__icon" src="/news/assets/favicons/torproject.org-e64b086c.png" width="16" height="16" alt="" loading="lazy" decoding="async">Re: Ebury 1.8.3 on two Quetzalcoatl relay servers: timeline, lessons, open questions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>tor-relays</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-09">9 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://kaba.cx/posts/20261020_Tor/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>How I got over 300 Tor exit nodes removed</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>kaba.cx</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-20">20 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html"><img class="source-slip__icon" src="/news/assets/favicons/thehackernews.com-bf20e9d2.png" width="16" height="16" alt="" loading="lazy" decoding="async">Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>The Hacker News</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-21">21 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/"><img class="source-slip__icon" src="/news/assets/favicons/support.torproject.org-f88d6334.png" width="16" height="16" alt="" loading="lazy" decoding="async">How to bypass censorship and connect to Tor from different countries or regions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Tor Project</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.welivesecurity.com/en/eset-research/ebury-alive-unseen-400k-linux-servers-compromised-cryptotheft-financial-gain/"><img class="source-slip__icon" src="/news/assets/favicons/welivesecurity.com-3a9e33db.png" width="16" height="16" alt="" loading="lazy" decoding="async">Ebury is alive but unseen: 400k Linux servers compromised for cryptotheft and financial gain</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>ESET</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2024-05-14">14 May 2024</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://man.openbsd.org/ssh"><img class="source-slip__icon" src="/news/assets/favicons/man.openbsd.org-6c007872.png" width="16" height="16" alt="" loading="lazy" decoding="async">ssh(1) - OpenBSD manual pages</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>OpenBSD</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://man.openbsd.org/ssh_config"><img class="source-slip__icon" src="/news/assets/favicons/man.openbsd.org-6c007872.png" width="16" height="16" alt="" loading="lazy" decoding="async">ssh_config(5) - OpenBSD manual pages</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>OpenBSD</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="/projects/pulse/sg/"><img class="source-slip__icon" src="/news/assets/favicons/anoni.net-e7cf54e0.png" width="16" height="16" alt="" loading="lazy" decoding="async">Tor relays in Singapore</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>anoni.net</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--security" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">More in this category</h2>
+  <p class="brief__category"><a class="cat cat--security" href="/news/en/category/security/">Security &amp; Scams</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:10:00+08:00">23 October 2026</time>
+      <a class="thread__title" href="/news/en/2026/10/php2shell-early-disclosure-debate/">Coordinated disclosure of the PHP vulnerabilities and publication before the fix</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:05:00+08:00">23 October 2026</time>
+      <a class="thread__title" href="/news/en/2026/10/php2shell-leaked-rce/">PHP remote code execution vulnerabilities and the early leak of their IDs</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:00:00+08:00">23 October 2026</time>
+      <a class="thread__title" href="/news/en/2026/10/emudhra-weak-ca-keys/">Weak private keys in eight eMudhra intermediate certificates</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/news/en/category/security/">All 17 stories in Security &amp; Scams</a></p>
+</nav>
+<p class="subscribe">Get new stories by <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>, <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>newsletter</span></a> or <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>Bluesky</span></a></p>
+<nav class="pager pager--story" aria-label="Story navigation">
+  <a class="pager__item pager__item--older" href="/news/en/2026/10/taiwan-election-cyberattacks-disinformation/"><span class="pager__label">Older story <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Cyber intrusions and disputed information ahead of Taiwan&#39;s local elections</span></a>
+  <a class="pager__all" href="/news/en/">All stories</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> Newsletter</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> Follow on Bluesky</a>
+      <a href="/news/en/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> Same Day, Years Apart</a>
+      <a href="/news/en/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> About</a>
+      <a href="/news/en/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> Reading options</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> Report an error</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net home</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/tor-exit-relay-ssh-interception/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> Onion version</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/10/tor-exit-relay-ssh-interception/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/10/tor-exit-relay-ssh-interception/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <p>Stories are licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>. Copyright in the quoted sources stays with their authors.</p>
+  </div>
+</footer>
+</body>
+</html>
