@@ -6,7 +6,129 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 29 Oct 2026 01:20:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 29 Oct 2026 01:25:00 +0800</lastBuildDate>
+<item>
+<title>The lawsuit to revoke Thailand&#39;s notification on urgent takedowns of online content</title>
+<link>https://anoni.net/news/en/2026/10/thailand-good-morals-content/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/thailand-good-morals-content</guid>
+<pubDate>Thu, 29 Oct 2026 01:25:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>In July, Thailand&#39;s Ministry of Digital Economy and Society published a notification defining the online data that may be the subject of an urgent court petition for suspension or removal under the Computer Crime Act, including 14 categories contrary to public order or good morals. On 14 October, Thai Lawyers for Human Rights and iLaw asked the Central Administrative Court to revoke the definition of &#34;urgent necessity&#34; and the two categories on the monarchy and on hatred. As of 29 October, the ministry&#39;s explanations had cited only examples such as scams and e-cigarette advertising, and we found no response on the two categories or the lawsuit.</description>
+<content:encoded>&lt;p&gt;Based on 13 sources, including ราชกิจจานุเบกษา, ศูนย์ทนายความเพื่อสิทธิมนุษยชน, iLaw&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Thai Lawyers for Human Rights (TLHR) and iLaw filed a suit at the Central Administrative Court on 14 October, asking it to revoke parts of a notification issued by the Ministry of Digital Economy and Society (MDES). The notification was signed on 19 June, published in the Royal Gazette on 17 July and took effect the next day. It defines &#34;urgent necessity&#34; under Section 20 of the Computer Crime Act as a situation in which delay could threaten national security, religion, the monarchy, good morals, social culture or public order, and provides that in such cases an official designated within the ministry petitions a court, with evidence, to suspend the dissemination of the data or remove it. According to TLHR&#39;s summary, paragraph 5 of Section 20 lets officials petition a court in urgent cases before the minister or the Computer Data Screening Committee has approved.&lt;/p&gt;
+&lt;p&gt;Under the definition sit four types of data. The fourth is a list of 14 categories contrary to public order or good morals, covering any data that falls into them and has been approved by the Computer Data Screening Committee. The categories include gambling, sales of illegal firearms, e-cigarettes, cannabis, alcohol, lending above the legal interest rate, surrogacy advertising, and images or text that mock, ridicule, belittle or refer to Buddhism in a way that damages it or exposes it to abuse or hatred.&lt;/p&gt;
+&lt;p&gt;The lawsuit targets only two of these categories, along with the definition of &#34;urgent necessity&#34; itself. One covers content that defames, ridicules, refers to or belittles the King, the Queen, the Heir-Apparent, the Regent, members of the royal family or the monarchy. The other covers images or text that demean others and incite hatred, create a sense of division or negative stereotypes, and could lead to social division, conflict and wider violence.&lt;/p&gt;
+&lt;p&gt;According to a Daily News report of 21 July, the ministry&#39;s permanent secretary said the notification removed time constraints in the previous screening process. Illegal URLs had grown from tens of thousands to millions, and handling time could fall from several days to a few hours. The scope covers all kinds of online threats, such as mule accounts, deepfake investment scams, e-cigarette advertising and SMS scams. Ministry figures show 883,012 URLs blocked from October 2025 to 13 July 2026, before the notification took effect.&lt;/p&gt;
+&lt;p&gt;In July, the law firm Tilleke &amp;amp; Gibbins advised platforms, e-commerce businesses and fintech companies to expect a significant increase in government-initiated takedown orders.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The notification governs online data disseminated in Thailand, so those directly affected are people who publish or access content in Thailand, and the platforms and internet service providers that must comply with court orders. We found no explanation of how it treats posts made outside Thailand. The points in dispute were raised by the plaintiffs, and as of 29 October the ministry had not responded publicly to any of them or to the lawsuit itself.&lt;/p&gt;
+&lt;p&gt;The first point is the minister&#39;s authority. The notification was issued, according to its text, under Section 4 of the Computer Crime Act, and the reason given in its preamble is a large increase in illegal or inappropriate data that calls for a stronger mechanism to stop its dissemination. TLHR argues that Section 4 only authorises the minister to set procedures and mechanisms for carrying out the act, and gives no power to define &#34;urgent necessity&#34; under paragraph 5 of Section 20.&lt;/p&gt;
+&lt;p&gt;The second point is scope and wording. The clause on the monarchy includes a reason for listing it, namely that these figures are revered by the people according to the beliefs and traditions of Thai society. TLHR argues that the categories go beyond what Section 20 sets out, and that &#34;refer to&#34;, which the Royal Institute dictionary defines as &#34;to be connected with&#34;, could also capture neutral mentions. TLHR also notes that &#34;the monarchy&#34; is not defined in law, while the ministry&#39;s July explanations discussed only scams, gambling, e-cigarette advertising and URL counts.&lt;/p&gt;
+&lt;p&gt;In an analysis from July, iLaw notes that Section 112 of the Criminal Code, the lèse-majesté provision, protects the King, the Queen, the Heir-Apparent and the Regent. The notification extends the list to members of the royal family and adds &#34;refer to&#34; to the covered acts. iLaw also argues that the category on hatred leaves officials and the screening committee room for discretion that could take in good-faith criticism, while noting that most categories are acts already prohibited under other laws.&lt;/p&gt;
+&lt;p&gt;The third point is procedure. Clauses 3 and 4 of the notification set out how a petition is filed: an official submits evidence to a court, and must strictly follow the relevant laws and regulations. TLHR and iLaw further argue that the ministry did not hold the consultation required by law before issuing it, and iLaw found no consultation on the ministry&#39;s website or on the government&#39;s central law portal.&lt;/p&gt;
+&lt;p&gt;A second suit reached the same court on the same day. According to MGR Online, another foundation also asked for the notification to be revoked, arguing that it could make people censor themselves out of fear. As of 29 October, TLHR, iLaw and the press had reported only the filing, and we found nothing on whether the court has accepted either case or issued any stay.&lt;/p&gt;
+&lt;p&gt;Beyond the lawsuit, the permanent secretary&#39;s explanation and the text of the notification differ on one point. In the explanation, the fast-track process involves working with foreign social media platforms and Thai internet service providers to stop content directly, without waiting for a court order, when it is clearly illegal. The notification contains no such provision. The Nation, an English-language Thai newspaper, also reports that the ministry&#39;s existing procedure under Section 14 of the Computer Crime Act lets officials, with the approval of the permanent secretary or a designated deputy, order providers to suspend or remove certain illegal computer data.&lt;/p&gt;
+&lt;p&gt;We are a community based in Taiwan, where &#34;good morals&#34; appears in Article 72 of the Civil Code, which concerns whether a juridical act is valid and is not a standard for taking down online content.&lt;/p&gt;
+&lt;p&gt;As far as we found in Taiwan&#39;s statutes, the closest mechanism for harmful content is in the Protection of Children and Youths Welfare and Rights Act, last amended in January 2021 according to the Laws and Regulations Database. Article 43 lists the categories, and under Article 46 complaints go to iWIN (Institute of Watch Internet Network). When the competent authority notifies a platform that content is harmful to children&#39;s physical or mental health, the platform must restrict children&#39;s access to it or remove it first. That mechanism does not go through a court, and it protects only children and young people.&lt;/p&gt;
+&lt;p&gt;In mainland China, Article 4 of the Provisions on the Governance of the Online Information Content Ecosystem, issued by the Cyberspace Administration of China (CAC) and in force since 1 March 2020, requires producers of online information content to obey laws and regulations and to &#34;follow public order and good customs&#34; (遵循公序良俗). The specific categories come in two tiers, in Articles 6 and 7.&lt;/p&gt;
+&lt;p&gt;Article 6 lists 11 kinds of illegal information that producers may not create, copy or publish, including content spreading obscenity, pornography, gambling or violence, inciting ethnic hatred or discrimination, undermining the state&#39;s religious policy, or harming national honour and interests. Article 7 adds nine kinds of negative information that producers must &#34;take measures to prevent and resist&#34;, such as sexually suggestive content and content inciting discrimination against groups or regions. The last of the nine is &#34;other content that has an adverse effect on the online ecosystem&#34;, with no specific conduct named.&lt;/p&gt;
+&lt;p&gt;Under Article 10, platforms may not disseminate the information in Article 6 and must prevent and resist disseminating the information in Article 7. On finding either, they must immediately take measures in accordance with the law, keep records and report to the competent authorities. We searched the full text of the Provisions and found no occurrence of &#34;court&#34; (法院); the duty to act falls directly on platforms, whereas the Thai notification requires officials to petition a court.&lt;/p&gt;
+&lt;p&gt;Readers can compare approaches across jurisdictions with a few questions. First, whether the categories of content that may be restricted are written into statute or filled in by an administrative notification or regulation. Second, whether suspending dissemination requires a court first, and whether cooperation with platforms outside the courts follows published rules. Third, whether an urgent procedure can deal within hours with clearly illegal content such as scams, and whether categories concerning speech should be handled separately from it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ratchakitcha.soc.go.th/documents/120935.pdf&#34;&gt;ประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม เรื่อง การยื่นคำร้องต่อศาลขอให้มีคำสั่งระงับการทำให้แพร่หลายหรือลบข้อมูลคอมพิวเตอร์ ออกจากระบบคอมพิวเตอร์ ในกรณีที่มีเหตุจำเป็นเร่งด่วน พ.ศ. ๒๕๖๙&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ราชกิจจานุเบกษา&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;17 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tlhr2014.com/archives/87218&#34;&gt;ฟ้องเพิกถอนประกาศกระทรวง DE เรื่องการปิดกั้นข้อมูล ออกโดยไม่มีฐานอำนาจ-ขยายขอบเขตไปกว้างขวางกว่า พ.ร.บ.คอมพิวเตอร์ฯ-กระทบเสรีภาพประชาชน&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ศูนย์ทนายความเพื่อสิทธิมนุษยชน&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilaw.or.th/articles/59615&#34;&gt;ศูนย์ทนายฯ ยื่นฟ้องเพิกถอนประกาศ DE ขยายนิยามเนื้อหาออนไลน์ “ขัดศีลธรรมอันดี” เหตุออกโดยไม่มีอำนาจ ขัดหลักความได้สัดส่วน และไม่ปฏิบัติตามกฎหมายรับฟังความคิดเห็น&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iLaw&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://prachataienglish.com/node/12083&#34;&gt;TLHR, iLaw sue MDES over new regulation on removing online content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Prachatai English&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilaw.or.th/articles/58837&#34;&gt;ประกาศใหม่ดีอี ขยายนิยามเนื้อหาออนไลน์ “ขัดศีลธรรมอันดี” กว้างกว่ามาตรา 112&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iLaw&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-25&#34;&gt;25 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dailynews.co.th/news/6044765/&#34;&gt;ปลัดกระทรวงดีอีเผยประกาศกระทรวงฯ ใหม่บังคับใช้แล้ว เร่งสปีดปิดกั้นเว็บผิดก.ม.เร็วขึ้น&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;เดลินิวส์&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;21 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nationthailand.com/news/policy/40068882&#34;&gt;Digital Ministry fast-tracks blocking as illegal URLs surge into millions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Nation Thailand&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;21 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mgronline.com/politics/detail/9690000099591&#34;&gt;มูลนิธิสิทธิเพื่อความยุติธรรมฟ้องศาลปกครอง ขอเพิกถอนประกาศดีอี ระงับ-ลบข้อมูลออนไลน์ฉุกเฉิน ชี้ อาจกระทบเสรีภาพการแสดงออก&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MGR Online&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legal500.com/intelligence/thailand/media-telecoms-it-entertainment/thailand-introduces-expedited-takedown-rules-for-online-content&#34;&gt;Thailand Introduces Expedited Takedown Rules For Online Content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tilleke &amp;amp; Gibbins（Legal 500）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;21 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&amp;amp;flno=72&#34;&gt;民法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://i.win.org.tw/about.php&#34;&gt;iWIN網路內容防護機構 - 關於我們&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iWIN 網路內容防護機構&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;20 December 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The European Data Protection Board&#39;s preliminary guidance on smart glasses</title>
 <link>https://anoni.net/news/en/2026/10/edpb-smart-glasses/</link>
@@ -3123,155 +3245,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mas.gov.sg/publications/annual-report/2024/annual-report-2023-2024/responsible-and-trusted-financial-centre/payment-service-providers&#34;&gt;Payment Service Providers&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Monetary Authority of Singapore&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>End-to-end Encrypted Chats and Confidential Computing in Brave Leo</title>
-<link>https://anoni.net/news/en/2026/10/brave-leo-e2ee-confidential-computing/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/brave-leo-e2ee-confidential-computing</guid>
-<pubDate>Wed, 21 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>From 15 October, Brave&#39;s AI assistant Leo encrypts chats with the GLM 5.3 Flash model in the browser and decrypts them only inside hardware-isolated enclaves. Other models are not covered. As of 20 October, Brave&#39;s servers still check the enclaves&#39; attestations for the browser, and we found no statement of iOS support.</description>
-<content:encoded>&lt;p&gt;Based on 19 sources, including Brave, GitHub, Hugging Face&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Brave announced on 15 October that chats between its AI assistant Leo and the GLM 5.3 Flash model are now end-to-end encrypted. GLM 5.3 Flash is a model whose weights Z.ai publishes under the MIT licence. Chats are encrypted in the browser and decrypted and answered only inside trusted execution environments (TEEs, compute areas in the processor and GPU isolated from the rest of the host) run by NEAR AI. The encryption applies only when you pick GLM 5.3 Flash by hand in Leo&#39;s model menu, Leo&#39;s other models are not covered, and as of 20 October GLM 5.3 Flash is still labelled as in testing.&lt;/p&gt;
-&lt;p&gt;According to the blog, the feature is available to all Brave users in the release version and in the Nightly and Beta test channels, but the blog does not say which platforms. The GitHub development issue is tagged only for desktop and Android, and as of 20 October we found no statement of support for the iPhone version.&lt;/p&gt;
-&lt;p&gt;According to Brave&#39;s blog, the browser encrypts each prompt, and any web page shared with Leo, with Oblivious HTTP (OHTTP), a standard from the Internet Engineering Task Force (IETF), and the decryption keys exist only inside the TEE. Encrypted messages go first to Brave&#39;s own AI Gateway and are then relayed to NEAR AI. Brave can see the user&#39;s IP address but not the content, NEAR AI&#39;s TEE decrypts the content without seeing the IP address, and according to the blog neither NEAR AI nor the cloud host operators can read inside the enclave. Each turn re-encrypts the whole conversation with a new one-time key, and the history stays only on the user&#39;s device, stored by neither Brave nor NEAR AI.&lt;/p&gt;
-&lt;p&gt;The blog then describes the checks before deployment, under which every NEAR AI deployment has to pass Brave&#39;s verifier before it is approved. The checks cover attestations signed by Intel and Nvidia (credentials signed by the hardware that prove the enclave is genuine and record which program runs inside it), and a rebuild from source to confirm it matches the program in production. The AI Gateway checks again before relaying each message, accepts verification results no more than an hour old, and does not relay anything that fails. The verifier, &lt;code&gt;near-tee-verifier&lt;/code&gt;, is released under an open-source licence, and anyone with a NEAR AI API key can run it against the live service.&lt;/p&gt;
-&lt;p&gt;Brave trialled a first version in Nightly in November 2025, and according to the blog that protection rested on policy, with the checks also requiring trust in Brave. The new verifier is public and anyone with an API key can run it. As of 20 October, the browser-side check is still handled by Brave&#39;s servers.&lt;/p&gt;
-&lt;p&gt;As of 20 October, the help centre has no article on end-to-end encryption with GLM 5.3 Flash. Leo&#39;s model page still lists GLM 4.7 Flash and says all models are run by Brave itself. The development issue is marked to be left out of release notes, and none of the platforms&#39; release notes mention end-to-end encryption.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;A typical AI chat service decrypts prompts on its servers, so the operator can technically read them and users have to rely on the privacy policy. OHTTP splits &#34;who is asking&#34; from &#34;what is asked&#34; between two parties, so the relay knows only the IP address and the processor sees only the content. TEEs are designed so that even the host operator cannot read the enclave&#39;s memory, and attestation lets outsiders confirm that what runs inside is a published program. Brave&#39;s blog describes Leo&#39;s new approach as a move from policy promises to cryptographic proof.&lt;/p&gt;
-&lt;p&gt;According to the blog, at launch on 15 October the browser still relied on Brave&#39;s AI Gateway for the checks, with the browser to verify the hardware attestations directly in later stages. Also according to the blog, the whole chain ultimately rests on trust in Intel and Nvidia, dstack (the TEE&#39;s operating system), Sigstore for build records, GitHub, Hugging Face and public DNS. The &lt;code&gt;near-tee-verifier&lt;/code&gt; documentation adds a caveat that a rebuild proves only that the live program comes from a specified version, not that the version has no backdoor. The inference software that runs the model is a third-party package, which according to the blog and the &lt;code&gt;near-tee-verifier&lt;/code&gt; documentation is not rebuilt from source but pinned to a version through deployment records covered by the hardware attestation.&lt;/p&gt;
-&lt;p&gt;In TEE.fail, a paper accepted at the security conference IEEE S&amp;amp;P 2026, researchers attached an interposition device to a server&#39;s DDR5 memory bus and, in some cases, extracted the key that Intel TDX (the TEE technology on Intel processors) uses to sign attestations. Attestations forged with that key can pass verification, and the key can also be used to break confidential computing on Nvidia GPUs. According to the research site, the attack requires physical access to the server, and Intel does not count such physical attacks among the threats TDX is meant to defend against. The researchers also write that, to their knowledge, it has not been exploited in the wild.&lt;/p&gt;
-&lt;p&gt;Another section of the research site demonstrates against dstack that a malicious server provider can forge all the attestations and can also borrow attestations from Nvidia GPUs elsewhere. The site&#39;s advice to dstack users is to be aware that they have to trust the operator who actually manages the TDX hardware. The paper does not analyse the Brave and NEAR AI deployment, and when we searched on 20 October we found no independent analysis of Leo.&lt;/p&gt;
-&lt;p&gt;According to the &lt;code&gt;near-tee-verifier&lt;/code&gt; documentation, the GPU attestation is not bound into the TDX attestation, so there is no way to confirm which GPU an answer came from. Closing that gap would need NEAR AI to add the binding between the two.&lt;/p&gt;
-&lt;p&gt;In mainland China, GreatFire&#39;s last test, on 18 October, found &lt;code&gt;brave.com&lt;/code&gt; 100% blocked, with interference recorded since 13 May 2017, and its most recent valid test of &lt;code&gt;laptop-updates.brave.com&lt;/code&gt;, used for downloads and updates, was also blocked. Leo&#39;s backend, &lt;code&gt;ai-chat.bsg.brave.com&lt;/code&gt;, has no measurements, since OONI&#39;s public API holds no Web Connectivity measurement of it from China between 20 July and 20 October and GreatFire has not tested it, so we found no direct evidence on whether Leo is reachable there. Apple&#39;s iTunes lookup API returns no Brave listing in the mainland China App Store (we did not check Google Play), which is a lookup result rather than an announcement of removal by Brave or Apple.&lt;/p&gt;
-&lt;p&gt;The same lookup finds Brave 1.96 (6 October) in the Taiwan, Hong Kong, Japan, South Korea and Singapore App Stores. Brave&#39;s help centre has no clause restricting where Leo can be used and does not say whether Leo is offered in mainland China, and the Leo page says Leo is available on desktop and mobile. Brave&#39;s development branch already has strings for Leo&#39;s end-to-end encryption in Traditional Chinese, Simplified Chinese, Japanese and Korean, though translation files in the development branch do not mean the release version offers them.&lt;/p&gt;
-&lt;p&gt;People who want to use an AI chat for text or web pages they would rather the service provider not read can open Leo in Brave on desktop or Android and choose GLM 5.3 Flash from the model menu. According to the English strings in the source code&#39;s development branch, the model menu shows &#34;Verifiably Private With NEAR AI TEE&#34; next to GLM 5.3 Flash, and answers carry a &#34;Verified&#34; badge. Inferring from the source code and the blog, the badge reflects the result of Brave&#39;s server-side check, and as of 20 October the browser itself does not yet verify the attestations. Leo needs no account, and the help page mentions a usage limit on the free tier without giving a number.&lt;/p&gt;
-&lt;p&gt;Brave has not published which languages Leo&#39;s answers support, and the GLM 5.3 Flash model card on Hugging Face lists English and Chinese. According to the blog, the encryption covers only the chat content, and Brave, which relays the messages, can still see the IP address. Search queries generated by the model also leave the TEE and go to Brave Search (not tied to the IP address).&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (19)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/browser-ai-e2ee/&#34;&gt;Another Brave User-First AI Win: Leo adds End-to-end Encryption, Oblivious HTTP, and Verifiable Confidential Computing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/near-verifier&#34;&gt;near-tee-verifier&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/55247&#34;&gt;[AI Chat] Add support for end-to-end encryption with NEAR models&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;5 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.brave.app/hc/en-us/articles/26727364100493&#34;&gt;What are the differences between Leo&amp;#39;s AI Models?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/leo/&#34;&gt;Brave Leo AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/browser-ai-tee/&#34;&gt;Verifiable Privacy and Transparency: A new frontier for Brave AI privacy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-20&#34;&gt;20 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/zai-org/GLM-5.3-Flash&#34;&gt;GLM-5.3-Flash&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hugging Face&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/ai_chat_ui_strings.grdp&#34;&gt;ai_chat_ui_strings.grdp&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb&#34;&gt;brave_components_resources_zh-TW.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/brave-adds-end-to-end-encryption-to-chats-with-ai-assistant-leo/&#34;&gt;Brave adds end-to-end encryption to chats with AI assistant Leo&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tee.fail/&#34;&gt;TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TEE.fail&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/brave.com&#34;&gt;Is https://brave.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/laptop-updates.brave.com&#34;&gt;Is https://laptop-updates.brave.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/measurements?probe_cc=CN&amp;amp;test_name=web_connectivity&amp;amp;domain=ai-chat.bsg.brave.com&amp;amp;since=2026-07-20&amp;amp;until=2026-10-20&#34;&gt;OONI API&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1052879175&amp;amp;country=cn&#34;&gt;iTunes lookup API (cn)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1052879175&amp;amp;country=tw&#34;&gt;iTunes lookup API (tw)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-CN.xtb&#34;&gt;brave_components_resources_zh-CN.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ja.xtb&#34;&gt;brave_components_resources_ja.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ko.xtb&#34;&gt;brave_components_resources_ko.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

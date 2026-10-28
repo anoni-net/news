@@ -6,7 +6,130 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 29 Oct 2026 01:20:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 29 Oct 2026 01:25:00 +0800</lastBuildDate>
+<item>
+<title>泰国网络内容紧急停止传播公告的撤销诉讼</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/thailand-good-morals-content/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/thailand-good-morals-content</guid>
+<pubDate>Thu, 29 Oct 2026 01:25:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>泰国数字经济与社会部 7 月公布一份公告，定义《计算机犯罪法》里可以紧急向法院申请停止传播或删除的网络数据，列出 14 项有违公共秩序或善良风俗的类别。泰国人权律师中心与 iLaw 10 月 14 日向中央行政法院起诉，请求撤销「紧急必要」的定义，以及涉及君主制度与仇恨的两项。到 10 月 29 日为止，数字经济与社会部的说明只举了诈骗与电子烟广告等例子，查不到对这两项与诉讼的回应。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，来自 ราชกิจจานุเบกษา、ศูนย์ทนายความเพื่อสิทธิมนุษยชน、iLaw 等 11 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;泰国人权律师中心（TLHR）与 iLaw 10 月 14 日向中央行政法院提起诉讼，请求撤销数字经济与社会部一份公告的部分条文。公告 6 月 19 日签署、7 月 17 日刊登在皇家公报，隔天施行。它把《计算机犯罪法》第 20 条的「紧急必要」定义为拖延可能威胁国家安全、宗教、君主制度、善良风俗、社会文化与公共秩序的情形，紧急时由部内指派的官员附上证据向法院申请停止传播或删除。依 TLHR 的摘述，第 20 条第 5 款让官员在紧急时，可以在部长或计算机数据审查委员会同意之前先向法院申请。&lt;/p&gt;
+&lt;p&gt;定义底下列了四类数据，第四类是 14 项有违公共秩序或善良风俗的类别，属于这些类别并经计算机数据审查委员会同意的数据都在范围内。类别包括赌博、销售非法枪支、电子烟、大麻、酒类、超过法定利率的放贷、代孕广告，以及用图文讽刺、嘲弄、贬低或牵涉佛教，使佛教受损或被辱骂憎恨的内容。&lt;/p&gt;
+&lt;p&gt;诉讼只针对其中两项，加上「紧急必要」的定义本身。一项是诬陷、嘲弄、牵涉或贬低国王、王后、王位继承人、摄政、王室成员或君主制度的内容。另一项是用图文贬抑并诱导仇恨、制造分裂感与负面刻板印象，可能导致社会分裂、冲突与更大范围暴力的内容。&lt;/p&gt;
+&lt;p&gt;依《每日新闻》7 月 21 日的报道，数字经济与社会部次长表示公告解决了原本审查流程的时间限制。违法网址已从数万个增加到数百万个，处理时间可以从数日缩短为数小时。范围涵盖各种网络威胁，例如涉诈账户、深度伪造投资诈骗、电子烟广告与短信诈骗。部内统计公告施行前的 2025 年 10 月到 2026 年 7 月 13 日，封锁了 883,012 个网址。&lt;/p&gt;
+&lt;p&gt;律师事务所 Tilleke &amp;amp; Gibbins 7 月提醒平台、电商与金融科技企业，预期政府发起的下架命令会大幅增加。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;公告管的是在泰国传播的网络数据，直接受影响的是在泰国发布或访问内容的人，以及要配合法院命令的平台与网络服务提供商。它对泰国以外的帖子如何处理，我们查不到说明。争议点由原告提出，到 10 月 29 日为止，数字经济与社会部对以下各点与诉讼本身都没有公开回应。&lt;/p&gt;
+&lt;p&gt;第一个争议点是部长的权限。公告写明依据《计算机犯罪法》第 4 条制定，前言的理由是违法或不适当的数据大量增加，需要更强的机制停止传播。TLHR 认为第 4 条只授权部长制定执行母法的程序与机制，部长没有权限去定义第 20 条第 5 款的「紧急必要」。&lt;/p&gt;
+&lt;p&gt;第二个争议点是范围与用词，君主制度那一项的条文写了列入的理由，也就是这些对象依泰国社会的信仰与传统受人民尊崇。TLHR 认为类别比第 20 条写明的范围更宽，「牵涉」依泰国皇家学术院的辞典是「牵连到」，中性的提及也可能落入范围。TLHR 也指出「君主制度」在法律里没有定义，该部 7 月的说明只谈诈骗、赌博、电子烟广告与网址数量。&lt;/p&gt;
+&lt;p&gt;iLaw 7 月的分析指出，刑法第 112 条（冒犯君主罪）保护的是国王、王后、王位继承人与摄政。公告把对象扩大到王室成员，行为也加上「牵涉」。iLaw 也认为仇恨那一项让官员与审查委员会有裁量空间，可能涵盖善意的批评，同时写到多数类别本来就是其他法律已经禁止的行为。&lt;/p&gt;
+&lt;p&gt;第三个争议点是程序。公告第 3、4 条规定的是提交申请的程序，官员要附上证据向法院申请，办理时严格遵守相关法令。TLHR 与 iLaw 另外主张制定公告前没有依法征求意见，iLaw 查了该部网站与法规中央系统都没有看到征求意见。&lt;/p&gt;
+&lt;p&gt;另有一件起诉在同一天送到同一所法院。MGR Online 报道，另一个基金会也请求撤销这份公告，主张它可能让人民因恐惧而自我审查。到 10 月 29 日为止，TLHR、iLaw 与报道都只写到提起诉讼，法院是否受理、有没有停止执行的裁定都查不到。&lt;/p&gt;
+&lt;p&gt;诉讼之外，对照次长的说明与公告条文还可以看到一处落差。次长的说明把快速流程描述成与外国社交平台及泰国的网络服务提供商合作，在明确违法时直接停止内容、不等法院命令，公告条文里没有这一段。泰国的英文报 The Nation 也写到，部内既有的程序依《计算机犯罪法》第 14 条，由次长或指定的副次长核准后命令业者停止或移除特定违法数据。&lt;/p&gt;
+&lt;p&gt;对照台湾，民法第 72 条的「善良风俗」判断的是法律行为是否有效，不是网络内容下架的标准。&lt;/p&gt;
+&lt;p&gt;就我们查到的台湾法规而言，跟有害内容最接近的机制在《儿童及少年福利与权益保障法》（全国法规资料库标示 2021 年 1 月修正）。类别写在第 43 条，第 46 条由 iWIN 网络内容防护机构受理申诉。平台经主管机关告知内容有害儿少身心时，要限制儿少浏览或先行移除。这套机制不经过法院，保护的对象也只限儿少。&lt;/p&gt;
+&lt;p&gt;在中国大陆，国家互联网信息办公室 2020 年 3 月 1 日施行的《网络信息内容生态治理规定》第四条，要求网络信息内容生产者遵守法律法规、「遵循公序良俗」。具体的内容类别分成两层，写在第六条与第七条。&lt;/p&gt;
+&lt;p&gt;第六条列出 11 项生产者不得制作、复制、发布的违法信息。其中包括散布淫秽、色情、赌博、暴力的内容，以及煽动民族仇恨与民族歧视的内容。破坏国家宗教政策的内容，以及损害国家荣誉和利益的内容，也在这 11 项里。&lt;/p&gt;
+&lt;p&gt;第七条另列 9 项不良信息，生产者「应当采取措施，防范和抵制」，例如带有性暗示的内容、「煽动人群歧视、地域歧视等的」内容。最后一项是「其他对网络生态造成不良影响的内容」，没有列出具体的行为。&lt;/p&gt;
+&lt;p&gt;平台的义务写在第十条，网络信息内容服务平台不得传播第六条的信息，应当防范和抵制传播第七条的信息。发现这两条的信息时，平台「应当依法立即采取处置措施，保存有关记录，并向有关主管部门报告」。我们逐字检索这份规定的全文，没有出现「法院」一词。处置义务直接落在平台身上，泰国的公告则要由官员向法院申请。&lt;/p&gt;
+&lt;p&gt;读者可以用几个问题比较各地的做法。一是可以限制的内容类别写在法律里，还是由行政机关的公告或规章补充。二是停止传播要不要先经过法院，法院以外的平台合作有没有公开的规则。三是紧急程序能不能在数小时内处理诈骗这类明确违法的内容，言论类的类别要不要跟它分开处理。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ratchakitcha.soc.go.th/documents/120935.pdf&#34;&gt;ประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม เรื่อง การยื่นคำร้องต่อศาลขอให้มีคำสั่งระงับการทำให้แพร่หลายหรือลบข้อมูลคอมพิวเตอร์ ออกจากระบบคอมพิวเตอร์ ในกรณีที่มีเหตุจำเป็นเร่งด่วน พ.ศ. ๒๕๖๙&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;ราชกิจจานุเบกษา&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;2026 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tlhr2014.com/archives/87218&#34;&gt;ฟ้องเพิกถอนประกาศกระทรวง DE เรื่องการปิดกั้นข้อมูล ออกโดยไม่มีฐานอำนาจ-ขยายขอบเขตไปกว้างขวางกว่า พ.ร.บ.คอมพิวเตอร์ฯ-กระทบเสรีภาพประชาชน&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;ศูนย์ทนายความเพื่อสิทธิมนุษยชน&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilaw.or.th/articles/59615&#34;&gt;ศูนย์ทนายฯ ยื่นฟ้องเพิกถอนประกาศ DE ขยายนิยามเนื้อหาออนไลน์ “ขัดศีลธรรมอันดี” เหตุออกโดยไม่มีอำนาจ ขัดหลักความได้สัดส่วน และไม่ปฏิบัติตามกฎหมายรับฟังความคิดเห็น&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iLaw&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://prachataienglish.com/node/12083&#34;&gt;TLHR, iLaw sue MDES over new regulation on removing online content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Prachatai English&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilaw.or.th/articles/58837&#34;&gt;ประกาศใหม่ดีอี ขยายนิยามเนื้อหาออนไลน์ “ขัดศีลธรรมอันดี” กว้างกว่ามาตรา 112&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iLaw&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-25&#34;&gt;2026 年 7 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dailynews.co.th/news/6044765/&#34;&gt;ปลัดกระทรวงดีอีเผยประกาศกระทรวงฯ ใหม่บังคับใช้แล้ว เร่งสปีดปิดกั้นเว็บผิดก.ม.เร็วขึ้น&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;เดลินิวส์&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;2026 年 7 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nationthailand.com/news/policy/40068882&#34;&gt;Digital Ministry fast-tracks blocking as illegal URLs surge into millions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Nation Thailand&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;2026 年 7 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mgronline.com/politics/detail/9690000099591&#34;&gt;มูลนิธิสิทธิเพื่อความยุติธรรมฟ้องศาลปกครอง ขอเพิกถอนประกาศดีอี ระงับ-ลบข้อมูลออนไลน์ฉุกเฉิน ชี้ อาจกระทบเสรีภาพการแสดงออก&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;MGR Online&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legal500.com/intelligence/thailand/media-telecoms-it-entertainment/thailand-introduces-expedited-takedown-rules-for-online-content&#34;&gt;Thailand Introduces Expedited Takedown Rules For Online Content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tilleke &amp;amp; Gibbins（Legal 500）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;2026 年 7 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&amp;amp;flno=72&#34;&gt;民法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://i.win.org.tw/about.php&#34;&gt;iWIN網路內容防護機構 - 關於我們&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iWIN 網路內容防護機構&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;2019 年 12 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>欧洲数据保护委员会对智能眼镜的初步指引</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/edpb-smart-glasses/</link>
@@ -2981,137 +3104,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;光明网&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-07&#34;&gt;2026 年 2 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Brave Leo 的端到端加密对话与机密计算</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/brave-leo-e2ee-confidential-computing</guid>
-<pubDate>Wed, 21 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Brave 的 AI 助手 Leo 10 月 15 日起，选用 GLM 5.3 Flash 模型的对话会在浏览器端加密，只在硬件隔离的计算区里解密处理。其他模型不在范围内，计算区的证明到 10 月 20 日为止仍由 Brave 的服务器代为检查，iOS 版查不到支持的说明。</description>
-<content:encoded>&lt;p&gt;整理 16 篇原文，来自 Brave、GitHub、Hugging Face 等 8 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Brave 10 月 15 日宣布，AI 助手 Leo 跟 GLM 5.3 Flash 模型的对话改成端到端加密，GLM 5.3 Flash 是智谱（Z.ai）以 MIT 许可证公开权重的模型。对话在浏览器端加密，只在 NEAR AI 运营的可信执行环境（TEE，处理器与 GPU 里跟主机其他部分隔离的计算区）里解密与生成回答。加密要在 Leo 的模型菜单手动选 GLM 5.3 Flash 才会生效，Leo 的其他模型不在范围内，到 10 月 20 日为止 GLM 5.3 Flash 也还标示为测试阶段。依博客，正式版与 Nightly、Beta 两个测试通道都已提供，所有 Brave 用户都能选用。&lt;/p&gt;
-&lt;p&gt;博客没有写支持哪些平台。GitHub 上的开发议题只标了桌面版与 Android，iPhone 版到 10 月 20 日为止查不到支持的说明。&lt;/p&gt;
-&lt;p&gt;依 Brave 的博客，浏览器用互联网标准组织 IETF 制定的 Oblivious HTTP（OHTTP）加密每一条提问与分享给 Leo 的网页，解密用的密钥只存在 TEE 里。加密后的消息先送到 Brave 自己运营的 AI Gateway，再转给 NEAR AI。Brave 看得到用户的 IP 地址、读不到内容，NEAR AI 运营的 TEE 在计算区里解密、看不到 IP 地址，博客也提到 NEAR AI 与云主机的运营者都读不到计算区的内容。每一轮对话都用新的一次性密钥重新加密整段记录，记录只存在用户的设备上，Brave 与 NEAR AI 都不保存。&lt;/p&gt;
-&lt;p&gt;博客接着说明部署前的检查，NEAR AI 的每一次部署都要先通过 Brave 检查程序的检查才会被批准。检查的项目包括 Intel 与 Nvidia 签署的证明（attestation，由硬件签署、证明计算区是真品并记录里面运行哪一份程序的凭据），以及从源代码重新构建、确认跟线上的程序一致。AI Gateway 转发每一条消息前会再核对一次，采用的验证结果不超过一小时，不通过就不转发。检查程序 &lt;code&gt;near-tee-verifier&lt;/code&gt; 以开源许可证公开，有 NEAR AI 的 API 密钥就能自行对线上服务运行验证。&lt;/p&gt;
-&lt;p&gt;Brave 2025 年 11 月在 Nightly 试行过第一版，博客提到当时的保护建立在政策上，检查也要信任 Brave。新版的检查程序公开，有 API 密钥就能自行运行。到 10 月 20 日为止，浏览器端的检查仍由 Brave 的服务器代为处理。&lt;/p&gt;
-&lt;p&gt;到 10 月 20 日为止，帮助中心没有 GLM 5.3 Flash 端到端加密的文章。Leo 的模型说明页列的仍是 GLM 4.7 Flash，也写所有模型都由 Brave 自行运营。开发议题标了不列入版本记录，各平台的版本记录都没有提到端到端加密。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;一般的 AI 对话服务在服务器上解开提问，运营者在技术上读得到内容，用户只能相信隐私政策。OHTTP 把「谁在问」跟「问了什么」拆给两方，转发的一方只知道 IP 地址，处理的一方只看到内容。TEE 的设计是让主机的运营者也读不到计算区的内存，attestation 让外界确认里面运行的是公开过的程序。Brave 的博客把 Leo 的新做法描述成从政策承诺改成密码学的证明。&lt;/p&gt;
-&lt;p&gt;根据博客，10 月 15 日发布时浏览器仍依赖 Brave 的 AI Gateway 做检查，之后才会分阶段改成由浏览器直接验证硬件的证明。博客也列出整条验证链最后要信任的对象，包括 Intel 与 Nvidia、TEE 的操作系统 dstack、构建记录的 Sigstore、GitHub、Hugging Face 与公共 DNS。&lt;code&gt;near-tee-verifier&lt;/code&gt; 的说明则提醒，重新构建只证明线上程序来自指定的版本，不能证明那个版本里没有后门。运行模型的推理软件是第三方软件包，依博客与 &lt;code&gt;near-tee-verifier&lt;/code&gt; 的说明没有从源代码重新构建，改用硬件证明的部署记录锁定版本。&lt;/p&gt;
-&lt;p&gt;安全会议 IEEE S&amp;amp;P 2026 收录的论文 TEE.fail 中，研究者在服务器的 DDR5 内存总线接入监听装置，在部分情况下取出 Intel TDX（Intel 处理器上的 TEE 技术）签署证明用的密钥。用这把密钥伪造的证明可以通过验证，也能用来攻破 Nvidia GPU 的机密计算。依研究网站，攻击需要物理接触服务器，Intel 不把这类物理攻击列入 TDX 要防范的范围。研究者也写到，就他们所知还没有被实际利用。&lt;/p&gt;
-&lt;p&gt;研究网站另有一节演示 dstack，恶意的服务器提供者可以伪造全部证明，也能借用别处 Nvidia GPU 的证明。网站给 dstack 用户的建议是留意自己要信任实际管理 TDX 硬件的运营者。论文没有分析 Brave 与 NEAR AI 的部署，本文 10 月 20 日搜索时也没有找到针对 Leo 的独立分析。&lt;/p&gt;
-&lt;p&gt;依 &lt;code&gt;near-tee-verifier&lt;/code&gt; 的说明，GPU 的证明没有绑进 TDX 的证明里，无法确认回答来自哪一张 GPU。要排除这个缺口，需要 NEAR AI 补上两者的绑定。&lt;/p&gt;
-&lt;p&gt;第三方监测网站 GreatFire 到 10 月 18 日的最后一次测试显示，&lt;code&gt;brave.com&lt;/code&gt; 在中国大陆 100% 被封锁，从 2017 年 5 月 13 日起就有干扰记录。下载与更新用的 &lt;code&gt;laptop-updates.brave.com&lt;/code&gt; 最近一次有效测试也是封锁。Leo 的后端 &lt;code&gt;ai-chat.bsg.brave.com&lt;/code&gt; 没有测量数据，7 月 20 日到 10 月 20 日之间 OONI 公开 API 里中国的网络连接测试（Web Connectivity）没有一条针对这个主机，GreatFire 也没有测过。Leo 在中国大陆能否连接，查不到直接证据。&lt;/p&gt;
-&lt;p&gt;Apple 的 iTunes 查询 API 在中国大陆的商店查不到 Brave（Google Play 没有查询），这是 API 的查询结果，不等于 Brave 或 Apple 公告下架。Brave 的帮助中心没有写 Leo 在中国大陆提供或不提供，Leo 的介绍页写桌面版与手机版都提供 Leo。同一个 API 在台湾、香港、日本、韩国、新加坡的 App Store 都查得到 Brave，帮助中心也没有限制 Leo 使用地区的条文。&lt;/p&gt;
-&lt;p&gt;想在 AI 对话里处理不愿让服务商读到的文字或网页内容，可以在 Brave 桌面版或 Android 版打开 Leo，从模型菜单选 GLM 5.3 Flash。依源代码开发分支的简体中文翻译，模型菜单在 GLM 5.3 Flash 旁显示「通过 NEAR AI TEE 实现可验证的隐私保护」，回答旁有「已验证」的徽章。依源代码与博客推论，徽章反映的是 Brave 服务器的检查结果，到 10 月 20 日为止浏览器本身还没有验证。Leo 不需要账号，说明页提到免费版有使用次数的限制，但没有列出数字。&lt;/p&gt;
-&lt;p&gt;Brave 没有写 Leo 的回答支持哪些语言，Hugging Face 上 GLM 5.3 Flash 的模型说明页（模型卡）标示的语言是英文与中文。依博客的说明，加密只及于对话内容，转发消息的 Brave 仍看得到 IP 地址。模型生成的搜索查询也会离开 TEE 送到 Brave Search（不绑 IP 地址）。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（16 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/browser-ai-e2ee/&#34;&gt;Another Brave User-First AI Win: Leo adds End-to-end Encryption, Oblivious HTTP, and Verifiable Confidential Computing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/near-verifier&#34;&gt;near-tee-verifier&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/55247&#34;&gt;[AI Chat] Add support for end-to-end encryption with NEAR models&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;2026 年 5 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.brave.app/hc/en-us/articles/26727364100493&#34;&gt;What are the differences between Leo&amp;#39;s AI Models?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/leo/&#34;&gt;Brave Leo AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/blog/browser-ai-tee/&#34;&gt;Verifiable Privacy and Transparency: A new frontier for Brave AI privacy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-20&#34;&gt;2025 年 11 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/zai-org/GLM-5.3-Flash&#34;&gt;GLM-5.3-Flash&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hugging Face&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-TW.xtb&#34;&gt;brave_components_resources_zh-TW.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cyberinsider.com/brave-adds-end-to-end-encryption-to-chats-with-ai-assistant-leo/&#34;&gt;Brave adds end-to-end encryption to chats with AI assistant Leo&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CyberInsider&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tee.fail/&#34;&gt;TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TEE.fail&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_zh-CN.xtb&#34;&gt;brave_components_resources_zh-CN.xtb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/brave.com&#34;&gt;Is https://brave.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/laptop-updates.brave.com&#34;&gt;Is https://laptop-updates.brave.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/measurements?probe_cc=CN&amp;amp;test_name=web_connectivity&amp;amp;domain=ai-chat.bsg.brave.com&amp;amp;since=2026-07-20&amp;amp;until=2026-10-20&#34;&gt;OONI API&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1052879175&amp;amp;country=cn&#34;&gt;iTunes lookup API (cn)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1052879175&amp;amp;country=tw&#34;&gt;iTunes lookup API (tw)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
