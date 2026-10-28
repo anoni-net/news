@@ -1501,7 +1501,8 @@ def jsonld(post: Post, target: Target, config: dict, image: str | None = None) -
         "inLanguage": post.lang.html,
         "author": authors,
         "publisher": organization,
-        "citation": [{"@type": "CreativeWork", "name": s.title, "url": s.url} for s in post.sources],
+        "citation": [{"@type": "CreativeWork", "name": s.title, "url": s.url if target.links_only else target.rewrite(s.url)}
+                     for s in post.sources],
     }
     if post.categories:
         data["articleSection"] = categories_table()[post.categories[0]][post.lang.code]
