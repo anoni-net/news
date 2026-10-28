@@ -6,7 +6,173 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 29 Oct 2026 01:20:00 +0800</lastBuildDate>
+<item>
+<title>The European Data Protection Board&#39;s preliminary guidance on smart glasses</title>
+<link>https://anoni.net/news/en/2026/10/edpb-smart-glasses/</link>
+<guid isPermaLink="false">anoni-news:en/2026/10/edpb-smart-glasses</guid>
+<pubDate>Thu, 29 Oct 2026 01:20:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On 13 October the European Data Protection Board adopted a statement on smart glasses, noting that because they look much like ordinary glasses, people nearby may be filmed or recorded without knowing it. The statement recommends that manufacturers signal recording with reliable lights and sounds that are hard to switch off, and that recording should not be possible while the light is covered. The press release presents the statement as preliminary guidance, and the statement sets no new rules and names no manufacturer.</description>
+<content:encoded>&lt;p&gt;Based on 19 sources, including European Data Protection Board, netzpolitik.org, Privacy Guides&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 13 October the European Data Protection Board (EDPB, the body made up of the data protection authorities of the EU member states) adopted a statement on smart glasses, setting out under the EU&#39;s General Data Protection Regulation (GDPR) the responsibilities of users, manufacturers and service providers in the EU. According to the statement, smart glasses bring new uses for communication and assistance, such as real-time translation and support for people with visual impairments.&lt;/p&gt;
+&lt;p&gt;According to the statement, these glasses look much like ordinary glasses, so collecting and recording personal data is barely noticeable. Microphones on some models can pick up background conversations the wearer is not part of. The statement adds that combining smart glasses with face or voice recognition systems poses a high risk to rights and freedoms in public spaces.&lt;/p&gt;
+&lt;p&gt;Users who record only for a purely personal or household activity, such as sharing only with family or friends, are not subject to the GDPR. The statement says this exemption must be narrowly construed, and other laws, such as criminal law, may still apply. Users who share to a public social media account or use the glasses at work become controllers (the party that decides the purpose and means of processing). Manufacturers and providers of AI features are also controllers where they decide the purposes and means, and the statement says they should not rely on users to meet their duty to inform people nearby.&lt;/p&gt;
+&lt;p&gt;For manufacturers, the statement recommends combining several signals. A light should be visible in many lighting conditions, recording should not be possible while the light is covered, and a shutter sound can be added. Phone notifications that detect nearby glasses can help but should not be the only signal, and should not allow the wearer to be tracked. The EDPB&#39;s press release presents the statement as preliminary guidance; the statement itself sets no new rules, names no manufacturer and closes by saying the EDPB will continue to analyse the privacy concerns smart glasses raise.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The light is the main cue people nearby have that they are being filmed. We could not reach Meta&#39;s own website, so Meta&#39;s statements here come from its newsroom post as quoted by Privacy Guides and 9to5Google. Every pair has a white capture LED on the front that blinks briefly for a photo and keeps blinking during video, and the LED has no off switch. From the second generation onwards, the camera is disabled when the glasses detect that the LED is blocked, and a July update also disables the camera if the LED has been tampered with or destroyed.&lt;/p&gt;
+&lt;p&gt;According to PPC Land&#39;s paraphrase, Meta considers a shutter sound impractical for notifying people at a distance and points to precedents such as laptop camera indicators for its use of a light.&lt;/p&gt;
+&lt;p&gt;In September the data protection authority of Hamburg in Germany published an inspection report on Ray-Ban Meta, and as netzpolitik.org reports it, the report&#39;s conclusion is that the LED is only of limited visibility depending on distance, angle and lighting. CORRECTIV reports two further findings. Blocking is checked only when recording starts, so covering the light mid-recording does not stop it, and on the second generation the light stays off entirely while AI features are in use (netzpolitik.org only mentions an inspection of the first generation). A footnote in the EDPB statement adds that a white LED could be mistaken for a reflection.&lt;/p&gt;
+&lt;p&gt;Section 8 of Germany&#39;s Telecommunications Digital Services Data Protection Act (TDDDG) bans devices disguised as everyday objects and designed for covert audio or video recording, and the Federal Network Agency (Bundesnetzagentur) is the responsible authority. Asked by CORRECTIV, the agency assessed the LED as clearly recognisable within 5 metres and found the conditions for a ban not currently met. The agency also said that the mere possibility of modification is no reason for a ban, and that it had not yet examined the second generation.&lt;/p&gt;
+&lt;p&gt;TNW reported that a Meta executive announced on Threads on 27 August an update that stops the camera when the light is covered, and described it as closing the gap of starting a recording and then covering the light. That is TNW&#39;s account. The report does not say which firmware version Hamburg inspected, and we cannot confirm that the two refer to the same gap.&lt;/p&gt;
+&lt;p&gt;In October, users reported that Ray-Ban Meta glasses had saved recordings of conversations without the wake word being spoken. Meta&#39;s response to Android Authority, as quoted by Privacy Guides, says the issue has been resolved and that users can manage, review and delete their voice recordings in settings at any time. As of 29 October, none of the reports we read gave the cause or the number of people affected. The reports we read also mention only voice recordings, not photos or videos.&lt;/p&gt;
+&lt;p&gt;Ray-Ban Meta wearers concerned about accidental recording can review and delete voice recordings in the glasses&#39; privacy settings in the Meta AI app. According to TechRadar, deletion only works after the fact and cannot prevent capture. TechRadar also writes that turning off voice activation seems to stop the problem, while ChannelNews notes that the cost is losing hands-free access to the assistant, which can still be called up with the button.&lt;/p&gt;
+&lt;p&gt;France&#39;s data protection authority, CNIL, also has recommendations for wearers. CNIL advises telling people nearby, switching off capture features when not needed and turning off the glasses wherever people are asked to turn off their phones, and suggests getting consent before posting images that show other people on social media.&lt;/p&gt;
+&lt;p&gt;People being filmed have fewer options. CNIL&#39;s page says lights that inform people nearby have only limited effect and are absent for some uses, and the EDPB statement says phone apps that detect smart glasses can only tell that glasses are nearby, not whether they are recording. If it matters to you, the simplest step is to ask the wearer directly whether they are recording (our suggestion).&lt;/p&gt;
+&lt;p&gt;Singapore&#39;s Ministry of Digital Development and Information (MDDI) answered two parliamentary questions on smart glasses in 2026. In its 8 April answer, the ministry wrote that smart glasses with AI capabilities &#34;are subject to existing safeguards for data protection and safety in Singapore&#34;. Organisations offering them must comply with the Personal Data Protection Act (PDPA), and an organisation that transfers such data to third-party contractors overseas remains responsible for protection comparable to Singapore&#39;s standards.&lt;/p&gt;
+&lt;p&gt;Asked on 6 May whether it would introduce visual indicator requirements, the ministry replied that photography and recording are &#34;subject to the same rules and principles regardless of the form factor of the device&#34;. According to the answer, organisations, including individuals creating content for commercial purposes, are accountable under the PDPA, which generally does not require them to seek consent for photography or recording in public spaces, but they must ensure that any later use or disclosure of the data, including for AI features, is for a reasonable purpose. The answer announced no indicator requirement. Both answers state that non-consensual recording, sharing or other misuse of intimate or private content may be a criminal offence under the Penal Code and the Protection from Harassment Act.&lt;/p&gt;
+&lt;p&gt;In South Korea, the news agency Newsis reported on 3 August that, according to the Personal Information Protection Commission (PIPC), the commission met Samsung staff in late July about the AI glasses Samsung plans to release within the year. They discussed notification devices, such as a light or sound, that make it easy for people nearby to notice when the camera and microphone are in use. The PIPC had earlier met Meta, which has launched its AI glasses in South Korea, and the report says the government plans to draw up privacy principles for AI glasses and autonomous robots with industry in the second half of 2026. We did not obtain a PIPC press release, so this account rests on the Newsis report.&lt;/p&gt;
+&lt;p&gt;As of 29 October, we found no statement or guidance specifically on smart glasses from Japan&#39;s Personal Information Protection Commission (PPC). A compendium of the approaches of G7 data protection authorities, compiled by CNIL in 2026, summarises earlier PPC recommendations on camera systems with face identification, and the compendium lists the PPC&#39;s view that camera images can fall within the scope of the Act on the Protection of Personal Information if they can identify a specific individual.&lt;/p&gt;
+&lt;p&gt;We, a community based in Taiwan, found no rules in Taiwan specific to smart glasses and no explanation from the authorities as of 29 October. Article 315-1 of Taiwan&#39;s Criminal Code punishes recording another person&#39;s non-public activities, speech or conversations without lawful reason, where non-public means not open to others, so that people do not expect to be heard or seen. We did not find the original text of any court rulings on whether filming in a public place counts as non-public.&lt;/p&gt;
+&lt;p&gt;Article 51 of the Personal Data Protection Act of Taiwan excludes purely personal or household activities, as well as audio-visual material collected in public places or at public events that is not combined with other personal data. Going by the wording, our reading is that footage combined with other personal data, for example when AI is used to identify who someone is, falls outside that exclusion.&lt;/p&gt;
+&lt;p&gt;Readers can compare approaches with a few questions. One is whether, when people nearby are filmed, the law looks only at whether the place is public or also at how the footage is used afterwards, as Singapore&#39;s answer does for organisations. Hamburg and the Federal Network Agency reached different conclusions on how visible the light is, after examining different models in different situations, so it is also worth comparing who should carry out such tests and against what standard, and whether indicator requirements belong in law or in agreements with industry. It is also worth comparing how each place&#39;s rules preserve features that help users, such as assistance for people with visual impairments and real-time translation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (19)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/system/files/2026-10/20261310_edpb_statement_smart-glasses_en.pdf&#34;&gt;Statement on Smart glasses&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en&#34;&gt;EDPB publishes statement on the data protection challenges of smart glasses&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/europaeischer-datenschutzausschuss-smartbrillen-sind-hohes-risiko-fuer-grundrechte-und-freiheiten/&#34;&gt;Europäischer Datenschutzausschuss: Smartbrillen sind „hohes Risiko für Grundrechte und Freiheiten“&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/07/13/the-next-version-of-metas-ai-glasses-will-activate-the-camera-without-the-camera-indicator-light/&#34;&gt;The Next Version of Meta&amp;#39;s AI Glasses Will Activate the Camera Without the Camera Indicator Light&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-13&#34;&gt;13 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/07/07/meta-ray-ban-smart-glasses-privacy-light-camera-update/&#34;&gt;Meta Ray-Ban glasses now disable the camera if privacy light breaks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-07&#34;&gt;7 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/meta-blocks-camera-on-ai-glasses-if-led-light-is-destroyed/&#34;&gt;Meta blocks camera on AI glasses if LED light is destroyed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-12&#34;&gt;12 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/meta-ueberwachungsbrille-datenschutzbehoerde-warnt-vor-erheblichen-risiken/&#34;&gt;Meta Überwachungsbrille: Datenschutzbehörde warnt vor erheblichen Risiken&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://correctiv.org/aktuelles/kuenstliche-intelligenz/2026/09/10/hamburgs-datenschutzbeauftragter-wertet-led-licht-von-smart-glasses-als-nicht-gut-erkennbar/&#34;&gt;Datenschutzbehörde sieht bei Meta Smart Glasses Risiko für heimliche Aufnahmen&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CORRECTIV&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thenextweb.com/news/meta-smart-glasses-led-update-cnil-edpb-consent&#34;&gt;Meta’s glasses now stop recording if you cover the LED&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TNW&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/17/meta-fixes-bug-in-smart-glasses-causing-them-to-record-conversations-without-user-consent/&#34;&gt;Meta Fixes Bug In Smart Glasses Causing Them to Record Conversations Without User Consent&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-17&#34;&gt;17 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techradar.com/computing/virtual-reality-augmented-reality/some-ray-ban-meta-users-are-fuming-after-their-smart-glasses-make-secret-audio-recordings-but-meta-says-the-issue-is-resolved&#34;&gt;Some Ray-Ban Meta users are fuming after their smart glasses make secret audio recordings — but Meta says the issue is &amp;#39;resolved&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TechRadar&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/meta-ray-ban-smart-glasses-accused-of-secretly-recording-conversations-company-says-issue-fixed/&#34;&gt;Meta Ray-Ban Smart Glasses Accused Of Secretly Recording Conversations, Company Says Issue Fixed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnil.fr/fr/lunettes-connectees-appel-a-la-vigilance&#34;&gt;Les lunettes connectées : la CNIL appelle à la vigilance&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CNIL&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;11 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-regulation-of-sale-and-use-of-smart-glasses-With-AI-Capabilities&#34;&gt;MDDI’s Response to PQ on Regulation of Sale and use of Smart Glasses With AI Capabilities&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Digital Development and Information&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-08&#34;&gt;8 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-regulating-smart-glasses-and-ai-wearables-to-prevent-covert-recording-and-unconsented-data-collection/&#34;&gt;MDDI&amp;#39;s Response to PQ on Regulating Smart Glasses and AI Wearables to Prevent Covert Recording and Unconsented Data Collection&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Digital Development and Information&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-06&#34;&gt;6 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newsis.com/view/NISX20260803_0003734502&#34;&gt;&amp;#34;이러다 몰카 안경 될라&amp;#34;…개인정보위, 삼성 &amp;#39;AI 글래스&amp;#39; 사생활 방지대책 요구&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Newsis&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-03&#34;&gt;3 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnil.fr/sites/default/files/2026-06/g7_dpas_compendium_of_approches_on_smart_glasses.pdf&#34;&gt;Smart glasses: Compendium of G7 data protection and privacy authorities approaches&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CNIL&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=51&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>SSH login interception through compromised Tor exit relays</title>
 <link>https://anoni.net/news/en/2026/10/tor-exit-relay-ssh-interception/</link>
@@ -3106,100 +3272,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-core/blob/master/components/resources/strings/brave_components_resources_ko.xtb&#34;&gt;brave_components_resources_ko.xtb&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Senate second reading of Canada&#39;s Bill C-22 and providers&#39; responses</title>
-<link>https://anoni.net/news/en/2026/10/canada-c22-senate-debate/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/canada-c22-senate-debate</guid>
-<pubDate>Tue, 20 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Canada&#39;s Bill C-22 on lawful access went to second reading debate in the Senate on 8 October and, as of 18 October, had not passed second reading. A Signal vice president said at a panel that Signal would have to leave Canada if ordered to collect more metadata, while the public safety minister&#39;s office said the bill does not require decrypting end-to-end encrypted information. Readers outside Canada do not need to change any settings now.</description>
-<content:encoded>&lt;p&gt;Based on 10 sources, including Parliament of Canada, Senate of Canada, Public Safety Canada&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Canada&#39;s Lawful Access Act, Bill C-22, passed third reading in the House of Commons in June, and the Senate adjourned after its second reading debate on 8 October, with its next sitting on 20 October. According to LEGISinfo, Parliament&#39;s bill database, as of 18 October the bill had not passed second reading, and there was no record of it being referred to a committee or receiving Royal Assent (the Governor General&#39;s signature that makes it law). Between 4 and 16 October, Signal, the censorship circumvention tool Psiphon and Citizen Lab, a research lab at the University of Toronto, set out their objections in public, while the senator sponsoring the bill for the government (the sponsor) explained its safeguards in a second reading speech. The bill has not passed and the providers&#39; exits are conditional, so in our assessment readers outside Canada do not need to change any settings now.&lt;/p&gt;
-&lt;p&gt;Signal&#39;s vice president of strategy and global affairs spoke at a panel held by the Internet Society&#39;s Canada chapter on 5 October, and The Globe and Mail reported it the next day. According to the report, the vice president argued that legal protection for encryption has to cover more than decryption with keys, and that being required to make major changes to the software would equally defeat the purpose of encryption. Signal keeps only users&#39; phone numbers, the date they joined and their last login information, and if ordered to collect more metadata (records about communications rather than their content) and keep it for up to six months, it would have to leave Canada. As of 18 October, Signal&#39;s blog and Bluesky account had not published a written statement on C-22.&lt;/p&gt;
-&lt;p&gt;Psiphon told The Globe and Mail on 2 October that it had begun drawing up plans to move its operations out of Canada if the bill passes as it stands. In a written reply, the company&#39;s vice president wrote that every line of its open source code is public, so any access capability the bill required would be visible to the whole world, including the authoritarian governments its users are trying to evade. A senior researcher at Citizen Lab argued in an opinion piece in the same newspaper on 9 October that no design lets law enforcement in while giving other attackers no chance to exploit it, and Citizen Lab republished a summary on its website on 16 October.&lt;/p&gt;
-&lt;p&gt;According to the sponsor&#39;s second reading speech on 8 October, the new law in Part 2 of the bill, which regulates providers&#39; technical capabilities, does not in itself give law enforcement or the Canadian Security Intelligence Service (CSIS) new powers to obtain information. Ministerial orders need approval from the Intelligence Commissioner, an independent official who reviews intelligence authorisations, are subject to independent review and last at most two years. Metadata retention is limited to specified categories for up to six months and excludes communications content and browsing history. A spokesperson for the public safety minister&#39;s office told The Globe and Mail that the bill explicitly does not require decrypting end-to-end encrypted information, and does not allow or compel providers to introduce systemic vulnerabilities or backdoors.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to Public Safety Canada&#39;s committee briefing notes from May, a provider that assesses it cannot meet a requirement without introducing a systemic vulnerability (one that affects a whole class of products or many users, not just a single target) does not have to comply, and the government uses the term to mark out what providers need not do. The sponsor also told the Senate that the committee needs to hear technical evidence on how the term works when a capability described as targeted could affect an entire product or update system. A senator quoted Psiphon&#39;s view that any legally mandated access mechanism in open source software would be public and could not be limited to Canadian agencies or a single investigation.&lt;/p&gt;
-&lt;p&gt;Oversight is another point of dispute. In the debate, one senator criticised the exclusion of ministerial orders from the Statutory Instruments Act, the law that sends regulations to Parliament for scrutiny, and another cited a joint brief from Citizen Lab and a civil liberties group saying the bill&#39;s obligations can be imposed without judicial authorisation. The sponsor said in the speech that orders and supporting material must go to the National Security and Intelligence Review Agency (NSIRA), an independent body that reviews intelligence and security agencies, and cited support for the bill from a representative of police organisations.&lt;/p&gt;
-&lt;p&gt;According to Public Safety Canada&#39;s briefing notes, Australia has a similar safeguard. Australia&#39;s Assistance and Access Act of 2018 likewise provides that a technical capability notice, a written order requiring a provider to build a particular capability, may not require it to build a systemic weakness or systemic vulnerability. The Australian law defines a systemic weakness as one that affects a whole class of technology, excluding a weakness selectively introduced to target a particular person unless it would jeopardise the security of other people&#39;s information. In the opinion piece, the Citizen Lab researcher cited Australia&#39;s experience, including one company&#39;s statement that lost trust caused economic losses of about A$1 billion.&lt;/p&gt;
-&lt;p&gt;When comparing approaches, it is worth asking who approves an order, whether a court is involved and whether providers may disclose that an order exists. Who decides what counts as a systemic vulnerability, and the scope and duration of metadata retention, can also be compared. Another question is whether the investigative goals behind the policy can be met without weakening encryption.&lt;/p&gt;
-&lt;p&gt;In Hong Kong, according to the government&#39;s 2020 announcement of the implementation rules for Article 43 of the National Security Law, officers may, under specific circumstances, apply to a magistrate for a warrant authorising police to request identification records or decryption assistance from a service provider, and all applications to intercept communications must be approved by the Chief Executive. In mainland China, Article 18 of the Counter-Terrorism Law requires telecom operators and internet service providers to give public security and state security organs technical interfaces and decryption support for preventing and investigating terrorism. Article 18 itself names no approving body and has no exception like Canada&#39;s systemic vulnerability. For mainland China we checked only Article 18, and for both places we have not looked into whether providers may disclose a request they receive.&lt;/p&gt;
-&lt;p&gt;Signal&#39;s and Psiphon&#39;s exits are both conditional, and as of 18 October neither had announced a date. The Senate&#39;s second reading vote after it resumes on 20 October, and which committee the bill goes to, are the next steps to watch. How readers in Canada will be affected depends on the bill&#39;s final text and the providers&#39; decisions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sencanada.ca/en/content/sen/chamber/451/debates/092db_2026-10-08-e&#34;&gt;Debates, Issue 92 (October 8, 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Senate of Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20260828-1/index-en.aspx&#34;&gt;Parliamentary Committee Notes: appearance before the Standing Committee on Public Safety and National Security (SECU)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Public Safety Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;5 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-messaging-service-signal-says-ministers-changes-to-lawful-access-bill/&#34;&gt;Messaging service Signal says minister’s changes to lawful access bill will not persuade it to stay in Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;6 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-psiphon-vpn-provider-plans-to-quit-canada-over-lawful-access-bill/&#34;&gt;Toronto-based VPN provider plans to quit Canada over lawful-access bill&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-04&#34;&gt;4 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/opinion/article-the-lawful-access-act-threatens-to-blow-a-hole-in-canadas-national/&#34;&gt;The Lawful Access Act threatens to blow a hole in Canada’s national security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;9 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/the-lawful-access-acts-threats-to-canadas-national-security/&#34;&gt;The Lawful Access Act’s threats to Canada’s national security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.au/C2018A00148/latest/text&#34;&gt;Telecommunications and Other Legislation Amendment (Assistance and Access) Act 2018&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Federal Register of Legislation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.info.gov.hk/gia/general/202007/06/P2020070600784.htm&#34;&gt;Implementation Rules for Article 43 of the Law of the People&amp;#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region gazetted&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Government&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-06&#34;&gt;6 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-06/12/content_2055871.htm&#34;&gt;中华人民共和国反恐怖主义法 (Counter-Terrorism Law of the People&amp;#39;s Republic of China)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2018-06-12&#34;&gt;12 June 2018&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

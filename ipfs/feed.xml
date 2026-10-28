@@ -6,7 +6,142 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 29 Oct 2026 01:20:00 +0800</lastBuildDate>
+<item>
+<title>歐洲資料保護委員會對智慧眼鏡的初步指引</title>
+<link>https://anoni.net/news/2026/10/edpb-smart-glasses/</link>
+<guid isPermaLink="false">anoni-news:2026/10/edpb-smart-glasses</guid>
+<pubDate>Thu, 29 Oct 2026 01:20:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>歐洲資料保護委員會 10 月 13 日通過一份智慧眼鏡的聲明，指出這類眼鏡外觀接近一般眼鏡，旁人可能在不知情下被錄影錄音。聲明建議製造商用可靠、難以關掉的燈號與聲音提示正在錄影，燈號被遮住時不能錄。新聞稿把聲明定位成初步的指引，聲明沒有訂出新的規定，也沒有點名廠商。</description>
+<content:encoded>&lt;p&gt;整理 15 篇原文，來自 European Data Protection Board、netzpolitik.org、Privacy Guides 等 11 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;歐洲資料保護委員會（EDPB，歐盟各國資料保護機關組成的委員會）10 月 13 日通過一份智慧眼鏡的聲明，依歐盟《一般資料保護規則》（GDPR）分析歐盟境內的使用者、製造商與服務提供者的責任。聲明肯定智慧眼鏡帶來溝通與協助的新用途，例如即時翻譯與視障輔助。&lt;/p&gt;
+&lt;p&gt;聲明也寫到，這類眼鏡外觀接近一般眼鏡，蒐集與錄下個人資料的過程幾乎看不出來。部分眼鏡的麥克風可能錄到使用者沒有參與的背景對話。聲明也寫到，智慧眼鏡可能與臉部或聲音辨識系統併用，對公共空間裡的權利與自由構成高風險。&lt;/p&gt;
+&lt;p&gt;依聲明的說法，使用者只為個人或家庭活動錄影時不受 GDPR 規範，例如只分享給家人朋友。這項例外要從嚴認定，使用者也可能受刑法等其他法律規範。&lt;/p&gt;
+&lt;p&gt;分享到公開的社群帳號或用在工作上，使用者就是資料控管者（決定資料用途與處理方式的一方）。製造商與 AI 功能的提供者決定處理的目的與方法時也是控管者，聲明寫到他們不應仰賴使用者來履行告知旁人的義務。&lt;/p&gt;
+&lt;p&gt;給製造商的建議是組合幾種提示。燈號應在許多光線條件下都看得見，燈號被遮住時不應能錄影，也可以加上快門聲。偵測附近眼鏡的手機通知可以輔助，但不宜當作唯一的提示，也不應讓人藉此追蹤眼鏡的使用者。EDPB 的新聞稿把聲明定位成初步的指引，聲明沒有訂出新的規定、沒有點名任何廠商，結尾寫到 EDPB 會繼續分析智慧眼鏡帶來的隱私問題。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;燈號是旁人知道自己正被拍的主要線索。我們連不上 Meta 自己的網站，Meta 的說法取自 Privacy Guides 與 9to5Google 照錄的新聞室文章。每一副眼鏡前方都有一顆白色的擷取燈，拍照時閃一下、錄影時持續閃爍，燈沒有關閉的開關。從第二代眼鏡起，相機偵測到燈被擋住就會停用，7 月的更新再讓燈被破壞或改裝時也停用相機。&lt;/p&gt;
+&lt;p&gt;PPC Land 的報導轉述，Meta 認為快門聲對遠處的人不實用，並以筆電鏡頭燈這類前例說明燈號的做法。&lt;/p&gt;
+&lt;p&gt;德國漢堡資料保護機關 9 月公布對 Ray-Ban Meta 的檢查報告，依 netzpolitik.org 的轉述，報告的結論是燈號受距離、角度與光線影響而只能有限地被察覺。CORRECTIV 轉述的發現還有兩項。一是遮擋只在開始錄影時檢查，錄影中遮住燈會繼續錄，二是第二代使用 AI 功能時燈完全不亮（netzpolitik.org 只寫到檢查第一代）。EDPB 的聲明也在註腳提醒，白色的燈可能被誤認為反光。&lt;/p&gt;
+&lt;p&gt;德國依《電信與數位服務資料保護法》第 8 條，禁止偽裝成日常用品、用來暗中錄音錄影的設備，主管機關是聯邦網路署。CORRECTIV 詢問該署，得到的評估是燈號在 5 公尺內清楚可辨，目前不具備禁止的要件。該署也表示光是可能被改裝不構成禁止的理由，而且還沒有檢查第二代。&lt;/p&gt;
+&lt;p&gt;TNW 報導，Meta 的主管 8 月 27 日在 Threads 上公布遮住燈時相機就停止的更新，報導把它描述成補上先開始錄影、再遮住燈的漏洞。這是 TNW 的說法，報導沒有寫漢堡檢查時用的是哪一版韌體，我們也不能確認兩者是同一個缺口。&lt;/p&gt;
+&lt;p&gt;10 月有使用者回報 Ray-Ban Meta 沒有喊出喚醒詞就存下對話錄音。依 Privacy Guides 引述 Meta 給 Android Authority 的回應，問題已經解決，使用者可以隨時在設定裡管理、檢視與刪除語音紀錄。到 10 月 29 日為止，我們讀到的報導都沒有寫出成因與受影響的人數。我們讀到的回報也只提到語音紀錄，沒有提到照片或影片。&lt;/p&gt;
+&lt;p&gt;配戴 Ray-Ban Meta 又在意誤錄的人，可以在 Meta AI App 的眼鏡隱私設定裡查看與刪除語音紀錄。依 TechRadar 的說明，刪除只能事後處理，不能事先阻止擷取。TechRadar 寫到關閉語音啟用之後問題似乎就不再發生，ChannelNews 則寫到代價是少了免持呼叫的功能，按鍵仍可以呼叫助理。&lt;/p&gt;
+&lt;p&gt;法國資料保護機關 CNIL 也給配戴的人幾項建議。CNIL 建議先告知附近的人、不需要時關掉擷取功能，被要求關手機的場合也關眼鏡，把含有他人的影像發到社群前也建議先取得同意。&lt;/p&gt;
+&lt;p&gt;被拍的旁人能做的比較少。CNIL 的頁面寫到告知旁人的燈號作用有限，有些用途也沒有燈，EDPB 的聲明則寫到偵測眼鏡的手機 App 只能知道附近有眼鏡、不知道它是否正在錄影。在意的話，直接問對方是否正在錄影是最簡單的做法（本文的建議）。&lt;/p&gt;
+&lt;p&gt;到 10 月 29 日為止，我們沒有查到台灣針對智慧眼鏡的專門規定，也沒有查到主管機關的說明。刑法第 315 條之 1 處罰無故竊錄他人非公開（不對外開放、旁人不預期被聽見或看見）的活動、言論與談話，公共場所的錄影是否算非公開，我們沒有查到實務見解的原文。《個人資料保護法》第 51 條排除單純的個人或家庭活動，以及在公開場所或公開活動中蒐集、處理或利用，沒有跟其他個資結合的影音。依條文的文字，影音一旦跟其他個資結合（例如用 AI 辨識出是誰）就不在排除範圍裡，這是本文對條文的理解。&lt;/p&gt;
+&lt;p&gt;讀者可以用幾個問題比較各地的做法。旁人被拍時，法律看的是場所是否公開，還是也看影像後來怎麼使用。漢堡與聯邦網路署對燈號是否明顯的結論不同，檢查的機型與情境也不同，這類檢查應由誰照什麼標準來做也值得比較。也值得比較各地的規定如何保留視障輔助、即時翻譯這類對使用者有用的功能。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/system/files/2026-10/20261310_edpb_statement_smart-glasses_en.pdf&#34;&gt;Statement on Smart glasses&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en&#34;&gt;EDPB publishes statement on the data protection challenges of smart glasses&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/europaeischer-datenschutzausschuss-smartbrillen-sind-hohes-risiko-fuer-grundrechte-und-freiheiten/&#34;&gt;Europäischer Datenschutzausschuss: Smartbrillen sind „hohes Risiko für Grundrechte und Freiheiten“&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/07/13/the-next-version-of-metas-ai-glasses-will-activate-the-camera-without-the-camera-indicator-light/&#34;&gt;The Next Version of Meta&amp;#39;s AI Glasses Will Activate the Camera Without the Camera Indicator Light&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-13&#34;&gt;2026 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/07/07/meta-ray-ban-smart-glasses-privacy-light-camera-update/&#34;&gt;Meta Ray-Ban glasses now disable the camera if privacy light breaks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-07&#34;&gt;2026 年 7 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/meta-blocks-camera-on-ai-glasses-if-led-light-is-destroyed/&#34;&gt;Meta blocks camera on AI glasses if LED light is destroyed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-12&#34;&gt;2026 年 7 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/meta-ueberwachungsbrille-datenschutzbehoerde-warnt-vor-erheblichen-risiken/&#34;&gt;Meta Überwachungsbrille: Datenschutzbehörde warnt vor erheblichen Risiken&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://correctiv.org/aktuelles/kuenstliche-intelligenz/2026/09/10/hamburgs-datenschutzbeauftragter-wertet-led-licht-von-smart-glasses-als-nicht-gut-erkennbar/&#34;&gt;Datenschutzbehörde sieht bei Meta Smart Glasses Risiko für heimliche Aufnahmen&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CORRECTIV&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thenextweb.com/news/meta-smart-glasses-led-update-cnil-edpb-consent&#34;&gt;Meta’s glasses now stop recording if you cover the LED&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TNW&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/17/meta-fixes-bug-in-smart-glasses-causing-them-to-record-conversations-without-user-consent/&#34;&gt;Meta Fixes Bug In Smart Glasses Causing Them to Record Conversations Without User Consent&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-17&#34;&gt;2026 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techradar.com/computing/virtual-reality-augmented-reality/some-ray-ban-meta-users-are-fuming-after-their-smart-glasses-make-secret-audio-recordings-but-meta-says-the-issue-is-resolved&#34;&gt;Some Ray-Ban Meta users are fuming after their smart glasses make secret audio recordings — but Meta says the issue is &amp;#39;resolved&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TechRadar&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/meta-ray-ban-smart-glasses-accused-of-secretly-recording-conversations-company-says-issue-fixed/&#34;&gt;Meta Ray-Ban Smart Glasses Accused Of Secretly Recording Conversations, Company Says Issue Fixed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnil.fr/fr/lunettes-connectees-appel-a-la-vigilance&#34;&gt;Les lunettes connectées : la CNIL appelle à la vigilance&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CNIL&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;2026 年 5 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=51&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tor 出口中繼的 SSH 登入攔截事件</title>
 <link>https://anoni.net/news/2026/10/tor-exit-relay-ssh-interception/</link>
@@ -2530,85 +2665,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tee.fail/&#34;&gt;TEE.fail: Breaking Trusted Execution Environments via DDR5 Memory Bus Interposition&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TEE.fail&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>加拿大 C-22 法案的參議院二讀與業者的表態</title>
-<link>https://anoni.net/news/2026/10/canada-c22-senate-debate/</link>
-<guid isPermaLink="false">anoni-news:2026/10/canada-c22-senate-debate</guid>
-<pubDate>Tue, 20 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>加拿大的 C-22 合法存取法案 10 月 8 日在參議院進行二讀辯論，到 10 月 18 日為止還沒有二讀通過。Signal 的副總裁在座談上表示，若被命令蒐集更多詮釋資料就只能撤出加拿大，公共安全部長辦公室則表示法案不要求解密端對端加密的資訊。加拿大以外的讀者現在不需要調整設定。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Parliament of Canada、Senate of Canada、Public Safety Canada 等 6 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;加拿大的《合法存取法》（Bill C-22）6 月在眾議院三讀通過，參議院 10 月 8 日進行二讀辯論後休會，下次開會是 10 月 20 日。依加拿大國會的法案資料庫 LEGISinfo，到 10 月 18 日為止法案還沒有二讀通過，也沒有交付委員會或御准（總督簽署成為法律）的紀錄。10 月 4 日到 16 日之間，Signal、審查規避工具 Psiphon 與多倫多大學的研究室 Citizen Lab 都公開提出反對的理由，代表政府在參議院推動法案的參議員（提案人）則在二讀演說中說明法案的保障。法案尚未通過、業者的撤出也都附有條件，依本文的判斷，加拿大以外的讀者現在不需要調整設定。&lt;/p&gt;
-&lt;p&gt;Signal 的策略與全球事務副總裁 10 月 5 日在網際網路協會加拿大分會的座談上發言，《環球郵報》（The Globe and Mail）隔天報導。依報導，這位副總裁主張法律對加密的保護要涵蓋用金鑰解密以外的情況，被要求大幅改動軟體同樣會抵銷加密的目的。Signal 只保存使用者的電話號碼、加入日期與最後登入資訊，若被命令蒐集更多詮釋資料（通訊內容以外的紀錄）並保存最長六個月，就只能撤出加拿大。到 10 月 18 日為止，Signal 的部落格與 Bluesky 帳號沒有發表關於 C-22 的書面聲明。&lt;/p&gt;
-&lt;p&gt;Psiphon 10 月 2 日向《環球郵報》表示已開始擬定把營運搬出加拿大的計畫，條件是法案照現狀通過。公司的副總裁在書面回覆中寫到，開源程式碼的每一行都公開，法案若要求建立存取能力就會被全世界看到（包括使用者想躲避的威權政府）。Citizen Lab 一位資深研究員 10 月 9 日在同一份報紙發表評論，主張不存在只讓執法單位進得去、其他攻擊者卻沒有機會利用的設計，Citizen Lab 10 月 16 日在網站上轉載了摘要。&lt;/p&gt;
-&lt;p&gt;依提案人 10 月 8 日的二讀演說，法案第二部分規範業者技術能力的新法，本身不會給執法單位或加拿大安全情報局（CSIS）新的取得資訊權力。部長命令要經情報專員（審查情報授權的獨立官員）核准、接受獨立審查，效期最長兩年。詮釋資料保存限於指定的類別、最長六個月，不包含通訊內容與瀏覽紀錄。公共安全部長辦公室的發言人向《環球郵報》表示，法案明文不要求解密端對端加密的資訊，也不允許或強迫業者引入系統性漏洞或後門。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依公共安全部 5 月的委員會備詢資料，業者評估某項要求無法在不引入系統性漏洞（影響整類產品或大量使用者、不只針對單一目標的漏洞）的情況下遵守時就不必遵守，政府用這個詞劃出業者不必遵守的範圍。提案人在演說中也提到，委員會要聽取技術證據，了解一項能力被描述成針對特定目標、卻可能影響整個產品或更新系統時這個詞如何運作。Psiphon 被一位參議員引用的意見則是開源軟體裡任何法定的存取機制都會公開，無法只限於加拿大機關或單一調查。&lt;/p&gt;
-&lt;p&gt;監督方式是另一個爭點。一位參議員在辯論中批評部長命令被排除在《法定文書法》（規定法規送交國會審查的法律）之外，另一位參議員引用 Citizen Lab 與一個公民自由團體的聯合意見書，寫到法案的義務可以在沒有司法授權的情況下施加。提案人在演說中則提到，命令與佐證資料要送交國家安全與情報審查機構（NSIRA，審查情報與安全機關的獨立機構），並引用警察團體代表對法案的支持。&lt;/p&gt;
-&lt;p&gt;公共安全部的備詢資料提到澳洲有類似的保障。澳洲 2018 年的《協助與存取法》同樣規定，技術能力通知（要求業者建立特定能力的書面命令）不得要求業者建立系統性弱點或系統性漏洞。澳洲法把系統性弱點定義為影響整類技術的弱點，不包括只針對特定人刻意引入的弱點（若會危及他人的資訊安全仍算）。Citizen Lab 研究員的評論則引用澳洲的經驗，寫到一家公司表示信任流失造成約 10 億澳幣的經濟損失。&lt;/p&gt;
-&lt;p&gt;比較各地做法時，可以問命令由誰核准、需不需要法院，以及業者能不能公開命令的存在。系統性漏洞由誰判斷、詮釋資料保存的範圍與期限，也是可以對照的地方。另外可以問政策想達成的調查目的，能不能在不削弱加密的情況下做到。&lt;/p&gt;
-&lt;p&gt;Signal 與 Psiphon 的撤出都附有條件，到 10 月 18 日為止兩家都沒有宣布撤出的日期。參議院 10 月 20 日復會後的二讀表決，以及法案交付哪個委員會，是接下來可以觀察的進度。在加拿大的讀者會受什麼影響，要看法案最後的條文與業者的決定。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sencanada.ca/en/content/sen/chamber/451/debates/092db_2026-10-08-e&#34;&gt;Debates, Issue 92 (October 8, 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Senate of Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20260828-1/index-en.aspx&#34;&gt;Parliamentary Committee Notes: appearance before the Standing Committee on Public Safety and National Security (SECU)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Public Safety Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;2026 年 5 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-messaging-service-signal-says-ministers-changes-to-lawful-access-bill/&#34;&gt;Messaging service Signal says minister’s changes to lawful access bill will not persuade it to stay in Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-psiphon-vpn-provider-plans-to-quit-canada-over-lawful-access-bill/&#34;&gt;Toronto-based VPN provider plans to quit Canada over lawful-access bill&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-04&#34;&gt;2026 年 10 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/opinion/article-the-lawful-access-act-threatens-to-blow-a-hole-in-canadas-national/&#34;&gt;The Lawful Access Act threatens to blow a hole in Canada’s national security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/the-lawful-access-acts-threats-to-canadas-national-security/&#34;&gt;The Lawful Access Act’s threats to Canada’s national security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.au/C2018A00148/latest/text&#34;&gt;Telecommunications and Other Legislation Amendment (Assistance and Access) Act 2018&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Federal Register of Legislation&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
