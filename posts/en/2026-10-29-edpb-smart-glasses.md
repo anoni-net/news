@@ -1,7 +1,7 @@
 ---
 title: The European Data Protection Board's preliminary guidance on smart glasses
 description: On 13 October the European Data Protection Board adopted a statement on smart glasses, noting that because they look much like ordinary glasses, people nearby may be filmed or recorded without knowing it. The statement recommends that manufacturers signal recording with reliable lights and sounds that are hard to switch off, and that recording should not be possible while the light is covered. The press release presents the statement as preliminary guidance, and the statement sets no new rules and names no manufacturer.
-date: 2026-10-29T12:00:00+08:00
+date: 2026-10-29T01:20:00+08:00
 slug: edpb-smart-glasses
 categories:
   - tracking
