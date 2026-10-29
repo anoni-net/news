@@ -64,6 +64,10 @@ from = "https://www.androidauthority.com/favicon.ico"
 icon = "anoni.net-e7cf54e0.png"
 from = "手動提供的檔案 anoni-favicon.png"
 
+[hosts."antaranews.com"]
+icon = "antaranews.com-8a11d568.png"
+from = "https://static.antaranews.com/assets/img/favicon/android-icon-192x192.png"
+
 [hosts."anthropic.com"]
 icon = "anthropic.com-c45fad63.png"
 from = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa394792257596c5_webclip.png"
@@ -304,6 +308,10 @@ none = "圖示檔擋自動抓取"
 [hosts."chinadigitaltimes.net"]
 icon = "chinadigitaltimes.net-eb24e633.png"
 from = "https://chinadigitaltimes.net/wp-content/themes/CDT-EN/images/favicon.png"
+
+[hosts."chinajusticeobserver.com"]
+icon = "chinajusticeobserver.com-4f90cbf9.png"
+from = "https://chinajusticeobserver.com/assets/img/logo.png"
 
 [hosts."chinalawtranslate.com"]
 icon = "chinalawtranslate.com-bb85a1d1.png"
@@ -945,6 +953,10 @@ from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
 
 [hosts."indiacode.nic.in"]
 none = "網站在抓取時無法連線"
+
+[hosts."inet.detik.com"]
+icon = "inet.detik.com-18b855d6.png"
+from = "https://awscdn.detik.net.id/inet3/images/favicon.ico?v=2026102912131"
 
 [hosts."info.gov.hk"]
 same_as = "gov.hk"
@@ -1847,6 +1859,10 @@ from = "https://www.taipeitimes.com/assets/images/TT_web_icon-mobile.jpg"
 icon = "tech.gov.sg-c90cc384.png"
 from = "https://isomer-user-content.by.gov.sg/85/a5ba3d15-6f87-41cf-9954-f07a2e7405fe/GovTech-Favicon-33x32.png"
 
+[hosts."tech.ifeng.com"]
+icon = "tech.ifeng.com-89927ee9.png"
+from = "https://y1.ifengimg.com/index/72x72_2520ifeng.png"
+
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
 from = "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=192"
@@ -1870,6 +1886,10 @@ from = "https://www.techspot.com/images/ts3mobile-badge.png"
 [hosts."tee.fail"]
 icon = "tee.fail-c874eed7.png"
 from = "https://tee.fail/img/favicon.png"
+
+[hosts."teknologi.bisnis.com"]
+icon = "teknologi.bisnis.com-a1d08655.png"
+from = "https://teknologi.bisnis.com/favicon.ico"
 
 [hosts."telegram.org"]
 icon = "telegram.org-a6b238d2.png"
