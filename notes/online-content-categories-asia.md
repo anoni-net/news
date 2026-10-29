@@ -1,6 +1,6 @@
 # 網路內容的限制類別與處置程序
 
-範圍是法規如何列出可以限制的網路內容類別（違法、有害、違反善良風俗或公序良俗），以及誰負責停止散布或移除、要不要經過法院。網站封鎖與 DNS 封鎖的規定寫在 `vpn-and-site-blocking.md`，這份不重複。第一次整理是 2026-10-29，為泰國數位經濟與社會部的緊急停止散布公告那篇導讀查證，查證日期都是這一天。
+範圍是法規如何列出可以限制的網路內容類別（違法、有害、違反善良風俗或公序良俗），以及誰負責停止散布或移除、要不要經過法院。網站封鎖與 DNS 封鎖的規定寫在 `vpn-and-site-blocking.md`，這份不重複。第一次整理是 2026-10-29，為泰國數位經濟與社會部的緊急停止散布公告那篇導讀查證，查證日期都是這一天。同一天寫印尼內容下架那篇導讀時，補上中國大陸第十六條那一條與「香港」一節，內容發布者能不能收到通知、能不能異議也一起查。
 
 ## 台灣
 
@@ -60,4 +60,27 @@
     - 照錄：「违反本规定第十四条、第十八条、第十九条、第二十一条、第二十二条、第二十三条、第二十四条、第二十五条规定的，由网信等有关主管部门依据职责，按照有关法律、行政法规的规定予以处理。」（第三十八條）
     - 來源：同上
     - 查證日期：2026-10-29
+- 事實：同一份規定的第十六條要求平台設置投訴舉報入口、及時受理處置公眾的投訴舉報並反饋處理結果，條文寫的對象是「公众投诉举报」。逐字搜尋規定全文，沒有出現「申诉」、「异议」與「通知」，也沒有條文寫到平台處置內容時要通知發布者，或發布者可以對處置提出異議
+    - 照錄：「网络信息内容服务平台应当在显著位置设置便捷的投诉举报入口，公布投诉举报方式，及时受理处置公众投诉举报并反馈处理结果。」（第十六條）
+    - 照錄：「鼓励网络信息内容服务使用者积极参与网络信息内容生态治理，通过投诉、举报等方式对网上违法和不良信息进行监督，共同维护良好网络生态。」（第二十條）
+    - 來源：同上
+    - 查證日期：2026-10-29
 - 未查證：國家互聯網信息辦公室 2026-07-03 就《互联网信息服务管理办法（修订草案征求意见稿）》公開徵求意見。這次只讀了網信辦的兩頁專家解讀（<https://www.cac.gov.cn/2026-07/03/c_1784821166739028.htm>、<https://www.cac.gov.cn/2026-07/03/c_1784821166582265.htm>），沒有讀草案本文，也沒有核對草案對違法信息與不良信息的寫法，引用前要先讀草案本文
+
+## 香港
+
+- 事實：《香港特別行政區維護國家安全法第四十三條實施細則》附表 4 第 2 部，讓警務處處長在保安局局長批准下授權指定人員。處長要有合理理由懷疑某人在電子平台發布的訊息相當可能構成危害國家安全罪行，或相當可能導致這類罪行發生。指定人員可以要求發布者在期限前移除訊息，也可以要求平台服務商作出禁制行動，平台服務商不遵從或不可行時，再要求主機服務商或網絡服務商。第 2 部的要求由警務處處長授權的指定人員發出（第 13 條規定指定人員由保安局局長委任公職人員擔任），條文沒有要求先經法院（`vpn-and-site-blocking.md` 的 HK-4 寫了罰則與「指明網絡服務」的定義，這裡不重複） <!-- docs-style-lint: disable-line -->
+    - 照錄：「The Commissioner of Police may, with the approval of the Secretary for Security, authorize a designated officer to exercise one or more of the powers specified in section 7 of this Schedule if the Commissioner has reasonable ground for suspecting that」（附表 4 第 6 條，後面接兩款條件）
+    - 照錄：「The designated officer may require the person who has published the electronic message on the electronic platform to remove the message from the platform before the deadline specified by the officer.」（附表 4 第 7(2) 條）
+    - 照錄：「The designated officer may require the platform service provider for the electronic platform to take a disabling action on the electronic message before the deadline specified by the officer.」（附表 4 第 7(3) 條）
+    - 來源：Implementation Rules for Article 43 of the Law of the People's Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region（L.N. 139 of 2020），Schedule 4，<https://www.gld.gov.hk/egazette/pdf/20202449e/cs220202449139.pdf>（官網本次沒有直接下載，用網路檔案館副本 <https://web.archive.org/web/2021id_/https://www.gld.gov.hk/egazette/pdf/20202449e/cs220202449139.pdf>），2020-07-06 訂立
+    - 查證日期：2026-10-29
+- 事實：附表 4 用到裁判官手令的地方有兩處，第 3 部要求服務商提供發布者的身分紀錄或解密協助（緊急時指明警務人員可以不經手令），以及第 11 條在發布者不遵從移除要求時扣押其電子器材以移除訊息。第 2 部的移除與禁制行動沒有手令程序。附表 4 的英文本逐字搜尋沒有出現 appeal 與 reasons，條文沒有寫到要對發布者說明理由或提供上訴途徑。發布者本人可能直接收到第 7(2) 條的書面移除要求（第 15 條），要求發給平台時，條文沒有寫到通知發布者
+    - 照錄：「A magistrate may issue a warrant authorizing a police officer to exercise the power specified in subsection (3) if the magistrate is satisfied by information on oath that」（附表 4 第 9(1) 條，後面接條件）
+    - 照錄：「the magistrate may issue a warrant authorizing a police officer to seize an electronic device of the person, and to take any reasonably necessary action on the device, for removing the message from the platform.」（附表 4 第 11 條）
+    - 照錄：「A requirement or notification under this Schedule must be in writing.」（附表 4 第 15(1) 條）
+    - 第 15(2) 條的送達方式：寄到當事人提供用來收信的地址（包含電子郵件地址與傳真號碼），當事人沒有提供地址時以電子訊息發送。所以發給發布者的移除要求是書面的，缺的是理由與上訴途徑
+    - 照錄：「The Secretary for Security may appoint a public officer as a designated officer for the purposes of this Schedule.」（附表 4 第 13 條）
+    - 來源：同上
+    - 查證日期：2026-10-29
+    - 註記：2020 年公布版本之後有沒有修訂，以及目前生效的版本，這次同樣沒有核對
