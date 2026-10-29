@@ -337,6 +337,10 @@ none = "圖示檔擋自動抓取"
 icon = "chinadigitaltimes.net-eb24e633.png"
 from = "https://chinadigitaltimes.net/wp-content/themes/CDT-EN/images/favicon.png"
 
+[hosts."chinajusticeobserver.com"]
+icon = "chinajusticeobserver.com-4f90cbf9.png"
+from = "https://chinajusticeobserver.com/assets/img/logo.png"
+
 [hosts."chinalawtranslate.com"]
 icon = "chinalawtranslate.com-bb85a1d1.png"
 from = "https://www.chinalawtranslate.com/wp-content/uploads/2015/06/cropped-bao80-300x300.jpg"
@@ -2037,6 +2041,10 @@ from = "https://www.taipeitimes.com/assets/images/TT_web_icon-mobile.jpg"
 [hosts."tech.gov.sg"]
 icon = "tech.gov.sg-c90cc384.png"
 from = "https://isomer-user-content.by.gov.sg/85/a5ba3d15-6f87-41cf-9954-f07a2e7405fe/GovTech-Favicon-33x32.png"
+
+[hosts."tech.ifeng.com"]
+icon = "tech.ifeng.com-89927ee9.png"
+from = "https://y1.ifengimg.com/index/72x72_2520ifeng.png"
 
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
