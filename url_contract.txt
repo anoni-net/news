@@ -141,6 +141,9 @@
 /2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/2026/10/iran-filtering-starlink/
+	#perspective
+	#sources
 /2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
@@ -183,6 +186,9 @@
 /2026/10/signal-backups-password-manager-transfer/
 	#perspective
 	#sources
+/2026/10/surveillance-tech-export-controls/
+	#perspective
+	#sources
 /2026/10/taiwan-election-cyberattacks-disinformation/
 	#perspective
 	#sources
@@ -208,6 +214,9 @@
 	#perspective
 	#sources
 /2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
+/2026/10/uk-chatgpt-asylum-decisions/
 	#perspective
 	#sources
 /2026/10/uk-supreme-court-spyware-state-immunity/
@@ -413,6 +422,9 @@
 /en/2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/en/2026/10/iran-filtering-starlink/
+	#perspective
+	#sources
 /en/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
@@ -455,6 +467,9 @@
 /en/2026/10/signal-backups-password-manager-transfer/
 	#perspective
 	#sources
+/en/2026/10/surveillance-tech-export-controls/
+	#perspective
+	#sources
 /en/2026/10/taiwan-election-cyberattacks-disinformation/
 	#perspective
 	#sources
@@ -480,6 +495,9 @@
 	#perspective
 	#sources
 /en/2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
+/en/2026/10/uk-chatgpt-asylum-decisions/
 	#perspective
 	#sources
 /en/2026/10/uk-supreme-court-spyware-state-immunity/
@@ -614,6 +632,8 @@
 	#y2026
 /en/history/10-29/
 	#y2026
+/en/history/10-30/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
@@ -692,6 +712,8 @@
 /history/10-28/
 	#y2026
 /history/10-29/
+	#y2026
+/history/10-30/
 	#y2026
 /page/2/
 /page/3/
@@ -842,6 +864,9 @@
 /zh-cn/2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/zh-cn/2026/10/iran-filtering-starlink/
+	#perspective
+	#sources
 /zh-cn/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
@@ -884,6 +909,9 @@
 /zh-cn/2026/10/signal-backups-password-manager-transfer/
 	#perspective
 	#sources
+/zh-cn/2026/10/surveillance-tech-export-controls/
+	#perspective
+	#sources
 /zh-cn/2026/10/taiwan-election-cyberattacks-disinformation/
 	#perspective
 	#sources
@@ -909,6 +937,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
+/zh-cn/2026/10/uk-chatgpt-asylum-decisions/
 	#perspective
 	#sources
 /zh-cn/2026/10/uk-supreme-court-spyware-state-immunity/
@@ -1042,6 +1073,8 @@
 /zh-cn/history/10-28/
 	#y2026
 /zh-cn/history/10-29/
+	#y2026
+/zh-cn/history/10-30/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/

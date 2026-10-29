@@ -32,6 +32,10 @@ from = "https://access.redhat.com/favicon.ico"
 icon = "accessnow.org-8d11dfe8.png"
 from = "https://www.accessnow.org/wp-content/uploads/2022/07/cropped-favicon-192x192.png"
 
+[hosts."advanced-television.com"]
+icon = "advanced-television.com-153912ef.png"
+from = "https://www.advanced-television.com/wp-content/uploads/2020/07/cropped-favicon-192x192.png"
+
 [hosts."advox.globalvoices.org"]
 icon = "advox.globalvoices.org-61131b5e.png"
 from = "https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-advox/favicon-196x196.png"
@@ -99,12 +103,20 @@ from = "https://apt.izzysoft.de/favicon.ico"
 icon = "archive.epic.org-d417717b.png"
 from = "https://archive.epic.org/favicon2.ico"
 
+[hosts."archive.icann.org"]
+icon = "archive.icann.org-4223f762.png"
+from = "https://archive.icann.org/apple-touch-icon.png"
+
 [hosts."arstechnica.com"]
 icon = "arstechnica.com-18386f32.png"
 from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-300x300.png"
 
 [hosts."arti.torproject.org"]
 same_as = "torproject.org"
+
+[hosts."article19.org"]
+icon = "article19.org-8a5c7bcb.png"
+from = "https://www.article19.org/apple-touch-icon.png"
 
 [hosts."arxiv.org"]
 icon = "arxiv.org-c4f5309f.png"
@@ -113,6 +125,10 @@ from = "https://arxiv.org/static/browse/0.3.4/images/icons/apple-touch-icon.png"
 [hosts."asahi-kasei.co.jp"]
 icon = "asahi-kasei.co.jp-4ca1fb09.png"
 from = "https://www.asahi-kasei.co.jp/pharma/favicon.ico"
+
+[hosts."asiae.co.kr"]
+icon = "asiae.co.kr-d67ff65d.png"
+from = "https://cwstatic.asiae.co.kr/icns/asiae.ico"
 
 [hosts."aspistrategist.org.au"]
 icon = "aspistrategist.org.au-e29f7643.png"
@@ -165,6 +181,10 @@ from = "https://www.berlin.de/favicon/apple-touch-icon.png"
 [hosts."beuc.eu"]
 icon = "beuc.eu-c77c3d2f.png"
 from = "https://www.beuc.eu/themes/custom/beuc/favicon.ico"
+
+[hosts."biometricupdate.com"]
+icon = "biometricupdate.com-559257a5.png"
+from = "https://www.biometricupdate.com/favicon/android-icon-192x192.png"
 
 [hosts."bitquery.io"]
 icon = "bitquery.io-5227abab.png"
@@ -259,6 +279,10 @@ same_as = "blog.mozilla.org"
 icon = "bugzilla.redhat.com-2ed93a2c.png"
 from = "https://bugzilla.redhat.com//extensions/RedHat/web/css/favicons/production.ico?v=0"
 
+[hosts."businesstoday.com.tw"]
+icon = "businesstoday.com.tw-ed90121a.png"
+from = "https://www.businesstoday.com.tw/lazyweb/web/img/favicon.ico"
+
 [hosts."bworldonline.com"]
 icon = "bworldonline.com-d9edf818.png"
 from = "https://bworldonline.com/wp-content/uploads/2024/09/cropped-bworld_icon-1-192x192.png"
@@ -278,6 +302,10 @@ from = "https://calmatters.digitaldemocracy.org/apple-touch-icon-ca-calmatters.p
 [hosts."canada.ca"]
 icon = "canada.ca-6be11ced.png"
 from = "https://www.canada.ca/favicon.ico"
+
+[hosts."carnegieendowment.org"]
+icon = "carnegieendowment.org-abaca402.png"
+from = "https://carnegieendowment.org/favicon.ico?favicon.2zfgazutvpu-p.ico"
 
 [hosts."cas.go.jp"]
 icon = "cas.go.jp-247cfca9.png"
@@ -324,6 +352,10 @@ from = "https://chromereleases.googleblog.com/favicon.ico"
 [hosts."chromestatus.com"]
 icon = "chromestatus.com-1338ffe4.png"
 from = "https://chromestatus.com/static/img/crstatus_192.png"
+
+[hosts."chromium.googlesource.com"]
+icon = "chromium.googlesource.com-f4ae33d1.png"
+from = "https://chromium.googlesource.com/+static/apple-touch-icon.png"
 
 [hosts."chromium.org"]
 icon = "chromium.org-682a9ae9.png"
@@ -389,6 +421,10 @@ from = "https://community.signalusers.org/uploads/db3609/optimized/3X/0/d/0dee9f
 [hosts."community.torproject.org"]
 icon = "community.torproject.org-e64b086c.png"
 from = "https://community.torproject.org/static/images/favicon.ico?h=2192192d"
+
+[hosts."comparitech.com"]
+icon = "comparitech.com-dc5ebd8e.png"
+from = "https://cdn.comparitech.com/wp-content/uploads/2018/12/cropped-favicon-1-192x192.jpg"
 
 [hosts."congress.gov"]
 icon = "congress.gov-1737b801.png"
@@ -541,6 +577,14 @@ from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b
 [hosts."developers.openai.com"]
 same_as = "help.openai.com"
 
+[hosts."dfrlab.org"]
+icon = "dfrlab.org-e33cb1a2.png"
+from = "https://dfrlab.org/wp-content/uploads/sites/3/2020/06/cropped-DFRLab-Thumbnail-Circle-border-300x300.png"
+
+[hosts."digiato.com"]
+icon = "digiato.com-9cf998c5.png"
+from = "https://static.digiato.com/digiato/2022/07/DigiatoVectorLogo.png.webp"
+
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
@@ -655,6 +699,10 @@ from = "https://en.greatfire.org/apple-touch-icon.png"
 icon = "en.wikipedia.org-6d780b78.png"
 from = "https://en.wikipedia.org/static/apple-touch/wikipedia.png"
 
+[hosts."english.www.gov.cn"]
+icon = "english.www.gov.cn-1db19351.png"
+from = "https://english.www.gov.cn/favicon.ico"
+
 [hosts."epark-relax.co.jp"]
 none = "網站沒有圖示"
 
@@ -685,6 +733,10 @@ from = "https://web.archive.org/web/20261020id_/https://static.xx.fbcdn.net/rsrc
 icon = "fdotwww.blob.core.windows.net-7d319a66.png"
 from = "https://www.fdot.gov/favicon.ico"
 
+[hosts."federalregister.gov"]
+icon = "federalregister.gov-2a1d5f84.png"
+from = "https://assets.federalregister.gov/assets/fr2_favicon-e64975e0e7df2bd990d1adf414332311038b22e3129a03d556ecffd9428d6783.png"
+
 [hosts."fetnet.net"]
 icon = "fetnet.net-a456a683.png"
 from = "https://www.fetnet.net/content/dam/fetnet/user_resource/cbu/images/help-center/FETNET-mobile-service-icon2.png"
@@ -699,6 +751,10 @@ from = "https://fidoalliance.org/wp-content/uploads/2023/12/cropped-FIDO_Passkey
 
 [hosts."files.nettsteder.regjeringen.no"]
 same_as = "nettsteder.regjeringen.no"
+
+[hosts."filter.watch"]
+icon = "filter.watch-ab5e1bf3.png"
+from = "https://filter.watch/wp-content/uploads/2024/07/favicon-300x300.png"
 
 [hosts."firefox.com"]
 icon = "firefox.com-cf4f5299.png"
@@ -720,6 +776,10 @@ from = "手動提供的檔案 flamman.png"
 icon = "flocksafety.com-b8c9ee48.png"
 from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
 
+[hosts."forbiddenstories.org"]
+icon = "forbiddenstories.org-ca32df32.png"
+from = "https://forbiddenstories.org/wp-content/uploads/2024/02/transferir.png?x75280"
+
 [hosts."forum.torproject.org"]
 icon = "forum.torproject.org-b958972b.png"
 from = "https://forum.torproject.org/uploads/default/optimized/2X/d/d3424bed34f4ec18b2e99178c2801ba6dfb655d6_2_180x180.png"
@@ -736,6 +796,10 @@ from = "https://www.freebsd.org/favicon.ico"
 icon = "freedom.press-d782bdb6.png"
 from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 
+[hosts."freedomhouse.org"]
+icon = "freedomhouse.org-389d9475.png"
+from = "https://freedomhouse.org/sites/default/files/favicon.ico"
+
 [hosts."frontex.europa.eu"]
 icon = "frontex.europa.eu-bda9fadf.png"
 from = "https://www.frontex.europa.eu/favicon.ico"
@@ -747,6 +811,10 @@ from = "https://www.fsa.go.jp/images/apple-touch-icon.png"
 [hosts."fsc.gov.tw"]
 icon = "fsc.gov.tw-7666e10e.png"
 from = "https://www.fsc.gov.tw/favicon.ico"
+
+[hosts."gadgetnews.net"]
+icon = "gadgetnews.net-7c12bf35.png"
+from = "https://gadgetnews.net/wp-content/uploads/2023/08/Favicon-2.png"
 
 [hosts."gaj.ankang.gov.cn"]
 icon = "gaj.ankang.gov.cn-5d932336.png"
@@ -836,6 +904,10 @@ from = "https://www.gov.mo/zh-hant/wp-content/static/favicon/android-icon-192x19
 icon = "gov.sg-ea01f39a.png"
 from = "https://isomer-user-content.by.gov.sg/34/fe559f70-7f30-4dbc-9735-4138562c6d50/favicon.ico"
 
+[hosts."gov.uk"]
+icon = "gov.uk-e6aebb21.png"
+from = "https://www.gov.uk/assets/frontend/govuk-icon-180-d45a306f0549414cfa5085f16e4a3816a77558b139e5bc226f23162d1d0decb0.png"
+
 [hosts."government.ru"]
 icon = "government.ru-28901b86.png"
 from = "https://web.archive.org/web/20260927id_/https://government.ru/favicon.ico"
@@ -863,6 +935,10 @@ from = "https://gultsch.de/favicon.ico"
 
 [hosts."gwytb.gov.cn"]
 same_as = "gov.cn"
+
+[hosts."hamshahrionline.ir"]
+icon = "hamshahrionline.ir-620e2cc3.png"
+from = "https://www.hamshahrionline.ir/resources/theme/hamshahri/img/icons/favicon-196x196.png"
 
 [hosts."haveibeenpwned.com"]
 icon = "haveibeenpwned.com-9e2dc6c7.png"
@@ -908,6 +984,10 @@ from = "https://www.hkdnr.hk/favicon.ico"
 icon = "home-affairs.ec.europa.eu-3712d20c.png"
 from = "https://home-affairs.ec.europa.eu/themes/contrib/oe_theme/images/favicons/ec/favicon.png"
 
+[hosts."home.treasury.gov"]
+icon = "home.treasury.gov-bba95752.png"
+from = "https://home.treasury.gov/images/favicon.png"
+
 [hosts."homeaffairs.gov.au"]
 icon = "homeaffairs.gov.au-b256f42f.png"
 from = "https://www.homeaffairs.gov.au/AssetLibrary/dist/assets/images/favicon.ico"
@@ -934,6 +1014,14 @@ from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-ic
 [hosts."i.win.org.tw"]
 icon = "i.win.org.tw-3c9efd99.png"
 from = "https://i.win.org.tw/favicon.png"
+
+[hosts."iana.org"]
+icon = "iana.org-a961d86d.png"
+from = "https://www.iana.org/static/img/bookmark_icon.e14a2530b3e9.ico"
+
+[hosts."icann.org"]
+icon = "icann.org-e2bdae57.png"
+from = "https://www.icann.org/favicon.ico"
 
 [hosts."ico.org.uk"]
 icon = "ico.org.uk-8989c7e1.png"
@@ -1019,6 +1107,10 @@ from = "https://www.itnews.com.au/images/favicon/apple-touch-icon.png"
 [hosts."itsfoss.com"]
 icon = "itsfoss.com-78bc1919.png"
 from = "https://itsfoss.com/content/images/size/w256h256/2025/11/android-chrome-512x512.png"
+
+[hosts."itu.int"]
+icon = "itu.int-73c28b5c.png"
+from = "https://www.itu.int/PublishingImages/masterpage/logos/itu-favicon.ico"
 
 [hosts."itunes.apple.com"]
 same_as = "apple.com"
@@ -1119,6 +1211,10 @@ from = "https://www.korea.kr/images/common/favicon.ico"
 icon = "korea.net-7241a798.png"
 from = "https://www.korea.net/favicon.ico"
 
+[hosts."koreajoongangdaily.com"]
+icon = "koreajoongangdaily.com-a5fd65dc.png"
+from = "https://www.koreajoongangdaily.com/view-resources/dachser2/public/koreajoongangdaily/favicons/web-app-manifest-512x512.png"
+
 [hosts."krackattacks.com"]
 icon = "krackattacks.com-40830c9b.png"
 from = "https://www.krackattacks.com/images/favicon.ico"
@@ -1162,6 +1258,10 @@ from = "https://www.lawson.co.jp/favicon.ico"
 [hosts."le.utah.gov"]
 icon = "le.utah.gov-bfd1677b.png"
 from = "https://web.archive.org/web/20261007id_/https://le.utah.gov/images/apple-touch-icon.png"
+
+[hosts."learn.microsoft.com"]
+icon = "learn.microsoft.com-52fcc091.png"
+from = "https://learn.microsoft.com/apple-touch-icon.png"
 
 [hosts."ledger.com"]
 same_as = "support.ledger.com"
@@ -1250,6 +1350,10 @@ from = "https://www.magnetforensics.com/wp-content/uploads/2025/05/cropped-MF_Fa
 icon = "man.openbsd.org-6c007872.png"
 from = "https://man.openbsd.org/favicon.ico"
 
+[hosts."maritime-executive.com"]
+icon = "maritime-executive.com-dfd0ea73.png"
+from = "https://maritime-executive.com/img/apple-touch-icon.png"
+
 [hosts."marketing-interactive.com"]
 icon = "marketing-interactive.com-f72720fd.png"
 from = "https://www.marketing-interactive.com/apple-touch-icon.png"
@@ -1273,6 +1377,10 @@ from = "https://www.medianama.com/wp-content/uploads/2024/04/cropped-favicon-192
 [hosts."meduza.io"]
 icon = "meduza.io-e004edbe.png"
 from = "https://meduza.io/apple-touch-icon-1024.png"
+
+[hosts."mehrnews.com"]
+icon = "mehrnews.com-4183ba69.png"
+from = "https://www.mehrnews.com/resources/theme/mehrnews/img/favicon.ico"
 
 [hosts."meity.gov.in"]
 icon = "meity.gov.in-533aec3e.png"
@@ -1329,6 +1437,10 @@ from = "https://ws.moi.gov.tw/001/Upload/400/sites/pagebackimage/ef9b9560-7f3e-4
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
+
+[hosts."mondaq.com"]
+icon = "mondaq.com-c16c2f25.png"
+from = "https://www.mondaq.com/favicon.ico?97211130a463a44a"
 
 [hosts."monogatari.co.jp"]
 icon = "monogatari.co.jp-9c5901bf.png"
@@ -1496,6 +1608,10 @@ from = "https://www.nsb.gov.tw/favicon.ico"
 icon = "oeil.secure.europarl.europa.eu-865fc6c6.png"
 from = "https://evokits.europarl.europa.eu/evostrap/7.0.0/lib/dist/assets/img/favicon.ico"
 
+[hosts."ofac.treasury.gov"]
+icon = "ofac.treasury.gov-bba95752.png"
+from = "https://ofac.treasury.gov/themes/custom/ofac/favicon.ico"
+
 [hosts."ofca.gov.hk"]
 icon = "ofca.gov.hk-b810d10c.png"
 from = "https://www.ofca.gov.hk/favicon.ico"
@@ -1518,6 +1634,10 @@ from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 [hosts."openjdk.org"]
 icon = "openjdk.org-babc8d36.png"
 from = "https://openjdk.org/images/nanoduke.ico"
+
+[hosts."openrightsgroup.org"]
+icon = "openrightsgroup.org-dcb8635e.png"
+from = "https://www.openrightsgroup.org/apple-touch-icon-1024x1024.png"
 
 [hosts."osborneclarke.com"]
 icon = "osborneclarke.com-446be60d.png"
@@ -1596,6 +1716,10 @@ same_as = "gov.hk"
 [hosts."policies.google.com"]
 icon = "policies.google.com-53ae8c75.png"
 from = "https://www.gstatic.com/policies/favicon.ico"
+
+[hosts."policy.trade.ec.europa.eu"]
+icon = "policy.trade.ec.europa.eu-3712d20c.png"
+from = "https://policy.trade.ec.europa.eu/themes/contrib/oe_theme/images/favicons/ec/favicon.png"
 
 [hosts."politiet.no"]
 icon = "politiet.no-3b14f30b.png"
@@ -1706,6 +1830,14 @@ from = "https://royfish.dev/public/favicon.ico"
 icon = "rsf.org-905ab8f8.png"
 from = "https://rsf.org/themes/custom/rsf/favicons/android-icon-192x192.png"
 
+[hosts."ru-bezh.ru"]
+icon = "ru-bezh.ru-674c0f7b.png"
+from = "https://ru-bezh.ru/favicon.ico"
+
+[hosts."ru.smbu.edu.cn"]
+icon = "ru.smbu.edu.cn-3bee7ef6.png"
+from = "https://ru.smbu.edu.cn/favicon.ico"
+
 [hosts."rules.utah.gov"]
 icon = "rules.utah.gov-a146b234.png"
 from = "https://rules.utah.gov/wp-content/uploads/site-icon-512-300x300.png"
@@ -1795,6 +1927,10 @@ from = "https://simplelogin.io/favicon.ico"
 icon = "smallpdf.com-b8979d33.png"
 from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
 
+[hosts."sme.gov.tw"]
+icon = "sme.gov.tw-bcedc2a7.png"
+from = "https://www.sme.gov.tw/mpstyle/2025wwwch/images/favicon.png"
+
 [hosts."smh.com.au"]
 icon = "smh.com.au-a36eafab.png"
 from = "https://www.smh.com.au/apple-touch-icons/smh.png"
@@ -1828,6 +1964,10 @@ from = "https://sslmate.com/assets/@9e36fda1926f2047cead1adb754d0fe2.png"
 [hosts."sso.agc.gov.sg"]
 icon = "sso.agc.gov.sg-7300262d.png"
 from = "https://sso.agc.gov.sg/CMS/Content/icons/apple-icon-180x180.png"
+
+[hosts."steamshipmutual.com"]
+icon = "steamshipmutual.com-736e3127.png"
+from = "https://www.steamshipmutual.com/sites/default/files/simsl-fav_8.png"
 
 [hosts."stheadline.com"]
 icon = "stheadline.com-089691d0.png"
@@ -1886,6 +2026,10 @@ from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
 icon = "system76.com-3462b304.png"
 from = "https://cdn11.bigcommerce.com/s-pywjnxrcr2/product_images/system76_logo-fav-32x32.png?t=1711381758"
 
+[hosts."t-invariant.org"]
+icon = "t-invariant.org-1bcb35c6.png"
+from = "https://t-invariant.org/wp-content/uploads/2025/05/cropped-t-invariant-logo-triangle-only-192x192.png"
+
 [hosts."taipeitimes.com"]
 icon = "taipeitimes.com-81cf3dff.png"
 from = "https://www.taipeitimes.com/assets/images/TT_web_icon-mobile.jpg"
@@ -1917,6 +2061,10 @@ from = "https://www.techspot.com/images/ts3mobile-badge.png"
 [hosts."tee.fail"]
 icon = "tee.fail-c874eed7.png"
 from = "https://tee.fail/img/favicon.png"
+
+[hosts."tehrantimes.com"]
+icon = "tehrantimes.com-abbd02d6.png"
+from = "https://www.tehrantimes.com/resources/theme/tehrantimes/img/favicon.ico"
 
 [hosts."teknologi.bisnis.com"]
 icon = "teknologi.bisnis.com-a1d08655.png"
@@ -2045,6 +2193,10 @@ from = "https://udn.com/static/img/icons/icon-192x192.png"
 icon = "ufm.dk-7092b75f.png"
 from = "https://ufm.dk/media/5ljdlabz/favicon.png?rmode=pad&width=180&height=180&format=png&bgcolor=transparent&v=1dc4cd92ab32530"
 
+[hosts."ventasdeseguridad.com"]
+icon = "ventasdeseguridad.com-db4640dc.png"
+from = "https://www.ventasdeseguridad.com/favicon.ico"
+
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
 from = "https://www.verizon.com/favicon.ico"
@@ -2068,6 +2220,10 @@ from = "https://w3techs.com/favicon.ico"
 [hosts."wap.miit.gov.cn"]
 icon = "wap.miit.gov.cn-754fc1e4.png"
 from = "https://wap.miit.gov.cn/favicon.ico"
+
+[hosts."wassenaar.org"]
+icon = "wassenaar.org-c64a6feb.png"
+from = "https://www.wassenaar.org/wp-content/uploads/2026/04/Frame-2147224220.png"
 
 [hosts."watchtowr.com"]
 icon = "watchtowr.com-8d05eca9.png"
@@ -2097,9 +2253,17 @@ from = "https://www.wi-fi.org/sites/default/files/public/logo.png"
 icon = "wicg.github.io-bf155846.png"
 from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
 
+[hosts."wiki.mozilla.org"]
+icon = "wiki.mozilla.org-b6fe8044.png"
+from = "https://wiki.mozilla.org/images/favicon.ico"
+
 [hosts."wikimediafoundation.org"]
 icon = "wikimediafoundation.org-61a8556d.png"
 from = "https://wikimediafoundation.org/wp-content/uploads/2018/05/cropped-wikimedia-logo_black-svg-2.png?w=192"
+
+[hosts."wired.com"]
+icon = "wired.com-32e047e6.png"
+from = "https://www.wired.com/verso/static/wired-us/assets/favicon.ico"
 
 [hosts."wired.me"]
 icon = "wired.me-32e047e6.png"
@@ -2157,6 +2321,10 @@ from = "https://ziyuan.baidu.com/favicon.ico"
 [hosts."zoom.com"]
 icon = "zoom.com-7e0948ce.png"
 from = "https://st1.zoom.us/homepage/20260930-1234/primary/favicon.ico"
+
+[hosts."zoomit.ir"]
+icon = "zoomit.ir-1d295ed2.png"
+from = "https://www.zoomit.ir/favicon.ico?favicon.11l_-hu5woagh.ico?dpl=2543a8d4-desktop"
 
 [hosts."zuckoff.app"]
 icon = "zuckoff.app-284bd984.png"
