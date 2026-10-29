@@ -6,7 +6,140 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 29 Oct 2026 01:25:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>英國內政部用生成式 AI 摘要庇護面談的爭議</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/uk-chatgpt-asylum-decisions/</link>
+<guid isPermaLink="false">anoni-news:2026/10/uk-chatgpt-asylum-decisions</guid>
+<pubDate>Fri, 30 Oct 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>英國數位權利團體 Open Rights Group 10 月發表調查，內政部在庇護案件使用兩個生成式 AI 工具，其中一個摘要面談紀錄。內政部的業務專家抽查 203 份摘要，第一輪判定 22% 不能使用。現任負責的部長在信中寫到，申請人沒有被特別告知 AI 參與了處理。內政部表示工具只是輔助，不會取代審查人員的決定。</description>
+<content:encoded>&lt;p&gt;整理 15 篇原文，來自 Open Rights Group、Home Office、Home Office（經 Open Rights Group 公布） 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;英國數位權利團體 Open Rights Group（ORG）10 月 12 日發表報告，整理半年來對內政部兩個生成式 AI 工具的調查。庇護案件摘要工具（ACS）把庇護面談的逐字紀錄整理成摘要給審查人員，庇護政策搜尋工具（APS）讓審查人員用對話方式查詢各國的政策資訊。依 ORG 的報告，兩者建在 OpenAI 的 GPT-4o 上、透過 Microsoft 的 Azure 提供。ORG 1 月的文件與 WIRED 則寫 GPT-4，內政部自己的公開文件沒有寫出模型名稱。&lt;/p&gt;
+&lt;p&gt;ACS 在 2026 年 4 月全面上線。依 ORG 透過國會質詢與資訊公開申請取得的資料，內政部的業務專家此後抽查了 203 份摘要。第一輪判定 45 份不能使用（22%），另有 19 份標記後送第二輪複查。第二輪的 56 份裡有 30 份不能使用，報告以 203 份為分母算成 15%（30÷203 約 14.8%，這是我們的換算），也沒有說明 19 份跟 56 份為何對不上。&lt;/p&gt;
+&lt;p&gt;ORG 拿這兩個數字跟內政部 2025 年試行評估的 9% 比較，那是試行時技術專員逐份審查後、因不準確或缺漏而剔除的摘要比例，跟上線後的抽查方法不同。The Register 的報導寫到內政部沒有回覆該媒體的提問，我們也沒有查到內政部對這些數字的公開回應。&lt;/p&gt;
+&lt;p&gt;ORG 依資料保護影響評估（處理高風險個資前要做的評估）的月平均推算，4 到 7 月約處理 7 萬個案件，只有 0.3% 經過專家抽查。受影響的是在英國申請庇護的人，現任負責庇護的部長 8 月給國會議員的信寫到，他們沒有被特別告知 AI 參與了案件的處理。內政部的隱私聲明寫到部分處理可能涉及自動化，複雜或不利的決定一定由受過訓練的人員作出，聲明裡沒有提到這兩個工具。ORG 委託三位律師在 2 月出具的法律意見（委託方取得的意見，未經法院判斷）認為，沒有告知申請人「很可能違法」，我們沒有查到內政部對這份意見的公開回應。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 WIRED 轉述的內政部回應，庇護決定由受過訓練的審查人員作出，工具不能單獨使用、也不會對申請作出決定。前任部長 6 月的信也寫到，摘要只是審查人員決定前要讀的文件之一，審查人員仍要讀完案件的所有文件。內政部也承諾公布更新的評估。&lt;/p&gt;
+&lt;p&gt;2025 年的試行評估寫到，使用 ACS 的組別讀完一份逐字紀錄比對照組快 23 分鐘（約省下 32%）。評估自己也寫明這是小規模試行，全面上線前需要進一步評估。ORG 認為，審查人員若仍要讀完所有文件，就不可能省下這些時間。&lt;/p&gt;
+&lt;p&gt;ORG 以資訊公開申請取得的數字指出，2026 年 4 月起每月的初次實質決定比前一年同期少約 42%，從面談到決定的平均時間增加 29%。The Register 的報導寫到，這些數字不能證明是 AI 造成的，也看不出部長承諾的效率提升。ORG 主張在庇護申請全面禁用 AI，報告的建議是先暫停兩個工具、委託獨立的稽核。&lt;/p&gt;
+&lt;p&gt;兩邊對工具做了什麼有不同的描述。部長 8 月的信寫到，這些工具摘要申請人提供的資訊，不會產生新內容。ORG 的報告則寫到兩個工具都會產生新的文字，可能篩掉、改寫或遺漏跟決定有關的事實。&lt;/p&gt;
+&lt;p&gt;依 ORG 報告的描述，大型語言模型的摘要是重新生成的句子，部長 8 月的信沒有說明「新內容」指的範圍。試行評估寫到 ACS 的摘要刻意沒有標示原文出處，以降低試行的技術複雜度，之後可以重新考慮。沒有出處編號時，審查人員不容易對照逐字紀錄的原句（本文的推論），部長的信則寫到之後要加上出處的編號。&lt;/p&gt;
+&lt;p&gt;前任部長 6 月的信寫到專家每週抽查 ACS 的產出，內政部也對 WIRED 表示會定期監控工具的表現。依 ORG 的報告，抽查表裡「是否遺漏最相關的事實」這一項有評分，但不列為不合格的條件。ORG 據此認為遺漏重要事實的摘要只要剩下的內容正確，仍可能通過，內政部對評分標準的說明我們沒有看到。&lt;/p&gt;
+&lt;p&gt;申請人能不能看到摘要，是另一個問題。依 ORG 的報告，申請人看不到、也無法更正自己面談的 AI 摘要。部長 8 月的信提到申請人在面談後的約定期間可以修改面談紀錄，ACS 是在修改期過後讓審查人員重新熟悉案件，信裡沒有提到申請人能否看到或更正摘要。&lt;/p&gt;
+&lt;p&gt;英國政府有一套讓機關公開演算法工具的透明度紀錄（Algorithmic Transparency Records），我們 10 月 29 日查詢時共 154 筆，內政部的 2 筆都不是這兩個工具。部長的信寫到，兩個工具的開發早於這套紀錄成為強制規定，現在正在補做。ORG 申請公開工具使用的提示詞被拒，理由之一是資安風險，部長說要在 8 月公布的平等影響評估（評估政策對不同群體影響的文件）到 10 月 12 日也還沒有公布。&lt;/p&gt;
+&lt;p&gt;監督內政部邊境與移民業務的獨立監察官 6 月公布 2025 年 6 到 12 月的庇護案件檢查報告，寫到 APS 的成效與可靠度不一。報告也寫到有證據顯示 AI 工具曾被不當用在決定書與面談，包括內政部規定不得用於庇護面談與決定的 Microsoft AI 助理 Copilot，以及 ChatGPT。庇護決定單位的主管表示這些情況已經處理。依 WIRED 的報導，監察官請 ORG 提供更多資料供擬定明年的檢查題目，但表示在公布前無法確認會檢查哪些題目。&lt;/p&gt;
+&lt;p&gt;面談紀錄送進 Azure 處理，申請人的陳述可能被誰讀到，要看服務的條件（本文的推論）。Microsoft 的說明文件寫到，客戶的提示（送進模型的文字）與輸出不提供給 OpenAI、也不用來改進模型。服務仍有偵測違規使用的濫用監控，被系統標記的提示與輸出可能由經授權的 Microsoft 員工人工審查，經核准修改濫用監控的客戶則不做這種儲存與人工審查。&lt;/p&gt;
+&lt;p&gt;文件也把部署分成幾種，資料處理的地區各不相同，其中 Global 類型的提示與回應可能在任何部署了該模型的地區處理。到 10 月 29 日為止，內政部採用哪一種部署、有沒有修改濫用監控，我們查不到內政部自己的說明。&lt;/p&gt;
+&lt;p&gt;台灣的行政院 2023 年訂定《行政院及所屬機關（構）使用生成式AI參考指引》，適用於行政院及所屬機關，性質是參考指引。第五點寫到不得以未經確認的產出直接作成行政行為或作為決策的唯一依據，方向跟英國內政部說工具不能單獨使用相近。第六點要求機關使用生成式 AI 作為輔助工具時適當揭露，但沒有寫揭露的對象，英國的部長信則寫不特別告知申請人。&lt;/p&gt;
+&lt;p&gt;2026 年 1 月公布的《人工智慧基本法》第 19 條另規定，政府使用人工智慧執行業務應進行風險評估。我們沒有查到台灣針對移民或庇護程序使用 AI 的專門規定。&lt;/p&gt;
+&lt;p&gt;在台灣跟行政院所屬機關往來的讀者，可以詢問承辦機關是否使用生成式 AI 處理自己的案件（本文的建議）。指引第六點沒有寫向誰揭露、揭露到什麼程度，詢問不保證能得到完整的答案。除此之外，讀者不需要因為這件事調整使用習慣。&lt;/p&gt;
+&lt;p&gt;比較各地政府用 AI 處理個人案件的做法，可以看當事人會不會被告知、能不能看到並更正 AI 的產出，以及抽查的比例與標準有沒有公開、遺漏事實算不算錯誤。政策想達成的效果也要一起看，省下的時間能不能抵過錯誤的代價，評估由誰來做、結果有沒有公布。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/press-releases/org-investigation-into-use-of-chatgpt-in-asylum-decisions-highlights-errors-inaccuracies-and-home-office-incompetence/&#34;&gt;ORG Investigation into use of ChatGPT in asylum decisions highlights errors, inaccuracies and Home Office incompetence&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/publications/the-use-of-chatgpt-in-asylum-decisions/&#34;&gt;The Use of ChatGPT in Asylum Decisions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/government/publications/evaluation-of-ai-trials-in-the-asylum-decision-making-process/evaluation-of-ai-trials-in-the-asylum-decision-making-process&#34;&gt;Evaluation of AI trials in the asylum decision making process&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-29&#34;&gt;2025 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/10/Letter-to-Bell-Ribeiro-Addy-MP-from-Alex-Norris.pdf&#34;&gt;Letter from the Minister for Border Security and Asylum (22 June 2026)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office（經 Open Rights Group 公布）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-22&#34;&gt;2026 年 6 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/10/Letter-to-Bell-Rebeiro-Addy-from-Anna-Turley.pdf&#34;&gt;Letter from the Minister for Border Security and Asylum (7 August 2026)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office（經 Open Rights Group 公布）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-07&#34;&gt;2026 年 8 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/government/publications/an-inspection-of-asylum-casework-june-december-2025&#34;&gt;An inspection of asylum casework (June – December 2025)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Independent Chief Inspector of Borders and Immigration&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-25&#34;&gt;2026 年 6 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.wired.com/story/uk-home-office-may-face-investigation-over-use-of-openai-tools/&#34;&gt;UK Home Office May Face Investigation Over Use of OpenAI Tech&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;WIRED&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/public-sector/2026/10/13/home-office-asylum-ai-flunks-one-in-five-accuracy-checks/5302649&#34;&gt;Home Office asylum AI flunks one in five accuracy checks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/01/Automating-the-Hostile-Environment-AI-tools-in-Asylum-Policy-Paper.pdf&#34;&gt;Automating the Hostile Environment: AI in the asylum decision-making process&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/government/publications/personal-information-use-in-borders-immigration-and-citizenship/borders-immigration-and-citizenship-privacy-information-notice--2&#34;&gt;Borders, immigration and citizenship: privacy information notice&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/03/Legal-Opinion-on-AI-tools-in-the-asylum-process.pdf&#34;&gt;The use of artificial intelligence tools by government: a case study of the Home Office&amp;#39;s asylum practice: joint legal opinion for the Open Rights Group&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy&#34;&gt;Data, privacy, and security for Foundry Models sold by Azure in Microsoft Foundry&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft Learn&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/algorithmic-transparency-records&#34;&gt;Algorithmic Transparency Records&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GOV.UK&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.sme.gov.tw/article-tw-2391-11626&#34;&gt;【資安宣導】行政院於112年10月3日函頒「行政院及所屬機關（構）使用生成式 AI 參考指引」，敬請參考&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;經濟部中小及新創企業署&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093&#34;&gt;人工智慧基本法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>泰國線上內容緊急停止散布公告的撤銷訴訟</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/thailand-good-morals-content/</link>
@@ -2561,129 +2694,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/google-ads/answer/6334160&#34;&gt;How Google uses Customer Match data&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Ledger 硬體錢包的植入晶片事件</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/ledger-hardware-wallet-implant/</link>
-<guid isPermaLink="false">anoni-news:2026/10/ledger-hardware-wallet-implant</guid>
-<pubDate>Wed, 21 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Ledger 10 月 15 日確認，犯罪集團在正品硬體錢包裡加裝設定時擷取復原詞的零件，再經東南亞的經銷商流入市面。到 10 月 13 日為止，Ledger 確認的盜領都跟授權經銷商 CryptoBilis 售出的裝置有關，其他管道的植入物回報還沒有證實。Ledger 的真品驗證偵測不到這類植入物，在 CryptoBilis 買過裝置且已經設定的人，Ledger 建議把資產轉到新裝置與新的復原詞。</description>
-<content:encoded>&lt;p&gt;整理 14 篇原文，來自 Ledger、Ledger Support、Ledger Academy 等 9 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;硬體錢包業者 Ledger 10 月 15 日在官方部落格確認，一個犯罪集團花了好幾個月買進正品的 Ledger 裝置。集團打開裝置裝上隱藏的零件，在使用者設定裝置時擷取復原詞（24 個英文單字，可以還原錢包裡的全部資產），再透過東南亞的經銷商流回市面。依鏈上分析公司 Bitquery 的時間線，集體盜領從 10 月 9 日開始。依 The Record 引述 Ledger 10 月 13 日的說明，已確認的盜領都跟 Ledger 授權的東南亞經銷商 CryptoBilis 售出的裝置有關。&lt;/p&gt;
-&lt;p&gt;依 Cointelegraph 引述，Ledger 10 月 13 日也表示還沒有證實其他管道買的裝置有盜領。Ledger 10 月 15 日的文章提到已請東南亞與香港的經銷商暫停銷售。官方的真品驗證（Genuine Check，連線 Ledger 伺服器確認安全晶片是原廠的檢查）偵測不到這類植入物。&lt;/p&gt;
-&lt;p&gt;依 Ledger 10 月 15 日的文章，晶片、作業系統與伺服器都沒有缺陷。Ledger 在文章裡把事件定性為裝置離開 Ledger 之後、在經銷管道發生的「localized distribution attack」（區域性的經銷攻擊），The Record 也引述 Ledger 認為受影響的裝置數量有限。依 The Record 引述 Ledger 10 月 13 日的說明，植入物讀取螢幕上顯示的資料，在設定時辨識出復原詞後用內建的 eSIM 經 LTE 行動網路傳出。&lt;/p&gt;
-&lt;p&gt;區塊鏈研發公司 Tibane Labs 拆解了兩台分別在日本拍賣網站與 Amazon Japan 賣家買到的 Nano X，頁面也寫明沒有測試過 CryptoBilis 的裝置。植入物是焊在主機板上、接到螢幕資料線的小型電腦，沒有去破解安全晶片（Secure Element，存放私鑰的晶片）。Tibane Labs 比較了三個版本，最新版本的專用天線印有零件編號與版本號，Tibane Labs 據此判斷植入物是量產品。&lt;/p&gt;
-&lt;p&gt;到 10 月 20 日為止，Ledger 沒有公布受影響的型號、批次、人數與金額。Bitquery 到 10 月 16 日統計出 335 個錢包、共 1.02 億美元被轉走，crypto.news 等早期報導的 9,290 萬美元是 Bitquery 較早版本的數字。Bitquery 的頁面提到鏈上紀錄指向同一個行為者持有所有被盜錢包的金鑰，但鏈上只看得到轉帳，看不出金鑰是從哪裡外洩的。&lt;/p&gt;
-&lt;p&gt;資安記者的電子報 Zero Day 10 月 13 日報導了 CryptoBilis 以外管道的植入物。一位不具名的日本研究者對 Zero Day 說，他累計向非授權網路賣家買了十台（最早在 3 月），全部都有植入物。同一篇報導引述一位德國買家在 X 的貼文，他在 Ledger 列為德國授權經銷商的 MediaMarkt 兩家門市，買到有植入物的 Nano X。到 10 月 20 日為止，Ledger 沒有證實這些說法。&lt;/p&gt;
-&lt;p&gt;The Record 引述 Ledger 10 月 13 日的說明，Ledger「also reviewing reports of implants in other signers and locations」。依 crypto.news 的報導，MediaMarkt 在 Ledger 同意下暫停銷售。Ledger 表示德國的案例沒有收到資金損失的回報，也沒有確認德國的回報跟其他案例是否相關。Ledger 10 月 15 日的文章提到曾派人到包括德國在內的市場買裝置拆開檢查，「Every unit examined was clean」，但沒有公布檢查的數量。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 Ledger 的教學網站 Ledger Academy，私鑰存在安全晶片裡。復原詞由裝置在初始化時產生，也只在那時顯示一次。依檢查硬體完整性的說明頁，真品驗證確認的是原廠寫入安全晶片的密鑰，用來擋下仿冒品。同一頁也提醒，只要原廠的安全晶片完好，真品驗證就偵測不到植入物這類實體改裝。&lt;/p&gt;
-&lt;p&gt;The Record 與 Tibane Labs 描述的植入物不碰安全晶片，在復原詞顯示的那一刻從螢幕的資料線讀走復原詞。檢查硬體完整性的說明頁提到，Nano X 與 Nano S Plus 開機時由安全晶片檢查主控晶片的韌體，被改過會出現警告。說明頁另外列出的檢查方式是開殼對照官方的內部照片，確認沒有多出晶片。Tibane Labs 的頁面提到裝置本身不會察覺植入物，最新版本的植入物也塗成跟原廠電路板相同的顏色。&lt;/p&gt;
-&lt;p&gt;依 The Record 引述 Ledger 10 月 13 日的說明，在 CryptoBilis 買的裝置還沒設定的話不要設定，直接聯絡客服。已經設定的，要盡快把資產轉到新的裝置與新的復原詞，也不要在 CryptoBilis 買的裝置上輸入或還原任何復原詞。受害者要先聯絡 Ledger 與當地警方，再決定是否開殼或寄送裝置。&lt;/p&gt;
-&lt;p&gt;在其他管道買到來源不明的 Nano X、已經設定過的人，到 10 月 20 日為止 Ledger 沒有提出換復原詞的建議。Tibane Labs 的頁面則建議換掉在來源不明的 Nano X 上顯示過的復原詞，在可信的裝置上產生新的復原詞再把資產轉過去。頁面也提到，被改裝的螢幕顯示過的復原詞，就算裝置從沒連上網路也要當成已經外洩。依檢查硬體完整性的說明頁，懂硬體的人可以開殼對照，但開殼造成的損壞不在保固範圍。&lt;/p&gt;
-&lt;p&gt;還沒買或剛收到裝置的人，可以參照客服中心的購買說明頁。包裝看起來被打開或重新封裝、盒內已經附上寫好復原詞卡片的裝置都不要使用，直接聯絡客服。Ledger 建議向官方商店或授權經銷商購買，到 10 月 20 日為止經銷商頁列出台灣 6 家與香港 5 家，香港的項目沒有標示暫停銷售。這些說明頁到 10 月 20 日為止沒有正體中文版。&lt;/p&gt;
-&lt;p&gt;CryptoBilis 與 MediaMarkt 都在 Ledger 的授權名單上，Ledger Academy 的購買指南也寫到「no global supply chain is entirely immune」。依本文的推論，授權通路能降低風險，但不能保證裝置沒被改裝。&lt;/p&gt;
-&lt;p&gt;Ledger 在 10 月 15 日的文章裡要求經銷商不再把裝置放在貨架與展示櫃，改從庫存直接交給買家，並重申退貨的裝置一律不得轉售。同一篇文章預告之後會公布更完整的技術細節，也在開發產品層面的防護措施。這兩項的後續，以及 Ledger 是否擴大確認的範圍，是接下來可以留意的地方。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ledger.com/blog-response-hardware-implant-attack&#34;&gt;Ledger’s Response to the Hardware Implant Attack&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ledger&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.ledger.com/article/4404382029329-zd&#34;&gt;Check hardware integrity&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ledger Support&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ledger.com/academy/topics/ledgersolutions/best-practices-to-securely-buy-ledger-signer&#34;&gt;Best Practices To Securely Buy Your Ledger Signer&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ledger Academy&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-06&#34;&gt;2026 年 3 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.ledger.com/article/Purchasing-from-an-authorised-reseller&#34;&gt;Purchasing from an authorised reseller&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ledger Support&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://shop.ledger.com/pages/resellers&#34;&gt;Find a Ledger Reseller around the world&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ledger&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ledger.com/academy/basic-basics/ledgers-bit-of-it/ledger-nano-security-made-easy&#34;&gt;Why is Ledger Nano so Secure?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ledger Academy&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/ledger-cryptocurrency-wallet-implant-theft&#34;&gt;Ledger says hardware implant in cryptocurrency wallets stole recovery phrases&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tibane.net/research/ledger-nano-x-implant&#34;&gt;Ledger Nano X: the spy implant.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tibane Labs&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bitquery.io/investigations/ledger-cryptobilis-hack&#34;&gt;The Ledger CryptoBilis hack took $102.0M from 335 wallets. One thief had all the keys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitquery&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-10&#34;&gt;2026 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zetter-zeroday.com/who-is-planting-backdoors-in-ledger-crypto-wallets/&#34;&gt;Who Is Planting Backdoors in Ledger Crypto Wallets?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Zero Day&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://crypto.news/ledger-suspends-retail-sales-in-germany-as-wallet-implant-probe-continues/&#34;&gt;Ledger suspends retail sales in Germany as wallet implant probe continues&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;crypto.news&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wallet-amid-92m/&#34;&gt;Ledger confirms hidden chip in crypto wallet amid $92M theft claims&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;crypto.news&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-11&#34;&gt;2026 年 10 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://crypto.news/ledger-reveals-how-hidden-chips-stole-recovery-phrases/&#34;&gt;Ledger reveals how hidden chips stole wallet recovery keys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;crypto.news&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cointelegraph.com/news/ledger-asks-resellers-to-halt-sales-in-southeast-asia-and-hong-kong&#34;&gt;Ledger asks resellers to halt sales in Southeast Asia and Hong Kong&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cointelegraph&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
