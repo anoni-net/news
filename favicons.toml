@@ -99,6 +99,10 @@ from = "https://apt.izzysoft.de/favicon.ico"
 icon = "archive.epic.org-d417717b.png"
 from = "https://archive.epic.org/favicon2.ico"
 
+[hosts."archive.icann.org"]
+icon = "archive.icann.org-4223f762.png"
+from = "https://archive.icann.org/apple-touch-icon.png"
+
 [hosts."arstechnica.com"]
 icon = "arstechnica.com-18386f32.png"
 from = "https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-300x300.png"
@@ -332,6 +336,10 @@ from = "https://chromereleases.googleblog.com/favicon.ico"
 [hosts."chromestatus.com"]
 icon = "chromestatus.com-1338ffe4.png"
 from = "https://chromestatus.com/static/img/crstatus_192.png"
+
+[hosts."chromium.googlesource.com"]
+icon = "chromium.googlesource.com-f4ae33d1.png"
+from = "https://chromium.googlesource.com/+static/apple-touch-icon.png"
 
 [hosts."chromium.org"]
 icon = "chromium.org-682a9ae9.png"
@@ -954,6 +962,14 @@ from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-ic
 [hosts."i.win.org.tw"]
 icon = "i.win.org.tw-3c9efd99.png"
 from = "https://i.win.org.tw/favicon.png"
+
+[hosts."iana.org"]
+icon = "iana.org-a961d86d.png"
+from = "https://www.iana.org/static/img/bookmark_icon.e14a2530b3e9.ico"
+
+[hosts."icann.org"]
+icon = "icann.org-e2bdae57.png"
+from = "https://www.icann.org/favicon.ico"
 
 [hosts."ico.org.uk"]
 icon = "ico.org.uk-8989c7e1.png"
@@ -2116,6 +2132,10 @@ from = "https://www.wi-fi.org/sites/default/files/public/logo.png"
 [hosts."wicg.github.io"]
 icon = "wicg.github.io-bf155846.png"
 from = "https://www.w3.org/assets/logos/w3c-2025/favicons/favicon-180.png"
+
+[hosts."wiki.mozilla.org"]
+icon = "wiki.mozilla.org-b6fe8044.png"
+from = "https://wiki.mozilla.org/images/favicon.ico"
 
 [hosts."wikimediafoundation.org"]
 icon = "wikimediafoundation.org-61a8556d.png"
