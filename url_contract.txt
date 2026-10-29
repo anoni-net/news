@@ -138,6 +138,9 @@
 /2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/2026/10/iran-filtering-starlink/
+	#perspective
+	#sources
 /2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
@@ -205,6 +208,9 @@
 	#perspective
 	#sources
 /2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
+/2026/10/uk-chatgpt-asylum-decisions/
 	#perspective
 	#sources
 /2026/10/uk-supreme-court-spyware-state-immunity/
@@ -407,6 +413,9 @@
 /en/2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/en/2026/10/iran-filtering-starlink/
+	#perspective
+	#sources
 /en/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
@@ -474,6 +483,9 @@
 	#perspective
 	#sources
 /en/2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
+/en/2026/10/uk-chatgpt-asylum-decisions/
 	#perspective
 	#sources
 /en/2026/10/uk-supreme-court-spyware-state-immunity/
@@ -837,6 +849,9 @@
 /zh-cn/2026/10/iphone-inactivity-reboot-bypass/
 	#perspective
 	#sources
+/zh-cn/2026/10/iran-filtering-starlink/
+	#perspective
+	#sources
 /zh-cn/2026/10/japan-data-breaches-2026/
 	#perspective
 	#sources
@@ -904,6 +919,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/10/tuta-nextcloud-integration/
+	#perspective
+	#sources
+/zh-cn/2026/10/uk-chatgpt-asylum-decisions/
 	#perspective
 	#sources
 /zh-cn/2026/10/uk-supreme-court-spyware-state-immunity/
