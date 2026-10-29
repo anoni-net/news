@@ -64,6 +64,10 @@ from = "https://www.androidauthority.com/favicon.ico"
 icon = "anoni.net-e7cf54e0.png"
 from = "手動提供的檔案 anoni-favicon.png"
 
+[hosts."antaranews.com"]
+icon = "antaranews.com-8a11d568.png"
+from = "https://static.antaranews.com/assets/img/favicon/android-icon-192x192.png"
+
 [hosts."anthropic.com"]
 icon = "anthropic.com-c45fad63.png"
 from = "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa394792257596c5_webclip.png"
@@ -639,6 +643,10 @@ from = "https://emudhra.com/images/favicon.png"
 [hosts."emudhra.we-have-a-problem.com"]
 none = "事件說明頁，網站沒有圖示"
 
+[hosts."en.antaranews.com"]
+icon = "en.antaranews.com-8a11d568.png"
+from = "https://en.antaranews.com/assets/img/favicon/android-icon-192x192.png"
+
 [hosts."en.greatfire.org"]
 icon = "en.greatfire.org-cbbba5a5.png"
 from = "https://en.greatfire.org/apple-touch-icon.png"
@@ -776,6 +784,10 @@ same_as = "torproject.org"
 [hosts."gizmodo.com"]
 icon = "gizmodo.com-4fc42cec.png"
 from = "https://gizmodo.com/apple-touch-icon.png?v1"
+
+[hosts."gld.gov.hk"]
+icon = "gld.gov.hk-7e1d8e2b.png"
+from = "https://www.gld.gov.hk/favicon.ico"
 
 [hosts."globalencryption.org"]
 icon = "globalencryption.org-6a2f17a9.png"
@@ -945,6 +957,18 @@ from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
 
 [hosts."indiacode.nic.in"]
 none = "網站在抓取時無法連線"
+
+[hosts."indonesiaatmelbourne.unimelb.edu.au"]
+icon = "indonesiaatmelbourne.unimelb.edu.au-092bcd66.png"
+from = "https://indonesiaatmelbourne.unimelb.edu.au/wp-content/uploads/2020/08/cropped-Favicon-2-192x192.png"
+
+[hosts."industri.kontan.co.id"]
+icon = "industri.kontan.co.id-cf84db71.png"
+from = "https://asset.kontan.co.id/general/images/favicon.ico"
+
+[hosts."inet.detik.com"]
+icon = "inet.detik.com-18b855d6.png"
+from = "https://awscdn.detik.net.id/inet3/images/favicon.ico?v=2026102912131"
 
 [hosts."info.gov.hk"]
 same_as = "gov.hk"
@@ -1340,6 +1364,10 @@ from = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7YVWz03dawww
 icon = "naehrdine.blogspot.com-624359af.png"
 from = "https://naehrdine.blogspot.com/favicon.ico"
 
+[hosts."nasional.kontan.co.id"]
+icon = "nasional.kontan.co.id-cf84db71.png"
+from = "https://asset.kontan.co.id/general/images/favicon.ico"
+
 [hosts."nationthailand.com"]
 icon = "nationthailand.com-39704d7e.png"
 from = "https://media.nationthailand.com/images/3.0/icon-192.png"
@@ -1390,6 +1418,10 @@ from = "https://news.mtn.co.kr/images/favicon.png"
 [hosts."news.mynavi.jp"]
 icon = "news.mynavi.jp-c3f92159.png"
 from = "https://news.mynavi.jp/favicon.ico"
+
+[hosts."news.republika.co.id"]
+icon = "news.republika.co.id-64602225.png"
+from = "http://static.republika.co.id/files/images/favicon-rol.png?v=ROL-60"
 
 [hosts."news.risky.biz"]
 icon = "news.risky.biz-8a82d4e1.png"
@@ -1510,6 +1542,10 @@ from = "https://pardok.parlament-berlin.de/favicon.ico"
 icon = "parl.ca-cc71bd4e.png"
 from = "https://www.parl.ca/favicon.ico"
 
+[hosts."pasal.id"]
+icon = "pasal.id-f365b25f.png"
+from = "https://pasal.id/apple-touch-icon.png"
+
 [hosts."pbs.org"]
 icon = "pbs.org-f7a94f50.png"
 from = "https://www.pbs.org/favicons/favicon-180x180.png"
@@ -1608,6 +1644,9 @@ from = "https://publicsafety.gc.ca/dist/assets/favicon.ico"
 icon = "quad9.net-ff6922f7.png"
 from = "https://quad9.net/icons/icon_512x512.a811cc.png"
 
+[hosts."radar.cloudflare.com"]
+same_as = "cloudflare.com"
+
 [hosts."radicle.dev"]
 icon = "radicle.dev-e034932a.png"
 from = "手動提供的檔案 radicle.png"
@@ -1618,6 +1657,10 @@ from = "https://rankingdigitalrights.org/wp-content/uploads/2022/01/header-no-te
 
 [hosts."ratchakitcha.soc.go.th"]
 none = "網站擋自動抓取"
+
+[hosts."rctiplus.com"]
+icon = "rctiplus.com-730ff4ce.png"
+from = "https://www.rctiplus.com/assets/image/elements/favicon.png"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
@@ -1666,6 +1709,10 @@ from = "https://rsf.org/themes/custom/rsf/favicons/android-icon-192x192.png"
 [hosts."rules.utah.gov"]
 icon = "rules.utah.gov-a146b234.png"
 from = "https://rules.utah.gov/wp-content/uploads/site-icon-512-300x300.png"
+
+[hosts."safenet.or.id"]
+icon = "safenet.or.id-65f8dcc0.png"
+from = "https://safenet.or.id/wp-content/uploads/2026/02/cropped-SAFEnetFavicon-192x192.png"
 
 [hosts."sakigake.jp"]
 icon = "sakigake.jp-e9870319.png"
@@ -1870,6 +1917,10 @@ from = "https://www.techspot.com/images/ts3mobile-badge.png"
 [hosts."tee.fail"]
 icon = "tee.fail-c874eed7.png"
 from = "https://tee.fail/img/favicon.png"
+
+[hosts."teknologi.bisnis.com"]
+icon = "teknologi.bisnis.com-a1d08655.png"
+from = "https://teknologi.bisnis.com/favicon.ico"
 
 [hosts."telegram.org"]
 icon = "telegram.org-a6b238d2.png"
