@@ -6,7 +6,142 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>伊朗网络过滤的效果与政府对 Starlink 的反制</title>
+<link>https://anoni.net/news/zh-cn/2026/10/iran-filtering-starlink/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/10/iran-filtering-starlink</guid>
+<pubDate>Fri, 30 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>关注伊朗网络的监测组织 Filterwatch 10 月的报告写到，伊朗政府担心过滤对卫星网络失效，因此转向干扰信号、没收设备与外交施压。网络空间最高委员会秘书宣称已能让 Starlink 终端失效，兼任通信部副部长的基础设施公司首席执行官则表示，通信部的正式立场是现行的过滤政策没有成效。依 2025 年的法律，个人使用未经许可的卫星网络设备可处徒刑。</description>
+<content:encoded>&lt;p&gt;整理 15 篇原文，来自 Filterwatch、Zoomit、Tehran Times 等 12 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;关注伊朗网络的监测组织 Filterwatch 10 月 14 日的报告写到，伊朗政府担心过滤对卫星网络逐渐失效（Filterwatch 2012 年由伦敦的数字权利团体 Small Media 发起，现在属于 Miaan Group）。依报告的分析，一般的过滤在国内运营商的网络与国际出口执行。Starlink 的终端则直接连上卫星，流量不经过这些地方。政府的回应因此转向干扰信号、没收设备、处罚用户与外交施压，这些罚则与干扰都发生在伊朗境内。&lt;/p&gt;
+&lt;p&gt;伊朗科技媒体 Zoomit 报道，网络空间最高委员会秘书 10 月 5 日宣称，伊朗在伊朗历 Dey 月（约 2025 年 12 月下旬到 2026 年 1 月中旬）的动荡与 1 月全国断网期间以「受控的方式」让 Starlink 终端失效。秘书引用西方网站的报道佐证，也表示伊朗还有其他技术可用。前一天，伊朗外交部召见挪威大使，抗议挪威没有依国际电信联盟（ITU）无线电规则委员会的决定阻止 Starlink 在伊朗境内的未经授权传输。&lt;/p&gt;
+&lt;p&gt;伊朗官员对成效的说法并不一致。依半官方通讯社 Mehr 9 月 14 日的报道，兼任通信部副部长的基础设施通信公司首席执行官表示通信部的正式立场是现行的过滤政策没有成效，决策也不只在一个部门手中。首席执行官估计 Starlink 在伊朗流量里约 1 Tbps（每秒 1 万亿比特），但占全国流量的份额仍然偏低，国内机构也没有精确的用户数字。首席执行官另说国际流量已回到过去水平的约 90%。&lt;/p&gt;
+&lt;p&gt;科技媒体 Digiato 转述另一位通信部副部长的警告，持续限制性的政策会把用户推向不依赖国内网络的工具。Gadgetnews 与 Digiato 也引述这位副部长在会议上的话，照这个趋势下一次危机只好断电，因为 Starlink 不再依赖伊朗的网络。&lt;/p&gt;
+&lt;p&gt;伊朗 2025 年通过《加重间谍与对以色列政权及敌对国家合作危害国家安全与利益的处罚法》，同年 10 月通过宪法监护委员会审查。依 Hamshahri Online 转述的第 5 条，为个人使用而使用、携带、持有、购买、出售或输入未经许可的卫星网络设备（例如 Starlink），处第 6 级徒刑并没收设备（各报道写的刑期年限不一致）。供应、生产、分销与安装属第 5 级徒刑，以对抗体制或间谍为目的且行为人被视为敌对力量时可处死刑。到 10 月 29 日为止，我们查不到依这一条起诉的案例。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;Digiato 转述的副部长也提到，卫星直连手机的技术若普及，连手机的设备登记（政府验证身份最基本的机制）都会失效。依 Tehran Times 报道的网络空间最高委员会秘书说法，动荡期间约 80% 的 Starlink 数据包被干扰，其余的流量也大多失去作用。秘书也提到 Starlink 在乌克兰等冲突中的使用，表示卫星通信可支持军事指挥与情报搜集。&lt;/p&gt;
+&lt;p&gt;Filterwatch 访问的一位 NasNet 技术人员（报告把 NasNet 链接到一个以 Starlink 连接为使用场景的路由器配置工具网站）表示，1 月部分地区的丢包率曾高达约 80%，Starlink 更新后降到约 10%。这位技术人员也表示伊朗从未能让 Starlink 在全国完全失效。报告的关键发现引用技术评估，认为全国性的关闭在技术上不可行，正文的依据是这位技术人员的说法。技术人员说的是丢包率，秘书说的是被干扰的数据包比例，两组 80% 的口径未必相同（本文的判断）。&lt;/p&gt;
+&lt;p&gt;依 ITU《无线电规则》第 18 条与相关决议，发射地球站要取得所在国主管部门的授权。ITU 网站上的委员会页面写到，委员会 3 月认定挪威（Starlink 系统的通知主管部门）的作为不符合义务，但没有权限因此暂停卫星系统的频率指配。6 月底到 7 月初的第 102 次会议再强烈敦促挪威与美国，让运营商立即停止伊朗境内未经授权的发射，也请伊朗尽力识别并停用境内未经授权的终端。&lt;/p&gt;
+&lt;p&gt;同一页转述，挪威认为规则框架没有明文要求时不愿执行委员会先前的决定，美国则认为委员会逾越了《国际电联组织法》给它的权限。委员会 10 月 26 到 30 日开第 103 次会议，到 10 月 29 日还查不到结果。依 Tehran Times 引述伊朗外交部的说法，伊朗官员在召见挪威大使时提到美国与以色列利用 Starlink 支持干预伊朗的活动。这是伊朗官方的说法，我们没有独立查证，也查不到 SpaceX 与挪威政府对这次召见的公开回应。&lt;/p&gt;
+&lt;p&gt;Cloudflare Radar 记录的伊朗 HTTP 请求在 10 月 4 日出现一笔流量异常，之后的每日高峰约为 10 月 3 日傍晚高点的四成，再逐日回升到 10 月 17 到 19 日的六到七成（本文在 10 月 29 日查询的约略读数）。Filterwatch 写到同期用户反映 VPN 失效，并提出跟针对规避工具的干扰有关的假设。依 Filterwatch 的记述（附 X 帖子链接），网络分析公司 Kentik 的互联网分析主任确认这次下降只限于 Cloudflare 的网络，分析主任对 Filterwatch 则表示伊朗整体流量约为 1 月 8 日之前的 60%（1 月曾全国断网）。Filterwatch 认为这跟首席执行官 9 月 14 日说的 90% 不一致，不过两者的基准与口径可能不同（本文的推论）。&lt;/p&gt;
+&lt;p&gt;Filterwatch 同期的另一份报告分析了三个 Android 恶意软件案例，都从一则 Telegram 消息开始，其中一个伪装成 Starlink 与 VPN 工具。报告写到攻击的关键一环是说服对象从官方应用商店以外安装。消息若来自朋友的账号，可能代表账号被盗，但证据不足以确认。&lt;/p&gt;
+&lt;p&gt;中国大陆查到的规定与执法集中在船舶，依航运媒体 The Maritime Executive 1 月的报道，《海上交通安全法》要求中国管辖范围内的船舶经主管部门许可的岸站或卫星关口站传输数字通信。Starlink 不在核准的运营商名单上。报道写到情节严重的罚款最高 10 万元，并可暂停证照最多三个月。另一组无线电规定最高罚 5 万元，无线电设备用于违法活动时最高 50 万元。&lt;/p&gt;
+&lt;p&gt;同一篇报道引述船东互保协会的通讯代理 Oasis，宁波港的海事主管部门 2025 年 12 月展开已知第一起针对船舶联网方式的调查。船东互保协会 Steamship Mutual 1 月 9 日的通知也提到，中国主管部门已开始处罚在中国管辖水域使用 Starlink 的船舶。这些是航运业的二手整理，法规原文我们没有核对。陆上个人持有或使用终端的规定与案例我们查不到，也没有找到允许境外低轨卫星服务供个人或企业直接使用的许可。&lt;/p&gt;
+&lt;p&gt;台湾的修法则以运营商为对象。依今周刊的报道，立法院 7 月 21 日三读通过的《电信管理法》第 36 条修正案规定以卫星通信技术设置公众电信网络的运营商经主管机关审酌国家安全等事项核准后，可以不受外资持股上限等限制。台湾个人持有或使用终端的规定，我们同样查不到，到 10 月 29 日为止也查不到 SpaceX 是否已提出申请。数字发展部部长在审查时则转述 Starlink 曾表示对台湾市场的兴趣不高。&lt;/p&gt;
+&lt;p&gt;中国境内与海外的读者不需要因为这件事调整使用习惯。Filterwatch 分析的是 Android 的案例，引导对象从官方应用商店以外安装的手法在其他地方也可能出现，好友传来的链接与安装包不一定可信（本文的推论）。&lt;/p&gt;
+&lt;p&gt;比较各地的做法，可以看卫星网络由谁核准、个人持有终端是否需要许可。政府要求运营商在境内停用终端时，依据的是国内法、ITU 的规则还是运营商的服务条款，也是各地的差别所在。政策想达成的效果也要一起看，过滤与断网的成效有没有独立的测量可以对照官方的说法。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://filter.watch/english/2026/10/14/network-monitoring-september-2026-regime-fear-of-filtering-failure/&#34;&gt;Iran’s Government Fears Its Filtering Is Failing: From the “Blackout” to Declaring War on Starlink&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Filterwatch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://filter.watch/english/2026/10/15/cyber-threat-intelligence-report-march-to-september-2026/&#34;&gt;AI in the Service of Repression: From Targeted Phishing to Gender-Based Harassment&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Filterwatch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zoomit.ir/iran-news/468503-iran-starlink-terminals-shutdown-technology-aghamiri/&#34;&gt;برای از کار انداختن استارلینک فقط یکی از فناوری‌هایمان را به کار گرفتیم؛ فناوری‌های دیگری هم داریم&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Zoomit&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zoomit.ir/iran-news/468499-iran-protests-norway-starlink-activities/&#34;&gt;اعتراض رسمی ایران به نروژ: برای جلوگیری از ارسال‌های غیرمجاز استارلینک هیچ اقدام موثری نکردید&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Zoomit&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tehrantimes.com/news/530789/Iran-protests-Norway-s-inaction-over-unauthorized-Starlink-operations&#34;&gt;Iran protests Norway&amp;#39;s inaction over unauthorized Starlink operations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tehran Times&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tehrantimes.com/news/531050/Iran-develops-countermeasures-against-Starlink&#34;&gt;Iran develops countermeasures against Starlink&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tehran Times&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mehrnews.com/news/6946660/&#34;&gt;بازگشت ۹۰ درصد اینترنت بین‌الملل به حالت قبل؛ جزئیات تحریم‌های سایبری&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mehr News Agency&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gadgetnews.net/1213107/as-starlink-becomes-widespread-we-will-have-cut-off-electricity-next-crisis/&#34;&gt;معاون وزیر ارتباطات: با فراگیر شدن استارلینک، در بحران بعدی باید برق را قطع کنیم!&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Gadgetnews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digiato.com/iran-technology-news/starlink-governance-debate&#34;&gt;دو روایت از استارلینک؛ اختلاف کارشناسی یا تقابل جناحی؟&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Digiato&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hamshahrionline.ir/news/1010728/&#34;&gt;جرم استفاده از استارلینک چیست؟ | چرا نباید استارلینک داشته باشید؟&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hamshahri Online&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-17&#34;&gt;2026 年 1 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.itu.int/en/ITU-R/conferences/RRB/Pages/Starlink.aspx&#34;&gt;Provision of Starlink satellite services in the territory of the Islamic Republic of Iran&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;ITU&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://radar.cloudflare.com/traffic/ir&#34;&gt;Iran&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Cloudflare Radar&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.businesstoday.com.tw/article/category/183015/post/202607210017/&#34;&gt;星鏈Starlink能無痛落地？台灣海纜被切斷成孤島有解？電信管理法三讀通過、外資持股放寬影響多大&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;今周刊&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-23&#34;&gt;2026 年 7 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://maritime-executive.com/article/china-begins-enforcing-its-ban-on-shipboard-starlink&#34;&gt;China Begins Enforcing its Ban on Shipboard Starlink&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Maritime Executive&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-13&#34;&gt;2026 年 1 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.steamshipmutual.com/publications/articles/fines-use-starlink-chinese-waters&#34;&gt;Fines for use of Starlink in Chinese Waters&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Steamship Mutual&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-09&#34;&gt;2026 年 1 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>英国内政部用生成式 AI 摘要庇护面谈的争议</title>
 <link>https://anoni.net/news/zh-cn/2026/10/uk-chatgpt-asylum-decisions/</link>
@@ -3018,111 +3153,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=telegram&amp;amp;since=2026-07-18&amp;amp;until=2026-10-18&#34;&gt;OONI API aggregation: telegram, CN&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>ChatGPT 广告的客户名单比对与对话内容</title>
-<link>https://anoni.net/news/zh-cn/2026/10/chatgpt-ads-customer-lists/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/chatgpt-ads-customer-lists</guid>
-<pubDate>Thu, 22 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>ChatGPT 的广告主可以上传电子邮件、电话号码或手机广告识别码的名单，让广告只出现在名单上的用户面前。广告只显示给 Free 与 Go 方案，台湾 9 月 23 日起陆续推出。依 OpenAI 到 10 月 20 日的帮助页，关闭广告个性化之后，ChatGPT 仍会依当前的对话内容挑选广告。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，来自 OpenAI、404 Media、Gizmodo 等 5 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;404 Media 10 月 15 日报道，ChatGPT 的广告主可以上传电子邮件、电话号码或手机广告识别码的名单，让广告只出现在名单上的用户面前。OpenAI 面向广告主的帮助页也列出这项功能，名称是自定义受众（Custom Audiences）。ChatGPT 的广告只显示给 Free 与较低价的付费方案 Go，台湾 9 月 23 日起陆续推出，Plus、Pro、Business 等方案没有广告。依 OpenAI 到 10 月 20 日的用户帮助页，关闭广告个性化之后，ChatGPT 仍会依当前的对话内容挑选广告。&lt;/p&gt;
-&lt;p&gt;根据自定义受众的帮助页，名单可以是电子邮件、电话号码、两者的 SHA-256 哈希值，或 Google 广告 ID（GAID，Android 手机上的广告识别码）。哈希是把数据转成固定长度字符串的单向运算。上传时也可以用没有哈希的原始数据，上传的文件通常在 24 小时内删除。OpenAI 把名单跟 ChatGPT 的用户比对，比对到的人才算进受众。&lt;/p&gt;
-&lt;p&gt;名单可以用来只对受众投放、排除受众，或提高、降低对受众的出价（广告主愿意为一次曝光或点击支付的价格）。只对受众投放与调整出价时，比对到的用户至少要 25,000 人，排除用的名单可以少于 25,000 人。广告管理工具也不会显示比对到哪些人。&lt;/p&gt;
-&lt;p&gt;依 Gizmodo 转述 404 Media 的报道，404 Media 自己在 ChatGPT 投放了两组广告活动测试这套系统。依同一篇转述，OpenAI 收到没有哈希的原始数据后会不会再哈希，并不清楚。404 Media 的报道有付费墙，付费墙之前公开的只有开头两段，其余细节依 Gizmodo 的转述。&lt;/p&gt;
-&lt;p&gt;依 OpenAI 的用户帮助页，OpenAI 不会把用户的对话、记忆、姓名、电子邮件、精确位置与 IP 地址交给广告主，广告主只会收到观看与点击次数这类汇总的效果数据。用户通过广告给广告主发消息时，广告主看得到那些消息。个人健康、心理健康与政治等敏感话题的对话附近不放广告，被判断为未满 18 岁的账号与临时对话也不显示广告。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;用客户名单投放广告在业界很常见，Google 的 Customer Match 与 Meta 的客户名单自定义受众都是同类功能。依 Meta 的帮助页，Meta 会先哈希名单再比对，Google 的帮助页则写 Google 不接收实际的电子邮件地址。OpenAI 的帮助页列出的上传格式包含没有哈希的原始数据。404 Media 的报道也提到，ChatGPT 的广告还会依用户输入的提示词挑选。&lt;/p&gt;
-&lt;p&gt;依 OpenAI 面向广告主的 Ad Tools Terms（广告工具条款），名单只能是广告主自己收集的第一方数据，不得取自数据经纪商（收集并转售个人数据的商家）。广告主要保证已依规定告知当事人，并取得必要的同意或其他法律依据，条款没有写 OpenAI 如何核实。到 10 月 20 日，用户帮助页没有提到能不能查自己在哪些广告主的名单里。广告菜单里有「About this ad」可以了解为什么看到某则广告，帮助页没有提到它会不会显示客户名单。&lt;/p&gt;
-&lt;p&gt;9 月 26 日那篇导读写的是像素（广告主装在自己网站上的追踪代码），它会把其他网站的浏览数据发回 OpenAI。OpenAI 的隐私政策（EEA、英国与瑞士以外的版本）提到，OpenAI 可能从广告主收到用户在广告主那里的购买记录这类信息，用来显示更相关的广告。&lt;/p&gt;
-&lt;p&gt;到 10 月 20 日，中国大陆、香港与澳门不在 OpenAI 列出的 ChatGPT 支持国家和地区清单内，API 的支持清单同样没有列出。依 ChatGPT 的清单页，在清单以外的地方使用可能导致账号被封锁或停用。ChatGPT 广告 9 月 23 日起在印尼、马来西亚、菲律宾、新加坡、泰国、越南与台湾陆续推出，在这之前亚太地区已在澳大利亚、新西兰、日本、韩国与印度推出。下面的设置写给在广告已推出的地方使用 Free 或 Go 方案的人。&lt;/p&gt;
-&lt;p&gt;用 Free 或 Go 方案的人，可以到 ChatGPT 的「Settings」、「Ad Controls」关闭「Personalize ads」，也可以关闭「Past chats and memory」这个只影响广告的开关（选项名称照英文版帮助页）。同一处也可以删除广告数据，最多 30 天后从服务器移除。帮助页提到手机 App 看不到这个选项时，要先更新到最新版。关闭个性化不会移除广告，系统仍会依当前的对话挑选广告。&lt;/p&gt;
-&lt;p&gt;不想看到广告的人可以改用 Plus 或 Pro，Free 方案也有无广告的选项，帮助页提到供应情况可能因地区和时间而不同。无广告选项的代价是每天能发的消息较少，也不能使用图片生成等工具，Go 方案的用户要先切回 Free 才能使用。帮助中心有简体中文版，切换步骤以英文版的「Change plan to go ad-free」为准。依帮助页「Temporary Chats will not show ads」，本文推论不想让某段对话影响广告的人可以改用临时对话。&lt;/p&gt;
-&lt;p&gt;名单可以包含电子邮件、电话号码与 GAID，OpenAI 没有说明比对时用的是账号的哪些数据。若比对的是账号登记的邮箱与电话（本文的推论），跟购物、会员用的不同时，名单可能比对不到。OpenAI 之后会不会说明收到原始数据后如何处理、关闭个性化是否也排除名单比对，是接下来可以留意的地方。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/20001346-set-up-custom-audiences-for-your-campaign&#34;&gt;Set up Custom Audiences for your Campaign&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://help.openai.com/zh-hant/articles/20001047-ads-in-chatgpt&#34;&gt;ChatGPT 中的廣告&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/20001047-ads-in-chatgpt&#34;&gt;Ads in ChatGPT&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/policies/ad-tools-terms/&#34;&gt;Ad Tools Terms&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-24&#34;&gt;2026 年 8 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/policies/privacy-policy/&#34;&gt;Privacy policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-30&#34;&gt;2026 年 7 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/&#34;&gt;ChatGPT Ads expands to Southeast Asia and Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.openai.com/api/docs/supported-countries&#34;&gt;Supported countries and territories&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/how-chatgpt-targets-ads-to-you-based-on-your-prompts-phone-number-and-email/&#34;&gt;How ChatGPT Targets Ads To You Based On Your Prompts, Phone Number, and Email&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gizmodo.com/heres-how-chatgpt-is-targeting-you-with-ads-2000826457&#34;&gt;Here&amp;#39;s How ChatGPT Is Targeting You With Ads&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Gizmodo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.facebook.com/business/help/341425252616329&#34;&gt;About customer list custom audiences&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/google-ads/answer/6334160&#34;&gt;How Google uses Customer Match data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

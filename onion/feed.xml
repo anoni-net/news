@@ -6,7 +6,126 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>伊朗網路過濾的效果與政府對 Starlink 的反制</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/iran-filtering-starlink/</link>
+<guid isPermaLink="false">anoni-news:2026/10/iran-filtering-starlink</guid>
+<pubDate>Fri, 30 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>關注伊朗網路的監測組織 Filterwatch 10 月的報告寫到，伊朗政府擔心過濾對衛星網路失效，因此轉向干擾訊號、沒收設備與外交施壓。網路最高委員會秘書宣稱已能讓 Starlink 終端失效，兼任通訊部副部長的基礎設施公司執行長則表示，通訊部的正式立場是現行的過濾政策沒有成效。依 2025 年的法律，個人使用未經許可的衛星網路設備可處徒刑。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，來自 Filterwatch、Zoomit、Tehran Times 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;關注伊朗網路的監測組織 Filterwatch 10 月 14 日的報告寫到，伊朗政府擔心過濾對衛星網路逐漸失效（Filterwatch 2012 年由倫敦的數位權利團體 Small Media 發起，現在屬於 Miaan Group）。依報告的分析，一般的過濾在國內業者的網路與國際出口執行。Starlink 的終端則直接連上衛星，流量不經過這些地方。政府的回應因此轉向干擾訊號、沒收設備、處罰使用者與外交施壓，這些罰則與干擾都發生在伊朗境內。&lt;/p&gt;
+&lt;p&gt;伊朗科技媒體 Zoomit 報導，網路最高委員會秘書 10 月 5 日宣稱，伊朗在伊朗曆 Dey 月（約 2025 年 12 月下旬到 2026 年 1 月中旬）的動盪與 1 月全國斷網期間以「受控的方式」讓 Starlink 終端失效。秘書引用西方網站的報導佐證，也表示伊朗還有其他技術可用。前一天，伊朗外交部召見挪威大使，抗議挪威沒有依國際電信聯盟（ITU）無線電規則委員會的決定阻止 Starlink 在伊朗境內的未經授權傳輸。&lt;/p&gt;
+&lt;p&gt;伊朗官員對成效的說法並不一致。依半官方通訊社 Mehr 9 月 14 日的報導，兼任通訊部副部長的基礎設施通信公司執行長表示通訊部的正式立場是現行的過濾政策沒有成效，決策也不只在一個部會手中。執行長估計 Starlink 在伊朗流量裡約 1 Tbps（每秒 1 兆位元），但占全國流量的份額仍然偏低，國內機構也沒有精確的使用者數字。執行長另說國際流量已回到過去水準的約 90%。&lt;/p&gt;
+&lt;p&gt;科技媒體 Digiato 轉述另一位通訊部副部長的警告，持續限制性的政策會把使用者推向不依賴國內網路的工具。Gadgetnews 與 Digiato 也引述這位副部長在會議上的話，照這個趨勢下一次危機只好斷電，因為 Starlink 不再依賴伊朗的網路。&lt;/p&gt;
+&lt;p&gt;伊朗 2025 年通過《加重間諜與對以色列政權及敵對國家合作危害國家安全與利益的處罰法》，同年 10 月通過護憲委員會審查。依 Hamshahri Online 轉述的第 5 條，為個人使用而使用、攜帶、持有、購買、出售或輸入未經許可的衛星網路設備（例如 Starlink），處第 6 級徒刑並沒收設備（各報導寫的刑期年限不一致）。供應、生產、分銷與安裝屬第 5 級徒刑，以對抗體制或間諜為目的且行為人被視為敵對力量時可處死刑。到 10 月 29 日為止，我們查不到依這一條起訴的案例。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;Digiato 轉述的副部長也提到，衛星直連手機的技術若普及，連手機的裝置登記（政府驗證身分最基本的機制）都會失效。依 Tehran Times 報導的網路最高委員會秘書說法，動盪期間約 80% 的 Starlink 封包被干擾，其餘的流量也大多失去作用。秘書也提到 Starlink 在烏克蘭等衝突中的使用，表示衛星通訊可支援軍事指揮與情報蒐集。&lt;/p&gt;
+&lt;p&gt;Filterwatch 訪問的一位 NasNet 技術人員（報告把 NasNet 連到一個以 Starlink 連線為使用情境的路由器設定工具網站）表示，1 月部分地區的封包遺失率曾高達約 80%，Starlink 更新後降到約 10%。這位技術人員也表示伊朗從未能讓 Starlink 在全國完全失效。報告的關鍵發現引用技術評估，認為全國性的關閉在技術上不可行，內文的依據是這位技術人員的說法。技術人員說的是封包遺失率，秘書說的是被干擾的封包比例，兩組 80% 的口徑未必相同（本文的判斷）。&lt;/p&gt;
+&lt;p&gt;依 ITU《無線電規則》第 18 條與相關決議，發射地球站要取得所在國主管機關的授權。ITU 網站上的委員會頁面寫到，委員會 3 月認定挪威（Starlink 系統的通報國）的作為不符合義務，但沒有權限因此暫停衛星系統的頻率指配。6 月底到 7 月初的第 102 次會議再強烈敦促挪威與美國，讓營運者立即停止伊朗境內未經授權的發射，也請伊朗盡力識別並停用境內未經授權的終端。&lt;/p&gt;
+&lt;p&gt;同一頁轉述，挪威認為規則框架沒有明文要求時不願執行委員會先前的決定，美國則認為委員會逾越了 ITU 憲章給它的權限。委員會 10 月 26 到 30 日開第 103 次會議，到 10 月 29 日還查不到結果。依 Tehran Times 引述伊朗外交部的說法，伊朗官員在召見挪威大使時提到美國與以色列利用 Starlink 支援干預伊朗的活動。這是伊朗官方的說法，我們沒有獨立查證，也查不到 SpaceX 與挪威政府對這次召見的公開回應。&lt;/p&gt;
+&lt;p&gt;Cloudflare Radar 看到的伊朗 HTTP 請求在 10 月 4 日出現一筆流量異常，之後的每日高峰約為 10 月 3 日傍晚高點的四成，再逐日回升到 10 月 17 到 19 日的六到七成（本文在 10 月 29 日查詢的約略讀數）。Filterwatch 寫到同期使用者回報 VPN 失效，並提出跟針對規避工具的干擾有關的假設。依 Filterwatch 的記述（附 X 貼文連結），網路分析公司 Kentik 的網際網路分析主任確認這次下降只限於 Cloudflare 的網路，分析主任對 Filterwatch 則表示伊朗整體流量約為 1 月 8 日之前的 60%（1 月曾全國斷網）。Filterwatch 認為這跟執行長 9 月 14 日說的 90% 不一致，不過兩者的基準與口徑可能不同（本文的推論）。&lt;/p&gt;
+&lt;p&gt;Filterwatch 同期的另一份報告分析了三個 Android 惡意程式案例，都從一則 Telegram 訊息開始，其中一個偽裝成 Starlink 與 VPN 工具。報告寫到攻擊的關鍵一環是說服對象從官方 App 商店以外安裝。訊息若來自朋友的帳號，可能代表帳號被盜，但證據不足以確認。&lt;/p&gt;
+&lt;p&gt;台灣的修法則以業者為對象。依今周刊的報導，立法院 7 月 21 日三讀通過的《電信管理法》第 36 條修正案，規範以衛星通信技術設置公眾電信網路的業者。這類業者經主管機關審酌國家安全等事項核准後，可以不受外資持股上限等限制。個人持有或使用終端的規定我們查不到，到 10 月 29 日為止也查不到 SpaceX 是否已提出申請，數發部長在審查時則轉述 Starlink 曾表示對台灣市場的興趣不高。&lt;/p&gt;
+&lt;p&gt;台灣的讀者不需要因為這件事調整使用習慣。Filterwatch 分析的是 Android 的案例，引導對象從官方商店以外安裝的手法在其他地方也可能出現，好友傳來的連結與安裝檔不一定可信（本文的推論）。&lt;/p&gt;
+&lt;p&gt;比較各地的做法，可以看衛星網路由誰核准、個人持有終端是否需要許可。政府要求業者在境內停用終端時，依據的是國內法、ITU 的規則還是業者的服務條款，也是各地的差別所在。政策想達成的效果也要一起看，過濾與斷網的成效有沒有獨立的量測可以對照官方的說法。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://filter.watch/english/2026/10/14/network-monitoring-september-2026-regime-fear-of-filtering-failure/&#34;&gt;Iran’s Government Fears Its Filtering Is Failing: From the “Blackout” to Declaring War on Starlink&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Filterwatch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://filter.watch/english/2026/10/15/cyber-threat-intelligence-report-march-to-september-2026/&#34;&gt;AI in the Service of Repression: From Targeted Phishing to Gender-Based Harassment&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Filterwatch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zoomit.ir/iran-news/468503-iran-starlink-terminals-shutdown-technology-aghamiri/&#34;&gt;برای از کار انداختن استارلینک فقط یکی از فناوری‌هایمان را به کار گرفتیم؛ فناوری‌های دیگری هم داریم&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Zoomit&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zoomit.ir/iran-news/468499-iran-protests-norway-starlink-activities/&#34;&gt;اعتراض رسمی ایران به نروژ: برای جلوگیری از ارسال‌های غیرمجاز استارلینک هیچ اقدام موثری نکردید&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Zoomit&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tehrantimes.com/news/530789/Iran-protests-Norway-s-inaction-over-unauthorized-Starlink-operations&#34;&gt;Iran protests Norway&amp;#39;s inaction over unauthorized Starlink operations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tehran Times&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tehrantimes.com/news/531050/Iran-develops-countermeasures-against-Starlink&#34;&gt;Iran develops countermeasures against Starlink&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tehran Times&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mehrnews.com/news/6946660/&#34;&gt;بازگشت ۹۰ درصد اینترنت بین‌الملل به حالت قبل؛ جزئیات تحریم‌های سایبری&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mehr News Agency&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gadgetnews.net/1213107/as-starlink-becomes-widespread-we-will-have-cut-off-electricity-next-crisis/&#34;&gt;معاون وزیر ارتباطات: با فراگیر شدن استارلینک، در بحران بعدی باید برق را قطع کنیم!&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Gadgetnews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digiato.com/iran-technology-news/starlink-governance-debate&#34;&gt;دو روایت از استارلینک؛ اختلاف کارشناسی یا تقابل جناحی؟&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Digiato&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hamshahrionline.ir/news/1010728/&#34;&gt;جرم استفاده از استارلینک چیست؟ | چرا نباید استارلینک داشته باشید؟&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Hamshahri Online&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-17&#34;&gt;2026 年 1 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.itu.int/en/ITU-R/conferences/RRB/Pages/Starlink.aspx&#34;&gt;Provision of Starlink satellite services in the territory of the Islamic Republic of Iran&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ITU&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://radar.cloudflare.com/traffic/ir&#34;&gt;Iran&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cloudflare Radar&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.businesstoday.com.tw/article/category/183015/post/202607210017/&#34;&gt;星鏈Starlink能無痛落地？台灣海纜被切斷成孤島有解？電信管理法三讀通過、外資持股放寬影響多大&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;今周刊&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-23&#34;&gt;2026 年 7 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>英國內政部用生成式 AI 摘要庇護面談的爭議</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/uk-chatgpt-asylum-decisions/</link>
@@ -2608,92 +2727,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060091&#34;&gt;行動寬頻業務管理規則&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>ChatGPT 廣告的客戶名單比對與對話內容</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/chatgpt-ads-customer-lists/</link>
-<guid isPermaLink="false">anoni-news:2026/10/chatgpt-ads-customer-lists</guid>
-<pubDate>Thu, 22 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>ChatGPT 的廣告主可以上傳電子郵件、電話號碼或手機廣告識別碼的名單，讓廣告只出現在名單上的使用者面前。廣告只顯示給 Free 與 Go 方案，台灣 9 月 23 日起陸續推出。依 OpenAI 到 10 月 20 日的說明頁，關閉廣告個人化之後，ChatGPT 仍會依目前的對話內容挑選廣告。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，來自 OpenAI、404 Media、Gizmodo 等 5 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;404 Media 10 月 15 日報導，ChatGPT 的廣告主可以上傳電子郵件、電話號碼或手機廣告識別碼的名單，讓廣告只出現在名單上的使用者面前。OpenAI 給廣告主的說明頁也列出這項功能，名稱是自訂受眾（Custom Audiences）。ChatGPT 的廣告只顯示給 Free 與較低價的付費方案 Go，台灣 9 月 23 日起陸續推出，Plus、Pro、Business 等方案沒有廣告。依 OpenAI 到 10 月 20 日的使用者說明頁，關閉廣告個人化之後，ChatGPT 仍會依目前的對話內容挑選廣告。&lt;/p&gt;
-&lt;p&gt;根據自訂受眾的說明頁，名單可以是電子郵件、電話號碼、兩者的 SHA-256 雜湊值，或 Google 廣告 ID（GAID，Android 手機上的廣告識別碼）。雜湊是把資料轉成固定長度字串的單向運算。上傳時也可以用沒有雜湊的原始資料，上傳的檔案通常在 24 小時內刪除。OpenAI 把名單跟 ChatGPT 的使用者比對，比對到的人才算進受眾。&lt;/p&gt;
-&lt;p&gt;名單可以用來只對受眾投放、排除受眾，或提高、降低對受眾的出價（廣告主願意為一次曝光或點擊付的價格）。只對受眾投放與調整出價時，比對到的使用者至少要 25,000 人，排除用的名單可以少於 25,000 人。廣告管理工具也不會顯示比對到哪些人。&lt;/p&gt;
-&lt;p&gt;依 Gizmodo 轉述 404 Media 的報導，404 Media 自己在 ChatGPT 刊登了兩組廣告活動測試這套系統。依同一篇轉述，OpenAI 收到沒有雜湊的原始資料後會不會再雜湊，並不清楚。404 Media 的報導有付費牆，付費牆之前公開的只有開頭兩段，其餘細節依 Gizmodo 的轉述。&lt;/p&gt;
-&lt;p&gt;依 OpenAI 的使用者說明頁，OpenAI 不會把使用者的對話、記憶、姓名、電子郵件、精確位置與 IP 位址交給廣告主，廣告主只會收到觀看與點擊次數這類彙總的成效數字。使用者透過廣告傳訊息給廣告主時，廣告主看得到那些訊息。個人健康、心理健康與政治等敏感主題的對話附近不放廣告，被判斷為未滿 18 歲的帳號與暫存對話也不顯示廣告。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;用客戶名單投放廣告在業界很常見，Google 的 Customer Match 與 Meta 的客戶名單自訂受眾都是同類功能。依 Meta 的說明頁，Meta 會先雜湊名單再比對，Google 的說明頁則寫 Google 不接收實際的電子郵件地址。OpenAI 的說明頁列出的上傳格式包含沒有雜湊的原始資料。404 Media 的報導也提到，ChatGPT 的廣告還會依使用者輸入的提示詞挑選。&lt;/p&gt;
-&lt;p&gt;依 OpenAI 給廣告主的 Ad Tools Terms（廣告工具條款），名單只能是廣告主自己蒐集的第一方資料，不得取自資料掮客（蒐集並轉售個人資料的業者）。廣告主要保證已依規定告知當事人，並取得必要的同意或其他法律依據，條款沒有寫 OpenAI 如何查證。到 10 月 20 日，使用者說明頁沒有提到能不能查自己在哪些廣告主的名單裡。廣告選單裡有「關於這則廣告」可以了解為什麼看到某則廣告，說明頁沒有提到它會不會顯示客戶名單。&lt;/p&gt;
-&lt;p&gt;9 月 26 日那篇導讀寫的是像素（廣告主裝在自己網站上的追蹤程式碼），它會把其他網站的瀏覽資料送回 OpenAI。OpenAI 的隱私權政策（EEA、英國與瑞士以外的版本）提到，OpenAI 可能從廣告主收到使用者在廣告主那裡的購買紀錄這類資訊，用來顯示更相關的廣告。&lt;/p&gt;
-&lt;p&gt;用 Free 或 Go 方案的人，可以到 ChatGPT 的「設定」、「廣告控制功能」關閉廣告個人化，也可以關閉「過去的聊天和記憶」這個只影響廣告的開關。同一處也可以刪除廣告資料，最多 30 天後從伺服器移除。說明頁提到手機 App 看不到這個選項時，要先更新到最新版。關閉個人化不會移除廣告，系統仍會依目前的對話挑選廣告。&lt;/p&gt;
-&lt;p&gt;不想看到廣告的人可以改用 Plus 或 Pro，Free 方案也有無廣告的選項，說明頁提到供應情況可能因地區和時間而不同。無廣告選項的代價是每天能傳的訊息較少，也不能使用圖片生成等工具，Go 方案的使用者要先切回 Free 才能使用。正體中文說明頁的切換步驟寫「輕觸變更方案以享受 Go 無廣告體驗」，跟英文版的「Change plan to go ad-free」意思不同，照做時以英文版為準。依說明頁「暫存對話不會顯示廣告」，本文推論不想讓某段對話影響廣告的人可以改用暫存對話。&lt;/p&gt;
-&lt;p&gt;名單可以包含電子郵件、電話號碼與 GAID，OpenAI 沒有說明比對時用的是帳號的哪些資料。若比對的是帳號登記的信箱與電話（本文的推論），跟購物、會員用的不同時，名單可能比對不到。OpenAI 之後會不會說明收到原始資料後如何處理、關閉個人化是否也排除名單比對，是接下來可以留意的地方。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/20001346-set-up-custom-audiences-for-your-campaign&#34;&gt;Set up Custom Audiences for your Campaign&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://help.openai.com/zh-hant/articles/20001047-ads-in-chatgpt&#34;&gt;ChatGPT 中的廣告&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/policies/ad-tools-terms/&#34;&gt;Ad Tools Terms&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-24&#34;&gt;2026 年 8 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/policies/privacy-policy/&#34;&gt;Privacy policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-30&#34;&gt;2026 年 7 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/&#34;&gt;ChatGPT Ads expands to Southeast Asia and Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-23&#34;&gt;2026 年 9 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.404media.co/how-chatgpt-targets-ads-to-you-based-on-your-prompts-phone-number-and-email/&#34;&gt;How ChatGPT Targets Ads To You Based On Your Prompts, Phone Number, and Email&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;404 Media&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gizmodo.com/heres-how-chatgpt-is-targeting-you-with-ads-2000826457&#34;&gt;Here&amp;#39;s How ChatGPT Is Targeting You With Ads&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Gizmodo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.facebook.com/business/help/341425252616329&#34;&gt;About customer list custom audiences&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/google-ads/answer/6334160&#34;&gt;How Google uses Customer Match data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

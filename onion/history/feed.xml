@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 29 Oct 2026 01:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>網址列裡 xn-- 開頭的網址</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-30/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/10-30/2026</guid>
+<pubDate>Fri, 30 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的瀏覽器遇到可能仿冒其他網站的中文、韓文等網域時，會在網址列改顯示 xn-- 開頭的編碼。這一天，ICANN 董事會通過一項快速申請程序，讓各國家與地區可以申請用自己的文字寫網址的最後一段。</description>
+<content:encoded>&lt;p&gt;瀏覽器會把網域裡的中文、韓文等文字轉成 &lt;code&gt;xn--&lt;/code&gt; 開頭的英數字串再查詢網站的位址，寫法觸發 Chrome 或 Firefox 的仿冒檢查時（例如英文字母混用俄文或希臘文字母），網址列就改顯示這串編碼。管理全球網域名稱的 ICANN 在 2009 年 10 月 30 日的首爾會議通過一項快速申請程序，讓各國家與地區申請用自己的文字寫網址的最後一段（&lt;code&gt;.tw&lt;/code&gt; 的位置），此前非拉丁文字只能用在網域的前半段。&lt;code&gt;.中國&lt;/code&gt; 與 &lt;code&gt;.中国&lt;/code&gt; 在 2010 年 7 月 8 日完成委派、交給當地機構管理，&lt;code&gt;.香港&lt;/code&gt; 與 &lt;code&gt;.台灣&lt;/code&gt; 分別在 7 月 12 日與 14 日完成委派。讀者可以從書籤或手動輸入開啟常用的網站，避開點進形近的網址（本文的推論，來源沒有評估效果）。Chrome 的文件提到密碼管理員只在網域完全相符時才自動填入，登入時密碼沒有跳出來就可以先核對網址（後半句是本文的推論）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>端對端加密與裝置上的間諜軟體</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-29/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你用 LINE 傳的一對一文字訊息預設是端對端加密，只有收發雙方的裝置能解開。這一天，包括日本與印度在內的七個國家發表聲明，呼籲科技公司讓執法單位在合法授權下可以讀取加密內容。</description>
 <content:encoded>&lt;p&gt;你用 LINE 傳的一對一文字訊息預設是端對端加密，只有收發雙方的裝置能解開內容，LINE 的說明頁也寫明這項功能無法關閉。美、英、澳、紐、加與印度、日本在 2020 年 10 月 11 日發表聯合聲明，表示支持強加密，同時呼籲科技公司在合法授權下讓執法單位可以讀取內容。印度《2021 年資訊科技（中介者指引與數位媒體倫理守則）規則》要求大型訊息服務依法院或主管機關的命令找出訊息的第一位發送者，WhatsApp 以追溯會破壞端對端加密為由，向德里高等法院提告。印度電子資訊科技部 2021 年的新聞稿寫到追溯只在其他方法無效時才使用，依 The Tribune 的報導，WhatsApp 的律師 2024 年則在法庭上表示被迫破解加密的話會退出印度。本站到 2026 年 10 月 10 日仍查不到這起訴訟的判決，台灣的讀者不需要另外設定 LINE，但群組的語音與視訊通話、相簿與記事本不在端對端加密的範圍內。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>維基百科在中國大陸的連線</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-10/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-10/2026</guid>
-<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在台灣可以直接讀維基百科，在中國大陸 2026 年 10 月的連線量測則幾乎都是異常或失敗。這一天，中國大陸的使用者回報被封鎖將近一年的英文維基百科可以連上了。</description>
-<content:encoded>&lt;p&gt;你在台灣可以直接讀維基百科，維基媒體基金會 2019 年 5 月的聲明則寫明維基百科在中國大陸所有語言版本都遭到封鎖。中文維基百科的貢獻者在 2006 年 10 月 10 日向基金會的郵件列表回報英文版在中國大陸可以連上了，中文版仍然被封。維基百科的社群通訊寫到這次封鎖始於 2005 年 10 月，官方也沒有說明解封的原因，無國界記者 11 月的通知則寫中文版約在 11 月 13 日解封。OONI 在 2026 年 9 月 10 日到 10 月 10 日於中國大陸量測中英文維基百科各 33 筆，全部是異常（跟對照量測不符，不等於確認封鎖）或失敗。台灣的讀者可以用 OONI Probe 量測自己的網路有沒有封鎖網站，量測結果會自動公開。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Thu, 29 Oct 2026 01:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Web addresses starting with xn-- in the address bar</title>
+<link>https://anoni.net/news/en/history/10-30/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-30/2026</guid>
+<pubDate>Fri, 30 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your browser switches to a code starting with xn-- in the address bar when a Chinese, Korean or other non-Latin domain name looks like a possible imitation of another site. On this day, the ICANN Board approved a fast-track process that let countries and territories apply to write the last part of a web address in their own script.</description>
+<content:encoded>&lt;p&gt;Browsers convert the Chinese, Korean or other non-Latin characters in a domain name into a string of plain letters and digits starting with &lt;code&gt;xn--&lt;/code&gt; before looking up the site&#39;s address. When the name matches a pattern that Chrome or Firefox treats as a possible lookalike, such as Latin letters mixed with Cyrillic or Greek, the address bar shows that code instead (Chrome&#39;s rules do allow Latin letters mixed with Chinese, Japanese or Korean). At its meeting in Seoul on 30 October 2009, ICANN (the body that oversees the world&#39;s domain names) approved a fast-track process for countries and territories to apply for the last part of a web address, where &lt;code&gt;.tw&lt;/code&gt; or &lt;code&gt;.kr&lt;/code&gt; sits, in their own script. In the list of top-level domains kept by the Internet Assigned Numbers Authority (IANA), &lt;code&gt;.中国&lt;/code&gt; and &lt;code&gt;.中國&lt;/code&gt; were delegated on 8 July 2010, &lt;code&gt;.香港&lt;/code&gt; on 12 July, &lt;code&gt;.台灣&lt;/code&gt; on 14 July and &lt;code&gt;.ไทย&lt;/code&gt; on 17 August, with &lt;code&gt;.한국&lt;/code&gt; and &lt;code&gt;.新加坡&lt;/code&gt; following on 6 February 2011. Readers can open the sites they use often from a bookmark or by typing the address, and because Chrome&#39;s documentation says password managers fill in a password only when the domain matches exactly, a saved password that fails to appear is a cue to check the address (both suggestions are our inference, and the sources do not assess how well they work).&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>End-to-end encryption and spyware on the device</title>
 <link>https://anoni.net/news/en/history/10-29/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the two devices involved can read them. On this day, seven countries including Japan and India issued a statement calling on technology companies to let law enforcement read encrypted content under lawful authorisation.</description>
 <content:encoded>&lt;p&gt;Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the sender&#39;s and the recipient&#39;s devices can unlock them, and LINE&#39;s help page reads that the feature cannot be turned off. On 11 October 2020, the US, UK, Australia, New Zealand and Canada, together with India and Japan (listed in the statement by country name only), declared support for strong encryption while calling on technology companies to let law enforcement read content under lawful authorisation. India&#39;s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 require large messaging services to enable identification of the first originator of a message on the order of a court or competent authority, and WhatsApp sued in the Delhi High Court, arguing that tracing would break end-to-end encryption. India&#39;s Ministry of Electronics and Information Technology wrote in a 2021 press release that tracing is a last resort for when other remedies have proven ineffective, and according to The Tribune, WhatsApp&#39;s lawyer told the court in 2024 that WhatsApp would leave India if forced to break encryption. As of 10 October 2026 we could not find a judgment in the case, and LINE users need no extra setting because Letter Sealing cannot be turned off, though group voice and video calls, albums and Notes are outside end-to-end encryption.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Wikipedia access in mainland China</title>
-<link>https://anoni.net/news/en/history/10-10/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-10/2026</guid>
-<pubDate>Sat, 10 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>You can read Wikipedia from Taiwan, but in mainland China every OONI measurement in the month to 10 October 2026 was an anomaly or a failure. On this day, users in mainland China reported that English Wikipedia, blocked for nearly a year, could be reached again.</description>
-<content:encoded>&lt;p&gt;You can read Wikipedia from Taiwan, while a May 2019 statement from the Wikimedia Foundation reads that Wikipedia was blocked across all language versions in mainland China. On 10 October 2006, contributors to Chinese Wikipedia reported on the foundation&#39;s mailing list that English Wikipedia could be reached from mainland China, while the Chinese version remained blocked. The Wikipedia Signpost, the community newsletter, reported that the block began in October 2005 and that no official explanation was available for lifting it, and a November notice from Reporters Without Borders puts the unblocking of the Chinese version at around 13 November. OONI recorded 33 measurements each of Chinese and English Wikipedia from mainland China between 10 September and 10 October 2026, and all of them were anomalies (a mismatch with the control measurement, which does not by itself confirm blocking) or failures. OONI&#39;s measurements from Hong Kong over the six months to 10 October 2026 were all normal, and anyone can run OONI Probe to check which sites their own network blocks, though OONI&#39;s FAQ reads that running it can potentially be risky depending on the country.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
