@@ -6,7 +6,153 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 31 Oct 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>印尼的內容下架爭議與公民團體的訴訟評估</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/indonesia-content-takedown/</link>
+<guid isPermaLink="false">anoni-news:2026/10/indonesia-content-takedown</guid>
+<pubDate>Sat, 31 Oct 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>印尼數位權利團體 SAFEnet 10 月整理現任政府兩年的數位管制，記錄 2026 年 4 到 9 月至少 73 則內容被下架，多數批評政府。SAFEnet 也與其他團體徵集可能的原告，評估對通訊與數位部的法律行動。部會否認要求平台限制森林火災的內容，憲法法院 9 月判決政府切斷存取前要先通知並附理由。印尼以外的讀者不受直接影響。</description>
+<content:encoded>&lt;p&gt;整理 17 篇原文，來自 SAFEnet、Pasal.id、Bisnis.com 等 13 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;印尼數位權利團體 SAFEnet 10 月 21 日發表報告，整理現任總統與副總統執政兩年的數位管制，認為數位空間越來越容易成為壓制、監控與審查的場域。依 SAFEnet 的監測，2025 年到 2026 年年中共記錄到 5,549 件數位權利侵害，這組數字我們查不到獨立的來源可以核對。10 月 23 日，SAFEnet 與記者協會、法律扶助團體等組成的法律團隊開設窗口，徵集內容曾被限制的人。這些限制在印尼境內生效，其他地方的讀者不受直接影響。&lt;/p&gt;
+&lt;p&gt;依 SAFEnet 的報告，它與媒體監測團體 Remotivi 記錄到 2026 年 4 到 9 月至少 73 則內容被下架，多數批評總統、免費營養餐計畫與災害處理。SAFEnet 10 月 5 日的另一份聲明把期間寫成 4 到 8 月，其中 90.4% 是依通訊與數位部（Komdigi）的要求被審核或下架。同一份聲明也提到，平台依部會要求發出的通知從未說明違反哪一條法律。我們查不到 Komdigi 對 73 則與 90.4% 這組數字的公開回應。&lt;/p&gt;
+&lt;p&gt;印尼國家人權委員會（Komnas HAM）收到抗議期間「限制網路」與「限制社群媒體」的申訴後約談 Komdigi。委員 10 月 13 日轉述，Komdigi 表示 8 月 27 日大規模抗議當天依網路巡邏的結果下架 486 則疑似違法的內容，同時否認限制網路。委員會仍在檢視這些下架的法律依據。&lt;/p&gt;
+&lt;p&gt;Komdigi 公布的另一組統計是 2024 年 10 月到 2026 年 4 月下架約 420 萬則違法內容，大多是網路賭博與色情。這是部會自己的數字，同樣查不到獨立的來源核對。486 則、420 萬則與 SAFEnet 的 73 則是三種不同的統計，不能相加或互相比較。&lt;/p&gt;
+&lt;p&gt;10 月中有公眾人物表示談森林火災的貼文觸及下降，Komdigi 副部長與部長先後否認部會要求平台下架或限制火災資訊。部長 10 月 21 日的影片聲明也提到部會在推動平台演算法的問責與透明，並請使用者先向平台申訴、再向部會回報。&lt;/p&gt;
+&lt;p&gt;法律團隊的新聞稿沒有寫明要告什麼、向哪個法院提起。團隊寫到，填表不等於成為原告，是否列為原告要看證據、損害與當事人適格（是否具備提告的資格）。團隊也請當事人附上平台的審核通知截圖、內容連結與跟平台的往來紀錄。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;Komdigi 3 月簽署的部長令 127/2026 把不實資訊與仇恨言論歸為令社會不安的內容，平台收到部長的切斷存取命令後，最遲 4 小時內要執行。令文的一手檔案我們查不到，內容依 Kontan 的引述。依 Kontan 訪問的數位空間管控局長，通報的內容會先由相關部會共同審查。向政府異議由平台透過 SAMAN（部會向平台發送命令、追蹤執行的系統）提出，部會另外鼓勵平台提供使用者異議的管道。&lt;/p&gt;
+&lt;p&gt;部會的理由寫在令文的考量裡，不實資訊與仇恨言論可能引起社會不安、恐慌與團體之間的衝突。命令發布之前，數位空間監督總局長 2025 年 9 月談 SAMAN 時也表示，下架不是為了壓制批評。記者協會 AJI 則在 4 月要求撤銷這道命令，認為「令社會不安」這類用語過於含糊。&lt;/p&gt;
+&lt;p&gt;依墨爾本大學印尼研究刊物的評論文章，獨立媒體 Magdalene 3 月在 Instagram 介紹一份潑酸案調查報告的貼文曾依這道命令在印尼境內被限制，幾天後撤銷。文章引述的總局長說法是，貼文的敘述與標題可能誤導公眾、引發對國家機構的不信任，而且 Magdalene 不在新聞評議會的認證名單上。新聞評議會的委員則表示 Magdalene 是合法的新聞機構，新聞評議會的認證不是法律要求。&lt;/p&gt;
+&lt;p&gt;憲法法院 9 月 29 日的判決（311/PUU-XXIV/2026）宣告《電子資訊與交易法》授權政府切斷存取的條文有條件違憲，政府要先發出數位或書面通知並附理由，才能切斷存取或命令平台切斷。憲法法院沒有採納聲請人要求先經法院許可的主張。到 10 月 29 日為止，我們沒有取得 Komdigi 對判決的公開說明，也查不到判決後是否調整了通知的作法。SAFEnet 認為判決是改革的第一步，部會同時是監管者與執行者，有了通知也不保證限制合乎比例。&lt;/p&gt;
+&lt;p&gt;OONI（志工在各地執行的審查量測）與 Cloudflare Radar（流量觀測）量的是網站能否連上與整體流量，單則內容的下架與觸及下降不會出現在這些資料裡。OONI 的網站連線量測在 8 月 27 日沒有異常高峰，Radar 在 8 月下旬到 9 月初也沒有印尼的中斷標註（本文 10 月 29 日查詢）。OONI 的量測依志工分布，各電信業者的覆蓋不均，不能排除區域性或業者層級的干擾。&lt;/p&gt;
+&lt;p&gt;內容在印尼被平台限制或下架的人，部長建議的路徑是先向平台申訴，再向部會回報。保留通知截圖與內容連結，之後申訴或尋求法律協助時才有依據（本文的建議，參考法律團隊列出的證據類型）。&lt;/p&gt;
+&lt;p&gt;台灣的《兒童及少年福利與權益保障法》第 46 條要求平台經主管機關告知有害兒少的內容後限制接取或先行移除，條文沒有法院程序，範圍限於兒少保護。泰國 7 月的公告走的是向法院聲請緊急停止散布的路徑。印尼的部長令與切斷存取的條文由行政機關直接下令，憲法法院這次補上的是事先通知。&lt;/p&gt;
+&lt;p&gt;比較各地的做法，可以看誰能下令移除內容、需不需要法院介入，以及當事人會不會收到附理由的通知、能不能異議。政策想達成的效果也要一起看，打擊不實資訊、賭博與色情的成效有沒有公開的數字可以檢驗。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（17 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/dua-tahun-pembungkaman-digital-pemerintahan-prabowo-gibran/&#34;&gt;Dua Tahun Pembungkaman Digital Pemerintahan [Presiden – Wakil Presiden]&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/posko-penjaringan-calon-penggugat-komdigi-atas-dugaan-pembatasan-konten-digital/&#34;&gt;Posko Penjaringan Calon Penggugat Komdigi atas Dugaan Pembatasan Konten Digital&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/putusan-mk-pasal-moderasi-konten-uu-ite-langkah-awal-mereformasi-buruknya-tata-kelola-digital-di-indonesia/&#34;&gt;Putusan MK Pasal Moderasi Konten UU ITE, Langkah Awal Mereformasi Buruknya Tata Kelola Digital di Indonesia&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pasal.id/peraturan/putusan-mk/puu-mk-311-2026&#34;&gt;Putusan MK 311/PUU-XXIV/2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Pasal.id&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://teknologi.bisnis.com/read/20261021/101/2014612/menkomdigi-bantah-minta-meta-tiktok-cs-hapus-konten-kritik-karhutla&#34;&gt;Menkomdigi Bantah Minta Meta-TikTok Cs Hapus Konten Kritik Karhutla&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bisnis.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.rctiplus.com/news/detail/inews/5496660/komdigi-tegaskan-tak-ada-pembatasan-konten-karhutla--pastikan-terbuka-dengan-kritik&#34;&gt;Komdigi Tegaskan Tak Ada Pembatasan Konten Karhutla, Pastikan Terbuka dengan Kritik&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iNews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.antaranews.com/berita/5783245/komnas-ham-periksa-dasar-hukum-penghapusan-486-konten-usai-demo&#34;&gt;Komnas HAM periksa dasar hukum penghapusan 486 konten usai demo&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ANTARA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.antaranews.com/news/412799/govt-removes-41-million-illegal-content-items-to-secure-digital-space&#34;&gt;Govt removes 4.1 million illegal content items to secure digital space&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ANTARA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-18&#34;&gt;2026 年 4 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://industri.kontan.co.id/news/komdigi-terbitkan-sk-penanganan-disinformasi-platform-wajib-takedown-maksimal-4-jam&#34;&gt;Komdigi Terbitkan SK Penanganan Disinformasi, Platform Wajib Takedown Maksimal 4 Jam&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Kontan&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-05&#34;&gt;2026 年 4 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nasional.kontan.co.id/news/aturan-takedown-4-jam-dikebut-komdigi-verifikasi-berlapis-untuk-cegah-salah-blokir&#34;&gt;Aturan Takedown 4 Jam Dikebut, Komdigi: Verifikasi Berlapis untuk Cegah Salah Blokir&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Kontan&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-12&#34;&gt;2026 年 4 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inet.detik.com/law-and-policy/d-8117225/komdigi-bantah-bungkam-kritik-di-media-sosial&#34;&gt;Komdigi Bantah Bungkam Kritik di Media Sosial&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;detikInet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-17&#34;&gt;2025 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.republika.co.id/berita/td86qt409/aji-sk-menteri-komdigi-1272026-pasal-karet-bungkam-pers-magdalene-jadi-korban&#34;&gt;AJI: SK Menteri Komdigi 127/2026 Pasal Karet Bungkam Pers, Magdalene Jadi Korban&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Republika&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-09&#34;&gt;2026 年 4 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://indonesiaatmelbourne.unimelb.edu.au/meta-restricted-indonesian-news-outlet-for-acid-attack-coverage-a-disguised-repression-against-independent-media&#34;&gt;Meta restricted Indonesian news outlet for acid attack coverage. A disguised repression against independent media?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Indonesia at Melbourne&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-15&#34;&gt;2026 年 4 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/country/ID&#34;&gt;Indonesia&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI Explorer&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://radar.cloudflare.com/id&#34;&gt;Indonesia&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cloudflare Radar&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ratchakitcha.soc.go.th/documents/120935.pdf&#34;&gt;ประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม เรื่อง การยื่นคำร้องต่อศาลขอให้มีคำสั่งระงับการทำให้แพร่หลายหรือลบข้อมูลคอมพิวเตอร์ ออกจากระบบคอมพิวเตอร์ ในกรณีที่มีเหตุจำเป็นเร่งด่วน พ.ศ. ๒๕๖๙&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ราชกิจจานุเบกษา&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;2026 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>監控技術的跨國交易與出口管制</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/surveillance-tech-export-controls/</link>
@@ -2707,129 +2853,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://w3techs.com/technologies/details/pl-php&#34;&gt;Usage Statistics and Market Share of PHP for Websites, October 2026&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;W3Techs&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>eMudhra 八張中繼憑證的弱私鑰事件</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/emudhra-weak-ca-keys/</link>
-<guid isPermaLink="false">anoni-news:2026/10/emudhra-weak-ca-keys</guid>
-<pubDate>Fri, 23 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>印度憑證機構 eMudhra 有八張中繼憑證的私鑰小於 256，任何人都能立刻算出來，再用來替別人的網站簽發 HTTPS 憑證。研究者 10 月 17 日通報後，Chrome 與 Firefox 在幾個小時內自動封鎖，一般使用者的瀏覽器不必另外設定。不經過瀏覽器的程式各自帶著信任清單，Node.js、Python 的 certifi、Go、Java 與 Linux 發行版從 10 月 19 日起陸續推出更新（到 10 月 22 日還沒全部完成），自行寫程式或維護伺服器的人要逐一更新。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，來自 Mozilla dev-security-policy、Mozilla Bugzilla、Google 等 12 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;印度的憑證機構 eMudhra（憑證品牌 emSign）有八張中繼憑證的私鑰簡單到可以直接算出來。中繼憑證位在根憑證之下，是實際用來簽發網站憑證的那一層。一位研究者在 UTC 10 月 17 日 18:05（台北時間 10 月 18 日 02:05）通報 Apple、Chrome、Microsoft、Mozilla 與 eMudhra，附上用八把私鑰各自簽出的證明。依 Mozilla 10 月 20 日在 dev-security-policy 郵件群組的貼文，取得私鑰的人可以替自己不擁有的網站簽發 HTTPS 憑證。&lt;/p&gt;
-&lt;p&gt;Chrome 與 Firefox 在通報後幾個小時內就用自動推送的封鎖清單擋下六張 TLS 中繼，多數使用者不必更新或重新啟動瀏覽器。受影響比較大的是不經過瀏覽器的程式，例如用 Node.js、Python、Go 或 Java 寫成的工具與伺服器，各自要等更新才會停止信任。Mozilla 10 月 20 日在事故單上補充，已經有好幾個人各自算出私鑰，其中有些人公開了這件事。&lt;/p&gt;
-&lt;p&gt;依 Mozilla 工程師在 Bugzilla 事故單的初步分析，八把都是 P-384 橢圓曲線的私鑰，本來應該是一個隨機挑選、長達 384 位元的整數。實際的值卻都小於 256，依序試過 256 個數字就能找出來。八張裡有六張用來簽發網站的 TLS 憑證，受 Chrome、Mozilla、Microsoft 與 Apple 信任。另外兩張用來簽署程式碼，受 Microsoft 信任。&lt;/p&gt;
-&lt;p&gt;eMudhra 的聲明寫到，八張中繼憑證在 2025 年 4 月 30 日的金鑰產生儀式建立，問題經過約 18 個月、兩次獨立稽核都沒有被發現。依 eMudhra 在事故單上的初步說明，儀式使用的程式有缺陷，在原本的金鑰之外多產生了一組弱金鑰。兩組金鑰的標籤相近，弱金鑰被誤用來申請憑證。eMudhra 10 月 21 日更新的聲明也提到，確切的根本原因還在調查。&lt;/p&gt;
-&lt;p&gt;依同一份聲明，八張中有七張從沒用在正式環境，正在使用的那一張沒有簽發過任何憑證。eMudhra 也不知道有人在公開之前算出弱金鑰的證據。依 Google 10 月 20 日的部落格，封鎖之前憑證透明度（Certificate Transparency，CT，公開記錄每一張憑證的日誌）裡沒有六張中繼簽出的網站憑證。Chrome 預設只接受記進 CT 的憑證，所以 Google 判斷偽造憑證騙不過 Chrome，也騙不過目標為最新 SDK 或自行啟用 CT 檢查的 Android App。&lt;/p&gt;
-&lt;p&gt;一位 Mozilla 工程師為事件架設的說明頁另外提到，很多瀏覽器以外的程式不檢查 CT。說明頁也寫到，從 2025 年 4 月憑證建立起就有被濫用的可能，目前不知道攻擊者有沒有利用弱金鑰攻擊這些程式。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;瀏覽器信任一個 HTTPS 網站，是因為網站的憑證由一串憑證機構逐層簽署，最上層的根憑證預先放在瀏覽器或作業系統的信任清單裡。中繼憑證的私鑰可以簽出任何網域的憑證。依 FreeBSD 10 月 21 日的安全公告，能攔截網路流量的攻擊者可以用被算出的私鑰冒充任何 TLS 伺服器，讀取或修改連線內容而不被發現。&lt;/p&gt;
-&lt;p&gt;Chrome 的 CRLSet 與 Firefox 的 OneCRL 都是瀏覽器在背景自動下載的封鎖清單，可以單獨擋下特定的中繼憑證。再加上 CT 的要求，Chrome 與 Firefox 這一端在通報當天就有兩層保護。依 Mozilla 的發行說明與事故單，停用了自動下載清單（Remote Settings）的 Firefox 要更新到 158.0.1。部分 Android 版 Firefox 的設定檔沒有在啟動時套用清單，要更新到 158.0.2。&lt;/p&gt;
-&lt;p&gt;依 Bugzilla 事故單，eMudhra 在 UTC 10 月 18 日把八張中繼標為撤銷。依 Mozilla 在事故單上的說法，有些程式不讀撤銷資訊，或沒有機制單獨撤回特定的中繼。NSS 是 Mozilla 維護的加密函式庫，許多程式與發行版沿用它的根憑證清單。為了保護前述的程式，Mozilla 在 10 月 20 日的 NSS 3.131.1 移除六張 TLS 中繼往上連到的根憑證 emSign ECC Root CA - G3。&lt;/p&gt;
-&lt;p&gt;Node.js 10 月 21 日的 22.23.4、24.22.1、26.12.1 換上了新清單，Go 也發布了 1.27.3 與 1.26.10。依說明頁的修補清單，Python 的 certifi 2026.10.19 與 curl 的 CA bundle 也已更新。依 Ubuntu 的追蹤單，到 10 月 22 日為止 22.04、24.04、26.04 與 26.10 已發布 ca-certificates 的更新，20.04 以前的版本還沒有。Fedora 已送出更新，依 Red Hat Bugzilla 的 bug 單，到 10 月 22 日為止這批更新仍信任簽發兩張程式碼簽署中繼的根憑證。&lt;/p&gt;
-&lt;p&gt;依說明頁的建議，一般使用者儘快把瀏覽器與作業系統更新到最新版。依 Google 的部落格，Android 裝置在 UTC 10 月 19 日 22:00 前後（台北時間 10 月 20 日 06:00）透過 Google Play 服務收到同樣的封鎖。Google 寫大多數 Android 裝置已經收到，還沒收到的重新開機就能馬上套用。沒有 Google Play 服務的 Android 裝置不在 Google 這段說明的範圍內，本文沒有查到 Android 系統本身的更新。&lt;/p&gt;
-&lt;p&gt;自行寫程式、維護伺服器或在電腦上執行命令列工具的人，要更新的是各自的執行環境。Go 的修補在標準函式庫的 &lt;code&gt;crypto/x509&lt;/code&gt; 套件，Go 程式編譯時會把標準函式庫包進執行檔，所以要用新版重新編譯。Python 的 certifi 是個別安裝的套件，每個虛擬環境與容器各有一份，要分別更新。依說明頁，macOS 內建的 curl、python3 等指令讀取 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 時不檢查撤銷，到 10 月 22 日這個檔案還沒更新。&lt;/p&gt;
-&lt;p&gt;依 OpenJDK 10 月 21 日的公告，作業系統套件提供的 Java 多半使用系統的憑證，更新系統就夠。自行安裝的 Java，以及 FreeBSD 與 Homebrew 的套件，要直接更新。&lt;/p&gt;
-&lt;p&gt;Cloudflare 的部落格提醒，更新之後如果出現憑證錯誤，不要用關閉憑證驗證的方式解決。說明頁準備了用受影響的中繼簽發的測試網址，用 curl 連線出現憑證錯誤，代表 curl 已經不信任這些憑證。Cloudflare 的部落格也寫到，這類測試只代表測到的那個程式，使用其他驗證方式的程式要個別確認。&lt;/p&gt;
-&lt;p&gt;移除根憑證可以保護不讀撤銷資訊的程式，代價是部分正當網站的憑證也跟著失效。eMudhra 在事故單上估計約 3 萬張憑證需要換掉，聲明寫影響範圍限於美國的單一客戶生態系。Chrome 在事故單上依到 10 月 21 日的 CT 資料統計，這個根底下約 3 萬 800 筆還沒過期的憑證紀錄，有 99.9% 由 Internet2 與 InCommon 的兩張從屬中繼簽發。依 Google 的部落格，Chrome 預計在太平洋時間 10 月 27 日上午從 Chrome Root Store 移除同一個根，也在評估 eMudhra 其他憑證是否繼續信任。&lt;/p&gt;
-&lt;p&gt;說明頁寫 Apple 裝置從 10 月 19 日起封鎖，Microsoft 平台從 10 月 20 日起封鎖。到 10 月 22 日為止，本文沒有找到兩家自己的公告。依 Bugzilla 事故單，到 UTC 10 月 21 日深夜為止，eMudhra 還沒有提交正式的事故報告。正式報告、eMudhra 對 Chrome 在事故單上所提問題的回覆，以及 Chrome 對 eMudhra 其他憑證的決定，是接下來可以留意的地方。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/0R3XLJL6FuE&#34;&gt;Compromised eMudhra Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla dev-security-policy&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/press-release/emudhra-statement-distrust-global-tls-intermediate-root-ca&#34;&gt;eMudhra Statement on distrust of select Global TLS Intermediate and one Root CA&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nodejs.org/en/blog/vulnerability/october-2026-security-releases&#34;&gt;Wednesday, October 21, 2026 Security Releases&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Node.js&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/golang/go/issues/82345&#34;&gt;crypto/x509: mitigation for security concerns with a specific Certificate Authority&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Go&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://openjdk.org/groups/vulnerability/advisories/2026-10-21&#34;&gt;OpenJDK Vulnerability Advisory: 2026/10/21&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenJDK&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugs.launchpad.net/ubuntu/+source/ca-certificates/+bug/2171507&#34;&gt;Bug&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Launchpad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=2556376&#34;&gt;2556376 – Update to mitigate current issues with eMudhra&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Red Hat Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.freebsd.org/security/advisories/FreeBSD-SA-26:73.caroot.asc&#34;&gt;FreeBSD-SA-26:73.caroot&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;FreeBSD&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cloudflare.com/emudhra-certificate-compromise/&#34;&gt;8 eMudhra certificates are compromised. Here&amp;#39;s what you need to know&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Fri, 30 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 31 Oct 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>The identity details you register for a phone number</title>
+<link>https://anoni.net/news/en/history/10-31/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/10-31/2026</guid>
+<pubDate>Sat, 31 Oct 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>If you get a mobile phone number in Taiwan or Japan, the carrier has to check who you are when you sign up. On this day, Indonesia began requiring people signing up for prepaid SIM cards to verify their national ID number and family card number against the government&#39;s population database.</description>
+<content:encoded>&lt;p&gt;Carriers in Taiwan must check and record a subscriber&#39;s name, address and two identity document numbers before activating any line, prepaid or not, and carriers in Japan must confirm a subscriber&#39;s name, address and date of birth when signing a contract for mobile voice service. On 31 October 2017, Indonesia&#39;s communications ministry began requiring people signing up for prepaid SIM cards to verify their national ID number and family card (household registration) number against the population registry&#39;s database, which Bisnis.com reported the ministry as saying was meant to prevent misuse of phone numbers. In March 2018, detikInet reported that one ID number had been used to register 50 phone numbers, which the ministry&#39;s written statement called unauthorised use rather than a data leak, and that ID and family card numbers were also circulating on websites. ANTARA and Bisnis.com reported the current communications and digital ministry as saying that Indonesian citizens have had to register new numbers with their ID number plus facial recognition since July 2026, and that each identity may hold at most three prepaid numbers per carrier (checked in October 2026). Readers outside Indonesia do not need to do anything because of these rules.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Web addresses starting with xn-- in the address bar</title>
 <link>https://anoni.net/news/en/history/10-30/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>You can open the BBC website normally from Taiwan, while OONI&#39;s measurements of BBC Chinese from mainland China are nearly all anomalies or failures. On this day, the BBC reported that an internet provider in Beijing appeared to be blocking its website.</description>
 <content:encoded>&lt;p&gt;You can open the BBC website normally from Taiwan or Hong Kong, where 873 of 919 and 1,322 of 1,329 of OONI&#39;s measurements from 10 July to 10 October 2026 were normal, while only 6 of 210 measurements of the simplified-character edition of BBC Chinese from mainland China were. On 12 October 1998, the BBC reported that China Net, the main state-controlled internet service provider in Beijing, was believed to be blocking www.bbc.co.uk, so users in Beijing could not listen to the BBC&#39;s Mandarin broadcast online. The report quotes an official at Beijing Telecom confirming that the site was not accessible but saying he did not know why, and Western experts saying that police give internet providers lists of banned sites. The BBC launched a version of its international news site reachable through Tor (an anonymity network that hides the route of a connection) in 2019, and in 2025 a Reporters Without Borders mirror project made its site available in 43 languages, though the announcement does not specify whether this includes the Chinese site. OONI Explorer shows how a website has been measured in each country, though some addresses, such as the traditional-character edition of BBC Chinese, had no measurements from mainland China in this period.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>End-to-end encryption and law enforcement access in messaging apps</title>
-<link>https://anoni.net/news/en/history/10-11/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-11/2026</guid>
-<pubDate>Sun, 11 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the two devices involved can read them. On this day, seven countries including Japan and India issued a statement calling on technology companies to let law enforcement read encrypted content under lawful authorisation.</description>
-<content:encoded>&lt;p&gt;Your one-to-one text messages on LINE are end-to-end encrypted by default, so only the sender&#39;s and the recipient&#39;s devices can unlock them, and LINE&#39;s help page reads that the feature cannot be turned off. On 11 October 2020, the US, UK, Australia, New Zealand and Canada, together with India and Japan (listed in the statement by country name only), declared support for strong encryption while calling on technology companies to let law enforcement read content under lawful authorisation. India&#39;s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 require large messaging services to enable identification of the first originator of a message on the order of a court or competent authority, and WhatsApp sued in the Delhi High Court, arguing that tracing would break end-to-end encryption. India&#39;s Ministry of Electronics and Information Technology wrote in a 2021 press release that tracing is a last resort for when other remedies have proven ineffective, and according to The Tribune, WhatsApp&#39;s lawyer told the court in 2024 that WhatsApp would leave India if forced to break encryption. As of 10 October 2026 we could not find a judgment in the case, and LINE users need no extra setting because Letter Sealing cannot be turned off, though group voice and video calls, albums and Notes are outside end-to-end encryption.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
