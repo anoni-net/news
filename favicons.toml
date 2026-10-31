@@ -589,6 +589,10 @@ from = "https://dfrlab.org/wp-content/uploads/sites/3/2020/06/cropped-DFRLab-Thu
 icon = "digiato.com-9cf998c5.png"
 from = "https://static.digiato.com/digiato/2022/07/DigiatoVectorLogo.png.webp"
 
+[hosts."digichina.stanford.edu"]
+icon = "digichina.stanford.edu-4fe933de.png"
+from = "https://digichina.stanford.edu/wp-content/uploads/2021/10/cropped-afgf7-8fobk-005-192x192.png"
+
 [hosts."digital-strategy.ec.europa.eu"]
 icon = "digital-strategy.ec.europa.eu-3712d20c.png"
 from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/favicons/ec/favicon.png"
@@ -759,6 +763,10 @@ same_as = "nettsteder.regjeringen.no"
 [hosts."filter.watch"]
 icon = "filter.watch-ab5e1bf3.png"
 from = "https://filter.watch/wp-content/uploads/2024/07/favicon-300x300.png"
+
+[hosts."finance.sina.cn"]
+icon = "finance.sina.cn-2d0ae078.png"
+from = "https://mjs.sinaimg.cn/wap/online/public/images/addToHome/fra_114x114_v1.png"
 
 [hosts."firefox.com"]
 icon = "firefox.com-cf4f5299.png"
