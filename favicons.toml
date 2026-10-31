@@ -543,6 +543,10 @@ from = "https://europa.eu/favicon.ico"
 icon = "datatilsynet.dk-17e6925e.png"
 from = "https://cdn.datatilsynet.dk/datatilsynet/media/7887/favicon.png?width=196&height=196"
 
+[hosts."datatilsynet.no"]
+icon = "datatilsynet.no-3d993670.png"
+from = "https://www.datatilsynet.no/UI/Icons/favicon-194x194.png"
+
 [hosts."david.alvarezrosa.com"]
 none = "個人網站的圖示是作者的姓名縮寫"
 
@@ -787,6 +791,10 @@ from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544
 [hosts."forbiddenstories.org"]
 icon = "forbiddenstories.org-ca32df32.png"
 from = "https://forbiddenstories.org/wp-content/uploads/2024/02/transferir.png?x75280"
+
+[hosts."forbrukerradet.no"]
+icon = "forbrukerradet.no-c159e228.png"
+from = "https://www.forbrukerradet.no/wp-content/themes/frweb22/dist/icons/fr-apple-touch-icon.png"
 
 [hosts."forum.torproject.org"]
 icon = "forum.torproject.org-b958972b.png"
