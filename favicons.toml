@@ -562,6 +562,10 @@ from = "https://def.ltn.com.tw/assets/images/logo24-def.png"
 icon = "demo.uwazi.io-990b6692.png"
 from = "https://demo.uwazi.io/public/favicon.ico"
 
+[hosts."devb.gov.hk"]
+icon = "devb.gov.hk-1925612d.png"
+from = "https://www.devb.gov.hk/favicon.ico"
+
 [hosts."developer.android.com"]
 icon = "developer.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
@@ -580,6 +584,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b
 
 [hosts."developers.openai.com"]
 same_as = "help.openai.com"
+
+[hosts."dexerto.com"]
+icon = "dexerto.com-69c6c86a.png"
+from = "https://www.dexerto.com/favicon/dexerto/apple-touch-icon.png"
 
 [hosts."dfrlab.org"]
 icon = "dfrlab.org-e33cb1a2.png"
@@ -1235,6 +1243,10 @@ from = "https://img.ksl.com/slc/2951/295162/29516202.png"
 icon = "landing.google.com-53ae8c75.png"
 from = "https://landing.google.com/favicon.ico"
 
+[hosts."laquadrature.net"]
+icon = "laquadrature.net-d81c9e16.png"
+from = "https://www.laquadrature.net/wp-content/uploads/sites/8/2018/09/LOGO-LQDN3.png"
+
 [hosts."law.cornell.edu"]
 icon = "law.cornell.edu-c329472e.png"
 from = "https://www.law.cornell.edu/sites/www.law.cornell.edu/files/favicon_1.ico"
@@ -1246,6 +1258,10 @@ from = "https://www.law.go.kr/LSW/images/ico_favorites.ico"
 [hosts."law.moj.gov.tw"]
 icon = "law.moj.gov.tw-ac2a3ab3.png"
 from = "https://law.moj.gov.tw/favicon.png"
+
+[hosts."law.ox.ac.uk"]
+icon = "law.ox.ac.uk-73b8ec29.png"
+from = "https://www.law.ox.ac.uk/themes/custom/olamalu_oxford_law_main/favicon.ico"
 
 [hosts."lawfaremedia.org"]
 icon = "lawfaremedia.org-66501058.png"
@@ -1627,6 +1643,10 @@ none = "網站擋自動抓取（403），2026-10-23"
 icon = "onionservices.torproject.org-7707876d.png"
 from = "https://onionservices.torproject.org/assets/favicon.png"
 
+[hosts."onvista.de"]
+icon = "onvista.de-7c95ac97.png"
+from = "https://www.onvista.de/favicon_192x192.png"
+
 [hosts."ooni.org"]
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
@@ -1740,6 +1760,9 @@ from = "https://ppc.land/content/images/2024/03/ppc.ico"
 [hosts."prachataienglish.com"]
 icon = "prachataienglish.com-bc8a9b34.png"
 from = "https://prachataienglish.com/sites/default/files/english-fav.png"
+
+[hosts."prestonbyrne.com"]
+none = "個人網站，圖示抓不到"
 
 [hosts."privacy.ca.gov"]
 icon = "privacy.ca.gov-a08db90b.png"
@@ -1861,6 +1884,10 @@ from = "https://www.sakura.ad.jp/resource/favicon/sakura_logo.png"
 [hosts."scala-com.jp"]
 icon = "scala-com.jp-2478aaf7.png"
 from = "https://scala-com.jp/assets/img/android-touch-icon.png"
+
+[hosts."scmp.com"]
+icon = "scmp.com-5f9b444f.png"
+from = "https://assets-v2.i-scmp.com/production/icons/scmp-icon-256x256.png"
 
 [hosts."scotthelme.co.uk"]
 none = "圖示是作者照片"
