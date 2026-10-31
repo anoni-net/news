@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sat, 31 Oct 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 01 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>The switch for personalised recommendations in apps</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-01/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-01/2026</guid>
+<pubDate>Sun, 01 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>If you have used the mainland Chinese version of an app, its settings may include an option to turn off personalised recommendations. On this day, China&#39;s Personal Information Protection Law took effect, requiring businesses that push information through automated decision-making to offer an option not based on personal characteristics or an easy way to refuse.</description>
+<content:encoded>&lt;p&gt;In an assessment published in March 2023 by Shanghai&#39;s municipal consumer rights protection commission (republished by Sina Finance), all 10 commonly used apps tested had a way to turn off personalised recommendations (content picked from what you browse and tap), and only Xiaohongshu (RedNote) said that turning them off would not stop them entirely. China&#39;s Personal Information Protection Law took effect on 1 November 2021 and requires businesses that push information or marketing through automated decision-making (choosing content by a person&#39;s characteristics) to also offer an option not based on those characteristics or an easy way to refuse, and under the 2022 algorithmic recommendation provisions a provider must stop the related service immediately once a user switches recommendations off. State bodies handling personal information must also notify the people concerned under the 2021 law, unless other laws require confidentiality or notice would hinder the body in performing its statutory duties. The Personal Data Protection Act of Taiwan does not mention advertising or recommendations, and its Article 20 covers only marketing, with no requirement for a recommendation switch or an option not based on personal characteristics. Article 20(2) and (3) do require a business that uses personal data for marketing under that article to stop once you refuse and to offer a way to refuse the first time it markets to you, so readers in Taiwan can turn down marketing that uses their personal data (checked in October 2026).&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>The identity details you register for a phone number</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-31/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Your iPhone&#39;s Safari fraudulent website warning may use Tencent&#39;s Safe Browsing service when the region is set to mainland China or Hong Kong. On this day, a researcher wrote on a blog that Safari&#39;s feature appeared to pass part of users&#39; browsing information to Tencent.</description>
 <content:encoded>&lt;p&gt;On your iPhone, Safari&#39;s Fraudulent Website Warning may send information calculated from the website address to Google and Apple for comparison, and Apple&#39;s Safari &amp;amp; Privacy page reads that Tencent Safe Browsing may also be used when the region is set to mainland China or Hong Kong. A cryptography researcher wrote in a blog post on 13 October 2019 that Safari on iOS 13 appeared to share part of users&#39; browsing history with Tencent, and that the feature appeared to be on by default. According to Apple&#39;s statement as quoted by MacRumors and other outlets on 14 October 2019, only devices with the region set to mainland China obtain the list of malicious sites from Tencent, and the actual URLs are not shared with the provider. The Apple page quoted by Daring Fireball at the time reads that providers may log your IP address, and the page as checked on 10 October 2026 still reads that Google and Tencent may do so, with Hong Kong now listed alongside mainland China for Tencent. The page lists Tencent only for the mainland China and Hong Kong region settings, and readers with either setting can turn the warning off under Settings &amp;gt; Apps &amp;gt; Safari, at the cost of one less prompt when opening phishing sites.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>BBC Chinese access in mainland China</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-12/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-12/2026</guid>
-<pubDate>Mon, 12 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>You can open the BBC website normally from Taiwan, while OONI&#39;s measurements of BBC Chinese from mainland China are nearly all anomalies or failures. On this day, the BBC reported that an internet provider in Beijing appeared to be blocking its website.</description>
-<content:encoded>&lt;p&gt;You can open the BBC website normally from Taiwan or Hong Kong, where 873 of 919 and 1,322 of 1,329 of OONI&#39;s measurements from 10 July to 10 October 2026 were normal, while only 6 of 210 measurements of the simplified-character edition of BBC Chinese from mainland China were. On 12 October 1998, the BBC reported that China Net, the main state-controlled internet service provider in Beijing, was believed to be blocking www.bbc.co.uk, so users in Beijing could not listen to the BBC&#39;s Mandarin broadcast online. The report quotes an official at Beijing Telecom confirming that the site was not accessible but saying he did not know why, and Western experts saying that police give internet providers lists of banned sites. The BBC launched a version of its international news site reachable through Tor (an anonymity network that hides the route of a connection) in 2019, and in 2025 a Reporters Without Borders mirror project made its site available in 43 languages, though the announcement does not specify whether this includes the Chinese site. OONI Explorer shows how a website has been measured in each country, though some addresses, such as the traditional-character edition of BBC Chinese, had no measurements from mainland China in this period.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
