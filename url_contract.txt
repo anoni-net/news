@@ -262,6 +262,9 @@
 	#sources
 	#thunderbird-ios
 /2026/11/
+/2026/11/bitchat-india-block/
+	#perspective
+	#sources
 /2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -270,6 +273,9 @@
 	#ofcom-4chan
 	#palantir-europe
 	#pimeyes
+	#sources
+/2026/11/xandr-norway-fine/
+	#perspective
 	#sources
 /404.html
 /about/
@@ -553,6 +559,9 @@
 	#sources
 	#thunderbird-ios
 /en/2026/11/
+/en/2026/11/bitchat-india-block/
+	#perspective
+	#sources
 /en/2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -561,6 +570,9 @@
 	#ofcom-4chan
 	#palantir-europe
 	#pimeyes
+	#sources
+/en/2026/11/xandr-norway-fine/
+	#perspective
 	#sources
 /en/about/
 	#byline
@@ -659,6 +671,7 @@
 /en/page/2/
 /en/page/3/
 /en/page/4/
+/en/page/5/
 /en/reading/
 	#display
 	#listening
@@ -742,6 +755,7 @@
 /page/2/
 /page/3/
 /page/4/
+/page/5/
 /reading/
 	#display
 	#listening
@@ -1009,6 +1023,9 @@
 	#sources
 	#thunderbird-ios
 /zh-cn/2026/11/
+/zh-cn/2026/11/bitchat-india-block/
+	#perspective
+	#sources
 /zh-cn/2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -1017,6 +1034,9 @@
 	#ofcom-4chan
 	#palantir-europe
 	#pimeyes
+	#sources
+/zh-cn/2026/11/xandr-norway-fine/
+	#perspective
 	#sources
 /zh-cn/about/
 	#byline
@@ -1115,6 +1135,7 @@
 /zh-cn/page/2/
 /zh-cn/page/3/
 /zh-cn/page/4/
+/zh-cn/page/5/
 /zh-cn/reading/
 	#display
 	#listening
