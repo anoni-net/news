@@ -8,3 +8,7 @@ __pycache__/
 
 # 下載的文件站網址合約與版面檢查的截圖
 /.cache/
+
+# Claude Code 的 worktree 與本機設定
+/.claude/worktrees/
+/.claude/settings.local.json
