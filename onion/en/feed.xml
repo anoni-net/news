@@ -6,7 +6,137 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sun, 01 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>The ad exception for Gmail and Photos data in Google&#39;s privacy policy</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/google-gmail-photos-ads/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/google-gmail-photos-ads</guid>
+<pubDate>Mon, 02 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The 16 October version of Google&#39;s privacy policy adds an exception to its rule against personalized ads based on Drive, Gmail and Photos content, for users who choose to make that data available to other Google services that support personalized ads, such as through Personal Intelligence. People who have not connected these apps need not change anything, and as of 1 November those who have can review or disconnect them under Search Services Personalization in their Google Account.</description>
+<content:encoded>&lt;p&gt;Based on 16 sources, including Google, The Verge, Ars Technica&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The version of Google&#39;s privacy policy that took effect on 16 October adds an exception to the sentence saying Google does not show personalized ads based on content from Drive, Gmail or Photos. The exception applies when users choose to make data from these services available to other Google services that support personalized ads, and people who have not made that choice are outside it. The example given in the policy&#39;s additional context is Personal Intelligence, which, according to a Google Search help page, people aged 18 or over who are signed in to a personal Google Account can turn on themselves. As of 1 November, the supported countries and territories on that page included Taiwan, Hong Kong, Macau, Japan, South Korea and Singapore, and connecting Google Photos is not available in every region.&lt;/p&gt;
+&lt;p&gt;According to The Verge&#39;s report of 23 October, people who have already used Personal Intelligence to connect Gmail or Photos to AI Mode (a search feature that answers questions conversationally) and other Search tools may now see ads based on the content of their email and photos. Google&#39;s comparison of the two versions shows that the 1 October text did not have the closing clause &#34;unless you choose to make data from these services available to other Google services that support personalized ads&#34;. A new sentence states that users may allow Search or Gemini Apps to access data from Photos, Gmail and Drive, and that Search may process some of that data to personalize content, including ads. The sentence on ads also changed from ads based on &#34;interests and activity&#34; to ads based on &#34;interests, activity, or personalized content from Google services&#34;.&lt;/p&gt;
+&lt;p&gt;In the example in the policy&#39;s additional context, a user asks Search about a recent hotel booking, and Search may use booking details from an email to suggest things to do near the hotel. According to the Search help page, connecting once gives all Search services access to Gmail and Photos, including Google Search, AI Mode, Discover (the feed of recommended articles on the Google app&#39;s home screen), Maps, Shopping, Flights, Hotels, Translate and News. Drive, which the policy mentions, was not among the apps that could be connected on the help page when we checked on 1 November. Ask Maps in Google Maps (a feature for asking about routes and places conversationally) can also be connected to Gmail, and as of 1 November its listed regions in Asia were only India, Japan and Indonesia, not Taiwan.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The first sentence of Google&#39;s full statement, published by Ars Technica on 23 October, is that connecting apps is entirely opt-in. The statement goes on to say that ads will continue to be relevant to things like the query, the context of the response and the user&#39;s interests, and will not be based directly on the Gmail inbox or Photos library. According to the Q&amp;amp;A on the Search help page, advertisers do not get access to the inbox or Photos, and Google does not show personalized ads based on sensitive categories such as race, religion, sexual orientation or health. As of 1 November, we found statements only from Google and the press, with no public response from advocacy groups or data protection authorities.&lt;/p&gt;
+&lt;p&gt;The help page&#39;s answer on ads likewise says ads will not be based directly on the inbox or Photos library, then adds that Search may reference summaries, excerpts and inferences from these sources to personalize the experience, and that &#34;That same info may be used to show you ads&#34;. Read this way, ads are not based on the inbox or library themselves, while the summaries, excerpts and inferences Search derives from email and photos may be used for ads. The same page&#39;s answer on training AI models includes an example of how Search pulls email and photos together. When a user asks AI Mode to suggest restaurants for an upcoming trip, the models might look at emails and photos for the hotel reservation and flight itinerary, then summarize that information into recommendations.&lt;/p&gt;
+&lt;p&gt;According to the help page, Search services do not train generative AI models directly on the Gmail inbox or on imagery and audio from the Photos library. The page goes on to state that when users interact with Search, summaries, excerpts and inferences from relevant emails, files and media are used to train the models. Where an email is brief or particularly relevant to the question, the summary may be the email itself. Once apps are connected, a subset of the data processed by AI Mode and Ask Maps is reviewed by human reviewers, including trained service providers.&lt;/p&gt;
+&lt;p&gt;We, a community based in Taiwan, looked at how the feature is offered in Asia, which The Verge&#39;s report does not cover. As of 1 November, the Search help page&#39;s supported countries and territories for connecting content apps included, among others, Hong Kong, Japan, Macau, Malaysia, Singapore, South Korea and Taiwan, with Chinese (Traditional), Chinese (Simplified), Japanese and Korean among the languages, and mainland China was not on the list. For the Gemini version, GIGAZINE reported that Google Japan posted on X on 14 April 2026 that Personal Intelligence in Gemini had begun a phased rollout in Japan, to be completed within a week. For Hong Kong, South Korea, Singapore and Taiwan we found no official launch announcement for the Gemini version, and the Gemini help page gives no country list.&lt;/p&gt;
+&lt;p&gt;None of the following provisions or policy plans is aimed at features that connect email or photos to ads, and we did not check how any of them would apply here, but they point in different directions. Taiwan and mainland China work through refusal, with Article 20 of Taiwan&#39;s Personal Data Protection Act requiring a non-government entity that markets with personal data to stop once the person objects and to offer a way to object the first time, and Article 24 of mainland China&#39;s Personal Information Protection Law requiring marketing through automated decision-making to come with an option that does not target personal characteristics or a convenient way to refuse. Under a policy plan South Korea&#39;s Personal Information Protection Commission published on 31 January 2024, by contrast, advertisers that do not identify a specific person may process online behavioural data without consent, provided that accumulating, overlapping or combining the data does not make anyone identifiable, while identifying a person requires consent. We could not find whether the revised guidelines the Commission planned to issue by the end of 2024 are in force, and readers can ask whether a way to refuse, an option not to be targeted or a consent requirement tied to identification reaches ads shaped by summaries and inferences from data a user connected for a different feature.&lt;/p&gt;
+&lt;p&gt;People who have not connected Gmail or Photos to Search or Gemini do not need to change any settings. Those who have can follow the Search help page: on a computer, go to Search Services Personalization in the Google Account, then Additional Personal Intelligence &amp;gt; Connected Content Apps, to review or disconnect them. Anyone who wants to try the feature first turns on Personalized Recommendations in the same place and then connects, and the actual screens may differ from the instructions (as of 1 November, a banner at the top of the help page said the settings are being updated). In Gemini the connections are under Settings &amp;amp; help &amp;gt; Personal Intelligence &amp;gt; Connected Apps at the bottom of &lt;code&gt;gemini.google.com&lt;/code&gt;, and the service named in the policy as processing this data to personalize content, including ads, is Search, with no mention of Gemini.&lt;/p&gt;
+&lt;p&gt;The connection settings in Search cover whether Gmail and Photos data is made available to Search, and My Ad Center is a separate set of controls. Under the policy, the ad settings in My Ad Center control what information Google uses to show ads, but the My Ad Center help page does not say whether its personalized ads switch covers connected data. Besides connecting the apps, the Search help page requires turning on Smart features in other Google products in Gmail as a condition for personalized responses. According to the Gmail help page, this setting controls the use of Workspace data in other Google products, and the page does not mention Photos or ads.&lt;/p&gt;
+&lt;p&gt;Going by the example in the policy&#39;s additional context (our inference), features such as suggesting plans from hotel booking details in an email work only once the apps are connected, and disconnecting removes them. According to the Search help page, data already saved in Search Services History is not deleted when an app is disconnected and can still be used for product improvement, including training generative AI models.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy/archive/20261001-20261016?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=en&#34;&gt;Connect your Google content apps to get a Search services experience that&amp;#39;s tailored to you&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update&#34;&gt;Now Google says it might use your Gmail and Google Photos data to target ads&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/&#34;&gt;Updated Google privacy policy says your Gmail might be used for advertising&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=zh-Hant&#34;&gt;連結 Google 內容應用程式，打造個人專屬搜尋服務體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16598406?hl=zh-Hant&#34;&gt;連結 Google 應用程式，打造個人化 Gemini 體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=zh-Hant&#34;&gt;自訂廣告體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/15604322?hl=zh-Hant&#34;&gt;瞭解 Google Workspace 和其他 Google 產品的智慧功能及控制選項&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16598406?hl=en&#34;&gt;Connect your Google apps to personalize your Gemini experience&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=en&#34;&gt;Customize your ads experience&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/15604322?hl=en&#34;&gt;Learn about smart features &amp;amp; controls for Google Workspace &amp;amp; other Google products&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gigazine.net/gsc_news/en/20260415-gemini-personal-intelligence-japan/&#34;&gt;&amp;#39;Personal Intelligence,&amp;#39; which allows Gemini to read your emails and photo albums and answer personal questions, is now available in Japan.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GIGAZINE&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-15&#34;&gt;15 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of the Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;amp;mCode=C020010000&amp;amp;nttId=9888&#34;&gt;맞춤형 광고에 쓰이는 “행태정보” 처리, 적법성과 투명성 높인다&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal Information Protection Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-01-31&#34;&gt;31 January 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Weekly brief, 2026 week 44</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/weekly-brief-2026-w44/</link>
@@ -3290,145 +3420,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-09&#34;&gt;9 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>A static website hosted as a Tor onion service</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/tor-onion-service-static-site/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/tor-onion-service-static-site</guid>
-<pubDate>Sat, 24 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Hosting an onion service needs no fixed IP address, domain name or open port, and tor plus an ordinary web server is enough to put a static site on the Tor network. tor shipped four security updates between June and October, three with fixes involving onion services, and as of 20 October the latest is 0.4.9.14. Visitors need to connect through Tor, for example with Tor Browser.</description>
-<content:encoded>&lt;p&gt;Based on 18 sources, including Tor Project, Riseup, Personal blog&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;In June, an author described on a personal blog how they put their static website on a Tor onion service (a site reachable only through Tor, with the server&#39;s location protected), using tor, the Tor Project&#39;s core program, and the nginx web server. According to the Tor Project&#39;s page on onion service properties, an onion service needs no fixed IP address, no domain name and no open port. Between 25 June and 7 October, tor shipped four security releases, 0.4.9.11 to 0.4.9.14, three of them with fixes involving onion services, and as of 20 October the latest is 0.4.9.14.&lt;/p&gt;
-&lt;p&gt;Anyone already running an onion service should update to the latest version. Visitors to such a site need to connect through Tor, for example with Tor Browser.&lt;/p&gt;
-&lt;p&gt;Following the post and the official setup guide, the operator names a directory for the keys and a local port to forward to in tor&#39;s configuration file, &lt;code&gt;torrc&lt;/code&gt;. After tor restarts, the &lt;code&gt;hostname&lt;/code&gt; file in that directory holds the site&#39;s .onion address. The web server listens only on the local machine, and according to the post Tor already encrypts the connection, so no separate TLS (the encryption behind HTTPS) is needed. Static site generators write the site&#39;s address into internal links, so the author builds a second copy based on the .onion address, which keeps visitors on the onion service from being sent back to the ordinary address.&lt;/p&gt;
-&lt;p&gt;The setup guide&#39;s further advice is to forward to a Unix socket (a channel that programs on the same computer use to exchange data) instead of a local network port, so the service does not leak onto the local network. The guide also warns that an onion service set up this way can be read by anyone who knows the address. To limit it to particular people, client authorization lets only those holding a private key connect. According to the Onion-Location page, operators of an existing HTTPS site can add that header so Tor Browser shows the .onion version in the address bar when someone opens the original site.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to the official overview, an onion service&#39;s name is the public key used to authenticate the connection, so no certificate authority (the bodies that issue HTTPS certificates to websites) is needed. Tor encrypts the connection all the way from the user to the service. The service only makes outbound connections and can get through NAT (the mechanism home and organisational networks use to share one public IP address), so it can run on school or office networks where ports cannot be opened. According to the properties page, an onion service is reachable whenever the user can reach the Tor network and the service is online, regardless of DNS and IP blocking.&lt;/p&gt;
-&lt;p&gt;According to the official Operational Security page, whether the server&#39;s location stays hidden depends on how the operator maintains the system. A web server may reveal its software and operating system, and a computer that is not always online also leaks information. The longer a service runs, the higher the risk that its location is found. The same page recommends adding Vanguards (an add-on that reduces the risk of a service&#39;s entry relays being traced) to guard against advanced attacks.&lt;/p&gt;
-&lt;p&gt;The setup guide calls keeping a server from revealing its location &#34;not an easy task&#34; and lists the Operational Security page and Riseup&#39;s guide for reference. Riseup&#39;s guide recommends NTP (network time synchronisation) to keep the server clock correct, so clock drift cannot be used to identify the server. For people who have never run a web server, the setup guide suggests trying OnionShare, which has a graphical interface and fewer settings. The Tor Project&#39;s Onionspray adds an onion entrance to an existing public website, and its documentation lists that it is not suited to onion-only sites and does not protect the site&#39;s location.&lt;/p&gt;
-&lt;p&gt;The documentation for Arti, the Tor implementation rewritten in the Rust programming language, is inconsistent on whether it can host onion services. As of 20 October, Arti&#39;s project page says this is implemented, while its capability and limitations page says it is only partly done and off by default. The Onionspray documentation also says it relies on the C implementation of tor until Arti offers an alternative. Our inference from these documents is that tor is the safer choice for a production deployment.&lt;/p&gt;
-&lt;p&gt;Readers whose access to ordinary websites is blocked but who can still reach Tor can also read sites hosted as onion services. Our inference from the Operational Security page is that hosting one needs a machine that can stay on for long periods. The official examples mainly use Debian, the process is editing a configuration file on the command line with no programming required, and the guide has a Traditional Chinese translation (as of 20 October some sections are still in English).&lt;/p&gt;
-&lt;p&gt;Tor Metrics and OONI publish figures for mainland China, Taiwan and Hong Kong. Tor Metrics estimates, as daily averages for 11 to 17 October, about 1,055 users connecting directly from mainland China, against about 9,518 from Taiwan and about 8,253 from Hong Kong. These are estimates of direct connections only and leave out users who connect through bridges.&lt;/p&gt;
-&lt;p&gt;OONI (Open Observatory of Network Interference) Tor tests from 18 September to 18 October numbered 301 in mainland China, 293 of them flagged as anomalies and none confirmed as blocked. Hong Kong had 706 tests with 7 anomalies, and Taiwan 4,797 tests with 314 anomalies, 311 of them from a single ASN (autonomous system number, which identifies one network). An anomaly is not a confirmed block, and the test checks whether the servers Tor needs to operate are reachable, not onion services themselves.&lt;/p&gt;
-&lt;p&gt;For mainland China, the Tor Project&#39;s support page advises letting Tor Browser&#39;s Connection Assist try bridges or Snowflake automatically first, then WebTunnel bridges, then Snowflake and meek (meek has limited bandwidth and is slower). That page covers reaching the Tor network and does not say whether onion services are reachable from mainland China. As of 20 October we found no rules specifically on running onion services in mainland China, Taiwan or Hong Kong.&lt;/p&gt;
-&lt;p&gt;According to the properties page, a site can still record data about users once they log in. Our inference from the Operational Security page is that what the site&#39;s own content reveals is up to the operator.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (18)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/setup/&#34;&gt;Set up Your Onion Service&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/overview/&#34;&gt;How do Onion Services work?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/opsec/&#34;&gt;Operational Security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/client-auth/&#34;&gt;Client Authorization&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/onion-location/&#34;&gt;Onion-Location&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionservices.torproject.org/technology/properties/&#34;&gt;Onion Services Properties&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.torproject.org/tpo/core/tor/-/raw/tor-0.4.9.14/ReleaseNotes&#34;&gt;Changes in version 0.4.9.14 - 2026-10-07&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;7 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionservices.torproject.org/apps/web/onionspray/&#34;&gt;Onionspray&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/https/&#34;&gt;HTTPS for your Onion Service&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arti.torproject.org/guides/capability-limitations/&#34;&gt;Capability and Limitations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.torproject.org/tpo/core/arti&#34;&gt;Arti&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://riseup.net/en/security/network-security/tor/onionservices-best-practices&#34;&gt;Best Practices for Hosting Onion Services&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Riseup&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/&#34;&gt;Self-Hosting on the Dark Web&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal blog&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-01&#34;&gt;1 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/&#34;&gt;How to bypass censorship and connect to Tor from different countries or regions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://metrics.torproject.org/userstats-relay-country.html&#34;&gt;Users – Tor Metrics&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, mainland China&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=HK&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Hong Kong&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=TW&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

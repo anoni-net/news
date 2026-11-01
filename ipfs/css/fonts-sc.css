@@ -21,8 +21,8 @@
     font-family: "anoni news serif SC";
     font-weight: 700;
     font-display: fallback;
-    src: local("Noto Serif CJK SC Bold"), local("NotoSerifCJKsc-Bold"), local("Noto Serif SC Bold"), local("NotoSerifSC-Bold"), local("Source Han Serif SC Bold"), local("SourceHanSerifSC-Bold"), url("/news/fonts/sc-700-2026-11.woff2?v=e4b5f9d3ee") format("woff2");
-    unicode-range: U+58, U+4EF7, U+5B9E, U+7ADE, U+7F5A;
+    src: local("Noto Serif CJK SC Bold"), local("NotoSerifCJKsc-Bold"), local("Noto Serif SC Bold"), local("NotoSerifSC-Bold"), local("Source Han Serif SC Bold"), local("SourceHanSerifSC-Bold"), url("/news/fonts/sc-700-2026-11.woff2?v=775360d36d") format("woff2");
+    unicode-range: U+58, U+4EF7, U+4F8B, U+5B9E, U+76F8, U+7ADE, U+7B56, U+7F5A;
 }
 
 @font-face {

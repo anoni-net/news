@@ -6,7 +6,90 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 01 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Google 隱私權政策裡 Gmail 與相簿資料的廣告例外</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/google-gmail-photos-ads/</link>
+<guid isPermaLink="false">anoni-news:2026/11/google-gmail-photos-ads</guid>
+<pubDate>Mon, 02 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Google 隱私權政策 10 月 16 日版，在不依雲端硬碟、Gmail 與相簿內容投放個人化廣告的條文後面加上例外，條件是使用者自行把這些資料提供給支援個人化廣告的其他 Google 服務。政策附註舉的例子是「個人化智慧服務」，截至 11 月 1 日，說明頁列為開放給 18 歲以上的個人帳戶自行連結。沒有做這項選擇的人不需要調整，已經把 Gmail 或相簿連到搜尋的人，可以在 Google 帳戶的「搜尋服務個人化」查看或中斷連結。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，來自 Google、The Verge、Ars Technica&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Google 隱私權政策 10 月 16 日生效的版本，在「不會根據雲端硬碟、Gmail 或相簿的內容顯示個人化廣告」這句後面加上例外。例外的條件是使用者自行選擇把這些服務的資料提供給支援個人化廣告的其他 Google 服務，沒有做這項選擇的人不在範圍內。政策附註舉的功能是「個人化智慧服務」（Personal Intelligence），依 Google 搜尋的說明頁，開放給 18 歲以上、登入個人 Google 帳戶的使用者自行啟用。到 11 月 1 日為止，說明頁列出的支援地區包括台灣、香港、澳門、日本、南韓與新加坡，部分地區不支援連結 Google 相簿。&lt;/p&gt;
+&lt;p&gt;依 The Verge 10 月 23 日的報導，已經透過個人化智慧服務把 Gmail、相簿連到 AI 模式（AI Mode，用對話回答問題的搜尋功能）等搜尋工具的人，現在可能看到依信件與相片內容投放的廣告。依政策的版本對照頁，10 月 1 日版沒有句尾的「unless you choose to make data from these services available to other Google services that support personalized ads」。新增的句子寫到使用者可以讓搜尋或 Gemini 應用程式存取相簿、Gmail 與雲端硬碟的資料，搜尋可能處理其中一部分資料來將內容個人化，包括廣告。描述廣告的句子也從依「興趣與活動」，改成依「興趣、活動或來自 Google 服務的個人化內容」。&lt;/p&gt;
+&lt;p&gt;政策附註舉的例子是使用者向搜尋詢問最近訂的飯店時，搜尋可能從信件裡的訂房資料建議飯店附近可以做的事。搜尋說明頁寫到，連結一次就開放所有搜尋服務存取 Gmail 與相簿，包括 Google 搜尋、AI 模式、探索（Discover，Google App 首頁推薦文章的版面）、地圖、購物、航班、飯店、翻譯與新聞。政策提到的雲端硬碟，不在 11 月 1 日查證時說明頁可連結的清單裡。地圖裡的「問問 Google 地圖」（用對話詢問路線與地點的功能）也能連結 Gmail，到 11 月 1 日說明頁列的地區在亞洲只有印度、日本與印尼，不含台灣。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;Ars Technica 10 月 23 日刊出 Google 的完整聲明，第一句是連結完全由使用者選擇加入（opt-in）。聲明接著提到，廣告會繼續跟查詢內容、回覆的脈絡與使用者的興趣相關，不會直接根據 Gmail 收件匣或相簿相片庫。搜尋說明頁的問答也寫到廣告主無法查看收件匣或相簿，Google 不會依種族、宗教、性傾向或健康等敏感類別投放個人化廣告。到 11 月 1 日為止，查到的只有 Google 與媒體的說法，沒有找到倡議組織或資料保護機關的公開回應。&lt;/p&gt;
+&lt;p&gt;搜尋說明頁回答廣告的那一題同樣寫廣告不會直接根據收件匣或相片庫，也提到搜尋可能參考這些來源的摘要、摘錄與推論來提供個人化體驗，「系統也可能運用這些資訊來顯示廣告」。依這一題的寫法，廣告不以收件匣或相片庫本身為依據，搜尋從信件與相片產生的摘要、摘錄與推論則可能用於廣告。說明頁在訓練 AI 模型那一題另外舉例說明搜尋如何彙整信件與相片。使用者請 AI 模式推薦下次旅行的餐廳時，模型可能從信件與相片取得飯店預訂與航班資訊，再彙整成建議。&lt;/p&gt;
+&lt;p&gt;搜尋說明頁也寫到，搜尋服務不會直接用 Gmail 收件匣或相簿的圖像與音訊訓練生成式 AI 模型。說明頁接著寫到，使用者跟搜尋互動時，從相關信件、檔案與相片產生的摘要、摘錄與推論會用來訓練模型。信件很短或跟問題特別相關時，摘要可能就是信件本身。連結之後，AI 模式與「問問 Google 地圖」處理的一部分資料會交給人工審查員（包括受過訓練的服務供應商）審查。&lt;/p&gt;
+&lt;p&gt;沒有把 Gmail 或相簿連到搜尋或 Gemini 的人不需要調整設定。已經連結的人，可以照搜尋說明頁的正體中文版在電腦上前往 Google 帳戶的「搜尋服務個人化」，依序進入「其他個人化智慧服務」、「連結內容應用程式」查看或中斷連結。想試用的人要在同一處先開啟「個人化推薦」再連結，實際畫面可能跟說明不同（到 11 月 1 日為止，說明頁頂端提示設定正在更新）。Gemini 的連結設定在 &lt;code&gt;gemini.google.com&lt;/code&gt; 底部「設定與說明」裡的「個人化智慧服務」、「連結的應用程式」，政策明寫會處理這些資料來個人化廣告的服務是搜尋，沒有提到 Gemini。&lt;/p&gt;
+&lt;p&gt;中斷搜尋的連結，管的是 Gmail 與相簿的資料要不要提供給搜尋，「我的廣告中心」則是另一組控制。依政策，那裡的廣告設定可以控制 Google 用哪些資訊顯示廣告，但我的廣告中心的說明頁沒有寫個人化廣告的開關是否涵蓋連結的資料。連結之外，搜尋說明頁還要求開啟 Gmail 的「其他 Google 產品的智慧功能」，作為取得個人化回覆的前提。Gmail 的說明頁寫的是這項設定控管能否在其他 Google 產品使用 Workspace 資料，沒有提到相簿與廣告。&lt;/p&gt;
+&lt;p&gt;依政策附註的例子推想，從信件裡的訂房資料建議行程這類功能要在連結之後才能使用，中斷連結就會少掉。依搜尋說明頁，已經存進搜尋服務記錄的資料不會因為中斷連結而刪除，仍可用於改良產品（包括訓練生成式 AI 模型）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy/archive/20261001-20261016?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=en&#34;&gt;Connect your Google content apps to get a Search services experience that&amp;#39;s tailored to you&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update&#34;&gt;Now Google says it might use your Gmail and Google Photos data to target ads&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/&#34;&gt;Updated Google privacy policy says your Gmail might be used for advertising&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=zh-Hant&#34;&gt;連結 Google 內容應用程式，打造個人專屬搜尋服務體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16598406?hl=zh-Hant&#34;&gt;連結 Google 應用程式，打造個人化 Gemini 體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=zh-Hant&#34;&gt;自訂廣告體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/15604322?hl=zh-Hant&#34;&gt;瞭解 Google Workspace 和其他 Google 產品的智慧功能及控制選項&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>每週短訊 2026 第 44 週</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/weekly-brief-2026-w44/</link>
@@ -2760,113 +2843,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://royfish.dev/fingerprints-are-the-new-cookies&#34;&gt;Fingerprints are the new cookies&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;royfish.dev&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Tor 洋蔥服務的靜態網站架設</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/tor-onion-service-static-site/</link>
-<guid isPermaLink="false">anoni-news:2026/10/tor-onion-service-static-site</guid>
-<pubDate>Sat, 24 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>架設洋蔥服務不需要固定 IP、網域或開放連接埠，用 tor 加上一般的網頁伺服器就能把靜態網站放上 Tor 網路。tor 6 月到 10 月連續發布四個安全更新，其中三個的修補涉及洋蔥服務，到 10 月 20 日為止最新版是 0.4.9.14。網站的訪客要透過 Tor 連線，例如用 Tor Browser。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，來自 Tor Project、Riseup、個人部落格&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;一位作者 6 月在個人部落格記錄，把自己的靜態網站放上 Tor 的洋蔥服務（onion service，只能透過 Tor 連線、伺服器位置受到保護的網站）。架站用的是 tor（Tor Project 的主程式）與 nginx（網頁伺服器軟體）。根據 Tor Project 的特性說明，洋蔥服務不需要固定 IP、網域，也不需要開放連接埠。tor 6 月 25 日到 10 月 7 日之間連續發布 0.4.9.11 到 0.4.9.14 四個安全更新，其中三個的修補涉及洋蔥服務，到 10 月 20 日為止最新版是 0.4.9.14。&lt;/p&gt;
-&lt;p&gt;已經在營運洋蔥服務的人要更新到最新版。網站的訪客要透過 Tor 連線，例如用 Tor Browser。&lt;/p&gt;
-&lt;p&gt;依原文與官方的設定指南，做法是在 tor 的設定檔 &lt;code&gt;torrc&lt;/code&gt; 指定一個存放金鑰的目錄與要轉送的本機連接埠。重新啟動 tor 之後，目錄裡的 &lt;code&gt;hostname&lt;/code&gt; 檔就是網站的 .onion 位址。網頁伺服器只在本機監聽，原文提到 Tor 本身就會加密連線，不需要另外設定 TLS（HTTPS 用的加密）。&lt;/p&gt;
-&lt;p&gt;同時經營一般網站的人要留意，靜態網站產生器會把網址寫進站內連結。原文因此另外建置一份以 .onion 位址為基準的版本，避免訪客從洋蔥服務點連結又回到一般網址。&lt;/p&gt;
-&lt;p&gt;設定指南另外建議把轉送的目標從本機的網路連接埠改成 Unix socket（同一台電腦裡程式之間交換資料的通道），避免服務洩漏到區域網路。指南也提醒，照這樣設定的洋蔥服務，任何知道位址的人都能讀取。只想讓特定的人連線時，可以設定客戶授權（client authorization），只有持有私鑰的人連得上。Onion-Location 說明頁提到，已經有 HTTPS 網站的人可以加上這個標頭，讓 Tor Browser 開啟原本的網站時在網址列提示 .onion 版本。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;官方說明提到，洋蔥服務的名稱就是用來驗證連線的公鑰，所以不需要憑證機構（替網站簽發 HTTPS 憑證的機構）。連線由 Tor 從使用者端一路加密到服務端。服務只對外建立連線、可以穿過 NAT（家用與機構網路共用對外 IP 的機制），學校或辦公室這類不能開連接埠的網路也能架設。根據特性說明，連得上 Tor 網路、服務也在線上時就能連到洋蔥服務，不受 DNS 與 IP 封鎖的影響。&lt;/p&gt;
-&lt;p&gt;依官方的 Operational Security 頁，伺服器位置能否保持隱藏，要看架設的人如何維護系統。網頁伺服器可能透露自己的種類與作業系統，電腦不是一直在線也會洩漏資訊。服務運作越久，位置被找到的風險也越高。同一頁建議加裝 Vanguards（降低入口節點被追查風險的附加元件）防範進階攻擊。&lt;/p&gt;
-&lt;p&gt;設定指南也寫，要讓伺服器不透露位置「not an easy task」（並不容易），並列出 Operational Security 頁與 Riseup 的指南當參考。Riseup 的指南建議用 NTP（網路校時）自動校正伺服器時間，避免時間誤差被用來辨識伺服器。沒有架過網頁伺服器的人，設定指南提到可以試試有圖形介面、設定比較少的 OnionShare。Tor Project 的 Onionspray 則是替既有的公開網站加上洋蔥服務入口，說明文件列出它不適合純洋蔥網站，也不保護網站的位置。&lt;/p&gt;
-&lt;p&gt;用 Rust 程式語言重寫的 Arti，文件對能不能架設洋蔥服務說法不一。到 10 月 20 日為止，Arti 的專案頁寫已經實作，能力與限制頁卻寫只完成一部分、預設關閉。Onionspray 的說明也寫在 Arti 有替代方案之前仍仰賴 C 語言實作的 tor，依這幾份文件推論，正式架設時以 tor 比較穩妥。&lt;/p&gt;
-&lt;p&gt;一般網站被封鎖、但連得上 Tor 的讀者，也能讀到架在洋蔥服務上的網站。依 Operational Security 頁推論，架設需要一台能長時間開機的主機。官方範例以 Debian 為主，過程是在命令列編輯設定檔、不需要寫程式，指南有正體中文翻譯（到 10 月 20 日為止部分段落仍是英文）。&lt;/p&gt;
-&lt;p&gt;特性說明也列出，使用者登入之後網站仍然記錄得到資料。依 Operational Security 頁推論，網站內容本身透露的資訊要靠架設的人自行把關。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/setup/&#34;&gt;Set up Your Onion Service&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/overview/&#34;&gt;How do Onion Services work?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/opsec/&#34;&gt;Operational Security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/client-auth/&#34;&gt;Client Authorization&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/onion-location/&#34;&gt;Onion-Location&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionservices.torproject.org/technology/properties/&#34;&gt;Onion Services Properties&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.torproject.org/tpo/core/tor/-/raw/tor-0.4.9.14/ReleaseNotes&#34;&gt;Changes in version 0.4.9.14 - 2026-10-07&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionservices.torproject.org/apps/web/onionspray/&#34;&gt;Onionspray&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.torproject.org/onion-services/advanced/https/&#34;&gt;HTTPS for your Onion Service&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arti.torproject.org/guides/capability-limitations/&#34;&gt;Capability and Limitations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.torproject.org/tpo/core/arti&#34;&gt;Arti&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://riseup.net/en/security/network-security/tor/onionservices-best-practices&#34;&gt;Best Practices for Hosting Onion Services&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Riseup&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/&#34;&gt;Self-Hosting on the Dark Web&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;個人部落格&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-01&#34;&gt;2026 年 6 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
