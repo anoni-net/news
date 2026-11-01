@@ -2205,6 +2205,10 @@ from = "https://therecord.media/favicon-192.png"
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
 
+[hosts."theverge.com"]
+icon = "theverge.com-923bdc5a.png"
+from = "https://www.theverge.com/static-assets/icons/android-chrome-512x512.png"
+
 [hosts."tibane.net"]
 icon = "tibane.net-8223110f.png"
 from = "https://www.tibane.net/favicon.png"
