@@ -265,6 +265,12 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/2026/11/qwen-political-censorship/
+	#perspective
+	#sources
 /2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -562,6 +568,12 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/en/2026/11/qwen-political-censorship/
+	#perspective
+	#sources
 /en/2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -670,6 +682,8 @@
 	#y2026
 /en/history/11-01/
 	#y2026
+/en/history/11-02/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
@@ -755,6 +769,8 @@
 /history/10-31/
 	#y2026
 /history/11-01/
+	#y2026
+/history/11-02/
 	#y2026
 /page/2/
 /page/3/
@@ -1030,6 +1046,12 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/zh-cn/2026/11/qwen-political-censorship/
+	#perspective
+	#sources
 /zh-cn/2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -1137,6 +1159,8 @@
 /zh-cn/history/10-31/
 	#y2026
 /zh-cn/history/11-01/
+	#y2026
+/zh-cn/history/11-02/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/

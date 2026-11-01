@@ -663,6 +663,10 @@ same_as = "quad9.net"
 icon = "documentation.ubuntu.com-23ab024d.png"
 from = "https://documentation.ubuntu.com/favicon.ico"
 
+[hosts."doi.org"]
+icon = "doi.org-26fada24.png"
+from = "https://doi.org/images/favicons/android-chrome-512x512.png"
+
 [hosts."doit.gov.taipei"]
 icon = "doit.gov.taipei-0f5e20a8.png"
 from = "https://doit.gov.taipei/images/favicon.ico"
@@ -744,6 +748,10 @@ from = "https://europa.eu/favicon.ico"
 
 [hosts."explorer.ooni.org"]
 same_as = "ooni.org"
+
+[hosts."ey.gov.tw"]
+icon = "ey.gov.tw-d38962ca.png"
+from = "https://www.ey.gov.tw/favicon.ico"
 
 [hosts."f-droid.org"]
 icon = "f-droid.org-1354c66e.png"
@@ -1007,6 +1015,10 @@ from = "https://help.yahoo.com/favicon.ico"
 [hosts."helpnetsecurity.com"]
 icon = "helpnetsecurity.com-eb4f8b13.png"
 from = "https://img.helpnetsecurity.com/wp-content/uploads/2019/09/09093400/cropped-hns2-192x192.png"
+
+[hosts."hirundo.io"]
+icon = "hirundo.io-c5bb7e30.png"
+from = "https://cdn.prod.website-files.com/660ac5137d0f7fda07d7ce65/6617d7981e36e21acf57ed8a_b5cd4c076c781cbe99afbb6bb99931a3-32bits-256.png"
 
 [hosts."hk01.com"]
 icon = "hk01.com-41717201.png"
@@ -1512,6 +1524,10 @@ from = "https://www.mozilla.org/media/img/favicons/mozilla/favicon-196x196.e1430
 [hosts."msa-alliance.cn"]
 none = "網站沒有 favicon，https 憑證為自簽"
 
+[hosts."msit.go.kr"]
+icon = "msit.go.kr-4b182cff.png"
+from = "https://www.msit.go.kr/favicon.ico"
+
 [hosts."mullvad.net"]
 icon = "mullvad.net-21b79597.png"
 from = "https://www.mullvad.net/apple-touch-icon.png"
@@ -1917,6 +1933,10 @@ from = "https://www.sakura.ad.jp/resource/favicon/sakura_logo.png"
 icon = "scala-com.jp-2478aaf7.png"
 from = "https://scala-com.jp/assets/img/android-touch-icon.png"
 
+[hosts."schneier.com"]
+icon = "schneier.com-56b2bf05.png"
+from = "https://icons.duckduckgo.com/ip3/schneier.com.ico"
+
 [hosts."scmp.com"]
 icon = "scmp.com-5f9b444f.png"
 from = "https://assets-v2.i-scmp.com/production/icons/scmp-icon-256x256.png"
@@ -2008,6 +2028,10 @@ from = "https://www.soumu.go.jp/favicon.ico"
 [hosts."source.android.com"]
 icon = "source.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
+
+[hosts."speechmap.substack.com"]
+icon = "speechmap.substack.com-cbfa4835.png"
+from = "https://substackcdn.com/image/fetch/$s_!Teni!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F484a0b01-a5aa-4a46-96eb-1bd25c96dbeb%2Fapple-touch-icon-1024x1024.png"
 
 [hosts."sprs.parl.gov.sg"]
 icon = "sprs.parl.gov.sg-3f13f797.png"
@@ -2205,6 +2229,10 @@ from = "https://therecord.media/favicon-192.png"
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
 
+[hosts."theverge.com"]
+icon = "theverge.com-923bdc5a.png"
+from = "https://www.theverge.com/static-assets/icons/android-chrome-512x512.png"
+
 [hosts."tibane.net"]
 icon = "tibane.net-8223110f.png"
 from = "https://www.tibane.net/favicon.png"
@@ -2303,6 +2331,10 @@ from = "https://watchtowr.com/wp-content/uploads/2023/02/cropped-Logo-192x192.pn
 [hosts."web.archive.org"]
 icon = "web.archive.org-32e1e194.png"
 from = "https://archive.org/apple-touch-icon.png（本機 DNS 解析不到，用 1.1.1.1 解析後下載）"
+
+[hosts."web.mit.edu"]
+icon = "web.mit.edu-29a4c937.png"
+from = "https://web.mit.edu/themes/mit/assets/favicon/apple-touch-icon.png"
 
 [hosts."webkit.org"]
 icon = "webkit.org-b3602cf9.png"
