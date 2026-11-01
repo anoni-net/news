@@ -1,6 +1,6 @@
 ---
 name: news-reviewer
-description: 第一輪審稿。逐句對照原文與寫作規則，找出比原文更肯定、範圍寫錯、長句與指涉不清這類問題。zh-TW 的第一輪，以及 zh-CN、en 引用了另外查證的來源時使用。
+description: 第一輪審稿。逐句對照原文與寫作規則，找出比原文更肯定、範圍寫錯、長句與指涉不清這類問題。zh-TW 的第一輪使用。
 tools: Read, Grep, Glob, WebFetch
 model: opus
 ---
