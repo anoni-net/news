@@ -59,6 +59,8 @@ uv run tools/make_cards.py --dry-run    # 維護者：產生還沒有或已過�
 
 原文的網站還沒有登記圖示時，建置會列出是哪個主機。維護者先執行 `uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md`，看過 `.cache/favicons/preview.html` 的預覽，再設好 `NEWS_ASSETS_RSYNC` 拿掉 `--dry-run` 執行一次，工具會上傳圖示並寫進 `favicons.toml`。抓不到或不適合的，用 `--from` 指定來源或用 `--none` 登記成通用圖示。規則見 `SPEC.md`「原文的網站圖示」。
 
+上面三個步驟（搬圖、預覽卡片、網站圖示）都會上傳到社群的主機，需要維護者的存取權限，要請維護者協助。投稿者與沒有權限的 AI 協作工具跳過這三步，在 PR 內文列出需要維護者處理的項目，例如有幾張圖、哪些主機的圖示還沒登記。原文網站的圖示還沒登記時，`build.py --check` 會失敗，這是預期的結果，維護者上傳之後就會通過。`NEWS_ASSETS_RSYNC` 的目的地只放在維護者的環境變數，不寫進 repo。
+
 ## 寫作規則
 
 寫作規則以社群首頁的[寫作風格規範](https://anoni.net/join/writing-style/)為準，英文版照[英文的寫作風格規範](https://anoni.net/en/join/writing-style/)，要調整規則時改那一頁（原始檔在 `anoni-net/www`），不要在這裡另存一份。檢查工具沿用文件站的 `tools/docs_style_lint.py`。

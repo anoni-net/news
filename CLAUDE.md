@@ -22,6 +22,10 @@
 
 從工作區或其他目錄開的 session 讀不到這裡的 `.claude/agents/`。這時改用通用的 subagent，明確指定表上的模型，並把對應 agent 檔的內文放進指示，不要另外寫一份更長的指示。
 
+### 從本 repo 開 session
+
+寫稿從本 repo 的主 clone 開 session，`.claude/agents/` 的七個 agent 才讀得到，派出的子代理也只帶本 repo 的說明。每一篇、每一則各開一個分支，從主 clone 開 worktree，起點寫 `origin/main`，例如 `git fetch origin main && git worktree add -b <分支> .claude/worktrees/<分支> origin/main`。`.claude/worktrees/` 已經寫進 `.gitignore`。
+
 ### 主對話的工作目錄
 
 session 從 anoni-net/news 的上層目錄或其他 repo 開啟、再進來工作時，盡量不要把主對話的工作目錄切進本 repo 或它的 worktree。Claude Code 在工作目錄改變時會自動載入本檔與它引入的 `AGENTS.md`，之後一直留在對話裡。`guides/` 底下的寫作指南不會自動載入，2026-10 拆檔之前 `AGENTS.md` 約 1.5 萬 token。已載入的內容會走 prompt cache，每回合重讀的成本不高，主要的影響是對話變長、比較早被壓縮。
