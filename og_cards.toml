@@ -83,6 +83,7 @@
 "2026-11-01-bitchat-india-block" = { "en" = "og/2026/11/bitchat-india-block-en-b60480f9.png", "zh-CN" = "og/2026/11/bitchat-india-block-zh-cn-6672fd01.png", "zh-TW" = "og/2026/11/bitchat-india-block-zh-tw-85c74eb2.png" }
 "2026-11-01-weekly-brief-2026-w44" = { "en" = "og/2026/11/weekly-brief-2026-w44-en-48b7e44c.png", "zh-CN" = "og/2026/11/weekly-brief-2026-w44-zh-cn-8a0b0159.png", "zh-TW" = "og/2026/11/weekly-brief-2026-w44-zh-tw-8d6bd66f.png" }
 "2026-11-01-xandr-norway-fine" = { "en" = "og/2026/11/xandr-norway-fine-en-3ce21e12.png", "zh-CN" = "og/2026/11/xandr-norway-fine-zh-cn-d204b441.png", "zh-TW" = "og/2026/11/xandr-norway-fine-zh-tw-47deb262.png" }
+"2026-11-02-google-gmail-photos-ads" = { "en" = "og/2026/11/google-gmail-photos-ads-en-f9a8c6e1.png", "zh-CN" = "og/2026/11/google-gmail-photos-ads-zh-cn-08e0ad81.png", "zh-TW" = "og/2026/11/google-gmail-photos-ads-zh-tw-cf0a7e29.png" }
 "2026-11-02-qwen-political-censorship" = { "en" = "og/2026/11/qwen-political-censorship-en-36c1df10.png", "zh-CN" = "og/2026/11/qwen-political-censorship-zh-cn-7f9f7a7f.png", "zh-TW" = "og/2026/11/qwen-political-censorship-zh-tw-f8902778.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-f1b37c7c.png", "zh-CN" = "og/history/09-26-zh-cn-f38b40e8.png", "zh-TW" = "og/history/09-26-zh-tw-d873b539.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-c875310d.png", "zh-CN" = "og/history/09-27-zh-cn-cb1e8c42.png", "zh-TW" = "og/history/09-27-zh-tw-6e156cbd.png" }
@@ -121,3 +122,4 @@
 "history/10-30" = { "en" = "og/history/10-30-en-73c73a2b.png", "zh-CN" = "og/history/10-30-zh-cn-09eb94de.png", "zh-TW" = "og/history/10-30-zh-tw-41a086ce.png" }
 "history/10-31" = { "en" = "og/history/10-31-en-e96b52f9.png", "zh-CN" = "og/history/10-31-zh-cn-3fc723d1.png", "zh-TW" = "og/history/10-31-zh-tw-39b956a4.png" }
 "history/11-01" = { "en" = "og/history/11-01-en-9f3cd289.png", "zh-CN" = "og/history/11-01-zh-cn-435f988c.png", "zh-TW" = "og/history/11-01-zh-tw-97d72629.png" }
+"history/11-02" = { "en" = "og/history/11-02-en-3e8f9bdf.png", "zh-CN" = "og/history/11-02-zh-cn-3b0dff34.png", "zh-TW" = "og/history/11-02-zh-tw-45174d3a.png" }

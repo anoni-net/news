@@ -2229,6 +2229,10 @@ from = "https://therecord.media/favicon-192.png"
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
 
+[hosts."theverge.com"]
+icon = "theverge.com-923bdc5a.png"
+from = "https://www.theverge.com/static-assets/icons/android-chrome-512x512.png"
+
 [hosts."tibane.net"]
 icon = "tibane.net-8223110f.png"
 from = "https://www.tibane.net/favicon.png"
@@ -2327,6 +2331,10 @@ from = "https://watchtowr.com/wp-content/uploads/2023/02/cropped-Logo-192x192.pn
 [hosts."web.archive.org"]
 icon = "web.archive.org-32e1e194.png"
 from = "https://archive.org/apple-touch-icon.png（本機 DNS 解析不到，用 1.1.1.1 解析後下載）"
+
+[hosts."web.mit.edu"]
+icon = "web.mit.edu-29a4c937.png"
+from = "https://web.mit.edu/themes/mit/assets/favicon/apple-touch-icon.png"
 
 [hosts."webkit.org"]
 icon = "webkit.org-b3602cf9.png"
