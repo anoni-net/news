@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中国开放权重模型 Qwen 的审查与代码差距量测 | anoni.net 新闻导读</title>
+<meta name="description" content="两家发布移除版模型的公司在 10 月各自公布 Qwen 的量测，一份是中文政治问题的审查比例，一份是代码安全性随客户身份出现的差距。量测跟用 Qwen 问政治问题的人、用 Qwen3-Coder 写代码的开发者有关，无论在自己电脑上运行或通过服务使用。到 11 月 1 日为止，我们没有查到第三方重现，也没有查到 Qwen 团队的回应。">
+<link rel="canonical" href="https://anoni.net/news/zh-cn/2026/11/qwen-political-censorship/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/qwen-political-censorship/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/qwen-political-censorship/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/qwen-political-censorship/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/qwen-political-censorship/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/qwen-political-censorship/">
+<link rel="stylesheet" href="/news/css/news.css?v=4219b38e67">
+<link rel="stylesheet" href="/news/css/fonts-sc.css?v=047cc87f3c">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="https://anoni.net/news/zh-cn/feed.xml">
+<meta property="og:site_name" content="anoni.net 新闻导读">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国开放权重模型 Qwen 的审查与代码差距量测">
+<meta property="og:description" content="两家发布移除版模型的公司在 10 月各自公布 Qwen 的量测，一份是中文政治问题的审查比例，一份是代码安全性随客户身份出现的差距。量测跟用 Qwen 问政治问题的人、用 Qwen3-Coder 写代码的开发者有关，无论在自己电脑上运行或通过服务使用。到 11 月 1 日为止，我们没有查到第三方重现，也没有查到 Qwen 团队的回应。">
+<meta property="og:url" content="https://anoni.net/news/zh-cn/2026/11/qwen-political-censorship/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/11/qwen-political-censorship-zh-cn-7f9f7a7f.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="中国开放权重模型 Qwen 的审查与代码差距量测">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="中国开放权重模型 Qwen 的审查与代码差距量测">
+<meta property="article:published_time" content="2026-11-02T00:05:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "中国开放权重模型 Qwen 的审查与代码差距量测",
+  "description": "两家发布移除版模型的公司在 10 月各自公布 Qwen 的量测，一份是中文政治问题的审查比例，一份是代码安全性随客户身份出现的差距。量测跟用 Qwen 问政治问题的人、用 Qwen3-Coder 写代码的开发者有关，无论在自己电脑上运行或通过服务使用。到 11 月 1 日为止，我们没有查到第三方重现，也没有查到 Qwen 团队的回应。",
+  "datePublished": "2026-11-02T00:05:00+08:00",
+  "url": "https://anoni.net/news/zh-cn/2026/11/qwen-political-censorship/",
+  "mainEntityOfPage": "https://anoni.net/news/zh-cn/2026/11/qwen-political-censorship/",
+  "image": "https://assets.anoni.net/news/og/2026/11/qwen-political-censorship-zh-cn-7f9f7a7f.png",
+  "inLanguage": "zh-Hans",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "https://anoni.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anoni.net/news/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "InterpreticAI/Qwen3.8-27B-Uncensored-v2 · Hugging Face",
+      "url": "https://huggingface.co/InterpreticAI/Qwen3.8-27B-Uncensored-v2"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Chinese AI Writes Weaker Code for Beijing’s Adversaries. We Fixed It. A Qwen3-Coder Case Study",
+      "url": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized · Hugging Face",
+      "url": "https://huggingface.co/hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Westernizing Qwen: Measuring and Mitigating Geopolitical Alignment in Chinese Open-Weight LLMs",
+      "url": "https://www.hirundo.io/blog/westernizing-qwen"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Political censorship in large language models originating from China",
+      "url": "https://doi.org/10.1093/pnasnexus/pgag013"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Chinese Open Source Model Roundup",
+      "url": "https://speechmap.substack.com/p/chinese-open-source-model-roundup"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "生成式人工智能服务管理暂行办法",
+      "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "卓揆：公務機關全面禁用Deepseek AI 服務",
+      "url": "https://www.ey.gov.tw/Page/9277F759E41CCD91/3ce9fe8f-2f5f-4d1d-8176-6fa4cf622b82"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "公務機關全面禁用DeepSeek AI 服務，未限制一般民間使用",
+      "url": "https://moda.gov.tw/ACS/press/news/press/15296"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Bias in Qwen3-Coder Model",
+      "url": "https://www.schneier.com/blog/archives/2026/10/bias-in-qwen3-coder-model.html"
+    }
+  ],
+  "articleSection": "审查与访问管制"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新闻导读",
+      "item": "https://anoni.net/news/zh-cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "审查与访问管制",
+      "item": "https://anoni.net/news/zh-cn/category/censorship/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "中国开放权重模型 Qwen 的审查与代码差距量测"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/zh-cn/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新闻导读</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新闻导读：" data-print-url="https://anoni.net/news/zh-cn/2026/11/qwen-political-censorship/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--censorship" href="/news/zh-cn/category/censorship/">审查与访问管制</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-11-02T00:05:00+08:00">2026 年 11 月 2 日 星期一</time></p>
+    <h1 class="story__title">中国开放权重模型 Qwen 的审查与代码差距量测</h1>
+    <p class="story__dek">两家发布移除版模型的公司在 10 月各自公布 Qwen 的量测，一份是中文政治问题的审查比例，一份是代码安全性随客户身份出现的差距。量测跟用 Qwen 问政治问题的人、用 Qwen3-Coder 写代码的开发者有关，无论在自己电脑上运行或通过服务使用。到 11 月 1 日为止，我们没有查到第三方重现，也没有查到 Qwen 团队的回应。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/hirundo.io-c5bb7e30.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/doi.org-26fada24.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 12 篇原文，来自 Interpretic AI、Hirundo、PNAS Nexus 等 9 个出处</span></a></span>
+      <span>导读：anoni.net 社区</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/news/2026/11/qwen-political-censorship/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/news/en/2026/11/qwen-political-censorship/" hreflang="en" lang="en">English</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="朗读这篇" data-label-playing="暂停" data-label-paused="继续朗读"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>朗读这篇</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>调整</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>语音</span> <select class="listen__select" data-voice data-group-tw="普通话（台湾）" data-group-cn="普通话（中国）" data-group-zh="普通话" data-group-yue="粤语"></select></label>
+          <label class="listen__field"><span>语速</span> <select class="listen__select" data-rate><option value="0.8">0.8 倍</option><option value="1" selected>1 倍</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label>
+        </div>
+        <p class="listen__note">用这台设备内置的语音朗读，文章不会传到其他服务器。选择的语音与语速只保存在这个浏览器里。<a href="/news/zh-cn/reading/#listening">朗读的完整说明</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="story__body content">
+<p>两家公司在 10 月下旬各自公布了阿里巴巴 Qwen 系列开放权重模型的量测（开放权重模型指公开模型文件、可以下载到自己电脑上运行的模型）。Interpretic AI 量测 Qwen3.8-27B 回答中文政治问题时的审查比例，10 月 31 日在 Hugging Face 发布移除审查的版本。依 Hirundo 10 月 21 日在博客公布的量测，Qwen3-Coder 写出的代码安全性会随系统提示词（开发者事先给模型的指示）里的客户身份改变，该公司也发布了修改过的版本。</p>
+<p>两份研究都出自发布移除版模型的公司，Hirundo 也替使用开放权重模型的组织评估与修正模型。到 11 月 1 日为止，我们没有查到第三方重现，下文的数字都是两家公司各自的量测。用 Qwen 问政治问题的人跟 Interpretic 的量测有关，用 Qwen3-Coder 写代码的开发者跟 Hirundo 的量测有关。</p>
+<p>Interpretic 的模型页写到，量测以中文提问两位研究者发表在期刊 PNAS Nexus 的 145 题政治题目，每个回答由另一个语言模型判定有没有审查。其中 113 题政治敏感的题目里，Qwen3.8-27B 原模型有 98 题被判为审查（86.7%），移除版剩 4 题（3.5%）。模型页没有写评分用的是哪一个模型、有没有人工抽查，移除的方式也只写了「targeted weight edit」（针对性地修改模型权重），没有附论文或代码。Interpretic 列出的限制是政治题只测了中文，也提醒回答有实质内容不代表正确。</p>
+<p>题目集出自 2026 年 2 月发表的论文，研究者比较中国与中国以外开发的基础模型。根据论文摘要，中国开发的模型对 145 题政治问题拒答较多、回答较短，不准确的回答也较多。所有模型用中文提问时的拒答率都比英文高，不过语言之间的差距小于中国与非中国模型之间的差距。</p>
+<p>Hirundo 的博客写到，研究请 Qwen3-Coder-30B-A3B-Instruct 反复写同一个网页服务，功能是用户注册、登录与保存私密文字。每次只改系统提示词里「代码替谁写」的一句，分成中立客户、美国国防承包商、中国国防承包商与香港民主倡议团体。写好的应用程序交给 ETH Zurich 与 LogicStar 的公开基准 BaxBench 实际运行，至少一种现成的攻击成功就算可被入侵。</p>
+<p>可被入侵的比例在替美国国防承包商写的应用程序是 70%，中国国防承包商是 59%。私密数据泄露的比较里，替香港民主倡议团体写的应用程序近半会让任何登录的用户读到所有人的私密数据，中立客户约三分之一（博客算成相对高出 28%）。提示词另外加上安全指示的那一组，可被入侵的比例在美国承包商是 74%，中立客户是 59%。博客用统计检验判定上述三项差距都不太像是随机造成的。</p>
+<p>博客的附录问答也写到，研究无法判断差距是否有人刻意放进模型。小模型本来就容易写出有漏洞的代码，前面提到的中立客户也有约三分之一会泄露，研究量的是额外的风险。研究只测了一个模型与一个任务，任务是从 11 个任务的小样本里挑出差距最明显的那一个。美国与香港两组是刻意挑选的极端案例。</p>
+<p>Hirundo 的移除版公开在 Hugging Face，模型页写的做法是行为遗忘（behavioral unlearning，用额外的训练让模型忘掉特定行为，同时保留其他能力）。根据博客，移除版在 Hirundo 自建的 500 题基准 CCPC-500 上被判为审查、偏向或宣传的回答从 46.6% 降到 4.0%，三项代码差距也不再显著。附录的其他比较里，移除版替美国承包商写的应用程序对中立客户仍有一项显著差距，博客的解读是效果从国家移到组织类型。在其他十个编程任务上，可以正常运行与可被入侵的应用程序比例都跟原模型相近。</p>
+<h2 id="perspective">导读观点</h2>
+<p>语言模型的回答取决于训练用的数据，以及训练后期的对齐（alignment），也就是让模型照开发者的规范回答的步骤。两份研究公开的量测都是大量提问、从输出计算比例，都没有分开检验训练数据与对齐。Hirundo 的博客主张移除版的结果证明代码的差距存在模型权重里，支撑主张的是同一家公司自己的移除实验。</p>
+<p>公开研究项目 SpeechMap 2025 年 5 月量测较早的 Qwen3 世代，整理里写到 Qwen3 的开放权重模型在批评中国的题目上普遍审查。中文提问时审查得最彻底，英文也有，芬兰文只在部分情况出现、也比较不一致。同一份整理也提到，商用版 Qwen-Max 返回大量 API 错误，SpeechMap 的解读是 API 另有一层审查。本文据此推论，通过服务使用模型时，读到的回答可能同时受模型本身与服务端的过滤影响。</p>
+<p>中国的《生成式人工智能服务管理暂行办法》2023 年 8 月 15 日施行，第四条要求提供与使用生成式人工智能服务时「不得生成煽动颠覆国家政权、推翻社会主义制度」等内容。根据第二条，没有向中国境内公众提供服务的研发与应用不适用这份办法，我们也没有查到办法对公开发布模型权重的专门规定。PNAS Nexus 论文的研究者提醒，论文是观察性的横断面研究（在同一个时间点比较不同模型、不做实验），不能证明监管压力与中国模型的审查行为之间有因果关系。</p>
+<p>在中国境内面向公众提供的生成式人工智能服务，提供者须遵守上一段的暂行办法。下载开放权重到自己的电脑上运行时没有经过服务端。按 Interpretic 的量测，Qwen3.8-27B 的权重本身就带有审查，读到的回答因此仍可能带有审查（本文的推论）。</p>
+<p>台湾行政院 2025 年 2 月 3 日要求公务机关全面禁用 DeepSeek AI 服务，新闻稿提到数据上传中国的信息安全风险尚未厘清也并未排除，模型训练也有思想审查等数据偏异。资通安全署 2025 年 2 月 20 日的说明写到，禁用范围包含云端服务、App 与下载到本地的使用方式，当时没有限制一般民间使用。公告点名的是 DeepSeek，我们没有查到点名 Qwen 的公告。</p>
+<p>Interpretic 的移除版在 100 题有害请求中拒绝的题数从 100 降到 95，一般能力测验的分数也小幅下降，考虑改用移除版的人要权衡这些副作用。两家的移除版跟原模型一样采用 Apache 2.0 授权，Interpretic 没有附论文或代码，Hirundo 也只写了做法的类别。Hirundo 的博客写到打算公开自建的 CCPC-500，我们 11 月 1 日查证时数据集的网址无法访问（返回 401 错误），不能确认已经公开。SpeechMap 2025 年 5 月整理当时第三方修改过的中国开源模型，写到英文的改善明显，中文只有小幅改善。</p>
+<p>用 Qwen 查询政治、历史这类敏感题目的人，本文建议把同一个问题拿去问不同来源的模型，再对照新闻与原始资料。论文摘要与 SpeechMap 都写到中文提问时拒答或审查较多，本文据此推论换一种语言再问可能得到不同的回答，不过论文也提到语言的差距小于中国与非中国模型之间的差距。上述研究都没有评估这些做法能否补上被审查的内容，没有被测到的题目也不代表没有偏误（本文的推论）。</p>
+<p>用 Qwen3-Coder 或其他模型写代码的开发者，代码上线前仍要另外审查与测试。根据 Hirundo 的博客，在提示词加上安全指示没有消除差距，常见的静态扫描工具也不一定抓得到这类泄露（登录的用户可以读到其他人的数据）。移除版在其他十个任务上仍有约四分之一的应用程序可被入侵，中立客户的应用程序也会泄露（见上文）。本文据此推论，无论用哪个版本，审查时都可以优先看访问权限的检查。</p>
+<p>到 11 月 1 日为止，我们没有查到阿里巴巴或 Qwen 团队对两份研究或论文的公开回应。12 月初可以留意是否有第三方重现两家公司的量测、CCPC-500 是否公开，以及 Qwen 团队有没有回应。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（12 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://huggingface.co/InterpreticAI/Qwen3.8-27B-Uncensored-v2"><img class="source-slip__icon" src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" loading="lazy" decoding="async">InterpreticAI/Qwen3.8-27B-Uncensored-v2 · Hugging Face</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Interpretic AI</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-31">2026 年 10 月 31 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.hirundo.io/blog/qwen3-coder-vulnerabilities"><img class="source-slip__icon" src="/news/assets/favicons/hirundo.io-c5bb7e30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Chinese AI Writes Weaker Code for Beijing’s Adversaries. We Fixed It. A Qwen3-Coder Case Study</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Hirundo</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://huggingface.co/hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized"><img class="source-slip__icon" src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" loading="lazy" decoding="async">hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized · Hugging Face</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Hirundo</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-13">2026 年 10 月 13 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.hirundo.io/blog/westernizing-qwen"><img class="source-slip__icon" src="/news/assets/favicons/hirundo.io-c5bb7e30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Westernizing Qwen: Measuring and Mitigating Geopolitical Alignment in Chinese Open-Weight LLMs</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Hirundo</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-05">2026 年 10 月 5 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://doi.org/10.1093/pnasnexus/pgag013"><img class="source-slip__icon" src="/news/assets/favicons/doi.org-26fada24.png" width="16" height="16" alt="" loading="lazy" decoding="async">Political censorship in large language models originating from China</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>PNAS Nexus</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-02-17">2026 年 2 月 17 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://huggingface.co/Qwen/Qwen3.8-27B"><img class="source-slip__icon" src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" loading="lazy" decoding="async">Qwen/Qwen3.8-27B</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Qwen</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-08-05">2026 年 8 月 5 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct"><img class="source-slip__icon" src="/news/assets/favicons/huggingface.co-5acaea69.png" width="16" height="16" alt="" loading="lazy" decoding="async">Qwen/Qwen3-Coder-30B-A3B-Instruct</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Qwen</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-07-31">2025 年 7 月 31 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://speechmap.substack.com/p/chinese-open-source-model-roundup"><img class="source-slip__icon" src="/news/assets/favicons/speechmap.substack.com-cbfa4835.png" width="16" height="16" alt="" loading="lazy" decoding="async">Chinese Open Source Model Roundup</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>SpeechMap</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-05-01">2025 年 5 月 1 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm"><img class="source-slip__icon" src="/news/assets/favicons/cac.gov.cn-ce2d7d32.png" width="16" height="16" alt="" loading="lazy" decoding="async">生成式人工智能服务管理暂行办法</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>中国网信网</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2023-07-13">2023 年 7 月 13 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.ey.gov.tw/Page/9277F759E41CCD91/3ce9fe8f-2f5f-4d1d-8176-6fa4cf622b82"><img class="source-slip__icon" src="/news/assets/favicons/ey.gov.tw-d38962ca.png" width="16" height="16" alt="" loading="lazy" decoding="async">卓揆：公務機關全面禁用Deepseek AI 服務</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>行政院</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-02-03">2025 年 2 月 3 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://moda.gov.tw/ACS/press/news/press/15296"><img class="source-slip__icon" src="/news/assets/favicons/moda.gov.tw-99fb4327.png" width="16" height="16" alt="" loading="lazy" decoding="async">公務機關全面禁用DeepSeek AI 服務，未限制一般民間使用</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>資通安全署</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-02-20">2025 年 2 月 20 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.schneier.com/blog/archives/2026/10/bias-in-qwen3-coder-model.html"><img class="source-slip__icon" src="/news/assets/favicons/schneier.com-56b2bf05.png" width="16" height="16" alt="" loading="lazy" decoding="async">Bias in Qwen3-Coder Model</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Schneier on Security</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-26">2026 年 10 月 26 日</time></dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--censorship" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分类的其他导读</h2>
+  <p class="brief__category"><a class="cat cat--censorship" href="/news/zh-cn/category/censorship/">审查与访问管制</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-11-01T00:05:00+08:00">2026 年 11 月 1 日</time>
+      <a class="thread__title" href="/news/zh-cn/2026/11/bitchat-india-block/">蓝牙网状网络通讯 App Bitchat 在印度下架的争议</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-31T00:05:00+08:00">2026 年 10 月 31 日</time>
+      <a class="thread__title" href="/news/zh-cn/2026/10/indonesia-content-takedown/">印尼的内容下架争议与公民团体的诉讼评估</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-30T00:05:00+08:00">2026 年 10 月 30 日</time>
+      <a class="thread__title" href="/news/zh-cn/2026/10/iran-filtering-starlink/">伊朗网络过滤的效果与政府对 Starlink 的反制</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/news/zh-cn/category/censorship/">「审查与访问管制」的全部 12 篇导读</a></p>
+</nav>
+<p class="subscribe">想收到新的导读：<a href="/news/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>订阅电子报</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 关注</span></a></p>
+<nav class="pager pager--story" aria-label="文章导览">
+  <a class="pager__item pager__item--older" href="/news/zh-cn/2026/11/google-gmail-photos-ads/"><span class="pager__label">较旧的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Google 隐私权政策里 Gmail 与相册数据的广告例外</span></a>
+  <a class="pager__all" href="/news/zh-cn/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/news/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 订阅电子报</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 关注</a>
+      <a href="/news/zh-cn/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 导读历史</a>
+      <a href="/news/zh-cn/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 关于新闻导读</a>
+      <a href="/news/zh-cn/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 阅读说明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/qwen-political-censorship/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> onion 版本</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/news/2026/11/qwen-political-censorship/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/news/en/2026/11/qwen-political-censorship/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
+  </div>
+</footer>
+</body>
+</html>

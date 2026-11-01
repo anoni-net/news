@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 01 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 02 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>沒有裝上的系統更新</title>
+<link>https://anoni.net/news/history/11-02/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-02/2026</guid>
+<pubDate>Mon, 02 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的手機沒有裝上安全性更新時，軟體裡的漏洞可能被別人從網路上利用。這一天，一個程式開始在網際網路上擴散，利用軟體的漏洞侵入一台又一台電腦。</description>
+<content:encoded>&lt;p&gt;你的手機收到的系統更新裡有安全性修補，Apple 的說明頁把持續更新軟體列為維護裝置安全最重要的措施之一。依 MIT 研究人員事後的分析論文，1988 年 11 月 2 日起有一個程式在當時約有 6 萬台主機的網際網路上從一台電腦侵入另一台。它利用收發郵件程式預設開啟的除錯功能、查詢使用者資料的服務不檢查輸入長度的漏洞，也用帳號名稱、姓名的簡單變化與程式內建的字詞清單猜密碼。依論文整理的當時應變做法，移除郵件程式的除錯指令與關掉或修正查詢服務，都要在其他漏洞也補上時才有效。你可以在 iPhone 的「設定」依序點「一般」、「軟體更新」、「自動更新」開啟「自動安裝」，Google 的 Android 說明頁到 11 月 1 日寫的是大部分系統更新與安全性修補會自動安裝，舊款裝置則可能無法執行較新的版本。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>App 裡的「個性化推薦」開關</title>
 <link>https://anoni.net/news/history/11-01/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在 Zoom 開的會議預設不是端對端加密，主持人要自己開啟。這一天，Zoom 宣布推出端對端加密的技術預覽。</description>
 <content:encoded>&lt;p&gt;你在 Zoom 開的會議預設不是端對端加密，Zoom 的說明文件寫明這類會議的加密金鑰由 Zoom 的伺服器產生與管理（2026 年 10 月 10 日查證）。2020 年 10 月 14 日，Zoom 宣布下週起推出端對端加密的技術預覽，免費與付費帳號都能使用。公告寫明開啟之後金鑰改由與會者的裝置產生，Zoom 的伺服器只轉送資料、不會取得解密會議內容所需的金鑰。依 Zoom 現行的說明文件，開啟端對端加密之後無法使用電話撥入、網頁版、雲端錄影、即時轉錄與 AI 功能，文件也建議只在需要額外保護的會議開啟。主持人可以先在 Zoom 網頁入口的設定開啟 Allow use of end-to-end encryption 選項，排定會議時再選擇端對端加密，免費帳號的主持人要先用簡訊驗證手機號碼。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Safari 詐騙網站警告與騰訊安全瀏覽</title>
-<link>https://anoni.net/news/history/10-13/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-13/2026</guid>
-<pubDate>Tue, 13 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的 iPhone 地區設為中國大陸或香港時，Safari 的詐騙網站警告可能用到騰訊的安全瀏覽服務。這一天，一位研究者在部落格寫到 Safari 的這項功能看來會把部分瀏覽資訊交給騰訊。</description>
-<content:encoded>&lt;p&gt;你的 iPhone 上，Safari 的「詐騙網站警告」可能把從網址算出的資訊送給 Google 與 Apple 比對，地區設為中國大陸或香港時還可能用到騰訊的安全瀏覽服務。一位密碼學研究者在 2019 年 10 月 13 日的部落格文章推測 iOS 13 的 Safari 會把部分瀏覽資訊交給騰訊，這項功能也看來是預設開啟。依 MacRumors 等媒體在 2019 年 10 月 14 日刊出的 Apple 聲明，只有地區設為中國大陸的裝置會從騰訊取得惡意網站清單，實際的網址不會交給服務供應商。Daring Fireball 當時引述的 Apple 說明頁寫到供應商可能記錄 IP 位址，2026 年 10 月 10 日查證的說明頁仍寫到 Google 與騰訊可能記錄 IP 位址，使用騰訊的地區也比 2019 年的聲明多了香港。說明頁列出的地區不包括台灣，地區設為中國大陸或香港的讀者可以到「設定」&amp;gt; App &amp;gt; Safari 關閉這項警告，代價是開啟釣魚網站時少了一道提醒。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
