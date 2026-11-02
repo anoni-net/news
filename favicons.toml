@@ -1723,6 +1723,9 @@ from = "https://ooni.org/images/apple-touch-icon.png"
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
 
+[hosts."openhandsetalliance.com"]
+none = "網站沒有提供圖示"
+
 [hosts."openjdk.org"]
 icon = "openjdk.org-babc8d36.png"
 from = "https://openjdk.org/images/nanoduke.ico"
