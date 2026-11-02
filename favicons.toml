@@ -52,6 +52,10 @@ from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf528
 icon = "aljazeera.com-ea349389.png"
 from = "https://www.aljazeera.com/favicon_aje.ico"
 
+[hosts."allenandgledhill.com"]
+icon = "allenandgledhill.com-d900bea8.png"
+from = "https://www.allenandgledhill.com/assets/img/icons/favicon-32x32.png"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -620,6 +624,9 @@ from = "https://digital-strategy.ec.europa.eu/themes/custom/cnt_theme/images/fav
 [hosts."digital.go.jp"]
 icon = "digital.go.jp-ea26cfc6.png"
 from = "https://www.digital.go.jp/themes/custom/gov_theme_da_2023/favicon.ico"
+
+[hosts."digitalpolicy.gov.hk"]
+same_as = "gov.hk"
 
 [hosts."digitaltoday.co.kr"]
 icon = "digitaltoday.co.kr-a149a2e1.png"
