@@ -6,7 +6,90 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Mon, 02 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>The Excluded Apps setting for Siri AI in iOS 27.2</title>
+<link>https://anoni.net/news/en/2026/11/siri-ai-exclude-apps/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/siri-ai-exclude-apps</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>iOS 27.2 adds Excluded Apps under Siri in Settings, for choosing apps that Siri, Search and suggestions may not read. According to EFF, on-screen awareness also stops working for excluded apps. Siri AI on iPhone and iPad is not offered in the EU or mainland China, and as of 2 November its languages do not include Chinese, so people whose device and Siri language are set to Chinese cannot use it for now.</description>
+<content:encoded>&lt;p&gt;Based on 8 sources from Apple, EFF&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Apple&#39;s release notes, published on 26 October, say iOS 27.2 adds Excluded Apps, a setting under Siri in Settings for choosing which apps Siri, Search and suggestions can access. Siri AI is the new Siri introduced in iOS 27, which can read app content to answer questions, and it runs on the iPhone 15 Pro, 15 Pro Max and iPhone 16 or later. Excluded Apps is listed in the Siri AI section of the release notes, and the iPadOS 27.2 notes list the same item. Siri AI on iPhone and iPad is not offered in the EU or mainland China, and as of 2 November its supported languages do not include Chinese, so people whose device and Siri language are set to Chinese cannot use Siri AI for now.&lt;/p&gt;
+&lt;p&gt;The same release notes say 27.2 adds French, Japanese, Korean, Portuguese and Spanish to Siri AI, making six languages with English. Apple&#39;s &#34;How to get Siri AI&#34; support page, published on 22 October, still said on 2 November that Siri AI is available only in English, and we go by the later release notes. According to Apple&#39;s September press release, the other Apple Intelligence features support simplified and traditional Chinese, while Siri AI has a language list of its own.&lt;/p&gt;
+&lt;p&gt;EFF&#39;s post of 28 October says Excluded Apps fulfils one of the asks in its Encrypt It Already campaign from earlier in 2026. The concern behind it is that many AI features require cloud processing, so even with privacy protections built into these systems, content from secure messaging apps may leave the device without the user knowing. EFF had asked for a way to tell the operating system&#39;s AI not to access a given app, even at the cost of some features, through a setting that is simple to understand.&lt;/p&gt;
+&lt;p&gt;According to EFF, after updating to 27.2 you open Excluded Apps under Siri in Settings and tap Add Apps to choose the apps to exclude. Siri AI then cannot access that app&#39;s content, and some features may stop working. EFF&#39;s example is that once Messages is excluded, you can no longer have Siri AI read or reply to messages for you. On-screen awareness, which lets you call up Siri and ask about what is on screen, also stops working for excluded apps, so with Signal excluded you cannot ask Siri to pick out any information on the Signal screen.&lt;/p&gt;
+&lt;p&gt;EFF writes that when Siri AI launched, blocking it from an app took several toggles, and the alternative was turning Siri AI off entirely. Our 27 September post, based on EFF&#39;s earlier article, said neither users nor app developers could block on-screen awareness, and that the way to limit access was turning off Show Content in Search app by app. The 27.2 exclusion list puts this in one place and covers on-screen awareness too, and in EFF&#39;s view the lost features show that the setting works.&lt;/p&gt;
+&lt;p&gt;EFF also checked where Android stands. According to EFF, in the Gemini app you tap your profile picture and go to Settings &amp;gt; Personal Intelligence &amp;gt; Connected Apps to revoke apps you do not want Gemini to access. EFF likes that the list is opt-in but finds the process less than intuitive. Signal does not support Gemini&#39;s app access feature at all, so it is not on the list, and Gemini cannot read Signal&#39;s content directly.&lt;/p&gt;
+&lt;p&gt;EFF also writes that once Device Assistance is turned on in Connected Apps, Gemini can read notifications. Basic features such as setting a timer need Device Assistance too, so EFF reckons most people already have it on.&lt;/p&gt;
+&lt;p&gt;Screen context is controlled by the Use screen and app data option in Gemini&#39;s settings, under Device controls &amp;gt; Screen context, and stays active until that option is turned off. Use screen and app data cannot be set per app. According to EFF, when users choose to use notification reading and screen context, both may read Signal&#39;s content or notifications. EFF wants Google to let users turn both features off per app.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Our September post noted that a Siri AI request may be processed on the phone or sent to Private Cloud Compute (the cloud servers Apple runs to handle AI requests), and nothing on screen says which. From that we inferred in September that anyone who wants to keep using Siri AI can only limit, at the source, which apps it may read. According to EFF, Siri AI cannot access the content of an excluded app, and from this we infer that such content is not sent off the device with a request either. In EFF&#39;s view Apple should go further and offer an option to use only on-device AI features, similar to what Samsung offered with Galaxy AI.&lt;/p&gt;
+&lt;p&gt;The iOS 27.2 release notes also list more sources Siri AI can draw on, including photos attached in Messages, Calendar event attendees, voicemails, and Safari history and Reading List, and Siri AI can now recall past conversations. Going by the release notes, people already using Siri AI will find it can reach more sources after the update than before.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s release notes do not say what Siri can still do once an app is excluded, only that the setting governs which apps Siri, Search and suggestions can access. Our inference from that sentence is that an excluded app&#39;s content may also stay out of Search and suggestions.&lt;/p&gt;
+&lt;p&gt;On Android, EFF compares Gemini&#39;s app list with the iOS exclusion list and finds the Android process less direct than Apple&#39;s new setting. According to EFF, people using Gemini on an Android phone can check two places, Device Assistance in Connected Apps and Use screen and app data, and each can only be turned off as a whole. Turning off Device Assistance also takes away basic features such as timers.&lt;/p&gt;
+&lt;p&gt;People whose device and Siri language are set to Chinese cannot use Siri AI for now. As of 2 November, Apple&#39;s support pages do not say whether people who have not turned on Siri AI can see Excluded Apps in Settings, or whether setting it affects Search and suggestions for them.&lt;/p&gt;
+&lt;p&gt;According to Apple&#39;s release notes and its support page, Siri AI is not available in mainland China. Apple&#39;s September press release states that Siri AI and the other new Apple Intelligence features will not be available in China while Apple works through regulatory requirements, with no timeline given. Japanese and Korean are among the five languages added in 27.2, though the support page says only that availability varies by region and platform, and we found no country-by-country listing for them. On Apple&#39;s feature availability pages for Hong Kong, Taiwan and Singapore, Siri AI was still listed on 2 November as available in English and not offered in mainland China or the EU, and those pages may not yet reflect 27.2.&lt;/p&gt;
+&lt;p&gt;People who already have Siri AI on can, after updating to iOS 27.2, go to Siri in Settings, tap Excluded Apps and add the apps to exclude (the option names follow the English interface in EFF&#39;s post). According to EFF, those who prefer the older version can still turn off Siri AI and go back to Siri Classic for now. The exclusion list only covers your own phone. We infer that if another member of a group has not excluded the same app and calls up Siri AI over the same conversation, the content may still leave from that person&#39;s phone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (8)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149076&#34;&gt;About iOS 27 Updates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai&#34;&gt;Victory! You Can Now Exclude Apps from Siri AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149075&#34;&gt;About iPadOS 27 Updates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/&#34;&gt;Siri AI, a profoundly more capable and personal assistant, is here&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.apple.com/hk/ios/feature-availability/&#34;&gt;iOS 和 iPadOS 27 - 功能的供應狀況 - Apple (香港)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.apple.com/tw/ios/feature-availability/&#34;&gt;iOS 和 iPadOS 27 - 功能特色適用範圍 - Apple (台灣)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/sg/ios/feature-availability/&#34;&gt;iOS and iPadOS 27 - Feature Availability - Apple (SG)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Measurements of censorship and code security gaps in China&#39;s open-weight Qwen models</title>
 <link>https://anoni.net/news/en/2026/11/qwen-political-censorship/</link>
@@ -3219,154 +3302,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.courtlistener.com/docket/73454649/&#34;&gt;6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The per-app clipboard read toggle in GrapheneOS</title>
-<link>https://anoni.net/news/en/2026/10/grapheneos-clipboard-toggle/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/grapheneos-clipboard-toggle</guid>
-<pubDate>Sun, 25 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>GrapheneOS, a privacy-hardened mobile operating system officially supported only on Pixel phones, added Secure Paste in a release announced on 18 September, letting users set app by app which apps cannot read content copied in other apps. As of 23 October the feature is off by default and has to be turned on in settings, and the settings GrapheneOS adds are in English only. Stock Android notifies users after an app has read the clipboard, while iPhone asks for permission before an app reads it programmatically. Having a password manager clear the clipboard after copying a password is a step available on both.</description>
-<content:encoded>&lt;p&gt;Based on 19 sources, including GrapheneOS, GrapheneOS Discussion Forum, GitHub&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;GrapheneOS is a privacy-hardened mobile operating system built on Android&#39;s open-source code, and as of 23 October its officially supported devices are the Pixel 6 through the Pixel 10a. Release 2026091700, announced on the official forum on 18 September, added a clipboard control called Secure Paste. According to the release notes, users can turn off clipboard reading app by app, or use a global toggle to make it off by default for all third-party apps. Users can still paste into those apps through the system selection toolbar, keyboard apps, keyboard shortcuts or accessibility services.&lt;/p&gt;
-&lt;p&gt;According to GrapheneOS&#39;s features page, Android only lets the focused app and the keyboard read the clipboard. Android shows a notice when an app reads content copied in another app, but by then the content has already been read. With Secure Paste on, an app cannot read content copied in other apps but can still read what it copied itself.&lt;/p&gt;
-&lt;p&gt;Secure Paste does not block reads by default: GrapheneOS described it as an opt-in feature in a reply on Mastodon, and the default in the settings code allows reads. According to the settings code, the toggle is at &#34;Settings &amp;gt; Security &amp;amp; privacy &amp;gt; Privacy controls &amp;gt; Clipboard access&#34;, a path the official usage guide does not give. The global default can be &#34;Allow&#34; or &#34;Blocked&#34;, and each app can be set to &#34;Allow&#34;, &#34;Paste only&#34; or &#34;Follow system clipboard access setting&#34; to follow the global default, with a note in the settings code that Paste only may break some apps. Release 2026091900 then cut the interval between notices about blocked reads from 1 minute to 6 seconds (the notice can be turned off per app), release 2026092500 improved the settings screen, and the release notes list no further clipboard changes up to release 2026102100 on 21 October.&lt;/p&gt;
-&lt;p&gt;Per the descriptions in the settings code, the global toggle does not apply to system apps, and the current keyboard plus some apps and system features can always read the clipboard. Apps can still see whether the clipboard has content, its type and when it was copied, and accessibility services that can view and act on screen content can trigger a paste and may obtain what is pasted. According to the features page, with Paste only set, pasting into apps that draw their own selection toolbar (such as apps written with Flutter, a cross-platform development framework) means using the keyboard&#39;s paste button instead. GrapheneOS added that button to its default keyboard and Gboard already has one, according to replies on the official forum, so people using other keyboards should check that theirs can paste.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to Microsoft&#39;s security blog in 2023, mobile users often use the clipboard to copy sensitive content such as passwords and payment information. Android apps can read and write the clipboard without user consent or any specific permission.&lt;/p&gt;
-&lt;p&gt;In the same post Microsoft published its findings that an old version of a shopping app read the clipboard periodically and sent the content back to a server when it matched a certain format. The post adds that Microsoft was not aware of any specific malicious intent, and the behaviour was removed in May 2022. Since Android 10, background apps cannot read the clipboard, but that restriction does nothing about apps in the foreground.&lt;/p&gt;
-&lt;p&gt;According to the Android developer documentation, since Android 12 the system shows a notice the first time an app reads content copied in another app. Android 13 also shows a preview when content is copied, to confirm the copy worked. Apple&#39;s developer documentation states that since iOS 16 the system asks the user for permission before an app reads the clipboard programmatically. MacRumors reported in 2022 that from iOS 16.1, apps that have requested to paste get a &#34;Paste from Other Apps&#34; option in Settings, which we have not checked against the current iOS.&lt;/p&gt;
-&lt;p&gt;We suggest that GrapheneOS users first switch a few apps to Paste only, then decide whether to set the global default to Blocked, pasting through the toolbar or keyboard instead (after checking that their keyboard has a paste key). Both the warning in the settings code and the limitations GrapheneOS lists suggest that blocking everything at once is more likely to break some apps. If an app stops working properly after the change, it can be switched back to Allow.&lt;/p&gt;
-&lt;p&gt;According to GrapheneOS&#39;s features page, Secure Paste replaces the standard approach of desktop and mobile operating systems, and stock Android phones have no per-app toggle. On iPhone an app asks before reading programmatically, and on both platforms users can start by checking their password manager. 1Password&#39;s support page states that passwords copied from it are cleared automatically after 90 seconds by default on every platform. We suggest that people using other password managers look in the settings for an option to clear the clipboard, keeping in mind that timed clearing only shortens how long content stays on the clipboard, and the focused app can still read it before it is cleared.&lt;/p&gt;
-&lt;p&gt;Anyone who wants to install GrapheneOS first needs a supported Pixel, and according to the official FAQ GrapheneOS cannot be installed on carrier-locked devices, mainly those from US carriers. The official web installer page lists the requirements: the device running the installer needs at least 2GB of free memory and 32GB of free storage, and it can be a computer or an Android phone or tablet. By our inference from the settings code directory as checked on 23 October, the settings and apps GrapheneOS adds are in English only, while the rest of the system keeps Android&#39;s own translations, including Simplified and Traditional Chinese.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, also checked the Google Store&#39;s list of regions in Asia for the supported phones. As of 23 October, Google Store Help lists the Asian places where the Pixel 10a, a GrapheneOS-supported model, can be bought as India, Japan, Singapore and Taiwan, while mainland China, Hong Kong, Macau and South Korea are not on the list. The page covers only the Google Store itself, not other retailers or carriers.&lt;/p&gt;
-&lt;p&gt;According to GrapheneOS&#39;s FAQ, its System Updater fetches update information and update files from &lt;code&gt;releases.grapheneos.org&lt;/code&gt;. GreatFire, which measures censorship in mainland China, recorded interference with that address in its last test on 2 October, the only conclusive test in the 90 days before 23 October. By our inference, downloading system updates over a direct connection from mainland China may not go smoothly.&lt;/p&gt;
-&lt;p&gt;GrapheneOS users who switch apps to Paste only are blocking apps from reading on their own, but not accessibility services they have turned on or the keyboard they are using. The cost is that some apps need the keyboard&#39;s paste key instead.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (19)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases#2026091700&#34;&gt;Releases | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/42090-grapheneos-version-2026091700-released&#34;&gt;GrapheneOS version 2026091700 released&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/features#secure-paste&#34;&gt;Features overview | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#supported-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web installer | Install | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117292361749585692&#34;&gt;GrapheneOS: &amp;#34;It&amp;#39;s an opt-in feature wit…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_packages_apps_Settings/blob/2026102100/res/values/strings_ext.xml&#34;&gt;platform_packages_apps_Settings/res/values/strings_ext.xml&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_frameworks_base/blob/2026102100/core/res/res/values/config_ext.xml&#34;&gt;platform_frameworks_base/core/res/res/values/config_ext.xml&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/5030-grapheneos-translate-to-other-languages&#34;&gt;GrapheneOS translate to other languages - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/10/privacy/changes&#34;&gt;Privacy changes in Android 10&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/12/behavior-changes-all&#34;&gt;Behavior changes: all apps&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/13/features&#34;&gt;Features and APIs Overview&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/uikit/uipastecontrol&#34;&gt;UIPasteControl&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple Developer Documentation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2022/10/17/ios-16-1-paste-from-other-apps-settings/&#34;&gt;iOS 16.1 Introduces New Copy-and-Paste Permission Settings on Per-App Basis&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-10-17&#34;&gt;17 October 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/security/blog/2023/03/06/protecting-android-clipboard-content-from-unintended-exposure/&#34;&gt;Protecting Android clipboard content from unintended exposure&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft Security Blog&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-03-06&#34;&gt;6 March 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.1password.com/copy-passwords/&#34;&gt;Copy and fill passwords into apps that don&amp;#39;t work with 1Password&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;1Password Support&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;17 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_packages_apps_Settings/tree/2026102100/res&#34;&gt;platform_packages_apps_Settings/res at 2026102100 · GrapheneOS/platform_packages_apps_Settings · GitHub&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/store/answer/2462844?hl=en&#34;&gt;Learn about devices &amp;amp; services available in your region - Google Store Help&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/releases.grapheneos.org&#34;&gt;Is https://releases.grapheneos.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

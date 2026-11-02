@@ -6,7 +6,71 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 02 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>iOS 27.2 的 Siri AI 排除 App 設定</title>
+<link>https://anoni.net/news/2026/11/siri-ai-exclude-apps/</link>
+<guid isPermaLink="false">anoni-news:2026/11/siri-ai-exclude-apps</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>iOS 27.2 在「設定」的 Siri 加入 Excluded Apps，可以選定不讓 Siri、搜尋與建議讀取的 App。依 EFF 的文章，被排除的 App 連螢幕感知也不運作。iPhone 與 iPad 版的 Siri AI 在歐盟與中國大陸沒有提供，到 11 月 2 日支援的語言也不含中文，裝置與 Siri 語言設為中文的人暫時用不到 Siri AI。</description>
+<content:encoded>&lt;p&gt;整理 5 篇原文，來自 Apple、EFF&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;依 Apple 10 月 26 日發布的版本說明，iOS 27.2 加入 Excluded Apps，使用者可以在「設定」的 Siri 裡選擇 Siri、搜尋與建議能讀取哪些 App。Siri AI 是 iOS 27 推出的新版 Siri，可以讀取 App 的內容回答問題，適用 iPhone 15 Pro、15 Pro Max 與 iPhone 16 之後的機型。Excluded Apps 列在版本說明的 Siri AI 小節，iPadOS 27.2 的版本說明也列了同一項。iPhone 與 iPad 版的 Siri AI 在歐盟與中國大陸沒有提供，支援的語言到 11 月 2 日也不含中文，裝置與 Siri 語言設為中文的人暫時無法使用 Siri AI。&lt;/p&gt;
+&lt;p&gt;同一份版本說明寫到，Siri AI 在 27.2 增加法文、日文、韓文、葡萄牙文與西班牙文，加上原本的英文共六種。Apple 10 月 22 日發布的「How to get Siri AI」說明頁，到 11 月 2 日仍寫目前只支援英文，本文以較晚發布的版本說明為準。依 Apple 9 月的新聞稿，Apple Intelligence 的其他功能支援正體與簡體中文，Siri AI 另有自己的語言清單。&lt;/p&gt;
+&lt;p&gt;EFF 10 月 28 日的文章寫到，Excluded Apps 回應了 EFF 在 2026 年稍早「Encrypt It Already」倡議提出的一項要求。文章提到的顧慮是許多 AI 功能需要雲端處理，即使系統設計了隱私保護，加密通訊 App 的內容仍可能在使用者不知情時離開裝置。EFF 當初要求讓使用者能指定作業系統的 AI 不讀取某個 App，即使因此少掉一些功能，設定也要簡單易懂。&lt;/p&gt;
+&lt;p&gt;依 EFF 的說明，更新到 27.2 之後在「設定」的 Siri 點進 Excluded Apps，再點 Add Apps 選擇要排除的 App。排除之後 Siri AI 無法讀取該 App 的內容，也可能少掉部分功能。EFF 舉的例子是排除訊息 App 之後，就不能請 Siri AI 朗讀或回覆訊息。螢幕感知（叫出 Siri 詢問眼前畫面內容的功能）對排除的 App 也不再運作，排除 Signal 之後，無法請 Siri 辨識 Signal 畫面上的任何資訊。&lt;/p&gt;
+&lt;p&gt;EFF 提到 Siri AI 剛推出時，要封鎖它讀取某個 App 需要切換好幾個選項，不然就只能整個關掉 Siri AI。本站 9 月 27 日的導讀依 EFF 當時的文章，寫到使用者與 App 開發者都無法封鎖螢幕感知，限制讀取的做法是逐一在各 App 關閉 Show Content in Search。27.2 的排除清單集中在一處，也涵蓋螢幕感知，EFF 認為少掉功能正好代表設定生效。&lt;/p&gt;
+&lt;p&gt;文章也檢查了 Android 的現況。依 EFF 的說明，在 Gemini App 點使用者照片後進入 Settings &amp;gt; Personal Intelligence &amp;gt; Connected Apps，可以撤銷不想讓 Gemini 讀取的 App。EFF 肯定這份清單採選擇加入（opt-in），但認為流程不夠直覺。Signal 完全不支援 Gemini 的 App 存取功能，所以不在清單上，Gemini 也無法直接讀取 Signal 的內容。&lt;/p&gt;
+&lt;p&gt;不過 EFF 也寫到，開啟 Connected Apps 裡的 Device Assistance 之後，Gemini 可以讀取通知。設定計時器等基本功能也需要 Device Assistance，EFF 推測多數人都已經開啟。&lt;/p&gt;
+&lt;p&gt;螢幕情境（screen context）在 Gemini 設定裡的選項是 Use screen and app data，位置在 Device controls &amp;gt; Screen context，關閉之後才會停用。Use screen and app data 無法依 App 個別設定。依 EFF 的說明，使用者選擇使用讀取通知與螢幕情境時，兩者都可能讀取 Signal 的內容或通知。EFF 希望 Google 讓使用者可以依 App 關閉這兩項功能。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;本站 9 月的導讀提到，Siri AI 的請求可能在手機上處理，也可能送到 Private Cloud Compute（Apple 自己營運、處理 AI 請求的雲端伺服器）。畫面上不會顯示是哪一種，9 月的導讀因此推論，想繼續使用 Siri AI 的人只能從源頭限制它讀取哪些 App。依 EFF 的說明，Siri AI 無法讀取被排除的 App 內容，本文據此推論這些內容也不會隨請求送出裝置。EFF 認為 Apple 應該再進一步，提供只用裝置端 AI 功能的選項，類似 Samsung 在 Galaxy AI 提供的做法。&lt;/p&gt;
+&lt;p&gt;iOS 27.2 的版本說明也列出 Siri AI 可以取用更多來源，包括訊息裡附的相片、行事曆活動的參加者、語音留言、Safari 的瀏覽紀錄與閱讀列表，Siri AI 也能記得過去的對話。依版本說明，已經在用 Siri AI 的人更新之後，Siri AI 能取用的來源比更新前多。&lt;/p&gt;
+&lt;p&gt;Apple 的版本說明沒有寫排除之後 Siri 還能做什麼，只寫這項設定管的是 Siri、搜尋與建議。依這句推想，被排除的 App 內容可能也不會出現在搜尋與建議裡，這是本文的推論。&lt;/p&gt;
+&lt;p&gt;Android 這一端，EFF 的文章把 Gemini 的 App 清單與 iOS 的排除清單放在一起比較，認為 Android 的流程不如 Apple 的新設定直接。依 EFF 的說明，用 Android 手機與 Gemini 的人可以檢查 Connected Apps 裡的 Device Assistance 與 Use screen and app data 兩處，兩者都只能整項關閉。關閉 Device Assistance 也會一併少掉計時器這類基本功能。&lt;/p&gt;
+&lt;p&gt;裝置與 Siri 語言設為中文的人暫時用不到 Siri AI。沒有開啟 Siri AI 的人在「設定」裡是否看得到 Excluded Apps、設定之後會不會影響搜尋與建議，到 11 月 2 日 Apple 的說明頁都沒有寫。&lt;/p&gt;
+&lt;p&gt;已經開啟 Siri AI 的人更新到 iOS 27.2 之後，可以到「設定」的 Siri 點 Excluded Apps 加入要排除的 App（選項名稱照 EFF 文章的英文介面）。依 EFF 的說明，偏好舊版的人目前仍可以關閉 Siri AI、改回 Siri Classic。排除清單只管自己的手機，本文推論群組裡其他成員沒有排除同一個 App、又對同一段對話叫出 Siri AI 時，內容仍可能從對方的手機送出。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149076&#34;&gt;About iOS 27 Updates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai&#34;&gt;Victory! You Can Now Exclude Apps from Siri AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149075&#34;&gt;About iPadOS 27 Updates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/&#34;&gt;Siri AI, a profoundly more capable and personal assistant, is here&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>中國開放權重模型 Qwen 的審查與程式碼差距量測</title>
 <link>https://anoni.net/news/2026/11/qwen-political-censorship/</link>
@@ -2669,136 +2733,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.courtlistener.com/docket/73454649/&#34;&gt;6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>GrapheneOS 的剪貼簿讀取開關</title>
-<link>https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/</link>
-<guid isPermaLink="false">anoni-news:2026/10/grapheneos-clipboard-toggle</guid>
-<pubDate>Sun, 25 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>官方只支援 Pixel 的隱私強化手機系統 GrapheneOS，9 月 18 日公告的版本加入 Secure Paste，可以逐一設定哪些 App 不能讀取其他 App 複製的內容。到 10 月 23 日功能預設沒有開啟，要自己到設定調整，GrapheneOS 自己新增的設定也只有英文。一般 Android 手機在 App 讀取剪貼簿之後才通知，iPhone 則在 App 用程式讀取前請使用者同意。複製密碼之後讓密碼管理器自動清除剪貼簿，是兩邊都能做的一步。</description>
-<content:encoded>&lt;p&gt;整理 16 篇原文，來自 GrapheneOS、GrapheneOS Discussion Forum、GitHub 等 8 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;GrapheneOS 是以 Android 開源程式碼為基礎的隱私強化手機系統，到 10 月 23 日官方支援的機型是 Pixel 6 到 Pixel 10a。9 月 18 日官方論壇公告的 2026091700 版，加入名為 Secure Paste 的剪貼簿控制。依發布紀錄，使用者可以逐一關閉 App 讀取剪貼簿的權限，也可以用全域開關把所有第三方 App 預設為關閉。關閉之後，使用者仍可以透過系統的選取工具列、鍵盤、鍵盤快捷鍵或無障礙服務，把內容貼進這些 App。&lt;/p&gt;
-&lt;p&gt;依 GrapheneOS 的功能介紹頁，Android 只允許目前取得焦點、正在操作的 App 與鍵盤讀取剪貼簿。App 讀到其他 App 複製的內容時 Android 會顯示通知，但通知出現時內容已經被讀走了。開啟 Secure Paste 之後，App 讀不到其他 App 複製的內容，仍可讀取自己複製的內容。&lt;/p&gt;
-&lt;p&gt;Secure Paste 預設不阻擋讀取，GrapheneOS 在 Mastodon 的回覆說明這是要自己開啟的功能，設定程式碼的預設值也是允許讀取。依設定程式碼，開關在「Settings &amp;gt; Security &amp;amp; privacy &amp;gt; Privacy controls &amp;gt; Clipboard access」，官方的使用說明沒有寫路徑。全域預設的選項是「Allow」與「Blocked」，每個 App 另外可以選「Allow」、「Paste only」，或用「Follow system clipboard access setting」跟著全域預設。設定程式碼的說明文字也提醒，改成 Paste only 可能讓某些 App 無法正常運作。&lt;/p&gt;
-&lt;p&gt;之後的 2026091900 版把擋下讀取時的通知間隔從 1 分鐘縮短為 6 秒，這則通知可以逐 App 關閉。2026092500 版改善了設定畫面，到 10 月 21 日的 2026102100 版，發布紀錄沒有再列出剪貼簿相關的條目。&lt;/p&gt;
-&lt;p&gt;依設定程式碼的說明文字，全域開關不套用到系統 App。目前使用的鍵盤以及部分 App 與系統功能，一律可以讀取剪貼簿。&lt;/p&gt;
-&lt;p&gt;App 仍可看到剪貼簿有沒有內容、內容類型與複製時間，能檢視並操作畫面內容的無障礙服務也可以觸發貼上，並可能取得貼上的內容。依功能介紹頁，設成 Paste only 之後，要貼到自行實作選取工具列的 App（例如用 Flutter 這套跨平台開發框架寫的 App）需改用鍵盤上的貼上按鈕。依官方論壇的回覆，GrapheneOS 在預設鍵盤加了這個按鈕，Gboard 原本就有。使用其他鍵盤的人要先確認有沒有貼上功能。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 Microsoft 2023 年的資安部落格，手機使用者常用剪貼簿複製密碼、付款資訊這類敏感內容。Android 的 App 讀寫剪貼簿不需要使用者同意，也不需要特定權限。&lt;/p&gt;
-&lt;p&gt;Microsoft 在同一篇文章公布調查結果，一款購物 App 的舊版本會定期讀取剪貼簿，內容符合特定格式就傳回伺服器。文中也提到並未得知特定的惡意意圖，該行為在 2022 年 5 月已移除。Android 10 起背景 App 不能讀剪貼簿，但這項限制擋不住前景的 App。&lt;/p&gt;
-&lt;p&gt;依 Android 開發者文件，Android 12 起 App 第一次讀取其他 App 複製的內容時，系統會顯示通知。Android 13 另外在複製時顯示預覽，用來確認複製成功。依 Apple 的開發者文件，iOS 16 起 App 用程式讀取剪貼簿時，系統會先請使用者同意。MacRumors 2022 年的報導提到，iOS 16.1 起要求過貼上的 App 在設定裡多了「Paste from Other Apps」選項，本文沒有在現行 iOS 核對。&lt;/p&gt;
-&lt;p&gt;本文建議用 GrapheneOS 的讀者先挑幾個 App 改成 Paste only，再視情況把全域預設改成 Blocked，貼上時改用工具列或鍵盤（先確認自己的鍵盤有貼上鍵）。設定程式碼的提醒與官方列出的限制都顯示，一次全部擋下比較容易遇到無法正常運作的 App。改了之後某個 App 無法正常運作，可以把那個 App 改回 Allow。&lt;/p&gt;
-&lt;p&gt;依 GrapheneOS 的功能介紹頁，Secure Paste 取代了桌機與手機系統的標準做法，一般 Android 手機沒有逐 App 的開關。iPhone 則是 App 用程式讀取時會先詢問，兩邊都可以先調整密碼管理器，1Password 的說明頁寫各平台複製出去的密碼預設 90 秒後自動清除。本文建議用其他密碼管理器的人，在設定裡找清除剪貼簿的選項。定時清除只縮短內容留在剪貼簿的時間，清除之前取得焦點的 App 仍可讀取。&lt;/p&gt;
-&lt;p&gt;想安裝 GrapheneOS 的人要先有一支支援的 Pixel，官方 FAQ 提醒電信業者鎖定的機型無法安裝，主要發生在美國的電信業者。依官方網頁安裝器的說明，執行安裝器的裝置要有至少 2GB 可用記憶體與 32GB 可用空間，電腦或 Android 手機、平板都可以。依 10 月 23 日查到的設定程式碼目錄推斷，GrapheneOS 自己新增的設定與 App 只有英文，系統其他部分沿用 Android 的正體中文。&lt;/p&gt;
-&lt;p&gt;已經在用 GrapheneOS 的人改成 Paste only 之後，擋下的是 App 自行讀取，擋不到已開啟的無障礙服務與目前使用的鍵盤。代價是部分 App 要改用鍵盤的貼上鍵。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（16 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases#2026091700&#34;&gt;Releases | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/42090-grapheneos-version-2026091700-released&#34;&gt;GrapheneOS version 2026091700 released&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/features#secure-paste&#34;&gt;Features overview | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#supported-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/install/web&#34;&gt;Web installer | Install | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117292361749585692&#34;&gt;GrapheneOS: &amp;#34;It&amp;#39;s an opt-in feature wit…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_packages_apps_Settings/blob/2026102100/res/values/strings_ext.xml&#34;&gt;platform_packages_apps_Settings/res/values/strings_ext.xml&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/GrapheneOS/platform_frameworks_base/blob/2026102100/core/res/res/values/config_ext.xml&#34;&gt;platform_frameworks_base/core/res/res/values/config_ext.xml&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/5030-grapheneos-translate-to-other-languages&#34;&gt;GrapheneOS translate to other languages - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/10/privacy/changes&#34;&gt;Privacy changes in Android 10&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/12/behavior-changes-all&#34;&gt;Behavior changes: all apps&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/13/features&#34;&gt;Features and APIs Overview&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/documentation/uikit/uipastecontrol&#34;&gt;UIPasteControl&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple Developer Documentation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2022/10/17/ios-16-1-paste-from-other-apps-settings/&#34;&gt;iOS 16.1 Introduces New Copy-and-Paste Permission Settings on Per-App Basis&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-10-17&#34;&gt;2022 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/security/blog/2023/03/06/protecting-android-clipboard-content-from-unintended-exposure/&#34;&gt;Protecting Android clipboard content from unintended exposure&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft Security Blog&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-03-06&#34;&gt;2023 年 3 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.1password.com/copy-passwords/&#34;&gt;Copy and fill passwords into apps that don&amp;#39;t work with 1Password&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;1Password Support&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-17&#34;&gt;2026 年 8 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
