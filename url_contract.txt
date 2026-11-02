@@ -277,6 +277,9 @@
 /2026/11/siri-ai-exclude-apps/
 	#perspective
 	#sources
+/2026/11/tor-browser-16-tails/
+	#perspective
+	#sources
 /2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -584,6 +587,9 @@
 	#perspective
 	#sources
 /en/2026/11/siri-ai-exclude-apps/
+	#perspective
+	#sources
+/en/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
 /en/2026/11/weekly-brief-2026-w44/
@@ -1072,6 +1078,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/siri-ai-exclude-apps/
+	#perspective
+	#sources
+/zh-cn/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
 /zh-cn/2026/11/weekly-brief-2026-w44/
