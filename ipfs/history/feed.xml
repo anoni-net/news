@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 02 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>瀏覽器送出的「不要出售或分享」訊號</title>
+<link>https://anoni.net/news/history/11-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-03/2026</guid>
+<pubDate>Tue, 03 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>有些瀏覽器可以替你向網站送出「不要出售或分享個人資料」的訊號。這一天，加州選民以公投通過隱私權法，給居民要求業者不分享個人資訊的權利。</description>
+<content:encoded>&lt;p&gt;部分瀏覽器可以在你連上網站時附帶 Global Privacy Control（GPC）訊號，GPC 網站寫這個訊號是為了依加州消費者隱私法提出不要出售或分享個人資料的請求。依加州州務卿的開票結果與投票指南，2020 年 11 月 3 日加州選民以 56.2% 的贊成票通過第 24 號提案《2020 年加州隱私權法》（CPRA），內容包括設立加州隱私保護局、讓消費者可以阻止業者分享個人資訊。依條文，訂定這類訊號技術規格的權限交給隱私保護局，該局現行的法規要求出售或分享個人資訊的業者把符合規格的訊號當成有效的退出請求。條文定義的消費者限於加州居民，本文據此推論不住在加州的讀者（包括台灣的讀者）開了 GPC 不會因此得到這部法律的保障。想送出訊號的人可以改用 DuckDuckGo 瀏覽器，或在原本的瀏覽器裝 DuckDuckGo 的擴充套件（說明頁到 11 月 2 日寫兩者都預設開啟），只是來源沒有寫網站收到加州以外使用者的訊號會不會照辦。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>沒有裝上的系統更新</title>
 <link>https://anoni.net/news/history/11-02/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你的個資外洩時，業者要向個人資料保護委員會通報的修正條文還沒有施行。這一天，新加坡國會通過規定設立個資保護委員會的《個人資料保護法》。</description>
 <content:encoded>&lt;p&gt;你的個資如果被業者外洩，台灣 2025 年 11 月公布的《個人資料保護法》修正規定符合一定通報範圍的外洩要通報，日後由個人資料保護委員會（個資會）統一受理。個資會籌備處 2025 年 10 月的公告寫明個資會要等組織法通過才能成立，全國法規資料庫到 2026 年 10 月 10 日查不到這部組織法，也仍標示修正條文的生效日期未定。新加坡國會在 2012 年 10 月 15 日三讀通過《個人資料保護法》，新加坡的個人資料保護委員會在 2013 年 1 月 2 日成立，讓民眾登記拒收行銷電話與簡訊的拒絕來電名單條文在 2014 年 1 月 2 日生效。台灣的籌備處設有個資法諮詢專線，公告沒有寫明它能不能受理外洩申訴。要求查處時，可以向業者的目的事業主管機關或地方政府反映，現行條文第 22 條規定這些機關可以檢查業者。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Zoom 會議的端對端加密</title>
-<link>https://anoni.net/news/history/10-14/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-14/2026</guid>
-<pubDate>Wed, 14 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在 Zoom 開的會議預設不是端對端加密，主持人要自己開啟。這一天，Zoom 宣布推出端對端加密的技術預覽。</description>
-<content:encoded>&lt;p&gt;你在 Zoom 開的會議預設不是端對端加密，Zoom 的說明文件寫明這類會議的加密金鑰由 Zoom 的伺服器產生與管理（2026 年 10 月 10 日查證）。2020 年 10 月 14 日，Zoom 宣布下週起推出端對端加密的技術預覽，免費與付費帳號都能使用。公告寫明開啟之後金鑰改由與會者的裝置產生，Zoom 的伺服器只轉送資料、不會取得解密會議內容所需的金鑰。依 Zoom 現行的說明文件，開啟端對端加密之後無法使用電話撥入、網頁版、雲端錄影、即時轉錄與 AI 功能，文件也建議只在需要額外保護的會議開啟。主持人可以先在 Zoom 網頁入口的設定開啟 Allow use of end-to-end encryption 選項，排定會議時再選擇端對端加密，免費帳號的主持人要先用簡訊驗證手機號碼。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

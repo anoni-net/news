@@ -6,7 +6,109 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Aftermath of the eMudhra weak private keys, and macOS command-line tools</title>
+<link>https://anoni.net/news/en/2026/11/emudhra-key-compromise-followup/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/emudhra-key-compromise-followup</guid>
+<pubDate>Tue, 03 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>After the private keys of eight intermediate certificates from the Indian certificate authority eMudhra were computed, Apple, Microsoft and Chrome have all blocked or removed the related certificates, and ordinary users&#39; browsers, phones and computers need no extra setup. The git, curl and other command-line tools built into macOS may still accept these certificates, and as of 2 November we had found no fix from Apple. eMudhra has announced it is leaving the public TLS certificate business, and as of 1 November had not filed a formal incident report on the incident ticket.</description>
+<content:encoded>&lt;p&gt;Based on 10 sources, including Apple, Microsoft 365 Message Center Archive, Mozilla Bugzilla&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The Indian certificate authority eMudhra (certificate brand emSign) had eight intermediate certificates whose private keys were small enough to compute directly, letting anyone holding them issue HTTPS certificates for websites they do not own. Since the incident became public in mid-October, Apple and Microsoft have published how they are handling it, and Chrome&#39;s trust list has dropped the related root certificate. Ordinary users&#39; browsers, phones and computers need no extra setup. According to Apple&#39;s 29 October support document, though, the git, curl and other command-line tools built into macOS may keep accepting these certificates until a future software update.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s support document says that since 19 October Apple has blocked the six intermediates that issue TLS certificates. Each of them exists as two certificates, one chaining to eMudhra&#39;s root emSign ECC Root CA - G3 and one cross-signed by Sectigo (another certificate authority&#39;s root signs a second copy, giving the same intermediate an extra path to trust) that chains to Sectigo&#39;s root AAA Certificate Services. Apple blocks all 12 of these certificates, and has also blocked the G3 root since 23 October. The block reaches devices automatically through certificate configuration data, with no software update to install, and Safari, Mail and apps that use Apple&#39;s networking and security frameworks all reject the certificates.&lt;/p&gt;
+&lt;p&gt;The same document says the curl, git, python3, ruby, perl and openssl that ship with macOS and the Xcode Command Line Tools verify certificates against a single file, &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;. When a certificate chains to a root in that file, these tools check neither Apple&#39;s block nor whether the certificate has been revoked. Apple writes that the file will be updated in a future macOS update, without saying which version or when.&lt;/p&gt;
+&lt;p&gt;A Mozilla engineer who set up an explainer page for the incident added a separate page about Apple&#39;s tools on 28 October. According to that page, macOS 27.2, released on 26 October, did not fix the problem and undid the workaround of removing the roots by hand. An attacker on the network path could make git fetch attacker-chosen code from &lt;code&gt;https://&lt;/code&gt; remotes, and could intercept credentials such as GitHub tokens. As of 2 November, we had found no macOS release after 27.2 that fixes it.&lt;/p&gt;
+&lt;p&gt;Microsoft&#39;s 28 October notice in the Microsoft 365 Message Center says the Windows Disallowed Certificate Trust List already blocks the affected certificate authorities. Edge and WebView2 (the component Windows apps use to embed web pages) also receive a CRLSet, a blocklist downloaded in the background, through component updates, with no new browser version to install. The notice adds that Microsoft has released Windows and Edge updates removing certificates related to these hierarchies from the trust list, but gives no date for Edge.&lt;/p&gt;
+&lt;p&gt;According to the Message Center notice and the Microsoft Security Response Center (MSRC) blog post quoted by The Register, Microsoft released an out-of-band Windows update (one outside the regular schedule) on 26 October that removes seven certificates related to the affected hierarchies from the Windows trust list. The update is meant for devices that cannot reach Microsoft&#39;s certificate update service or have automatic trust list updates turned off, and it also carries a known issue from the 13 October update. Certificate lists normally arrive through the update service, so many devices do not need this update.&lt;/p&gt;
+&lt;p&gt;Google&#39;s 20 October blog post said the Chrome Root Store would remove emSign ECC Root CA - G3 on the morning of 27 October Pacific Time. We could not find an announcement from Chrome that the removal was done, but in the Chromium source code we read on 2 November, the Chrome Root Store list no longer includes this root. eMudhra&#39;s other root, emSign Root CA - G1, is still on the list, and Mozilla also wrote on the incident ticket on 20 October that it was not removing trust in G1 at that time. Google&#39;s 20 October post said it was assessing whether to keep trusting eMudhra&#39;s other certificates, and as of 2 November we had found no outcome.&lt;/p&gt;
+&lt;p&gt;On 27 October the Chrome Root Program replied to community questions on the incident ticket, describing the CRLSet block and the eventual closure of the incident ticket as emergency containment, with follow-up work still to come. According to that comment, within an hour of the report Chrome ran Google&#39;s &lt;code&gt;paranoid_crypto&lt;/code&gt; over every CA certificate Chrome trusts and found no other weak keys of known types. Before the incident, the checking tools in common use in the industry did not test for elliptic-curve private keys that are too small. Chrome has opened an issue in the tooling project of CCADB (the certificate authority database shared by the browser vendors) to require weak-key checks before a CA discloses a certificate.&lt;/p&gt;
+&lt;p&gt;eMudhra announced on the incident ticket on 25 October that it is leaving the public TLS certificate business, and on 30 October appointed KPMG as an independent external reviewer. According to eMudhra&#39;s incident statement page, its leadership&#39;s 26 October explanation put the problem down to an error in its own scripts and promised a full root cause analysis through the CCADB process. A 28 October update says about 30,800 certificates under G3 belong to a single customer ecosystem in the United States, which has already switched to issuing new certificates from eMudhra&#39;s G1 RSA root. eMudhra also asked the root programs for time to let these customers migrate, and says it will stop issuing TLS certificates from G1 once the migration is complete.&lt;/p&gt;
+&lt;p&gt;On 20 October the Mozilla Root Program sent eMudhra a list of questions and asked for an initial reply within 24 hours, which it still had not received on 23 October. On 23 October eMudhra blamed the delay on intense attention from social media, investors and customers, and the Chrome Root Program replied that this was not an acceptable reason. eMudhra&#39;s 25 October comment argued that CCADB&#39;s incident reporting rules give a CA 14 days to submit a full report, and that it was still within the deadline.&lt;/p&gt;
+&lt;p&gt;eMudhra later wrote on 27 October that it had replied to Mozilla&#39;s questions directly, and on 29 October attached a response document for Google to the ticket. As of the last comment on 1 November, eMudhra had not filed a formal incident report on this ticket, and the ticket was still open.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Chrome&#39;s CRLSet, Apple&#39;s certificate configuration data and the Windows Disallowed Certificate Trust List all update automatically in the background and can block a specific intermediate certificate on its own. The command-line tools built into macOS read only the &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; file, which still contains the G3 root and Sectigo&#39;s AAA Certificate Services, so certificates chaining to either root pass verification. Apple&#39;s document says these tools do not check revocation, which means eMudhra&#39;s revocation of the eight intermediates on 18 October UTC has no effect on them.&lt;/p&gt;
+&lt;p&gt;According to a count a researcher posted on the incident ticket on 25 October (which we did not verify independently), 107,107 certificates signed with six of the keys were recorded in one operator&#39;s Certificate Transparency log (CT log, a public log that records every certificate) between 20 and 21 October UTC. Of these, 106,050 were proof-of-concept certificates naming only google.com, and 106,058 chained to a root through Sectigo&#39;s AAA cross-signature. One of the examples the researcher listed embeds signed certificate timestamps (SCTs, proof of inclusion) from three logs, all of which Chrome lists as usable, and from this we infer that requiring CT inclusion proofs alone does not stop such certificates. Almost none of these certificates carry a pointer to revocation information, so programs that check only the revocation status of the website certificate itself will not stop them either, and only programs that check CA certificate revocation at every level, receive a pushed blocklist, or have removed the related roots will reject them.&lt;/p&gt;
+&lt;p&gt;According to Apple&#39;s document, people who do not use Terminal need to do nothing, and people who use the built-in git, curl or python3 on a Mac to reach &lt;code&gt;https://&lt;/code&gt; URLs can wait for Apple&#39;s update. Those who do not want to wait can follow the same document and remove emSign ECC Root CA - G3 from &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; with an administrator account. Removing G3 alone does not block the six Sectigo cross-signed certificates, so AAA Certificate Services has to be removed as well. The same document notes the cost, which is that some websites unrelated to the incident that chain through these roots may also fail verification in these tools.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s document also warns that a macOS update can put the original file back, so until you install a version that contains the fix, check again after every update. Apps and tools that bring their own root certificate list do not read this file and do not apply Apple&#39;s block either, and you need to ask their developers. Removing root certificates by hand on a Mac only protects the tools that read this file.&lt;/p&gt;
+&lt;p&gt;The explainer page&#39;s list of who has shipped fixes marks OpenHarmony/HarmonyOS NEXT as pending, and the page says OpenHarmony-based HarmonyOS does not let users disable system-installed roots, so &#34;No user-side workaround is available on these devices until the patched version ships.&#34; HarmonyOS is Huawei&#39;s operating system, but that list is maintained by the researcher, not published by Huawei, and as of 2 November we had found no statement from Huawei. The same page says HarmonyOS 4.3 and earlier can disable the roots the same way as other Android-based systems, and that the block reaches many Android devices through the Google Play services update channel. GreatFire&#39;s last test on 1 November found &lt;code&gt;play.google.com&lt;/code&gt; fully blocked in mainland China, although GreatFire measures whether the site can be reached, not whether Google Play services on a device can receive updates.&lt;/p&gt;
+&lt;p&gt;Things to watch next are the macOS update in which Apple fixes &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;, the formal incident report eMudhra files through the CCADB process, and each root program&#39;s decision on the G1 root. The customer ecosystem that holds about 30,800 certificates has already moved to issuing from G1. We infer that whether G1 stays trusted will decide how soon these websites have to replace their certificates again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;18 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/apple.html&#34;&gt;Apple&amp;#39;s git still trusts the compromised eMudhra certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5305637&#34;&gt;Microsoft releases out-of-band Windows fixes with certificate updates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;27 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/play.google.com&#34;&gt;Is https://play.google.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The Excluded Apps setting for Siri AI in iOS 27.2</title>
 <link>https://anoni.net/news/en/2026/11/siri-ai-exclude-apps/</link>
@@ -3192,116 +3294,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.go.kr/LSW/lsInfoP.do?lsId=011357&#34;&gt;개인정보 보호법&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;국가법령정보센터&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Weekly brief, 2026 week 43</title>
-<link>https://anoni.net/news/en/2026/10/weekly-brief-2026-w43/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/weekly-brief-2026-w43</guid>
-<pubDate>Sun, 25 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Five stories and follow-ups from 1 to 22 October: progress on Session&#39;s Protocol v2, the development of Thunderbird for iOS, CryptPad 2026.10.0, PipePipe 5.5.0, and docket activity in a civil rights suit against two Florida state troopers in the US.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including Session, Thunderbird, GitHub&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;This issue collects five stories, three of them follow-ups to earlier articles, covering 1 to 22 October.&lt;/p&gt;
-&lt;h3 id=&#34;session-v2&#34;&gt;Progress on Session Protocol v2&lt;/h3&gt;
-&lt;p&gt;Session, a messaging app you can register for without a phone number, described the progress of its new Protocol v2 in a blog post on 13 October. Forward secrecy for one-to-one messages (past messages stay unreadable even if keys leak) and post-quantum encryption (encryption designed to resist attacks by future quantum computers) have been implemented in the shared library libsession, and the post-quantum part will use a hybrid design that combines a post-quantum algorithm with the current one. As of 23 October, the apps had shipped only forward-compatibility handling: a message in the v2 format shows up as a placeholder asking the user to update, and the apps cannot yet send v2 messages.&lt;/p&gt;
-&lt;p&gt;According to the same post, device groups (joining, removal and membership management) are still in development, and the migration plan for existing accounts is still being designed. An account can only switch to v2 once all its linked devices support it, and the switch may then need to be confirmed manually. Session&#39;s fundraising post of 8 October states that v2 does not yet have a release date.&lt;/p&gt;
-&lt;p&gt;In another post on 19 October, Session wrote that Session Router 1.1, the onion routing layer future versions of Session will use to connect to the node network, has added forward secrecy and a post-quantum key exchange. Node operators can choose whether to upgrade for now, and Session recommends that they do. According to the v2 post, Session Router will later become the main transport layer for v2.&lt;/p&gt;
-&lt;h3 id=&#34;thunderbird-ios&#34;&gt;Development of Thunderbird for iOS&lt;/h3&gt;
-&lt;p&gt;Thunderbird, the open-source email software, set out the design direction for its iPhone version on its official blog on 1 October, writing that the goal is a first version ready for community testing within the next few months. As of 23 October, the app was not on the App Store, and the GitHub repository&#39;s description says the project is in early development and not yet usable. On 23 October, the public TestFlight page (Apple&#39;s platform for distributing beta apps) showed the beta as full.&lt;/p&gt;
-&lt;p&gt;According to the team&#39;s replies in the post&#39;s comments, iCloud mail accounts can sign in over IMAP with the account password. As of 18 October, sign-in for Google and Microsoft accounts was still an open work item on GitHub. As of 23 October, we found no mention of OpenPGP (the standard for end-to-end encrypted email) support in either the repository or the post. The code is released under the MPL-2.0 licence.&lt;/p&gt;
-&lt;h3 id=&#34;cryptpad&#34;&gt;CryptPad 2026.10.0&lt;/h3&gt;
-&lt;p&gt;The autumn release that CryptPad, an end-to-end encrypted collaboration suite, previewed in its summer status report (covered in an earlier article) was published on GitHub on 21 October as 2026.10.0. According to the release notes, this version rewrites CryptPad&#39;s server, and the office document editors have moved from OnlyOffice to the compatible Euro Office. Self-hosting administrators should read the upgrade notes before upgrading, because the upgrade involves changes to the reverse proxy configuration and the configuration file is now split in two.&lt;/p&gt;
-&lt;p&gt;As of 23 October, the official blog had no announcement of this release. The summer status report mentioned that cryptpad.fr would drop French-language customer support, and as of the same day we still could not find a date for it.&lt;/p&gt;
-&lt;h3 id=&#34;pipepipe&#34;&gt;PipePipe 5.5.0&lt;/h3&gt;
-&lt;p&gt;PipePipe, the open-source YouTube client covered in an earlier article, released 5.5.0 on GitHub on 21 October. The release notes list multi-select on list pages, regular expression support in keyword filters, and filtering comments by keyword, username or like count. The third-party repository IzzyOnDroid updated to 5.5.0 the same day, while F-Droid&#39;s package page still showed 5.4.0 as of 23 October.&lt;/p&gt;
-&lt;h3 id=&#34;flock-lawsuit&#34;&gt;Civil rights suit against Florida state troopers&lt;/h3&gt;
-&lt;p&gt;An earlier article covered a civil rights suit in the US District Court for the Middle District of Florida. The plaintiff had been arrested over a hit-and-run and was later not prosecuted, and the case involves license plate reader records. She sued two state troopers, and on 3 August the court stayed the case so that the parties could go to mediation.&lt;/p&gt;
-&lt;p&gt;The docket on CourtListener (a free database of US court dockets) lists a mediation report on 21 September and an order on 22 October. We could not find the contents of either entry in free public sources, and as of 23 October we had found no news reports of a mediation outcome or of the case resuming.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/session-protocol-v2-update&#34;&gt;Session Protocol v2: An Update on PFS, Post-Quantum and Linked Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/smaller-nodes-stronger-encryption&#34;&gt;Smaller nodes, stronger encryption: Oxen 11.7, Storage Server 2.12 and Session Router 1.1&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;19 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/session-octant-privacy-round&#34;&gt;Session is taking part in Octant&amp;#39;s Epoch 13 privacy round&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;8 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/&#34;&gt;Thunderbird for iOS: A First Look at the Native iPhone Email App in Development&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Thunderbird&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;1 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/thunderbird/thunderbird-ios&#34;&gt;thunderbird-ios&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://testflight.apple.com/join/ER3hRBSz&#34;&gt;Join the Thunderbird: Free Your Inbox beta - TestFlight - Apple&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0&#34;&gt;🍂 Autumn Release (2026.10.0)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/09/15/status-2026-09/&#34;&gt;Summer 2026 status&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;15 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.5.0&#34;&gt;v5.5.0&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/packages/InfinityLoop1309.NewPipeEnhanced/&#34;&gt;PipePipe | F-Droid - Free and Open Source Android App Repository&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced&#34;&gt;PipePipe - IzzyOnDroid F-Droid Repository&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IzzyOnDroid&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.courtlistener.com/docket/73454649/&#34;&gt;6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

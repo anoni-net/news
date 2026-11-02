@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Mon, 02 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Browser signals asking websites not to sell or share your data</title>
+<link>https://anoni.net/news/en/history/11-03/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-03/2026</guid>
+<pubDate>Tue, 03 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Some browsers can send websites a signal on your behalf asking them not to sell or share your personal data. On this day, California voters passed a privacy law by ballot measure, giving residents the right to stop businesses from sharing their personal information.</description>
+<content:encoded>&lt;p&gt;Some browsers can attach a Global Privacy Control (GPC) signal when you connect to a website, and the GPC website says the signal is meant to communicate a request not to sell or share your personal data under the California Consumer Privacy Act. According to the California Secretary of State&#39;s results and voter guide, on 3 November 2020 California voters approved Proposition 24, the California Privacy Rights Act of 2020 (CPRA), with 56.2% of the vote, and the act gave the power to set technical specifications for such signals to a newly created California Privacy Protection Agency. The agency&#39;s current regulations require businesses that sell or share personal information to treat a signal meeting those specifications as a valid opt-out request, but the act defines a consumer as a California resident, so we infer that readers living elsewhere, Asia included, gain no protection under this law by turning GPC on. Japan regulates a different step: under its Telecommunications Business Act, as amended with effect from 16 June 2023, online services such as messaging, social media, search and news that use tags to send user data to outside parties must notify users or publish what is sent, or else obtain consent or offer a way to stop it, and the ministry&#39;s explainer we read does not mention browser signals such as GPC (checked 23 October 2026). Anyone who wants to send the signal can use the DuckDuckGo browser or install DuckDuckGo&#39;s extension in their current browser (its help page said as of 2 November that both have GPC on by default), though none of the sources say whether websites honour signals from users outside California.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>System updates left uninstalled</title>
 <link>https://anoni.net/news/en/history/11-02/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Your personal data in Taiwan falls under amendments that would require companies to report leaks to a Personal Data Protection Commission, but the amendments have no effective date yet. On this day, Singapore&#39;s Parliament passed the Personal Data Protection Act, which provides for a Personal Data Protection Commission.</description>
 <content:encoded>&lt;p&gt;If a company leaks your personal data, Taiwan&#39;s Personal Data Protection Act, as amended and promulgated in November 2025, requires leaks within a defined reporting scope to be reported, and the Personal Data Protection Commission is to receive such reports. The commission&#39;s preparatory office announced in October 2025 that the commission can be established only after its organic act passes, and as of 10 October 2026 we could not find that act in the national Laws &amp;amp; Regulations Database, which still marks the effective date of the amendments as undetermined. Singapore&#39;s Parliament passed the Personal Data Protection Act on 15 October 2012, its Personal Data Protection Commission was established on 2 January 2013, and the Do Not Call Registry provisions, which let people register to opt out of marketing calls and messages, took effect on 2 January 2014. Taiwan&#39;s preparatory office runs a consultation line on the personal data law, though its announcement does not specify whether the line accepts breach complaints. To request an investigation in Taiwan, readers can contact the authority responsible for the company&#39;s sector or the local government, which Article 22 of the current Act empowers to inspect companies, while in Singapore the commission&#39;s website has a menu entry for reporting a data protection concern.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>End-to-end encryption in Zoom meetings</title>
-<link>https://anoni.net/news/en/history/10-14/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-14/2026</guid>
-<pubDate>Wed, 14 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Your Zoom meetings are not end-to-end encrypted by default, and the host has to turn the option on. On this day, Zoom announced a technical preview of end-to-end encryption.</description>
-<content:encoded>&lt;p&gt;Your Zoom meetings are not end-to-end encrypted by default, and Zoom&#39;s support documentation reads that for these meetings the encryption keys are generated and managed by Zoom&#39;s servers (checked on 10 October 2026). On 14 October 2020, Zoom announced that end-to-end encryption would be available as a technical preview from the following week, to free and paid users around the world. The announcement reads that with it turned on, the keys are generated by the participants&#39; devices, and Zoom&#39;s servers only relay data without obtaining the keys needed to decrypt the meeting. According to Zoom&#39;s current documentation, turning on end-to-end encryption disables joining by telephone, the web app, cloud recording, live transcription and AI features, and the documentation recommends using it only for meetings that need extra protection. A host first turns on the &#34;Allow use of end-to-end encryption&#34; setting in the Zoom web portal and then chooses end-to-end encryption when scheduling a meeting, and hosts on free accounts must first verify a phone number by SMS.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

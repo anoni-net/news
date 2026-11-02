@@ -6,7 +6,110 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>eMudhra 弱私钥事件的后续处置与 macOS 命令行工具</title>
+<link>https://anoni.net/news/zh-cn/2026/11/emudhra-key-compromise-followup/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/emudhra-key-compromise-followup</guid>
+<pubDate>Tue, 03 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>印度证书颁发机构 eMudhra 八张中间证书的私钥被算出之后，Apple、Microsoft 与 Chrome 都已封锁或移除相关证书，一般用户的浏览器、手机与电脑不必另外设置。macOS 内置的 git、curl 等命令行工具仍可能接受这些证书，到 11 月 2 日还没有查到 Apple 的修复。eMudhra 宣布退出公开 TLS 证书业务，到 11 月 1 日还没在事故单提交正式事故报告。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，来自 Apple、Microsoft 365 Message Center Archive、Mozilla Bugzilla 等 9 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;印度证书颁发机构 eMudhra（证书品牌 emSign）有八张中间证书的私钥小到可以直接算出，取得私钥的人能替不属于自己的网站签发 HTTPS 证书。10 月中事件公开之后，Apple 与 Microsoft 陆续公布了各自的处置，Chrome 的信任列表也拿掉了相关的根证书。一般用户的浏览器、手机与电脑不必另外设置。依 Apple 10 月 29 日的支持文档，macOS 内置的 git、curl 等命令行工具在之后的软件更新之前，仍可能接受这些证书。&lt;/p&gt;
+&lt;p&gt;依 Apple 的支持文档，Apple 从 10 月 19 日起封锁六张签发 TLS 证书的中间证书。每张中间证书各有两份证书，一份连到 eMudhra 的根证书 emSign ECC Root CA - G3，另一份经 Sectigo 交叉签名（另一家证书颁发机构的根再签一份，让同一张中间证书多一条信任路径）连到 Sectigo 的根 AAA Certificate Services。Apple 封锁的是这 12 份证书，10 月 23 日起也封锁了 G3 根。封锁通过证书配置数据自动送到设备，不必安装软件更新，Safari、Mail 与使用 Apple 网络和安全框架的 App 都会拦下。&lt;/p&gt;
+&lt;p&gt;同一份文档也提到，macOS 与 Xcode Command Line Tools 附带的 curl、git、python3、ruby、perl 与 openssl，会拿 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 这个文件验证证书。证书连到文件里的根时，这些工具不检查 Apple 的封锁，也不检查证书有没有被吊销。Apple 写这个文件会在之后的 macOS 更新里更新，没有写是哪个版本、什么时候推出。&lt;/p&gt;
+&lt;p&gt;一位 Mozilla 工程师为事件搭建了说明页，10 月 28 日另外写了一页谈 Apple 的工具。依该页，10 月 26 日推出的 macOS 27.2 没有修复问题，还让用户手动移除根证书的处理失效。位于连接路径上的攻击者可以让 git 从 &lt;code&gt;https://&lt;/code&gt; 远程取得攻击者挑的代码，也能拦截 GitHub token 这类登录信息。到 11 月 2 日，本文没有查到 macOS 27.2 之后的修复版本。&lt;/p&gt;
+&lt;p&gt;Microsoft 10 月 28 日在 Microsoft 365 消息中心的公告提到，Windows 的不信任证书列表（Disallowed Certificate Trust List）已经封锁受影响的证书颁发机构。Edge 与 WebView2（Windows App 内嵌网页用的组件）另外通过组件更新收到 CRLSet，也就是在后台下载的封锁列表，不必安装新版浏览器。公告也写到 Microsoft 已发布 Windows 与 Edge 的更新，从信任列表移除这些证书层级的相关证书，没有写 Edge 的日期。&lt;/p&gt;
+&lt;p&gt;依 Microsoft 消息中心的公告与 The Register 引述的 Microsoft 安全响应中心（MSRC）博客，Microsoft 10 月 26 日发布 Windows 的带外更新（out-of-band，例行更新以外的更新），从 Windows 的信任列表移除七张跟受影响证书层级相关的证书。这份更新给无法连到 Microsoft 证书更新服务、或停用自动更新信任列表的设备，也带着 10 月 13 日更新的已知问题。证书列表通常经由更新服务送达，很多设备不需要这份更新。&lt;/p&gt;
+&lt;p&gt;Google 10 月 20 日的博客预告，Chrome Root Store 会在太平洋时间 10 月 27 日上午移除 emSign ECC Root CA - G3。本文查不到 Chrome 宣告完成的公告，11 月 2 日读到的 Chromium 源代码里，Chrome Root Store 的列表已经没有这张根。eMudhra 的另一张根 emSign Root CA - G1 仍在列表上，Mozilla 10 月 20 日也在事故单上写当时不移除对 G1 的信任。Google 10 月 20 日的博客写正在评估 eMudhra 其他证书是否继续信任，到 11 月 2 日本文没有查到结果。&lt;/p&gt;
+&lt;p&gt;Chrome 根证书计划（Chrome Root Program）10 月 27 日在事故单上回复社区的提问，把 CRLSet 的封锁与事故单结案称为紧急遏制，之后还有后续的工作。依这则留言，Chrome 在通报后一小时内用 Google 的 &lt;code&gt;paranoid_crypto&lt;/code&gt; 检查了 Chrome 信任的所有 CA 证书，没有找到其他已知类型的弱密钥。业界常用的检查工具在事件之前，没有检查椭圆曲线私钥过小的情况。Chrome 已在 CCADB（各家浏览器共用的证书颁发机构数据库）的工具项目提出议题，要让 CA 披露证书之前先通过弱密钥检查。&lt;/p&gt;
+&lt;p&gt;eMudhra 10 月 25 日在事故单上宣布退出公开 TLS 证书业务，10 月 30 日任命 KPMG 为独立的外部审查者。依 eMudhra 的事件声明页，领导层 10 月 26 日的说明写问题出在自家的脚本错误，并承诺通过 CCADB 的程序公布完整的根本原因分析。10 月 28 日的更新写到，G3 底下约 3 万 800 张证书属于美国的单一客户生态系统，这个生态系统已改用 eMudhra 的 G1 RSA 根签发新证书。eMudhra 也请各家根证书计划给时间让这批客户迁移，迁移完成后就停止从 G1 签发 TLS 证书。&lt;/p&gt;
+&lt;p&gt;Mozilla 根证书计划 10 月 20 日向 eMudhra 寄出问题清单，要求 24 小时内初步回复，到 10 月 23 日还没收到。eMudhra 10 月 23 日把延迟归因于社交媒体与投资人、客户的密集关注，Chrome 根证书计划回复这不是可以接受的理由。eMudhra 10 月 25 日的留言主张，CCADB 的事故通报规定给 CA 14 天提交完整报告，自己仍在期限内。&lt;/p&gt;
+&lt;p&gt;之后 eMudhra 在 10 月 27 日的留言写已经直接回复 Mozilla 的问题，10 月 29 日在事故单附上给 Google 的回复文档。到 11 月 1 日事故单的最后一则留言为止，eMudhra 还没有在这张单上提交正式事故报告，事故单的状态仍是处理中。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;Chrome 的 CRLSet、Apple 的证书配置数据与 Windows 的不信任证书列表都在后台自动更新，可以单独拦下特定的中间证书。macOS 内置的命令行工具只读 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 一个文件，文件里还有 G3 根与 Sectigo 的 AAA Certificate Services，连到这两张根的证书就会通过验证。Apple 的文档写这些工具不检查吊销，所以 eMudhra 在 UTC 10 月 18 日吊销八张中间证书，对它们没有作用。&lt;/p&gt;
+&lt;p&gt;依一位研究者 10 月 25 日在事故单上的统计（本文没有另外核对），UTC 10 月 20 日到 21 日之间有 107,107 张用其中六把密钥签出的证书，被记进一家厂商的证书透明度日志（CT log，公开记录每一张证书的日志）。其中 106,050 张是只写 google.com 的概念验证证书，106,058 张经由 Sectigo 的 AAA 交叉签名连到根。这位研究者列出的例子里有一张内嵌了三家日志的收录证明（SCT），三家都是 Chrome 列为可用的日志，本文据此推论只要求 CT 收录证明拦不下这类证书。这些证书几乎都没有吊销信息的指针，只检查网站证书本身吊销状态的程序也拦不下，只有逐层检查 CA 证书吊销、收到推送的封锁列表或已移除相关根证书的程序会拒绝。&lt;/p&gt;
+&lt;p&gt;依 Apple 的文档，不用终端的人不需要做任何事，在 Mac 上用内置的 git、curl 或 python3 连 &lt;code&gt;https://&lt;/code&gt; 网址的人可以等 Apple 的更新。不想等的人可以依同一份文档，用管理员权限从 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 移除 emSign ECC Root CA - G3。只移除 G3 拦不下 Sectigo 交叉签名的那六份，需一起移除 AAA Certificate Services。依同一份文档，代价是经由这张根、跟事件无关的部分网站，也可能在这些工具里验证失败。&lt;/p&gt;
+&lt;p&gt;Apple 的文档另外提醒，macOS 更新可能换回原本的文件。安装到含修复的版本之前，每次更新后都要重新检查。自带根证书列表的 App 与工具不读这个文件，也不套用 Apple 的封锁，要向开发者确认。在 Mac 上手动移除根证书，保护到的只有读这个文件的工具。&lt;/p&gt;
+&lt;p&gt;研究者说明页的「谁已修复」清单把 OpenHarmony 与 HarmonyOS NEXT 列为尚未修复（这份清单由研究者维护，不是华为发布的，本文没有查到华为的公告）。页面写这类设备不允许用户停用系统根证书，修复版本发布之前用户端没有变通办法。HarmonyOS 4.3 及更早版本，页面写可以像其他基于 Android 的系统一样停用系统内置的根证书。我们没有查到中国的政府或企业网站使用过受影响的 eMudhra 证书。&lt;/p&gt;
+&lt;p&gt;Google 的封锁经由 Google Play 服务的更新渠道送到许多 Android 设备，说明页提醒部分设备不允许用户停用系统根证书。GreatFire 的量测显示 &lt;code&gt;https://play.google.com&lt;/code&gt; 在中国大陆到 2026 年 11 月 1 日的最后一次测试是 100% 被封锁。这项量测只看网址能否连线，不能确定设备是否收得到更新，本文据此推论在中国大陆没有 Google Play 服务的 Android 设备可能收不到这一份封锁。说明页给了手动停用两张根证书的步骤，部分设备不允许停用时无法手动处理。&lt;/p&gt;
+&lt;p&gt;接下来可以留意 Apple 修复 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 的 macOS 更新、eMudhra 依 CCADB 程序提交的正式事故报告，以及各家根证书计划对 G1 根的决定。约 3 万 800 张证书所属的客户生态系统已经改用 G1 签发。本文推论，G1 是否继续被信任，会影响这批网站多久之后要再换一次证书。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/apple.html&#34;&gt;Apple&amp;#39;s git still trusts the compromised eMudhra certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5305637&#34;&gt;Microsoft releases out-of-band Windows fixes with certificate updates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/play.google.com&#34;&gt;Is https://play.google.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;2026 年 11 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>iOS 27.2 的 Siri AI 排除 App 设置</title>
 <link>https://anoni.net/news/zh-cn/2026/11/siri-ai-exclude-apps/</link>
@@ -2980,116 +3083,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>每周短讯 2026 第 43 周</title>
-<link>https://anoni.net/news/zh-cn/2026/10/weekly-brief-2026-w43/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/weekly-brief-2026-w43</guid>
-<pubDate>Sun, 25 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>10 月 1 日到 10 月 22 日的 5 则新闻与后续，包括 Session 通讯协议 v2 的进展、Thunderbird for iOS 的开发进展、CryptPad 2026.10.0、PipePipe 5.5.0，以及美国佛州州警遭起诉的民权诉讼的案卷动态。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，来自 Session、Thunderbird、GitHub 等 8 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;这一期收 5 则，其中 3 则是之前导读的后续，涵盖 10 月 1 日到 10 月 22 日。&lt;/p&gt;
-&lt;h3 id=&#34;session-v2&#34;&gt;Session 通讯协议 v2 的进展&lt;/h3&gt;
-&lt;p&gt;无需手机号码就能注册的通讯 App Session，在 10 月 13 日的博客文章中介绍了新版通讯协议 v2 的进展。一对一消息的前向保密（密钥泄露时，过去的消息仍无法解开）与后量子加密（能抵御未来量子计算机攻击的加密），已在共享库 libsession 实现，后量子的部分会采用后量子算法与现行算法的混合设计。App 端截至 10 月 23 日已发布的只有向前兼容的处理，收到 v2 格式的消息时会显示要求更新的占位消息，还不能发送 v2 消息。&lt;/p&gt;
-&lt;p&gt;据同一篇文章，设备组（加入、移除与成员管理）还在开发，现有账号的迁移计划还在设计。账号要等所有关联的设备都支持 v2 才能切换，届时可能需要手动确认。Session 10 月 8 日的募款文章写 v2 还没有发布日期。&lt;/p&gt;
-&lt;p&gt;Session 10 月 19 日的另一篇文章提到，Session 日后版本连接节点网络时要用的洋葱路由层 Session Router 1.1，已加入前向保密与后量子的密钥交换。节点运营者目前可自行选择是否升级，官方建议升级。v2 的文章写 Session Router 之后会成为 v2 的主要传输层。&lt;/p&gt;
-&lt;h3 id=&#34;thunderbird-ios&#34;&gt;Thunderbird for iOS 的开发进展&lt;/h3&gt;
-&lt;p&gt;开源邮件软件 Thunderbird 10 月 1 日在官方博客公开 iPhone 版的设计方向，文章写目标是在接下来几个月内推出供社区测试的第一个版本。截至 10 月 23 日，App Store 上还没有这个 App，GitHub 仓库的说明写项目还在早期开发、尚不能使用。公开的 TestFlight（Apple 发放测试版 App 的平台）测试页 10 月 23 日显示名额已满。&lt;/p&gt;
-&lt;p&gt;据团队在文章评论区的回复，iCloud 邮箱可以用 IMAP 账号密码登录。Google 与 Microsoft 账号的登录方式，截至 10 月 18 日在 GitHub 上仍是未关闭的工作项。截至 10 月 23 日，仓库与文章都查不到 OpenPGP（端到端加密电子邮件的标准）的支持，代码以 MPL-2.0 许可证发布。&lt;/p&gt;
-&lt;h3 id=&#34;cryptpad&#34;&gt;CryptPad 2026.10.0&lt;/h3&gt;
-&lt;p&gt;端到端加密协作套件 CryptPad 在夏季进度报告预告的秋季版（见前一篇导读），10 月 21 日在 GitHub 以 2026.10.0 发布。版本说明写这一版重写了 CryptPad 的服务器，办公文档的编辑器也从 OnlyOffice 换成兼容的 Euro Office。自托管的管理员升级前要读升级说明，升级会涉及反向代理的配置，配置文件也拆成了两个。&lt;/p&gt;
-&lt;p&gt;截至 10 月 23 日，官方博客还没有这一版的公告。夏季进度报告提到的 cryptpad.fr 停止法语客服，到同一天仍查不到停止的日期。&lt;/p&gt;
-&lt;h3 id=&#34;pipepipe&#34;&gt;PipePipe 5.5.0&lt;/h3&gt;
-&lt;p&gt;前一篇导读介绍的开源 YouTube 客户端 PipePipe，10 月 21 日在 GitHub 发布 5.5.0。版本说明列出列表页的多选、关键词过滤支持正则表达式，以及按关键词、用户名或点赞数过滤评论。第三方软件仓库 IzzyOnDroid 同一天更新到 5.5.0，F-Droid 的软件包页面截至 10 月 23 日显示的仍是 5.4.0。&lt;/p&gt;
-&lt;h3 id=&#34;flock-lawsuit&#34;&gt;佛州州警遭起诉的民权诉讼&lt;/h3&gt;
-&lt;p&gt;前一篇导读写到佛罗里达州中区联邦地区法院的一起民权诉讼，原告曾因一起肇事逃逸案被捕、后来获不起诉，案情涉及车牌识别的记录。她对两位州警提起诉讼，法院 8 月 3 日裁定中止审理，让双方进行调解。&lt;/p&gt;
-&lt;p&gt;CourtListener（收录美国法院案卷的免费数据库）的案卷列出 9 月 21 日的一份调解报告与 10 月 22 日的一项裁定。两项记录的内容在免费的公开来源都查不到。截至 10 月 23 日，也没有查到报道调解结果或恢复审理的新闻。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/session-protocol-v2-update&#34;&gt;Session Protocol v2: An Update on PFS, Post-Quantum and Linked Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/smaller-nodes-stronger-encryption&#34;&gt;Smaller nodes, stronger encryption: Oxen 11.7, Storage Server 2.12 and Session Router 1.1&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://getsession.org/blog/session-octant-privacy-round&#34;&gt;Session is taking part in Octant&amp;#39;s Epoch 13 privacy round&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Session&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-08&#34;&gt;2026 年 10 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/&#34;&gt;Thunderbird for iOS: A First Look at the Native iPhone Email App in Development&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Thunderbird&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-01&#34;&gt;2026 年 10 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/thunderbird/thunderbird-ios&#34;&gt;thunderbird-ios&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://testflight.apple.com/join/ER3hRBSz&#34;&gt;Join the Thunderbird: Free Your Inbox beta - TestFlight - Apple&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0&#34;&gt;🍂 Autumn Release (2026.10.0)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cryptpad.org/2026/09/15/status-2026-09/&#34;&gt;Summer 2026 status&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CryptPad&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-15&#34;&gt;2026 年 9 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases/tag/v5.5.0&#34;&gt;v5.5.0&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://f-droid.org/en/packages/InfinityLoop1309.NewPipeEnhanced/&#34;&gt;PipePipe | F-Droid - Free and Open Source Android App Repository&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;F-Droid&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced&#34;&gt;PipePipe - IzzyOnDroid F-Droid Repository&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IzzyOnDroid&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.courtlistener.com/docket/73454649/&#34;&gt;6:26-cv-01263 (M.D. Fla.)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CourtListener&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
