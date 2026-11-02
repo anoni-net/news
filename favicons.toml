@@ -1422,6 +1422,10 @@ from = "https://www.marketing-interactive.com/apple-touch-icon.png"
 icon = "mas.gov.sg-760a368b.png"
 from = "https://www.mas.gov.sg/html/site/_favicon/apple-touch-icon.png"
 
+[hosts."mc.merill.net"]
+icon = "mc.merill.net-633bff0e.png"
+from = "https://mc.merill.net/favicon.ico"
+
 [hosts."mcmc.gov.my"]
 icon = "mcmc.gov.my-7010665f.png"
 from = "https://www.mcmc.gov.my/favicon.ico"
