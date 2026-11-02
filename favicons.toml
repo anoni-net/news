@@ -1,6 +1,10 @@
 # 原文網站的圖示登記表，格式與流程見 SPEC.md「原文的網站圖示」。
 # 鍵是 sources 網址的主機名稱，去掉開頭的 www.。由 tools/fetch_favicons.py 寫入，手改之前先讀規格。
 
+[hosts."12371.cn"]
+icon = "12371.cn-c26f1267.png"
+from = "https://p4.img.cctvpic.com/photoAlbum/templet/common/DEPA1356314678315297/sy_dyw377_0504.png"
+
 [hosts."404media.co"]
 icon = "404media.co-96a9d826.png"
 from = "https://www.404media.co/favicon.ico"
@@ -263,6 +267,10 @@ from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192
 [hosts."brdr.hkma.gov.hk"]
 icon = "brdr.hkma.gov.hk-e2b6d0cb.png"
 from = "https://www.hkma.gov.hk/favicon.jpg"
+
+[hosts."brennancenter.org"]
+icon = "brennancenter.org-2a0c2609.png"
+from = "https://www.brennancenter.org/apple-touch-icon.png?v=1"
 
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
@@ -772,6 +780,10 @@ from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR
 [hosts."facebook.com"]
 icon = "facebook.com-de7506c8.png"
 from = "https://web.archive.org/web/20261020id_/https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico"
+
+[hosts."fas.org"]
+icon = "fas.org-3f60befe.png"
+from = "https://fas.org/wp-content/themes/fas/assets/images/favicon.ico"
 
 [hosts."fdotwww.blob.core.windows.net"]
 icon = "fdotwww.blob.core.windows.net-7d319a66.png"
@@ -1688,6 +1700,9 @@ same_as = "gov.cn"
 icon = "nrk.no-a87b9a82.png"
 from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
 
+[hosts."nsa.gov"]
+none = "網站擋下自動抓取，抓不到圖示"
+
 [hosts."nsb.gov.tw"]
 icon = "nsb.gov.tw-23fb8542.png"
 from = "https://www.nsb.gov.tw/favicon.ico"
@@ -2003,6 +2018,9 @@ from = "https://www.sfc.hk/assets/favicon.png"
 [hosts."sflc.in"]
 icon = "sflc.in-e1e6722e.png"
 from = "https://sflc.in/wp-content/uploads/2022/01/cropped-download-1-192x192.png"
+
+[hosts."sgp.fas.org"]
+same_as = "fas.org"
 
 [hosts."share.timescar.jp"]
 icon = "share.timescar.jp-b71684b4.png"
