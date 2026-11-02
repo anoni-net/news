@@ -477,6 +477,10 @@ from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e
 icon = "coveryourtracks.eff.org-18aa39f8.png"
 from = "https://coveryourtracks.eff.org/static/favicon.ico"
 
+[hosts."cppa.ca.gov"]
+icon = "cppa.ca.gov-a08db90b.png"
+from = "https://cppa.ca.gov/images/apple-touch-icon-192x192.png"
+
 [hosts."cpr.dk"]
 icon = "cpr.dk-c81c529e.png"
 from = "https://cdn9.cpr.dk/cpr/media/12019/cpr-favicon.png?width=196&height=196"
@@ -678,6 +682,10 @@ from = "https://www.doj.gov.hk/favicon.ico"
 [hosts."dspdp.gov.mo"]
 same_as = "gov.mo"
 
+[hosts."duckduckgo.com"]
+icon = "duckduckgo.com-c77e5388.png"
+from = "https://duckduckgo.com/static-assets/favicons/DDG-iOS-icon_60x60.png"
+
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
 from = "https://ec.europa.eu/favicon.ico"
@@ -704,6 +712,10 @@ same_as = "klri.re.kr"
 [hosts."elawcn.com"]
 icon = "elawcn.com-c1822820.png"
 from = "https://www.elawcn.com/favicon.ico"
+
+[hosts."elections.cdn.sos.ca.gov"]
+icon = "elections.cdn.sos.ca.gov-29e07b77.png"
+from = "https://www.sos.ca.gov/packages/casos/themes/casos_theme/icons/apple-touch-icon-144x144.png"
 
 [hosts."elegislation.gov.hk"]
 same_as = "gov.hk"
@@ -912,6 +924,10 @@ from = "https://globalfreedomofexpression.columbia.edu/wp-content/themes/gfe/fav
 [hosts."globalnews.ca"]
 icon = "globalnews.ca-1e432260.png"
 from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_square-144.png"
+
+[hosts."globalprivacycontrol.org"]
+icon = "globalprivacycontrol.org-2f5a1540.png"
+from = "https://globalprivacycontrol.org/img/favicon/apple-touch-icon.png"
 
 [hosts."gongbao.court.gov.cn"]
 same_as = "court.gov.cn"
