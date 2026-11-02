@@ -87,6 +87,8 @@
 "2026-11-02-qwen-political-censorship" = { "en" = "og/2026/11/qwen-political-censorship-en-36c1df10.png", "zh-CN" = "og/2026/11/qwen-political-censorship-zh-cn-7f9f7a7f.png", "zh-TW" = "og/2026/11/qwen-political-censorship-zh-tw-f8902778.png" }
 "2026-11-03-emudhra-key-compromise-followup" = { "en" = "og/2026/11/emudhra-key-compromise-followup-en-e9f357f8.png", "zh-CN" = "og/2026/11/emudhra-key-compromise-followup-zh-cn-6df2712a.png", "zh-TW" = "og/2026/11/emudhra-key-compromise-followup-zh-tw-6f62d815.png" }
 "2026-11-03-siri-ai-exclude-apps" = { "en" = "og/2026/11/siri-ai-exclude-apps-en-e43b4945.png", "zh-CN" = "og/2026/11/siri-ai-exclude-apps-zh-cn-3337ec80.png", "zh-TW" = "og/2026/11/siri-ai-exclude-apps-zh-tw-eb3efd37.png" }
+"2026-11-04-hk-payment-handbook" = { "en" = "og/2026/11/hk-payment-handbook-en-4f343f67.png", "zh-CN" = "og/2026/11/hk-payment-handbook-zh-cn-22084d8f.png", "zh-TW" = "og/2026/11/hk-payment-handbook-zh-tw-8d363edd.png" }
+"2026-11-04-ai-devtools-supply-chain" = { "en" = "og/2026/11/ai-devtools-supply-chain-en-e4b60d77.png", "zh-CN" = "og/2026/11/ai-devtools-supply-chain-zh-cn-3e4cc392.png", "zh-TW" = "og/2026/11/ai-devtools-supply-chain-zh-tw-a318b0e6.png" }
 "2026-11-06-cisa-scuba-config-tools" = { "en" = "og/2026/11/cisa-scuba-config-tools-en-263a1733.png", "zh-CN" = "og/2026/11/cisa-scuba-config-tools-zh-cn-6ddef874.png", "zh-TW" = "og/2026/11/cisa-scuba-config-tools-zh-tw-cc2f6145.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-f1b37c7c.png", "zh-CN" = "og/history/09-26-zh-cn-f38b40e8.png", "zh-TW" = "og/history/09-26-zh-tw-d873b539.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-c875310d.png", "zh-CN" = "og/history/09-27-zh-cn-cb1e8c42.png", "zh-TW" = "og/history/09-27-zh-tw-6e156cbd.png" }
@@ -127,3 +129,4 @@
 "history/11-01" = { "en" = "og/history/11-01-en-9f3cd289.png", "zh-CN" = "og/history/11-01-zh-cn-435f988c.png", "zh-TW" = "og/history/11-01-zh-tw-97d72629.png" }
 "history/11-02" = { "en" = "og/history/11-02-en-3e8f9bdf.png", "zh-CN" = "og/history/11-02-zh-cn-3b0dff34.png", "zh-TW" = "og/history/11-02-zh-tw-45174d3a.png" }
 "history/11-03" = { "en" = "og/history/11-03-en-80515b23.png", "zh-CN" = "og/history/11-03-zh-cn-5cc10fde.png", "zh-TW" = "og/history/11-03-zh-tw-eb792859.png" }
+"history/11-04" = { "en" = "og/history/11-04-en-30e13040.png", "zh-CN" = "og/history/11-04-zh-cn-dfa4781b.png", "zh-TW" = "og/history/11-04-zh-tw-62c6faa4.png" }

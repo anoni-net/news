@@ -262,6 +262,9 @@
 	#sources
 	#thunderbird-ios
 /2026/11/
+/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
@@ -272,6 +275,9 @@
 	#perspective
 	#sources
 /2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/2026/11/hk-payment-handbook/
 	#perspective
 	#sources
 /2026/11/qwen-political-censorship/
@@ -574,6 +580,9 @@
 	#sources
 	#thunderbird-ios
 /en/2026/11/
+/en/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
@@ -584,6 +593,9 @@
 	#perspective
 	#sources
 /en/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/en/2026/11/hk-payment-handbook/
 	#perspective
 	#sources
 /en/2026/11/qwen-political-censorship/
@@ -704,6 +716,8 @@
 	#y2026
 /en/history/11-03/
 	#y2026
+/en/history/11-04/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
@@ -793,6 +807,8 @@
 /history/11-02/
 	#y2026
 /history/11-03/
+	#y2026
+/history/11-04/
 	#y2026
 /page/2/
 /page/3/
@@ -1065,6 +1081,9 @@
 	#sources
 	#thunderbird-ios
 /zh-cn/2026/11/
+/zh-cn/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
@@ -1075,6 +1094,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/zh-cn/2026/11/hk-payment-handbook/
 	#perspective
 	#sources
 /zh-cn/2026/11/qwen-political-censorship/
@@ -1194,6 +1216,8 @@
 /zh-cn/history/11-02/
 	#y2026
 /zh-cn/history/11-03/
+	#y2026
+/zh-cn/history/11-04/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
