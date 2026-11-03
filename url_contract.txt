@@ -274,6 +274,9 @@
 /2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
+/2026/11/eff-security-worse/
+	#perspective
+	#sources
 /2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -602,6 +605,9 @@
 	#perspective
 	#sources
 /en/2026/11/cisa-scuba-config-tools/
+	#perspective
+	#sources
+/en/2026/11/eff-security-worse/
 	#perspective
 	#sources
 /en/2026/11/emudhra-key-compromise-followup/
@@ -1123,6 +1129,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/cisa-scuba-config-tools/
+	#perspective
+	#sources
+/zh-cn/2026/11/eff-security-worse/
 	#perspective
 	#sources
 /zh-cn/2026/11/emudhra-key-compromise-followup/
