@@ -854,6 +854,10 @@ from = "手動提供的檔案 flamman.png"
 icon = "flocksafety.com-b8c9ee48.png"
 from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
 
+[hosts."fma.ph"]
+icon = "fma.ph-70be4e19.png"
+from = "https://fma.ph/wp-content/uploads/2022/01/Regular-logo-vertical-full-color-230x230.png"
+
 [hosts."forbiddenstories.org"]
 icon = "forbiddenstories.org-ca32df32.png"
 from = "https://forbiddenstories.org/wp-content/uploads/2024/02/transferir.png?x75280"
@@ -1822,6 +1826,10 @@ from = "https://www.pdpc.gov.sg/favicon.ico"
 icon = "pdpc.gov.tw-5b8e23ff.png"
 from = "https://ws.pdpc.gov.tw/FS01/FilePath/3/sites/pagebackimage/favicon.ico"
 
+[hosts."philstar.com"]
+icon = "philstar.com-fb5cd868.png"
+from = "https://media.philstar.com/images/icons/apple-touch-icon-180x180.png"
+
 [hosts."phorion.io"]
 icon = "phorion.io-9fa09a7a.png"
 from = "https://phorion.io/images/apple-touch-icon.png"
@@ -2088,6 +2096,10 @@ from = "https://simplelogin.io/favicon.ico"
 [hosts."smallpdf.com"]
 icon = "smallpdf.com-b8979d33.png"
 from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
+
+[hosts."smartlab.gov.hk"]
+icon = "smartlab.gov.hk-625800f9.png"
+from = "https://www.smartlab.gov.hk/favicon.ico"
 
 [hosts."sme.gov.tw"]
 icon = "sme.gov.tw-bcedc2a7.png"
