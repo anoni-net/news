@@ -1141,6 +1141,10 @@ from = "手動提供的檔案 bw.png"
 icon = "imda.gov.sg-8b6918ac.png"
 from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
 
+[hosts."implicator.ai"]
+icon = "implicator.ai-9c8b76ea.png"
+from = "https://www.implicator.ai/content/images/size/w256h256/2025/04/Logo_impli_full.png"
+
 [hosts."indiacode.nic.in"]
 none = "網站在抓取時無法連線"
 
@@ -1531,6 +1535,10 @@ from = "https://web.archive.org/web/20260927id_/https://www.minister.defence.gov
 [hosts."mirrors.tuna.tsinghua.edu.cn"]
 icon = "mirrors.tuna.tsinghua.edu.cn-4a3f6ec5.png"
 from = "https://mirrors.tuna.tsinghua.edu.cn/static/img/favicon.png"
+
+[hosts."mlex.com"]
+icon = "mlex.com-a1f35a43.png"
+from = "https://www.mlex.com/favicon_red.ico"
 
 [hosts."mobileid.go.kr"]
 icon = "mobileid.go.kr-440b052c.png"
@@ -1989,6 +1997,10 @@ from = "https://www.sakigake.jp/assets/img/favicon_192@2x.png"
 [hosts."sakura.ad.jp"]
 icon = "sakura.ad.jp-92f8aa2b.png"
 from = "https://www.sakura.ad.jp/resource/favicon/sakura_logo.png"
+
+[hosts."san.com"]
+icon = "san.com-710104ff.png"
+from = "https://san.com/wp-content/uploads/2024/02/cropped-SAN-Logo.png?w=192"
 
 [hosts."scala-com.jp"]
 icon = "scala-com.jp-2478aaf7.png"
