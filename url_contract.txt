@@ -268,6 +268,9 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/cisa-scuba-config-tools/
+	#perspective
+	#sources
 /2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -586,6 +589,9 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/cisa-scuba-config-tools/
+	#perspective
+	#sources
 /en/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -718,6 +724,8 @@
 	#y2026
 /en/history/11-04/
 	#y2026
+/en/history/11-06/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
@@ -809,6 +817,8 @@
 /history/11-03/
 	#y2026
 /history/11-04/
+	#y2026
+/history/11-06/
 	#y2026
 /page/2/
 /page/3/
@@ -1087,6 +1097,9 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/cisa-scuba-config-tools/
+	#perspective
+	#sources
 /zh-cn/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -1218,6 +1231,8 @@
 /zh-cn/history/11-03/
 	#y2026
 /zh-cn/history/11-04/
+	#y2026
+/zh-cn/history/11-06/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
