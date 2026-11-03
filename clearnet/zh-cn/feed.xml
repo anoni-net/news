@@ -6,7 +6,57 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 04 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Article 19 数字支付手册的风险类别与七项策略</title>
+<link>https://anoni.net/news/zh-cn/2026/11/hk-payment-handbook/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/hk-payment-handbook</guid>
+<pubDate>Wed, 04 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Article 19 发布正体中文与英文版的数字支付手册，以香港与英美之间的金融交易为例。手册整理银行、汇款服务与支付平台收集哪些数据、跟谁共享、保存多久，提出七项降低风险的策略，并写明类似的分析框架与策略也适用于其他地方。</description>
+<content:encoded>&lt;p&gt;整理 3 篇原文，来自 Article 19、中国人大网&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;言论自由组织 Article 19 发布一份数字支付手册，有正体中文与英文两个版本。手册整理银行、汇款服务与支付平台会收集哪些数据、跟谁共享、保存多久，并提出七项降低风险的策略。内容以香港与英国、美国之间的金融交易为例，也写明类似的分析框架与策略适用于其他地方。&lt;/p&gt;
+&lt;p&gt;手册的执行摘要写到，每一笔金融交易都会留下痕迹，资金即使存在英美的银行也可能有风险。手册指称 2020 年《中华人民共和国香港特别行政区维护国家安全法》（以下简称《香港国安法》）生效之后，当局通过追踪金融交易、冻结账户与切断资金来源，对被针对者以及跟他们有资金往来的人施压。手册把进出香港交易的主要风险分成强制披露、资产冻结与账户关闭、向亲属与捐款人等相关人士施压，以及跨境追查四种（这是手册的描述，本文没有另外查证香港政府的回应）。&lt;/p&gt;
+&lt;p&gt;依手册的整理，开户时的“了解你的客户”（KYC，金融机构核实客户身份的程序）要收集姓名、出生日期、身份证件、国籍、地址与税籍编号，也会记下账户用途、职业与资金来源。金融机构一般收不到逐项的消费明细，但付款记录仍可能透露医疗开支、慈善与政治捐款、旅游模式与消费习惯。记录在客户关系结束后至少保存 5 年，香港的税务与公司法规要求 7 年，部分业者保存到 10 年。&lt;/p&gt;
+&lt;p&gt;手册描述一笔电汇从汇出银行、中介银行到收款银行，每一站都可以查阅双方的完整身份。金融机构会向金融情报单位提交可疑交易报告，香港收报告的是由警务处与海关联合运作的联合财富情报组。手册因此写香港的金融情报分析直接置于本地警务体系之内。数据也会共享给信息安全、营销与信用数据机构这类第三方业者。&lt;/p&gt;
+&lt;p&gt;联名持有人、授权签署人、家人与经常往来的对象都会纳入账户档案，手册写审查可以双向进行，有交易往来的人也可能受到审查。账户活动出现重大或无法解释的变化、涉及身份不明的第三方、使用加密货币或异常的频率与金额，都可能触发加强监察。依手册的说明，系统评估的是模式而非意图，合法活动也可能被标记。机构可能在未通知当事人的情况下提交报告。&lt;/p&gt;
+&lt;p&gt;手册的七项策略依序是把披露的数据限缩到法律要求的最低范围、分开不同用途的财务活动、掌握交易流程与资金流向、维持稳定一致的账户模式、了解所用的业者、了解自己的法律权利，以及预先做好应对准备。具体做法包括开户时不主动加入自愿性计划，以及移除不必要的联名持有人与关联账户。账户出事之后，手册建议记录一切、不要独自处理并寻求法律意见。&lt;/p&gt;
+&lt;p&gt;挑选业者时，手册列出五个问题：分享数据前是否需要正式法律程序、会不会质疑范围过广的要求、数据被调取时会不会通知用户、数据存在哪里、有没有发布透明度报告。各业者公开文件的写法不同，有的表明需要正式法律程序并会质疑过广的要求，有的保留不经法院命令分享数据的空间。手册附录依各业者的公开文件做了评级，并注明回应政府要求的那一栏只反映公司公开的承诺，是否落实无法独立验证。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;手册的法规表从反洗钱金融行动特别工作组（FATF）的 40 项建议列起，再列出香港、英国与美国各自的规定，例如香港的《打击洗钱及恐怖分子资金筹集条例》与美国的《货币及外汇交易申报法》（又称《银行保密法》）。核实身份、保存记录与通报可疑交易，都是这类规定要求业者做的事。依这张表推论，换一家业者或 App，同样的义务仍然存在。手册也写明，没有任何金融服务业者能保证阻止政府依法获取客户的数据。&lt;/p&gt;
+&lt;p&gt;手册逐一说明的转账方式里，加密货币兑换成法定货币时交易所仍要做 KYC，手册提醒以化名进行的付款不应被视为匿名。区块链分析可以把钱包地址连到真实身份，调查人员追到交易所，就能以传票或法院命令获取账户记录、IP 地址与交易记录。加密货币付款一般难以撤回，也缺乏争议处理机制与政府保险，用户还可能因诈骗、私钥泄露或价格短时间大幅波动而蒙受损失。完全依赖现金才能避开第三方，依手册的评估对多数人并不切实际，选择收集数据较少的业者则往往也可能代表信息安全措施较薄弱。&lt;/p&gt;
+&lt;p&gt;手册列出的触发指标包括使用加密货币与账户活动出现重大变化，本文据此推论突然改用加密货币会同时符合这两项。根据手册对独立设备的建议，使用多部设备也可能被金融机构标记为异常。分拆付款的重复转账可能让双方的关系更容易被察觉。没有正当理由分开付款时，手册建议合并成单一交易以减少记录的数量。&lt;/p&gt;
+&lt;p&gt;依手册的说明，香港的《个人资料（私隐）条例》适用于在香港控制个人资料的机构，不论机构位于何处。法律救济通常要到损害发生后才能启动。手册也列出外界难以核实的部分，例如部分跨国企业把香港的数据库与公司其他部分分隔，以及各地金融情报单位之间交换数据的实际运作。&lt;/p&gt;
+&lt;p&gt;手册以知识共享署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0）许可，非商业用途可以注明出处后翻译或改写，衍生作品沿用相同许可。到 11 月 2 日为止查不到简体中文版。手册假设读者已具备数字安全与风险管理的基本知识。&lt;/p&gt;
+&lt;p&gt;中国大陆的《中华人民共和国反洗钱法》（2024 年 11 月 8 日修订）第二十八条规定，金融机构不得为身份不明的客户提供服务或者与其进行交易，不得为客户开立匿名账户或者假名账户。第三十四条要求金融机构建立客户身份资料和交易记录保存制度，客户身份资料在业务关系结束后、客户交易信息在交易结束后，应当至少保存十年。第七条规定依职责取得的反洗钱信息，非依法律规定，不得向任何单位和个人提供。非银行支付机构是否适用这些条文，本文没有核对。&lt;/p&gt;
+&lt;p&gt;需要跨境收付款、处境风险较高的人，手册建议优先考虑在香港没有注册实体的业者。手册的理由是香港当局可以直接向注册实体发出要求，不必经过可能提供较多隐私与通知保障的国际法律渠道。手册也建议向汇出机构查询会经过哪些中介银行，并预先准备账户被冻结时的替代渠道。认为自己正被针对的人，手册建议尽早寻求独立的法律意见（本文没有逐项查证各地法规，以上整理不构成法律意见）。&lt;/p&gt;
+&lt;p&gt;根据手册，平台的默认设置通常不以隐私为优先，与隐私相关的功能往往默认开启、要用户自行关闭。在意支付记录会透露人际关系或立场的人，可以先打开常用的支付 App，照手册的建议关掉营销与个性化选项、停用非必要的相机与位置权限。依手册的法规说明推论，营销、个性化与权限设置减少的是对外公开与共享的数据，业者依法保存的身份与交易记录不会因此消失。账号本身的安全另外处理，手册列出的做法是启用多重因素验证，身份验证 App 一般比短信验证码安全。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_chi_FINALpdf.pdf&#34;&gt;保障支付安全，延續行動：香港人使用數碼支付平台手冊&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_eng_FINAL.pdf&#34;&gt;Safeguarding payments, sustaining movements: A handbook for Hong Kongers to navigate digital payment platforms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202411/t20241108_440887.html&#34;&gt;中华人民共和国反洗钱法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-08&#34;&gt;2024 年 11 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>AI 编程工具的扩展后门与恶意指引文件</title>
 <link>https://anoni.net/news/zh-cn/2026/11/ai-devtools-supply-chain/</link>
@@ -2824,177 +2874,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/service/privacy/&#34;&gt;Privacy&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>香港商场的闭路电视与警方的锐眼计划</title>
-<link>https://anoni.net/news/zh-cn/2026/10/hong-kong-mall-cctv-police/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/hong-kong-mall-cctv-police</guid>
-<pubDate>Mon, 26 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>香港保安局局长 10 月 18 日受访时表示，私人商场的部分闭路电视将接入警方的「锐眼计划」，商讨已进入最后阶段。局长也表示未必需要另外告知市民，2 月则说明第三方接入属于单向传送、政府系统的影像一般保存 31 日。到香港旅游或出差的人经过商场的公共区域时可能入镜，香港以外的地方不受影响。据香港媒体的报道，人脸识别已在局部范围试验。</description>
-<content:encoded>&lt;p&gt;整理 21 篇原文，来自 Security Bureau, Hong Kong Police Force、Hong Kong Police Force、Legislative Council Secretariat 等 14 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;香港保安局局长 10 月 18 日在电视节目受访时表示，私人商场的部分闭路电视将接入警方的「锐眼计划」（SmartView），与商场的商讨已进入最后阶段。局长没有点名是哪些商场。据香港 01 的报道，局长也表示未必需要告知市民镜头已接入，要看个别商场的做法。到香港旅游或出差的人经过商场的公共区域时，可能出现在接入的镜头里，香港以外的地方不受影响。&lt;/p&gt;
-&lt;p&gt;据保安局与警务处 2 月提交立法会的文件，锐眼计划是政府主导、在罪案率高与人流多的公众地方安装闭路电视的计划，目的包括维护国家安全、预防罪案、协助调查与管理人群。第一阶段在 2025 年底完成，约有 5,000 个警方安装的镜头，另外接入约 6,000 个其他政府部门与机构的镜头。文件预计 2028 年全港约有 6 万个、2028 到 2031 年再增加约 6,500 个，并写到计划从 2024 年 4 月启用到 2026 年 1 月协助警方侦破 899 起案件。据集志社的报道，立法会财务委员会 3 月 27 日通过约 40.6 亿港元的拨款。&lt;/p&gt;
-&lt;p&gt;同一份文件列出的 AI 功能包括估算人流与识别车牌，局长 2 月在立法会说明日后会加入人脸识别，让系统自动跨镜头追踪嫌疑人。据 Dim Sum Daily 的报道，局长 10 月 18 日受访时提到系统的部分范围正在试验人脸识别。警务处处长 2 月受访时表示落实前会先行公布。据星岛日报的报道，处长希望最迟 2027 年引入，时间要看法律框架等条件。&lt;/p&gt;
-&lt;p&gt;据 Hong Kong Free Press 的报道，局长表示警方能实时看到画面还是只能事后下载，要看地点的罪案风险。局长 2 月在立法会说明第三方接入属于单向传送，第三方拿不到系统里的数据。他也说明政府系统的影像一般保存 31 日后自动删除，除非由指定的较高职级人员决定另作使用。商场接入的具体安排，Dim Sum Daily 报道局长 10 月表示会配合各商场既有的政策。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;本文的推论是，接入之后警方可以从系统看到或调阅原本由各商场分散保存的画面。据局长 2 月在立法会的描述，加上人脸识别之后，查找嫌疑人会从人工逐段看视频变成系统自动跨镜头追踪。香港个人资料私隐专员公署 2025 年 10 月的闭路电视指引提到，人脸识别与追踪个人通常不在公众的预期之内，使用时必须有充分的理由。&lt;/p&gt;
-&lt;p&gt;2019 年香港政府曾因隐私疑虑停用智慧灯柱的三项功能，技术咨询委员会在 2020 年建议改用对隐私较友好的技术，取代灯柱上的镜头与蓝牙探测器。到 10 月 23 日，警务处说明页列出的锐眼镜头安装位置包括一般灯柱与智慧灯柱。&lt;/p&gt;
-&lt;p&gt;据 Hong Kong Free Press 的报道，局长表示很多商场已有录像的告示，未必需要另外告知镜头接入警方系统。警务处说明页附上的第三方镜头告示，由物业拥有人决定是否张贴。公署的指引建议告示写出操作系统的资料使用者与监察的具体目的。&lt;/p&gt;
-&lt;p&gt;立法会保安事务委员会 2 月的会议纪要写到，委员关注镜头如何保障市民的隐私与数据安全，同一份纪要的结论是委员支持推进第二、第三阶段。Hong Kong Free Press 2025 年 10 月的报道写香港没有规范执法机关如何使用 AI，同一篇提到公署当时婉拒回应法新社是否曾被咨询。到 10 月 23 日，查不到公署对锐眼计划的公开回应，也查不到人脸识别专属的法律框架。&lt;/p&gt;
-&lt;p&gt;警务处的说明页提到计划下安装的镜头只拍公众地方，并委托独立顾问做隐私影响评估，页面没有写明第三方的镜头是否也只拍公众地方、是否纳入这份评估。警务处处长 2 月受访时表示，政府正在研究人脸识别的法律框架。局长 2 月在立法会表示当时讨论的 AI 分析都在案发后、不会有系统地侵犯隐私，并表示已咨询律政司与个人资料私隐专员的意见。&lt;/p&gt;
-&lt;p&gt;被镜头拍到的人（包括旅客）可以用公署指定的表格向保存影像的机构提出查阅资料要求，向警方申请可以到警署递交、邮寄或在线申请。机构要在 40 日内回复，可以要求身份证明与收费，表格的身份栏也接受护照号码。据公署的实务指南，资料是为了预防或侦查罪案而持有、提供查阅又很可能妨碍这个目的时，可以依《个人资料（私隐）条例》第 58 条豁免。同一份指南也提到，资料使用者要有足够的证据证明资料是为这些目的持有，不能只是概括主张。&lt;/p&gt;
-&lt;p&gt;在中国大陆，商贸中心等人员聚集场所涉及公共安全区域的视频系统，适用国务院 2025 年 4 月 1 日施行的《公共安全视频图像信息系统管理条例》。国家机关为执法办案查阅、调取这些视频时，要依照法律、行政法规规定的权限与程序，不得超出履行职责所必需的范围。据局长说明，香港政府系统的影像一般保存 31 日后自动删除，条例规定的则是下限。包括商场在内的系统管理单位要把视频至少保存 30 日，30 日后再删除已实现处理目的的部分。&lt;/p&gt;
-&lt;p&gt;告示方面，香港由物业拥有人决定是否张贴第三方镜头的告示，中国大陆的条例则要求管理单位设置显著的提示标识。条例本身没有规定标识要写哪些内容，2025 年 6 月 1 日施行的《人脸识别技术应用安全管理办法》第五条则要求处理人脸信息前以显著方式告知处理者的名称与联系方式、处理目的、保存期限等事项，法律、行政法规规定可以不告知的除外。办法第十三条与《个人信息保护法》第二十六条也都要求公共场所的人脸识别或图像采集设备为维护公共安全所必需，并设置显著的提示标识。本文 10 月 23 日只读了这三份文件，没有查公安机关使用人脸识别的内部规定。&lt;/p&gt;
-&lt;p&gt;读者可以用几个问题检视这项计划。一是政府想达成的效果，接入商场之后是否公布破案数字的变化。二是立法会委员关注的保障，人脸识别落实前公布的内容是否包括法律依据与保存规则。三是公署指引建议的告示，接入的商场有没有让经过的人知道影像会传给警方。&lt;/p&gt;
-&lt;p&gt;之后可以留意警务处公布人脸识别的时间与法律框架、接入的商场是否公开，以及公署是否对锐眼计划作出回应。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（21 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/english/panels/se/papers/se20260224cb2-231-2-e.pdf&#34;&gt;Development of the Territory-wide Closed-Circuit Television System under the &amp;#34;SmartView&amp;#34; programme&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Security Bureau, Hong Kong Police Force&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.hk/ppp_en/11_useful_info/cctv.html&#34;&gt;SmartView&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Police Force&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/english/panels/se/papers/se20260224cb2-231-3-e.pdf&#34;&gt;Background brief on &amp;#34;SmartView&amp;#34;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Legislative Council Secretariat&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-23&#34;&gt;2026 年 2 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/english/panels/se/minutes/se20260224.pdf&#34;&gt;Minutes of meeting held on 24 February 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Legislative Council Panel on Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-10&#34;&gt;2026 年 3 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/guidance_cctv_surveillance.pdf&#34;&gt;Guidance on the Use of CCTV Surveillance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/news_events/media_statements/press_20251027.html&#34;&gt;Privacy Commissioner’s Office Issues New Guidance and Leaflets on the Use of CCTV System and Video Cameras on Drones and Vehicles&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-27&#34;&gt;2025 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.hk/ppp_en/11_useful_info/privacy.html&#34;&gt;Personal Data Privacy Policy Statement&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Police Force&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/publications/files/Dforme.pdf&#34;&gt;Personal Data (Privacy) Ordinance Data Access Request Form&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/misc/booklets/e-lawbook/html/files/assets/basic-html/page-172.html&#34;&gt;Personal Data (Privacy) Law in Hong Kong – A Practical Guide on Compliance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2019/07/17/hong-kong-govt-deactivates-functions-new-smart-lampposts-amid-privacy-concerns/&#34;&gt;Hong Kong gov&amp;#39;t deactivates functions on new smart lampposts amid privacy concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-17&#34;&gt;2019 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.news.gov.hk/eng/2020/03/20200309/20200309_122355_325.html&#34;&gt;Smart lampposts report released&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;news.gov.hk&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-03-09&#34;&gt;2020 年 3 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/10/20/cctv-cameras-at-hong-kong-malls-to-be-linked-to-police-surveillance-network-says-security-chief/&#34;&gt;CCTV cameras at Hong Kong malls to be linked to police surveillance network, says security chief&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.hk01.com/社會新聞/60400893/銳眼-將駁商場cctv-鄧炳強-商討進入最後階段-無需告知駁入&#34;&gt;「銳眼」將駁商場CCTV　保安局局長：商討進入最後階段　無需告知駁入&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;香港01&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dimsumdaily.hk/chris-tang-sets-plan-to-expand-drone-depots-and-extend-smartview-cctv-across-hong-kong-by-2028/&#34;&gt;Security chief sets plan to expand drone depots and extend SmartView CCTV across Hong Kong by 2028&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Dim Sum Daily&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.stheadline.com/daily-hongkong/3545203/&#34;&gt;警務處處長冀銳眼最遲明年引入人臉識別&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;星島日報&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-16&#34;&gt;2026 年 2 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/02/16/hong-kong-police-eyes-adding-facial-recognition-to-cctv-cameras-by-year-end-as-part-of-hk4-billion-expansion-plan/&#34;&gt;Hong Kong police may add facial recognition to CCTV cameras this year as part of HK$4 billion expansion plan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-16&#34;&gt;2026 年 2 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2025/10/27/new-police-plan-to-expand-ai-enabled-cctv-blanket-to-public-housing-estates-raises-questions-over-privacy/&#34;&gt;New police plan to expand AI-enabled CCTV blanket to public housing estates raises questions over privacy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-27&#34;&gt;2025 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://thecollectivehk.com/%E9%8A%B3%E7%9C%BC%E6%93%B4%E5%BC%B5%E7%AB%8B%E6%B3%95%E6%9C%83%E9%80%9A%E9%81%8E40%E5%84%84%E5%85%83%E6%92%A5%E6%AC%BE%E9%80%BE6%E8%90%AC%E9%8F%A1%E9%A0%AD%E5%85%A9%E5%B9%B4%E5%BE%8C%E4%BD%88/&#34;&gt;「銳眼」擴張｜立法會通過 40.6 億元撥款　逾 6 萬鏡頭兩年後佈全港&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;集誌社&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;2026 年 3 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/content/202502/content_7003024.htm&#34;&gt;公共安全视频图像信息系统管理条例&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国政府网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-10&#34;&gt;2025 年 2 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm&#34;&gt;人脸识别技术应用安全管理办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-21&#34;&gt;2025 年 3 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

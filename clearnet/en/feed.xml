@@ -6,7 +6,68 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 04 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Risk categories and seven strategies in Article 19&#39;s digital payments handbook</title>
+<link>https://anoni.net/news/en/2026/11/hk-payment-handbook/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/hk-payment-handbook</guid>
+<pubDate>Wed, 04 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Article 19 has published a digital payments handbook in Traditional Chinese and English, using transactions between Hong Kong and the UK and US as its examples. It sets out what banks, money transfer services and payment platforms collect, whom they share it with and how long they keep it, offers seven strategies for reducing the risk, and notes that similar lessons apply elsewhere.</description>
+<content:encoded>&lt;p&gt;Based on 5 sources from Article 19, Laws &amp;amp; Regulations Database of Taiwan, Monetary Authority of Singapore&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Article 19, a freedom of expression organisation, has published a handbook on digital payments in Traditional Chinese and English. It sets out what banks, money transfer services and payment platforms collect, whom they share it with and how long they keep it, and offers seven strategies for reducing the risk. The examples centre on transactions between Hong Kong and the UK and US, and Article 19 notes that &#34;similar lessons apply elsewhere&#34;.&lt;/p&gt;
+&lt;p&gt;The executive summary starts from the point that every financial transaction leaves a trail, and that money held in US or UK banks can still carry risk. According to the handbook, since the Law of the People&#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region (the National Security Law) took effect in 2020, the authorities have tracked financial transactions, frozen accounts and cut off funding to put pressure on the people they target and on anyone who sends them money or receives money from them. Article 19 sorts the main risks for transactions in and out of Hong Kong into four kinds: compelled disclosure, asset freezes and account closures, pressure on associates such as relatives and donors, and cross-border reach (this is the handbook&#39;s account, and we did not separately look for a response from the Hong Kong government).&lt;/p&gt;
+&lt;p&gt;Under Know Your Customer (KYC) rules, the checks financial institutions use to verify who a customer is, institutions collect the customer&#39;s name, date of birth, government-issued ID, nationality, address and tax identifiers when an account is opened, and also record the account&#39;s purpose, the customer&#39;s occupation and the source of funds. According to the handbook, financial institutions generally do not receive item-level purchase details, but payment activity can still reveal health-related expenses, charitable and political contributions, travel patterns and purchasing habits. Records are kept for at least five years after the customer relationship ends; Hong Kong&#39;s tax and company regulations require seven, and some providers keep them for ten.&lt;/p&gt;
+&lt;p&gt;In the handbook&#39;s walk-through of a wire transfer, the sending bank, any intermediary banks and the receiving bank can all view the full identities of both parties. Financial institutions file suspicious transaction reports with a financial intelligence unit, which in Hong Kong is the Joint Financial Intelligence Unit, run jointly by the Hong Kong Police Force and the Customs and Excise Department. Article 19 writes that this places financial intelligence analysis &#34;directly inside the territory&#39;s policing apparatus&#34;. Data is also shared with third-party providers such as cybersecurity, marketing and credit reference firms.&lt;/p&gt;
+&lt;p&gt;Joint holders, authorised signatories, family members and frequent counterparties all go into the account profile, and according to the handbook scrutiny &#34;can flow in both directions&#34;, so the people someone transacts with can come under scrutiny too. Significant or unexplained changes in account activity, transactions involving unknown third parties, the use of cryptocurrency, and unusual frequency or amounts can all trigger closer monitoring. Because these systems &#34;evaluate patterns rather than intent&#34;, legitimate activity can be flagged as well, and an institution may file a report without notifying the customer.&lt;/p&gt;
+&lt;p&gt;The seven strategies, in order, are to limit the information shared to the minimum required by law, structure your financial life, know the transaction flow, maintain consistent banking habits, know the company, know your rights, and be prepared. Concrete steps include not opting into voluntary programmes when opening an account and removing unnecessary joint holders and connected accounts. Once something goes wrong with an account, Article 19 recommends documenting everything, not acting alone and seeking legal advice.&lt;/p&gt;
+&lt;p&gt;Article 19 lists five questions to ask when choosing a provider: whether it requires formal legal process before sharing data, whether it challenges overbroad requests, whether it notifies users when their data is requested, where it stores data, and whether it publishes a transparency report. Providers&#39; public documents differ, with some committing to formal legal process and to challenging overbroad requests, and others reserving room to share data without a court order. An appendix rates each provider on the basis of its public documents, with a note that the column on responses to government requests &#34;reflects each company&#39;s public commitment only — compliance cannot be independently verified&#34;.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The handbook&#39;s table of key regulations starts with the Financial Action Task Force (FATF), which sets global standards through its 40 Recommendations, and then lists rules for Hong Kong, the UK and the US, such as Hong Kong&#39;s Anti-Money Laundering and Counter-Terrorist Financing Ordinance and the US Currency and Foreign Transactions Reporting Act (also known as the Bank Secrecy Act). Verifying identity, keeping records and reporting suspicious transactions are what these rules require providers to do. Our inference from the table is that the same obligations remain when someone switches to another provider or app. Article 19 also writes that &#34;no company can guarantee protection against lawful government access&#34;.&lt;/p&gt;
+&lt;p&gt;Under Article 26 of Taiwan&#39;s Act Governing Electronic Payment Institutions (as amended on 19 January 2023), specialised electronic payment institutions must keep each transaction&#39;s stored-value card or account number, item, date, amount and currency, including for incomplete transactions, for at least five years after the transaction is completed or stopped. When the tax authorities or customs request these records together with identity-verification data, the institutions may not refuse. Article 8 of Taiwan&#39;s Money Laundering Control Act (as amended on 31 July 2024) requires financial institutions covered by the Act to keep customer identification data for at least five years after the business relationship ends. In Singapore, Notice PSN01 of the Monetary Authority of Singapore (MAS), last revised on 30 June 2025, prohibits licensed payment service providers from opening or maintaining anonymous accounts or accounts in fictitious names (paragraph 7.1) and requires them to keep customer due diligence information and transaction records for at least five years (paragraph 16.3).&lt;/p&gt;
+&lt;p&gt;Among the transfer methods covered in the handbook, cryptocurrency exchanges still run KYC when converting to government-issued currency, and Article 19 warns that &#34;pseudonymous payments should not be treated as anonymous&#34;. Blockchain analytics can link wallet addresses to real-world identities, and once investigators trace funds to an exchange they can use subpoenas or court orders to obtain full account records, IP addresses and transaction histories. Cryptocurrency payments are generally difficult to reverse and lack dispute and government-insurance protections, and users can lose money to scams, compromised private keys or rapid price swings. By the handbook&#39;s assessment, avoiding third parties entirely would mean relying on cash alone, which is impractical for most people, while providers that collect less data may also have weaker security.&lt;/p&gt;
+&lt;p&gt;The monitoring triggers in the handbook include the use of cryptocurrency and significant changes in account activity, so our inference is that a sudden switch to cryptocurrency would meet both. In its advice on keeping separate devices, Article 19 notes that using multiple devices can also be flagged by financial institutions as unusual behaviour. Repeated transfers from splitting a payment can make the relationship between the two parties more visible, and unless there is a legitimate reason to pay separately, Article 19 suggests consolidating into a single transaction to reduce the number of records.&lt;/p&gt;
+&lt;p&gt;According to the handbook, Hong Kong&#39;s Personal Data (Privacy) Ordinance applies to any organisation, whether in Hong Kong or not, that controls the collection, holding, processing or use of personal data in Hong Kong. Legal remedies usually become available only after harm has occurred. Among the points Article 19 describes as hard to verify from outside are the separation of Hong Kong databases from the rest of the company at some multinationals, and how data exchange between financial intelligence units works in practice.&lt;/p&gt;
+&lt;p&gt;The handbook is released under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0) licence, so it can be translated or adapted for non-commercial use with attribution, and derivative works must carry the same licence. As of 2 November we could not find a Simplified Chinese edition. The handbook is written for readers who already understand the fundamentals of digital security and risk management.&lt;/p&gt;
+&lt;p&gt;For people who need to send or receive money across borders and face higher risk, Article 19 recommends prioritising providers with no Hong Kong-registered entity. Its reasoning is that Hong Kong authorities can serve demands directly on a registered entity &#34;without going through international legal channels that may provide more robust privacy and notice protections&#34;. Article 19 also suggests asking the sending institution which intermediary banks the transfer will pass through, and preparing alternative channels in case an account is frozen. For anyone who believes they are being targeted, Article 19 recommends seeking independent legal advice as early as possible (we have not checked each jurisdiction&#39;s rules item by item, and this summary is not legal advice).&lt;/p&gt;
+&lt;p&gt;According to the handbook, platform &#34;defaults are rarely set in your favour&#34;, and privacy settings are often opt-out rather than opt-in. People concerned that their payment records reveal their relationships or views can open the payment apps they use most and, following the handbook&#39;s advice, turn off marketing and personalisation options and disable non-essential camera and location permissions. Our inference from the handbook&#39;s section on regulations is that changing marketing, personalisation and permission settings reduces what is made public and shared, while the identity and transaction records that providers must keep by law remain. Account security is a separate matter, and the step listed in the handbook is enabling multi-factor authentication, with authenticator apps generally more secure than SMS codes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (5)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_chi_FINALpdf.pdf&#34;&gt;保障支付安全，延續行動：香港人使用數碼支付平台手冊&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_eng_FINAL.pdf&#34;&gt;Safeguarding payments, sustaining movements: A handbook for Hong Kongers to navigate digital payment platforms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380237&#34;&gt;Act Governing Electronic Payment Institutions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380131&#34;&gt;Money Laundering Control Act&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mas.gov.sg/regulation/notices/psn01-aml-cft-notice---specified-payment-services&#34;&gt;MAS Notice PSN01: Prevention of Money Laundering and Countering the Financing of Terrorism – Holders of Payment Services Licence (Specified Payment Services)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Monetary Authority of Singapore&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>A backdoored extension and malicious instruction files in AI coding tools</title>
 <link>https://anoni.net/news/en/2026/11/ai-devtools-supply-chain/</link>
@@ -3017,190 +3078,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;内閣府ほか&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-25&#34;&gt;25 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>CCTV at Hong Kong malls and the police SmartView programme</title>
-<link>https://anoni.net/news/en/2026/10/hong-kong-mall-cctv-police/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/hong-kong-mall-cctv-police</guid>
-<pubDate>Mon, 26 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Hong Kong&#39;s Secretary for Security said in an interview on 18 October that some CCTV cameras at private shopping malls will be connected to the police SmartView programme, with talks in their final stage. He also said the public may not need to be told separately, and in February said that third-party connections are one-way and that footage on the government system is generally kept for 31 days. People travelling to Hong Kong for leisure or business may be caught on camera in public areas of malls, and places outside Hong Kong are not affected. According to Hong Kong media reports, facial recognition is being piloted in parts of the system.</description>
-<content:encoded>&lt;p&gt;Based on 23 sources, including Security Bureau, Hong Kong Police Force, Hong Kong Police Force, Legislative Council Secretariat&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Hong Kong&#39;s Secretary for Security said in a television interview on 18 October that some CCTV cameras at private shopping malls will be connected to the Hong Kong Police Force&#39;s SmartView programme, and that talks with the malls had reached their final stage. He did not name the malls. According to HK01, he also said the public may not need to be told that cameras have been connected, depending on each mall&#39;s practice. People travelling to Hong Kong for leisure or business may appear on connected cameras when passing through public areas of malls, and places outside Hong Kong are not affected.&lt;/p&gt;
-&lt;p&gt;According to a paper the Security Bureau and the police submitted to the Legislative Council in February, SmartView is a government-led programme to install CCTV in public places with high crime rates and heavy pedestrian flow, with aims including safeguarding national security, preventing crime, assisting investigations and managing crowds. The first phase was completed at the end of 2025, with about 5,000 cameras installed by the police and about 6,000 cameras of other government departments and organisations connected. According to the paper, about 60,000 cameras are planned across the city by 2028 and about 6,500 more between 2028 and 2031, and from its launch in April 2024 to January 2026 the programme helped the police detect 899 cases. According to The Collective HK, the Legislative Council&#39;s Finance Committee approved funding of about HK$4.06 billion on 27 March.&lt;/p&gt;
-&lt;p&gt;The same paper lists AI functions including crowd size estimation and number plate recognition, and the Secretary told the Legislative Council in February that facial recognition would be added so the system could track suspects across cameras automatically. According to Dim Sum Daily, he said in the 18 October interview that facial recognition is being piloted in parts of the system. The Commissioner of Police said in an interview in February that the public would be informed before it is deployed. According to Sing Tao Daily, the Commissioner hopes to introduce it by 2027 at the latest, with the timing depending on conditions including a legal framework.&lt;/p&gt;
-&lt;p&gt;According to Hong Kong Free Press, the Secretary said that whether police can see live footage or only download it afterwards would depend on the location&#39;s crime risk. He told the Legislative Council in February that third-party connections are one-way, so third parties cannot obtain data from the system. He also said footage on the government system is generally kept for 31 days and then deleted automatically, unless a designated officer of a higher rank decides on other use. On the arrangements for malls, Dim Sum Daily reported the Secretary as saying in October that they would follow each mall&#39;s existing policies.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Our inference is that once cameras are connected, police could view or retrieve through the system footage that each mall previously stored on its own. Based on the Secretary&#39;s description to the Legislative Council in February, adding facial recognition would turn the search for a suspect from reviewing footage clip by clip by hand into automatic tracking across cameras. Under the October 2025 CCTV guidance from Hong Kong&#39;s Office of the Privacy Commissioner for Personal Data (PCPD), facial identification and tracking of individuals are not normally expected by the public, so their use must be supported by strong justification.&lt;/p&gt;
-&lt;p&gt;In 2019 the Hong Kong government disabled three functions on smart lampposts over privacy concerns, and in 2020 a technical advisory committee recommended more privacy-friendly technologies in place of the lampposts&#39; cameras and Bluetooth detectors. As of 23 October, the places listed on the police SmartView page for installing cameras include ordinary lampposts and smart lampposts.&lt;/p&gt;
-&lt;p&gt;According to Hong Kong Free Press, the Secretary said that many malls already display signs warning of recording, so the public may not need to be told separately that cameras are connected to the police system. The notice for third-party cameras shown on the police SmartView page is posted at the discretion of the property owner. Under the PCPD&#39;s guidance, notices should name the data user operating the system and the specific purpose of the surveillance.&lt;/p&gt;
-&lt;p&gt;According to the minutes of the Legislative Council Panel on Security&#39;s February meeting, members raised concerns about how the cameras would safeguard the public&#39;s privacy and personal data security, and in the same minutes members supported proceeding with the second and third phases. According to a Hong Kong Free Press report from October 2025, Hong Kong had no rules on how law enforcement could use AI, and the PCPD had declined to tell AFP whether it had been consulted. As of 23 October, we could not find any public response from the PCPD to SmartView, nor a legal framework specific to facial recognition.&lt;/p&gt;
-&lt;p&gt;According to the police SmartView page, cameras installed under the programme capture only public places, and an independent consultancy was commissioned to conduct a privacy impact assessment. There is no mention on the page of whether third-party cameras also capture only public places or are covered by that assessment. The Commissioner of Police said in a February interview that the government is working on a legal framework for facial recognition. The Secretary told the Legislative Council in February that the AI analysis then under discussion all took place after a crime and would not systematically intrude on privacy, and that the Department of Justice and the Privacy Commissioner for Personal Data had been consulted.&lt;/p&gt;
-&lt;p&gt;People caught on camera, including visitors, can use the form specified by the PCPD to make a data access request to the organisation holding the footage, and requests to the police can be made at a police station, by post or online. The organisation must respond within 40 days and may ask for proof of identity and charge a fee, and the form&#39;s identity field also accepts a passport number. According to the PCPD&#39;s practical guide, data held for preventing or detecting crime can be exempted under section 58 of the Personal Data (Privacy) Ordinance where giving access would be likely to prejudice that purpose. According to the same guide, a data user must have sufficient evidence that the data is held for these purposes, and a mere general assertion is not enough.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, compared three other places in Asia on the same points as Hong Kong, using laws we read on 23 October. On who can draw on cameras that police do not own, Taiwan&#39;s Police Power Exercise Act lets police collect data with existing recording equipment in public places or places open to the public, which we read as including malls, where crime is frequent or reasonably expected, though we did not check whether privately owned cameras are covered. In mainland China, shopping centres are among the places covered by the State Council&#39;s regulations on public security video systems, in force since 1 April 2025, and state organs retrieving that footage for law enforcement must follow the authority and procedures set by laws and administrative regulations.&lt;/p&gt;
-&lt;p&gt;In South Korea, those with proper authority, such as malls, may install cameras in public places for facility safety and management under the Personal Information Protection Act. Under Article 18(2) of the same act, they may provide footage to others with the person&#39;s separate consent or where another law makes special provision, unless this would unfairly infringe the interests of the person or a third party. The provision on disclosure for criminal investigations (Article 18(2) item 7) applies only to public institutions, and we did not check which provisions of laws such as the Criminal Procedure Act apply.&lt;/p&gt;
-&lt;p&gt;On notices, South Korea requires signs giving the purpose and location, the area and hours filmed and a contact for the person in charge, while Taiwan&#39;s Article 10 contains no provision on notices. Mainland China&#39;s regulations require a conspicuous notice without setting its content, and its measures on facial recognition, in force since 1 June 2025, require operators to tell people beforehand, in a conspicuous way, matters such as the operator&#39;s name and contact details, the purpose and the retention period, unless laws or administrative regulations allow otherwise. For mainland China we did not check internal rules on police use of facial recognition.&lt;/p&gt;
-&lt;p&gt;On retention, according to the Secretary, footage on Hong Kong&#39;s government system is generally kept for 31 days and then deleted automatically. Mainland China&#39;s Article 17 sets a minimum for the units managing public security video systems, malls included, which must keep footage for at least 30 days before deleting what has served its purpose. Taiwan&#39;s Article 10 sets a maximum for data collected by police, which must be destroyed within one year unless needed to investigate a suspected crime or other violation. We did not check South Korea&#39;s retention rules.&lt;/p&gt;
-&lt;p&gt;Readers can weigh the programme with a few questions. First, on the effect the government wants, whether figures on cases solved will be published after malls are connected. Second, on the safeguards Legislative Council members raised, whether what is announced before facial recognition is deployed includes the legal basis and retention rules. Third, on the notices called for in the PCPD&#39;s guidance, whether connected malls let passers-by know their footage goes to the police.&lt;/p&gt;
-&lt;p&gt;Next, it is worth watching when the police announce the timing and legal framework for facial recognition, whether the connected malls are made public, and whether the PCPD responds to SmartView.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (23)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/english/panels/se/papers/se20260224cb2-231-2-e.pdf&#34;&gt;Development of the Territory-wide Closed-Circuit Television System under the &amp;#34;SmartView&amp;#34; programme&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Security Bureau, Hong Kong Police Force&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.hk/ppp_en/11_useful_info/cctv.html&#34;&gt;SmartView&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Police Force&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/english/panels/se/papers/se20260224cb2-231-3-e.pdf&#34;&gt;Background brief on &amp;#34;SmartView&amp;#34;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Legislative Council Secretariat&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-23&#34;&gt;23 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/english/panels/se/minutes/se20260224.pdf&#34;&gt;Minutes of meeting held on 24 February 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Legislative Council Panel on Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-10&#34;&gt;10 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/guidance_cctv_surveillance.pdf&#34;&gt;Guidance on the Use of CCTV Surveillance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/news_events/media_statements/press_20251027.html&#34;&gt;Privacy Commissioner’s Office Issues New Guidance and Leaflets on the Use of CCTV System and Video Cameras on Drones and Vehicles&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-27&#34;&gt;27 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.hk/ppp_en/11_useful_info/privacy.html&#34;&gt;Personal Data Privacy Policy Statement&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Police Force&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/publications/files/Dforme.pdf&#34;&gt;Personal Data (Privacy) Ordinance Data Access Request Form&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/misc/booklets/e-lawbook/html/files/assets/basic-html/page-172.html&#34;&gt;Personal Data (Privacy) Law in Hong Kong – A Practical Guide on Compliance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2019/07/17/hong-kong-govt-deactivates-functions-new-smart-lampposts-amid-privacy-concerns/&#34;&gt;Hong Kong gov&amp;#39;t deactivates functions on new smart lampposts amid privacy concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-17&#34;&gt;17 July 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.news.gov.hk/eng/2020/03/20200309/20200309_122355_325.html&#34;&gt;Smart lampposts report released&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;news.gov.hk&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-03-09&#34;&gt;9 March 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/10/20/cctv-cameras-at-hong-kong-malls-to-be-linked-to-police-surveillance-network-says-security-chief/&#34;&gt;CCTV cameras at Hong Kong malls to be linked to police surveillance network, says security chief&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.hk01.com/社會新聞/60400893/銳眼-將駁商場cctv-鄧炳強-商討進入最後階段-無需告知駁入&#34;&gt;「銳眼」將駁商場CCTV　保安局局長：商討進入最後階段　無需告知駁入&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;香港01&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;18 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dimsumdaily.hk/chris-tang-sets-plan-to-expand-drone-depots-and-extend-smartview-cctv-across-hong-kong-by-2028/&#34;&gt;Security chief sets plan to expand drone depots and extend SmartView CCTV across Hong Kong by 2028&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Dim Sum Daily&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;18 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.stheadline.com/daily-hongkong/3545203/&#34;&gt;警務處處長冀銳眼最遲明年引入人臉識別&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;星島日報&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-16&#34;&gt;16 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/02/16/hong-kong-police-eyes-adding-facial-recognition-to-cctv-cameras-by-year-end-as-part-of-hk4-billion-expansion-plan/&#34;&gt;Hong Kong police may add facial recognition to CCTV cameras this year as part of HK$4 billion expansion plan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-16&#34;&gt;16 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2025/10/27/new-police-plan-to-expand-ai-enabled-cctv-blanket-to-public-housing-estates-raises-questions-over-privacy/&#34;&gt;New police plan to expand AI-enabled CCTV blanket to public housing estates raises questions over privacy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-27&#34;&gt;27 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://thecollectivehk.com/%E9%8A%B3%E7%9C%BC%E6%93%B4%E5%BC%B5%E7%AB%8B%E6%B3%95%E6%9C%83%E9%80%9A%E9%81%8E40%E5%84%84%E5%85%83%E6%92%A5%E6%AC%BE%E9%80%BE6%E8%90%AC%E9%8F%A1%E9%A0%AD%E5%85%A9%E5%B9%B4%E5%BE%8C%E4%BD%88/&#34;&gt;「銳眼」擴張｜立法會通過 40.6 億元撥款　逾 6 萬鏡頭兩年後佈全港&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;集誌社&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;27 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080145&#34;&gt;Police Power Exercise Act&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.go.kr/법령/개인정보보호법/제25조&#34;&gt;개인정보 보호법 제25조(고정형 영상정보처리기기의 설치ㆍ운영 제한)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;국가법령정보센터&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.go.kr/법령/개인정보보호법/제18조&#34;&gt;개인정보 보호법 제18조(개인정보의 목적 외 이용ㆍ제공 제한)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;국가법령정보센터&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/content/202502/content_7003024.htm&#34;&gt;公共安全视频图像信息系统管理条例&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Chinese Government Website&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-10&#34;&gt;10 February 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm&#34;&gt;人脸识别技术应用安全管理办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-21&#34;&gt;21 March 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

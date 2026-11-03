@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 03 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 04 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>美國網路業者協助的境外通訊蒐集</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-04/2026</guid>
+<pubDate>Wed, 04 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你用的美國郵件與雲端服務，業者可能被美國政府要求協助蒐集境外非美國人的通訊。這一天，美國政府正式公布成立負責通訊情報的國家安全局。</description>
+<content:encoded>&lt;p&gt;提供你郵件、雲端與通訊服務的美國業者，可能收過司法部長與國家情報總監依《外國情報監視法》（FISA）第 702 條發出的書面指令，要求協助蒐集被合理相信位於美國境外的非美國人的通訊。依 NSA 官方頁，美國總統在 1952 年 10 月 24 日以備忘錄設立國家安全局（NSA，本文引用的來源沒有寫到它在 702 條蒐集裡的角色）負責美國政府的通訊情報，正式公布則延到 11 月 4 日選舉日（依美國科學家聯盟 FAS 的 Secrecy News 引述 NSA 的說法）。美國法典的註記載明 702 條在 2026 年 6 月 12 日廢止（11 月 2 日查證時未見延長法案），但保留過渡程序的例外，倡議組織 Brennan Center 在 6 月的文件中認為蒐集會延續到 2027 年 3 月。Apple 在透明度報告裡列出 FISA 法院命令的數量時沒有分出哪些與 702 條有關，為了分開列出內容與非內容資料（用戶資料、交易與連線紀錄），依法須延後 6 個月並以 500 為級距列出。本文據此推論你無法從報告得知自己的帳號是否在內，來源也沒有寫使用者這一端有什麼做法能避免被蒐集。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>瀏覽器送出的「不要出售或分享」訊號</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-03/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你的手機連上 Wi-Fi 時用的加密，有弱點時要靠系統更新修補。這一天，研究者公開 WPA2 Wi-Fi 加密的弱點 KRACK。</description>
 <content:encoded>&lt;p&gt;你的手機連上有密碼的 Wi-Fi 時，手機與無線基地台（路由器）之間傳的資料會加密，常見的加密標準是 WPA2 與較新的 WPA3。2017 年 10 月 16 日，研究者公開 WPA2 的弱點 KRACK，在 Wi-Fi 訊號範圍內的攻擊者可以讀取原本以為已經加密的資料。研究者的網站寫明弱點出在 Wi-Fi 標準本身，支援 Wi-Fi 的裝置很可能都受影響，改 Wi-Fi 密碼也無法防範。Android 2017 年 11 月的安全性更新與 Apple 同年 10 月底的 iOS 11.1 都修補了這個弱點，研究者的網站也寫到家用路由器多半不受影響，仍建議更新路由器韌體。仍在用多年前舊手機的讀者，可以在設定查看 Android 的安全性修補程式等級是否在 2017 年 11 月 6 日以後，iPhone 則看系統是否在 iOS 11.1 以後。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>個資外洩的通報窗口</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-15/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-15/2026</guid>
-<pubDate>Thu, 15 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的個資外洩時，業者要向個人資料保護委員會通報的修正條文還沒有施行。這一天，新加坡國會通過規定設立個資保護委員會的《個人資料保護法》。</description>
-<content:encoded>&lt;p&gt;你的個資如果被業者外洩，台灣 2025 年 11 月公布的《個人資料保護法》修正規定符合一定通報範圍的外洩要通報，日後由個人資料保護委員會（個資會）統一受理。個資會籌備處 2025 年 10 月的公告寫明個資會要等組織法通過才能成立，全國法規資料庫到 2026 年 10 月 10 日查不到這部組織法，也仍標示修正條文的生效日期未定。新加坡國會在 2012 年 10 月 15 日三讀通過《個人資料保護法》，新加坡的個人資料保護委員會在 2013 年 1 月 2 日成立，讓民眾登記拒收行銷電話與簡訊的拒絕來電名單條文在 2014 年 1 月 2 日生效。台灣的籌備處設有個資法諮詢專線，公告沒有寫明它能不能受理外洩申訴。要求查處時，可以向業者的目的事業主管機關或地方政府反映，現行條文第 22 條規定這些機關可以檢查業者。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

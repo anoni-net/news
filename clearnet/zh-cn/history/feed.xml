@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 03 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 04 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>美国互联网企业协助的境外通信收集</title>
+<link>https://anoni.net/news/zh-cn/history/11-04/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-04/2026</guid>
+<pubDate>Wed, 04 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你用的美国邮件与云服务，企业可能被美国政府要求协助收集境外非美国人的通信。这一天，美国政府正式公布成立负责通信情报的国家安全局。</description>
+<content:encoded>&lt;p&gt;为你提供邮件、云和通信服务的美国企业，可能收过司法部长与国家情报总监依《外国情报监视法》（FISA）第 702 条发出的书面指令，要求协助收集被合理相信位于美国境外的非美国人的通信。依 NSA 官方页面，美国总统在 1952 年 10 月 24 日以备忘录设立负责通信情报的国家安全局（NSA，来源没有写到它在 702 条收集中的角色），正式公布则延到 11 月 4 日选举日（依 FAS 引述 NSA 的说法）。美国法典的注记载明 702 条在 2026 年 6 月 12 日废止（11 月 2 日查证时未见延长法案），但保留过渡程序的例外，倡议组织 Brennan Center 在 6 月的文件中认为收集会延续到 2027 年 3 月。Apple 的透明度报告没有分出哪些 FISA 法院命令与 702 条有关，内容与非内容数据（用户数据、交易与连接记录）依法须延后 6 个月并以 500 为级距列出（本文据此推论你无法从报告得知自己的账号是否在内，来源也没有写用户这一端有什么做法能避免被收集）。中国境内与海外的非美国人读者同样可能成为 702 条所说的目标，中国《国家情报法》第七条另写明的「任何组织和公民都应当依法支持、协助和配合国家情报工作」是组织与公民的协助义务（11 月 2 日查证共产党员网转载的条文，没有限定境外通信，也没有提到电子通信业者，与 702 条管的事不同）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>浏览器发送的「不要出售或分享」信号</title>
 <link>https://anoni.net/news/zh-cn/history/11-03/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你的手机连上 Wi-Fi 时用的加密，有弱点时要靠系统更新修补。这一天，研究者公开 WPA2 Wi-Fi 加密的弱点 KRACK。</description>
 <content:encoded>&lt;p&gt;你的手机连上有密码的 Wi-Fi 时，手机与路由器（无线接入点）之间传的数据会加密，常见的加密标准是 WPA2 与较新的 WPA3。2017 年 10 月 16 日，研究者公开 WPA2 的弱点 KRACK，在 Wi-Fi 信号范围内的攻击者可以读取原本以为已经加密的数据。研究者的网站写明弱点出在 Wi-Fi 标准本身，支持 Wi-Fi 的设备很可能都受影响，改 Wi-Fi 密码也无法防范。Android 2017 年 11 月的安全更新与 Apple 同年 10 月底的 iOS 11.1 都修补了这个弱点，研究者的网站也写到家用路由器多半不受影响，仍建议更新路由器固件。仍在用多年前旧手机的读者，可以在设置查看 Android 的安全补丁级别是否在 2017 年 11 月 6 日以后，iPhone 则看系统是否在 iOS 11.1 以后。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>个人信息泄露的通报窗口</title>
-<link>https://anoni.net/news/zh-cn/history/10-15/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-15/2026</guid>
-<pubDate>Thu, 15 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你的个人信息如果被台湾的业者泄露，业者要向个人资料保护委员会通报的修正条文还没有施行。这一天，新加坡国会通过规定设立个资保护委员会的《个人资料保护法》。</description>
-<content:encoded>&lt;p&gt;你的个人信息如果被台湾的业者泄露，台湾 2025 年 11 月公布的《个人资料保护法》修正规定符合一定通报范围的泄露要通报，日后由个人资料保护委员会（个资会）统一受理。个资会筹备处 2025 年 10 月的公告写明个资会要等组织法通过才能成立，全国法规资料库到 2026 年 10 月 10 日查不到这部组织法，也仍标示修正条文的生效日期未定。新加坡国会在 2012 年 10 月 15 日三读通过《个人资料保护法》，新加坡的个人资料保护委员会在 2013 年 1 月 2 日成立，让民众登记拒收营销电话与短信的拒绝来电名单条文在 2014 年 1 月 2 日生效。台湾的筹备处设有个资法咨询专线，公告没有写明它能不能受理泄露申诉，要求查处时可以向业者的目的事业主管机关或地方政府反映（现行条文第 22 条规定这些机关可以检查业者）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
