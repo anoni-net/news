@@ -16,10 +16,10 @@
 
 ## Google Play
 
-查證日期 2026-10-18，寫 anoni-net/news 的 Signal 備份與 Android 密碼管理器搬移那篇時補上。
+查證日期 2026-10-18，寫 anoni-net/news 的 Signal 備份與 Android 密碼管理器搬移那篇時補上。GreatFire 的量測在 2026-11-02 寫 11/05 導讀歷史時重新查證。
 
-- 事實：GreatFire 到 2026 年 10 月 11 日的最後一次測試，`https://play.google.com` 在中國大陸 100% 被封鎖，從 2012 年 3 月 10 日起就有干擾紀錄。這是第三方的量測，量的是網址能不能連線
-    - 照錄：「As of the last test on 2026-10-11, https://play.google.com is 100% blocked in mainland China, based on GreatFire's live Great Firewall measurements.」
+- 事實：GreatFire 到 2026 年 11 月 1 日的最後一次測試，`https://play.google.com` 在中國大陸 100% 被封鎖，從 2012 年 3 月 10 日起就有干擾紀錄。這是第三方的量測，量的是網址能不能連線
+    - 照錄：「As of the last test on 2026-11-01, https://play.google.com is 100% blocked in mainland China, based on GreatFire's live Great Firewall measurements.」
     - 照錄：「GreatFire has recorded interference with https://play.google.com from mainland China since 2012-03-10.」
     - 來源：GreatFire，<https://en.greatfire.org/https/play.google.com>
 - 事實：Android 的密碼管理器搬移（Credential Manager 的 Credentials Transfer API），開發者文件寫的呼叫端檢查以 Google Play 服務的系統元件為準。文件沒有寫沒有 Google Play 服務的手機能不能使用
