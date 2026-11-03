@@ -260,6 +260,10 @@ from = "https://blogs.windows.com/wp-content/uploads/2022/09/cropped-Windows11Ic
 icon = "boho.or.kr-35ff434f.png"
 from = "https://www.boho.or.kr/images/homepage/www/kr/favicon.ico"
 
+[hosts."brandefense.io"]
+icon = "brandefense.io-16345e4e.png"
+from = "https://brandefense.io/wp-content/themes/brandefense/customer-files/favicon/apple-touch-icon.png"
+
 [hosts."brave.app"]
 icon = "brave.app-793e8faa.png"
 from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
@@ -2295,6 +2299,10 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 [hosts."themarkup.org"]
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
+
+[hosts."thenewstack.io"]
+icon = "thenewstack.io-2105cb5a.png"
+from = "https://cdn.thenewstack.io/media/2026/03/b2fc1b22-cropped-89b6d319-download-192x192.png"
 
 [hosts."thenextweb.com"]
 icon = "thenextweb.com-788e75eb.png"
