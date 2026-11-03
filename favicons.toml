@@ -403,6 +403,10 @@ none = "官網暫停中的臨時首頁，沒有圖示"
 icon = "cloudflare.com-71ae303d.png"
 from = "https://www.cloudflare.com/favicon.ico"
 
+[hosts."clubic.com"]
+icon = "clubic.com-bb88776e.png"
+from = "https://clubic.com/apple-touch-icon.png"
+
 [hosts."cna.com.tw"]
 icon = "cna.com.tw-86ae6cef.png"
 from = "https://imgcdn.cna.com.tw/www/website/img/fav-icon.png"
@@ -2446,6 +2450,10 @@ same_as = "moda.gov.tw"
 [hosts."x.com"]
 icon = "x.com-17d5ac31.png"
 from = "https://x.com/apple-touch-icon.png"
+
+[hosts."xatakandroid.com"]
+icon = "xatakandroid.com-2c05c06a.png"
+from = "https://img.weblogssl.com/css/xatakandroid/p/common/apple-touch-icon.png"
 
 [hosts."xinhuanet.com"]
 icon = "xinhuanet.com-db68823e.png"
