@@ -260,6 +260,10 @@ from = "https://blogs.windows.com/wp-content/uploads/2022/09/cropped-Windows11Ic
 icon = "boho.or.kr-35ff434f.png"
 from = "https://www.boho.or.kr/images/homepage/www/kr/favicon.ico"
 
+[hosts."brandefense.io"]
+icon = "brandefense.io-16345e4e.png"
+from = "https://brandefense.io/wp-content/themes/brandefense/customer-files/favicon/apple-touch-icon.png"
+
 [hosts."brave.app"]
 icon = "brave.app-793e8faa.png"
 from = "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png"
@@ -853,6 +857,10 @@ from = "手動提供的檔案 flamman.png"
 [hosts."flocksafety.com"]
 icon = "flocksafety.com-b8c9ee48.png"
 from = "https://cdn.prod.website-files.com/6821cc9ecc966b7f252b372e/69de39fd8544c7e90b3a7f09_256.png"
+
+[hosts."fma.ph"]
+icon = "fma.ph-70be4e19.png"
+from = "https://fma.ph/wp-content/uploads/2022/01/Regular-logo-vertical-full-color-230x230.png"
 
 [hosts."forbiddenstories.org"]
 icon = "forbiddenstories.org-ca32df32.png"
@@ -1822,6 +1830,10 @@ from = "https://www.pdpc.gov.sg/favicon.ico"
 icon = "pdpc.gov.tw-5b8e23ff.png"
 from = "https://ws.pdpc.gov.tw/FS01/FilePath/3/sites/pagebackimage/favicon.ico"
 
+[hosts."philstar.com"]
+icon = "philstar.com-fb5cd868.png"
+from = "https://media.philstar.com/images/icons/apple-touch-icon-180x180.png"
+
 [hosts."phorion.io"]
 icon = "phorion.io-9fa09a7a.png"
 from = "https://phorion.io/images/apple-touch-icon.png"
@@ -2089,6 +2101,10 @@ from = "https://simplelogin.io/favicon.ico"
 icon = "smallpdf.com-b8979d33.png"
 from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
 
+[hosts."smartlab.gov.hk"]
+icon = "smartlab.gov.hk-625800f9.png"
+from = "https://www.smartlab.gov.hk/favicon.ico"
+
 [hosts."sme.gov.tw"]
 icon = "sme.gov.tw-bcedc2a7.png"
 from = "https://www.sme.gov.tw/mpstyle/2025wwwch/images/favicon.png"
@@ -2295,6 +2311,10 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 [hosts."themarkup.org"]
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
+
+[hosts."thenewstack.io"]
+icon = "thenewstack.io-2105cb5a.png"
+from = "https://cdn.thenewstack.io/media/2026/03/b2fc1b22-cropped-89b6d319-download-192x192.png"
 
 [hosts."thenextweb.com"]
 icon = "thenextweb.com-788e75eb.png"

@@ -274,6 +274,9 @@
 /2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
+/2026/11/eff-security-worse/
+	#perspective
+	#sources
 /2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -281,6 +284,9 @@
 	#perspective
 	#sources
 /2026/11/hk-payment-handbook/
+	#perspective
+	#sources
+/2026/11/philippines-ai-risk-map/
 	#perspective
 	#sources
 /2026/11/police-pixel-crime-claims/
@@ -601,6 +607,9 @@
 /en/2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
+/en/2026/11/eff-security-worse/
+	#perspective
+	#sources
 /en/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -608,6 +617,9 @@
 	#perspective
 	#sources
 /en/2026/11/hk-payment-handbook/
+	#perspective
+	#sources
+/en/2026/11/philippines-ai-risk-map/
 	#perspective
 	#sources
 /en/2026/11/police-pixel-crime-claims/
@@ -1123,6 +1135,9 @@
 /zh-cn/2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
+/zh-cn/2026/11/eff-security-worse/
+	#perspective
+	#sources
 /zh-cn/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -1130,6 +1145,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/hk-payment-handbook/
+	#perspective
+	#sources
+/zh-cn/2026/11/philippines-ai-risk-map/
 	#perspective
 	#sources
 /zh-cn/2026/11/police-pixel-crime-claims/
