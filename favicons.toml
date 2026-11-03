@@ -2185,6 +2185,10 @@ from = "https://cdn11.bigcommerce.com/s-pywjnxrcr2/product_images/system76_logo-
 icon = "t-invariant.org-1bcb35c6.png"
 from = "https://t-invariant.org/wp-content/uploads/2025/05/cropped-t-invariant-logo-triangle-only-192x192.png"
 
+[hosts."tails.net"]
+icon = "tails.net-dd3e352f.png"
+from = "https://tails.net/favicon.ico"
+
 [hosts."taipeitimes.com"]
 icon = "taipeitimes.com-81cf3dff.png"
 from = "https://www.taipeitimes.com/assets/images/TT_web_icon-mobile.jpg"
