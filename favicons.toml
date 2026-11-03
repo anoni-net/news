@@ -2447,6 +2447,14 @@ from = "https://webkit.org/apple-touch-icon.png"
 icon = "weblate.cryptpad.org-676939f0.png"
 from = "https://weblate.cryptpad.org/favicon.ico"
 
+[hosts."wechat.com"]
+icon = "wechat.com-0bcdde9f.png"
+from = "https://newres.wechat.com/t/fed_upload/08b92997-2415-408f-b706-442ed4ede518/OTE0YTAw.png"
+
+[hosts."weixin.qq.com"]
+icon = "weixin.qq.com-3e88c836.png"
+from = "https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico"
+
 [hosts."welivesecurity.com"]
 icon = "welivesecurity.com-3a9e33db.png"
 from = "https://www.welivesecurity.com/favicon.ico"
