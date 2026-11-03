@@ -262,7 +262,16 @@
 	#sources
 	#thunderbird-ios
 /2026/11/
+/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
 /2026/11/bitchat-india-block/
+	#perspective
+	#sources
+/2026/11/character-ai-chats-sale/
+	#perspective
+	#sources
+/2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
 /2026/11/emudhra-key-compromise-followup/
@@ -271,10 +280,19 @@
 /2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/2026/11/hk-payment-handbook/
+	#perspective
+	#sources
+/2026/11/police-pixel-crime-claims/
+	#perspective
+	#sources
 /2026/11/qwen-political-censorship/
 	#perspective
 	#sources
 /2026/11/siri-ai-exclude-apps/
+	#perspective
+	#sources
+/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
 /2026/11/weekly-brief-2026-w44/
@@ -571,7 +589,16 @@
 	#sources
 	#thunderbird-ios
 /en/2026/11/
+/en/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
 /en/2026/11/bitchat-india-block/
+	#perspective
+	#sources
+/en/2026/11/character-ai-chats-sale/
+	#perspective
+	#sources
+/en/2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
 /en/2026/11/emudhra-key-compromise-followup/
@@ -580,10 +607,19 @@
 /en/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/en/2026/11/hk-payment-handbook/
+	#perspective
+	#sources
+/en/2026/11/police-pixel-crime-claims/
+	#perspective
+	#sources
 /en/2026/11/qwen-political-censorship/
 	#perspective
 	#sources
 /en/2026/11/siri-ai-exclude-apps/
+	#perspective
+	#sources
+/en/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
 /en/2026/11/weekly-brief-2026-w44/
@@ -698,7 +734,11 @@
 	#y2026
 /en/history/11-03/
 	#y2026
+/en/history/11-04/
+	#y2026
 /en/history/11-05/
+	#y2026
+/en/history/11-06/
 	#y2026
 /en/page/2/
 /en/page/3/
@@ -790,7 +830,11 @@
 	#y2026
 /history/11-03/
 	#y2026
+/history/11-04/
+	#y2026
 /history/11-05/
+	#y2026
+/history/11-06/
 	#y2026
 /page/2/
 /page/3/
@@ -1063,7 +1107,16 @@
 	#sources
 	#thunderbird-ios
 /zh-cn/2026/11/
+/zh-cn/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
 /zh-cn/2026/11/bitchat-india-block/
+	#perspective
+	#sources
+/zh-cn/2026/11/character-ai-chats-sale/
+	#perspective
+	#sources
+/zh-cn/2026/11/cisa-scuba-config-tools/
 	#perspective
 	#sources
 /zh-cn/2026/11/emudhra-key-compromise-followup/
@@ -1072,10 +1125,19 @@
 /zh-cn/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/zh-cn/2026/11/hk-payment-handbook/
+	#perspective
+	#sources
+/zh-cn/2026/11/police-pixel-crime-claims/
+	#perspective
+	#sources
 /zh-cn/2026/11/qwen-political-censorship/
 	#perspective
 	#sources
 /zh-cn/2026/11/siri-ai-exclude-apps/
+	#perspective
+	#sources
+/zh-cn/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
 /zh-cn/2026/11/weekly-brief-2026-w44/
@@ -1190,7 +1252,11 @@
 	#y2026
 /zh-cn/history/11-03/
 	#y2026
+/zh-cn/history/11-04/
+	#y2026
 /zh-cn/history/11-05/
+	#y2026
+/zh-cn/history/11-06/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
