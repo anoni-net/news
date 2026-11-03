@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 程式開發工具的擴充套件後門與惡意指引檔 | anoni.net 新聞導讀</title>
+<meta name="description" content="太平洋時間 10 月 29 日從 Cursor 自家市集安裝或更新 Claude Code 擴充套件 2.1.312、2.1.313 的 Windows 與 macOS 使用者，可能裝到含後門的版本。依 Anthropic 方面的說法，官方管道的版本不受影響。另一份 10 月 22 日的研究記錄了放進下載資料夾、誘使 Codex 安裝惡意套件的 Markdown 指引檔。">
+<link rel="canonical" href="https://anoni.net/news/2026/11/ai-devtools-supply-chain/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/ai-devtools-supply-chain/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/ai-devtools-supply-chain/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/ai-devtools-supply-chain/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/ai-devtools-supply-chain/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ai-devtools-supply-chain/">
+<link rel="stylesheet" href="/news/css/news.css?v=4219b38e67">
+<link rel="stylesheet" href="/news/css/fonts-tc.css?v=83d19a1956">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="https://anoni.net/news/feed.xml">
+<meta property="og:site_name" content="anoni.net 新聞導讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 程式開發工具的擴充套件後門與惡意指引檔">
+<meta property="og:description" content="太平洋時間 10 月 29 日從 Cursor 自家市集安裝或更新 Claude Code 擴充套件 2.1.312、2.1.313 的 Windows 與 macOS 使用者，可能裝到含後門的版本。依 Anthropic 方面的說法，官方管道的版本不受影響。另一份 10 月 22 日的研究記錄了放進下載資料夾、誘使 Codex 安裝惡意套件的 Markdown 指引檔。">
+<meta property="og:url" content="https://anoni.net/news/2026/11/ai-devtools-supply-chain/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/11/ai-devtools-supply-chain-zh-tw-a318b0e6.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI 程式開發工具的擴充套件後門與惡意指引檔">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="AI 程式開發工具的擴充套件後門與惡意指引檔">
+<meta property="article:published_time" content="2026-11-04T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "AI 程式開發工具的擴充套件後門與惡意指引檔",
+  "description": "太平洋時間 10 月 29 日從 Cursor 自家市集安裝或更新 Claude Code 擴充套件 2.1.312、2.1.313 的 Windows 與 macOS 使用者，可能裝到含後門的版本。依 Anthropic 方面的說法，官方管道的版本不受影響。另一份 10 月 22 日的研究記錄了放進下載資料夾、誘使 Codex 安裝惡意套件的 Markdown 指引檔。",
+  "datePublished": "2026-11-04T00:00:00+08:00",
+  "url": "https://anoni.net/news/2026/11/ai-devtools-supply-chain/",
+  "mainEntityOfPage": "https://anoni.net/news/2026/11/ai-devtools-supply-chain/",
+  "image": "https://assets.anoni.net/news/og/2026/11/ai-devtools-supply-chain-zh-tw-a318b0e6.png",
+  "inLanguage": "zh-Hant",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "https://anoni.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anoni.net/news/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace",
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Markdown Is the New Executable: Attackers Are Dropping Agent Instructions Into Your Downloads Folder From the Web",
+      "url": "https://forever.security/blog/hijacking-ai-agents-via-downloads-folder/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Anthropic: That Claude Code extension compromise… couldn't be us",
+      "url": "https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Official Claude Code Extension Compromise: Security Advisory",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Anthropic hacked to deliver remote access trojan to claude developer laptops worldwide",
+      "url": "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "AI coding agents fall for malicious instructions planted in the Downloads folder",
+      "url": "https://www.helpnetsecurity.com/2026/10/26/ai-coding-agents-malware-openai-codex/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "惡意Markdown指引檔企圖誘使Codex安裝惡意套件，AI程式開發代理面臨攻擊風險",
+      "url": "https://www.ithome.com.tw/news/180033"
+    }
+  ],
+  "articleSection": "資安與詐騙"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新聞導讀",
+      "item": "https://anoni.net/news/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "資安與詐騙",
+      "item": "https://anoni.net/news/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI 程式開發工具的擴充套件後門與惡意指引檔"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=54871c22c2" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新聞導讀</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新聞導讀：" data-print-url="https://anoni.net/news/2026/11/ai-devtools-supply-chain/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--security" href="/news/category/security/">資安與詐騙</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-11-04T00:00:00+08:00">2026 年 11 月 4 日 星期三</time></p>
+    <h1 class="story__title">AI 程式開發工具的擴充套件後門與惡意指引檔</h1>
+    <p class="story__dek">太平洋時間 10 月 29 日從 Cursor 自家市集安裝或更新 Claude Code 擴充套件 2.1.312、2.1.313 的 Windows 與 macOS 使用者，可能裝到含後門的版本。依 Anthropic 方面的說法，官方管道的版本不受影響。另一份 10 月 22 日的研究記錄了放進下載資料夾、誘使 Codex 安裝惡意套件的 Markdown 指引檔。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/cursor.com-990d2f32.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/forever.security-a3d20fe6.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/arstechnica.com-18386f32.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 8 篇原文，來自 Cursor、Forever Security、Ars Technica 等 8 個出處</span></a></span>
+      <span>導讀：anoni.net 社群</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/2026/11/ai-devtools-supply-chain/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/2026/11/ai-devtools-supply-chain/" hreflang="en" lang="en">English</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="朗讀這篇" data-label-playing="暫停" data-label-paused="繼續朗讀"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>朗讀這篇</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>調整</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>語音</span> <select class="listen__select" data-voice data-group-tw="華語（台灣）" data-group-cn="華語（中國）" data-group-zh="華語" data-group-yue="粵語"></select></label>
+          <label class="listen__field"><span>速度</span> <select class="listen__select" data-rate><option value="0.8">0.8 倍</option><option value="1" selected>1 倍</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label>
+        </div>
+        <p class="listen__note">用這台裝置內建的語音朗讀，文章不會傳到其他伺服器。選擇的語音與速度只存在這個瀏覽器裡。<a href="/news/reading/#listening">朗讀的完整說明</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="story__body content">
+<p>10 月 29 日，AI 程式編輯器 Cursor 自家的擴充套件市集上出現被竄改過的 Claude Code 擴充套件（extension，裝進編輯器、增加功能的外掛程式），停留約 11 小時。依 Cursor 的公告，受影響的是 Windows 與 macOS 版的 <code>Anthropic.claude-code</code> 2.1.312 與 2.1.313，只有在那段時間從 Cursor 市集安裝或更新的人需要處理。依 The Register 轉引 Anthropic 一位技術人員在 X 的貼文，Anthropic 官方管道的版本沒有問題，只有 Cursor 的使用者受影響。另一件是資安公司 Forever Security 10 月 22 日公開的案例，一份出現在下載資料夾的 Markdown 指引檔試圖讓 OpenAI 的程式開發代理 Codex 安裝惡意套件。</p>
+<p>依 Cursor 的公告，惡意版本在市集上的時間是太平洋時間 10 月 29 日 02:27 到 13:35（台北時間 10 月 29 日 17:27 到 10 月 30 日 04:35）。Ars Technica 的報導引述 Cursor，受影響的使用者最多 5,000 人。資安公司 Phorion 的技術長向 Ars 表示，惡意版本是用 Anthropic 在 Cursor 市集的官方帳號發布的。他也提到 Cursor 預設會自動更新擴充套件，使用者可以在設定裡調整。</p>
+<p>Cursor 10 月 30 日更新公告時列出 2.1.312 與 2.1.313 兩版，Ars、The Register 與 Phorion 一開始都只寫 2.1.313。Phorion 10 月 30 日把原本寫的 Open VSX（VS Code 衍生編輯器共用的開放擴充套件市集）更正為 Cursor 的市集，10 月 31 日又依 Cursor 的更新補上 2.1.312。Phorion 與 Ars 都寫到惡意程式碼也有針對 Linux 的部分，Cursor 列出的受影響平台只有 Windows 與 macOS。依 Ars 引述一位獨立資安研究者的說法，Anthropic 在惡意版本上架數小時後發布了 2.1.314。</p>
+<p>依 Cursor 的公告與 Phorion 的分析，惡意程式碼在擴充套件載入時就會執行，使用者不必開啟它。程式會把電腦名稱、使用者名稱、作業系統、公開 IP、Git 設定的 email 與環境變數的名稱（不含值）回傳給攻擊者。它也試著加入攻擊者的 SSH（遠端登入電腦用的協定）金鑰、建立反向連線的通道，並設定成在背景持續重試。Cursor 的公告提到開啟 SSH 服務需要管理員權限，多數 macOS 與 Windows 電腦上這一步會失敗，攻擊者也就無法經由通道登入。</p>
+<p>即使通道沒有建立，攻擊者的金鑰與持續執行的設定仍會留在電腦上，電腦的資料也已經送出。Cursor 與代管業者合作，讓攻擊者的伺服器下線。Cursor 的公告列出的處置還包括移除惡意版本、暫時關閉整個市集，以及稽核存取紀錄、確認沒有其他擴充套件被竄改。Cursor 也更換了金鑰，重建市集後重新上線。</p>
+<p>到 11 月 2 日，Cursor 與 Anthropic 都沒有公開惡意版本如何以 Anthropic 的已驗證帳號上架到 Cursor 市集。前面引述的那位獨立資安研究者 10 月 30 日的文章標題寫「Anthropic hacked」，之後在文中補上 Anthropic 方面把問題歸到 Cursor 市集的回應。依 The Register 轉引，Anthropic 那位技術人員寫 Anthropic 的系統與員工電腦都沒有被入侵。他寫到有人利用 Cursor 市集的存取權限，上傳了 Anthropic 沒有製作、也沒有發布的竄改版本。</p>
+<p>Markdown 指引檔那件，依 Forever 的文章，客戶電腦的下載資料夾裡出現一份約 13 KB、偽裝成一般工程規範的 <code>AGENTS.md</code>。<code>AGENTS.md</code> 是開發者放在專案資料夾裡、給程式開發代理讀的指引檔，代理會自動讀取並照著做。檔案要求 Codex 修改自己的全機設定、註冊攻擊者指定的 MCP 伺服器（Model Context Protocol，讓代理串接外部工具的介面），再安裝 npm 套件 <code>function-color</code>。Forever 用自家產品在套件安裝前攔下，依 Help Net Security 的報導，npm 已經移除該套件。</p>
+<p>依 Help Net Security 的報導，研究者發現時不知道檔案是怎麼進到下載資料夾的。研究者寫到，網站不需要使用者點擊或授權，就能把檔案放進下載資料夾。Codex 只照做它信任的資料夾裡的 <code>AGENTS.md</code>，使用者在下載資料夾工作過之後，那裡就算是信任的資料夾。研究者在隔離環境重現整條攻擊，Codex 在超過九成的嘗試裡執行了檔案要它執行的程式（多數測試用只會開啟計算機的無害替身）。</p>
+<p>研究者也仿照同樣的寫法自行寫了一份 <code>CLAUDE.md</code>，測試 Anthropic 的 Claude Code，這份檔案沒有在客戶電腦上出現過。約一半的測試裡，Claude Code 照檔案改了設定，把 API 連線導向研究者的伺服器。研究者寫到登入權杖會因此外流，用截取的權杖可以接管帳號。Forever 的文章主張 OpenAI 與 Anthropic 都沒有東西可以修補，到 11 月 2 日，本文沒有查到兩家公司對這份研究的公開回應。</p>
+<h2 id="perspective">導讀觀點</h2>
+<p>兩起事件的來源沒有把它們連在一起，本文放在同一篇，是因為兩者都利用了開發工具自動載入、自動信任的檔案。Ars 的報導提到，Cursor 的擴充套件以編輯器本身的權限執行，裝上之後很可能可以存取本機檔案、原始碼與開發工具。本文推論，市集的已驗證帳號加上預設的自動更新，讓發布帳號成為使用者與惡意版本之間唯一的關卡。依 The Register 與 DoublePulsar 的文章，更新到 2.1.314 也不會清掉已經裝好的持續執行設定。</p>
+<p>指引檔的攻擊屬於間接提示注入（indirect prompt injection，把指令藏在 AI 會讀進來的內容裡），代理照設計會把指引檔當成使用者的指示照做。Forever 把問題歸在兩件各自合理的事交會的地方，一是代理信任它所在的資料夾，二是網頁長久以來就能把檔案放進下載資料夾。依 Help Net Security 的報導，很多瀏覽工作已經交給代理自行完成。代理自己開啟的網頁也可能放下檔案，螢幕前沒有人看得到。</p>
+<p>自動更新與指引檔都有取捨。本文推論，關掉擴充套件的自動更新可以避開類似的時間窗，代價是安全修補也會晚到。Forever 建議保持代理的操作核准與沙箱（限制程式能存取的範圍）開啟，依 iThome 的整理，Codex 那份指引檔就試圖讓代理略過這兩道限制。</p>
+<p>在台北時間 10 月 29 日傍晚到 30 日清晨從 Cursor 市集安裝或更新過 Claude Code 擴充套件的 Windows 與 macOS 使用者，第一步是照 Cursor 公告裡的方法檢查 SSH 的授權金鑰清單，有攻擊者的金鑰就代表電腦受影響。公告附有 macOS 與 Windows 的檢查與清除腳本。同一份公告提醒只移除擴充套件可能不夠，要從另一台可信任的電腦更換受影響電腦能存取的密碼、權杖與登入工作階段，並評估是否重灌。</p>
+<p>用 Codex、Claude Code 這類代理的人，Forever 建議的第一步是不要在下載資料夾啟動代理（本文推論不寫程式、只讓代理整理文件或瀏覽網頁的人也適用），不需要另外購買工具。打開剛複製的程式庫或別人給的資料夾之前，先讀過裡面不是自己寫的 <code>AGENTS.md</code> 與 <code>CLAUDE.md</code>，也檢查代理的設定檔有沒有自己沒加過的伺服器或網址。發現被植入檔案時，依 Forever 的建議，要當作登入權杖已經外流並立即更換。本文推論這些做法只能降低被誘導的機會，代理照指引檔行事的設計不會因此改變。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（8 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://cursor.com/blog/claude-code-extension-security-notice"><img class="source-slip__icon" src="/news/assets/favicons/cursor.com-990d2f32.png" width="16" height="16" alt="" loading="lazy" decoding="async">Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Cursor</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-29">2026 年 10 月 29 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://forever.security/blog/hijacking-ai-agents-via-downloads-folder/"><img class="source-slip__icon" src="/news/assets/favicons/forever.security-a3d20fe6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Markdown Is the New Executable: Attackers Are Dropping Agent Instructions Into Your Downloads Folder From the Web</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Forever Security</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-22">2026 年 10 月 22 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/"><img class="source-slip__icon" src="/news/assets/favicons/arstechnica.com-18386f32.png" width="16" height="16" alt="" loading="lazy" decoding="async">Anthropic VS code extension on Cursor backdoored for nearly 12 hours</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Ars Technica</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-30">2026 年 10 月 30 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682"><img class="source-slip__icon" src="/news/assets/favicons/theregister.com-315165b2.png" width="16" height="16" alt="" loading="lazy" decoding="async">Anthropic: That Claude Code extension compromise… couldn&#39;t be us</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>The Register</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-30">2026 年 10 月 30 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/"><img class="source-slip__icon" src="/news/assets/favicons/phorion.io-9fa09a7a.png" width="16" height="16" alt="" loading="lazy" decoding="async">Official Claude Code Extension Compromise: Security Advisory</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Phorion</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-30">2026 年 10 月 30 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Anthropic hacked to deliver remote access trojan to claude developer laptops worldwide</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>DoublePulsar</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-30">2026 年 10 月 30 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.helpnetsecurity.com/2026/10/26/ai-coding-agents-malware-openai-codex/"><img class="source-slip__icon" src="/news/assets/favicons/helpnetsecurity.com-eb4f8b13.png" width="16" height="16" alt="" loading="lazy" decoding="async">AI coding agents fall for malicious instructions planted in the Downloads folder</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Help Net Security</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-26">2026 年 10 月 26 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://www.ithome.com.tw/news/180033"><img class="source-slip__icon" src="/news/assets/favicons/ithome.com.tw-bd791a4e.png" width="16" height="16" alt="" loading="lazy" decoding="async">惡意Markdown指引檔企圖誘使Codex安裝惡意套件，AI程式開發代理面臨攻擊風險</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>iThome</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-30">2026 年 10 月 30 日</time></dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--security" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分類的其他導讀</h2>
+  <p class="brief__category"><a class="cat cat--security" href="/news/category/security/">資安與詐騙</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-29T00:00:00+08:00">2026 年 10 月 29 日</time>
+      <a class="thread__title" href="/news/2026/10/tor-exit-relay-ssh-interception/">Tor 出口中繼的 SSH 登入攔截事件</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-28T00:05:00+08:00">2026 年 10 月 28 日</time>
+      <a class="thread__title" href="/news/2026/10/taiwan-election-cyberattacks-disinformation/">台灣地方選舉前的網路侵擾與爭議訊息</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-23T00:10:00+08:00">2026 年 10 月 23 日</time>
+      <a class="thread__title" href="/news/2026/10/php2shell-early-disclosure-debate/">PHP 漏洞的協調揭露與修補前的提前公開</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/news/category/security/">「資安與詐騙」的全部 19 篇導讀</a></p>
+</nav>
+<p class="subscribe">想收到新的導讀：<a href="/news/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>訂閱電子報</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 追蹤</span></a></p>
+<nav class="pager pager--story" aria-label="文章導覽">
+  <a class="pager__item pager__item--older" href="/news/2026/11/emudhra-key-compromise-followup/"><span class="pager__label">較舊的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">eMudhra 弱私鑰事件的後續處置與 macOS 命令列工具</span></a>
+  <a class="pager__all" href="/news/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="頁尾">
+      <a href="/news/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 訂閱電子報</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 追蹤</a>
+      <a href="/news/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 導讀歷史</a>
+      <a href="/news/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 關於新聞導讀</a>
+      <a href="/news/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 閱讀說明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 回報錯誤</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首頁</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ai-devtools-supply-chain/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> onion 版本</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/2026/11/ai-devtools-supply-chain/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/2026/11/ai-devtools-supply-chain/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+  </div>
+</footer>
+</body>
+</html>

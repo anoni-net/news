@@ -6,7 +6,93 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 03 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>AI 程式開發工具的擴充套件後門與惡意指引檔</title>
+<link>https://anoni.net/news/2026/11/ai-devtools-supply-chain/</link>
+<guid isPermaLink="false">anoni-news:2026/11/ai-devtools-supply-chain</guid>
+<pubDate>Wed, 04 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>太平洋時間 10 月 29 日從 Cursor 自家市集安裝或更新 Claude Code 擴充套件 2.1.312、2.1.313 的 Windows 與 macOS 使用者，可能裝到含後門的版本。依 Anthropic 方面的說法，官方管道的版本不受影響。另一份 10 月 22 日的研究記錄了放進下載資料夾、誘使 Codex 安裝惡意套件的 Markdown 指引檔。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Cursor、Forever Security、Ars Technica 等 8 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;10 月 29 日，AI 程式編輯器 Cursor 自家的擴充套件市集上出現被竄改過的 Claude Code 擴充套件（extension，裝進編輯器、增加功能的外掛程式），停留約 11 小時。依 Cursor 的公告，受影響的是 Windows 與 macOS 版的 &lt;code&gt;Anthropic.claude-code&lt;/code&gt; 2.1.312 與 2.1.313，只有在那段時間從 Cursor 市集安裝或更新的人需要處理。依 The Register 轉引 Anthropic 一位技術人員在 X 的貼文，Anthropic 官方管道的版本沒有問題，只有 Cursor 的使用者受影響。另一件是資安公司 Forever Security 10 月 22 日公開的案例，一份出現在下載資料夾的 Markdown 指引檔試圖讓 OpenAI 的程式開發代理 Codex 安裝惡意套件。&lt;/p&gt;
+&lt;p&gt;依 Cursor 的公告，惡意版本在市集上的時間是太平洋時間 10 月 29 日 02:27 到 13:35（台北時間 10 月 29 日 17:27 到 10 月 30 日 04:35）。Ars Technica 的報導引述 Cursor，受影響的使用者最多 5,000 人。資安公司 Phorion 的技術長向 Ars 表示，惡意版本是用 Anthropic 在 Cursor 市集的官方帳號發布的。他也提到 Cursor 預設會自動更新擴充套件，使用者可以在設定裡調整。&lt;/p&gt;
+&lt;p&gt;Cursor 10 月 30 日更新公告時列出 2.1.312 與 2.1.313 兩版，Ars、The Register 與 Phorion 一開始都只寫 2.1.313。Phorion 10 月 30 日把原本寫的 Open VSX（VS Code 衍生編輯器共用的開放擴充套件市集）更正為 Cursor 的市集，10 月 31 日又依 Cursor 的更新補上 2.1.312。Phorion 與 Ars 都寫到惡意程式碼也有針對 Linux 的部分，Cursor 列出的受影響平台只有 Windows 與 macOS。依 Ars 引述一位獨立資安研究者的說法，Anthropic 在惡意版本上架數小時後發布了 2.1.314。&lt;/p&gt;
+&lt;p&gt;依 Cursor 的公告與 Phorion 的分析，惡意程式碼在擴充套件載入時就會執行，使用者不必開啟它。程式會把電腦名稱、使用者名稱、作業系統、公開 IP、Git 設定的 email 與環境變數的名稱（不含值）回傳給攻擊者。它也試著加入攻擊者的 SSH（遠端登入電腦用的協定）金鑰、建立反向連線的通道，並設定成在背景持續重試。Cursor 的公告提到開啟 SSH 服務需要管理員權限，多數 macOS 與 Windows 電腦上這一步會失敗，攻擊者也就無法經由通道登入。&lt;/p&gt;
+&lt;p&gt;即使通道沒有建立，攻擊者的金鑰與持續執行的設定仍會留在電腦上，電腦的資料也已經送出。Cursor 與代管業者合作，讓攻擊者的伺服器下線。Cursor 的公告列出的處置還包括移除惡意版本、暫時關閉整個市集，以及稽核存取紀錄、確認沒有其他擴充套件被竄改。Cursor 也更換了金鑰，重建市集後重新上線。&lt;/p&gt;
+&lt;p&gt;到 11 月 2 日，Cursor 與 Anthropic 都沒有公開惡意版本如何以 Anthropic 的已驗證帳號上架到 Cursor 市集。前面引述的那位獨立資安研究者 10 月 30 日的文章標題寫「Anthropic hacked」，之後在文中補上 Anthropic 方面把問題歸到 Cursor 市集的回應。依 The Register 轉引，Anthropic 那位技術人員寫 Anthropic 的系統與員工電腦都沒有被入侵。他寫到有人利用 Cursor 市集的存取權限，上傳了 Anthropic 沒有製作、也沒有發布的竄改版本。&lt;/p&gt;
+&lt;p&gt;Markdown 指引檔那件，依 Forever 的文章，客戶電腦的下載資料夾裡出現一份約 13 KB、偽裝成一般工程規範的 &lt;code&gt;AGENTS.md&lt;/code&gt;。&lt;code&gt;AGENTS.md&lt;/code&gt; 是開發者放在專案資料夾裡、給程式開發代理讀的指引檔，代理會自動讀取並照著做。檔案要求 Codex 修改自己的全機設定、註冊攻擊者指定的 MCP 伺服器（Model Context Protocol，讓代理串接外部工具的介面），再安裝 npm 套件 &lt;code&gt;function-color&lt;/code&gt;。Forever 用自家產品在套件安裝前攔下，依 Help Net Security 的報導，npm 已經移除該套件。&lt;/p&gt;
+&lt;p&gt;依 Help Net Security 的報導，研究者發現時不知道檔案是怎麼進到下載資料夾的。研究者寫到，網站不需要使用者點擊或授權，就能把檔案放進下載資料夾。Codex 只照做它信任的資料夾裡的 &lt;code&gt;AGENTS.md&lt;/code&gt;，使用者在下載資料夾工作過之後，那裡就算是信任的資料夾。研究者在隔離環境重現整條攻擊，Codex 在超過九成的嘗試裡執行了檔案要它執行的程式（多數測試用只會開啟計算機的無害替身）。&lt;/p&gt;
+&lt;p&gt;研究者也仿照同樣的寫法自行寫了一份 &lt;code&gt;CLAUDE.md&lt;/code&gt;，測試 Anthropic 的 Claude Code，這份檔案沒有在客戶電腦上出現過。約一半的測試裡，Claude Code 照檔案改了設定，把 API 連線導向研究者的伺服器。研究者寫到登入權杖會因此外流，用截取的權杖可以接管帳號。Forever 的文章主張 OpenAI 與 Anthropic 都沒有東西可以修補，到 11 月 2 日，本文沒有查到兩家公司對這份研究的公開回應。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;兩起事件的來源沒有把它們連在一起，本文放在同一篇，是因為兩者都利用了開發工具自動載入、自動信任的檔案。Ars 的報導提到，Cursor 的擴充套件以編輯器本身的權限執行，裝上之後很可能可以存取本機檔案、原始碼與開發工具。本文推論，市集的已驗證帳號加上預設的自動更新，讓發布帳號成為使用者與惡意版本之間唯一的關卡。依 The Register 與 DoublePulsar 的文章，更新到 2.1.314 也不會清掉已經裝好的持續執行設定。&lt;/p&gt;
+&lt;p&gt;指引檔的攻擊屬於間接提示注入（indirect prompt injection，把指令藏在 AI 會讀進來的內容裡），代理照設計會把指引檔當成使用者的指示照做。Forever 把問題歸在兩件各自合理的事交會的地方，一是代理信任它所在的資料夾，二是網頁長久以來就能把檔案放進下載資料夾。依 Help Net Security 的報導，很多瀏覽工作已經交給代理自行完成。代理自己開啟的網頁也可能放下檔案，螢幕前沒有人看得到。&lt;/p&gt;
+&lt;p&gt;自動更新與指引檔都有取捨。本文推論，關掉擴充套件的自動更新可以避開類似的時間窗，代價是安全修補也會晚到。Forever 建議保持代理的操作核准與沙箱（限制程式能存取的範圍）開啟，依 iThome 的整理，Codex 那份指引檔就試圖讓代理略過這兩道限制。&lt;/p&gt;
+&lt;p&gt;在台北時間 10 月 29 日傍晚到 30 日清晨從 Cursor 市集安裝或更新過 Claude Code 擴充套件的 Windows 與 macOS 使用者，第一步是照 Cursor 公告裡的方法檢查 SSH 的授權金鑰清單，有攻擊者的金鑰就代表電腦受影響。公告附有 macOS 與 Windows 的檢查與清除腳本。同一份公告提醒只移除擴充套件可能不夠，要從另一台可信任的電腦更換受影響電腦能存取的密碼、權杖與登入工作階段，並評估是否重灌。&lt;/p&gt;
+&lt;p&gt;用 Codex、Claude Code 這類代理的人，Forever 建議的第一步是不要在下載資料夾啟動代理（本文推論不寫程式、只讓代理整理文件或瀏覽網頁的人也適用），不需要另外購買工具。打開剛複製的程式庫或別人給的資料夾之前，先讀過裡面不是自己寫的 &lt;code&gt;AGENTS.md&lt;/code&gt; 與 &lt;code&gt;CLAUDE.md&lt;/code&gt;，也檢查代理的設定檔有沒有自己沒加過的伺服器或網址。發現被植入檔案時，依 Forever 的建議，要當作登入權杖已經外流並立即更換。本文推論這些做法只能降低被誘導的機會，代理照指引檔行事的設計不會因此改變。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cursor.com/blog/claude-code-extension-security-notice&#34;&gt;Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cursor&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forever.security/blog/hijacking-ai-agents-via-downloads-folder/&#34;&gt;Markdown Is the New Executable: Attackers Are Dropping Agent Instructions Into Your Downloads Folder From the Web&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Forever Security&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/&#34;&gt;Anthropic VS code extension on Cursor backdoored for nearly 12 hours&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682&#34;&gt;Anthropic: That Claude Code extension compromise… couldn&amp;#39;t be us&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://phorion.io/blog/offical-claude-code-vsx-compromise/&#34;&gt;Official Claude Code Extension Compromise: Security Advisory&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Phorion&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2&#34;&gt;Anthropic hacked to deliver remote access trojan to claude developer laptops worldwide&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;DoublePulsar&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.helpnetsecurity.com/2026/10/26/ai-coding-agents-malware-openai-codex/&#34;&gt;AI coding agents fall for malicious instructions planted in the Downloads folder&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Help Net Security&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180033&#34;&gt;惡意Markdown指引檔企圖誘使Codex安裝惡意套件，AI程式開發代理面臨攻擊風險&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>eMudhra 弱私鑰事件的後續處置與 macOS 命令列工具</title>
 <link>https://anoni.net/news/2026/11/emudhra-key-compromise-followup/</link>
@@ -2559,164 +2645,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;集誌社&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-27&#34;&gt;2026 年 3 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>歐盟數位綜合法案裡的 AI 訓練與 Cookie 規定</title>
-<link>https://anoni.net/news/2026/10/eu-digital-omnibus-ai-training/</link>
-<guid isPermaLink="false">anoni-news:2026/10/eu-digital-omnibus-ai-training</guid>
-<pubDate>Mon, 26 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>歐盟成員國 10 月 21 日議定數位綜合法案（Digital Omnibus）草案的理事會立場，要在 GDPR 寫明開發與運作 AI 時可以用「正當利益」處理個人資料，Cookie 不需同意的情形也要擴大。這是跟歐洲議會談判用的立場，到 10 月 23 日議會還沒有形成立場。GDPR 適用於設在歐盟的企業處理的個人資料，也保護位於歐盟境內、被非歐盟企業提供服務或監控行為的人，其他情況下歐盟以外的讀者不直接受影響。</description>
-<content:encoded>&lt;p&gt;整理 19 篇原文，來自 Council of the European Union、EuropaWire、European Commission 等 14 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;歐盟成員國的常駐代表 10 月 21 日議定數位綜合法案（Digital Omnibus）草案的理事會立場，這份草案由執委會 2025 年 11 月提出。理事會的立場要在歐盟的《一般資料保護規則》（GDPR）寫明，開發與運作 AI 時可以用「正當利益」處理個人資料，也就是不先取得同意、但要權衡當事人權利的合法依據。理事會文件的標題是與歐洲議會談判的授權，這不是最終的法律，到 10 月 23 日議會的程序頁面仍停在等待委員會決定。GDPR 適用於設在歐盟的企業處理的個人資料，也保護位於歐盟境內、被非歐盟企業提供服務或監控行為的人，其他情況下歐盟以外的讀者不直接受影響。&lt;/p&gt;
-&lt;p&gt;依理事會文件的第 88bis 條，開發與運作 AI 系統或模型時處理個人資料可以依 GDPR 的正當利益進行，處理時要有技術與組織上的保障。執委會的提案在條文裡列出資料最小化、加強透明與「無條件的反對權」，並排除當事人權益優先的情形。理事會的條文刪掉加強透明與權益優先的除外句，反對權改成 GDPR 第 21 條、需要以自身特殊情況為由的反對權。資料最小化與權益優先的權衡移到說明條文（recital，條文前說明立法用意的段落，本身不是條文），同一段說明條文也提到開發或運作 AI 本身不構成正當利益，要逐案評估。&lt;/p&gt;
-&lt;p&gt;執委會原本提議修改 GDPR 第 4(1) 條的個人資料定義，歐洲資料保護委員會（EDPB，各國資料保護機關組成）與歐洲資料保護監督官（EDPS，監督歐盟機構自身處理個資的機關）2 月強烈建議立法者不要採納，理事會的版本沒有保留這項修改。理事會另外新增第 25a 條，規定第三方無法識別當事人時，假名化（把可以直接識別個人的欄位換成代號）的資料對它不算個人資料。&lt;/p&gt;
-&lt;p&gt;執委會原本提議把 Cookie 的規定移進 GDPR，理事會的版本改為留在專門規範電子通訊隱私的 ePrivacy 指令，並擴大不需要使用者同意的情形。新增的項目包括只依當次頁面內容、不使用個人資料的廣告曝光與成效量測。依理事會的版本，使用者拒絕之後網站至少四個月內不能為同一個目的再次詢問。執委會的提案原本寫六個月，理事會的版本讓網站可以更早再問一次。&lt;/p&gt;
-&lt;p&gt;消費者組織 BEUC 6 月致成員國代表的信支持讓瀏覽器自動送出同意或拒絕的訊號，理事會的版本沒有保留這項設計。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;理事會的版本若成為最終法律，企業可以依條文主張用正當利益拿個人資料開發 AI，Cookie 不需同意的情形也會變多。文中後面提到的 LinkedIn 與 Gemini 設定跟這個法案無關，到 10 月 23 日已經可以使用。&lt;/p&gt;
-&lt;p&gt;正當利益是 GDPR 的六種合法依據之一，企業不必先取得同意，但要證明處理是必要的並權衡當事人的權利。依 EDPB 2024 年 12 月的意見，開發與部署 AI 模型在某些情況下可以用正當利益當作依據。依 GDPR 第 21 條，當事人可以自身的特殊情況為由提出反對，企業要證明有更重要的正當理由才能繼續處理。&lt;/p&gt;
-&lt;p&gt;執委會提案的說明書提到，修改的目的之一是釐清處理資料用於 AI 訓練與開發的部分規則。業界團體 9 月針對當時妥協版本致理事會的信（信上未標日期）則要求在條文本身寫明法律依據，理由是只寫在說明條文不能給企業確定性。理事會 10 月的授權文件把第 88bis 條寫在條文本身。EDPB 與 EDPS 2 月對執委會提案的聯合意見，結論則是 GDPR 不需要為此另寫條文，企業仍要逐案通過同樣的評估。&lt;/p&gt;
-&lt;p&gt;到 10 月 23 日，對 10 月議定文字的公開回應只查到奧地利隱私倡議團體 noyb。依 noyb 10 月 23 日的解讀，議定的文字讓「AI 情境」的處理自動合法，noyb 稱之為對歐洲人的「數位徵收」。歐洲數位權利團體的聯盟 EDRi 9 月 18 日針對當時妥協版本的信提到，條文沒有讓所有 AI 相關的處理自動合法，但可能讓逐案評估變成立法上的普遍背書。理事會的說明條文則寫明開發 AI 本身不構成正當利益，理事會的新聞稿（轉載）也表示在支持 AI 創新的同時維持適當的保障。&lt;/p&gt;
-&lt;p&gt;理事會的新聞稿表示定義沒有改，新增的假名化規定是為了讓組織更清楚如何遵守。noyb 認為這等於大幅縮小個人資料的範圍，網路追蹤是否仍受 GDPR 規範會變得不清楚。依第 25a 條的另一款，資料轉給能識別當事人的第三方時，移轉與後續的處理仍算處理個人資料。EDRi 的信提到，同一份假名化的資料可能對某些組織不算個人資料、對另一些組織仍算。&lt;/p&gt;
-&lt;p&gt;處理以正當利益為依據時，歐盟境內的人可以依第 21 條提出反對。Meta 2025 年 4 月的公告另外提到，歐盟使用者可以透過表單反對公開資料被用於訓練，公告沒有寫明依據哪一條。&lt;/p&gt;
-&lt;p&gt;到 10 月 23 日，LinkedIn 說明頁上的生成式 AI 訓練設定預設開啟、關閉後只停止往後的訓練，頁面沒有限定地區。依同日查證的 Google 說明頁，關閉 Gemini 的 Keep Activity 又不送出意見回饋，之後的對話就不會用於改善 AI 模型。同一頁也提到，這些設定管不到用對話產生匿名資料來改善服務。關閉之後對話仍會保留 72 小時，用於回應使用者與保護 Google、使用者與大眾，過程可能有人工審查。&lt;/p&gt;
-&lt;p&gt;台灣的《個人資料保護法》到 10 月 23 日沒有針對 AI 訓練的條文，依第 19 條，非公務機關有特定目的、資料又取自一般可得的來源時可以不經同意蒐集。病歷、醫療、基因等第 6 條所列的資料不在此列，當事人明顯有更值得保護的重大利益時也不行。拿去訓練屬於利用，第 20 條要求在蒐集的特定目的必要範圍內為之。第 3 條則列出當事人可以請求停止蒐集、處理或利用，以及請求刪除。&lt;/p&gt;
-&lt;p&gt;2026 年 1 月公布的《人工智慧基本法》第 14 條要求各目的事業主管機關會商個資主管機關，在 AI 研發與應用時避免不必要的個人資料蒐集、處理或利用。&lt;/p&gt;
-&lt;p&gt;讀者可以用幾個問題，比較之後歐洲議會形成的版本與理事會的版本。一是條文寫明正當利益之後，企業是否比較確定、資料保護機關是否仍逐案審查。二是當事人的反對權在實際操作上能不能用，假名化的新規定會不會讓網路追蹤離開 GDPR 的範圍。三是使用者看到 Cookie 同意視窗的次數會不會減少，這是執委會提案想達成的效果之一。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（19 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cdn.netzpolitik.org/wp-upload/2026/10/Daten-Omnibus-Rats-Einigung.pdf&#34;&gt;Mandate for negotiations with the European Parliament (14756/26)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Council of the European Union&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.consilium.europa.eu/en/press/press-releases/2026/10/21/digital-rulebook-council-agrees-position-to-simplify-data-protection-privacy-and-cyber-reporting-rules/&#34;&gt;Digital rulebook: Council agrees position to simplify data protection, privacy and cyber reporting rules&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Council of the European Union&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.europawire.eu/council-of-the-eu-backs-digital-omnibus-changes-to-gdpr-cookie-consent-and-cyber-incident-reporting/eu-press-release/2026/10/22/12/17/03/183831/&#34;&gt;Council of the EU Backs Digital Omnibus Changes to GDPR, Cookie Consent and Cyber Incident Reporting&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EuropaWire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://data.consilium.europa.eu/doc/document/ST-15698-2025-INIT/en/pdf&#34;&gt;Proposal for a Regulation as regards the simplification of the digital legislative framework (Digital Omnibus)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-19&#34;&gt;2025 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2718&#34;&gt;Simpler EU digital rules and new digital wallets to save billions for businesses and boost innovation&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-19&#34;&gt;2025 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0360(COD)&#34;&gt;Simplification of the digital legislative framework – Digital Omnibus (Omnibus VII)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Parliament Legislative Observatory&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.beuc.eu/sites/default/files/publications/BEUC-X-2026-056_Letter_Digital_Omnibus_to_PermRep.pdf&#34;&gt;Consumer concerns on Digital Omnibus – preserve actual simplification for consumers&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BEUC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-12&#34;&gt;2026 年 6 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/news/news/2026/digital-omnibus-edpb-and-edps-support-simplification-and-competitiveness-while_en&#34;&gt;Digital Omnibus: EDPB and EDPS support simplification and competitiveness while raising key concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-11&#34;&gt;2026 年 2 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/news/news/2024/edpb-opinion-ai-models-gdpr-principles-support-responsible-ai_en&#34;&gt;EDPB opinion on AI models: GDPR principles support responsible AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-18&#34;&gt;2024 年 12 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://edri.org/wp-content/uploads/2026/09/Letter-to-Council-Digital-Omibus-Data.pdf&#34;&gt;Urgent follow-up on the Digital Omnibus Council compromise&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EDRi&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ivsz.hu/wp-content/uploads/2026/09/Joint-Industry-Letter_-Digital-Omnibus.pdf&#34;&gt;Getting the Digital Omnibus right: The last chance to restore a clear legal basis for AI development in Europe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IVSZ&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://noyb.eu/en/ai-eu-member-states-approve-digital-expropriation-europeans-ai-companies&#34;&gt;AI: EU Member States approve &amp;#34;digital expropriation&amp;#34; for AI companies&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;noyb&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/eu-laender-einig-beim-daten-omnibus-mehr-ki-training-weniger-datenschutz/&#34;&gt;EU-Länder einig beim Daten-Omnibus: Mehr KI-Training, weniger Datenschutz&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/sites/default/files/files/file1/edpb_guidelines_3_2018_territorial_scope_after_public_consultation_en_1.pdf&#34;&gt;Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-01-07&#34;&gt;2020 年 1 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.linkedin.com/help/linkedin/answer/a6278444&#34;&gt;Control whether LinkedIn uses your data to improve generative AI (GAI) models that are used for content creation on LinkedIn&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;LinkedIn Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=en&#34;&gt;Gemini Apps Privacy Hub&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Gemini Apps Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://about.fb.com/news/2025/04/making-ai-work-harder-for-europeans/&#34;&gt;Making AI Work Harder for Europeans&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Meta&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-14&#34;&gt;2025 年 4 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093&#34;&gt;人工智慧基本法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
