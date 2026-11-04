@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 04 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 05 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>預載 Google 應用程式的 Android 手機定期傳出的資訊</title>
+<link>https://anoni.net/news/history/11-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-05/2026</guid>
+<pubDate>Thu, 05 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你手上預載 Google 應用程式的 Android 手機可能會定期把當機報告、已安裝的應用程式等資訊傳給 Google，Google 隱私權政策到 11 月 2 日查證時仍這樣寫。這一天，Google 等 34 家公司組成聯盟，宣布開發開放原始碼的手機平台 Android。</description>
+<content:encoded>&lt;p&gt;你手上的 Android 手機如果是 Google 或合作廠商販售、內建 Google Play 服務與 Gmail、地圖等應用程式的機種，Google 隱私權政策寫明這類裝置會定期連線到 Google 的伺服器，提供裝置類型、電信業者名稱、當機報告、已安裝的應用程式以及視裝置設定而定的其他使用情形。當年的新聞稿寫到，Google、台灣的 HTC 等 34 家公司在 2007 年 11 月 5 日組成開放手機聯盟（Open Handset Alliance），宣布要以開放原始碼授權釋出行動裝置平台 Android。Android 官方說明頁寫明作業系統的原始碼現在公開給任何人使用，Google 的應用程式與服務則另成一組，相容 Android 的裝置才有機會取得授權預載。Google 帳戶說明頁到 11 月 2 日寫明，手機設定裡的「使用狀況與診斷」關閉後仍可取得 Android 的更新、也不會影響應用程式收集資訊，但沒有寫是否也停止傳送隱私權政策列出的項目。不想把電池電量、應用程式的使用頻率這類資訊傳給 Google 的人，可以在「設定」依序點「Google」、「更多」、「使用狀況與診斷」把它關閉，各廠牌的選單位置可能不同。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>美國網路業者協助的境外通訊蒐集</title>
 <link>https://anoni.net/news/history/11-04/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在台灣的通訊要被監察時，偵查中要由法院核發通訊監察書。這一天，印度《資訊科技法》施行，政府可以下令攔截通訊並要求協助解密。</description>
 <content:encoded>&lt;p&gt;你在台灣的電話與網路通訊要被監察時，依《通訊保障及監察法》，偵查中由檢察官向法院聲請、由法院核發通訊監察書。2000 年 10 月 17 日，印度政府依公報指定《資訊科技法》從這一天施行，原始版第 69 條讓主管官員可以下令政府機關攔截電腦傳輸的資訊。被要求的人要提供解密協助，不配合最高可處 7 年徒刑。2009 年生效的修正把第 69 條擴大成攔截、監控與解密，並新增第 69A 條讓政府可以下令封鎖資訊，2020 年 6 月電子與資訊科技部就依第 69A 條封鎖了包括 TikTok、微信在內的 59 個 App。台灣的讀者在國內不需要調整設定，到印度時，2020 年被封鎖的 App 在當地可能無法使用（印度官方到 2025 年 8 月仍表示沒有解除 TikTok 的封鎖）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Wi-Fi 加密弱點的修補</title>
-<link>https://anoni.net/news/history/10-16/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-16/2026</guid>
-<pubDate>Fri, 16 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的手機連上 Wi-Fi 時用的加密，有弱點時要靠系統更新修補。這一天，研究者公開 WPA2 Wi-Fi 加密的弱點 KRACK。</description>
-<content:encoded>&lt;p&gt;你的手機連上有密碼的 Wi-Fi 時，手機與無線基地台（路由器）之間傳的資料會加密，常見的加密標準是 WPA2 與較新的 WPA3。2017 年 10 月 16 日，研究者公開 WPA2 的弱點 KRACK，在 Wi-Fi 訊號範圍內的攻擊者可以讀取原本以為已經加密的資料。研究者的網站寫明弱點出在 Wi-Fi 標準本身，支援 Wi-Fi 的裝置很可能都受影響，改 Wi-Fi 密碼也無法防範。Android 2017 年 11 月的安全性更新與 Apple 同年 10 月底的 iOS 11.1 都修補了這個弱點，研究者的網站也寫到家用路由器多半不受影響，仍建議更新路由器韌體。仍在用多年前舊手機的讀者，可以在設定查看 Android 的安全性修補程式等級是否在 2017 年 11 月 6 日以後，iPhone 則看系統是否在 iOS 11.1 以後。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

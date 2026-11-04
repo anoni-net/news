@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Wed, 04 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 05 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>What Android phones with Google apps send to Google</title>
+<link>https://anoni.net/news/en/history/11-05/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-05/2026</guid>
+<pubDate>Thu, 05 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Your Android phone with Google apps preinstalled may regularly send Google details such as crash reports and the apps you have installed, as Google&#39;s privacy policy still said when we checked on 2 November. On this day, Google and 33 other companies formed an alliance and announced Android, an open-source platform for mobile phones.</description>
+<content:encoded>&lt;p&gt;If your Android phone was sold by Google or one of its partners and comes with Google Play Services and apps such as Gmail and Maps, Google&#39;s privacy policy says it periodically contacts Google&#39;s servers to provide information including your device type, carrier name, crash reports, the apps you have installed and, depending on your device settings, other information about how you use the device. According to the press release from the time, 34 companies, among them Google and Taiwan&#39;s HTC, formed the Open Handset Alliance on 5 November 2007 and announced that they would release Android, a platform for mobile devices, under an open-source licence. Android&#39;s official overview now says the operating system&#39;s source code is available for anyone to use, while Google&#39;s apps and services form a separate set that only Android-compatible devices can be licensed to preinstall. In mainland China, GreatFire&#39;s third-party tests found the website play.google.com 100% blocked as of 1 November, and the Google documents we read do not say whether phones sold there come with Google&#39;s apps. If you would rather not send Google details such as your battery level and how often you use your apps, open Settings → Google → More → Usage &amp;amp; diagnostics and turn it off, though the menu may sit elsewhere on some brands (Google&#39;s account help page said as of 2 November that this still lets the phone get Android updates and does not affect what apps collect, without saying whether the items listed in the privacy policy stop as well).&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Collection of overseas communications with help from US service providers</title>
 <link>https://anoni.net/news/en/history/11-04/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Some apps on your phone may not work if you travel to India. On this day, India&#39;s Information Technology Act came into force, letting the government order interception of communications and assistance with decryption.</description>
 <content:encoded>&lt;p&gt;If you travel to India, some apps on your phone may not work there. On 17 October 2000, India&#39;s government appointed that day, by official notification, for the Act to come into force, and its original Section 69 let a designated official order government agencies to intercept information sent through computers. Anyone called on had to help decrypt it, with up to seven years in prison for refusing (in Taiwan, interception during an investigation needs a court-issued warrant). An amendment that took effect in 2009 widened Section 69 to interception, monitoring and decryption and added Section 69A to let the government order information blocked, which the Ministry of Electronics and Information Technology used in June 2020 to block 59 apps, including TikTok and WeChat. India&#39;s government said in August 2025 that no order had been issued to lift the TikTok ban, so before a trip, check that you have a way to keep in touch that works there.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Patching of Wi-Fi encryption weaknesses</title>
-<link>https://anoni.net/news/en/history/10-16/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-16/2026</guid>
-<pubDate>Fri, 16 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Your phone depends on system updates to fix weaknesses in the encryption it uses on Wi-Fi. On this day, a researcher disclosed KRACK, a weakness in WPA2 Wi-Fi encryption.</description>
-<content:encoded>&lt;p&gt;When your phone joins a Wi-Fi network with a password, the data between the phone and the wireless access point (the router) is encrypted, most commonly with the WPA2 standard or the newer WPA3. On 16 October 2017, a researcher disclosed KRACK, a weakness in WPA2 that lets an attacker within Wi-Fi range read information that was assumed to be encrypted. The researcher&#39;s website reads that the weakness is in the Wi-Fi standard itself, that any device supporting Wi-Fi is most likely affected, and that changing the Wi-Fi password does not prevent the attack. Android&#39;s November 2017 security bulletin and Apple&#39;s iOS 11.1, released at the end of October 2017, both carry fixes, and the website reads that home routers are mostly not affected, though it still recommends updating router firmware. Readers still using an old phone can check in Settings whether the Android security patch level is 6 November 2017 or later, and on an iPhone whether iOS is 11.1 or later.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
