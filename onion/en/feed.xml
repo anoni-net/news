@@ -6,7 +6,70 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 04 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Tor Browser 16.0 and Tails 7.16</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/tor-browser-16-tails/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/tor-browser-16-tails</guid>
+<pubDate>Thu, 05 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Tor Browser 16.0 is out for desktop and Android and is now based on Firefox ESR 153. The desktop version has redesigned Settings and a new generic window titles option that is off by default, and 32-bit x86 Linux is no longer supported from this release. Tails 7.16 updates its built-in Tor Browser to 16.0, and Tails 7.0 or later can upgrade automatically.</description>
+<content:encoded>&lt;p&gt;Based on 5 sources from Tor Project, Tails, OONI&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The Tor Project released Tor Browser 16.0 for desktop and Android on 29 October, the first stable release based on Firefox ESR 153 (Firefox&#39;s Extended Support Release). Tails (an operating system that boots from a USB stick and sends every connection through Tor) followed the next day with 7.16, which updates its built-in Tor Browser to 16.0. The update covers Windows, macOS, Linux and Android users, except for 32-bit x86 Linux computers, which are no longer supported from 16.0.&lt;/p&gt;
+&lt;p&gt;According to the Tor Project&#39;s announcement, the team carries out an annual review whenever it moves to a new ESR. This time it reviewed and handled more than 270 Bugzilla (Mozilla&#39;s bug tracker) issues covering a year of Firefox changes that could harm the privacy and security of Tor Browser users. The changelog has several entries that disable or hide features: WebGPU (a new interface that lets web pages run computations directly on the graphics card) is disabled pending review, and the AI settings panel and the translation settings page are hidden. The Android version also disables AI features and Google Lens, and these entries consist of titles only, with no reasons given.&lt;/p&gt;
+&lt;p&gt;Settings on desktop follow Firefox&#39;s June redesign, with the old General page split into new pages for appearance, downloads, tabs and browsing, accessibility, and language. Pages specific to Tor Browser, such as Connection and Security Level, have been rebuilt with Firefox&#39;s new components. The announcement says settings that could harm privacy or make the browser easier to fingerprint (to recognize the same device from browser settings and device characteristics) when turned on are either hidden or carry a warning. Existing preferences are kept, and the search bar at the top of Settings finds options that have moved.&lt;/p&gt;
+&lt;p&gt;Settings also gain a generic window titles option, under Privacy and security → Protections from third-party applications, which replaces every window title with &#34;Tor Browser&#34;. As the announcement explains, browsers usually name a window after the page being viewed, and other programs on the computer, as well as the operating system itself, can read that title without special permissions. The option is off by default, because the announcement says there was not enough time in this release cycle to evaluate side effects. Those who may be affected are people using screen readers and people with highly customized systems (for example, less common desktop environments or application switchers).&lt;/p&gt;
+&lt;p&gt;The Linux version adds native support for 64-bit ARM processors, such as the Raspberry Pi and Apple Silicon Macs running Linux. Support for 32-bit x86 Linux ends along with Firefox&#39;s, and when the announcement was published this platform accounted for about 200 update checks a day, down from about 4,000 at its peak in 2019.&lt;/p&gt;
+&lt;p&gt;The built-in manual on desktop (type &lt;code&gt;about:manual&lt;/code&gt; in the address bar, or open ☰ → Help → Tor Browser manual) now uses content from the new support site, and it can still be read offline, including when Tor will not connect. Google Play limits apps distributed as APKs to 100 MB, which has kept the manual from being bundled for offline reading on Android. Much of the Android interface now uses Material Design 3 (Google&#39;s design guidelines for Android), and the announcement says later releases will continue the work. The changelog also lists the removal of the password interface on Android, the disabling of all link-sharing features, and the disabling of bookmark import.&lt;/p&gt;
+&lt;p&gt;According to the Tails announcement, 7.16 updates Tor Browser to 16.0, bringing the new Settings with it. The Tor client is updated to 0.4.9.15, and OpenPGP support in Thunderbird has been fixed.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Tor Browser is built on Firefox ESR and moves to a new base version once a year, so each move takes in a year of Firefox changes at once. The 16.0 changelog shows several new features switched off first, with WebGPU, for example, marked as disabled pending review. Firefox&#39;s new online search suggestions also remain off. From this we infer that some features Firefox users already have will reach Tor Browser users later or not at all.&lt;/p&gt;
+&lt;p&gt;Generic window titles deal with other programs on the same computer. The Tor network protects the path a connection takes and does not cover other software installed on the computer. The option changes only the window title, and we infer that other programs reading what is on the screen fall outside what it handles.&lt;/p&gt;
+&lt;p&gt;Once every window is called &#34;Tor Browser&#34;, we infer that people who rely on window names to switch between windows will find them harder to tell apart, which may be the situation for the screen reader users the announcement mentions. In the announcement, the Tor Project invites people who use screen readers or highly customized systems to try the option and report any problems.&lt;/p&gt;
+&lt;p&gt;The same option has already reached Firefox through the Tor Uplift Project (the effort to send Tor Browser&#39;s changes back to Firefox). According to the announcement, advanced Firefox users can get the same effect by setting &lt;code&gt;privacy.exposeContentTitleInWindow&lt;/code&gt; (normal windows) and &lt;code&gt;privacy.exposeContentTitleInWindow.pbm&lt;/code&gt; (private browsing windows) to false in &lt;code&gt;about:config&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The same announcement says a new circuit display (the panel showing which relays a connection passes through) is coming to the Alpha test release and is not part of 16.0. The new version brings site information into the panel and can draw multi-path circuits, and it will be the first circuit display on Android. According to the announcement, multi-path circuits use extra relays to split traffic into two paths that converge on a single exit (the last relay before the connection leaves the Tor network for the destination site). As of the announcement, connections to regular websites were already randomly assigned to multi-path circuits depending on network availability, while onion services (sites reachable only through Tor) were not.&lt;/p&gt;
+&lt;p&gt;For readers in Taiwan and Hong Kong, OONI (Open Observatory of Network Interference) Tor tests from 18 September to 18 October, queried on 20 October, found 7 anomalies in 706 tests in Hong Kong and 314 anomalies in 4,797 tests in Taiwan, 311 of the Taiwan anomalies from a single ASN (autonomous system number, which identifies one network). An anomaly is not a confirmed block, and the test checks whether the servers Tor needs to operate can be reached. As of 20 October we had found no rules in either Taiwan or Hong Kong specifically on running onion services.&lt;/p&gt;
+&lt;p&gt;People using Tor Browser on desktop can find generic window titles under Privacy and security in Settings after updating to 16.0. According to the announcement, turning it on keeps other software from learning browsing history through window titles. From this we infer that people worried about software of unknown origin on their computer can consider turning it on, though it does not help when other programs log keystrokes or take screenshots. For people who need fuller protection against other software on the computer, the announcement recommends Tails.&lt;/p&gt;
+&lt;p&gt;For anyone moving to Tails on that recommendation, Tails&#39; known issues page said as of 2 November that Macs with Apple chips (M1, M2 and so on) and many other Mac models cannot start Tails at all. Tails 7.0 or later can upgrade to 7.16 automatically, and if the automatic upgrade fails or Tails will not start afterwards, a manual upgrade is the fallback. Reinstalling instead erases the Persistent Storage on the USB stick (the space Tails uses to keep files and settings). According to the Tor Project&#39;s announcement, most people still on 32-bit x86 Linux can switch to the 64-bit version, unless their hardware or Linux version is too old.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (5)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/new-release-tor-browser-160/&#34;&gt;New Release: Tor Browser 16.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/news/version_7.16/&#34;&gt;Tails 7.16&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/support/known_issues/&#34;&gt;Known issues&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=HK&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Hong Kong&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=TW&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Taiwan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Risk categories and seven strategies in Article 19&#39;s digital payments handbook</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/hk-payment-handbook/</link>
@@ -2904,180 +2967,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Quad9&#39;s exit from France and French DNS blocking orders</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/quad9-exit-france/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/quad9-exit-france</guid>
-<pubDate>Tue, 27 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Public DNS resolver Quad9 announced on 22 October that from 24 November it will stop serving users located in France. According to Quad9, a French court applying anti-piracy rules for sports broadcasts ordered it to block a list of domains for users in France. We compare how Taiwan, India and Japan handle site blocking.</description>
-<content:encoded>&lt;p&gt;Based on 21 sources, including Quad9, Tribunal judiciaire de Paris, Google for Developers&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Quad9, a public DNS resolver run by a Swiss non-profit foundation, translates the domain names in web addresses into server addresses, and users can set it up in place of the default resolver from their network provider. On 22 October Quad9 announced that from 24 November it will no longer serve users located in France. According to its announcement, a French court ruling of 21 October, issued at the request of the sports broadcaster beIN, requires Quad9 to block resolution of a list of domains for users in France. Quad9&#39;s announcement says it will not block them and that it has chosen to leave France instead, and the announcement does not say how it will identify users located there.&lt;/p&gt;
-&lt;p&gt;Orders like this rest on Article L. 333-10 of the French Sports Code, under which broadcast rightsholders can ask a court to order anyone in a position to help to take blocking measures against pirate sites reached from France. On 13 May the Paris Judicial Court ordered defendants including Google and Quad9 to act within 3 days of notification and to keep the blocks in place until 14 November, the last match of the WTA tennis season. Under the provision the ruling applies, rightsholders then report newly found pirate sites, and the French audiovisual and digital communications regulator (Arcom) verifies them before notifying the defendants.&lt;/p&gt;
-&lt;p&gt;According to Quad9, the list of domains in the May ruling later grew to 58, and TorrentFreak quotes Quad9 as saying it has not blocked them. TorrentFreak also reports that beIN went back to court seeking fines of up to €580,000 a day, and according to TorrentFreak, beIN does not comment on ongoing proceedings. Quad9&#39;s announcement says the October ruling still requires the blocks and sets the fine at €1,000 a day (€24,000 in total up to 14 November). The announcement adds that an appeal is under way and that Quad9 could not bear the fines that around 20 similar lawsuits would add up to.&lt;/p&gt;
-&lt;p&gt;Quad9&#39;s announcement says its service is free, requires no registration, and holds no data mapping users to countries. Quad9 therefore cannot tell whom the ruling applies to, and adding the domains to its global blocklist would apply a French ruling to users worldwide.&lt;/p&gt;
-&lt;p&gt;In a separate case brought by the French pay-TV company Canal+, Quad9&#39;s December 2024 announcement says it then blocked the listed sites for users in all regions. In litigation in Germany, Quad9 once blocked by region based on IP address, and after the rightsholder connected through a VPN, the court found the measure insufficient and imposed a fine. Quad9 won on appeal in December 2023, when the Higher Regional Court of Dresden held that a resolver is not liable for infringement.&lt;/p&gt;
-&lt;p&gt;According to TorrentFreak, Quad9&#39;s explanation for the difference between the German case and this one is that the German block was an interim measure during litigation and each case is handled on its own. How the Canal+ case relates to this one is not explained in the report.&lt;/p&gt;
-&lt;p&gt;Other public resolvers have taken different paths. According to the announcement cited by TorrentFreak, Cisco&#39;s OpenDNS stopped serving France and Portugal on 28 June 2024. As of 23 October, Google Public DNS&#39;s help page lists France among five jurisdictions where it blocks under orders, answering queries for blocked domains with a refusal. Cloudflare&#39;s documentation says 1.1.1.1 does not block or filter content, and its blog says that in response to blocking orders it sometimes geo-blocks sites on its content delivery network (CDN) instead.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;A DNS resolver translates the domain name in a web address into a server&#39;s IP address. A DNS-level block makes the resolver withhold the address for specific domains, which affects only queries sent through that resolver. According to an Internet Society report from March 2026, a resolver receives only the domain name, not the full path of the page.&lt;/p&gt;
-&lt;p&gt;On whether a block can be limited to France, the Paris Judicial Court&#39;s May ruling reasoned that the defendants had not shown that confining it to France would be costly or technically impossible, and left the technical method to them. Quad9&#39;s announcement says it has no data on users&#39; countries, and in the German case an IP-based block was bypassed with a VPN. The Internet Society report says it is hard for operators to determine users&#39; locations accurately within milliseconds, so blocks may affect users outside the jurisdiction. Google Public DNS&#39;s help page lists France among the jurisdictions where it blocks under orders.&lt;/p&gt;
-&lt;p&gt;On whether a block that can be bypassed still works, Quad9&#39;s announcement says people who want the content will switch to other, less trustworthy resolvers, and blocking does not remove content from the servers. The Paris Judicial Court&#39;s ruling says the number of people using alternative resolvers does not affect a rightsholder&#39;s right to seek a block. According to TorrentFreak, the Paris Court of Appeal held in March, in Canal+&#39;s case against Google, Cloudflare and Cisco, that a filtering measure that can be bypassed is not therefore ineffective. The same ruling found that alternative resolvers let users reach pirate sites and get around blocks by network providers.&lt;/p&gt;
-&lt;p&gt;On who bears responsibility and cost, Quad9&#39;s announcement calls letting private companies decide what can be seen online a dangerous problem. The Internet Society report concludes that DNS blocking is the wrong tool for enforcing public policy, and says small and non-profit operators may not be able to afford country-by-country blocking. According to the Canal+ press release republished by Señal News, the appeal ruling fits Canal+&#39;s strategy of making all kinds of technical intermediaries share responsibility for fighting piracy. The May ruling says blocking costs are shared among the parties under an agreement overseen by Arcom.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, compared three places in Asia on who can order site blocking and whether public resolvers are covered. In Taiwan, a January 2025 procedure from the Ministry of Digital Affairs lets the Taiwan Network Information Center (TWNIC) and participating access providers stop resolving specific domains on a court judgment or ruling or a lawful administrative decision, for example under laws on fraud or child sexual exploitation. Suspension under the procedure does not include stopping users from reaching sites through public resolvers or VPNs, and its explanatory notes say this is technically impossible, citing OpenDNS, Cloudflare DNS and Quad9. As of 7 October Taiwan&#39;s Copyright Act had no provision authorising site blocking.&lt;/p&gt;
-&lt;p&gt;India is one of the five jurisdictions on Google Public DNS&#39;s list, where the page says it complies with enforceable court and government orders, though the page does not say which orders or laws apply there. In a 2019 piracy case the Delhi High Court ordered internet providers to block the sites and let rightsholders add mirror sites through the court registrar without a new lawsuit. The order is addressed to internet providers and does not mention public resolvers, although the judgment quotes a study noting that users can switch to an alternative DNS server not subject to blocking orders.&lt;/p&gt;
-&lt;p&gt;In Japan, the government published an anti-piracy roadmap in August 2026, whose attached measures menu (dated May 2024) says legislation on blocking remains under consideration. That note covers site blocking in general, not DNS specifically. As of 7 October, the official documents we checked contain no Japanese law authorising courts or agencies to order piracy sites blocked.&lt;/p&gt;
-&lt;p&gt;To check whether you are using Quad9, open its &lt;code&gt;on.quad9.net&lt;/code&gt; check page. After 24 November, people in France whose device or router is fixed to Quad9 may be unable to resolve web addresses, and the announcement does not say how the service will stop. Those who switch to their network provider&#39;s default resolver or another service lose Quad9&#39;s blocking of malicious domains. As of 23 October, Quad9&#39;s node data shows nodes in Taipei, Tokyo, Singapore, Seoul and elsewhere online, and the announcement mentions no change for users outside France.&lt;/p&gt;
-&lt;p&gt;A few questions help compare the two sides&#39; standards. First, who must show the cost and feasibility of confining a block to one country: the court found that the defendants had not shown it, while Quad9&#39;s announcement and the Internet Society report point to the limits of locating users. Second, does a block that can be bypassed count as effective: the court held that being bypassable does not make it ineffective, while Quad9&#39;s announcement says users will move to other services. Third, should technical intermediaries share responsibility for fighting piracy, and can small and non-profit resolvers afford country-by-country blocking?&lt;/p&gt;
-&lt;p&gt;Things to watch next are the outcome of Quad9&#39;s appeal and whether the exit on 24 November goes ahead as planned. According to TorrentFreak on 16 October, several DNS providers have appealed the March and May rulings to France&#39;s highest court. TorrentFreak reported in July that a newly passed French law has Arcom push new blocking targets in real time through an automated system, and according to that report it is due to take effect later in 2026. We have not checked whether the new law covers public resolvers.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (21)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/blog/au-revoir-france/&#34;&gt;Farewell, France&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/support/faq/&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/service/locations/&#34;&gt;Locations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/press/quad9-faces-new-dns-censorship-legal-challenge-in-france-from-canal/&#34;&gt;Quad9 Faces New DNS Censorship Legal Challenge in France from Canal+&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-10&#34;&gt;10 December 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/blog/quad9-turns-the-sony-case-around-in-dresden/&#34;&gt;Quad9 Turns the Sony Case Around in Dresden&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-12-06&#34;&gt;6 December 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/press/quad9-s-opinion-of-the-recent-court-ruling-in-leipzig/&#34;&gt;Quad9’s Opinion of the Recent Court Ruling in Leipzig&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-03-06&#34;&gt;6 March 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/images/tribunal-judiciaire_n°2602207_13_05_2026.pdf&#34;&gt;Tribunal judiciaire de Paris, jugement du 13 mai 2026, RG n° 26/02207&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tribunal judiciaire de Paris&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-13&#34;&gt;13 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.google.com/speed/public-dns/blocking&#34;&gt;Blocking Behavior&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google for Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/&#34;&gt;1.1.1.1 Public DNS Resolver&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cloudflare 1.1.1.1 docs&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cloudflare.com/h1-2025-transparency-report/&#34;&gt;Innovating to address streaming abuse — and our latest transparency report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-19&#34;&gt;19 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017&#34;&gt;著作權法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.internetsociety.org/resources/doc/2025/mandated-dns-blocking/&#34;&gt;Mandated DNS Blocking: A Guide for Legal Professionals&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Internet Society&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-30&#34;&gt;30 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www-api.moda.gov.tw/File/Get/moda/zh-tw/Qv1tZuiNEVfsLIl&#34;&gt;運用 DNS RPZ 自律機制停止解析違法網站處理參考程序&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;數位發展部&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-09&#34;&gt;9 January 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://senalnews.com/en/digital/-canal-reaches-a-new-milestone-in-its-fight-against-audiovisual-piracy&#34;&gt;CANAL+ reaches a new milestone in its fight against audiovisual piracy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Señal News&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/dns-resolver-quad9-rejects-french-piracy-blocks-weighs-exit-as-bein-seeks-up-to-e580k-a-day/&#34;&gt;DNS Resolver Quad9 Rejects French Piracy Blocks, Weighs Exit as beIN Seeks Up to €580K a Day&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;5 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/?p=277758&#34;&gt;Google, Cloudflare, Cisco Lose Pirate Site DNS Blocking Appeal in France&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-01&#34;&gt;1 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/?p=253822&#34;&gt;OpenDNS Suspends Service in France Due to Canal+ Piracy Blocking Order&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-06-29&#34;&gt;29 June 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/france-approves-automated-real-time-blocking-of-pirate-sports-streams/&#34;&gt;France Approves Automated, Real-Time Blocking of Pirate Sports Streams&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-28&#34;&gt;28 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/vpns-and-cloudflare-escape-beins-e10000-a-day-piracy-blocking-penalties/&#34;&gt;VPNs and Cloudflare Escape beIN’s €10,000-a-Day Piracy Blocking Penalties&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://globalfreedomofexpression.columbia.edu/wp-content/uploads/2019/07/UTV-Software-Communications-Ltd.-v.-1337X.TO_.pdf&#34;&gt;UTV Software Communication Ltd. v. 1337X.TO, CS(COMM) 724/2017&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Delhi High Court&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-04-10&#34;&gt;10 April 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cas.go.jp/jp/seisakukaigi/titeki2/pdf/kaizokuban_taisaku_r808.pdf&#34;&gt;インターネット上の海賊版に対する総合的な対策メニュー及び工程表&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;内閣府ほか&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-25&#34;&gt;25 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

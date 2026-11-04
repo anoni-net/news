@@ -6,7 +6,83 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 04 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Tor Browser 16.0 与 Tails 7.16</title>
+<link>https://anoni.net/news/zh-cn/2026/11/tor-browser-16-tails/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/tor-browser-16-tails</guid>
+<pubDate>Thu, 05 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Tor Browser 16.0 推出桌面版与 Android 版，改以 Firefox ESR 153 为基础。桌面版重新设计设置页，新增默认关闭的通用窗口标题，32 位 x86 Linux 从这一版起不再支持。Tails 7.16 把内置的 Tor Browser 更新到 16.0，Tails 7.0 或更新的版本可以自动升级。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，来自 Tor Project、Tails、GreatFire 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Tor Project 10 月 29 日发布 Tor Browser 16.0，桌面版与 Android 版同时推出，是第一个以 Firefox ESR 153（Firefox 的长期支持版本）为基础的稳定版。Tails（从 U 盘启动、所有连接都经过 Tor 的操作系统）隔天发布 7.16，把内置的 Tor Browser 更新到 16.0。Windows、macOS、Linux 与 Android 的用户都在更新范围内，只有 32 位 x86 的 Linux 电脑从 16.0 起不再支持。&lt;/p&gt;
+&lt;p&gt;依 Tor Project 的公告，换到新的 ESR 时团队会做每年一次的审查。这次检查并处理了超过 270 条 Bugzilla（Mozilla 的缺陷跟踪系统）议题，对象是 Firefox 一年来可能损害 Tor Browser 用户隐私与安全的变更。变更日志里有多项停用或隐藏的条目，例如 WebGPU（让网页直接使用显卡运算的新接口）在审查完成前停用，AI 设置面板与翻译设置页隐藏起来。Android 版也停用 AI 功能与 Google Lens，这些条目都只有标题，没有说明理由。&lt;/p&gt;
+&lt;p&gt;桌面版的设置页跟着 Firefox 6 月的改版重新设计，原本的“一般”页拆到外观、下载、标签页与浏览、无障碍、语言几个新页面（页面名称依英文公告翻译）。连接与安全等级这些 Tor Browser 特有的页面，改用 Firefox 的新组件重写。公告提到，开启后可能损害隐私或让浏览器更容易被识别指纹（网站从浏览器设置与设备特征认出同一台设备）的设置，有的隐藏、有的加上警告。原本的偏好设置会保留，找不到的选项可以用设置页顶端的搜索栏。&lt;/p&gt;
+&lt;p&gt;设置里另外新增通用窗口标题（位置在 Privacy and security → Protections from third-party applications），开启后所有窗口标题都换成“Tor Browser”。依公告的说明，浏览器通常把正在浏览的网页标题当成窗口名称，电脑上的其他程序与操作系统不需要特别权限就能读取。选项默认关闭，公告写到这次的开发周期来不及评估副作用。可能受影响的是使用屏幕阅读器的人，以及高度自定义系统的人（例如使用少见的桌面环境或程序切换器）。&lt;/p&gt;
+&lt;p&gt;Linux 版新增 64 位 ARM 处理器的原生支持，例如 Raspberry Pi 与安装 Linux 的 Apple Silicon Mac。32 位 x86 Linux 跟着 Firefox 停止支持，公告发布时每天约有 200 次更新检查来自这个平台，2019 年高峰时约 4,000 次。&lt;/p&gt;
+&lt;p&gt;桌面版内置的用户手册（地址栏输入 &lt;code&gt;about:manual&lt;/code&gt;，或从菜单 ☰ → Help → Tor Browser manual 打开）换成新支持网站的内容，一样可以离线阅读，连不上 Tor 网络时也能查。Google Play 限制以 APK 发布的 App 不能超过 100 MB，Android 版的手册因此一直无法内置、离线阅读。Android 版的界面大量改用 Material Design 3（Google 为 Android 制定的设计规范），公告写到后续版本还会继续改。变更日志也列出 Android 版移除密码界面、停用所有链接分享功能，以及停用导入书签。&lt;/p&gt;
+&lt;p&gt;依 Tails 的公告，7.16 把 Tor Browser 更新到 16.0，连带换上新的设置页。Tor 客户端更新到 0.4.9.15，Thunderbird 的 OpenPGP 支持也修复了。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;Tor Browser 建立在 Firefox ESR 上，每年换一次基础版本，等于一次接收 Firefox 一年份的变更。从 16.0 的变更日志看，多项新功能先关掉，例如 WebGPU 标明审查完成前停用。Firefox 新的在线搜索建议也维持关闭。本文据此推论，Firefox 用户已经有的部分功能，Tor Browser 的用户会比较晚用到或用不到。&lt;/p&gt;
+&lt;p&gt;通用窗口标题处理的是同一台电脑上的其他程序。Tor 网络保护的是连接经过的路径，电脑上安装的其他软件不在范围内。选项只换掉窗口标题，其他程序读取屏幕内容不在它处理的范围内（本文的推论）。&lt;/p&gt;
+&lt;p&gt;所有窗口都叫“Tor Browser”之后，本文推论依赖窗口名称切换窗口的人会比较难分辨，公告提到的屏幕阅读器用户可能就是这种情况。Tor Project 在公告里邀请使用屏幕阅读器或高度自定义系统的人试用，反馈遇到的问题。&lt;/p&gt;
+&lt;p&gt;同一个选项已经通过 Tor Uplift Project（把 Tor Browser 的修改送回 Firefox 的计划）进到 Firefox。依公告，熟悉高级设置的 Firefox 用户可以在 &lt;code&gt;about:config&lt;/code&gt; 把 &lt;code&gt;privacy.exposeContentTitleInWindow&lt;/code&gt;（一般窗口）与 &lt;code&gt;privacy.exposeContentTitleInWindow.pbm&lt;/code&gt;（隐私浏览窗口）设为 false，效果相同。&lt;/p&gt;
+&lt;p&gt;同一篇公告也预告新的线路显示（circuit display，显示连接经过哪几个中继节点的面板）即将进入 Alpha 测试版，不在 16.0 里。新版会把网站信息整合进面板，也能画出多路径线路，Android 版第一次会有线路显示。依公告，多路径线路用额外的中继节点把流量分成两条路径，在同一个出口节点（连接离开 Tor 网络、连到目的网站前的最后一个中继节点）汇合。到公告发布时，一般网站的连接已经会依网络的可用状况随机分配到多路径线路，洋葱服务（只能通过 Tor 连上的网站）还没有。&lt;/p&gt;
+&lt;p&gt;在中国境内取得 Tor Browser 与连上 Tor，Tor Project 的支持页有专门写给中国的一节。取得更新版 Tor Browser 先试 Telegram 机器人 @gettor_bot，不行再寄信到 gettor@torproject.org，主题依操作系统写 windows、macos、linux 或 android。第三方量测网站 GreatFire 的结果是，&lt;code&gt;www.torproject.org&lt;/code&gt; 最近 3 次有结论的测试全部被封锁（最后一次 2026 年 10 月 16 日）。&lt;code&gt;support.torproject.org&lt;/code&gt; 最后一次测试在 2026 年 5 月 7 日，结果同样是封锁，之后没有再测（两项都查证于 11 月 2 日）。&lt;/p&gt;
+&lt;p&gt;支持页写到 Tor 被封锁时，Connection Assist 会自动尝试网桥或 Snowflake。不行就改用中国可用的网桥，首选 WebTunnel（从 Telegram 的 @GetBridgesBot 或 bridges 网站取得），其次是 Snowflake 与 meek（meek 有带宽限制，速度会相当慢）。16.0 的变更日志列了“Update Bridge settings when connection failed”与 Android 版“Add frequent regions to tor connection assist”两个条目，只有标题，没有写适用哪些地区。法规方面，《计算机信息网络国际联网管理暂行规定》第六条要求直接国际联网使用国家公用电信网提供的国际出入口信道，“任何单位和个人”都不得自行建立或使用其他信道（条文没有出现 Tor 或网桥的字样，查到的官方资料也没有说明是否适用于使用 Tor）。&lt;/p&gt;
+&lt;p&gt;用 Tor Browser 桌面版的人更新到 16.0 之后，可以在设置的 Privacy and security 找到通用窗口标题（选项名称照英文公告）。依公告，开启后其他软件无法从窗口标题得知浏览记录。本文据此推论，担心电脑上装了来源不明软件的人可以考虑开启，但其他程序记录按键或截图时仍然保护不到。需要更完整地防范电脑上其他软件的人，Tor Project 在公告里推荐的是 Tails。&lt;/p&gt;
+&lt;p&gt;想照公告改用 Tails 的人，Tails 的已知问题页到 11 月 2 日仍写着，使用 Apple 芯片（M1、M2 等）的 Mac 与许多其他机型的 Mac 完全无法启动 Tails。Tails 7.0 或更新的版本可以自动升级到 7.16，自动升级失败或升级后无法启动时改用手动升级。改成重新安装的话，U 盘上的持久存储（Persistent Storage，Tails 用来保存文件与设置的空间）会消失。还在用 32 位 x86 Linux 的人，依公告多数可以改装 64 位版本，硬件或 Linux 版本太旧的除外。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/new-release-tor-browser-160/&#34;&gt;New Release: Tor Browser 16.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/news/version_7.16/&#34;&gt;Tails 7.16&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/support/known_issues/&#34;&gt;Known issues&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tor-browser/circumvention/connecting-from-censored-regions/&#34;&gt;How to bypass censorship and connect to Tor from different countries or regions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/www.torproject.org&#34;&gt;www.torproject.org&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/support.torproject.org&#34;&gt;support.torproject.org&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/1996-02/02/c_126468621.htm&#34;&gt;计算机信息网络国际联网管理暂行规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家网信办（转载）&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Article 19 数字支付手册的风险类别与七项策略</title>
 <link>https://anoni.net/news/zh-cn/2026/11/hk-payment-handbook/</link>
@@ -2681,199 +2757,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinamobileltd.com/sc/ir/reports/sd2025_ashare.pdf&#34;&gt;中国移动有限公司 2025 年可持续发展报告&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国移动&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Quad9 退出法国与法国的 DNS 封锁命令</title>
-<link>https://anoni.net/news/zh-cn/2026/10/quad9-exit-france/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/quad9-exit-france</guid>
-<pubDate>Tue, 27 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>公共 DNS 解析服务 Quad9 10 月 22 日宣布，11 月 24 日起不再为位于法国的用户提供服务。依 Quad9 的公告，起因是法国法院依体育转播的反盗版规定，要求它替法国用户封锁一批域名。依 10 月 23 日查到的第三方测量，在中国大陆连接 Quad9 加密 DNS 网址的测试多数标为异常，异常不等于确认封锁。</description>
-<content:encoded>&lt;p&gt;整理 24 篇原文，来自 Quad9、Tribunal judiciaire de Paris、Google for Developers 等 13 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Quad9 是瑞士非营利基金会运营的公共 DNS 解析服务，负责把网址里的域名翻译成服务器的地址，用户可以自行设置、取代网络运营商默认的解析服务。Quad9 10 月 22 日宣布，11 月 24 日起不再为位于法国的用户提供服务。依 Quad9 的公告，体育转播商 beIN 提出请求后，法国法院 10 月 21 日的判决要求它替位于法国的用户封锁一批域名的解析。Quad9 表示不会封锁这些域名，所以选择退出法国，公告没有说明会用什么方式识别位于法国的用户。&lt;/p&gt;
-&lt;p&gt;这类命令的依据是法国《体育法典》第 L. 333-10 条，转播权利人可以请求法院命令能够协助的对象采取封锁措施，阻止从法国境内连到盗播网站。巴黎司法法院 5 月 13 日判决 Google 与 Quad9 等被告在送达后 3 天内采取措施，封锁持续到 WTA 网球赛季最后一场的 11 月 14 日。依判决适用的条文，之后由权利人提供新发现的盗播网站，法国视听与数字通信监管局（Arcom）核查后再通报被告。&lt;/p&gt;
-&lt;p&gt;5 月判决列出的域名依 Quad9 的说法后来增加到 58 个，TorrentFreak 引述 Quad9 表示没有封锁这些域名。TorrentFreak 也报道 beIN 回到法院，请求每日最高 58 万欧元的罚款。beIN 对 TorrentFreak 表示不就进行中的程序发表评论。Quad9 的公告写到 10 月的判决仍要求封锁、罚款定为每日 1,000 欧元（到 11 月 14 日合计 2.4 万欧元），并提到有一件上诉还在进行，Quad9 承受不了另外约 20 件类似诉讼累积的罚款。&lt;/p&gt;
-&lt;p&gt;依 Quad9 的公告，它的服务免费、不需要注册，也没有把用户对应到所在国家的数据。Quad9 因此无法判断判决适用于哪些人，若把域名加进全球的封锁清单，又会把法国的判决套用到全世界的用户。&lt;/p&gt;
-&lt;p&gt;在法国付费电视运营商 Canal+ 提出的另一件案子，Quad9 2024 年 12 月的公告写到，当时它对所有地区的用户封锁了清单上的网站。在德国的诉讼中，Quad9 曾依 IP 地址做地区封锁，权利人用 VPN 连接之后法院认定措施不足并处以罚款。Quad9 后来在 2023 年 12 月的上诉审胜诉，德累斯顿高等法院认定解析服务不负侵权责任。&lt;/p&gt;
-&lt;p&gt;依 TorrentFreak，Quad9 对德国案与这次做法不同的解释是德国的封锁属于诉讼期间的临时措施、每个案子各自处理。Canal+ 案与这次的关系，报道没有说明。&lt;/p&gt;
-&lt;p&gt;其他公共解析服务的做法也不同。依 TorrentFreak 引用的公告，Cisco 的 OpenDNS 从 2024 年 6 月 28 日起停止在法国与葡萄牙提供服务。到 10 月 23 日，Google Public DNS 的说明页列出法国等五个会依命令封锁的地区，被封锁的域名会直接回复拒绝查询。Cloudflare 的文档提到 1.1.1.1 不封锁也不过滤内容，博客则提到回应封锁命令时，有时改在内容分发网络（CDN）对网站做地理封锁。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;DNS 解析服务把网址里的域名翻译成服务器的 IP 地址，DNS 层的封锁让解析服务对特定域名不回复地址，只影响通过这个解析服务的查询。依 Internet Society 2026 年 3 月的报告，解析服务收到的只有域名，没有网页的完整路径。&lt;/p&gt;
-&lt;p&gt;封锁能不能只限于法国，巴黎司法法院 5 月判决的理由是被告没有证明限定在法国境内会有高成本或技术上不可行，技术方式由被告自行选择。Quad9 的公告则提到它没有用户所在国家的数据，德国的经验也显示依 IP 地址判断会被 VPN 绕过。Internet Society 的报告提到，运营者要在毫秒内准确判断用户的位置并不容易，封锁可能影响管辖范围以外的用户。Google Public DNS 的说明页则列出它会依命令在法国等地区封锁。&lt;/p&gt;
-&lt;p&gt;对于可以被绕过的封锁还有没有效，Quad9 的公告提到想看的人会改用其他较不可信的解析服务，封锁也不会让内容从服务器上消失。巴黎司法法院的判决写到，改用替代解析服务的人数多寡，不影响权利人请求封锁的权利。依 TorrentFreak 的转述，巴黎上诉法院 3 月在 Canal+ 对 Google、Cloudflare 与 Cisco 的案件中认定，过滤措施可以被绕过不代表措施无效。同一个判决也认为，替代解析服务让用户可以连到盗播网站，并绕过网络运营商的封锁。&lt;/p&gt;
-&lt;p&gt;责任与成本由谁负担，Quad9 的公告认为让私人企业决定网络上能看到什么是危险的问题。Internet Society 报告的结论是 DNS 封锁不适合用来执行公共政策，报告也提到小型与非营利运营者可能负担不起逐国封锁的成本。依 Señal News 转载的 Canal+ 新闻稿，上诉法院的判决符合 Canal+ 要求各类技术中介承担打击盗播责任的策略。5 月的判决则提到，封锁的成本依 Arcom 主持的协议由各方分摊。&lt;/p&gt;
-&lt;p&gt;台湾的数字发展部 2025 年 1 月订定的参考程序也有 DNS 层的停止解析，由台湾网络信息中心（TWNIC）与自愿参与的网络接入服务商修改特定域名的解析结果，要依法院判决、裁定或机关依法作出的处分才能启动。程序写明停止解析不包括禁止用户通过公共解析服务或 VPN 浏览的技术，说明栏也提到这在技术上做不到，举的例子包括 OpenDNS、Cloudflare DNS 与 Quad9。启动的依据例如诈骗犯罪与儿童及少年性剥削的相关法律，到 10 月 7 日查证时，台湾的《著作权法》没有授权封锁网站的条文。&lt;/p&gt;
-&lt;p&gt;公共解析服务在不在封锁范围内，法国与台湾的方向不同。本文的法国案件由法院判决命令解析服务自己封锁域名，判决后新增的网站由 Arcom 核查后通报，台湾的程序则把公共解析服务排除在外。中国大陆的《网络安全法》（2026 年 1 月 1 日起施行的 2025 年修正版）第五十二条规定，来源于境外、法律和行政法规禁止发布或者传输的信息，由网信部门和有关部门通知有关机构采取技术措施阻断传播。条文写的是通知有关机构，没有写到公共解析服务，本文查到的中国大陆法规也没有规定法院程序。&lt;/p&gt;
-&lt;p&gt;依 Quad9 10 月 23 日的节点数据，中国大陆、香港与澳门都没有 Quad9 的节点。节点只是服务器的所在地，没有节点不代表无法使用。依 Quad9 的隐私页，Quad9 退出某个国家时当地用户仍可使用服务（除非当地自己阻止），由邻近国家的节点提供。该页写的是退出某国的情形，没有针对中国大陆、香港或澳门说明。&lt;/p&gt;
-&lt;p&gt;中国大陆这一边，查得到的是第三方测量能不能连上 Quad9 本身的结果。第三方测量项目 GreatFire 到 10 月 22 日的最后一次测试，&lt;code&gt;https://dns.quad9.net&lt;/code&gt; 最近 2 次有结论的测试中有 1 次受到干扰，从 2020 年 2 月 4 日起就有干扰记录。加密 DNS 查询用的 &lt;code&gt;https://dns.quad9.net/dns-query&lt;/code&gt;，最近 2 次有结论的测试（最后一次 9 月 3 日）都受到干扰，两个网址的测试次数都不多。&lt;/p&gt;
-&lt;p&gt;依网络干扰观测项目 OONI 的公开 API，7 月 23 日到 10 月 23 日在中国大陆对 &lt;code&gt;dns.quad9.net&lt;/code&gt; 做了 239 次网页连接测试（Web Connectivity），其中 232 次测的是加密 DNS 查询用的网址。239 次中 224 次标为异常，确认封锁 0 次。异常不等于确认封锁，GreatFire 与 OONI 的测量结果也都不能用来判断封锁的手法。本文没有找到能判断用 9.9.9.9 做一般 DNS 查询在中国大陆是否受到干扰的测量结果。&lt;/p&gt;
-&lt;p&gt;想确认自己是否在用 Quad9，可以打开 Quad9 提供的 &lt;code&gt;on.quad9.net&lt;/code&gt; 检查页。11 月 24 日之后人在法国、设备或路由器又固定设置成 Quad9 的人，可能无法解析网址，公告没有说明停止服务的方式。改用网络运营商默认或其他解析服务的人，会失去 Quad9 拦截恶意域名的保护。依 10 月 23 日的节点数据，Quad9 在台北、东京、新加坡、首尔等地的节点都在运行，公告没有提到法国以外的用户会有任何变动。&lt;/p&gt;
-&lt;p&gt;读者可以从几个问题比较两方的标准。一是限定在一国境内封锁的成本与可行性由谁证明，法院认为被告没有证明，Quad9 与 Internet Society 则提出定位的限制。二是可以被绕过的封锁算不算有效，法院认为可绕过不代表无效，Quad9 认为用户会转向其他服务。三是技术中介该不该分担打击盗播的责任，以及小型与非营利的解析服务能否负担逐国封锁。&lt;/p&gt;
-&lt;p&gt;之后可以留意 Quad9 上诉的结果，以及 11 月 24 日的退出是否如期。依 TorrentFreak 10 月 16 日的报道，数个 DNS 运营者已就 3 月与 5 月的判决上诉到法国最高法院。TorrentFreak 7 月报道法国新通过的法律改由 Arcom 以自动化系统实时推送新增的封锁目标，依当时的报道，正式实施要到 2026 年稍晚。新法是否涵盖公共解析服务，本文没有查证。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（24 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/blog/au-revoir-france/&#34;&gt;Farewell, France&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/support/faq/&#34;&gt;Frequently Asked Questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/service/locations/&#34;&gt;Locations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/press/quad9-faces-new-dns-censorship-legal-challenge-in-france-from-canal/&#34;&gt;Quad9 Faces New DNS Censorship Legal Challenge in France from Canal+&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-10&#34;&gt;2024 年 12 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/blog/quad9-turns-the-sony-case-around-in-dresden/&#34;&gt;Quad9 Turns the Sony Case Around in Dresden&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-12-06&#34;&gt;2023 年 12 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/news/press/quad9-s-opinion-of-the-recent-court-ruling-in-leipzig/&#34;&gt;Quad9’s Opinion of the Recent Court Ruling in Leipzig&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-03-06&#34;&gt;2023 年 3 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/images/tribunal-judiciaire_n°2602207_13_05_2026.pdf&#34;&gt;Tribunal judiciaire de Paris, jugement du 13 mai 2026, RG n° 26/02207&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tribunal judiciaire de Paris&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-13&#34;&gt;2026 年 5 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.google.com/speed/public-dns/blocking&#34;&gt;Blocking Behavior&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google for Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/&#34;&gt;1.1.1.1 Public DNS Resolver&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Cloudflare 1.1.1.1 docs&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.cloudflare.com/h1-2025-transparency-report/&#34;&gt;Innovating to address streaming abuse — and our latest transparency report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Cloudflare&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-19&#34;&gt;2025 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017&#34;&gt;著作權法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.internetsociety.org/resources/doc/2025/mandated-dns-blocking/&#34;&gt;Mandated DNS Blocking: A Guide for Legal Professionals&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Internet Society&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-30&#34;&gt;2026 年 3 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www-api.moda.gov.tw/File/Get/moda/zh-tw/Qv1tZuiNEVfsLIl&#34;&gt;運用 DNS RPZ 自律機制停止解析違法網站處理參考程序&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;數位發展部&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-09&#34;&gt;2025 年 1 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://senalnews.com/en/digital/-canal-reaches-a-new-milestone-in-its-fight-against-audiovisual-piracy&#34;&gt;CANAL+ reaches a new milestone in its fight against audiovisual piracy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Señal News&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/dns-resolver-quad9-rejects-french-piracy-blocks-weighs-exit-as-bein-seeks-up-to-e580k-a-day/&#34;&gt;DNS Resolver Quad9 Rejects French Piracy Blocks, Weighs Exit as beIN Seeks Up to €580K a Day&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/?p=277758&#34;&gt;Google, Cloudflare, Cisco Lose Pirate Site DNS Blocking Appeal in France&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-01&#34;&gt;2026 年 4 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/?p=253822&#34;&gt;OpenDNS Suspends Service in France Due to Canal+ Piracy Blocking Order&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-06-29&#34;&gt;2024 年 6 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/france-approves-automated-real-time-blocking-of-pirate-sports-streams/&#34;&gt;France Approves Automated, Real-Time Blocking of Pirate Sports Streams&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-28&#34;&gt;2026 年 7 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://torrentfreak.com/vpns-and-cloudflare-escape-beins-e10000-a-day-piracy-blocking-penalties/&#34;&gt;VPNs and Cloudflare Escape beIN’s €10,000-a-Day Piracy Blocking Penalties&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TorrentFreak&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/dns.quad9.net&#34;&gt;Is https://dns.quad9.net blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/dns.quad9.net/dns-query&#34;&gt;Is https://dns.quad9.net/dns-query blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=web_connectivity&amp;amp;domain=dns.quad9.net&amp;amp;since=2026-07-23&amp;amp;until=2026-10-23&#34;&gt;OONI API aggregation: web_connectivity, dns.quad9.net, CN&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm&#34;&gt;中华人民共和国网络安全法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-29&#34;&gt;2025 年 12 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://quad9.net/service/privacy/&#34;&gt;Privacy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Quad9&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
