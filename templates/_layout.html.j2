@@ -60,8 +60,9 @@
 {% set header_langs = alternates|rejectattr("current")|list %}
 {% if header_langs %}
     {# 頁首右側的語系切換，用簡稱放得進手機的一列，完整名稱寫在 aria-label，朗讀時念得出來。
+       aria-label 要包含畫面上的簡稱（WCAG 2.5.3），用語音操作說「EN」才點得到，簡稱不在全名裡的（EN 與 English）兩個都寫，簡稱放前面，不加括號（括號裡的字不算進比對）。
        文章頁與單頁在標題區已經有「其他語言」那一行，覆寫成空的 block，不重複放 #}
-    <nav class="site-header__langs" role="navigation" aria-label="{{ s.other_langs_label }}">{{ icon('translate') }}{% for alt in header_langs %}<a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}" aria-label="{{ alt.name }}">{{ alt.short }}</a>{% endfor %}</nav>
+    <nav class="site-header__langs" role="navigation" aria-label="{{ s.other_langs_label }}">{{ icon('translate') }}{% for alt in header_langs %}<a href="{{ alt.href }}" hreflang="{{ alt.html }}" lang="{{ alt.html }}"{% if alt.short not in alt.name %} aria-label="{{ alt.short }}, {{ alt.name }}"{% else %} aria-label="{{ alt.name }}"{% endif %}>{{ alt.short }}</a>{% endfor %}</nav>
 {% endif %}
 {% endblock %}
   </div>
@@ -85,7 +86,7 @@
       <a href="{{ onion_url }}">{{ icon('torproject') }} {{ s.onion }}</a>
 {% endif %}
     </nav>
-{% with langs_class = "site-footer__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+{% with langs_class = "site-footer__langs", langs_label = s.footer_langs_label %}{% include "_other_langs.html.j2" %}{% endwith %}
     <p>{{ s.license_before }}<a href="{{ s.license_url }}">CC-BY 4.0</a>{{ s.license_after }}</p>
 {% if target.analytics %}
     <p>{{ s.analytics }}</p>
