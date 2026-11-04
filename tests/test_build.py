@@ -1314,7 +1314,8 @@ def test_header_langs_only_where_story_has_none(fixture_site):
         return page[page.index('<header class="site-header">'):page.index("</header>")]
 
     assert re.findall(r'href="(/news/[^"]*)"[^>]*aria-label="([^"]+)">([^<]+)</a>', header("")) == [
-        ("/news/zh-cn/", "简体中文", "简体"), ("/news/en/", "English", "EN")]
+        ("/news/zh-cn/", "简体中文", "简体"), ("/news/en/", "EN, English", "EN")]
+    # 簡稱不在全名裡時 aria-label 兩個都寫，用語音說出畫面上的「EN」才點得到（WCAG 2.5.3）
     assert re.findall(r'aria-label="([^"]+)">([^<]+)</a>', header("en/2026/")) == [
         ("正體中文", "正體"), ("简体中文", "简体")]
     assert "site-header__langs" not in header("2026/09/zkp-age-verification/")

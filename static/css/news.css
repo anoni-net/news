@@ -28,6 +28,8 @@
     --c-headline: var(--brand-cyan-900);
     --c-link: var(--brand-cyan-800);
     --c-rule: var(--brand-cyan-500);
+    /* 焦點外框要跟底色有 3:1（WCAG 1.4.11），cyan-500 在白底只有 2.5，用 cyan-800 */
+    --c-focus: var(--brand-cyan-800);
     --c-header-bg: var(--brand-cyan-900);
     --c-header-text: #ffffff;
     --c-header-link: var(--brand-cyan-50);
@@ -80,6 +82,7 @@ html:lang(en) .site-header__product {
         --c-headline: var(--brand-cyan-100);
         --c-link: var(--brand-cyan-300);
         --c-rule: var(--brand-cyan-600);
+        --c-focus: var(--brand-cyan-600);
         --c-header-bg: var(--brand-cyan-900);
         --c-header-text: #ffffff;
         --c-header-link: var(--brand-cyan-50);
@@ -116,7 +119,7 @@ a {
 }
 
 a:focus-visible {
-    outline: 2px solid var(--c-rule);
+    outline: 2px solid var(--c-focus);
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -144,6 +147,8 @@ p {
 /* ---------------------------------------------------------------- 頁首與刊頭 */
 
 .site-header {
+    /* 頁首是墨色底，焦點外框改用淺色 */
+    --c-focus: var(--c-header-link);
     background: var(--c-header-bg);
     color: var(--c-header-text);
 }
@@ -444,6 +449,9 @@ p {
 
 /* 導讀歷史的「同一天還有」那一行是連結，顏色跟導讀的出處行一樣用次要色，滑過才加底線 */
 .brief__source .past__also {
+    /* 單獨一行的連結，點擊範圍補到 24px 高（WCAG 2.5.8） */
+    display: inline-block;
+    min-height: 24px;
     color: var(--c-muted);
     text-decoration: none;
 }
@@ -806,7 +814,7 @@ p {
 
 .listen__button:focus-visible,
 .listen__toggle:focus-visible {
-    outline: 2px solid var(--c-rule);
+    outline: 2px solid var(--c-focus);
     outline-offset: 2px;
 }
 
@@ -840,7 +848,7 @@ p {
 }
 
 .listen__select:focus-visible {
-    outline: 2px solid var(--c-rule);
+    outline: 2px solid var(--c-focus);
     outline-offset: 2px;
 }
 
