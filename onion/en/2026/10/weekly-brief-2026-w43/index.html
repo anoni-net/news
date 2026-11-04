@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/weekly-brief-2026-w43/">
 <link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/weekly-brief-2026-w43/">
 <link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/weekly-brief-2026-w43/">
-<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="stylesheet" href="/css/news.css?v=baf0bab174">
 <link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="anoni.net News" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml">
 <meta property="og:site_name" content="anoni.net News">
@@ -173,19 +173,19 @@
   </header>
   <div class="story__body content">
 <p>This issue collects five stories, three of them follow-ups to earlier articles, covering 1 to 22 October.</p>
-<h3 id="session-v2">Progress on Session Protocol v2</h3>
+<h2 id="session-v2">Progress on Session Protocol v2</h2>
 <p>Session, a messaging app you can register for without a phone number, described the progress of its new Protocol v2 in a blog post on 13 October. Forward secrecy for one-to-one messages (past messages stay unreadable even if keys leak) and post-quantum encryption (encryption designed to resist attacks by future quantum computers) have been implemented in the shared library libsession, and the post-quantum part will use a hybrid design that combines a post-quantum algorithm with the current one. As of 23 October, the apps had shipped only forward-compatibility handling: a message in the v2 format shows up as a placeholder asking the user to update, and the apps cannot yet send v2 messages.</p>
 <p>According to the same post, device groups (joining, removal and membership management) are still in development, and the migration plan for existing accounts is still being designed. An account can only switch to v2 once all its linked devices support it, and the switch may then need to be confirmed manually. Session's fundraising post of 8 October states that v2 does not yet have a release date.</p>
 <p>In another post on 19 October, Session wrote that Session Router 1.1, the onion routing layer future versions of Session will use to connect to the node network, has added forward secrecy and a post-quantum key exchange. Node operators can choose whether to upgrade for now, and Session recommends that they do. According to the v2 post, Session Router will later become the main transport layer for v2.</p>
-<h3 id="thunderbird-ios">Development of Thunderbird for iOS</h3>
+<h2 id="thunderbird-ios">Development of Thunderbird for iOS</h2>
 <p>Thunderbird, the open-source email software, set out the design direction for its iPhone version on its official blog on 1 October, writing that the goal is a first version ready for community testing within the next few months. As of 23 October, the app was not on the App Store, and the GitHub repository's description says the project is in early development and not yet usable. On 23 October, the public TestFlight page (Apple's platform for distributing beta apps) showed the beta as full.</p>
 <p>According to the team's replies in the post's comments, iCloud mail accounts can sign in over IMAP with the account password. As of 18 October, sign-in for Google and Microsoft accounts was still an open work item on GitHub. As of 23 October, we found no mention of OpenPGP (the standard for end-to-end encrypted email) support in either the repository or the post. The code is released under the MPL-2.0 licence.</p>
-<h3 id="cryptpad">CryptPad 2026.10.0</h3>
+<h2 id="cryptpad">CryptPad 2026.10.0</h2>
 <p>The autumn release that CryptPad, an end-to-end encrypted collaboration suite, previewed in its summer status report (covered in an earlier article) was published on GitHub on 21 October as 2026.10.0. According to the release notes, this version rewrites CryptPad's server, and the office document editors have moved from OnlyOffice to the compatible Euro Office. Self-hosting administrators should read the upgrade notes before upgrading, because the upgrade involves changes to the reverse proxy configuration and the configuration file is now split in two.</p>
 <p>As of 23 October, the official blog had no announcement of this release. The summer status report mentioned that cryptpad.fr would drop French-language customer support, and as of the same day we still could not find a date for it.</p>
-<h3 id="pipepipe">PipePipe 5.5.0</h3>
+<h2 id="pipepipe">PipePipe 5.5.0</h2>
 <p>PipePipe, the open-source YouTube client covered in an earlier article, released 5.5.0 on GitHub on 21 October. The release notes list multi-select on list pages, regular expression support in keyword filters, and filtering comments by keyword, username or like count. The third-party repository IzzyOnDroid updated to 5.5.0 the same day, while F-Droid's package page still showed 5.4.0 as of 23 October.</p>
-<h3 id="flock-lawsuit">Civil rights suit against Florida state troopers</h3>
+<h2 id="flock-lawsuit">Civil rights suit against Florida state troopers</h2>
 <p>An earlier article covered a civil rights suit in the US District Court for the Middle District of Florida. The plaintiff had been arrested over a hit-and-run and was later not prosecuted, and the case involves license plate reader records. She sued two state troopers, and on 3 August the court stayed the case so that the parties could go to mediation.</p>
 <p>The docket on CourtListener (a free database of US court dockets) lists a mediation report on 21 September and an order on 22 October. We could not find the contents of either entry in free public sources, and as of 23 October we had found no news reports of a mediation outcome or of the case resuming.</p>
   </div>
@@ -311,7 +311,7 @@
       <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> Report an error</a>
       <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net home</a>
     </nav>
-<nav class="site-footer__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/2026/10/weekly-brief-2026-w43/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/zh-cn/2026/10/weekly-brief-2026-w43/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+<nav class="site-footer__langs" role="navigation" aria-label="Other languages (footer)"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/2026/10/weekly-brief-2026-w43/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/zh-cn/2026/10/weekly-brief-2026-w43/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
     <p>Stories are licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>. Copyright in the quoted sources stays with their authors.</p>
   </div>
 </footer>

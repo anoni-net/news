@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/weekly-brief-2026-w42/">
 <link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/weekly-brief-2026-w42/">
 <link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/weekly-brief-2026-w42/">
-<link rel="stylesheet" href="/css/news.css?v=4219b38e67">
+<link rel="stylesheet" href="/css/news.css?v=baf0bab174">
 <link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml">
 <meta property="og:site_name" content="anoni.net 新闻导读">
@@ -203,26 +203,26 @@
   </header>
   <div class="story__body content">
 <p>这一期收 7 则，涵盖 10 月 3 日到 10 月 11 日。</p>
-<h3 id="telegram-desktop">Telegram Desktop 的文件读取漏洞</h3>
+<h2 id="telegram-desktop">Telegram Desktop 的文件读取漏洞</h2>
 <p>研究者 10 月 3 日公开 Telegram Desktop 7.2.8 及更早版本的漏洞，在 Telegram 以外的地方点一次特制链接，就可能让本地文件被发送给攻击者。被发送的文件可能包括登录信息，攻击者可以借此接管账号，研究者只在 Windows 上确认过。研究者写 Telegram 9 月 16 日在 GitHub 的一个 commit 修复了这个问题，9 月 17 日发布的 7.2.9 包含这项修复，官方版本说明只写了另一项显示问题的修复。</p>
 <p>用 Telegram Desktop 的人可以确认版本是 7.2.9 或更新的版本。研究者另建议设置本地密码，但提醒它只能让被盗的登录信息无法使用，挡不住文件被读取。</p>
-<h3 id="bitwarden">Bitwarden 商店版的许可证变更</h3>
+<h2 id="bitwarden">Bitwarden 商店版的许可证变更</h2>
 <p>Bitwarden 员工 10 月 9 日在社区论坛公告，下一个版本起，各应用商店上架的是商业许可证的版本。员工在回复中也写，官网下载页的版本同样改用商业许可证。公告写 GPLv3 的开源版本会继续在 GitHub 更新与发布，目前所有功能两个版本都有，但员工的回复也写未来有些组件会以商业许可证发布、只存在于商业版。</p>
 <p>另一位员工在论坛写，这次调整只影响重新打包转售 Bitwarden 的人，自托管不受影响。到 10 月 12 日，GitHub 上的许可证文件最后一次修改在 2025 年。内容仍是 GPLv3，加上只用于 <code>bitwarden_license</code> 目录的 Bitwarden License。商业版的许可证文字在官网查不到。</p>
-<h3 id="lineageos-24">LineageOS 24</h3>
+<h2 id="lineageos-24">LineageOS 24</h2>
 <p>LineageOS 是以 Android 开源代码为基础、可以自行刷入手机的操作系统，10 月 11 日在官方博客宣布基于 Android 17 的 24.0。24.0 先支持一部分设备，其他设备符合要求后陆续加入。使用 Linux 内核 4.4 与 4.9 的设备，官方只接受 22.2 的版本。博客写 22.2 会持续每月合并安全补丁，直到 Google 停止为 Android 15 发布官方安全公告。</p>
 <p>已经在用官方版本的人按设备的升级指南操作，除非设备的 wiki 页面另有说明，不必清除数据。</p>
-<h3 id="nitter">Nitter 的资金与法律协助</h3>
+<h2 id="nitter">Nitter 的资金与法律协助</h2>
 <p>据项目的 README，Nitter 是注重隐私的开源 X（Twitter）替代前端。维护者 10 月 10 日在 nitter.net 公告，X Corp. 8 月 24 日与 9 月 8 日两次发出律师函，要求永久撤下 Nitter 实例与代码仓库。公告写，维护者 9 月 7 日说已有律师代理，依据的是后来证实不实的保证。到 10 月 10 日的公告为止，Nitter 没有法律顾问，维护者正在寻求资金与法律协助。</p>
 <p>TechCrunch 8 月的报道写，信中指控 Nitter 非法使用与规避 X 的 API。到 10 月 12 日，nitter.net 只剩公告页。</p>
-<h3 id="esp32-adblock">以 ESP32-C3 制作的 DNS 广告拦截器</h3>
+<h2 id="esp32-adblock">以 ESP32-C3 制作的 DNS 广告拦截器</h2>
 <p>GitHub 上的开源项目 esp32-c3-adblock 把类似 Pi-hole 的 DNS 广告拦截放进 ESP32-C3 开发板，README 写这块板子约 2 美元，以 MIT 许可证发布。到 10 月 6 日项目仍有更新，README 提到拦截清单上的域名查询一律回答 0.0.0.0，其他查询转发到上游的 DNS。使用方式是把设备的 DNS 指向这块开发板，README 的安装步骤是自行编译再烧录。</p>
 <p>README 也提醒没改掉默认密码的话，管理界面的密码等于公开，而且管理界面只有普通的 HTTP。本文在 10 月 12 日读 main 分支代码的结果是，默认以未加密的 DNS 转发到公共 DNS 服务 Quad9。</p>
-<h3 id="india-shutdown">印度新德里的移动网络关闭与平台通知</h3>
+<h2 id="india-shutdown">印度新德里的移动网络关闭与平台通知</h2>
 <p>据 Deccan Herald 的报道，印度内政部授权在新德里 Janpath 与 Kartavya Path 路口周围半径 4 公里内暂停移动上网服务，涵盖所有移动网络技术。时间是印度时间 10 月 9 日 22:00（北京时间 10 月 10 日 00:30）到 10 月 10 日 22:00（北京时间 10 月 11 日 00:30），与一场抗议重叠。MediaNama 的报道提到这份命令标示最高机密、没有写理由。到 10 月 12 日更新的报道为止，内政部没有正式公开命令。</p>
 <p>据 MediaNama 照录的通知全文，电子和信息技术部 10 月 8 日另发通知。通知建议社交平台对可能影响公共秩序的不实与误导内容加强注意，并优先处理授权政府机关的举报。到 10 月 12 日，部委网站查不到这份通知。</p>
 <p>数字权利组织 SFLC.IN 认为这次关闭不符合比例原则，也认为命令没有事先公布，违反 2024 年电信（暂时停止服务）规则的公布要求。SFLC.IN 另认为通知的用语宽泛模糊，可能让平台为了保住责任豁免而过度删除合法言论。</p>
-<h3 id="psiphon-c-22">Psiphon 与加拿大 C-22 法案</h3>
+<h2 id="psiphon-c-22">Psiphon 与加拿大 C-22 法案</h2>
 <p>The Globe and Mail 10 月 4 日报道，协助用户绕过网络审查的多伦多企业 Psiphon 对报社表示已开始规划，合法访问法案 C-22（Lawful Access Act, 2026）按现行版本通过就把业务迁出加拿大。Citizen Lab 的页面写，法案通过后会要求电子服务提供者秘密修改系统，让警方与情报机关具备监控能力。Psiphon 的副总裁在给报社的邮件回复中写，开源的代码没办法偷偷加入后门，每一行都是公开的。到 10 月 12 日，Psiphon 自己的网站没有另发公告。</p>
 <p>同一篇报道中，公共安全部长的发言人回应，合法访问的框架本身不会让企业无法在加拿大经营安全、保护隐私的服务。报道也写众议院在夏季休会前修改法案，其中一项修正保护端到端加密。到 10 月 12 日，加拿大议会的 LEGISinfo 显示法案在参议院二读。</p>
   </div>
@@ -391,7 +391,7 @@
       <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
       <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
     </nav>
-<nav class="site-footer__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/weekly-brief-2026-w42/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/weekly-brief-2026-w42/" hreflang="en" lang="en">English</a></nav>
+<nav class="site-footer__langs" role="navigation" aria-label="页脚的其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/10/weekly-brief-2026-w42/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/10/weekly-brief-2026-w42/" hreflang="en" lang="en">English</a></nav>
     <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
   </div>
 </footer>
