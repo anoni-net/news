@@ -799,6 +799,13 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/civil-society/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/category/finance/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/finance/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/category/brief/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/brief/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/brief/"/>
@@ -1947,6 +1954,13 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/civil-society/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/category/finance/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/finance/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/category/brief/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/brief/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/brief/"/>
@@ -3093,6 +3107,13 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/civil-society/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/civil-society/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/civil-society/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/category/finance/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/finance/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/finance/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/category/brief/</loc>
