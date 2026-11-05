@@ -4,7 +4,7 @@ description: Article 19 has published a digital payments handbook in Traditional
 date: 2026-11-04T00:05:00+08:00
 slug: hk-payment-handbook
 categories:
-  - civil-society
+  - finance
 regions:
   - HK
 sources:

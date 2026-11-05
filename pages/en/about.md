@@ -17,7 +17,7 @@ There is also a companion series, [Same Day, Years Apart](../history/), with one
 
 ## Story selection {#selection}
 
-Candidates come from about thirty regular sources, including digital rights groups, security research teams, open-source projects and news outlets, plus daily picks from tech communities. Maintainers shortlist by headline, then read the original to confirm there is something useful to add. Priority goes to things readers can download, configure or follow today, and to technical or policy changes that alter how people already work.
+Candidates come from about thirty regular sources, including digital rights groups, security research teams, open-source projects and news outlets, plus daily picks from tech communities. Maintainers shortlist by headline, then read the original to confirm there is something useful to add. Priority goes to things readers can download, configure or follow today, and to technical or policy changes that alter how people already work. In financial privacy and press freedom stories technology is not always at the centre, so we pick them when they lead back to a tool or practice readers can use, such as encrypted messaging, device security or anonymous submission systems.
 
 ## Fact-checking {#fact-checking}
 

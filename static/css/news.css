@@ -1491,6 +1491,8 @@ p {
 .cat--mobile { --cat: #1d4ed8; }
 .cat--security { --cat: #be185d; }
 .cat--civil-society { --cat: #15803d; }
+.cat--finance { --cat: #4338ca; }
+.cat--press { --cat: #c2410c; }
 .cat--brief { --cat: #4b5563; }
 
 @media (prefers-color-scheme: dark) {
@@ -1501,6 +1503,8 @@ p {
     .cat--mobile { --cat: #93c5fd; }
     .cat--security { --cat: #f9a8d4; }
     .cat--civil-society { --cat: #86efac; }
+    .cat--finance { --cat: #a5b4fc; }
+    .cat--press { --cat: #fdba74; }
     .cat--brief { --cat: #cbd5e1; }
 }
 
