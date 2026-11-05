@@ -12,6 +12,8 @@
 
 主軸是隱私、匿名網路與網路審查。在這個範圍裡，優先選能帶出具體專案或技術的新聞，例如開源工具的新發布或重大功能、附上方法與程式碼的研究、開放資料集與 API、數位安全的工具與流程。其次是會讓既有做法需要調整的變化，例如常用工具改變使用方式、加密與匿名工具面臨的政策變動、新的監控手法與檢測方式。
 
+金融隱私與新聞自由這兩類的新聞，科技不一定是主角，例如帳戶被凍結、記者被要求交出消息來源。這類新聞要能接回讀者可以使用的工具或做法才選，例如加密通訊、裝置安全或匿名投稿管道。
+
 跟隱私、匿名與審查無關的科技新聞、版本公告、沒有技術面可談的政策聲明與閉源產品的行銷文不選。主要用途是追查特定個人的工具也不選，導讀容易成為濫用的操作說明。
 
 工具類的文章寫稿前先看過專案頁面，確認授權、最近一次發布的時間、使用門檻與介面語言。最近一年沒有發布的專案不選，除非文章本身就在說明它停止維護。導讀寫工具能做什麼、誰在維護、如何取得，不寫哪個地區、哪個族群的人在用它。
@@ -62,6 +64,8 @@ It is maintained by [anoni.net](https://anoni.net/), a community based in Taiwan
 ## Story selection
 
 The focus is privacy, anonymity networks and internet censorship. Within that scope we prefer news that leads to a concrete project or technology: a new release or major feature of an open-source tool, research published with its methods and code, open datasets and APIs, and digital security tools and practices. Next come changes that mean existing practice has to adapt, such as a widely used tool changing how it works, policy shifts affecting encryption and anonymity tools, and new surveillance techniques and ways to detect them.
+
+In financial privacy and press freedom stories, technology is not always at the centre, as when an account is frozen or a journalist is ordered to reveal a source. We pick these when they lead back to a tool or practice readers can use, such as encrypted messaging, device security or anonymous submission systems.
 
 We skip technology news unrelated to privacy, anonymity or censorship, release announcements, policy statements with no technical side to discuss, and marketing for closed-source products. We also skip tools whose main use is tracking down particular individuals, since a briefing on one could easily serve as a how-to for abuse.
 
