@@ -19,6 +19,7 @@ import argparse
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -37,9 +38,23 @@ CHROME = os.environ.get("CHROME", "google-chrome")
 MAX_BYTES = 150_000
 
 
+def dark_category_color(key: str) -> str | None:
+    """news.css 深色模式裡 .cat--<鍵> 的顏色。深色模式那組規則有縮排，淺色那組在行首。"""
+    css = (ROOT / "static" / "css" / "news.css").read_text(encoding="utf-8")
+    match = re.search(rf"^\s+\.cat--{re.escape(key)}\s*\{{\s*--cat:\s*(#[0-9a-fA-F]+);", css, re.M)
+    return match.group(1) if match else None
+
+
 def render(data: dict, out: Path) -> None:
     """填好模板，用 Chrome 截圖，再轉成調色盤 PNG 縮小檔案，不留 metadata。"""
     html_text = build.CARD_TEMPLATE.read_text(encoding="utf-8")
+    # 模板只寫了 2026-10 的分類顏色。改模板會讓所有卡片的雜湊一起換掉，之後加的分類改從 news.css 補上
+    key = data["label_class"]
+    if f".{key} {{" not in html_text:
+        color = dark_category_color(key)
+        if color is None:
+            raise SystemExit(f"news.css 的深色模式沒有 .cat--{key} 的顏色")
+        html_text = html_text.replace("</style>", f"  .{key} {{ --cat: {color}; }}\n</style>", 1)
     html_text = html_text.replace("LOGO_URL", (ROOT / "static" / "logo-wordmark-white.svg").as_uri())
     html_text = html_text.replace("CARD_DATA", json.dumps(data, ensure_ascii=False))
     with tempfile.TemporaryDirectory() as tmp:

@@ -4,7 +4,7 @@ description: Article 19 發布正體中文與英文版的數位支付手冊，�
 date: 2026-11-04T00:05:00+08:00
 slug: hk-payment-handbook
 categories:
-  - civil-society
+  - finance
 regions:
   - HK
 sources:
