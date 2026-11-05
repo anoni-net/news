@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 05 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 06 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>綁在帳號上的電子郵件與電話號碼</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-06/2026</guid>
+<pubDate>Fri, 06 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在 X 註冊時填的電子郵件或電話號碼，依 1 月生效的隱私政策會跟帳號連在一起。這一天，美國檢方公開一份刑事控訴書，兩名前 Twitter 員工被控替沙烏地政府查詢批評該國政府的使用者資料。</description>
+<content:encoded>&lt;p&gt;依 2026 年 1 月 15 日生效的隱私政策，你在 X（前身是 Twitter）建立帳號時要提供電子郵件或電話號碼其中一種，填了就會跟帳號連在一起。2019 年 11 月 6 日，美國加州北區聯邦檢察署公開一份刑事控訴書（當時還沒經過審判的指控），兩名前 Twitter 員工與一名沙烏地國民被控擔任沙烏地政府的非法代理人。依司法部新聞稿，兩名員工未經授權用員工權限查詢批評沙烏地政府的使用者資料，包括可能被用來找出發文者身分與所在地的電子郵件、電話號碼、連線用的 IP 位址與出生日期。依司法部後來的新聞稿與最高法院的判決，其中一名前員工 2022 年被陪審團認定有罪、判處 42 個月徒刑，最高法院 2026 年 6 月只就偽造紀錄這一項罪名的審判地點撤銷上訴法院的判決並發回。到 11 月 2 日查證時，X 的隱私政策沒有寫哪些員工可以存取這些帳號資料，也沒有寫存取時受什麼控管。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>預載 Google 應用程式的 Android 手機定期傳出的資訊</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-05/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在公共 Wi-Fi 上用網址 https 開頭的 Google 搜尋時，關鍵字在傳輸途中有加密。這一天，Google 宣布登入的使用者預設改用 HTTPS 搜尋。</description>
 <content:encoded>&lt;p&gt;你在咖啡店或車站的公共 Wi-Fi 上用網址 https 開頭的 Google 搜尋時，輸入的關鍵字與結果頁在傳輸途中有加密，同一個網路上的人看不到。2011 年 10 月 18 日，Google 宣布登入帳號的使用者在接下來幾週會被導向 HTTPS 的 google.com，官方部落格寫明這在網咖 Wi-Fi 這類不安全的網路上特別重要。Google 2010 年的部落格寫明加密搜尋不會減少送到 Google 的資料，只是讓第三方看不到，2011 年的公告也寫點擊廣告時瀏覽器仍會把搜尋字詞傳給廣告主。台灣的讀者用 Google 搜尋不需要另外設定。Chrome 團隊 2025 年 10 月的公告也寫明，從 2026 年 10 月的 154 版起，打開沒有 HTTPS 的公開網站前會預設先詢問。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>通訊攔截與解密命令的核發者</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-17/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-17/2026</guid>
-<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在台灣的通訊要被監察時，偵查中要由法院核發通訊監察書。這一天，印度《資訊科技法》施行，政府可以下令攔截通訊並要求協助解密。</description>
-<content:encoded>&lt;p&gt;你在台灣的電話與網路通訊要被監察時，依《通訊保障及監察法》，偵查中由檢察官向法院聲請、由法院核發通訊監察書。2000 年 10 月 17 日，印度政府依公報指定《資訊科技法》從這一天施行，原始版第 69 條讓主管官員可以下令政府機關攔截電腦傳輸的資訊。被要求的人要提供解密協助，不配合最高可處 7 年徒刑。2009 年生效的修正把第 69 條擴大成攔截、監控與解密，並新增第 69A 條讓政府可以下令封鎖資訊，2020 年 6 月電子與資訊科技部就依第 69A 條封鎖了包括 TikTok、微信在內的 59 個 App。台灣的讀者在國內不需要調整設定，到印度時，2020 年被封鎖的 App 在當地可能無法使用（印度官方到 2025 年 8 月仍表示沒有解除 TikTok 的封鎖）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

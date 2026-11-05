@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Thu, 05 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 06 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>The email address and phone number tied to your account</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-06/2026</guid>
+<pubDate>Fri, 06 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The email address or phone number you give X when signing up is linked to your account under the privacy policy in effect since January. On this day, US prosecutors made public a criminal complaint accusing two former Twitter employees of looking up data on critics of the Saudi government on that government&#39;s behalf.</description>
+<content:encoded>&lt;p&gt;Under X&#39;s privacy policy in effect since 15 January 2026, creating an account on X (formerly Twitter) requires either an email address or a phone number, and whichever you give is associated with your account. On 6 November 2019, the US Attorney&#39;s Office for the Northern District of California made public a criminal complaint (an allegation not yet tested at trial) charging two former Twitter employees and a Saudi national with acting as illegal agents of the Saudi government. According to the Justice Department&#39;s press release, the two employees used their employee credentials without authorisation to look up information on users critical of the Saudi government, including email addresses, phone numbers, IP addresses and dates of birth that could have been used to identify and locate the people behind the posts. Later Justice Department press releases and the Supreme Court&#39;s ruling show that a jury convicted one of the former employees in 2022 and he was sentenced to 42 months in prison, and that in June 2026 the Supreme Court reversed and remanded the appeals court&#39;s judgment on a single count, falsifying records, over where that charge could be tried. Carriers in Taiwan, Hong Kong, South Korea and Japan must confirm a subscriber&#39;s identity when issuing a mobile number (in Singapore, a licence condition for prepaid cards), so we infer that a phone number on an X account may lead back to the person it is registered to.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>What Android phones with Google apps send to Google</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-05/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>When you search on Google over https on public Wi-Fi, the words you type are encrypted in transit. On this day, Google announced that signed-in users would search over HTTPS by default.</description>
 <content:encoded>&lt;p&gt;When you search on Google over https on Wi-Fi in a café or a train station, your search terms and results page are encrypted in transit, so others on the same network cannot see them. On 18 October 2011, Google announced on its official blog that users signed in to a Google Account would be redirected to HTTPS on google.com over the following weeks, noting that this matters especially on unsecured connections such as an internet café&#39;s Wi-Fi. Google&#39;s 2010 blog post says encrypted search does not reduce the data sent to Google but only hides it from third parties, and the 2011 announcement adds that clicking an ad still passes the search query to the advertiser. In mainland China, 16 of the censorship monitor GreatFire&#39;s last 17 conclusive tests, up to 8 October 2026, could not reach www.google.com, while an undated page on Baidu&#39;s webmaster platform says its whole site runs on HTTPS. Elsewhere in Asia, readers do not need to change any settings to search Google, and according to the Chrome team&#39;s announcement, from Chrome 154 in October 2026 the browser asks by default before opening a public site without HTTPS.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Apps blocked in India and the law behind them</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-17/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-17/2026</guid>
-<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Some apps on your phone may not work if you travel to India. On this day, India&#39;s Information Technology Act came into force, letting the government order interception of communications and assistance with decryption.</description>
-<content:encoded>&lt;p&gt;If you travel to India, some apps on your phone may not work there. On 17 October 2000, India&#39;s government appointed that day, by official notification, for the Act to come into force, and its original Section 69 let a designated official order government agencies to intercept information sent through computers. Anyone called on had to help decrypt it, with up to seven years in prison for refusing (in Taiwan, interception during an investigation needs a court-issued warrant). An amendment that took effect in 2009 widened Section 69 to interception, monitoring and decryption and added Section 69A to let the government order information blocked, which the Ministry of Electronics and Information Technology used in June 2020 to block 59 apps, including TikTok and WeChat. India&#39;s government said in August 2025 that no order had been issued to lift the TikTok ban, so before a trip, check that you have a way to keep in touch that works there.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

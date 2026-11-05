@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 05 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 06 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>绑在账号上的电子邮件与电话号码</title>
+<link>https://anoni.net/news/zh-cn/history/11-06/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-06/2026</guid>
+<pubDate>Fri, 06 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在 X 注册时填的电子邮件或电话号码，依 1 月生效的隐私政策会跟账号连在一起。这一天，美国检方公开一份刑事控诉书，两名前 Twitter 员工被控替沙特政府查询批评该国政府的用户数据。</description>
+<content:encoded>&lt;p&gt;依 2026 年 1 月 15 日生效的隐私政策，你在 X（前身是 Twitter）创建账号时要提供电子邮件或电话号码其中一种，填了就会跟账号连在一起。2019 年 11 月 6 日，美国加州北区联邦检察署公开一份刑事控诉书（当时还没经过审判的指控），两名前 Twitter 员工与一名沙特国民被控担任沙特政府的非法代理人。依司法部新闻稿，两名员工未经授权用员工权限查询批评沙特政府的用户数据，包括可能被用来找出发帖者身份与所在地的电子邮件、电话号码、联网用的 IP 地址与出生日期。依司法部后来的新闻稿与最高法院的判决，其中一名前员工 2022 年被陪审团认定有罪、判处 42 个月徒刑，最高法院 2026 年 6 月只就伪造记录这一项罪名的审判地点撤销上诉法院的判决并发回。到 11 月 2 日查证时，X 的隐私政策没有写哪些员工可以访问这些账号数据、访问时受什么管控，GreatFire 的检测页则显示 twitter.com 在中国大陆打不开（最后检测日 10 月 12 日，页面不涵盖 x.com）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>预装 Google 应用的 Android 手机定期传出的信息</title>
 <link>https://anoni.net/news/zh-cn/history/11-05/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在公共 Wi-Fi 上搜索时，关键词是否加密要看搜索服务。这一天，Google 宣布登录的用户默认改用 HTTPS 搜索。</description>
 <content:encoded>&lt;p&gt;你在咖啡店或车站连上公共 Wi-Fi 搜索时，关键词在传输途中是否加密取决于搜索服务，百度在搜索资源平台一篇未标日期的说明里写已经全站实现 https。2011 年 10 月 18 日，Google 宣布登录账号的用户在接下来几周会被导向 HTTPS 的 google.com，官方博客写明这在网吧 Wi-Fi 这类不安全的网络上特别重要。Google 2010 年的博客写明加密搜索不会减少发送给 Google 的数据，只是让第三方看不到，2011 年的公告也写点击广告时浏览器仍会把搜索词传给广告主。在中国大陆，第三方封锁监测网站 GreatFire 截至 2026 年 10 月 8 日的最近 17 次有结论的测试中，有 16 次连不上 www.google.com。在海外用 Google 搜索的读者不需要另外设置，Chrome 团队的公告写明 2026 年 10 月的 154 版起会在打开没有 HTTPS 的公开网站前默认先询问。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>在印度无法使用的 App 与《信息技术法》</title>
-<link>https://anoni.net/news/zh-cn/history/10-17/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-17/2026</guid>
-<pubDate>Sat, 17 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你到印度时，手机上的部分 App 在当地可能无法使用。这一天，印度《信息技术法》施行，政府可以下令拦截通信并要求协助解密。</description>
-<content:encoded>&lt;p&gt;你到印度出差或旅行时，手机上的部分 App 在当地可能无法使用。2000 年 10 月 17 日，印度政府依公报指定《信息技术法》从这一天施行，原始版第 69 条让主管官员可以下令拦截计算机传输的信息。被要求的人要提供解密协助，不配合最高可处 7 年徒刑（台湾侦查中的通讯监察，则由检察官向法院声请、法院核发通讯监察书）。2009 年生效的修正把第 69 条扩大成拦截、监控与解密，并新增第 69A 条让政府可以下令封锁信息，2020 年 6 月电子和信息技术部依第 69A 条封锁了包括 TikTok、微信与微博在内的 59 个 App。印度官方到 2025 年 8 月仍表示没有解除 TikTok 的封锁，出发前可以先准备在当地也能使用的联络方式。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
