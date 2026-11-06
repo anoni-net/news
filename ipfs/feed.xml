@@ -6,7 +6,134 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 06 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 07 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>AI 加速找漏洞之後的個人防護與開源維護</title>
+<link>https://anoni.net/news/2026/11/eff-security-worse/</link>
+<guid isPermaLink="false">anoni-news:2026/11/eff-security-worse</guid>
+<pubDate>Sat, 07 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>EFF 10 月 23 日的兩篇文章認為前沿 AI 模型讓找漏洞變得便宜，電腦被入侵會更頻繁。EFF 建議每個人更新瀏覽器與 App、改用密碼管理員並提防釣魚，也主張依賴開源的企業出錢出人維護。自己架網站的人另外要確認 PHP 已修補。</description>
+<content:encoded>&lt;p&gt;整理 15 篇原文，來自 EFF、The PHP Foundation、PHP 等 11 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美國數位權利組織 EFF 10 月 23 日發表兩篇文章，認為 OpenAI、Anthropic 等公司的前沿 AI 模型，讓找出零時差漏洞（廠商還不知道、還沒有修補的漏洞）變得便宜又容易。EFF 預期好轉之前情況會先變糟，第一篇給一般使用者的建議是基本的數位安全習慣，任何地方用電腦與手機的人都適用。第二篇以 PHP 的漏洞為例，主張依賴開源的企業出錢出人維護。網站用 PHP 的話，另外要確認伺服器上的 PHP 已經修補 10 月公開的漏洞。&lt;/p&gt;
+&lt;p&gt;依 EFF 的第二篇，美國國家漏洞資料庫（NVD）自 1988 年起收錄約 40 萬筆 CVE（公開漏洞的統一編號），光是 10 月就新提交 1.3 萬筆。EFF 據此推算歷來登錄的漏洞有 3% 是在 10 月找到的，也預估到年底時，史上所有漏洞會有超過四分之一出自 2026 年。數字沒有附上一手連結，圖說列的來源是 CVE Tracker。資安業者 Brandefense 10 月 26 日更新的分析列出，NVD 到 10 月 25 日已發布 86,533 筆 CVE 紀錄，2025 年全年是 48,151 筆。&lt;/p&gt;
+&lt;p&gt;EFF 的第二篇以網站伺服器上常用的程式語言 PHP 為例，提到它用在將近七成的網站。W3Techs 11 月 2 日的統計是在已知伺服端語言的網站裡占 69.1%。PHP 專案 10 月 21 日發布 8.5.12、8.4.27、8.3.36、8.2.35，修補兩個可讓未登入的攻擊者在伺服器上執行程式碼的漏洞。&lt;/p&gt;
+&lt;p&gt;根據資助 PHP 開發的 PHP Foundation 10 月 21 日的說明，2024 年外部出資的第一次稽核時已發現問題的徵兆，但沒有找到具體的攻擊方式。EFF 提到維護者當時找不到利用方式，降低了處理的優先順序，漏洞一直沒有修補。EFF 的說法是，2026 年 8 月研究者用 OpenAI 與 Anthropic 的最新模型各自重新發現，並找到利用的方法。基金會列出的發現者則是資安公司 Calif、OpenAI 與 Wiz，Anthropic 的 Claude Mythos 出現在基金會 2026 年稍早掃描 PHP 的段落，沒有列為發現者。&lt;/p&gt;
+&lt;p&gt;EFF 提到撰文時有超過 3,300 萬個網站仍在使用有漏洞的 PHP 版本。The New Stack 10 月 27 日引述資安公司 Censys 的網路掃描，約 3,250 萬個連上網際網路的 PHP 服務回報的是不安全的版本，另有約 6,130 萬個無法判斷版本。同一篇也提醒，Linux 發行版常把修補移植到舊版本而不改版本號。部分算成未修補的服務因此可能已經修補，依版本號推估的數字可能偏高。&lt;/p&gt;
+&lt;p&gt;依 EFF 的描述，PHP、OpenSSL、SQLite 這些專案幾乎在每台電腦上執行，維護團隊有的只有一個人。漏洞通報大量湧入，其中有些是假的，但很多是真的。依基金會的說明，PHP 的資安團隊 7 月 1 日到 10 月 21 日發布了 15 個 CVE，另外處理了一百多份無效、重複或無法重現的通報。AI 協助驗證通報，每個判斷與修補仍由人來做。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;CVE 是替公開漏洞編號的紀錄，每一筆的嚴重程度不同，EFF 的第二篇把它們都寫成嚴重的漏洞。Help Net Security 6 月報導資安事件應變團隊的國際組織 FIRST 對全年 CVE 數量的預測，文中寫到部分成長來自 GitHub Security Advisories 與 VulnCheck 擴大編目、補登舊紀錄。&lt;/p&gt;
+&lt;p&gt;Brandefense 的同一份分析列出，美國 CISA 的已知遭利用漏洞目錄（KEV）2026 年到 10 月 23 日新增 272 筆，約每千筆 CVE 三筆。分析也提醒 KEV 收錄舊的 CVE，這個比例只能當粗略的參考。依本文的推論，紀錄增加的倍數不等於遭利用的漏洞增加的倍數，但需要套用的修補確實變多了。&lt;/p&gt;
+&lt;p&gt;在資助開源方面，EFF 主張企業應該投入金錢與人力維護它們所依賴的開源專案，沒有提出金額、機制或具體的基金。PHP Foundation 對資源的描述跟 EFF 不同，EFF 提到維護靠少數志工在空閒時間進行，基金會則表示 PHP 本身的資安工作仰賴一小群基金會出資的開發者與少數志工。基金會呼籲三類對象支持，分別是用 PHP 開發產品的公司、主機商與雲端及 Linux 發行版、政府與公共機構。基金會也承認修補延後是結構性的失誤，原因出在資安團隊的決策流程與資源不足。&lt;/p&gt;
+&lt;p&gt;EFF 給個人的第一項建議是讓瀏覽器與所有 App 隨時更新到最新的修補。EFF 的 Surveillance Self-Defense（SSD，監控自我防衛指南）提到，更新常會修補攻擊可利用的舊程式碼，部分舊的作業系統連安全性更新都不再提供。依 Chrome 的說明，有新版時瀏覽器會在背景自動更新，通常在關閉再重新開啟時完成。長時間不關瀏覽器的話，畫面上會出現等待更新的提示。&lt;/p&gt;
+&lt;p&gt;EFF 也建議安裝密碼管理員，每個網站各用一組密碼，一個網站被入侵時其他帳號的密碼不受影響。依 SSD 的說明，Apple、Google、Mozilla 內建的密碼管理員也可以用。Apple 的「密碼」App 預設端對端加密，Google 的密碼管理員要自行到設定裡用通關密語開啟裝置端加密。SSD 也列了 Bitwarden、KeePassXC 等獨立的密碼管理員，並提醒自動填入密碼是防範釣魚的重要保護。&lt;/p&gt;
+&lt;p&gt;EFF 另外建議考慮安裝阻擋追蹤器的工具，例如 EFF 免費的瀏覽器擴充功能 Privacy Badger，10 月 23 日的文章提到它已有 Safari 版。EFF 同一句也提醒要留意釣魚，SSD 說明釣魚是用假連結騙取密碼。EFF 也提醒資料外洩可能變多，常用的網站可能遭受比平常多的攻擊，部分服務可能因此中斷。&lt;/p&gt;
+&lt;p&gt;架設部落格或網站的人，EFF 建議確認自己或主機商已經修補 PHP 的漏洞。依 php.net 10 月 21 日的公告，這兩個漏洞沒有完整的緩解方式，更新是唯一安全的選擇。PHP 專案對 7.4、8.0、8.1 另外提供了給從原始碼建置者用的最小回補，其他舊版要看發行版或 LTS 業者有沒有回補。依本文從 EFF 這項建議推論，租用主機的人可以請業者確認是否已套用這次的修補。&lt;/p&gt;
+&lt;p&gt;每個用電腦與手機的人都適用的第一步，是開啟系統與 App 的自動更新，並定期關閉再重開瀏覽器。iPhone 的位置在「設定」、「一般」、「軟體更新」、「自動更新」，依 Apple 的說明會在充電且連上 Wi-Fi 時於夜間安裝。Android 的說明則寫大部分的安全性修補會自動安裝，時間依製造商與電信業者而不同，舊款裝置可能無法升級。依本文的推論，這些設定擋不住網站本身被入侵造成的資料外洩，各網站用不同的密碼能讓一處外洩不擴及其他帳號。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/computer-security-about-get-lot-worse-heres-what-you-can-do&#34;&gt;Computer Security Is About to Get a Lot Worse, Here&amp;#39;s What You Can Do&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/vulnerability-apocalypse-and-why-we-should-fund-open-source&#34;&gt;The Vulnerability Apocalypse and Why We Should Fund Open Source&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/&#34;&gt;Today&amp;#39;s PHP Security Release, and How We&amp;#39;re Strengthening PHP Security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The PHP Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.php.net/archive/2026.php&#34;&gt;PHP: News Archive - 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PHP&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://w3techs.com/technologies/details/pl-php&#34;&gt;Usage Statistics and Market Share of PHP for Websites&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;W3Techs&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thenewstack.io/php2shell-unpatched-php-servers/&#34;&gt;&amp;#34;The panic hasn&amp;#39;t turned into patching&amp;#34;: What security researchers really think about the PHP2Shell response&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The New Stack&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brandefense.io/blog/cve-volume-vulnpocalypse-risk-prioritization/&#34;&gt;CVE Volume vs Real Risk: Making Sense of Vulnpocalypse&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brandefense&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-26&#34;&gt;2026 年 8 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.helpnetsecurity.com/2026/06/15/first-2026-cve-forecast/&#34;&gt;AI vulnerability discovery is pushing 2026 CVEs toward 66,000&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Help Net Security&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-15&#34;&gt;2026 年 6 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/keeping-your-data-safe&#34;&gt;Keeping Your Data Safe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/choosing-the-password-manager-that-s-right-for-you&#34;&gt;Choosing the Password Manager That&amp;#39;s Right for You&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/how-avoid-phishing-attacks&#34;&gt;How to: Avoid Phishing Attacks&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/pages/privacy-badger&#34;&gt;Privacy Badger: EFF&amp;#39;s Free Tracker Blocking Browser Extension&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95414?hl=zh-Hant&#34;&gt;更新 Google Chrome&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/118575&#34;&gt;更新 iPhone 或 iPad&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple 支援&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/7680439?hl=zh-Hant&#34;&gt;檢查及更新 Android 版本&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android 說明&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>執法單位把 Pixel 與 GrapheneOS 連上犯罪的說法與爭議</title>
 <link>https://anoni.net/news/2026/11/police-pixel-crime-claims/</link>
@@ -2150,95 +2277,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=51&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Tor 出口中繼的 SSH 登入攔截事件</title>
-<link>https://anoni.net/news/2026/10/tor-exit-relay-ssh-interception/</link>
-<guid isPermaLink="false">anoni-news:2026/10/tor-exit-relay-ssh-interception</guid>
-<pubDate>Thu, 29 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>10 月初，三百多個 Tor 出口中繼的設定遭到竄改，經過它們的 SSH 連線被導到攔截伺服器。10 月 1 日到 5 日之間經由 Tor 用密碼登入 SSH、又接受了陌生或改變過的主機金鑰的人，要把那組密碼當成已經外洩。這些中繼在台北時間 10 月 6 日 01:00 前已經從 Tor 的可用中繼清單消失，依發現者的文章，加密的網頁流量照常轉送。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Tor Project、tor-relays、kaba.cx 等 6 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;10 月初，三百多個 Tor 出口中繼（Tor 連線的最後一站，負責把流量送到目的地）的設定遭到竄改，經過它們的 SSH 連線（遠端登入、管理伺服器用的協定）被導到攔截伺服器。使用者接受了假的主機金鑰（伺服器用來證明身分的金鑰）、輸入密碼之後，密碼就被取走。受影響的是經由 Tor 用 SSH 登入伺服器的人，經由 Tor 用未加密連線收信的人也可能受影響。這些中繼在台北時間 10 月 6 日 01:00 前已經從 Tor 的可用中繼清單消失，依發現者的文章，加密的網頁流量照常轉送。&lt;/p&gt;
-&lt;p&gt;發現者是一位經由 Tor 連 SSH 的使用者，10 月 2 日看到主機金鑰改變的警告。他接著掃描全部約 3,000 個出口，找到 333 個出示假的主機金鑰或把連線轉往攔截伺服器的出口，當晚通報 Tor Project。其中十多個本身出示假的主機金鑰，其餘三百多個把連線轉到同樣的 12 台攔截伺服器。&lt;/p&gt;
-&lt;p&gt;依發現者的文章，使用者繼續登入之後，攔截伺服器取走密碼並把連線轉給真正的伺服器。使用者輸入的每個指令都會經過攔截伺服器。&lt;/p&gt;
-&lt;p&gt;攔截伺服器接著用同一組密碼另外登入使用者原本要連的伺服器，試圖安裝名為 Ebury 的後門（讓攻擊者之後能再次登入的程式），發現者沒有看到完整的安裝。Ebury 植入伺服器的 SSH 軟體 OpenSSH，會記下登入時輸入的帳號密碼。ESET 2024 年的報告統計，2009 年起累計約有 40 萬台伺服器受害。&lt;/p&gt;
-&lt;p&gt;Tor 負責監控網路狀況的 Network Health 團隊在 UTC 10 月 5 日 17:50（台北時間 10 月 6 日 01:50）發布公告，提到攻擊者取得 Linux 主機的權限之後修改 Tor 的設定檔，連原本不是出口的中繼也被改成出口。Tor 的目錄伺服器（定期公布可用中繼清單的一組伺服器，這份清單稱為共識）從 UTC 10 月 4 日晚上（台北時間 10 月 5 日清晨）起，陸續把受影響的中繼標記成不能當出口。&lt;/p&gt;
-&lt;p&gt;一位中繼營運者比對公開的目錄資料，找到 59 位營運者的 377 個中繼在 10 月 1 日到 4 日之間套用了同一組出口政策（中繼允許連往哪些連接埠的設定）。分析者提醒，這只代表設定吻合，不能證明主機都被入侵或每一個都攔截 SSH。高峰時這些中繼占可用出口權重（目錄伺服器給每個出口的流量比重）的約 7%。Tor 用戶端大致依權重挑選出口，本文據此推算，經由 Tor 的連線約有 7% 的機率選到它們。&lt;/p&gt;
-&lt;p&gt;其中 277 個屬於同一個中繼家族（同一位營運者登記在一起的一組中繼）。家族營運者的事後檢討寫到，他們登入伺服器、取得管理權限（sudo）與備份都用同一組密碼，管理伺服器也允許用密碼登入。攻擊者最初從哪裡取得這組密碼，還不清楚。家族營運者檢查的兩台伺服器裝了 Ebury，其他受影響的主機是否也有，從公開資料無法判斷。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;Tor 只在自己的網路裡加密，出口中繼可以讀取送往目的地的流量。HTTPS 與 SSH 自帶加密與身分驗證，未加密的收信協定沒有。&lt;/p&gt;
-&lt;p&gt;SSH 用主機金鑰確認連上的是真正的伺服器。依 OpenSSH 的說明文件，主機金鑰改變時 &lt;code&gt;ssh&lt;/code&gt; 程式會顯示警告並停用密碼登入，預設設定下直接拒絕連線。使用者要自行刪除舊的金鑰紀錄，才會走到輸入密碼這一步。第一次連線的伺服器沒有舊紀錄可以比對，使用者只會看到一般的確認提示，按下同意就接受了攔截伺服器的金鑰。&lt;/p&gt;
-&lt;p&gt;The Hacker News 依 SSH 的協定規格推論，只有用密碼登入的人會被取走帳密。用金鑰登入（以自己電腦上的私鑰證明身分、不把密碼送給伺服器的登入方式）時，每次登入的證明只對這一次連線有效，攔截者無法用它登入真正的伺服器。報導也提到，攔截者仍可以接受金鑰登入、顯示假的命令列畫面。用金鑰登入的人如果在假畫面輸入了 sudo 之類的管理密碼，本文推論那組密碼一樣可能外洩。&lt;/p&gt;
-&lt;p&gt;The Hacker News 的建議是，10 月 1 日到 5 日之間經由 Tor 用密碼登入、又接受了陌生或改變過的主機金鑰的人，要把那組密碼當成已經外洩。家族營運者的伺服器在 9 月 30 日就出現用途不明的隱藏程式，營運者無法確定它們是否也在攔截 SSH，所以 10 月 1 日之前登入的人也不能排除。&lt;/p&gt;
-&lt;p&gt;家族營運者寫到，Ebury 會記下在受感染伺服器上輸入的密碼。檢查時要用金鑰登入，或從救援系統（不經過原本系統開機的維修環境）開機。&lt;/p&gt;
-&lt;p&gt;外洩的那組密碼，其他用到它的服務可以先換，被登入的伺服器等檢查完再換。ESET 公開的偵測腳本要在伺服器的命令列執行，10 月 9 日合併的更新才能偵測到這次的 Ebury，沒找到也不代表伺服器是乾淨的。&lt;/p&gt;
-&lt;p&gt;之後經由 Tor 管理伺服器時，發現者建議改用金鑰登入。第一次連線時，可以先向管理者索取主機金鑰的指紋（金鑰的一串識別碼，連線時畫面上會顯示）來核對。&lt;/p&gt;
-&lt;p&gt;另一個做法是把 SSH 設成洋蔥服務（只能經由 Tor 連上、連線不離開 Tor 網路的服務），連線不經過出口中繼，就不會被出口中繼攔截。代價是金鑰登入要保管好私鑰，換電腦或遺失時要重新設定。洋蔥服務則要在伺服器上執行 tor，設定比直接開放 SSH 多一步。&lt;/p&gt;
-&lt;p&gt;依分析者的整理，多數受影響的中繼關掉加密的收信連接埠、只放行未加密的，經由它們轉送的收信流量因此全是明文。沒有來源確認郵件內容實際被讀取，經由 Tor 收信的人仍要確認郵件軟體用的是加密連線。&lt;/p&gt;
-&lt;p&gt;Tor 的中繼由各地志工架設，任何人都能加入，被入侵或惡意的中繼需仰賴 Network Health 團隊的掃描與使用者回報才能找出。發現者 10 月 2 日通報，到 UTC 10 月 5 日 17:00 受影響的中繼全部離開共識，花了約三天。&lt;/p&gt;
-&lt;p&gt;Tor 用戶端預設挑選出口時不考慮使用者的所在位置，所以中繼在哪個國家，跟讀者是否受影響無關。社群用地理位置資料比對那 377 個中繼，台灣、日本、南韓、香港都沒有，新加坡有 24 個且都屬於同一個家族（地理位置資料可能有誤差）。&lt;/p&gt;
-&lt;p&gt;只用 Tor Browser 瀏覽 HTTPS 網站、沒有經由 Tor 用 SSH 或收信的人，不需要做任何設定。到 10 月 24 日為止，我們在 Tor Project 的部落格、狀態頁與郵件列表上沒有找到其他 58 位營運者的中繼為何套用同一組政策的說明。ESET 的 Ebury 研究者在 Tor 中繼營運者的郵件列表上寫到，很可能還有其他被入侵的中繼沒被發現。可以在 11 月 25 日前後留意 Tor Project 是否公布這批中繼的入侵途徑，以及是否發現新的受影響中繼。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/thread/WOHPLKCSHYXFTBRZXDENDKJZMBMPLMG5/&#34;&gt;Security incident affecting some relay operators&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/thread/QHRD6YOX6RZRDR7NCHNDO7GLCEA6VFM6/&#34;&gt;Ebury 1.8.3 on two Quetzalcoatl relay servers: timeline, lessons, open questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;tor-relays&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.torproject.org/mailman3/hyperkitty/list/tor-relays@lists.torproject.org/message/Z2B6XYKJZBBQADU77MSNL6FJP7MHZHIV/&#34;&gt;Re: Ebury 1.8.3 on two Quetzalcoatl relay servers: timeline, lessons, open questions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;tor-relays&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://kaba.cx/posts/20261020_Tor/&#34;&gt;How I got over 300 Tor exit nodes removed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;kaba.cx&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html&#34;&gt;Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Hacker News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.welivesecurity.com/en/eset-research/ebury-alive-unseen-400k-linux-servers-compromised-cryptotheft-financial-gain/&#34;&gt;Ebury is alive but unseen: 400k Linux servers compromised for cryptotheft and financial gain&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ESET&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-05-14&#34;&gt;2024 年 5 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://man.openbsd.org/ssh&#34;&gt;ssh(1) - OpenBSD manual pages&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenBSD&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://man.openbsd.org/ssh_config&#34;&gt;ssh_config(5) - OpenBSD manual pages&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenBSD&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
