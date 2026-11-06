@@ -6,7 +6,82 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 07 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 07 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>菲律宾公民社会的 AI 风险盘点</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/philippines-ai-risk-map/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/philippines-ai-risk-map</guid>
+<pubDate>Sat, 07 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>菲律宾的 Foundation for Media Alternatives 整理两场工作坊的讨论，列出 AI 在劳动、虚假信息、隐私、环境与创意产业的风险，报告写明内容只代表参与者的看法。报告比较众议院的七件 AI 法案草案，并向国会、行政机关与平台提出建议。菲律宾以外的读者不受直接影响。</description>
+<content:encoded>&lt;p&gt;整理 6 篇原文，来自 Foundation for Media Alternatives、PhilStar、BusinessWorld 等 5 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;菲律宾的 Foundation for Media Alternatives（FMA）10 月 30 日发布一份 AI 风险盘点报告，整理两场工作坊的讨论。参与者来自人权、劳工、性别、媒体与环境等领域的公民团体与基层组织，以及学者、技术人员、记者与数字权利的法律工作者。报告列出 AI 在劳动、虚假信息、隐私、教育、环境与创意产业的风险，再分别向国会、行政机关、平台与 AI 开发者提出建议。内容针对菲律宾的法案与政策，其他地方的读者不受直接影响。&lt;/p&gt;
+&lt;p&gt;两场工作坊在 7 月 28 日与 9 月 23 日举行，第二场补上第一场缺少的环境、健康与创意领域。依报告的方法说明，各组讨论 AI 在自己的领域如何产生影响、谁受益谁受害、看到哪些具体事件，以及有哪些现有的法律或保护可以适用。风险标在可能性与严重度的矩阵上，等级由各组在工作坊里自行评定，报告没有列出参与人数与组织数。报告也写明风险一节只代表参与者的看法，不代表任何组织或机构的立场，建议也不应读成每个参与组织的共识。&lt;/p&gt;
+&lt;p&gt;依报告的整理，菲律宾最普遍、横跨各领域的风险是工作取代与劳动加剧。劳动加剧指工作量与速度增加却没有额外报酬。企业流程外包（BPO，例如客服与后勤外包）业有质量保证人员因自动化失业，另一家 BPO 业者约有 1,500 人遭解雇（报告写的是估计数字），据称与 AI 驱动的调查或监控（survey/monitoring）功能有关。大型平台的内容审核员担心自己的审核成果被当成机器学习的训练数据，训练出来的系统最后会取代自己。&lt;/p&gt;
+&lt;p&gt;风险矩阵里，可能性与严重度都评为高的还有科技促成的性别暴力、AI 生成的儿童性虐待素材、对活动人士的监控，以及虚假信息。报告写虚假信息正在侵蚀外界对媒体与政府的信任。公共数据被私人取用、数据中心的环境冲击、AI 训练数据的不透明与偏差，也列在最高等级。&lt;/p&gt;
+&lt;p&gt;隐私一节里，参与者认为菲律宾的《2012 年数据隐私法》（Data Privacy Act of 2012）用来治理 AI 的效果有限。被收集的数据在公司易主之后归谁、用户如何跨境主张权利，报告列为还没有答案的问题。&lt;/p&gt;
+&lt;p&gt;报告也列出 AI 在人权工作上的保护用途，例如翻译、撰写资助申请与用开源情报记录侵害。环境组对数据中心的看法分歧，有人认为菲律宾不必在这些条件下跟邻国竞争，也有人认为透明、公开审计、可问责的数据中心是工业化与增加产值的机会。&lt;/p&gt;
+&lt;p&gt;报告的建议里，许多项目不必等新法，行政机关、企业与社区可以依《数据隐私法》、环境影响评估制度与《劳动法典》（Labor Code）这些现有授权先做。报告把透明列为其他问责的前提，报告的理由是看不见训练数据、数据收集、能源用水与 AI 辅助的决定，就无从评估或提出异议。依报告的建议，问责应落在上游的模型开发者、平台与大型部署者，受影响最深的群体也要在 AI 决策中有保障的席位。给企业与平台的建议包括声明产品在哪些环节用了 AI、保存 AI 辅助决定的记录、接受独立第三方审计，以及让创作者可以退出训练数据并取得补偿。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;报告分析的七件 AI 法案都是众议院的草案，已交给众议院信息与通信技术委员会的技术工作小组，到报告发布时仍在合并成替代法案《Artificial Intelligence Development and Regulation Act》。依 PhilStar 7 月 14 日刊出、页尾标示为投稿（Contributed story）的稿件，当时的替代法案版本里，多数 AI 系统不必向政府登记。登记与安全检查只适用于决定贷款、工作与健康的高风险系统，初创企业可以在政府设立的监管沙盒里开发与测试。同一篇稿件引述工作小组主席的说法，目标是一部创新者能依循、监管者能执行、每个菲律宾人都能信任的法律。&lt;/p&gt;
+&lt;p&gt;依报告对七案的九项标准比较，部分法案的登记范围前后不一致，现有的高风险分类也还没有反映参与者记下的伤害。报告的建议是明列影响儿童、神经多样者（neurodivergent people）与其他弱势群体的系统、替学生与工人评分评量或拒绝工作、贷款与服务申请的系统，以及包括政府健康监测与分析在内的医疗 AI。问责要放在上游的基础模型提供者，要求它们在国内运营前设立并登记本地代表，让上游提供者在菲律宾有承担法律义务的对象。中小企业按规模比例适用、不全面豁免。&lt;/p&gt;
+&lt;p&gt;报告对劳动的建议是修订劳动与社会保障的法规，并对高算力用量的 AI 使用征收附加费（例如以营收或用量门槛认定），用来成立福利基金照顾现有保障涵盖不到的工人。依 PhilStar 的稿件，7 月时的替代法案版本写明不得只靠算法解雇菲律宾人，雇主在 AI 造成人员取代之前要提前 60 天通知并提供再培训。&lt;/p&gt;
+&lt;p&gt;行政机关方面，报告的建议是在新法通过前先成立跨部门的 AI 任务小组，并从一开始就定出转为常设机构的路径。依 BusinessWorld 4 月 29 日的报道，经济、规划与发展部（DEPDev）公布 AI 治理框架草案，列出伦理与网络犯罪、网络安全与数据隐私、劳动市场冲击、知识产权与反垄断、环境与资源消耗等风险。依报告，参与者预期框架的内容会偏一般性，不太可能处理工作坊提出的问题。DEPDev 的部长在同一篇报道里说，没有好的政策与清楚的治理框架，人民会暴露在不必要的风险里（本文到 11 月 3 日没有查到框架是否已定稿）。&lt;/p&gt;
+&lt;p&gt;到 11 月 3 日为止，本文没有查到信息与通信技术部（DICT）、国家隐私委员会（NPC）、DEPDev 对这份报告的公开回应，报告提到的业者与平台则没有另外查询。上面政府这一方的考量取自 PhilStar 的投稿稿件与 BusinessWorld 的报道，报告列出的个案与风险评级目前只看到报告这一方的说法。&lt;/p&gt;
+&lt;p&gt;报告的建议里跟匿名与隐私工具最接近的是社区自有、在地控制的技术，例如在本地网络或离线运作、不必依赖大型平台就能分享信息与通报暴力的工具。参与者列出这类工具的障碍有成本、易用性与信号，也提到早期的开源选项已遭弃置。参与者提到，如果要替幸存者开发 AI 工具，应保障隐私、能转介给真人并提供紧急求助的渠道。&lt;/p&gt;
+&lt;p&gt;创意产业的参与者描述了几种个人的做法，例如把自己的写作放在封闭的项目文件夹，不用通用的聊天工具处理要发表的作品。报告同时写明，素养的责任不应只落在用户身上，许多人也觉得自己无力设下界限。参与的艺术工作者提到，作品一旦进入训练数据就无法移除。本文据此推论，这类做法只能保护之后的作品，已经被抓取的内容不在范围内。&lt;/p&gt;
+&lt;p&gt;中国大陆的《个人信息保护法》第二十四条第三款规定，个人对以自动化决策方式作出的重大影响权益的决定有权要求说明，也有权拒绝仅以自动化决策方式作出的决定。条文写的是自动化决策，没有写生成式 AI（国家机关实务上如何适用，本文没有查到）。第六十二条由国家网信部门统筹协调，针对人脸识别、人工智能等新技术、新应用制定专门的个人信息保护规则、标准。《生成式人工智能服务管理暂行办法》第七条要求服务提供者处理训练数据涉及个人信息时取得个人同意或符合法律、行政法规规定的其他情形，办法只适用于向境内公众提供的服务（2023 年 8 月 15 日施行）。&lt;/p&gt;
+&lt;p&gt;政务方面，中央网信办与国家发展改革委的《政务领域人工智能大模型部署应用指引》由中国网信网在 2025 年 10 月 10 日刊登，没有写明法律效力。指引写明为各级政务部门提供工作导向和基本参照，并把大模型定位为「辅助型」。指引要求在应用界面显著位置设置风险提示、告知服务的局限性并标识输出内容，披露对象是界面的用户，没有写到受决定影响的当事人。&lt;/p&gt;
+&lt;p&gt;比较各地的 AI 治理时，权利方面可以问企业要披露哪些训练数据与数据收集、受影响的人能不能对 AI 辅助的决定提出异议，以及监督机构有没有法律授权与常设性。政策效果方面也可以问，像 7 月版本那样只对高风险系统要求登记的做法，能不能同时让初创企业有发展空间、让监管机关实际执行。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fma.ph/ai-risk-report/&#34;&gt;Mapping the Impacts of AI in the Philippines: A Civil Society Risk-Mapping Report&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Foundation for Media Alternatives&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.philstar.com/business/technology/2026/07/14/2542095/proposed-ai-bill-gains-momentum-congress&#34;&gt;Proposed AI bill gains momentum in Congress&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PhilStar&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-14&#34;&gt;2026 年 7 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bworldonline.com/economy/2026/04/29/746472/depdev-unveils-ai-governance-framework/&#34;&gt;DEPDev unveils AI governance framework&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;BusinessWorld&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;2026 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全国人民代表大会网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm&#34;&gt;生成式人工智能服务管理暂行办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-10/10/c_1761819469929310.htm&#34;&gt;政务领域人工智能大模型部署应用指引&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-10&#34;&gt;2025 年 10 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>AI 加速找漏洞之后的个人防护与开源维护</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/eff-security-worse/</link>
@@ -2476,166 +2551,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;2019 年 12 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>欧洲数据保护委员会对智能眼镜的初步指引</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/10/edpb-smart-glasses/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/edpb-smart-glasses</guid>
-<pubDate>Thu, 29 Oct 2026 01:20:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>欧洲数据保护委员会 10 月 13 日通过一份智能眼镜的声明，指出这类眼镜外观接近普通眼镜，旁人可能在不知情的情况下被录像录音。声明建议制造商用可靠、难以关闭的指示灯与声音提示正在录像，指示灯被遮住时不能录制。新闻稿把声明定位为初步的指引，声明没有制定新的规定，也没有点名厂商。</description>
-<content:encoded>&lt;p&gt;整理 18 篇原文，来自 European Data Protection Board、netzpolitik.org、Privacy Guides 等 14 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;欧洲数据保护委员会（EDPB，由欧盟各国数据保护机构组成的委员会）10 月 13 日通过一份智能眼镜的声明，依据欧盟《通用数据保护条例》（GDPR）分析欧盟境内的用户、制造商与服务提供者的责任。声明肯定智能眼镜带来沟通与协助的新用途，例如实时翻译与视障辅助。&lt;/p&gt;
-&lt;p&gt;声明也写到，这类眼镜外观接近普通眼镜，收集与录下个人数据的过程几乎看不出来。部分眼镜的麦克风可能录到用户没有参与的背景对话。声明也写到，智能眼镜可能与人脸或声音识别系统并用，对公共空间里的权利与自由构成高风险。&lt;/p&gt;
-&lt;p&gt;依声明的说法，用户只为个人或家庭活动录像时不受 GDPR 规范，例如只分享给家人朋友。这项例外要从严认定，用户也可能受刑法等其他法律规范。&lt;/p&gt;
-&lt;p&gt;分享到公开的社交账号或用在工作上，用户就是数据控制者（决定数据用途与处理方式的一方）。制造商与 AI 功能的提供者决定处理的目的与方法时也是控制者，声明写到他们不应依赖用户来履行告知旁人的义务。&lt;/p&gt;
-&lt;p&gt;给制造商的建议是组合几种提示。指示灯应在多种光线条件下都看得见，指示灯被遮住时不应能录像，也可以加上快门声。侦测附近眼镜的手机通知可以辅助，但不宜作为唯一的提示，也不应让人借此追踪眼镜的用户。EDPB 的新闻稿把声明定位为初步的指引，声明没有制定新的规定、没有点名任何厂商，结尾写到 EDPB 会继续分析智能眼镜带来的隐私问题。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;指示灯是旁人知道自己正被拍的主要线索。我们连不上 Meta 自己的网站，Meta 的说法取自 Privacy Guides 与 9to5Google 照录的新闻室文章。每一副眼镜前方都有一颗白色的拍摄指示灯，拍照时闪一下、录像时持续闪烁，灯没有关闭的开关。从第二代眼镜起，相机侦测到灯被挡住就会停用，7 月的更新再让灯被破坏或改装时也停用相机。&lt;/p&gt;
-&lt;p&gt;PPC Land 的报道转述，Meta 认为快门声对远处的人不实用，并以笔记本电脑摄像头指示灯这类先例说明指示灯的做法。&lt;/p&gt;
-&lt;p&gt;德国汉堡数据保护机构 9 月公布对 Ray-Ban Meta 的检查报告，依 netzpolitik.org 的转述，报告的结论是指示灯受距离、角度与光线影响而只能有限地被察觉。CORRECTIV 转述的发现还有两项。一是遮挡只在开始录像时检查，录像中遮住灯会继续录，二是第二代使用 AI 功能时灯完全不亮（netzpolitik.org 只写到检查第一代）。EDPB 的声明也在脚注提醒，白色的灯可能被误认为反光。&lt;/p&gt;
-&lt;p&gt;德国依《电信与数字服务数据保护法》第 8 条，禁止伪装成日常用品、用来暗中录音录像的设备，主管机关是联邦网络局。CORRECTIV 询问该局，得到的评估是指示灯在 5 米内清楚可辨，目前不具备禁止的要件。该局也表示仅仅可能被改装不构成禁止的理由，而且还没有检查第二代。&lt;/p&gt;
-&lt;p&gt;TNW 报道，Meta 的主管 8 月 27 日在 Threads 上公布遮住灯时相机就停止的更新，报道把它描述成补上先开始录像、再遮住灯的漏洞。这是 TNW 的说法，报道没有写汉堡检查时用的是哪一版固件，我们也不能确认两者是同一个缺口。&lt;/p&gt;
-&lt;p&gt;10 月有用户反映 Ray-Ban Meta 没有喊出唤醒词就存下对话录音。依 Privacy Guides 引述 Meta 给 Android Authority 的回应，问题已经解决，用户可以随时在设置里管理、查看与删除语音记录。截至 10 月 29 日，我们读到的报道都没有写出成因与受影响的人数。我们读到的反映也只提到语音记录，没有提到照片或视频。&lt;/p&gt;
-&lt;p&gt;佩戴 Ray-Ban Meta 又在意误录的人，可以在 Meta AI App 的眼镜隐私设置里查看与删除语音记录。依 TechRadar 的说明，删除只能事后处理，不能事先阻止采集。TechRadar 写到关闭语音激活之后问题似乎就不再发生，ChannelNews 则写到代价是少了免提唤起助手的功能，按键仍可以唤起助手。&lt;/p&gt;
-&lt;p&gt;法国数据保护机构 CNIL 也给佩戴的人几项建议。CNIL 建议先告知附近的人、不需要时关掉拍摄功能，被要求关手机的场合也关眼镜，把含有他人的影像发到社交平台前也建议先取得同意。&lt;/p&gt;
-&lt;p&gt;被拍的旁人能做的比较少。CNIL 的页面写到告知旁人的指示灯作用有限，有些用途也没有灯，EDPB 的声明则写到侦测眼镜的手机 App 只能知道附近有眼镜、不知道它是否正在录像。在意的话，直接问对方是否正在录像是最简单的做法（本文的建议）。&lt;/p&gt;
-&lt;p&gt;据科技日报 6 月的报道，Rokid（乐奇）的用户社区出现偷拍视频，引发争议。Rokid 随后发布声明，表示现售智能眼镜都标配硬件级拍摄指示灯、录制时强制亮灯，并配备遮挡检测。同一篇报道的记者在多家电商平台搜到针对各品牌的「遮光贴」，商品描述宣称「不影响拍照」、「不触发警报」。这类贴纸单价 2 至 10 元，有店铺销量超过 7000 件。&lt;/p&gt;
-&lt;p&gt;截至 10 月 29 日，我们没有查到中国大陆针对智能眼镜的专门规定。《个人信息保护法》第七十二条规定，自然人因个人或者家庭事务处理个人信息的，不适用该法。第二十六条要求在公共场所安装图像采集、个人身份识别设备「应当为维护公共安全所必需」，并设置显著的提示标识。这一条规范的是「安装」的设备，我们没有查到官方说明它是否及于个人佩戴的穿戴式设备。&lt;/p&gt;
-&lt;p&gt;科技日报同一篇报道引述中国政法大学人工智能法研究院院长的说法，民法典与个人信息保护法对肖像权、隐私权提供了原则性保护，但穿戴设备的提示灯、提示音、摄像头遮挡这类硬件层面仍缺乏统一、细化的强制性规范。工人日报 8 月的报道引述中国人民大学法学院讲师的说法，即使在公共场所用智能眼镜偷拍他人肖像、私密活动，依民法典也构成对肖像权、隐私权的侵犯（本文没有取得民法典相关条文的一手文本）。&lt;/p&gt;
-&lt;p&gt;工人日报同一篇报道写到，工信部信息通信管理局指导编制的《AI眼镜可信视界自律公约》6 月发布，雷鸟、华为、中兴等 10 家企业联合签署。公约的性质是行业自律。&lt;/p&gt;
-&lt;p&gt;我们同样没有查到台湾针对智能眼镜的专门规定。台湾《刑法》第 315 条之 1 处罚无故窃录他人非公开的活动、言论与谈话，《个人资料保护法》第 51 条排除单纯的个人或家庭活动，以及在公开场所收集、没有跟其他个人资料结合的影音资料。&lt;/p&gt;
-&lt;p&gt;读者可以用几个问题比较各地的做法。旁人被拍时，法律看的是场所是否公开，还是也看影像后来怎么使用。汉堡与联邦网络局对指示灯是否明显的结论不同，检查的机型与情境也不同，这类检查应由谁照什么标准来做也值得比较。也可以比较指示灯的要求放在法规还是行业自律里，以及各地的规定如何保留视障辅助、实时翻译这类对用户有用的功能。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（18 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/system/files/2026-10/20261310_edpb_statement_smart-glasses_en.pdf&#34;&gt;Statement on Smart glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en&#34;&gt;EDPB publishes statement on the data protection challenges of smart glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/europaeischer-datenschutzausschuss-smartbrillen-sind-hohes-risiko-fuer-grundrechte-und-freiheiten/&#34;&gt;Europäischer Datenschutzausschuss: Smartbrillen sind „hohes Risiko für Grundrechte und Freiheiten“&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/07/13/the-next-version-of-metas-ai-glasses-will-activate-the-camera-without-the-camera-indicator-light/&#34;&gt;The Next Version of Meta&amp;#39;s AI Glasses Will Activate the Camera Without the Camera Indicator Light&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-13&#34;&gt;2026 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/07/07/meta-ray-ban-smart-glasses-privacy-light-camera-update/&#34;&gt;Meta Ray-Ban glasses now disable the camera if privacy light breaks&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-07&#34;&gt;2026 年 7 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/meta-blocks-camera-on-ai-glasses-if-led-light-is-destroyed/&#34;&gt;Meta blocks camera on AI glasses if LED light is destroyed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-12&#34;&gt;2026 年 7 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/meta-ueberwachungsbrille-datenschutzbehoerde-warnt-vor-erheblichen-risiken/&#34;&gt;Meta Überwachungsbrille: Datenschutzbehörde warnt vor erheblichen Risiken&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://correctiv.org/aktuelles/kuenstliche-intelligenz/2026/09/10/hamburgs-datenschutzbeauftragter-wertet-led-licht-von-smart-glasses-als-nicht-gut-erkennbar/&#34;&gt;Datenschutzbehörde sieht bei Meta Smart Glasses Risiko für heimliche Aufnahmen&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CORRECTIV&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thenextweb.com/news/meta-smart-glasses-led-update-cnil-edpb-consent&#34;&gt;Meta’s glasses now stop recording if you cover the LED&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TNW&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/17/meta-fixes-bug-in-smart-glasses-causing-them-to-record-conversations-without-user-consent/&#34;&gt;Meta Fixes Bug In Smart Glasses Causing Them to Record Conversations Without User Consent&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-17&#34;&gt;2026 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techradar.com/computing/virtual-reality-augmented-reality/some-ray-ban-meta-users-are-fuming-after-their-smart-glasses-make-secret-audio-recordings-but-meta-says-the-issue-is-resolved&#34;&gt;Some Ray-Ban Meta users are fuming after their smart glasses make secret audio recordings — but Meta says the issue is &amp;#39;resolved&amp;#39;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TechRadar&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/meta-ray-ban-smart-glasses-accused-of-secretly-recording-conversations-company-says-issue-fixed/&#34;&gt;Meta Ray-Ban Smart Glasses Accused Of Secretly Recording Conversations, Company Says Issue Fixed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnil.fr/fr/lunettes-connectees-appel-a-la-vigilance&#34;&gt;Les lunettes connectées : la CNIL appelle à la vigilance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CNIL&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;2026 年 5 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.news.cn/legal/20260626/08d2d0ba3e9e4f5883bf33c23def59bd/c.html&#34;&gt;技术和法规双管齐下 防范智能眼镜偷拍&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;科技日报（新华网转载）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-26&#34;&gt;2026 年 6 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.news.cn/legal/20260812/d5873938392b4a66836932d3d2dcf489/c.html&#34;&gt;当智能眼镜成为“行走的摄像头”，隐私边界如何守住？&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;工人日报（新华网转载）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-12&#34;&gt;2026 年 8 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=51&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

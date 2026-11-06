@@ -6,7 +6,94 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 07 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 07 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>A civil society map of AI risks in the Philippines</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/philippines-ai-risk-map/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/philippines-ai-risk-map</guid>
+<pubDate>Sat, 07 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The Foundation for Media Alternatives in the Philippines has compiled the discussions of two workshops into a map of AI risks in labour, disinformation, privacy, the environment and the creative industries, and states that the content reflects only the participants&#39; views. The report compares seven draft AI bills in the House of Representatives and makes recommendations to Congress, executive agencies and platforms. Readers outside the Philippines are not directly affected.</description>
+<content:encoded>&lt;p&gt;Based on 8 sources, including Foundation for Media Alternatives, PhilStar, BusinessWorld&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The Foundation for Media Alternatives (FMA) in the Philippines published an AI risk-mapping report on 30 October, drawing on the discussions of two workshops. Participants came from civil society groups and grassroots organisations working on human rights, labour, gender, media and the environment, along with academics, technologists, journalists and digital rights lawyers. The report sets out the risks of AI in labour, disinformation, privacy, education, the environment and the creative industries, then makes separate recommendations to Congress, executive agencies, platforms and AI developers. It deals with Philippine bills and policies, so readers elsewhere are not directly affected.&lt;/p&gt;
+&lt;p&gt;The workshops were held on 28 July and 23 September, with the second adding the environment, health and creative sectors that the first had not covered. According to the report&#39;s methodology, each group discussed how AI affects its own sector, who benefits and who is harmed, what concrete incidents it had seen, and which existing laws or protections might apply. Risks were plotted on a likelihood-and-severity matrix, with ratings set by each group during the workshops, and the report does not give the number of participants or organisations. The report also states that the risk section reflects only the participants&#39; views, not the position of any organisation or institution, and that the recommendations should not be read as a consensus of every participating organisation.&lt;/p&gt;
+&lt;p&gt;In the report&#39;s account, the most prevalent risks in the Philippines, cutting across sectors, are job displacement and labour intensification, meaning more work done faster without added pay. In business process outsourcing (BPO), the industry that handles outsourced work such as customer service and back-office operations, quality-assurance specialists at one operation lost their jobs to automation, and at another BPO company an estimated 1,500 employees were dismissed (the report gives this as an estimate), reportedly in connection with AI-driven survey/monitoring functions. Content moderators at a major platform worry that their moderation work is being used as machine-learning training data, and that the systems trained on it will eventually replace them.&lt;/p&gt;
+&lt;p&gt;Also rated high for both likelihood and severity on the matrix are technology-facilitated gender-based violence, AI-generated child sexual abuse material, surveillance of activists, and disinformation, which the report writes is eroding trust in the media and the government. Private appropriation of public data, the environmental impact of data centres, and the opacity and bias of AI training data are placed in the top tier as well.&lt;/p&gt;
+&lt;p&gt;In the privacy section, participants considered the Data Privacy Act of 2012 to be of limited use in governing AI. The report lists who owns collected data after a company changes hands, and how users can enforce their rights across borders, as questions that remain unresolved.&lt;/p&gt;
+&lt;p&gt;The report also records protective uses of AI in human rights work, such as translation, help with writing grant applications, and open-source intelligence for documenting violations. The environment group was divided on data centres, with some arguing that the Philippines need not compete with its neighbours on these terms, and others seeing transparent, publicly audited and accountable data centres as an opportunity for industrialisation and higher output.&lt;/p&gt;
+&lt;p&gt;Many of the recommendations do not have to wait for a new law, since executive agencies, companies and communities can act now under existing mandates such as the Data Privacy Act, the environmental impact assessment system and the Labor Code. The report treats transparency as the precondition for all other accountability, on the reasoning that no one can assess or contest what they cannot see, whether training data, data collection, energy and water use, or AI-assisted decisions. Its recommendations place accountability on upstream model developers, platforms and large deployers, and call for the groups most affected to have a guaranteed place in decisions about AI. For companies and platforms, they include disclosing where AI is used in a product, keeping records of AI-assisted decisions, accepting independent third-party audits, and letting creators opt out of training data and receive compensation.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;All seven AI bills analysed in the report are House of Representatives bills, referred to a technical working group of the House Committee on Information and Communications Technology and, as of the report&#39;s publication, still being consolidated into a substitute bill, the Artificial Intelligence Development and Regulation Act. According to a piece PhilStar ran on 14 July, marked at the foot as a contributed story, the version of the substitute bill at that time would not require most AI systems to register with the government. Registration and safety checks would apply only to high-risk systems that decide on loans, jobs and health, and startups could develop and test new systems in a government-established regulatory sandbox. The same piece quotes the working group&#39;s chair as saying the goal is &#34;a law our innovators can build on, our regulators can enforce, and every Filipino can trust&#34;.&lt;/p&gt;
+&lt;p&gt;Comparing the seven bills against nine criteria, the report finds that some are inconsistent about the scope of registration, and that the existing high-risk categories do not yet reflect the harms participants documented. It recommends explicitly listing systems that affect children, neurodivergent people and other vulnerable groups, systems that grade or assess students and workers or reject applications for jobs, loans or services, and AI used in healthcare, including government monitoring and analytics. Accountability would rest with upstream foundation model providers, which would have to create and register a local representative before operating in the country, so that there is a party in the Philippines bearing their legal obligations. Small and medium enterprises would be covered proportionately rather than exempted altogether.&lt;/p&gt;
+&lt;p&gt;On labour, the report recommends amending labour and social protection rules, and imposing a surcharge on high-compute AI use (identified, for example, through revenue or usage thresholds) to finance a welfare fund for workers outside existing protections. According to the PhilStar piece, the July version of the substitute bill provided that no Filipino may be dismissed by an algorithm alone, and that employers must give 60 days&#39; notice and retraining before any displacement caused by AI.&lt;/p&gt;
+&lt;p&gt;For the executive branch, the report recommends forming a multi-agency AI task force before a new law is passed, with its path to becoming a permanent body defined from the start. BusinessWorld reported on 29 April that the Department of Economy, Planning, and Development (DEPDev) had unveiled a draft AI governance framework, listing risks that include ethical considerations and cybercrime, cybersecurity and data privacy, labour market disruption, intellectual property and antitrust, and environmental sustainability and resource consumption. According to the report, participants expected the framework to be general and unlikely to address the issues raised in the workshops. In the same BusinessWorld article, the DEPDev secretary said that without good policy and a clear governance framework, &#34;we expose our people to unnecessary risk&#34; (as of 3 November we could not find whether the framework has been finalised).&lt;/p&gt;
+&lt;p&gt;As of 3 November we found no public response to the report from the Department of Information and Communications Technology (DICT), the National Privacy Commission (NPC) or DEPDev, and we did not separately contact the companies and platforms it mentions. The government considerations above come from the PhilStar contributed piece and the BusinessWorld report, while for the cases and risk ratings in the report, only the report&#39;s side is available so far.&lt;/p&gt;
+&lt;p&gt;The recommendation closest to anonymity and privacy tools is community-owned, locally controlled technology, such as tools that run on local networks or offline and let people share information and report violence without relying on large platforms. Participants named cost, usability and signal as obstacles for such tools, and noted that earlier open-source options have been abandoned. They added that any AI tools built for survivors should guarantee privacy, referral to a human and an emergency pathway.&lt;/p&gt;
+&lt;p&gt;Participants from the creative sector described several personal guardrails, such as keeping their own writing in a closed project folder and not using general chat tools for work they intend to publish. The report also states that the burden of literacy should not fall on users alone, and that many people feel too disempowered to set limits. Artists who took part said that once a work is in a training pool, it cannot be removed. Our inference is that such practices protect only future work, and do not reach content that has already been scraped.&lt;/p&gt;
+&lt;p&gt;South Korea&#39;s Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust, which the Ministry of Science and ICT says took full effect on 22 January 2026, sets out obligations for a defined category of high-impact AI, meaning systems used in listed areas that may significantly affect people&#39;s life, physical safety or fundamental rights, whereas the July version of the Philippine substitute bill described above requires registration only for high-risk systems. Businesses providing high-impact AI must put in place risk management, explanation and user protection measures, human oversight and documentation. On disclosure, Article 31(1) in the Korea Legislation Research Institute&#39;s English translation of the Act (Act No. 20676) requires operators to tell users in advance that a product or service runs on high-impact or generative AI. The Ministry of Science and ICT announced that fact-finding investigations and penalties under the transparency provision will be deferred for a grace period of at least a year (both checked on 1 November).&lt;/p&gt;
+&lt;p&gt;Two provisions of Taiwan&#39;s AI Basic Act (人工智慧基本法), in force since its promulgation on 14 January 2026, are addressed to government: Article 19 requires the government to carry out risk assessments when it uses AI and to set usage rules or internal control mechanisms, and Article 14 requires the competent authorities, in consultation with the personal data protection authority, to avoid unnecessary collection, processing or use of personal data in AI research and applications. Article 4 lists transparency and explainability among the Act&#39;s principles without saying to whom disclosure is owed (Articles 4 and 19 checked on 29 October, Article 14 on 23 October). In Hong Kong, the Digital Policy Office&#39;s Artificial Intelligence Adoption Guide for Government Bureaux and Departments (July 2026), written as recommendations without stating binding force, advises that important decisions should never depend exclusively on AI outputs without human review. The guide does not require telling the people affected by a decision that AI was involved (checked on 29 October).&lt;/p&gt;
+&lt;p&gt;When comparing AI governance across places, questions on rights include which training data and data collection companies must disclose, whether the people affected can contest AI-assisted decisions, and whether oversight bodies have a legal mandate and permanence. On what the policy is meant to achieve, one can also ask whether registering only high-risk systems, as in the July version, can both leave room for startups and be enforced in practice by regulators.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (8)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fma.ph/ai-risk-report/&#34;&gt;Mapping the Impacts of AI in the Philippines: A Civil Society Risk-Mapping Report&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Foundation for Media Alternatives&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.philstar.com/business/technology/2026/07/14/2542095/proposed-ai-bill-gains-momentum-congress&#34;&gt;Proposed AI bill gains momentum in Congress&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PhilStar&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-14&#34;&gt;14 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bworldonline.com/economy/2026/04/29/746472/depdev-unveils-ai-governance-framework/&#34;&gt;DEPDev unveils AI governance framework&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;BusinessWorld&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;29 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법&#34;&gt;인공지능 발전과 신뢰 기반 조성 등에 관한 기본법&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;국가법령정보센터&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-20&#34;&gt;20 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=71019&amp;amp;key=&amp;amp;type=new&#34;&gt;Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Korea Legislation Research Institute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-21&#34;&gt;21 January 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&amp;amp;mId=4&amp;amp;bbsSeqNo=42&amp;amp;nttSeqNo=1215&#34;&gt;MSIT Releases Guidelines on Ensuring AI Transparency&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Science and ICT (South Korea)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093&#34;&gt;人工智慧基本法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of The Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-14&#34;&gt;14 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smartlab.gov.hk/files/AI%20Adoption%20Guide-EN.pdf&#34;&gt;Artificial Intelligence Adoption Guide for Government Bureaux and Departments&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Digital Policy Office (Hong Kong)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Personal protection and open source maintenance as AI speeds up vulnerability discovery</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/eff-security-worse/</link>
@@ -2629,172 +2716,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;20 December 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The European Data Protection Board&#39;s preliminary guidance on smart glasses</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/10/edpb-smart-glasses/</link>
-<guid isPermaLink="false">anoni-news:en/2026/10/edpb-smart-glasses</guid>
-<pubDate>Thu, 29 Oct 2026 01:20:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>On 13 October the European Data Protection Board adopted a statement on smart glasses, noting that because they look much like ordinary glasses, people nearby may be filmed or recorded without knowing it. The statement recommends that manufacturers signal recording with reliable lights and sounds that are hard to switch off, and that recording should not be possible while the light is covered. The press release presents the statement as preliminary guidance, and the statement sets no new rules and names no manufacturer.</description>
-<content:encoded>&lt;p&gt;Based on 19 sources, including European Data Protection Board, netzpolitik.org, Privacy Guides&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;On 13 October the European Data Protection Board (EDPB, the body made up of the data protection authorities of the EU member states) adopted a statement on smart glasses, setting out under the EU&#39;s General Data Protection Regulation (GDPR) the responsibilities of users, manufacturers and service providers in the EU. According to the statement, smart glasses bring new uses for communication and assistance, such as real-time translation and support for people with visual impairments.&lt;/p&gt;
-&lt;p&gt;According to the statement, these glasses look much like ordinary glasses, so collecting and recording personal data is barely noticeable. Microphones on some models can pick up background conversations the wearer is not part of. The statement adds that combining smart glasses with face or voice recognition systems poses a high risk to rights and freedoms in public spaces.&lt;/p&gt;
-&lt;p&gt;Users who record only for a purely personal or household activity, such as sharing only with family or friends, are not subject to the GDPR. The statement says this exemption must be narrowly construed, and other laws, such as criminal law, may still apply. Users who share to a public social media account or use the glasses at work become controllers (the party that decides the purpose and means of processing). Manufacturers and providers of AI features are also controllers where they decide the purposes and means, and the statement says they should not rely on users to meet their duty to inform people nearby.&lt;/p&gt;
-&lt;p&gt;For manufacturers, the statement recommends combining several signals. A light should be visible in many lighting conditions, recording should not be possible while the light is covered, and a shutter sound can be added. Phone notifications that detect nearby glasses can help but should not be the only signal, and should not allow the wearer to be tracked. The EDPB&#39;s press release presents the statement as preliminary guidance; the statement itself sets no new rules, names no manufacturer and closes by saying the EDPB will continue to analyse the privacy concerns smart glasses raise.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The light is the main cue people nearby have that they are being filmed. We could not reach Meta&#39;s own website, so Meta&#39;s statements here come from its newsroom post as quoted by Privacy Guides and 9to5Google. Every pair has a white capture LED on the front that blinks briefly for a photo and keeps blinking during video, and the LED has no off switch. From the second generation onwards, the camera is disabled when the glasses detect that the LED is blocked, and a July update also disables the camera if the LED has been tampered with or destroyed.&lt;/p&gt;
-&lt;p&gt;According to PPC Land&#39;s paraphrase, Meta considers a shutter sound impractical for notifying people at a distance and points to precedents such as laptop camera indicators for its use of a light.&lt;/p&gt;
-&lt;p&gt;In September the data protection authority of Hamburg in Germany published an inspection report on Ray-Ban Meta, and as netzpolitik.org reports it, the report&#39;s conclusion is that the LED is only of limited visibility depending on distance, angle and lighting. CORRECTIV reports two further findings. Blocking is checked only when recording starts, so covering the light mid-recording does not stop it, and on the second generation the light stays off entirely while AI features are in use (netzpolitik.org only mentions an inspection of the first generation). A footnote in the EDPB statement adds that a white LED could be mistaken for a reflection.&lt;/p&gt;
-&lt;p&gt;Section 8 of Germany&#39;s Telecommunications Digital Services Data Protection Act (TDDDG) bans devices disguised as everyday objects and designed for covert audio or video recording, and the Federal Network Agency (Bundesnetzagentur) is the responsible authority. Asked by CORRECTIV, the agency assessed the LED as clearly recognisable within 5 metres and found the conditions for a ban not currently met. The agency also said that the mere possibility of modification is no reason for a ban, and that it had not yet examined the second generation.&lt;/p&gt;
-&lt;p&gt;TNW reported that a Meta executive announced on Threads on 27 August an update that stops the camera when the light is covered, and described it as closing the gap of starting a recording and then covering the light. That is TNW&#39;s account. The report does not say which firmware version Hamburg inspected, and we cannot confirm that the two refer to the same gap.&lt;/p&gt;
-&lt;p&gt;In October, users reported that Ray-Ban Meta glasses had saved recordings of conversations without the wake word being spoken. Meta&#39;s response to Android Authority, as quoted by Privacy Guides, says the issue has been resolved and that users can manage, review and delete their voice recordings in settings at any time. As of 29 October, none of the reports we read gave the cause or the number of people affected. The reports we read also mention only voice recordings, not photos or videos.&lt;/p&gt;
-&lt;p&gt;Ray-Ban Meta wearers concerned about accidental recording can review and delete voice recordings in the glasses&#39; privacy settings in the Meta AI app. According to TechRadar, deletion only works after the fact and cannot prevent capture. TechRadar also writes that turning off voice activation seems to stop the problem, while ChannelNews notes that the cost is losing hands-free access to the assistant, which can still be called up with the button.&lt;/p&gt;
-&lt;p&gt;France&#39;s data protection authority, CNIL, also has recommendations for wearers. CNIL advises telling people nearby, switching off capture features when not needed and turning off the glasses wherever people are asked to turn off their phones, and suggests getting consent before posting images that show other people on social media.&lt;/p&gt;
-&lt;p&gt;People being filmed have fewer options. CNIL&#39;s page says lights that inform people nearby have only limited effect and are absent for some uses, and the EDPB statement says phone apps that detect smart glasses can only tell that glasses are nearby, not whether they are recording. If it matters to you, the simplest step is to ask the wearer directly whether they are recording (our suggestion).&lt;/p&gt;
-&lt;p&gt;Singapore&#39;s Ministry of Digital Development and Information (MDDI) answered two parliamentary questions on smart glasses in 2026. In its 8 April answer, the ministry wrote that smart glasses with AI capabilities &#34;are subject to existing safeguards for data protection and safety in Singapore&#34;. Organisations offering them must comply with the Personal Data Protection Act (PDPA), and an organisation that transfers such data to third-party contractors overseas remains responsible for protection comparable to Singapore&#39;s standards.&lt;/p&gt;
-&lt;p&gt;Asked on 6 May whether it would introduce visual indicator requirements, the ministry replied that photography and recording are &#34;subject to the same rules and principles regardless of the form factor of the device&#34;. According to the answer, organisations, including individuals creating content for commercial purposes, are accountable under the PDPA, which generally does not require them to seek consent for photography or recording in public spaces, but they must ensure that any later use or disclosure of the data, including for AI features, is for a reasonable purpose. The answer announced no indicator requirement. Both answers state that non-consensual recording, sharing or other misuse of intimate or private content may be a criminal offence under the Penal Code and the Protection from Harassment Act.&lt;/p&gt;
-&lt;p&gt;In South Korea, the news agency Newsis reported on 3 August that, according to the Personal Information Protection Commission (PIPC), the commission met Samsung staff in late July about the AI glasses Samsung plans to release within the year. They discussed notification devices, such as a light or sound, that make it easy for people nearby to notice when the camera and microphone are in use. The PIPC had earlier met Meta, which has launched its AI glasses in South Korea, and the report says the government plans to draw up privacy principles for AI glasses and autonomous robots with industry in the second half of 2026. We did not obtain a PIPC press release, so this account rests on the Newsis report.&lt;/p&gt;
-&lt;p&gt;As of 29 October, we found no statement or guidance specifically on smart glasses from Japan&#39;s Personal Information Protection Commission (PPC). A compendium of the approaches of G7 data protection authorities, compiled by CNIL in 2026, summarises earlier PPC recommendations on camera systems with face identification, and the compendium lists the PPC&#39;s view that camera images can fall within the scope of the Act on the Protection of Personal Information if they can identify a specific individual.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, found no rules in Taiwan specific to smart glasses and no explanation from the authorities as of 29 October. Article 315-1 of Taiwan&#39;s Criminal Code punishes recording another person&#39;s non-public activities, speech or conversations without lawful reason, where non-public means not open to others, so that people do not expect to be heard or seen. We did not find the original text of any court rulings on whether filming in a public place counts as non-public.&lt;/p&gt;
-&lt;p&gt;Article 51 of the Personal Data Protection Act of Taiwan excludes purely personal or household activities, as well as audio-visual material collected in public places or at public events that is not combined with other personal data. Going by the wording, our reading is that footage combined with other personal data, for example when AI is used to identify who someone is, falls outside that exclusion.&lt;/p&gt;
-&lt;p&gt;Readers can compare approaches with a few questions. One is whether, when people nearby are filmed, the law looks only at whether the place is public or also at how the footage is used afterwards, as Singapore&#39;s answer does for organisations. Hamburg and the Federal Network Agency reached different conclusions on how visible the light is, after examining different models in different situations, so it is also worth comparing who should carry out such tests and against what standard, and whether indicator requirements belong in law or in agreements with industry. It is also worth comparing how each place&#39;s rules preserve features that help users, such as assistance for people with visual impairments and real-time translation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (19)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/system/files/2026-10/20261310_edpb_statement_smart-glasses_en.pdf&#34;&gt;Statement on Smart glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en&#34;&gt;EDPB publishes statement on the data protection challenges of smart glasses&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;European Data Protection Board&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/europaeischer-datenschutzausschuss-smartbrillen-sind-hohes-risiko-fuer-grundrechte-und-freiheiten/&#34;&gt;Europäischer Datenschutzausschuss: Smartbrillen sind „hohes Risiko für Grundrechte und Freiheiten“&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/07/13/the-next-version-of-metas-ai-glasses-will-activate-the-camera-without-the-camera-indicator-light/&#34;&gt;The Next Version of Meta&amp;#39;s AI Glasses Will Activate the Camera Without the Camera Indicator Light&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-13&#34;&gt;13 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://9to5google.com/2026/07/07/meta-ray-ban-smart-glasses-privacy-light-camera-update/&#34;&gt;Meta Ray-Ban glasses now disable the camera if privacy light breaks&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;9to5Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-07&#34;&gt;7 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/meta-blocks-camera-on-ai-glasses-if-led-light-is-destroyed/&#34;&gt;Meta blocks camera on AI glasses if LED light is destroyed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-12&#34;&gt;12 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/meta-ueberwachungsbrille-datenschutzbehoerde-warnt-vor-erheblichen-risiken/&#34;&gt;Meta Überwachungsbrille: Datenschutzbehörde warnt vor erheblichen Risiken&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://correctiv.org/aktuelles/kuenstliche-intelligenz/2026/09/10/hamburgs-datenschutzbeauftragter-wertet-led-licht-von-smart-glasses-als-nicht-gut-erkennbar/&#34;&gt;Datenschutzbehörde sieht bei Meta Smart Glasses Risiko für heimliche Aufnahmen&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CORRECTIV&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thenextweb.com/news/meta-smart-glasses-led-update-cnil-edpb-consent&#34;&gt;Meta’s glasses now stop recording if you cover the LED&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TNW&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/17/meta-fixes-bug-in-smart-glasses-causing-them-to-record-conversations-without-user-consent/&#34;&gt;Meta Fixes Bug In Smart Glasses Causing Them to Record Conversations Without User Consent&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-17&#34;&gt;17 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techradar.com/computing/virtual-reality-augmented-reality/some-ray-ban-meta-users-are-fuming-after-their-smart-glasses-make-secret-audio-recordings-but-meta-says-the-issue-is-resolved&#34;&gt;Some Ray-Ban Meta users are fuming after their smart glasses make secret audio recordings — but Meta says the issue is &amp;#39;resolved&amp;#39;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;TechRadar&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/meta-ray-ban-smart-glasses-accused-of-secretly-recording-conversations-company-says-issue-fixed/&#34;&gt;Meta Ray-Ban Smart Glasses Accused Of Secretly Recording Conversations, Company Says Issue Fixed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnil.fr/fr/lunettes-connectees-appel-a-la-vigilance&#34;&gt;Les lunettes connectées : la CNIL appelle à la vigilance&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CNIL&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;11 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-regulation-of-sale-and-use-of-smart-glasses-With-AI-Capabilities&#34;&gt;MDDI’s Response to PQ on Regulation of Sale and use of Smart Glasses With AI Capabilities&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Digital Development and Information&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-08&#34;&gt;8 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-regulating-smart-glasses-and-ai-wearables-to-prevent-covert-recording-and-unconsented-data-collection/&#34;&gt;MDDI&amp;#39;s Response to PQ on Regulating Smart Glasses and AI Wearables to Prevent Covert Recording and Unconsented Data Collection&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Digital Development and Information&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-06&#34;&gt;6 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newsis.com/view/NISX20260803_0003734502&#34;&gt;&amp;#34;이러다 몰카 안경 될라&amp;#34;…개인정보위, 삼성 &amp;#39;AI 글래스&amp;#39; 사생활 방지대책 요구&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Newsis&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-03&#34;&gt;3 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnil.fr/sites/default/files/2026-06/g7_dpas_compendium_of_approches_on_smart_glasses.pdf&#34;&gt;Smart glasses: Compendium of G7 data protection and privacy authorities approaches&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CNIL&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&amp;amp;flno=315-1&#34;&gt;中華民國刑法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&amp;amp;flno=51&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

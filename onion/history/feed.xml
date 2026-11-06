@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 06 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 07 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>WeChat 個人資料的存放地點</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-07/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-07/2026</guid>
+<pubDate>Sat, 07 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你若用中國大陸區碼 +86 以外的手機號碼註冊 WeChat，依 WeChat 的隱私政策個人資訊存在新加坡與馬來西亞的伺服器。這一天，中國全國人大常委會通過《網絡安全法》，要求關鍵資訊基礎設施的營運者把在境內收集的個人資訊原則上存在境內。</description>
+<content:encoded>&lt;p&gt;依 2026 年 8 月 6 日更新、11 月 3 日查證的 WeChat 隱私政策，你若用中國大陸區碼 +86 以外的手機號碼註冊 WeChat，個人資訊存在新加坡與馬來西亞的伺服器（香港與澳門使用者的資料存在香港）。政策裡也寫了資料在有限的情況下可能為了技術支援從中國大陸遠端存取，你跟 Weixin（騰訊把 +86 號碼註冊的帳號歸為微信）使用者互動的資訊也會分享給 Weixin，由它在中國大陸、在必要範圍內處理。中國全國人大常委會在 2016 年 11 月 7 日通過《中華人民共和國網絡安全法》，要求關鍵資訊基礎設施（通訊、能源、金融等重要行業的系統，範圍由國務院另定）的營運者把在境內收集與產生的個人資訊、重要資料存在境內（確需出境的須經安全評估），2026 年 1 月 1 日施行的修正沒有改動這項規定。騰訊在 +86 帳號適用的《微信隱私保護指引》（8 月 17 日生效）裡寫明境內收集的個人資訊原則上依法律法規存在中國境內，沒有列出是哪幾部法規，WeChat 的隱私政策則沒有說明上述存放安排跟中國法律的關係。想知道 WeChat 存了你哪些資料，可以在「Me」&amp;gt;「Settings」&amp;gt;「My Information &amp;amp; Authorizations」選「Export Personal Data」（中文介面的選項名稱可能不同，政策只列英文），匯出的內容有帳號資料、聯絡人、朋友圈、收藏、位置與登入資料等類別。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>綁在帳號上的電子郵件與電話號碼</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-06/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你每次上網，網站都可能記下連線的 IP 位址。這一天，依法院的新聞稿，歐盟法院判決動態 IP 位址在網站有合法管道識別訪客時屬於個人資料。</description>
 <content:encoded>&lt;p&gt;你每次打開網站，網站的伺服器都可以記下連線用的 IP 位址（每次連線都會換的叫動態 IP 位址）。依法院的新聞稿，歐盟法院 2016 年 10 月 19 日判決網站營運者若有合法管道從網路業者取得額外資料來識別訪客，動態 IP 位址對它來說就屬於個人資料。同一份判決也承認網站為了防範網路攻擊，可以有保存訪客某些個人資料的正當利益。國家發展委員會 2020 年處理另一件個資案的函釋引用這份判決，轉述動態 IP 位址在能以合理方式對照其他資料、識別特定的人時屬於個人資料，台灣的個資法條文本身沒有點名 IP 位址。可以先看常用網站的隱私權政策是否保存 IP 位址，依本文的推論，網站能用 IP 位址識別到你時才可能適用個資法第 3 條的查詢與刪除權。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>公共 Wi-Fi 上的搜尋關鍵字</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-18/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-18/2026</guid>
-<pubDate>Sun, 18 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在公共 Wi-Fi 上用網址 https 開頭的 Google 搜尋時，關鍵字在傳輸途中有加密。這一天，Google 宣布登入的使用者預設改用 HTTPS 搜尋。</description>
-<content:encoded>&lt;p&gt;你在咖啡店或車站的公共 Wi-Fi 上用網址 https 開頭的 Google 搜尋時，輸入的關鍵字與結果頁在傳輸途中有加密，同一個網路上的人看不到。2011 年 10 月 18 日，Google 宣布登入帳號的使用者在接下來幾週會被導向 HTTPS 的 google.com，官方部落格寫明這在網咖 Wi-Fi 這類不安全的網路上特別重要。Google 2010 年的部落格寫明加密搜尋不會減少送到 Google 的資料，只是讓第三方看不到，2011 年的公告也寫點擊廣告時瀏覽器仍會把搜尋字詞傳給廣告主。台灣的讀者用 Google 搜尋不需要另外設定。Chrome 團隊 2025 年 10 月的公告也寫明，從 2026 年 10 月的 154 版起，打開沒有 HTTPS 的公開網站前會預設先詢問。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
