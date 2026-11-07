@@ -83,6 +83,25 @@
     - 來源（一手）：同上
 - 查不到：這部法沒有 App 商店層級的年齡確認規定。其他法律有沒有，本次沒有逐一檢視。法條中的罰則與監督手段，本次沒有查
 
+## Apple 帳號的年齡確認（服務層級）
+
+這一節記 Apple 依各地法律對 Apple 帳號實施的年齡確認，屬於服務的做法，不是法規本身。第一次整理是寫 anoni-net/news 的 iOS 27.2 自拍年齡確認那篇導讀的時候，查證日期 2026-11-07（依資料蒐集抓下的頁面副本）。
+
+- 事實：Apple 列出年齡確認要求適用的 Apple 帳號地區是澳洲、巴西、新加坡、南韓、英國與美國德州，亞洲只有新加坡與南韓。台灣、香港、中國大陸與日本不在清單上
+    - 照錄：「Where required by law, these age confirmation requirements apply to Apple Accounts in Australia, Brazil, Singapore, South Korea, the UK, and the United States (Texas)」
+    - 來源（一手）：Apple，Region-specific rules for managing an Apple Account，2026-10-26，<https://support.apple.com/en-us/125666>
+- 事實：用自拍確認成年（iOS 與 iPadOS 27.2 起）只在澳洲、巴西、新加坡與英國提供，南韓與德州沒有
+    - 照錄：「or by taking a selfie (available in Australia, Brazil, Singapore, and the UK)」
+    - 來源（一手）：同上
+- 事實：新加坡的 Apple 帳號只在下載或購買 18+ 分級 App 時要確認成年，方式有本人的信用卡、掃描護照、駕照、National Registration Identity Card、FIN 卡或自拍
+    - 照錄：「To download or purchase apps with an age rating of 18+, you need to confirm that you're 18 or older.」
+    - 照錄：「You can confirm that you're an adult with a credit card that belongs to you, by scanning your passport, driving license, National Registration Identity Card, or Foreign Identification Number (FIN) card, or by taking a selfie.」
+    - 來源（一手）：Apple，Age requirements for managing an Apple Account in Singapore，2026-10-26，<https://support.apple.com/en-us/126786>
+- 事實：南韓的 Apple 帳號要確認已滿法定 19 歲，才能透過 Apple 服務下載或串流成人內容。驗證要有韓國手機門號，輸入跟電信帳戶相同的姓名，以及生日、電信業者、門號、性別與國籍，再輸入簡訊驗證碼，每年重新驗證一次。頁面沒有列自拍
+    - 照錄：「To download or stream mature content through Apple services in South Korea, you must verify that you're at least legally 19 years old. Once a year, you'll be asked to verify your age again.」
+    - 來源（一手）：Apple，Age requirements for managing an Apple Account in South Korea，2026-03-24，<https://support.apple.com/en-us/126787>。Apple，Verify your age when you download or stream mature content in South Korea，2025-03-03，<https://support.apple.com/en-us/118395>
+- 查不到：Apple 在南韓採用電信業者簡訊驗證的法律依據。Apple 以帳號地區還是所在位置判斷是否適用，Apple 的文件沒有寫明
+
 ## 未取得一手來源的地方
 
 下面三個地方做過初步搜尋，因為沒有取得一手來源，不列條目，使用前要自行查證。
