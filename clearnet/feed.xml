@@ -6,7 +6,89 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 08 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>加拿大 C-22 法案的參議院委員會審查與加密弱點的爭論</title>
+<link>https://anoni.net/news/2026/11/canada-c22-senate-committee/</link>
+<guid isPermaLink="false">anoni-news:2026/11/canada-c22-senate-committee</guid>
+<pubDate>Sun, 08 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>加拿大的 C-22 合法存取法案 10 月 22 日在參議院二讀通過，交付國家安全、國防與退伍軍人事務委員會審查，到 11 月 7 日為止還沒有三讀。Citizen Lab 的研究員主張 6 月以來 AI 帶動的網路威脅出現重大變化，通訊系統不該再留下弱點。政府 5 月的備詢資料則主張法案不要求建立後門，業者可以拒絕會引入系統性漏洞的要求。加拿大以外的讀者現在不需要調整設定。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Parliament of Canada、Citizen Lab、Internet Society 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;加拿大的《合法存取法》（Bill C-22）10 月 22 日在參議院完成二讀，同一天交付參議院國家安全、國防與退伍軍人事務常設委員會審查。加拿大國會的法案資料庫 LEGISinfo 列出委員會 11 月 2 日的一次會議，到 11 月 7 日為止委員會還沒有提出報告。法案 6 月已在眾議院三讀通過，參議院 10 月辯論期間，通訊與審查規避工具的業者都公開提出反對的理由。法案還沒有成為法律，加拿大以外的讀者現在不需要調整設定。&lt;/p&gt;
+&lt;p&gt;法案讓政府能要求通訊與網路服務業者建立協助執法的技術能力，也能以法規要求業者保存詮釋資料（通訊內容以外的紀錄）。參議院到 11 月 7 日沒有通過任何修正，委員會提出報告之後，法案才會進入三讀。&lt;/p&gt;
+&lt;p&gt;Citizen Lab 是多倫多大學的研究室，10 月 23 日在網站上貼出一場座談的影片。依主辦方之一 Internet Society（在世界各地設有分會、推動開放與安全網際網路的國際組織）的貼文，座談在 10 月初為國會議員舉行，主題是合法存取在 AI 帶動網路威脅的時代代表什麼。頁面只有一段文字，寫到 Citizen Lab 的資深研究員在座談上談法案的法律疑慮。研究員強調應該修補與預防漏洞，不要在日常的通訊系統上「鑽更多洞」。&lt;/p&gt;
+&lt;p&gt;同一位研究員 10 月 9 日在《環球郵報》（The Globe and Mail）發表評論，主張 6 月以來 AI 帶動的網路威脅出現重大變化。作者在評論裡舉的例子包括 7 月 OpenAI 的 AI agent 逃出沙箱、攻擊軟體公司 Hugging Face，以及外界對 Anthropic 未公開發布的模型 Claude Mythos 的擔憂。評論沒有附這些事件的來源，本文也沒有核對相關公司的原始公告。依評論的結論，政府官員假設科技業者能找到「安全的方式」削弱資安防護，誤判了當前的威脅環境。&lt;/p&gt;
+&lt;p&gt;Citizen Lab 6 月提交給眾議院委員會的意見書早於研究員 10 月的評論，內容是逐部分檢視條文的法律與政策分析。意見書的核心建議是整個撤回法案第二部分，也就是規範業者技術能力的新法。理由之一是政府可以對任何電子服務業者施加任何義務，包括改變服務的運作方式或在服務裡嵌入監控工具。意見書只有一句提到 AI，內容是隨著 AI 監控技術增加，法案的侵入性也會跟著提高。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 Citizen Lab 的意見書，為了配合監控義務而修改的技術設計很難保護，範圍比加拿大更窄的美國與紐西蘭制度也多次被外國情報機關秘密入侵。意見書引用美國國家安全局（NSA）的測試，NSA 測試的符合美國監聽能力法 CALEA 的交換器每一台都有安全漏洞，也引用與中國政府有關的駭客組織 Salt Typhoon 入侵美國監聽能力系統的事件。依本站 11 月 7 日整理的 &lt;a href=&#34;https://anoni.net/news/2026/11/eff-security-worse/&#34;&gt;EFF 文章&lt;/a&gt;，前沿 AI 模型讓找漏洞變得便宜。10 月 10 日那篇則整理了 &lt;a href=&#34;https://anoni.net/news/2026/10/glm-5-3-cyber-capabilities/&#34;&gt;Anthropic 測試開放權重模型寫出攻擊瀏覽器程式的報告&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;依公共安全部長 5 月 5 日到眾議院委員會備詢的資料，政府不支持、法案也不要求建立後門，政府只訂定對業者的要求、不指定技術做法。業者評估某項要求無法在不引入系統性漏洞（影響整類產品或大量使用者、不只針對單一目標的漏洞）的情況下遵守時，就不必遵守。系統性漏洞已經在條文裡定義，部長命令也要事先經情報專員（審查情報授權的獨立官員）核准。Citizen Lab 的意見書則把法案的保障評為彈性大、定義不清，適用範圍也沒有設限。&lt;/p&gt;
+&lt;p&gt;Citizen Lab 研究員的評論把 AI 當成 6 月之後的新情況，主張政府期待業者兼顧監控義務與資安的前提，已經跟不上威脅的變化。公共安全部的備詢資料早於這波論點，資料轉述通訊安全局（CSE，加拿大負責訊號情報與網路安全的機關）的意見，認為惡意網路活動的威脅本來就存在。依備詢資料轉述的 CSE 評估，法案讓合法存取從臨時、自願的做法改成標準化的管理，能改善資安。公共安全部長辦公室的發言人 10 月初向《環球郵報》表示，法案不允許或強迫業者引入系統性漏洞或後門。&lt;/p&gt;
+&lt;p&gt;依備詢資料，加拿大的警察與情報人員對付懂科技的犯罪者與國家行為者時，用的是數十年前的工具。政府把法案定位成補上這個落差的做法。Internet Society 執行長在同一場座談的開場演說中，提出的替代做法是加強數位鑑識能力、改善跨境合作、相稱地使用詮釋資料，以及跟服務業者建立合作關係。演說的前提是弱點一旦存在，任何找到它的人都能利用。&lt;/p&gt;
+&lt;p&gt;法案到 11 月 7 日仍在參議院委員會審查，依本文的判斷，在加拿大的讀者現在也不需要調整設定。前面提到的 EFF 文章給每個人的建議是更新瀏覽器與 App、改用密碼管理員並提防釣魚，這些做法跟法案的結果無關。接下來可以留意委員會的報告有沒有修正第二部分，以及參議院三讀的時間。&lt;/p&gt;
+&lt;p&gt;英國的《調查權力法》（Investigatory Powers Act 2016）第 253 條同樣讓政府對業者發出技術能力通知，通知要經司法專員核准，可以規定的義務包括移除業者自己施加的電子保護。依本站 9 月的整理，Apple 收到通知之後，從 2025 年 2 月起不再讓英國的新使用者開啟 &lt;a href=&#34;https://anoni.net/news/2026/09/uk-icloud-advanced-data-protection/&#34;&gt;iCloud 進階資料保護&lt;/a&gt;。依政府 5 月的備詢資料，加拿大的部長命令由情報專員事先核准。法案也另設例外，業者評估會引入系統性漏洞時可以不遵守。&lt;/p&gt;
+&lt;p&gt;比較各地做法時，可以問命令由誰核准、業者能不能拒絕或公開命令，以及系統性漏洞最後由誰認定。也可以問威脅環境改變之後，誰負責重新評估已經建立的存取能力。另外要問政策想達成的調查目的，能不能用數位鑑識、跨境合作這類不削弱加密的方法做到。也可以從政府的標準問，標準化的存取能力能不能補上備詢資料提到的調查工具落差，又能不能改善 CSE 提到的臨時、自願做法的資安問題。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/built-in-weakness-lawful-access-and-encryption-in-the-age-of-ai-powered-cyber-threats/&#34;&gt;Built-In Weakness: Lawful Access and Encryption in the Age of AI-Powered Cyber Threats&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.internetsociety.org/blog/2026/10/we-shouldnt-have-to-give-up-our-safety-online-to-be-safe/&#34;&gt;We Shouldn’t Have to Give Up Our Safety Online to Be Safe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Internet Society&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/opinion/article-the-lawful-access-act-threatens-to-blow-a-hole-in-canadas-national/&#34;&gt;The Lawful Access Act threatens to blow a hole in Canada’s national security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-messaging-service-signal-says-ministers-changes-to-lawful-access-bill/&#34;&gt;Messaging service Signal says minister’s changes to lawful access bill will not persuade it to stay in Canada&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/&#34;&gt;Analysis of Proposed Surveillance Law Expansion under Bill C-22&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-02&#34;&gt;2026 年 6 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20260828-1/index-en.aspx&#34;&gt;Parliamentary Committee Notes: appearance before the Standing Committee on Public Safety and National Security (SECU)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Public Safety Canada&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;2026 年 5 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.uk/ukpga/2016/25/section/253&#34;&gt;Investigatory Powers Act 2016, section 253&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;legislation.gov.uk&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>iOS 27.2 用自拍估算年齡的成年確認</title>
 <link>https://anoni.net/news/2026/11/ios-selfie-age-verification/</link>
@@ -2064,139 +2146,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;今周刊&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-23&#34;&gt;2026 年 7 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>英國內政部用生成式 AI 摘要庇護面談的爭議</title>
-<link>https://anoni.net/news/2026/10/uk-chatgpt-asylum-decisions/</link>
-<guid isPermaLink="false">anoni-news:2026/10/uk-chatgpt-asylum-decisions</guid>
-<pubDate>Fri, 30 Oct 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>英國數位權利團體 Open Rights Group 10 月發表調查，內政部在庇護案件使用兩個生成式 AI 工具，其中一個摘要面談紀錄。內政部的業務專家抽查 203 份摘要，第一輪判定 22% 不能使用。現任負責的部長在信中寫到，申請人沒有被特別告知 AI 參與了處理。內政部表示工具只是輔助，不會取代審查人員的決定。</description>
-<content:encoded>&lt;p&gt;整理 15 篇原文，來自 Open Rights Group、Home Office、Home Office（經 Open Rights Group 公布） 等 10 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;英國數位權利團體 Open Rights Group（ORG）10 月 12 日發表報告，整理半年來對內政部兩個生成式 AI 工具的調查。庇護案件摘要工具（ACS）把庇護面談的逐字紀錄整理成摘要給審查人員，庇護政策搜尋工具（APS）讓審查人員用對話方式查詢各國的政策資訊。依 ORG 的報告，兩者建在 OpenAI 的 GPT-4o 上、透過 Microsoft 的 Azure 提供。ORG 1 月的文件與 WIRED 則寫 GPT-4，內政部自己的公開文件沒有寫出模型名稱。&lt;/p&gt;
-&lt;p&gt;ACS 在 2026 年 4 月全面上線。依 ORG 透過國會質詢與資訊公開申請取得的資料，內政部的業務專家此後抽查了 203 份摘要。第一輪判定 45 份不能使用（22%），另有 19 份標記後送第二輪複查。第二輪的 56 份裡有 30 份不能使用，報告以 203 份為分母算成 15%（30÷203 約 14.8%，這是我們的換算），也沒有說明 19 份跟 56 份為何對不上。&lt;/p&gt;
-&lt;p&gt;ORG 拿這兩個數字跟內政部 2025 年試行評估的 9% 比較，那是試行時技術專員逐份審查後、因不準確或缺漏而剔除的摘要比例，跟上線後的抽查方法不同。The Register 的報導寫到內政部沒有回覆該媒體的提問，我們也沒有查到內政部對這些數字的公開回應。&lt;/p&gt;
-&lt;p&gt;ORG 依資料保護影響評估（處理高風險個資前要做的評估）的月平均推算，4 到 7 月約處理 7 萬個案件，只有 0.3% 經過專家抽查。受影響的是在英國申請庇護的人，現任負責庇護的部長 8 月給國會議員的信寫到，他們沒有被特別告知 AI 參與了案件的處理。內政部的隱私聲明寫到部分處理可能涉及自動化，複雜或不利的決定一定由受過訓練的人員作出，聲明裡沒有提到這兩個工具。ORG 委託三位律師在 2 月出具的法律意見（委託方取得的意見，未經法院判斷）認為，沒有告知申請人「很可能違法」，我們沒有查到內政部對這份意見的公開回應。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 WIRED 轉述的內政部回應，庇護決定由受過訓練的審查人員作出，工具不能單獨使用、也不會對申請作出決定。前任部長 6 月的信也寫到，摘要只是審查人員決定前要讀的文件之一，審查人員仍要讀完案件的所有文件。內政部也承諾公布更新的評估。&lt;/p&gt;
-&lt;p&gt;2025 年的試行評估寫到，使用 ACS 的組別讀完一份逐字紀錄比對照組快 23 分鐘（約省下 32%）。評估自己也寫明這是小規模試行，全面上線前需要進一步評估。ORG 認為，審查人員若仍要讀完所有文件，就不可能省下這些時間。&lt;/p&gt;
-&lt;p&gt;ORG 以資訊公開申請取得的數字指出，2026 年 4 月起每月的初次實質決定比前一年同期少約 42%，從面談到決定的平均時間增加 29%。The Register 的報導寫到，這些數字不能證明是 AI 造成的，也看不出部長承諾的效率提升。ORG 主張在庇護申請全面禁用 AI，報告的建議是先暫停兩個工具、委託獨立的稽核。&lt;/p&gt;
-&lt;p&gt;兩邊對工具做了什麼有不同的描述。部長 8 月的信寫到，這些工具摘要申請人提供的資訊，不會產生新內容。ORG 的報告則寫到兩個工具都會產生新的文字，可能篩掉、改寫或遺漏跟決定有關的事實。&lt;/p&gt;
-&lt;p&gt;依 ORG 報告的描述，大型語言模型的摘要是重新生成的句子，部長 8 月的信沒有說明「新內容」指的範圍。試行評估寫到 ACS 的摘要刻意沒有標示原文出處，以降低試行的技術複雜度，之後可以重新考慮。沒有出處編號時，審查人員不容易對照逐字紀錄的原句（本文的推論），部長的信則寫到之後要加上出處的編號。&lt;/p&gt;
-&lt;p&gt;前任部長 6 月的信寫到專家每週抽查 ACS 的產出，內政部也對 WIRED 表示會定期監控工具的表現。依 ORG 的報告，抽查表裡「是否遺漏最相關的事實」這一項有評分，但不列為不合格的條件。ORG 據此認為遺漏重要事實的摘要只要剩下的內容正確，仍可能通過，內政部對評分標準的說明我們沒有看到。&lt;/p&gt;
-&lt;p&gt;申請人能不能看到摘要，是另一個問題。依 ORG 的報告，申請人看不到、也無法更正自己面談的 AI 摘要。部長 8 月的信提到申請人在面談後的約定期間可以修改面談紀錄，ACS 是在修改期過後讓審查人員重新熟悉案件，信裡沒有提到申請人能否看到或更正摘要。&lt;/p&gt;
-&lt;p&gt;英國政府有一套讓機關公開演算法工具的透明度紀錄（Algorithmic Transparency Records），我們 10 月 29 日查詢時共 154 筆，內政部的 2 筆都不是這兩個工具。部長的信寫到，兩個工具的開發早於這套紀錄成為強制規定，現在正在補做。ORG 申請公開工具使用的提示詞被拒，理由之一是資安風險，部長說要在 8 月公布的平等影響評估（評估政策對不同群體影響的文件）到 10 月 12 日也還沒有公布。&lt;/p&gt;
-&lt;p&gt;監督內政部邊境與移民業務的獨立監察官 6 月公布 2025 年 6 到 12 月的庇護案件檢查報告，寫到 APS 的成效與可靠度不一。報告也寫到有證據顯示 AI 工具曾被不當用在決定書與面談，包括內政部規定不得用於庇護面談與決定的 Microsoft AI 助理 Copilot，以及 ChatGPT。庇護決定單位的主管表示這些情況已經處理。依 WIRED 的報導，監察官請 ORG 提供更多資料供擬定明年的檢查題目，但表示在公布前無法確認會檢查哪些題目。&lt;/p&gt;
-&lt;p&gt;面談紀錄送進 Azure 處理，申請人的陳述可能被誰讀到，要看服務的條件（本文的推論）。Microsoft 的說明文件寫到，客戶的提示（送進模型的文字）與輸出不提供給 OpenAI、也不用來改進模型。服務仍有偵測違規使用的濫用監控，被系統標記的提示與輸出可能由經授權的 Microsoft 員工人工審查，經核准修改濫用監控的客戶則不做這種儲存與人工審查。&lt;/p&gt;
-&lt;p&gt;文件也把部署分成幾種，資料處理的地區各不相同，其中 Global 類型的提示與回應可能在任何部署了該模型的地區處理。到 10 月 29 日為止，內政部採用哪一種部署、有沒有修改濫用監控，我們查不到內政部自己的說明。&lt;/p&gt;
-&lt;p&gt;台灣的行政院 2023 年訂定《行政院及所屬機關（構）使用生成式AI參考指引》，適用於行政院及所屬機關，性質是參考指引。第五點寫到不得以未經確認的產出直接作成行政行為或作為決策的唯一依據，方向跟英國內政部說工具不能單獨使用相近。第六點要求機關使用生成式 AI 作為輔助工具時適當揭露，但沒有寫揭露的對象，英國的部長信則寫不特別告知申請人。&lt;/p&gt;
-&lt;p&gt;2026 年 1 月公布的《人工智慧基本法》第 19 條另規定，政府使用人工智慧執行業務應進行風險評估。我們沒有查到台灣針對移民或庇護程序使用 AI 的專門規定。&lt;/p&gt;
-&lt;p&gt;在台灣跟行政院所屬機關往來的讀者，可以詢問承辦機關是否使用生成式 AI 處理自己的案件（本文的建議）。指引第六點沒有寫向誰揭露、揭露到什麼程度，詢問不保證能得到完整的答案。除此之外，讀者不需要因為這件事調整使用習慣。&lt;/p&gt;
-&lt;p&gt;比較各地政府用 AI 處理個人案件的做法，可以看當事人會不會被告知、能不能看到並更正 AI 的產出，以及抽查的比例與標準有沒有公開、遺漏事實算不算錯誤。政策想達成的效果也要一起看，省下的時間能不能抵過錯誤的代價，評估由誰來做、結果有沒有公布。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/press-releases/org-investigation-into-use-of-chatgpt-in-asylum-decisions-highlights-errors-inaccuracies-and-home-office-incompetence/&#34;&gt;ORG Investigation into use of ChatGPT in asylum decisions highlights errors, inaccuracies and Home Office incompetence&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/publications/the-use-of-chatgpt-in-asylum-decisions/&#34;&gt;The Use of ChatGPT in Asylum Decisions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/government/publications/evaluation-of-ai-trials-in-the-asylum-decision-making-process/evaluation-of-ai-trials-in-the-asylum-decision-making-process&#34;&gt;Evaluation of AI trials in the asylum decision making process&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-29&#34;&gt;2025 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/10/Letter-to-Bell-Ribeiro-Addy-MP-from-Alex-Norris.pdf&#34;&gt;Letter from the Minister for Border Security and Asylum (22 June 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office（經 Open Rights Group 公布）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-22&#34;&gt;2026 年 6 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/10/Letter-to-Bell-Rebeiro-Addy-from-Anna-Turley.pdf&#34;&gt;Letter from the Minister for Border Security and Asylum (7 August 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office（經 Open Rights Group 公布）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-07&#34;&gt;2026 年 8 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/government/publications/an-inspection-of-asylum-casework-june-december-2025&#34;&gt;An inspection of asylum casework (June – December 2025)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Independent Chief Inspector of Borders and Immigration&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-25&#34;&gt;2026 年 6 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.wired.com/story/uk-home-office-may-face-investigation-over-use-of-openai-tools/&#34;&gt;UK Home Office May Face Investigation Over Use of OpenAI Tech&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;WIRED&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/public-sector/2026/10/13/home-office-asylum-ai-flunks-one-in-five-accuracy-checks/5302649&#34;&gt;Home Office asylum AI flunks one in five accuracy checks&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/01/Automating-the-Hostile-Environment-AI-tools-in-Asylum-Policy-Paper.pdf&#34;&gt;Automating the Hostile Environment: AI in the asylum decision-making process&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/government/publications/personal-information-use-in-borders-immigration-and-citizenship/borders-immigration-and-citizenship-privacy-information-notice--2&#34;&gt;Borders, immigration and citizenship: privacy information notice&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Home Office&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openrightsgroup.org/app/uploads/2026/03/Legal-Opinion-on-AI-tools-in-the-asylum-process.pdf&#34;&gt;The use of artificial intelligence tools by government: a case study of the Home Office&amp;#39;s asylum practice: joint legal opinion for the Open Rights Group&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Open Rights Group&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy&#34;&gt;Data, privacy, and security for Foundry Models sold by Azure in Microsoft Foundry&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft Learn&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/algorithmic-transparency-records&#34;&gt;Algorithmic Transparency Records&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GOV.UK&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.sme.gov.tw/article-tw-2391-11626&#34;&gt;【資安宣導】行政院於112年10月3日函頒「行政院及所屬機關（構）使用生成式 AI 參考指引」，敬請參考&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;經濟部中小及新創企業署&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093&#34;&gt;人工智慧基本法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

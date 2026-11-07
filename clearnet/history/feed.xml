@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 07 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 08 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>台灣業者把個資傳到國外時的把關機關</title>
+<link>https://anoni.net/news/history/11-08/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-08/2026</guid>
+<pubDate>Sun, 08 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的個資被台灣的業者傳到國外時，目前（2026 年 11 月查證）由業者所屬的中央目的事業主管機關把關。這一天，歐洲理事會開放簽署一份議定書，要求締約方設立完全獨立的個資監督機關並限制個資傳到保護不足的非締約國家或組織。</description>
+<content:encoded>&lt;p&gt;你的個資被台灣的業者傳到國外時，現行個資法只讓中央目的事業主管機關在涉及國家重大利益、接受國的個資法規不完善等四種情形下可以限制業者傳輸。2001 年 11 月 8 日，歐洲理事會（Council of Europe，跟歐盟是不同的組織）開放簽署《個人資料自動化處理之個人保護公約》的附加議定書，要求每個締約方設立完全獨立行使職權、受理任何人對個資處理提出申訴的監督機關。議定書也規定接收個資的非締約國家或組織必須有足夠的保護程度，但有兩種例外：國內法基於當事人的特定利益或正當且優先的利益（尤其是重要的公共利益）而允許傳輸，或傳輸的一方提供經主管機關認可的保障（例如契約條款）。台灣個資法 2023 年增訂的條文把主管機關定為個人資料保護委員會，2025 年 11 月 11 日修正公布的條文也讓委員會可以限制業者把個資傳到國外。兩者都尚未施行：全國法規資料庫到 11 月 7 日查證時仍標示最後生效日期「未定」，施行前業者處理個資仍由所屬的中央目的事業主管機關或直轄市、縣市政府監管。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>WeChat 個人資料的存放地點</title>
 <link>https://anoni.net/news/history/11-07/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你登入網站時跳出的憑證警告，可能代表有人在連線中間冒充那個網站。這一天，監測中國網路審查的 GreatFire 發文指中國當局用假憑證冒充 iCloud 網站，攔截使用者的連線。</description>
 <content:encoded>&lt;p&gt;你登入網站時跳出的憑證警告，代表網站出示、用來證明身分的憑證沒有通過瀏覽器的核對，連線中間可能有人冒充那個網站。2014 年 10 月 20 日，監測中國網路審查的 GreatFire 發文指中國當局用沒有任何憑證機構背書、自行簽署的假憑證冒充 iCloud 網站，從連線中間攔截內容（中間人攻擊）。依 MacTrast 的報導，中國外交部發言人表示北京堅決反對駭客行為。Apple 隔天在支援頁提醒使用者不要在跳出憑證警告的網站輸入 Apple 帳號（當時叫 Apple ID）與密碼，頁面裡沒有提到中國。台灣的讀者在任何網站看到憑證警告時都不應輸入帳號密碼，也可以在 iPhone 設定的「登入與安全性」確認 Apple 帳號已開啟雙重認證，密碼外洩時帳號仍多一層保護（Apple 要求新帳號一律開啟，2026 年 10 月查證）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>網站記錄的 IP 位址與個人資料</title>
-<link>https://anoni.net/news/history/10-19/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-19/2026</guid>
-<pubDate>Mon, 19 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你每次上網，網站都可能記下連線的 IP 位址。這一天，依法院的新聞稿，歐盟法院判決動態 IP 位址在網站有合法管道識別訪客時屬於個人資料。</description>
-<content:encoded>&lt;p&gt;你每次打開網站，網站的伺服器都可以記下連線用的 IP 位址（每次連線都會換的叫動態 IP 位址）。依法院的新聞稿，歐盟法院 2016 年 10 月 19 日判決網站營運者若有合法管道從網路業者取得額外資料來識別訪客，動態 IP 位址對它來說就屬於個人資料。同一份判決也承認網站為了防範網路攻擊，可以有保存訪客某些個人資料的正當利益。國家發展委員會 2020 年處理另一件個資案的函釋引用這份判決，轉述動態 IP 位址在能以合理方式對照其他資料、識別特定的人時屬於個人資料，台灣的個資法條文本身沒有點名 IP 位址。可以先看常用網站的隱私權政策是否保存 IP 位址，依本文的推論，網站能用 IP 位址識別到你時才可能適用個資法第 3 條的查詢與刪除權。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

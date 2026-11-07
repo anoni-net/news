@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 07 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 08 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>境内处理者把个人信息传到境外时的条件与主管部门</title>
+<link>https://anoni.net/news/zh-cn/history/11-08/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-08/2026</guid>
+<pubDate>Sun, 08 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的个人信息被境内的处理者传到境外前，依《个人信息保护法》须具备安全评估、专业机构认证、标准合同等条件之一（2026 年 11 月查证）。这一天，欧洲理事会开放签署一份议定书，要求缔约方设立完全独立的个人数据监督机关并限制个人数据传到保护不足的非缔约国家或组织。</description>
+<content:encoded>&lt;p&gt;你的个人信息被境内的处理者向境外提供时，《中华人民共和国个人信息保护法》第 38 条要求处理者具备四项条件之一：通过国家网信部门组织的安全评估、按照国家网信部门的规定经专业机构认证、与境外接收方订立国家网信部门制定的标准合同，或符合法律、行政法规、国家网信部门规定的其他条件。此外，处理者还要告知你境外接收方的名称、联系方式、处理目的与方式等事项，并取得你的单独同意（第 39 条）。2001 年 11 月 8 日，欧洲理事会（Council of Europe，跟欧盟是不同的组织）开放签署《关于个人数据自动化处理的个人保护公约》的附加议定书，要求每个缔约方设立完全独立行使职权、受理任何人对个人数据处理提出申诉的监督机关。议定书也规定接收个人数据的非缔约国家或组织必须有足够的保护程度，但有两种例外：国内法基于当事人的特定利益或正当且优先的利益（尤其是重要的公共利益）而允许传输，或传输的一方提供经主管机关认可的保障（例如合同条款）。任何组织、个人可以向国家网信部门、国务院有关部门和县级以上地方人民政府有关部门中履行个人信息保护职责的部门，投诉、举报违法处理个人信息的活动（第 60、65 条，依人大网公布的 2021 年 8 月 20 日通过的文本，2026 年 11 月 7 日查证）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>WeChat 个人信息的存放地点</title>
 <link>https://anoni.net/news/zh-cn/history/11-07/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你登录网站时弹出的证书警告，可能代表有人在连接中间冒充那个网站。这一天，监测中国网络审查的 GreatFire 发文指中国当局用假证书冒充 iCloud 网站，拦截用户的连接。</description>
 <content:encoded>&lt;p&gt;你登录网站时弹出的证书警告，代表网站出示、用来证明身份的证书没有通过浏览器的核对，连接中间可能有人冒充那个网站。2014 年 10 月 20 日，监测中国网络审查的 GreatFire 发文指中国当局用没有任何证书机构背书、自行签署的假证书冒充 iCloud 网站，从连接中间拦截内容（中间人攻击）。依 MacTrast 的报道，中国外交部发言人表示北京坚决反对黑客行为。Apple 隔天在支持页面提醒用户不要在弹出证书警告的网站输入 Apple 账户（当时叫 Apple ID）与密码，页面里没有提到中国。依 Apple 2025 年 4 月发布的说明（2026 年 10 月查证），中国大陆的 iCloud 由云上贵州（云上艾珀（贵州）技术有限公司）运营，不同时是中国公民又居住在中国大陆的用户可以把 Apple 账户的国家或地区改成目前所在地。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>网站记录的 IP 地址与个人数据</title>
-<link>https://anoni.net/news/zh-cn/history/10-19/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-19/2026</guid>
-<pubDate>Mon, 19 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你每次上网，网站都可能记下连接的 IP 地址。这一天，依法院的新闻稿，欧盟法院判决动态 IP 地址在网站有合法渠道识别访客时属于个人数据。</description>
-<content:encoded>&lt;p&gt;你每次打开网站，网站的服务器都可以记下连接用的 IP 地址（每次连接都会换的叫动态 IP 地址）。依法院的新闻稿，欧盟法院 2016 年 10 月 19 日判决网站运营者若有合法渠道从网络运营商取得额外数据来识别访客，动态 IP 地址对它来说就属于个人数据。同一份判决也承认网站为了防范网络攻击，可以有保存访客某些个人数据的正当利益。《中华人民共和国个人信息保护法》以「已识别或者可识别」定义个人信息，条文没有点名 IP 地址。想知道常用的网站会不会保存 IP 地址，可以先看它的隐私政策。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
