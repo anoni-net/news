@@ -53,3 +53,17 @@ GreatFire 是第三方的量測，量的是網址能不能連線，不是官方�
 - 事實：到 2026-10-23 查詢時，`https://coveryourtracks.eff.org` 在 GreatFire 此前 90 天只有 1 次有結論的測試，結果是正常連線（0/1）。頁面標了「Verdict revised」，2026 年 10 月 16 日那次連線被拒，沒有計入，不能寫成「10 月 16 日的測試沒有被封鎖」。只有 1 次，證據很薄
     - 照錄：「All 1 recent conclusive tests connected normally.」
     - 來源：GreatFire，<https://en.greatfire.org/https/coveryourtracks.eff.org>
+
+## Firefox 中國版的營運方與服務終止
+
+- 事實：Firefox 中國版的營運方是北京谋智火狐信息技术有限公司（簡稱北京火狐），公告署名的是這一家。依 IT之家轉載的公告，2025 年 5 月 8 日 Mozilla 與北京火狐達成一致，北京火狐不再營運 Firefox 瀏覽器及任何與 Firefox 有關的中國大陸業務。Firefox 瀏覽器在中國大陸繼續可用，火狐通行證帳號與同步服務在 2025 年 9 月底後停止
+    - 照錄：「北京谋智火狐宣布将于 2025 年 9 月 29 日后正式终止与 Mozilla 及 Firefox 浏览器相关的中国大陆运营。Firefox 浏览器将在中国大陆继续可用并保持全部功能。」
+    - 來源：IT之家轉載，<https://www.ithome.com/0/871/110.htm>，文章寫於 2025 年 7 月 27 日。Mozilla 與北京火狐的原公告沒有取得，是轉載
+- 事實：停止日有兩種說法。IT之家與 CyberInsider 寫 2025 年 9 月 29 日，Wikipedia 的 Mozilla China 條目寫官方服務 2025 年 9 月 24 日停止。沒有一手來源，引用時寫「9 月底」並交代是轉載
+    - 來源：CyberInsider，<https://cyberinsider.com/mozilla-announces-imminent-end-of-firefox-account-services-in-china/>，2025-07-28。Wikipedia，<https://en.wikipedia.org/wiki/Mozilla_China>
+- 事實（二手來源）：CyberInsider 寫到服務停止後，使用者仍可從 firefox.com 下載並使用瀏覽器，帳號可改用國際版 accounts.firefox.com
+    - 照錄：「Users can continue downloading and using the browser through firefox.com.」
+    - 來源：CyberInsider「Mozilla Announces Imminent End of Firefox Account Services in China」，<https://cyberinsider.com/mozilla-announces-imminent-end-of-firefox-account-services-in-china/>，2025-07-28，查證日期 2026-11-08
+- 查不到：北京谋智网络（Beijing Mozilla Online）只有 Wikipedia 一個來源，與北京火狐的關係沒有一手資料，不引用。中國版與國際版瀏覽器本體的差異（預設搜尋、首頁、追蹤保護行為）查不到，不寫
+- 查證日期：2026-11-08（連線現況沿用上面 2026-10-23 的查證，沒有重新查證）
+- 補充：2026-11-08 開啟 `https://en.greatfire.org/https/www.firefox.com.cn`，判定仍是 2026-04-28 部分受到干擾、沒有近期測試。頁面標 Verdict revised，2026-11-06 等 2 次連線被拒的測試沒有計入，可能跟服務停止有關，原因沒有查證

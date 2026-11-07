@@ -1190,6 +1190,10 @@ same_as = "gov.hk"
 icon = "internazionale.it-e2ec5b4a.png"
 from = "https://static.internazionale.it/assets/img/apple-icon-144x144-precomposed.png"
 
+[hosts."internet.watch.impress.co.jp"]
+icon = "internet.watch.impress.co.jp-a329a5d4.png"
+from = "https://internet.watch.impress.co.jp/favicon.ico"
+
 [hosts."internetfreedom.in"]
 none = "白色透明底的圖示，淺色模式看不見"
 
@@ -1212,6 +1216,10 @@ from = "https://www.irrawaddy.com/favicon.ico"
 [hosts."issa.house.gov"]
 icon = "issa.house.gov-9acaf926.png"
 from = "https://issa.house.gov/profiles/evo/assets/images/favicon.ico"
+
+[hosts."ithome.com"]
+icon = "ithome.com-fdc8873e.png"
+from = "https://www.ithome.com/img/t.png"
 
 [hosts."ithome.com.tw"]
 icon = "ithome.com.tw-bd791a4e.png"
