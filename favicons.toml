@@ -613,6 +613,10 @@ from = "https://demo.uwazi.io/public/favicon.ico"
 icon = "devb.gov.hk-1925612d.png"
 from = "https://www.devb.gov.hk/favicon.ico"
 
+[hosts."devdiscourse.com"]
+icon = "devdiscourse.com-178a996b.png"
+from = "https://www.devdiscourse.com/AdminFiles/Favicon/apple-touch-icon.png"
+
 [hosts."developer.android.com"]
 icon = "developer.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/android/images/touchicon-180.png"
@@ -1085,6 +1089,9 @@ from = "https://line.me/static/img/apple-touch-icon-180x180.png"
 icon = "help.openai.com-cb2858c5.png"
 from = "https://web.archive.org/web/20260927id_/https://help.openai.com/apple-touch-icon.png"
 
+[hosts."help.x.com"]
+same_as = "x.com"
+
 [hosts."help.yahoo.com"]
 icon = "help.yahoo.com-c254779b.png"
 from = "https://help.yahoo.com/favicon.ico"
@@ -1183,6 +1190,10 @@ from = "https://www.imda.gov.sg/favicon.ico?favicon.0i4kkjrw_hhau.ico"
 [hosts."implicator.ai"]
 icon = "implicator.ai-9c8b76ea.png"
 from = "https://www.implicator.ai/content/images/size/w256h256/2025/04/Logo_impli_full.png"
+
+[hosts."inc42.com"]
+icon = "inc42.com-56c6cf02.png"
+from = "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2021/09/cropped-inc42-favicon-1-192x192.png"
 
 [hosts."indiacode.nic.in"]
 none = "網站在抓取時無法連線"
@@ -1482,6 +1493,10 @@ from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
 [hosts."luk.tsipil.ugm.ac.id"]
 same_as = "tsipil.ugm.ac.id"
 
+[hosts."lumendatabase.org"]
+icon = "lumendatabase.org-d1afaaca.png"
+from = "https://lumendatabase.org/favicon.ico"
+
 [hosts."ly.gov.tw"]
 icon = "ly.gov.tw-c284cb73.png"
 from = "https://www.ly.gov.tw/images/favicon.ico"
@@ -1730,6 +1745,10 @@ from = "https://news.ycombinator.com/apple-touch-icon.png"
 [hosts."newsis.com"]
 icon = "newsis.com-a8787be3.png"
 from = "https://image.newsis.com/n_www/images/ci/2024/favicon.png"
+
+[hosts."newslaundry.com"]
+icon = "newslaundry.com-029c2a22.png"
+from = "https://www.newslaundry.com/favicon.ico"
 
 [hosts."newsonair.gov.in"]
 icon = "newsonair.gov.in-6cb1c7c3.png"

@@ -84,3 +84,8 @@
     - 來源：同上
     - 查證日期：2026-10-29
     - 註記：2020 年公布版本之後有沒有修訂，以及目前生效的版本，這次同樣沒有核對
+- 事實（二手）：依 HKFP 引述 Google 透明度報告，香港政府 2022 年要求 Google 移除 330 個項目，其中 57 個與國家安全有關。2021 年是 116 個（其中 6 個與國家安全有關），2022 年下半年是 183 個、多來自 YouTube，Google 對將近一半的請求沒有處理。這是 2022 年的數字，引用時寫出年份，2023 年以後的數字這次沒有取得（Google 的透明度頁面靠 JavaScript 載入）
+    - 照錄：「In total during 2022, the government requested that Google remove 330 items, among which 57 were related to national security.」
+    - 照錄：「In 2021, Hong Kong requested that Google remove 116 items in all, with just six related to national security.」
+    - 來源（二手）：Hong Kong Free Press，Hong Kong asked Google to remove 183 items in latter half of 2022; national security takedown requests surged，<https://hongkongfp.com/2023/05/09/hong-kong-asked-google-to-remove-183-items-in-latter-half-of-2022-national-security-takedown-requests-surged/>，2023-05-09
+    - 查證日期：2026-11-08
