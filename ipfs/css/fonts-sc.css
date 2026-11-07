@@ -21,8 +21,8 @@
     font-family: "anoni news serif SC";
     font-weight: 700;
     font-display: fallback;
-    src: local("Noto Serif CJK SC Bold"), local("NotoSerifCJKsc-Bold"), local("Noto Serif SC Bold"), local("NotoSerifSC-Bold"), local("Source Han Serif SC Bold"), local("SourceHanSerifSC-Bold"), url("/news/fonts/sc-700-2026-11.woff2?v=2cdc21cefa") format("woff2");
-    unicode-range: U+58, U+4E03, U+4E1A, U+4E4B, U+4EA7, U+4ED8, U+4EF7, U+4F8B, U+515A, U+540C, U+552E, U+571F, U+5BBE, U+5DEE, U+5FAE, U+6076, U+610F, U+6269, U+627E, U+6392, U+64CE, U+652F, U+6784, U+6838, U+72AF, U+7565, U+76F8, U+7834, U+7981, U+7ADE, U+7B56, U+7C7B, U+7EED, U+7F5A, U+7F6A, U+83F2, U+8D39, U+8DDD, U+8FDD, U+901F, U+9605, U+9664, U+9669, U+98CE;
+    src: local("Noto Serif CJK SC Bold"), local("NotoSerifCJKsc-Bold"), local("Noto Serif SC Bold"), local("NotoSerifSC-Bold"), local("Source Han Serif SC Bold"), local("SourceHanSerifSC-Bold"), url("/news/fonts/sc-700-2026-11.woff2?v=db7f79e397") format("woff2");
+    unicode-range: U+58, U+4E03, U+4E1A, U+4E4B, U+4EA7, U+4ED8, U+4EF7, U+4F8B, U+515A, U+540C, U+552E, U+571F, U+5BBE, U+5DEE, U+5FAE, U+6076, U+610F, U+6269, U+627E, U+62CD, U+6392, U+64CE, U+652F, U+6784, U+6838, U+72AF, U+7565, U+76F8, U+7834, U+786E, U+7981, U+7ADE, U+7B56, U+7C7B, U+7EED, U+7F5A, U+7F6A, U+83F2, U+8D39, U+8DDD, U+8FDD, U+901F, U+9605, U+9664, U+9669, U+98CE;
 }
 
 @font-face {

@@ -6,7 +6,122 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 07 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>iOS 27.2 用自拍估算年齡的成年確認</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ios-selfie-age-verification/</link>
+<guid isPermaLink="false">anoni-news:2026/11/ios-selfie-age-verification</guid>
+<pubDate>Sun, 08 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Apple 在 iOS 與 iPadOS 27.2 加入用自拍估算年齡、確認使用者已成年的選項，依 Apple 的支援文件只在澳洲、巴西、新加坡與英國提供。到 11 月 7 日為止，台灣與香港不在 Apple 列出需要確認年齡的地區內。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，來自 Apple、Privacy Guides、Apple Developer 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Apple 在 iOS 與 iPadOS 27.2 加入一種新的成年確認方式，使用者拍下自己的臉，由年齡估算模型判斷是否已滿 18 歲。依 Apple 10 月 26 日發布的支援文件，自拍選項只在澳洲、巴西、新加坡與英國提供。同一份文件列出的年齡確認要求適用於六個地方的 Apple 帳號，另外兩處是南韓與美國德州，這兩地沒有自拍選項。到 11 月 7 日為止，台灣、香港與其他沒有列出的地方都不在清單上，當地的使用者不必做年齡確認。&lt;/p&gt;
+&lt;p&gt;隱私指南網站 Privacy Guides 10 月 29 日的短訊報導了這項功能，文末寫到住在澳洲、巴西、新加坡、南韓、英國或德州的人都要確認年齡，沒有區分哪些地方提供自拍。本文的地區範圍以 Apple 的支援文件為準，南韓與德州的使用者只能用其他方式確認。&lt;/p&gt;
+&lt;p&gt;依 Apple 的說明，年齡確認可能出現在建立新帳號、更新系統、變更部分安全設定或下載或購買 18+ 分級 App 的時候，實際情況依所在地區而定。選擇自拍時，要把臉放在畫面中央，慢慢向四個方向轉頭拍下臉的各個角度。確認成年之後不必再做一次。&lt;/p&gt;
+&lt;p&gt;同一份說明提到，自拍會同時交給裝置上與 Private Cloud Compute（Apple 的雲端運算服務，Apple 把它描述成裝置的安全與隱私保護在雲端的延伸）上的年齡估算模型分析，結果在裝置上合併。Apple 寫明分析過程中包括 Apple 在內的任何人都無法存取自拍。確認之後自拍會刪除，不以任何形式保留。Privacy Guides 的文章寫成在裝置上「或」在 Private Cloud Compute 執行，Apple 的說明則是兩邊都執行。&lt;/p&gt;
+&lt;p&gt;自拍之外，Apple 列出的方式還有本人的信用卡與掃描證件（護照、駕照或政府核發的身分證件），金融卡與禮品卡不能用。已有帳號的人，Apple 會先檢查帳號裡有沒有信用卡或其他符合條件的資料。依 Apple 另一份說明，證件影像由 Apple 與服務供應商用來確認年齡與防範詐騙，短暫保存後刪除。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;年齡估算從臉部影像推測一個人大約幾歲，不需要出示證件。Privacy Guides 的文章提到，效果完全取決於估算演算法的品質，而且一定會有誤判。成年人可能被判成未成年，也可能有相反的情況。到 11 月 7 日為止，本文查不到 Apple 公布的模型名稱、誤判率或準確度資料，也沒有查到獨立驗證自拍刪除與無法存取的報告。&lt;/p&gt;
+&lt;p&gt;Apple 列出的地方，有幾處的法規要求 App 商店確認或提供使用者的年齡。新加坡資訊通信媒體發展局（IMDA）依《Code of Practice for Online Safety – App Distribution Services》，要求指定的 App 商店 2026 年 4 月 1 日起至少能判斷使用者是否未滿 18 歲，年齡估算、年齡驗證或兩者並用由商店自行選擇。IMDA 的新聞稿寫到，目的是降低使用者、尤其是兒童接觸有害內容的風險，Code 也要求年齡確認做到資料最小化。&lt;/p&gt;
+&lt;p&gt;德州的 App 商店責任法（App Store Accountability Act，SB 2420）從 6 月 4 日起適用於在德州建立的新 Apple 帳號。依 EFF 6 月的文章，巴西 2025 年通過的法律要求 App 商店與作業系統替其他服務提供年齡訊號，預計 2027 年初全面遵循。&lt;/p&gt;
+&lt;p&gt;Privacy Guides 的文章逐一比較各種方式，信用卡會交出可識別身分的資料，但下載免費 App 本來就要填付款資訊。掃描證件可能讓敏感文件落到第三方手上，文中舉 Discord 為例，替它處理證件照年齡確認的第三方外洩了約 7 萬份證件。自拍做不好同樣有風險，替 Roblox 與 ChatGPT 等公司處理年齡驗證的 Persona 外洩了自拍資料庫。文章的看法是 Apple 的版本在這方面看來好得多，至少比把證件交給第三方好。&lt;/p&gt;
+&lt;p&gt;數位權利組織 EFF 2025 年 1 月討論臉部年齡估算的文章早於 Apple 推出自拍確認（本文沒有查到 EFF 針對 Apple 這項功能的評論），文中寫到臉部掃描對隱私與資訊安全帶來新的威脅。設計不良的系統可能保存臉部資料，甚至跟使用者瀏覽的內容連結起來。EFF 6 月的文章提到，它對歐洲各項年齡驗證倡議的回應一直是，強制年齡驗證不是保護年輕人的正確方式。Apple 2025 年 11 月針對德州法律的開發者公告也寫到，這類法律為了讓人下載一個 App 就要求蒐集敏感個資，Apple 擔心會損害所有使用者的隱私。&lt;/p&gt;
+&lt;p&gt;依 Apple 給開發者的問答，App 可以透過 Declared Age Range API（App 向系統查詢使用者年齡區間的介面）取得年齡資訊，使用者可以決定要不要分享。在法律要求的地方，Apple 會把當地法律定義的年齡類別提供給 App。依巴西的說明頁，開發者為遵守當地法律提出要求時一律分享年齡區間。德州的說明頁則寫一律分享，兩地的使用者都不能關閉。&lt;/p&gt;
+&lt;p&gt;iOS 26.5 起，用信用卡或證件確認的結果只回傳一個不區分方式的 &lt;code&gt;confirmed&lt;/code&gt; 值，本文沒有查到自拍確認之後回傳什麼。加州的 AB 1043 走另一種做法，要求作業系統在帳號設定時詢問年齡、把年齡範圍提供給 App 而不要求驗證。AB 1043 經 AB 1856 修改後 2027 年 1 月 1 日起適用（見&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/california-ab1856-open-source-exemption/&#34;&gt;加州 AB 1856 的開源作業系統豁免&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;台灣與香港不在 Apple 列出的年齡確認地區。到 11 月 7 日為止，本文查不到台灣與香港針對作業系統或 App 商店要求年齡確認的法規。依開發者問答，在法律沒有要求的地方，App 只有在使用者自己選擇分享時才能取得年齡區間。&lt;/p&gt;
+&lt;p&gt;本文依 Apple 的文件推論，台灣與香港的讀者可能碰到年齡確認的情況有兩種。一是 Apple 帳號的地區屬於清單上的地方，或是在那些地方建立新帳號。Apple 的文件沒有寫明以帳號地區還是所在位置判斷，德州的說明頁寫的是在德州建立的新帳號。二是當地之後立法要求 App 商店確認年齡，Apple 的文件寫的是依法才適用年齡確認。&lt;/p&gt;
+&lt;p&gt;帳號在澳洲、巴西、新加坡或英國的人被要求確認時，可以比較各種方式留下的資料。已綁信用卡的帳號可能不必另外操作，自拍依 Apple 的說明會送到 Private Cloud Compute 分析後刪除，證件影像則由 Apple 與服務供應商短暫保存。到 11 月 7 日為止 Apple 沒有公布誤判率，自拍無法確認成年時可以重拍，或改用信用卡、證件。不確認也能繼續使用裝置，代價是不能下載 18+ App，也不能關閉部分安全設定。&lt;/p&gt;
+&lt;p&gt;台灣與香港的讀者現在不需要調整任何設定。之後可以留意 Apple 會不會把自拍選項擴大到南韓、德州或其他地方，會不會公布估算模型的準確度。另一項是巴西預計 2027 年初全面遵循時，作業系統提供的年齡訊號如何實作。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149095&#34;&gt;Confirm that you&amp;#39;re an adult with a selfie&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/125666&#34;&gt;Region-specific rules for managing an Apple Account&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/125662&#34;&gt;If you&amp;#39;re asked to confirm that you&amp;#39;re an adult&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/29/apple-introduces-selfie-age-verification-in-ios-27-2/&#34;&gt;Apple Introduces Selfie Age Verification in iOS 27.2&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/age-assurance/&#34;&gt;Age assurance developer Q&amp;amp;A&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple Developer&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/126783&#34;&gt;Age requirements for managing an Apple Account in Brazil&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127462&#34;&gt;Age requirements for managing an Apple Account in the United States (Texas)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;2026 年 6 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/news/?id=2ezb6jhj&#34;&gt;Next steps for apps distributed in Texas&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple Developer&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-04&#34;&gt;2025 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2025/online-safety-code-of-practice-for-app-distribution-services&#34;&gt;New Online Safety Code of Practice for App Distribution Services Enhances Protection for Singapore Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-15&#34;&gt;2025 年 1 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/2025/01/ads-code/factsheet-on-age-assurance.pdf&#34;&gt;Factsheet on Age Assurance under the ADS Code&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-15&#34;&gt;2025 年 1 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/06/internet-age-gates-are-growing-global-threat&#34;&gt;Internet Age Gates Are a Growing Global Threat&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-05&#34;&gt;2026 年 6 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/01/face-scans-estimate-our-age-creepy-af-and-harmful&#34;&gt;Face Scans to Estimate Our Age: Harmful and Creepy AF&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-23&#34;&gt;2025 年 1 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>菲律賓公民社會的 AI 風險盤點</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/philippines-ai-risk-map/</link>
@@ -2082,118 +2197,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093&#34;&gt;人工智慧基本法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>泰國線上內容緊急停止散布公告的撤銷訴訟</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/thailand-good-morals-content/</link>
-<guid isPermaLink="false">anoni-news:2026/10/thailand-good-morals-content</guid>
-<pubDate>Thu, 29 Oct 2026 01:25:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>泰國數位經濟與社會部 7 月公布一份公告，定義《電腦犯罪法》裡可以緊急向法院聲請停止散布或刪除的線上資料，列出 14 項有違公共秩序或善良風俗的類別。泰國人權律師中心與 iLaw 10 月 14 日向中央行政法院起訴，請求撤銷「緊急必要」的定義，以及涉及君主制度與仇恨的兩項。到 10 月 29 日為止，數位經濟與社會部的說明只舉了詐騙與電子菸廣告等例子，查不到對這兩項與訴訟的回應。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，來自 ราชกิจจานุเบกษา、ศูนย์ทนายความเพื่อสิทธิมนุษยชน、iLaw 等 10 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;泰國人權律師中心（TLHR）與 iLaw 10 月 14 日向中央行政法院提起訴訟，請求撤銷數位經濟與社會部一份公告的部分條文。公告 6 月 19 日簽署、7 月 17 日刊登在皇家公報，隔天施行。它把《電腦犯罪法》第 20 條的「緊急必要」定義為拖延可能威脅國家安全、宗教、君主制度、善良風俗、社會文化與公共秩序的情形，緊急時由部內指派的官員附上證據向法院聲請停止散布或刪除。依 TLHR 的摘述，第 20 條第 5 項讓官員在緊急時，可以在部長或電腦資料審查委員會同意之前先向法院聲請。&lt;/p&gt;
-&lt;p&gt;定義底下列了四類資料，第四類是 14 項有違公共秩序或善良風俗的類別，屬於這些類別並經電腦資料審查委員會同意的資料都在範圍內。類別包括賭博、販售非法槍枝、電子菸、大麻、酒類、超過法定利率的放貸、代理孕母廣告，以及用圖文諷刺、嘲弄、貶低或牽涉佛教，使佛教受損或被辱罵憎恨的內容。&lt;/p&gt;
-&lt;p&gt;訴訟只針對其中兩項，加上「緊急必要」的定義本身。一項是誣陷、嘲弄、牽涉或貶低國王、王后、王位繼承人、攝政、王室成員或君主制度的內容。另一項是用圖文貶抑並誘導仇恨、製造分裂感與負面刻板印象，可能導致社會分裂、衝突與更大範圍暴力的內容。&lt;/p&gt;
-&lt;p&gt;依《每日新聞》7 月 21 日的報導，數位經濟與社會部次長表示公告解決了原本審查流程的時間限制。違法網址已從數萬個增加到數百萬個，處理時間可以從數日縮短為數小時。範圍涵蓋各種線上威脅，例如人頭帳戶、深偽投資詐騙、電子菸廣告與簡訊詐騙。部內統計公告施行前的 2025 年 10 月到 2026 年 7 月 13 日，封鎖了 883,012 個網址。&lt;/p&gt;
-&lt;p&gt;律師事務所 Tilleke &amp;amp; Gibbins 7 月提醒平台、電商與金融科技業者，預期政府發起的下架命令會大幅增加。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;公告管的是在泰國散布的線上資料，直接受影響的是在泰國發布或存取內容的人，以及要配合法院命令的平台與網路業者。它對泰國以外的貼文如何處理，我們查不到說明。爭點由原告提出，到 10 月 29 日為止，數位經濟與社會部對以下各點與訴訟本身都沒有公開回應。&lt;/p&gt;
-&lt;p&gt;第一個爭點是部長的權限。公告寫明依據《電腦犯罪法》第 4 條訂定，前言的理由是違法或不適當的資料大量增加，需要更強的機制停止散布。TLHR 認為第 4 條只授權部長訂定執行母法的程序與機制，部長沒有權限去定義第 20 條第 5 項的「緊急必要」。&lt;/p&gt;
-&lt;p&gt;第二個爭點是範圍與用詞，君主制度那一項的條文寫了列入的理由，也就是這些對象依泰國社會的信仰與傳統受人民尊崇。TLHR 認為類別比第 20 條寫明的範圍更寬，「牽涉」依泰國皇家學術院的辭典是「牽連到」，中性的提及也可能落入範圍。TLHR 也指出「君主制度」在法律裡沒有定義，該部 7 月的說明只談詐騙、賭博、電子菸廣告與網址數量。&lt;/p&gt;
-&lt;p&gt;iLaw 7 月的分析指出，刑法第 112 條（冒犯君主罪）保護的是國王、王后、王位繼承人與攝政。公告把對象擴大到王室成員，行為也加上「牽涉」。iLaw 也認為仇恨那一項讓官員與審查委員會有裁量空間，可能涵蓋善意的批評，同時寫到多數類別本來就是其他法律已經禁止的行為。&lt;/p&gt;
-&lt;p&gt;第三個爭點是程序。公告第 3、4 條規定的是送件的程序，官員要附上證據向法院聲請，辦理時嚴格遵守相關法令。TLHR 與 iLaw 另外主張訂定公告前沒有依法徵詢意見，iLaw 查了該部網站與法規中央系統都沒有看到徵詢。&lt;/p&gt;
-&lt;p&gt;另有一件起訴在同一天送到同一所法院。MGR Online 報導，另一個基金會也請求撤銷這份公告，主張它可能讓人民因恐懼而自我審查。到 10 月 29 日為止，TLHR、iLaw 與報導都只寫到提起訴訟，法院是否受理、有沒有停止執行的裁定都查不到。&lt;/p&gt;
-&lt;p&gt;訴訟之外，對照次長的說明與公告條文還可以看到一處落差。次長的說明把快速流程描述成與外國社群平台及泰國的網路業者合作，在明確違法時直接停止內容、不等法院命令，公告條文裡沒有這一段。泰國的英文報 The Nation 也寫到，部內既有的程序依《電腦犯罪法》第 14 條，由次長或指定的副次長核准後命令業者停止或移除特定違法資料。&lt;/p&gt;
-&lt;p&gt;對照台灣，民法第 72 條的「善良風俗」判斷的是法律行為是否有效，不是網路內容下架的標準。&lt;/p&gt;
-&lt;p&gt;就我們查到的台灣法規而言，跟有害內容最接近的機制在《兒童及少年福利與權益保障法》（全國法規資料庫標示 2021 年 1 月修正）。類別寫在第 43 條，第 46 條由 iWIN 網路內容防護機構受理申訴。平台經主管機關告知內容有害兒少身心時，要限制兒少瀏覽或先行移除。這套機制不經過法院，保護的對象也只限兒少。&lt;/p&gt;
-&lt;p&gt;讀者可以用幾個問題比較各地的做法。一是可以限制的內容類別寫在法律裡，還是由行政機關的公告補充。二是停止散布要不要先經過法院，法院以外的平台合作有沒有公開的規則。三是緊急程序能不能在數小時內處理詐騙這類明確違法的內容，言論類的類別要不要跟它分開處理。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ratchakitcha.soc.go.th/documents/120935.pdf&#34;&gt;ประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม เรื่อง การยื่นคำร้องต่อศาลขอให้มีคำสั่งระงับการทำให้แพร่หลายหรือลบข้อมูลคอมพิวเตอร์ ออกจากระบบคอมพิวเตอร์ ในกรณีที่มีเหตุจำเป็นเร่งด่วน พ.ศ. ๒๕๖๙&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ราชกิจจานุเบกษา&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;2026 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tlhr2014.com/archives/87218&#34;&gt;ฟ้องเพิกถอนประกาศกระทรวง DE เรื่องการปิดกั้นข้อมูล ออกโดยไม่มีฐานอำนาจ-ขยายขอบเขตไปกว้างขวางกว่า พ.ร.บ.คอมพิวเตอร์ฯ-กระทบเสรีภาพประชาชน&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ศูนย์ทนายความเพื่อสิทธิมนุษยชน&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilaw.or.th/articles/59615&#34;&gt;ศูนย์ทนายฯ ยื่นฟ้องเพิกถอนประกาศ DE ขยายนิยามเนื้อหาออนไลน์ “ขัดศีลธรรมอันดี” เหตุออกโดยไม่มีอำนาจ ขัดหลักความได้สัดส่วน และไม่ปฏิบัติตามกฎหมายรับฟังความคิดเห็น&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iLaw&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://prachataienglish.com/node/12083&#34;&gt;TLHR, iLaw sue MDES over new regulation on removing online content&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Prachatai English&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ilaw.or.th/articles/58837&#34;&gt;ประกาศใหม่ดีอี ขยายนิยามเนื้อหาออนไลน์ “ขัดศีลธรรมอันดี” กว้างกว่ามาตรา 112&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iLaw&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-25&#34;&gt;2026 年 7 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dailynews.co.th/news/6044765/&#34;&gt;ปลัดกระทรวงดีอีเผยประกาศกระทรวงฯ ใหม่บังคับใช้แล้ว เร่งสปีดปิดกั้นเว็บผิดก.ม.เร็วขึ้น&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;เดลินิวส์&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;2026 年 7 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nationthailand.com/news/policy/40068882&#34;&gt;Digital Ministry fast-tracks blocking as illegal URLs surge into millions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Nation Thailand&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;2026 年 7 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mgronline.com/politics/detail/9690000099591&#34;&gt;มูลนิธิสิทธิเพื่อความยุติธรรมฟ้องศาลปกครอง ขอเพิกถอนประกาศดีอี ระงับ-ลบข้อมูลออนไลน์ฉุกเฉิน ชี้ อาจกระทบเสรีภาพการแสดงออก&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MGR Online&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legal500.com/intelligence/thailand/media-telecoms-it-entertainment/thailand-introduces-expedited-takedown-rules-for-online-content&#34;&gt;Thailand Introduces Expedited Takedown Rules For Online Content&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tilleke &amp;amp; Gibbins（Legal 500）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-21&#34;&gt;2026 年 7 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&amp;amp;flno=72&#34;&gt;民法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://i.win.org.tw/about.php&#34;&gt;iWIN網路內容防護機構 - 關於我們&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iWIN 網路內容防護機構&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
