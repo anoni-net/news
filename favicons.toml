@@ -60,6 +60,10 @@ from = "https://www.aljazeera.com/favicon_aje.ico"
 icon = "allenandgledhill.com-d900bea8.png"
 from = "https://www.allenandgledhill.com/assets/img/icons/favicon-32x32.png"
 
+[hosts."am730.com.hk"]
+icon = "am730.com.hk-f51bc587.png"
+from = "https://www.am730.com.hk/assets/favicons/apple-touch-icon.png"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -723,6 +727,10 @@ from = "https://duckduckgo.com/static-assets/favicons/DDG-iOS-icon_60x60.png"
 icon = "ec.europa.eu-8c67fe09.png"
 from = "https://ec.europa.eu/favicon.ico"
 
+[hosts."edigest.hk"]
+icon = "edigest.hk-7548f63c.png"
+from = "https://www.edigest.hk/wp-content/themes/bucket/theme-content/images/196x196.png"
+
 [hosts."edition.cnn.com"]
 icon = "edition.cnn.com-ae11d4e1.png"
 from = "https://edition.cnn.com/media/sites/cnn/apple-touch-icon.png"
@@ -1120,6 +1128,10 @@ from = "https://www.huntress.com/assets/apple-touch-icon-DudXUahm.png"
 icon = "huridocs.org-5c928d7a.png"
 from = "https://huridocs.org/wp-content/uploads/2020/11/cropped-huridocs-logo-icon-192x192.jpg"
 
+[hosts."i-cable.com"]
+icon = "i-cable.com-6bd8c263.png"
+from = "https://icable-prod.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2022/07/04143029/cropped-icable_logo_512x512px-192x192.png"
+
 [hosts."i.win.org.tw"]
 icon = "i.win.org.tw-3c9efd99.png"
 from = "https://i.win.org.tw/favicon.png"
@@ -1135,6 +1147,10 @@ from = "https://www.icann.org/favicon.ico"
 [hosts."ico.org.uk"]
 icon = "ico.org.uk-8989c7e1.png"
 from = "https://ico.org.uk/media2/lhphq55z/favicon.ico"
+
+[hosts."idtechwire.com"]
+icon = "idtechwire.com-07961583.png"
+from = "https://idtechwire.com/wp-content/uploads/cropped-BasicLogo-32x32.png"
 
 [hosts."ilaw.or.th"]
 icon = "ilaw.or.th-4c0b5e40.png"
@@ -2337,6 +2353,10 @@ from = "https://therecord.media/favicon-192.png"
 [hosts."theregister.com"]
 icon = "theregister.com-315165b2.png"
 from = "https://www.theregister.com/view-resources/dachser2/public/theregister/favicons/web-app-manifest-512x512.png"
+
+[hosts."thestandard.com.hk"]
+icon = "thestandard.com.hk-b2de4002.png"
+from = "https://www.thestandard.com.hk/ts/assets/favicon/android-icon-192x192.png"
 
 [hosts."theverge.com"]
 icon = "theverge.com-923bdc5a.png"
