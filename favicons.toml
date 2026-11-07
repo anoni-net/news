@@ -430,6 +430,9 @@ from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
 [hosts."cnnic.net.cn"]
 none = "網站在抓取時無法連線，頁面沒有宣告圖示"
 
+[hosts."coe.int"]
+none = "原站與 Internet Archive 都擋下自動抓取"
+
 [hosts."cointelegraph.com"]
 icon = "cointelegraph.com-c888aa49.png"
 from = "https://cointelegraph.com/apple-touch-icon.png"
@@ -1973,6 +1976,9 @@ from = "https://www.rfc-editor.org/api/v1/favicon/512x512.png"
 [hosts."riseup.net"]
 icon = "riseup.net-b2500dd4.png"
 from = "https://riseup.net/assets/images/favicon.png"
+
+[hosts."rm.coe.int"]
+none = "原站與 Internet Archive 都擋下自動抓取"
 
 [hosts."robbietilton.com"]
 none = "網站圖示是作者本人的照片，不放個人肖像"
