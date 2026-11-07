@@ -146,6 +146,10 @@ from = "https://www.asahi-kasei.co.jp/pharma/favicon.ico"
 icon = "asiae.co.kr-d67ff65d.png"
 from = "https://cwstatic.asiae.co.kr/icns/asiae.ico"
 
+[hosts."asnbank.nl"]
+icon = "asnbank.nl-e796a917.png"
+from = "https://www.asnbank.nl/static/design/6707989A-E4D1-458C-95A6-F399A91416CE-fsm/rel/icon/android-icon-192x192.png?random=BD62"
+
 [hosts."aspistrategist.org.au"]
 icon = "aspistrategist.org.au-e29f7643.png"
 from = "https://www.aspistrategist.org.au/wp-content/themes/aspi/assets/img/icons/apple-touch-icon-precomposed.png"
@@ -592,6 +596,10 @@ none = "個人網站的圖示是作者的姓名縮寫"
 [hosts."dawo.community"]
 icon = "dawo.community-cf7a3078.png"
 from = "https://www.dawo.community/favicon.svg（轉成 PNG）"
+
+[hosts."dbs.com.hk"]
+icon = "dbs.com.hk-aea0e8a1.png"
+from = "https://www.dbs.com.hk/_next/public/favicon.ico?q=c2ceb8e2-6809-43d4-8233-a64c629a4993"
 
 [hosts."deccanherald.com"]
 icon = "deccanherald.com-84da2aa0.png"
@@ -1969,6 +1977,10 @@ from = "https://www.gstatic.com/devrel-devsite/prod/v9ce9cb5b22b62a465ff52c45061
 [hosts."priveetee.github.io"]
 same_as = "pipepipe.dev"
 
+[hosts."privsec.dev"]
+icon = "privsec.dev-30b82af8.png"
+from = "https://privsec.dev/apple-touch-icon.png"
+
 [hosts."publicsafety.gc.ca"]
 icon = "publicsafety.gc.ca-6be11ced.png"
 from = "https://publicsafety.gc.ca/dist/assets/favicon.ico"
@@ -2104,6 +2116,10 @@ from = "https://security.googleblog.com/favicon.ico"
 [hosts."security.macnica.co.jp"]
 icon = "security.macnica.co.jp-fc3bfb51.png"
 from = "https://security.macnica.co.jp/upload/favicon.ico"
+
+[hosts."security.nl"]
+icon = "security.nl-c2c3ad95.png"
+from = "https://www.security.nl/images/apple-icon-144x144.png"
 
 [hosts."securitylab.github.com"]
 icon = "securitylab.github.com-ad3eceb3.png"
