@@ -508,6 +508,10 @@ from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e
 icon = "coveryourtracks.eff.org-18aa39f8.png"
 from = "https://coveryourtracks.eff.org/static/favicon.ico"
 
+[hosts."cpj.org"]
+icon = "cpj.org-dd76b860.png"
+from = "https://cpj.org/wp-content/themes/cpj/icons/apple-touch-icon.png"
+
 [hosts."cppa.ca.gov"]
 icon = "cppa.ca.gov-a08db90b.png"
 from = "https://cppa.ca.gov/images/apple-touch-icon-192x192.png"
@@ -1155,6 +1159,10 @@ from = "https://www.iana.org/static/img/bookmark_icon.e14a2530b3e9.ico"
 [hosts."icann.org"]
 icon = "icann.org-e2bdae57.png"
 from = "https://www.icann.org/favicon.ico"
+
+[hosts."icnl.org"]
+icon = "icnl.org-e208212a.png"
+from = "https://www.icnl.org/favicon.ico"
 
 [hosts."ico.org.uk"]
 icon = "ico.org.uk-8989c7e1.png"
