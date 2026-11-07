@@ -60,6 +60,10 @@ from = "https://www.aljazeera.com/favicon_aje.ico"
 icon = "allenandgledhill.com-d900bea8.png"
 from = "https://www.allenandgledhill.com/assets/img/icons/favicon-32x32.png"
 
+[hosts."alpinelinux.org"]
+icon = "alpinelinux.org-e90660cd.png"
+from = "https://alpinelinux.org/alpine-logo.ico"
+
 [hosts."am730.com.hk"]
 icon = "am730.com.hk-f51bc587.png"
 from = "https://www.am730.com.hk/assets/favicons/apple-touch-icon.png"
@@ -1049,6 +1053,10 @@ from = "https://gultsch.de/favicon.ico"
 [hosts."gwytb.gov.cn"]
 same_as = "gov.cn"
 
+[hosts."hachyderm.io"]
+icon = "hachyderm.io-2c1f0de1.png"
+from = "https://hachyderm.io/packs/assets/apple-touch-icon-1024x1024-B3Tu3EqI.png"
+
 [hosts."hamshahrionline.ir"]
 icon = "hamshahrionline.ir-620e2cc3.png"
 from = "https://www.hamshahrionline.ir/resources/theme/hamshahri/img/icons/favicon-196x196.png"
@@ -1092,6 +1100,10 @@ from = "https://cdn.prod.website-files.com/660ac5137d0f7fda07d7ce65/6617d7981e36
 [hosts."hk01.com"]
 icon = "hk01.com-41717201.png"
 from = "https://www.hk01.com/apple-touch-icon.png?v=5AeznpzBEm"
+
+[hosts."hkcert.org"]
+icon = "hkcert.org-c20e658a.png"
+from = "https://www.hkcert.org/assets/shared/img/favicon/apple-touch-icon.png"
 
 [hosts."hkdnr.hk"]
 icon = "hkdnr.hk-4024b7ae.png"
@@ -1302,6 +1314,9 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 [hosts."justiceinitiative.org"]
 icon = "justiceinitiative.org-987979f3.png"
 from = "https://www.justiceinitiative.org/dist/images/favicons/favicon-152.png"
+
+[hosts."jvn.jp"]
+none = "原站與 Internet Archive 都沒有可用的圖示"
 
 [hosts."kaba.cx"]
 none = "個人網站沒有提供圖示"
@@ -1806,6 +1821,14 @@ from = "https://openjdk.org/images/nanoduke.ico"
 icon = "openrightsgroup.org-dcb8635e.png"
 from = "https://www.openrightsgroup.org/apple-touch-icon-1024x1024.png"
 
+[hosts."openssh.com"]
+icon = "openssh.com-6c007872.png"
+from = "https://www.openssh.com/favicon.ico"
+
+[hosts."openwall.com"]
+icon = "openwall.com-c05dca8e.png"
+from = "https://www.openwall.com/favicon.ico"
+
 [hosts."osborneclarke.com"]
 icon = "osborneclarke.com-446be60d.png"
 from = "https://www.osborneclarke.com/themes/custom/osborneclarke/assets/images/icon.png"
@@ -2062,6 +2085,10 @@ from = "https://www.sec.gov/favicon.ico"
 icon = "securedrop.org-903dcbd4.png"
 from = "https://securedrop.org/apple-touch-icon.png"
 
+[hosts."security-tracker.debian.org"]
+icon = "security-tracker.debian.org-aef258f5.png"
+from = "https://security-tracker.debian.org/favicon.ico"
+
 [hosts."security.googleblog.com"]
 icon = "security.googleblog.com-624359af.png"
 from = "https://security.googleblog.com/favicon.ico"
@@ -2157,6 +2184,10 @@ from = "https://sprs.parl.gov.sg/favicon.ico"
 [hosts."ssd.eff.org"]
 icon = "ssd.eff.org-88f6a486.png"
 from = "https://ssd.eff.org/favicon.ico"
+
+[hosts."sshhole.com"]
+icon = "sshhole.com-c4c6bf80.png"
+from = "https://sshhole.com/icon-192.png"
 
 [hosts."ssl4.eir-parts.net"]
 none = "上市公司公告的託管平台"
