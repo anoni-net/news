@@ -586,6 +586,10 @@ same_as = "gov.sg"
 icon = "csmonitor.com-bbc4d219.png"
 from = "https://www.csmonitor.com/bundles/csm/images/favicon/apple-touch-icon.png"
 
+[hosts."csrc.nist.gov"]
+icon = "csrc.nist.gov-0ac27f49.png"
+from = "https://csrc.nist.gov/images/icons/apple-touch-icon.png"
+
 [hosts."cultura.gob.es"]
 icon = "cultura.gob.es-6ae34a40.png"
 from = "https://web.archive.org/web/20260927id_/https://www.cultura.gob.es/favicon.ico"
@@ -1023,6 +1027,10 @@ from = "https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-51
 icon = "github.com-90043607.png"
 from = "https://github.githubassets.com/favicons/favicon.png"
 
+[hosts."gitlab.com"]
+icon = "gitlab.com-e3bfc5d8.png"
+from = "https://gitlab.com/apple-touch-icon.png"
+
 [hosts."gitlab.torproject.org"]
 same_as = "torproject.org"
 
@@ -1127,6 +1135,9 @@ same_as = "gov.cn"
 [hosts."hachyderm.io"]
 icon = "hachyderm.io-2c1f0de1.png"
 from = "https://hachyderm.io/packs/assets/apple-touch-icon-1024x1024-B3Tu3EqI.png"
+
+[hosts."hackingpassion.com"]
+none = "網站與網頁封存都取不到圖示"
 
 [hosts."hamshahrionline.ir"]
 icon = "hamshahrionline.ir-620e2cc3.png"
@@ -1897,6 +1908,10 @@ none = "網站擋下自動抓取，抓不到圖示"
 icon = "nsb.gov.tw-23fb8542.png"
 from = "https://www.nsb.gov.tw/favicon.ico"
 
+[hosts."nvd.nist.gov"]
+icon = "nvd.nist.gov-9a487dd3.png"
+from = "https://nvd.nist.gov/favicon.ico"
+
 [hosts."oeil.secure.europarl.europa.eu"]
 icon = "oeil.secure.europarl.europa.eu-865fc6c6.png"
 from = "https://evokits.europarl.europa.eu/evostrap/7.0.0/lib/dist/assets/img/favicon.ico"
@@ -2332,6 +2347,10 @@ from = "https://www.soumu.go.jp/favicon.ico"
 icon = "source.android.com-56e81a95.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/v5be16d8c9f9402e54c2da2ff24cb75c148f5d2bc84c6f8dfc8b9e16ae456160b/androidsource/images/touchicon-180.png"
 
+[hosts."spectrum.ieee.org"]
+icon = "spectrum.ieee.org-8864e0b1.png"
+from = "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNjU5NjY0OS9vcmlnaW4ucG5nIiwiZXhwaXJlc19hdCI6MTg0ODgxODUwNn0.1LlzHtxZSVXyzapxWjeSrRIRu5qo3CeB8FaWpd2tl_o/img.png?width=192&height=192"
+
 [hosts."speechmap.substack.com"]
 icon = "speechmap.substack.com-cbfa4835.png"
 from = "https://substackcdn.com/image/fetch/$s_!Teni!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F484a0b01-a5aa-4a46-96eb-1bd25c96dbeb%2Fapple-touch-icon-1024x1024.png"
@@ -2564,6 +2583,10 @@ from = "https://www.tibane.net/favicon.png"
 icon = "tlhr2014.com-2a284765.png"
 from = "https://tlhr2014.com/wp-content/uploads/2019/04/cropped-TLHRicon-01-192x192.png"
 
+[hosts."tomshardware.com"]
+icon = "tomshardware.com-34440fb9.png"
+from = "https://vanilla.futurecdn.net/tomshardware/1808946/apple-touch-icon.png"
+
 [hosts."torproject.org"]
 icon = "torproject.org-e64b086c.png"
 from = "https://www.torproject.org/static/images/favicon/favicon.ico"
@@ -2618,6 +2641,9 @@ from = "https://ufm.dk/media/5ljdlabz/favicon.png?rmode=pad&width=180&height=180
 [hosts."ventasdeseguridad.com"]
 icon = "ventasdeseguridad.com-db4640dc.png"
 from = "https://www.ventasdeseguridad.com/favicon.ico"
+
+[hosts."veracrypt.io"]
+none = "圖示轉換後是全透明"
 
 [hosts."verizon.com"]
 icon = "verizon.com-6ec72a34.png"
