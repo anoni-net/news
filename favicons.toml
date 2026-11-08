@@ -123,6 +123,9 @@ from = "https://apps.nextcloud.com/static/assets/img/favicon-180.png"
 icon = "apt.izzysoft.de-3d40667a.png"
 from = "https://apt.izzysoft.de/favicon.ico"
 
+[hosts."archive.dni.gov"]
+none = "抓不到圖示"
+
 [hosts."archive.epic.org"]
 icon = "archive.epic.org-d417717b.png"
 from = "https://archive.epic.org/favicon2.ico"
@@ -563,6 +566,10 @@ same_as = "cryptpad.org"
 [hosts."cryptpad.org"]
 icon = "cryptpad.org-0c6cadf4.png"
 from = "https://cryptpad.org/images/main-favicon.png"
+
+[hosts."cs.princeton.edu"]
+icon = "cs.princeton.edu-924d03a8.png"
+from = "https://www.cs.princeton.edu/sites/default/files/favicon.ico"
 
 [hosts."cs.umd.edu"]
 icon = "cs.umd.edu-d1ebf39c.png"
@@ -2619,6 +2626,9 @@ from = "https://www.viva.co.id/favicon-196x196.png"
 [hosts."voising-official.com"]
 icon = "voising-official.com-9385d7b2.png"
 from = "https://voising-official.com/apple-icon.png"
+
+[hosts."w2.eff.org"]
+same_as = "eff.org"
 
 [hosts."w3.org"]
 icon = "w3.org-bf155846.png"
