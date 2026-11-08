@@ -265,6 +265,9 @@
 /2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -302,6 +305,9 @@
 	#perspective
 	#sources
 /2026/11/ios-selfie-age-verification/
+	#perspective
+	#sources
+/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
 /2026/11/openssh-sshole/
@@ -623,6 +629,9 @@
 /en/2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/en/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /en/2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -660,6 +669,9 @@
 	#perspective
 	#sources
 /en/2026/11/ios-selfie-age-verification/
+	#perspective
+	#sources
+/en/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
 /en/2026/11/openssh-sshole/
@@ -1198,6 +1210,9 @@
 /zh-cn/2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/zh-cn/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /zh-cn/2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -1235,6 +1250,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/ios-selfie-age-verification/
+	#perspective
+	#sources
+/zh-cn/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
 /zh-cn/2026/11/openssh-sshole/
