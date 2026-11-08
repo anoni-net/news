@@ -2048,6 +2048,10 @@ from = "https://piyolog.hatenadiary.jp/icon/link"
 icon = "pm.gov.au-6ab35cff.png"
 from = "https://www.pm.gov.au/themes/custom/pearly/favicon.ico"
 
+[hosts."pofmaoffice.gov.sg"]
+icon = "pofmaoffice.gov.sg-890d5eb3.png"
+from = "https://isomer-user-content.by.gov.sg/501/a9379482-64d6-4fe6-bc14-886715c9ef75/favicon-32x32.png"
+
 [hosts."police.gov.hk"]
 same_as = "gov.hk"
 

@@ -89,3 +89,16 @@
     - 照錄：「In 2021, Hong Kong requested that Google remove 116 items in all, with just six related to national security.」
     - 來源（二手）：Hong Kong Free Press，Hong Kong asked Google to remove 183 items in latter half of 2022; national security takedown requests surged，<https://hongkongfp.com/2023/05/09/hong-kong-asked-google-to-remove-183-items-in-latter-half-of-2022-national-security-takedown-requests-surged/>，2023-05-09
     - 查證日期：2026-11-08
+
+## 新加坡
+
+- 事實：依 POFMA Office 網站首頁的說明，《防止網路假訊息與操縱法》（Protection from Online Falsehoods and Manipulation Act，POFMA）的主要工具是更正指示，收到指示的人要在原貼文旁加上通知，並連結到政府的澄清，原貼文不必移除
+    - 照錄：「POFMA’s primary tools to correct falsehoods are correction directions which require recipients to insert a notice against the original post, with a link to the Government’s clarification.  The clarification sets out the falsehoods and facts for the public to examine, without the original post being removed.」
+    - 來源：POFMA Office 首頁，<https://www.pofmaoffice.gov.sg/>，頁尾標示 2026-10-16 更新
+    - 查證日期：2026-11-08
+- 事實：依 POFMA Office 的 Regulations 頁面，更正指示不要求移除假訊息，較嚴重的情況可以使用停止傳播指示（stop communication direction）或停用指示（disabling direction）。發出指示的條件是有虛假的事實陳述透過網際網路在新加坡傳播，而且發出指示符合公共利益
+    - 照錄：「POFMA’s primary tools to counter online falsehoods are the correction directions - these directions do not require the online falsehood to be removed. In more serious cases, a stop communication or disabling direction may be used.」
+    - 照錄：「A false statement of fact has been or is being communicated in Singapore through the Internet; and」、「It is in the public interest to issue the direction.」
+    - 來源：Regulations，POFMA Office，<https://www.pofmaoffice.gov.sg/regulations/>，頁面標示 2026-06-04 更新，頁尾標示 2026-10-16 更新
+    - 查證日期：2026-11-08
+- 查不到：POFMA 法條本文（Singapore Statutes Online 回傳 403）、上訴程序與近年發出指示的件數都沒有取得，不引用。新加坡的其他內容下架規定，例如線上安全相關的法律，這次也沒有查
