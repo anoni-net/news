@@ -937,6 +937,10 @@ from = "https://www.fsa.go.jp/images/apple-touch-icon.png"
 icon = "fsc.gov.tw-7666e10e.png"
 from = "https://www.fsc.gov.tw/favicon.ico"
 
+[hosts."ftc.gov"]
+icon = "ftc.gov-b5a26d94.png"
+from = "https://web.archive.org/web/20261108id_/https://www.ftc.gov/themes/custom/ftc_uswds/favicon.ico"
+
 [hosts."gadgetnews.net"]
 icon = "gadgetnews.net-7c12bf35.png"
 from = "https://gadgetnews.net/wp-content/uploads/2023/08/Favicon-2.png"
@@ -1903,6 +1907,9 @@ from = "https://pasal.id/apple-touch-icon.png"
 icon = "pbs.org-f7a94f50.png"
 from = "https://www.pbs.org/favicons/favicon-180x180.png"
 
+[hosts."pc.watch.impress.co.jp"]
+same_as = "internet.watch.impress.co.jp"
+
 [hosts."pcpd.org.hk"]
 icon = "pcpd.org.hk-dc297a73.png"
 from = "https://www.pcpd.org.hk/favicon.ico"
@@ -2291,6 +2298,10 @@ from = "https://support.microsoft.com/apple-touch-icon.png"
 
 [hosts."support.mozilla.org"]
 same_as = "blog.mozilla.org"
+
+[hosts."support.riotgames.com"]
+icon = "support.riotgames.com-6f3f17d5.png"
+from = "https://support.riotgames.com/apple-touch-icon.png"
 
 [hosts."support.signal.org"]
 icon = "support.signal.org-ac934b40.png"
