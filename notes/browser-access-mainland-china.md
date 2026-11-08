@@ -1,6 +1,6 @@
 # 瀏覽器與指紋檢測網站在中國大陸的取得方式
 
-範圍是 Chrome、Firefox 與 Tor Browser 的官方網站或下載頁、兩款瀏覽器在中國大陸 App Store 的上架狀態，以及 EFF 的指紋檢測網站 Cover Your Tracks 在中國大陸能不能連上。Brave 見 `brave-access-asia.md`，Google Play 見 `google-services-mainland-china.md`，Tor 網路本身的連線狀況見 `tor-access-asia.md`。第一次整理是寫 anoni-net/news 的瀏覽器指紋那篇的時候，查證日期 2026-10-23。
+範圍是 Chrome、Firefox 與 Tor Browser 的官方網站或下載頁、兩款瀏覽器在中國大陸 App Store 的上架狀態，以及 EFF 的指紋檢測網站 Cover Your Tracks 與追蹤器阻擋擴充套件 Privacy Badger 在中國大陸能不能連上、能不能取得（Privacy Badger 一節也記錄台灣、香港、日本、南韓的 Mac App Store）。Brave 見 `brave-access-asia.md`，Google Play 見 `google-services-mainland-china.md`，Tor 網路本身的連線狀況見 `tor-access-asia.md`。第一次整理是寫 anoni-net/news 的瀏覽器指紋那篇的時候，查證日期 2026-10-23。
 
 GreatFire 是第三方的量測，量的是網址能不能連線，不是官方的封鎖名單，也沒有區分瀏覽器內建的更新管道。
 
@@ -53,6 +53,24 @@ GreatFire 是第三方的量測，量的是網址能不能連線，不是官方�
 - 事實：到 2026-10-23 查詢時，`https://coveryourtracks.eff.org` 在 GreatFire 此前 90 天只有 1 次有結論的測試，結果是正常連線（0/1）。頁面標了「Verdict revised」，2026 年 10 月 16 日那次連線被拒，沒有計入，不能寫成「10 月 16 日的測試沒有被封鎖」。只有 1 次，證據很薄
     - 照錄：「All 1 recent conclusive tests connected normally.」
     - 來源：GreatFire，<https://en.greatfire.org/https/coveryourtracks.eff.org>
+
+## Privacy Badger 與 EFF 網站
+
+寫 anoni-net/news 的 Privacy Badger Safari 版那篇時補上，查證日期 2026-11-08。
+
+- 事實：iTunes 查詢 API 在中國大陸、台灣、香港、日本、南韓的商店（`country=cn`、`tw`、`hk`、`jp`、`kr`）都查得到 Privacy Badger 的 Mac 版（App ID `6761143693`，類型 mac-software），價格皆為免費，版本同為 2026.10.22。這是 API 的查詢結果，沒有用各地的帳號實際開啟商店頁。iOS 版沒有上架（以 `entity=software` 查詢為 0 筆）
+    - 來源：iTunes lookup API，<https://itunes.apple.com/lookup?id=6761143693&country=cn>（另查 `tw`、`hk`、`jp`、`kr`、`us`），查詢日 2026-11-08
+- 事實：同一個 API 列出的語言代碼共 28 個，包含 `JA` 與兩個 `ZH`，沒有 `KO`。API 沒有區分正簡。擴充套件原始碼的 `src/_locales/` 有 `zh_TW` 與 `zh_CN`
+    - 來源：同上。privacybadger/src/_locales，GitHub，<https://github.com/EFForg/privacybadger/tree/master/src/_locales>，查證日期 2026-11-08
+- 事實：說明頁 privacybadger.org 有簡體中文版 `/zh-cn/`，正體中文的 `/zh-tw/` 回應 404
+    - 來源：<https://privacybadger.org/zh-cn/>，查證日期 2026-11-08
+- 事實：`https://www.eff.org` 在 GreatFire 的判定是「Sometimes」，最近 61 次有結論的測試有 23% 受到干擾，最後一次測試 2026 年 10 月 12 日。同網域的子網址判定不同，`https://eff.org` 是 Intermittent，`tor.eff.org` 是 Blocked，`ssd.eff.org` 是 Not blocked
+    - 照錄：「Sometimes. Access is unreliable — 23% of the last 61 conclusive tests showed interference.」 <!-- docs-style-lint: disable-line -->
+    - 來源：GreatFire，<https://en.greatfire.org/https/www.eff.org>，2026-11-08 讀取
+- 事實：`https://privacybadger.org` 在 GreatFire 的最後一次測試是 2026 年 5 月 31 日，結果是可以連線，之後沒有新的測試。引用時寫出測試日期
+    - 照錄：「As of the last test on 2026-05-31 — 5 mo ago — it was reachable in mainland China. We haven't tested it since, so this may have changed.」 <!-- docs-style-lint: disable-line -->
+    - 來源：GreatFire，<https://en.greatfire.org/https/privacybadger.org>，2026-11-08 讀取
+- 查不到：用中國大陸的 Apple 帳號實際下載 Privacy Badger 的情形
 
 ## Firefox 中國版的營運方與服務終止
 
