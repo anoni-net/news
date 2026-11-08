@@ -1,6 +1,6 @@
 # 瀏覽器與指紋檢測網站在中國大陸的取得方式
 
-範圍是 Chrome、Firefox 與 Tor Browser 的官方網站或下載頁、兩款瀏覽器在中國大陸 App Store 的上架狀態，以及 EFF 的指紋檢測網站 Cover Your Tracks 與追蹤器阻擋擴充套件 Privacy Badger 在中國大陸能不能連上、能不能取得（Privacy Badger 一節也記錄台灣、香港、日本、南韓的 Mac App Store）。Brave 見 `brave-access-asia.md`，Google Play 見 `google-services-mainland-china.md`，Tor 網路本身的連線狀況見 `tor-access-asia.md`。第一次整理是寫 anoni-net/news 的瀏覽器指紋那篇的時候，查證日期 2026-10-23。
+範圍是 Chrome、Firefox 與 Tor Browser 的官方網站或下載頁、兩款瀏覽器在中國大陸 App Store 的上架狀態，以及 EFF 的指紋檢測網站 Cover Your Tracks 與追蹤器阻擋擴充套件 Privacy Badger 在中國大陸能不能連上、能不能取得（Privacy Badger 一節也記錄台灣、香港、日本、南韓的 Mac App Store），以及 Onion Browser 與 Orbot 在這幾個 App Store 的查詢結果。Brave 見 `brave-access-asia.md`，Google Play 見 `google-services-mainland-china.md`，Tor 網路本身的連線狀況見 `tor-access-asia.md`。第一次整理是寫 anoni-net/news 的瀏覽器指紋那篇的時候，查證日期 2026-10-23。
 
 GreatFire 是第三方的量測，量的是網址能不能連線，不是官方的封鎖名單，也沒有區分瀏覽器內建的更新管道。
 
@@ -47,6 +47,14 @@ GreatFire 是第三方的量測，量的是網址能不能連線，不是官方�
     - 來源：GreatFire，<https://en.greatfire.org/https/support.torproject.org>
 - 事實：Tor Project 的指紋保護說明頁有簡體中文版，大標題「指纹识别保护」
     - 來源：指纹识别保护 - 功能 - Tor 浏览器，Tor Project，<https://support.torproject.org/zh-CN/tor-browser/features/fingerprinting-protections/>，查詢日 2026-10-23
+
+## Onion Browser 與 Orbot（iOS）
+
+寫 anoni-net/news 的 iOS 版 Tor Browser 那篇時補上，查證日期 2026-11-08。
+
+- 事實：iTunes 查詢 API 在台灣、香港、日本、南韓、美國的商店（`country=tw`、`hk`、`jp`、`kr`、`us`）查得到 Onion Browser（App ID `519296448`）與 Orbot（App ID `1609461599`），各 1 筆，在中國大陸的商店（`country=cn`）都是 0 筆。這是 API 的查詢結果，不等於 Apple 的公告，沒有用各地的帳號實際開啟商店頁
+    - 來源：iTunes lookup API，<https://itunes.apple.com/lookup?id=519296448&country=cn>、<https://itunes.apple.com/lookup?id=1609461599&country=cn>（另查 `tw`、`hk`、`jp`、`kr`、`us`），查詢日 2026-11-08
+- 查不到：兩款在中國大陸的商店查不到的原因與時間點，是下架或從未上架都沒有資料，引用時不要寫成被下架
 
 ## Cover Your Tracks
 

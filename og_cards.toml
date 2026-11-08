@@ -108,6 +108,9 @@
 "2026-11-13-android-tv-residential-proxy" = { "en" = "og/2026/11/android-tv-residential-proxy-en-a5415800.png", "zh-CN" = "og/2026/11/android-tv-residential-proxy-zh-cn-3945658d.png", "zh-TW" = "og/2026/11/android-tv-residential-proxy-zh-tw-adb78238.png" }
 "2026-11-13-ninth-circuit-reverse-location" = { "en" = "og/2026/11/ninth-circuit-reverse-location-en-ed35a0fa.png", "zh-CN" = "og/2026/11/ninth-circuit-reverse-location-zh-cn-d521fe44.png", "zh-TW" = "og/2026/11/ninth-circuit-reverse-location-zh-tw-7e8611a8.png" }
 "2026-11-14-gemini-chat-training" = { "en" = "og/2026/11/gemini-chat-training-en-47a62fbe.png", "zh-CN" = "og/2026/11/gemini-chat-training-zh-cn-c909610a.png", "zh-TW" = "og/2026/11/gemini-chat-training-zh-tw-95a359f2.png" }
+
+
+"2026-11-14-ios-full-tor-browser" = { "en" = "og/2026/11/ios-full-tor-browser-en-8ead4eca.png", "zh-CN" = "og/2026/11/ios-full-tor-browser-zh-cn-132203ac.png", "zh-TW" = "og/2026/11/ios-full-tor-browser-zh-tw-447a2985.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-f1b37c7c.png", "zh-CN" = "og/history/09-26-zh-cn-f38b40e8.png", "zh-TW" = "og/history/09-26-zh-tw-d873b539.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-c875310d.png", "zh-CN" = "og/history/09-27-zh-cn-cb1e8c42.png", "zh-TW" = "og/history/09-27-zh-tw-6e156cbd.png" }
 "history/09-28" = { "en" = "og/history/09-28-en-00ae9f4b.png", "zh-CN" = "og/history/09-28-zh-cn-7e49a518.png", "zh-TW" = "og/history/09-28-zh-tw-61f00929.png" }
@@ -157,3 +160,6 @@
 "history/11-11" = { "en" = "og/history/11-11-en-de0cc92d.png", "zh-CN" = "og/history/11-11-zh-cn-fffd3a55.png", "zh-TW" = "og/history/11-11-zh-tw-fdf84cdf.png" }
 "history/11-12" = { "en" = "og/history/11-12-en-d0a44aca.png", "zh-CN" = "og/history/11-12-zh-cn-efa68ad1.png", "zh-TW" = "og/history/11-12-zh-tw-0ac6cf54.png" }
 "history/11-13" = { "en" = "og/history/11-13-en-7a81b0d4.png", "zh-CN" = "og/history/11-13-zh-cn-60ae0fa0.png", "zh-TW" = "og/history/11-13-zh-tw-d4b2d246.png" }
+
+"history/11-14" = { "en" = "og/history/11-14-en-72995dee.png", "zh-CN" = "og/history/11-14-zh-cn-90528fa8.png", "zh-TW" = "og/history/11-14-zh-tw-afda57c3.png" }
+
