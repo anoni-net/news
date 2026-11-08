@@ -1989,6 +1989,9 @@ from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-t
 icon = "privacy.mi.com-7de29412.png"
 from = "https://privacy.mi.com/favicon.ico"
 
+[hosts."privacybadger.org"]
+same_as = "eff.org"
+
 [hosts."privacyguides.org"]
 icon = "privacyguides.org-9c0b097f.png"
 from = "https://www.privacyguides.org/content/images/size/w256h256/2024/01/pg-yellow-2.png"
