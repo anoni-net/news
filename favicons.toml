@@ -457,6 +457,9 @@ from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
 [hosts."cnnic.net.cn"]
 none = "網站在抓取時無法連線，頁面沒有宣告圖示"
 
+[hosts."cnvd.org.cn"]
+none = "原站與 Internet Archive 都抓不到圖示"
+
 [hosts."coe.int"]
 none = "原站與 Internet Archive 都擋下自動抓取"
 
@@ -2209,6 +2212,10 @@ from = "https://www.security.nl/images/apple-icon-144x144.png"
 [hosts."securitylab.github.com"]
 icon = "securitylab.github.com-ad3eceb3.png"
 from = "https://securitylab.github.com/assets/img/favicons/apple-touch-icon.png"
+
+[hosts."sekoia.com"]
+icon = "sekoia.com-b3208469.png"
+from = "https://cdn.prod.website-files.com/69aaa27bc8027f082ae84b86/6a37beab98b71ccf1a988883_Sekoia_Symbol_Black-1.png"
 
 [hosts."senalnews.com"]
 icon = "senalnews.com-e91f6e84.png"
