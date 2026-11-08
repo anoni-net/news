@@ -1,8 +1,8 @@
 # VPN 的法律規範與法院或行政機關命令封鎖網站的制度
 
-範圍是七個地方（中國大陸、新加坡、印度、日本、台灣、香港、印尼）對 VPN 業者或使用者的法律規範，以及法院或行政機關命令網路業者封鎖網站的制度，重點放在盜版網站。只寫法規、官方文件與判決，不寫哪個地區、哪個族群的人在用什麼工具，也不寫人名（來源文件裡的當事人與提案人姓名一律略去）。
+範圍是八個地方（中國大陸、新加坡、印度、日本、台灣、香港、印尼、緬甸）對 VPN 業者或使用者的法律規範，以及法院或行政機關命令網路業者封鎖網站的制度，重點放在盜版網站。只寫法規、官方文件與判決，不寫哪個地區、哪個族群的人在用什麼工具，也不寫人名（來源文件裡的當事人與提案人姓名一律略去）。
 
-第一次整理是寫 anoni-net/news 的猶他州所在地條款與美國網站封鎖法案那篇導讀的時候。查證日期 2026-10-07，下面每一條都是這天查到的內容，只有「印尼」與「自行檢測網站封鎖」兩節是寫 10/26、10/27 的導讀歷史時在 2026-10-24 補上的。
+第一次整理是寫 anoni-net/news 的猶他州所在地條款與美國網站封鎖法案那篇導讀的時候。查證日期 2026-10-07，下面每一條都是這天查到的內容，只有「印尼」與「自行檢測網站封鎖」兩節是寫 10/26、10/27 的導讀歷史時在 2026-10-24 補上的，「緬甸」一節是寫 11/10 的導讀歷史時在 2026-11-08 補上的。
 
 來源分一手與二手：一手是法規原文、政府或法院的公告與判決，二手是媒體、律師事務所與百科的整理。照錄的句子保留原文語言與標點，PDF 與網頁轉文字時多出來的空白已經去掉。
 
@@ -300,6 +300,58 @@
 - 一手（法律原文，政府網站）
 - 查證日期：2026-10-24
 - 查不到：2016 年增訂的第 26 條第 (3) 到 (5) 項（法院裁定後刪除不相關資訊）的施行細則原文，二手說法寫在 2019 年第 71 號政府規章，原文沒有取得。2024 年第 1 號法律沒有修改第 26 條（官方 PDF 的文字層搜尋不到「Pasal 26」，OCR 可能漏字，引用前看一次掃描影像）。誹謗條文在新刑法 2026-01-02 生效後的適用範圍沒有確認
+
+## 緬甸
+
+### MM-1　《網路安全法》第 44 條，設立或提供 VPN 要先取得主管部會的許可
+
+- 事實：《網路安全法》（State Administration Council Law No. 1/2025）第 44 條規定，要在國家網路空間設立 VPN 或提供 VPN 服務的人，須依規定取得主管部會（Ministry）的許可。第 70 條規定，未經許可設立 VPN 或提供 VPN 服務而被定罪的，處 1 個月以上 6 個月以下徒刑，或 100 萬到 1,000 萬緬元的罰金，或併罰。條文的規範對象是設立與提供 VPN 的人，沒有單獨寫到使用者
+- 照錄：「Anyone wishing to establish a VPN or provide VPN services within the national cyberspace shall obtain permission as prescribed from the Ministry.」（第 44 條）
+- 照錄：「If any person is convicted of having established a VPN or having provided VPN services without permission from the Ministry: (a) ... imprisonment for a term of not less than 1 month but not more than 6 months, or with a fine of not less than MMK 1,000,000 but not more than MMK 10,000,000 or with both」（第 70 條）
+- 文件：Cybersecurity Law（State Administration Council Law No. 1/2025），Lincoln Legal Services 的非官方英譯，文件標示「CONVENIENCE TRANSLATION - ACCURACY NOT GUARANTEED」，ICNL 轉載
+- 網址：<https://www.icnl.org/wp-content/uploads/2025-version-Lincoln.pdf>
+- 二手（非官方的法條英譯）。緬甸政府的公報原文沒有取得
+- 查證日期：2026-11-08
+
+### MM-2　同一部法律適用於在境外的緬甸公民
+
+- 事實：非官方英譯的適用條文寫明，居住在國外的緬甸公民觸犯本法可罰的罪，依本法審判。沒有查到對境外公民實際執法的案例，引用時只能寫條文如此
+- 照錄：「Any Myanmar citizen residing abroad who commits an offence punishable under this Law shall be adjudicated according to this law.」
+- 文件與網址同 MM-1
+- 二手（非官方的法條英譯）
+- 查證日期：2026-11-08
+
+### MM-3　頒布與施行日期（二手）
+
+- 事實：法律在 2025-01-01 頒布。Hogan Lovells 的文章寫明法律在 2025-07-30 施行，提供 VPN 服務之前須取得政府核准，並整理個人與公司的罰則。施行日只有這一家律師事務所的來源
+- 照錄：「came into effect on 30 July 2025」
+- 照錄：「Government approval is now required prior to offering VPN services.」
+- 文件：Myanmar's Cybersecurity Law Comes into Effect: Key implications for international stakeholders，Hogan Lovells，2025-08-07
+- 網址：<https://www.hlc.com/en/publications/myanmars-cybersecurity-law-comes-into-effect-key-implications-for-international-stakeholders>
+- 二手（律師事務所文章）
+- 查證日期：2026-11-08
+
+### MM-4　使用 VPN 是否入罪，各方的轉述不一致（二手）
+
+- 事實：RFA 的報導寫成處罰未經許可提供 VPN，Access Now 的頁面寫成使用 VPN 也入罪，BNI 的報導寫成處罰 VPN 使用者。引用時以 MM-1 的條文為準，並寫出各方的轉述不同
+- 照錄：「will penalize unauthorized provision of virtual private networks」（RFA）
+- 照錄：「The 2025 Cybersecurity Law criminalizes the use of Virtual Private Networks (VPNs)」（Access Now）
+- 照錄：「impose penalties on VPN users, including imprisonment from one to six months」（BNI）
+- 文件：Myanmar enacts cybersecurity law that aims to restrict use of VPNs，Radio Free Asia，2025-01-02。Myanmar's digital dictatorship，Access Now，頁面沒有日期。Expert Warn Public to Be Cautious as Cybersecurity Law May Be Used for Increased Suppression，BNI，2025-01-14
+- 網址：<https://www.rfa.org/english/myanmar/2025/01/02/cybersecurity-law-vpn/>、<https://www.accessnow.org/myanmar/>、<https://www.bnionline.net/en/news/expert-warn-public-be-cautious-cybersecurity-law-may-be-used-increased-suppression>
+- 二手（媒體與倡議團體）
+- 查證日期：2026-11-08
+
+### MM-5　2024 年 6、7 月當局封鎖 Signal 與主要的 VPN（二手）
+
+- 事實：Freedom House 的 2025 年報告（涵蓋 2024-06-01 到 2025-05-31）寫明，當局在 2024 年 6、7 月封鎖加密通訊軟體 Signal 與主要的 VPN，2025 年 1 月軍政府通過《網路安全法》，限制 VPN 業者的營運
+- 照錄：「In June and July 2024, authorities blocked access to the encrypted messaging application Signal and major virtual private networks (VPNs)」
+- 照錄：「In January 2025, the military regime adopted the Cybersecurity Law, which codified overbroad censorship mandates, limited the operations of VPN providers, and imposed local data retention requirements」
+- 文件：Myanmar: Freedom on the Net 2025 Country Report，Freedom House
+- 網址：<https://freedomhouse.org/country/myanmar/freedom-net/2025>
+- 二手（人權組織的年度報告）
+- 查證日期：2026-11-08
+- 查不到：第 44 條的許可實際核發過沒有、2026 年與 VPN 相關的逮捕件數
 
 ## 自行檢測網站封鎖
 
