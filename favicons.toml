@@ -229,6 +229,10 @@ from = "https://bitwarden.com/icons/icon-512x512.png"
 icon = "bjnews.com.cn-12b0be0a.png"
 from = "https://www.bjnews.com.cn/favicon.ico"
 
+[hosts."bkl.co.kr"]
+icon = "bkl.co.kr-9b3cf47d.png"
+from = "https://www.bkl.co.kr/favicon.ico"
+
 [hosts."blocktempo.com"]
 icon = "blocktempo.com-ccb2ccb4.png"
 from = "https://image.blocktempo.com/2019/04/cropped-%E9%BB%91%E5%AD%97%E7%99%BD%E6%A1%86%E5%8B%95%E5%8D%80Logo_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F-1-750x750-2-2-e1555450212503-1-32x32.png"

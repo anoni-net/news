@@ -1,6 +1,6 @@
 # 用個人資料訓練 AI 在亞洲的規定
 
-範圍是亞洲各地用個人資料開發、訓練 AI 時的合法依據，特別是不經當事人同意處理公開資料的條件，以及當事人能不能拒絕。第一次整理是寫 anoni-net/news 的歐盟數位綜合法案（Digital Omnibus）那篇的時候，查證日期都是 2026-10-23。
+範圍是亞洲各地用個人資料開發、訓練 AI 時的合法依據，特別是不經當事人同意處理公開資料的條件，以及當事人能不能拒絕。第一次整理是寫 anoni-net/news 的歐盟數位綜合法案（Digital Omnibus）那篇的時候，查證日期除新加坡與香港的條目（2026-11-08）外都是 2026-10-23。
 
 幾個容易混淆的地方：
 
@@ -85,6 +85,25 @@
     - 照錄：「2026. 9. 8. 법률 제21910호로 공포되었으며」、「부칙에 따라 공포 후 6개월이 경과한 2027. 3. 9.부터 시행됩니다.」
     - 來源：개인정보 보호법 AI 특례 일부개정법률 공포: 시행 대비 실무 가이드，BKL（법무법인 태평양），<https://www.bkl.co.kr/law/insight/newsletter/6749>，查證日期 2026-10-23
 
-## 香港、新加坡、澳門
+## 新加坡
 
-- 查不到：三地針對 AI 訓練的條文或指引，2026-10-23 沒有查
+- 事實：個人資料保護委員會（PDPC）2026 年 7 月 20 日發布生成式 AI 指引（Advisory Guidelines，不是法條）。使用者提供給組織、或因使用組織的產品與服務而產生的個人資料稱為 User Data，組織用它開發生成式 AI 模型時，可以考慮依賴同意義務的例外或視為同意（deemed consent），這些做法不適用時要取得同意
+    - 照錄：「personal data provided by an individual to an organisation, or personal data about an individual created in the course of or as a result of the individual’s use of the organisation’s products or services (“User Data”).」（4.1）
+    - 照錄：「As a starting point, organisations may consider relying on exceptions to the “Consent Obligation” or deemed consent to use User Data to develop Generative AI Models. However, in cases where organisations determine that such alternatives are not applicable, they must obtain consent.」（4.2）
+    - 來源：Advisory Guidelines on Use of Personal Data in Generative AI，Personal Data Protection Commission，<https://www.pdpc.gov.sg/assets/143cb9d4-532e-4cca-9a77-bcc0415ca294>，2026-07-20，查證日期 2026-11-08
+- 事實：同意義務的例外舉的例子是業務改善與研究例外，細節在 PDPC 2024 年 3 月 1 日的 AI 推薦與決策系統指引。服飾公司轉型為生成式 AI 模型開發者、想用客戶資料訓練的情境，指引的範例認為不符合業務改善例外，應該重新取得同意
+    - 照錄：「For example, the business improvement and research exceptions.」（註 7）
+    - 照錄：「so significant a departure from past commercial activities that a reasonable person would not consider the use to be appropriate.」、「In this case, the appropriate course of action is to obtain fresh consent.」（4.2 的範例）
+    - 來源：同上，以及 Advisory Guidelines on Use of Personal Data in AI Recommendation and Decision Systems，Personal Data Protection Commission，2024-03-01（只看過副本首頁的發布日期，內文沒有逐段核對），查證日期 2026-11-08
+- 事實：取得同意時，PDPC 認為一般性的通知（General Notifications，只寫「新產品開發」這類目的）不足以取得用 User Data 做大規模模型訓練或微調的同意，組織必須提供明確寫出 AI 或生成式 AI 用途的通知（AI-Specific Notifications）。指引鼓勵組織在實際可行的範圍內，在通知裡說明當事人如何拒絕或撤回同意，例如提供逐步說明或容易取得的退出機制
+    - 照錄：「The Commission is of the view that General Notifications are an insufficient means of obtaining consent to use User Data for Generative AI development, specifically, for large-scale Generative AI Model training and/or fine-tuning. Organisations must provide AI-Specific Notifications for this purpose.」（4.4，註腳編號略去）
+    - 照錄：「they are encouraged to provide the following information, to the extent practicable, in their AI-Specific Notifications」（4.6）
+    - 照錄：「How individuals can decline or withdraw consent to the use of personal data for AI training (e.g. by providing step-by-step instructions or an easily accessible opt-out mechanism).」（4.6(d)）
+    - 來源：Advisory Guidelines on Use of Personal Data in Generative AI，同上，查證日期 2026-11-08
+- 查不到：PDPC 針對特定聊天機器人或特定業者的決定，這次沒有查
+
+## 香港、澳門
+
+- 查不到：香港個人資料私隱專員公署（PCPD）的文件。2026-11-08 PCPD 網站對 curl 與 WebFetch 都回空內容或 JavaScript 驗證頁，沒有讀到原文
+- 二手：搜尋摘要提到 PCPD 2024 年 6 月的 "Artificial Intelligence: Model Personal Data Protection Framework"，內容沒有核對，不可當作已查證，查證日期 2026-11-08
+- 查不到：澳門針對 AI 訓練的條文或指引，沒有查
