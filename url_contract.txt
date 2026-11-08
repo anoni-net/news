@@ -334,6 +334,9 @@
 /2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
+/2026/11/us-border-device-searches/
+	#perspective
+	#sources
 /2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -366,6 +369,7 @@
 /category/encryption/
 /category/finance/
 /category/mobile/
+/category/press/
 /category/security/
 /category/surveillance/
 /category/tracking/
@@ -701,6 +705,9 @@
 /en/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
+/en/2026/11/us-border-device-searches/
+	#perspective
+	#sources
 /en/2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -732,6 +739,7 @@
 /en/category/encryption/
 /en/category/finance/
 /en/category/mobile/
+/en/category/press/
 /en/category/security/
 /en/category/surveillance/
 /en/category/tracking/
@@ -1285,6 +1293,9 @@
 /zh-cn/2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
+/zh-cn/2026/11/us-border-device-searches/
+	#perspective
+	#sources
 /zh-cn/2026/11/weekly-brief-2026-w44/
 	#canada-c22
 	#france-travail
@@ -1316,6 +1327,7 @@
 /zh-cn/category/encryption/
 /zh-cn/category/finance/
 /zh-cn/category/mobile/
+/zh-cn/category/press/
 /zh-cn/category/security/
 /zh-cn/category/surveillance/
 /zh-cn/category/tracking/
