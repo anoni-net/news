@@ -265,6 +265,9 @@
 /2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -624,6 +627,9 @@
 	#thunderbird-ios
 /en/2026/11/
 /en/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
+/en/2026/11/android-tv-residential-proxy/
 	#perspective
 	#sources
 /en/2026/11/asn-bank-grapheneos/
@@ -1198,6 +1204,9 @@
 	#thunderbird-ios
 /zh-cn/2026/11/
 /zh-cn/2026/11/ai-devtools-supply-chain/
+	#perspective
+	#sources
+/zh-cn/2026/11/android-tv-residential-proxy/
 	#perspective
 	#sources
 /zh-cn/2026/11/asn-bank-grapheneos/

@@ -72,6 +72,10 @@ from = "https://www.am730.com.hk/assets/favicons/apple-touch-icon.png"
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
 
+[hosts."android.com"]
+icon = "android.com-27f6c28b.png"
+from = "https://www.gstatic.com/marketing-cms/assets/images/ac/18/a88f0b954e5ab0ab9a1f4f6da1dc/32.png=s180"
+
 [hosts."android.googlesource.com"]
 icon = "android.googlesource.com-f4ae33d1.png"
 from = "https://android.googlesource.com/+static/apple-touch-icon.png"
@@ -414,6 +418,10 @@ from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-1
 
 [hosts."city.sapporo.jp"]
 none = "官網暫停中的臨時首頁，沒有圖示"
+
+[hosts."cloud.google.com"]
+icon = "cloud.google.com-a59b81d6.png"
+from = "https://www.gstatic.com/cgc/super_cloud_gradient.png"
 
 [hosts."cloudflare.com"]
 icon = "cloudflare.com-71ae303d.png"
@@ -1272,6 +1280,10 @@ from = "https://www.irrawaddy.com/favicon.ico"
 icon = "issa.house.gov-9acaf926.png"
 from = "https://issa.house.gov/profiles/evo/assets/images/favicon.ico"
 
+[hosts."itbrief.com.au"]
+icon = "itbrief.com.au-7dc504c1.png"
+from = "https://itbrief.com.au/brands/itb-shortcut-icon.png"
+
 [hosts."ithome.com"]
 icon = "ithome.com-fdc8873e.png"
 from = "https://www.ithome.com/img/t.png"
@@ -1970,6 +1982,10 @@ from = "https://www.pm.gov.au/themes/custom/pearly/favicon.ico"
 [hosts."police.gov.hk"]
 same_as = "gov.hk"
 
+[hosts."police.gov.sg"]
+icon = "police.gov.sg-c72316ab.png"
+from = "https://www.police.gov.sg/favicon.ico"
+
 [hosts."policies.google.com"]
 icon = "policies.google.com-53ae8c75.png"
 from = "https://www.gstatic.com/policies/favicon.ico"
@@ -2030,6 +2046,10 @@ from = "https://privsec.dev/apple-touch-icon.png"
 [hosts."publicsafety.gc.ca"]
 icon = "publicsafety.gc.ca-6be11ced.png"
 from = "https://publicsafety.gc.ca/dist/assets/favicon.ico"
+
+[hosts."qianzhan.com"]
+icon = "qianzhan.com-0339666b.png"
+from = "https://img1.qianzhan.com/img/apple-touch-icon.png"
 
 [hosts."quad9.net"]
 icon = "quad9.net-ff6922f7.png"
