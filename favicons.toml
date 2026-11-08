@@ -1005,6 +1005,10 @@ from = "https://globalprivacycontrol.org/img/favicon/apple-touch-icon.png"
 [hosts."gongbao.court.gov.cn"]
 same_as = "court.gov.cn"
 
+[hosts."goodmorningamerica.com"]
+icon = "goodmorningamerica.com-bb03960b.png"
+from = "https://s.abcnews.com/images/GMA/favicon-32x32.png"
+
 [hosts."google.cn"]
 icon = "google.cn-b463ba0d.png"
 from = "https://www.google.cn/chrome/static/images/favicons/android-icon-192x192.png"
@@ -1210,6 +1214,10 @@ from = "https://www.implicator.ai/content/images/size/w256h256/2025/04/Logo_impl
 [hosts."inc42.com"]
 icon = "inc42.com-56c6cf02.png"
 from = "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2021/09/cropped-inc42-favicon-1-192x192.png"
+
+[hosts."independent.org"]
+icon = "independent.org-d4fa8d5c.png"
+from = "https://www.independent.org/wp-content/uploads/2026/02/cropped-favicon-blue-192x192.png"
 
 [hosts."indiacode.nic.in"]
 none = "網站在抓取時無法連線"
@@ -2124,6 +2132,10 @@ from = "https://assets-v2.i-scmp.com/production/icons/scmp-icon-256x256.png"
 [hosts."scotthelme.co.uk"]
 none = "圖示是作者照片"
 
+[hosts."scotusblog.com"]
+icon = "scotusblog.com-3c186de3.png"
+from = "https://www.scotusblog.com/apple-icon.png?apple-icon.ec413ade.png"
+
 [hosts."sec.gov"]
 icon = "sec.gov-8ecd49c8.png"
 from = "https://www.sec.gov/favicon.ico"
@@ -2655,3 +2667,7 @@ from = "https://www.zoomit.ir/favicon.ico?favicon.11l_-hu5woagh.ico?dpl=2543a8d4
 [hosts."zuckoff.app"]
 icon = "zuckoff.app-284bd984.png"
 from = "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/88/89/1f/88891f97-8ae4-7ed0-9754-05b15f2bf184/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg"
+
+[hosts."zwillgen.com"]
+icon = "zwillgen.com-6479b4de.png"
+from = "https://www.zwillgen.com/wp-content/themes/zwillgen/favicon.png"
