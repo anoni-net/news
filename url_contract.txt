@@ -265,6 +265,9 @@
 /2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -623,6 +626,9 @@
 /en/2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/en/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /en/2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -816,6 +822,7 @@
 /en/page/3/
 /en/page/4/
 /en/page/5/
+/en/page/6/
 /en/reading/
 	#display
 	#listening
@@ -922,6 +929,7 @@
 /page/3/
 /page/4/
 /page/5/
+/page/6/
 /reading/
 	#display
 	#listening
@@ -1192,6 +1200,9 @@
 /zh-cn/2026/11/ai-devtools-supply-chain/
 	#perspective
 	#sources
+/zh-cn/2026/11/android-tv-residential-proxy/
+	#perspective
+	#sources
 /zh-cn/2026/11/asn-bank-grapheneos/
 	#perspective
 	#sources
@@ -1385,6 +1396,7 @@
 /zh-cn/page/3/
 /zh-cn/page/4/
 /zh-cn/page/5/
+/zh-cn/page/6/
 /zh-cn/reading/
 	#display
 	#listening
