@@ -808,6 +808,10 @@ from = "https://en.greatfire.org/apple-touch-icon.png"
 icon = "en.wikipedia.org-6d780b78.png"
 from = "https://en.wikipedia.org/static/apple-touch/wikipedia.png"
 
+[hosts."engadget.com"]
+icon = "engadget.com-698acb61.png"
+from = "https://www.engadget.com/img/engadget-favicon.png"
+
 [hosts."english.www.gov.cn"]
 icon = "english.www.gov.cn-1db19351.png"
 from = "https://english.www.gov.cn/favicon.ico"
@@ -1361,6 +1365,10 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 [hosts."justiceinitiative.org"]
 icon = "justiceinitiative.org-987979f3.png"
 from = "https://www.justiceinitiative.org/dist/images/favicons/favicon-152.png"
+
+[hosts."justsecurity.org"]
+icon = "justsecurity.org-136082f9.png"
+from = "https://i0.wp.com/www.justsecurity.org/wp-content/uploads/2021/01/cropped-logo_dome_fav.png?fit=192%2C192&ssl=1"
 
 [hosts."jvn.jp"]
 none = "原站與 Internet Archive 都沒有可用的圖示"
@@ -2005,6 +2013,9 @@ from = "https://privacy.ca.gov/wp-content/themes/CAWeb/src/images/system/apple-t
 icon = "privacy.mi.com-7de29412.png"
 from = "https://privacy.mi.com/favicon.ico"
 
+[hosts."privacybadger.org"]
+same_as = "eff.org"
+
 [hosts."privacyguides.org"]
 icon = "privacyguides.org-9c0b097f.png"
 from = "https://www.privacyguides.org/content/images/size/w256h256/2024/01/pg-yellow-2.png"
@@ -2232,6 +2243,9 @@ from = "https://www.sme.gov.tw/mpstyle/2025wwwch/images/favicon.png"
 [hosts."smh.com.au"]
 icon = "smh.com.au-a36eafab.png"
 from = "https://www.smh.com.au/apple-touch-icons/smh.png"
+
+[hosts."sneak.berlin"]
+none = "網站圖示是表情符號，放在來源旁不合適，2026-11-08"
 
 [hosts."somo.nl"]
 none = "網站擋自動抓取（403），2026-10-23"
