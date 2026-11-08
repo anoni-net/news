@@ -1350,6 +1350,10 @@ from = "https://cdn.prod.website-files.com/5e691d0b7de02f1fd6919876/64c9516ea9fd
 icon = "justiceinitiative.org-987979f3.png"
 from = "https://www.justiceinitiative.org/dist/images/favicons/favicon-152.png"
 
+[hosts."justsecurity.org"]
+icon = "justsecurity.org-136082f9.png"
+from = "https://i0.wp.com/www.justsecurity.org/wp-content/uploads/2021/01/cropped-logo_dome_fav.png?fit=192%2C192&ssl=1"
+
 [hosts."jvn.jp"]
 none = "原站與 Internet Archive 都沒有可用的圖示"
 
