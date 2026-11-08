@@ -6,7 +6,133 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 08 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>OpenSSH 在 musl 系统上的长密码登录绕过漏洞</title>
+<link>https://anoni.net/news/zh-cn/2026/11/openssh-sshole/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/openssh-sshole</guid>
+<pubDate>Mon, 09 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>OpenSSH 11 月 5 日发布 10.6p2，修补超长密码可以登录没有设密码账号的漏洞。只有 Linux 上用 musl libc、不经 PAM 验证密码的 sshd 在范围内，例如 Alpine Linux。依 OpenSSH 维护者与 HKCERT 的说明，Debian、Ubuntu、Red Hat 这类用 glibc 的系统不在范围内，到 11 月 8 日两家发行版的跟踪页还没有标为不受影响。到 11 月 8 日，中国的漏洞库（CNVD、CNNVD）无法读取，没有取得相关条目。在 Alpine 上运行 sshd 的人要更新或关闭密码登录。</description>
+<content:encoded>&lt;p&gt;整理 14 篇原文，来自 OpenSSH、Alpine Linux、oss-security 等 14 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;OpenSSH 在 11 月 5 日发布 10.6p2，修补一个用超长密码就能登录「没有设密码的账号」的漏洞，发现者取名为 *sshole。范围很窄，只有 Linux 上用 musl libc（C 语言的标准函数库，程序调用系统功能时经过它）、而且不经 PAM（Linux 上统一处理登录验证的模块）验证密码的 sshd（OpenSSH 的服务器程序）受影响。依 OpenSSH 维护者在 Mastodon 的帖子，以及香港电脑保安事故协调中心（HKCERT）与 Red Hat 的说明，Debian、Ubuntu、Red Hat 这类用 glibc 的系统不在范围内。需要检查的是 Alpine Linux（常用来制作容器镜像的发行版）上有运行 sshd 的机器，以及其他用 musl、又装了 OpenSSH 的系统，例如部分嵌入式设备。&lt;/p&gt;
+&lt;p&gt;依 Alpine 的安全公告，四个条件同时成立才受影响。sshd 用的是 Alpine 默认不含 PAM 的 &lt;code&gt;openssh-server&lt;/code&gt;，或是含 PAM 的版本但设成 &lt;code&gt;UsePAM no&lt;/code&gt;。密码登录保持开启，这是 OpenSSH 的默认值。机器上有密码字段为 &lt;code&gt;*&lt;/code&gt; 的账号（只用密钥登录、没有设密码的账号常是这样），另外至少还有一个账号设了密码。&lt;/p&gt;
+&lt;p&gt;符合条件时，攻击者只要知道那个 &lt;code&gt;*&lt;/code&gt; 账号的名称，发送 257 到 1,024 字节的任意密码就能登录。公告写只需要一次连接，每次都会成功。&lt;/p&gt;
+&lt;p&gt;依同一份公告的说明，不经 PAM 时 sshd 用 &lt;code&gt;crypt()&lt;/code&gt; 把收到的密码算成哈希，再跟账号的密码字段比对。字段太短、放不下 salt（混进密码一起计算的随机值）时，sshd 会借用其他账号的 salt。musl 的 &lt;code&gt;crypt()&lt;/code&gt; 遇到超过 256 字节的密码时返回字符串 &lt;code&gt;*&lt;/code&gt; 当作错误标记，跟没有密码的账号字段相同，比对就成立了。依 oss-security 邮件列表上的通报，修补版改成检查哈希的最短长度，不再接受 &lt;code&gt;*&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;发现者的说明页把成因追溯到三个项目各自的修改。2012 年 musl 为了避免超长密码拖慢服务器，把密码限制在 256 字节。2016 年 OpenSSH 改成借用其他账号的 salt，用意是不让攻击者从响应时间判断账号存不存在，Alpine 则在 2022 年的 3.16 版前后把 root 的密码字段改成 &lt;code&gt;*&lt;/code&gt;。说明页写 OpenSSH 在 OpenBSD 与 glibc 上测试，musl 不测试 sshd，多数发行版又经过 PAM。&lt;/p&gt;
+&lt;p&gt;依 Alpine 的公告，OpenSSH 默认的 &lt;code&gt;PermitRootLogin prohibit-password&lt;/code&gt; 不让 root 用密码登录。其他能登录的账号若能通过 doas（类似 sudo 的提权工具）获取 root 权限，这道设置就挡不住。旧版的官方云镜像内置一个 &lt;code&gt;alpine&lt;/code&gt; 账号，密码字段是 &lt;code&gt;*&lt;/code&gt;，用 doas 也不必输入密码。公告提到这些镜像第一次开机时是安全的，管理者替任何账号设了密码之后（例如控制台的登录密码）就可以被利用。&lt;/p&gt;
+&lt;p&gt;OpenSSH 的发布说明写他们认为根本原因在 sshd 之外，但可以在 sshd 这一端避开。依 Ars Technica 的报道，一位 musl 开发者的立场是问题出在调用端的用法，musl 本身没有 bug。他也提到 musl 计划在之后的版本修改这个机制。&lt;/p&gt;
+&lt;p&gt;漏洞之后获得 CVE（公开漏洞的统一编号）CVE-2026-123158，严重度评分（CVSS，满分 10）为 8.1。到 11 月 8 日，OpenSSH、Alpine、Ars Technica 与 iThome 都没有提到实际被利用的案例，HKCERT 的通报则写已经有公开的 PoC（证明漏洞能被利用的程序）。依 Ars Technica 引述安全公司 Detectify 的说法，Shodan（扫描全网络设备的搜索引擎）列出约 2,200 万台开着 SSH 22 端口的系统。Ars 的评估是其中只有一部分符合条件，但逐台测试又快又容易，找出受影响的设备不需要花太多力气。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;Red Hat 的说明页写旗下产品不受影响，因为产品里的 OpenSSH 链接的是 glibc，也默认使用 PAM。到 11 月 8 日，Debian 的跟踪页把 bookworm、trixie 的 OpenSSH 标成 vulnerable、紧急程度标 unimportant，Ubuntu 的页面则标「Needs evaluation」。Debian 的表以 sid 的 &lt;code&gt;1:10.6p2-1&lt;/code&gt; 为修正版本，更早的版本都标 vulnerable，本文据此推论是依版本号标示。紧急程度标 unimportant，也与 HKCERT、OpenSSH 维护者写的 glibc 系统不受影响一致。&lt;/p&gt;
+&lt;p&gt;Ars 的报道写 Docker Hub 上的 Alpine 基础镜像下载超过 10 亿次，不过依 Alpine 的公告，容器里没有运行 sshd 的用户不受影响。用 cloud-init（云主机第一次开机时应用设置的工具）写入 &lt;code&gt;PasswordAuthentication no&lt;/code&gt; 的云镜像也不在范围内。&lt;/p&gt;
+&lt;p&gt;依 Ars Technica 的报道，Alpine 长年用在路由器、智能电视与工业控制器，这类设备很多很难更新。发现者把 OpenWrt、Buildroot、Yocto 列为用 musl 的系统。Ars 补充 OpenWrt 默认的 SSH 服务器是 Dropbear，另外安装 OpenSSH 才在范围内。Ars 也写发现者说 Buildroot 与 Yocto 受影响，但到 11 月 5 日还没有确认。&lt;/p&gt;
+&lt;p&gt;用 Raspberry Pi OS 的树莓派属于 Debian 系、用 glibc，本文推论不在范围内，装 Alpine 的则照 Alpine 的条件检查。家用 NAS 与路由器是否受影响，本文参考的来源都没有提到，到 11 月 8 日也没有查到厂商的公告。&lt;/p&gt;
+&lt;p&gt;香港的 HKCERT 在 11 月 6 日发布通报，风险评级 Medium，写明有公开的 PoC。通报也写 Red Hat、SUSE、Ubuntu、Debian 等主流 Linux 发行版用 glibc，不受影响。到 11 月 8 日，台湾 TWCERT/CC 的资安警讯列表与日本 JPCERT/CC、JVN 的首页查不到相关条目（首页只列最新项目，查不到不等于没有）。&lt;/p&gt;
+&lt;p&gt;中国的 CNVD 到 11 月 8 日无法打开，CNNVD 的页面没有内容，也没有搜到中国机构的通报。本文没有取得中国机构的说明可对照，中国境内的读者可以参考 HKCERT 的通报与 Alpine 的公告，海外的读者也一样。境内哪些设备用 musl 加 OpenSSH，本文参考的来源没有提到。&lt;/p&gt;
+&lt;p&gt;依维护者的帖子，OpenSSH 团队得知问题的隔天就发布修正版。理由是团队最近多次遇到 AI 代理很快重新发现已知的漏洞，有时只隔几小时。团队因此认为长时间的保密期是危险的做法，主要对攻击者有利。发布说明也写，目前会更频繁地发布修正版，不再累积到下一个预定版本。&lt;/p&gt;
+&lt;p&gt;依 Alpine 的公告，在 Alpine 上自己管理 sshd 的人要更新 &lt;code&gt;openssh&lt;/code&gt; 软件包并重新启动 sshd，只升级软件包不会替换已经在运行的服务。Alpine 从 3.16 起的每个版本都有修补软件包，包含已经停止支持的版本，版本对照与命令见公告。上游的修正版本是 OpenSSH 10.6p2，各系统的修补软件包可能沿用旧的版本号（Alpine 就是如此），本文参考的来源没有写其他系统如何更新。&lt;/p&gt;
+&lt;p&gt;暂时无法更新时可以关闭密码登录。依 oss-security 的通报，关闭之后就能避开漏洞，代价是不能再用密码登录。Alpine 的公告提醒先确认密钥登录可用，并保留当前的连接直到新的登录测试成功。&lt;/p&gt;
+&lt;p&gt;公告也列出事后检查的方法，看登录日志里有没有没设密码的账号出现 &lt;code&gt;Accepted password&lt;/code&gt;，无法排除时把机器当成已被入侵处理。只用 Debian、Ubuntu、Red Hat 系统的人，依维护者与 HKCERT 的说明不需要为这个漏洞改设置。这是依 glibc 与 PAM 的条件推论，到 11 月 8 日 Debian 与 Ubuntu 的跟踪页还没有跟着更新。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openssh.com/releasenotes.html#10.6p2&#34;&gt;OpenSSH Release Notes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenSSH&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/&#34;&gt;Security advisory: openssh-server password authentication bypass&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Alpine Linux&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openwall.com/lists/oss-security/2026/11/05/3&#34;&gt;&amp;#34;sshole&amp;#34;: password authentication bypass: OpenSSH + musl libc&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;oss-security&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hachyderm.io/@damienmiller/117563026759098135&#34;&gt;OpenSSH 10.6p2 has been released with a workaround for a critical vulnerability&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hachyderm.io&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sshhole.com&#34;&gt;*sshole&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;sshhole.com&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/&#34;&gt;Meet *sshole, the vulnerability that lets hackers SSH into Linux devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180281&#34;&gt;OpenSSH發布緊急更新，修補可利用長密碼繞過身分驗證的資安漏洞SSHole&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://access.redhat.com/security/cve/CVE-2026-123158&#34;&gt;CVE-2026-123158&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Red Hat&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://security-tracker.debian.org/tracker/CVE-2026-123158&#34;&gt;CVE-2026-123158&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Debian&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ubuntu.com/security/CVE-2026-123158&#34;&gt;CVE-2026-123158&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ubuntu&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hkcert.org/security-bulletin/openssh-multiple-vulnerabilities_20261106&#34;&gt;OpenSSH Security Restriction Bypass Vulnerability&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;HKCERT&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.twcert.org.tw/tw/lp-169-1.html&#34;&gt;資安警訊&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;TWCERT/CC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.jpcert.or.jp/english/&#34;&gt;JPCERT/CC&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;JPCERT/CC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://jvn.jp/en/&#34;&gt;JVN&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;JVN&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>加拿大 C-22 法案的参议院委员会审查与加密弱点的争论</title>
 <link>https://anoni.net/news/zh-cn/2026/11/canada-c22-senate-committee/</link>
@@ -2389,141 +2515,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国政府网&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-10&#34;&gt;2025 年 2 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>伊朗网络过滤的效果与政府对 Starlink 的反制</title>
-<link>https://anoni.net/news/zh-cn/2026/10/iran-filtering-starlink/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/10/iran-filtering-starlink</guid>
-<pubDate>Fri, 30 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>关注伊朗网络的监测组织 Filterwatch 10 月的报告写到，伊朗政府担心过滤对卫星网络失效，因此转向干扰信号、没收设备与外交施压。网络空间最高委员会秘书宣称已能让 Starlink 终端失效，兼任通信部副部长的基础设施公司首席执行官则表示，通信部的正式立场是现行的过滤政策没有成效。依 2025 年的法律，个人使用未经许可的卫星网络设备可处徒刑。</description>
-<content:encoded>&lt;p&gt;整理 15 篇原文，来自 Filterwatch、Zoomit、Tehran Times 等 12 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;关注伊朗网络的监测组织 Filterwatch 10 月 14 日的报告写到，伊朗政府担心过滤对卫星网络逐渐失效（Filterwatch 2012 年由伦敦的数字权利团体 Small Media 发起，现在属于 Miaan Group）。依报告的分析，一般的过滤在国内运营商的网络与国际出口执行。Starlink 的终端则直接连上卫星，流量不经过这些地方。政府的回应因此转向干扰信号、没收设备、处罚用户与外交施压，这些罚则与干扰都发生在伊朗境内。&lt;/p&gt;
-&lt;p&gt;伊朗科技媒体 Zoomit 报道，网络空间最高委员会秘书 10 月 5 日宣称，伊朗在伊朗历 Dey 月（约 2025 年 12 月下旬到 2026 年 1 月中旬）的动荡与 1 月全国断网期间以「受控的方式」让 Starlink 终端失效。秘书引用西方网站的报道佐证，也表示伊朗还有其他技术可用。前一天，伊朗外交部召见挪威大使，抗议挪威没有依国际电信联盟（ITU）无线电规则委员会的决定阻止 Starlink 在伊朗境内的未经授权传输。&lt;/p&gt;
-&lt;p&gt;伊朗官员对成效的说法并不一致。依半官方通讯社 Mehr 9 月 14 日的报道，兼任通信部副部长的基础设施通信公司首席执行官表示通信部的正式立场是现行的过滤政策没有成效，决策也不只在一个部门手中。首席执行官估计 Starlink 在伊朗流量里约 1 Tbps（每秒 1 万亿比特），但占全国流量的份额仍然偏低，国内机构也没有精确的用户数字。首席执行官另说国际流量已回到过去水平的约 90%。&lt;/p&gt;
-&lt;p&gt;科技媒体 Digiato 转述另一位通信部副部长的警告，持续限制性的政策会把用户推向不依赖国内网络的工具。Gadgetnews 与 Digiato 也引述这位副部长在会议上的话，照这个趋势下一次危机只好断电，因为 Starlink 不再依赖伊朗的网络。&lt;/p&gt;
-&lt;p&gt;伊朗 2025 年通过《加重间谍与对以色列政权及敌对国家合作危害国家安全与利益的处罚法》，同年 10 月通过宪法监护委员会审查。依 Hamshahri Online 转述的第 5 条，为个人使用而使用、携带、持有、购买、出售或输入未经许可的卫星网络设备（例如 Starlink），处第 6 级徒刑并没收设备（各报道写的刑期年限不一致）。供应、生产、分销与安装属第 5 级徒刑，以对抗体制或间谍为目的且行为人被视为敌对力量时可处死刑。到 10 月 29 日为止，我们查不到依这一条起诉的案例。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;Digiato 转述的副部长也提到，卫星直连手机的技术若普及，连手机的设备登记（政府验证身份最基本的机制）都会失效。依 Tehran Times 报道的网络空间最高委员会秘书说法，动荡期间约 80% 的 Starlink 数据包被干扰，其余的流量也大多失去作用。秘书也提到 Starlink 在乌克兰等冲突中的使用，表示卫星通信可支持军事指挥与情报搜集。&lt;/p&gt;
-&lt;p&gt;Filterwatch 访问的一位 NasNet 技术人员（报告把 NasNet 链接到一个以 Starlink 连接为使用场景的路由器配置工具网站）表示，1 月部分地区的丢包率曾高达约 80%，Starlink 更新后降到约 10%。这位技术人员也表示伊朗从未能让 Starlink 在全国完全失效。报告的关键发现引用技术评估，认为全国性的关闭在技术上不可行，正文的依据是这位技术人员的说法。技术人员说的是丢包率，秘书说的是被干扰的数据包比例，两组 80% 的口径未必相同（本文的判断）。&lt;/p&gt;
-&lt;p&gt;依 ITU《无线电规则》第 18 条与相关决议，发射地球站要取得所在国主管部门的授权。ITU 网站上的委员会页面写到，委员会 3 月认定挪威（Starlink 系统的通知主管部门）的作为不符合义务，但没有权限因此暂停卫星系统的频率指配。6 月底到 7 月初的第 102 次会议再强烈敦促挪威与美国，让运营商立即停止伊朗境内未经授权的发射，也请伊朗尽力识别并停用境内未经授权的终端。&lt;/p&gt;
-&lt;p&gt;同一页转述，挪威认为规则框架没有明文要求时不愿执行委员会先前的决定，美国则认为委员会逾越了《国际电联组织法》给它的权限。委员会 10 月 26 到 30 日开第 103 次会议，到 10 月 29 日还查不到结果。依 Tehran Times 引述伊朗外交部的说法，伊朗官员在召见挪威大使时提到美国与以色列利用 Starlink 支持干预伊朗的活动。这是伊朗官方的说法，我们没有独立查证，也查不到 SpaceX 与挪威政府对这次召见的公开回应。&lt;/p&gt;
-&lt;p&gt;Cloudflare Radar 记录的伊朗 HTTP 请求在 10 月 4 日出现一笔流量异常，之后的每日高峰约为 10 月 3 日傍晚高点的四成，再逐日回升到 10 月 17 到 19 日的六到七成（本文在 10 月 29 日查询的约略读数）。Filterwatch 写到同期用户反映 VPN 失效，并提出跟针对规避工具的干扰有关的假设。依 Filterwatch 的记述（附 X 帖子链接），网络分析公司 Kentik 的互联网分析主任确认这次下降只限于 Cloudflare 的网络，分析主任对 Filterwatch 则表示伊朗整体流量约为 1 月 8 日之前的 60%（1 月曾全国断网）。Filterwatch 认为这跟首席执行官 9 月 14 日说的 90% 不一致，不过两者的基准与口径可能不同（本文的推论）。&lt;/p&gt;
-&lt;p&gt;Filterwatch 同期的另一份报告分析了三个 Android 恶意软件案例，都从一则 Telegram 消息开始，其中一个伪装成 Starlink 与 VPN 工具。报告写到攻击的关键一环是说服对象从官方应用商店以外安装。消息若来自朋友的账号，可能代表账号被盗，但证据不足以确认。&lt;/p&gt;
-&lt;p&gt;中国大陆查到的规定与执法集中在船舶，依航运媒体 The Maritime Executive 1 月的报道，《海上交通安全法》要求中国管辖范围内的船舶经主管部门许可的岸站或卫星关口站传输数字通信。Starlink 不在核准的运营商名单上。报道写到情节严重的罚款最高 10 万元，并可暂停证照最多三个月。另一组无线电规定最高罚 5 万元，无线电设备用于违法活动时最高 50 万元。&lt;/p&gt;
-&lt;p&gt;同一篇报道引述船东互保协会的通讯代理 Oasis，宁波港的海事主管部门 2025 年 12 月展开已知第一起针对船舶联网方式的调查。船东互保协会 Steamship Mutual 1 月 9 日的通知也提到，中国主管部门已开始处罚在中国管辖水域使用 Starlink 的船舶。这些是航运业的二手整理，法规原文我们没有核对。陆上个人持有或使用终端的规定与案例我们查不到，也没有找到允许境外低轨卫星服务供个人或企业直接使用的许可。&lt;/p&gt;
-&lt;p&gt;台湾的修法则以运营商为对象。依今周刊的报道，立法院 7 月 21 日三读通过的《电信管理法》第 36 条修正案规定以卫星通信技术设置公众电信网络的运营商经主管机关审酌国家安全等事项核准后，可以不受外资持股上限等限制。台湾个人持有或使用终端的规定，我们同样查不到，到 10 月 29 日为止也查不到 SpaceX 是否已提出申请。数字发展部部长在审查时则转述 Starlink 曾表示对台湾市场的兴趣不高。&lt;/p&gt;
-&lt;p&gt;中国境内与海外的读者不需要因为这件事调整使用习惯。Filterwatch 分析的是 Android 的案例，引导对象从官方应用商店以外安装的手法在其他地方也可能出现，好友传来的链接与安装包不一定可信（本文的推论）。&lt;/p&gt;
-&lt;p&gt;比较各地的做法，可以看卫星网络由谁核准、个人持有终端是否需要许可。政府要求运营商在境内停用终端时，依据的是国内法、ITU 的规则还是运营商的服务条款，也是各地的差别所在。政策想达成的效果也要一起看，过滤与断网的成效有没有独立的测量可以对照官方的说法。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://filter.watch/english/2026/10/14/network-monitoring-september-2026-regime-fear-of-filtering-failure/&#34;&gt;Iran’s Government Fears Its Filtering Is Failing: From the “Blackout” to Declaring War on Starlink&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Filterwatch&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://filter.watch/english/2026/10/15/cyber-threat-intelligence-report-march-to-september-2026/&#34;&gt;AI in the Service of Repression: From Targeted Phishing to Gender-Based Harassment&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Filterwatch&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zoomit.ir/iran-news/468503-iran-starlink-terminals-shutdown-technology-aghamiri/&#34;&gt;برای از کار انداختن استارلینک فقط یکی از فناوری‌هایمان را به کار گرفتیم؛ فناوری‌های دیگری هم داریم&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Zoomit&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zoomit.ir/iran-news/468499-iran-protests-norway-starlink-activities/&#34;&gt;اعتراض رسمی ایران به نروژ: برای جلوگیری از ارسال‌های غیرمجاز استارلینک هیچ اقدام موثری نکردید&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Zoomit&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tehrantimes.com/news/530789/Iran-protests-Norway-s-inaction-over-unauthorized-Starlink-operations&#34;&gt;Iran protests Norway&amp;#39;s inaction over unauthorized Starlink operations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tehran Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tehrantimes.com/news/531050/Iran-develops-countermeasures-against-Starlink&#34;&gt;Iran develops countermeasures against Starlink&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tehran Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mehrnews.com/news/6946660/&#34;&gt;بازگشت ۹۰ درصد اینترنت بین‌الملل به حالت قبل؛ جزئیات تحریم‌های سایبری&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mehr News Agency&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;2026 年 9 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gadgetnews.net/1213107/as-starlink-becomes-widespread-we-will-have-cut-off-electricity-next-crisis/&#34;&gt;معاون وزیر ارتباطات: با فراگیر شدن استارلینک، در بحران بعدی باید برق را قطع کنیم!&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Gadgetnews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digiato.com/iran-technology-news/starlink-governance-debate&#34;&gt;دو روایت از استارلینک؛ اختلاف کارشناسی یا تقابل جناحی؟&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Digiato&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-07&#34;&gt;2026 年 10 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hamshahrionline.ir/news/1010728/&#34;&gt;جرم استفاده از استارلینک چیست؟ | چرا نباید استارلینک داشته باشید؟&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hamshahri Online&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-17&#34;&gt;2026 年 1 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.itu.int/en/ITU-R/conferences/RRB/Pages/Starlink.aspx&#34;&gt;Provision of Starlink satellite services in the territory of the Islamic Republic of Iran&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;ITU&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://radar.cloudflare.com/traffic/ir&#34;&gt;Iran&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Cloudflare Radar&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.businesstoday.com.tw/article/category/183015/post/202607210017/&#34;&gt;星鏈Starlink能無痛落地？台灣海纜被切斷成孤島有解？電信管理法三讀通過、外資持股放寬影響多大&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;今周刊&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-23&#34;&gt;2026 年 7 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://maritime-executive.com/article/china-begins-enforcing-its-ban-on-shipboard-starlink&#34;&gt;China Begins Enforcing its Ban on Shipboard Starlink&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Maritime Executive&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-13&#34;&gt;2026 年 1 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.steamshipmutual.com/publications/articles/fines-use-starlink-chinese-waters&#34;&gt;Fines for use of Starlink in Chinese Waters&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Steamship Mutual&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-09&#34;&gt;2026 年 1 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
