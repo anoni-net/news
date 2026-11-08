@@ -343,6 +343,9 @@ from = "https://carnegieendowment.org/favicon.ico?favicon.2zfgazutvpu-p.ico"
 icon = "cas.go.jp-247cfca9.png"
 from = "https://www.cas.go.jp/jp/images/kanboufav.ico"
 
+[hosts."cbp.gov"]
+none = "原站擋下自動抓取，Internet Archive 也沒有可用的圖示"
+
 [hosts."cbsnews.com"]
 icon = "cbsnews.com-5afd5cc8.png"
 from = "https://www.cbsnews.com/fly/bundles/cbsnewscore/icons/icon-192x192.png"
@@ -380,6 +383,10 @@ from = "https://www.chinalawtranslate.com/wp-content/uploads/2015/06/cropped-bao
 [hosts."chinamobileltd.com"]
 icon = "chinamobileltd.com-e9442738.png"
 from = "https://www.chinamobileltd.com/apple-touch-icon.png"
+
+[hosts."chinanews.com.cn"]
+icon = "chinanews.com.cn-e329b563.png"
+from = "https://www.chinanews.com.cn/favicon.ico"
 
 [hosts."chromereleases.googleblog.com"]
 icon = "chromereleases.googleblog.com-c7f09aac.png"
@@ -1127,6 +1134,10 @@ from = "https://www.hkcert.org/assets/shared/img/favicon/apple-touch-icon.png"
 [hosts."hkdnr.hk"]
 icon = "hkdnr.hk-4024b7ae.png"
 from = "https://www.hkdnr.hk/favicon.ico"
+
+[hosts."hklaw.com"]
+icon = "hklaw.com-284896a2.png"
+from = "https://www.hklaw.com/favicon.ico"
 
 [hosts."home-affairs.ec.europa.eu"]
 icon = "home-affairs.ec.europa.eu-3712d20c.png"
@@ -2033,6 +2044,10 @@ none = "網站擋自動抓取"
 [hosts."rctiplus.com"]
 icon = "rctiplus.com-730ff4ce.png"
 from = "https://www.rctiplus.com/assets/image/elements/favicon.png"
+
+[hosts."reason.com"]
+icon = "reason.com-1ffb1dde.png"
+from = "https://reason.com/wp-content/uploads/2026/08/cropped-rinsquareRGB-192x192.png"
 
 [hosts."reclaimthenet.org"]
 icon = "reclaimthenet.org-ebe7368e.png"
