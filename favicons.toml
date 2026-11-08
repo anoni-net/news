@@ -25,6 +25,10 @@ from = "https://9to5mac.com/wp-content/uploads/sites/6/2019/10/cropped-cropped-m
 icon = "abc.net.au-be7c5ab1.png"
 from = "https://www.abc.net.au/news-assets/touchicon-abc.png"
 
+[hosts."abcnews.go.com"]
+icon = "abcnews.go.com-7ca1ec82.png"
+from = "https://s.abcnews.com/assets/dtci/images/favicon.ico"
+
 [hosts."about.fb.com"]
 same_as = "meta.com"
 
@@ -310,6 +314,9 @@ same_as = "blog.mozilla.org"
 [hosts."bugzilla.redhat.com"]
 icon = "bugzilla.redhat.com-2ed93a2c.png"
 from = "https://bugzilla.redhat.com//extensions/RedHat/web/css/favicons/production.ico?v=0"
+
+[hosts."business-humanrights.org"]
+none = "官網的圖示只有 SVG，抓不到點陣圖"
 
 [hosts."businesstoday.com.tw"]
 icon = "businesstoday.com.tw-ed90121a.png"
@@ -620,6 +627,10 @@ from = "https://def.ltn.com.tw/assets/images/logo24-def.png"
 [hosts."demo.uwazi.io"]
 icon = "demo.uwazi.io-990b6692.png"
 from = "https://demo.uwazi.io/public/favicon.ico"
+
+[hosts."democrats-foreignaffairs.house.gov"]
+icon = "democrats-foreignaffairs.house.gov-eb05aff3.png"
+from = "https://democrats-foreignaffairs.house.gov/wp-content/uploads/2026/03/cropped-hfac-icon-dems-192x192.png"
 
 [hosts."devb.gov.hk"]
 icon = "devb.gov.hk-1925612d.png"
@@ -1456,6 +1467,10 @@ same_as = "support.ledger.com"
 [hosts."leg.colorado.gov"]
 icon = "leg.colorado.gov-6606b55f.png"
 from = "https://leg.colorado.gov/assets/apple-touch-icon-c8ff93a2e70b52915d8cc0b6132070db2484e4ea64b52289069a7610a280289e.png"
+
+[hosts."legal.yahoo.com"]
+icon = "legal.yahoo.com-c254779b.png"
+from = "https://s.yimg.com/rz/l/favicon.ico"
 
 [hosts."legal500.com"]
 icon = "legal500.com-e2f1b377.png"
