@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sun, 08 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 09 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Firefox&#39;s default tracking protection</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-09/2026</guid>
+<pubDate>Mon, 09 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Firefox on your desktop has by default let a cookie be used only on the site that created it since June 2022, and Firefox&#39;s development source code was still set that way when checked in November 2026. On this day, the Mozilla Foundation released Firefox 1.0 with a built-in pop-up blocker and features to help guard against phishing sites.</description>
+<content:encoded>&lt;p&gt;Firefox on your desktop by default lets a cookie (a small file a website stores in your browser) be used only on the site that created it. Mozilla&#39;s June 2022 announcement said this default applies to all Firefox desktop users worldwide and stops tracking companies from following your browsing across sites, and it was still set that way in Firefox&#39;s development source code when we checked on 8 November 2026. On 9 November 2004, the Mozilla Foundation released Firefox 1.0, available in Japanese the same day according to Japan&#39;s Internet Watch, and its press release listed a built-in pop-up blocker and a clear display of secure sites&#39; real identity to help guard against phishing and spoofed sites. In mainland China, the Chinese news site IT之家 and CyberInsider reported in July 2025 that Beijing Firefox (北京谋智火狐信息技术有限公司), Firefox&#39;s local operator, would end its account, sync and community services later that year, though the browser could still be downloaded from firefox.com. If you use Firefox and have not changed the cookie setting, you do not need to turn anything on, and on other browsers you can look for an option to block tracking cookies.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>When a business in Japan sends your personal data abroad</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-08/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>If the internet camera in your home still uses its factory default password, others may be able to use it to attack other websites. On this day, large numbers of hijacked cameras and video recorders were used to attack Dyn, which handles web address lookups for many websites, and many websites on the US East Coast became unreachable.</description>
 <content:encoded>&lt;p&gt;If the internet camera in your home still uses its factory default password and can be reached directly from the internet, others may be able to log in and use it to attack other websites. On 21 October 2016, Dyn, a provider of DNS, the service that turns web addresses into server addresses, was hit by two waves of heavy traffic, and according to Singapore&#39;s Cyber Security Agency, much of the internet on the US East Coast became inaccessible. Dyn&#39;s own analysis later confirmed that a significant share of the traffic came from devices controlled by the Mirai malware, and a security firm quoted by KrebsOnSecurity that day said most of them were video recorders and internet cameras made by China&#39;s Xiongmai or built with its parts. The same firm said some models had a password built into the firmware that users could not change, while Xiongmai said most problems came from users not changing default passwords and announced a recall of some early cameras sold in the US. Singapore&#39;s Cybersecurity Labelling Scheme now covers IP cameras and lists unique default passwords among its basic-level requirements, and if you already have a camera at home, the US government&#39;s 2016 US-CERT alert advises changing the default password and installing security patches when they are available.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Certificate warnings on sign-in pages</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-20/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-20/2026</guid>
-<pubDate>Tue, 20 Oct 2026 11:35:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>A certificate warning when you sign in to a website can mean someone is impersonating that site in the middle of your connection. On this day, GreatFire, which monitors censorship in China, said the Chinese authorities were using a fake certificate to impersonate the iCloud website and intercept users&#39; connections.</description>
-<content:encoded>&lt;p&gt;When you sign in to a website and see a certificate warning, the certificate the site presented to prove its identity did not pass your browser&#39;s check, and someone in the middle of the connection may be impersonating the site. On 20 October 2014, GreatFire, which monitors censorship in China, said the Chinese authorities were impersonating the iCloud website with a fake certificate that no certificate authority had vouched for (a self-signed one) and intercepting traffic, which is known as a man-in-the-middle attack. According to MacTrast, a spokesperson for China&#39;s Foreign Ministry said Beijing was resolutely opposed to hacking. The next day, Apple posted a support page that did not mention China but told users never to enter their Apple Account details (then called an Apple ID) or password on a site that shows a certificate warning. Wherever you are in Asia, do not enter a password on any site that shows a certificate warning, and check under Settings &amp;gt; Sign-In &amp;amp; Security on your iPhone that two-factor authentication is on for your Apple Account, so that a leaked password alone is not enough to get in (as of October 2026, Apple requires it for all new accounts).&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

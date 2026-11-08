@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 08 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 09 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Firefox 預設開啟的追蹤保護</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-09/2026</guid>
+<pubDate>Mon, 09 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的桌機版 Firefox 從 2022 年 6 月起預設讓 Cookie 只能在建立它的網站使用，2026 年 11 月查證時開發中的原始碼仍是如此。這一天，Mozilla 基金會釋出 Firefox 1.0，內建彈出視窗阻擋與協助防範釣魚網站的功能。</description>
+<content:encoded>&lt;p&gt;你的桌機版 Firefox 存下的 Cookie（網站存進瀏覽器的小檔案）預設只能在建立它的網站使用，這項預設從 2022 年 6 月開始，到 2026 年 11 月 8 日查證時開發中的 Firefox 原始碼仍這樣設定。Mozilla 的公告寫到，追蹤公司因此無法用這些 Cookie 跨網站記錄你瀏覽過哪些網站。2004 年 11 月 9 日 Mozilla 基金會釋出 Firefox 1.0，新聞稿列出的功能有內建的彈出視窗阻擋，以及顯示安全網站真實身分、協助防範釣魚與偽冒網站的設計。Firefox 也從 2019 年 9 月起對所有使用者預設開啟追蹤保護，封鎖追蹤器清單上的第三方 Cookie（網頁裡嵌入的廣告或分析服務存下的 Cookie）。Cookie 只限建立它的網站使用是目前查證過的預設，用 Firefox 的讀者沒有自行調整過就不需要另外設定這一項，用其他瀏覽器的讀者可以到設定裡找有沒有封鎖追蹤 Cookie 的選項。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>台灣業者把個資傳到國外時的把關機關</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-08/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你家裡的網路攝影機若還用出廠的預設密碼，可能被他人用來攻擊其他網站。這一天，大批被入侵的攝影機與錄影主機被用來攻擊替許多網站處理網址查詢的 Dyn，美國東岸許多網站一度無法連線。</description>
 <content:encoded>&lt;p&gt;你家裡的網路攝影機若還用出廠的預設密碼，又能從外部網路直接連到，別人可能登入後用它攻擊其他網站。DNS（把網址轉成伺服器位址的服務）業者 Dyn 在 2016 年 10 月 21 日遭到兩波大量流量攻擊，依新加坡網路安全局的說明，美國東岸許多網站因此一度無法連線。Dyn 在事後分析中確認相當部分的流量來自 Mirai 惡意程式控制的裝置，依 KrebsOnSecurity 當天引述的資安公司說法，受控的裝置主要是雄邁製造或採用雄邁零件的錄影主機與網路攝影機。這家資安公司也表示部分機種的密碼寫死在韌體裡、使用者無法更改，雄邁則表示多數問題出在使用者沒有更改預設密碼，並宣布召回早期在美國銷售的部分攝影機。經濟部標準檢驗局 2026 年 10 月 2 日公告進口與國內製造的連網數位攝影機要增列資安檢驗標準（原有標準到 2028 年 7 月才停用），已經在用攝影機的讀者可以照美國政府資安通報單位 US-CERT 2016 年的警示換掉預設密碼、有修補程式時更新韌體。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>登入頁跳出的憑證警告</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-20/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-20/2026</guid>
-<pubDate>Tue, 20 Oct 2026 11:35:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你登入網站時跳出的憑證警告，可能代表有人在連線中間冒充那個網站。這一天，監測中國網路審查的 GreatFire 發文指中國當局用假憑證冒充 iCloud 網站，攔截使用者的連線。</description>
-<content:encoded>&lt;p&gt;你登入網站時跳出的憑證警告，代表網站出示、用來證明身分的憑證沒有通過瀏覽器的核對，連線中間可能有人冒充那個網站。2014 年 10 月 20 日，監測中國網路審查的 GreatFire 發文指中國當局用沒有任何憑證機構背書、自行簽署的假憑證冒充 iCloud 網站，從連線中間攔截內容（中間人攻擊）。依 MacTrast 的報導，中國外交部發言人表示北京堅決反對駭客行為。Apple 隔天在支援頁提醒使用者不要在跳出憑證警告的網站輸入 Apple 帳號（當時叫 Apple ID）與密碼，頁面裡沒有提到中國。台灣的讀者在任何網站看到憑證警告時都不應輸入帳號密碼，也可以在 iPhone 設定的「登入與安全性」確認 Apple 帳號已開啟雙重認證，密碼外洩時帳號仍多一層保護（Apple 要求新帳號一律開啟，2026 年 10 月查證）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

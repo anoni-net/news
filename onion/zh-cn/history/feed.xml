@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 08 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 09 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Firefox 默认开启的跟踪保护</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-09/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-09/2026</guid>
+<pubDate>Mon, 09 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的桌面版 Firefox 从 2022 年 6 月起默认让 Cookie 只能在创建它的网站使用，2026 年 11 月查证时开发中的源代码仍是如此。这一天，Mozilla 基金会发布 Firefox 1.0，内置弹出窗口拦截与协助防范钓鱼网站的功能。</description>
+<content:encoded>&lt;p&gt;依 Mozilla 2022 年的公告，不分所在地，你的桌面版 Firefox 存下的 Cookie（网站存进浏览器的小文件）默认只能在创建它的网站使用（2022 年 6 月起，2026 年 11 月 8 日查证时开发中的 Firefox 源代码仍这样设置）。2004 年 11 月 9 日 Mozilla 基金会发布 Firefox 1.0，新闻稿列出的功能有内置的弹出窗口拦截，以及显示安全网站真实身份、协助防范钓鱼与仿冒网站的设计。在中国大陆，Firefox 中国版的账号与同步服务原由北京谋智火狐信息技术有限公司运营，依 IT之家转载的公告在 2025 年 9 月底停止。公告写到 Mozilla 与该公司 2025 年 5 月 8 日达成一致，浏览器本身继续可用（停止日在转载的公告写 9 月 29 日，Wikipedia 写 9 月 24 日，Mozilla 与北京火狐的原公告未能取得）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>境内处理者把个人信息传到境外时的条件与主管部门</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-08/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你家里的网络摄像头如果还用出厂的默认密码，可能被他人用来攻击其他网站。这一天，大批被入侵的摄像头与录像主机被用来攻击替许多网站处理网址查询的 Dyn，美国东岸许多网站一度无法访问。</description>
 <content:encoded>&lt;p&gt;你家里的网络摄像头如果还用出厂的默认密码，又能从外部网络直接访问，别人可能登录后用它攻击其他网站。DNS（把网址转换成服务器地址的服务）服务商 Dyn 在 2016 年 10 月 21 日遭到两波大量流量攻击，依新加坡网络安全局的说明，美国东岸许多网站因此一度无法访问。Dyn 在事后分析中确认相当部分的流量来自 Mirai 恶意程序控制的设备，依 KrebsOnSecurity 当天引述的安全公司说法，受控的设备主要是雄迈制造或采用雄迈零件的录像主机与网络摄像头。这家安全公司也表示部分型号的密码写死在固件里、用户无法更改，雄迈则表示多数问题出在用户没有更改默认密码，并宣布召回早期在美国销售的部分摄像头。2026 年 7 月 1 日起施行的《网络安全标识管理办法》列举的基础级（最低一级）要求包括不存在弱口令或通用默认口令，消费类网联摄像头可依实施规则自愿申请，已经在用摄像头的读者可以照美国政府安全通报单位 US-CERT 2016 年的警示换掉默认密码、有补丁时更新固件。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>登录页弹出的证书警告</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-20/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-20/2026</guid>
-<pubDate>Tue, 20 Oct 2026 11:35:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你登录网站时弹出的证书警告，可能代表有人在连接中间冒充那个网站。这一天，监测中国网络审查的 GreatFire 发文指中国当局用假证书冒充 iCloud 网站，拦截用户的连接。</description>
-<content:encoded>&lt;p&gt;你登录网站时弹出的证书警告，代表网站出示、用来证明身份的证书没有通过浏览器的核对，连接中间可能有人冒充那个网站。2014 年 10 月 20 日，监测中国网络审查的 GreatFire 发文指中国当局用没有任何证书机构背书、自行签署的假证书冒充 iCloud 网站，从连接中间拦截内容（中间人攻击）。依 MacTrast 的报道，中国外交部发言人表示北京坚决反对黑客行为。Apple 隔天在支持页面提醒用户不要在弹出证书警告的网站输入 Apple 账户（当时叫 Apple ID）与密码，页面里没有提到中国。依 Apple 2025 年 4 月发布的说明（2026 年 10 月查证），中国大陆的 iCloud 由云上贵州（云上艾珀（贵州）技术有限公司）运营，不同时是中国公民又居住在中国大陆的用户可以把 Apple 账户的国家或地区改成目前所在地。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
