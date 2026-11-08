@@ -42,3 +42,11 @@
     - 來源（二手）：前瞻網，〈广电总局加强整顿OTT盒子 乐视网/优酷/PPTV/腾讯视频TV版下架〉，2014-09-02，<https://www.qianzhan.com/indynews/detail/150/140902-2620ee3a.html>
 - 事實：Videostrong 是深圳的公司（The Register 引述 Google）。中國主管機關對 Google 指控有無回應，查不到（2026-11-08 查）
 - 事實：Google Play 在中國大陸的連線狀況見 `google-services-mainland-china.md`。GreatFire 到 2026-11-01 的測試，`https://play.google.com` 100% 被封鎖。大陸版 Android 電視盒是否另有認證查詢方式，查不到
+
+## 手機的預載軟體
+
+寫導讀歷史 11-15（2016 年的 Adups 預載更新軟體）時補上，範圍是手機，查證日期 2026-11-08。
+
+- 查不到：台灣、香港、新加坡、日本對預載軟體蒐集個資的專門官方說明，電視盒的提醒不算在內。手機這一項的查詢沒有逐一列出查過的機關與頁面，不等於這些地方確認沒有
+- 查不到：亞洲各國廉價 Android 手機預載事件的官方通報
+- 查不到：BLU 手機在亞洲的銷售狀況

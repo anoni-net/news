@@ -953,6 +953,10 @@ from = "https://www.forbrukerradet.no/wp-content/themes/frweb22/dist/icons/fr-ap
 icon = "forever.security-a3d20fe6.png"
 from = "https://forever.security/apple-touch-icon.png"
 
+[hosts."fortune.com"]
+icon = "fortune.com-7526c17c.png"
+from = "https://fortune.com/apple-touch-icon.png"
+
 [hosts."forum.torproject.org"]
 icon = "forum.torproject.org-b958972b.png"
 from = "https://forum.torproject.org/uploads/default/optimized/2X/d/d3424bed34f4ec18b2e99178c2801ba6dfb655d6_2_180x180.png"
@@ -2115,6 +2119,10 @@ same_as = "pipepipe.dev"
 [hosts."privsec.dev"]
 icon = "privsec.dev-30b82af8.png"
 from = "https://privsec.dev/apple-touch-icon.png"
+
+[hosts."prnewswire.com"]
+icon = "prnewswire.com-e1e5711b.png"
+from = "https://www.prnewswire.com/content/dam/prnewswire/icons/2019-Q4-PRN-Icon-32-32.png"
 
 [hosts."publicsafety.gc.ca"]
 icon = "publicsafety.gc.ca-6be11ced.png"
