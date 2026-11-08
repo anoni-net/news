@@ -286,6 +286,9 @@
 /2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
+/2026/11/genai-transnational-repression/
+	#perspective
+	#sources
 /2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
@@ -308,6 +311,9 @@
 	#perspective
 	#sources
 /2026/11/police-pixel-crime-claims/
+	#perspective
+	#sources
+/2026/11/privacy-badger-safari-macos/
 	#perspective
 	#sources
 /2026/11/qwen-political-censorship/
@@ -638,6 +644,9 @@
 /en/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
+/en/2026/11/genai-transnational-repression/
+	#perspective
+	#sources
 /en/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
@@ -660,6 +669,9 @@
 	#perspective
 	#sources
 /en/2026/11/police-pixel-crime-claims/
+	#perspective
+	#sources
+/en/2026/11/privacy-badger-safari-macos/
 	#perspective
 	#sources
 /en/2026/11/qwen-political-censorship/
@@ -798,12 +810,15 @@
 	#y2026
 /en/history/11-10/
 	#y2026
+/en/history/11-12/
+	#y2026
 /en/history/11-13/
 	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
 /en/page/5/
+/en/page/6/
 /en/reading/
 	#display
 	#listening
@@ -904,12 +919,15 @@
 	#y2026
 /history/11-10/
 	#y2026
+/history/11-12/
+	#y2026
 /history/11-13/
 	#y2026
 /page/2/
 /page/3/
 /page/4/
 /page/5/
+/page/6/
 /reading/
 	#display
 	#listening
@@ -1201,6 +1219,9 @@
 /zh-cn/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
+/zh-cn/2026/11/genai-transnational-repression/
+	#perspective
+	#sources
 /zh-cn/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
@@ -1223,6 +1244,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/police-pixel-crime-claims/
+	#perspective
+	#sources
+/zh-cn/2026/11/privacy-badger-safari-macos/
 	#perspective
 	#sources
 /zh-cn/2026/11/qwen-political-censorship/
@@ -1361,12 +1385,15 @@
 	#y2026
 /zh-cn/history/11-10/
 	#y2026
+/zh-cn/history/11-12/
+	#y2026
 /zh-cn/history/11-13/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
 /zh-cn/page/4/
 /zh-cn/page/5/
+/zh-cn/page/6/
 /zh-cn/reading/
 	#display
 	#listening
