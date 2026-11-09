@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 09 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>缅甸联系人那端被封锁过的 Signal</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-10/2026</guid>
+<pubDate>Tue, 10 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在缅甸的朋友手机上的 Signal，依 Freedom House 的记录在 2024 年被当局封锁过。这一天，缅甸监狱里的特别法庭不公开审理，判处一名博主 20 年 6 个月徒刑。</description>
+<content:encoded>&lt;p&gt;你用 Signal 联系缅甸的朋友或同事时，依 Freedom House 2025 年的报告，对方那端的 Signal 与主要的 VPN（把连接先转到其他主机、常用来避开封锁的服务）在 2024 年 6、7 月间被当局封锁。2025 年 1 月颁布的《网络安全法》依非官方英译规定设立或提供 VPN 要先取得主管部委的许可，RFA 的报道写成处罚未经许可提供，Access Now 则写成使用 VPN 也入罪。新闻自由组织 RSF 报道一名在仰光经营网吧并写博客的博主被捕时持有军政府禁止的视频，2008 年 11 月 10 日仰光永盛监狱（Insein）的特别法庭判处他 20 年 6 个月徒刑（CPJ 记载审理不公开、其中 15 年依据“电子法”），他在 2012 年 1 月的特赦中获释。在中国大陆，工信部 2017 年的通知规定，未经批准不得自行建立或租用专线（含 VPN）开展跨境经营活动（条文限定经营活动，没有写个人使用，2026 年 10 月 7 日依工信部网站的文本查证）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Firefox 默认开启的跟踪保护</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-09/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在网站或 App 被要求验证年龄时，常要交出信用卡、证件或其他能识别身份的信息。这一天，美国的公民自由团体起诉挑战刚签署的《儿童在线保护法》，主张验证年龄与身份的要求会让读者无法匿名阅读。</description>
 <content:encoded>&lt;p&gt;你在网站或 App 被要求验证年龄时，常要交出信用卡、证件或其他能识别身份的信息。1998 年 10 月 22 日，美国公民自由联盟、电子前哨基金会等 17 个原告在费城的联邦法院挑战前一天签署的《儿童在线保护法》（COPA），主张验证年龄与身份的要求会让读者无法匿名阅读。COPA 让在网络上以商业目的提供对未成年人有害内容的经营者负刑责，经营者以信用卡、成人访问码等方式限制未成年人获取，可以作为抗辩。COPA 从 1999 年起受法院禁令阻挡、一直没有施行，美国最高法院 2025 年审理得州的法律时，判决要求色情网站验证访客满 18 岁的规定合宪。在中国大陆，2024 年施行的《未成年人网络保护条例》要求网络游戏服务提供者通过统一的未成年人网络游戏电子身份认证系统等手段验证未成年用户的真实身份（2026 年 10 月查证）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>家用网络摄像头的默认密码</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-21/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-21/2026</guid>
-<pubDate>Wed, 21 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你家里的网络摄像头如果还用出厂的默认密码，可能被他人用来攻击其他网站。这一天，大批被入侵的摄像头与录像主机被用来攻击替许多网站处理网址查询的 Dyn，美国东岸许多网站一度无法访问。</description>
-<content:encoded>&lt;p&gt;你家里的网络摄像头如果还用出厂的默认密码，又能从外部网络直接访问，别人可能登录后用它攻击其他网站。DNS（把网址转换成服务器地址的服务）服务商 Dyn 在 2016 年 10 月 21 日遭到两波大量流量攻击，依新加坡网络安全局的说明，美国东岸许多网站因此一度无法访问。Dyn 在事后分析中确认相当部分的流量来自 Mirai 恶意程序控制的设备，依 KrebsOnSecurity 当天引述的安全公司说法，受控的设备主要是雄迈制造或采用雄迈零件的录像主机与网络摄像头。这家安全公司也表示部分型号的密码写死在固件里、用户无法更改，雄迈则表示多数问题出在用户没有更改默认密码，并宣布召回早期在美国销售的部分摄像头。2026 年 7 月 1 日起施行的《网络安全标识管理办法》列举的基础级（最低一级）要求包括不存在弱口令或通用默认口令，消费类网联摄像头可依实施规则自愿申请，已经在用摄像头的读者可以照美国政府安全通报单位 US-CERT 2016 年的警示换掉默认密码、有补丁时更新固件。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

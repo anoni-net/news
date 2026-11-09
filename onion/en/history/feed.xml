@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Mon, 09 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Signal blocked at your Myanmar contacts&#39; end</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-10/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-10/2026</guid>
+<pubDate>Tue, 10 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Signal on your friends&#39; phones in Myanmar was blocked by the authorities in 2024, according to Freedom House. On this day, a special court inside a Myanmar prison sentenced a blogger to 20 years and six months after a closed trial.</description>
+<content:encoded>&lt;p&gt;If you message friends or colleagues in Myanmar on Signal, Freedom House&#39;s 2025 report says authorities there blocked Signal and major VPNs (services that route your connection through another server, often to get around blocking) in June and July 2024, before the military adopted a Cybersecurity Law in January 2025. Under an unofficial English translation, the law requires ministry permission to set up or provide a VPN; RFA reported it as penalising unauthorised provision, while Access Now said it also criminalises use. According to the press freedom group RSF, a blogger who ran internet cafés in Yangon was arrested with a video banned by the military government, and on 10 November 2008 a special court inside Yangon&#39;s Insein Prison sentenced him to 20 years and six months. CPJ, another press freedom group, recorded that the trial was held behind closed doors and that 15 years of the sentence came under the &#34;Electronic Act&#34;, and he was freed in an amnesty in January 2012. In website connection tests run in Myanmar by the censorship measurement project OONI from July to September 2026, about 27,000 to 39,000 results a month were flagged as anomalous (an anomaly is not a confirmed block), and you can look up local connectivity on OONI Explorer.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Firefox&#39;s default tracking protection</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-09/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>When a website or app asks you to verify your age, you often have to hand over a credit card, an ID document or other information that identifies you. On this day, US civil liberties groups went to court to challenge the newly signed Child Online Protection Act, arguing that its age verification and identification requirements would stop readers from accessing speech anonymously.</description>
 <content:encoded>&lt;p&gt;When a website or app asks you to verify your age, you often have to hand over a credit card, an ID document or other information that identifies you. On 22 October 1998, 17 plaintiffs including the American Civil Liberties Union and the Electronic Frontier Foundation went to the federal court in Philadelphia to challenge the Child Online Protection Act (COPA), signed the day before, arguing that its age verification and identification requirements would stop readers from accessing speech anonymously. COPA made commercial providers of material harmful to minors on the web criminally liable, though restricting minors&#39; access through means such as a credit card or an adult access code could be raised as a defense. COPA was blocked by court injunctions from 1999 and never took effect, and in 2025, in a case about a Texas law, the US Supreme Court upheld a requirement for pornography sites to verify that visitors are at least 18. In Asia-Pacific, Australia&#39;s under-16 social media rule has applied since 10 December 2025 and requires information collected for age checks to be destroyed after use, while Malaysia&#39;s child protection code, which took effect on 1 June 2026 with a grace period for providers to complete verification, bars children under 16 from registering social media accounts.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Default passwords on home security cameras</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-21/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-21/2026</guid>
-<pubDate>Wed, 21 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>If the internet camera in your home still uses its factory default password, others may be able to use it to attack other websites. On this day, large numbers of hijacked cameras and video recorders were used to attack Dyn, which handles web address lookups for many websites, and many websites on the US East Coast became unreachable.</description>
-<content:encoded>&lt;p&gt;If the internet camera in your home still uses its factory default password and can be reached directly from the internet, others may be able to log in and use it to attack other websites. On 21 October 2016, Dyn, a provider of DNS, the service that turns web addresses into server addresses, was hit by two waves of heavy traffic, and according to Singapore&#39;s Cyber Security Agency, much of the internet on the US East Coast became inaccessible. Dyn&#39;s own analysis later confirmed that a significant share of the traffic came from devices controlled by the Mirai malware, and a security firm quoted by KrebsOnSecurity that day said most of them were video recorders and internet cameras made by China&#39;s Xiongmai or built with its parts. The same firm said some models had a password built into the firmware that users could not change, while Xiongmai said most problems came from users not changing default passwords and announced a recall of some early cameras sold in the US. Singapore&#39;s Cybersecurity Labelling Scheme now covers IP cameras and lists unique default passwords among its basic-level requirements, and if you already have a camera at home, the US government&#39;s 2016 US-CERT alert advises changing the default password and installing security patches when they are available.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
