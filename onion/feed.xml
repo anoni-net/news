@@ -6,7 +6,87 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 09 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>荷蘭 ASN Bank 的 Wero 付款與 Play Integrity 檢查</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/asn-bank-grapheneos/</link>
+<guid isPermaLink="false">anoni-news:2026/11/asn-bank-grapheneos</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>依使用者回報，荷蘭 ASN Bank 的 Android App 1.36.3 版（10 月中更新）起在 GrapheneOS 這類沒有 Google 認證的系統上不時擋下 Wero 付款，App 仍可開啟、查看帳戶。到 11 月 8 日本文查不到 ASN 的公告。打算改用 GrapheneOS 的人，可以把它當成銀行付款功能改用 Google 檢查的例子。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 GitHub、ASN Bank、Android Developers 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;依使用者在 GitHub 上一個銀行 App 相容性回報專案的留言，荷蘭 ASN Bank 的 Android App 從 10 月中更新的 1.36.3 版起，在 GrapheneOS（以 Android 開源程式碼為基礎的隱私強化手機系統）這類沒有經過 Google 認證的系統上不時擋下 Wero 付款。到 11 月 8 日本文查不到 ASN 的公告，說法都來自使用者貼出的客服與申訴回信。目前的回報只涉及 ASN 與同屬 de Volksbank 的 SNS Bank，一位 SNS Bank App 使用者寫 App 仍可開啟、查看帳戶，只是無法用 Wero 付款。荷蘭以外的讀者不會直接遇到，打算改用 GrapheneOS 的人可以把它當成銀行付款功能改用 Google 檢查的例子。&lt;/p&gt;
+&lt;p&gt;iDEAL 是荷蘭網路購物常用的付款方式，依 Security.nl 2025 年 4 月引述 Wero 的營運方 EPI（European Payments Initiative）對荷蘭《AD》報的說法，iDEAL 要在 2027 年底前完全由 Wero 取代。Wero 整合在各家銀行的 App 裡，也有獨立的 App。ASN 的說明頁寫 2026 年起 iDEAL 逐步改成 Wero，網路商店上會看到「iDEAL | Wero」的名稱。&lt;/p&gt;
+&lt;p&gt;PrivSec 的相容性名單把 ASN 寫成「ASN Bank (De Volksbank)」，回報的使用者也說 ASN 與 SNS Bank 是同一套 App 換了品牌。依使用者回報，被擋時 App 顯示的訊息用的是「iDEAL | Wero」這個名稱，內容是手機或 App 的安裝不符合銀行的安全要求。同一版也有人付款成功，有人回報時好時壞。回報者把新舊兩條流程分開描述，一位使用者寫舊的 iDEAL | Wero 流程可以付款，新的 Wero 流程則過不了 Play Integrity（Google 提供給 App 檢查裝置與系統的服務）。&lt;/p&gt;
+&lt;p&gt;依使用者貼出的 ASN IT 支援回覆，GrapheneOS 不支援 Wero，裝置須符合 Wero 的安全要求。多位使用者貼出的申訴回信內容幾乎相同。信中的理由是 iDEAL | Wero 使用一般作業系統的標準安全檢查，替代系統略過或取代了這些內建防護，所以 iDEAL | Wero 不保證交易安全。回信也寫 ASN 正與 iDEAL | Wero 研究未來是否支援替代作業系統，目前無法承諾。&lt;/p&gt;
+&lt;p&gt;使用者也去信 EPI。依使用者轉貼的回信，EPI 目前集中支援使用最廣的行動銀行平台與裝置。信中也寫，此做法可能排除不用行動銀行的人，以及偏好 Apple 與 Android 生態系以外系統與裝置的人。到 11 月 8 日本文查不到這幾封信的公開版本。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 Android 開發者文件，Play Integrity 回傳的判定分成幾個等級。基本完整性（MEETS_BASIC_INTEGRITY）只要求通過基本的系統完整性檢查，bootloader（開機載入程式）可以解鎖，裝置也可以沒有經過認證。裝置完整性（MEETS_DEVICE_INTEGRITY）要求 App 在真正且經過認證的 Android 裝置（genuine and certified Android device）上執行，Android 13 起還要有硬體證明 bootloader 已鎖、載入的是經過認證的製造商映像檔。文件裡沒有出現 GrapheneOS，本文依裝置完整性的條件推論，未經 Google 認證的系統拿不到這項判定。&lt;/p&gt;
+&lt;p&gt;GrapheneOS 的使用說明也寫，它通過基本的完整性檢查，但沒有經過 Google 認證。GrapheneOS 不打算繞過檢查，理由是檢查一改進就會再失效。&lt;/p&gt;
+&lt;p&gt;ASN 要求哪一個等級，本文查不到官方資料。一位用 LineageOS（另一套未經認證的 Android 系統）的使用者回報基本完整性通過、裝置完整性未通過，只有 Wero 轉帳不能用（單一案例）。依使用者回報（未經銀行證實），Triodos 與 N26 的 App 在 GrapheneOS 上可以用 Wero 付款，bunq 可以設定 Wero。&lt;/p&gt;
+&lt;p&gt;依使用者轉貼的內容，EPI 在後來的另一封回信裡說明採用 Play Integrity 的理由。信中寫 Android 的硬體金鑰證明（hardware key attestation）可以驗證一組金鑰是在 TEE、StrongBox 這類跟一般系統隔開的硬體環境裡產生，而且沒有離開那裡，但驗證不了呼叫的 App 與執行中的作業系統是否完整。Play Integrity 把裝置、系統與 App 的訊號合在一份有簽章的權杖裡，由後端伺服器驗證。信中的結論是硬體金鑰證明單獨提供不了 EPI 的風險與詐騙模型需要的驗證。&lt;/p&gt;
+&lt;p&gt;GrapheneOS 則在相容性指南裡主張銀行改用標準的 Android 硬體證明 API，把 GrapheneOS 公開的官方簽章金鑰列進允許清單。依指南，這套 API 可以驗證硬體、韌體、作業系統與 App，產生的金鑰憑證帶有 App 的 ID、簽章金鑰指紋、版本號與系統的驗證開機金鑰指紋。指南的評估是硬體證明比 Play Integrity 更強，不必依賴 Google Play 服務與 Google 的伺服器，也提到 Play Integrity 最高的強完整性（MEETS_STRONG_INTEGRITY）等級本身就建立在硬體金鑰證明上。兩邊對同一套 API 能驗證到哪裡的說法不同，本文沒有查證哪一方正確。&lt;/p&gt;
+&lt;p&gt;只有一位使用者寫舊流程可以付款，其他人的回報時好時壞，本文推論不宜把它當成穩定的做法。多位使用者已經向 ASN 與 EPI 申訴，GrapheneOS 也在指南裡鼓勵使用者寫信給 App 開發者並附上指南連結。&lt;/p&gt;
+&lt;p&gt;打算改用 GrapheneOS 的人，可以先查常用的銀行與支付 App 在 PrivSec 相容性名單上的狀況。名單由社群回報、GrapheneOS 官方不保證內容，也收錄台灣多家銀行與支付 App。到 11 月 8 日，名單上 ASN 那一項仍沒有附註（名單最後更新在 10 月 20 日，比第一則 Wero 回報早一天），App 更新之後名單可能還沒跟上。&lt;/p&gt;
+&lt;p&gt;本文的推論是，也可以另外保留一支經過 Google 認證的手機只用來付款，有使用者提到自己有備用手機、受到的影響較小。代價是多一支裝置要更新與保管，那支手機上的付款仍要通過 Google 的檢查。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105&#34;&gt;ASN Bank&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/PrivSec-dev/banking-apps-compat-report/issues/1137&#34;&gt;SNS Bank (De Volksbank) / ASN / Wero&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.asnbank.nl/asn-app-en-asn-online-bankieren/veilig-bankierennew/sneller-bestellen-en-betalen-met-ideal-wero.html&#34;&gt;Sneller bestellen en betalen met iDEAL | Wero&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ASN Bank&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/google/play/integrity/verdicts&#34;&gt;Integrity verdicts | Play Integrity | Android Developers&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/articles/attestation-compatibility-guide&#34;&gt;Attestation compatibility guide | Articles | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/usage#banking-apps&#34;&gt;Usage guide | GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/&#34;&gt;Banking Applications Compatibility with GrapheneOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PrivSec&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-26&#34;&gt;2022 年 1 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.security.nl/posting/883786&#34;&gt;IDeal eind 2027 volledig vervangen door nieuw betalingssysteem Wero&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Security.nl&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-11&#34;&gt;2025 年 4 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>香港銳眼計劃的臉部辨識與商場鏡頭接入</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/hk-mall-facial-recognition/</link>
@@ -1905,152 +1985,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>印尼的內容下架爭議與公民團體的訴訟評估</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/indonesia-content-takedown/</link>
-<guid isPermaLink="false">anoni-news:2026/10/indonesia-content-takedown</guid>
-<pubDate>Sat, 31 Oct 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>印尼數位權利團體 SAFEnet 10 月整理現任政府兩年的數位管制，記錄 2026 年 4 到 9 月至少 73 則內容被下架，多數批評政府。SAFEnet 也與其他團體徵集可能的原告，評估對通訊與數位部的法律行動。部會否認要求平台限制森林火災的內容，憲法法院 9 月判決政府切斷存取前要先通知並附理由。印尼以外的讀者不受直接影響。</description>
-<content:encoded>&lt;p&gt;整理 17 篇原文，來自 SAFEnet、Pasal.id、Bisnis.com 等 13 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;印尼數位權利團體 SAFEnet 10 月 21 日發表報告，整理現任總統與副總統執政兩年的數位管制，認為數位空間越來越容易成為壓制、監控與審查的場域。依 SAFEnet 的監測，2025 年到 2026 年年中共記錄到 5,549 件數位權利侵害，這組數字我們查不到獨立的來源可以核對。10 月 23 日，SAFEnet 與記者協會、法律扶助團體等組成的法律團隊開設窗口，徵集內容曾被限制的人。這些限制在印尼境內生效，其他地方的讀者不受直接影響。&lt;/p&gt;
-&lt;p&gt;依 SAFEnet 的報告，它與媒體監測團體 Remotivi 記錄到 2026 年 4 到 9 月至少 73 則內容被下架，多數批評總統、免費營養餐計畫與災害處理。SAFEnet 10 月 5 日的另一份聲明把期間寫成 4 到 8 月，其中 90.4% 是依通訊與數位部（Komdigi）的要求被審核或下架。同一份聲明也提到，平台依部會要求發出的通知從未說明違反哪一條法律。我們查不到 Komdigi 對 73 則與 90.4% 這組數字的公開回應。&lt;/p&gt;
-&lt;p&gt;印尼國家人權委員會（Komnas HAM）收到抗議期間「限制網路」與「限制社群媒體」的申訴後約談 Komdigi。委員 10 月 13 日轉述，Komdigi 表示 8 月 27 日大規模抗議當天依網路巡邏的結果下架 486 則疑似違法的內容，同時否認限制網路。委員會仍在檢視這些下架的法律依據。&lt;/p&gt;
-&lt;p&gt;Komdigi 公布的另一組統計是 2024 年 10 月到 2026 年 4 月下架約 420 萬則違法內容，大多是網路賭博與色情。這是部會自己的數字，同樣查不到獨立的來源核對。486 則、420 萬則與 SAFEnet 的 73 則是三種不同的統計，不能相加或互相比較。&lt;/p&gt;
-&lt;p&gt;10 月中有公眾人物表示談森林火災的貼文觸及下降，Komdigi 副部長與部長先後否認部會要求平台下架或限制火災資訊。部長 10 月 21 日的影片聲明也提到部會在推動平台演算法的問責與透明，並請使用者先向平台申訴、再向部會回報。&lt;/p&gt;
-&lt;p&gt;法律團隊的新聞稿沒有寫明要告什麼、向哪個法院提起。團隊寫到，填表不等於成為原告，是否列為原告要看證據、損害與當事人適格（是否具備提告的資格）。團隊也請當事人附上平台的審核通知截圖、內容連結與跟平台的往來紀錄。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;Komdigi 3 月簽署的部長令 127/2026 把不實資訊與仇恨言論歸為令社會不安的內容，平台收到部長的切斷存取命令後，最遲 4 小時內要執行。令文的一手檔案我們查不到，內容依 Kontan 的引述。依 Kontan 訪問的數位空間管控局長，通報的內容會先由相關部會共同審查。向政府異議由平台透過 SAMAN（部會向平台發送命令、追蹤執行的系統）提出，部會另外鼓勵平台提供使用者異議的管道。&lt;/p&gt;
-&lt;p&gt;部會的理由寫在令文的考量裡，不實資訊與仇恨言論可能引起社會不安、恐慌與團體之間的衝突。命令發布之前，數位空間監督總局長 2025 年 9 月談 SAMAN 時也表示，下架不是為了壓制批評。記者協會 AJI 則在 4 月要求撤銷這道命令，認為「令社會不安」這類用語過於含糊。&lt;/p&gt;
-&lt;p&gt;依墨爾本大學印尼研究刊物的評論文章，獨立媒體 Magdalene 3 月在 Instagram 介紹一份潑酸案調查報告的貼文曾依這道命令在印尼境內被限制，幾天後撤銷。文章引述的總局長說法是，貼文的敘述與標題可能誤導公眾、引發對國家機構的不信任，而且 Magdalene 不在新聞評議會的認證名單上。新聞評議會的委員則表示 Magdalene 是合法的新聞機構，新聞評議會的認證不是法律要求。&lt;/p&gt;
-&lt;p&gt;憲法法院 9 月 29 日的判決（311/PUU-XXIV/2026）宣告《電子資訊與交易法》授權政府切斷存取的條文有條件違憲，政府要先發出數位或書面通知並附理由，才能切斷存取或命令平台切斷。憲法法院沒有採納聲請人要求先經法院許可的主張。到 10 月 29 日為止，我們沒有取得 Komdigi 對判決的公開說明，也查不到判決後是否調整了通知的作法。SAFEnet 認為判決是改革的第一步，部會同時是監管者與執行者，有了通知也不保證限制合乎比例。&lt;/p&gt;
-&lt;p&gt;OONI（志工在各地執行的審查量測）與 Cloudflare Radar（流量觀測）量的是網站能否連上與整體流量，單則內容的下架與觸及下降不會出現在這些資料裡。OONI 的網站連線量測在 8 月 27 日沒有異常高峰，Radar 在 8 月下旬到 9 月初也沒有印尼的中斷標註（本文 10 月 29 日查詢）。OONI 的量測依志工分布，各電信業者的覆蓋不均，不能排除區域性或業者層級的干擾。&lt;/p&gt;
-&lt;p&gt;內容在印尼被平台限制或下架的人，部長建議的路徑是先向平台申訴，再向部會回報。保留通知截圖與內容連結，之後申訴或尋求法律協助時才有依據（本文的建議，參考法律團隊列出的證據類型）。&lt;/p&gt;
-&lt;p&gt;台灣的《兒童及少年福利與權益保障法》第 46 條要求平台經主管機關告知有害兒少的內容後限制接取或先行移除，條文沒有法院程序，範圍限於兒少保護。泰國 7 月的公告走的是向法院聲請緊急停止散布的路徑。印尼的部長令與切斷存取的條文由行政機關直接下令，憲法法院這次補上的是事先通知。&lt;/p&gt;
-&lt;p&gt;比較各地的做法，可以看誰能下令移除內容、需不需要法院介入，以及當事人會不會收到附理由的通知、能不能異議。政策想達成的效果也要一起看，打擊不實資訊、賭博與色情的成效有沒有公開的數字可以檢驗。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（17 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/dua-tahun-pembungkaman-digital-pemerintahan-prabowo-gibran/&#34;&gt;Dua Tahun Pembungkaman Digital Pemerintahan [Presiden – Wakil Presiden]&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/posko-penjaringan-calon-penggugat-komdigi-atas-dugaan-pembatasan-konten-digital/&#34;&gt;Posko Penjaringan Calon Penggugat Komdigi atas Dugaan Pembatasan Konten Digital&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/putusan-mk-pasal-moderasi-konten-uu-ite-langkah-awal-mereformasi-buruknya-tata-kelola-digital-di-indonesia/&#34;&gt;Putusan MK Pasal Moderasi Konten UU ITE, Langkah Awal Mereformasi Buruknya Tata Kelola Digital di Indonesia&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pasal.id/peraturan/putusan-mk/puu-mk-311-2026&#34;&gt;Putusan MK 311/PUU-XXIV/2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Pasal.id&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://teknologi.bisnis.com/read/20261021/101/2014612/menkomdigi-bantah-minta-meta-tiktok-cs-hapus-konten-kritik-karhutla&#34;&gt;Menkomdigi Bantah Minta Meta-TikTok Cs Hapus Konten Kritik Karhutla&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bisnis.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.rctiplus.com/news/detail/inews/5496660/komdigi-tegaskan-tak-ada-pembatasan-konten-karhutla--pastikan-terbuka-dengan-kritik&#34;&gt;Komdigi Tegaskan Tak Ada Pembatasan Konten Karhutla, Pastikan Terbuka dengan Kritik&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iNews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.antaranews.com/berita/5783245/komnas-ham-periksa-dasar-hukum-penghapusan-486-konten-usai-demo&#34;&gt;Komnas HAM periksa dasar hukum penghapusan 486 konten usai demo&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ANTARA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.antaranews.com/news/412799/govt-removes-41-million-illegal-content-items-to-secure-digital-space&#34;&gt;Govt removes 4.1 million illegal content items to secure digital space&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ANTARA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-18&#34;&gt;2026 年 4 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://industri.kontan.co.id/news/komdigi-terbitkan-sk-penanganan-disinformasi-platform-wajib-takedown-maksimal-4-jam&#34;&gt;Komdigi Terbitkan SK Penanganan Disinformasi, Platform Wajib Takedown Maksimal 4 Jam&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Kontan&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-05&#34;&gt;2026 年 4 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nasional.kontan.co.id/news/aturan-takedown-4-jam-dikebut-komdigi-verifikasi-berlapis-untuk-cegah-salah-blokir&#34;&gt;Aturan Takedown 4 Jam Dikebut, Komdigi: Verifikasi Berlapis untuk Cegah Salah Blokir&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Kontan&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-12&#34;&gt;2026 年 4 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inet.detik.com/law-and-policy/d-8117225/komdigi-bantah-bungkam-kritik-di-media-sosial&#34;&gt;Komdigi Bantah Bungkam Kritik di Media Sosial&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;detikInet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-17&#34;&gt;2025 年 9 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.republika.co.id/berita/td86qt409/aji-sk-menteri-komdigi-1272026-pasal-karet-bungkam-pers-magdalene-jadi-korban&#34;&gt;AJI: SK Menteri Komdigi 127/2026 Pasal Karet Bungkam Pers, Magdalene Jadi Korban&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Republika&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-09&#34;&gt;2026 年 4 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://indonesiaatmelbourne.unimelb.edu.au/meta-restricted-indonesian-news-outlet-for-acid-attack-coverage-a-disguised-repression-against-independent-media&#34;&gt;Meta restricted Indonesian news outlet for acid attack coverage. A disguised repression against independent media?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Indonesia at Melbourne&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-15&#34;&gt;2026 年 4 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/country/ID&#34;&gt;Indonesia&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI Explorer&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://radar.cloudflare.com/id&#34;&gt;Indonesia&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cloudflare Radar&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ratchakitcha.soc.go.th/documents/120935.pdf&#34;&gt;ประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม เรื่อง การยื่นคำร้องต่อศาลขอให้มีคำสั่งระงับการทำให้แพร่หลายหรือลบข้อมูลคอมพิวเตอร์ ออกจากระบบคอมพิวเตอร์ ในกรณีที่มีเหตุจำเป็นเร่งด่วน พ.ศ. ๒๕๖๙&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ราชกิจจานุเบกษา&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-17&#34;&gt;2026 年 7 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
