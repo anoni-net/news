@@ -6,7 +6,120 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>印度記錄網路審查的組織在 X 收到的帳號下架請求</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/india-censorship-takedowns/</link>
+<guid isPermaLink="false">anoni-news:2026/11/india-censorship-takedowns</guid>
+<pubDate>Tue, 10 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>署名德里警方的兩份通知 10 月底到 11 月初送到 X，要求移除或在印度扣留兩個數位權利組織與一個記錄封鎖命令的帳號。到 11 月 8 日，通知的真偽沒有官方確認，也查不到 X 是否照辦。依 X 的政策，扣留只限於提出請求的國家。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，來自 SFLC.in、Internet Freedom Foundation、Newslaundry 等 9 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;10 月 31 日與 11 月 2 日，兩份署名德里警方的通知送到 X，要求移除或扣留（withhold，只在特定國家隱藏內容）三個記錄網路審查的帳號。被點名的印度數位權利組織 SFLC.in 公布了 X 轉來的副本，用「purportedly issued」（據稱發出）形容這兩份通知。到 11 月 8 日，德里警方與印度政府都沒有公開確認。依 X 的說明頁，扣留只限於提出請求的國家，印度以外的讀者看到的內容不受影響。&lt;/p&gt;
+&lt;p&gt;事情從 10 月 29 日開始，兩個印度數位權利組織與一個彙整封鎖命令的 X 帳號收到一封自稱代表印度教民族主義組織 RSS 的律師函，要求停止記錄受限的內容。依 Newslaundry 轉述 IFF（Internet Freedom Foundation，印度的數位權利組織）的說法，事後有幾位 RSS 幹部在 X 上質疑函件的真偽。兩個組織 10 月 30 日在 X 公開這封函件，第一份警方通知點名的就是這兩則貼文，理由是誹謗 RSS。&lt;/p&gt;
+&lt;p&gt;根據 SFLC.in 11 月 5 日的聲明，兩份通知的法院命令欄位都留白，第一份援引《印度刑法典》（Bharatiya Nyaya Sanhita，BNS）第 356 條的誹謗罪。第二份通知把三個帳號整個列進去，內文援引 2000 年《資訊科技法》第 79(3)(b) 條與 2021 年《資訊科技（中介者指引與數位媒體倫理守則）規則》，並寫明依法的通知要在三小時內處理。第 79 條是安全港（safe harbour，平台不必為使用者張貼的內容負責的保護）條款，第 79(3)(b) 條讓平台收到通知後若不移除內容，就可能失去這層保護。&lt;/p&gt;
+&lt;p&gt;X 11 月 3 日把兩份通知的副本轉給受影響的組織，依 IFF 的說法，信裡沒有交代 X 是否已照辦。路透社 11 月 4 日的報導寫兩個組織的帳號當天下午仍可瀏覽，X、德里警方、印度電子與資訊科技部（MeitY）與 RSS 都沒有回應路透社的詢問。之後的狀態與回應，到 11 月 8 日本文都查不到，兩份通知有沒有進 Lumen 這類收集下架通知的資料庫也查不到。&lt;/p&gt;
+&lt;p&gt;SFLC.in 自行查證了通知的來源。寄件伺服器的 IP 登記在德里警方名下，也列在網域的 SPF 紀錄（公開列出哪些伺服器可以代網域寄信的設定）裡，但寄到通知上兩個警方信箱的信都被退回。兩項證據指向不同方向，SFLC.in 沒有據此判定真偽。它向德里警方與 X 求證，到 11 月 5 日沒有收到正式回覆。&lt;/p&gt;
+&lt;p&gt;SFLC.in 也測試了 X 的執法機關請求表單（Law Enforcement Request form）。X 的法律請求入口（Legal Request Portal）會寄驗證連結到官方信箱，這張表單沒有。SFLC.in 11 月 4 日用虛構的電子郵件針對自己的貼文送出請求，X 照樣登記了。同一天下午表單已經改成寄驗證碼到提交的信箱，到 11 月 8 日 X 沒有公開說明這項漏洞與修正。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;平台判斷通知是否有效時，要看依據的法律與提交者，受影響的人則要先收到通知才能申訴。通知之外，印度還有 2000 年《資訊科技法》第 69A 條這條路徑，由中央政府以書面記錄理由的命令封鎖。依開發者公開的 Apple 通知，10 月 3 日 Bitchat 從印度的 App Store 下架引用的是第 69A 條（見&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/bitchat-india-block/&#34;&gt;Bitchat 在印度下架的爭議&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;本文的推論是，通知加上三小時期限，平台要在很短的時間內判斷請求是否有效。表單有沒有驗證提交者的身分，也就影響冒名的請求能否進入平台的處理流程。SFLC.in 詢問 X 兩份通知經由哪個管道送出，到 11 月 5 日沒有得到答案。&lt;/p&gt;
+&lt;p&gt;根據 X 的說明頁，X 用它取得的位置資訊判斷使用者所在的國家，被扣留的貼文與帳號會顯示提示。一種提示表示 X 因法院命令這類有效的法律要求而扣留，另一種表示 X 依當地法律、回應經特定支援管道提交的檢舉而扣留。兩份通知的標題是 Illegal Content Report，本文推論若被扣留，比較可能顯示依當地法律扣留的提示。X 沒有說明這批請求的分類。&lt;/p&gt;
+&lt;p&gt;同一份說明頁也寫，除非受到法院密封命令這類限制，X 會寄信到帳號登記的信箱或在 App 內通知受影響的人。通知通常附上請求的副本，依法律要求扣留的可以直接回信申訴，依當地法律扣留的經由說明中心申訴。本文據此推論，登記信箱沒人收信的組織可能不知道帳號被扣留，也拿不到請求副本。在印度經營組織帳號的人可以定期確認登記信箱，收到 X 的通知後依通知裡的管道申訴。&lt;/p&gt;
+&lt;p&gt;針對通知引用的誹謗罪，SFLC.in 的分析是 BNS 的刑事誹謗屬於非可逮捕罪行，警方要有治安法官的命令才能行動。SFLC.in 也主張，德里邦政府 6 月授權發這類通知的官員不包含通知上署名的職位，限制整個帳號而不是個別內容也不符必要性與比例原則（這些是組織的分析，不是法院或政府的認定）。路透社附上印度政府對平台指令的一般說法（不是針對本案），指令針對違法或誤導的內容並尊重合法的言論。&lt;/p&gt;
+&lt;p&gt;依 Inc42 與 SFLC.in 轉述《印度快報》（Indian Express）的報導，MeitY 已開始討論是否重新考慮社群平台的安全港。依 Inc42 的轉述，報導寫政府在研究把保護限縮在網路服務業者、電信業者與點對點通訊平台，討論仍在探索階段。SFLC.in 轉述的理由是平台用演算法策展與放大內容，已是發布者。MeitY 到 11 月 8 日沒有公開說明，把警方通知與安全港的討論放在一起是本文的連結，因為兩者都涉及第 79 條。&lt;/p&gt;
+&lt;p&gt;SFLC.in 引用最高法院的先例，主張第 79 條是法定保護，不是行政裁量可以撤回的特權。它也提醒，平台若要為使用者內容負責，政治言論、新聞與對官員的批評最容易被過度移除。MediaNama 9 月針對政府消息人士對 Meta 的說法寫過分析，認為當時的立場全靠匿名簡報，安全港是平台被告時提出的抗辯、由法院判斷。該分析早於 11 月的報導，所分析的消息人士說法與《印度快報》的報導相近，把兩者並列是本文的連結。&lt;/p&gt;
+&lt;p&gt;印度以外的讀者不必做任何設定。之後可以留意 X 是否在印度扣留這些帳號、德里警方或 MeitY 是否公開回應，以及安全港的討論是否變成正式的修法或規則草案。&lt;/p&gt;
+&lt;p&gt;EFF 11 月 6 日的文章要求平台公開收到的請求、通知受影響的使用者，並讓限制措施有申訴的管道。比較各平台的做法時，也可以看平台有沒有驗證提交者的身分、通知有沒有附上法院命令。依路透社轉述的政府說法，指令針對違法與誤導的內容，可以問平台在期限內能否分辨通知的真偽與合法性。安全港收緊後，平台是更精準地移除違法內容、還是移除更多合法言論，本文沒有找到公開的評估。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-regarding-the-takedown-requests-against-its-x-account-and-posts/&#34;&gt;SFLC.in Statement Regarding the Takedown Requests Against Its X Account and Posts&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-received-supposed-rss-legal-notice-and-subsequent-takedown-requests/&#34;&gt;SFLC.in received supposed RSS Legal Notice and subsequent Takedown Requests&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-condemning-takedown-directions-affecting-digital-rights-organisations-in-india/&#34;&gt;SFLC.in Statement Condemning Takedown Directions Affecting Digital Rights Organisations in India&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://internetfreedom.in/dont-ask-people-to-give-up-a-fundamental-right-within-seven-days/&#34;&gt;Don’t ask people to give up a fundamental right within seven days&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Internet Freedom Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newslaundry.com/2026/11/03/delhi-police-seeks-to-silence-digital-rights-groups-iff-sflc-on-x-wants-accounts-removed&#34;&gt;Delhi Police seeks to silence digital rights groups IFF, SFLC on X, wants accounts removed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Newslaundry&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.devdiscourse.com/article/international/4001546-prominent-indian-free-speech-groups-say-police-ordered-x-accounts-removed&#34;&gt;Prominent Indian free speech groups say police ordered X accounts removed&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Reuters（經 Devdiscourse 轉載）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/when-watchdogs-are-silenced-indias-crackdown-those-documenting-online-censorship&#34;&gt;When the Watchdogs Are Silenced: India&amp;#39;s Crackdown on Those Documenting Online Censorship&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.x.com/en/rules-and-policies/post-withheld-by-country&#34;&gt;About country withheld content&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;X Help Center&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lumendatabase.org/pages/about&#34;&gt;About&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Lumen&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-on-the-potential-removal-of-safe-harbour-protection-from-intermediaries/&#34;&gt;SFLC.in Statement on the Potential Removal of ‘Safe Harbour’ Protection from Intermediaries&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inc42.com/buzz/centre-weighs-withdrawing-safe-harbour-for-meta-google-x-report/&#34;&gt;Centre Weighs Withdrawing Safe Harbour For Meta, Google, X: Report&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Inc42&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.medianama.com/2026/09/223-meta-intermediary-status-safe-harbour/&#34;&gt;Can Meta Lose Safe Harbour Over Its Algorithms?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MediaNama&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>荷蘭 ASN Bank 的 Wero 付款與 Play Integrity 檢查</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/asn-bank-grapheneos/</link>
@@ -1860,131 +1973,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NOWnews&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-04&#34;&gt;2025 年 12 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Xandr 經即時競價處理 Grindr 使用者資料的挪威罰款</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/xandr-norway-fine/</link>
-<guid isPermaLink="false">anoni-news:2026/11/xandr-norway-fine</guid>
-<pubDate>Sun, 01 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>挪威資料保護機關 10 月 12 日公布對 Microsoft 旗下的廣告科技公司 Xandr 處以 9,200 萬挪威克朗（約 850 萬歐元）罰款，認定它在 2018 到 2020 年經即時競價廣告處理挪威 Grindr 使用者的資料，沒有合法依據。Microsoft 的發言人對媒體表示行為發生在收購之前，正在檢視決定。手機的廣告 ID 可以在設定裡刪除或拒絕追蹤，官方說明頁沒有寫這些設定是否涵蓋決定書認定的其他資料。</description>
-<content:encoded>&lt;p&gt;整理 14 篇原文，來自 Datatilsynet、noyb、netzpolitik.org 等 8 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;挪威資料保護機關（Datatilsynet）10 月 12 日公布，對 Microsoft 旗下的廣告科技公司 Xandr 處以 9,200 萬挪威克朗罰款（依決定書約合 850 萬歐元），是挪威資料保護機關到公布時開出最高的一筆。根據 10 月 2 日作成的決定書，Xandr 在 2018 年 7 月到 2020 年 4 月經即時競價廣告處理挪威 Grindr 使用者的資料時沒有合法依據，處理的資料至少包括使用 Grindr 這件事、廣告 ID（手機系統給每台裝置的廣告用識別碼）與 IP 位址。罰款只涉及挪威的使用者，決定書也沒有評估現況。依機關 10 月 16 日的說明文章，每次開啟有廣告的 App 都可能觸發這類競標。&lt;/p&gt;
-&lt;p&gt;即時競價（RTB）是 App 或網站有廣告位時，把使用者的資料送給廣告平台，讓廣告商在幾分之一秒內競標的機制。根據決定書，使用者打開 Grindr 時，廣告請求直接或經廣告中介 MoPub 送到 Xandr。Xandr 當時同時經營賣方與買方的平台，依機關的新聞稿，資料可能再轉給數以千計的業者。&lt;/p&gt;
-&lt;p&gt;挪威資料保護機關在決定書裡認定，使用 Grindr 這件事本身就指向性傾向，屬於歐盟《一般資料保護規則》（GDPR，挪威所屬的歐洲經濟區同樣適用）的特殊類別個人資料。這類資料原則上禁止處理，例外之一是當事人明確同意。機關的新聞稿裡寫，Xandr 的抗辯是它認為 Grindr 已經取得使用者的同意。機關的結論是 Grindr 取得的同意無效，Xandr 身為共同控制者（一起決定資料如何處理的業者）也要自行確認同意有效，責任不能推給別人。&lt;/p&gt;
-&lt;p&gt;這件案子出自挪威消費者委員會與 noyb（歐洲的隱私倡議組織）2020 年對 Grindr 與多家廣告科技公司提出的申訴。Grindr 本身 2021 年 12 月已被罰 6,500 萬克朗，隱私申訴委員會、奧斯陸地方法院與上訴法院先後維持。機關的 2025 年年報寫到，上訴法院 2025 年 10 月的判決沒有再上訴，已經確定。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;Microsoft 的發言人對德國數位政策媒體 netzpolitik.org 表示，調查與決定針對的是 Microsoft 收購 Xandr 之前的行為，之後法律標準的解釋與實務已有發展。發言人也說公司正在檢視決定、評估選項。&lt;/p&gt;
-&lt;p&gt;依決定書，Xandr 主張調查開始時，它和任何處於相同位置的業者都無法預期機關採用的標準與結論。機關認為這是指業界慣例，並引上訴法院的見解，認為業界慣例不能列為減輕因素。&lt;/p&gt;
-&lt;p&gt;罰款依 Xandr 自己的年營業額計算。機關依歐盟法院的判例認為，違法期間 Xandr 還不屬於 Microsoft，用 Microsoft 的營業額不適當也沒有必要。&lt;/p&gt;
-&lt;p&gt;Xandr 反對以 2025 會計年度的營收計算罰款，理由是機關發出預先通知（決定前的通知）後過了一年多才作成決定。機關仍以這個年度的營收為基礎，但把處理時間長列為減輕因素、調降罰款。Xandr 另外主張延遲損害了自己的抗辯能力，機關不同意。&lt;/p&gt;
-&lt;p&gt;對決定提出申訴（appeal）的期限是收到決定後三週，收件日期沒有公開。到 10 月 31 日，機關的英文新聞頁沒有後續公告。&lt;/p&gt;
-&lt;p&gt;noyb 10 月 12 日把罰款連到歐盟的數位綜合法案（Digital Omnibus，執委會 2025 年 11 月提出的數位法規簡化提案），認為業界遊說要讓網路追蹤用的識別碼不再受 GDPR 規範。歐洲消費者組織 BEUC 則擔心放寬個人資料的定義，會讓這次被認定違法的同意做法失去約束。&lt;/p&gt;
-&lt;p&gt;依理事會 10 月 21 日的新聞稿，成員國議定的立場保留現有的個人資料定義，另外新增假名化（把可直接識別個人的欄位換成代號）的條文。&lt;/p&gt;
-&lt;p&gt;新聞稿也寫到，新增的條文是為了讓組織更清楚如何遵守規定。noyb 10 月 23 日的解讀則認為，新的假名化條文會大幅縮小個人資料的範圍。&lt;/p&gt;
-&lt;p&gt;Android 可以在「設定」的「隱私權」&amp;gt;「廣告」刪除廣告 ID，iPhone 可以在「設定」的「隱私權與安全性」&amp;gt;「追蹤」關閉「允許 App 發出追蹤請求」，或逐一關閉個別 App。依 Apple 對 App 的規定，使用者要求 App 不要追蹤之後，App 也不得改用其他能識別你或裝置的資訊追蹤。依 Google 的說明，App 可能另有使用其他類型 ID 的設定。兩家的說明頁都沒有寫 IP 位址與使用哪個 App 是否仍隨廣告請求送出，這些設定能否涵蓋決定書認定的其他資料，我們無法確認。&lt;/p&gt;
-&lt;p&gt;這件案子沒有提供台灣使用者或現況的資訊。台灣的《個人資料保護法》第 6 條把性生活列為特種個資，原則上不得蒐集、處理或利用，條文沒有性傾向的字樣。使用某個 App 是否屬於這一類，主管機關或法院的解釋這次沒有查證，個資法也沒有針對廣告識別碼或即時競價的專條。&lt;/p&gt;
-&lt;p&gt;比較各地的做法，可以看使用某個 App 這件事會不會被當成敏感資料，以及廣告鏈上每個收到資料的業者是否都要自行確認同意。也可以看業者主張法律標準的解釋已有發展時，主管機關如何評價過去的做法。若各地比照數位綜合法案調整個人資料的定義，追蹤用的識別碼是否仍受規範，也是比較的重點。政策想達成的效果也要一起看，這件案子 2020 年申訴、2026 年才作成決定，罰款能否改變業者現在的做法。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.no/en/news/news-2026/microsoft-company-fined-nok-92-million-for-unlawfully-sharing-personal-data/&#34;&gt;Microsoft company fined NOK 92 million&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.no/contentassets/213ea490834f4fc2a796aa495cb72fb8/administrative-fine---unlawful-processing-of-personal-data_redacted-public-version.pdf&#34;&gt;Administrative fine – Unlawful processing of personal data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-02&#34;&gt;2026 年 10 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://noyb.eu/en/privacy-win-norwegian-authority-fines-microsofts-xandr-eu-85-million&#34;&gt;Privacy win: Norwegian Authority fines Microsoft&amp;#39;s Xandr € 8.5 Million&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;noyb&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/sensible-grindr-daten-microsoft-tochter-muss-rekordstrafe-zahlen/&#34;&gt;Sensible Grindr-Daten: Microsoft-Tochter muss Rekordstrafe zahlen&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.forbrukerradet.no/side/microsoft-company-fined-85-million-euros-following-complaint-by-the-norwegian-consumer-council-and-noyb/&#34;&gt;Microsoft company fined 8,5 million euros following complaint by the Norwegian Consumer Council and noyb&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Forbrukerrådet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.no/en/regulations-and-tools/regulations/avgjorelser-fra-datatilsynet/2021/gebyr-til-grindr/&#34;&gt;The NO DPA imposes fine against Grindr LLC&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-12-15&#34;&gt;2021 年 12 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.no/en/news/news-2025/the-court-of-appeal-upholds-the-fine-against-grindr/&#34;&gt;The Court of Appeal upholds the fine against Grindr&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-21&#34;&gt;2025 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.no/link/88940761a1414b2ca479ecd16db8b3bb.aspx/download&#34;&gt;ÅRSRAPPORT FOR 2025&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.consilium.europa.eu/en/press/press-releases/2026/10/21/digital-rulebook-council-agrees-position-to-simplify-data-protection-privacy-and-cyber-reporting-rules/&#34;&gt;Digital rulebook: Council agrees position to simplify data protection, privacy and cyber reporting rules&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Council of the EU&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://noyb.eu/en/ai-eu-member-states-approve-digital-expropriation-europeans-ai-companies&#34;&gt;AI: EU Member States approve &amp;#34;digital expropriation&amp;#34; for AI companies&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;noyb&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.datatilsynet.no/aktuelt/aktuelle-nyheter-2026/slik-auksjoneres-dataene-dine-bort/&#34;&gt;Slik auksjoneres dataene dine bort&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Datatilsynet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://policies.google.com/technologies/ads?hl=zh-TW&#34;&gt;廣告 – 隱私權與條款 – Google&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/102420&#34;&gt;如果 App 要求追蹤你的活動&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple 支援&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
