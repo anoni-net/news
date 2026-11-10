@@ -6,7 +6,117 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>US border device search figures and the unlock decision before travel</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/us-border-device-searches/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/us-border-device-searches</guid>
+<pubDate>Wed, 11 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>According to FPF on 4 November, citing data obtained by CBC News, US Customs and Border Protection (CBP) searched 32% more travellers&#39; electronic devices in the first three quarters of fiscal year 2026 than in the same period a year earlier. The searches affect travellers entering and leaving the US, and non-US citizens who refuse to unlock a device may be refused entry. People carrying source material to the US need to decide before departure whether they will unlock if asked.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including U.S. Customs and Border Protection, Freedom of the Press Foundation, CBP&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 4 November, the Freedom of the Press Foundation (FPF), a US press freedom organisation, cited data obtained by Canada&#39;s CBC News in its digital security newsletter: in the first three quarters of fiscal year 2026, US Customs and Border Protection (CBP) searched 32% more travellers&#39; electronic devices than in the same period a year earlier. The US federal fiscal year begins in October of the previous calendar year, so those three quarters run from October 2025 to June 2026. Both US citizens and foreign visitors entering or leaving the US can be searched, but the consequences of refusing to unlock a device differ. In FPF&#39;s words, border searches &#34;affect a very small percentage of international travelers, but they are disproportionately travelers who are not U.S. citizens.&#34;&lt;/p&gt;
+&lt;p&gt;As relayed by FPF, the CBC report counts 47,517 basic searches in those three quarters and another 4,564 advanced searches. The report also notes that CBP will not reveal how many of the searches took place at the northern border with Canada or the southern border with Mexico, and FPF, citing it, writes that the agency &#34;is reportedly on track for a record-setting year for device searches.&#34; Adding up the quarterly table on CBP&#39;s website, we count 52,081 searches in the first three quarters, already more than 90% of the 55,318 for the whole of fiscal year 2025. CBP&#39;s page notes that the statistics may change when finalised, and as of 8 November the table had no figure for the fourth quarter.&lt;/p&gt;
+&lt;p&gt;The difference between the two kinds of search is set out in CBP Directive 3340-049B, an internal directive that took effect on 1 January and replaced the earlier 049A. It defines an advanced search as &#34;any search in which an officer connects equipment, wired or wireless, to copy and/or analyze the contents of an electronic device,&#34; allowed only with reasonable suspicion that the traveller has broken a law CBP enforces, or a national security concern, and with supervisory approval. Connecting equipment merely to bypass a password, overcome encryption or translate content does not count as an advanced search. Every other search is a basic search, which an officer may conduct &#34;with or without suspicion,&#34; and which the journalist checklist written by FPF with EFF (the Electronic Frontier Foundation) describes as manually looking through information on a device.&lt;/p&gt;
+&lt;p&gt;The same directive obliges travellers to present devices &#34;in a condition that allows inspection of the device and its contents.&#34; If a device is protected by a passcode or encryption, officers may ask for the traveller&#39;s assistance or for the passcode, and a recorded passcode is not to be uploaded into CBP systems. A device that cannot be inspected may be detained, ordinarily for no more than five days, with longer detention needing higher-level approval. Copies of a device&#39;s contents are kept for at most 21 days after the search ends, except in cases such as probable cause to suspect a violation.&lt;/p&gt;
+&lt;p&gt;Under the directive, officers may not intentionally use a device to reach information stored only in the cloud, so during a search they ask the traveller to turn on airplane mode and turn off Bluetooth and Wi-Fi, or cut the connection themselves. For material covered by attorney-client privilege, the directive sets out a procedure of contacting the legal office and forming a separate filter team. Work-related information carried by journalists is grouped with medical records as other possibly sensitive information, which &#34;shall be handled in accordance with any applicable federal law and CBP policy.&#34;&lt;/p&gt;
+&lt;p&gt;The body of the directive does not distinguish between US citizens and foreign travellers in what follows a refusal to provide a passcode. According to CBP&#39;s explanatory page, whether a device can be inspected does not by itself decide admission, and a US citizen will not be refused entry on that ground alone. The same page says a citizen&#39;s device may still be detained and clearance may take longer, while for foreign travellers the matter can be weighed in the admission decision. FPF&#39;s article puts the possible detention at days or weeks and the checklist at days to months, and the checklist warns that refusing may bring scrutiny of a green card holder&#39;s permanent resident status, and that foreign nationals arriving on a visa or under the visa waiver programme may be denied entry.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The US Supreme Court has not yet ruled on border searches of phones, and the federal courts of appeals differ depending on how the search is done. EFF&#39;s July article reports that the Fourth Circuit held manual searches to be routine, needing neither a warrant nor individualised suspicion. On 18 September the legal blog Volokh Conspiracy summarised a Second Circuit ruling from the day before, which likewise held that a manual search of a phone needs no warrant and no suspicion at all; the traveller in that case was a lawful permanent resident of the US. We have not read either ruling in full.&lt;/p&gt;
+&lt;p&gt;According to a 13 October overview by the law firm Holland &amp;amp; Knight, the circuits are further apart on forensic searches, with the Fourth and Ninth Circuits requiring reasonable suspicion. The Eleventh Circuit holds that none is needed, and the remaining circuits have either left the question open or not yet faced it. The overview&#39;s authors expect the Supreme Court to take up the issue before long. CBP&#39;s directive also provides that where binding circuit precedent imposes different requirements, the place where the search begins determines which rules apply.&lt;/p&gt;
+&lt;p&gt;CBP&#39;s directive presents border searches as part of carrying out its customs, immigration, law enforcement and homeland security responsibilities, used among other things to detect terrorism, smuggling and child sexual abuse material. It states that &#34;courts have rejected a categorical exception to the border search doctrine for electronic devices&#34; (the doctrine under which border searches generally need no warrant), and that some of its own requirements are imposed &#34;as a policy matter,&#34; &#34;above and beyond prevailing constitutional and legal requirements.&#34; On its border searches page, EFF argues that &#34;a warrant based on probable cause, issued by a judge, is required for border device searches.&#34; In the Second Circuit case, one judge wrote a concurrence (agreeing with the outcome while giving separate reasons) arguing for at least some suspicion, and the author of the Volokh Conspiracy post argues that a warrant should be required.&lt;/p&gt;
+&lt;p&gt;FPF&#39;s article notes that makers of forensic tools rely on exploit research that can take months, &#34;so simply keeping your device up to date will make it significantly harder for someone to make a forensic copy of your device.&#34; It also recommends a long, unique passcode and powering the device down before going through border security, which returns it to its encrypted state and significantly reduces what forensic tools can extract. Modern phones encrypt the disk by default, while computer users should check that FileVault on a Mac or BitLocker on Windows is turned on. The directive treats connecting equipment to bypass a passcode as a basic search, needing neither reasonable suspicion nor supervisory approval, and FPF&#39;s article does not discuss whether updates and powering down still help in that situation.&lt;/p&gt;
+&lt;p&gt;The checklist advises deciding before the trip whether to unlock a device or give the passcode if asked. It puts the chance of being selected for a device search at less than 0.01% of international travellers, but adds that depending on what information you carry, &#34;the impact of a search may be quite high.&#34; For those who plan to unlock, it suggests moving files, chat histories and contacts they do not want seen off the device beforehand, emptying the trash, and temporarily leaving groups on messaging apps such as Signal. It also suggests logging out, on the day of travel, of accounts that border officials should not be able to access.&lt;/p&gt;
+&lt;p&gt;People who will carry source material into or out of the US can read the checklist before they leave, and FPF and EFF each host a copy in English. The checklist also recommends noting down a lawyer familiar with border cases and telling family or friends when you expect to clear the border. EFF&#39;s Surveillance Self-Defense site has a page of border advice as well, last reviewed in October 2018, which warns that some of its recommendations may be out of date. The checklist was published in June 2025, before the new directive took effect in January, but its descriptions of basic and advanced searches match the new directive&#39;s definitions.&lt;/p&gt;
+&lt;p&gt;We, a community based in Taiwan, also looked at device inspection at borders in parts of Asia. In mainland China, the Ministry of State Security issued two sets of procedural rules for state security organs, one for administrative enforcement and one for criminal cases, which took effect on 1 July 2024; we did not obtain their text, only the account state security officers gave China News Service, a state news agency, on 11 June 2024. According to that report, officers may inspect electronic devices only while carrying out counter-espionage work and only those of individuals and organisations connected with it, which the officers said rules out ordinary inbound travellers. Each inspection needs approval from the head of a state security organ at the level of a city divided into districts or above, even in an emergency, and the officer must show enforcement credentials with the person inspected or a witness present.&lt;/p&gt;
+&lt;p&gt;For Taiwan, Hong Kong and Japan, as of 8 November we found no published rule or official guidance on customs examining the contents of travellers&#39; phones or other devices. Article 105 of Japan&#39;s Customs Act lets customs officers question people and inspect goods and the related books and documents, including electromagnetic records, but we found no provision in the Act that expressly covers devices carried by travellers and did not determine whether Article 105 extends to them.&lt;/p&gt;
+&lt;p&gt;When comparing practices across places, on privacy one can ask whether a search needs suspicion or a warrant, how long copies of device contents are kept, and whether journalists&#39; material has its own handling procedure. On effectiveness, one can ask whether raising the threshold for searches would affect CBP&#39;s work on smuggling and national security cases. Since CBP does not disclose how searches are spread across its borders, one can also ask whether outsiders can judge from the published figures whether searches are being used for the purposes the directive lists.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/travel/cbp-search-authority/border-search-electronic-devices&#34;&gt;Border Search of Electronic Devices at Ports of Entry&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;U.S. Customs and Border Protection&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/us-border-device-searches-near-record-high/&#34;&gt;U.S. border device searches near record high&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/document/directives/cbp-directive-no-3340-049b-border-search-electronic-devices&#34;&gt;CBP Directive No. 3340-049B: Border Search of Electronic Devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CBP&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;28 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/border-security/&#34;&gt;Preparing devices for travel through a US border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/06/journalist-security-checklist-preparing-devices-travel-through-us-border&#34;&gt;A Journalist Security Checklist: Preparing Devices for Travel Through a US Border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-23&#34;&gt;23 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/fourth-circuit-says-border-agents-can-search-your-phone-hand-no-suspicion-required&#34;&gt;The Fourth Circuit Says Border Agents Can Search Your Phone By Hand, No Suspicion Required&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-22&#34;&gt;22 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reason.com/volokh/2026/09/18/second-circuit-rejects-limits-on-border-searches-of-cell-phones/&#34;&gt;Second Circuit Rejects Limits on Border Searches of Cell Phones&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Volokh Conspiracy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hklaw.com/en/insights/publications/2026/10/does-privacy-exist-at-the-us-border&#34;&gt;Does Privacy Exist at the U.S. Border? An Update on the Fourth Amendment and Forensic Examination of Electronic Devices at the Border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Holland &amp;amp; Knight&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/issues/border-searches&#34;&gt;Border Searches&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/things-consider-when-crossing-us-border&#34;&gt;Things to Consider When Crossing the U.S. Border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinanews.com.cn/gn/2024/06-11/10231866.shtml&#34;&gt;“入境查手机”？权威回应！&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;China News Service&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-06-11&#34;&gt;11 June 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/329AC0000000061&#34;&gt;関税法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Known flaws exploited on older iOS and Android, and a claimed Lockdown Mode bypass</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/ios-android-exploits-lockdown/</link>
@@ -2439,154 +2549,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Weekly brief, 2026 week 44</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/weekly-brief-2026-w44/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/weekly-brief-2026-w44</guid>
-<pubDate>Sun, 01 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Seven stories from 13 to 23 October: Hong Kong&#39;s tighter rules on access to land records, the face search engine PimEyes and the EU AI Act&#39;s ban, Senate committee review of Canada&#39;s Bill C-22, the finding that microtargeted ads by four German parties were unlawful, a generative AI pilot for checks at France&#39;s public employment service, European governments&#39; Palantir contracts, and the enforcement of Ofcom&#39;s fines against websites outside the UK.</description>
-<content:encoded>&lt;p&gt;Based on 16 sources, including Hong Kong Free Press, Development Bureau, South China Morning Post&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;This issue collects seven stories, one of them a follow-up to an earlier article, covering 13 to 23 October.&lt;/p&gt;
-&lt;h2 id=&#34;hk-land-records&#34;&gt;Rules on access to land records in Hong Kong&lt;/h2&gt;
-&lt;p&gt;According to a Development Bureau announcement on 16 October, the Hong Kong government gazetted eight pieces of subsidiary legislation that day. The provisions on electronic applications take effect on 4 October 2027, and the Secretary for Development will set the commencement date for the rest in the first half of 2027.&lt;/p&gt;
-&lt;p&gt;Hong Kong Free Press reported on 21 October that the new rules limit land record searches to nine purposes, and news reporting is not among them. &#34;Public interest&#34; is listed as a valid ground, but the Land Registrar vets every application case by case. The Hong Kong Journalists Association called for the amendments to be shelved, arguing that protecting &#34;privacy&#34; should not override the public&#39;s right to know, and listed 18 investigative reports produced using land records.&lt;/p&gt;
-&lt;p&gt;According to a Development Bureau paper to the Legislative Council quoted by Hong Kong Free Press, the purpose of the amendments is to strike a balance between protecting personal data privacy and keeping land records transparent. The South China Morning Post reported that on 23 October the Legislative Council decided to set up a subcommittee to examine them.&lt;/p&gt;
-&lt;h2 id=&#34;pimeyes&#34;&gt;The face search engine PimEyes and the AI Act&#39;s ban&lt;/h2&gt;
-&lt;p&gt;According to a netzpolitik.org report on 13 October, the EU&#39;s Artificial Intelligence Act has since 2 February 2025 banned AI systems that create or expand facial recognition databases through the untargeted scraping of facial images from the internet, but the face search engine PimEyes still operates as usual in Germany. The Federal Network Agency, designated as the competent authority only in summer 2026, declined to comment on planned or ongoing proceedings. A German bill would let the Federal Criminal Police Office and the Federal Police use such search engines, and according to the report, the bill&#39;s explanatory memorandum rests on the view that the ban does not apply if no AI system is used to scrape the data. As of 31 October, we had found no response from PimEyes to the report.&lt;/p&gt;
-&lt;h2 id=&#34;canada-c22&#34;&gt;Senate committee review of Canada&#39;s Bill C-22&lt;/h2&gt;
-&lt;p&gt;Our 20 October article, &#34;Senate second reading of Canada&#39;s Bill C-22 and providers&#39; responses&#34;, covered this Lawful Access Act. The bill would let the government require telecommunications and online service providers to build technical capabilities to assist law enforcement, and require designated providers to retain metadata (records about communications rather than their content). According to the bill&#39;s progress page on the Parliament of Canada website, the bill passed second reading in the Senate on 22 October and was referred to the Standing Senate Committee on National Security, Defence and Veterans Affairs. As of 31 October, the committee had no recorded activity on it.&lt;/p&gt;
-&lt;p&gt;According to the Senate Debates for the same day, the opposition critic for the bill argued that it should go to the Standing Senate Committee on Legal and Constitutional Affairs instead. The senator also noted that a House of Commons committee had amended the metadata retention period to six months. According to an Electronic Frontier Foundation (EFF) article on 22 October, the Canadian Civil Liberties Association is urging people to sign a petition against the bill, and some senators have also expressed concerns.&lt;/p&gt;
-&lt;h2 id=&#34;germany-microtargeting&#34;&gt;Finding of unlawful microtargeting by four German parties&lt;/h2&gt;
-&lt;p&gt;According to an announcement on 21 October by noyb, a European privacy advocacy group, the Berlin data protection authority found that the SPD, the Greens, the Left Party and the CDU targeted ads at users based on their political interests without a legal basis such as consent. dpa-AFX, part of the German Press Agency (dpa), reported that the authority made its decision on 24 September and issued only formal warnings or reprimands to the parties, with no fines. As of netzpolitik.org&#39;s report on 23 October, the penalties were not yet final, according to a spokesperson for the authority. As of 31 October, we had found no response from the four parties.&lt;/p&gt;
-&lt;h2 id=&#34;france-travail&#34;&gt;Generative AI pilot for job-search checks at France&#39;s public employment service&lt;/h2&gt;
-&lt;p&gt;On 23 October, La Quadrature du Net, a French digital rights group, published a presentation that France Travail gave to its AI ethics committee on 30 June. According to the group, the public employment service is piloting generative AI to help check whether jobseekers are actively looking for work, and the group called for its immediate withdrawal.&lt;/p&gt;
-&lt;p&gt;In the presentation&#39;s own words, the AI consolidates data from the database, interviews and case files into a single report, which an adviser analyses and validates. According to the same presentation, the decision always remains with the adviser. The goals it lists are meeting the 2027 target for checks with unchanged staffing and making checks systematic by 2030.&lt;/p&gt;
-&lt;p&gt;La Quadrature du Net argues that the advisers&#39; work will be reduced to confirming possible sanctions. As of 31 October, we had found no response from France Travail to the document.&lt;/p&gt;
-&lt;h2 id=&#34;palantir-europe&#34;&gt;Palantir contracts with European governments&lt;/h2&gt;
-&lt;p&gt;According to a netzpolitik.org report on 15 October, an investigation led by the Dutch outlet Follow the Money, with media from 18 countries taking part, found national-level contracts with Palantir, the US data analytics software company, in 11 European countries, eight of which have dealings with the armed forces or defence ministry. According to the same report, many countries are concerned about dependence, security and democracy, and are looking for alternatives.&lt;/p&gt;
-&lt;p&gt;According to netzpolitik.org&#39;s weekly round-up, the amounts disclosed by individual countries add up to about €1.4 billion. Some governments do not disclose their costs, so this is a lower bound. In its response to the investigative team, Palantir stated that technological sovereignty should be judged by who controls the data and decisions, not only by the nationality of the software vendor.&lt;/p&gt;
-&lt;h2 id=&#34;ofcom-4chan&#34;&gt;Enforcement of Ofcom&#39;s fines against websites outside the UK&lt;/h2&gt;
-&lt;p&gt;Ofcom, the UK communications regulator, has fined the forum 4chan hundreds of thousands of pounds under the Online Safety Act, and according to a report by the entertainment outlet Dexerto on 20 October, 4chan had not paid. According to the same report, Ofcom&#39;s chief executive told a House of Commons committee that some fines may never be recovered if foreign courts get in the way. The chief executive also said that only 2 of the 11 fines issued under the Act since March 2025 had been paid.&lt;/p&gt;
-&lt;p&gt;A lawyer representing 4chan described this testimony on the lawyer&#39;s own website as Ofcom conceding defeat, while Dexerto wrote that the chief executive did not name 4chan and that Ofcom has not publicly said it is abandoning enforcement. According to news from the University of Oxford&#39;s Faculty of Law, the lawsuit 4chan brought against Ofcom in the US was dismissed by a federal district court in mid-September on grounds of foreign sovereign immunity. As of 31 October, we had found no response from Ofcom or any new enforcement action.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/10/21/hong-kong-press-group-urges-authorities-to-scrap-new-rules-tightening-media-access-to-land-records/&#34;&gt;Hong Kong press group urges authorities to scrap new rules tightening media access to land records&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.devb.gov.hk/en/publications_and_press_releases/press/index_id_15606.html&#34;&gt;Eight pieces of subsidiary legislation gazetted today to implement title registration system on new land&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Development Bureau&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.scmp.com/news/hong-kong/society/article/3371956/hong-kong-legco-review-tighter-rules-access-land-records-amid-concerns&#34;&gt;Hong Kong Legco to review tighter rules on access to land records amid concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;South China Morning Post&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/gesichtersuchmaschine-pimeyes-ein-verbot-das-niemand-durchsetzt/&#34;&gt;Gesichtersuchmaschine PimEyes: Ein Verbot, das niemand durchsetzt&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e&#34;&gt;Debates, Issue 95 (October 22, 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Senate of Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill&#34;&gt;Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://noyb.eu/en/noyb-win-german-dpa-finds-microtargeting-major-political-parties-illegal&#34;&gt;noyb win: German DPA finds microtargeting by major political parties illegal&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;noyb&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.onvista.de/news/2026/10-21-behoerde-wahlwerbung-nach-nutzerprofilen-war-rechtswidrig-0-10-26566530&#34;&gt;Behörde: Wahlwerbung nach Nutzerprofilen war rechtswidrig&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;dpa-AFX（onvista）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/beschwerde-erfolgreich-politisches-microtargeting-von-vier-parteien-war-rechtswidrig/&#34;&gt;Beschwerde erfolgreich: Politisches Microtargeting von vier Parteien war rechtswidrig&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.laquadrature.net/2026/10/23/france-travail-experimente-une-ia-generative-de-controle/&#34;&gt;France Travail expérimente une IA générative de contrôle&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;La Quadrature du Net&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/laenderuebergreifende-recherche-palantirs-geschaefte-in-europa/&#34;&gt;Länderübergreifende Recherche: Palantirs Geschäfte in Europa&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;15 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/kw-42-die-woche-in-der-europa-palantir-auf-die-finger-schaut/&#34;&gt;KW 42: Die Woche, in der Europa Palantir auf die Finger schaut&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-17&#34;&gt;17 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dexerto.com/entertainment/ofcom-admits-it-may-never-collect-4chans-fines-after-ai-hamster-trolling-3420509/&#34;&gt;Ofcom admits it may never collect 4chan&amp;#39;s fines after AI hamster trolling&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Dexerto&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/&#34;&gt;Ofcom Concedes Defeat in the 4chan Case&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;prestonbyrne.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.ox.ac.uk/content/news/dphil-candidate-christian-bale-helps-ofcom-defeat-us-lawsuit&#34;&gt;DPhil candidate […] helps Ofcom defeat US lawsuit&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;University of Oxford Faculty of Law&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

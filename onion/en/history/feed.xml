@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Tue, 10 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Anti-cheat and copy protection software running at the lowest layer of Windows</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-11/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-11/2026</guid>
+<pubDate>Wed, 11 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Some games on your computer come with anti-cheat software that runs at the lowest layer of Windows (checked in November 2026). On this day, Sony BMG suspended the manufacture of CDs containing XCP, copy protection software that hid its own files on computers.</description>
+<content:encoded>&lt;p&gt;Some games on your computer come with anti-cheat software that runs a driver in the Windows kernel, the lowest layer of the operating system; Riot Games&#39; support page, checked on 8 November 2026, lists one as part of Vanguard and links to removal steps. A researcher reported on a blog in late October 2005 that XCP, the copy protection software on Sony BMG music CDs, hid files and running programs whose names began with a set prefix and had no entry in the Control Panel&#39;s Add or Remove Programs list. Sony BMG suspended the manufacture of XCP CDs as a precaution on 11 November 2005, according to a company statement quoted by Betanews, and on 18 November Sony Music Japan International announced it had asked dealers in Japan to stop selling 40 imported XCP titles and pull shop stock, PC Watch reported. In January 2007, the US Federal Trade Commission published a proposed settlement barring Sony BMG from installing copy protection software that consumers could not readily find or remove. On Windows, you can turn on memory integrity, which makes it harder for malicious programs to use drivers to take over your PC, under Device security &amp;gt; Core isolation details in the Windows Security app; if Windows reports an incompatible driver, Microsoft suggests asking the device manufacturer for an updated one.&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Signal blocked at your Myanmar contacts&#39; end</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/11-10/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>If you keep seeing the same ad on different websites, an advertiser may be using third-party cookies to recognize you across sites. On this day, Mozilla released Firefox 63 with content blocking, letting users choose to block third-party tracking cookies.</description>
 <content:encoded>&lt;p&gt;If you keep seeing the same ad on different websites, an advertiser may be using third-party cookies (small files stored in your browser by ad or analytics services embedded in web pages) to recognize you across sites. Firefox 63, released on 23 October 2018, added content blocking, letting users turn on blocking of third-party tracking cookies or of all trackers. Mozilla said that day it aimed to block third-party tracking cookies by default in Firefox 65, and version 69 in September 2019 did so for all desktop and Android users (new users from June), while Safari has fully blocked third-party cookies by default since March 2020. According to Google&#39;s April 2025 announcement, Chrome will not show a separate prompt about third-party cookies, and its help page (checked in October 2026) shows that users can block them under Privacy and security in the settings. In Japan, the privacy regulator&#39;s guidelines give an individual&#39;s browsing history collected through cookies as an example of personally referable information, a category the law defines separately from personal information.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Age checks before you can see content</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/history/10-22/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/10-22/2026</guid>
-<pubDate>Thu, 22 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>When a website or app asks you to verify your age, you often have to hand over a credit card, an ID document or other information that identifies you. On this day, US civil liberties groups went to court to challenge the newly signed Child Online Protection Act, arguing that its age verification and identification requirements would stop readers from accessing speech anonymously.</description>
-<content:encoded>&lt;p&gt;When a website or app asks you to verify your age, you often have to hand over a credit card, an ID document or other information that identifies you. On 22 October 1998, 17 plaintiffs including the American Civil Liberties Union and the Electronic Frontier Foundation went to the federal court in Philadelphia to challenge the Child Online Protection Act (COPA), signed the day before, arguing that its age verification and identification requirements would stop readers from accessing speech anonymously. COPA made commercial providers of material harmful to minors on the web criminally liable, though restricting minors&#39; access through means such as a credit card or an adult access code could be raised as a defense. COPA was blocked by court injunctions from 1999 and never took effect, and in 2025, in a case about a Texas law, the US Supreme Court upheld a requirement for pornography sites to verify that visitors are at least 18. In Asia-Pacific, Australia&#39;s under-16 social media rule has applied since 10 December 2025 and requires information collected for age checks to be destroyed after use, while Malaysia&#39;s child protection code, which took effect on 1 June 2026 with a grace period for providers to complete verification, bars children under 16 from registering social media accounts.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

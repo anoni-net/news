@@ -6,7 +6,117 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>美国边境电子设备搜查的件数与出国前的判断</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/us-border-device-searches/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/us-border-device-searches</guid>
+<pubDate>Wed, 11 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>依 FPF 11 月 4 日引述 CBC 取得的资料，美国海关及边境保护局（CBP）2026 财政年度前三季搜查旅客电子设备的件数比前一年同期多 32%。受影响的是出入境美国的旅客，非美国公民拒绝解锁可能被拒绝入境。携带消息来源资料赴美的人，出发前需要先决定被要求时要不要解锁。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，来自 U.S. Customs and Border Protection、Freedom of the Press Foundation、CBP 等 9 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美国的新闻自由组织 Freedom of the Press Foundation（FPF）11 月 4 日在数字安全电子报引述加拿大 CBC News 取得的资料，美国海关及边境保护局（CBP）2026 财政年度前三季搜查旅客电子设备的件数，比前一年同期多 32%。美国联邦政府的财政年度从前一年 10 月开始，前三季是 2025 年 10 月到 2026 年 6 月。受影响的是出入境美国的旅客，美国公民与外国旅客都可能被搜查，拒绝解锁时的后果则不同。根据 FPF 的原文，被搜查的旅客只占国际旅客的很小一部分，其中非美国公民的比例偏高。&lt;/p&gt;
+&lt;p&gt;FPF 引述的 CBC 报道列出，前三季有 47,517 件是基本搜查，另有 4,564 件是高级搜查。CBC 的报道也提到 CBP 不公开这些搜查有多少发生在北边的加拿大边境与南边的墨西哥边境，FPF 则引述报道认为 2026 财政年度的件数可能创下纪录。本文把 CBP 网站季度统计表的数字相加，前三季共 52,081 件，已是 2025 财政年度全年 55,318 件的九成以上。CBP 的页面注记统计在定案时可能调整，到 11 月 8 日为止，表上还没有第四季的数字。&lt;/p&gt;
+&lt;p&gt;两种搜查的差别写在 CBP 的内部指令 3340-049B，这份指令 1 月 1 日生效，取代先前的 049A 版。指令定义的高级搜查是官员用有线或无线的设备连接设备来复制或分析内容，须有旅客违法的合理怀疑或国家安全疑虑并经主管核准。只为了绕过密码、破解加密或翻译内容而接上设备，不算高级搜查。高级搜查以外的都算基本搜查，官员可以在没有任何怀疑时进行，FPF 与 EFF（电子前哨基金会）合写的记者过境检查清单把它描述成手动翻看设备里的信息。&lt;/p&gt;
+&lt;p&gt;同一份指令要求旅客让设备处于可以检查的状态。设备有密码或加密时，官员可以请旅客协助或要求密码，记下的密码不上传 CBP 的系统。无法检查的设备可能被扣留，扣留通常不超过 5 天，延长需要更高层级的核准。设备内容的副本最多保存到搜查结束后 21 天，之后除了有相当理由（probable cause）怀疑违法等例外，不再留存。&lt;/p&gt;
+&lt;p&gt;指令不允许官员刻意用设备读取只存在云端的数据，搜查时会请旅客开启飞行模式、关闭蓝牙与 Wi-Fi，或由官员自行切断连接。律师与当事人之间受保密特权保护的资料，指令订有联系法务单位与另组过滤小组的程序。记者携带的工作资料与病历同列为其他可能敏感的信息，指令只写依适用的联邦法律与 CBP 政策处理。&lt;/p&gt;
+&lt;p&gt;指令正文没有区分美国公民与外国旅客拒绝提供密码的后果。根据 CBP 的说明页，能否检查设备本身不决定是否准许入境，美国公民不会只因此被拒绝入境。同一页也提到公民的设备仍可能被扣留、通关时间可能拉长，外国旅客的情况则可以纳入入境的判断。FPF 的原文写的扣留期间是几天或几周，清单写的是几天到几个月，并提醒持绿卡的永久居民拒绝配合可能让居留身份受到审查、持签证或免签入境的外国旅客可能被拒绝入境。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;美国最高法院还没有处理边境搜查手机的问题，各巡回上诉法院的见解依搜查方式而不同。EFF 7 月的文章提到，第四巡回法院判决手动搜查属于例行搜查，不需要令状或针对个人的怀疑。法律博客 Volokh Conspiracy 9 月 18 日的文章整理了第二巡回法院前一天的判决，同样认定手动搜查手机不需要令状与任何怀疑，案中的旅客是美国的永久居民。本文没有读到这两份判决的原文。&lt;/p&gt;
+&lt;p&gt;根据律师事务所 Holland &amp;amp; Knight 10 月 13 日的整理，各巡回法院对取证搜查的见解分歧更大，第四与第九巡回法院要求合理怀疑。第十一巡回法院认为不需要，其他巡回法院没有表态或还没有处理。整理的作者预期最高法院不久后会受理。CBP 的指令也写到，有约束力的巡回判例另有要求时，以搜查开始的地点决定适用哪一套规则。&lt;/p&gt;
+&lt;p&gt;CBP 的指令列出，边境搜查是执行海关、移民、执法与国安职责的一部分，用途包括查缉恐怖主义、走私与儿童性剥削影像。指令也写到法院拒绝在边境搜查原则（border search doctrine，边境的搜查原则上不需要令状）之下替电子设备设绝对的例外，并自述其中部分要求是在宪法与法律的要求之外，以政策自行加上的。EFF 在边境搜查页的主张是，搜查设备应取得法官依相当理由签发的令状。第二巡回那份判决有一位法官在协同意见书（同意判决结果、另外写出理由）主张至少要有某种怀疑，Volokh Conspiracy 文章的作者则认为应取得令状。&lt;/p&gt;
+&lt;p&gt;FPF 的原文提到，取证设备的厂商要花上几个月研究漏洞利用，保持设备更新就能让取证复制困难许多。原文也建议用长而独特的密码，并在通过边境检查前关机，让设备回到加密状态、大幅减少取证设备可以取出的数据。现代手机默认开启全盘加密，电脑则要自行确认 Mac 的 FileVault 或 Windows 的 BitLocker 已经开启。指令把 CBP 为绕过密码接上设备归为基本搜查，不需要合理怀疑与主管核准，原文没有讨论更新与关机在这种情况下是否有效。&lt;/p&gt;
+&lt;p&gt;清单建议出发前就决定，被要求时要不要解锁或提供密码。清单提到国际旅客被选中搜查的概率低于万分之一，但依携带的资料不同，被搜查的影响可能很大。打算解锁的人，清单提醒可以事先把不想被看到的文件、聊天记录与联系人移出设备并清空回收站，也暂时退出 Signal 这类通讯软件的群组。清单也列出，出发当天可以登出不想让官员访问的账号。&lt;/p&gt;
+&lt;p&gt;会携带消息来源资料出入境美国的人，出发前可以先读这份清单，FPF 与 EFF 的网站各有一份英文版。清单也建议写下熟悉边境案件的律师联系方式，让亲友知道通关的时间。EFF 的 Surveillance Self-Defense 网站也有一页边境的建议，最后审阅日期是 2018 年 10 月，页面上注明部分建议可能已经过时。清单发布于 2025 年 6 月，早于 1 月生效的新版指令，但清单对基本与高级搜查的说明与新版指令的定义一致。&lt;/p&gt;
+&lt;p&gt;中新网 2024 年 6 月 11 日的报道介绍了国家安全部公布的《国家安全机关行政执法程序规定》与《国家安全机关办理刑事案件程序规定》，两份规章 2024 年 7 月 1 日施行。依报道引的国家安全机关人员说法，查验电子设备须是依法执行反间谍工作。对象须是与反间谍工作有关的个人和组织，不会是普通入境人员。程序须经设区的市级以上国家安全机关负责人批准，应出示执法证件，有被查验人或见证人在场（本文没有取得两份规章的条文原文，以上是国安机关人员的说明，不是条文）。&lt;/p&gt;
+&lt;p&gt;到 11 月 8 日为止，本文查不到台湾、香港的海关检查旅客电子设备内容的规定。日本《关税法》第 105 条列出海关职员可以质问、检查货物、船舶、航空器与账簿文件（含电磁记录）等，本文没有查到明文规定旅客携带的手机等设备，也没有判断这一条是否涵盖。&lt;/p&gt;
+&lt;p&gt;比较各地的做法时，隐私方面可以问搜查前需不需要怀疑或令状、设备内容的副本保存多久、记者的资料有没有专门的处理程序。效果方面，可以问提高搜查门槛会不会影响 CBP 查缉走私与国安案件。CBP 不公开搜查在各边境的分布，也可以问外界能否从公开的数字评估搜查是否用在指令列出的用途上。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/travel/cbp-search-authority/border-search-electronic-devices&#34;&gt;Border Search of Electronic Devices at Ports of Entry&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;U.S. Customs and Border Protection&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/us-border-device-searches-near-record-high/&#34;&gt;U.S. border device searches near record high&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/document/directives/cbp-directive-no-3340-049b-border-search-electronic-devices&#34;&gt;CBP Directive No. 3340-049B: Border Search of Electronic Devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CBP&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/border-security/&#34;&gt;Preparing devices for travel through a US border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/06/journalist-security-checklist-preparing-devices-travel-through-us-border&#34;&gt;A Journalist Security Checklist: Preparing Devices for Travel Through a US Border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-23&#34;&gt;2025 年 6 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/fourth-circuit-says-border-agents-can-search-your-phone-hand-no-suspicion-required&#34;&gt;The Fourth Circuit Says Border Agents Can Search Your Phone By Hand, No Suspicion Required&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-22&#34;&gt;2026 年 7 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reason.com/volokh/2026/09/18/second-circuit-rejects-limits-on-border-searches-of-cell-phones/&#34;&gt;Second Circuit Rejects Limits on Border Searches of Cell Phones&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Volokh Conspiracy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hklaw.com/en/insights/publications/2026/10/does-privacy-exist-at-the-us-border&#34;&gt;Does Privacy Exist at the U.S. Border? An Update on the Fourth Amendment and Forensic Examination of Electronic Devices at the Border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Holland &amp;amp; Knight&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/issues/border-searches&#34;&gt;Border Searches&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/things-consider-when-crossing-us-border&#34;&gt;Things to Consider When Crossing the U.S. Border&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinanews.com.cn/gn/2024/06-11/10231866.shtml&#34;&gt;“入境查手机”？权威回应！&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国新闻网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-06-11&#34;&gt;2024 年 6 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/329AC0000000061&#34;&gt;関税法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>旧版 iOS 与 Android 被利用的已知漏洞，以及锁定模式的绕过宣称</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/ios-android-exploits-lockdown/</link>
@@ -2322,154 +2432,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/mail.google.com&#34;&gt;Is https://mail.google.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>每周短讯 2026 第 44 周</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/weekly-brief-2026-w44/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/weekly-brief-2026-w44</guid>
-<pubDate>Sun, 01 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>10 月 13 日到 10 月 23 日的 7 则新闻，包括香港收紧查阅土地记录的规定、人脸搜索引擎 PimEyes 与欧盟 AI 法的禁令、加拿大 C-22 法案的参议院委员会审查、德国四个政党微定向广告的违法认定、法国就业服务机构的生成式 AI 核查试点、欧洲各国政府的 Palantir 合同，以及英国 Ofcom 对境外网站的罚款执行。</description>
-<content:encoded>&lt;p&gt;整理 16 篇原文，来自 Hong Kong Free Press、Development Bureau、South China Morning Post 等 13 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;这一期收 7 则，1 则是之前导读的后续，涵盖 10 月 13 日到 10 月 23 日。&lt;/p&gt;
-&lt;h2 id=&#34;hk-land-records&#34;&gt;香港土地记录的查阅规定&lt;/h2&gt;
-&lt;p&gt;据发展局 10 月 16 日的公告，香港政府当天刊宪八项附属法例。电子申请的条文 2027 年 10 月 4 日生效，其余由发展局局长在 2027 年上半年另定生效日期。&lt;/p&gt;
-&lt;p&gt;香港自由新闻 10 月 21 日报道，新规定把土地记录的查册限定在九种目的，新闻采访不在其中。「公众利益」虽列为正当理由，所有申请都由土地注册处处长逐案审核。香港记者协会要求搁置修订，认为保护「私隐」不应凌驾公众知情权，并列出 18 篇利用土地记录完成的调查报道。&lt;/p&gt;
-&lt;p&gt;香港自由新闻引述发展局提交立法会的文件，修订是要在保护个人资料隐私与维持土地记录的透明之间取得平衡。南华早报报道立法会 10 月 23 日决定成立小组委员会审议。&lt;/p&gt;
-&lt;h2 id=&#34;pimeyes&#34;&gt;人脸搜索引擎 PimEyes 与 AI 法的禁令&lt;/h2&gt;
-&lt;p&gt;据 netzpolitik.org 10 月 13 日的报道，欧盟《人工智能法》2025 年 2 月 2 日起禁止以不针对特定对象的方式从互联网抓取人脸图像、建立或扩充人脸识别数据库的 AI 系统，人脸搜索引擎 PimEyes 在德国仍照常运营。2026 年夏天才被指定为主管机构的联邦网络局表示不评论规划中与进行中的程序。德国有一项让联邦刑事警察局与联邦警察使用这类搜索引擎的法案，据报道，法案立法理由的立场是抓取数据若没有使用 AI 系统就不受禁令限制。截至 10 月 31 日，我们没有查到 PimEyes 对这篇报道的说法。&lt;/p&gt;
-&lt;h2 id=&#34;canada-c22&#34;&gt;加拿大 C-22 法案的参议院委员会审查&lt;/h2&gt;
-&lt;p&gt;10 月 20 日的导读〈加拿大 C-22 法案的参议院二读与服务商的表态〉写过这部《合法访问法》，它让政府能要求通信与网络服务商建立协助执法的技术能力，也能要求指定的服务商保存元数据（通信内容以外的记录）。据加拿大国会的法案进度页面，法案 10 月 22 日在参议院二读通过，交付国家安全、国防与退伍军人事务委员会。截至 10 月 31 日，委员会还没有活动记录。&lt;/p&gt;
-&lt;p&gt;同一天的参议院议事录记下，反对党负责这项法案的参议员主张应送法律与宪法事务委员会审查。这位参议员也提到，元数据的保存期限在众议院委员会修正为六个月。电子前哨基金会（EFF）10 月 22 日的文章转述，加拿大公民自由协会呼吁民众联署反对法案，部分参议员也表达了疑虑。&lt;/p&gt;
-&lt;h2 id=&#34;germany-microtargeting&#34;&gt;德国四个政党微定向广告的违法认定&lt;/h2&gt;
-&lt;p&gt;据欧洲隐私倡议组织 noyb 10 月 21 日的公告，柏林数据保护机构认定社民党、绿党、左翼党与基民盟按用户的政治兴趣投放广告，没有同意等合法依据。据德新社旗下 dpa-AFX 的报道，机构 9 月 24 日作出决定，对政党只发出正式警告或训诫、没有罚款。到 10 月 23 日 netzpolitik.org 的报道为止，机构的发言人表示处分尚未确定。截至 10 月 31 日，我们没有查到四个政党的回应。&lt;/p&gt;
-&lt;h2 id=&#34;france-travail&#34;&gt;法国就业服务机构的生成式 AI 核查试点&lt;/h2&gt;
-&lt;p&gt;法国数字权利团体 La Quadrature du Net 10 月 23 日公开一份 France Travail 6 月 30 日向 AI 伦理委员会汇报的材料，指这个公共就业服务机构正在试点用生成式 AI 协助核查求职者是否积极找工作，并呼吁立即撤回。&lt;/p&gt;
-&lt;p&gt;据材料自己的说法，AI 把数据库、面谈与档案整合成一份报告，由顾问分析与确认。材料也写到决定始终留在顾问手上。材料列出的目标是 2027 年在人力不变的情况下完成核查目标，2030 年让核查系统化。&lt;/p&gt;
-&lt;p&gt;La Quadrature du Net 认为顾问的工作会缩减为确认可能的处罚。截至 10 月 31 日，我们没有查到 France Travail 对这份文件的回应。&lt;/p&gt;
-&lt;h2 id=&#34;palantir-europe&#34;&gt;欧洲各国政府的 Palantir 合同&lt;/h2&gt;
-&lt;p&gt;据 netzpolitik.org 10 月 15 日的报道，荷兰媒体 Follow the Money 主导、18 国媒体参与的调查在 11 个欧洲国家找到美国数据分析软件公司 Palantir 的国家层面合同，其中 8 国与军队或国防部有业务往来。报道写到许多国家担心依赖、安全与民主，正在寻找替代方案。&lt;/p&gt;
-&lt;p&gt;据 netzpolitik.org 的周报，各国公开的金额合计约 14 亿欧元。有些政府不公开成本，所以这是下限。Palantir 对调查团队的回应是，技术主权应看谁控制数据与决策，不只看软件供应商的国籍。&lt;/p&gt;
-&lt;h2 id=&#34;ofcom-4chan&#34;&gt;英国 Ofcom 对境外网站的罚款执行&lt;/h2&gt;
-&lt;p&gt;英国通信管理局（Ofcom）依《在线安全法》对论坛 4chan 开出数十万英镑的罚款，据娱乐媒体 Dexerto 10 月 20 日的报道，4chan 还没有缴纳。同一篇报道写到，Ofcom 首席执行官在下议院委员会表示若外国法院出面阻拦，有些罚款可能无法收回。这位首席执行官也表示 2025 年 3 月以来依这部法开出的 11 笔罚款只有 2 笔缴清。&lt;/p&gt;
-&lt;p&gt;代理 4chan 的律师在自己的网站把这段证词写成 Ofcom 认输，Dexerto 则写到首席执行官没有点名 4chan，Ofcom 也没有公开表示放弃执法。据牛津大学法学院的消息，4chan 在美国对 Ofcom 提起的诉讼，9 月中旬被联邦地区法院以外国主权豁免为由驳回。截至 10 月 31 日，我们没有查到 Ofcom 的回应或新的执法行动。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（16 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/10/21/hong-kong-press-group-urges-authorities-to-scrap-new-rules-tightening-media-access-to-land-records/&#34;&gt;Hong Kong press group urges authorities to scrap new rules tightening media access to land records&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.devb.gov.hk/en/publications_and_press_releases/press/index_id_15606.html&#34;&gt;Eight pieces of subsidiary legislation gazetted today to implement title registration system on new land&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Development Bureau&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.scmp.com/news/hong-kong/society/article/3371956/hong-kong-legco-review-tighter-rules-access-land-records-amid-concerns&#34;&gt;Hong Kong Legco to review tighter rules on access to land records amid concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;South China Morning Post&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/gesichtersuchmaschine-pimeyes-ein-verbot-das-niemand-durchsetzt/&#34;&gt;Gesichtersuchmaschine PimEyes: Ein Verbot, das niemand durchsetzt&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e&#34;&gt;Debates, Issue 95 (October 22, 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Senate of Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill&#34;&gt;Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://noyb.eu/en/noyb-win-german-dpa-finds-microtargeting-major-political-parties-illegal&#34;&gt;noyb win: German DPA finds microtargeting by major political parties illegal&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;noyb&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.onvista.de/news/2026/10-21-behoerde-wahlwerbung-nach-nutzerprofilen-war-rechtswidrig-0-10-26566530&#34;&gt;Behörde: Wahlwerbung nach Nutzerprofilen war rechtswidrig&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;dpa-AFX（onvista）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/beschwerde-erfolgreich-politisches-microtargeting-von-vier-parteien-war-rechtswidrig/&#34;&gt;Beschwerde erfolgreich: Politisches Microtargeting von vier Parteien war rechtswidrig&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.laquadrature.net/2026/10/23/france-travail-experimente-une-ia-generative-de-controle/&#34;&gt;France Travail expérimente une IA générative de contrôle&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;La Quadrature du Net&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/laenderuebergreifende-recherche-palantirs-geschaefte-in-europa/&#34;&gt;Länderübergreifende Recherche: Palantirs Geschäfte in Europa&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-15&#34;&gt;2026 年 10 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/kw-42-die-woche-in-der-europa-palantir-auf-die-finger-schaut/&#34;&gt;KW 42: Die Woche, in der Europa Palantir auf die Finger schaut&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-17&#34;&gt;2026 年 10 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dexerto.com/entertainment/ofcom-admits-it-may-never-collect-4chans-fines-after-ai-hamster-trolling-3420509/&#34;&gt;Ofcom admits it may never collect 4chan&amp;#39;s fines after AI hamster trolling&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Dexerto&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/&#34;&gt;Ofcom Concedes Defeat in the 4chan Case&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;prestonbyrne.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.ox.ac.uk/content/news/dphil-candidate-christian-bale-helps-ofcom-defeat-us-lawsuit&#34;&gt;DPhil candidate […] helps Ofcom defeat US lawsuit&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;University of Oxford Faculty of Law&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

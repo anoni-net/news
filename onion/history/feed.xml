@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 10 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>在 Windows 最底層執行的反作弊與防拷軟體</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-11/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-11/2026</guid>
+<pubDate>Wed, 11 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你電腦上有些遊戲的反作弊軟體在 Windows 最底層執行（2026 年 11 月查證）。這一天，Sony BMG 暫停製造內含防拷技術 XCP 的 CD，XCP 會在電腦上隱藏自己的檔案。</description>
+<content:encoded>&lt;p&gt;你電腦上有些遊戲的反作弊軟體會在 Windows 核心層級（作業系統最底層的部分）執行驅動程式。Riot Games 的說明頁（2026 年 11 月 8 日查證）寫到 Vanguard 有這類驅動程式，也連到移除步驟的指南。依研究者 2005 年 10 月底的部落格文章，Sony BMG 音樂 CD 附的防拷技術 XCP 會隱藏特定名稱開頭的檔案與執行中的程式，控制台的「新增或移除程式」也沒有它的項目。Betanews 引述 Sony BMG 的聲明，該公司在 2005 年 11 月 11 日以預防為由暫停製造含 XCP 的 CD，美國聯邦貿易委員會 2007 年 1 月公布的和解草案則要求它不得安裝讓消費者不易找到或移除的防拷軟體。用 Windows 的讀者可以在 Windows 安全性應用程式的「裝置安全性」&amp;gt;「核心隔離詳細資料」開啟記憶體完整性（讓惡意程式更難利用驅動程式控制電腦的功能），開啟失敗時 Windows 可能顯示已安裝不相容的驅動程式，Microsoft 建議先向裝置廠商取得更新的驅動程式。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>緬甸聯絡人那端被封鎖過的 Signal</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-10/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在不同網站一再看到同一則廣告，可能是廣告商用第三方 Cookie 在各網站認出了你。這一天，Mozilla 釋出的 Firefox 63 新增內容封鎖功能，使用者可以選擇封鎖第三方追蹤 Cookie。</description>
 <content:encoded>&lt;p&gt;你在不同網站一再看到同一則廣告，可能是廣告商用第三方 Cookie（網頁裡嵌入的廣告或分析服務存進瀏覽器的小檔案）在各網站認出了你。2018 年 10 月 23 日釋出的 Firefox 63 新增內容封鎖功能，使用者可以自行開啟封鎖第三方追蹤 Cookie 或所有追蹤器，Mozilla 同一天說明目標是在 Firefox 65 預設封鎖第三方追蹤 Cookie。Firefox 在 2019 年 9 月的 69 版對桌機與 Android 的所有使用者預設封鎖追蹤器清單裡的第三方 Cookie（新使用者從 6 月起已預設），Safari 則從 2020 年 3 月起預設完整封鎖第三方 Cookie。依 Google 2025 年 4 月的公告，Chrome 不會另外跳出詢問第三方 Cookie 的畫面，使用者仍在設定裡自行選擇。依 Chrome 的說明頁（2026 年 10 月查證），用 Chrome 的讀者可以在「隱私權和安全性」的「第三方 Cookie」設定裡封鎖第三方 Cookie。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>看內容前的年齡驗證</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-22/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-22/2026</guid>
-<pubDate>Thu, 22 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在網站或 App 被要求驗證年齡時，常要交出信用卡、證件或其他能辨識身分的資料。這一天，美國的公民自由團體提告挑戰剛簽署的《兒童線上保護法》，主張驗證年齡與身分的要求會讓讀者無法匿名閱讀。</description>
-<content:encoded>&lt;p&gt;你在網站或 App 被要求驗證年齡時，常要交出信用卡、證件或其他能辨識身分的資料。1998 年 10 月 22 日，美國公民自由聯盟、電子前哨基金會等 17 個原告在費城的聯邦法院挑戰前一天簽署的《兒童線上保護法》（COPA），主張驗證年齡與身分的要求會讓讀者無法匿名閱讀。COPA 讓在網路上以商業目的提供對未成年人有害內容的業者負刑責，業者以信用卡、成人存取碼等方式限制未成年人取得，可以作為抗辯。COPA 從 1999 年起受法院禁制令阻擋、一直沒有施行，美國最高法院 2025 年審理德州的法律時，判決要求色情網站驗證訪客滿 18 歲的規定合憲。台灣現行的《兒童及少年福利與權益保障法》沒有點名要求驗證年齡，衛福部 2026 年 4 月預告的修正草案（依民間司法改革基金會轉錄的第 59 條）要求平台與內容提供者採取適齡識別或其他可行的必要措施（標準與方式由主管機關另訂），讀者目前不需要因此調整設定（2026 年 10 月查證）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
