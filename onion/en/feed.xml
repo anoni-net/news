@@ -6,7 +6,148 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 11 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Privacy Badger for Safari on macOS</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/privacy-badger-safari-macos/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/privacy-badger-safari-macos</guid>
+<pubDate>Thu, 12 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On 19 October, EFF released a Safari version of Privacy Badger, its tracker-blocking browser extension. It runs only on the Mac and requires Safari 26.5 and macOS 15.7.7 or later. As of 8 November, there is no Safari version for iPhone or iPad.</description>
+<content:encoded>&lt;p&gt;Based on 18 sources, including EFF, Apple, GitHub&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The Electronic Frontier Foundation (EFF), a US digital rights group, released a Safari version of Privacy Badger on 19 October. Privacy Badger is a free browser extension developed by EFF that automatically learns to recognise and block trackers. The Safari version supports only the Mac and needs Safari 26.5 or later, and the system requirement listed on its Mac App Store page is macOS 15.7.7 or later. As of 8 November, it cannot be installed in Safari on iPhone or iPad.&lt;/p&gt;
+&lt;p&gt;According to EFF&#39;s announcement, Privacy Badger already has more than 4 million users. In the press release, EFF&#39;s technical staff mention that Safari support has long been one of the most frequent requests from users. The announcement credits improvements in Safari&#39;s extension support for making a release possible for Safari 26.5 and later.&lt;/p&gt;
+&lt;p&gt;According to the announcement, Safari&#39;s default browsing mode limits the information trackers can access but still lets them load. Privacy Badger stops trackers from loading in the first place, so it can block tracking techniques that get around Safari&#39;s protections. Widgets such as embedded tweets, comment sections and video players can share data even if the user never clicks them, and Privacy Badger replaces them with placeholders that load only when clicked.&lt;/p&gt;
+&lt;p&gt;Privacy Badger also automatically sends the Global Privacy Control (GPC) signal, which tells websites not to sell or share the user&#39;s personal data. The announcement lists US states including California, Colorado, New Jersey and Connecticut as places where GPC already has legal effect.&lt;/p&gt;
+&lt;p&gt;The Safari version is a free install from the Mac App Store, with EFF as the seller. The announcement warns that installing an extension in Safari takes more steps than in other browsers, and links to Apple&#39;s instructions. This is the first release of the Safari version, and problems can be reported by email to &lt;code&gt;extension-devs@eff.org&lt;/code&gt; or on GitHub.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;According to privacybadger.org, Privacy Badger identifies trackers algorithmically, whereas most blocking tools rely on manually maintained lists of domains. It watches whether third-party domains use cookies that can uniquely identify a browser, &#34;supercookies&#34; kept in local storage, and canvas fingerprinting (identifying a device from subtle differences in how its browser draws graphics). A third-party domain caught tracking the user on three different websites gets blocked. Ads that do not track the user are left alone.&lt;/p&gt;
+&lt;p&gt;Privacy Badger uses lists as well. By default it regularly pulls in data from Badger Sett, EFF&#39;s training project, on the trackers Badger Sett has found across thousands of popular websites. A separate yellowlist holds third-party domains that websites need in order to work, and for these Privacy Badger loads the content and blocks only third-party cookies and the referrer. On the same site, the yellowlist is described as a compromise for usability that EFF hopes to do without in the long run.&lt;/p&gt;
+&lt;p&gt;According to Apple&#39;s support page, Safari deletes cookies and website data from third-party sites the user has not visited and interacted with directly. Safari also presents websites with a simplified version of the system configuration, so that every Mac looks more alike and trackers find it harder to identify a device. According to EFF&#39;s announcement, Privacy Badger is effective on its own. Used alongside an ad blocker, or with the tracking protection in Safari&#39;s Advanced settings applied to all windows, it can also block trackers that are missing from other tools&#39; lists or that those tools choose not to block.&lt;/p&gt;
+&lt;p&gt;According to privacybadger.org, GPC is meant to be a legally binding request to every company wherever an applicable privacy law exists. The states listed in the announcement are all in the US, and our inference is that websites elsewhere may ignore the signal. According to the same site, Privacy Badger also sends the Do Not Track signal (a browser signal asking websites not to track the user). A domain is blocked only if it keeps collecting unique identifiers after receiving both signals.&lt;/p&gt;
+&lt;p&gt;During installation, the browser warns that the extension can access data on all websites, and according to privacybadger.org, browsing data is not shared unless the user submits a broken-site report. The privacy label on the Mac App Store page reads &#34;Data Not Collected&#34;, information provided by the developer that Apple has not verified. Freedom of the Press Foundation, a press freedom organisation, also reminded readers in its introduction to the Safari version to install only extensions they trust. Beyond permissions, a website may stop working properly, and according to EFF&#39;s announcement, Privacy Badger can then be disabled for that site alone.&lt;/p&gt;
+&lt;p&gt;Among the Asian rules on ad tracking that we, a community based in Taiwan, have collected, Article 20 of Taiwan&#39;s Personal Data Protection Act requires a non-government entity using personal data for marketing to stop once the person refuses, and to offer a way to refuse the first time it markets to them. Article 24 of mainland China&#39;s Personal Information Protection Law requires anyone pushing information or commercial marketing to individuals through automated decision-making to also offer an option that does not target their personal characteristics, or a convenient way to refuse. Japan&#39;s amended Telecommunications Business Act, in force since 16 June 2023, requires online information services such as messaging, social media, search and news to give notice of or publish the user data they send to outside parties through tags or modules, or else obtain consent or offer a way to opt out. None of these provisions mentions GPC or Do Not Track, and we have not checked whether regulators in these places treat either signal as a refusal or an opt-out.&lt;/p&gt;
+&lt;p&gt;An iTunes lookup API query on 8 November returned the app in the Mac App Store storefronts for mainland China, Taiwan, Hong Kong, Japan and South Korea, free in each and at the same version, 2026.10.22, though we did not open those storefronts with local accounts. The listing&#39;s 28 languages include Japanese and Chinese but not Korean. In mainland China, GreatFire rated www.eff.org as unreliable, with interference in 23% of the last 61 conclusive tests up to its latest test on 12 October. privacybadger.org was reachable from mainland China at GreatFire&#39;s last test on 31 May, and has not been tested since.&lt;/p&gt;
+&lt;p&gt;If you use Safari on a Mac and want less cross-site tracking, first make sure Safari is at 26.5 or later and the system at macOS 15.7.7 or later, then install the extension from the Mac App Store and enable it in Safari following Apple&#39;s instructions. The extension&#39;s interface is available in Traditional Chinese, though as of 8 November privacybadger.org has no Traditional Chinese version. Privacy Badger blocks third-party trackers, and data collected by the sites you visit directly is outside its scope (when you visit YouTube directly, for example, neither YouTube&#39;s own tracking nor its ads are blocked). As of 8 November, there is no version for browsing on iPhone and iPad.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (18)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/announcing-privacy-badger-safari-macos&#34;&gt;Announcing Privacy Badger for Safari on macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;19 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/press/releases/eff-launches-privacy-badger-safari-macos&#34;&gt;EFF Launches Privacy Badger for Safari on macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;19 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacybadger.org/&#34;&gt;Privacy Badger | Fight hidden tracking with EFF&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/privacy-badger/id6761143693&#34;&gt;Privacy Badger App - App Store&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/EFForg/privacybadger/issues/3248&#34;&gt;Support Safari on iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/EFForg/privacybadger/tree/master/src/_locales&#34;&gt;privacybadger/src/_locales&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/privacy-badger-now-supports-safari/&#34;&gt;Privacy Badger now supports Safari&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/prevent-cross-site-tracking-sfri40732/mac&#34;&gt;Prevent cross-site tracking in Safari on Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of the Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.soumu.go.jp/main_sosiki/joho_tsusin/d_syohi/gaibusoushin_kiritsu.html&#34;&gt;自分に関する情報が第三者に送信される場合、 自身で確認できるようになります。&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Internal Affairs and Communications&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=6761143693&amp;amp;country=cn&#34;&gt;iTunes lookup API (cn)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=6761143693&amp;amp;country=tw&#34;&gt;iTunes lookup API (tw)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=6761143693&amp;amp;country=hk&#34;&gt;iTunes lookup API (hk)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=6761143693&amp;amp;country=jp&#34;&gt;iTunes lookup API (jp)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=6761143693&amp;amp;country=kr&#34;&gt;iTunes lookup API (kr)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/www.eff.org&#34;&gt;www.eff.org&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/privacybadger.org&#34;&gt;privacybadger.org&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>US border device search figures and the unlock decision before travel</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/us-border-device-searches/</link>
@@ -2419,136 +2560,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Schneier on Security&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The ad exception for Gmail and Photos data in Google&#39;s privacy policy</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/google-gmail-photos-ads/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/google-gmail-photos-ads</guid>
-<pubDate>Mon, 02 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The 16 October version of Google&#39;s privacy policy adds an exception to its rule against personalized ads based on Drive, Gmail and Photos content, for users who choose to make that data available to other Google services that support personalized ads, such as through Personal Intelligence. People who have not connected these apps need not change anything, and as of 1 November those who have can review or disconnect them under Search Services Personalization in their Google Account.</description>
-<content:encoded>&lt;p&gt;Based on 16 sources, including Google, The Verge, Ars Technica&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The version of Google&#39;s privacy policy that took effect on 16 October adds an exception to the sentence saying Google does not show personalized ads based on content from Drive, Gmail or Photos. The exception applies when users choose to make data from these services available to other Google services that support personalized ads, and people who have not made that choice are outside it. The example given in the policy&#39;s additional context is Personal Intelligence, which, according to a Google Search help page, people aged 18 or over who are signed in to a personal Google Account can turn on themselves. As of 1 November, the supported countries and territories on that page included Taiwan, Hong Kong, Macau, Japan, South Korea and Singapore, and connecting Google Photos is not available in every region.&lt;/p&gt;
-&lt;p&gt;According to The Verge&#39;s report of 23 October, people who have already used Personal Intelligence to connect Gmail or Photos to AI Mode (a search feature that answers questions conversationally) and other Search tools may now see ads based on the content of their email and photos. Google&#39;s comparison of the two versions shows that the 1 October text did not have the closing clause &#34;unless you choose to make data from these services available to other Google services that support personalized ads&#34;. A new sentence states that users may allow Search or Gemini Apps to access data from Photos, Gmail and Drive, and that Search may process some of that data to personalize content, including ads. The sentence on ads also changed from ads based on &#34;interests and activity&#34; to ads based on &#34;interests, activity, or personalized content from Google services&#34;.&lt;/p&gt;
-&lt;p&gt;In the example in the policy&#39;s additional context, a user asks Search about a recent hotel booking, and Search may use booking details from an email to suggest things to do near the hotel. According to the Search help page, connecting once gives all Search services access to Gmail and Photos, including Google Search, AI Mode, Discover (the feed of recommended articles on the Google app&#39;s home screen), Maps, Shopping, Flights, Hotels, Translate and News. Drive, which the policy mentions, was not among the apps that could be connected on the help page when we checked on 1 November. Ask Maps in Google Maps (a feature for asking about routes and places conversationally) can also be connected to Gmail, and as of 1 November its listed regions in Asia were only India, Japan and Indonesia, not Taiwan.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The first sentence of Google&#39;s full statement, published by Ars Technica on 23 October, is that connecting apps is entirely opt-in. The statement goes on to say that ads will continue to be relevant to things like the query, the context of the response and the user&#39;s interests, and will not be based directly on the Gmail inbox or Photos library. According to the Q&amp;amp;A on the Search help page, advertisers do not get access to the inbox or Photos, and Google does not show personalized ads based on sensitive categories such as race, religion, sexual orientation or health. As of 1 November, we found statements only from Google and the press, with no public response from advocacy groups or data protection authorities.&lt;/p&gt;
-&lt;p&gt;The help page&#39;s answer on ads likewise says ads will not be based directly on the inbox or Photos library, then adds that Search may reference summaries, excerpts and inferences from these sources to personalize the experience, and that &#34;That same info may be used to show you ads&#34;. Read this way, ads are not based on the inbox or library themselves, while the summaries, excerpts and inferences Search derives from email and photos may be used for ads. The same page&#39;s answer on training AI models includes an example of how Search pulls email and photos together. When a user asks AI Mode to suggest restaurants for an upcoming trip, the models might look at emails and photos for the hotel reservation and flight itinerary, then summarize that information into recommendations.&lt;/p&gt;
-&lt;p&gt;According to the help page, Search services do not train generative AI models directly on the Gmail inbox or on imagery and audio from the Photos library. The page goes on to state that when users interact with Search, summaries, excerpts and inferences from relevant emails, files and media are used to train the models. Where an email is brief or particularly relevant to the question, the summary may be the email itself. Once apps are connected, a subset of the data processed by AI Mode and Ask Maps is reviewed by human reviewers, including trained service providers.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, looked at how the feature is offered in Asia, which The Verge&#39;s report does not cover. As of 1 November, the Search help page&#39;s supported countries and territories for connecting content apps included, among others, Hong Kong, Japan, Macau, Malaysia, Singapore, South Korea and Taiwan, with Chinese (Traditional), Chinese (Simplified), Japanese and Korean among the languages, and mainland China was not on the list. For the Gemini version, GIGAZINE reported that Google Japan posted on X on 14 April 2026 that Personal Intelligence in Gemini had begun a phased rollout in Japan, to be completed within a week. For Hong Kong, South Korea, Singapore and Taiwan we found no official launch announcement for the Gemini version, and the Gemini help page gives no country list.&lt;/p&gt;
-&lt;p&gt;None of the following provisions or policy plans is aimed at features that connect email or photos to ads, and we did not check how any of them would apply here, but they point in different directions. Taiwan and mainland China work through refusal, with Article 20 of Taiwan&#39;s Personal Data Protection Act requiring a non-government entity that markets with personal data to stop once the person objects and to offer a way to object the first time, and Article 24 of mainland China&#39;s Personal Information Protection Law requiring marketing through automated decision-making to come with an option that does not target personal characteristics or a convenient way to refuse. Under a policy plan South Korea&#39;s Personal Information Protection Commission published on 31 January 2024, by contrast, advertisers that do not identify a specific person may process online behavioural data without consent, provided that accumulating, overlapping or combining the data does not make anyone identifiable, while identifying a person requires consent. We could not find whether the revised guidelines the Commission planned to issue by the end of 2024 are in force, and readers can ask whether a way to refuse, an option not to be targeted or a consent requirement tied to identification reaches ads shaped by summaries and inferences from data a user connected for a different feature.&lt;/p&gt;
-&lt;p&gt;People who have not connected Gmail or Photos to Search or Gemini do not need to change any settings. Those who have can follow the Search help page: on a computer, go to Search Services Personalization in the Google Account, then Additional Personal Intelligence &amp;gt; Connected Content Apps, to review or disconnect them. Anyone who wants to try the feature first turns on Personalized Recommendations in the same place and then connects, and the actual screens may differ from the instructions (as of 1 November, a banner at the top of the help page said the settings are being updated). In Gemini the connections are under Settings &amp;amp; help &amp;gt; Personal Intelligence &amp;gt; Connected Apps at the bottom of &lt;code&gt;gemini.google.com&lt;/code&gt;, and the service named in the policy as processing this data to personalize content, including ads, is Search, with no mention of Gemini.&lt;/p&gt;
-&lt;p&gt;The connection settings in Search cover whether Gmail and Photos data is made available to Search, and My Ad Center is a separate set of controls. Under the policy, the ad settings in My Ad Center control what information Google uses to show ads, but the My Ad Center help page does not say whether its personalized ads switch covers connected data. Besides connecting the apps, the Search help page requires turning on Smart features in other Google products in Gmail as a condition for personalized responses. According to the Gmail help page, this setting controls the use of Workspace data in other Google products, and the page does not mention Photos or ads.&lt;/p&gt;
-&lt;p&gt;Going by the example in the policy&#39;s additional context (our inference), features such as suggesting plans from hotel booking details in an email work only once the apps are connected, and disconnecting removes them. According to the Search help page, data already saved in Search Services History is not deleted when an app is disconnected and can still be used for product improvement, including training generative AI models.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy/archive/20261001-20261016?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=en&#34;&gt;Connect your Google content apps to get a Search services experience that&amp;#39;s tailored to you&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update&#34;&gt;Now Google says it might use your Gmail and Google Photos data to target ads&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/&#34;&gt;Updated Google privacy policy says your Gmail might be used for advertising&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;23 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=zh-Hant&#34;&gt;連結 Google 內容應用程式，打造個人專屬搜尋服務體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16598406?hl=zh-Hant&#34;&gt;連結 Google 應用程式，打造個人化 Gemini 體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=zh-Hant&#34;&gt;自訂廣告體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/15604322?hl=zh-Hant&#34;&gt;瞭解 Google Workspace 和其他 Google 產品的智慧功能及控制選項&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16598406?hl=en&#34;&gt;Connect your Google apps to personalize your Gemini experience&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=en&#34;&gt;Customize your ads experience&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/15604322?hl=en&#34;&gt;Learn about smart features &amp;amp; controls for Google Workspace &amp;amp; other Google products&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gigazine.net/gsc_news/en/20260415-gemini-personal-intelligence-japan/&#34;&gt;&amp;#39;Personal Intelligence,&amp;#39; which allows Gemini to read your emails and photo albums and answer personal questions, is now available in Japan.&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GIGAZINE&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-15&#34;&gt;15 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of the Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;amp;mCode=C020010000&amp;amp;nttId=9888&#34;&gt;맞춤형 광고에 쓰이는 “행태정보” 처리, 적법성과 투명성 높인다&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal Information Protection Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-01-31&#34;&gt;31 January 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

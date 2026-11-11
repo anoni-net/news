@@ -6,7 +6,85 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 11 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Privacy Badger 的 macOS Safari 版</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/privacy-badger-safari-macos/</link>
+<guid isPermaLink="false">anoni-news:2026/11/privacy-badger-safari-macos</guid>
+<pubDate>Thu, 12 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>EFF 10 月 19 日推出阻擋追蹤器的擴充套件 Privacy Badger 的 Safari 版，只支援 Mac，需要 Safari 26.5 與 macOS 15.7.7 以上。到 11 月 8 日為止，iPhone 與 iPad 還沒有 Safari 版。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 EFF、Apple、GitHub 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美國數位權利組織 EFF 在 10 月 19 日推出 Privacy Badger 的 Safari 版。Privacy Badger 是 EFF 開發的免費瀏覽器擴充套件，會自動學習辨識並阻擋追蹤器。Safari 版只支援 Mac，需要 Safari 26.5 以上，Mac App Store 頁面列出的系統需求是 macOS 15.7.7 以上。到 11 月 8 日為止，iPhone 與 iPad 的 Safari 還不能安裝。&lt;/p&gt;
+&lt;p&gt;依 EFF 的公告，Privacy Badger 已有超過 400 萬名使用者。EFF 的技術人員在新聞稿提到，支援 Safari 一直是使用者最常提出的需求之一。公告把 Privacy Badger 能在 Safari 26.5 以上推出，歸功於 Safari 對擴充套件支援的改進。&lt;/p&gt;
+&lt;p&gt;依公告，Safari 預設的瀏覽模式會限制追蹤器可以取得的資訊，但仍讓追蹤器載入。Privacy Badger 從一開始就不讓追蹤器載入，可以擋下繞過 Safari 防護的追蹤手法。嵌入的推文、留言區與影片播放器這類小工具，即使使用者沒有點擊也可能分享資料，Privacy Badger 會把它們換成點了才載入的預留框。&lt;/p&gt;
+&lt;p&gt;Privacy Badger 也會自動送出全球隱私控制（Global Privacy Control，GPC）訊號，告訴網站不要出售或分享使用者的個人資料。公告列出加州、科羅拉多、紐澤西、康乃狄克等美國的州，寫明 GPC 在這些地方已具法律效力。&lt;/p&gt;
+&lt;p&gt;Safari 版要從 Mac App Store 免費安裝，賣家是 EFF。公告提醒 Safari 安裝擴充套件的步驟比其他瀏覽器複雜，附上 Apple 的說明頁。這是 Safari 版的第一個版本，遇到問題可以寄信到 &lt;code&gt;extension-devs@eff.org&lt;/code&gt; 或在 GitHub 回報。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 privacybadger.org 的說明，Privacy Badger 用演算法判斷追蹤器，多數阻擋工具則仰賴人工維護的網域清單。它觀察第三方網域有沒有使用能唯一識別瀏覽器的 cookie、存在本機儲存空間的「超級 cookie」與畫布指紋（canvas fingerprinting，用瀏覽器繪圖的細微差異辨識裝置）。同一個第三方網域在三個不同的網站上追蹤使用者，就會被擋下。廣告沒有追蹤使用者時，Privacy Badger 不會擋。&lt;/p&gt;
+&lt;p&gt;Privacy Badger 也用清單，預設會定期從 EFF 的訓練專案 Badger Sett 取得 Badger Sett 在數千個熱門網站上找到的追蹤器資料。另有一份黃名單，收錄網站運作需要的第三方網域。Privacy Badger 會載入這些網域的內容，只擋掉第三方 cookie 與 referrer。說明頁把黃名單寫成對實用性的妥協，長期希望不再需要黃名單。&lt;/p&gt;
+&lt;p&gt;依 Apple 的說明頁，Safari 會刪除使用者沒有直接造訪並互動過的第三方網站的 cookie 與網站資料。Safari 也會向網站呈現簡化過的系統設定，讓每台 Mac 看起來更相似，降低追蹤者辨識裝置的能力。依 EFF 的公告，Privacy Badger 單獨使用就有效。跟廣告封鎖器或 Safari 進階設定裡套用到所有視窗的追蹤防護一起用時，它也能擋下不在其他工具清單裡、或其他工具選擇不擋的追蹤器。&lt;/p&gt;
+&lt;p&gt;依 privacybadger.org 的說明，GPC 的用意是在有適用隱私法的地方，對所有公司都具法律效力。公告列出的州都在美國。本文推論，其他地方的網站可能不理會這個訊號。說明頁也提到，Privacy Badger 會一併送出 Do Not Track 訊號（請網站不要追蹤使用者的瀏覽器訊號），網域收到兩種訊號之後仍收集唯一識別碼才會被擋下。&lt;/p&gt;
+&lt;p&gt;安裝時瀏覽器會警告擴充套件可以存取所有網站的資料，privacybadger.org 寫明除非使用者送出網站故障回報，否則不會分享瀏覽資料。Mac App Store 頁面的隱私標示寫「不收集資料」，這項資訊由開發者提供，Apple 沒有驗證。新聞自由組織 Freedom of the Press Foundation 介紹 Safari 版時也提醒，只安裝可信任的擴充套件。除了權限，網站也可能無法正常運作，EFF 的公告提到這時可以只對那個網站停用 Privacy Badger。&lt;/p&gt;
+&lt;p&gt;用 Mac 版 Safari、想減少跨網站追蹤的人，第一步先確認 Safari 已更新到 26.5 以上、系統是 macOS 15.7.7 以上，再從 Mac App Store 安裝並照 Apple 的說明在 Safari 啟用。擴充套件的介面有正體中文，說明頁 privacybadger.org 到 11 月 8 日為止沒有正體中文版。Privacy Badger 擋的是第三方追蹤器，直接造訪的網站自己收集的資料不在範圍內（例如直接造訪 YouTube 時，YouTube 自己的追蹤與廣告都不會被擋），iPhone 與 iPad 上的瀏覽也還無法保護。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/announcing-privacy-badger-safari-macos&#34;&gt;Announcing Privacy Badger for Safari on macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/press/releases/eff-launches-privacy-badger-safari-macos&#34;&gt;EFF Launches Privacy Badger for Safari on macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacybadger.org/&#34;&gt;Privacy Badger | Fight hidden tracking with EFF&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/privacy-badger/id6761143693&#34;&gt;Privacy Badger App - App Store&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/EFForg/privacybadger/issues/3248&#34;&gt;Support Safari on iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/EFForg/privacybadger/tree/master/src/_locales&#34;&gt;privacybadger/src/_locales&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/privacy-badger-now-supports-safari/&#34;&gt;Privacy Badger now supports Safari&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/prevent-cross-site-tracking-sfri40732/mac&#34;&gt;Prevent cross-site tracking in Safari on Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>美國邊境電子裝置搜查的件數與出國前的判斷</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/us-border-device-searches/</link>
@@ -1907,89 +1985,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Schneier on Security&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Google 隱私權政策裡 Gmail 與相簿資料的廣告例外</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/google-gmail-photos-ads/</link>
-<guid isPermaLink="false">anoni-news:2026/11/google-gmail-photos-ads</guid>
-<pubDate>Mon, 02 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Google 隱私權政策 10 月 16 日版，在不依雲端硬碟、Gmail 與相簿內容投放個人化廣告的條文後面加上例外，條件是使用者自行把這些資料提供給支援個人化廣告的其他 Google 服務。政策附註舉的例子是「個人化智慧服務」，截至 11 月 1 日，說明頁列為開放給 18 歲以上的個人帳戶自行連結。沒有做這項選擇的人不需要調整，已經把 Gmail 或相簿連到搜尋的人，可以在 Google 帳戶的「搜尋服務個人化」查看或中斷連結。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，來自 Google、The Verge、Ars Technica&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Google 隱私權政策 10 月 16 日生效的版本，在「不會根據雲端硬碟、Gmail 或相簿的內容顯示個人化廣告」這句後面加上例外。例外的條件是使用者自行選擇把這些服務的資料提供給支援個人化廣告的其他 Google 服務，沒有做這項選擇的人不在範圍內。政策附註舉的功能是「個人化智慧服務」（Personal Intelligence），依 Google 搜尋的說明頁，開放給 18 歲以上、登入個人 Google 帳戶的使用者自行啟用。到 11 月 1 日為止，說明頁列出的支援地區包括台灣、香港、澳門、日本、南韓與新加坡，部分地區不支援連結 Google 相簿。&lt;/p&gt;
-&lt;p&gt;依 The Verge 10 月 23 日的報導，已經透過個人化智慧服務把 Gmail、相簿連到 AI 模式（AI Mode，用對話回答問題的搜尋功能）等搜尋工具的人，現在可能看到依信件與相片內容投放的廣告。依政策的版本對照頁，10 月 1 日版沒有句尾的「unless you choose to make data from these services available to other Google services that support personalized ads」。新增的句子寫到使用者可以讓搜尋或 Gemini 應用程式存取相簿、Gmail 與雲端硬碟的資料，搜尋可能處理其中一部分資料來將內容個人化，包括廣告。描述廣告的句子也從依「興趣與活動」，改成依「興趣、活動或來自 Google 服務的個人化內容」。&lt;/p&gt;
-&lt;p&gt;政策附註舉的例子是使用者向搜尋詢問最近訂的飯店時，搜尋可能從信件裡的訂房資料建議飯店附近可以做的事。搜尋說明頁寫到，連結一次就開放所有搜尋服務存取 Gmail 與相簿，包括 Google 搜尋、AI 模式、探索（Discover，Google App 首頁推薦文章的版面）、地圖、購物、航班、飯店、翻譯與新聞。政策提到的雲端硬碟，不在 11 月 1 日查證時說明頁可連結的清單裡。地圖裡的「問問 Google 地圖」（用對話詢問路線與地點的功能）也能連結 Gmail，到 11 月 1 日說明頁列的地區在亞洲只有印度、日本與印尼，不含台灣。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;Ars Technica 10 月 23 日刊出 Google 的完整聲明，第一句是連結完全由使用者選擇加入（opt-in）。聲明接著提到，廣告會繼續跟查詢內容、回覆的脈絡與使用者的興趣相關，不會直接根據 Gmail 收件匣或相簿相片庫。搜尋說明頁的問答也寫到廣告主無法查看收件匣或相簿，Google 不會依種族、宗教、性傾向或健康等敏感類別投放個人化廣告。到 11 月 1 日為止，查到的只有 Google 與媒體的說法，沒有找到倡議組織或資料保護機關的公開回應。&lt;/p&gt;
-&lt;p&gt;搜尋說明頁回答廣告的那一題同樣寫廣告不會直接根據收件匣或相片庫，也提到搜尋可能參考這些來源的摘要、摘錄與推論來提供個人化體驗，「系統也可能運用這些資訊來顯示廣告」。依這一題的寫法，廣告不以收件匣或相片庫本身為依據，搜尋從信件與相片產生的摘要、摘錄與推論則可能用於廣告。說明頁在訓練 AI 模型那一題另外舉例說明搜尋如何彙整信件與相片。使用者請 AI 模式推薦下次旅行的餐廳時，模型可能從信件與相片取得飯店預訂與航班資訊，再彙整成建議。&lt;/p&gt;
-&lt;p&gt;搜尋說明頁也寫到，搜尋服務不會直接用 Gmail 收件匣或相簿的圖像與音訊訓練生成式 AI 模型。說明頁接著寫到，使用者跟搜尋互動時，從相關信件、檔案與相片產生的摘要、摘錄與推論會用來訓練模型。信件很短或跟問題特別相關時，摘要可能就是信件本身。連結之後，AI 模式與「問問 Google 地圖」處理的一部分資料會交給人工審查員（包括受過訓練的服務供應商）審查。&lt;/p&gt;
-&lt;p&gt;沒有把 Gmail 或相簿連到搜尋或 Gemini 的人不需要調整設定。已經連結的人，可以照搜尋說明頁的正體中文版在電腦上前往 Google 帳戶的「搜尋服務個人化」，依序進入「其他個人化智慧服務」、「連結內容應用程式」查看或中斷連結。想試用的人要在同一處先開啟「個人化推薦」再連結，實際畫面可能跟說明不同（到 11 月 1 日為止，說明頁頂端提示設定正在更新）。Gemini 的連結設定在 &lt;code&gt;gemini.google.com&lt;/code&gt; 底部「設定與說明」裡的「個人化智慧服務」、「連結的應用程式」，政策明寫會處理這些資料來個人化廣告的服務是搜尋，沒有提到 Gemini。&lt;/p&gt;
-&lt;p&gt;中斷搜尋的連結，管的是 Gmail 與相簿的資料要不要提供給搜尋，「我的廣告中心」則是另一組控制。依政策，那裡的廣告設定可以控制 Google 用哪些資訊顯示廣告，但我的廣告中心的說明頁沒有寫個人化廣告的開關是否涵蓋連結的資料。連結之外，搜尋說明頁還要求開啟 Gmail 的「其他 Google 產品的智慧功能」，作為取得個人化回覆的前提。Gmail 的說明頁寫的是這項設定控管能否在其他 Google 產品使用 Workspace 資料，沒有提到相簿與廣告。&lt;/p&gt;
-&lt;p&gt;依政策附註的例子推想，從信件裡的訂房資料建議行程這類功能要在連結之後才能使用，中斷連結就會少掉。依搜尋說明頁，已經存進搜尋服務記錄的資料不會因為中斷連結而刪除，仍可用於改良產品（包括訓練生成式 AI 模型）。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://policies.google.com/privacy/archive/20261001-20261016?hl=en&#34;&gt;Privacy Policy – Privacy &amp;amp; Terms – Google&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=en&#34;&gt;Connect your Google content apps to get a Search services experience that&amp;#39;s tailored to you&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update&#34;&gt;Now Google says it might use your Gmail and Google Photos data to target ads&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/&#34;&gt;Updated Google privacy policy says your Gmail might be used for advertising&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/16859283?hl=zh-Hant&#34;&gt;連結 Google 內容應用程式，打造個人專屬搜尋服務體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16598406?hl=zh-Hant&#34;&gt;連結 Google 應用程式，打造個人化 Gemini 體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=zh-Hant&#34;&gt;自訂廣告體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/mail/answer/15604322?hl=zh-Hant&#34;&gt;瞭解 Google Workspace 和其他 Google 產品的智慧功能及控制選項&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
