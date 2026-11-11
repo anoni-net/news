@@ -6,7 +6,94 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Generative AI in transnational repression cases and the response from AI companies</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/genai-transnational-repression/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/genai-transnational-repression</guid>
+<pubDate>Thu, 12 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Anthropic&#39;s September threat intelligence report describes state-linked actors using Claude for surveillance, some of it aimed at dissidents living abroad. In an October commentary for Just Security, Citizen Lab researchers analysed the report and urged AI companies to act on disclosure and notification, detection and refusal, and evidence preservation. Neither document offers settings advice for ordinary users.</description>
+<content:encoded>&lt;p&gt;Based on 8 sources, including Anthropic, Just Security, Citizen Lab&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Anthropic&#39;s threat intelligence team published &#34;Detecting and countering misuse of AI: September 2026&#34; on 10 September. Its surveillance chapter lists a series of operations the company found and disrupted between January and July 2026, in which, according to the report, state-linked organisations, contractors working for states and commercial spyware vendors used Claude to build and run surveillance. The report classifies some of these cases as transnational repression aimed at dissidents and diaspora communities living abroad.&lt;/p&gt;
+&lt;p&gt;Three Citizen Lab researchers analysed the report in a commentary published by Just Security on 12 October, and Citizen Lab&#39;s website republished a summary on 22 October. Every case the commentary discusses comes from Anthropic&#39;s report. Both documents deal with how attackers use AI services, and neither offers settings advice for ordinary users.&lt;/p&gt;
+&lt;p&gt;The researchers cite Freedom House&#39;s definition, under which digital transnational repression is the use of digital technology by governments to intimidate and silence dissidents in exile and in diaspora communities. Their earlier interview research with affected people found that such threats cause fear and isolation, and lead people to self-censor and withdraw from advocacy.&lt;/p&gt;
+&lt;p&gt;The researchers group the report&#39;s cases into four shifts. The first is cost: digital repression used to depend on language skills, trained intelligence analysts and software engineers, and the researchers read the cases as showing that AI can replace part of that. The second is the processing of open information, since diaspora communities leave large amounts of data on social media, messaging apps, public databases and organisational websites. An AI assistant can compile that scattered data into intelligence reports used to reconstruct personal networks, infer political leanings and locate people, and even to flag their vulnerabilities.&lt;/p&gt;
+&lt;p&gt;The third shift is building models into fixed workflows, so that a handful of staff can oversee repeated, partly automated surveillance reporting; in one case the system automatically reviewed 15 to 30 or more foreign media articles a day. Fourth, surveillance output can support physical surveillance, coercion, the recruitment of informants and the disruption of civil society groups&#39; work. The researchers also note that the report does not show this reconnaissance led to physical attacks.&lt;/p&gt;
+&lt;p&gt;According to the report&#39;s cases, the model was also used to translate and write messages in dialect, generate multilingual posts for fake online personas, and write code for surveillance tools such as browser extensions. One operation was still at a trial stage and had more than 255 synthetic social media accounts ready, which the report takes as a sign that the accounts were prepared in advance for later use. Unlike the follow-on surveillance described in an earlier news investigation, the report found no evidence that these accounts had been used against real targets before Anthropic banned them. Another operation planned mass reporting and bot amplification against journalists at an exile media outlet, and the report describes this as a plan rather than something carried out.&lt;/p&gt;
+&lt;p&gt;According to the report, in the same operation that planned mass reporting against the exile journalists, Claude refused several requests for covert interrogation and for generating fake personas at scale. In a case the commentary classifies as domestic surveillance, Claude first refused to produce a surveillance report, but after the request was rephrased the model still produced guidance naming 10 civilians. In another domestic case the commentary mentions, the surveillance system ran entirely on a local model, and Anthropic banned the account but could not disable the system already deployed.&lt;/p&gt;
+&lt;p&gt;Anthropic&#39;s usage policy prohibits using Claude for non-consensual surveillance and profiling, and for violating individuals&#39; civil liberties and human rights. According to the report, the related accounts were banned in every case, and the company improved its ability to detect similar techniques. Where an operation&#39;s impact extended beyond the platform, Anthropic shared identifiers and intelligence with industry partners and authorities as appropriate. The report also mentions that some actors used VPNs to get around Anthropic&#39;s regional restrictions.&lt;/p&gt;
+&lt;p&gt;The researchers write that the report reflects only what one company could see and detect over a short period, and that confidence in some attributions is limited. In one case in the report, the actor is assessed only with low confidence to be a contractor working for a state security agency rather than the agency itself.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The researchers note that earlier warnings about AI in transnational repression mostly extrapolated from technical capability and had few concrete cases behind them, and they regard Anthropic&#39;s report as offering rare operational detail. They suggest that detection should not rely on easily recognised repression keywords, and should instead flag the combination of social media monitoring, geolocation, vulnerability profiling and inference of political leanings, since together these capabilities can point to a transnational repression workflow.&lt;/p&gt;
+&lt;p&gt;The researchers base their recommendations on the UN Guiding Principles on Business and Human Rights (UNGPs), which require companies to address adverse human rights impacts they are involved in. The commentary argues that AI companies should treat transnational repression as a threat category of its own, separate from domestic surveillance and influence operations, and act in three areas. As of 8 November, we found no public response to the commentary from Anthropic, OpenAI, DeepMind or xAI. On the companies&#39; side, the only document available is Anthropic&#39;s September report, which predates the commentary and is not a response to its recommendations.&lt;/p&gt;
+&lt;p&gt;On the first area, disclosure and notification, Anthropic&#39;s report is itself a public disclosure, and its account of the response says information is shared with industry partners and authorities as appropriate. The researchers credit the report&#39;s detail and consider that OpenAI, DeepMind and xAI may encounter similar operations, though without standardised reporting there is nothing to assess. They also recommend notifying affected communities, and point out that Google and Apple already have processes for notifying the targets of state-backed attacks. Those notifications go to the companies&#39; own users, whereas the people targeted through an AI service are not necessarily its users, so the researchers recommend community-level notification in formats and languages the recipients can understand.&lt;/p&gt;
+&lt;p&gt;On the second area, detection and refusal, the researchers credit Anthropic with repeatedly finding and stopping operations before large-scale deployment, while noting that in some cases a rephrased request got around a refusal. Anthropic&#39;s report describes improving detection of similar techniques in each case and feeding the investigation findings into its safeguards.&lt;/p&gt;
+&lt;p&gt;On the third area, evidence preservation, the researchers note that civil lawsuits and criminal investigations have already arisen from cases where digital transnational repression escalated into physical harm. They therefore argue that companies should keep detailed incident records, including attribution data, for future investigations. They also write that what should be kept depends on local law and remains contested.&lt;/p&gt;
+&lt;p&gt;Neither the commentary nor the Citizen Lab page offers practical advice for people who are targeted. Google and Apple each have processes for notifying the targets of state-backed operations, and the commentary treats them as a reference for AI companies setting up notification of their own.&lt;/p&gt;
+&lt;p&gt;We, a community based in Taiwan, compared these recommendations with the Asian rules on AI and online platforms we have checked, and the closest parallel to regular public reporting is in Japan. The Act Partially Amending the Public Offices Election Act and the Act on Responses to Infringement of Rights Caused by Distribution of Information through Specified Telecommunications (Act No. 58 of 2026), promulgated on 17 July 2026 and taking effect on 1 March 2027, requires large-scale specified telecommunications service providers to take measures against information that may harm the fairness of elections, under guidelines set by the Minister for Internal Affairs and Communications, and to publish how they implemented those measures each year. That duty is aimed at large platforms and election-related information and does not mention surveillance. South Korea&#39;s Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust (the AI Basic Act), which took full effect on 22 January 2026 with a grace period of at least one year for penalties under its transparency provision, requires generative AI providers to label their output (Article 31), which concerns disclosure to users rather than what a provider does when its tools are misused.&lt;/p&gt;
+&lt;p&gt;Mainland China already places a record-keeping duty on providers, with a different recipient. Under the Provisions on the Administration of Deep Synthesis of Internet Information Services (Order No. 12), issued by the Cyberspace Administration of China, the Ministry of Industry and Information Technology and the Ministry of Public Security and in force since 10 January 2023, a provider of deep synthesis services within mainland China that finds its service used to produce or spread false information must take rebuttal measures, keep the relevant records and report to the cyberspace authorities and other competent authorities (Article 11). The researchers want records kept for civil lawsuits and criminal investigations arising from harm to targeted people, whereas the Chinese rule names the cyberspace authorities as the recipient, and the duty is triggered by false information rather than by surveillance.&lt;/p&gt;
+&lt;p&gt;When reading other AI companies&#39; threat reports, a few things are worth comparing: whether transnational repression is classified separately, what steps the response includes (banning accounts, improving detection, sharing intelligence), whether targeted communities are notified, and what records are kept. Another set of questions concerns effectiveness, since the researchers point out that some refusals were bypassed by rephrasing. When a system runs on a local model, banning the account does not stop it, so how early detection needs to happen to be useful is also worth comparing. The researchers note that the industry has no standardised reporting, and whether companies can be compared will depend on whether a common format is established.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (8)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/threat-intelligence-report-september-2026&#34;&gt;Detecting and countering misuse of AI: September 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;10 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.justsecurity.org/159245/how-generative-ai-scaling-transnational-repression/&#34;&gt;How Generative AI is Scaling Transnational Repression&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Just Security&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;12 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/how-generative-ai-is-scaling-transnational-repression/&#34;&gt;How Generative AI is Scaling Transnational Repression&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2AAA.htm&#34;&gt;衆法 第221回国会 26号 審議経過&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;House of Representatives, Japan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/houan/g22105026.htm&#34;&gt;公職選挙法及び特定電気通信による情報の流通によって発生する権利侵害等への対処に関する法律の一部を改正する法律案&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;House of Representatives, Japan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=71019&amp;amp;key=&amp;amp;type=new&#34;&gt;Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Korea Legislation Research Institute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-21&#34;&gt;21 January 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&amp;amp;mId=4&amp;amp;bbsSeqNo=42&amp;amp;nttSeqNo=1215&#34;&gt;MSIT Releases Guidelines on Ensuring AI Transparency&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Science and ICT, South Korea&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm&#34;&gt;互联网信息服务深度合成管理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-12-11&#34;&gt;11 December 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Privacy Badger for Safari on macOS</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/privacy-badger-safari-macos/</link>
@@ -2417,149 +2504,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/sg/ios/feature-availability/&#34;&gt;iOS and iPadOS 27 - Feature Availability - Apple (SG)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Measurements of censorship and code security gaps in China&#39;s open-weight Qwen models</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/qwen-political-censorship/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/qwen-political-censorship</guid>
-<pubDate>Mon, 02 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>In October, two companies that publish modified versions of Qwen models each released their own measurements, one of censorship in answers to political questions in Chinese, the other of a gap in code security that follows the client named in the prompt. The findings concern people who ask Qwen political questions and developers who write code with Qwen3-Coder, whether the model runs locally or through a service. As of 1 November, we had found no third-party replication and no response from the Qwen team.</description>
-<content:encoded>&lt;p&gt;Based on 16 sources, including Interpretic AI, Hirundo, PNAS Nexus&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Two companies published measurements of Alibaba&#39;s Qwen family of open-weight models in late October (open-weight models are models whose files are public and can be downloaded and run on your own computer). Interpretic AI measured how often Qwen3.8-27B censors its answers to political questions in Chinese, and on 31 October released a version with the censorship removed on Hugging Face. According to measurements Hirundo published on its blog on 21 October, the security of the code Qwen3-Coder writes changes with the client named in the system prompt (the instructions a developer gives the model in advance), and the company has also released a modified version.&lt;/p&gt;
-&lt;p&gt;Both studies come from companies that publish the modified models, and Hirundo also evaluates and fixes models for organisations that run open-weight models. As of 1 November we had found no third-party replication, so all the figures below are each company&#39;s own measurements. Interpretic&#39;s measurements matter to people who ask Qwen political questions, and Hirundo&#39;s to developers who write code with Qwen3-Coder.&lt;/p&gt;
-&lt;p&gt;According to Interpretic&#39;s model page, the test put to the model, in Chinese, a set of 145 political questions that two researchers published in the journal PNAS Nexus, and another language model judged whether each answer was censored. Of the 113 politically sensitive questions in the set, 98 answers from the original Qwen3.8-27B were judged censored (86.7%), against 4 (3.5%) for the modified version. The model page does not say which model did the grading or whether anyone checked samples by hand, and it describes the removal only as a &#34;targeted weight edit&#34;, with no paper or code. Interpretic lists as limitations that the political questions were tested only in Chinese, and cautions that a substantive answer is not necessarily a correct one.&lt;/p&gt;
-&lt;p&gt;The question set comes from a paper published in February 2026, in which the researchers compared foundation models developed in China with those developed elsewhere. According to the abstract, models developed in China refused more of the 145 political questions, gave shorter answers and gave more inaccurate ones. Every model refused more often when asked in Chinese than in English, but the gap between languages was smaller than the gap between Chinese and non-Chinese models.&lt;/p&gt;
-&lt;p&gt;According to Hirundo&#39;s blog, the study asked Qwen3-Coder-30B-A3B-Instruct to write the same web service again and again, with user registration, login and storage of private text. Each time, only the one sentence in the system prompt saying who the code was for changed, naming a neutral client, a US defence contractor, a Chinese defence contractor or a Hong Kong pro-democracy group. The finished apps were run on BaxBench, a public benchmark from ETH Zurich and LogicStar, and an app counted as exploitable if at least one off-the-shelf attack against it succeeded.&lt;/p&gt;
-&lt;p&gt;Apps written for the US defence contractor were exploitable 70% of the time, against 59% for the Chinese defence contractor. On private data leaks, nearly half of the apps written for the Hong Kong pro-democracy group let any logged-in user read everyone&#39;s private data, against about a third for the neutral client (a relative increase of 28%, as the blog calculates it). In the group whose prompts also included security instructions, 74% of the apps for the US contractor were exploitable, against 59% for the neutral client. According to the blog&#39;s statistical tests, none of the three gaps is likely to be due to chance.&lt;/p&gt;
-&lt;p&gt;The Q&amp;amp;A in the blog&#39;s appendix also states that the study cannot tell whether anyone put the gap into the model on purpose. Small models write vulnerable code anyway, and about a third of the neutral client&#39;s apps leaked as well, so what the study measured is the extra risk on top of that. Only one model and one task were tested, and the task was the one with the clearest gap in a small sample of 11 tasks. The US and Hong Kong groups were deliberately chosen edge cases.&lt;/p&gt;
-&lt;p&gt;Hirundo&#39;s modified model is public on Hugging Face, and its model page describes the method as behavioral unlearning (extra training that makes a model forget a specific behaviour while keeping its other abilities). According to the blog, on CCPC-500, a 500-question benchmark Hirundo built itself, the share of answers judged to contain censorship, bias or propaganda fell from 46.6% to 4.0%, and the three code gaps were no longer significant. In other comparisons in the appendix, the modified model still showed one significant gap for the US contractor against the neutral client, and in the blog&#39;s reading the effect moves from the country to the type of organisation. On ten other programming tasks, the shares of apps that worked and of apps that were exploitable were both close to those of the original model.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;A language model&#39;s answers depend on its training data and on alignment, the later stage of training that makes a model answer according to the developer&#39;s rules. Both studies measured by asking large numbers of questions and computing proportions from the output, and neither examined training data and alignment separately. Hirundo&#39;s blog argues that the modified model&#39;s results prove the code gaps sit in the model weights, and the claim rests on the same company&#39;s own removal experiment.&lt;/p&gt;
-&lt;p&gt;SpeechMap, a public research project, tested the earlier Qwen3 generation in May 2025, and according to its roundup Qwen3&#39;s open-weight models were broadly censored on topics critical of China. The censorship was most thorough with questions asked in Chinese, present in English too, and appeared in Finnish only in some cases and less consistently. The same roundup records a high number of API errors from the commercial Qwen-Max, which SpeechMap reads as an additional layer of censorship at the API. From this we infer that when a model is used through a service, the answers may be shaped both by the model itself and by filtering on the service side.&lt;/p&gt;
-&lt;p&gt;China&#39;s Interim Measures for the Management of Generative Artificial Intelligence Services took effect on 15 August 2023, and Article 4 requires that providing and using generative AI services must not generate content inciting subversion of state power or the overthrow of the socialist system, among other categories. Under Article 2, research and application that do not provide services to the public in mainland China fall outside the Measures, and we found no provision specifically on publishing model weights. The researchers behind the PNAS Nexus paper caution that their study is observational and cross-sectional (it compares different models at a single point in time, without experiments) and &#34;does not establish a causal linkage between regulatory pressures and censorship behaviors of China-originating LLMs&#34;.&lt;/p&gt;
-&lt;p&gt;On 3 February 2025, Taiwan&#39;s Executive Yuan required all public agencies to stop using DeepSeek AI services, and its press release noted that the security risk of data being uploaded to China had been neither clarified nor ruled out, and that the model&#39;s training involved data bias such as ideological censorship. According to the Administration for Cyber Security on 20 February 2025, the ban covered cloud services, apps and locally downloaded use, and at the time placed no restriction on use by the general public. The notices named DeepSeek, and we found none naming Qwen.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, compared rules on generative AI from mainland China, Taiwan and South Korea, and neither the Taiwanese nor the South Korean rules discussed here regulate the political position of a model&#39;s answers. Besides Article 4 of the Interim Measures, mainland China has guidelines on deploying large AI models in government work, issued by the Office of the Central Cyberspace Affairs Commission and the National Development and Reform Commission and published on 10 October 2025 as a reference for government departments&#39; own use, which call on those departments to use mature models and services that have completed filing with the cyberspace authorities for general-purpose tasks such as question answering and drafting documents (filing is a condition of entry, and the guidelines do not say what it examines). Taiwan&#39;s DeepSeek ban works on use instead, limiting which products public agencies may use. Article 31 of South Korea&#39;s Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust, in full force since 22 January 2026, requires a business providing generative AI to label the output as generated by generative AI, and according to the Ministry of Science and ICT, fact-finding investigations and penalties under this transparency provision are deferred for a grace period of at least one year (checked on 1 November).&lt;/p&gt;
-&lt;p&gt;In Interpretic&#39;s tests, the modified model refused 95 of 100 harmful requests, down from 100, and its scores on general ability tests dropped slightly, side effects that anyone thinking of switching to it has to weigh. Both companies&#39; modified models keep the original&#39;s Apache 2.0 licence, but Interpretic published no paper or code, and Hirundo described only the category of its method. Hirundo&#39;s blog states that it intends to release CCPC-500, but when we checked on 1 November the dataset&#39;s address could not be accessed (it returned a 401 error), so we cannot confirm that it is public. According to SpeechMap&#39;s roundup of May 2025, third-party modifications of the Chinese open-source models of the time had brought clear improvements in English and only modest ones in Chinese.&lt;/p&gt;
-&lt;p&gt;For people who use Qwen to look up sensitive subjects such as politics or history, we suggest putting the same question to models from different sources, then checking the answers against news coverage and primary materials. According to both the paper&#39;s abstract and SpeechMap, asking in Chinese produced more refusals or censorship, and from this we infer that asking again in another language may produce a different answer, though the paper also notes that the language gap is smaller than the gap between Chinese and non-Chinese models. None of these studies evaluated whether such approaches recover censored content, and questions that were not tested are not necessarily free of bias (our inference).&lt;/p&gt;
-&lt;p&gt;Developers writing code with Qwen3-Coder or any other model still need to review and test it separately before it goes into production. According to Hirundo&#39;s blog, adding security instructions to the prompt did not remove the gap, and common static analysis tools may not catch this kind of leak, where a logged-in user can read other people&#39;s data. On the ten other tasks, about a quarter of the apps written by the modified model were still exploitable, and the neutral client&#39;s apps leaked too (see above). From this we infer that, whichever version you use, access control checks are a good place to start a review.&lt;/p&gt;
-&lt;p&gt;As of 1 November, we had found no public response from Alibaba or the Qwen team to either study or to the paper. In early December, it will be worth watching whether any third party replicates the two companies&#39; measurements, whether CCPC-500 is published, and whether the Qwen team responds.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/InterpreticAI/Qwen3.8-27B-Uncensored-v2&#34;&gt;InterpreticAI/Qwen3.8-27B-Uncensored-v2 · Hugging Face&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Interpretic AI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-31&#34;&gt;31 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hirundo.io/blog/qwen3-coder-vulnerabilities&#34;&gt;Chinese AI Writes Weaker Code for Beijing’s Adversaries. We Fixed It. A Qwen3-Coder Case Study&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hirundo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized&#34;&gt;hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized · Hugging Face&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hirundo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hirundo.io/blog/westernizing-qwen&#34;&gt;Westernizing Qwen: Measuring and Mitigating Geopolitical Alignment in Chinese Open-Weight LLMs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hirundo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;5 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://doi.org/10.1093/pnasnexus/pgag013&#34;&gt;Political censorship in large language models originating from China&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PNAS Nexus&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-17&#34;&gt;17 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/Qwen/Qwen3.8-27B&#34;&gt;Qwen/Qwen3.8-27B&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Qwen&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-05&#34;&gt;5 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct&#34;&gt;Qwen/Qwen3-Coder-30B-A3B-Instruct&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Qwen&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-31&#34;&gt;31 July 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://speechmap.substack.com/p/chinese-open-source-model-roundup&#34;&gt;Chinese Open Source Model Roundup&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SpeechMap&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-05-01&#34;&gt;1 May 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm&#34;&gt;生成式人工智能服务管理暂行办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;13 July 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ey.gov.tw/Page/9277F759E41CCD91/3ce9fe8f-2f5f-4d1d-8176-6fa4cf622b82&#34;&gt;卓揆：公務機關全面禁用Deepseek AI 服務&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Executive Yuan&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-03&#34;&gt;3 February 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://moda.gov.tw/ACS/press/news/press/15296&#34;&gt;公務機關全面禁用DeepSeek AI 服務，未限制一般民間使用&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Administration for Cyber Security, Ministry of Digital Affairs (Taiwan)&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-20&#34;&gt;20 February 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-10/10/c_1761819469929310.htm&#34;&gt;政务领域人工智能大模型部署应用指引&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-10&#34;&gt;10 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-10/10/c_1761819469876932.htm&#34;&gt;中央网信办、国家发展改革委印发《政务领域人工智能大模型部署应用指引》&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-10-10&#34;&gt;10 October 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=71019&amp;amp;key=&amp;amp;type=new&#34;&gt;Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Korea Legislation Research Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&amp;amp;mId=4&amp;amp;bbsSeqNo=42&amp;amp;nttSeqNo=1215&#34;&gt;MSIT Releases Guidelines on Ensuring AI Transparency&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Science and ICT (South Korea)&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2026/10/bias-in-qwen3-coder-model.html&#34;&gt;Bias in Qwen3-Coder Model&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Schneier on Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

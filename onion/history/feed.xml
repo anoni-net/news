@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 11 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Mac 開啟 App 前的線上檢查</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-12/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-12/2026</guid>
+<pubDate>Thu, 12 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的 Mac 開啟從網路下載的 App 時，會連線向 Apple 檢查有沒有已知的惡意軟體。這一天，Apple 的公證服務出了問題，同一段時間各地的 Mac 開啟第三方 App 時卡住好幾分鐘或打不開。</description>
+<content:encoded>&lt;p&gt;你的 Mac 開啟從網路下載的 App 時，macOS 的門禁功能（Gatekeeper）會連線向 Apple 檢查 App 有沒有已知的惡意軟體、開發者的憑證有沒有被撤銷，2026 年 11 月 8 日查證的 Apple 支援頁寫明公證檢查（替 App 檢查惡意軟體的服務）走加密連線、開發者憑證檢查時不記錄你的 IP 位址。Engadget 報導 Apple 在開發者系統狀態頁確認公證服務在 2020 年 11 月 12 日美東時間下午出了問題，同一段時間不論有沒有更新到新版 macOS Big Sur，Mac 開啟第三方 App 時都可能卡住好幾分鐘或打不開。一位安全研究者在當天的部落格文章與後續增補裡主張，macOS 每執行一個程式就以未加密的方式把它的識別資訊連同 IP 傳給 Apple，Apple 在 11 月 16 日更新的支援頁寫明從未把這些檢查的資料與使用者或裝置的資訊結合。同一頁也寫到已停止記錄開發者憑證檢查的 IP 位址，並承諾一年內推出加密的撤銷檢查協定與讓使用者選擇不檢查的設定等改進，現行頁已沒有這項承諾與對應兩項改進的句子。你可以在「系統設定」的「隱私權與安全性」查看「安全性」一欄，這個選項決定 Mac 能開啟哪些來源的 App（只限 App Store 或再加上已識別的開發者），現行支援頁沒有寫到關閉線上檢查的設定。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>在 Windows 最底層執行的反作弊與防拷軟體</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-11/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你收藏的連結失效之後，原本的頁面可能還留在網頁存檔裡。這一天，Internet Archive 推出 Wayback Machine，讓所有人可以瀏覽 1996 年以來存下的網頁舊版本。</description>
 <content:encoded>&lt;p&gt;你收藏的連結失效、引用的官方網頁改版之後，原本的內容可能還留在網頁存檔裡。依當天的新聞稿，Internet Archive 在 2001 年 10 月 24 日推出 Wayback Machine，輸入網址、選擇日期就能瀏覽 1996 年以來存下的網頁版本。依 Internet Archive 說明中心的頁面（2026 年 10 月查證），需要密碼的頁面、擁有者要求排除的網站可能不在存檔裡。想留下某個頁面現在的樣子，可以在 web.archive.org 用 Save Page Now 存下那一頁。存下的內容公開給所有人瀏覽，裡面有他人的個資時要先考慮清楚。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>瀏覽器裡的第三方追蹤 Cookie</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-23/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-23/2026</guid>
-<pubDate>Fri, 23 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在不同網站一再看到同一則廣告，可能是廣告商用第三方 Cookie 在各網站認出了你。這一天，Mozilla 釋出的 Firefox 63 新增內容封鎖功能，使用者可以選擇封鎖第三方追蹤 Cookie。</description>
-<content:encoded>&lt;p&gt;你在不同網站一再看到同一則廣告，可能是廣告商用第三方 Cookie（網頁裡嵌入的廣告或分析服務存進瀏覽器的小檔案）在各網站認出了你。2018 年 10 月 23 日釋出的 Firefox 63 新增內容封鎖功能，使用者可以自行開啟封鎖第三方追蹤 Cookie 或所有追蹤器，Mozilla 同一天說明目標是在 Firefox 65 預設封鎖第三方追蹤 Cookie。Firefox 在 2019 年 9 月的 69 版對桌機與 Android 的所有使用者預設封鎖追蹤器清單裡的第三方 Cookie（新使用者從 6 月起已預設），Safari 則從 2020 年 3 月起預設完整封鎖第三方 Cookie。依 Google 2025 年 4 月的公告，Chrome 不會另外跳出詢問第三方 Cookie 的畫面，使用者仍在設定裡自行選擇。依 Chrome 的說明頁（2026 年 10 月查證），用 Chrome 的讀者可以在「隱私權和安全性」的「第三方 Cookie」設定裡封鎖第三方 Cookie。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

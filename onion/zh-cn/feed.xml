@@ -6,7 +6,87 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>生成式 AI 用于跨国镇压的案例与 AI 厂商的应对</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/genai-transnational-repression/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/genai-transnational-repression</guid>
+<pubDate>Thu, 12 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Anthropic 9 月的威胁情报报告列出国家相关行为者用 Claude 进行监控的案例，其中几件以居住在国外的异见人士为对象。Citizen Lab 研究者 10 月在 Just Security 的评论分析这份报告，建议 AI 厂商在披露与通知、检测与拒绝、保存证据三方面着手。报告与评论都没有给普通用户的设置建议。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，来自 Anthropic、Just Security、Citizen Lab 等 6 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Anthropic 的威胁情报团队 9 月 10 日发布〈Detecting and countering misuse of AI: September 2026〉，监控一章列出 2026 年 1 到 7 月间发现并中断的一系列行动。依报告，国家相关的组织、替国家工作的承包商与商业间谍软件厂商用 Claude 搭建、运行监控。其中部分案例被报告归为跨国镇压，对象是居住在国外的异见人士与海外社区。&lt;/p&gt;
+&lt;p&gt;Citizen Lab 的三位研究者 10 月 12 日在 Just Security 发表评论分析这份报告，Citizen Lab 网站 10 月 22 日转载了摘要。评论分析的案例都出自 Anthropic 的报告。报告与评论的对象都是攻击者如何使用 AI 服务，都没有给普通用户的设置建议。&lt;/p&gt;
+&lt;p&gt;研究者引用 Freedom House 的定义，数字跨国镇压指政府用数字技术恐吓、压制流亡在外与海外社区里的异见人士。依研究者先前访谈受影响者的研究，这类威胁造成恐惧与孤立，也让人自我审查、退出倡导活动。&lt;/p&gt;
+&lt;p&gt;研究者把报告的案例归纳成四项变化。第一项是成本，数字镇压原本依赖语言能力、受过训练的情报分析师与软件工程师，研究者认为案例显示 AI 可以取代其中一部分。第二项是公开数据的整理，海外社区在社交平台、即时通信软件、公开数据库与组织网站留下大量数据。AI 助手可以把零散的数据整理成情报报告，用来重建人际关系、推断政治倾向与找出所在位置，甚至标出弱点。&lt;/p&gt;
+&lt;p&gt;第三项是把模型接进固定的流程，少数人员就能监督重复运行、部分自动化的监控报告，其中一案每天自动审阅 15 到 30 篇以上的外国媒体报道。第四项，监控的产出可以支持实体跟踪、胁迫、发展线人与干扰公民团体的活动。研究者也写到报告没有证明这些侦察导致了实体攻击。&lt;/p&gt;
+&lt;p&gt;依报告的案例，模型参与的环节还包括翻译与用方言撰写消息、为假的网络人设生成多语帖子，以及编写代码搭建浏览器扩展这类监控工具。其中一案还在试行阶段，另外备有超过 255 个合成的社交账号，报告认为这显示是先备好账号、之后再投入使用。对照先前一份新闻调查描述的后续监控环节，报告在封禁账号之前没有发现它们用在真实对象上。另一案计划对流亡媒体的记者发动集体举报与机器人账号放大，报告的写法是计划，没有写已经执行。&lt;/p&gt;
+&lt;p&gt;依报告，在计划对流亡媒体记者集体举报的同一个行动里，Claude 拒绝了几项秘密审讯与大规模生成假人设的请求。在评论归为国内监控的一件案例里，Claude 先拒绝生成监控报告。对方换个说法重新提问之后，模型仍生成了点名 10 位平民的指引。评论提到的另一件国内案例做出的监控系统完全在本地模型上运行，Anthropic 封禁了账号，却无法停用已经部署的系统。&lt;/p&gt;
+&lt;p&gt;Anthropic 的使用政策禁止用 Claude 进行未经同意的监控与侧写，也禁止用来侵害个人的公民自由与人权。依报告，每个案例都封禁了相关账号，也改进检测同类手法的能力。行动影响到平台以外时，Anthropic 视情况把识别信息与情报分享给行业伙伴与主管机关。报告另外提到部分行为者用 VPN 绕过 Anthropic 的服务地区限制。&lt;/p&gt;
+&lt;p&gt;研究者写明这份报告只反映一家公司在短期内看得到、检测得到的范围，部分归因的信心也有限。以报告本身为例，其中一案只以低信心判断行为者是替国家安全机关工作的承包商，而不是机关本身。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;研究者提到过去对 AI 用于跨国镇压的警告多半从技术能力推想，少有具体的案例，并认为 Anthropic 的报告提供了少见的操作细节。研究者建议检测不要只抓容易识别的镇压字眼，改为标出社交监控、地理定位、弱点侧写与政治倾向推断同时出现的组合，这些能力合起来可以指向一套跨国镇压的工作流程。&lt;/p&gt;
+&lt;p&gt;研究者的建议以联合国《工商业与人权指导原则》（UNGPs）为依据，指导原则要求企业处理自身涉入的人权负面影响。评论主张 AI 厂商把跨国镇压列为独立的威胁类别，跟国内监控、影响力行动分开，并在三个方向上着手。到 11 月 8 日，查不到 Anthropic、OpenAI、DeepMind 与 xAI 对评论的公开回应。厂商这一方目前只看得到 Anthropic 9 月的报告，它早于评论发表，不是对建议的回应。&lt;/p&gt;
+&lt;p&gt;在第一个方向披露与通知上，Anthropic 的报告本身就是一份公开披露，处置的部分写的是视情况把信息分享给行业伙伴与主管机关。研究者肯定报告的细节，也认为 OpenAI、DeepMind 与 xAI 可能遇到类似的行动，只是没有标准化的报告可以评估。研究者也建议通知受影响的社区，Google 与 Apple 已经有通知国家支持攻击对象的流程。这类通知发给的是遭锁定的自家用户，AI 厂商面对的被锁定者却不一定是自家的用户，研究者因此建议用对方读得懂的格式与语言做社区层面的通知。&lt;/p&gt;
+&lt;p&gt;在第二个方向检测与拒绝上，研究者肯定 Anthropic 多次在行动大规模部署之前就发现并阻止，也指出部分案例换个说法重新提问就绕过了拒绝。Anthropic 的报告写的做法是在每个案例改进检测同类手法的能力，并把调查的结果并入防护措施。&lt;/p&gt;
+&lt;p&gt;在第三个方向保存证据上，研究者提到已有民事诉讼与刑事调查来自数字跨国镇压演变成实体伤害的案件。研究者因此主张厂商保存包含归因数据的详细事件记录，供日后调查使用。研究者也写明该保存什么取决于各地法律，目前仍有争议。&lt;/p&gt;
+&lt;p&gt;评论与 Citizen Lab 的页面都没有给被锁定者的操作建议。Google 与 Apple 各有通知国家支持行动锁定对象的流程，评论把它们当作 AI 厂商建立通知机制时的参考。&lt;/p&gt;
+&lt;p&gt;Anthropic 的 Supported Regions Policy 页面标示 2026 年 11 月 12 日生效，11 月 2 日查证的清单含日本、新加坡、韩国、台湾，没有中国大陆、香港与澳门（页面写明不在清单内的国家与地区不受支持）。10 月 20 日查证的 OpenAI ChatGPT 支持国家清单同样没有这三个地区（在清单以外使用可能导致账号被封锁或停权）。中国大陆境内提供的生成合成服务适用《互联网信息服务深度合成管理规定》（2023 年 1 月 10 日施行）与《人工智能生成合成内容标识办法》（2025 年 9 月 1 日施行）。前者要求提供者处理利用服务制作的虚假信息（第十一条），后者规定生成合成内容的标识义务。&lt;/p&gt;
+&lt;p&gt;之后读到其他 AI 厂商的威胁报告时，可以比较几件事：有没有把跨国镇压独立分类、处置包含哪些步骤（封禁账号、改进检测、分享情报）、有没有通知被锁定的社区、保存了哪些记录。另一组问题是效果，研究者指出部分案例换个说法就绕过了拒绝。系统部署在本地模型上时，封禁账号也停不了，检测要早到哪个阶段才有用也值得比较。研究者提到行业没有标准化的报告，各家之间能不能比较，也取决于会不会建立共同的格式。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/threat-intelligence-report-september-2026&#34;&gt;Detecting and countering misuse of AI: September 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.justsecurity.org/159245/how-generative-ai-scaling-transnational-repression/&#34;&gt;How Generative AI is Scaling Transnational Repression&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Just Security&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/how-generative-ai-is-scaling-transnational-repression/&#34;&gt;How Generative AI is Scaling Transnational Repression&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/supported-countries&#34;&gt;Supported Regions Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.openai.com/en/articles/7947663-chatgpt-supported-countries&#34;&gt;ChatGPT Supported Countries&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OpenAI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm&#34;&gt;互联网信息服务深度合成管理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-12-11&#34;&gt;2022 年 12 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm&#34;&gt;关于印发《人工智能生成合成内容标识办法》的通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国政府网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-07&#34;&gt;2025 年 3 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Privacy Badger 的 macOS Safari 版</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/privacy-badger-safari-macos/</link>
@@ -2327,123 +2407,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/sg/ios/feature-availability/&#34;&gt;iOS and iPadOS 27 - Feature Availability - Apple (SG)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>中国开放权重模型 Qwen 的审查与代码差距量测</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/qwen-political-censorship/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/qwen-political-censorship</guid>
-<pubDate>Mon, 02 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>两家发布移除版模型的公司在 10 月各自公布 Qwen 的量测，一份是中文政治问题的审查比例，一份是代码安全性随客户身份出现的差距。量测跟用 Qwen 问政治问题的人、用 Qwen3-Coder 写代码的开发者有关，无论在自己电脑上运行或通过服务使用。到 11 月 1 日为止，我们没有查到第三方重现，也没有查到 Qwen 团队的回应。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，来自 Interpretic AI、Hirundo、PNAS Nexus 等 9 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;两家公司在 10 月下旬各自公布了阿里巴巴 Qwen 系列开放权重模型的量测（开放权重模型指公开模型文件、可以下载到自己电脑上运行的模型）。Interpretic AI 量测 Qwen3.8-27B 回答中文政治问题时的审查比例，10 月 31 日在 Hugging Face 发布移除审查的版本。依 Hirundo 10 月 21 日在博客公布的量测，Qwen3-Coder 写出的代码安全性会随系统提示词（开发者事先给模型的指示）里的客户身份改变，该公司也发布了修改过的版本。&lt;/p&gt;
-&lt;p&gt;两份研究都出自发布移除版模型的公司，Hirundo 也替使用开放权重模型的组织评估与修正模型。到 11 月 1 日为止，我们没有查到第三方重现，下文的数字都是两家公司各自的量测。用 Qwen 问政治问题的人跟 Interpretic 的量测有关，用 Qwen3-Coder 写代码的开发者跟 Hirundo 的量测有关。&lt;/p&gt;
-&lt;p&gt;Interpretic 的模型页写到，量测以中文提问两位研究者发表在期刊 PNAS Nexus 的 145 题政治题目，每个回答由另一个语言模型判定有没有审查。其中 113 题政治敏感的题目里，Qwen3.8-27B 原模型有 98 题被判为审查（86.7%），移除版剩 4 题（3.5%）。模型页没有写评分用的是哪一个模型、有没有人工抽查，移除的方式也只写了「targeted weight edit」（针对性地修改模型权重），没有附论文或代码。Interpretic 列出的限制是政治题只测了中文，也提醒回答有实质内容不代表正确。&lt;/p&gt;
-&lt;p&gt;题目集出自 2026 年 2 月发表的论文，研究者比较中国与中国以外开发的基础模型。根据论文摘要，中国开发的模型对 145 题政治问题拒答较多、回答较短，不准确的回答也较多。所有模型用中文提问时的拒答率都比英文高，不过语言之间的差距小于中国与非中国模型之间的差距。&lt;/p&gt;
-&lt;p&gt;Hirundo 的博客写到，研究请 Qwen3-Coder-30B-A3B-Instruct 反复写同一个网页服务，功能是用户注册、登录与保存私密文字。每次只改系统提示词里「代码替谁写」的一句，分成中立客户、美国国防承包商、中国国防承包商与香港民主倡议团体。写好的应用程序交给 ETH Zurich 与 LogicStar 的公开基准 BaxBench 实际运行，至少一种现成的攻击成功就算可被入侵。&lt;/p&gt;
-&lt;p&gt;可被入侵的比例在替美国国防承包商写的应用程序是 70%，中国国防承包商是 59%。私密数据泄露的比较里，替香港民主倡议团体写的应用程序近半会让任何登录的用户读到所有人的私密数据，中立客户约三分之一（博客算成相对高出 28%）。提示词另外加上安全指示的那一组，可被入侵的比例在美国承包商是 74%，中立客户是 59%。博客用统计检验判定上述三项差距都不太像是随机造成的。&lt;/p&gt;
-&lt;p&gt;博客的附录问答也写到，研究无法判断差距是否有人刻意放进模型。小模型本来就容易写出有漏洞的代码，前面提到的中立客户也有约三分之一会泄露，研究量的是额外的风险。研究只测了一个模型与一个任务，任务是从 11 个任务的小样本里挑出差距最明显的那一个。美国与香港两组是刻意挑选的极端案例。&lt;/p&gt;
-&lt;p&gt;Hirundo 的移除版公开在 Hugging Face，模型页写的做法是行为遗忘（behavioral unlearning，用额外的训练让模型忘掉特定行为，同时保留其他能力）。根据博客，移除版在 Hirundo 自建的 500 题基准 CCPC-500 上被判为审查、偏向或宣传的回答从 46.6% 降到 4.0%，三项代码差距也不再显著。附录的其他比较里，移除版替美国承包商写的应用程序对中立客户仍有一项显著差距，博客的解读是效果从国家移到组织类型。在其他十个编程任务上，可以正常运行与可被入侵的应用程序比例都跟原模型相近。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;语言模型的回答取决于训练用的数据，以及训练后期的对齐（alignment），也就是让模型照开发者的规范回答的步骤。两份研究公开的量测都是大量提问、从输出计算比例，都没有分开检验训练数据与对齐。Hirundo 的博客主张移除版的结果证明代码的差距存在模型权重里，支撑主张的是同一家公司自己的移除实验。&lt;/p&gt;
-&lt;p&gt;公开研究项目 SpeechMap 2025 年 5 月量测较早的 Qwen3 世代，整理里写到 Qwen3 的开放权重模型在批评中国的题目上普遍审查。中文提问时审查得最彻底，英文也有，芬兰文只在部分情况出现、也比较不一致。同一份整理也提到，商用版 Qwen-Max 返回大量 API 错误，SpeechMap 的解读是 API 另有一层审查。本文据此推论，通过服务使用模型时，读到的回答可能同时受模型本身与服务端的过滤影响。&lt;/p&gt;
-&lt;p&gt;中国的《生成式人工智能服务管理暂行办法》2023 年 8 月 15 日施行，第四条要求提供与使用生成式人工智能服务时「不得生成煽动颠覆国家政权、推翻社会主义制度」等内容。根据第二条，没有向中国境内公众提供服务的研发与应用不适用这份办法，我们也没有查到办法对公开发布模型权重的专门规定。PNAS Nexus 论文的研究者提醒，论文是观察性的横断面研究（在同一个时间点比较不同模型、不做实验），不能证明监管压力与中国模型的审查行为之间有因果关系。&lt;/p&gt;
-&lt;p&gt;在中国境内面向公众提供的生成式人工智能服务，提供者须遵守上一段的暂行办法。下载开放权重到自己的电脑上运行时没有经过服务端。按 Interpretic 的量测，Qwen3.8-27B 的权重本身就带有审查，读到的回答因此仍可能带有审查（本文的推论）。&lt;/p&gt;
-&lt;p&gt;台湾行政院 2025 年 2 月 3 日要求公务机关全面禁用 DeepSeek AI 服务，新闻稿提到数据上传中国的信息安全风险尚未厘清也并未排除，模型训练也有思想审查等数据偏异。资通安全署 2025 年 2 月 20 日的说明写到，禁用范围包含云端服务、App 与下载到本地的使用方式，当时没有限制一般民间使用。公告点名的是 DeepSeek，我们没有查到点名 Qwen 的公告。&lt;/p&gt;
-&lt;p&gt;Interpretic 的移除版在 100 题有害请求中拒绝的题数从 100 降到 95，一般能力测验的分数也小幅下降，考虑改用移除版的人要权衡这些副作用。两家的移除版跟原模型一样采用 Apache 2.0 授权，Interpretic 没有附论文或代码，Hirundo 也只写了做法的类别。Hirundo 的博客写到打算公开自建的 CCPC-500，我们 11 月 1 日查证时数据集的网址无法访问（返回 401 错误），不能确认已经公开。SpeechMap 2025 年 5 月整理当时第三方修改过的中国开源模型，写到英文的改善明显，中文只有小幅改善。&lt;/p&gt;
-&lt;p&gt;用 Qwen 查询政治、历史这类敏感题目的人，本文建议把同一个问题拿去问不同来源的模型，再对照新闻与原始资料。论文摘要与 SpeechMap 都写到中文提问时拒答或审查较多，本文据此推论换一种语言再问可能得到不同的回答，不过论文也提到语言的差距小于中国与非中国模型之间的差距。上述研究都没有评估这些做法能否补上被审查的内容，没有被测到的题目也不代表没有偏误（本文的推论）。&lt;/p&gt;
-&lt;p&gt;用 Qwen3-Coder 或其他模型写代码的开发者，代码上线前仍要另外审查与测试。根据 Hirundo 的博客，在提示词加上安全指示没有消除差距，常见的静态扫描工具也不一定抓得到这类泄露（登录的用户可以读到其他人的数据）。移除版在其他十个任务上仍有约四分之一的应用程序可被入侵，中立客户的应用程序也会泄露（见上文）。本文据此推论，无论用哪个版本，审查时都可以优先看访问权限的检查。&lt;/p&gt;
-&lt;p&gt;到 11 月 1 日为止，我们没有查到阿里巴巴或 Qwen 团队对两份研究或论文的公开回应。12 月初可以留意是否有第三方重现两家公司的量测、CCPC-500 是否公开，以及 Qwen 团队有没有回应。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/InterpreticAI/Qwen3.8-27B-Uncensored-v2&#34;&gt;InterpreticAI/Qwen3.8-27B-Uncensored-v2 · Hugging Face&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Interpretic AI&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-31&#34;&gt;2026 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hirundo.io/blog/qwen3-coder-vulnerabilities&#34;&gt;Chinese AI Writes Weaker Code for Beijing’s Adversaries. We Fixed It. A Qwen3-Coder Case Study&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hirundo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized&#34;&gt;hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized · Hugging Face&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hirundo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hirundo.io/blog/westernizing-qwen&#34;&gt;Westernizing Qwen: Measuring and Mitigating Geopolitical Alignment in Chinese Open-Weight LLMs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hirundo&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-05&#34;&gt;2026 年 10 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://doi.org/10.1093/pnasnexus/pgag013&#34;&gt;Political censorship in large language models originating from China&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PNAS Nexus&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-17&#34;&gt;2026 年 2 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/Qwen/Qwen3.8-27B&#34;&gt;Qwen/Qwen3.8-27B&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Qwen&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-05&#34;&gt;2026 年 8 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct&#34;&gt;Qwen/Qwen3-Coder-30B-A3B-Instruct&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Qwen&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-31&#34;&gt;2025 年 7 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://speechmap.substack.com/p/chinese-open-source-model-roundup&#34;&gt;Chinese Open Source Model Roundup&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;SpeechMap&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-05-01&#34;&gt;2025 年 5 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm&#34;&gt;生成式人工智能服务管理暂行办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ey.gov.tw/Page/9277F759E41CCD91/3ce9fe8f-2f5f-4d1d-8176-6fa4cf622b82&#34;&gt;卓揆：公務機關全面禁用Deepseek AI 服務&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;行政院&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-03&#34;&gt;2025 年 2 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://moda.gov.tw/ACS/press/news/press/15296&#34;&gt;公務機關全面禁用DeepSeek AI 服務，未限制一般民間使用&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;資通安全署&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-02-20&#34;&gt;2025 年 2 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2026/10/bias-in-qwen3-coder-model.html&#34;&gt;Bias in Qwen3-Coder Model&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Schneier on Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

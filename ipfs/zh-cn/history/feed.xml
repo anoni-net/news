@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 11 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Mac 打开 App 前的在线检查</title>
+<link>https://anoni.net/news/zh-cn/history/11-12/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-12/2026</guid>
+<pubDate>Thu, 12 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你的 Mac 打开从网络下载的 App 时，会联网向 Apple 检查有没有已知的恶意软件。这一天，Apple 的公证服务出了问题，同一时段各地的 Mac 打开第三方 App 时卡住好几分钟或打不开。</description>
+<content:encoded>&lt;p&gt;你的 Mac 打开从网络下载的 App 时，macOS 的门禁功能（Gatekeeper）会联网向 Apple 检查 App 有没有已知的恶意软件、开发者的证书有没有被撤销，2026 年 11 月 8 日查证的 Apple 支持页写明公证检查（替 App 检查恶意软件的服务）走加密连接、开发者证书检查时不记录你的 IP 地址。Engadget 报道 Apple 在开发者系统状态页确认公证服务在 2020 年 11 月 12 日美东时间下午出了问题，同一时段不论有没有更新到新版 macOS Big Sur，Mac 打开第三方 App 时都可能卡住好几分钟或打不开。一位安全研究者在当天的博客文章与后续增补里主张，macOS 每运行一个程序就以未加密的方式把它的识别信息连同 IP 传给 Apple，Apple 在 11 月 16 日更新的支持页写明从未把这些检查的数据与用户或设备的信息结合。同一页也写到已停止记录开发者证书检查的 IP 地址，并承诺一年内推出加密的撤销检查协议与让用户选择不检查的设置等改进，现行页已没有这项承诺与对应两项改进的句子。你可以在“系统设置”的“隐私与安全性”查看“安全性”一栏，这个选项决定 Mac 能打开哪些来源的 App（只限 App Store 或再加上被认可的开发者），Apple 中国版支持页（2026 年 6 月 1 日发布）有与英文版相同的隐私保护段落而没有写到关闭在线检查的设置。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>在 Windows 最底层运行的反作弊与防拷软件</title>
 <link>https://anoni.net/news/zh-cn/history/11-11/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你收藏过的失效链接可能还有网页存档，2026 年 9 至 10 月 OONI 从中国大陆连接存档网站的测量则几乎都是异常或失败。这一天，Internet Archive 推出 Wayback Machine，让所有人可以浏览 1996 年以来存下的网页旧版本。</description>
 <content:encoded>&lt;p&gt;你收藏的链接失效、引用的官方网页改版之后，原本的内容可能还留在网页存档里。依当天的新闻稿，Internet Archive 在 2001 年 10 月 24 日推出 Wayback Machine，输入网址、选择日期就能浏览 1996 年以来存下的网页版本。依 Internet Archive 帮助中心的页面（2026 年 10 月查证），需要密码的页面、拥有者要求排除的网站可能不在存档里。依 GreatFire（监测中国网络审查的网站）2026 年 10 月 23 日查询的页面，archive.org 在中国大陆最近 5 次有结论的检测（最后一次在 9 月 1 日）都失败，OONI（由志愿者测量网络封锁的项目）在 2026 年 9 月 1 日到 10 月 22 日于中国大陆的 80 条测量也只有 1 条正常（其余是异常或失败，异常不等于确认封锁）。海外的读者（同一期间在日本、新加坡与马来西亚的测量几乎全部正常）可以在 web.archive.org 用 Save Page Now 存下某个页面现在的样子，存下的内容公开给所有人浏览，里面有他人的个人信息时要先考虑清楚。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>浏览器里的第三方跟踪 Cookie</title>
-<link>https://anoni.net/news/zh-cn/history/10-23/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-23/2026</guid>
-<pubDate>Fri, 23 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你在不同网站一再看到同一则广告，可能是广告商用第三方 Cookie 在各网站认出了你。这一天，Mozilla 发布的 Firefox 63 新增内容拦截功能，用户可以选择拦截第三方跟踪 Cookie。</description>
-<content:encoded>&lt;p&gt;你在不同网站一再看到同一则广告，可能是广告商用第三方 Cookie（网页里嵌入的广告或分析服务存进浏览器的小文件）在各网站认出了你。2018 年 10 月 23 日发布的 Firefox 63 新增内容拦截功能，用户可以自行开启拦截第三方跟踪 Cookie 或所有跟踪器，Mozilla 同一天说明目标是在 Firefox 65 默认拦截第三方跟踪 Cookie。Firefox 在 2019 年 9 月的 69 版对桌面与 Android 的所有用户默认拦截跟踪器清单里的第三方 Cookie（新用户从 6 月起已默认），Safari 则从 2020 年 3 月起默认完整拦截第三方 Cookie。依 Google 2025 年 4 月的公告，Chrome 不会另外弹出询问第三方 Cookie 的画面，用户可在「隐私和安全」设置里自行选择（2026 年 10 月依 Chrome 帮助页面查证）。在中国大陆，《中华人民共和国个人信息保护法》第二十四条（2021 年 11 月施行）要求通过自动化决策方式向个人推送信息、商业营销时提供不针对个人特征的选项或便捷的拒绝方式，条文没有提到 Cookie。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
