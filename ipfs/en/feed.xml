@@ -6,7 +6,116 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 12 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Preloaded backdoors and residential proxies on home Android TV boxes</title>
+<link>https://anoni.net/news/en/2026/11/android-tv-residential-proxy/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/android-tv-residential-proxy</guid>
+<pubDate>Fri, 13 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>People with an Android TV box at home may be affected. In early November Google announced the takedown of XCPE, a backdoor preloaded on more than 1.3 million set-top boxes, certified models included, that used them to relay other people&#39;s traffic. As of 8 November, Google had published no removal steps for devices already sold, and advice on replacing a box differs from Singapore police guidance.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including Google Threat Intelligence Group, Google, Synthient&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;A home internet connection may be getting rented out to strangers through the Android TV box plugged into the television. In early November, Google Threat Intelligence Group (GTIG) reported that Google and industry partners had, the week before, dismantled the XCPE botnet (a large set of devices remotely controlled by one party), into which the XCPE backdoor had enrolled more than 1.3 million set-top boxes. The overwhelming majority of the infected devices are Android TV boxes, along with some telehealth devices, karaoke machines and digital signage, spread around the world. Readers with an Android TV box at home, especially one of unknown origin, can start by checking the model list and certification status, although neither can confirm an infection on its own.&lt;/p&gt;
+&lt;p&gt;A residential proxy sends a paying customer&#39;s traffic out through an ordinary household&#39;s connection, so the destination records that household&#39;s IP address as the source. According to GTIG&#39;s analysis, the modules XCPE loaded were most often tied to residential proxies and bandwidth sharing, with some ad fraud modules as well. As many as three proxy software development kits (SDKs) were installed on a single device. The devices&#39; owners neither knew nor agreed.&lt;/p&gt;
+&lt;p&gt;According to IT Brief&#39;s report on analysis by the security company TrendAI, malicious traffic passed through ordinary home and office IP addresses, so attackers appeared as local users when accessing online services. Because the traffic came from real household connections, it could get past the IP reputation and geolocation checks that banks and retailers use to verify users. As of 8 November, the official documents we found did not address whether a home IP had been blocked or investigated as a result, or whether its owner could face legal liability.&lt;/p&gt;
+&lt;p&gt;GTIG describes the backdoor as a package named &lt;code&gt;x.cpe&lt;/code&gt; (&lt;code&gt;com.oemservice&lt;/code&gt; in some builds), preloaded in firmware with system privileges. If a user uninstalls it, it reinstalls from the &lt;code&gt;/oem/&lt;/code&gt; partition on reboot. It wipes the device&#39;s user consent settings and disables app verification in Google Play Protect (Android&#39;s built-in defense against malicious apps), then silently downloads and runs other files. GTIG found the same backdoor in the firmware of many brands and models over multiple years.&lt;/p&gt;
+&lt;p&gt;GTIG also recorded the operators capturing live screenshots, injecting keystrokes, exfiltrating account and device information and opening remote shells, and the command list includes a function for probing the local network. According to the same report, most interactions with infected devices were about installing, removing and configuring modules.&lt;/p&gt;
+&lt;p&gt;GTIG assesses with high confidence that the Android device manufacturer Videostrong deliberately developed, deployed and operated the XCPE backdoor and botnet for profit, then sold access to criminal affiliates. Videostrong had not replied to inquiries from The Record or The Register when those outlets published. Ars Technica reported that the affected models include Google-certified ones. GTIG&#39;s explanation is that Videostrong used obfuscation to exploit a gap in Google&#39;s tests, loading the malicious code after the device&#39;s first boot.&lt;/p&gt;
+&lt;p&gt;The 1.3 million figure is GTIG&#39;s count for the XCPE backdoor itself. GTIG separately estimates that taking down the command-and-control (C2, the servers that issue remote instructions) domains of the affiliates&#39; modules will cut off access to at least 10 million more infected devices. The affiliates distribute their malware through channels beyond XCPE, so those 10 million are in addition to the 1.3 million. The Record reported that many of them are not Android devices.&lt;/p&gt;
+&lt;p&gt;Google&#39;s response included legal action to take down domains used by Videostrong and more than a dozen malware families, and a ban on Videostrong and its future subsidiaries and affiliates building or selling certified Android devices or supplying software to certified vendors. Google&#39;s report also says the company is improving firmware integrity checks on certified Android TV devices. As of 8 November, neither that report nor any other official statement we found offered removal steps for devices already sold, or said whether certification would be revoked for the affected models. According to The Record, Google also did not explain whether users would be notified or the malware forcibly removed.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;To check certification status, open the Google Play Store&#39;s profile menu, then go to Settings and About. We did not test this on a TV box, and the screens may differ from the help page. According to that page, non-certified devices may not be secure, and device certification is separate from Play Protect, which guards against harmful apps. A certified status does not rule out a problem either, since XCPE&#39;s affected models include certified ones and the malicious code loaded after first boot.&lt;/p&gt;
+&lt;p&gt;Synthient, one of GTIG&#39;s partners, published 182 model names observed in this case, with a note that a model name alone is not sufficient to confirm compromise. Ars Technica recommended that anyone who bought a MECOOL box, or a white-label Android TV box of unknown origin, check the list. GTIG&#39;s report lists no symptoms users can see, and IT Brief&#39;s report mentions that a box may appear to work normally. As of 8 November, we had found no method for an ordinary user to confirm whether their home IP is being rented out.&lt;/p&gt;
+&lt;p&gt;Researchers cited by ChannelNews (the report does not say which firm) recommend disconnecting a confirmed infected device and replacing it, because &lt;code&gt;x.cpe&lt;/code&gt; is embedded in system firmware and antivirus tools and factory resets may not permanently remove it. That means paying for a new box, and confirming an infection first is not easy. For anyone replacing a box, GTIG recommends buying from reputable manufacturers and points to the partner list on the Android TV website. The linked certified partners page is headed with phones and tablets, and as of 8 November we had not established whether TV boxes are fully listed there.&lt;/p&gt;
+&lt;p&gt;Singapore&#39;s police and Cyber Security Agency issued an advisory in November 2025, ahead of GTIG&#39;s disclosure, covering non-certified TV boxes. It advises disconnecting from the internet immediately, scanning for and uninstalling suspicious apps, and checking bank and other accounts. Anyone who finds malware or unauthorized transactions is told to file a report with Singapore police and not to factory-reset the device first, as that could hinder investigations.&lt;/p&gt;
+&lt;p&gt;The advisory also allows continued use or a full factory reset when no malware or unauthorized transactions turn up, but it was not written for XCPE. GTIG states that users cannot remove &lt;code&gt;x.cpe&lt;/code&gt;, and ChannelNews reports that antivirus tools and factory resets may not permanently clear it, so our inference is that a clean scan does not show that &lt;code&gt;x.cpe&lt;/code&gt; is absent.&lt;/p&gt;
+&lt;p&gt;According to The Record, the head of GTIG&#39;s disruption operations, asked about removing the malware, replied that taking down the domains severed the botnet&#39;s communications, &#34;effectively rendering the malware benign.&#34; Ars Technica&#39;s assessment is that the devices should be safe to use, but Play Protect remains disabled and the inactive modules are still installed in the system. According to GTIG&#39;s report, operators who are disrupted quickly move to new loaders or other monetization SDKs. Researchers cited by ChannelNews also warn that criminals could set up replacement systems, leaving infected devices open to further abuse.&lt;/p&gt;
+&lt;p&gt;A home IP can also be rented out through apps people install themselves. GTIG urges extra caution with apps that offer payment for &#34;unused bandwidth&#34; or &#34;sharing your internet,&#34; and its report lists them as primary ways for illicit proxy networks to grow. According to GTIG&#39;s analysis, proxy operators generally seek consent only when platform policy requires it, and as of 8 November the materials we found included no response from the proxy operators named in the report.&lt;/p&gt;
+&lt;p&gt;Among the official action on TV boxes we could find in Asia, Singapore&#39;s 2025 advisory tells people to use official streaming services or buy certified devices from reputable brands, which on our reading would not by itself have protected against XCPE, since its affected models include certified ones. The Hong Kong news outlet Sing Tao Headline reported in June 2025 that the Customs and Excise Department, in operations on 11 and 25 June against suspected illegal streaming devices, arrested two men on suspicion of breaching the Copyright Ordinance and seized 99 set-top boxes from more than 10 brands along with specific apps. According to that report, customs officers found trojans and spyware in some of the apps and warned that connecting such boxes to a home network would endanger personal privacy and could affect other connected devices. Those findings concern apps, while GTIG found XCPE preloaded in firmware.&lt;/p&gt;
+&lt;p&gt;Japan&#39;s National Police Agency is among the partners GTIG names in the XCPE operation, though we found no notice of the agency&#39;s own. As of 8 November we also found no XCPE notice from the computer emergency response teams TWCERT/CC in Taiwan or HKCERT in Hong Kong.&lt;/p&gt;
+&lt;p&gt;If a TV box&#39;s model is on the list, its origin is unknown or it shows as non-certified, the first step is to cut its network connection (both the replacement advice and the Singapore advice begin there), which takes a few minutes. Singapore&#39;s advisory tells anyone who believes an account may be compromised to change the password immediately and turn on multi-factor authentication, and we suggest doing that from a different device. GTIG recommends making sure Play Protect is active, which people keeping the device for now can check. According to Ars Technica the backdoor disables Play Protect, and the sources do not say whether it would be turned off again after being re-enabled manually.&lt;/p&gt;
+&lt;p&gt;Anyone still using the box for now can connect it to the router&#39;s guest network, apart from phones and computers, and confirm that the guest network isolates local devices. ChannelNews reported that attackers could investigate other devices on the same home network, and the guest network is our inference from that. Isolation appears in the sources only for businesses, with no assessment of home guest networks, and a guest network does not stop operators from capturing screens, exfiltrating account information or relaying traffic on the box. Disconnecting stops the relaying but cannot recover account information that may already have left, and replacing the box costs the price of a new one.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet/&#34;&gt;Shutting the Door on the XCPE Botnet&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Threat Intelligence Group&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/10248227&#34;&gt;Check &amp;amp; fix Play Protect certification status&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.android.com/certified/partners/&#34;&gt;Certified - Partners | Android&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md&#34;&gt;The Internals of a Badbox Operation&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Synthient&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/google/2026/11/google-dismantles-botnet-secretly-running-on-1-3-million-android-tv-boxes/&#34;&gt;Google dismantles botnet secretly running on 1.3 million Android TV boxes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/google-takes-down-massive-android-botnet-infecting-1-3-million-devices/&#34;&gt;Google Takes Down Massive Android Botnet Infecting 1.3 Million Devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/google-dismantles-botnet-hidden-android-tv-boxes&#34;&gt;Google dismantles massive botnet hidden in Android TV boxes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5307045&#34;&gt;Cops bust botnet of 1.3M infected Android TV boxes&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itbrief.com.au/story/trendai-helps-disrupt-x-cpe-botnet-in-1-3m-devices&#34;&gt;TrendAI helps disrupt X.CPE botnet in 1.3m devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IT Brief Australia&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;5 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.sg/media-hub/news/2025/11/20251112_advisory_on_the_dangers_of_non_certified_streaming_devices&#34;&gt;Advisory On The Dangers Of Non-Certified Streaming Devices&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Police Force&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-12&#34;&gt;12 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.stheadline.com/breaking-news/3468064/&#34;&gt;北角深水埗兩店售侵權機頂盒 標榜永久免費收看 海關拘2人&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Sing Tao Headline&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-26&#34;&gt;26 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Generative AI in transnational repression cases and the response from AI companies</title>
 <link>https://anoni.net/news/en/2026/11/genai-transnational-repression/</link>
@@ -2421,89 +2530,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The Excluded Apps setting for Siri AI in iOS 27.2</title>
-<link>https://anoni.net/news/en/2026/11/siri-ai-exclude-apps/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/siri-ai-exclude-apps</guid>
-<pubDate>Tue, 03 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>iOS 27.2 adds Excluded Apps under Siri in Settings, for choosing apps that Siri, Search and suggestions may not read. According to EFF, on-screen awareness also stops working for excluded apps. Siri AI on iPhone and iPad is not offered in the EU or mainland China, and as of 2 November its languages do not include Chinese, so people whose device and Siri language are set to Chinese cannot use it for now.</description>
-<content:encoded>&lt;p&gt;Based on 8 sources from Apple, EFF&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple&#39;s release notes, published on 26 October, say iOS 27.2 adds Excluded Apps, a setting under Siri in Settings for choosing which apps Siri, Search and suggestions can access. Siri AI is the new Siri introduced in iOS 27, which can read app content to answer questions, and it runs on the iPhone 15 Pro, 15 Pro Max and iPhone 16 or later. Excluded Apps is listed in the Siri AI section of the release notes, and the iPadOS 27.2 notes list the same item. Siri AI on iPhone and iPad is not offered in the EU or mainland China, and as of 2 November its supported languages do not include Chinese, so people whose device and Siri language are set to Chinese cannot use Siri AI for now.&lt;/p&gt;
-&lt;p&gt;The same release notes say 27.2 adds French, Japanese, Korean, Portuguese and Spanish to Siri AI, making six languages with English. Apple&#39;s &#34;How to get Siri AI&#34; support page, published on 22 October, still said on 2 November that Siri AI is available only in English, and we go by the later release notes. According to Apple&#39;s September press release, the other Apple Intelligence features support simplified and traditional Chinese, while Siri AI has a language list of its own.&lt;/p&gt;
-&lt;p&gt;EFF&#39;s post of 28 October says Excluded Apps fulfils one of the asks in its Encrypt It Already campaign from earlier in 2026. The concern behind it is that many AI features require cloud processing, so even with privacy protections built into these systems, content from secure messaging apps may leave the device without the user knowing. EFF had asked for a way to tell the operating system&#39;s AI not to access a given app, even at the cost of some features, through a setting that is simple to understand.&lt;/p&gt;
-&lt;p&gt;According to EFF, after updating to 27.2 you open Excluded Apps under Siri in Settings and tap Add Apps to choose the apps to exclude. Siri AI then cannot access that app&#39;s content, and some features may stop working. EFF&#39;s example is that once Messages is excluded, you can no longer have Siri AI read or reply to messages for you. On-screen awareness, which lets you call up Siri and ask about what is on screen, also stops working for excluded apps, so with Signal excluded you cannot ask Siri to pick out any information on the Signal screen.&lt;/p&gt;
-&lt;p&gt;EFF writes that when Siri AI launched, blocking it from an app took several toggles, and the alternative was turning Siri AI off entirely. Our 27 September post, based on EFF&#39;s earlier article, said neither users nor app developers could block on-screen awareness, and that the way to limit access was turning off Show Content in Search app by app. The 27.2 exclusion list puts this in one place and covers on-screen awareness too, and in EFF&#39;s view the lost features show that the setting works.&lt;/p&gt;
-&lt;p&gt;EFF also checked where Android stands. According to EFF, in the Gemini app you tap your profile picture and go to Settings &amp;gt; Personal Intelligence &amp;gt; Connected Apps to revoke apps you do not want Gemini to access. EFF likes that the list is opt-in but finds the process less than intuitive. Signal does not support Gemini&#39;s app access feature at all, so it is not on the list, and Gemini cannot read Signal&#39;s content directly.&lt;/p&gt;
-&lt;p&gt;EFF also writes that once Device Assistance is turned on in Connected Apps, Gemini can read notifications. Basic features such as setting a timer need Device Assistance too, so EFF reckons most people already have it on.&lt;/p&gt;
-&lt;p&gt;Screen context is controlled by the Use screen and app data option in Gemini&#39;s settings, under Device controls &amp;gt; Screen context, and stays active until that option is turned off. Use screen and app data cannot be set per app. According to EFF, when users choose to use notification reading and screen context, both may read Signal&#39;s content or notifications. EFF wants Google to let users turn both features off per app.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Our September post noted that a Siri AI request may be processed on the phone or sent to Private Cloud Compute (the cloud servers Apple runs to handle AI requests), and nothing on screen says which. From that we inferred in September that anyone who wants to keep using Siri AI can only limit, at the source, which apps it may read. According to EFF, Siri AI cannot access the content of an excluded app, and from this we infer that such content is not sent off the device with a request either. In EFF&#39;s view Apple should go further and offer an option to use only on-device AI features, similar to what Samsung offered with Galaxy AI.&lt;/p&gt;
-&lt;p&gt;The iOS 27.2 release notes also list more sources Siri AI can draw on, including photos attached in Messages, Calendar event attendees, voicemails, and Safari history and Reading List, and Siri AI can now recall past conversations. Going by the release notes, people already using Siri AI will find it can reach more sources after the update than before.&lt;/p&gt;
-&lt;p&gt;Apple&#39;s release notes do not say what Siri can still do once an app is excluded, only that the setting governs which apps Siri, Search and suggestions can access. Our inference from that sentence is that an excluded app&#39;s content may also stay out of Search and suggestions.&lt;/p&gt;
-&lt;p&gt;On Android, EFF compares Gemini&#39;s app list with the iOS exclusion list and finds the Android process less direct than Apple&#39;s new setting. According to EFF, people using Gemini on an Android phone can check two places, Device Assistance in Connected Apps and Use screen and app data, and each can only be turned off as a whole. Turning off Device Assistance also takes away basic features such as timers.&lt;/p&gt;
-&lt;p&gt;People whose device and Siri language are set to Chinese cannot use Siri AI for now. As of 2 November, Apple&#39;s support pages do not say whether people who have not turned on Siri AI can see Excluded Apps in Settings, or whether setting it affects Search and suggestions for them.&lt;/p&gt;
-&lt;p&gt;According to Apple&#39;s release notes and its support page, Siri AI is not available in mainland China. Apple&#39;s September press release states that Siri AI and the other new Apple Intelligence features will not be available in China while Apple works through regulatory requirements, with no timeline given. Japanese and Korean are among the five languages added in 27.2, though the support page says only that availability varies by region and platform, and we found no country-by-country listing for them. On Apple&#39;s feature availability pages for Hong Kong, Taiwan and Singapore, Siri AI was still listed on 2 November as available in English and not offered in mainland China or the EU, and those pages may not yet reflect 27.2.&lt;/p&gt;
-&lt;p&gt;People who already have Siri AI on can, after updating to iOS 27.2, go to Siri in Settings, tap Excluded Apps and add the apps to exclude (the option names follow the English interface in EFF&#39;s post). According to EFF, those who prefer the older version can still turn off Siri AI and go back to Siri Classic for now. The exclusion list only covers your own phone. We infer that if another member of a group has not excluded the same app and calls up Siri AI over the same conversation, the content may still leave from that person&#39;s phone.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (8)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149076&#34;&gt;About iOS 27 Updates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/victory-you-can-now-exclude-apps-siri-ai&#34;&gt;Victory! You Can Now Exclude Apps from Siri AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149075&#34;&gt;About iPadOS 27 Updates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127893&#34;&gt;How to get Siri AI&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/&#34;&gt;Siri AI, a profoundly more capable and personal assistant, is here&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-14&#34;&gt;14 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.apple.com/hk/ios/feature-availability/&#34;&gt;iOS 和 iPadOS 27 - 功能的供應狀況 - Apple (香港)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.apple.com/tw/ios/feature-availability/&#34;&gt;iOS 和 iPadOS 27 - 功能特色適用範圍 - Apple (台灣)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/sg/ios/feature-availability/&#34;&gt;iOS and iPadOS 27 - Feature Availability - Apple (SG)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
