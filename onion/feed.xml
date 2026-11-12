@@ -6,7 +6,120 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>美國第九巡迴法院審理的基地台傾印搜索票</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ninth-circuit-reverse-location/</link>
+<guid isPermaLink="false">anoni-news:2026/11/ninth-circuit-reverse-location</guid>
+<pubDate>Fri, 13 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>美國第九巡迴法院審理一件基地台傾印（向電信業者調取某時某地所有手機資料）的上訴案，EFF 與 ACLU 主張傾印搜索票本身違憲。到 11 月 8 日查不到政府一方在上訴審的書狀，依本文推論關閉 Google 定位紀錄擋不了基地台傾印。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，來自 EFF、The Register、SCOTUSblog 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美國第九巡迴上訴法院正在審理一件基地台傾印（tower dump）搜索票的上訴案。傾印搜索票要求行動通訊業者交出某時某地所有手機的位置資料，範圍內跟案件無關的裝置也包含在內。數位權利組織 EFF 與美國公民自由聯盟（ACLU）在 11 月 3 日以法庭之友（amicus，非當事人向法院提出意見）的身分提交書狀，主張傾印搜索票本身違憲。案件只涉及美國的執法，其他地方的讀者不受直接影響。&lt;/p&gt;
+&lt;p&gt;EFF 的文章把基地台傾印與 geofence（地理圍欄）搜索票都歸為反向位置搜索（reverse location searches），兩者都先劃出時間與地點，再從資料裡找人。基地台傾印向行動通訊業者調取，geofence 向 Google 這類公司調取裝置的位置紀錄，資料來源不同。美國最高法院 6 月 29 日判決的是 geofence，第九巡迴法院的上訴案（案號 &lt;code&gt;26-689&lt;/code&gt;）是基地台傾印。&lt;/p&gt;
+&lt;p&gt;依 EFF 的文章，兩名被害人的遺體在加州一條偏遠公路旁被發現，警方在同一條公路數英里外找到其中一人的車。警方隨後聲請涵蓋該路段的基地台傾印搜索票，最後取得近 1,700 支不重複手機的位置資料。&lt;/p&gt;
+&lt;p&gt;依 The Register 引述的裁定，內華達聯邦地方法院 2025 年認定基地台傾印屬於美國憲法第四修正案（禁止不合理的搜索與扣押）所稱的搜索，本案的搜索票是第四修正案禁止的概括搜索票（general warrant，不限定對象的搜索令狀）。裁定同時沒有排除任何證據，理由是該院看來是第九巡迴法院轄區內第一個這樣認定的法院，而且善意例外（good faith exception，執法人員相信自己依搜索票合法行事時，證據原則上仍可使用）適用。被告其後向第九巡迴法院上訴。&lt;/p&gt;
+&lt;p&gt;依 EFF 的文章，書狀有三項主張。最高法院的 geofence 判決加強了基地台傾印屬於違憲概括搜索票的論點，沒有相當理由（probable cause，核發搜索票要求的具體依據）認為範圍內所有人都涉案，就不能搜索所有人。即使法院仍允許傾印搜索票，也要限制範圍與期限、通知受影響的人，並在事後刪除無關的資料。書狀也要求法院放下善意例外，實際判斷憲法問題。&lt;/p&gt;
+&lt;p&gt;最高法院的 geofence 判決以 6 比 3 認定，警方調取手機位置紀錄屬於搜索，即使時間很短、資料在第三方公司手上也一樣。依法律事務所 ZwillGen 的分析，搜索票是否具體、有沒有相當理由，發回先前審理的第四巡迴法院判斷。反向搜索票是否合憲仍未解決。EFF 的文章把第九巡迴法院的上訴案寫成判決之後第一件進入聯邦上訴法院的同類案件。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;手機開機且未開飛航模式時會連上基地台，這是行動網路的基本運作方式（本文補充的背景，下面的來源沒有直接寫這一句）。SCOTUSblog 整理最高法院 2018 年的基地台案時，把基地台位置資訊描述成手機連上基地台時產生的歷史紀錄。The Register 提到傾印可以涵蓋十分鐘到一小時內連上該基地台的所有連線。&lt;/p&gt;
+&lt;p&gt;Google 帳號的定位紀錄（Location History，Google Maps 時間軸背後的設定）是另一份資料，存放在裝置上或 Google 的伺服器，本文據此推論關閉它擋不了基地台傾印。查到的來源沒有寫出使用者這一端能避開基地台紀錄的做法，哪些連線會留下可調取的紀錄、業者保存多久也沒有寫。&lt;/p&gt;
+&lt;p&gt;到 11 月 8 日，本文查不到政府一方在第九巡迴法院上訴案提出的書狀，也查不到相關報導。依聯邦上訴程序的通則，答辯期限通常在上訴人書狀後 30 天，查不到可能只是期限未到（本文推算，未查到案卷）。下一段政府一方的論點都出自別的案件（最高法院的 geofence 案與同案的第四巡迴法院判決），當時的資料來自 Google，跟電信業者無關。&lt;/p&gt;
+&lt;p&gt;依 ABC News 的報導，政府在最高法院的 geofence 案主張，使用者把位置資訊分享給 App 與 Google 這類服務業者就放棄了隱私期待。第四巡迴法院的多數意見也認為當事人自願讓 Google 持有的兩小時位置資料不能合理期待保密（依 SCOTUSblog）。最高法院的多數意見認定資料由第三方公司持有時當事人仍有隱私期待，2018 年的基地台案判決也已認定取得基地台位置資訊屬於搜索、不適用第三方原則（third-party doctrine，交給第三方的紀錄不受第四修正案保護的見解，依 SCOTUSblog 與 Independent Institute 的整理）。這些來源沒有說明 2018 年的判決是否及於傾印，政府一方會如何主張、法院是否接受，要看上訴案的後續。&lt;/p&gt;
+&lt;p&gt;EFF 的文章主張反向位置搜索票本身違憲，並舉法律禁止警方搜索犯罪現場附近上百戶住家為例。依 The Register 的報導，密西西比一位聯邦治安法官 2025 年 2 月以缺乏對特定個人的相當理由駁回 FBI 的四張基地台傾印搜索票，政府 2025 年 6 月申請延長決定是否上訴的期限（到 11 月 8 日查不到結果）。ABC News 的報導則寫 geofence 搜索票對調查人員尋找嫌疑人、失蹤兒童與山區迷路者的價值越來越高，也寫專家認為限制可能妨礙執法。最高法院審理 geofence 案的口頭辯論時，一位大法官提出的方向是訂出合理的時間與地理範圍，再交給核發搜索票的法官落實。&lt;/p&gt;
+&lt;p&gt;地方法院認定搜索票違憲卻不排除證據，依據是善意例外。EFF 的文章主張，法院常迴避新型監控技術的憲法問題，警方可以繼續使用多年甚至數十年卻沒有明確的判決。依 EFF 2024 年的文章，第五巡迴法院在另一件 geofence 案適用善意例外的理由是 2018 年的技術還新穎，警方也向有經驗的機關求教。最高法院的不同意見同樣以善意例外為由，主張第四巡迴法院既已認定善意例外適用，判決對當事人就沒有實際影響。&lt;/p&gt;
+&lt;p&gt;台灣的《通訊保障及監察法》（全國法規資料庫 2024 年 7 月修正的版本）把位置資訊列入通信紀錄，檢察官調取原則上要向法院聲請調取票，最輕本刑十年以上之罪與條文列舉的罪名（例如詐欺、強盜）可由檢察官依職權或司法警察官經檢察官許可調取。條文沒有寫明某基地台某時段全部連線的傾印是否適用（本文比對法條的觀察，到 11 月 8 日也沒有查到官方說明）。美國上訴案的爭點落在相當理由與搜索範圍是否特定，台灣條文的門檻是必要性及關連性，部分罪名不必經法院（同為本文比對）。&lt;/p&gt;
+&lt;p&gt;想確認 Google 這一端資料的人，可以到 Android 或 iPhone 版 Google Maps App 的 Your Timeline 設定，查看定位紀錄對應的時間軸（Timeline）是否開啟。依 Google 2023 年的公告與 11 月 8 日查閱的說明頁，時間軸預設關閉、要自行同意才會開啟，資料存在裝置上。使用者另外選擇備份時，Google 伺服器上會有一份加密副本。Apple 2025 年下半年的透明報告寫明沒有資料可回應 geofence 要求。&lt;/p&gt;
+&lt;p&gt;依最高法院的不同意見與 Independent Institute 的分析，Google 修改定位紀錄服務後已無法再回應 geofence 搜索票。Independent Institute 的分析寫明改變發生在 2025 年 7 月，到 11 月 8 日沒有找到 Google 自己的說明。上面的設定與報告都只涉及 Google、Apple 手上的資料。&lt;/p&gt;
+&lt;p&gt;看上訴案的後續，第九巡迴法院會實際判斷憲法問題，還是再次停在善意例外。如果允許傾印搜索票，範圍、期限、通知與刪除的限制能否保護無關的路人，又不讓缺少嫌疑人線索的案件失去調查方法。政府一方的書狀會沿用使用者自願交出資料的論點，還是另外說明基地台紀錄跟 Google 資料的差別。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/were-asking-ninth-circuit-hold-reverse-location-warrants-categorically&#34;&gt;We’re Asking the Ninth Circuit to Hold Reverse Location Warrants Categorically Unconstitutional&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/files/2026/11/03/united_states_v._spurlock_-_eff_aclu_amicus_brief_1.pdf&#34;&gt;Brief of Amici Curiae, No. 26-689 (9th Cir.)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://theregister.com/2025/06/19/us_tower_grab_appeal/&#34;&gt;Uncle Sam seeks time in tower dump data grab case after judge calls it &amp;#39;unconstitutional&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-19&#34;&gt;2025 年 6 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.scotusblog.com/2026/06/court-rules-that-law-enforcements-use-of-geofence-warrant-was-a-search/&#34;&gt;Court rules that law enforcement’s use of “geofence warrant” was a “search”&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SCOTUSblog&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-29&#34;&gt;2026 年 6 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zwillgen.com/law-enforcement/supreme-court-holds-geofence-warrants-are-fourth-amendment-searches-leaves-other-important-questions-lower-courts/&#34;&gt;Supreme Court Holds Geofence Warrants Are Fourth Amendment Searches, But Leaves Other Important Questions for Lower Courts&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ZwillGen&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-02&#34;&gt;2026 年 7 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2024/08/federal-appeals-court-finds-geofence-warrants-are-categorically-unconstitutional&#34;&gt;Federal Appeals Court Finds Geofence Warrants Are “Categorically” Unconstitutional&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-08-12&#34;&gt;2024 年 8 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.goodmorningamerica.com/amp/news/story/supreme-court-weighs-geofence-warrants-cellphone-data-132358022&#34;&gt;Supreme Court grapples with limits to &amp;#39;geofence warrants&amp;#39; over privacy concerns&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ABC News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-28&#34;&gt;2026 年 4 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.independent.org/article/2026/06/30/supreme-court-geofence-warrants-chatrie/&#34;&gt;No. 25-112 (U.S. June 29, 2026)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Independent Institute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-30&#34;&gt;2026 年 6 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/products/maps/updates-to-location-history-and-new-controls-coming-soon-to-maps/&#34;&gt;Updates to Location History and new controls coming soon to Maps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-12-12&#34;&gt;2023 年 12 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/maps/answer/6258979?hl=en&#34;&gt;Manage your Google Maps Timeline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Maps Help&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/legal/transparency/pdf/requests-2025-h2-en.pdf&#34;&gt;Apple Transparency Report: Government and Private Party Requests, July 1 - December 31, 2025&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060044&#34;&gt;通訊保障及監察法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>家用 Android 電視盒的預載後門與住宅代理</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/android-tv-residential-proxy/</link>
@@ -1863,100 +1976,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>eMudhra 弱私鑰事件的後續處置與 macOS 命令列工具</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/emudhra-key-compromise-followup/</link>
-<guid isPermaLink="false">anoni-news:2026/11/emudhra-key-compromise-followup</guid>
-<pubDate>Tue, 03 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>印度憑證機構 eMudhra 八張中繼憑證的私鑰被算出之後，Apple、Microsoft 與 Chrome 都已封鎖或移除相關憑證，一般使用者的瀏覽器、手機與電腦不必另外設定。macOS 內建的 git、curl 等命令列工具仍可能接受這些憑證，到 11 月 2 日還沒有查到 Apple 的修正。eMudhra 宣布退出公開 TLS 憑證業務，到 11 月 1 日還沒在事故單提交正式事故報告。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，來自 Apple、Microsoft 365 Message Center Archive、Mozilla Bugzilla 等 8 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;印度憑證機構 eMudhra（憑證品牌 emSign）有八張中繼憑證的私鑰小到可以直接算出，取得私鑰的人能替不屬於自己的網站簽發 HTTPS 憑證。10 月中事件公開之後，Apple 與 Microsoft 陸續公布了各自的處置，Chrome 的信任清單也拿掉了相關的根憑證。一般使用者的瀏覽器、手機與電腦不必另外設定。依 Apple 10 月 29 日的支援文件，macOS 內建的 git、curl 等命令列工具在之後的軟體更新之前，仍可能接受這些憑證。&lt;/p&gt;
-&lt;p&gt;依 Apple 的支援文件，Apple 從 10 月 19 日起封鎖六張簽發 TLS 憑證的中繼。每張中繼各有兩份憑證，一份連到 eMudhra 的根憑證 emSign ECC Root CA - G3，另一份經 Sectigo 交叉簽署（另一家憑證機構的根再簽一份，讓同一張中繼多一條信任路徑）連到 Sectigo 的根 AAA Certificate Services。Apple 封鎖的是這 12 份憑證，10 月 23 日起也封鎖了 G3 根。封鎖透過憑證設定資料自動送到裝置，不必安裝軟體更新，Safari、Mail 與使用 Apple 網路與安全框架的 App 都會擋下。&lt;/p&gt;
-&lt;p&gt;同一份文件也提到，macOS 與 Xcode Command Line Tools 附的 curl、git、python3、ruby、perl 與 openssl，會拿 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 這個檔案驗證憑證。憑證連到檔案裡的根時，這些工具不檢查 Apple 的封鎖，也不檢查憑證有沒有被撤銷。Apple 寫這個檔案會在之後的 macOS 更新裡更新，沒有寫是哪個版本、什麼時候推出。&lt;/p&gt;
-&lt;p&gt;一位 Mozilla 工程師為事件架設了說明頁，10 月 28 日另外寫了一頁談 Apple 的工具。依該頁，10 月 26 日推出的 macOS 27.2 沒有修正問題，還讓使用者手動移除根憑證的處理失效。位在連線路徑上的攻擊者可以讓 git 從 &lt;code&gt;https://&lt;/code&gt; 遠端取得攻擊者挑的程式碼，也能攔截 GitHub token 這類登入資訊。到 11 月 2 日，本文沒有查到 macOS 27.2 之後的修正版本。&lt;/p&gt;
-&lt;p&gt;Microsoft 10 月 28 日在 Microsoft 365 訊息中心的公告提到，Windows 的不信任憑證清單（Disallowed Certificate Trust List）已經封鎖受影響的憑證機構。Edge 與 WebView2（Windows App 內嵌網頁用的元件）另外透過元件更新收到 CRLSet，也就是在背景下載的封鎖清單，不必安裝新版瀏覽器。公告也寫到 Microsoft 已發布 Windows 與 Edge 的更新，從信任清單移除這些憑證階層的相關憑證，沒有寫 Edge 的日期。&lt;/p&gt;
-&lt;p&gt;依 Microsoft 訊息中心的公告與 The Register 引述的 Microsoft 安全回應中心（MSRC）部落格，Microsoft 10 月 26 日發布 Windows 的帶外更新（out-of-band，固定排程以外的更新），從 Windows 的信任清單移除七張跟受影響憑證階層相關的憑證。這份更新給無法連到 Microsoft 憑證更新服務、或停用自動更新信任清單的裝置，也帶著 10 月 13 日更新的已知問題。憑證清單通常經由更新服務送達，很多裝置不需要這份更新。&lt;/p&gt;
-&lt;p&gt;Google 10 月 20 日的部落格預告，Chrome Root Store 會在太平洋時間 10 月 27 日上午移除 emSign ECC Root CA - G3。本文查不到 Chrome 宣告完成的公告，11 月 2 日讀到的 Chromium 原始碼裡，Chrome Root Store 的清單已經沒有這張根。eMudhra 的另一張根 emSign Root CA - G1 仍在清單上，Mozilla 10 月 20 日也在事故單上寫當時不移除對 G1 的信任。Google 10 月 20 日的部落格寫正在評估 eMudhra 其他憑證是否繼續信任，到 11 月 2 日本文沒有查到結果。&lt;/p&gt;
-&lt;p&gt;Chrome 根憑證計畫（Chrome Root Program）10 月 27 日在事故單上回覆社群的提問，把 CRLSet 的封鎖與之後的事故單結案稱為緊急圍堵，之後還有後續的工作。依這則留言，Chrome 在通報後一小時內用 Google 的 &lt;code&gt;paranoid_crypto&lt;/code&gt; 檢查了 Chrome 信任的所有 CA 憑證，沒有找到其他已知類型的弱金鑰。業界常用的檢查工具在事件之前，沒有檢查橢圓曲線私鑰過小的情況。Chrome 已在 CCADB（各家瀏覽器共用的憑證機構資料庫）的工具專案提出議題，要讓 CA 揭露憑證之前先通過弱金鑰檢查。&lt;/p&gt;
-&lt;p&gt;eMudhra 10 月 25 日在事故單上宣布退出公開 TLS 憑證業務，10 月 30 日任命 KPMG 為獨立的外部審查者。依 eMudhra 的事件聲明頁，領導層 10 月 26 日的說明寫問題出在自家的腳本錯誤，並承諾透過 CCADB 的程序公布完整的根本原因分析。10 月 28 日的更新寫到，G3 底下約 3 萬 800 張憑證屬於美國的單一客戶生態系，這個生態系已改用 eMudhra 的 G1 RSA 根簽發新憑證。eMudhra 也請各家根憑證計畫給時間讓這批客戶轉移，轉移完成後就停止從 G1 簽發 TLS 憑證。&lt;/p&gt;
-&lt;p&gt;Mozilla 根憑證計畫 10 月 20 日向 eMudhra 寄出問題清單，要求 24 小時內初步回覆，到 10 月 23 日還沒收到。eMudhra 10 月 23 日把延遲歸因於社群媒體與投資人、客戶的密集關注，Chrome 根憑證計畫回覆這不是可以接受的理由。eMudhra 10 月 25 日的留言主張，CCADB 的事故通報規定給 CA 14 天提交完整報告，自己仍在期限內。&lt;/p&gt;
-&lt;p&gt;之後 eMudhra 在 10 月 27 日的留言寫已經直接回覆 Mozilla 的問題，10 月 29 日在事故單附上給 Google 的回覆文件。到 11 月 1 日事故單的最後一則留言為止，eMudhra 還沒有在這張單上提交正式事故報告，事故單的狀態仍是處理中。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;Chrome 的 CRLSet、Apple 的憑證設定資料與 Windows 的不信任憑證清單都在背景自動更新，可以單獨擋下特定的中繼憑證。macOS 內建的命令列工具只讀 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 一個檔案，檔案裡還有 G3 根與 Sectigo 的 AAA Certificate Services，連到這兩張根的憑證就會通過驗證。Apple 的文件寫這些工具不檢查撤銷，所以 eMudhra 在 UTC 10 月 18 日撤銷八張中繼，對它們沒有作用。&lt;/p&gt;
-&lt;p&gt;依一位研究者 10 月 25 日在事故單上的統計（本文沒有另外核對），UTC 10 月 20 日到 21 日之間有 107,107 張用其中六把金鑰簽出的憑證，被記進一家業者的憑證透明度日誌（CT log，公開記錄每一張憑證的日誌）。其中 106,050 張是只寫 google.com 的概念驗證憑證，106,058 張經由 Sectigo 的 AAA 交叉簽署連到根。這位研究者列出的例子裡有一張內嵌了三家日誌的收錄證明（SCT），三家都是 Chrome 列為可用的日誌，本文據此推論只要求 CT 收錄證明擋不下這類憑證。這些憑證幾乎都沒有撤銷資訊的指標，只檢查網站憑證本身撤銷狀態的程式也擋不下，只有逐層檢查 CA 憑證撤銷、收到推送的封鎖清單或已移除相關根憑證的程式會拒絕。&lt;/p&gt;
-&lt;p&gt;依 Apple 的文件，不用終端機的人不需要做任何事，在 Mac 上用內建的 git、curl 或 python3 連 &lt;code&gt;https://&lt;/code&gt; 網址的人可以等 Apple 的更新。不想等的人可以依同一份文件，用管理員權限從 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 移除 emSign ECC Root CA - G3。只移除 G3 擋不下 Sectigo 交叉簽署的那六份，需一起移除 AAA Certificate Services。依同一份文件，代價是經由這張根、跟事件無關的部分網站，也可能在這些工具裡驗證失敗。&lt;/p&gt;
-&lt;p&gt;Apple 的文件另外提醒，macOS 更新可能換回原本的檔案。安裝到含修正的版本之前，每次更新後都要重新檢查。自帶根憑證清單的 App 與工具不讀這個檔案，也不套用 Apple 的封鎖，要向開發者確認。在 Mac 上手動移除根憑證，保護到的只有讀這個檔案的工具。&lt;/p&gt;
-&lt;p&gt;接下來可以留意 Apple 修正 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 的 macOS 更新、eMudhra 依 CCADB 程序提交的正式事故報告，以及各家根憑證計畫對 G1 根的決定。約 3 萬 800 張憑證所屬的客戶生態系已經改用 G1 簽發。本文推論，G1 是否繼續被信任，會影響這批網站多久之後要再換一次憑證。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;2026 年 10 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/apple.html&#34;&gt;Apple&amp;#39;s git still trusts the compromised eMudhra certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;2026 年 10 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5305637&#34;&gt;Microsoft releases out-of-band Windows fixes with certificate updates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

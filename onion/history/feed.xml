@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 12 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>電子信箱業者交給政府的帳號資料</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-13/2026</guid>
+<pubDate>Fri, 13 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你的 Yahoo 奇摩信箱資訊依 2026 年 11 月的隱私權政策，可能在回應政府機關的合法要求時被揭露。這一天，Yahoo 公布與兩名在中國入獄者（記者與異議人士）的家屬就交出帳號資料的訴訟達成和解，當時沒有公開金額。</description>
+<content:encoded>&lt;p&gt;你的 Yahoo 奇摩信箱依服務條款由地址在台北的公司提供、適用中華民國法律，隱私權政策另外寫了資訊可能在居住地以外處理與儲存，也可能在回應政府機關的合法要求時被揭露（2026 年 11 月 8 日查閱）。2007 年 11 月 13 日，Yahoo 公布與兩名在中國入獄者（記者與異議人士）的家屬就美國的訴訟達成和解，條款保密、當時沒有公開金額。家屬主張 Yahoo 交給中國當局的資料直接導致兩人被捕與定罪（MIT Technology Review 的報導），Yahoo 主張依中國法律必須提供，Yahoo 的律師也表示不清楚資料對逮捕與定罪有沒有影響。美國眾議院外交委員會的新聞稿列出中國當局要求的記者帳號資料包括 IP 位址（可用來追查連線來源的網路編號）、登入紀錄與數週的郵件內容，同一份新聞稿寫該記者以洩露國家機密的罪名被判 10 年。依 Business &amp;amp; Human Rights Resource Centre 轉述的 Reuters 報導，Yahoo 在 2021 年宣布服務自 11 月 1 日起無法從中國大陸存取，台灣的讀者可以打開服務條款與隱私權政策核對自己信箱的服務提供者與適用法律（本文的建議）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Mac 開啟 App 前的線上檢查</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-12/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你用 Facebook 帳號登入過的 App 或遊戲，可能還保有當時從帳號取得的資料。這一天，英國資訊專員辦公室公布對 Facebook 的 50 萬英鎊罰款，理由包括讓 App 開發者未經使用者清楚知情的同意取得資料。</description>
 <content:encoded>&lt;p&gt;你用 Facebook 帳號登入過的 App 或遊戲，可能還保有當時從帳號取得的資料。英國的資訊專員辦公室（ICO，負責個資保護的主管機關）在 2018 年 10 月 25 日公布對 Facebook 的 50 萬英鎊罰款，新聞稿寫 Facebook 在 2007 到 2014 年間讓 App 開發者未經使用者清楚知情的同意取得資料，連沒有安裝 App、只是安裝者朋友的使用者也在內。Facebook 提出上訴後，雙方在 2019 年和解，Facebook 同意支付罰款但不承認責任。依 ICO 宣布和解的聲明裡收錄的 Facebook 說法，2015 年對政治顧問公司 Cambridge Analytica 的指控本應多做調查，當時也已大幅限制 App 開發者可取得的資訊。依 Facebook 說明中心的頁面，電腦版可以在「設定和隱私」的「設定」裡打開「應用程式和網站」移除 App（英文版 2026 年 10 月查證），移除之後 App 先前存下的資料可能還在。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>失效連結的網頁存檔</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-24/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-24/2026</guid>
-<pubDate>Sat, 24 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你收藏的連結失效之後，原本的頁面可能還留在網頁存檔裡。這一天，Internet Archive 推出 Wayback Machine，讓所有人可以瀏覽 1996 年以來存下的網頁舊版本。</description>
-<content:encoded>&lt;p&gt;你收藏的連結失效、引用的官方網頁改版之後，原本的內容可能還留在網頁存檔裡。依當天的新聞稿，Internet Archive 在 2001 年 10 月 24 日推出 Wayback Machine，輸入網址、選擇日期就能瀏覽 1996 年以來存下的網頁版本。依 Internet Archive 說明中心的頁面（2026 年 10 月查證），需要密碼的頁面、擁有者要求排除的網站可能不在存檔裡。想留下某個頁面現在的樣子，可以在 web.archive.org 用 Save Page Now 存下那一頁。存下的內容公開給所有人瀏覽，裡面有他人的個資時要先考慮清楚。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

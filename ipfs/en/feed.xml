@@ -6,7 +6,127 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>The Ninth Circuit appeal over a cell tower dump warrant</title>
+<link>https://anoni.net/news/en/2026/11/ninth-circuit-reverse-location/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/ninth-circuit-reverse-location</guid>
+<pubDate>Fri, 13 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The US Court of Appeals for the Ninth Circuit is hearing an appeal over a tower dump warrant, which demands location data for every phone in a given place at a given time from mobile carriers. EFF and the ACLU argue that these warrants are unconstitutional in themselves. As of 8 November we could not find a government brief in the appeal, and our inference is that turning off Google Location History does not stop a tower dump.</description>
+<content:encoded>&lt;p&gt;Based on 13 sources, including EFF, The Register, SCOTUSblog&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The US Court of Appeals for the Ninth Circuit is hearing an appeal over a tower dump warrant, which requires a mobile carrier to hand over location data for every phone in a given place at a given time, including devices that have nothing to do with the case. On 3 November the digital rights group EFF (Electronic Frontier Foundation) and the American Civil Liberties Union (ACLU) filed an amicus brief, a filing in which a non-party offers its views to the court, arguing that these warrants are unconstitutional in themselves. The case concerns law enforcement in the United States only, and readers elsewhere are not directly affected.&lt;/p&gt;
+&lt;p&gt;EFF&#39;s article groups tower dumps and geofence warrants together as &#34;reverse location searches&#34;, in which police start from a time and a place and then look for people in the data. A tower dump is demanded from a mobile carrier and a geofence warrant from a company such as Google that holds device location records, so the data comes from different sources. The US Supreme Court&#39;s 29 June ruling dealt with geofence warrants, while the Ninth Circuit appeal (case number &lt;code&gt;26-689&lt;/code&gt;) concerns a tower dump.&lt;/p&gt;
+&lt;p&gt;According to EFF&#39;s article, the bodies of two victims were found beside a remote highway in California, and police found a car belonging to one of them several miles away on the same highway. Police then sought a tower dump warrant covering that stretch of road and eventually obtained location data on nearly 1,700 unique phones.&lt;/p&gt;
+&lt;p&gt;According to the ruling as quoted by The Register, a federal district court in Nevada held in 2025 that a tower dump is a search under the Fourth Amendment to the US Constitution, which bars unreasonable searches and seizures, and that the warrant in this case was a general warrant (one not limited to particular targets) forbidden by the amendment. The court still suppressed no evidence, because it appeared to be the first court within the Ninth Circuit to reach that conclusion and because the good faith exception applied. Under that exception, evidence can generally still be used when officers believed they were acting lawfully under a warrant. The defendant then appealed to the Ninth Circuit.&lt;/p&gt;
+&lt;p&gt;EFF and the ACLU make three arguments in the brief, according to EFF&#39;s article. The Supreme Court&#39;s geofence ruling strengthens the case that tower dumps are unconstitutional general warrants, since police cannot search everyone in an area without probable cause, the concrete grounds a warrant requires, to believe all of them were involved. If the court still allows these warrants, it must limit their scope and duration, require notice to the people affected and require irrelevant data to be deleted afterwards. The brief also asks the court to set aside the good faith exception and actually decide the constitutional question.&lt;/p&gt;
+&lt;p&gt;By 6 to 3, the Supreme Court held in the geofence case that police carry out a search when they demand a phone&#39;s location records, even for a short period and even when a third-party company holds the data. According to an analysis by the law firm ZwillGen, the Court sent back to the Fourth Circuit, which had heard the case earlier, the question of whether that warrant was sufficiently particular and supported by probable cause, and the constitutionality of reverse warrants remains unresolved. EFF&#39;s article describes the Ninth Circuit appeal as the first case of its kind before a federal appeals court since the ruling.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;A phone that is powered on and not in airplane mode connects to cell towers, which is how mobile networks work (background we are adding, which the sources below do not state directly). SCOTUSblog, summarizing the Supreme Court&#39;s 2018 cell-site case, describes cell-site location information as a historical record created when a phone connects to a cell site. According to The Register, a tower dump can cover all connections to a tower within windows ranging from ten minutes to one hour.&lt;/p&gt;
+&lt;p&gt;Location History on a Google account, the setting behind Google Maps Timeline, is separate data kept on the device or on Google&#39;s servers, and on that basis we infer that turning it off does not stop a tower dump. The sources we found describe no way for users to avoid tower records, and they do not say which connections leave records that can be demanded or how long carriers keep them.&lt;/p&gt;
+&lt;p&gt;As of 8 November we could find neither a government brief in the Ninth Circuit appeal nor any reporting on one. Under the general rule of federal appellate procedure a response brief is usually due 30 days after the appellant&#39;s, so the absence may only mean the deadline has not arrived (this is our own calculation, and we did not find the docket). The government arguments in the next paragraph all come from a different case, the Supreme Court&#39;s geofence case and the Fourth Circuit decision in that same case, where the data came from Google and no carrier was involved.&lt;/p&gt;
+&lt;p&gt;According to ABC News, the government argued in the geofence case that users give up their expectation of privacy when they share location information with apps and service providers such as Google. The Fourth Circuit&#39;s majority also held, per SCOTUSblog, that the defendant could not reasonably expect two hours of location data, voluntarily left with Google, to be kept private. The Supreme Court&#39;s majority held that a person keeps an expectation of privacy even when a third-party company holds the data, and its 2018 cell-site ruling had already treated obtaining cell-site location information as a search outside the third-party doctrine, the view that records handed to a third party are not protected by the Fourth Amendment (as summarized by SCOTUSblog and the Independent Institute). These sources do not say whether the 2018 ruling reaches tower dumps, so how the government will argue and whether the court will accept it depends on how the appeal proceeds.&lt;/p&gt;
+&lt;p&gt;EFF&#39;s article argues that reverse location warrants are unconstitutional in themselves, and compares them to the rule that bars police from searching the houses of a hundred people near a crime scene. According to The Register, a federal magistrate judge in Mississippi rejected four FBI tower dump warrants in February 2025 for lack of probable cause as to specific individuals, and in June 2025 the government asked for more time to decide whether to appeal (as of 8 November we could not find the outcome). ABC News reported that geofence warrants have become increasingly valuable to investigators looking for criminal suspects, missing children and hikers lost in the wilderness, and that experts believe limits could hamper law enforcement. At oral argument in the geofence case, one justice suggested setting reasonable limits on time and geography and leaving it to the judges who issue warrants to apply them.&lt;/p&gt;
+&lt;p&gt;The district court found the warrant unconstitutional but kept the evidence because of the good faith exception. EFF&#39;s article argues that courts too often avoid the constitutional questions raised by new surveillance techniques, leaving police able to keep using them for years or even decades with no definitive ruling. According to EFF&#39;s 2024 article, the Fifth Circuit applied the good faith exception in a separate geofence case because the technology was still novel in 2018 and police had sought guidance from more experienced agencies. A dissent at the Supreme Court also rested on good faith, reasoning that since the Fourth Circuit had already found the exception applied, the ruling would have no practical effect on the defendant.&lt;/p&gt;
+&lt;p&gt;To check the Google side, open the Your Timeline settings in the Google Maps app on Android or iPhone and see whether Timeline, the view tied to Location History, is turned on. According to Google&#39;s 2023 announcement and its help page as read on 8 November, Timeline is off by default, turns on only if you opt in, and is stored on the device. If you choose to back it up, an encrypted copy is kept on Google&#39;s servers. Apple&#39;s transparency report for the second half of 2025 states that Apple has no data to provide in response to geofence requests.&lt;/p&gt;
+&lt;p&gt;According to a Supreme Court dissent and the Independent Institute&#39;s analysis, Google has changed its Location History service so that it can no longer respond to geofence warrants. The Independent Institute&#39;s analysis dates the change to July 2025, and as of 8 November we had found no statement from Google itself. The settings and report above concern only data held by Google and Apple.&lt;/p&gt;
+&lt;p&gt;Taiwan&#39;s Communication Security and Surveillance Act (通訊保障及監察法, in the version amended in July 2024 on the Laws &amp;amp; Regulations Database) counts location information among communication records. A prosecutor must in principle apply to a court for a retrieval order (調取票), but for offences with a minimum sentence of ten years and for listed offences such as fraud and robbery, a prosecutor can obtain the records on their own authority, or a judicial police officer can with a prosecutor&#39;s approval. The Act does not say whether it covers a dump of every connection to a given tower in a given period (our own reading of the text, and as of 8 November we had found no official explanation). The US appeal turns on probable cause and how specific a search must be, while Taiwan&#39;s text sets a threshold of necessity and relevance and lets some offences bypass the court (also our own comparison).&lt;/p&gt;
+&lt;p&gt;Under Japan&#39;s Code of Criminal Procedure (刑事訴訟法), Article 197(2) lets investigators send an inquiry (照会) to public offices and to public or private organizations and ask them to report necessary matters, and Article 197(3) lets prosecutors, their assistant officers and judicial police officers ask carriers to keep specified communication logs (通信履歴), such as sender, recipient and time, from being erased for up to 30 days, for the purpose of seizure or an order to provide electronic records, a preservation request that does not itself hand over the data. As of 8 November we could not find an official explanation of whether cell tower location data is obtained through a court warrant (令状) for seizure or inspection or through an inquiry.&lt;/p&gt;
+&lt;p&gt;Whether the Ninth Circuit actually decides the constitutional question or stops again at the good faith exception remains open. If tower dump warrants stay available, it is also unclear whether limits on scope, duration, notice and deletion can protect bystanders without taking an investigative method away from cases with no leads on a suspect. Nor is it known whether the government&#39;s brief will repeat the argument that users hand over their data voluntarily, or explain how carrier records differ from Google&#39;s data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/were-asking-ninth-circuit-hold-reverse-location-warrants-categorically&#34;&gt;We’re Asking the Ninth Circuit to Hold Reverse Location Warrants Categorically Unconstitutional&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/files/2026/11/03/united_states_v._spurlock_-_eff_aclu_amicus_brief_1.pdf&#34;&gt;Brief of Amici Curiae, No. 26-689 (9th Cir.)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://theregister.com/2025/06/19/us_tower_grab_appeal/&#34;&gt;Uncle Sam seeks time in tower dump data grab case after judge calls it &amp;#39;unconstitutional&amp;#39;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-19&#34;&gt;19 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.scotusblog.com/2026/06/court-rules-that-law-enforcements-use-of-geofence-warrant-was-a-search/&#34;&gt;Court rules that law enforcement’s use of “geofence warrant” was a “search”&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SCOTUSblog&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-29&#34;&gt;29 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zwillgen.com/law-enforcement/supreme-court-holds-geofence-warrants-are-fourth-amendment-searches-leaves-other-important-questions-lower-courts/&#34;&gt;Supreme Court Holds Geofence Warrants Are Fourth Amendment Searches, But Leaves Other Important Questions for Lower Courts&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ZwillGen&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-02&#34;&gt;2 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2024/08/federal-appeals-court-finds-geofence-warrants-are-categorically-unconstitutional&#34;&gt;Federal Appeals Court Finds Geofence Warrants Are “Categorically” Unconstitutional&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-08-12&#34;&gt;12 August 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.goodmorningamerica.com/amp/news/story/supreme-court-weighs-geofence-warrants-cellphone-data-132358022&#34;&gt;Supreme Court grapples with limits to &amp;#39;geofence warrants&amp;#39; over privacy concerns&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ABC News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-28&#34;&gt;28 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.independent.org/article/2026/06/30/supreme-court-geofence-warrants-chatrie/&#34;&gt;No. 25-112 (U.S. June 29, 2026)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Independent Institute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-30&#34;&gt;30 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/products/maps/updates-to-location-history-and-new-controls-coming-soon-to-maps/&#34;&gt;Updates to Location History and new controls coming soon to Maps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-12-12&#34;&gt;12 December 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/maps/answer/6258979?hl=en&#34;&gt;Manage your Google Maps Timeline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Maps Help&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/legal/transparency/pdf/requests-2025-h2-en.pdf&#34;&gt;Apple Transparency Report: Government and Private Party Requests, July 1 - December 31, 2025&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060044&#34;&gt;通訊保障及監察法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/323AC0000000131&#34;&gt;刑事訴訟法（昭和二十三年法律第百三十一号）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Preloaded backdoors and residential proxies on home Android TV boxes</title>
 <link>https://anoni.net/news/en/2026/11/android-tv-residential-proxy/</link>
@@ -2428,108 +2548,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cursor.com/docs/account/regions&#34;&gt;Regions&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cursor&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Aftermath of the eMudhra weak private keys, and macOS command-line tools</title>
-<link>https://anoni.net/news/en/2026/11/emudhra-key-compromise-followup/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/emudhra-key-compromise-followup</guid>
-<pubDate>Tue, 03 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>After the private keys of eight intermediate certificates from the Indian certificate authority eMudhra were computed, Apple, Microsoft and Chrome have all blocked or removed the related certificates, and ordinary users&#39; browsers, phones and computers need no extra setup. The git, curl and other command-line tools built into macOS may still accept these certificates, and as of 2 November we had found no fix from Apple. eMudhra has announced it is leaving the public TLS certificate business, and as of 1 November had not filed a formal incident report on the incident ticket.</description>
-<content:encoded>&lt;p&gt;Based on 10 sources, including Apple, Microsoft 365 Message Center Archive, Mozilla Bugzilla&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The Indian certificate authority eMudhra (certificate brand emSign) had eight intermediate certificates whose private keys were small enough to compute directly, letting anyone holding them issue HTTPS certificates for websites they do not own. Since the incident became public in mid-October, Apple and Microsoft have published how they are handling it, and Chrome&#39;s trust list has dropped the related root certificate. Ordinary users&#39; browsers, phones and computers need no extra setup. According to Apple&#39;s 29 October support document, though, the git, curl and other command-line tools built into macOS may keep accepting these certificates until a future software update.&lt;/p&gt;
-&lt;p&gt;Apple&#39;s support document says that since 19 October Apple has blocked the six intermediates that issue TLS certificates. Each of them exists as two certificates, one chaining to eMudhra&#39;s root emSign ECC Root CA - G3 and one cross-signed by Sectigo (another certificate authority&#39;s root signs a second copy, giving the same intermediate an extra path to trust) that chains to Sectigo&#39;s root AAA Certificate Services. Apple blocks all 12 of these certificates, and has also blocked the G3 root since 23 October. The block reaches devices automatically through certificate configuration data, with no software update to install, and Safari, Mail and apps that use Apple&#39;s networking and security frameworks all reject the certificates.&lt;/p&gt;
-&lt;p&gt;The same document says the curl, git, python3, ruby, perl and openssl that ship with macOS and the Xcode Command Line Tools verify certificates against a single file, &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;. When a certificate chains to a root in that file, these tools check neither Apple&#39;s block nor whether the certificate has been revoked. Apple writes that the file will be updated in a future macOS update, without saying which version or when.&lt;/p&gt;
-&lt;p&gt;A Mozilla engineer who set up an explainer page for the incident added a separate page about Apple&#39;s tools on 28 October. According to that page, macOS 27.2, released on 26 October, did not fix the problem and undid the workaround of removing the roots by hand. An attacker on the network path could make git fetch attacker-chosen code from &lt;code&gt;https://&lt;/code&gt; remotes, and could intercept credentials such as GitHub tokens. As of 2 November, we had found no macOS release after 27.2 that fixes it.&lt;/p&gt;
-&lt;p&gt;Microsoft&#39;s 28 October notice in the Microsoft 365 Message Center says the Windows Disallowed Certificate Trust List already blocks the affected certificate authorities. Edge and WebView2 (the component Windows apps use to embed web pages) also receive a CRLSet, a blocklist downloaded in the background, through component updates, with no new browser version to install. The notice adds that Microsoft has released Windows and Edge updates removing certificates related to these hierarchies from the trust list, but gives no date for Edge.&lt;/p&gt;
-&lt;p&gt;According to the Message Center notice and the Microsoft Security Response Center (MSRC) blog post quoted by The Register, Microsoft released an out-of-band Windows update (one outside the regular schedule) on 26 October that removes seven certificates related to the affected hierarchies from the Windows trust list. The update is meant for devices that cannot reach Microsoft&#39;s certificate update service or have automatic trust list updates turned off, and it also carries a known issue from the 13 October update. Certificate lists normally arrive through the update service, so many devices do not need this update.&lt;/p&gt;
-&lt;p&gt;Google&#39;s 20 October blog post said the Chrome Root Store would remove emSign ECC Root CA - G3 on the morning of 27 October Pacific Time. We could not find an announcement from Chrome that the removal was done, but in the Chromium source code we read on 2 November, the Chrome Root Store list no longer includes this root. eMudhra&#39;s other root, emSign Root CA - G1, is still on the list, and Mozilla also wrote on the incident ticket on 20 October that it was not removing trust in G1 at that time. Google&#39;s 20 October post said it was assessing whether to keep trusting eMudhra&#39;s other certificates, and as of 2 November we had found no outcome.&lt;/p&gt;
-&lt;p&gt;On 27 October the Chrome Root Program replied to community questions on the incident ticket, describing the CRLSet block and the eventual closure of the incident ticket as emergency containment, with follow-up work still to come. According to that comment, within an hour of the report Chrome ran Google&#39;s &lt;code&gt;paranoid_crypto&lt;/code&gt; over every CA certificate Chrome trusts and found no other weak keys of known types. Before the incident, the checking tools in common use in the industry did not test for elliptic-curve private keys that are too small. Chrome has opened an issue in the tooling project of CCADB (the certificate authority database shared by the browser vendors) to require weak-key checks before a CA discloses a certificate.&lt;/p&gt;
-&lt;p&gt;eMudhra announced on the incident ticket on 25 October that it is leaving the public TLS certificate business, and on 30 October appointed KPMG as an independent external reviewer. According to eMudhra&#39;s incident statement page, its leadership&#39;s 26 October explanation put the problem down to an error in its own scripts and promised a full root cause analysis through the CCADB process. A 28 October update says about 30,800 certificates under G3 belong to a single customer ecosystem in the United States, which has already switched to issuing new certificates from eMudhra&#39;s G1 RSA root. eMudhra also asked the root programs for time to let these customers migrate, and says it will stop issuing TLS certificates from G1 once the migration is complete.&lt;/p&gt;
-&lt;p&gt;On 20 October the Mozilla Root Program sent eMudhra a list of questions and asked for an initial reply within 24 hours, which it still had not received on 23 October. On 23 October eMudhra blamed the delay on intense attention from social media, investors and customers, and the Chrome Root Program replied that this was not an acceptable reason. eMudhra&#39;s 25 October comment argued that CCADB&#39;s incident reporting rules give a CA 14 days to submit a full report, and that it was still within the deadline.&lt;/p&gt;
-&lt;p&gt;eMudhra later wrote on 27 October that it had replied to Mozilla&#39;s questions directly, and on 29 October attached a response document for Google to the ticket. As of the last comment on 1 November, eMudhra had not filed a formal incident report on this ticket, and the ticket was still open.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Chrome&#39;s CRLSet, Apple&#39;s certificate configuration data and the Windows Disallowed Certificate Trust List all update automatically in the background and can block a specific intermediate certificate on its own. The command-line tools built into macOS read only the &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; file, which still contains the G3 root and Sectigo&#39;s AAA Certificate Services, so certificates chaining to either root pass verification. Apple&#39;s document says these tools do not check revocation, which means eMudhra&#39;s revocation of the eight intermediates on 18 October UTC has no effect on them.&lt;/p&gt;
-&lt;p&gt;According to a count a researcher posted on the incident ticket on 25 October (which we did not verify independently), 107,107 certificates signed with six of the keys were recorded in one operator&#39;s Certificate Transparency log (CT log, a public log that records every certificate) between 20 and 21 October UTC. Of these, 106,050 were proof-of-concept certificates naming only google.com, and 106,058 chained to a root through Sectigo&#39;s AAA cross-signature. One of the examples the researcher listed embeds signed certificate timestamps (SCTs, proof of inclusion) from three logs, all of which Chrome lists as usable, and from this we infer that requiring CT inclusion proofs alone does not stop such certificates. Almost none of these certificates carry a pointer to revocation information, so programs that check only the revocation status of the website certificate itself will not stop them either, and only programs that check CA certificate revocation at every level, receive a pushed blocklist, or have removed the related roots will reject them.&lt;/p&gt;
-&lt;p&gt;According to Apple&#39;s document, people who do not use Terminal need to do nothing, and people who use the built-in git, curl or python3 on a Mac to reach &lt;code&gt;https://&lt;/code&gt; URLs can wait for Apple&#39;s update. Those who do not want to wait can follow the same document and remove emSign ECC Root CA - G3 from &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; with an administrator account. Removing G3 alone does not block the six Sectigo cross-signed certificates, so AAA Certificate Services has to be removed as well. The same document notes the cost, which is that some websites unrelated to the incident that chain through these roots may also fail verification in these tools.&lt;/p&gt;
-&lt;p&gt;Apple&#39;s document also warns that a macOS update can put the original file back, so until you install a version that contains the fix, check again after every update. Apps and tools that bring their own root certificate list do not read this file and do not apply Apple&#39;s block either, and you need to ask their developers. Removing root certificates by hand on a Mac only protects the tools that read this file.&lt;/p&gt;
-&lt;p&gt;The explainer page&#39;s list of who has shipped fixes marks OpenHarmony/HarmonyOS NEXT as pending, and the page says OpenHarmony-based HarmonyOS does not let users disable system-installed roots, so &#34;No user-side workaround is available on these devices until the patched version ships.&#34; HarmonyOS is Huawei&#39;s operating system, but that list is maintained by the researcher, not published by Huawei, and as of 2 November we had found no statement from Huawei. The same page says HarmonyOS 4.3 and earlier can disable the roots the same way as other Android-based systems, and that the block reaches many Android devices through the Google Play services update channel. GreatFire&#39;s last test on 1 November found &lt;code&gt;play.google.com&lt;/code&gt; fully blocked in mainland China, although GreatFire measures whether the site can be reached, not whether Google Play services on a device can receive updates.&lt;/p&gt;
-&lt;p&gt;Things to watch next are the macOS update in which Apple fixes &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;, the formal incident report eMudhra files through the CCADB process, and each root program&#39;s decision on the G1 root. The customer ecosystem that holds about 30,800 certificates has already moved to issuing from G1. We infer that whether G1 stays trusted will decide how soon these websites have to replace their certificates again.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-18&#34;&gt;18 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/&#34;&gt;Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/apple.html&#34;&gt;Apple&amp;#39;s git still trusts the compromised eMudhra certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-20&#34;&gt;20 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5305637&#34;&gt;Microsoft releases out-of-band Windows fixes with certificate updates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;27 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/play.google.com&#34;&gt;Is https://play.google.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

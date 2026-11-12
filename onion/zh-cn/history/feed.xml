@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 12 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>电子邮箱服务商交给政府的账号资料</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-13/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-13/2026</guid>
+<pubDate>Fri, 13 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在中国大陆已无法访问 Yahoo 的服务，Yahoo 台湾站的隐私权保护政策（2026 年 11 月查阅）写明信息可能在回应政府机关的合法要求时被披露。这一天，Yahoo 公布与两名在中国入狱者（记者与异议人士）的家属就交出账号资料的诉讼达成和解，当时没有公开金额。</description>
+<content:encoded>&lt;p&gt;Yahoo 在 2021 年宣布服务自 11 月 1 日起无法从中国大陆访问（依 Business &amp;amp; Human Rights Resource Centre 转述的 Reuters 报道），Yahoo 台湾站的隐私权保护政策写明信息可能在回应政府机关的合法要求时被披露（2026 年 11 月 8 日查阅）。2007 年 11 月 13 日，Yahoo 公布与两名在中国入狱者（记者与异议人士）的家属就美国的诉讼达成和解，条款保密、当时没有公开金额。家属主张 Yahoo 交给中国当局的资料直接导致两人被捕与定罪（MIT Technology Review 的报道），Yahoo 主张依中国法律必须提供，Yahoo 的律师也表示不清楚资料对逮捕与定罪有没有影响。美国众议院外交委员会的新闻稿列出中国当局要求的记者账号资料包括 IP 地址（可用来追查连接来源的网络编号）、登录记录与数周的邮件内容，同一份新闻稿写该记者以泄露国家秘密的罪名被判 10 年。中国大陆的《网络安全法》（国家网信办公布的 2025 年修正版、2026 年 1 月 1 日起施行）规定网络运营者应当为公安机关、国家安全机关依法维护国家安全和侦查犯罪的活动提供技术支持和协助，你可以打开自己所用邮箱的隐私政策，核对账号资料在哪些情形下会提供给政府机关（本文的建议）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Mac 打开 App 前的在线检查</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-12/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你用 Facebook 账号登录过的 App 或游戏，可能还保有当时从账号取得的数据。这一天，英国信息专员办公室公布对 Facebook 的 50 万英镑罚款，理由包括让 App 开发者未经用户清楚知情的同意取得数据。</description>
 <content:encoded>&lt;p&gt;你用 Facebook 账号登录过的 App 或游戏，可能还保有当时从账号取得的数据。英国的信息专员办公室（ICO，负责个人信息保护的主管机关）在 2018 年 10 月 25 日公布对 Facebook 的 50 万英镑罚款，新闻稿写 Facebook 在 2007 到 2014 年间让 App 开发者未经用户清楚知情的同意取得数据，连没有安装 App、只是安装者好友的用户也在内。双方在 Facebook 上诉后于 2019 年和解，Facebook 同意支付罚款但不承认责任，ICO 宣布和解的声明里收录的 Facebook 说法是 2015 年对政治顾问公司 Cambridge Analytica 的指控本应多做调查、当时也已大幅限制 App 开发者可取得的信息。依 GreatFire（监测中国网络审查的网站）2026 年 10 月 23 日查询的页面，Facebook 网站在中国大陆最近 84 次有结论的检测都失败（最近一次在 10 月 12 日），OONI（由志愿者测量网络封锁的项目）在 2026 年 9 月 23 日到 10 月 22 日于中国大陆的 598 条测量也只有 32 条正常（其余是异常或失败，异常不等于确认封锁）。海外的读者依 Facebook 帮助中心的页面，可以在电脑版「设置与隐私」的「设置」里打开「应用和网站」移除 App（英文版 2026 年 10 月查证），移除之后 App 先前存下的数据可能还在。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>失效链接的网页存档</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-24/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-24/2026</guid>
-<pubDate>Sat, 24 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你收藏过的失效链接可能还有网页存档，2026 年 9 至 10 月 OONI 从中国大陆连接存档网站的测量则几乎都是异常或失败。这一天，Internet Archive 推出 Wayback Machine，让所有人可以浏览 1996 年以来存下的网页旧版本。</description>
-<content:encoded>&lt;p&gt;你收藏的链接失效、引用的官方网页改版之后，原本的内容可能还留在网页存档里。依当天的新闻稿，Internet Archive 在 2001 年 10 月 24 日推出 Wayback Machine，输入网址、选择日期就能浏览 1996 年以来存下的网页版本。依 Internet Archive 帮助中心的页面（2026 年 10 月查证），需要密码的页面、拥有者要求排除的网站可能不在存档里。依 GreatFire（监测中国网络审查的网站）2026 年 10 月 23 日查询的页面，archive.org 在中国大陆最近 5 次有结论的检测（最后一次在 9 月 1 日）都失败，OONI（由志愿者测量网络封锁的项目）在 2026 年 9 月 1 日到 10 月 22 日于中国大陆的 80 条测量也只有 1 条正常（其余是异常或失败，异常不等于确认封锁）。海外的读者（同一期间在日本、新加坡与马来西亚的测量几乎全部正常）可以在 web.archive.org 用 Save Page Now 存下某个页面现在的样子，存下的内容公开给所有人浏览，里面有他人的个人信息时要先考虑清楚。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

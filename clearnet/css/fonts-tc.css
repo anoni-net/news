@@ -21,16 +21,16 @@
     font-family: "anoni news serif TC";
     font-weight: 700;
     font-display: fallback;
-    src: local("Noto Serif CJK TC Bold"), local("NotoSerifCJKtc-Bold"), local("Noto Serif TC Bold"), local("NotoSerifTC-Bold"), local("Source Han Serif TC Bold"), local("SourceHanSerifTC-Bold"), url("/news/fonts/tc-700-2026-11.woff2?v=83ebe1f557") format("woff2");
-    unicode-range: U+58, U+4E03, U+4E4B, U+4ED8, U+4F4F, U+4F8B, U+50F9, U+5217, U+5230, U+552E, U+56E0, U+571F, U+58D3, U+5957, U+5B85, U+5BE9, U+5C31, U+5DEE, U+5DF2, U+5FAE, U+60E1, U+610F, U+627E, U+62CD, U+6392, U+64CE, U+64F4, U+652F, U+65B7, U+69CB, U+6A19, U+6AA2, U+6C42, U+72AF, U+72C0, U+7522, U+7565, U+76D2, U+76E4, U+76EE, U+76F8, U+7834, U+78BA, U+7981, U+7AF6, U+7B56, U+7D44, U+7E54, U+7E8C, U+7F6A, U+7F70, U+820A, U+83F2, U+88AB, U+8A8D, U+8AAA, U+8ACB, U+8CBB, U+8CD3, U+8DDD, U+8F09, U+901F, U+9055, U+93AE, U+9580, U+95B1, U+9664, U+96AA, U+9805, U+982D, U+985E, U+98A8, U+9EE8, U+FF0C;
+    src: local("Noto Serif CJK TC Bold"), local("NotoSerifCJKtc-Bold"), local("Noto Serif TC Bold"), local("NotoSerifTC-Bold"), local("Source Han Serif TC Bold"), local("SourceHanSerifTC-Bold"), url("/news/fonts/tc-700-2026-11.woff2?v=bd6e836e70") format("woff2");
+    unicode-range: U+58, U+4E03, U+4E4B, U+4E5D, U+4ED8, U+4F4F, U+4F8B, U+50BE, U+50F9, U+5217, U+5230, U+552E, U+56E0, U+571F, U+57FA, U+58D3, U+5957, U+5B85, U+5BE9, U+5C31, U+5DE1, U+5DEE, U+5DF2, U+5FAE, U+60E1, U+610F, U+627E, U+62CD, U+6392, U+64CE, U+64F4, U+652F, U+65B7, U+69CB, U+6A19, U+6AA2, U+6C42, U+72AF, U+72C0, U+7522, U+7565, U+76D2, U+76E4, U+76EE, U+76F8, U+7834, U+78BA, U+7968, U+7981, U+7AF6, U+7B56, U+7D22, U+7D44, U+7E54, U+7E8C, U+7F6A, U+7F70, U+820A, U+83F2, U+88AB, U+8A8D, U+8AAA, U+8ACB, U+8CBB, U+8CD3, U+8DDD, U+8F09, U+8FF4, U+901F, U+9055, U+93AE, U+9580, U+95B1, U+9664, U+96AA, U+9805, U+982D, U+985E, U+98A8, U+9EE8, U+FF0C;
 }
 
 @font-face {
     font-family: "anoni news serif TC";
     font-weight: 700;
     font-display: fallback;
-    src: local("Noto Serif CJK TC Bold"), local("NotoSerifCJKtc-Bold"), local("Noto Serif TC Bold"), local("NotoSerifTC-Bold"), local("Source Han Serif TC Bold"), local("SourceHanSerifTC-Bold"), url("/news/fonts/tc-700-site.woff2?v=11b2f967d8") format("woff2");
-    unicode-range: U+3001, U+4E09, U+4E0D, U+4EAB, U+4ECD, U+4F86, U+50B3, U+5171, U+529F, U+5316, U+5361, U+53BB, U+53CB, U+53EF, U+53F2, U+554F, U+56DE, U+570D, U+5740, U+57FA, U+5931, U+59D3, U+5B57, U+5B89, U+5BE6, U+5E95, U+5F0A, U+6027, U+6216, U+6253, U+62F7, U+651D, U+65BC, U+6709, U+670B, U+6B63, U+6B77, U+6BB5, U+6C92, U+7121, U+7531, U+7533, U+7559, U+767E, U+7A97, U+7AE0, U+7D61, U+7D81, U+7F72, U+805E, U+843D, U+8490, U+878D, U+89E3, U+8A02, U+8AA4, U+8DF3, U+8EAB, U+90A3, U+914D, U+932F, U+9375, U+9678, U+96C6, U+9801, U+984C, U+9A5F, U+FF08-FF09;
+    src: local("Noto Serif CJK TC Bold"), local("NotoSerifCJKtc-Bold"), local("Noto Serif TC Bold"), local("NotoSerifTC-Bold"), local("Source Han Serif TC Bold"), local("SourceHanSerifTC-Bold"), url("/news/fonts/tc-700-site.woff2?v=31a00b53d0") format("woff2");
+    unicode-range: U+3001, U+4E09, U+4E0D, U+4EAB, U+4ECD, U+4F86, U+50B3, U+5171, U+529F, U+5316, U+5361, U+53BB, U+53CB, U+53EF, U+53F2, U+554F, U+56DE, U+570D, U+5740, U+5931, U+59D3, U+5B57, U+5B89, U+5BE6, U+5E95, U+5F0A, U+6027, U+6216, U+6253, U+62F7, U+651D, U+65BC, U+6709, U+670B, U+6B63, U+6B77, U+6BB5, U+6C92, U+7121, U+7531, U+7533, U+7559, U+767E, U+7A97, U+7AE0, U+7D61, U+7D81, U+7F72, U+805E, U+843D, U+8490, U+878D, U+89E3, U+8A02, U+8AA4, U+8DF3, U+8EAB, U+90A3, U+914D, U+932F, U+9375, U+9678, U+96C6, U+9801, U+984C, U+9A5F, U+FF08-FF09;
 }
 
 @font-face {
