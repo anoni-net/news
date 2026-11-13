@@ -6,7 +6,95 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Tor options on the iPhone and the plan for a full Tor Browser on iOS</title>
+<link>https://anoni.net/news/en/2026/11/ios-full-tor-browser/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/ios-full-tor-browser</guid>
+<pubDate>Sat, 14 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>As of 8 November there is no Tor Browser for the iPhone, and the Tor Project recommends Onion Browser instead. Guardian Project has published a one-year roadmap that puts the first Alpha in the quarter labelled April 2027, and nothing can be installed until that Alpha ships.</description>
+<content:encoded>&lt;p&gt;Based on 9 sources, including Guardian Project, Tor Project, Onion Browser&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;As of 8 November there is no Tor Browser (a browser that connects through the Tor onion routing network) for the iPhone. The Tor Project&#39;s installation page recommends Onion Browser instead and warns that its privacy protections do not match Tor Browser&#39;s. On 2 November Guardian Project published a one-year roadmap for bringing the full Tor Browser to iOS, with the first Alpha scheduled for the quarter the roadmap labels April 2027. The project has not yet chosen a distribution route and nothing can be installed until the Alpha ships, so iPhone users have the same options as before.&lt;/p&gt;
+&lt;p&gt;According to the Onion Browser FAQ, Tor hides the websites you visit from anyone watching your connection and keeps those websites from learning your physical location. On an iPhone, the open-source Onion Browser is one way to browse through Tor. It connects either alongside a separate app, Orbot, or through a built-in Tor that the FAQ marks as iOS 17 only. App Store data as of 8 November shows Onion Browser and Orbot as free with a minimum of iOS 15, last updated on 20 October and 15 October respectively.&lt;/p&gt;
+&lt;p&gt;In the FAQ&#39;s comparison, Orbot is safer and the built-in Tor is more stable. With the built-in Tor, your real IP address leaks to the sites you visit through WebRTC (the browser technology for sending audio, video and data directly), and audio and video streams cannot go through Tor. The FAQ attributes this to WebKit, the browser engine (the core component that parses and displays web pages) that Apple supplies and requires. Orbot uses Apple&#39;s Network Extensions, which Apple limits to 50 MB of memory, and the Tor client is killed and restarted when it nears that limit.&lt;/p&gt;
+&lt;p&gt;According to the FAQ, Onion Browser clears its data automatically when it leaves the foreground, keeps no cache or cookies by default, and can detect a site&#39;s .onion address and switch to it. On browser fingerprinting (identifying visitors from details of their device and browser), the FAQ&#39;s advice is that iOS&#39;s built-in WebKit has very few settings to change, so the best approach is to look like every other iOS user.&lt;/p&gt;
+&lt;p&gt;Anyone who only wants all of an iPhone&#39;s traffic to go through Tor can use Orbot with Safari. According to the FAQ, Orbot sends all device traffic into Tor, so the benefits of Tor apply with Safari as well. The FAQ does not cover what happens to Safari&#39;s connections when Orbot is killed.&lt;/p&gt;
+&lt;p&gt;The first protection on the FAQ&#39;s list of what Onion Browser adds over Safari is that no request goes out until Tor is running and handling it, followed by the automatic clearing and the .onion switching. We infer from what the Tor Project and the FAQ write about WebKit that Safari is bound by the same WebKit limits as Onion Browser and falls just as short of Tor Browser&#39;s anti-tracking capabilities.&lt;/p&gt;
+&lt;p&gt;Guardian Project describes itself in the announcement as having more than ten years of experience developing and distributing Onion Browser and Orbot for iOS. The new project aims to bring iOS a Tor Browser built on Firefox&#39;s Gecko engine with the Tor Project&#39;s patches, while continuing to maintain Onion Browser and Orbot. According to the announcement, Onion Browser was deliberately given a different name because it is not the full Tor Browser. An iOS app using the Tor Browser name still needs the Tor Project&#39;s approval.&lt;/p&gt;
+&lt;p&gt;The roadmap runs by quarter. Q2, labelled January 2027, is for showing a prototype running Gecko on iOS and choosing a main route. Q3, labelled April 2027, is for shipping the first Alpha through TestFlight (Apple&#39;s channel for distributing test builds) and sideloading (installing apps without the App Store). Only in Q4, labelled July 2027, does the project decide whether the next step is a Beta or a full release.&lt;/p&gt;
+&lt;p&gt;Guardian Project acknowledges in the announcement that the best path is still uncertain, and the roadmap has two. The Apple route rests on the European Union&#39;s Digital Markets Act (DMA), which requires Apple to allow third-party browser engines on iOS, and on Japan&#39;s alternative browser engine programme. Gecko would run through BrowserEngineKit (the development kit Apple provides for alternative engines) and ship through the official store. The open route uses sideloading channels such as AltStore, a way, in the announcement&#39;s words, to &#34;break free from App Store censorship and limitations&#34;.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;According to the Tor Project&#39;s support page, Apple requires browsers on iOS to use WebKit, which is why Onion Browser cannot have the same privacy protections as Tor Browser (the EU and Japan have separate programmes, covered in the next paragraph). The FAQ explains that Tor Browser on desktop and Android is built on Firefox&#39;s Gecko, which offers more control and more reliability when implementing proxying and anti-tracking. Our reading is that moving to Gecko addresses the limits at the engine layer, since Onion Browser can already connect through Tor today.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s developer documents, as of 8 November, require iOS 17.4 or iPadOS 18 or later for the EU programme and iOS 26.2 or later for Japan&#39;s. An app must first be authorised by Apple and can only be distributed locally (the Japan document allows exceptions that Apple expressly permits). We infer from these conditions that, unless Apple grants separate permission, iPhone users outside the EU and Japan could not get an Apple-route Tor Browser from the official store. The announcement also allows for being limited to Europe and Japan, and Guardian Project plans to push Apple to open third-party browser engines worldwide.&lt;/p&gt;
+&lt;p&gt;Guardian Project uses the phrase &#34;malicious compliance&#34; for how Apple has complied with the DMA, and the roadmap includes a risk analysis of Apple as a platform and distributor. Under Apple&#39;s documents, only developers who meet specific criteria and commit to ongoing privacy and security requirements are authorised to use alternative engines. According to the announcement, the official store reaches ordinary users in Europe and Japan who only get apps through Apple&#39;s official channels. Whether sideloading would help users who already face App Store censorship more is left as a question in the announcement, with no conclusion.&lt;/p&gt;
+&lt;p&gt;The Alpha&#39;s timing comes from the roadmap, and the announcement has no information on where it could be installed. On shipping Tor Browser for iOS through the EU and Japan app stores, the wording in the announcement is &#34;when and if it is ready to go that way&#34;.&lt;/p&gt;
+&lt;p&gt;Japan is the only place in Asia that Apple&#39;s two programmes cover, and there only on iOS 26.2 or later. We infer that, unless Apple grants separate permission, an Apple-route Tor Browser would not reach the App Store outside the EU and Japan.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s iTunes lookup API on 8 November returned no listing for Onion Browser or Orbot in the mainland China storefront and one listing each in the US storefront. This is an API result, not an Apple announcement, and we neither opened the storefronts with local accounts nor could find out whether the two apps were removed from the mainland China store or never listed there.&lt;/p&gt;
+&lt;p&gt;For anyone who needs to hide their IP address from the sites they visit, the FAQ&#39;s comparison favours Onion Browser with Orbot (both are free where the App Store lists them and need iOS 15 or later). If Orbot keeps restarting, the built-in Tor is more stable, at the cost of the IP leak and of audio and video staying outside Tor. All of these options still use WebKit. We infer from the Tor Project&#39;s support page that anyone who needs Tor Browser&#39;s full protection has to move to a computer or Android for now.&lt;/p&gt;
+&lt;p&gt;Readers who do not need to hide their IP address from the sites they visit have nothing to set up now, and two points are worth coming back to. The quarter labelled January 2027 is when the main route gets chosen, and we infer that the choice will affect whether readers outside the EU and Japan can get the browser. The quarter labelled April 2027 will show whether the Alpha ships on schedule and in which regions. Guardian Project plans to keep maintaining Onion Browser and Orbot, and Q3 of the roadmap (labelled April 2027) also includes work on helping users decide between Onion Browser and Tor Browser for iOS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://guardianproject.info/2026/11/02/brewing-onion-cider-bringing-a-full-tor-browser-to-ios/&#34;&gt;Brewing Onion Cider: Bringing a full Tor Browser to iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Guardian Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tormobile/tormobile-3/&#34;&gt;How to install Tor Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionbrowser.com/faqs&#34;&gt;FAQs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Onion Browser&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines/&#34;&gt;Using alternative browser engines in the European Union&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines-jp/&#34;&gt;Using alternative browser engines in Japan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/onion-browser/id519296448&#34;&gt;Onion Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/orbot/id1609461599&#34;&gt;Orbot&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=519296448&amp;amp;country=cn&#34;&gt;Apple iTunes lookup, Onion Browser, China storefront&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1609461599&amp;amp;country=cn&#34;&gt;Apple iTunes lookup, Orbot, China storefront&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The Ninth Circuit appeal over a cell tower dump warrant</title>
 <link>https://anoni.net/news/en/2026/11/ninth-circuit-reverse-location/</link>
@@ -2449,105 +2537,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mas.gov.sg/regulation/notices/psn01-aml-cft-notice---specified-payment-services&#34;&gt;MAS Notice PSN01: Prevention of Money Laundering and Countering the Financing of Terrorism – Holders of Payment Services Licence (Specified Payment Services)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Monetary Authority of Singapore&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>A backdoored extension and malicious instruction files in AI coding tools</title>
-<link>https://anoni.net/news/en/2026/11/ai-devtools-supply-chain/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/ai-devtools-supply-chain</guid>
-<pubDate>Wed, 04 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Windows and macOS users who installed or updated the Claude Code extension 2.1.312 or 2.1.313 from Cursor&#39;s own marketplace on 29 October, Pacific time, may have received a backdoored version. According to an Anthropic staff member, the versions on Anthropic&#39;s official channels are not affected. Separately, research published on 22 October documented a Markdown instruction file placed in a Downloads folder to lure Codex into installing a malicious package.</description>
-<content:encoded>&lt;p&gt;Based on 10 sources, including Cursor, Forever Security, Ars Technica&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;On 29 October a tampered copy of the Claude Code extension (an add-on that installs into the editor and extends what it can do) sat in the extension marketplace run by Cursor, the AI code editor, for about 11 hours. According to Cursor&#39;s notice, the affected releases are the Windows and macOS builds of &lt;code&gt;Anthropic.claude-code&lt;/code&gt; 2.1.312 and 2.1.313, and only people who installed or updated the extension from Cursor&#39;s marketplace during that window need to act. The Register quotes a post on X by an Anthropic technical staff member saying the versions on Anthropic&#39;s official channels are fine and that only Cursor users are affected. In a separate case published on 22 October, the security company Forever Security described a Markdown instruction file that turned up in a Downloads folder and tried to get Codex, OpenAI&#39;s coding agent, to install a malicious package.&lt;/p&gt;
-&lt;p&gt;According to Cursor&#39;s notice, the malicious version was available from 02:27 to 13:35 Pacific Daylight Time on 29 October, which is 09:27 to 20:35 UTC, or 17:27 on 29 October to 04:35 on 30 October in Taipei (UTC+8). Ars Technica cites Cursor as saying at most 5,000 users were affected. The chief technology officer of the security company Phorion told Ars that the malicious version was published from Anthropic&#39;s official account on the Cursor marketplace. He also said that Cursor updates extensions automatically by default, which users can change in settings.&lt;/p&gt;
-&lt;p&gt;When Cursor updated its notice on 30 October it listed two versions, 2.1.312 and 2.1.313, whereas Ars, The Register and Phorion all initially reported only 2.1.313. On 30 October Phorion corrected its reference to Open VSX (the open extension marketplace shared by editors derived from VS Code) to Cursor&#39;s marketplace, and on 31 October added 2.1.312 following Cursor&#39;s update. Phorion and Ars both report that the malicious code also contains Linux-specific parts, while Cursor lists only Windows and macOS as affected platforms. Ars quotes an independent security researcher as saying Anthropic released 2.1.314 several hours after the malicious version went up.&lt;/p&gt;
-&lt;p&gt;According to Cursor&#39;s notice and Phorion&#39;s analysis, the malicious code runs as soon as the extension loads, without the user ever opening it. It sends the attacker the computer name, user name, operating system, public IP address, the email address in the Git configuration and the names of environment variables (not their values). It also tries to add the attacker&#39;s SSH key (SSH being the protocol used to log in to a computer remotely), set up a reverse tunnel, and keep retrying in the background. Cursor&#39;s notice says enabling the SSH service requires administrator privileges, so on most macOS and Windows machines this step fails and the attacker cannot log in through the tunnel.&lt;/p&gt;
-&lt;p&gt;Even where the tunnel was never set up, the attacker&#39;s key and the persistence settings remain on the machine, and the machine&#39;s details have already been sent. Cursor worked with the hosting provider to take the attacker&#39;s server offline. The other steps listed in Cursor&#39;s notice were removing the malicious version, temporarily shutting down the whole marketplace, and auditing access logs to confirm that no other extensions had been tampered with. Cursor also rotated its keys, rebuilt the marketplace and brought it back online.&lt;/p&gt;
-&lt;p&gt;As of 2 November neither Cursor nor Anthropic had disclosed how the malicious version came to be published under Anthropic&#39;s verified account on Cursor&#39;s marketplace. The independent researcher quoted above titled a 30 October post &#34;Anthropic hacked&#34;, and later added Anthropic&#39;s response, which places the problem with Cursor&#39;s marketplace, to the text. As quoted by The Register, the Anthropic staff member wrote that neither Anthropic&#39;s systems nor its employees&#39; laptops had been compromised. He wrote that someone had used access to Cursor&#39;s marketplace to upload a tampered copy that Anthropic had neither built nor published.&lt;/p&gt;
-&lt;p&gt;In the Markdown case, Forever&#39;s post describes an &lt;code&gt;AGENTS.md&lt;/code&gt; of about 13 KB, disguised as ordinary engineering guidelines, that appeared in the Downloads folder on a customer&#39;s computer. &lt;code&gt;AGENTS.md&lt;/code&gt; is an instruction file that developers keep in a project folder for coding agents, which read it automatically and follow it. This one asked Codex to change its own machine-wide settings, register an MCP server chosen by the attacker (MCP, the Model Context Protocol, is the interface agents use to connect to outside tools), and then install the npm package &lt;code&gt;function-color&lt;/code&gt;. Forever&#39;s own product stopped the package before it was installed, and according to Help Net Security, npm has since removed it.&lt;/p&gt;
-&lt;p&gt;According to Help Net Security, the researchers did not know how the file got into the Downloads folder when they found it. They wrote that a website can put a file in the Downloads folder without a click or any permission from the user. Codex only follows an &lt;code&gt;AGENTS.md&lt;/code&gt; in a folder it trusts, and the Downloads folder counts as trusted once the user has worked there. Reproducing the full attack in an isolated environment, the researchers found that Codex ran the program the file told it to run in more than 90 percent of attempts (most tests used a harmless stand-in that only opens a calculator).&lt;/p&gt;
-&lt;p&gt;The researchers also wrote their own &lt;code&gt;CLAUDE.md&lt;/code&gt; along the same lines to test Anthropic&#39;s Claude Code; this file was never found on a customer&#39;s computer. In about half of the tests, Claude Code changed its settings as the file instructed and pointed its API connection at the researchers&#39; server. The researchers wrote that this leaks the login token, which can be captured and used to take over the account. Forever&#39;s post argues that there is nothing for OpenAI or Anthropic to patch, and as of 2 November we had found no public response to the research from either company.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The sources do not connect the two incidents, and we cover them together because both exploit files that developer tools load and trust automatically. Ars reports that Cursor extensions run with the editor&#39;s own permissions, so once installed one can very likely reach local files, source code and developer tools. Our inference is that a verified marketplace account combined with automatic updates by default left the publishing account as the only checkpoint between users and a malicious version. According to The Register and DoublePulsar, updating to 2.1.314 does not remove the persistence settings already installed.&lt;/p&gt;
-&lt;p&gt;The instruction-file attack is a form of indirect prompt injection (hiding instructions in content an AI will read), and agents are designed to follow an instruction file as though it came from the user. Forever places the problem where two individually reasonable things meet: agents trust the folder they are working in, and web pages have long been able to drop files into the Downloads folder. According to Help Net Security, much browsing is now handed to agents to do on their own. A page an agent opens by itself can also drop a file, with no one at the screen to notice.&lt;/p&gt;
-&lt;p&gt;Both automatic updates and instruction files involve trade-offs. Our inference is that turning off automatic extension updates avoids a window like this one, at the cost of receiving security fixes later too. Forever advises keeping the agent&#39;s action approvals and sandbox (which limits what a program can access) switched on, and according to iThome&#39;s summary, the instruction file aimed at Codex tried to get the agent to bypass exactly those two limits.&lt;/p&gt;
-&lt;p&gt;Anthropic&#39;s Supported Regions Policy is marked &#34;Effective Nov 12, 2026&#34;, a date later than our check on 2 November, and lists Japan, Singapore, South Korea and Taiwan among the places in Asia where its products, Claude Code included, will be available under that policy. The page also states, &#34;Any country or region not listed is unsupported.&#34; Mainland China, Hong Kong and Macao are not on the list. Cursor&#39;s documentation says only that some of its model providers have location-based restrictions, so certain models may not appear in Cursor in some regions while the others remain usable, and the page does not name the regions.&lt;/p&gt;
-&lt;p&gt;Windows and macOS users who installed or updated the Claude Code extension from Cursor&#39;s marketplace between the evening of 29 October and the early hours of 30 October, Taipei time (the morning and early afternoon of 29 October, Pacific time), can start by checking the list of authorised SSH keys as described in Cursor&#39;s notice; finding the attacker&#39;s key there means the machine is affected. The notice includes check and clean-up scripts for macOS and Windows. It also warns that removing the extension alone may not be enough, and advises changing, from a separate trusted computer, the passwords, tokens and login sessions the affected machine could reach, and considering a reinstall.&lt;/p&gt;
-&lt;p&gt;For people using agents such as Codex or Claude Code, the first step Forever recommends is not starting an agent in the Downloads folder, which requires no extra tools (our inference is that this also applies to people who do not write code and only use agents to sort documents or browse the web). Before opening a freshly cloned repository or a folder someone else sent, read any &lt;code&gt;AGENTS.md&lt;/code&gt; and &lt;code&gt;CLAUDE.md&lt;/code&gt; inside that you did not write, and check the agent&#39;s configuration files for servers or URLs you did not add yourself. If you find a planted file, Forever advises treating your login tokens as leaked and changing them immediately. Our inference is that these steps only reduce the chance of an agent being misled, and do not change the design that has agents act on instruction files.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cursor.com/blog/claude-code-extension-security-notice&#34;&gt;Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cursor&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forever.security/blog/hijacking-ai-agents-via-downloads-folder/&#34;&gt;Markdown Is the New Executable: Attackers Are Dropping Agent Instructions Into Your Downloads Folder From the Web&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Forever Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/&#34;&gt;Anthropic VS code extension on Cursor backdoored for nearly 12 hours&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682&#34;&gt;Anthropic: That Claude Code extension compromise… couldn&amp;#39;t be us&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://phorion.io/blog/offical-claude-code-vsx-compromise/&#34;&gt;Official Claude Code Extension Compromise: Security Advisory&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Phorion&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2&#34;&gt;Anthropic hacked to deliver remote access trojan to claude developer laptops worldwide&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;DoublePulsar&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.helpnetsecurity.com/2026/10/26/ai-coding-agents-malware-openai-codex/&#34;&gt;AI coding agents fall for malicious instructions planted in the Downloads folder&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Help Net Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180033&#34;&gt;惡意Markdown指引檔企圖誘使Codex安裝惡意套件，AI程式開發代理面臨攻擊風險&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/supported-countries&#34;&gt;Supported Regions Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cursor.com/docs/account/regions&#34;&gt;Regions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cursor&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

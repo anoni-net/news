@@ -6,7 +6,81 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>iPhone 上的 Tor 選項與完整 Tor Browser 的開發計畫</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ios-full-tor-browser/</link>
+<guid isPermaLink="false">anoni-news:2026/11/ios-full-tor-browser</guid>
+<pubDate>Sat, 14 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>到 11 月 8 日為止，iPhone 上沒有 Tor Browser，Tor Project 推薦的是 Onion Browser。Guardian Project 公布一年路線圖，Alpha 測試版排在標示為 2027 年 4 月的那一季，Alpha 推出前無法安裝。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，來自 Guardian Project、Tor Project、Onion Browser 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;到 11 月 8 日為止，iPhone 上沒有 Tor Browser（經 Tor 網路連線的瀏覽器）。Tor Project 在安裝說明頁推薦改用 Onion Browser，也提醒它的隱私保護比不上 Tor Browser。Guardian Project 在 11 月 2 日公布一年路線圖，目標是把完整的 Tor Browser 帶到 iOS，第一個 Alpha 測試版排在路線圖標示為 2027 年 4 月的那一季。計畫還在決定走哪一條發行路線，Alpha 推出前無法安裝，iPhone 使用者手上的選項沒有改變。&lt;/p&gt;
+&lt;p&gt;依 Onion Browser 的常見問題頁（FAQ），Tor 能讓監看連線的人看不到你造訪的網站，也讓網站無法得知你的實際位置。在 iPhone 上經 Tor 瀏覽網頁，可以用開源的 Onion Browser。它有兩種連線方式：搭配另一款 App Orbot，或用 App 內建的 Tor（Onion Browser 的 FAQ 裡標註 iOS 17 only）。依 App Store 的資料，到 11 月 8 日為止兩款都免費、最低需求都是 iOS 15，最近一次更新分別在 10 月 20 日與 10 月 15 日。&lt;/p&gt;
+&lt;p&gt;依 FAQ 的比較，Orbot 比較安全，內建的 Tor 比較穩定。使用內建的 Tor 時，真實 IP 會經由 WebRTC（瀏覽器直接傳輸影音與資料的技術）洩漏給造訪的網站，音訊與影片串流也無法經過 Tor。FAQ 裡的原因是 Apple 提供並強制使用的瀏覽器引擎 WebKit（引擎是解析與顯示網頁的核心元件）。Orbot 使用 Apple 的 Network Extensions（網路擴充功能），Apple 只給它 50 MB 記憶體，Tor 客戶端接近上限時會被終止並重新啟動。&lt;/p&gt;
+&lt;p&gt;依 FAQ，Onion Browser 會在離開前景時自動清除資料、預設不保留快取與 cookie，也能偵測網站的 .onion 位址並自動切換。至於瀏覽器指紋（網站用裝置與瀏覽器的細節辨識訪客的手法），FAQ 裡的說法是 iOS 內建的 WebKit 能調整的地方很少，最好的做法是跟其他 iOS 使用者看起來一樣。&lt;/p&gt;
+&lt;p&gt;只想讓整台 iPhone 的連線走 Tor 時，也可以用 Orbot 搭配 Safari。依 FAQ，Orbot 把裝置上所有流量都送進 Tor，搭配 Safari 時同樣有 Tor 的效果。Orbot 被終止時 Safari 的連線會如何，FAQ 裡沒有交代。&lt;/p&gt;
+&lt;p&gt;FAQ 裡 Onion Browser 比 Safari 多的保護，首先是確認 Tor 正在運作並接手請求之後才送出連線，另外還有自動清除與 .onion 切換。本文依 Tor Project 與 FAQ 對 WebKit 的說明推論，Safari 與 Onion Browser 一樣受 WebKit 限制，同樣達不到 Tor Browser 的反追蹤能力。&lt;/p&gt;
+&lt;p&gt;Guardian Project 在公告自述有十年以上開發與發行 Onion Browser、iOS 版 Orbot 的經驗。新計畫要在 iOS 上提供以 Firefox 的 Gecko 引擎為基礎、納入 Tor Project 修補的 Tor Browser，同時繼續維護 Onion Browser 與 Orbot。依公告，Onion Browser 特意取了不同的名字，因為它並非完整的 Tor Browser。iOS 版要使用 Tor Browser 的名稱，還要取得 Tor Project 的核准。&lt;/p&gt;
+&lt;p&gt;路線圖以季為單位，標示為 2027 年 1 月的第二季要展示在 iOS 上執行 Gecko 的原型，並選定主要路線。標示為 2027 年 4 月的第三季要透過 TestFlight（Apple 的測試版發放管道）與側載（不經 App Store 安裝 App）推出第一個 Alpha。標示為 2027 年 7 月的第四季才要決定下一步是 Beta 還是正式推出。&lt;/p&gt;
+&lt;p&gt;公告裡也寫到哪條路最好仍不確定，路線圖列了兩條。Apple 路線的依據是歐盟《數位市場法》（Digital Markets Act，DMA）要求 Apple 在 iOS 上開放第三方瀏覽器引擎，以及日本的替代瀏覽器引擎方案。Gecko 會透過 BrowserEngineKit（Apple 提供給替代引擎的開發工具）執行，經官方商店發行。開放路線改走 AltStore 這類側載管道，公告的用語是擺脫 App Store 的審查與限制。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 Tor Project 的說明頁，Apple 要求 iOS 上的瀏覽器使用 WebKit，Onion Browser 因此無法具備與 Tor Browser 相同的隱私保護（歐盟與日本另有方案，見下一段）。FAQ 裡的說明是 Tor Browser 在電腦與 Android 上以 Firefox 的 Gecko 為基礎，實作代理與反追蹤時有更多控制空間，也更可靠。本文的理解是，換成 Gecko 處理的是引擎這一層的限制，經 Tor 連線本身 Onion Browser 現在就能做到。&lt;/p&gt;
+&lt;p&gt;Apple 的開發者文件到 11 月 8 日為止列出的條件是歐盟方案需要 iOS 17.4 或 iPadOS 18 以上、日本方案需要 iOS 26.2 以上。App 要先通過 Apple 的授權，也只能在當地發行（日本的文件另有 Apple 明確許可的例外）。本文依這些條件推論，除非 Apple 另外許可，歐盟與日本以外的 iPhone 使用者無法從官方商店取得走 Apple 路線的 Tor Browser。公告裡也有只能在歐洲與日本發行的假設，Guardian Project 打算推動 Apple 在全球開放第三方瀏覽器引擎。&lt;/p&gt;
+&lt;p&gt;公告裡以 malicious compliance（惡意遵從）形容 Apple 遵循 DMA 的做法，路線圖也排了針對 Apple 這個平台與發行者的風險分析。Apple 的文件裡寫的是，只授權符合特定標準、承諾持續遵守隱私與安全要求的開發者使用替代引擎。依公告，官方商店能觸及歐洲與日本只會從 Apple 官方管道取得 App 的一般使用者。側載對已經面臨 App Store 審查的使用者是否更有幫助，公告裡只有問句，沒有結論。&lt;/p&gt;
+&lt;p&gt;Alpha 的時程來自路線圖，公告裡沒有它能在哪些地區安裝的資訊。公告對經歐盟與日本商店發行 iOS 版 Tor Browser 的說法是 when and if（準備好才會進行）。&lt;/p&gt;
+&lt;p&gt;要對造訪的網站隱藏 IP 的人，依 FAQ 的比較適合讓 Onion Browser 搭配 Orbot（兩款都可以從 App Store 免費安裝，需要 iOS 15 以上）。Orbot 反覆重新啟動時，內建的 Tor 比較穩定，代價是前面提到的 IP 洩漏與影音不經 Tor。以上做法都仍用 WebKit。本文依 Tor Project 的說明推論，需要 Tor Browser 完整防護的人目前要改到電腦或 Android 上使用。&lt;/p&gt;
+&lt;p&gt;不需要對造訪的網站隱藏 IP 的讀者現在不必做任何設定，要回來看的時間點有兩個。標示為 2027 年 1 月的那一季會選定主要路線，本文推論路線的選擇會影響歐盟與日本以外的讀者能否取得。標示為 2027 年 4 月的那一季要看 Alpha 是否如期推出、開放哪些地區。Guardian Project 規劃繼續維護 Onion Browser 與 Orbot，路線圖的第三季（標示為 2027 年 4 月）也排了協助使用者判斷該用 Onion Browser 或 iOS 版 Tor Browser 的工作。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://guardianproject.info/2026/11/02/brewing-onion-cider-bringing-a-full-tor-browser-to-ios/&#34;&gt;Brewing Onion Cider: Bringing a full Tor Browser to iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Guardian Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tormobile/tormobile-3/&#34;&gt;How to install Tor Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionbrowser.com/faqs&#34;&gt;FAQs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Onion Browser&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines/&#34;&gt;Using alternative browser engines in the European Union&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines-jp/&#34;&gt;Using alternative browser engines in Japan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/onion-browser/id519296448&#34;&gt;Onion Browser&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/orbot/id1609461599&#34;&gt;Orbot&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>美國第九巡迴法院審理的基地台傾印搜索票</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ninth-circuit-reverse-location/</link>
@@ -1890,92 +1964,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_eng_FINAL.pdf&#34;&gt;Safeguarding payments, sustaining movements: A handbook for Hong Kongers to navigate digital payment platforms&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>AI 程式開發工具的擴充套件後門與惡意指引檔</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ai-devtools-supply-chain/</link>
-<guid isPermaLink="false">anoni-news:2026/11/ai-devtools-supply-chain</guid>
-<pubDate>Wed, 04 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>太平洋時間 10 月 29 日從 Cursor 自家市集安裝或更新 Claude Code 擴充套件 2.1.312、2.1.313 的 Windows 與 macOS 使用者，可能裝到含後門的版本。依 Anthropic 方面的說法，官方管道的版本不受影響。另一份 10 月 22 日的研究記錄了放進下載資料夾、誘使 Codex 安裝惡意套件的 Markdown 指引檔。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Cursor、Forever Security、Ars Technica 等 8 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;10 月 29 日，AI 程式編輯器 Cursor 自家的擴充套件市集上出現被竄改過的 Claude Code 擴充套件（extension，裝進編輯器、增加功能的外掛程式），停留約 11 小時。依 Cursor 的公告，受影響的是 Windows 與 macOS 版的 &lt;code&gt;Anthropic.claude-code&lt;/code&gt; 2.1.312 與 2.1.313，只有在那段時間從 Cursor 市集安裝或更新的人需要處理。依 The Register 轉引 Anthropic 一位技術人員在 X 的貼文，Anthropic 官方管道的版本沒有問題，只有 Cursor 的使用者受影響。另一件是資安公司 Forever Security 10 月 22 日公開的案例，一份出現在下載資料夾的 Markdown 指引檔試圖讓 OpenAI 的程式開發代理 Codex 安裝惡意套件。&lt;/p&gt;
-&lt;p&gt;依 Cursor 的公告，惡意版本在市集上的時間是太平洋時間 10 月 29 日 02:27 到 13:35（台北時間 10 月 29 日 17:27 到 10 月 30 日 04:35）。Ars Technica 的報導引述 Cursor，受影響的使用者最多 5,000 人。資安公司 Phorion 的技術長向 Ars 表示，惡意版本是用 Anthropic 在 Cursor 市集的官方帳號發布的。他也提到 Cursor 預設會自動更新擴充套件，使用者可以在設定裡調整。&lt;/p&gt;
-&lt;p&gt;Cursor 10 月 30 日更新公告時列出 2.1.312 與 2.1.313 兩版，Ars、The Register 與 Phorion 一開始都只寫 2.1.313。Phorion 10 月 30 日把原本寫的 Open VSX（VS Code 衍生編輯器共用的開放擴充套件市集）更正為 Cursor 的市集，10 月 31 日又依 Cursor 的更新補上 2.1.312。Phorion 與 Ars 都寫到惡意程式碼也有針對 Linux 的部分，Cursor 列出的受影響平台只有 Windows 與 macOS。依 Ars 引述一位獨立資安研究者的說法，Anthropic 在惡意版本上架數小時後發布了 2.1.314。&lt;/p&gt;
-&lt;p&gt;依 Cursor 的公告與 Phorion 的分析，惡意程式碼在擴充套件載入時就會執行，使用者不必開啟它。程式會把電腦名稱、使用者名稱、作業系統、公開 IP、Git 設定的 email 與環境變數的名稱（不含值）回傳給攻擊者。它也試著加入攻擊者的 SSH（遠端登入電腦用的協定）金鑰、建立反向連線的通道，並設定成在背景持續重試。Cursor 的公告提到開啟 SSH 服務需要管理員權限，多數 macOS 與 Windows 電腦上這一步會失敗，攻擊者也就無法經由通道登入。&lt;/p&gt;
-&lt;p&gt;即使通道沒有建立，攻擊者的金鑰與持續執行的設定仍會留在電腦上，電腦的資料也已經送出。Cursor 與代管業者合作，讓攻擊者的伺服器下線。Cursor 的公告列出的處置還包括移除惡意版本、暫時關閉整個市集，以及稽核存取紀錄、確認沒有其他擴充套件被竄改。Cursor 也更換了金鑰，重建市集後重新上線。&lt;/p&gt;
-&lt;p&gt;到 11 月 2 日，Cursor 與 Anthropic 都沒有公開惡意版本如何以 Anthropic 的已驗證帳號上架到 Cursor 市集。前面引述的那位獨立資安研究者 10 月 30 日的文章標題寫「Anthropic hacked」，之後在文中補上 Anthropic 方面把問題歸到 Cursor 市集的回應。依 The Register 轉引，Anthropic 那位技術人員寫 Anthropic 的系統與員工電腦都沒有被入侵。他寫到有人利用 Cursor 市集的存取權限，上傳了 Anthropic 沒有製作、也沒有發布的竄改版本。&lt;/p&gt;
-&lt;p&gt;Markdown 指引檔那件，依 Forever 的文章，客戶電腦的下載資料夾裡出現一份約 13 KB、偽裝成一般工程規範的 &lt;code&gt;AGENTS.md&lt;/code&gt;。&lt;code&gt;AGENTS.md&lt;/code&gt; 是開發者放在專案資料夾裡、給程式開發代理讀的指引檔，代理會自動讀取並照著做。檔案要求 Codex 修改自己的全機設定、註冊攻擊者指定的 MCP 伺服器（Model Context Protocol，讓代理串接外部工具的介面），再安裝 npm 套件 &lt;code&gt;function-color&lt;/code&gt;。Forever 用自家產品在套件安裝前攔下，依 Help Net Security 的報導，npm 已經移除該套件。&lt;/p&gt;
-&lt;p&gt;依 Help Net Security 的報導，研究者發現時不知道檔案是怎麼進到下載資料夾的。研究者寫到，網站不需要使用者點擊或授權，就能把檔案放進下載資料夾。Codex 只照做它信任的資料夾裡的 &lt;code&gt;AGENTS.md&lt;/code&gt;，使用者在下載資料夾工作過之後，那裡就算是信任的資料夾。研究者在隔離環境重現整條攻擊，Codex 在超過九成的嘗試裡執行了檔案要它執行的程式（多數測試用只會開啟計算機的無害替身）。&lt;/p&gt;
-&lt;p&gt;研究者也仿照同樣的寫法自行寫了一份 &lt;code&gt;CLAUDE.md&lt;/code&gt;，測試 Anthropic 的 Claude Code，這份檔案沒有在客戶電腦上出現過。約一半的測試裡，Claude Code 照檔案改了設定，把 API 連線導向研究者的伺服器。研究者寫到登入權杖會因此外流，用截取的權杖可以接管帳號。Forever 的文章主張 OpenAI 與 Anthropic 都沒有東西可以修補，到 11 月 2 日，本文沒有查到兩家公司對這份研究的公開回應。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;兩起事件的來源沒有把它們連在一起，本文放在同一篇，是因為兩者都利用了開發工具自動載入、自動信任的檔案。Ars 的報導提到，Cursor 的擴充套件以編輯器本身的權限執行，裝上之後很可能可以存取本機檔案、原始碼與開發工具。本文推論，市集的已驗證帳號加上預設的自動更新，讓發布帳號成為使用者與惡意版本之間唯一的關卡。依 The Register 與 DoublePulsar 的文章，更新到 2.1.314 也不會清掉已經裝好的持續執行設定。&lt;/p&gt;
-&lt;p&gt;指引檔的攻擊屬於間接提示注入（indirect prompt injection，把指令藏在 AI 會讀進來的內容裡），代理照設計會把指引檔當成使用者的指示照做。Forever 把問題歸在兩件各自合理的事交會的地方，一是代理信任它所在的資料夾，二是網頁長久以來就能把檔案放進下載資料夾。依 Help Net Security 的報導，很多瀏覽工作已經交給代理自行完成。代理自己開啟的網頁也可能放下檔案，螢幕前沒有人看得到。&lt;/p&gt;
-&lt;p&gt;自動更新與指引檔都有取捨。本文推論，關掉擴充套件的自動更新可以避開類似的時間窗，代價是安全修補也會晚到。Forever 建議保持代理的操作核准與沙箱（限制程式能存取的範圍）開啟，依 iThome 的整理，Codex 那份指引檔就試圖讓代理略過這兩道限制。&lt;/p&gt;
-&lt;p&gt;在台北時間 10 月 29 日傍晚到 30 日清晨從 Cursor 市集安裝或更新過 Claude Code 擴充套件的 Windows 與 macOS 使用者，第一步是照 Cursor 公告裡的方法檢查 SSH 的授權金鑰清單，有攻擊者的金鑰就代表電腦受影響。公告附有 macOS 與 Windows 的檢查與清除腳本。同一份公告提醒只移除擴充套件可能不夠，要從另一台可信任的電腦更換受影響電腦能存取的密碼、權杖與登入工作階段，並評估是否重灌。&lt;/p&gt;
-&lt;p&gt;用 Codex、Claude Code 這類代理的人，Forever 建議的第一步是不要在下載資料夾啟動代理（本文推論不寫程式、只讓代理整理文件或瀏覽網頁的人也適用），不需要另外購買工具。打開剛複製的程式庫或別人給的資料夾之前，先讀過裡面不是自己寫的 &lt;code&gt;AGENTS.md&lt;/code&gt; 與 &lt;code&gt;CLAUDE.md&lt;/code&gt;，也檢查代理的設定檔有沒有自己沒加過的伺服器或網址。發現被植入檔案時，依 Forever 的建議，要當作登入權杖已經外流並立即更換。本文推論這些做法只能降低被誘導的機會，代理照指引檔行事的設計不會因此改變。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cursor.com/blog/claude-code-extension-security-notice&#34;&gt;Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Cursor&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forever.security/blog/hijacking-ai-agents-via-downloads-folder/&#34;&gt;Markdown Is the New Executable: Attackers Are Dropping Agent Instructions Into Your Downloads Folder From the Web&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Forever Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/&#34;&gt;Anthropic VS code extension on Cursor backdoored for nearly 12 hours&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682&#34;&gt;Anthropic: That Claude Code extension compromise… couldn&amp;#39;t be us&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://phorion.io/blog/offical-claude-code-vsx-compromise/&#34;&gt;Official Claude Code Extension Compromise: Security Advisory&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Phorion&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2&#34;&gt;Anthropic hacked to deliver remote access trojan to claude developer laptops worldwide&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;DoublePulsar&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.helpnetsecurity.com/2026/10/26/ai-coding-agents-malware-openai-codex/&#34;&gt;AI coding agents fall for malicious instructions planted in the Downloads folder&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Help Net Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180033&#34;&gt;惡意Markdown指引檔企圖誘使Codex安裝惡意套件，AI程式開發代理面臨攻擊風險&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
