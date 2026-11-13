@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>服务商手上的个人记录与美国 Total Information Awareness 计划</title>
+<link>https://anoni.net/news/zh-cn/history/11-14/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-14/2026</guid>
+<pubDate>Sat, 14 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在中国大陆办理手机入网，要向运营商提供真实身份信息，运营商还负有协助公安机关、国家安全机关的法定义务（2026 年 11 月查阅）。这一天，《纽约时报》的专栏作家写道《国土安全法》草案未修改就通过的话，美国国防部的 Total Information Awareness 计划会把美国人的消费、通信与旅行记录集中成数据库。</description>
+<content:encoded>&lt;p&gt;在中国大陆办理移动电话入网手续要提供真实身份信息，不提供的话运营商不得提供相关服务（《网络安全法》第二十六条），同法第三十条另要求网络运营者协助公安机关、国家安全机关依法侦查犯罪与维护国家安全（国家网信办公布的 2025 年修正版、2026 年 1 月 1 日起施行，2026 年 11 月 8 日查阅）。2002 年 11 月 14 日《纽约时报》的专栏作家写道，《国土安全法》草案未修改就通过的话，美国人的信用卡消费、处方、上网与订票记录都会进入国防部 Total Information Awareness（全面信息感知，TIA）计划的数据库。美国国防部高等研究计划局（DARPA）2003 年 5 月给国会的报告里把 TIA 定位为反恐的研发原型、否认有意建立美国公民的档案，国会同年 9 月的 2004 财政年度国防拨款法禁止经费用于 TIA，但书排除的反恐国外情报处理、分析与协作工具只能用在美国境外或全程针对非美国公民的行动。美国国家情报总监办公室 2023 年 6 月解密公开的专家小组报告里写情报单位可以购买商业数据，规范比其他情报来源宽松，结合其他商业数据也常能识别出个人。你可以打开所用运营商或应用的隐私政策，核对通信与账号资料在哪些情形下会提供给政府机关（本文的建议）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>电子邮箱服务商交给政府的账号资料</title>
 <link>https://anoni.net/news/zh-cn/history/11-13/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你连不上某个网站时，原因之一可能是网络运营商让网址查不到对应的服务器地址。这一天，美国众议院司法委员会主席提出《禁止网络盗版法案》，要求网络运营商依法院命令采取让境外侵权网站域名无法解析等措施。</description>
 <content:encoded>&lt;p&gt;你连不上某个网站时，原因之一可能是网络运营商让网络的电话簿（DNS）查不到这个网址的服务器地址。美国众议院司法委员会主席在 2011 年 10 月 26 日提出《禁止网络盗版法案》（SOPA），要求网络运营商收到法院命令后 5 天内或法院另定的期限内，采取让境外侵权网站域名无法解析等措施。2012 年 1 月提案的主席宣布打算删除 DNS 封锁条款，维基百科也停止服务 24 小时抗议，委员会之后推迟审议。中国大陆 2025 年修正的《网络安全法》第五十二条规定国家网信部门和有关部门发现来源于境外的禁止信息时，应当通知有关机构采取技术措施阻断传播，条文由行政机关执行、没有写到法院程序。海外的读者在所在地的网络打不开某个网站时，可以用 OONI Probe 的网络连接测试分出 DNS、连接与网页内容的异常（异常不一定代表封锁），运行的风险取决于你的处境与所在地（OONI 的常见问题写明监控网络的人可能看到你在运行它）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>用 Facebook 账号登录的第三方 App</title>
-<link>https://anoni.net/news/zh-cn/history/10-25/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-25/2026</guid>
-<pubDate>Sun, 25 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你用 Facebook 账号登录过的 App 或游戏，可能还保有当时从账号取得的数据。这一天，英国信息专员办公室公布对 Facebook 的 50 万英镑罚款，理由包括让 App 开发者未经用户清楚知情的同意取得数据。</description>
-<content:encoded>&lt;p&gt;你用 Facebook 账号登录过的 App 或游戏，可能还保有当时从账号取得的数据。英国的信息专员办公室（ICO，负责个人信息保护的主管机关）在 2018 年 10 月 25 日公布对 Facebook 的 50 万英镑罚款，新闻稿写 Facebook 在 2007 到 2014 年间让 App 开发者未经用户清楚知情的同意取得数据，连没有安装 App、只是安装者好友的用户也在内。双方在 Facebook 上诉后于 2019 年和解，Facebook 同意支付罚款但不承认责任，ICO 宣布和解的声明里收录的 Facebook 说法是 2015 年对政治顾问公司 Cambridge Analytica 的指控本应多做调查、当时也已大幅限制 App 开发者可取得的信息。依 GreatFire（监测中国网络审查的网站）2026 年 10 月 23 日查询的页面，Facebook 网站在中国大陆最近 84 次有结论的检测都失败（最近一次在 10 月 12 日），OONI（由志愿者测量网络封锁的项目）在 2026 年 9 月 23 日到 10 月 22 日于中国大陆的 598 条测量也只有 32 条正常（其余是异常或失败，异常不等于确认封锁）。海外的读者依 Facebook 帮助中心的页面，可以在电脑版「设置与隐私」的「设置」里打开「应用和网站」移除 App（英文版 2026 年 10 月查证），移除之后 App 先前存下的数据可能还在。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

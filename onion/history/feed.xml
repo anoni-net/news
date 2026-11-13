@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>業者手上的個人紀錄與美國 Total Information Awareness 計畫</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-14/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-14/2026</guid>
+<pubDate>Sat, 14 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你手機的通信紀錄由電信業者保存，檢察官偵查犯罪時原則上要向法院聲請調取（2026 年 11 月查證）。這一天，《紐約時報》的專欄作家寫道《國土安全法》草案未修改就通過的話，美國國防部的 Total Information Awareness 計畫會把美國人的消費、通信與旅行紀錄集中成資料庫。</description>
+<content:encoded>&lt;p&gt;你手機的通信紀錄連同位置資訊由電信業者保存，《通訊保障及監察法》第 11-1 條規定檢察官偵查犯罪時原則上要向法院聲請調取票才能取得，最輕本刑十年以上之罪與條文列舉的罪名則不必經法院而由檢察官自行調取（2026 年 11 月 8 日查閱）。2002 年 11 月 14 日《紐約時報》的專欄作家寫道，《國土安全法》草案未修改就通過的話，美國人的信用卡消費、處方、上網與訂票紀錄都會進入國防部 Total Information Awareness（全面資訊感知，TIA）計畫的資料庫。美國國防部高等研究計畫署（DARPA）2003 年 5 月給國會的報告裡把 TIA 定位為反恐的研發原型、否認有意建立美國公民的檔案，國會同年 9 月的 2004 會計年度國防撥款法禁止經費用於 TIA，但書排除的反恐國外情報處理、分析與協作工具只能用在美國境外或全程針對非美國公民的行動。美國國家情報總監辦公室 2023 年 6 月解密公開的專家小組報告裡寫情報單位可以購買商業資料，規範比其他情報來源寬鬆，結合其他商業資料也常能辨識出個人。建議門號申請人依《電信管理法》第 9 條及其作業辦法向電信業者查詢自己的通信與帳務紀錄（不涵蓋情報單位購買的商業資料），查詢要付費、紀錄法定最短保存一年，條文沒有寫能否得知紀錄是否被調取（2026 年 11 月 8 日查閱）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>電子信箱業者交給政府的帳號資料</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-13/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你連不上某個網站時，原因之一可能是網路業者讓網址查不到對應的伺服器位址。這一天，美國眾議院司法委員會主席提出《禁止網路盜版法案》，要求網路業者依法院命令採取讓境外侵權網站網域名稱無法解析等措施。</description>
 <content:encoded>&lt;p&gt;你連不上某個網站時，原因之一可能是網路業者讓網路的電話簿（DNS）查不到這個網址的伺服器位址。美國眾議院司法委員會主席在 2011 年 10 月 26 日提出《禁止網路盜版法案》（SOPA），要求網路業者收到法院命令後 5 天內或法院另定的期限內，採取讓境外侵權網站網域名稱無法解析等措施。2012 年 1 月提案的主席宣布打算拿掉 DNS 封鎖條款，維基百科也停止服務 24 小時抗議，委員會之後延後審議。在台灣 2022 年 6 月修正的著作權法裡，我們沒有找到讓著作權人聲請封鎖網站的條文，其他理由的封鎖本文沒有查。網站在你的網路上打不開時，可以用 OONI Probe 的網路連線測試分出 DNS、連線與網頁內容的異常，但異常不一定代表封鎖。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>用 Facebook 帳號登入的第三方 App</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-25/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-25/2026</guid>
-<pubDate>Sun, 25 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你用 Facebook 帳號登入過的 App 或遊戲，可能還保有當時從帳號取得的資料。這一天，英國資訊專員辦公室公布對 Facebook 的 50 萬英鎊罰款，理由包括讓 App 開發者未經使用者清楚知情的同意取得資料。</description>
-<content:encoded>&lt;p&gt;你用 Facebook 帳號登入過的 App 或遊戲，可能還保有當時從帳號取得的資料。英國的資訊專員辦公室（ICO，負責個資保護的主管機關）在 2018 年 10 月 25 日公布對 Facebook 的 50 萬英鎊罰款，新聞稿寫 Facebook 在 2007 到 2014 年間讓 App 開發者未經使用者清楚知情的同意取得資料，連沒有安裝 App、只是安裝者朋友的使用者也在內。Facebook 提出上訴後，雙方在 2019 年和解，Facebook 同意支付罰款但不承認責任。依 ICO 宣布和解的聲明裡收錄的 Facebook 說法，2015 年對政治顧問公司 Cambridge Analytica 的指控本應多做調查，當時也已大幅限制 App 開發者可取得的資訊。依 Facebook 說明中心的頁面，電腦版可以在「設定和隱私」的「設定」裡打開「應用程式和網站」移除 App（英文版 2026 年 10 月查證），移除之後 App 先前存下的資料可能還在。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
