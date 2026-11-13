@@ -6,7 +6,123 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Gemini 个人账号对话用于模型训练的范围与关闭方式</title>
+<link>https://anoni.net/news/zh-cn/2026/11/gemini-chat-training/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/gemini-chat-training</guid>
+<pubDate>Sat, 14 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>年满 18 岁的 Gemini 个人账号默认开启“保留活动记录”（Keep Activity），开启时 Google 会用活动记录训练生成式 AI 模型，部分对话经人工审查（依 Google 说明页，11 月 8 日查阅）。关闭设置或改用临时对话（Temporary Chat）后，对话不用于训练（关闭设置时提供意见反馈例外），保留 72 小时。经人工审查的对话最多保留三年。说明页没有区分付费与免费方案。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Google、Hacker News、中国人大网 等 4 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;年满 18 岁的用户登录个人 Google 账号使用 Gemini 时，“保留活动记录”（Keep Activity）设置默认为开启。开启期间，Google 会用活动记录改进服务与训练生成式 AI 模型，其中一部分对话会经过人工审查。默认值写在“管理及删除活动记录”说明页，用途写在 Gemini 帮助中心的隐私权专区（本文于 11 月 8 日查阅），工作或学校账号可能适用其他条款。11 月 4 日一则 Hacker News 帖子提到付费订阅者的对话同样会用于训练并引起讨论，下文的规则出自 Google 的现行文件，推论处另行标明。&lt;/p&gt;
+&lt;p&gt;依隐私权专区（隐私权声明 2026 年 10 月 13 日版、问答 10 月 26 日版），Google 列出的活动记录用途是提供、开发及改进服务（包括训练生成式 AI 模型），以及保护 Google、用户和一般大众。同一页提到系统不会使用 Gemini 对话作为展示广告的依据（日后调整会提供清楚说明），Google 也不会出售个人信息。&lt;/p&gt;
+&lt;p&gt;设置开启时，对话、上传的文件与共享的屏幕画面都会存进活动记录，关联应用（Connected Apps，让 Gemini 调用其他 Google 应用与第三方服务数据的功能）的数据与从其他 AI 平台导入的对话同样用于改进服务。活动记录默认 18 个月后自动删除，可以改成 3 个月、36 个月或不自动删除。音频、Gemini Live（以语音与 Gemini 自然对话的功能）的视频与屏幕共享默认不用于改进服务，需要另外勾选，Live 对话的转录稿与分享给 Live 的上传内容则在“保留活动记录”开启时用于改进服务。&lt;/p&gt;
+&lt;p&gt;隐私权专区提到 Google AI 方案（Google 的付费订阅方案）时，只把订阅相关信息列为收集项目，训练与人工审查的段落没有区分付费与免费。本文据此推论两者适用同一份声明，Google 没有明文写出这句话，到 11 月 8 日也查不到 Google AI 方案专属的隐私文件。&lt;/p&gt;
+&lt;p&gt;工作与学校账号的活动记录设置由 Google Workspace 管理员控制，适用的规则可能不同。Workspace 的生成式 AI 隐私权专区（10 月 6 日版）只适用符合资格的 Workspace 版本，未经 Workspace 客户（订阅的组织）事先许可或指示，客户数据不会用于训练模型。这些版本的 Gemini 应用里，对话与上传文件未经许可不会在组织域之外由人工审查，也不用于训练生成式 AI 模型。&lt;/p&gt;
+&lt;p&gt;依隐私权专区，人工审查员会评估回复是否质量低下、不准确或有害，并提出更好的回复。对话也会为了维护安全、处理违反服务条款的行为而接受审查。页面只写“部分对话”，没有公布比例。&lt;/p&gt;
+&lt;p&gt;对话送交受过专业训练的服务提供商审查之前，会先解除与账号的关联。审查过的对话与相关数据（例如使用语言、设备类型、位置信息）最多保留三年，页面没有区分审查原因，用户删除活动记录时也不会一并删除。本文据此推论，关闭设置后为保护用途审查过的对话，保留时间也可能超过 72 小时。用户在对话里写下的姓名或地址仍在文字之中，这也是本文的推论。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;维持开启时，一般对话默认保留 18 个月，用于训练并有部分经人工审查。关闭“保留活动记录”后，日后的对话除提供意见反馈的情况外不用于训练、不经改进服务的人工审查，保留 72 小时。临时对话（Temporary Chat，逐次使用、不显示在活动记录与近期对话、离开后无法再访问的对话模式）同样保留 72 小时，不用于训练，也不经改进服务的人工审查。三种做法都不影响为保护 Google、用户和一般大众而处理对话（“过程中可能会借助人工审查”），审查过的对话最多保留三年，Gemini 设置也无法控制把对话处理成去标识化数据、借以改进 Google 服务的流程。&lt;/p&gt;
+&lt;p&gt;“保留活动记录”同时控制对话的存储与模型训练，查阅的说明页没有列出只保留对话、不用于训练的选项。隐私权专区的句子只涵盖日后的对话，没有提到关闭之前已存进活动记录的对话（包括已用于训练的数据）之后如何处理。关闭之后的短期保留，隐私权专区列出的用途是回复用户、处理意见反馈与保护 Google、用户和一般大众，举的例子是系统发生故障时数据可以访问。&lt;/p&gt;
+&lt;p&gt;隐私权专区写到 Gemini 设置无法控制去标识化处理，也写到关闭设置且不提供意见反馈时，日后的对话不会用于改进 AI 模型。两句的关系页面没有说明。&lt;/p&gt;
+&lt;p&gt;设置关闭时提交意见反馈，Google 会收集反馈内容、过去 24 小时内的对话，以及对话里的上传项目与关联应用的数据。反馈与相关对话会交由受过训练的团队审查，并依 Google 隐私权政策用于改进产品与机器学习技术。&lt;/p&gt;
+&lt;p&gt;依设置说明页，关闭之后可用的关联应用有设备小帮手（device assistant）、Gemini Notebook（存放笔记本来源文件的服务）、Google 信息（Google Messages）、电话与 WhatsApp。以 Gem（用户创建并保存、用来获得符合特定需求回复的自定义项目）创建的对话不会保留，Gem 本身留在账号里。关闭期间的对话事后无法在活动记录查阅。&lt;/p&gt;
+&lt;p&gt;不想关闭设置的人可以逐次使用临时对话。Google Messages 与 Chrome 里的 Gemini 没有这项功能，工作与学校账号也不能用。对话中无法使用 Gem、需要开启“保留活动记录”的关联应用与个性化回复，也无法提供意见反馈。&lt;/p&gt;
+&lt;p&gt;对话能否用于训练，牵涉用户对自己数据的控制与产品改进两种考量。Google 在隐私权专区的说明是审查员的建议会用来改善模型日后的回复，并请用户不要输入不想让审查员看到、或不愿供 Google 改进服务的机密信息。到 11 月 8 日，查不到 Google 对 Hacker News 帖子的公开回应，也查不到消费者团体或数据保护机构针对 Gemini 个人对话训练的正式文件。本文呈现的只有 Google 这一方的文件。&lt;/p&gt;
+&lt;p&gt;Gemini 网页版的服务地区清单里，中国大陆标注为“仅限 Workspace”，移动 App 的清单不含中国大陆（11 月 8 日查阅，说明页没有标日期）。隐私权专区说明的是个人账号的 Gemini 应用，个人账号的说明如何适用于大陆境内，本文没有查到 Google 的说明。中国大陆《个人信息保护法》第十三条把取得个人同意列为处理个人信息的合法情形之一，第四十四条赋予个人限制或拒绝他人处理其个人信息的权利。《生成式人工智能服务管理暂行办法》第七条要求涉及个人信息的训练数据取得个人同意或符合法律、行政法规规定的其他情形，依第二条第三款该办法只适用于向境内公众提供的服务，这些条文是否涵盖 Gemini 个人账号的对话本文没有查到解释。&lt;/p&gt;
+&lt;p&gt;电脑版的路径是在 &lt;code&gt;gemini.google.com&lt;/code&gt; 依次点按“设置与帮助”（Settings &amp;amp; help）、“活动记录”（Activity），再到画面上方点“开启”，选“关闭”或“关闭并删除活动记录”（Turn off and delete activity，名称依正体中文界面转写，简体界面用字可能不同，说明页有移动 App 的步骤）。依隐私权专区的规则推论，不希望对话用于训练的人可以关闭设置或每次改用临时对话。需要长期保留对话、或在个人账号关联 Google Workspace 这类应用的人可以维持开启，敏感内容改用临时对话。机密内容能否输入，需要依各种做法留下的保留期与审查范围自行评估。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=en&#34;&gt;Gemini Apps Privacy Hub&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=zh-Hant&#34;&gt;Gemini 系列應用程式隱私權專區&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13278892?hl=zh-Hant&#34;&gt;管理及刪除 Gemini 系列應用程式活動記錄&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13275745?hl=zh-Hant&#34;&gt;使用 Gemini 系列應用程式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16836988?hl=zh-Hant&#34;&gt;關於透過「連結的應用程式」享有的個人化體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/15146780?hl=zh-Hant&#34;&gt;在 Gemini 系列應用程式中使用 Gem&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/15274899?hl=zh-Hant&#34;&gt;和 Gemini Live 自然對話&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/a/answer/15706919?hl=en&#34;&gt;Generative AI in Google Workspace Privacy Hub&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=50363461&#34;&gt;Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hacker News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13575153?hl=en&#34;&gt;Where you can use the Gemini web app&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/14579026?hl=en&#34;&gt;Gemini mobile app availability&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm&#34;&gt;生成式人工智能服务管理暂行办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>iPhone 上的 Tor 选项与完整 Tor Browser 的开发计划</title>
 <link>https://anoni.net/news/zh-cn/2026/11/ios-full-tor-browser/</link>
@@ -2406,56 +2522,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/1996-02/02/c_126468621.htm&#34;&gt;计算机信息网络国际联网管理暂行规定&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家网信办（转载）&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Article 19 数字支付手册的风险类别与七项策略</title>
-<link>https://anoni.net/news/zh-cn/2026/11/hk-payment-handbook/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/hk-payment-handbook</guid>
-<pubDate>Wed, 04 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Article 19 发布正体中文与英文版的数字支付手册，以香港与英美之间的金融交易为例。手册整理银行、汇款服务与支付平台收集哪些数据、跟谁共享、保存多久，提出七项降低风险的策略，并写明类似的分析框架与策略也适用于其他地方。</description>
-<content:encoded>&lt;p&gt;整理 3 篇原文，来自 Article 19、中国人大网&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;言论自由组织 Article 19 发布一份数字支付手册，有正体中文与英文两个版本。手册整理银行、汇款服务与支付平台会收集哪些数据、跟谁共享、保存多久，并提出七项降低风险的策略。内容以香港与英国、美国之间的金融交易为例，也写明类似的分析框架与策略适用于其他地方。&lt;/p&gt;
-&lt;p&gt;手册的执行摘要写到，每一笔金融交易都会留下痕迹，资金即使存在英美的银行也可能有风险。手册指称 2020 年《中华人民共和国香港特别行政区维护国家安全法》（以下简称《香港国安法》）生效之后，当局通过追踪金融交易、冻结账户与切断资金来源，对被针对者以及跟他们有资金往来的人施压。手册把进出香港交易的主要风险分成强制披露、资产冻结与账户关闭、向亲属与捐款人等相关人士施压，以及跨境追查四种（这是手册的描述，本文没有另外查证香港政府的回应）。&lt;/p&gt;
-&lt;p&gt;依手册的整理，开户时的“了解你的客户”（KYC，金融机构核实客户身份的程序）要收集姓名、出生日期、身份证件、国籍、地址与税籍编号，也会记下账户用途、职业与资金来源。金融机构一般收不到逐项的消费明细，但付款记录仍可能透露医疗开支、慈善与政治捐款、旅游模式与消费习惯。记录在客户关系结束后至少保存 5 年，香港的税务与公司法规要求 7 年，部分业者保存到 10 年。&lt;/p&gt;
-&lt;p&gt;手册描述一笔电汇从汇出银行、中介银行到收款银行，每一站都可以查阅双方的完整身份。金融机构会向金融情报单位提交可疑交易报告，香港收报告的是由警务处与海关联合运作的联合财富情报组。手册因此写香港的金融情报分析直接置于本地警务体系之内。数据也会共享给信息安全、营销与信用数据机构这类第三方业者。&lt;/p&gt;
-&lt;p&gt;联名持有人、授权签署人、家人与经常往来的对象都会纳入账户档案，手册写审查可以双向进行，有交易往来的人也可能受到审查。账户活动出现重大或无法解释的变化、涉及身份不明的第三方、使用加密货币或异常的频率与金额，都可能触发加强监察。依手册的说明，系统评估的是模式而非意图，合法活动也可能被标记。机构可能在未通知当事人的情况下提交报告。&lt;/p&gt;
-&lt;p&gt;手册的七项策略依序是把披露的数据限缩到法律要求的最低范围、分开不同用途的财务活动、掌握交易流程与资金流向、维持稳定一致的账户模式、了解所用的业者、了解自己的法律权利，以及预先做好应对准备。具体做法包括开户时不主动加入自愿性计划，以及移除不必要的联名持有人与关联账户。账户出事之后，手册建议记录一切、不要独自处理并寻求法律意见。&lt;/p&gt;
-&lt;p&gt;挑选业者时，手册列出五个问题：分享数据前是否需要正式法律程序、会不会质疑范围过广的要求、数据被调取时会不会通知用户、数据存在哪里、有没有发布透明度报告。各业者公开文件的写法不同，有的表明需要正式法律程序并会质疑过广的要求，有的保留不经法院命令分享数据的空间。手册附录依各业者的公开文件做了评级，并注明回应政府要求的那一栏只反映公司公开的承诺，是否落实无法独立验证。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;手册的法规表从反洗钱金融行动特别工作组（FATF）的 40 项建议列起，再列出香港、英国与美国各自的规定，例如香港的《打击洗钱及恐怖分子资金筹集条例》与美国的《货币及外汇交易申报法》（又称《银行保密法》）。核实身份、保存记录与通报可疑交易，都是这类规定要求业者做的事。依这张表推论，换一家业者或 App，同样的义务仍然存在。手册也写明，没有任何金融服务业者能保证阻止政府依法获取客户的数据。&lt;/p&gt;
-&lt;p&gt;手册逐一说明的转账方式里，加密货币兑换成法定货币时交易所仍要做 KYC，手册提醒以化名进行的付款不应被视为匿名。区块链分析可以把钱包地址连到真实身份，调查人员追到交易所，就能以传票或法院命令获取账户记录、IP 地址与交易记录。加密货币付款一般难以撤回，也缺乏争议处理机制与政府保险，用户还可能因诈骗、私钥泄露或价格短时间大幅波动而蒙受损失。完全依赖现金才能避开第三方，依手册的评估对多数人并不切实际，选择收集数据较少的业者则往往也可能代表信息安全措施较薄弱。&lt;/p&gt;
-&lt;p&gt;手册列出的触发指标包括使用加密货币与账户活动出现重大变化，本文据此推论突然改用加密货币会同时符合这两项。根据手册对独立设备的建议，使用多部设备也可能被金融机构标记为异常。分拆付款的重复转账可能让双方的关系更容易被察觉。没有正当理由分开付款时，手册建议合并成单一交易以减少记录的数量。&lt;/p&gt;
-&lt;p&gt;依手册的说明，香港的《个人资料（私隐）条例》适用于在香港控制个人资料的机构，不论机构位于何处。法律救济通常要到损害发生后才能启动。手册也列出外界难以核实的部分，例如部分跨国企业把香港的数据库与公司其他部分分隔，以及各地金融情报单位之间交换数据的实际运作。&lt;/p&gt;
-&lt;p&gt;手册以知识共享署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0）许可，非商业用途可以注明出处后翻译或改写，衍生作品沿用相同许可。到 11 月 2 日为止查不到简体中文版。手册假设读者已具备数字安全与风险管理的基本知识。&lt;/p&gt;
-&lt;p&gt;中国大陆的《中华人民共和国反洗钱法》（2024 年 11 月 8 日修订）第二十八条规定，金融机构不得为身份不明的客户提供服务或者与其进行交易，不得为客户开立匿名账户或者假名账户。第三十四条要求金融机构建立客户身份资料和交易记录保存制度，客户身份资料在业务关系结束后、客户交易信息在交易结束后，应当至少保存十年。第七条规定依职责取得的反洗钱信息，非依法律规定，不得向任何单位和个人提供。非银行支付机构是否适用这些条文，本文没有核对。&lt;/p&gt;
-&lt;p&gt;需要跨境收付款、处境风险较高的人，手册建议优先考虑在香港没有注册实体的业者。手册的理由是香港当局可以直接向注册实体发出要求，不必经过可能提供较多隐私与通知保障的国际法律渠道。手册也建议向汇出机构查询会经过哪些中介银行，并预先准备账户被冻结时的替代渠道。认为自己正被针对的人，手册建议尽早寻求独立的法律意见（本文没有逐项查证各地法规，以上整理不构成法律意见）。&lt;/p&gt;
-&lt;p&gt;根据手册，平台的默认设置通常不以隐私为优先，与隐私相关的功能往往默认开启、要用户自行关闭。在意支付记录会透露人际关系或立场的人，可以先打开常用的支付 App，照手册的建议关掉营销与个性化选项、停用非必要的相机与位置权限。依手册的法规说明推论，营销、个性化与权限设置减少的是对外公开与共享的数据，业者依法保存的身份与交易记录不会因此消失。账号本身的安全另外处理，手册列出的做法是启用多重因素验证，身份验证 App 一般比短信验证码安全。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_chi_FINALpdf.pdf&#34;&gt;保障支付安全，延續行動：香港人使用數碼支付平台手冊&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_eng_FINAL.pdf&#34;&gt;Safeguarding payments, sustaining movements: A handbook for Hong Kongers to navigate digital payment platforms&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202411/t20241108_440887.html&#34;&gt;中华人民共和国反洗钱法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-08&#34;&gt;2024 年 11 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

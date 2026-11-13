@@ -6,7 +6,142 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Scope and opt-out of model training on Gemini personal account chats</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/gemini-chat-training/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/gemini-chat-training</guid>
+<pubDate>Sat, 14 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Keep Activity is on by default for Gemini personal accounts held by people 18 or over, and while it is on Google uses activity to train generative AI models, with a subset of chats going to human reviewers (per Google&#39;s help pages, checked on 8 November). With the setting off (feedback excepted) or in a Temporary Chat, chats are not used for training and are kept for 72 hours, while human-reviewed chats are kept for up to three years. The help pages do not distinguish between paid and free plans.</description>
+<content:encoded>&lt;p&gt;Based on 16 sources, including Google, Hacker News, Personal Data Protection Commission, Singapore&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Keep Activity is on by default for anyone 18 or over who uses Gemini with a personal Google Account. While it is on, Google uses activity to improve its services and train generative AI models, and a subset of chats goes to human reviewers. The default is stated on Google&#39;s &#34;Manage &amp;amp; delete your activity in Gemini Apps&#34; help page and the uses on the Privacy Hub in the Gemini help center (checked on 8 November), and work or school accounts may be subject to different terms. A Hacker News post on 4 November about paid subscribers&#39; chats also being used for training prompted discussion; the rules below come from Google&#39;s current documents, and our inferences are marked as such.&lt;/p&gt;
+&lt;p&gt;The Privacy Hub (Privacy Notice last updated 13 October 2026, privacy questions last updated 26 October) lists the uses of activity as providing, developing and improving services, including training generative AI models, and protecting Google, its users and the public. According to the same page, Gemini chats are not being used to show ads, Google will clearly communicate any change to that, and Google does not sell personal information.&lt;/p&gt;
+&lt;p&gt;With the setting on, chats, uploaded files and shared screens are saved in activity. Data from Connected Apps (which let Gemini use data from other Google apps and third-party services) and chats imported from other AI platforms are also used to improve services. Activity is auto-deleted after 18 months by default, and the period can be changed to 3 months, 36 months or no auto-delete. Audio and the videos and screenshares from Gemini Live (spoken conversation with Gemini) are not used to improve services by default and need a separate opt-in, while transcripts of Live chats and uploads shared with Live are used to improve services when Keep Activity is on.&lt;/p&gt;
+&lt;p&gt;Where the Privacy Hub mentions Google AI plans (Google&#39;s paid subscriptions), it lists only subscription information as data collected, and the sections on training and human review do not distinguish paid from free. We infer from this that both fall under the same notice. Google has not written that sentence, and as of 8 November we could not find a privacy document specific to Google AI plans.&lt;/p&gt;
+&lt;p&gt;Activity settings on work and school accounts are controlled by a Google Workspace administrator, and different rules may apply. The Generative AI in Google Workspace Privacy Hub (last updated 6 October) covers only qualifying Workspace editions, and under it customer data is not used to train models without the prior permission or instruction of the customer, meaning the subscribing organization. In the Gemini app on those editions, chats and uploaded files are not reviewed by human reviewers or otherwise used to train generative AI models outside the customer&#39;s domain without permission.&lt;/p&gt;
+&lt;p&gt;According to the Privacy Hub, human reviewers assess whether Gemini&#39;s responses were low-quality, inaccurate or harmful and suggest better ones. Chats are also reviewed to keep Gemini safe and to address violations of the Google Terms of Service. The page describes the reviewed portion only as a &#34;subset&#34; and gives no proportion.&lt;/p&gt;
+&lt;p&gt;Chats are disconnected from the account before being sent to Google&#39;s trained service providers for review. Reviewed chats and related data (such as language, device type and location info) are retained for up to three years, the page makes no distinction by reason for review, and deleting activity does not delete them. We infer that chats reviewed for protection purposes after the setting is turned off may also be kept for longer than 72 hours. Names or addresses a user types into a chat remain in the text, which is also our inference.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;With Keep Activity left on, ordinary chats are kept for 18 months by default and used for training, and some are reviewed by humans. With it off, future chats are not used for training unless the user sends feedback, are not reviewed by humans to improve services, and are kept for 72 hours. Temporary Chat (a per-chat mode whose chats do not appear in activity or recent chats and cannot be reopened after leaving) has the same 72-hour retention and is likewise outside training and service-improvement review. None of the three changes Google&#39;s use of chats to protect Google, its users and the public, &#34;including with help from human reviewers&#34;, with reviewed chats kept for up to three years, and Gemini settings do not control the processing of chats into anonymized data to improve Google services.&lt;/p&gt;
+&lt;p&gt;Keep Activity controls both chat storage and model training, and the help pages we read list no option to keep chats while excluding them from training. The Privacy Hub&#39;s sentences cover only future chats and do not address what happens to chats already in activity before the setting was turned off, including data already used for training. For the short-term retention after turning it off, the Privacy Hub lists responding to the user, processing feedback, and protecting Google, its users and the public, with a potential system failure as the example of why chats remain available.&lt;/p&gt;
+&lt;p&gt;Two statements sit side by side on the Privacy Hub: Gemini settings do not control processing into anonymized data, and with the setting off and no feedback submitted, future chats are not used to improve AI models. How they relate is not explained on the page.&lt;/p&gt;
+&lt;p&gt;If a user submits feedback while the setting is off, Google collects the feedback, the last 24 hours of chats, and any uploads and Connected Apps data in those chats. The feedback and associated chats are reviewed by specially trained teams and used, consistent with the Google Privacy Policy, to improve products and machine-learning technologies.&lt;/p&gt;
+&lt;p&gt;According to the activity help page, the Connected Apps still available with the setting off are Device assistance, Gemini Notebook (a service that holds notebook source files), Messages, Phone and WhatsApp. Chats created with Gems (custom items a user creates and saves to get responses suited to a particular need) are not saved, though the Gems stay in the account. Chats held while the setting is off cannot be looked up in activity afterwards.&lt;/p&gt;
+&lt;p&gt;People who would rather leave the setting on can use Temporary Chat case by case. It is not available in Gemini in Google Messages or Gemini in Chrome, or on work and school accounts. Inside a Temporary Chat, Gems, Connected Apps that require Keep Activity, and personalized responses are unavailable, and feedback cannot be given.&lt;/p&gt;
+&lt;p&gt;Whether chats can be used for training involves two concerns, users&#39; control over their own data and product improvement. In the Privacy Hub, Google explains that reviewers&#39; suggestions are used to help its models respond better in the future and asks users not to enter confidential information they would not want a reviewer to see or Google to use to improve its services. As of 8 November we could find no public response from Google to the Hacker News post, and no formal document from a consumer group or data protection authority on training with Gemini personal chats. This article presents only Google&#39;s side, from its own documents.&lt;/p&gt;
+&lt;p&gt;Singapore&#39;s Personal Data Protection Commission (PDPC) addresses training on data from a service&#39;s own users in its Advisory Guidelines on Use of Personal Data in Generative AI, issued on 20 July 2026, which are guidance rather than statute. Under the guidelines, User Data means personal data an individual provides to an organization or that is created through use of its products or services (which, in our reading, would include chats typed into an assistant such as Gemini, though the guidelines do not name it), and organizations may consider exceptions to the consent requirement or deemed consent for model development but must obtain consent if those alternatives do not apply. Where consent is the route, the PDPC&#39;s view is that a general notice is insufficient for large-scale training, and organizations must state explicitly that the purpose includes AI development. Organizations are also encouraged, to the extent practicable, to explain how people can decline or withdraw consent, for example with step-by-step instructions or an easily accessible opt-out.&lt;/p&gt;
+&lt;p&gt;South Korea&#39;s National Assembly passed an amendment to the Personal Information Protection Act on 20 August 2026 that creates a special provision for using lawfully collected personal information in AI development, limited to cases where pseudonymized or anonymized data would not suffice and there is a public or social need. According to a newsletter from the law firm BKL, it was promulgated on 8 September 2026 and takes effect on 9 March 2027, so it is not yet current law. Taiwan&#39;s Personal Data Protection Act has no provision on AI training: Article 20 generally confines private-sector use of personal data to the specific purpose of collection, which we read as covering training, and Article 3 bars waiving the right to ask for that use to stop. None of these three texts is specific to Gemini, though in our reading personal data typed into a chat and then used for training is the kind of use they govern, and we did not review court rulings or agency interpretations in Taiwan.&lt;/p&gt;
+&lt;p&gt;On desktop, the path at &lt;code&gt;gemini.google.com&lt;/code&gt; is Settings &amp;amp; help &amp;gt; Activity, then click On near the top and choose Turn off or Turn off and delete activity (the help page also has steps for the mobile apps). From the Privacy Hub&#39;s rules, we infer that people who do not want chats used for training can turn the setting off or use Temporary Chat each time. People who need to keep chats long-term, or who connect apps such as Google Workspace to a personal account, can leave it on and use Temporary Chat for sensitive content. Whether to enter confidential content at all has to be weighed against the retention periods and review scope of each option.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=en&#34;&gt;Gemini Apps Privacy Hub&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=zh-Hant&#34;&gt;Gemini 系列應用程式隱私權專區&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13278892?hl=zh-Hant&#34;&gt;管理及刪除 Gemini 系列應用程式活動記錄&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13275745?hl=zh-Hant&#34;&gt;使用 Gemini 系列應用程式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16836988?hl=zh-Hant&#34;&gt;關於透過「連結的應用程式」享有的個人化體驗&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/15146780?hl=zh-Hant&#34;&gt;在 Gemini 系列應用程式中使用 Gem&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/15274899?hl=zh-Hant&#34;&gt;和 Gemini Live 自然對話&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/a/answer/15706919?hl=en&#34;&gt;Generative AI in Google Workspace Privacy Hub&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;6 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=50363461&#34;&gt;Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hacker News&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13278892?hl=en&#34;&gt;Manage &amp;amp; delete your activity in Gemini Apps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13275745?hl=en&#34;&gt;Use Gemini Apps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16836988?hl=en&#34;&gt;About personalization with Connected Apps&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pdpc.gov.sg/assets/143cb9d4-532e-4cca-9a77-bcc0415ca294&#34;&gt;Advisory Guidelines on Use of Personal Data in Generative AI&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal Data Protection Commission, Singapore&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-20&#34;&gt;20 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;amp;mCode=C020010000&amp;amp;nttId=12391&#34;&gt;안전한 인공지능 개발을 위한 개인정보 활용 특례 신설 「개인정보 보호법」 개정안 국회 본회의 통과&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal Information Protection Commission, South Korea&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-20&#34;&gt;20 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bkl.co.kr/law/insight/newsletter/6749&#34;&gt;개인정보 보호법 AI 특례 일부개정법률 공포: 시행 대비 실무 가이드&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;BKL&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of the Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tor options on the iPhone and the plan for a full Tor Browser on iOS</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/ios-full-tor-browser/</link>
@@ -2476,67 +2611,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=TW&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Taiwan&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Risk categories and seven strategies in Article 19&#39;s digital payments handbook</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/hk-payment-handbook/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/hk-payment-handbook</guid>
-<pubDate>Wed, 04 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Article 19 has published a digital payments handbook in Traditional Chinese and English, using transactions between Hong Kong and the UK and US as its examples. It sets out what banks, money transfer services and payment platforms collect, whom they share it with and how long they keep it, offers seven strategies for reducing the risk, and notes that similar lessons apply elsewhere.</description>
-<content:encoded>&lt;p&gt;Based on 5 sources from Article 19, Laws &amp;amp; Regulations Database of Taiwan, Monetary Authority of Singapore&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Article 19, a freedom of expression organisation, has published a handbook on digital payments in Traditional Chinese and English. It sets out what banks, money transfer services and payment platforms collect, whom they share it with and how long they keep it, and offers seven strategies for reducing the risk. The examples centre on transactions between Hong Kong and the UK and US, and Article 19 notes that &#34;similar lessons apply elsewhere&#34;.&lt;/p&gt;
-&lt;p&gt;The executive summary starts from the point that every financial transaction leaves a trail, and that money held in US or UK banks can still carry risk. According to the handbook, since the Law of the People&#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region (the National Security Law) took effect in 2020, the authorities have tracked financial transactions, frozen accounts and cut off funding to put pressure on the people they target and on anyone who sends them money or receives money from them. Article 19 sorts the main risks for transactions in and out of Hong Kong into four kinds: compelled disclosure, asset freezes and account closures, pressure on associates such as relatives and donors, and cross-border reach (this is the handbook&#39;s account, and we did not separately look for a response from the Hong Kong government).&lt;/p&gt;
-&lt;p&gt;Under Know Your Customer (KYC) rules, the checks financial institutions use to verify who a customer is, institutions collect the customer&#39;s name, date of birth, government-issued ID, nationality, address and tax identifiers when an account is opened, and also record the account&#39;s purpose, the customer&#39;s occupation and the source of funds. According to the handbook, financial institutions generally do not receive item-level purchase details, but payment activity can still reveal health-related expenses, charitable and political contributions, travel patterns and purchasing habits. Records are kept for at least five years after the customer relationship ends; Hong Kong&#39;s tax and company regulations require seven, and some providers keep them for ten.&lt;/p&gt;
-&lt;p&gt;In the handbook&#39;s walk-through of a wire transfer, the sending bank, any intermediary banks and the receiving bank can all view the full identities of both parties. Financial institutions file suspicious transaction reports with a financial intelligence unit, which in Hong Kong is the Joint Financial Intelligence Unit, run jointly by the Hong Kong Police Force and the Customs and Excise Department. Article 19 writes that this places financial intelligence analysis &#34;directly inside the territory&#39;s policing apparatus&#34;. Data is also shared with third-party providers such as cybersecurity, marketing and credit reference firms.&lt;/p&gt;
-&lt;p&gt;Joint holders, authorised signatories, family members and frequent counterparties all go into the account profile, and according to the handbook scrutiny &#34;can flow in both directions&#34;, so the people someone transacts with can come under scrutiny too. Significant or unexplained changes in account activity, transactions involving unknown third parties, the use of cryptocurrency, and unusual frequency or amounts can all trigger closer monitoring. Because these systems &#34;evaluate patterns rather than intent&#34;, legitimate activity can be flagged as well, and an institution may file a report without notifying the customer.&lt;/p&gt;
-&lt;p&gt;The seven strategies, in order, are to limit the information shared to the minimum required by law, structure your financial life, know the transaction flow, maintain consistent banking habits, know the company, know your rights, and be prepared. Concrete steps include not opting into voluntary programmes when opening an account and removing unnecessary joint holders and connected accounts. Once something goes wrong with an account, Article 19 recommends documenting everything, not acting alone and seeking legal advice.&lt;/p&gt;
-&lt;p&gt;Article 19 lists five questions to ask when choosing a provider: whether it requires formal legal process before sharing data, whether it challenges overbroad requests, whether it notifies users when their data is requested, where it stores data, and whether it publishes a transparency report. Providers&#39; public documents differ, with some committing to formal legal process and to challenging overbroad requests, and others reserving room to share data without a court order. An appendix rates each provider on the basis of its public documents, with a note that the column on responses to government requests &#34;reflects each company&#39;s public commitment only — compliance cannot be independently verified&#34;.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The handbook&#39;s table of key regulations starts with the Financial Action Task Force (FATF), which sets global standards through its 40 Recommendations, and then lists rules for Hong Kong, the UK and the US, such as Hong Kong&#39;s Anti-Money Laundering and Counter-Terrorist Financing Ordinance and the US Currency and Foreign Transactions Reporting Act (also known as the Bank Secrecy Act). Verifying identity, keeping records and reporting suspicious transactions are what these rules require providers to do. Our inference from the table is that the same obligations remain when someone switches to another provider or app. Article 19 also writes that &#34;no company can guarantee protection against lawful government access&#34;.&lt;/p&gt;
-&lt;p&gt;Under Article 26 of Taiwan&#39;s Act Governing Electronic Payment Institutions (as amended on 19 January 2023), specialised electronic payment institutions must keep each transaction&#39;s stored-value card or account number, item, date, amount and currency, including for incomplete transactions, for at least five years after the transaction is completed or stopped. When the tax authorities or customs request these records together with identity-verification data, the institutions may not refuse. Article 8 of Taiwan&#39;s Money Laundering Control Act (as amended on 31 July 2024) requires financial institutions covered by the Act to keep customer identification data for at least five years after the business relationship ends. In Singapore, Notice PSN01 of the Monetary Authority of Singapore (MAS), last revised on 30 June 2025, prohibits licensed payment service providers from opening or maintaining anonymous accounts or accounts in fictitious names (paragraph 7.1) and requires them to keep customer due diligence information and transaction records for at least five years (paragraph 16.3).&lt;/p&gt;
-&lt;p&gt;Among the transfer methods covered in the handbook, cryptocurrency exchanges still run KYC when converting to government-issued currency, and Article 19 warns that &#34;pseudonymous payments should not be treated as anonymous&#34;. Blockchain analytics can link wallet addresses to real-world identities, and once investigators trace funds to an exchange they can use subpoenas or court orders to obtain full account records, IP addresses and transaction histories. Cryptocurrency payments are generally difficult to reverse and lack dispute and government-insurance protections, and users can lose money to scams, compromised private keys or rapid price swings. By the handbook&#39;s assessment, avoiding third parties entirely would mean relying on cash alone, which is impractical for most people, while providers that collect less data may also have weaker security.&lt;/p&gt;
-&lt;p&gt;The monitoring triggers in the handbook include the use of cryptocurrency and significant changes in account activity, so our inference is that a sudden switch to cryptocurrency would meet both. In its advice on keeping separate devices, Article 19 notes that using multiple devices can also be flagged by financial institutions as unusual behaviour. Repeated transfers from splitting a payment can make the relationship between the two parties more visible, and unless there is a legitimate reason to pay separately, Article 19 suggests consolidating into a single transaction to reduce the number of records.&lt;/p&gt;
-&lt;p&gt;According to the handbook, Hong Kong&#39;s Personal Data (Privacy) Ordinance applies to any organisation, whether in Hong Kong or not, that controls the collection, holding, processing or use of personal data in Hong Kong. Legal remedies usually become available only after harm has occurred. Among the points Article 19 describes as hard to verify from outside are the separation of Hong Kong databases from the rest of the company at some multinationals, and how data exchange between financial intelligence units works in practice.&lt;/p&gt;
-&lt;p&gt;The handbook is released under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0) licence, so it can be translated or adapted for non-commercial use with attribution, and derivative works must carry the same licence. As of 2 November we could not find a Simplified Chinese edition. The handbook is written for readers who already understand the fundamentals of digital security and risk management.&lt;/p&gt;
-&lt;p&gt;For people who need to send or receive money across borders and face higher risk, Article 19 recommends prioritising providers with no Hong Kong-registered entity. Its reasoning is that Hong Kong authorities can serve demands directly on a registered entity &#34;without going through international legal channels that may provide more robust privacy and notice protections&#34;. Article 19 also suggests asking the sending institution which intermediary banks the transfer will pass through, and preparing alternative channels in case an account is frozen. For anyone who believes they are being targeted, Article 19 recommends seeking independent legal advice as early as possible (we have not checked each jurisdiction&#39;s rules item by item, and this summary is not legal advice).&lt;/p&gt;
-&lt;p&gt;According to the handbook, platform &#34;defaults are rarely set in your favour&#34;, and privacy settings are often opt-out rather than opt-in. People concerned that their payment records reveal their relationships or views can open the payment apps they use most and, following the handbook&#39;s advice, turn off marketing and personalisation options and disable non-essential camera and location permissions. Our inference from the handbook&#39;s section on regulations is that changing marketing, personalisation and permission settings reduces what is made public and shared, while the identity and transaction records that providers must keep by law remain. Account security is a separate matter, and the step listed in the handbook is enabling multi-factor authentication, with authenticator apps generally more secure than SMS codes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (5)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_chi_FINALpdf.pdf&#34;&gt;保障支付安全，延續行動：香港人使用數碼支付平台手冊&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.article19.org/wp-content/uploads/2026/10/ARTICLE-19-Payment-report_eng_FINAL.pdf&#34;&gt;Safeguarding payments, sustaining movements: A handbook for Hong Kongers to navigate digital payment platforms&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Article 19&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380237&#34;&gt;Act Governing Electronic Payment Institutions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380131&#34;&gt;Money Laundering Control Act&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mas.gov.sg/regulation/notices/psn01-aml-cft-notice---specified-payment-services&#34;&gt;MAS Notice PSN01: Prevention of Money Laundering and Countering the Financing of Terrorism – Holders of Payment Services Licence (Specified Payment Services)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Monetary Authority of Singapore&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

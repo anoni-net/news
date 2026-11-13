@@ -22,6 +22,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/11/gemini-chat-training/</loc>
+<lastmod>2026-11-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/gemini-chat-training/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/ios-full-tor-browser/</loc>
 <lastmod>2026-11-14</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/ios-full-tor-browser/"/>
@@ -1360,6 +1368,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/2026/11/gemini-chat-training/</loc>
+<lastmod>2026-11-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/gemini-chat-training/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/2026/11/ios-full-tor-browser/</loc>
 <lastmod>2026-11-14</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/ios-full-tor-browser/"/>
@@ -2696,6 +2712,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/gemini-chat-training/</loc>
+<lastmod>2026-11-14</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/gemini-chat-training/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/gemini-chat-training/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/11/ios-full-tor-browser/</loc>
