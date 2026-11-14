@@ -289,6 +289,9 @@
 /2026/11/eff-security-worse/
 	#perspective
 	#sources
+/2026/11/emudhra-incident-closeout/
+	#perspective
+	#sources
 /2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -682,6 +685,9 @@
 	#perspective
 	#sources
 /en/2026/11/eff-security-worse/
+	#perspective
+	#sources
+/en/2026/11/emudhra-incident-closeout/
 	#perspective
 	#sources
 /en/2026/11/emudhra-key-compromise-followup/
@@ -1318,6 +1324,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/eff-security-worse/
+	#perspective
+	#sources
+/zh-cn/2026/11/emudhra-incident-closeout/
 	#perspective
 	#sources
 /zh-cn/2026/11/emudhra-key-compromise-followup/
