@@ -193,6 +193,10 @@ from = "https://www.barandbench.com/favicon.ico"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."bdnews24.com"]
+icon = "bdnews24.com-9b60eafa.png"
+from = "https://fea.assettype.com/bdnews24/assets/favicon-DGWicxG8.png"
+
 [hosts."beaksec.github.io"]
 icon = "beaksec.github.io-ca605d50.png"
 from = "https://beaksec.github.io/assets/img/favicons/apple-touch-icon.png"
@@ -1065,6 +1069,10 @@ from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_sq
 [hosts."globalprivacycontrol.org"]
 icon = "globalprivacycontrol.org-2f5a1540.png"
 from = "https://globalprivacycontrol.org/img/favicon/apple-touch-icon.png"
+
+[hosts."globalvoices.org"]
+icon = "globalvoices.org-ca86898a.png"
+from = "https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-forestgreen/favicon-196x196.png"
 
 [hosts."gongbao.court.gov.cn"]
 same_as = "court.gov.cn"
