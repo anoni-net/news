@@ -196,6 +196,10 @@ from = "https://www.barandbench.com/favicon.ico"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."bdnews24.com"]
+icon = "bdnews24.com-9b60eafa.png"
+from = "https://fea.assettype.com/bdnews24/assets/favicon-DGWicxG8.png"
+
 [hosts."beaksec.github.io"]
 icon = "beaksec.github.io-ca605d50.png"
 from = "https://beaksec.github.io/assets/img/favicons/apple-touch-icon.png"
@@ -1080,6 +1084,10 @@ from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_sq
 icon = "globalprivacycontrol.org-2f5a1540.png"
 from = "https://globalprivacycontrol.org/img/favicon/apple-touch-icon.png"
 
+[hosts."globalvoices.org"]
+icon = "globalvoices.org-ca86898a.png"
+from = "https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-forestgreen/favicon-196x196.png"
+
 [hosts."gongbao.court.gov.cn"]
 same_as = "court.gov.cn"
 
@@ -1922,6 +1930,10 @@ from = "https://www.npa.gov.tw/static/images/favicon.ico?v=20260723"
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
 
+[hosts."npr.org"]
+icon = "npr.org-88735a65.png"
+from = "https://media.npr.org/chrome/favicon/favicon-180x180.png"
+
 [hosts."nrk.no"]
 icon = "nrk.no-a87b9a82.png"
 from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
@@ -1936,6 +1948,10 @@ from = "https://www.nsb.gov.tw/favicon.ico"
 [hosts."nvd.nist.gov"]
 icon = "nvd.nist.gov-9a487dd3.png"
 from = "https://nvd.nist.gov/favicon.ico"
+
+[hosts."obamawhitehouse.archives.gov"]
+icon = "obamawhitehouse.archives.gov-ed6cb2d9.png"
+from = "https://obamawhitehouse.archives.gov/sites/obamawhitehouse.archives.gov/themes/custom/fortyfour/images/fortyfour/favicons/favicon-196x196.png"
 
 [hosts."oeil.secure.europarl.europa.eu"]
 icon = "oeil.secure.europarl.europa.eu-865fc6c6.png"
