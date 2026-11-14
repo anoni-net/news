@@ -301,6 +301,9 @@
 /2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/2026/11/grapheneos-pixel-11/
+	#perspective
+	#sources
 /2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -325,7 +328,13 @@
 /2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
 /2026/11/openssh-sshole/
+	#perspective
+	#sources
+/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /2026/11/philippines-ai-risk-map/
@@ -687,6 +696,9 @@
 /en/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/en/2026/11/grapheneos-pixel-11/
+	#perspective
+	#sources
 /en/2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -711,7 +723,13 @@
 /en/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/en/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
 /en/2026/11/openssh-sshole/
+	#perspective
+	#sources
+/en/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /en/2026/11/philippines-ai-risk-map/
@@ -876,6 +894,10 @@
 	#y2026
 /en/history/11-15/
 	#y2026
+/en/history/11-16/
+	#y2026
+/en/history/11-17/
+	#y2026
 /en/history/11-18/
 	#y2026
 /en/page/2/
@@ -992,6 +1014,10 @@
 /history/11-14/
 	#y2026
 /history/11-15/
+	#y2026
+/history/11-16/
+	#y2026
+/history/11-17/
 	#y2026
 /history/11-18/
 	#y2026
@@ -1306,6 +1332,9 @@
 /zh-cn/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/zh-cn/2026/11/grapheneos-pixel-11/
+	#perspective
+	#sources
 /zh-cn/2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -1330,7 +1359,13 @@
 /zh-cn/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/zh-cn/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
 /zh-cn/2026/11/openssh-sshole/
+	#perspective
+	#sources
+/zh-cn/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /zh-cn/2026/11/philippines-ai-risk-map/
@@ -1494,6 +1529,10 @@
 /zh-cn/history/11-14/
 	#y2026
 /zh-cn/history/11-15/
+	#y2026
+/zh-cn/history/11-16/
+	#y2026
+/zh-cn/history/11-17/
 	#y2026
 /zh-cn/history/11-18/
 	#y2026
