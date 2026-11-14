@@ -322,6 +322,9 @@
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/2026/11/neticrm-breach/
+	#perspective
+	#sources
 /2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
@@ -703,6 +706,9 @@
 	#perspective
 	#sources
 /en/2026/11/lenovo-fingerprint-usb/
+	#perspective
+	#sources
+/en/2026/11/neticrm-breach/
 	#perspective
 	#sources
 /en/2026/11/ninth-circuit-reverse-location/
@@ -1319,6 +1325,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/
+	#perspective
+	#sources
+/zh-cn/2026/11/neticrm-breach/
 	#perspective
 	#sources
 /zh-cn/2026/11/ninth-circuit-reverse-location/
