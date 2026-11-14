@@ -653,6 +653,10 @@ from = "https://www.deccanherald.com/apple-touch-icon.png"
 icon = "decrypt.co-136239ed.png"
 from = "https://cdn.decrypt.co/wp-content/themes/decrypt-media/assets/images/favicon-192x192.png"
 
+[hosts."deepmind.google"]
+icon = "deepmind.google-a954da5b.png"
+from = "https://storage.googleapis.com/gdm-deepmind-com-prod-public/icons/google_deepmind_2x_96dp.png"
+
 [hosts."def.ltn.com.tw"]
 icon = "def.ltn.com.tw-4f178073.png"
 from = "https://def.ltn.com.tw/assets/images/logo24-def.png"
