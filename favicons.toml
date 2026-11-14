@@ -72,6 +72,9 @@ from = "https://alpinelinux.org/alpine-logo.ico"
 icon = "am730.com.hk-f51bc587.png"
 from = "https://www.am730.com.hk/assets/favicons/apple-touch-icon.png"
 
+[hosts."americanactionforum.org"]
+none = "網站擋下抓取"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -448,6 +451,10 @@ from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-1
 [hosts."city.sapporo.jp"]
 none = "官網暫停中的臨時首頁，沒有圖示"
 
+[hosts."cityandstateny.com"]
+icon = "cityandstateny.com-932b1349.png"
+from = "https://www.cityandstateny.com/apple-touch-icon.png"
+
 [hosts."cloud.google.com"]
 icon = "cloud.google.com-a59b81d6.png"
 from = "https://www.gstatic.com/cgc/super_cloud_gradient.png"
@@ -524,6 +531,9 @@ same_as = "europa.eu"
 icon = "consumer.huawei.com-dddcd8b6.png"
 from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawei-logo.png"
 
+[hosts."convenience.org"]
+none = "網站沒有可抓的圖示"
+
 [hosts."corp.helpfeel.com"]
 icon = "corp.helpfeel.com-bbd6adad.png"
 from = "https://storage.googleapis.com/production-os-assets/assets/c63b1285-25e6-4ecb-8205-5ba7ade6158b"
@@ -539,6 +549,10 @@ from = "https://corp.timescar.jp/favicon.ico"
 [hosts."correctiv.org"]
 icon = "correctiv.org-a1b75091.png"
 from = "https://correctiv.org/wp-content/uploads/2026/04/favicon-57.png"
+
+[hosts."council.nyc.gov"]
+icon = "council.nyc.gov-bd233fba.png"
+from = "https://council.nyc.gov/wp-content/themes/wp-nycc/favicon.ico"
 
 [hosts."court.gov.cn"]
 icon = "court.gov.cn-1db19351.png"
@@ -972,6 +986,10 @@ from = "https://forum.torproject.org/uploads/default/optimized/2X/d/d3424bed34f4
 [hosts."foxnews.com"]
 icon = "foxnews.com-69c2c6ef.png"
 from = "https://static.foxnews.com/static/orion/styles/img/fox-news/favicons/android-chrome-192x192.png"
+
+[hosts."fpf.org"]
+icon = "fpf.org-c0eab97e.png"
+from = "https://fpf.org/wp-content/uploads/2020/09/favicon.ico"
 
 [hosts."freebsd.org"]
 icon = "freebsd.org-0e087a1a.png"
@@ -1581,6 +1599,9 @@ from = "https://www.legislation.gov.au/favicon.ico"
 [hosts."legislation.gov.uk"]
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
+
+[hosts."legistar.council.nyc.gov"]
+same_as = "council.nyc.gov"
 
 [hosts."letsencrypt.org"]
 icon = "letsencrypt.org-005fa57a.png"
