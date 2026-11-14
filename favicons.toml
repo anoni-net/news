@@ -72,6 +72,9 @@ from = "https://alpinelinux.org/alpine-logo.ico"
 icon = "am730.com.hk-f51bc587.png"
 from = "https://www.am730.com.hk/assets/favicons/apple-touch-icon.png"
 
+[hosts."americanactionforum.org"]
+none = "網站擋下抓取"
+
 [hosts."android-developers.googleblog.com"]
 icon = "android-developers.googleblog.com-2fb9822b.png"
 from = "https://android-developers.googleblog.com/favicon.ico"
@@ -193,6 +196,10 @@ from = "https://www.barandbench.com/favicon.ico"
 icon = "bbc.com-0c3f441e.png"
 from = "https://static.files.bbci.co.uk/bbcdotcom/web/20260922-091849-a8520cb5b4-web-3.22.0-3/apple-touch-icon.png"
 
+[hosts."bdnews24.com"]
+icon = "bdnews24.com-9b60eafa.png"
+from = "https://fea.assettype.com/bdnews24/assets/favicon-DGWicxG8.png"
+
 [hosts."beaksec.github.io"]
 icon = "beaksec.github.io-ca605d50.png"
 from = "https://beaksec.github.io/assets/img/favicons/apple-touch-icon.png"
@@ -306,6 +313,10 @@ from = "https://www.hkma.gov.hk/favicon.jpg"
 [hosts."brennancenter.org"]
 icon = "brennancenter.org-2a0c2609.png"
 from = "https://www.brennancenter.org/apple-touch-icon.png?v=1"
+
+[hosts."bsky.app"]
+icon = "bsky.app-a78dc52f.png"
+from = "https://web-cdn.bsky.app/static/apple-touch-icon.png"
 
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
@@ -444,6 +455,10 @@ from = "https://citizenlab.ca/wp-content/uploads/2025/10/cropped-Favicon-Large-1
 [hosts."city.sapporo.jp"]
 none = "官網暫停中的臨時首頁，沒有圖示"
 
+[hosts."cityandstateny.com"]
+icon = "cityandstateny.com-932b1349.png"
+from = "https://www.cityandstateny.com/apple-touch-icon.png"
+
 [hosts."cloud.google.com"]
 icon = "cloud.google.com-a59b81d6.png"
 from = "https://www.gstatic.com/cgc/super_cloud_gradient.png"
@@ -520,6 +535,9 @@ same_as = "europa.eu"
 icon = "consumer.huawei.com-dddcd8b6.png"
 from = "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/huawei-logo.png"
 
+[hosts."convenience.org"]
+none = "網站沒有可抓的圖示"
+
 [hosts."corp.helpfeel.com"]
 icon = "corp.helpfeel.com-bbd6adad.png"
 from = "https://storage.googleapis.com/production-os-assets/assets/c63b1285-25e6-4ecb-8205-5ba7ade6158b"
@@ -535,6 +553,10 @@ from = "https://corp.timescar.jp/favicon.ico"
 [hosts."correctiv.org"]
 icon = "correctiv.org-a1b75091.png"
 from = "https://correctiv.org/wp-content/uploads/2026/04/favicon-57.png"
+
+[hosts."council.nyc.gov"]
+icon = "council.nyc.gov-bd233fba.png"
+from = "https://council.nyc.gov/wp-content/themes/wp-nycc/favicon.ico"
 
 [hosts."court.gov.cn"]
 icon = "court.gov.cn-1db19351.png"
@@ -969,6 +991,10 @@ from = "https://forum.torproject.org/uploads/default/optimized/2X/d/d3424bed34f4
 icon = "foxnews.com-69c2c6ef.png"
 from = "https://static.foxnews.com/static/orion/styles/img/fox-news/favicons/android-chrome-192x192.png"
 
+[hosts."fpf.org"]
+icon = "fpf.org-c0eab97e.png"
+from = "https://fpf.org/wp-content/uploads/2020/09/favicon.ico"
+
 [hosts."freebsd.org"]
 icon = "freebsd.org-0e087a1a.png"
 from = "https://www.freebsd.org/favicon.ico"
@@ -1065,6 +1091,10 @@ from = "https://globalnews.ca/wp-content/themes/shaw-globalnews/_img/pwa/news_sq
 [hosts."globalprivacycontrol.org"]
 icon = "globalprivacycontrol.org-2f5a1540.png"
 from = "https://globalprivacycontrol.org/img/favicon/apple-touch-icon.png"
+
+[hosts."globalvoices.org"]
+icon = "globalvoices.org-ca86898a.png"
+from = "https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-forestgreen/favicon-196x196.png"
 
 [hosts."gongbao.court.gov.cn"]
 same_as = "court.gov.cn"
@@ -1289,6 +1319,10 @@ from = "https://www.implicator.ai/content/images/size/w256h256/2025/04/Logo_impl
 icon = "inc42.com-56c6cf02.png"
 from = "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2021/09/cropped-inc42-favicon-1-192x192.png"
 
+[hosts."incommon.org"]
+icon = "incommon.org-4347827e.png"
+from = "https://incommon.org/wp-content/uploads/2025/10/App-touch.jpg"
+
 [hosts."independent.org"]
 icon = "independent.org-d4fa8d5c.png"
 from = "https://www.independent.org/wp-content/uploads/2026/02/cropped-favicon-blue-192x192.png"
@@ -1333,6 +1367,10 @@ from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-L
 [hosts."ipa.go.jp"]
 icon = "ipa.go.jp-d88935f7.png"
 from = "https://www.ipa.go.jp/apple-touch-icon-180x180.png"
+
+[hosts."iranfocus.com"]
+icon = "iranfocus.com-35f237f3.png"
+from = "https://iranfocus.com/wp-content/uploads/2020/10/cropped-Focus-logo-White-BG-192x192.jpg"
 
 [hosts."irrawaddy.com"]
 icon = "irrawaddy.com-eceea825.png"
@@ -1570,6 +1608,9 @@ from = "https://www.legislation.gov.au/favicon.ico"
 icon = "legislation.gov.uk-4d9dd818.png"
 from = "https://www.legislation.gov.uk/images/chrome/apple-touch-icons/apple-touch-icon.png"
 
+[hosts."legistar.council.nyc.gov"]
+same_as = "council.nyc.gov"
+
 [hosts."letsencrypt.org"]
 icon = "letsencrypt.org-005fa57a.png"
 from = "https://letsencrypt.org/favicon.ico"
@@ -1801,6 +1842,10 @@ from = "https://static.nbd.com.cn/favicon.ico"
 icon = "ndl.go.jp-7107fbd7.png"
 from = "https://ndl.go.jp/assets/hp/favicon/apple-touch-icon.png"
 
+[hosts."netblocks.org"]
+icon = "netblocks.org-fe8fdc1b.png"
+from = "https://netblocks.org/wp-content/uploads/sites/8/2018/06/cropped-netblocks-square-tiny-icon-transparent-192x192.png"
+
 [hosts."nettsteder.regjeringen.no"]
 icon = "nettsteder.regjeringen.no-d4b34e7a.png"
 from = "https://nettsteder.regjeringen.no/wp-content/uploads/2019/10/cropped-favicon_loeve_512_512_hvit_-192x192.png"
@@ -1905,6 +1950,10 @@ from = "https://www.npa.gov.tw/static/images/favicon.ico?v=20260723"
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
 
+[hosts."npr.org"]
+icon = "npr.org-88735a65.png"
+from = "https://media.npr.org/chrome/favicon/favicon-180x180.png"
+
 [hosts."nrk.no"]
 icon = "nrk.no-a87b9a82.png"
 from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
@@ -1916,9 +1965,16 @@ none = "網站擋下自動抓取，抓不到圖示"
 icon = "nsb.gov.tw-23fb8542.png"
 from = "https://www.nsb.gov.tw/favicon.ico"
 
+[hosts."nsearchives.nseindia.com"]
+none = "網站擋下抓取"
+
 [hosts."nvd.nist.gov"]
 icon = "nvd.nist.gov-9a487dd3.png"
 from = "https://nvd.nist.gov/favicon.ico"
+
+[hosts."obamawhitehouse.archives.gov"]
+icon = "obamawhitehouse.archives.gov-ed6cb2d9.png"
+from = "https://obamawhitehouse.archives.gov/sites/obamawhitehouse.archives.gov/themes/custom/fortyfour/images/fortyfour/favicons/favicon-196x196.png"
 
 [hosts."oeil.secure.europarl.europa.eu"]
 icon = "oeil.secure.europarl.europa.eu-865fc6c6.png"
