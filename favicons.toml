@@ -1901,6 +1901,10 @@ from = "https://www.npa.gov.tw/static/images/favicon.ico?v=20260723"
 [hosts."npc.gov.cn"]
 same_as = "gov.cn"
 
+[hosts."npr.org"]
+icon = "npr.org-88735a65.png"
+from = "https://media.npr.org/chrome/favicon/favicon-180x180.png"
+
 [hosts."nrk.no"]
 icon = "nrk.no-a87b9a82.png"
 from = "https://static.nrk.no/publisering/kurator-visning/assets/apple-touch-icon.png"
@@ -1915,6 +1919,10 @@ from = "https://www.nsb.gov.tw/favicon.ico"
 [hosts."nvd.nist.gov"]
 icon = "nvd.nist.gov-9a487dd3.png"
 from = "https://nvd.nist.gov/favicon.ico"
+
+[hosts."obamawhitehouse.archives.gov"]
+icon = "obamawhitehouse.archives.gov-ed6cb2d9.png"
+from = "https://obamawhitehouse.archives.gov/sites/obamawhitehouse.archives.gov/themes/custom/fortyfour/images/fortyfour/favicons/favicon-196x196.png"
 
 [hosts."oeil.secure.europarl.europa.eu"]
 icon = "oeil.secure.europarl.europa.eu-865fc6c6.png"
