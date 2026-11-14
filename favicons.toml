@@ -329,6 +329,10 @@ from = "https://bugzilla.redhat.com//extensions/RedHat/web/css/favicons/producti
 [hosts."business-humanrights.org"]
 none = "官網的圖示只有 SVG，抓不到點陣圖"
 
+[hosts."business-standard.com"]
+icon = "business-standard.com-fb4063e0.png"
+from = "https://www.business-standard.com/android-chrome-192x192-min.png"
+
 [hosts."businesstoday.com.tw"]
 icon = "businesstoday.com.tw-ed90121a.png"
 from = "https://www.businesstoday.com.tw/lazyweb/web/img/favicon.ico"
