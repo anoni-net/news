@@ -301,6 +301,9 @@
 /2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/2026/11/grapheneos-pixel-11/
+	#perspective
+	#sources
 /2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -687,6 +690,9 @@
 /en/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/en/2026/11/grapheneos-pixel-11/
+	#perspective
+	#sources
 /en/2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -878,6 +884,8 @@
 	#y2026
 /en/history/11-16/
 	#y2026
+/en/history/11-17/
+	#y2026
 /en/history/11-18/
 	#y2026
 /en/page/2/
@@ -996,6 +1004,8 @@
 /history/11-15/
 	#y2026
 /history/11-16/
+	#y2026
+/history/11-17/
 	#y2026
 /history/11-18/
 	#y2026
@@ -1310,6 +1320,9 @@
 /zh-cn/2026/11/google-gmail-photos-ads/
 	#perspective
 	#sources
+/zh-cn/2026/11/grapheneos-pixel-11/
+	#perspective
+	#sources
 /zh-cn/2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -1500,6 +1513,8 @@
 /zh-cn/history/11-15/
 	#y2026
 /zh-cn/history/11-16/
+	#y2026
+/zh-cn/history/11-17/
 	#y2026
 /zh-cn/history/11-18/
 	#y2026

@@ -314,6 +314,10 @@ from = "https://www.hkma.gov.hk/favicon.jpg"
 icon = "brennancenter.org-2a0c2609.png"
 from = "https://www.brennancenter.org/apple-touch-icon.png?v=1"
 
+[hosts."bsky.app"]
+icon = "bsky.app-a78dc52f.png"
+from = "https://web-cdn.bsky.app/static/apple-touch-icon.png"
+
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
@@ -1356,6 +1360,10 @@ from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-L
 icon = "ipa.go.jp-d88935f7.png"
 from = "https://www.ipa.go.jp/apple-touch-icon-180x180.png"
 
+[hosts."iranfocus.com"]
+icon = "iranfocus.com-35f237f3.png"
+from = "https://iranfocus.com/wp-content/uploads/2020/10/cropped-Focus-logo-White-BG-192x192.jpg"
+
 [hosts."irrawaddy.com"]
 icon = "irrawaddy.com-eceea825.png"
 from = "https://www.irrawaddy.com/favicon.ico"
@@ -1825,6 +1833,10 @@ from = "https://static.nbd.com.cn/favicon.ico"
 [hosts."ndl.go.jp"]
 icon = "ndl.go.jp-7107fbd7.png"
 from = "https://ndl.go.jp/assets/hp/favicon/apple-touch-icon.png"
+
+[hosts."netblocks.org"]
+icon = "netblocks.org-fe8fdc1b.png"
+from = "https://netblocks.org/wp-content/uploads/sites/8/2018/06/cropped-netblocks-square-tiny-icon-transparent-192x192.png"
 
 [hosts."nettsteder.regjeringen.no"]
 icon = "nettsteder.regjeringen.no-d4b34e7a.png"
