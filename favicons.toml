@@ -471,6 +471,10 @@ from = "https://www.cnn.com/media/sites/cnn/apple-touch-icon.png"
 [hosts."cnnic.net.cn"]
 none = "網站在抓取時無法連線，頁面沒有宣告圖示"
 
+[hosts."cnnindonesia.com"]
+icon = "cnnindonesia.com-0d196cae.png"
+from = "https://cdn.cnnindonesia.com/cnnid/mobile/images/logo__cnn.png?v=12.6.9"
+
 [hosts."cnvd.org.cn"]
 none = "原站與 Internet Archive 都抓不到圖示"
 
@@ -1772,6 +1776,10 @@ from = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7YVWz03dawww
 [hosts."naehrdine.blogspot.com"]
 icon = "naehrdine.blogspot.com-624359af.png"
 from = "https://naehrdine.blogspot.com/favicon.ico"
+
+[hosts."nasional.kompas.com"]
+icon = "nasional.kompas.com-4e844a00.png"
+from = "https://asset.kompas.com/data/2017/wp/images/favicon2017.ico"
 
 [hosts."nasional.kontan.co.id"]
 icon = "nasional.kontan.co.id-cf84db71.png"
