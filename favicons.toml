@@ -791,6 +791,10 @@ from = "https://nextcloud.com/c/uploads/2022/03/favicon.png"
 [hosts."docs.quad9.net"]
 same_as = "quad9.net"
 
+[hosts."docs.roku.com"]
+icon = "docs.roku.com-3fe5294d.png"
+from = "https://docs.roku.com/favicon.ico"
+
 [hosts."documentation.ubuntu.com"]
 icon = "documentation.ubuntu.com-23ab024d.png"
 from = "https://documentation.ubuntu.com/favicon.ico"
@@ -2293,6 +2297,10 @@ from = "https://www.sakigake.jp/assets/img/favicon_192@2x.png"
 icon = "sakura.ad.jp-92f8aa2b.png"
 from = "https://www.sakura.ad.jp/resource/favicon/sakura_logo.png"
 
+[hosts."samsung.com"]
+icon = "samsung.com-22198c65.png"
+from = "https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/pwa/icon/pwa_icon_192x192.png"
+
 [hosts."san.com"]
 icon = "san.com-710104ff.png"
 from = "https://san.com/wp-content/uploads/2024/02/cropped-SAN-Logo.png?w=192"
@@ -2586,6 +2594,10 @@ from = "https://www.telenor.com/images/favicon/android-icon-192x192.png"
 [hosts."testflight.apple.com"]
 icon = "testflight.apple.com-ab5d2c9e.png"
 from = "https://testflight.apple.com/images/testflight-1200_40.jpg"
+
+[hosts."texasattorneygeneral.gov"]
+icon = "texasattorneygeneral.gov-a31c4220.png"
+from = "https://www.texasattorneygeneral.gov/apple-touch-icon.png"
 
 [hosts."texastribune.org"]
 icon = "texastribune.org-90fb8aad.png"

@@ -364,6 +364,9 @@
 /2026/11/tor-browser-16-tails/
 	#perspective
 	#sources
+/2026/11/tv-acr/
+	#perspective
+	#sources
 /2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -763,6 +766,9 @@
 	#perspective
 	#sources
 /en/2026/11/tor-browser-16-tails/
+	#perspective
+	#sources
+/en/2026/11/tv-acr/
 	#perspective
 	#sources
 /en/2026/11/us-border-device-searches/
@@ -1409,6 +1415,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/tor-browser-16-tails/
+	#perspective
+	#sources
+/zh-cn/2026/11/tv-acr/
 	#perspective
 	#sources
 /zh-cn/2026/11/us-border-device-searches/
