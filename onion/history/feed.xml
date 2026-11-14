@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 14 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 15 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Android 手機出廠預載的更新軟體與外傳的簡訊內容</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-15/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-15/2026</guid>
+<pubDate>Sun, 15 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你手機出廠時裝好的軟體是否外傳資料，本站查證時沒有找到給一般使用者的檢查說明（2026 年 11 月查證）。這一天，資安公司 Kryptowire 揭露美國線上通路販售的部分 Android 手機內建更新軟體，未經同意把簡訊全文與通話紀錄傳到上海的伺服器。</description>
+<content:encoded>&lt;p&gt;你手機出廠時裝好的軟體是否外傳資料，本站 2026 年 11 月 8 日查證時沒有找到給一般使用者的檢查說明。資安公司 Kryptowire 2016 年 11 月 15 日的聲明寫到，美國線上通路販售的部分 Android 手機（包括美國手機品牌 BLU 的 R1 HD）內建上海公司 Adups 的更新軟體，沒有告知或取得同意就每 72 小時把簡訊全文與通話紀錄傳到上海的伺服器。Adups 的律師對《紐約時報》表示傳送功能是應某家中國客戶要求、為客服與阻擋垃圾簡訊而做，出現在 BLU 手機上是錯誤（Fortune、TechCrunch 與 CyberScoop 轉述），CyberScoop 當時的報導寫蒐集的目的仍不明確。BLU 對《紐約時報》的說法是約 12 萬支手機受影響（CyberScoop 轉述），Adups 稱已刪除誤收的資料（TechCrunch 轉述），Fortune 的報導寫 Google 不知道這套軟體散布多廣。讀者可以在 Play 商店設定的「關於」查看 Play Protect 認證狀態，但認證只代表通過 Android 相容性測試、不代表預載軟體沒有外傳資料，顯示未認證時可先對照該說明頁的認證裝置清單。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>業者手上的個人紀錄與美國 Total Information Awareness 計畫</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-14/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你可以請 Google 不再於搜尋結果列出含有你電話、地址或身分證字號的網頁。這一天，印尼國會通過《資訊與電子交易法》修正案，網站與平台業者須依法院裁定刪除當事人請求的不相關資訊。</description>
 <content:encoded>&lt;p&gt;你可以請 Google 不再於搜尋結果列出含有你電話、地址或身分證字號的網頁，網頁本身則要另外聯絡網站擁有者。印尼國會在 2016 年 10 月 27 日通過《資訊與電子交易法》修正案，網站與平台業者須依當事人請求與法院裁定刪除不相關資訊。雅加達郵報引述通訊資訊部長說這是好事，因為印尼先前沒有被遺忘權，同一篇報導也寫到這項條文與網路霸凌條文被視為特別嚴苛的規定。負責修法的國會小組召集議員表示，第 40 條讓政府有權命令業者切斷違法內容的存取以防止違法資訊散布，報導也寫到規範政府控制電子資訊權力的條文很少。台灣的《個人資料保護法》讓當事人可以向蒐集者請求刪除違法蒐集的個人資料，不想跟網站擁有者交涉時可以先只申請移除搜尋結果。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>打不開的網站與網域名稱封鎖</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-26/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-26/2026</guid>
-<pubDate>Mon, 26 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你連不上某個網站時，原因之一可能是網路業者讓網址查不到對應的伺服器位址。這一天，美國眾議院司法委員會主席提出《禁止網路盜版法案》，要求網路業者依法院命令採取讓境外侵權網站網域名稱無法解析等措施。</description>
-<content:encoded>&lt;p&gt;你連不上某個網站時，原因之一可能是網路業者讓網路的電話簿（DNS）查不到這個網址的伺服器位址。美國眾議院司法委員會主席在 2011 年 10 月 26 日提出《禁止網路盜版法案》（SOPA），要求網路業者收到法院命令後 5 天內或法院另定的期限內，採取讓境外侵權網站網域名稱無法解析等措施。2012 年 1 月提案的主席宣布打算拿掉 DNS 封鎖條款，維基百科也停止服務 24 小時抗議，委員會之後延後審議。在台灣 2022 年 6 月修正的著作權法裡，我們沒有找到讓著作權人聲請封鎖網站的條文，其他理由的封鎖本文沒有查。網站在你的網路上打不開時，可以用 OONI Probe 的網路連線測試分出 DNS、連線與網頁內容的異常，但異常不一定代表封鎖。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 14 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 15 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Android 手机出厂预装的更新软件与外传的短信内容</title>
+<link>https://anoni.net/news/zh-cn/history/11-15/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-15/2026</guid>
+<pubDate>Sun, 15 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你手机出厂时装好的软件是否外传数据，本站查证时没有找到面向一般用户的检查说明（2026 年 11 月查证）。这一天，安全公司 Kryptowire 披露美国线上渠道销售的部分 Android 手机内置更新软件，未经同意把短信全文与通话记录传到上海的服务器。</description>
+<content:encoded>&lt;p&gt;你手机出厂时装好的软件是否外传数据，本站 2026 年 11 月 8 日查证时没有找到面向一般用户的检查说明。安全公司 Kryptowire 2016 年 11 月 15 日的声明写到，美国线上渠道销售的部分 Android 手机（包括美国手机品牌 BLU 的 R1 HD）内置上海公司 Adups 的更新软件，没有告知或取得同意就每 72 小时把短信全文与通话记录传到上海的服务器。Adups 的律师对《纽约时报》表示传送功能是应某家中国客户要求、为客服与拦截垃圾短信而做，出现在 BLU 手机上是错误（Fortune、TechCrunch 与 CyberScoop 转述），CyberScoop 当时的报道写收集的目的仍不明确。BLU 对《纽约时报》的说法是约 12 万部手机受影响（CyberScoop 转述），Adups 称已删除误收的数据（TechCrunch 转述），Fortune 的报道写 Google 不知道这套软件散布多广。在海外买中国制手机的读者可以在 Play 商店设置的“关于”查看 Play Protect 认证状态，但认证只代表通过 Android 兼容性测试、不代表预装软件没有外传数据，显示未认证时可先对照该说明页的认证设备列表（GreatFire 测得 play.google.com 到 2026 年 11 月 1 日在中国大陆 100% 被封锁，本站据此推断大陆买的手机多半用不上这个查法）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>服务商手上的个人记录与美国 Total Information Awareness 计划</title>
 <link>https://anoni.net/news/zh-cn/history/11-14/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>在海外的你可以请 Google 不再在搜索结果中列出含有你电话、地址或身份证号码的网页。这一天，印尼国会通过《信息与电子交易法》修正案，网站与平台运营者须依法院裁定删除当事人请求的不相关信息。</description>
 <content:encoded>&lt;p&gt;在海外的你可以请 Google 不再在搜索结果中列出含有你电话、地址或身份证号码的网页，网页本身则要另外联系网站所有者。印尼国会在 2016 年 10 月 27 日通过《信息与电子交易法》修正案，网站与平台运营者须依当事人请求与法院裁定删除不相关信息。雅加达邮报引述通信与信息部长说这是好事，因为印尼先前没有被遗忘权，同一篇报道也写到这项条文与网络欺凌条文被视为特别严苛的规定。负责修法的国会小组召集议员表示，第 40 条让政府有权命令运营者切断违法内容的访问以防止违法信息传播，报道也写到规范政府控制电子信息权力的条文很少。中国大陆的《个人信息保护法》第四十七条让个人在撤回同意、处理者违法或违反约定处理个人信息等情形下有权请求删除，在海外不想跟网站所有者交涉时可以先只申请移除 Google 的搜索结果。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>打不开的网站与域名封锁</title>
-<link>https://anoni.net/news/zh-cn/history/10-26/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-26/2026</guid>
-<pubDate>Mon, 26 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你连不上某个网站时，原因之一可能是网络运营商让网址查不到对应的服务器地址。这一天，美国众议院司法委员会主席提出《禁止网络盗版法案》，要求网络运营商依法院命令采取让境外侵权网站域名无法解析等措施。</description>
-<content:encoded>&lt;p&gt;你连不上某个网站时，原因之一可能是网络运营商让网络的电话簿（DNS）查不到这个网址的服务器地址。美国众议院司法委员会主席在 2011 年 10 月 26 日提出《禁止网络盗版法案》（SOPA），要求网络运营商收到法院命令后 5 天内或法院另定的期限内，采取让境外侵权网站域名无法解析等措施。2012 年 1 月提案的主席宣布打算删除 DNS 封锁条款，维基百科也停止服务 24 小时抗议，委员会之后推迟审议。中国大陆 2025 年修正的《网络安全法》第五十二条规定国家网信部门和有关部门发现来源于境外的禁止信息时，应当通知有关机构采取技术措施阻断传播，条文由行政机关执行、没有写到法院程序。海外的读者在所在地的网络打不开某个网站时，可以用 OONI Probe 的网络连接测试分出 DNS、连接与网页内容的异常（异常不一定代表封锁），运行的风险取决于你的处境与所在地（OONI 的常见问题写明监控网络的人可能看到你在运行它）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

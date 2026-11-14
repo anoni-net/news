@@ -6,7 +6,73 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 15 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>中國數字時代 404 文庫 2026 年 9 月收錄的被刪文章</title>
+<link>https://anoni.net/news/2026/11/cdt-404-september/</link>
+<guid isPermaLink="false">anoni-news:2026/11/cdt-404-september</guid>
+<pubDate>Sun, 15 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>中國數字時代（CDT）9 月把 31 篇被刪文章收進 404 文庫，主要來自微信。CDT 的整理與文庫說明都寫出統計並不全面，31 篇不能當成中國網路刪文的總量。《互联网信息服务管理办法》修訂草案到 11 月 8 日未見正式公布，中國以外的讀者不必調整設定。</description>
+<content:encoded>&lt;p&gt;整理 5 篇原文，來自 China Digital Times、中國網信網、Citizen Lab&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;記錄中國網路審查的網站中國數字時代（China Digital Times，CDT）11 月 2 日發布 9 月的整理，CDT 中文站在 9 月 1 日到 30 日把 31 篇文章收進「404 文庫」（404 是網頁不存在時的錯誤代碼），主要來自微信。同一份整理也寫到，收錄的內容只占每天從中國網路消失內容的一小部分，31 篇不能當成中國網路刪文的總量。刪文發生在中國的平台上，中國以外的讀者不必調整任何設定，引用或轉貼中國平台文章的人則要考慮原始連結失效。&lt;/p&gt;
+&lt;p&gt;依文庫列表頁的說明，這個項目存檔被網路審查封鎖或刪除的文章，2021 年起整理成逐篇附上原地址與 CDT 備份的列表。受編輯精力與採集方式所限，列表頁寫出「被删文章」的統計並不全面，也不代表完整的網路審查狀況。文章消失的原因，文庫的判斷是絕大多數遭遇內容審查，極少部分可能是作者迫於壓力主動刪除。原地址欄只記錄連結已失效，沒有刪除理由。&lt;/p&gt;
+&lt;p&gt;CDT 整理裡的日期以文章放上 CDT 網站的時間為準，31 篇實際被刪的時間不一定落在 9 月。本文依列表頁 11 月 8 日的內容盤點，31 篇裡有 29 篇來自微信公眾號（在微信上發布文章的帳號）。知乎與一個媒體集體網站各有 1 篇，沒有來自微博的文章。盤點的結果反映文庫收到哪些文章，也受採集方式影響，不能當成各平台刪文的比例。&lt;/p&gt;
+&lt;p&gt;CDT 存檔篇數最多的是一名北京女子失聯 26 年後在山東被找到的事件，共有 6 篇被刪文章。評論者質疑拐賣、戶籍與官方責任，11 月 2 日的整理寫警方似乎尚未立案。廣州商圈發生持刀傷人案後，被刪的文章批評網路上用「無差別」形容案件，理由是攻擊者看起來只針對女性。CDT 同時整理了一篇談審查與自我審查的文章，並寫這篇因為沒有具體提到這起案件而躲過審查。&lt;/p&gt;
+&lt;p&gt;湖南邵陽一起被 CDT 形容為官方勒索的「遠洋捕撈」（警方到其他轄區抓人，以恫嚇索取金錢的做法）案，CDT 整理的三篇相關文章裡只有一篇知乎回答被刪。整理裡的一名創業者遭指定居所監視居住（RSDL，在看守所以外的指定地點限制人身自由的強制措施），繳交人民幣一億元，其中 6,500 萬進入邵陽政府帳戶。縣公安局正副局長 2025 年 7 月被免職，至少 15 人受處分，到 11 月 2 日的整理為止沒有刑事指控。&lt;/p&gt;
+&lt;p&gt;同一份摘要裡，北京的無人機新規原定 11 月中旬施行，一篇 CDT 編輯形容語氣溫和的微信公眾號文章被刪。常州一家車燈製造商的 107 名新進員工抵制公司要求離職或轉調產線（領半個月薪資離職，或轉到薪資較低的產線），公司道歉並提高員工的補償。相關的兩篇文章被刪，其中一篇主張學英文以便向國際發聲。武漢一名相聲演員改編紅歌的調查結案，主辦方被罰人民幣 486,874 元、劇場被罰 11 萬元，相關文章被刪一篇。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;文庫記錄的是連結失效的結果，看不到由誰、依什麼規則刪除。研究機構 Citizen Lab 2016 年的報告測試了另一段流程，也就是微信聊天訊息與內建瀏覽器的過濾。報告的結論是過濾在伺服器端執行，關鍵詞過濾只對以中國大陸手機號碼註冊的帳號啟用，帳號之後綁定國際號碼仍會持續。訊息被擋時使用者不會收到通知，群組聊天被擋的關鍵詞也比一對一聊天多，部分關鍵詞在後來的測試裡又可以傳送。&lt;/p&gt;
+&lt;p&gt;Citizen Lab 的量測在 2016 年進行，對象是聊天訊息的關鍵詞與內建瀏覽器的網址。公眾號文章發布後被刪是另一種機制，不能用它解釋 9 月的 31 篇。報告能提供的是同一款 App 依帳號套用不同規則的紀錄，內建瀏覽器的網址過濾也是中國帳號與國際帳號各用一份名單。之後的規則有沒有改變，不在報告的範圍內。&lt;/p&gt;
+&lt;p&gt;現行規定之一是《网络信息内容生态治理规定》，2020 年 3 月 1 日施行，適用於中國境內。規定列出 11 款不得「制作、复制、发布」的「违法信息」，包括危害國家安全、散布謠言、侮辱誹謗與侵害隱私，另有 9 款要防範的「不良信息」。平台發現時要立即處置、保存記錄並向主管機關報告。本站 10 月 29 日逐字搜尋這份規定的全文，裡面沒有條文寫到處置內容時要通知發布者，或發布者可以提出異議。&lt;/p&gt;
+&lt;p&gt;修訂中的《互联网信息服务管理办法（修订草案征求意见稿）》是草案，國家互聯網信息辦公室 2026 年 7 月 3 日再次公開徵求意見（8 月 2 日截止），到 11 月 8 日本文沒有找到正式公布的消息。網信辦的通知寫明，草案是為了「促进互联网信息服务健康有序发展，保护公民、法人和其他组织的合法权益，维护国家安全和公共利益」。草案要求平台發現違規內容時採取刪除、封鎖、斷開連結、限制帳號功能與營利權限、關閉帳號等措施，並寫明「防止信息扩散」。&lt;/p&gt;
+&lt;p&gt;《网络信息内容生态治理规定》只寫公眾投訴舉報，這份草案修訂的是另一部辦法，另外要求使用者申訴與人工客服。大型平台要在 24 小時內處理涉及法律、行政法規禁止內容與不良資訊的投訴、舉報和申訴。&lt;/p&gt;
+&lt;p&gt;網信辦的通知說明的是草案的目的，不涉及個別文章。文庫的說明把絕大多數文章的消失歸因於內容審查，但沒有記載個別文章的刪除理由。本文也沒有另外查詢平台或主管機關對個別文章的說明，單篇的原因無法從文庫的資料判定。&lt;/p&gt;
+&lt;p&gt;需要長期引用微信公眾號文章的人，可以在引用當下另存一份副本。本文從文庫的連結失效紀錄推得這項建議，CDT 沒有提出。副本解決連結失效，無法證明內容未經改動。身在中國境內的人還要考量另一層風險，現行規定禁止的行為包含複製，本文推論轉存或轉傳被認定為違法資訊的內容也在規定的範圍內。&lt;/p&gt;
+&lt;p&gt;文庫列表頁設有「404给CDT」的投稿入口，發現文章被刪的人可以交給文庫。本文沒有查證這個入口對投稿者身分的保護程度，所在地有風險的人投稿前需要先評估。&lt;/p&gt;
+&lt;p&gt;之後可以留意草案是否正式公布，使用者申訴與大型平台 24 小時處理的要求有沒有保留，以及 CDT 接下來幾個月的整理。&lt;/p&gt;
+&lt;p&gt;比較各地的內容移除制度時，可以問處置時要不要寫明理由、通知發布者，發布者能否申訴、由誰審理。官方文件的標準也可以放進比較，例如處置謠言、侮辱誹謗內容的速度如何與申訴程序兼顧，被舉報的內容能否在時限內處理。第三方存檔保存被刪文章時適用哪些規定，也是各地可以對照的問題。申訴制度能否讓發布者知道文章被刪的原因，要看正式條文與平台的實作。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/11/cdts-404-deleted-content-archive-summary-for-september-2026/&#34;&gt;CDT’s “404 Deleted Content Archive” Summary for September 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/chinese/404-articles-archive&#34;&gt;中国数字时代404文库&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;2019 年 12 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-07/03/c_1784822399677167.htm&#34;&gt;国家互联网信息办公室关于《互联网信息服务管理办法（修订草案征求意见稿）》再次公开征求意见的通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-03&#34;&gt;2026 年 7 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/&#34;&gt;One App, Two Systems: How WeChat uses one censorship policy in China and another internationally&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2016-11-30&#34;&gt;2016 年 11 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Lenovo 指紋隨身碟的未加密 SD 卡與加密宣稱的判斷方式</title>
 <link>https://anoni.net/news/2026/11/lenovo-fingerprint-usb/</link>
@@ -1969,112 +2035,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Character.AI 破產出售與使用者對話紀錄的處置</title>
-<link>https://anoni.net/news/2026/11/character-ai-chats-sale/</link>
-<guid isPermaLink="false">anoni-news:2026/11/character-ai-chats-sale</guid>
-<pubDate>Thu, 05 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>聊天機器人平台 Character.AI 的營運公司 10 月在美國聲請破產、準備出售資產。美國司法部的破產管理官與 39 州加華盛頓特區要求法院指派隱私監察人，就使用者資料能否隨資產出售、以什麼條件出售向法院提供意見，公司主張隱私權政策已允許移轉。依 MLex 的報導，法官 10 月 30 日沒有要求指派，但鼓勵公司考慮。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，來自 The Record from Recorded Future News、PPC Land、MLex 等 7 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;聊天機器人平台 Character.AI 的營運公司 Character Technologies 10 月 12 日在美國德拉瓦州的破產法院聲請 Chapter 11（美國《破產法》第 11 章的程序，公司在法院監督下處理債務，可以出售資產），依 Implicator 的報導，公司準備出售全部或大部分資產。美國司法部監督破產案件的破產管理官（U.S. Trustee）10 月 27 日提出異議，要求指派消費者隱私監察人，就哪些資料可以出售、用什麼條件出售向法院提供意見。到 11 月 2 日為止，使用者的資料與對話是否會隨資產出售還沒有定案，帳號與對話存在這家公司的人不論住在哪裡都可能受影響（本文依書狀引用的全球使用者數推論）。&lt;/p&gt;
-&lt;p&gt;依 The Record 10 月 30 日的轉述，破產管理官的書狀引用的數字是平台全球每月約有 1,200 萬活躍使用者，平均每天使用約兩小時。使用者問聊天機器人對話是否私密時，機器人回答未經明確許可不會分享。書狀把隱私權政策形容為不透明。依書狀的描述，政策有些地方提醒公司可能揭露可識別個人的資訊，也寫到公司被出售時可以移轉。&lt;/p&gt;
-&lt;p&gt;書狀也寫到政策在 2026 年 7 月 1 日更新，當時公司正積極尋求出售資產。破產管理官要求公司交代先前的各個版本是否寫明出售時會移轉個資，以及變更如何通知使用者。依同一篇報導，法院可以限制使用者資料的出售，適用的前提見導讀觀點的第一段。&lt;/p&gt;
-&lt;p&gt;依 PPC Land 的報導，39 州與華盛頓特區的檢察長 10 月 29 日提出聯合書狀，全面採納破產管理官的異議。各州寫到，公司出售的財產只要可能含有使用者（包括未成年人）的個資或敏感資訊，就需要隱私監察人。各州也寫到正以這個平台為由調查公司是否違反消費者保護與隱私的規定，並認為從公司的出售動議看不出，除了 Disney 的授權之外是否還要出售整個平台。&lt;/p&gt;
-&lt;p&gt;到 11 月 2 日為止，出售的開場出價者（先出價、讓其他買方加價競標的一方）是 Disney。依 PPC Land 的轉述，Disney 出價 2,000 萬美元，標的是部分智慧財產的非專屬永久授權。授權排除 app、品牌、使用者資料與對話。同樣依 PPC Land，公司 10 月 27 日的回覆也寫到 Disney 不購買可識別個人的資訊。&lt;/p&gt;
-&lt;p&gt;依 Implicator 10 月 14 日的報導，當時公司沒有公開使用者的對話是否在出售的資產裡，沒有買方願意繼續經營時平台會停止營運。依 Straight Arrow News 的引述，公司宣布破產時的公告寫到，使用者資料仍受隱私權政策保護。&lt;/p&gt;
-&lt;p&gt;依 MLex 付費牆前的摘要，法官在 10 月 30 日的聽證上沒有要求公司聘請隱私監察人，但「強烈鼓勵」公司考慮。依 PPC Land 整理的提議時程，投標在 11 月 20 日截止，接著 11 月 23 日拍賣、11 月 24 日舉行出售聽證。到 11 月 2 日為止，我們沒有查到投標程序是否獲准、監察人是否已經指派。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;美國法典第 11 編（破產法）第 363 條 (b)(1) 項限制出售可識別個人資訊的前提，是聲請破產當天生效的隱私權政策禁止把這類資訊移轉給非關係企業。符合前提時，出售必須跟政策一致。不一致的出售要先依第 332 條指派監察人，經過通知與聽證後法院才能核准。第 332 條規定，法院要在聽證前至少 7 天令破產管理官指派一位無利害關係的人，向法院說明出售對消費者隱私的損益與減少損失的替代做法（依 The Record 2025 年 6 月的報導，23andMe 的破產出售也設有一位這樣的監察人）。&lt;/p&gt;
-&lt;p&gt;公司在 10 月 27 日的回覆中主張，聲請當天生效的政策允許在這次程序中出售與移轉使用者資料，所以不需要監察人（依 PPC Land 的引述）。依 The Record 的轉述，破產管理官的書狀則把政策形容為含糊，並追問先前的版本與 7 月 1 日的更新。我們取得的是 Internet Archive 2026 年 6 月 13 日保存的 2025 年 8 月 27 日版，「Business Transfers」一條寫到在合併、出售資產或收購時，公司「may disclose certain information」。7 月 1 日版的全文我們沒有取得，無法比對字句是否改過。&lt;/p&gt;
-&lt;p&gt;破產管理官的書狀要求先由獨立的人檢查，尤其是未成年人、健康資料與使用者合理預期會保密的內容（依 The Record 的轉述），各州的聯合書狀依 PPC Land 的報導全面採納這份異議。依 PPC Land 的引述，公司的回覆寫到流動資金受到相當限制，無法支撐大幅延長的程序。回覆也寫到公司願意在適當的情況下同意指派，正在跟破產管理官協商。依 PPC Land 的推算，出售聽證若需要監察人，最晚要在 11 月 17 日指派。&lt;/p&gt;
-&lt;p&gt;依 PPC Land 的引述，公司的回覆寫到不會為了廣告分享對話內容，英國與歐盟的使用者可以選擇不讓資料用來訓練模型。依 PPC Land 的比對，廣告那一條只談分享，選擇不用於訓練只限英國與歐盟的使用者。破產法對可識別個人資訊的定義，列的是姓名、住址、電子郵件、電話這類為了取得服務而提供的資料，到 11 月 2 日為止我們沒有查到法院認定對話內容是否落在定義裡。PPC Land 也寫到，各州的書狀沒有處理對話是否落在定義裡。&lt;/p&gt;
-&lt;p&gt;隱私團體民主與科技中心（CDT）的分析師在 The Record 的報導中提到，使用者跟聊天機器人分享的內容具體又私密，即使出售前拿掉姓名仍可能識別出本人。她也提到 AI 讓推測敏感特徵更容易。她認為至少應該讓使用者自行選擇加入，資料才能賣給買方。&lt;/p&gt;
-&lt;p&gt;依 PPC Land 的引述，公司的回覆寫到使用者可以透過自動化系統申請匯出或刪除資料，公司會受理這些請求。各州要求出售前讓所有使用者都可以刪除資料，PPC Land 的觀察是回覆沒有處理刪除與出售的時間先後。依 Implicator 的報導，匯出資料與刪除帳號可以在 app 或網站操作。同一篇報導也寫到，政策允許公司為了法律義務或爭議保留部分資訊，公開的角色在帳號刪除後也可能留著。&lt;/p&gt;
-&lt;p&gt;依 Implicator 的報導，沒有買方願意繼續經營時平台會停止營運，本文據此推論想保留對話的人可以先匯出。在意對話被移轉的人可以考慮申請刪除，但公司的回覆沒有交代刪除會不會在出售前完成。&lt;/p&gt;
-&lt;p&gt;之後可以留意 11 月 17 日前是否指派監察人，以及 11 月 24 日的出售聽證核准的範圍是否包含使用者資料與對話。&lt;/p&gt;
-&lt;p&gt;比較這類出售時，可以看隱私權政策在聲請破產前改過幾次、使用者有沒有收到通知、出售的資產是否包含對話，以及買方是否要沿用原本的政策、使用者能不能事先選擇加入或退出。破產法的定義列的是姓名、住址這類資料，監察人的審查能不能涵蓋對話內容也要一起看。另一個問題是審查是否會拉長程序（公司依 PPC Land 的引述主張會），以及公司資金受限時，找不到買方、平台停止營運的可能性會不會因此變大。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale&#34;&gt;DOJ raises privacy concerns over potential sale of Character.AI chats&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Record from Recorded Future News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/39-states-and-dc-say-character-ai-user-data-needs-a-privacy-ombudsman/&#34;&gt;39 states and DC say Character.ai user data needs a privacy ombudsman&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/character-ai-keeps-21-7m-bid-floor-for-disney-rivals-despite-32-states/&#34;&gt;Character.ai keeps $21.7m bid floor for Disney rivals despite 32 states&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mlex.com/mlex/articles/2544709&#34;&gt;US judge pushes Character.AI to get privacy ombudsman for bankruptcy proceedings&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MLex&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.implicator.ai/character-ai-files-for-chapter-11-as-disney-bids-20-million-for-an-ip-license/&#34;&gt;Character.AI Files for Chapter 11, Disney Bids $20 Million&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Implicator&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;2026 年 10 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://san.com/cc/character-ais-bankruptcy-leaves-millions-of-users-chats-in-limbo/&#34;&gt;Character.AI’s bankruptcy leaves millions of users’ chats in limbo&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Straight Arrow News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20260613210315/https://policies.character.ai/privacy&#34;&gt;Character.AI Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Character.AI（Internet Archive 2026-06-13 的快照）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-08-27&#34;&gt;2025 年 8 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.cornell.edu/uscode/text/11/363&#34;&gt;11 U.S. Code § 363 - Use, sale, or lease of property&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;LII / Legal Information Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.cornell.edu/uscode/text/11/332&#34;&gt;11 U.S. Code § 332 - Consumer privacy ombudsman&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;LII / Legal Information Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.cornell.edu/uscode/text/11/101&#34;&gt;11 U.S. Code § 101 - Definitions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;LII / Legal Information Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/23andme-privacy-ombudsman-recommends-consent-sale&#34;&gt;23andMe privacy ombudsman recommends company obtains consent for sale of customer data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Record from Recorded Future News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-12&#34;&gt;2025 年 6 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -6,7 +6,109 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 15 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Deleted articles added to China Digital Times&#39; 404 archive in September 2026</title>
+<link>https://anoni.net/news/en/2026/11/cdt-404-september/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/cdt-404-september</guid>
+<pubDate>Sun, 15 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>In September, China Digital Times (CDT) added 31 deleted articles, mostly from WeChat, to its 404 archive. Both CDT&#39;s summary and the archive&#39;s own notes make clear that the count is incomplete, so 31 cannot be taken as the total of deletions on the Chinese internet. As of 8 November we had found no final text of the draft revision to China&#39;s Measures for the Administration of Internet Information Services. Readers outside China do not need to change any settings.</description>
+<content:encoded>&lt;p&gt;Based on 10 sources, including China Digital Times, 中國網信網, Citizen Lab&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;China Digital Times (CDT), a site that documents censorship on the Chinese internet, added 31 articles, mainly from WeChat, to its &#34;404 Deleted Content Archive&#34; between 1 and 30 September, according to a summary it published on 2 November (404 is the error code for a page that does not exist). In the same summary, the archive&#39;s contents are described as only a small fraction of what disappears from the Chinese internet each day, so the 31 articles cannot be taken as the total of deletions there. The deletions happen on Chinese platforms and readers outside China do not need to change any settings, but anyone citing or reposting articles from those platforms should allow for the original links to stop working.&lt;/p&gt;
+&lt;p&gt;According to the archive&#39;s list page, the project preserves articles blocked or deleted by internet censorship, and since 2021 it has been organised as a list giving each article&#39;s original address and a CDT backup. On the same page, limited editorial capacity and the way articles are collected are given as the reasons the count of &#34;deleted articles&#34; is not comprehensive and does not represent the full picture of online censorship. In the archive&#39;s assessment, the great majority of these articles disappeared because of content censorship, and a very small share may have been deleted by their authors under pressure. The original-address column records only that a link is dead and gives no reason for the deletion.&lt;/p&gt;
+&lt;p&gt;The dates in CDT&#39;s summary refer to when articles were posted on the CDT website, so the 31 were not necessarily deleted in September. We went through the list page as it stood on 8 November and found that 29 of the 31 came from WeChat Official Accounts (accounts that publish articles on WeChat), with one from the question-and-answer site Zhihu, one from a media collective&#39;s website, and none from Weibo. The tally shows which articles reached the archive and is shaped by how they were collected, so it cannot be read as each platform&#39;s share of deletions.&lt;/p&gt;
+&lt;p&gt;The largest group among the September additions concerns a Beijing woman found in Shandong 26 years after she went missing, with six deleted articles. Commentators raised questions about trafficking, household registration and official responsibility, and according to the 2 November summary police apparently had not opened a case. After a knife attack in a Guangzhou shopping district, the deleted commentary objected to the word &#34;indiscriminate&#34; being used online to describe the case, on the grounds that the attacker appeared to target only women. CDT also compiled a piece on censorship and self-censorship, and wrote that it escaped censorship because it did not specifically mention the attack.&lt;/p&gt;
+&lt;p&gt;CDT describes a case in Shaoyang, Hunan, as official extortion through &#34;distant-water fishing&#34; (police going to other jurisdictions to arrest people and intimidate them for money), and of the three related articles CDT compiled, only one, a Zhihu answer, was deleted. In the summary, an entrepreneur held under residential surveillance at a designated location (RSDL, a coercive measure that restricts a person&#39;s liberty somewhere other than a detention centre) paid RMB 100 million, of which RMB 65 million went into Shaoyang government accounts. The county public security bureau&#39;s chief and deputy chief were removed from their posts in July 2025 and at least 15 people were disciplined, and as of the 2 November summary no criminal charges had been brought.&lt;/p&gt;
+&lt;p&gt;The same summary covers new drone rules in Beijing, due to take effect in mid-November, and the deletion of a WeChat Official Account article about them that a CDT editor described as mild in tone. At a car-lamp manufacturer in Changzhou, 107 new employees resisted a company demand that they either leave with half a month&#39;s pay or move to a lower-paid production line, and the company apologised and raised their compensation. Two related articles were deleted, one of which argued for learning English in order to speak out internationally. An investigation in Wuhan into a xiangsheng (crosstalk comedy) performer&#39;s adaptation of a revolutionary &#34;red song&#34; ended with the organiser fined RMB 486,874 and the theatre fined RMB 110,000, and one related article was deleted.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The archive records the result, a dead link, and does not show who deleted an article or under which rules. A 2016 report by the research group Citizen Lab tested a different part of the process, the filtering of WeChat chat messages and of the app&#39;s built-in browser. The report&#39;s conclusion is that filtering runs on the server side and that keyword filtering is enabled only for accounts registered with mainland China phone numbers, continuing even after such an account links an international number. Users receive no notice when a message is blocked, more keywords are blocked in group chats than in one-to-one chats, and some keywords that were blocked could be sent in later tests.&lt;/p&gt;
+&lt;p&gt;Citizen Lab&#39;s measurements date from 2016 and cover chat keywords and URLs in the built-in browser. Deleting an Official Account article after publication is a different mechanism, so the report cannot explain September&#39;s 31 articles. Its value here is as a record of one app applying different rules by account, with separate URL lists for China-registered and international accounts in the built-in browser. Whether those rules have changed since is outside the report&#39;s scope.&lt;/p&gt;
+&lt;p&gt;One rule currently in force is the Provisions on the Governance of the Online Information Content Ecosystem (网络信息内容生态治理规定), issued by the Cyberspace Administration of China (CAC), in force since 1 March 2020 and applicable within China. The Provisions list 11 kinds of &#34;illegal information&#34; (违法信息) that may not be created, copied or published (制作、复制、发布), including content that endangers national security, spreads rumours, insults or defames others, or violates privacy, plus nine kinds of &#34;negative information&#34; (不良信息) to be guarded against. A platform that finds such content must act immediately, keep records and report to the competent authorities. On 29 October we searched the full text word by word and found no provision requiring a platform to notify the publisher when it acts on content, or allowing the publisher to object.&lt;/p&gt;
+&lt;p&gt;The revision of the Measures for the Administration of Internet Information Services (互联网信息服务管理办法（修订草案征求意见稿）) is still a draft. The CAC opened a second round of public comment on 3 July 2026, closing on 2 August, and as of 8 November we had found no report of a final text. The purpose stated in the CAC&#39;s notice is promoting the healthy and orderly development of internet information services, protecting the lawful rights and interests of citizens, legal persons and other organisations, and safeguarding national security and the public interest. Under the draft, platforms that find prohibited content must take measures such as deleting or blocking it, cutting links, restricting account functions and monetisation, or closing accounts, with the stated aim of preventing the information from spreading (防止信息扩散).&lt;/p&gt;
+&lt;p&gt;The Provisions provide only for complaints and reports from the public. The draft, which revises a separate set of measures, additionally requires channels for user appeals and human customer service. Large platforms would have to handle complaints, reports and appeals concerning content prohibited by laws and administrative regulations, and concerning negative information, within 24 hours.&lt;/p&gt;
+&lt;p&gt;The CAC&#39;s notice covers the purpose of the draft and does not address any individual article. The archive&#39;s notes attribute most disappearances to content censorship but do not record why any given article was deleted. We did not separately look for explanations from platforms or regulators about individual articles, so the reason for any single deletion cannot be determined from the archive&#39;s data.&lt;/p&gt;
+&lt;p&gt;Anyone who needs to cite a WeChat Official Account article over the long term can save a copy at the time of citing it. That advice is our own inference from the archive&#39;s record of dead links, and CDT does not make it. A copy deals with the dead link but cannot prove the text has not been altered. People inside China have another risk to weigh, since the conduct the current Provisions prohibit includes copying, and we infer that saving or forwarding content deemed illegal information falls within their scope.&lt;/p&gt;
+&lt;p&gt;The archive&#39;s list page has a submission entry, &#34;404给CDT&#34; (&#34;404 to CDT&#34;), for anyone who finds a deleted article and wants to pass it to the archive. We have not checked how well this entry protects submitters&#39; identities, and people in places where submitting carries risk need to assess that first.&lt;/p&gt;
+&lt;p&gt;Still to watch are whether the draft is formally published, whether the user-appeal and 24-hour requirements for large platforms stay in it, and CDT&#39;s summaries over the coming months.&lt;/p&gt;
+&lt;p&gt;For comparison, in Hong Kong, Part 2 of Schedule 4 to the Implementation Rules for Article 43 of the National Security Law, as published in 2020, lets a designated officer require a publisher to remove a message, or a platform to disable it, without first going to court. The officer acts on the authorisation of the Commissioner of Police, approved by the Secretary for Security, where there are reasonable grounds to suspect the message is likely to constitute or cause an offence endangering national security. A requirement sent to a publisher must be in writing, but the schedule has no provision for giving reasons or a route of appeal, or for notifying the publisher when the requirement goes to the platform (we did not check whether later amendments changed this schedule). According to Hong Kong Free Press, citing Google&#39;s transparency report, the Hong Kong government asked Google to remove 330 items in 2022, 57 of them related to national security.&lt;/p&gt;
+&lt;p&gt;Singapore&#39;s Protection from Online Falsehoods and Manipulation Act (POFMA) starts from a different remedy. On the POFMA Office&#39;s website, the primary tools are correction directions, which require the recipient to insert a notice against the original post with a link to the Government&#39;s clarification and do not require removal, while a stop communication or disabling direction may be used in more serious cases. We read only those web pages, so the text of the Act, its appeal process and the number of directions issued are not covered here. We are a community based in Taiwan, where Article 46 of the Protection of Children and Youths Welfare and Rights Act requires a platform to restrict children&#39;s access to content, or remove it first, once the competent authority tells the platform the content harms children&#39;s physical or mental health; the article has no court step and protects only children and young people.&lt;/p&gt;
+&lt;p&gt;When comparing content-removal regimes, readers can ask whether a reason must be given and the publisher notified when content is acted on, whether the publisher can appeal, and who hears that appeal. The standards in official documents belong in the comparison too, for example how the speed of acting on rumours, insults and defamation is balanced against an appeals process, and whether reported content can be dealt with inside a time limit. Which rules apply to third-party archives of deleted articles is another point to compare. Whether an appeals system lets publishers learn why an article was deleted depends on the final text and on how platforms implement it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/11/cdts-404-deleted-content-archive-summary-for-september-2026/&#34;&gt;CDT’s “404 Deleted Content Archive” Summary for September 2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/chinese/404-articles-archive&#34;&gt;中国数字时代404文库&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;20 December 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-07/03/c_1784822399677167.htm&#34;&gt;国家互联网信息办公室关于《互联网信息服务管理办法（修订草案征求意见稿）》再次公开征求意见的通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-03&#34;&gt;3 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/&#34;&gt;One App, Two Systems: How WeChat uses one censorship policy in China and another internationally&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2016-11-30&#34;&gt;30 November 2016&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gld.gov.hk/egazette/pdf/20202449e/cs220202449139.pdf&#34;&gt;Implementation Rules for Article 43 of the Law of the People&amp;#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Government Gazette&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-06&#34;&gt;6 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2023/05/09/hong-kong-asked-google-to-remove-183-items-in-latter-half-of-2022-national-security-takedown-requests-surged/&#34;&gt;Hong Kong asked Google to remove 183 items in latter half of 2022; national security takedown requests surged&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-05-09&#34;&gt;9 May 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pofmaoffice.gov.sg/&#34;&gt;POFMA Office&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;POFMA Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pofmaoffice.gov.sg/regulations/&#34;&gt;Regulations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;POFMA Office&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;4 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Unencrypted SD card inside a Lenovo fingerprint USB drive, and how to assess encryption claims</title>
 <link>https://anoni.net/news/en/2026/11/lenovo-fingerprint-usb/</link>
@@ -2544,132 +2646,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-22&#34;&gt;22 July 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Character.AI&#39;s bankruptcy sale and the handling of user chats</title>
-<link>https://anoni.net/news/en/2026/11/character-ai-chats-sale/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/character-ai-chats-sale</guid>
-<pubDate>Thu, 05 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Character Technologies, the company behind the chatbot platform Character.AI, filed for bankruptcy in the US in October and plans to sell its assets. The U.S. Trustee at the Justice Department and 39 states plus Washington, D.C. asked the court to appoint a privacy ombudsman to advise on whether, and on what terms, user data can be sold with the assets, while the company argues that its privacy policy already permits the transfer. According to MLex, the judge did not require an appointment on 30 October but encouraged the company to consider one.</description>
-<content:encoded>&lt;p&gt;Based on 14 sources, including The Record from Recorded Future News, PPC Land, MLex&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Character Technologies, the company that runs the chatbot platform Character.AI, filed for Chapter 11 in the US Bankruptcy Court in Delaware on 12 October (a procedure under Chapter 11 of the US Bankruptcy Code in which a company deals with its debts under court supervision and may sell assets), and according to Implicator it plans to sell all or most of its assets. On 27 October the U.S. Trustee, the Justice Department official who oversees bankruptcy cases, filed an objection asking for a consumer privacy ombudsman to advise the court on which data can be sold and on what terms. As of 2 November, whether users&#39; data and conversations will be sold with the assets had not been decided, and anyone with an account and chats stored with the company may be affected wherever they live (our inference from the worldwide user figure cited in the filing).&lt;/p&gt;
-&lt;p&gt;According to The Record&#39;s account of 30 October, the U.S. Trustee&#39;s filing cites about 12 million monthly active users worldwide, who spend about two hours a day on the platform on average. When users ask the chatbot whether their conversations are private, its reply is that nothing is shared without explicit permission. In the filing, the U.S. Trustee calls the privacy policy &#34;opaque&#34;, and according to its description the policy cautions in places that the company may disclose personally identifiable information, and also permits that information to be transferred if the company is sold.&lt;/p&gt;
-&lt;p&gt;According to the filing, the policy was updated on 1 July 2026, while the company was &#34;actively seeking to sell its assets&#34;. The U.S. Trustee asked the company to account for earlier versions of the policy, including whether each disclosed that personal information could be transferred in a sale, and how changes were communicated to users. According to the same report, the court has the power to restrict the sale of user data, under conditions set out in the first paragraph of the Perspective section.&lt;/p&gt;
-&lt;p&gt;According to PPC Land, the attorneys general of 39 states and Washington, D.C. filed a joint brief on 29 October adopting the U.S. Trustee&#39;s objection in full. In the brief, the states argue that a privacy ombudsman is needed wherever the property being sold may contain personal or sensitive information about users, including minors. The states also wrote that they are investigating the company over possible consumer protection and privacy violations based on the platform, and that the company&#39;s sale motion does not make clear whether it intends to sell the whole platform in addition to the Disney licence.&lt;/p&gt;
-&lt;p&gt;As of 2 November, the stalking horse bidder (the party that bids first, so that other buyers can bid above it) was Disney. According to PPC Land, Disney offered $20 million for a non-exclusive, perpetual licence to some of the company&#39;s intellectual property, a licence that excludes the app, the brand, and user data and conversations. Also according to PPC Land, the company wrote in its reply of 27 October that Disney is not purchasing personally identifiable information.&lt;/p&gt;
-&lt;p&gt;According to Implicator&#39;s report of 14 October, the company had not said at that point whether users&#39; conversations were among the assets for sale, and the platform will shut down if no buyer is willing to keep it running. As quoted by Straight Arrow News, the company wrote in its bankruptcy announcement that user data &#34;continues to be protected under our Privacy Policy&#34;.&lt;/p&gt;
-&lt;p&gt;According to the summary in front of MLex&#39;s paywall, the judge did not require the company to engage a privacy ombudsman at the 30 October hearing, but &#34;strongly encourage[d]&#34; it to consider doing so. Under the proposed timeline compiled by PPC Land, bids are due on 20 November, followed by an auction on 23 November and a sale hearing on 24 November. As of 2 November, we had not found whether the bidding procedures were approved or whether an ombudsman had been appointed.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Under section 363(b)(1) of Title 11 of the US Code (the Bankruptcy Code), the sale of personally identifiable information is restricted when the privacy policy in effect on the day the case was filed prohibits transferring such information to unaffiliated parties. When that condition is met, the sale has to be consistent with the policy. A sale that is not consistent requires an ombudsman appointed under section 332, and the court can approve it only after notice and a hearing. Under section 332, the court orders the U.S. Trustee to appoint a disinterested person at least seven days before the hearing, to advise the court on the privacy losses or gains for consumers and on alternatives that would mitigate the losses (according to The Record&#39;s report of June 2025, the 23andMe bankruptcy sale also had such an ombudsman).&lt;/p&gt;
-&lt;p&gt;In its reply of 27 October, the company argued that the policy in effect on the filing date permits the sale and transfer of user data in this case, so no ombudsman is required (as quoted by PPC Land). According to The Record, the U.S. Trustee instead described the policy in the filing as &#34;ambiguous&#34; and pressed for the earlier versions and the 1 July update. The version we obtained is the one dated 27 August 2025, saved by the Internet Archive on 13 June 2026, under whose &#34;Business Transfers&#34; clause the company &#34;may disclose certain information&#34; in connection with a merger, sale of company assets or acquisition. We did not obtain the full text of the 1 July version and cannot compare whether the wording changed.&lt;/p&gt;
-&lt;p&gt;In the filing, the U.S. Trustee asks for an independent review first, particularly of minors&#39; data, health data and anything users would reasonably expect to be private (according to The Record), and according to PPC Land the states&#39; joint brief adopts the objection in full. As quoted by PPC Land, the company wrote in its reply that it is operating under substantial liquidity constraints and cannot support a substantially extended process. The company also wrote that it is willing to consent to an appointment under appropriate circumstances and is negotiating with the U.S. Trustee. By PPC Land&#39;s calculation, if the sale hearing needs an ombudsman, one has to be appointed by 17 November.&lt;/p&gt;
-&lt;p&gt;As quoted by PPC Land, the company wrote in its reply that it does not share chat content for advertising purposes, and that users in the UK and EU can opt out of having their data used to train models. In PPC Land&#39;s comparison, the advertising line covers only sharing, and the training opt-out is limited to users in the UK and EU. The Bankruptcy Code&#39;s definition of personally identifiable information lists data such as a name, address, email address and phone number provided to obtain a service, and as of 2 November we had not found any court ruling on whether conversation content falls within it. PPC Land also wrote that the states&#39; brief does not address that question.&lt;/p&gt;
-&lt;p&gt;According to The Record, an analyst at the Center for Democracy and Technology (CDT), a privacy advocacy group, says that what people share with chatbots is specific and intimate and can identify them even if names are removed before a sale, and that AI makes inferring sensitive traits easier. &#34;At the very least, customers of the seller should have to opt into the sale of their data to the buyer,&#34; she told The Record.&lt;/p&gt;
-&lt;p&gt;As quoted by PPC Land, the company wrote in its reply that users can request export or deletion of their data through its automated systems and that it honours such requests. The states asked that all users be able to delete their data before any sale, and PPC Land observed that the reply does not address when deletion happens relative to a sale. According to Implicator, data export and account deletion are available in the app and on the website. Implicator also reported that the policy allows the company to keep some information for legal obligations or disputes, and that characters a user made public may remain after the account is deleted.&lt;/p&gt;
-&lt;p&gt;Based on Implicator&#39;s report that the platform will shut down if no buyer is willing to keep it running, we infer that people who want to keep their conversations can export them first. Those concerned about their conversations being transferred can consider requesting deletion, though the company&#39;s reply does not say whether deletion would be completed before the sale.&lt;/p&gt;
-&lt;p&gt;The next points to watch are whether an ombudsman is appointed before 17 November, and whether what the 24 November sale hearing approves includes user data and conversations.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, compared how the personal data laws of Taiwan, South Korea and Japan treat personal data that moves with a business in a transfer or merger. Taiwan&#39;s Personal Data Protection Act has no provision specifically on transferring personal data in a business transfer or merger (based on a full-text search of the Act, without reading its enforcement rules or official interpretations). Article 20(1) requires a non-government agency to use personal data (apart from the categories of sensitive data listed in Article 6(1)) within the scope necessary for the specific purpose of collection, and whether that purpose still binds a buyer is our reading of the text, as we found no official interpretation on the point.&lt;/p&gt;
-&lt;p&gt;Article 27 of South Korea&#39;s Personal Information Protection Act requires a company that transfers personal data through the transfer of all or part of its business or a merger to tell the people concerned in advance about the transfer, the recipient&#39;s name and contact details, and how they can act if they do not want their data transferred. The recipient may use the data only for the original purpose at the time of transfer. Under Article 27(5)(ii) of Japan&#39;s Act on the Protection of Personal Information, a company receiving personal data through a merger or other succession of business does not count as a third party, so the rule requiring consent for provision to third parties does not apply, while Article 18(2) bars handling the data beyond the purpose of use before the succession without the person&#39;s consent. Neither of these two Japanese articles requires notice to the person in advance (we did not look at other provisions), and we did not check how the Korean and Japanese provisions apply to a sale in bankruptcy.&lt;/p&gt;
-&lt;p&gt;When comparing sales like this one, readers can look at how many times the privacy policy changed before the bankruptcy filing, whether users were notified, whether the assets for sale include conversations, whether the buyer has to keep the original policy, and whether users can opt in or out beforehand. Since the Bankruptcy Code&#39;s definition lists data such as names and addresses, whether an ombudsman&#39;s review can cover conversation content is also worth following. Another question is whether a review would lengthen the process (as the company argues, according to PPC Land), and whether, with the company&#39;s funds constrained, that would make it more likely that no buyer is found and the platform shuts down.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (14)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale&#34;&gt;DOJ raises privacy concerns over potential sale of Character.AI chats&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record from Recorded Future News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/39-states-and-dc-say-character-ai-user-data-needs-a-privacy-ombudsman/&#34;&gt;39 states and DC say Character.ai user data needs a privacy ombudsman&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ppc.land/character-ai-keeps-21-7m-bid-floor-for-disney-rivals-despite-32-states/&#34;&gt;Character.ai keeps $21.7m bid floor for Disney rivals despite 32 states&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PPC Land&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.mlex.com/mlex/articles/2544709&#34;&gt;US judge pushes Character.AI to get privacy ombudsman for bankruptcy proceedings&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MLex&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.implicator.ai/character-ai-files-for-chapter-11-as-disney-bids-20-million-for-an-ip-license/&#34;&gt;Character.AI Files for Chapter 11, Disney Bids $20 Million&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Implicator&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-14&#34;&gt;14 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://san.com/cc/character-ais-bankruptcy-leaves-millions-of-users-chats-in-limbo/&#34;&gt;Character.AI’s bankruptcy leaves millions of users’ chats in limbo&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Straight Arrow News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20260613210315/https://policies.character.ai/privacy&#34;&gt;Character.AI Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Character.AI (Internet Archive snapshot of 13 June 2026)&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-08-27&#34;&gt;27 August 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.cornell.edu/uscode/text/11/363&#34;&gt;11 U.S. Code § 363 - Use, sale, or lease of property&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;LII / Legal Information Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.cornell.edu/uscode/text/11/332&#34;&gt;11 U.S. Code § 332 - Consumer privacy ombudsman&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;LII / Legal Information Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.cornell.edu/uscode/text/11/101&#34;&gt;11 U.S. Code § 101 - Definitions&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;LII / Legal Information Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/23andme-privacy-ombudsman-recommends-consent-sale&#34;&gt;23andMe privacy ombudsman recommends company obtains consent for sale of customer data&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record from Recorded Future News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-12&#34;&gt;12 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://elaw.klri.re.kr/eng_service/lawView.do?hseq=75275&amp;amp;lang=ENG&#34;&gt;Personal Information Protection Act&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Korea Legislation Research Institute&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/415AC0000000057&#34;&gt;個人情報の保護に関する法律&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
