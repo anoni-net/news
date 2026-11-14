@@ -6,7 +6,129 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 14 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 15 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Unencrypted SD card inside a Lenovo fingerprint USB drive, and how to assess encryption claims</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/lenovo-fingerprint-usb/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/lenovo-fingerprint-usb</guid>
+<pubDate>Sun, 15 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>According to a researcher&#39;s slides, the Lenovo ThinkPlus FU100 fingerprint drive was marketed with hardware encryption and AES-256 but held an unencrypted SD card. Lenovo&#39;s statement says these products were sold by Lenovo only in mainland China and that affected customers can arrange a replacement. The statement does not address whether the AES-256 claim was accurate (checked on 8 November). For encrypted drives from other brands, the test is whether the key depends on the password.</description>
+<content:encoded>&lt;p&gt;Based on 14 sources, including RE//verse 2026, NVD, Tom&amp;#39;s Hardware&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;A USB drive marketed as encrypted or fingerprint-locked does not necessarily hold encrypted files. In slides from the RE//verse reverse engineering conference in March 2026, a researcher took apart the Lenovo ThinkPlus FU100 fingerprint drive and concluded that the case held only an SD card and that the data had no encryption at all. According to a Lenovo statement carried by Tom&#39;s Hardware, these ThinkPlus storage products were designed for the China market and are only available from Lenovo in mainland China. The slides also list other affected devices, and the checks below apply equally to products from other brands that are advertised as encrypted.&lt;/p&gt;
+&lt;p&gt;The teardown and its conclusion both come from the slides, and what follows relies on their text and on accounts by Tom&#39;s Hardware and the security blog HackingPassion. One slide reads &#34;It&#39;s just an SD card in a fancy case&#34;, and the fingerprint reader controls only the USB connection. As HackingPassion describes it, the fingerprint decides whether the drive connects to the computer, and the files on the card do not depend on it.&lt;/p&gt;
+&lt;p&gt;The &#34;hardware encrypted&#34; and AES-256 (a widely used encryption algorithm) claims appear on the FU100 introduction slide, with the image credited to Alibaba.com. As of 8 November we could not find an FU100 product page on Lenovo&#39;s website, so we cannot confirm whether Lenovo&#39;s own channels used the same wording.&lt;/p&gt;
+&lt;p&gt;According to the slides and HackingPassion, the researcher reported the problem to Lenovo on 2 August 2025. A temporary fix on 27 August 2025 added a layer of epoxy over the SD card, and a proper fix was scheduled for December 2025. Lenovo&#39;s statement says it worked with the researcher through coordinated disclosure after receiving the report, remediated the issues through hardware and software upgrades, and published a security advisory and three CVEs (public vulnerability identifiers) in January 2026.&lt;/p&gt;
+&lt;p&gt;The original page of Lenovo advisory &lt;code&gt;LEN-210545&lt;/code&gt; returned Access Denied when we checked on 8 November, so we know its contents only through secondary sources and the US National Vulnerability Database (NVD). In the NVD record submitted by Lenovo, someone with physical access may be able to read data stored on the drive, and the affected products are the first generation of the ThinkPlus FU100, FU200, TU800 and TSD303.&lt;/p&gt;
+&lt;p&gt;According to HackingPassion and Tom&#39;s Hardware, the TSD303 external SSD covered in the same talk does encrypt its data, and its problem lay in password verification. The drive sent the correct password in plain text over USB to a program on the computer, which compared it with what the user typed. A first fix encrypted the password before sending it, but the key could be derived by the program, and a second fix in December 2025 moved the comparison onto the drive itself. In HackingPassion&#39;s summary of the slides, of ten devices built on the same software kit (vendor names blacked out on the slide), two stored data unencrypted on a micro SD card and eight had problems with how the password was sent.&lt;/p&gt;
+&lt;p&gt;Lenovo&#39;s statement does not address whether the AES-256 and hardware encryption claims were accurate, and it neither confirms nor denies that the SD card was unencrypted. According to HackingPassion, neither Lenovo nor the researcher mentions any attack on owners, and as of 8 November we had found no reported victims.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Fingerprint readers and password screens may control nothing more than the connection, and whether the data is protected depends on where the decryption key comes from. HackingPassion&#39;s summary gives two reliable designs: a key derived from the password through a deliberately slow function such as PBKDF2 or Argon2, so that each guess costs time, or verification carried out entirely inside the drive&#39;s own chip, with neither password nor key leaving it. According to the slides, the FU100&#39;s data is not encrypted, so it uses neither design (our inference).&lt;/p&gt;
+&lt;p&gt;In the versions the researcher tested, the software encryption tool from storage vendor Netac used a fixed AES-256 key written into the program, unrelated to the user&#39;s password (per Tom&#39;s Hardware and HackingPassion). Tom&#39;s Hardware also reports that Netac had not patched this by the time of the researcher&#39;s March 2026 talk. Software encryption is a different kind of case from the FU100&#39;s complete lack of encryption, but in both, an AES-256 label does not reveal where the key comes from (our generalization).&lt;/p&gt;
+&lt;p&gt;FIPS 140 (the US government standard for cryptographic modules) is administered through the Cryptographic Module Validation Program (CMVP) of the US National Institute of Standards and Technology (NIST), and modules are tested by independent laboratories. Certificates can be looked up on NIST&#39;s list, and according to NIST&#39;s page, FIPS 140-2 certificates move to the Historical List after 21 September 2026. IEEE Spectrum reported that the German security firm SySS published a way in December 2009 to bypass several FIPS 140-2 certified USB drives, recovering data within seconds regardless of the password. Citing GCN, IEEE Spectrum wrote that the preliminary analysis in a NIST press release at the time traced the problem to &#34;the software authorizing decryption&#34; rather than the certified cryptographic module, and that NIST was investigating whether the certification process needed changes.&lt;/p&gt;
+&lt;p&gt;As of 8 November we could not find any record of the FU100 passing FIPS 140 or China&#39;s commercial cryptography certification (the country&#39;s certification system for commercial cryptography products). HackingPassion advises treating a fingerprint reader or password screen on a drive as a lock on access, unless the maker shows that the key depends on it. Because NIST&#39;s preliminary analysis pointed to software, we infer that even after a certificate turns up, buyers still need the vendor to explain how keys are generated and where the password is verified.&lt;/p&gt;
+&lt;p&gt;People with any of the four first-generation devices listed in NVD can contact Lenovo Support to arrange a replacement, according to Lenovo&#39;s statement. HackingPassion reports that the free upgrade goes through a service line in China, with the device either sent back for replacement or given a firmware upgrade on site. Also according to HackingPassion, Lenovo advises backing up the data first and then wiping or formatting the device.&lt;/p&gt;
+&lt;p&gt;Lenovo&#39;s statement does not say whether units resold outside mainland China can be replaced. As of 8 November we could not find a record of the FU100 being sold through official channels in Hong Kong, Singapore or Taiwan, or rules in those places specific to labeling storage devices as encrypted. We could not confirm whether ordinary encrypted USB drives or SSDs fall within mainland China&#39;s commercial cryptography certification catalog.&lt;/p&gt;
+&lt;p&gt;Whether the data on a lost drive is actually encrypted can have legal consequences in Singapore. For organizations covered by the Personal Data Protection Act 2012, Part 6A treats the loss of a storage medium as a data breach where unauthorized access or similar handling of the personal data on it is likely, and under section 26D(5) an organization need not notify affected individuals of a notifiable breach if it had a technological measure in place beforehand that makes significant harm to them unlikely. We infer that encryption is the obvious candidate for such a measure, and that an organization relying on a drive like the FU100 could not count on the exception on the strength of the product&#39;s marketing.&lt;/p&gt;
+&lt;p&gt;Anyone storing sensitive files on a drive from another brand can encrypt them before copying them over, so that the key comes from a password they set (one of the options HackingPassion lists). VeraCrypt (open-source disk encryption software) lists Windows, macOS and Linux versions on its download page, and supports two key derivation methods, PBKDF2 and Argon2id, for non-system volumes and file containers. The cost is that every computer used to open the files must be able to run VeraCrypt.&lt;/p&gt;
+&lt;p&gt;Microsoft&#39;s documentation lists Windows Pro, Enterprise, Education and similar editions as able to enable BitLocker, and Home is not in the table. According to the BitLocker FAQ, BitLocker To Go covers USB flash drives and SD cards, and encrypted drives can be opened on another computer with a password. We could not find official documentation on whether Home can unlock an already encrypted drive.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s security guide states that FileVault protects internal and removable storage devices, and Disk Utility can also encrypt an external device with a password when formatting it, which requires erasing the device first. LUKS (a disk encryption format common on Linux) processes passwords with PBKDF2 or Argon2, according to the cryptsetup FAQ, which also recommends backing up the LUKS header, since a damaged header can make the data impossible to decrypt. We could not find official documentation on whether macOS-encrypted external drives or LUKS volumes can be opened on other operating systems, so anyone who needs to move between computers should test this first.&lt;/p&gt;
+&lt;p&gt;Encrypting files yourself addresses a drive that is lost or taken by someone else, but it does not help if the computer itself is compromised, the password is too short, or the password is forgotten (our inference). A drive that holds only public material does not need this step, and anyone storing personal data or work documents can weigh it against the cost of needing the encryption software on every computer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (14)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/xusheng6/breaking_encrypted_USB_drives_with_TTD/blob/main/Breaking_Encrypted_USB_Drives_v2.pdf&#34;&gt;Breaking Encrypted USB Drives with Time-Travel Debugging&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;RE//verse 2026&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2025-13453&#34;&gt;NVD-CVE-2025-13453&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NVD&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-14&#34;&gt;14 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tomshardware.com/tech-industry/cyber-security/lenovo-fingerprint-usb-stick-sold-as-aes-256-encrypted-had-a-plain-sd-card-inside-ai-assisted-follow-up-finds-a-backdoor-and-hardcoded-keys-in-other-secure-usb-products&#34;&gt;Lenovo&amp;#39;s &amp;#39;encrypted&amp;#39; fingerprint USB drive is just an unencrypted SD card in a fancy case — AI-assisted follow-up finds a backdoor and hardcoded keys in other ‘secure’ USB products (updated)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tom&amp;#39;s Hardware&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hackingpassion.com/lenovo-thinkplus-encrypted-usb-sd-card/&#34;&gt;Lenovo ThinkPlus Fingerprint USB Drive Sold as Encrypted Was a Plain SD Card Inside&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;HackingPassion&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://spectrum.ieee.org/fips-1402-cerified-flash-drives-have-security-flaw&#34;&gt;FIPS 140-2 Cerified Flash Drives Have Security Flaw&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IEEE Spectrum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2010-01-12&#34;&gt;12 January 2010&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://csrc.nist.gov/projects/cryptographic-module-validation-program&#34;&gt;Cryptographic Module Validation Program&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://veracrypt.io/en/Header%20Key%20Derivation.html&#34;&gt;Header Key Derivation, Salt, and Iteration Count&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;VeraCrypt&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://veracrypt.io/en/Downloads.html&#34;&gt;VeraCrypt Downloads&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;VeraCrypt&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/&#34;&gt;BitLocker overview&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/faq&#34;&gt;BitLocker FAQ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/security/volume-encryption-with-filevault-sec4c6dc1b6e/web&#34;&gt;Volume encryption with FileVault in macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/disk-utility/encrypt-protect-a-storage-device-password-dskutl35612/mac&#34;&gt;Encrypt and protect a storage device with a password in Disk Utility on Mac&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.com/cryptsetup/cryptsetup/-/raw/main/FAQ.md&#34;&gt;Frequently Asked Questions Cryptsetup/LUKS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;cryptsetup&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=P16A-&#34;&gt;Personal Data Protection Act 2012&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Statutes Online&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Scope and opt-out of model training on Gemini personal account chats</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/gemini-chat-training/</link>
@@ -2548,69 +2670,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/415AC0000000057&#34;&gt;個人情報の保護に関する法律&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Tor Browser 16.0 and Tails 7.16</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/tor-browser-16-tails/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/tor-browser-16-tails</guid>
-<pubDate>Thu, 05 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Tor Browser 16.0 is out for desktop and Android and is now based on Firefox ESR 153. The desktop version has redesigned Settings and a new generic window titles option that is off by default, and 32-bit x86 Linux is no longer supported from this release. Tails 7.16 updates its built-in Tor Browser to 16.0, and Tails 7.0 or later can upgrade automatically.</description>
-<content:encoded>&lt;p&gt;Based on 5 sources from Tor Project, Tails, OONI&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The Tor Project released Tor Browser 16.0 for desktop and Android on 29 October, the first stable release based on Firefox ESR 153 (Firefox&#39;s Extended Support Release). Tails (an operating system that boots from a USB stick and sends every connection through Tor) followed the next day with 7.16, which updates its built-in Tor Browser to 16.0. The update covers Windows, macOS, Linux and Android users, except for 32-bit x86 Linux computers, which are no longer supported from 16.0.&lt;/p&gt;
-&lt;p&gt;According to the Tor Project&#39;s announcement, the team carries out an annual review whenever it moves to a new ESR. This time it reviewed and handled more than 270 Bugzilla (Mozilla&#39;s bug tracker) issues covering a year of Firefox changes that could harm the privacy and security of Tor Browser users. The changelog has several entries that disable or hide features: WebGPU (a new interface that lets web pages run computations directly on the graphics card) is disabled pending review, and the AI settings panel and the translation settings page are hidden. The Android version also disables AI features and Google Lens, and these entries consist of titles only, with no reasons given.&lt;/p&gt;
-&lt;p&gt;Settings on desktop follow Firefox&#39;s June redesign, with the old General page split into new pages for appearance, downloads, tabs and browsing, accessibility, and language. Pages specific to Tor Browser, such as Connection and Security Level, have been rebuilt with Firefox&#39;s new components. The announcement says settings that could harm privacy or make the browser easier to fingerprint (to recognize the same device from browser settings and device characteristics) when turned on are either hidden or carry a warning. Existing preferences are kept, and the search bar at the top of Settings finds options that have moved.&lt;/p&gt;
-&lt;p&gt;Settings also gain a generic window titles option, under Privacy and security → Protections from third-party applications, which replaces every window title with &#34;Tor Browser&#34;. As the announcement explains, browsers usually name a window after the page being viewed, and other programs on the computer, as well as the operating system itself, can read that title without special permissions. The option is off by default, because the announcement says there was not enough time in this release cycle to evaluate side effects. Those who may be affected are people using screen readers and people with highly customized systems (for example, less common desktop environments or application switchers).&lt;/p&gt;
-&lt;p&gt;The Linux version adds native support for 64-bit ARM processors, such as the Raspberry Pi and Apple Silicon Macs running Linux. Support for 32-bit x86 Linux ends along with Firefox&#39;s, and when the announcement was published this platform accounted for about 200 update checks a day, down from about 4,000 at its peak in 2019.&lt;/p&gt;
-&lt;p&gt;The built-in manual on desktop (type &lt;code&gt;about:manual&lt;/code&gt; in the address bar, or open ☰ → Help → Tor Browser manual) now uses content from the new support site, and it can still be read offline, including when Tor will not connect. Google Play limits apps distributed as APKs to 100 MB, which has kept the manual from being bundled for offline reading on Android. Much of the Android interface now uses Material Design 3 (Google&#39;s design guidelines for Android), and the announcement says later releases will continue the work. The changelog also lists the removal of the password interface on Android, the disabling of all link-sharing features, and the disabling of bookmark import.&lt;/p&gt;
-&lt;p&gt;According to the Tails announcement, 7.16 updates Tor Browser to 16.0, bringing the new Settings with it. The Tor client is updated to 0.4.9.15, and OpenPGP support in Thunderbird has been fixed.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Tor Browser is built on Firefox ESR and moves to a new base version once a year, so each move takes in a year of Firefox changes at once. The 16.0 changelog shows several new features switched off first, with WebGPU, for example, marked as disabled pending review. Firefox&#39;s new online search suggestions also remain off. From this we infer that some features Firefox users already have will reach Tor Browser users later or not at all.&lt;/p&gt;
-&lt;p&gt;Generic window titles deal with other programs on the same computer. The Tor network protects the path a connection takes and does not cover other software installed on the computer. The option changes only the window title, and we infer that other programs reading what is on the screen fall outside what it handles.&lt;/p&gt;
-&lt;p&gt;Once every window is called &#34;Tor Browser&#34;, we infer that people who rely on window names to switch between windows will find them harder to tell apart, which may be the situation for the screen reader users the announcement mentions. In the announcement, the Tor Project invites people who use screen readers or highly customized systems to try the option and report any problems.&lt;/p&gt;
-&lt;p&gt;The same option has already reached Firefox through the Tor Uplift Project (the effort to send Tor Browser&#39;s changes back to Firefox). According to the announcement, advanced Firefox users can get the same effect by setting &lt;code&gt;privacy.exposeContentTitleInWindow&lt;/code&gt; (normal windows) and &lt;code&gt;privacy.exposeContentTitleInWindow.pbm&lt;/code&gt; (private browsing windows) to false in &lt;code&gt;about:config&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The same announcement says a new circuit display (the panel showing which relays a connection passes through) is coming to the Alpha test release and is not part of 16.0. The new version brings site information into the panel and can draw multi-path circuits, and it will be the first circuit display on Android. According to the announcement, multi-path circuits use extra relays to split traffic into two paths that converge on a single exit (the last relay before the connection leaves the Tor network for the destination site). As of the announcement, connections to regular websites were already randomly assigned to multi-path circuits depending on network availability, while onion services (sites reachable only through Tor) were not.&lt;/p&gt;
-&lt;p&gt;For readers in Taiwan and Hong Kong, OONI (Open Observatory of Network Interference) Tor tests from 18 September to 18 October, queried on 20 October, found 7 anomalies in 706 tests in Hong Kong and 314 anomalies in 4,797 tests in Taiwan, 311 of the Taiwan anomalies from a single ASN (autonomous system number, which identifies one network). An anomaly is not a confirmed block, and the test checks whether the servers Tor needs to operate can be reached. As of 20 October we had found no rules in either Taiwan or Hong Kong specifically on running onion services.&lt;/p&gt;
-&lt;p&gt;People using Tor Browser on desktop can find generic window titles under Privacy and security in Settings after updating to 16.0. According to the announcement, turning it on keeps other software from learning browsing history through window titles. From this we infer that people worried about software of unknown origin on their computer can consider turning it on, though it does not help when other programs log keystrokes or take screenshots. For people who need fuller protection against other software on the computer, the announcement recommends Tails.&lt;/p&gt;
-&lt;p&gt;For anyone moving to Tails on that recommendation, Tails&#39; known issues page said as of 2 November that Macs with Apple chips (M1, M2 and so on) and many other Mac models cannot start Tails at all. Tails 7.0 or later can upgrade to 7.16 automatically, and if the automatic upgrade fails or Tails will not start afterwards, a manual upgrade is the fallback. Reinstalling instead erases the Persistent Storage on the USB stick (the space Tails uses to keep files and settings). According to the Tor Project&#39;s announcement, most people still on 32-bit x86 Linux can switch to the 64-bit version, unless their hardware or Linux version is too old.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (5)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/new-release-tor-browser-160/&#34;&gt;New Release: Tor Browser 16.0&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;29 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/news/version_7.16/&#34;&gt;Tails 7.16&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/support/known_issues/&#34;&gt;Known issues&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=HK&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Hong Kong&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=TW&amp;amp;test_name=tor&amp;amp;since=2026-09-18&amp;amp;until=2026-10-19&#34;&gt;OONI API, Tor tests, Taiwan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>联想指纹 U 盘的未加密 SD 卡与加密宣称的判断方式 | anoni.net 新闻导读</title>
+<meta name="description" content="依研究者的幻灯片，联想 ThinkPlus FU100 指纹 U 盘标榜硬件加密与 AES-256，里面却是没有加密的 SD 卡。联想的声明写这批产品只由联想在中国大陆销售，受影响的客户可以安排更换。声明没有回答 AES-256 宣称是否属实（11 月 8 日查证）。其他品牌标榜加密的 U 盘，可以从密钥是否依赖密码来判断。">
+<link rel="canonical" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/lenovo-fingerprint-usb/">
+<link rel="alternate" hreflang="zh-Hant" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/lenovo-fingerprint-usb/">
+<link rel="alternate" hreflang="zh-Hans" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/lenovo-fingerprint-usb/">
+<link rel="alternate" hreflang="en" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/lenovo-fingerprint-usb/">
+<link rel="alternate" hreflang="x-default" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/lenovo-fingerprint-usb/">
+<link rel="stylesheet" href="/css/news.css?v=3aa97f0e6e">
+<link rel="icon" href="/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新闻导读" href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml">
+<meta property="og:site_name" content="anoni.net 新闻导读">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="联想指纹 U 盘的未加密 SD 卡与加密宣称的判断方式">
+<meta property="og:description" content="依研究者的幻灯片，联想 ThinkPlus FU100 指纹 U 盘标榜硬件加密与 AES-256，里面却是没有加密的 SD 卡。联想的声明写这批产品只由联想在中国大陆销售，受影响的客户可以安排更换。声明没有回答 AES-256 宣称是否属实（11 月 8 日查证）。其他品牌标榜加密的 U 盘，可以从密钥是否依赖密码来判断。">
+<meta property="og:url" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/lenovo-fingerprint-usb/">
+<meta property="og:image" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png?v=74a0aa1c7b">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="anoni.net 新闻导读">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="anoni.net 新闻导读">
+<meta property="article:published_time" content="2026-11-15T00:00:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "联想指纹 U 盘的未加密 SD 卡与加密宣称的判断方式",
+  "description": "依研究者的幻灯片，联想 ThinkPlus FU100 指纹 U 盘标榜硬件加密与 AES-256，里面却是没有加密的 SD 卡。联想的声明写这批产品只由联想在中国大陆销售，受影响的客户可以安排更换。声明没有回答 AES-256 宣称是否属实（11 月 8 日查证）。其他品牌标榜加密的 U 盘，可以从密钥是否依赖密码来判断。",
+  "datePublished": "2026-11-15T00:00:00+08:00",
+  "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/lenovo-fingerprint-usb/",
+  "mainEntityOfPage": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/lenovo-fingerprint-usb/",
+  "image": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/og-zh-cn.png",
+  "inLanguage": "zh-Hans",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "anoni.net",
+      "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+        "width": 512,
+        "height": 512
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "Breaking Encrypted USB Drives with Time-Travel Debugging",
+      "url": "https://github.com/xusheng6/breaking_encrypted_USB_drives_with_TTD/blob/main/Breaking_Encrypted_USB_Drives_v2.pdf"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "NVD-CVE-2025-13453",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13453"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Lenovo's 'encrypted' fingerprint USB drive is just an unencrypted SD card in a fancy case — AI-assisted follow-up finds a backdoor and hardcoded keys in other ‘secure’ USB products (updated)",
+      "url": "https://www.tomshardware.com/tech-industry/cyber-security/lenovo-fingerprint-usb-stick-sold-as-aes-256-encrypted-had-a-plain-sd-card-inside-ai-assisted-follow-up-finds-a-backdoor-and-hardcoded-keys-in-other-secure-usb-products"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Lenovo ThinkPlus Fingerprint USB Drive Sold as Encrypted Was a Plain SD Card Inside",
+      "url": "https://hackingpassion.com/lenovo-thinkplus-encrypted-usb-sd-card/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "FIPS 140-2 Cerified Flash Drives Have Security Flaw",
+      "url": "https://spectrum.ieee.org/fips-1402-cerified-flash-drives-have-security-flaw"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Cryptographic Module Validation Program",
+      "url": "https://csrc.nist.gov/projects/cryptographic-module-validation-program"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Header Key Derivation, Salt, and Iteration Count",
+      "url": "https://veracrypt.io/en/Header%20Key%20Derivation.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "VeraCrypt Downloads",
+      "url": "https://veracrypt.io/en/Downloads.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "BitLocker overview",
+      "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "BitLocker FAQ",
+      "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/faq"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Volume encryption with FileVault in macOS",
+      "url": "https://support.apple.com/guide/security/volume-encryption-with-filevault-sec4c6dc1b6e/web"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Encrypt and protect a storage device with a password in Disk Utility on Mac",
+      "url": "https://support.apple.com/guide/disk-utility/encrypt-protect-a-storage-device-password-dskutl35612/mac"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Frequently Asked Questions Cryptsetup/LUKS",
+      "url": "https://gitlab.com/cryptsetup/cryptsetup/-/raw/main/FAQ.md"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "联想指纹U盘翻车：宣称加密实际明文存储",
+      "url": "https://tech.ifeng.com/c/8xh9aBEZS6U"
+    }
+  ],
+  "articleSection": "加密与通信"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新闻导读",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "加密与通信",
+      "item": "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/category/encryption/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "联想指纹 U 盘的未加密 SD 卡与加密宣称的判断方式"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/zh-cn/"><img class="site-header__logo" src="/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新闻导读</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story" data-print-label="出自 anoni.net 新闻导读：" data-print-url="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/lenovo-fingerprint-usb/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--encryption" href="/zh-cn/category/encryption/">加密与通信</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-11-15T00:00:00+08:00">2026 年 11 月 15 日 星期日</time></p>
+    <h1 class="story__title">联想指纹 U 盘的未加密 SD 卡与加密宣称的判断方式</h1>
+    <p class="story__dek">依研究者的幻灯片，联想 ThinkPlus FU100 指纹 U 盘标榜硬件加密与 AES-256，里面却是没有加密的 SD 卡。联想的声明写这批产品只由联想在中国大陆销售，受影响的客户可以安排更换。声明没有回答 AES-256 宣称是否属实（11 月 8 日查证）。其他品牌标榜加密的 U 盘，可以从密钥是否依赖密码来判断。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/nvd.nist.gov-9a487dd3.png" width="16" height="16" alt="" decoding="async"><img src="/assets/favicons/tomshardware.com-34440fb9.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 14 篇原文，来自 RE//verse 2026、NVD、Tom&#39;s Hardware 等 11 个出处</span></a></span>
+      <span>导读：anoni.net 社区</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/11/lenovo-fingerprint-usb/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/11/lenovo-fingerprint-usb/" hreflang="en" lang="en">English</a></nav>
+  </header>
+  <div class="story__body content">
+<p>U 盘标榜“加密”或“指纹解锁”，不代表里面的文件经过加密。一位研究者 2026 年 3 月在逆向工程研讨会 RE//verse 的幻灯片拆解了联想 ThinkPlus FU100 指纹 U 盘，结论是外壳里只有一张 SD 卡，数据没有任何加密。依联想经 Tom's Hardware 转载的声明，这批 ThinkPlus 存储产品为中国市场设计，也只由联想在中国大陆销售。幻灯片另外列出其他受影响的设备，下面的判断方式也可用在其他品牌标榜加密的产品。</p>
+<p>拆解与结论都出自幻灯片，以下依幻灯片的文字与 Tom's Hardware、安全博客 HackingPassion 的转述。幻灯片写着“It's just an SD card in a fancy case”（只是装在漂亮外壳里的 SD 卡），指纹识别只控制 USB 连接。依 HackingPassion 的描述，指纹决定的是 U 盘要不要连上电脑，卡上的文件不受它影响。</p>
+<p>“硬件加密”与 AES-256（广泛使用的加密算法）两项宣称列在幻灯片的 FU100 介绍页，图片来源标示为 Alibaba.com。到 11 月 8 日，本文查不到联想官网的 FU100 产品页，无法确认联想自己的渠道是否用过同样的文字。</p>
+<p>依幻灯片与 HackingPassion，研究者 2025 年 8 月 2 日通报联想。2025 年 8 月 27 日的临时修补是在 SD 卡上覆盖一层环氧树脂（epoxy），完整修补排在 2025 年 12 月。联想的声明提到接获通报后与研究者协调披露，通过硬件与软件升级修复，并在 2026 年 1 月发布安全公告与三个 CVE（公开的漏洞编号）。</p>
+<p>联想公告 LEN-210545 的原页在 11 月 8 日查阅时返回 Access Denied，公告内容只能依二手来源与美国国家漏洞数据库（NVD）的记录。NVD 上由联想提交的记录写到，有实体接触的人可能读取 U 盘上的数据，受影响的是 ThinkPlus FU100、FU200、TU800 与 TSD303 的第一代。</p>
+<p>依 HackingPassion 与 Tom's Hardware，同一场演讲里的外接 SSD TSD303 有加密数据，问题出在密码验证。设备会把正确的密码以明文经 USB 传回电脑上的程序比对。第一版修补改成加密后传送，密钥却可由程序推算，2025 年 12 月的第二版改由设备自行比对。依 HackingPassion 的整理，幻灯片列出的十款使用相同软件套件的设备（幻灯片上的厂商名称经过遮蔽）有两款把数据未加密存在 micro SD 卡上，八款的问题在密码传送。</p>
+<p>联想的声明没有回答 AES-256 与硬件加密的宣称是否属实，也没有承认或否认 SD 卡未加密。依 HackingPassion，联想与研究者都没有提到有人实际遭到攻击，本文到 11 月 8 日也没有查到受害案例。</p>
+<h2 id="perspective">导读观点</h2>
+<p>指纹与密码界面控制的可能只是连接，数据有没有受到保护，要看解密密钥从哪里来。依 HackingPassion 的整理，第一种可靠的做法是密钥由密码经过 PBKDF2 或 Argon2 这类刻意放慢的函数衍生，每猜一次都要花时间。另一种是验证完全在设备自己的芯片内进行，密码与密钥都不离开芯片。依幻灯片，FU100 的数据没有加密，两种做法都没有用上（本文的推论）。</p>
+<p>存储设备厂商 Netac 的软件加密工具在研究者测试的版本里，AES-256 密钥是写在程序里的固定值，跟用户的密码无关（依 Tom's Hardware 与 HackingPassion）。Tom's Hardware 也写到，Netac 到研究者 2026 年 3 月的演讲时没有修补。软件加密与 FU100 完全没有加密的性质不同，标示 AES-256 同样看不出密钥的来源（本文的归纳）。</p>
+<p>FIPS 140（美国政府的密码模块标准）由 NIST 的密码模块验证计划（CMVP）管理，模块交由独立实验室测试。证书可以在 NIST 的清单查询，依 NIST 的页面，FIPS 140-2 的证书在 2026 年 9 月 21 日后移到 Historical List（历史清单）。依 IEEE Spectrum 的报道，德国安全公司 SySS 2009 年 12 月公开绕过多款 FIPS 140-2 认证 U 盘的方法，不论密码为何都能在数秒内还原数据。IEEE Spectrum 引述 GCN 的报道，NIST 当时新闻稿的初步分析把问题指向授权解密的软件（the software authorizing decryption）而非通过认证的密码模块，也提到正在调查认证流程是否需要调整。</p>
+<p>到 11 月 8 日，本文查不到 FU100 通过 FIPS 140 或中国商用密码认证（中国对商用密码产品的认证制度）的资料。HackingPassion 的建议是把 U 盘上的指纹或密码界面当成访问的锁，除非厂商说明密钥依赖它。NIST 的初步分析把问题指向软件，本文据此推论，查到证书之后仍需要厂商说明密钥如何生成、密码在哪里验证。</p>
+<p>手上有 NVD 列出的四款第一代设备的人，依联想的声明可以联系联想技术支持安排更换。依 HackingPassion 转述，免费升级（free upgrade）要拨打中国的服务专线，设备会送回更换或到场升级固件。同样依 HackingPassion 转述，联想建议送出前先备份数据，再擦除或格式化。</p>
+<p>联想的声明写明这批产品只由联想在中国大陆销售，中国大陆的读者手上可能有这些型号，可以先对照上文 NVD 列出的四款第一代设备。IT之家 11 月 1 日的报道经凤凰网转载，标题为“联想指纹U盘翻车：宣称加密实际明文存储”，内容与 HackingPassion 一致。更换专线的来源是 HackingPassion 的转述，联想的声明只写客户可以联系联想技术支持。中国大陆以外的读者若有这些型号，多半是转售或平行进口的产品（本文的推论）。</p>
+<p>其他品牌的 U 盘要放敏感文件时，可以在文件放上去之前自行加密，让密钥来自自己设置的密码（HackingPassion 列出的建议之一）。VeraCrypt（开源的磁盘加密软件）的下载页列出 Windows、macOS 与 Linux 版本，非系统卷与文件容器支持 PBKDF2 与 Argon2id 两种密钥衍生方式。代价是每台要打开文件的电脑都要能运行 VeraCrypt。</p>
+<p>Microsoft 的说明页只列出 Windows Pro、Enterprise、Education 等版本可以启用 BitLocker，Home 版不在表内。依 BitLocker FAQ，BitLocker To Go 涵盖 USB 闪存盘与 SD 卡，加密后可以在另一台电脑用密码打开。Home 版能否解锁已加密的 U 盘，本文没有核对到官方文档。</p>
+<p>Apple 的安全指南写到 FileVault 保护内置与可移除的存储设备，磁盘工具也可以在格式化时用密码加密外接设备，加密前需先擦除设备。LUKS（Linux 常用的磁盘加密格式）依 cryptsetup 的 FAQ 以 PBKDF2 或 Argon2 处理密码，FAQ 也建议备份 LUKS 头（header），头损坏可能无法解密。macOS 加密的外接盘与 LUKS 能否在其他操作系统打开，本文没有核对到官方文档，要跨电脑使用的人需先实际试过。</p>
+<p>自行加密可以应对 U 盘遗失或被别人取走的情况，电脑本身已遭入侵、密码太短或忘记密码时都帮不上忙（本文的推论）。只放公开数据的 U 盘不需要多做这一步，要放个人数据或工作文档的人，再衡量每台电脑都要能运行加密软件的代价。</p>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（14 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/xusheng6/breaking_encrypted_USB_drives_with_TTD/blob/main/Breaking_Encrypted_USB_Drives_v2.pdf"><img class="source-slip__icon" src="/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Breaking Encrypted USB Drives with Time-Travel Debugging</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>RE//verse 2026</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-13453"><img class="source-slip__icon" src="/assets/favicons/nvd.nist.gov-9a487dd3.png" width="16" height="16" alt="" loading="lazy" decoding="async">NVD-CVE-2025-13453</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>NVD</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-01-14">2026 年 1 月 14 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.tomshardware.com/tech-industry/cyber-security/lenovo-fingerprint-usb-stick-sold-as-aes-256-encrypted-had-a-plain-sd-card-inside-ai-assisted-follow-up-finds-a-backdoor-and-hardcoded-keys-in-other-secure-usb-products"><img class="source-slip__icon" src="/assets/favicons/tomshardware.com-34440fb9.png" width="16" height="16" alt="" loading="lazy" decoding="async">Lenovo&#39;s &#39;encrypted&#39; fingerprint USB drive is just an unencrypted SD card in a fancy case — AI-assisted follow-up finds a backdoor and hardcoded keys in other ‘secure’ USB products (updated)</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Tom&#39;s Hardware</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-11-01">2026 年 11 月 1 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://hackingpassion.com/lenovo-thinkplus-encrypted-usb-sd-card/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Lenovo ThinkPlus Fingerprint USB Drive Sold as Encrypted Was a Plain SD Card Inside</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>HackingPassion</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-29">2026 年 10 月 29 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://spectrum.ieee.org/fips-1402-cerified-flash-drives-have-security-flaw"><img class="source-slip__icon" src="/assets/favicons/spectrum.ieee.org-8864e0b1.png" width="16" height="16" alt="" loading="lazy" decoding="async">FIPS 140-2 Cerified Flash Drives Have Security Flaw</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>IEEE Spectrum</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2010-01-12">2010 年 1 月 12 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://csrc.nist.gov/projects/cryptographic-module-validation-program"><img class="source-slip__icon" src="/assets/favicons/csrc.nist.gov-0ac27f49.png" width="16" height="16" alt="" loading="lazy" decoding="async">Cryptographic Module Validation Program</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>NIST</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://veracrypt.io/en/Header%20Key%20Derivation.html"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Header Key Derivation, Salt, and Iteration Count</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>VeraCrypt</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://veracrypt.io/en/Downloads.html"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>VeraCrypt Downloads</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>VeraCrypt</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/"><img class="source-slip__icon" src="/assets/favicons/learn.microsoft.com-52fcc091.png" width="16" height="16" alt="" loading="lazy" decoding="async">BitLocker overview</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Microsoft</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/faq"><img class="source-slip__icon" src="/assets/favicons/learn.microsoft.com-52fcc091.png" width="16" height="16" alt="" loading="lazy" decoding="async">BitLocker FAQ</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Microsoft</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/guide/security/volume-encryption-with-filevault-sec4c6dc1b6e/web"><img class="source-slip__icon" src="/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Volume encryption with FileVault in macOS</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://support.apple.com/guide/disk-utility/encrypt-protect-a-storage-device-password-dskutl35612/mac"><img class="source-slip__icon" src="/assets/favicons/support.apple.com-573bbc30.png" width="16" height="16" alt="" loading="lazy" decoding="async">Encrypt and protect a storage device with a password in Disk Utility on Mac</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>Apple</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://gitlab.com/cryptsetup/cryptsetup/-/raw/main/FAQ.md"><img class="source-slip__icon" src="/assets/favicons/gitlab.com-e3bfc5d8.png" width="16" height="16" alt="" loading="lazy" decoding="async">Frequently Asked Questions Cryptsetup/LUKS</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>cryptsetup</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="zh-Hant"><a href="https://tech.ifeng.com/c/8xh9aBEZS6U"><img class="source-slip__icon" src="/assets/favicons/tech.ifeng.com-89927ee9.png" width="16" height="16" alt="" loading="lazy" decoding="async">联想指纹U盘翻车：宣称加密实际明文存储</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出处</dt><dd>凤凰网（转载 IT之家）</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-11-01">2026 年 11 月 1 日</time></dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<nav class="related cat--encryption" role="navigation" aria-labelledby="related-heading">
+  <h2 class="thread__heading" id="related-heading">同分类的其他导读</h2>
+  <p class="brief__category"><a class="cat cat--encryption" href="/zh-cn/category/encryption/">加密与通信</a>
+</p>
+  <ol class="thread__list">
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-11-08T00:05:00+08:00">2026 年 11 月 8 日</time>
+      <a class="thread__title" href="/zh-cn/2026/11/canada-c22-senate-committee/">加拿大 C-22 法案的参议院委员会审查与加密弱点的争论</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-22T00:05:00+08:00">2026 年 10 月 22 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/telegram-data-us-court/">Telegram 交给美国执法部门的用户数据</a>
+    </li>
+    <li class="thread__item">
+      <time class="thread__date" datetime="2026-10-21T00:00:00+08:00">2026 年 10 月 21 日</time>
+      <a class="thread__title" href="/zh-cn/2026/10/brave-leo-e2ee-confidential-computing/">Brave Leo 的端到端加密对话与机密计算</a>
+    </li>
+  </ol>
+  <p class="related__all"><a href="/zh-cn/category/encryption/">「加密与通信」的全部 12 篇导读</a></p>
+</nav>
+<p class="subscribe">想收到新的导读：<a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>订阅电子报</span></a>、<a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 关注</span></a></p>
+<nav class="pager pager--story" aria-label="文章导览">
+  <a class="pager__item pager__item--older" href="/zh-cn/2026/11/gemini-chat-training/"><span class="pager__label">较旧的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Gemini 个人账号对话用于模型训练的范围与关闭方式</span></a>
+  <a class="pager__all" href="/zh-cn/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="页脚">
+      <a href="/zh-cn/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/s/cmc9ceju1000dlj017fiathzq"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 订阅电子报</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 关注</a>
+      <a href="/zh-cn/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 导读历史</a>
+      <a href="/zh-cn/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 关于新闻导读</a>
+      <a href="/zh-cn/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 阅读说明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 报告错误</a>
+      <a href="http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首页</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="页脚的其他语言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他语言：<a href="/2026/11/lenovo-fingerprint-usb/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>、<a href="/en/2026/11/lenovo-fingerprint-usb/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC-BY 4.0</a> 授权，引用的原文著作权属于原作者。</p>
+  </div>
+</footer>
+</body>
+</html>
