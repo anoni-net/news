@@ -289,6 +289,9 @@
 /2026/11/eff-security-worse/
 	#perspective
 	#sources
+/2026/11/emudhra-incident-closeout/
+	#perspective
+	#sources
 /2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -299,6 +302,9 @@
 	#perspective
 	#sources
 /2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
 /2026/11/hk-mall-facial-recognition/
@@ -322,10 +328,19 @@
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/2026/11/neticrm-breach/
+	#perspective
+	#sources
 /2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
 /2026/11/openssh-sshole/
+	#perspective
+	#sources
+/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /2026/11/philippines-ai-risk-map/
@@ -338,6 +353,9 @@
 	#perspective
 	#sources
 /2026/11/qwen-political-censorship/
+	#perspective
+	#sources
+/2026/11/signal-verification-subpoena/
 	#perspective
 	#sources
 /2026/11/siri-ai-exclude-apps/
@@ -675,6 +693,9 @@
 /en/2026/11/eff-security-worse/
 	#perspective
 	#sources
+/en/2026/11/emudhra-incident-closeout/
+	#perspective
+	#sources
 /en/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -685,6 +706,9 @@
 	#perspective
 	#sources
 /en/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/en/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
 /en/2026/11/hk-mall-facial-recognition/
@@ -708,10 +732,19 @@
 /en/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/en/2026/11/neticrm-breach/
+	#perspective
+	#sources
 /en/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/en/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
 /en/2026/11/openssh-sshole/
+	#perspective
+	#sources
+/en/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /en/2026/11/philippines-ai-risk-map/
@@ -724,6 +757,9 @@
 	#perspective
 	#sources
 /en/2026/11/qwen-political-censorship/
+	#perspective
+	#sources
+/en/2026/11/signal-verification-subpoena/
 	#perspective
 	#sources
 /en/2026/11/siri-ai-exclude-apps/
@@ -876,6 +912,12 @@
 	#y2026
 /en/history/11-15/
 	#y2026
+/en/history/11-16/
+	#y2026
+/en/history/11-17/
+	#y2026
+/en/history/11-18/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
@@ -990,6 +1032,12 @@
 /history/11-14/
 	#y2026
 /history/11-15/
+	#y2026
+/history/11-16/
+	#y2026
+/history/11-17/
+	#y2026
+/history/11-18/
 	#y2026
 /page/2/
 /page/3/
@@ -1290,6 +1338,9 @@
 /zh-cn/2026/11/eff-security-worse/
 	#perspective
 	#sources
+/zh-cn/2026/11/emudhra-incident-closeout/
+	#perspective
+	#sources
 /zh-cn/2026/11/emudhra-key-compromise-followup/
 	#perspective
 	#sources
@@ -1300,6 +1351,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/google-gmail-photos-ads/
+	#perspective
+	#sources
+/zh-cn/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
 /zh-cn/2026/11/hk-mall-facial-recognition/
@@ -1323,10 +1377,19 @@
 /zh-cn/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/zh-cn/2026/11/neticrm-breach/
+	#perspective
+	#sources
 /zh-cn/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/zh-cn/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
 /zh-cn/2026/11/openssh-sshole/
+	#perspective
+	#sources
+/zh-cn/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /zh-cn/2026/11/philippines-ai-risk-map/
@@ -1339,6 +1402,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/qwen-political-censorship/
+	#perspective
+	#sources
+/zh-cn/2026/11/signal-verification-subpoena/
 	#perspective
 	#sources
 /zh-cn/2026/11/siri-ai-exclude-apps/
@@ -1490,6 +1556,12 @@
 /zh-cn/history/11-14/
 	#y2026
 /zh-cn/history/11-15/
+	#y2026
+/zh-cn/history/11-16/
+	#y2026
+/zh-cn/history/11-17/
+	#y2026
+/zh-cn/history/11-18/
 	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/

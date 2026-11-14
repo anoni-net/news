@@ -112,6 +112,12 @@
 "2026-11-15-cdt-404-september" = { "en" = "og/2026/11/cdt-404-september-en-bdf02ddd.png", "zh-CN" = "og/2026/11/cdt-404-september-zh-cn-072c3e4e.png", "zh-TW" = "og/2026/11/cdt-404-september-zh-tw-cc9a79d3.png" }
 "2026-11-15-lenovo-fingerprint-usb" = { "en" = "og/2026/11/lenovo-fingerprint-usb-en-948bca6e.png", "zh-CN" = "og/2026/11/lenovo-fingerprint-usb-zh-cn-8c227c88.png", "zh-TW" = "og/2026/11/lenovo-fingerprint-usb-zh-tw-e6787818.png" }
 "2026-11-19-tv-acr" = { "en" = "og/2026/11/tv-acr-en-75d6742f.png", "zh-CN" = "og/2026/11/tv-acr-zh-cn-448cf0ff.png", "zh-TW" = "og/2026/11/tv-acr-zh-tw-de71e895.png" }
+"2026-11-18-signal-verification-subpoena" = { "en" = "og/2026/11/signal-verification-subpoena-en-5467e9ab.png", "zh-CN" = "og/2026/11/signal-verification-subpoena-zh-cn-8c04a3ca.png", "zh-TW" = "og/2026/11/signal-verification-subpoena-zh-tw-01c805bb.png" }
+"2026-11-19-neticrm-breach" = { "en" = "og/2026/11/neticrm-breach-en-567dbc81.png", "zh-CN" = "og/2026/11/neticrm-breach-zh-cn-d5ccffdb.png", "zh-TW" = "og/2026/11/neticrm-breach-zh-tw-73a2e138.png" }
+"2026-11-17-emudhra-incident-closeout" = { "en" = "og/2026/11/emudhra-incident-closeout-en-56359955.png", "zh-CN" = "og/2026/11/emudhra-incident-closeout-zh-cn-e93dfba4.png", "zh-TW" = "og/2026/11/emudhra-incident-closeout-zh-tw-1c17cbb5.png" }
+"2026-11-16-penlink-webloc-ad-location-tracking" = { "en" = "og/2026/11/penlink-webloc-ad-location-tracking-en-927afb53.png", "zh-CN" = "og/2026/11/penlink-webloc-ad-location-tracking-zh-cn-04cbebd6.png", "zh-TW" = "og/2026/11/penlink-webloc-ad-location-tracking-zh-tw-c1973296.png" }
+"2026-11-17-nyc-surveillance-pricing" = { "en" = "og/2026/11/nyc-surveillance-pricing-en-2ef791e9.png", "zh-CN" = "og/2026/11/nyc-surveillance-pricing-zh-cn-14a62fc1.png", "zh-TW" = "og/2026/11/nyc-surveillance-pricing-zh-tw-17f72d11.png" }
+"2026-11-16-grapheneos-pixel-11" = { "en" = "og/2026/11/grapheneos-pixel-11-en-27b757cc.png", "zh-CN" = "og/2026/11/grapheneos-pixel-11-zh-cn-2cba7551.png", "zh-TW" = "og/2026/11/grapheneos-pixel-11-zh-tw-e791fa03.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-f1b37c7c.png", "zh-CN" = "og/history/09-26-zh-cn-f38b40e8.png", "zh-TW" = "og/history/09-26-zh-tw-d873b539.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-c875310d.png", "zh-CN" = "og/history/09-27-zh-cn-cb1e8c42.png", "zh-TW" = "og/history/09-27-zh-tw-6e156cbd.png" }
 "history/09-28" = { "en" = "og/history/09-28-en-00ae9f4b.png", "zh-CN" = "og/history/09-28-zh-cn-7e49a518.png", "zh-TW" = "og/history/09-28-zh-tw-61f00929.png" }
@@ -163,3 +169,6 @@
 "history/11-13" = { "en" = "og/history/11-13-en-7a81b0d4.png", "zh-CN" = "og/history/11-13-zh-cn-60ae0fa0.png", "zh-TW" = "og/history/11-13-zh-tw-d4b2d246.png" }
 "history/11-14" = { "en" = "og/history/11-14-en-72995dee.png", "zh-CN" = "og/history/11-14-zh-cn-90528fa8.png", "zh-TW" = "og/history/11-14-zh-tw-afda57c3.png" }
 "history/11-15" = { "en" = "og/history/11-15-en-27f54f91.png", "zh-CN" = "og/history/11-15-zh-cn-8f624311.png", "zh-TW" = "og/history/11-15-zh-tw-aa247664.png" }
+"history/11-17" = { "en" = "og/history/11-17-en-6108b267.png", "zh-CN" = "og/history/11-17-zh-cn-5bd4d6b5.png", "zh-TW" = "og/history/11-17-zh-tw-4e6809db.png" }
+"history/11-16" = { "en" = "og/history/11-16-en-942e3586.png", "zh-CN" = "og/history/11-16-zh-cn-42cfb2d4.png", "zh-TW" = "og/history/11-16-zh-tw-bdca3051.png" }
+"history/11-18" = { "en" = "og/history/11-18-en-b5bd483f.png", "zh-CN" = "og/history/11-18-zh-cn-1907472c.png", "zh-TW" = "og/history/11-18-zh-tw-ca80c9da.png" }
