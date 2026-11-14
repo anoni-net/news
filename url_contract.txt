@@ -334,6 +334,9 @@
 /2026/11/openssh-sshole/
 	#perspective
 	#sources
+/2026/11/penlink-webloc-ad-location-tracking/
+	#perspective
+	#sources
 /2026/11/philippines-ai-risk-map/
 	#perspective
 	#sources
@@ -721,6 +724,9 @@
 	#perspective
 	#sources
 /en/2026/11/openssh-sshole/
+	#perspective
+	#sources
+/en/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /en/2026/11/philippines-ai-risk-map/
@@ -1351,6 +1357,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/openssh-sshole/
+	#perspective
+	#sources
+/zh-cn/2026/11/penlink-webloc-ad-location-tracking/
 	#perspective
 	#sources
 /zh-cn/2026/11/philippines-ai-risk-map/
