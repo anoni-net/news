@@ -1,6 +1,6 @@
 # GrapheneOS 與 Pixel 在亞洲各地的取得與更新
 
-範圍是 Pixel 在亞洲各地能不能從 Google Store 購買、GrapheneOS 的安裝與更新伺服器在中國大陸的連線量測，以及 GrapheneOS 設定程式的中文語系。第一次整理是寫 anoni-net/news 的 GrapheneOS 剪貼簿讀取開關那篇的時候，查證日期 2026-10-23。
+範圍是 Pixel 在亞洲各地能不能從 Google Store 購買、GrapheneOS 的安裝與更新伺服器在中國大陸的連線量測，以及 GrapheneOS 設定程式的中文語系。第一次整理是寫 anoni-net/news 的 GrapheneOS 剪貼簿讀取開關那篇的時候，查證日期 2026-10-23，Google Store 的銷售地區在 2026-11-14 寫 Pixel 11 那篇時複查。
 
 ## Google Store 的 Pixel 銷售地區
 
@@ -11,6 +11,10 @@
     - 來源：Learn about devices & services available in your region，Google Store Help，<https://support.google.com/store/answer/2462844?hl=en>，頁面沒有標示日期
 - 事實：同一頁的 Pixel 10、Pixel 9a、Pixel 9 系列與 Pixel 11 系列，亞洲的地區與 Pixel 10a 相同，都是印度、日本、新加坡與台灣
     - 來源同上
+- 事實：2026-11-14 複查同一頁，Pixel 11、11 Pro、11 Pro XL、11 Pro Fold、Pixel 10 與 10a 的亞洲地區仍是印度、日本、新加坡與台灣，中國大陸、香港、澳門與南韓都不在清單，與 2026-10-23 的查證一致
+    - 照錄（Pixel 11 Pro Fold）：「Australia, Austria, Belgium, Canada, Denmark, Finland, France, Germany, India, Ireland, Japan, Netherlands, Norway, Singapore, Sweden, Switzerland, Taiwan, United Kingdom, United States (except Puerto Rico)」
+    - 來源同上，查證日期 2026-11-14
+- 查不到：Pixel 11 系列在亞洲各地的實際上市日期。Google 的發表文只寫 8 月 20 日在 Google Store 與零售夥伴上架，沒有分地區（查證日期 2026-11-14）
 - 查不到：Google 官方說明「Pixel 不在中國大陸銷售」的頁面。只能寫 Google Store 的清單裡沒有中國大陸，不寫 Pixel 在中國大陸沒有任何販售管道
 
 ## GrapheneOS 的安裝與更新伺服器
