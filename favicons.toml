@@ -311,6 +311,10 @@ from = "https://www.hkma.gov.hk/favicon.jpg"
 icon = "brennancenter.org-2a0c2609.png"
 from = "https://www.brennancenter.org/apple-touch-icon.png?v=1"
 
+[hosts."bsky.app"]
+icon = "bsky.app-a78dc52f.png"
+from = "https://web-cdn.bsky.app/static/apple-touch-icon.png"
+
 [hosts."buchodi.com"]
 icon = "buchodi.com-143610b3.png"
 from = "https://storage.ghost.io/c/b8/53/b853e3d4-3186-409d-9c7f-7da931a60431/content/images/size/w256h256/2026/03/buchodi-60x60-01.png"
