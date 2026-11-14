@@ -1285,6 +1285,10 @@ from = "https://www.implicator.ai/content/images/size/w256h256/2025/04/Logo_impl
 icon = "inc42.com-56c6cf02.png"
 from = "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2021/09/cropped-inc42-favicon-1-192x192.png"
 
+[hosts."incommon.org"]
+icon = "incommon.org-4347827e.png"
+from = "https://incommon.org/wp-content/uploads/2025/10/App-touch.jpg"
+
 [hosts."independent.org"]
 icon = "independent.org-d4fa8d5c.png"
 from = "https://www.independent.org/wp-content/uploads/2026/02/cropped-favicon-blue-192x192.png"
@@ -1911,6 +1915,9 @@ none = "網站擋下自動抓取，抓不到圖示"
 [hosts."nsb.gov.tw"]
 icon = "nsb.gov.tw-23fb8542.png"
 from = "https://www.nsb.gov.tw/favicon.ico"
+
+[hosts."nsearchives.nseindia.com"]
+none = "網站擋下抓取"
 
 [hosts."nvd.nist.gov"]
 icon = "nvd.nist.gov-9a487dd3.png"

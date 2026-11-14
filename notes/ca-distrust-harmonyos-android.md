@@ -9,6 +9,7 @@
     - 照錄：「If you are using HarmonyOS 4.3 and earlier, you can disable system-installed roots in the same way as on other Android-based systems.」
     - 來源：eMudhra Intermediate CA Compromise，eMudhra 事件說明頁，<https://emudhra.we-have-a-problem.com/>，頁面沒有寫文件日期，2026-11-02 查證
 - 查不到：華為針對這次事件的官方說明。頁面也沒有列出針對台灣、香港、新加坡的系統或發行版
+- 2026-11-14 重新查證：清單仍把 OpenHarmony/HarmonyOS NEXT 列為 pending，頁頂多了 11 月 10 日的更新註記（Apple 的修正）。頁面沒有提到 emSign Root CA - G1 與 2026-11-07 撤銷的 RSA 中繼憑證，HarmonyOS 對 G1 的處理沒有查證
 
 ## 沒有 Google Play 服務的 Android
 
@@ -19,4 +20,7 @@
 - 事實：GreatFire 到 2026-11-01 的最後一次測試，`https://play.google.com` 在中國大陸 100% 被封鎖。這是第三方量測，量的是網址能不能連線，不能據此確定裝置收不收得到更新
     - 照錄：「As of the last test on 2026-11-01, https://play.google.com is 100% blocked in mainland China」
     - 來源：Is https://play.google.com blocked in mainland China? — GreatFire，<https://en.greatfire.org/https/play.google.com>，頁面標示的最後測試日 2026-11-01，2026-11-02 查證。Google Play 的連線狀況另見 `google-services-mainland-china.md` <!-- docs-style-lint: disable-line -->
+- 事實：說明頁寫，沒有收到更新封鎖清單的 Android 裝置，使用者或許可以在設定的「Trusted credentials」停用受影響的根憑證。列出的只有 emSign ECC Root CA - G3 與 AAA Certificate Services，沒有 G1
+    - 照錄：「On devices that have not received the updated blocklist, users may be able to disable the affected roots in the system trust store.」
+    - 來源：eMudhra Intermediate CA Compromise，<https://emudhra.we-have-a-problem.com/>，頁面沒有寫文件日期，2026-11-14 查證
 - 查不到：中國大陸銷售的 Android 手機有多少帶有 Google Play 服務，所以稿件只寫「沒有 Google Play 服務的裝置」，不寫大陸的手機都沒有
