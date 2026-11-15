@@ -227,6 +227,9 @@
 
 ## 新加坡
 
+- 事實：PDPA 一般不適用於公共機構（public agency）蒐集、使用或揭露個人資料。
+    - 照錄：「It generally does not apply to: ... Any public agency in relation to the collection, use or disclosure of personal data.」
+    - 來源：PDPC，Personal Data Protection Act（Scope of the PDPA），https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act ，查證日期 2026-11-15
 - 事實：通報義務的對象是 PDPA 適用的組織，資料外洩（data breach）定義為個人資料遭未經授權的存取、蒐集、使用、揭露、複製、修改或處置，或儲存媒體遺失且上述情形很可能發生。
     - 照錄：「In this Part, unless the context otherwise requires」
     - 照錄：「the unauthorised access, collection, use, disclosure, copying, modification or disposal of personal data; or」
