@@ -334,6 +334,9 @@
 /2026/11/ios-selfie-age-verification/
 	#perspective
 	#sources
+/2026/11/iphone-grey-list/
+	#perspective
+	#sources
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -754,6 +757,9 @@
 	#perspective
 	#sources
 /en/2026/11/ios-selfie-age-verification/
+	#perspective
+	#sources
+/en/2026/11/iphone-grey-list/
 	#perspective
 	#sources
 /en/2026/11/lenovo-fingerprint-usb/
@@ -1435,6 +1441,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/ios-selfie-age-verification/
+	#perspective
+	#sources
+/zh-cn/2026/11/iphone-grey-list/
 	#perspective
 	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/

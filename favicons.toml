@@ -582,6 +582,9 @@ from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e
 icon = "coveryourtracks.eff.org-18aa39f8.png"
 from = "https://coveryourtracks.eff.org/static/favicon.ico"
 
+[hosts."cp24.com"]
+none = "網站只提供 16×16 的 favicon，放大後無法辨識"
+
 [hosts."cpj.org"]
 icon = "cpj.org-dd76b860.png"
 from = "https://cpj.org/wp-content/themes/cpj/icons/apple-touch-icon.png"
@@ -1708,6 +1711,10 @@ from = "https://images.macrumors.com/images-new/apple-touch-icon-blue.png"
 icon = "mactrast.com-5fa08fa0.png"
 from = "https://www.mactrast.com/wp-content/uploads/2018/10/cropped-cropped-icon-2-1-192x192.jpg"
 
+[hosts."macworld.com"]
+icon = "macworld.com-c9545379.png"
+from = "https://www.macworld.com/wp-content/uploads/2021/03/cropped-macworld-favicon.png?w=192"
+
 [hosts."magnetforensics.com"]
 icon = "magnetforensics.com-3a08e791.png"
 from = "https://www.magnetforensics.com/wp-content/uploads/2025/05/cropped-MF_Favicon_48x48-2024-192x192.png"
@@ -2574,6 +2581,10 @@ from = "https://www.supremecourt.gov/apple-touch-icon.png"
 [hosts."supremecourt.uk"]
 icon = "supremecourt.uk-75b9325d.png"
 from = "https://supremecourt.uk/favicon.ico?favicon.02t943vwb-avr.ico"
+
+[hosts."swipeblocked.com"]
+icon = "swipeblocked.com-4e45005a.png"
+from = "手動提供的檔案 icon.png"
 
 [hosts."system76.com"]
 icon = "system76.com-3462b304.png"
