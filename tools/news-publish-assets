@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# 由 tools/install_publish_assets.sh 複製到 ~/.local/bin/news-publish-assets。
+# 從稿件路徑找出它所在的 worktree，執行那份 worktree 的 tools/publish_assets.py，
+# 所以在任何目錄都能直接下這個指令，不必先 cd，也不必在前面帶環境變數。
+set -euo pipefail
+
+args=()
+root=""
+for a in "$@"; do
+  if [[ "$a" == *.md && -f "$a" ]]; then
+    a="$(realpath "$a")"
+    if [[ -z "$root" ]]; then
+      root="$(git -C "$(dirname "$a")" rev-parse --show-toplevel)"
+    fi
+  fi
+  args+=("$a")
+done
+
+if [[ -z "$root" ]]; then
+  echo "用法：news-publish-assets [--dry-run] [--from 主機=來源] [--none 主機=理由] <稿件路徑.md> ..." >&2
+  echo "至少要給一個存在的稿件路徑，指令從它找出所在的 worktree" >&2
+  exit 2
+fi
+if [[ ! -f "$root/tools/publish_assets.py" ]]; then
+  echo "$root 沒有 tools/publish_assets.py，請先把 main 合併進這個分支" >&2
+  exit 2
+fi
+
+cd "$root"
+exec uv run tools/publish_assets.py "${args[@]}"
