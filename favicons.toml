@@ -2116,6 +2116,10 @@ from = "https://www.php.net/favicon-196x196.png?v=2"
 icon = "php2shell.com-70184835.png"
 from = "https://www.php2shell.com/apple-icon.png?apple-icon.3hw9e6l41ubyq.png"
 
+[hosts."phys.org"]
+icon = "phys.org-b85d9d95.png"
+from = "https://phys.b-cdn.net/tmpl/v6/img/favicons/web-app-manifest-512x512.png"
+
 [hosts."pib.gov.in"]
 icon = "pib.gov.in-fffa8d37.png"
 from = "https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg"
