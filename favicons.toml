@@ -508,6 +508,10 @@ from = "https://cointelegraph.com/apple-touch-icon.png"
 icon = "community.bitwarden.com-e00b6948.png"
 from = "https://us1.discourse-cdn.com/flex001/uploads/bitwarden1/optimized/1X/a499e237d3b459cb4e0f722f024ad44b4a4755d6_2_180x180.png"
 
+[hosts."community.brave.app"]
+icon = "community.brave.app-0f28e6aa.png"
+from = "https://global.discourse-cdn.com/brave/optimized/3X/1/8/182067f3480d1a5e7aea5ae3131b116ca1ef7918_2_180x180.png"
+
 [hosts."community.letsencrypt.org"]
 icon = "community.letsencrypt.org-e3f802a1.png"
 from = "https://global.discourse-cdn.com/letsencrypt/optimized/3X/c/a/ca6c06ea1ea201324bba7048c6841ce60236468d_2_180x180.png"
@@ -1379,6 +1383,10 @@ from = "https://interseclab.org/wp-content/uploads/2025/08/cropped-IntersecLab-L
 [hosts."ipa.go.jp"]
 icon = "ipa.go.jp-d88935f7.png"
 from = "https://www.ipa.go.jp/apple-touch-icon-180x180.png"
+
+[hosts."iptc.org"]
+icon = "iptc.org-7629572a.png"
+from = "https://iptc.org/favicon.ico"
 
 [hosts."iranfocus.com"]
 icon = "iranfocus.com-35f237f3.png"
