@@ -932,6 +932,10 @@ from = "https://web.archive.org/web/20261020id_/https://static.xx.fbcdn.net/rsrc
 icon = "fas.org-3f60befe.png"
 from = "https://fas.org/wp-content/themes/fas/assets/images/favicon.ico"
 
+[hosts."fccchina.org"]
+icon = "fccchina.org-065728ab.png"
+from = "https://fccchina.org/wp-content/uploads/2020/11/cropped-FCCC_site-icon-192x192.png"
+
 [hosts."fdotwww.blob.core.windows.net"]
 icon = "fdotwww.blob.core.windows.net-7d319a66.png"
 from = "https://www.fdot.gov/favicon.ico"
@@ -2667,6 +2671,10 @@ from = "https://www.thelocal.no/images/no/image/apple-touch-icon/180.png"
 icon = "themarkup.org-0c33d958.png"
 from = "https://mrkp-static-production.themarkup.org/static/img/social-icons/apple-touch-icon.png"
 
+[hosts."thenationalnews.com"]
+icon = "thenationalnews.com-ab6192db.png"
+from = "https://www.thenationalnews.com/pf/resources/favicon.jpeg?d=1171"
+
 [hosts."thenewstack.io"]
 icon = "thenewstack.io-2105cb5a.png"
 from = "https://cdn.thenewstack.io/media/2026/03/b2fc1b22-cropped-89b6d319-download-192x192.png"
@@ -2698,6 +2706,10 @@ from = "https://www.theverge.com/static-assets/icons/android-chrome-512x512.png"
 [hosts."tibane.net"]
 icon = "tibane.net-8223110f.png"
 from = "https://www.tibane.net/favicon.png"
+
+[hosts."timep.org"]
+icon = "timep.org-74f394cf.png"
+from = "https://timep.org/wp-content/uploads/2020/04/cropped-timep-logo-192x192.png"
 
 [hosts."tlhr2014.com"]
 icon = "tlhr2014.com-2a284765.png"

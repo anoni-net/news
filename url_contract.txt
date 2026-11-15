@@ -337,6 +337,9 @@
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/2026/11/mada-masr-egypt/
+	#perspective
+	#sources
 /2026/11/neticrm-breach/
 	#perspective
 	#sources
@@ -754,6 +757,9 @@
 	#perspective
 	#sources
 /en/2026/11/lenovo-fingerprint-usb/
+	#perspective
+	#sources
+/en/2026/11/mada-masr-egypt/
 	#perspective
 	#sources
 /en/2026/11/neticrm-breach/
@@ -1428,6 +1434,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/
+	#perspective
+	#sources
+/zh-cn/2026/11/mada-masr-egypt/
 	#perspective
 	#sources
 /zh-cn/2026/11/neticrm-breach/
