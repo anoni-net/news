@@ -6,7 +6,53 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 16 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Penlink 的廣告定位監控系統 Webloc 與各國客戶</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/penlink-webloc-ad-location-tracking/</link>
+<guid isPermaLink="false">anoni-news:2026/11/penlink-webloc-ad-location-tracking</guid>
+<pubDate>Mon, 16 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Citizen Lab 11 月 12 日的更新頁轉述 Bloomberg 的調查，用 App 與廣告資料追蹤手機位置的 Webloc 有更多國家的安全機關採購，包括英國、德國、新加坡等國。4 月報告確認的客戶在美國、薩爾瓦多與匈牙利，更新頁另寫奧地利內政部已確認是客戶（11 月 14 日查證）。手機的追蹤與位置權限設定可以減少 App 送出的資料，但報告也寫無法可靠阻止。</description>
+<content:encoded>&lt;p&gt;整理 2 篇原文，來自 Citizen Lab&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;依 Citizen Lab 11 月 12 日的更新頁，Bloomberg 的調查以 Citizen Lab 4 月的研究為基礎，找到更多國家的安全機關採購 Webloc。Webloc 是美國監控技術廠商 Penlink 販售的定位監控系統，用從手機 App 與數位廣告購得的資料追蹤裝置的位置與行動。Citizen Lab 4 月的報告提到，描述 Webloc 的文件附的地圖顯示它曾用來追蹤多個國家的人。同一份報告也寫，任何顯示廣告的 App 都可能成為資料來源。&lt;/p&gt;
+&lt;p&gt;4 月的報告把客戶分成確認與潛在兩層。確認的客戶有匈牙利的國內情報單位（至少從 2022 年起使用，到報告發表時仍在使用）、2021 年購買的薩爾瓦多國家民警，以及美國移民及海關執法局（ICE）、美軍、德州公共安全廳與多個城市的警察局。更新頁引述的一位資深研究員形容，Webloc 從軍方與情報機關擴散到聯邦執法單位，再到州與地方警察。潛在客戶的依據包括資訊公開申請的含糊回覆、採購紀錄、訓練紀錄與伺服器分析，報告寫值得進一步研究的是荷蘭、墨西哥、越南與新加坡。&lt;/p&gt;
+&lt;p&gt;更新頁寫奧地利內政部之後也已確認是客戶，沒有交代確認的來源。4 月的報告因它在 2024 年 12 月採購 Tangles、拒答資訊公開申請是否包含 Webloc，原本列為潛在客戶。依更新頁轉述 Bloomberg 的調查，其他國家的客戶包括英國、荷蘭、德國、墨西哥、新加坡、沙烏地阿拉伯、阿聯與以色列，更新頁寫這些發現與 4 月報告列的潛在客戶相符。4 月的報告談潛在客戶時除了值得進一步研究的國家，也寫到拒答資訊公開申請的英國與荷蘭機關與受過 Webloc 訓練的以色列軍方人員。&lt;/p&gt;
+&lt;p&gt;Webloc 由以色列公司 Cobwebs Technologies 開發，2023 年 Cobwebs 與 Penlink 合併後改由 Penlink 販售，是社群媒體與網路情報系統 Tangles 的加購產品。到 4 月報告發表時，Penlink 的官網只提到一次 Webloc 的課程，報告的分析依據是 2021 年薩爾瓦多國家民警外流的技術提案、美國海軍情報署的合約文件等。&lt;/p&gt;
+&lt;p&gt;依報告引述的 2021 年文件，Webloc 提供全球最多 5 億台行動裝置（一個月內至少被追蹤過一次）持續更新的紀錄，每 4 到 24 小時更新一次。2023 年一份美國執法單位的合約文件則寫可以查三年的歷史資料。同一批 2021 年文件列出的欄位包括廣告識別碼、時間、依 GPS 或 Wi-Fi 推算的座標、IP 位址、Wi-Fi 名稱、裝置型號與作業系統、年齡、性別、語系、使用的 App 與廣告分群，Android 與 iOS 都有。報告也寫無法評估這些資料現在的涵蓋範圍與準確度。&lt;/p&gt;
+&lt;p&gt;依 Penlink 的回應，Webloc 只含跟裝置識別碼連在一起的位置資料，不含年齡、性別、親職、興趣分類與造訪的網站。研究者無法驗證這個說法，並引述一份 2025 年的 Penlink 文件，裡面寫 Webloc 會產生人口統計的洞察（generates demographic insights）。報告也寫，即使不再包含這些欄位，位置紀錄本身就能看出一個人的習慣、興趣與個人特徵。&lt;/p&gt;
+&lt;p&gt;分析人員可以在地圖上圈出一個範圍（地理圍欄，geofence），列出曾出現在範圍內的裝置，也可以找出在兩個以上地點都出現過的裝置。依薩爾瓦多的文件，熱度圖可以顯示裝置白天與夜間常在的位置，據此推斷住家與工作地址。文件裡也有派「地面部隊」到嫌疑人位置的建議，並把辨識裝置背後的人列為 Webloc 的目的。&lt;/p&gt;
+&lt;p&gt;伺服器分析靠的是主機名稱與登入頁面。出現 Tangles 登入頁的主機，研究者有高信心屬於 Tangles 的部署，從主機名稱的字母推測對應 Webloc 等產品的只有中等信心。即使有把握某些國家有相關的伺服器，報告也寫仍不知道這些產品是否實際在運作。伺服器所在的國家是否就是客戶所在的國家，研究者同樣不知道。&lt;/p&gt;
+&lt;p&gt;Penlink 回覆了 Citizen Lab 在 4 月 3 日寄出的報告摘要，回應全文刊在報告裡。依 Penlink 的回應，報告「似乎依據不正確的資訊或誤解」，包括 Penlink 在 2023 年收購 Cobwebs 之後不再採用的做法。回應也寫報告提到已不存在的公司與產品、Penlink 沒有生意往來的國家，但沒有指出是哪些。&lt;/p&gt;
+&lt;p&gt;回應另外寫資料來自透過 SDK（App 開發者嵌入的第三方程式套件）取得使用者同意、會濾掉敏感地點的供應商，符合美國聯邦貿易委員會（FTC）的要求，公司也遵守美國各州的隱私法。報告的評語是回應沒有回答多數問題，也沒有談及美國以外的隱私法規。研究者也無法驗證取得同意的說法。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;利用 App 與廣告資料的監控被稱為廣告情報（ADINT），據報告轉述，這個詞出自監控產業本身。即時競價（RTB）是報告背景說明列的其中一條資料來源，App 或網頁每次顯示廣告前會在不到一秒內舉行拍賣，使用者的資料同時送給幾十到上百家行銷公司。另一條是 App 裡的第三方追蹤程式，監控廠商通常向經營這類程式的資料仲介（data broker，蒐集並轉賣個人資料的公司）購買。本站 10 月介紹過的&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/adfection-targeted-ads-spyware/&#34;&gt;另一份 Citizen Lab 報告&lt;/a&gt;同樣利用廣告供應鏈，那是另一家廠商用定向廣告投遞間諜軟體，跟 Webloc 是不同的系統。&lt;/p&gt;
+&lt;p&gt;報告寫目前無法確定 Penlink 從哪裡取得 Webloc 的資料，可能是 App 的追蹤程式、競價資料或兩者兼有。2021 年的文件顯示 Webloc 有 Wi-Fi 名稱的資料，競價資料取不到這一項，研究者據此推測當時的資料來自 App 裡的追蹤程式。研究者也認為 2026 年的來源幾乎可以確定跟 2021 年不同，因為這類資料供應鏈一直在變，替監控廠商蒐集資料的資料仲介也一再被切斷 App 的資料來源。&lt;/p&gt;
+&lt;p&gt;報告寫位置與廣告資料可以看出一個人的住家、工作地點、宗教、政治立場、性傾向或健康狀況，也有不少業者能把廣告識別碼對回姓名、email 與電話號碼。更新頁寫這類系統在歐洲與英國使用是否合法有高度爭議，用在報導提到的威權國家尤其危險。依 96 件資訊公開申請的回覆，報告的結論是歐洲與英國政府高度不透明。&lt;/p&gt;
+&lt;p&gt;Bloomberg 找到的各國客戶是哪些機關、如何使用，到 11 月 14 日為止 Citizen Lab 的頁面沒有寫出，也沒有引述 Penlink 或這些機關對 Bloomberg 調查的回應。資料供應鏈既然不明，讀者也無從得知哪些 App 的資料流到 Webloc（本文的推論）。&lt;/p&gt;
+&lt;p&gt;報告的防護建議是 iPhone 安裝新 App 時拒絕讓它追蹤你在其他公司 App 與網站上的活動，並回頭檢視先前允許追蹤的 App。iOS 14.5 以前的版本沒有這項功能。Android 依裝置廠商與系統版本，在設定裡刪除廣告 ID 或停用廣告個人化。iPhone 可以檢視哪些 App 取得了位置與其他資訊的權限，Android 也可以檢視位置權限。&lt;/p&gt;
+&lt;p&gt;報告提醒這些做法只能減少、無法可靠阻止 App 把資料分享給第三方。App 仍可能把運作時處理的資料從自己的伺服器直接交給其他公司。報告也引述 Google 的說明，使用者刪除廣告 ID 之後，App 可能改用其他持久或專有的識別碼。不顯示廣告的 App 也可能直接或間接分享資料，行蹤需要保密的人完成設定之後，仍要假設手機上的 App 可能送出位置資料（本文從報告的限制推論）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（2 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/security-agencies-worldwide-found-to-use-ad-based-surveillance-system/&#34;&gt;Security Agencies Worldwide Found to Use Ad-Based Surveillance System&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/&#34;&gt;Uncovering Webloc: An Analysis of Penlink’s Ad-based Geolocation Surveillance Tech&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-09&#34;&gt;2026 年 4 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>GrapheneOS 支援 Pixel 11 的條件</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/grapheneos-pixel-11/</link>
@@ -1917,132 +1963,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/7680439?hl=zh-Hant&#34;&gt;檢查及更新 Android 版本&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>執法單位把 Pixel 與 GrapheneOS 連上犯罪的說法與爭議</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/police-pixel-crime-claims/</link>
-<guid isPermaLink="false">anoni-news:2026/11/police-pixel-crime-claims</guid>
-<pubDate>Fri, 06 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>多倫多一名警方消息來源 9 月向 The Globe and Mail 表示，槍擊案的一支關鍵手機裝了只支援 Pixel 的隱私強化系統 GrapheneOS，調查人員到報導時仍解不開。GrapheneOS 的官方帳號 10 月 31 日起連發貼文，稱荷蘭與德國有國家支持的抹黑行動。加拿大、西班牙與法國的執法單位與 GrapheneOS 對誰在用、能不能解開與開發者的責任各有說法。</description>
-<content:encoded>&lt;p&gt;整理 14 篇原文，來自 GrapheneOS、The Globe and Mail、Xataka Android 等 6 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;GrapheneOS 是只支援 Google Pixel 手機的隱私強化系統，2025 年起在西班牙、法國與加拿大一再被執法單位與犯罪調查連在一起。官方帳號 10 月 31 日到 11 月 1 日在 Mastodon 連發貼文，稱荷蘭與德國正在進行國家支持的錯誤資訊與抹黑行動，同時稱 The Globe and Mail 9 月那篇報導公正平衡。到 11 月 2 日，本文查到的資料裡沒有任何要求調整手機系統設定的公告，因此本文判斷用 Pixel 的讀者不需要改設定。同一天也查不到亞洲的執法單位有類似的公開說法。&lt;/p&gt;
-&lt;p&gt;依 The Globe and Mail 9 月 21 日的報導，多倫多一連串槍擊案扣押的一支關鍵手機執行 GrapheneOS，調查人員到報導時仍解不開而受阻。消息來源只有一名警方人士。他未獲授權談論案情，報社沒有公開身分。多倫多警察局的回覆是不評論個別鑑識的進度，發言人另外提到執法單位需要適當的合法工具，才能跟上加密技術。&lt;/p&gt;
-&lt;p&gt;報導也寫到，多倫多警察局長公開支持加拿大聯邦國會審議中的 C-22 法案（Bill C-22），這是 9 月 21 日報導時的狀態。法案會要求電子服務業者協助攔截資料，受到科技業者與公民自由團體反對。&lt;/p&gt;
-&lt;p&gt;相近的說法在 2025 年 7 月就出現過。Xataka Android 轉述了加泰隆尼亞媒體 Ara 的報導，其中加泰隆尼亞警方的一名反毒負責人說每看到一支 Pixel 就會想到可能是毒販。報導引述的資安專家把原因歸於 Pixel 可以自由安裝其他作業系統。&lt;/p&gt;
-&lt;p&gt;法國的說法出現在 2025 年 11 月。依 Clubic 轉述 Le Parisien 的報導，法國司法警察的資安分析人員向其他執法單位發出關於 GrapheneOS 的內部通報。通報裡的描述是 GrapheneOS 原本用於保護公民的手機不被入侵，之後逐漸擴散到想避開執法單位蒐集資料的使用者，包括在司法程序中。依 Privacy Guides 的整理，GrapheneOS 隨後宣布停止在法國的營運，把伺服器移出法國的主機商 OVH。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 GrapheneOS 官方 FAQ，支援的裝置依一份條件清單挑選。條件包括安裝其他作業系統時仍保有完整的硬體安全功能、驗證開機（verified boot，開機時檢查系統有沒有被改過）與每月的安全性更新，沒有一次延遲超過一週。FAQ 寫明 Pixel 8 到 Pixel 10a 都符合，這些條件是 GrapheneOS 自己訂的，不是第三方的驗證。Pixel 本身是一般零售的手機，台灣、日本與新加坡的 Google Store 都有販售。&lt;/p&gt;
-&lt;p&gt;誰在用 GrapheneOS，是各方說法差最多的地方。依 GIGAZINE 轉述 GrapheneOS 2025 年 7 月的回應，多數犯罪者用的是 iOS 或 Android，GrapheneOS 使用者裡犯罪者的比例可能比 Android 還低。本文查到的資料裡，各方都沒有公布使用者組成的統計。The Globe and Mail 訪問的 EFF 技術人員認為，選用 GrapheneOS 的理由很多，跟有沒有犯罪無關。&lt;/p&gt;
-&lt;p&gt;手機能不能解開，各方的說法也不一致。GrapheneOS 經律師給 The Globe and Mail 的聲明寫，系統設計成連專案本身都無法繞過防護，沒有後門、萬用金鑰或遠端存取。報導訪問了一名經營數位鑑識公司的退休加拿大皇家騎警，他就一般手機說 Cellebrite 與 Magnet Forensics 兩家製作手機鑑識工具的公司的工具幾乎能解開任何手機。兩家公司都不願評論是否成功從 GrapheneOS 手機取出資料，加拿大皇家騎警與 FBI 也一樣。&lt;/p&gt;
-&lt;p&gt;依 Xataka Android 的報導，加泰隆尼亞警方解不開加密時，改在法院授權下對嫌犯的手機植入惡意程式。報導引述的一句話是，對付組織犯罪不植入木馬就查不下去。部分律師則質疑這種做法侵犯隱私的界線不明確。&lt;/p&gt;
-&lt;p&gt;開發者的責任方面，依 Privacy Guides 轉述 Le Parisien 的訪談，法國的網路犯罪檢察官認為一部分使用者想保護通訊有正當性。發現開發者與犯罪組織有關、又不配合司法時，檢方仍會提告。GrapheneOS 在 The Globe and Mail 引用的社群貼文寫，GrapheneOS 完全合法，沒有義務削弱它的防護。報導訪問的多倫多大學教授則提到，加拿大法律沒有禁止使用隱私導向的作業系統，對異議人士、社運人士與記者有時可能不可或缺。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 10 月 31 日的貼文指另一套去 Google 化手機系統 /e/OS 的開發公司 Murena 直接協助國家的反隱私行動、一再宣稱 GrapheneOS 主要由犯罪者使用，這是 GrapheneOS 的說法，本文沒有查到其他佐證。貼文附的例子之一是 Murena 創辦人 2026 年 3 月接受 Clubic 的訪談。那段回答出自支援多款手機是否犧牲安全性的提問，他說 /e/OS 讓使用者避開市售手機上大量的個資蒐集，沒有要幫兒少性犯罪者躲過司法追查。同一段接著說，/e/OS 不是以強化安全為目標、只對特定目標人物有用的系統。&lt;/p&gt;
-&lt;p&gt;到 11 月 2 日，本文查不到 Murena 對這次貼文的回應，也查不到 Google 對 Pixel 被連上犯罪的說法。GrapheneOS 11 月 1 日的貼文另外指荷蘭的執法單位多年來誇大自己的能力，把 GrapheneOS 的安全性說得比實際弱。荷蘭與德國的執法單位實際說了什麼，本文沒有取得可查證的原始來源，兩地的內容只來自 GrapheneOS 的貼文。&lt;/p&gt;
-&lt;p&gt;本文查到的資料裡沒有任何要求調整手機系統設定的公告，本文的判斷是用 Pixel 原廠系統或已經裝了 GrapheneOS 的讀者都不必因為這些爭議改設定。依官方 FAQ，市面上有公司販售預先裝好 GrapheneOS 的手機，到 11 月 2 日專案沒有與任何一家合作或背書。官方建議買支援的 Pixel 自行安裝（網頁安裝器只需要支援 WebUSB 的瀏覽器，也就是能讓網頁透過 USB 連接手機的瀏覽器），GrapheneOS 11 月 1 日的貼文也提到荷蘭有公司販售假冒的 GrapheneOS 裝置。本文的推論是，自行安裝能避開被改過的系統，但不會改變各地法律對扣押手機與交出密碼的規定。&lt;/p&gt;
-&lt;p&gt;可以留意的後續有 C-22 法案的審議，以及 Murena 與 Google 會不會回應。法案在 9 月 21 日報導時仍在加拿大國會，本文沒有查證之後的審議進度。&lt;/p&gt;
-&lt;p&gt;比較各地執法單位的說法時，調查方面可以問點名一款手機或系統對破案有沒有幫助，法院授權的手段是否已經足夠。隱私方面可以問這類說法會不會讓一般使用者改用防護較弱的手機，要求開發者協助又會不會削弱所有使用者的防護。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（14 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117537776055163844&#34;&gt;GrapheneOS: &amp;#34;There&amp;#39;s a major state sponsored misinformation an…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-31&#34;&gt;2026 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117538125480285654&#34;&gt;GrapheneOS: &amp;#34;https://www.theglobeandmail.com/canada/article-pr…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-31&#34;&gt;2026 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117537849579958664&#34;&gt;GrapheneOS: &amp;#34;Murena is directly assisting with state anti-priv…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-31&#34;&gt;2026 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117542070655288748&#34;&gt;GrapheneOS: &amp;#34;@Schouten_B@mastodon.social @danieldk@mastodon.so…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;2026 年 11 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117542127500288741&#34;&gt;GrapheneOS: &amp;#34;@Schouten_B@mastodon.social @danieldk@mastodon.so…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;2026 年 11 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#future-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#preinstalled-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#install&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/canada/article-probes-toronto-shooter-for-hire-impenetrable-phone-graphene-os/&#34;&gt;Probes into Toronto&amp;#39;s shooter-for-hire network thwarted by impenetrable phone, police source says&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.xatakandroid.com/sociedad/cada-vez-que-vemos-google-pixel-pensamos-que-puede-ser-narcotraficante-movil-perfecto-para-crimen-sencilla-razon&#34;&gt;&amp;#34;Cada vez que vemos un Pixel pensamos que puede ser un narcotraficante&amp;#34;. La policía apunta al móvil de Google como el favorito del crimen&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Xataka Android&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-02&#34;&gt;2025 年 7 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gigazine.net/gsc_news/en/20250725-pixel-with-grapheneos&#34;&gt;OS official strongly refutes that police are easily linking Google Pixel and security-specialized OS &amp;#39;GrapheneOS&amp;#39; to criminals&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GIGAZINE&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-25&#34;&gt;2025 年 7 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://clubic.com/actualite-588202-impossibles-a-ouvrir-la-police-alerte-sur-ces-smartphones-prises-des-criminels.html&#34;&gt;&amp;#34;Impossibles à ouvrir !&amp;#34; : la police alerte sur ces smartphones prisés des criminels&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Clubic&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-22&#34;&gt;2025 年 11 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2025/11/22/grapheneos-migrates-server-infrastructure-from-france-amid-police-intimidation-claims/&#34;&gt;GrapheneOS migrates server infrastructure from France amid police intimidation claims&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-22&#34;&gt;2025 年 11 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://clubic.com/actualite-604786-murena-e-os-interview.html&#34;&gt;&amp;#34;On arrive à un point de bascule violent&amp;#34; : le fondateur de /e/OS alerte sur la souveraineté - Interview&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Clubic&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-22&#34;&gt;2026 年 3 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

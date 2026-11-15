@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 15 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 16 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>从中国大陆无法打开的 twitter.com 与上海对话里的防火墙提问</title>
+<link>https://anoni.net/news/zh-cn/history/11-16/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-16/2026</guid>
+<pubDate>Mon, 16 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在中国大陆境内，或从海外回国时，twitter.com 仍然打不开（2026 年 11 月 14 日查证的第三方测量）。这一天，当时的美国总统在上海与大学生对话时，被问到是否知道中国的网络防火墙。</description>
+<content:encoded>&lt;p&gt;你在中国大陆境内，twitter.com（Twitter 改名 X 之前的域名）本来就打不开，从海外回国的读者也一样。长期测量中国网络防火墙（在境内封锁境外网站的审查系统）的 GreatFire，最近 59 次有结论的测试有 98% 失败（只量 twitter.com，本站 2026 年 11 月 14 日查证时最后一次测试是 11 月 10 日）。当时的美国总统 2009 年 11 月 16 日在上海与大学生对话时（全国电视没有直播、上海地方台与网络有播出），美国驻中国大使代读了网友寄到美国大使馆网站的提问，问他是否知道中国的防火墙、是否应该能自由使用 Twitter。白宫的逐字稿记下他回答自己从没用过 Twitter、支持信息自由流通与不审查、也提到各国有不同的传统，美国的《基督教科学箴言报》（CSMonitor）报道这段回答由官方新华社的网站逐字转录、在中国四大门户网站显著刊出。要回国或前往中国大陆的读者，出发前可以在 GreatFire 查常用网址的测量结果（本站的建议）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Android 手机出厂预装的更新软件与外传的短信内容</title>
 <link>https://anoni.net/news/zh-cn/history/11-15/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在门禁或会员入场时登记的人脸信息，跟指纹一样能认出你是谁。这一天，一位大学副教授向法院起诉杭州一家动物园，园方把年卡的入园方式从指纹改成人脸识别。</description>
 <content:encoded>&lt;p&gt;你在门禁或会员入场时登记的人脸信息，跟指纹一样能认出你是谁。一位大学副教授在 2019 年 10 月 28 日向杭州市富阳区法院起诉一家动物园，原因是园方把年卡的入园方式从原本登记的指纹改成人脸识别。一审在 2020 年认为以指纹或人脸识别核验本身合法，但双方约定的是指纹入园且园方没有告知拍照的用途，判园方删除面部特征信息。2021 年的二审维持判决，并因园方已停用指纹闸机另外判删除指纹识别信息。中国大陆的《个人信息保护法》（2021 年 11 月施行）把生物识别列为处理须取得单独同意的敏感个人信息，《人脸识别技术应用安全管理办法》（2025 年 6 月施行）第十条也规定个人不同意用人脸验证身份时处理者应当提供其他合理、便捷的方式（国家另有规定的除外），你在中国大陆被要求刷脸时可以据此要求改用其他方式（在海外则可以先问有没有卡片或二维码）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>搜索结果里的个人信息与移除申请</title>
-<link>https://anoni.net/news/zh-cn/history/10-27/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-27/2026</guid>
-<pubDate>Tue, 27 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>在海外的你可以请 Google 不再在搜索结果中列出含有你电话、地址或身份证号码的网页。这一天，印尼国会通过《信息与电子交易法》修正案，网站与平台运营者须依法院裁定删除当事人请求的不相关信息。</description>
-<content:encoded>&lt;p&gt;在海外的你可以请 Google 不再在搜索结果中列出含有你电话、地址或身份证号码的网页，网页本身则要另外联系网站所有者。印尼国会在 2016 年 10 月 27 日通过《信息与电子交易法》修正案，网站与平台运营者须依当事人请求与法院裁定删除不相关信息。雅加达邮报引述通信与信息部长说这是好事，因为印尼先前没有被遗忘权，同一篇报道也写到这项条文与网络欺凌条文被视为特别严苛的规定。负责修法的国会小组召集议员表示，第 40 条让政府有权命令运营者切断违法内容的访问以防止违法信息传播，报道也写到规范政府控制电子信息权力的条文很少。中国大陆的《个人信息保护法》第四十七条让个人在撤回同意、处理者违法或违反约定处理个人信息等情形下有权请求删除，在海外不想跟网站所有者交涉时可以先只申请移除 Google 的搜索结果。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

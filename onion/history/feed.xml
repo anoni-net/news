@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 15 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 16 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>從中國大陸無法開啟的 twitter.com 與上海對話裡的防火牆提問</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-16/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-16/2026</guid>
+<pubDate>Mon, 16 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你帶著手機到中國大陸時，twitter.com 仍然無法開啟（2026 年 11 月 14 日查證的第三方量測）。這一天，當時的美國總統在上海與大學生對話時，被問到是否知道中國的網路防火牆。</description>
+<content:encoded>&lt;p&gt;你帶著手機到中國大陸時，twitter.com（Twitter 改名 X 之前的網域）仍然無法開啟。長期量測中國網路防火牆（在境內封鎖境外網站的審查系統）的 GreatFire，最近 59 次有結論的測試有 98% 失敗（只量 twitter.com，本站 2026 年 11 月 14 日查證時最後一次測試是 11 月 10 日）。當時的美國總統 2009 年 11 月 16 日在上海與大學生對話時（全國電視沒有直播、上海地方台與網路有播出），美國駐中國大使代讀了網友寄到美國大使館網站的提問，問他是否知道中國的防火牆、是否應該能自由使用 Twitter。白宮的逐字稿記下他回答自己從沒用過 Twitter、支持資訊自由流通與不審查、也提到各國有不同的傳統，美國的《基督教科學箴言報》（CSMonitor）報導這段回答由官方新華社的網站逐字轉錄、在中國四大入口網站顯著刊出。要前往中國大陸的讀者，出發前可以在 GreatFire 查常用網址的量測結果（本站的建議）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>Android 手機出廠預載的更新軟體與外傳的簡訊內容</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-15/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在門禁或會員入場時登錄的臉部資料，跟指紋一樣能認出你是誰。這一天，中國大陸一位大學副教授向法院起訴杭州一家動物園，園方把年票的入園方式從指紋改成人臉辨識。</description>
 <content:encoded>&lt;p&gt;你在門禁或會員入場時登錄的臉部資料，跟指紋一樣能認出你是誰。中國大陸一位大學副教授在 2019 年 10 月 28 日向杭州市富陽區法院起訴一家動物園，原因是園方把年票的入園方式從原本登記的指紋改成人臉辨識。一審在 2020 年認為核驗方式本身合法，但雙方約定的是指紋入園且園方沒有告知拍照的用途，判園方刪除臉部資訊。2021 年的二審維持判決，並因園方已停用指紋閘門另外判刪除指紋資訊。台灣的《個人資料保護法》第 2 條把特徵、指紋列入個人資料（臉部算不算特徵是本文的推論），特定目的消失時可以請求刪除（業者因業務必須者除外），被要求掃臉時也可以先問有沒有卡片或 QR 碼等其他方式。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>搜尋結果裡的個人資料與移除申請</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-27/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-27/2026</guid>
-<pubDate>Tue, 27 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你可以請 Google 不再於搜尋結果列出含有你電話、地址或身分證字號的網頁。這一天，印尼國會通過《資訊與電子交易法》修正案，網站與平台業者須依法院裁定刪除當事人請求的不相關資訊。</description>
-<content:encoded>&lt;p&gt;你可以請 Google 不再於搜尋結果列出含有你電話、地址或身分證字號的網頁，網頁本身則要另外聯絡網站擁有者。印尼國會在 2016 年 10 月 27 日通過《資訊與電子交易法》修正案，網站與平台業者須依當事人請求與法院裁定刪除不相關資訊。雅加達郵報引述通訊資訊部長說這是好事，因為印尼先前沒有被遺忘權，同一篇報導也寫到這項條文與網路霸凌條文被視為特別嚴苛的規定。負責修法的國會小組召集議員表示，第 40 條讓政府有權命令業者切斷違法內容的存取以防止違法資訊散布，報導也寫到規範政府控制電子資訊權力的條文很少。台灣的《個人資料保護法》讓當事人可以向蒐集者請求刪除違法蒐集的個人資料，不想跟網站擁有者交涉時可以先只申請移除搜尋結果。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
