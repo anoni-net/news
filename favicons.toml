@@ -647,6 +647,10 @@ from = "https://cursor.com/marketing-static/icon-192x192-light.png"
 icon = "cyber.go.jp-58e1884f.png"
 from = "https://www.cyber.go.jp/img/favicon.ico"
 
+[hosts."cyber.harvard.edu"]
+icon = "cyber.harvard.edu-574bc106.png"
+from = "https://cyber.harvard.edu/themes/custom/bkc/favicon.ico"
+
 [hosts."cyberinsider.com"]
 icon = "cyberinsider.com-f4b1bbac.png"
 from = "https://cyberinsider.com/wp-content/uploads/2024/04/cropped-Cyber-Insider-Logo-192x192.png"
@@ -1624,6 +1628,10 @@ from = "https://s.yimg.com/rz/l/favicon.ico"
 icon = "legal500.com-e2f1b377.png"
 from = "https://www.legal500.com/apple-icon.png?9aebdb461841f006"
 
+[hosts."legalis.net"]
+icon = "legalis.net-a8cccb36.png"
+from = "https://www.legalis.net/wp-content/uploads/2026/05/cropped-logo_legalis-1-192x192.jpg"
+
 [hosts."legco.gov.hk"]
 same_as = "gov.hk"
 
@@ -2425,6 +2433,10 @@ from = "https://share.timescar.jp/favicon-apple.png"
 [hosts."sheriffs.org"]
 icon = "sheriffs.org-fd44e411.png"
 from = "https://www.sheriffs.org/wp-content/uploads/2024/01/nsa-logo.png"
+
+[hosts."sherloc.unodc.org"]
+icon = "sherloc.unodc.org-ed326373.png"
+from = "https://sherloc.unodc.org/cdn/favicon/standard/apple-touch-icon.png"
 
 [hosts."shop.ledger.com"]
 same_as = "support.ledger.com"
