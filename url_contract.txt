@@ -343,6 +343,9 @@
 /2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/2026/11/nist-solopreneur-guide/
+	#perspective
+	#sources
 /2026/11/nyc-surveillance-pricing/
 	#perspective
 	#sources
@@ -759,6 +762,9 @@
 /en/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/en/2026/11/nist-solopreneur-guide/
+	#perspective
+	#sources
 /en/2026/11/nyc-surveillance-pricing/
 	#perspective
 	#sources
@@ -953,6 +959,7 @@
 /en/page/4/
 /en/page/5/
 /en/page/6/
+/en/page/7/
 /en/reading/
 	#display
 	#listening
@@ -1080,6 +1087,7 @@
 /page/4/
 /page/5/
 /page/6/
+/page/7/
 /reading/
 	#display
 	#listening
@@ -1428,6 +1436,9 @@
 /zh-cn/2026/11/ninth-circuit-reverse-location/
 	#perspective
 	#sources
+/zh-cn/2026/11/nist-solopreneur-guide/
+	#perspective
+	#sources
 /zh-cn/2026/11/nyc-surveillance-pricing/
 	#perspective
 	#sources
@@ -1622,6 +1633,7 @@
 /zh-cn/page/4/
 /zh-cn/page/5/
 /zh-cn/page/6/
+/zh-cn/page/7/
 /zh-cn/reading/
 	#display
 	#listening
