@@ -121,6 +121,7 @@
 "2026-11-19-tv-acr" = { "en" = "og/2026/11/tv-acr-en-75d6742f.png", "zh-CN" = "og/2026/11/tv-acr-zh-cn-448cf0ff.png", "zh-TW" = "og/2026/11/tv-acr-zh-tw-de71e895.png" }
 "2026-11-20-ooni-tls-middlebox" = { "en" = "og/2026/11/ooni-tls-middlebox-en-bd8e09b0.png", "zh-CN" = "og/2026/11/ooni-tls-middlebox-zh-cn-db73e145.png", "zh-TW" = "og/2026/11/ooni-tls-middlebox-zh-tw-d5de38c0.png" }
 "2026-11-21-boca-passport-leak" = { "en" = "og/2026/11/boca-passport-leak-en-2beb0cc1.png", "zh-CN" = "og/2026/11/boca-passport-leak-zh-cn-13f01e0e.png", "zh-TW" = "og/2026/11/boca-passport-leak-zh-tw-876aa111.png" }
+"2026-11-21-brave-photo-metadata" = { "en" = "og/2026/11/brave-photo-metadata-en-69bf9b22.png", "zh-CN" = "og/2026/11/brave-photo-metadata-zh-cn-3e614e50.png", "zh-TW" = "og/2026/11/brave-photo-metadata-zh-tw-4446ae08.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-f1b37c7c.png", "zh-CN" = "og/history/09-26-zh-cn-f38b40e8.png", "zh-TW" = "og/history/09-26-zh-tw-d873b539.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-c875310d.png", "zh-CN" = "og/history/09-27-zh-cn-cb1e8c42.png", "zh-TW" = "og/history/09-27-zh-tw-6e156cbd.png" }
 "history/09-28" = { "en" = "og/history/09-28-en-00ae9f4b.png", "zh-CN" = "og/history/09-28-zh-cn-7e49a518.png", "zh-TW" = "og/history/09-28-zh-tw-61f00929.png" }
@@ -176,3 +177,4 @@
 "history/11-17" = { "en" = "og/history/11-17-en-6108b267.png", "zh-CN" = "og/history/11-17-zh-cn-5bd4d6b5.png", "zh-TW" = "og/history/11-17-zh-tw-4e6809db.png" }
 "history/11-18" = { "en" = "og/history/11-18-en-b5bd483f.png", "zh-CN" = "og/history/11-18-zh-cn-1907472c.png", "zh-TW" = "og/history/11-18-zh-tw-ca80c9da.png" }
 "history/11-19" = { "en" = "og/history/11-19-en-9f81e2e5.png", "zh-CN" = "og/history/11-19-zh-cn-808990e1.png", "zh-TW" = "og/history/11-19-zh-tw-a22a63d8.png" }
+"history/11-21" = { "en" = "og/history/11-21-en-8c1ddd0d.png", "zh-CN" = "og/history/11-21-zh-cn-54c321b2.png", "zh-TW" = "og/history/11-21-zh-tw-d0318a54.png" }
