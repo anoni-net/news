@@ -61,6 +61,25 @@ uv run tools/make_cards.py --dry-run    # 維護者：產生還沒有或已過�
 
 上面三個步驟（搬圖、預覽卡片、網站圖示）都會上傳到社群的主機，需要維護者的存取權限，要請維護者協助。投稿者與沒有權限的 AI 協作工具跳過這三步，在 PR 內文列出需要維護者處理的項目，例如有幾張圖、哪些主機的圖示還沒登記。原文網站的圖示還沒登記時，`build.py --check` 會失敗，這是預期的結果，維護者上傳之後就會通過。`NEWS_ASSETS_RSYNC` 的目的地只放在維護者的環境變數，不寫進 repo。
 
+### 維護者機器上的 `news-publish-assets`
+
+網站圖示、網址合約與預覽卡片可以用一個指令完成。在能連到圖片主機的機器上執行一次 `tools/install_publish_assets.sh --dest <rsync 目標>`，它會把指令裝到 `~/.local/bin/`、把目的地寫進 `~/.config/anoni-news/assets-rsync`，並在 `~/.claude/settings.json` 加上允許規則，Claude Code 的 auto mode 會直接放行這個指令。
+
+```bash
+news-publish-assets --dry-run <稿件路徑>   # 試抓圖示、試產卡片，看過兩個 preview.html
+news-publish-assets <稿件路徑>             # 上傳圖示與卡片、更新網址合約、執行 build.py --check
+news-publish-assets --none 'cp24.com=只有 16×16 的圖示' <稿件路徑>   # 圖示不適合時，參數同 fetch_favicons.py
+```
+
+稿件路徑給任一語系的檔案都可以，可以是絕對路徑，同一篇的三個語系會一起處理。指令從路徑找出所在的 worktree，所以在任何目錄都能直接執行。給 AI 協作工具的寫法：
+
+- 指令單獨一行，不在前面加 `cd ... &&`、環境變數，後面也不接管線，允許規則才對得上
+- 不必先確認權限、讀設定檔或檢查環境變數，照流程直接執行
+- 連不到圖片主機時，指令會在上傳前停下來說明原因，這時照上一段在 PR 內文列出要上傳的項目
+- 被擋下或失敗時不要換一種寫法重試，回報給維護者
+
+搬圖（`tools/ingest_images.py`）要人審核授權與來源，不在這個指令裡。
+
 ## 寫作規則
 
 寫作規則以社群首頁的[寫作風格規範](https://anoni.net/join/writing-style/)為準，英文版照[英文的寫作風格規範](https://anoni.net/en/join/writing-style/)，要調整規則時改那一頁（原始檔在 `anoni-net/www`），不要在這裡另存一份。檢查工具沿用文件站的 `tools/docs_style_lint.py`。
