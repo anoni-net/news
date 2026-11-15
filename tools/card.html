@@ -32,9 +32,12 @@
   h1 {
     margin: 18px 0 0; max-width: 1024px;
     font-family: "Noto Serif CJK TC", serif; font-weight: 700; line-height: 1.32; letter-spacing: 0.02em;
-    /* 中文逐字都能換行，再用 balance 讓各行長度平均，不會剩一個字落單，也不會讓 AI、Apple 這種開頭的英文自成一行 */
+    /* 沒有斷詞時中文逐字都能換行，再用 balance 讓各行長度平均，不會剩一個字落單，也不會讓 AI、Apple 這種開頭的英文自成一行 */
     line-break: strict; overflow-wrap: anywhere; text-wrap: balance;
   }
+  /* 中文標題先用 Intl.Segmenter 斷詞，只在詞與詞之間放 <wbr>，keep-all 擋掉詞中間的換行，「支援」不會拆成兩行。
+     單一個詞比一行還長時，仍由 overflow-wrap: anywhere 換行 */
+  h1.by-word { word-break: keep-all; }
   :lang(zh-Hans) h1 { font-family: "Noto Serif CJK SC", serif; }
   :lang(en) h1 { font-family: Georgia, "Noto Serif", serif; letter-spacing: 0; line-height: 1.22; word-break: normal; }
   .foot {
@@ -60,7 +63,19 @@
   var cat = document.getElementById("cat");
   cat.textContent = DATA.label;
   cat.className = "cat " + DATA.label_class;
-  document.getElementById("title").textContent = DATA.title;
+  var title = document.getElementById("title");
+  if (DATA.html_lang !== "en" && window.Intl && Intl.Segmenter) {
+    // 只在兩個詞相鄰的地方放 <wbr>，標點與空白跟著前後的詞，「，」不會落到下一行的開頭
+    var prev = null;
+    for (const part of new Intl.Segmenter(DATA.html_lang, { granularity: "word" }).segment(DATA.title)) {
+      if (prev && prev.isWordLike && part.isWordLike) title.appendChild(document.createElement("wbr"));
+      title.appendChild(document.createTextNode(part.segment));
+      prev = part;
+    }
+    title.className = "by-word";
+  } else {
+    title.textContent = DATA.title;
+  }
   document.getElementById("date").textContent = DATA.date;
   document.getElementById("site").textContent = DATA.site;
   // 標題從大字開始縮，放得進三行、又不碰到底下的日期為止
