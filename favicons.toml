@@ -2000,6 +2000,10 @@ none = "網站擋下抓取"
 icon = "nvd.nist.gov-9a487dd3.png"
 from = "https://nvd.nist.gov/favicon.ico"
 
+[hosts."nytimes.com"]
+icon = "nytimes.com-a24892d7.png"
+from = "https://static01.nyt.com/vi-assets/static-assets/assets/apple-touch-icon-BTg5GMmB.png"
+
 [hosts."obamawhitehouse.archives.gov"]
 icon = "obamawhitehouse.archives.gov-ed6cb2d9.png"
 from = "https://obamawhitehouse.archives.gov/sites/obamawhitehouse.archives.gov/themes/custom/fortyfour/images/fortyfour/favicons/favicon-196x196.png"
