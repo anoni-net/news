@@ -274,6 +274,12 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/boca-passport-leak/
+	#perspective
+	#sources
+/2026/11/brave-photo-metadata/
+	#perspective
+	#sources
 /2026/11/canada-c22-senate-committee/
 	#perspective
 	#sources
@@ -331,10 +337,16 @@
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/2026/11/mada-masr-egypt/
+	#perspective
+	#sources
 /2026/11/neticrm-breach/
 	#perspective
 	#sources
 /2026/11/ninth-circuit-reverse-location/
+	#perspective
+	#sources
+/2026/11/nist-solopreneur-guide/
 	#perspective
 	#sources
 /2026/11/nyc-surveillance-pricing/
@@ -684,6 +696,12 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/boca-passport-leak/
+	#perspective
+	#sources
+/en/2026/11/brave-photo-metadata/
+	#perspective
+	#sources
 /en/2026/11/canada-c22-senate-committee/
 	#perspective
 	#sources
@@ -741,10 +759,16 @@
 /en/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/en/2026/11/mada-masr-egypt/
+	#perspective
+	#sources
 /en/2026/11/neticrm-breach/
 	#perspective
 	#sources
 /en/2026/11/ninth-circuit-reverse-location/
+	#perspective
+	#sources
+/en/2026/11/nist-solopreneur-guide/
 	#perspective
 	#sources
 /en/2026/11/nyc-surveillance-pricing/
@@ -932,11 +956,16 @@
 	#y2026
 /en/history/11-19/
 	#y2026
+/en/history/11-21/
+	#y2026
+/en/history/11-22/
+	#y2026
 /en/page/2/
 /en/page/3/
 /en/page/4/
 /en/page/5/
 /en/page/6/
+/en/page/7/
 /en/reading/
 	#display
 	#listening
@@ -1055,11 +1084,16 @@
 	#y2026
 /history/11-19/
 	#y2026
+/history/11-21/
+	#y2026
+/history/11-22/
+	#y2026
 /page/2/
 /page/3/
 /page/4/
 /page/5/
 /page/6/
+/page/7/
 /reading/
 	#display
 	#listening
@@ -1339,6 +1373,12 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/boca-passport-leak/
+	#perspective
+	#sources
+/zh-cn/2026/11/brave-photo-metadata/
+	#perspective
+	#sources
 /zh-cn/2026/11/canada-c22-senate-committee/
 	#perspective
 	#sources
@@ -1396,10 +1436,16 @@
 /zh-cn/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
+/zh-cn/2026/11/mada-masr-egypt/
+	#perspective
+	#sources
 /zh-cn/2026/11/neticrm-breach/
 	#perspective
 	#sources
 /zh-cn/2026/11/ninth-circuit-reverse-location/
+	#perspective
+	#sources
+/zh-cn/2026/11/nist-solopreneur-guide/
 	#perspective
 	#sources
 /zh-cn/2026/11/nyc-surveillance-pricing/
@@ -1587,11 +1633,16 @@
 	#y2026
 /zh-cn/history/11-19/
 	#y2026
+/zh-cn/history/11-21/
+	#y2026
+/zh-cn/history/11-22/
+	#y2026
 /zh-cn/page/2/
 /zh-cn/page/3/
 /zh-cn/page/4/
 /zh-cn/page/5/
 /zh-cn/page/6/
+/zh-cn/page/7/
 /zh-cn/reading/
 	#display
 	#listening

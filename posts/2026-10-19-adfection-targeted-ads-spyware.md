@@ -53,7 +53,7 @@ sources:
     url: https://support.google.com/googleplay/android-developer/answer/6048248?hl=zh-Hant
     publisher: Play 管理中心說明
 watch:
-  - date: 2026-11-18
+  - date: 2026-12-18
     note: Citizen Lab 預告的 DARK CARTOGRAPHER 後續報告是否發表，Discover-Tech 或 Candiru 是否公開回應，IAB Europe 是否把 Discover-Tech 正式除名，Apple 或 Google 是否發布相關修補公告
 authors:
   - anoni-net
