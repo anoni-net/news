@@ -920,6 +920,10 @@ from = "https://www.eulisa.europa.eu/sites/default/files/favicons/apple-touch-ic
 icon = "europa.eu-f2d19d01.png"
 from = "https://europa.eu/favicon.ico"
 
+[hosts."expertinsights.com"]
+icon = "expertinsights.com-bd6485f5.png"
+from = "https://b3953882.assetcdn.net/2.0/3953882/wp-content/themes/expertinsights-wp-theme/assets/favicon/apple-touch-icon.png?lossy=1&strip=1&avif=1"
+
 [hosts."explorer.ooni.org"]
 same_as = "ooni.org"
 
@@ -1009,6 +1013,10 @@ from = "https://www.forbrukerradet.no/wp-content/themes/frweb22/dist/icons/fr-ap
 [hosts."forever.security"]
 icon = "forever.security-a3d20fe6.png"
 from = "https://forever.security/apple-touch-icon.png"
+
+[hosts."forklog.com"]
+icon = "forklog.com-ab1517d0.png"
+from = "https://forklog.com/wp-content/uploads/FL_favicon.webp"
 
 [hosts."fortune.com"]
 icon = "fortune.com-7526c17c.png"
@@ -1719,6 +1727,10 @@ from = "https://www.macworld.com/wp-content/uploads/2021/03/cropped-macworld-fav
 icon = "magnetforensics.com-3a08e791.png"
 from = "https://www.magnetforensics.com/wp-content/uploads/2025/05/cropped-MF_Favicon_48x48-2024-192x192.png"
 
+[hosts."mailroute.net"]
+icon = "mailroute.net-3d229266.png"
+from = "https://mailroute.net/favicon.ico?favicon.0x3dzn~oxb6tn.ico?dpl=dpl_2Ks7zknPKE5qPsdsgvhSen8Utv5U"
+
 [hosts."man.openbsd.org"]
 icon = "man.openbsd.org-6c007872.png"
 from = "https://man.openbsd.org/favicon.ico"
@@ -1982,6 +1994,10 @@ from = "https://nodejs.org/static/images/favicons/favicon.png"
 icon = "nonfunctional.substack.com-5324e146.png"
 from = "https://substackcdn.com/icons/substack/apple-touch-icon.png"
 
+[hosts."notebookcheck.net"]
+icon = "notebookcheck.net-14e60148.png"
+from = "https://www.notebookcheck.net/apple-touch-icon.png"
+
 [hosts."nownews.com"]
 icon = "nownews.com-76034231.png"
 from = "https://www.nownews.com/icon/logo-192x192.png"
@@ -2114,6 +2130,10 @@ from = "https://www.pbs.org/favicons/favicon-180x180.png"
 
 [hosts."pc.watch.impress.co.jp"]
 same_as = "internet.watch.impress.co.jp"
+
+[hosts."pcgamer.com"]
+icon = "pcgamer.com-7e4e5b27.png"
+from = "https://cdn.mos.cms.futurecdn.net/flexiimages/nsto4filky1762166946.png"
 
 [hosts."pcpd.org.hk"]
 icon = "pcpd.org.hk-dc297a73.png"
@@ -2289,6 +2309,10 @@ none = "東京證券交易所的適時揭露系統"
 [hosts."releases.ict-online.ru"]
 icon = "releases.ict-online.ru-f72911b5.png"
 from = "https://releases.ict-online.ru/old/favicons/releases.ict-online.ru/apple-touch-icon.png?v=kP3Wrq4xww1"
+
+[hosts."research.checkpoint.com"]
+icon = "research.checkpoint.com-6bb7eec9.png"
+from = "https://research.checkpoint.com/wp-content/uploads/2022/10/cropped-pavicon_CPR-03-e1666694691376-192x192.png"
 
 [hosts."rfa.org"]
 icon = "rfa.org-3be0b6f2.png"
@@ -2610,6 +2634,10 @@ from = "https://isomer-user-content.by.gov.sg/85/a5ba3d15-6f87-41cf-9954-f07a2e7
 icon = "tech.ifeng.com-89927ee9.png"
 from = "https://y1.ifengimg.com/index/72x72_2520ifeng.png"
 
+[hosts."techcommunity.microsoft.com"]
+icon = "techcommunity.microsoft.com-6b911f1c.png"
+from = "https://techcommunity.microsoft.com/t5/s/gxcuf89792/m_assets/themes/customTheme1/favicon-1730836283320.png?time=1730836286415&image-dimensions=180x180"
+
 [hosts."techcrunch.com"]
 icon = "techcrunch.com-72f4a02d.png"
 from = "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w=192"
@@ -2721,6 +2749,10 @@ from = "https://www.theregister.com/view-resources/dachser2/public/theregister/f
 [hosts."thestandard.com.hk"]
 icon = "thestandard.com.hk-b2de4002.png"
 from = "https://www.thestandard.com.hk/ts/assets/favicon/android-icon-192x192.png"
+
+[hosts."thestar.com.my"]
+icon = "thestar.com.my-a17f03ec.png"
+from = "https://cdn.thestar.com.my/Themes/img/touch-icon-192x192.png"
 
 [hosts."theverge.com"]
 icon = "theverge.com-923bdc5a.png"
@@ -2918,6 +2950,10 @@ from = "https://xtech.nikkei.com/apple-touch-icon.png"
 icon = "z.ai-e7bc4841.png"
 from = "https://docs.z.ai/mintlify-assets/_mintlify/favicons/zhipu-32152247/ksfquWFAc8TQf_Hb/_generated/favicon/apple-touch-icon.png"
 
+[hosts."z.cash"]
+icon = "z.cash-ee1b1188.png"
+from = "https://z.cash/wp-content/uploads/2023/06/cropped-z-favicon-512-192x192.png"
+
 [hosts."zetter-zeroday.com"]
 icon = "zetter-zeroday.com-60706310.png"
 from = "https://www.zetter-zeroday.com/favicon.ico"
@@ -2935,6 +2971,9 @@ from = "https://zh.wikisource.org/static/favicon/wikisource.ico"
 [hosts."zhonglun.com"]
 icon = "zhonglun.com-c0e89dfa.png"
 from = "https://www.zhonglun.com/upload/static/images/icon.png"
+
+[hosts."zips.z.cash"]
+same_as = "z.cash"
 
 [hosts."ziyuan.baidu.com"]
 icon = "ziyuan.baidu.com-18c0d0b0.png"
