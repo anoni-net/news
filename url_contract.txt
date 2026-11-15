@@ -340,6 +340,9 @@
 /2026/11/nyc-surveillance-pricing/
 	#perspective
 	#sources
+/2026/11/ooni-tls-middlebox/
+	#perspective
+	#sources
 /2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -745,6 +748,9 @@
 	#perspective
 	#sources
 /en/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
+/en/2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
 /en/2026/11/openssh-sshole/
@@ -1397,6 +1403,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/nyc-surveillance-pricing/
+	#perspective
+	#sources
+/zh-cn/2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
 /zh-cn/2026/11/openssh-sshole/
