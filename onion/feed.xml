@@ -6,7 +6,99 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 16 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>eMudhra 憑證事件的事故報告、macOS 修正版與 G1 根的期限</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/emudhra-incident-closeout/</link>
+<guid isPermaLink="false">anoni-news:2026/11/emudhra-incident-closeout</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>印度憑證機構 eMudhra 的弱私鑰事件在 11 月有三項進展。Apple 11 月 9 日推出 macOS 27.2.1、26.7.3 與 15.8.3，修正內建的 git、curl 等命令列工具。在 Mac 上用這些工具的人要更新系統，其他人不必另外設定。eMudhra 11 月 10 日提交事故報告，交代 11 月 7 日另外撤銷的八張 RSA 中繼憑證。依 11 月 14 日讀到的原始碼，Chrome 與 Mozilla 不再信任 UTC 11 月 16 日之後簽發、以 emSign Root CA - G1 為根的憑證，Microsoft 排定同一天移除 Edge 與 WebView2 對 G1 的信任。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，來自 Mozilla Bugzilla、Apple、Microsoft 365 Message Center Archive 等 8 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;印度憑證機構 eMudhra（憑證品牌 emSign）有八張中繼憑證的私鑰可以直接算出，事件 10 月中公開之後，11 月有三項進展。Apple 11 月 9 日推出 macOS 27.2.1、26.7.3 與 15.8.3，修正內建的命令列工具，也更新了根憑證清單檔 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;。eMudhra 11 月 10 日在 Mozilla 的 Bugzilla 事故單 2083449 提交完整事故報告。Chrome 與 Mozilla 對 eMudhra 的另一張根憑證 emSign Root CA - G1 設下日期限制，Microsoft 則排定移除 Edge 與 WebView2（Windows App 內嵌網頁用的元件）對它的信任。&lt;/p&gt;
+&lt;p&gt;在 Mac 上用內建的 git、curl、python3 等工具連 &lt;code&gt;https://&lt;/code&gt; 網址的人，要把系統更新到上述其中一個版本，其他人不必另外設定。依 Apple 的支援文件，Safari、Mail 與使用 Apple 網路與安全框架的 App 早已自動封鎖受影響的憑證，不必安裝更新。依 Microsoft 的公告，Edge 與 WebView2 的相關更新透過元件推送。&lt;/p&gt;
+&lt;p&gt;依 Apple 11 月 9 日改版的支援文件，從 macOS 27.2.1 起，macOS 與 Xcode Command Line Tools 附的命令列工具也會擋下受影響的 12 份中繼憑證。10 月撤銷的八張 ECDSA 中繼裡有六張是 TLS 用的中繼，每張各有兩份憑證，合計 12 份。兩份分別連到 eMudhra 的根 emSign ECC Root CA - G3，以及經 Sectigo 交叉簽署連到 AAA Certificate Services。更新同時從 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 移除五張根憑證，包括這兩張根與 emSign Root CA - G1，macOS 26 與 macOS 15 對應的修正版是 26.7.3 與 15.8.3。&lt;/p&gt;
+&lt;p&gt;依事故報告，eMudhra 在 11 月 7 日撤銷八張 RSA-4096 的中繼憑證（G2B 與 G2C 系列）。加上 10 月 18 日撤銷的八張 ECDSA 中繼，受影響的中繼憑證共 16 張。11 月 7 日填的撤銷理由是停止營運（&lt;code&gt;cessationOfOperation&lt;/code&gt;），前一批 ECDSA 中繼填的是 CA 私鑰外洩（&lt;code&gt;caCompromise&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;依報告，八把 RSA 私鑰沒有弱私鑰的問題，簽章都對得上憑證裡的公鑰。16 把金鑰在 2025 年 4 月 30 日的同一場金鑰產生儀式建立，匯入時私鑰材料經過主機上一支 Python 程式的記憶體，離開了硬體安全模組（HSM，專門產生與保管私鑰的硬體）。eMudhra 因此無法證明這批私鑰的處理符合自家憑證實務作業聲明（CPS，憑證機構公開承諾的作業規範）對私鑰移轉的規定。報告寫 RSA 的問題是在 11 月初、根憑證計畫討論這條規定之後確認，沒有寫是哪一家計畫，也沒有寫撤銷是否出於對方要求。&lt;/p&gt;
+&lt;p&gt;報告沒有寫有人取得 RSA 私鑰的證據，對整起事件的說法是沒有已知的濫用案例。報告提交當天有人在事故單上留言，問既然無法證明私鑰的處理合規，撤銷理由為何不用私鑰外洩（&lt;code&gt;keyCompromise&lt;/code&gt;）。到 11 月 14 日，事故單上沒有 eMudhra 對這則提問的回覆。&lt;/p&gt;
+&lt;p&gt;依報告的附錄，八張裡有六張是 TLS 用的中繼（發行者 emSign Root TLS CA - G1），另外兩張是程式碼簽署用的中繼（發行者 emSign Root CS CA - G2）。兩種中繼各有 G2B 與 G2C 版本，G2B 的四張沒有簽發過終端憑證。G2C 的四張 5 月起在美國投入使用，簽發過網站憑證與程式碼簽署憑證。G2C 最後一次簽發在 11 月 3 日，報告寫終端憑證已經遷移或換發。&lt;/p&gt;
+&lt;p&gt;依 eMudhra 10 月 28 日的更新，約 3 萬 800 張 G3 憑證所屬的美國客戶生態系，已改由 eMudhra 的 G1 RSA 根簽發。事故報告把 G1 階層的主要服務對象寫成北美的一個大學聯盟。本文對照 10 月 28 日的更新與事故報告推論，那條 G1 RSA 管道包含這次撤銷的 G2C 中繼，兩份文件都沒有直接寫出。報告列的 TLS 中繼發行者是 emSign Root TLS CA - G1，它與 emSign Root CA - G1 的關係，本文沒有查到第一手資料。&lt;/p&gt;
+&lt;p&gt;InCommon（美國大學與研究機構的憑證服務）11 月 10 日的公告寫，自家目前經 G1 簽發的憑證機構已無法再取得公開信任（&#34;Our current G1 issuing Certificate Authority (CA) is no longer viable for public trust&#34;）。同一頁之後的更新寫簽發已從 emSign 改到 SSL.com，並請各機構在 11 月 16 日當天結束前換掉受影響的憑證。InCommon 是否就是報告裡的大學聯盟，報告沒有寫名稱，本文依兩者的描述推論是同一個客戶。&lt;/p&gt;
+&lt;p&gt;eMudhra 的報告寫 G1 階層的所有簽發在 11 月 16 日前停止，報告 11 月 10 日提交時，這一項列為進行中。本文 11 月 14 日讀到的 Chromium 與 Firefox 原始碼，都對 emSign Root CA - G1 設了日期限制。UTC 11 月 16 日 23:59:59（台北時間 11 月 17 日 07:59:59）之後簽發的憑證不再信任，之前簽發的仍信任。本文沒有查到 Chrome 與 Mozilla 針對 G1 的公告，原始碼也沒有寫正式版何時帶上這項設定。&lt;/p&gt;
+&lt;p&gt;Microsoft 11 月 11 日更新的公告寫，11 月 16 日推出元件更新，Edge 與 WebView2 收到後移除 G1 在內四張 eMudhra 根的預設信任。到 11 月 14 日，本文沒有查到這項更新推出的結果。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;照 11 月 14 日的原始碼設定，Chrome 的限制看憑證記進憑證透明度日誌（CT log，公開記錄每一張憑證的日誌）的時間，Mozilla 的清單也設了同一天的期限。設定生效後，已經發出的憑證可以用到過期，期限之後的新憑證不被接受。Microsoft 為 Edge 與 WebView2 預定的更新則直接拿掉 G1，macOS 命令列工具更新後也一樣，連到 G1 的網站憑證不論何時簽發都可能無法通過驗證。本文據此推論，還沒換掉 G1 憑證的網站可能在 Chrome 正常開啟，在 Edge 或 Mac 的 curl 裡驗證失敗。&lt;/p&gt;
+&lt;p&gt;依 eMudhra 11 月 5 日更新的事件聲明，Apple 預定在 11 月 30 日移除並不再信任 G1 根，G1 底下任何時間簽發的憑證都不再被 Apple 的平台信任。InCommon 11 月 10 日的公告也轉述了這個日期。到 11 月 14 日，Apple 11 月 9 日改版的支援文件沒有寫這個日期，只寫了 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 移除 G1。&lt;/p&gt;
+&lt;p&gt;前篇提到，不想等更新的人可以依 Apple 的步驟，從 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 手動移除 G3 與 AAA Certificate Services。依同一份支援文件，更新到 27.2.1、26.7.3 或 15.8.3 之後就不必再重做這些步驟。照 Apple 步驟操作時留下的備份檔 &lt;code&gt;/etc/ssl/cert.pem.orig&lt;/code&gt; 可以用 &lt;code&gt;sudo rm&lt;/code&gt; 刪掉，也不要還原更新前做的備份。更新後的檔案少了五張根，Apple 提醒只讀這份檔案的工具，可能無法驗證部分憑證連到這些根的網站。&lt;/p&gt;
+&lt;p&gt;需要更新的命令列工具包括內建的 git、curl、python3、ruby、perl 與 openssl。無法更新到上述版本的 Mac，可以照 Apple 支援文件的步驟從 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 手動移除根憑證，需要管理員帳號。自帶根憑證清單的 App 與工具不讀 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;，也不套用 Apple 的封鎖。系統更新保護不到這些工具，要向開發者確認。&lt;/p&gt;
+&lt;p&gt;只用 Safari、Mail 與使用 Apple 框架的 App 的人不需要做任何事。接下來可以留意 eMudhra 預定 12 月 4 日完成的 KPMG 獨立審查、Apple 是否在 11 月 30 日對 G1 有所處置，以及到 11 月 14 日只設了日期限制的 Chrome 與 Mozilla，之後會不會把 G1 整個移出信任清單。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c82&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;2026 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/100100&#34;&gt;Apple security releases&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://incommon.org/about/news/incommon-certificate-service-update&#34;&gt;Moving Forward Together: InCommon Certificate Service Update&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;InCommon&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-firefox/firefox/blob/main/security/nss/lib/ckfw/builtins/certdata.txt&#34;&gt;certdata.txt&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180445&#34;&gt;eMudhra憑證事故擴大，再有8張RSA中繼CA憑證遭撤銷&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Penlink 的廣告定位監控系統 Webloc 與各國客戶</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/penlink-webloc-ad-location-tracking/</link>
@@ -1836,133 +1928,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BusinessWorld&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;2026 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>AI 加速找漏洞之後的個人防護與開源維護</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/eff-security-worse/</link>
-<guid isPermaLink="false">anoni-news:2026/11/eff-security-worse</guid>
-<pubDate>Sat, 07 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>EFF 10 月 23 日的兩篇文章認為前沿 AI 模型讓找漏洞變得便宜，電腦被入侵會更頻繁。EFF 建議每個人更新瀏覽器與 App、改用密碼管理員並提防釣魚，也主張依賴開源的企業出錢出人維護。自己架網站的人另外要確認 PHP 已修補。</description>
-<content:encoded>&lt;p&gt;整理 15 篇原文，來自 EFF、The PHP Foundation、PHP 等 11 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國數位權利組織 EFF 10 月 23 日發表兩篇文章，認為 OpenAI、Anthropic 等公司的前沿 AI 模型，讓找出零時差漏洞（廠商還不知道、還沒有修補的漏洞）變得便宜又容易。EFF 預期好轉之前情況會先變糟，第一篇給一般使用者的建議是基本的數位安全習慣，任何地方用電腦與手機的人都適用。第二篇以 PHP 的漏洞為例，主張依賴開源的企業出錢出人維護。網站用 PHP 的話，另外要確認伺服器上的 PHP 已經修補 10 月公開的漏洞。&lt;/p&gt;
-&lt;p&gt;依 EFF 的第二篇，美國國家漏洞資料庫（NVD）自 1988 年起收錄約 40 萬筆 CVE（公開漏洞的統一編號），光是 10 月就新提交 1.3 萬筆。EFF 據此推算歷來登錄的漏洞有 3% 是在 10 月找到的，也預估到年底時，史上所有漏洞會有超過四分之一出自 2026 年。數字沒有附上一手連結，圖說列的來源是 CVE Tracker。資安業者 Brandefense 10 月 26 日更新的分析列出，NVD 到 10 月 25 日已發布 86,533 筆 CVE 紀錄，2025 年全年是 48,151 筆。&lt;/p&gt;
-&lt;p&gt;EFF 的第二篇以網站伺服器上常用的程式語言 PHP 為例，提到它用在將近七成的網站。W3Techs 11 月 2 日的統計是在已知伺服端語言的網站裡占 69.1%。PHP 專案 10 月 21 日發布 8.5.12、8.4.27、8.3.36、8.2.35，修補兩個可讓未登入的攻擊者在伺服器上執行程式碼的漏洞。&lt;/p&gt;
-&lt;p&gt;根據資助 PHP 開發的 PHP Foundation 10 月 21 日的說明，2024 年外部出資的第一次稽核時已發現問題的徵兆，但沒有找到具體的攻擊方式。EFF 提到維護者當時找不到利用方式，降低了處理的優先順序，漏洞一直沒有修補。EFF 的說法是，2026 年 8 月研究者用 OpenAI 與 Anthropic 的最新模型各自重新發現，並找到利用的方法。基金會列出的發現者則是資安公司 Calif、OpenAI 與 Wiz，Anthropic 的 Claude Mythos 出現在基金會 2026 年稍早掃描 PHP 的段落，沒有列為發現者。&lt;/p&gt;
-&lt;p&gt;EFF 提到撰文時有超過 3,300 萬個網站仍在使用有漏洞的 PHP 版本。The New Stack 10 月 27 日引述資安公司 Censys 的網路掃描，約 3,250 萬個連上網際網路的 PHP 服務回報的是不安全的版本，另有約 6,130 萬個無法判斷版本。同一篇也提醒，Linux 發行版常把修補移植到舊版本而不改版本號。部分算成未修補的服務因此可能已經修補，依版本號推估的數字可能偏高。&lt;/p&gt;
-&lt;p&gt;依 EFF 的描述，PHP、OpenSSL、SQLite 這些專案幾乎在每台電腦上執行，維護團隊有的只有一個人。漏洞通報大量湧入，其中有些是假的，但很多是真的。依基金會的說明，PHP 的資安團隊 7 月 1 日到 10 月 21 日發布了 15 個 CVE，另外處理了一百多份無效、重複或無法重現的通報。AI 協助驗證通報，每個判斷與修補仍由人來做。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;CVE 是替公開漏洞編號的紀錄，每一筆的嚴重程度不同，EFF 的第二篇把它們都寫成嚴重的漏洞。Help Net Security 6 月報導資安事件應變團隊的國際組織 FIRST 對全年 CVE 數量的預測，文中寫到部分成長來自 GitHub Security Advisories 與 VulnCheck 擴大編目、補登舊紀錄。&lt;/p&gt;
-&lt;p&gt;Brandefense 的同一份分析列出，美國 CISA 的已知遭利用漏洞目錄（KEV）2026 年到 10 月 23 日新增 272 筆，約每千筆 CVE 三筆。分析也提醒 KEV 收錄舊的 CVE，這個比例只能當粗略的參考。依本文的推論，紀錄增加的倍數不等於遭利用的漏洞增加的倍數，但需要套用的修補確實變多了。&lt;/p&gt;
-&lt;p&gt;在資助開源方面，EFF 主張企業應該投入金錢與人力維護它們所依賴的開源專案，沒有提出金額、機制或具體的基金。PHP Foundation 對資源的描述跟 EFF 不同，EFF 提到維護靠少數志工在空閒時間進行，基金會則表示 PHP 本身的資安工作仰賴一小群基金會出資的開發者與少數志工。基金會呼籲三類對象支持，分別是用 PHP 開發產品的公司、主機商與雲端及 Linux 發行版、政府與公共機構。基金會也承認修補延後是結構性的失誤，原因出在資安團隊的決策流程與資源不足。&lt;/p&gt;
-&lt;p&gt;EFF 給個人的第一項建議是讓瀏覽器與所有 App 隨時更新到最新的修補。EFF 的 Surveillance Self-Defense（SSD，監控自我防衛指南）提到，更新常會修補攻擊可利用的舊程式碼，部分舊的作業系統連安全性更新都不再提供。依 Chrome 的說明，有新版時瀏覽器會在背景自動更新，通常在關閉再重新開啟時完成。長時間不關瀏覽器的話，畫面上會出現等待更新的提示。&lt;/p&gt;
-&lt;p&gt;EFF 也建議安裝密碼管理員，每個網站各用一組密碼，一個網站被入侵時其他帳號的密碼不受影響。依 SSD 的說明，Apple、Google、Mozilla 內建的密碼管理員也可以用。Apple 的「密碼」App 預設端對端加密，Google 的密碼管理員要自行到設定裡用通關密語開啟裝置端加密。SSD 也列了 Bitwarden、KeePassXC 等獨立的密碼管理員，並提醒自動填入密碼是防範釣魚的重要保護。&lt;/p&gt;
-&lt;p&gt;EFF 另外建議考慮安裝阻擋追蹤器的工具，例如 EFF 免費的瀏覽器擴充功能 Privacy Badger，10 月 23 日的文章提到它已有 Safari 版。EFF 同一句也提醒要留意釣魚，SSD 說明釣魚是用假連結騙取密碼。EFF 也提醒資料外洩可能變多，常用的網站可能遭受比平常多的攻擊，部分服務可能因此中斷。&lt;/p&gt;
-&lt;p&gt;架設部落格或網站的人，EFF 建議確認自己或主機商已經修補 PHP 的漏洞。依 php.net 10 月 21 日的公告，這兩個漏洞沒有完整的緩解方式，更新是唯一安全的選擇。PHP 專案對 7.4、8.0、8.1 另外提供了給從原始碼建置者用的最小回補，其他舊版要看發行版或 LTS 業者有沒有回補。依本文從 EFF 這項建議推論，租用主機的人可以請業者確認是否已套用這次的修補。&lt;/p&gt;
-&lt;p&gt;每個用電腦與手機的人都適用的第一步，是開啟系統與 App 的自動更新，並定期關閉再重開瀏覽器。iPhone 的位置在「設定」、「一般」、「軟體更新」、「自動更新」，依 Apple 的說明會在充電且連上 Wi-Fi 時於夜間安裝。Android 的說明則寫大部分的安全性修補會自動安裝，時間依製造商與電信業者而不同，舊款裝置可能無法升級。依本文的推論，這些設定擋不住網站本身被入侵造成的資料外洩，各網站用不同的密碼能讓一處外洩不擴及其他帳號。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/computer-security-about-get-lot-worse-heres-what-you-can-do&#34;&gt;Computer Security Is About to Get a Lot Worse, Here&amp;#39;s What You Can Do&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/vulnerability-apocalypse-and-why-we-should-fund-open-source&#34;&gt;The Vulnerability Apocalypse and Why We Should Fund Open Source&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/&#34;&gt;Today&amp;#39;s PHP Security Release, and How We&amp;#39;re Strengthening PHP Security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The PHP Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.php.net/archive/2026.php&#34;&gt;PHP: News Archive - 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PHP&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://w3techs.com/technologies/details/pl-php&#34;&gt;Usage Statistics and Market Share of PHP for Websites&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;W3Techs&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://thenewstack.io/php2shell-unpatched-php-servers/&#34;&gt;&amp;#34;The panic hasn&amp;#39;t turned into patching&amp;#34;: What security researchers really think about the PHP2Shell response&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The New Stack&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brandefense.io/blog/cve-volume-vulnpocalypse-risk-prioritization/&#34;&gt;CVE Volume vs Real Risk: Making Sense of Vulnpocalypse&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brandefense&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-26&#34;&gt;2026 年 8 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.helpnetsecurity.com/2026/06/15/first-2026-cve-forecast/&#34;&gt;AI vulnerability discovery is pushing 2026 CVEs toward 66,000&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Help Net Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-15&#34;&gt;2026 年 6 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/keeping-your-data-safe&#34;&gt;Keeping Your Data Safe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/choosing-the-password-manager-that-s-right-for-you&#34;&gt;Choosing the Password Manager That&amp;#39;s Right for You&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/how-avoid-phishing-attacks&#34;&gt;How to: Avoid Phishing Attacks&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/pages/privacy-badger&#34;&gt;Privacy Badger: EFF&amp;#39;s Free Tracker Blocking Browser Extension&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/chrome/answer/95414?hl=zh-Hant&#34;&gt;更新 Google Chrome&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Chrome 說明&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/118575&#34;&gt;更新 iPhone 或 iPad&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple 支援&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/7680439?hl=zh-Hant&#34;&gt;檢查及更新 Android 版本&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android 說明&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
