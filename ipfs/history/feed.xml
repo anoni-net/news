@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 16 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>伊朗 2026 年的網路過濾與汽油漲價抗議期間的近乎全國斷網</title>
+<link>https://anoni.net/news/history/11-17/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-17/2026</guid>
+<pubDate>Tue, 17 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你伊朗親友的網路依 NetBlocks 2026 年 5 月的紀錄已大致恢復連線，但量測顯示仍受很重的過濾（2026 年 11 月查證）。這一天，伊朗前一天開始的近乎全國斷網滿 24 小時，NetBlocks 記錄的全國連線只剩平常的 5%。</description>
+<content:encoded>&lt;p&gt;你伊朗親友的網路在 2026 年 2 月底開始的斷網過了三個月後已大致恢復連線，但量測顯示仍受很重的過濾（網路連線觀測組織 NetBlocks 5 月 28 日的貼文，Iran Focus 轉載，本站 2026 年 11 月 14 日查證）。依 NetBlocks 2019 年 11 月 17 日的紀錄，伊朗 16 日開始的近乎全國斷網到這一天滿 24 小時，全國連線只剩平常的 5%。網路審查觀測計畫 OONI 的文章裡寫斷網在政府突然宣布汽油漲價、多個城市爆發抗議之後開始，多數伊朗人無法連上國際網路，只能使用架在國內的網站與服務。OONI 的常見問題寫明執行量測工具 OONI Probe 可能有的風險要看誰在監看你的網路、你人在哪個國家，它也不是隱私工具（監看網路的政府、網路業者或雇主可能看到你在執行它）。本文建議台灣的讀者衡量過這項風險之後，用 OONI Probe 量測自己所在網路上的網站與 WhatsApp、Telegram 等通訊 App 是否被封鎖，伊朗等世界各地的量測結果則可以在 OONI 公開資料的網站 OONI Explorer 查詢。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>從中國大陸無法開啟的 twitter.com 與上海對話裡的防火牆提問</title>
 <link>https://anoni.net/news/history/11-16/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你手機上的端對端加密保護傳送中的訊息，擋不住手機本身被入侵。這一天，WhatsApp 與 Facebook 在美國聯邦法院控告間諜軟體公司 NSO Group，指控對方利用 WhatsApp 把間諜軟體送到約 1,400 支手機與裝置。</description>
 <content:encoded>&lt;p&gt;端對端加密讓訊息在傳送途中連經手的伺服器也讀不到，但手機本身被入侵時，訊息在手機上解密之後仍可能被讀走。WhatsApp 與 Facebook（現在的 Meta）在 2019 年 10 月 29 日向美國加州北區聯邦地方法院控告間諜軟體公司 NSO Group，起訴書寫被告因為無法破解端對端加密而透過 WhatsApp 的伺服器把惡意程式送到約 1,400 支手機與裝置，在訊息解密後讀取。法院在 2025 年 11 月判決並簽發永久禁制令禁止 NSO 用間諜軟體鎖定 WhatsApp，NSO 以禁制令會對業務造成無法彌補的損害為由聲請暫停執行，2026 年 1 月被上訴法院駁回。一般讀者可以讓 App 與手機系統保持最新，這是本文從 WhatsApp 當年修補漏洞後請使用者更新 App 推出的通則。需要保護消息來源的人可以考慮 iPhone 的封閉模式，Apple 寫它是為了減少傭兵間諜軟體可利用的途徑，代價是大部分訊息附件與連結預覽不能用（Android 的進階保護說明頁只寫一般性的防護）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>門禁與入場時登錄的臉部資料</title>
-<link>https://anoni.net/news/history/10-28/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-28/2026</guid>
-<pubDate>Wed, 28 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在門禁或會員入場時登錄的臉部資料，跟指紋一樣能認出你是誰。這一天，中國大陸一位大學副教授向法院起訴杭州一家動物園，園方把年票的入園方式從指紋改成人臉辨識。</description>
-<content:encoded>&lt;p&gt;你在門禁或會員入場時登錄的臉部資料，跟指紋一樣能認出你是誰。中國大陸一位大學副教授在 2019 年 10 月 28 日向杭州市富陽區法院起訴一家動物園，原因是園方把年票的入園方式從原本登記的指紋改成人臉辨識。一審在 2020 年認為核驗方式本身合法，但雙方約定的是指紋入園且園方沒有告知拍照的用途，判園方刪除臉部資訊。2021 年的二審維持判決，並因園方已停用指紋閘門另外判刪除指紋資訊。台灣的《個人資料保護法》第 2 條把特徵、指紋列入個人資料（臉部算不算特徵是本文的推論），特定目的消失時可以請求刪除（業者因業務必須者除外），被要求掃臉時也可以先問有沒有卡片或 QR 碼等其他方式。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

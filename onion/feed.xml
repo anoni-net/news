@@ -6,7 +6,93 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>紐約市禁止依個人資料定價的法案與 FTC 的政策聲明草案</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/nyc-surveillance-pricing/</link>
+<guid isPermaLink="false">anoni-news:2026/11/nyc-surveillance-pricing</guid>
+<pubDate>Tue, 17 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>紐約市議會 11 月 12 日通過法案，原則上禁止業者用演算法依個人資料對同一商品開出不同價格。到 11 月 14 日法案還在等市長簽署，成為法律一年後生效。美國聯邦貿易委員會（FTC）8 月提出的政策聲明草案，則是在特定情況下要求業者揭露個人化定價。紐約市以外的讀者不受這項市法案直接影響。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 New York City Council、Federal Trade Commission、The Record 等 7 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;紐約市議會 11 月 12 日以 44 比 5 通過一項法案，原則上禁止業者用演算法依個人資料，對同一件商品或服務向不同顧客開出不同價格。法案適用於設在紐約市或與市內消費者交易的業者，其他地方的讀者不受這項市法案直接影響。到 11 月 14 日為止，市議會的議事系統仍把法案列為等待市長簽署，條文訂在成為法律一年後生效。&lt;/p&gt;
+&lt;p&gt;法案條文把禁止的做法定名為 surveillance pricing（監控定價），FTC 的草案與業界團體的文件則稱為個人化定價（personalized pricing）。條文的定義是全部或部分由演算法決定、利用個人資料對同一商品向不同顧客開出不同的價格。條文裡的個人資料，指可以識別、或可以合理地直接或間接連結到特定消費者或裝置的任何資料。消費者主動提供、用來計算車程與外送費用或評估當地供需的位置資料不算在內。&lt;/p&gt;
+&lt;p&gt;條文另外允許幾種條文認可的客製折扣（bona fide custom discount）。消費者主動加入的會員或集點方案可以依過去的購買紀錄分級，前提是紀錄不與其他個人資料合併比對。退伍軍人、年長者、教師這類身分或生日要由消費者自己提出，不能由業者推論，兩種折扣都要明確揭露。保險、依信用報告評估信用的定價，以及聯邦或州法要求或明文授權的定價，不在禁止的範圍內。&lt;/p&gt;
+&lt;p&gt;執法由紐約市消費者與勞工保護局（DCWP）負責，每件違規最高罰 1,000 美元。依條文，全美分店少於 15 家、主要在紐約市實體營業的業者第一次違規時，可以在接到通知後 30 天內更正並全額退款。提供客製折扣或使用監控定價的業者也要建立程序，讓在市內購物的消費者可以請求取得定價時考量了哪些個人資料、如何考量。&lt;/p&gt;
+&lt;p&gt;美國聯邦貿易委員會（FTC）8 月 19 日提出的是個人化定價的執法政策聲明草案（Proposed Enforcement Policy Statement），說明 FTC 打算如何執法，本身不是新的規則。草案提到國會沒有授權 FTC 在所有情況下禁止個人化定價（personalized pricing），FTC 打算依《FTC 法》第 5 條（禁止不公平或欺騙的商業行為）積極執法。消費者合理預期價格不會因個人資料而不同時，業者要清楚揭露價格經過個人化、個人化的依據與使用的資料類型，不揭露很可能違反第 5 條。意見徵詢已在 9 月截止，到 11 月 14 日為止，本文沒有查到定案的版本。&lt;/p&gt;
+&lt;p&gt;草案附了幾個舉例，FTC 註明不是完整的清單，只供討論。例子包括外送業者依資料判斷顧客不太能出門而報較高的價格、超市依家中有幾個孩子替外送的牛奶加價，以及叫車業者推測使用者有緊急病況，提高送往醫療院所的車資。The Record 的報導則寫到，超市、叫車與航空業普遍被認為使用這類定價，但公開的證據有限。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 FTC 草案的描述，業者分析個人資料推估一位消費者願意付多少錢、會不會比價，再據此訂價。市議會新聞稿引用的一份調查發現，某大型生鮮外送平台的定價實驗讓個人之間的價差達到 23%。新聞稿引用的另一份調查裡，電視的價格在顧客把車開進賣場停車場之後從 499.99 美元漲到 599.99 美元。新聞稿也提到，消費者很難察覺這種定價。&lt;/p&gt;
+&lt;p&gt;依紐約市的法案，業者即使事先告知也不能依個人資料定價。條文列出的例外是前面提到的折扣，以及保險、信用報告與法律要求或授權的定價。參與推動法案的 Consumer Reports 政策分析師在給 The Record 的回覆裡表示，法律生效後，紐約市 800 萬人不必再猜測搜尋紀錄、在網頁上游標停留的地方是否影響看到的價格。&lt;/p&gt;
+&lt;p&gt;FTC 的草案則要求揭露，腳註提到 FTC 暫不表示，有些個人化定價在完整揭露之後是否仍屬不公平。草案自己舉的例子是，只告訴消費者這是「專屬」價格很可能造成誤導，說明價格依同一個登入帳號的購買紀錄推估則可能足夠。&lt;/p&gt;
+&lt;p&gt;Future of Privacy Forum（FPF，自述為推動資料保護與數位治理實務的非營利組織）9 月提交意見書，請 FTC 釐清沒有揭露的個人化定價是否都算欺騙、還是只有導致較高價格的才算，以及如何判斷價格較高。FPF 寫到許多零售業者做個人化定價是為了給部分消費者較低的價格，例如會員方案、個人化折價券與學生、年長者優惠，並建議以業者內部實際的基準價比較。FPF 另外提到版面空間與使用體驗讓深入揭露定價資訊有困難，請 FTC 提供落實揭露的指引。&lt;/p&gt;
+&lt;p&gt;依 City &amp;amp; State 的報導，紐約市的法案受到服務在適用範圍內的 Uber 等業者反對，本文查不到 Uber 自己的公開說法。報導裡市議會議長反駁法案會讓業者無法提供某些折扣的說法，表示業者仍可以給折扣，只是不能挖掘個人資料、對同一件商品收不同的價格。便利商店與燃油零售業的同業組織 NACS 8 月要求 FTC 延長意見期限，公告提到這個議題充斥錯誤資訊，對零售業長期的定價做法、會員方案與折扣構成重大風險。&lt;/p&gt;
+&lt;p&gt;FTC 的草案提到有限的經濟研究（包括一份 2023 年的研究）顯示個人化定價很可能增加業者的利潤，部分消費者受益的同時另一部分受損，手法越精細越不可能讓消費者受益。American Action Forum 的競爭政策主任在意見書（文末註明只代表作者本人）引用同一份 2023 年研究的結果：個人化定價使整體的消費者剩餘（消費者願意付的價格與實際付出的差額）下降時，仍有超過六成的消費者因個人化而受益。作者認為以消費者預期為標準可能抑制定價的創新與競爭、讓執法流於主觀，主張 FTC 把第 5 條的執法集中在明顯的詐欺與不實陳述，例如宣稱人人同價、實際卻用顧客資料個人化。&lt;/p&gt;
+&lt;p&gt;FTC 的草案說明揭露為何重要時提到，不知道價格經過個人化的消費者，無法用 VPN 或私密瀏覽、換業者或不完成交易來避開較高的價格。American Action Forum 的意見書寫到，揭露之後消費者可能設法隱藏顯示自己願意多付錢的資訊，兩份文件都沒有寫到這些做法能避開多少差價。&lt;/p&gt;
+&lt;p&gt;紐約市以外的讀者現在不需要做任何事，紐約市的消費者也要等法案生效，才能向業者請求取得定價考量的個人資料。即使法案生效，保險、依信用報告評估信用的定價與法律要求或授權的定價仍不在禁止範圍內。本文的推論是，登入帳號之後累積的購買紀錄與會員資料不會因為換用 VPN 或私密瀏覽而消失。到 11 月 14 日為止，議事系統還沒有市長簽署的紀錄，FTC 的草案也沒有定案。&lt;/p&gt;
+&lt;p&gt;依 The Record 與 City &amp;amp; State 的報導，市長表態支持這項法案。可以留意的後續是市長是否簽署，以及 FTC 的定案版有沒有修改揭露要求。The Record 也引述 Consumer Reports 的說法，紐約州議會 6 月通過類似的州法案，到 11 月 13 日報導時州長仍未簽署。&lt;/p&gt;
+&lt;p&gt;讀者比較紐約市與 FTC 這兩種做法時，隱私方面可以問哪些個人資料可以用來定價、消費者能不能知道並查詢業者用了哪些資料。效果方面可以問，直接禁止與要求揭露哪一種能讓消費者避開依個人資料的加價，同時保留會員與學生優惠這類折扣。公開的證據有限，也可以問主管機關能不能發現個人化定價。依 FTC 的草案，FTC 沒有全面禁止的權限，也可以問城市、州與聯邦能用的工具有什麼不同。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=8027985&amp;amp;GUID=A6815BBB-AC2B-487F-A27B-46449A644474&#34;&gt;The New York City Council - File #: Int 0891-2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://council.nyc.gov/press/2026/11/12/3336/&#34;&gt;New York City Council to Vote on Surveillance Pricing Ban&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ftc.gov/system/files/ftc_gov/pdf/p034101-ftc-enforcement-policy-statement-re-personalized-pricing-proposed-for-public-comment.pdf&#34;&gt;Federal Trade Commission’s Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Federal Trade Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-19&#34;&gt;2026 年 8 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/nyc-council-passes-bill-ban-surveillance-pricing&#34;&gt;NYC to bar surveillance pricing as momentum for bans grows nationwide&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cityandstateny.com/policy/2026/11/julie-menins-surveillance-pricing-ban-passes-council/417196/&#34;&gt;Julie Menin’s surveillance pricing ban passes the council&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;City &amp;amp; State New York&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fpf.org/resource/fpf-submits-comments-in-response-to-the-federal-trade-commissions-request-for-feedback-on-its-proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;FPF Submits Comments in Response to the Federal Trade Commission’s Request for Feedback on its Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Future of Privacy Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.americanactionforum.org/comments-for-record/proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;American Action Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://convenience.org/stay-current/news/2026/august/28/nacs-asks-ftc-to-extend-personalized-pricing-comment-deadline&#34;&gt;NACS Asks FTC to Extend Personalized Pricing Comment Deadline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NACS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>eMudhra 憑證事件的事故報告、macOS 修正版與 G1 根的期限</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/emudhra-incident-closeout/</link>
@@ -1876,58 +1962,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-23&#34;&gt;2025 年 1 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>菲律賓公民社會的 AI 風險盤點</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/philippines-ai-risk-map/</link>
-<guid isPermaLink="false">anoni-news:2026/11/philippines-ai-risk-map</guid>
-<pubDate>Sat, 07 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>菲律賓的 Foundation for Media Alternatives 整理兩場工作坊的討論，列出 AI 在勞動、假訊息、隱私、環境與創意產業的風險，報告寫明內容只代表參與者的看法。報告比較眾議院的七件 AI 法案草案，並向國會、行政機關與平台提出建議。菲律賓以外的讀者不受直接影響。</description>
-<content:encoded>&lt;p&gt;整理 3 篇原文，來自 Foundation for Media Alternatives、PhilStar、BusinessWorld&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;菲律賓的 Foundation for Media Alternatives（FMA）10 月 30 日發布一份 AI 風險盤點報告，整理兩場工作坊的討論。參與者來自人權、勞工、性別、媒體與環境等領域的公民團體與基層組織，以及學者、技術人員、記者與數位權利的法律工作者。報告列出 AI 在勞動、假訊息、隱私、教育、環境與創意產業的風險，再分別向國會、行政機關、平台與 AI 開發者提出建議。內容針對菲律賓的法案與政策，其他地方的讀者不受直接影響。&lt;/p&gt;
-&lt;p&gt;兩場工作坊在 7 月 28 日與 9 月 23 日舉行，第二場補上第一場缺少的環境、健康與創意領域。依報告的方法說明，各組討論 AI 在自己的領域如何產生影響、誰受益誰受害、看到哪些具體事件，以及有哪些現有的法律或保護可以適用。風險標在可能性與嚴重度的矩陣上，等級由各組在工作坊裡自行評定，報告沒有列出參與人數與組織數。報告也寫明風險一節只代表參與者的看法，不代表任何組織或機構的立場，建議也不應讀成每個參與組織的共識。&lt;/p&gt;
-&lt;p&gt;依報告的整理，菲律賓最普遍、橫跨各領域的風險是工作取代與勞動加劇。勞動加劇指工作量與速度增加卻沒有額外報酬。企業流程外包（BPO，例如客服與後勤外包）業有品質保證人員因自動化失業，另一家 BPO 業者約有 1,500 人遭解僱（報告寫的是估計數字），據稱與 AI 驅動的調查或監控（survey/monitoring）功能有關。大型平台的內容審核員擔心自己的審核成果被當成機器學習的訓練資料，訓練出來的系統最後會取代自己。&lt;/p&gt;
-&lt;p&gt;風險矩陣裡，可能性與嚴重度都評為高的還有科技促成的性別暴力、AI 生成的兒少性虐待素材、對活動人士的監控，以及假訊息。報告寫假訊息正在侵蝕外界對媒體與政府的信任。公共資料被私人取用、資料中心的環境衝擊、AI 訓練資料的不透明與偏誤，也列在最高等級。&lt;/p&gt;
-&lt;p&gt;隱私一節裡，參與者認為菲律賓的《2012 年資料隱私法》（Data Privacy Act of 2012）用來治理 AI 的效果有限。被蒐集的資料在公司易主之後歸誰、使用者如何跨境主張權利，報告列為還沒有答案的問題。&lt;/p&gt;
-&lt;p&gt;報告也列出 AI 在人權工作上的保護用途，例如翻譯、撰寫補助申請與用開源情資記錄侵害。環境組對資料中心的看法分歧，有人認為菲律賓不必在這些條件下跟鄰國競爭，也有人認為透明、公開稽核、可問責的資料中心是工業化與增加產值的機會。&lt;/p&gt;
-&lt;p&gt;報告的建議裡，許多項目不必等新法，行政機關、企業與社區可以依《資料隱私法》、環境影響評估制度與《勞動法典》（Labor Code）這些現有授權先做。報告把透明列為其他問責的前提，報告的理由是看不見訓練資料、資料蒐集、能源用水與 AI 輔助的決定，就無從評估或提出異議。依報告的建議，問責應落在上游的模型開發者、平台與大型部署者，受影響最深的群體也要在 AI 決策中有保障的席位。給企業與平台的建議包括宣告產品在哪些環節用了 AI、保存 AI 輔助決定的紀錄、接受獨立第三方稽核，以及讓創作者可以退出訓練資料並取得補償。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;報告分析的七件 AI 法案都是眾議院的草案，已交給眾議院資訊與通訊科技委員會的技術工作小組，到報告發布時仍在合併成替代法案《Artificial Intelligence Development and Regulation Act》。依 PhilStar 7 月 14 日刊出、頁尾標示為投稿（Contributed story）的稿件，當時的替代法案版本裡，多數 AI 系統不必向政府登記。登記與安全檢查只適用於決定貸款、工作與健康的高風險系統，新創可以在政府設立的監管沙盒裡開發與測試。同一篇稿件引述工作小組主席的說法，目標是一部創新者能依循、監管者能執行、每個菲律賓人都能信任的法律。&lt;/p&gt;
-&lt;p&gt;依報告對七案的九項標準比較，部分法案的登記範圍前後不一致，現有的高風險分類也還沒有反映參與者記下的傷害。報告的建議是明列影響兒童、神經多樣者（neurodivergent people）與其他弱勢群體的系統、替學生與工人評分評量或拒絕工作、貸款與服務申請的系統，以及包括政府健康監測與分析在內的醫療 AI。問責要放在上游的基礎模型提供者，要求它們在國內營運前設立並登記本地代表，讓上游提供者在菲律賓有承擔法律義務的對象。中小企業照規模比例適用、不全面豁免。&lt;/p&gt;
-&lt;p&gt;報告對勞動的建議是修訂勞動與社會保障的法規，並對高運算用量的 AI 使用課徵附加費（例如以營收或用量門檻認定），用來成立福利基金照顧現有保障涵蓋不到的工人。依 PhilStar 的稿件，7 月時的替代法案版本寫明不得只靠演算法解僱菲律賓人，雇主在 AI 造成人員取代之前要提前 60 天通知並提供再培訓。&lt;/p&gt;
-&lt;p&gt;行政機關方面，報告的建議是在新法通過前先成立跨部會的 AI 任務小組，並從一開始就定出轉為常設機構的路徑。依 BusinessWorld 4 月 29 日的報導，經濟、規劃與發展部（DEPDev）公布 AI 治理框架草案，列出倫理與網路犯罪、資安與資料隱私、勞動市場衝擊、智慧財產與反壟斷、環境與資源消耗等風險。依報告，參與者預期框架的內容會偏一般性，不太可能處理工作坊提出的問題。DEPDev 的部長在同一篇報導裡說，沒有好的政策與清楚的治理框架，人民會暴露在不必要的風險裡（本文到 11 月 3 日沒有查到框架是否已定稿）。&lt;/p&gt;
-&lt;p&gt;到 11 月 3 日為止，本文沒有查到資訊與通訊科技部（DICT）、國家隱私委員會（NPC）、DEPDev 對這份報告的公開回應，報告提到的業者與平台則沒有另外查詢。上面政府這一方的考量取自 PhilStar 的投稿稿件與 BusinessWorld 的報導，報告列出的個案與風險評等目前只看到報告這一方的說法。&lt;/p&gt;
-&lt;p&gt;報告的建議裡跟匿名與隱私工具最接近的是社區自有、在地控制的技術，例如在本地網路或離線運作、不必依賴大型平台就能分享資訊與通報暴力的工具。參與者列出這類工具的障礙有成本、易用性與訊號，也提到早期的開源選項已遭棄置。參與者提到，如果要替倖存者開發 AI 工具，應保障隱私、能轉介給真人並提供緊急求助的管道。&lt;/p&gt;
-&lt;p&gt;創意產業的參與者描述了幾種個人的做法，例如把自己的寫作放在封閉的專案資料夾，不用通用的聊天工具處理要發表的作品。報告同時寫明，素養的責任不應只落在使用者身上，許多人也覺得自己無力設下界線。參與的藝術工作者提到，作品一旦進入訓練資料就無法移除。本文據此推論，這類做法只能保護之後的作品，已經被抓取的內容不在範圍內。&lt;/p&gt;
-&lt;p&gt;比較各地的 AI 治理時，權利方面可以問企業要揭露哪些訓練資料與資料蒐集、受影響的人能不能對 AI 輔助的決定提出異議，以及監督機構有沒有法律授權與常設性。政策效果方面也可以問，像 7 月版本那樣只對高風險系統要求登記的做法，能不能同時讓新創有發展空間、讓監管機關實際執行。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fma.ph/ai-risk-report/&#34;&gt;Mapping the Impacts of AI in the Philippines: A Civil Society Risk-Mapping Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Foundation for Media Alternatives&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.philstar.com/business/technology/2026/07/14/2542095/proposed-ai-bill-gains-momentum-congress&#34;&gt;Proposed AI bill gains momentum in Congress&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PhilStar&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-14&#34;&gt;2026 年 7 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bworldonline.com/economy/2026/04/29/746472/depdev-unveils-ai-governance-framework/&#34;&gt;DEPDev unveils AI governance framework&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;BusinessWorld&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;2026 年 4 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

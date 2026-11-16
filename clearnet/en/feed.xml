@@ -6,7 +6,116 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>New York City&#39;s surveillance pricing ban bill and the FTC&#39;s draft policy statement on personalized pricing</title>
+<link>https://anoni.net/news/en/2026/11/nyc-surveillance-pricing/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/nyc-surveillance-pricing</guid>
+<pubDate>Tue, 17 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The New York City Council passed a bill on 12 November that, with some exceptions, bars businesses from using algorithms and personal data to charge different customers different prices for the same product. As of 14 November the bill was awaiting the mayor&#39;s signature, and it takes effect one year after becoming law. A draft policy statement the US Federal Trade Commission (FTC) proposed in August would instead require businesses to disclose personalized pricing in certain circumstances. Readers outside New York City are not directly affected by the city bill.</description>
+<content:encoded>&lt;p&gt;Based on 11 sources, including New York City Council, Federal Trade Commission, The Record&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The New York City Council voted 44 to 5 on 12 November to pass a bill that, with some exceptions, bars businesses from using algorithms and personal data to charge different customers different prices for the same goods or services. It applies to businesses domiciled in the city or transacting with consumers there, so readers elsewhere are not directly affected by this city bill. As of 14 November, the council&#39;s legislative system still listed the bill as awaiting the mayor&#39;s signature, and the text takes effect one year after it becomes law.&lt;/p&gt;
+&lt;p&gt;The bill calls the practice it bans surveillance pricing, while a draft from the US Federal Trade Commission (FTC) and documents from industry groups call it personalized pricing. The text defines it as pricing set completely or in part by an algorithm that uses personal data to offer different prices to different customers for the same goods or services. Personal data under the bill means any data that identifies or could reasonably be linked, directly or indirectly, with a specific consumer or device. Location data that consumers provide themselves and that is used to calculate trip and delivery fees or to assess local supply and demand does not count.&lt;/p&gt;
+&lt;p&gt;The bill also permits several kinds of what it calls bona fide custom discounts. Loyalty or rewards programs that consumers opt into can tier members by past purchase history, provided that history is not combined or cross-referenced with other personal data. Status such as veteran, senior or teacher, or a birthday, must be offered by the consumer rather than inferred by the business, and both kinds of discount must be clearly disclosed. Insurance, pricing that assesses creditworthiness based on credit reports, and pricing required or expressly authorized by federal or state law fall outside the ban.&lt;/p&gt;
+&lt;p&gt;Enforcement falls to the city&#39;s Department of Consumer and Worker Protection (DCWP), with civil penalties of up to $1,000 per violation. Under the text, a business with fewer than 15 locations nationwide that operates mainly in physical locations in New York City can, after a first violation, correct it and issue full refunds within 30 days of being notified. Businesses that offer custom discounts or use surveillance pricing must also set up a procedure that lets consumers who shop in the city request what personal data was considered in setting a price and how it was considered.&lt;/p&gt;
+&lt;p&gt;On 19 August the FTC proposed a draft enforcement policy statement on personalized pricing (Proposed Enforcement Policy Statement), which sets out how it intends to enforce existing law and is not a new rule in itself. According to the draft, Congress has not given the FTC authority to prohibit personalized pricing in all circumstances, and the FTC intends to enforce Section 5 of the FTC Act, which prohibits unfair or deceptive practices in commerce, aggressively. Where consumers reasonably expect that prices will not vary based on their personal data, businesses should clearly disclose that the price is personalized, the basis for the personalization and the types of data used, and failing to do so is likely to violate Section 5. The comment period closed in September, and as of 14 November we had found no final version.&lt;/p&gt;
+&lt;p&gt;The draft includes several examples, which the FTC marks as non-exhaustive and offered only for discussion. They include a food delivery company quoting higher prices to customers whose data suggests they are unlikely or unable to leave home, a grocery chain charging a delivery customer more for milk because several children live in the household, and a rideshare company charging more for a ride to a medical facility when data suggests the user has a medical emergency. Separately, The Record reported that grocery stores, ride-sharing companies and airlines are thought to be widely using this kind of pricing, though public evidence is limited.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;As the FTC&#39;s draft describes it, businesses analyze personal data to estimate how much an individual consumer is willing to pay and whether they are likely to comparison shop, then set prices accordingly. One investigation cited in the council&#39;s press release found that a major grocery delivery platform&#39;s pricing experiments produced price differences between individuals as high as 23 percent. In another cited in the release, the price of a television rose from $499.99 to $599.99 after the customer pulled into the store&#39;s parking lot. According to the release, consumers find this kind of pricing hard to detect.&lt;/p&gt;
+&lt;p&gt;Under New York City&#39;s bill, businesses cannot price based on personal data even if they tell customers in advance. The exceptions listed in the text are the discounts described above, plus insurance, credit reports and pricing required or authorized by law. A Consumer Reports policy analyst who worked on the campaign for the bill told The Record that once the law takes effect, eight million people in New York City will no longer have to guess whether their search history or where their cursor hovers on a page is shaping the price they see.&lt;/p&gt;
+&lt;p&gt;The FTC&#39;s draft relies on disclosure instead, and in a footnote the FTC declines for now to take a position on whether some personalized pricing is still unfair even when fully disclosed. The draft&#39;s own example is that telling consumers only that a price is &#34;exclusive&#34; is likely misleading, while explaining that it was estimated from purchase history on the same logged-in account may be sufficient.&lt;/p&gt;
+&lt;p&gt;The Future of Privacy Forum (FPF), which describes itself as a non-profit organization advancing data protection and digital governance practices, filed comments in September. It asked the FTC to clarify whether all undisclosed personalized pricing counts as deceptive or only pricing that leads to higher prices, and how it would judge whether a price is higher. FPF wrote that many retailers personalize prices to offer some consumers lower prices, through loyalty programs, personalized coupons and discounts for students and seniors, and recommended comparing against a retailer&#39;s real internal baseline price. It also cited limited space and user-experience considerations as obstacles to in-depth pricing disclosures and asked the FTC for guidance on putting the disclosure requirement into practice.&lt;/p&gt;
+&lt;p&gt;According to City &amp;amp; State, the bill has faced opposition from businesses whose services fall under it, including Uber, though we could not find a public statement from Uber itself. In the same report, the council Speaker rejected claims that the bill would stop businesses from offering some discounts, saying they can still give discounts but cannot mine personal data to charge different prices for the same product. NACS, a trade association for convenience and fuel retailers, asked the FTC in August to extend the comment deadline, and its notice said the issue is rife with misinformation and poses significant risks to longstanding retail pricing practices, loyalty programs and discounts.&lt;/p&gt;
+&lt;p&gt;In the draft, the FTC cites limited economic research, including a 2023 study, indicating that personalized pricing is likely to increase business profits while benefiting some consumers and harming others, and that more sophisticated methods are less likely to benefit consumers. In comments marked as representing only the author&#39;s views, American Action Forum&#39;s director of competition policy cites the same 2023 study, which found that over 60 percent of consumers benefited from personalization even when overall consumer surplus (the gap between what consumers are willing to pay and what they actually pay) declined. The author argues that a consumer-expectations standard could chill pricing innovation and competition and lead to subjective enforcement, and urges the FTC to focus Section 5 enforcement on clear fraud and misrepresentation, such as claiming everyone pays the same price while personalizing it with customer data.&lt;/p&gt;
+&lt;p&gt;Explaining why disclosure matters, the FTC writes in the draft that consumers who do not know a price is personalized cannot use a VPN or private browsing, switch businesses, or walk away to avoid higher prices. According to American Action Forum&#39;s comments, once prices are disclosed consumers may try to hide information that signals they are willing to pay more. Neither document says how much of the price difference these measures can avoid.&lt;/p&gt;
+&lt;p&gt;Readers outside New York City do not need to do anything now, and consumers in the city will have to wait until the law takes effect before they can ask businesses which personal data went into a price and how. Even then, insurance, pricing that assesses creditworthiness based on credit reports, and pricing required or authorized by law remain outside the ban. We infer that purchase history and loyalty data built up under a logged-in account do not disappear when someone switches to a VPN or private browsing. As of 14 November, the legislative system showed no mayoral signature, and the FTC&#39;s draft had not been finalized.&lt;/p&gt;
+&lt;p&gt;According to The Record and City &amp;amp; State, the mayor supports the bill. Developments to watch are whether the mayor signs it and whether the FTC&#39;s final version changes the disclosure requirements. The Record also cited Consumer Reports as saying that the New York State Legislature passed a similar state bill in June, which the governor had still not signed as of the report on 13 November.&lt;/p&gt;
+&lt;p&gt;In mainland China, three sets of rules address this kind of pricing, starting with Article 24 of the Personal Information Protection Law, in force since 1 November 2021, requires automated decisions made with personal information to be transparent and fair, and bars unreasonable differential treatment of individuals in transaction terms such as price. Article 21 of the algorithmic recommendation provisions issued by the Cyberspace Administration of China (CAC), in force since 1 March 2022, bars recommendation providers selling to consumers from using algorithms to apply unreasonable differential treatment in price based on characteristics such as preferences or transaction habits. The Rules on Price Conduct of Internet Platforms, issued by the National Development and Reform Commission, the State Administration for Market Regulation and the CAC and in force since 10 April 2026 with a five-year term. Article 15 bars platforms and their merchants from using data, algorithms or platform rules to set different prices for the same product under the same terms based on information such as willingness to pay, ability to pay, preferences or habits &#34;without the consumer&#39;s knowledge&#34; (our translation).&lt;/p&gt;
+&lt;p&gt;In our reading, tying the prohibition to whether consumers know may put Article 15 closer to the FTC&#39;s emphasis on disclosure than to New York City&#39;s bill, which applies even when a business gives notice. We could not confirm whether Article 15 still applies once a consumer knows, and the other two rules leave open what counts as unreasonable. When we checked on 14 November, we found no rule or public statement from authorities in Taiwan, Hong Kong, Singapore, Japan or South Korea that specifically addresses pricing based on personal data, which does not mean none exists.&lt;/p&gt;
+&lt;p&gt;When comparing New York City&#39;s approach with the FTC&#39;s, readers can ask on the privacy side which personal data may be used to set prices, and whether consumers can learn and look up which data a business used. On effectiveness, they can ask whether an outright ban or a disclosure requirement does more to let consumers avoid markups based on personal data while keeping discounts such as loyalty and student pricing. With public evidence limited, another question is whether regulators can detect personalized pricing at all. Since, according to its draft, the FTC lacks authority for a blanket ban, readers can also ask how the tools available to cities, states and the federal government differ.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=8027985&amp;amp;GUID=A6815BBB-AC2B-487F-A27B-46449A644474&#34;&gt;The New York City Council - File #: Int 0891-2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://council.nyc.gov/press/2026/11/12/3336/&#34;&gt;New York City Council to Vote on Surveillance Pricing Ban&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;12 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ftc.gov/system/files/ftc_gov/pdf/p034101-ftc-enforcement-policy-statement-re-personalized-pricing-proposed-for-public-comment.pdf&#34;&gt;Federal Trade Commission’s Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Federal Trade Commission&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-19&#34;&gt;19 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/nyc-council-passes-bill-ban-surveillance-pricing&#34;&gt;NYC to bar surveillance pricing as momentum for bans grows nationwide&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cityandstateny.com/policy/2026/11/julie-menins-surveillance-pricing-ban-passes-council/417196/&#34;&gt;Julie Menin’s surveillance pricing ban passes the council&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;City &amp;amp; State New York&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fpf.org/resource/fpf-submits-comments-in-response-to-the-federal-trade-commissions-request-for-feedback-on-its-proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;FPF Submits Comments in Response to the Federal Trade Commission’s Request for Feedback on its Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Future of Privacy Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;30 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.americanactionforum.org/comments-for-record/proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;American Action Forum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://convenience.org/stay-current/news/2026/august/28/nacs-asks-ftc-to-extend-personalized-pricing-comment-deadline&#34;&gt;NACS Asks FTC to Extend Personalized Pricing Comment Deadline&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NACS&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全国人民代表大会&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm&#34;&gt;互联网信息服务算法推荐管理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-04&#34;&gt;4 January 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-12/20/c_1767870953332182.htm&#34;&gt;关于印发《互联网平台价格行为规则》的通知&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-20&#34;&gt;20 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The eMudhra incident report, macOS fixes and the deadline for the G1 root</title>
 <link>https://anoni.net/news/en/2026/11/emudhra-incident-closeout/</link>
@@ -2404,93 +2513,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/420AC1000000079&#34;&gt;青少年が安全に安心してインターネットを利用できる環境の整備等に関する法律&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>A civil society map of AI risks in the Philippines</title>
-<link>https://anoni.net/news/en/2026/11/philippines-ai-risk-map/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/philippines-ai-risk-map</guid>
-<pubDate>Sat, 07 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The Foundation for Media Alternatives in the Philippines has compiled the discussions of two workshops into a map of AI risks in labour, disinformation, privacy, the environment and the creative industries, and states that the content reflects only the participants&#39; views. The report compares seven draft AI bills in the House of Representatives and makes recommendations to Congress, executive agencies and platforms. Readers outside the Philippines are not directly affected.</description>
-<content:encoded>&lt;p&gt;Based on 8 sources, including Foundation for Media Alternatives, PhilStar, BusinessWorld&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The Foundation for Media Alternatives (FMA) in the Philippines published an AI risk-mapping report on 30 October, drawing on the discussions of two workshops. Participants came from civil society groups and grassroots organisations working on human rights, labour, gender, media and the environment, along with academics, technologists, journalists and digital rights lawyers. The report sets out the risks of AI in labour, disinformation, privacy, education, the environment and the creative industries, then makes separate recommendations to Congress, executive agencies, platforms and AI developers. It deals with Philippine bills and policies, so readers elsewhere are not directly affected.&lt;/p&gt;
-&lt;p&gt;The workshops were held on 28 July and 23 September, with the second adding the environment, health and creative sectors that the first had not covered. According to the report&#39;s methodology, each group discussed how AI affects its own sector, who benefits and who is harmed, what concrete incidents it had seen, and which existing laws or protections might apply. Risks were plotted on a likelihood-and-severity matrix, with ratings set by each group during the workshops, and the report does not give the number of participants or organisations. The report also states that the risk section reflects only the participants&#39; views, not the position of any organisation or institution, and that the recommendations should not be read as a consensus of every participating organisation.&lt;/p&gt;
-&lt;p&gt;In the report&#39;s account, the most prevalent risks in the Philippines, cutting across sectors, are job displacement and labour intensification, meaning more work done faster without added pay. In business process outsourcing (BPO), the industry that handles outsourced work such as customer service and back-office operations, quality-assurance specialists at one operation lost their jobs to automation, and at another BPO company an estimated 1,500 employees were dismissed (the report gives this as an estimate), reportedly in connection with AI-driven survey/monitoring functions. Content moderators at a major platform worry that their moderation work is being used as machine-learning training data, and that the systems trained on it will eventually replace them.&lt;/p&gt;
-&lt;p&gt;Also rated high for both likelihood and severity on the matrix are technology-facilitated gender-based violence, AI-generated child sexual abuse material, surveillance of activists, and disinformation, which the report writes is eroding trust in the media and the government. Private appropriation of public data, the environmental impact of data centres, and the opacity and bias of AI training data are placed in the top tier as well.&lt;/p&gt;
-&lt;p&gt;In the privacy section, participants considered the Data Privacy Act of 2012 to be of limited use in governing AI. The report lists who owns collected data after a company changes hands, and how users can enforce their rights across borders, as questions that remain unresolved.&lt;/p&gt;
-&lt;p&gt;The report also records protective uses of AI in human rights work, such as translation, help with writing grant applications, and open-source intelligence for documenting violations. The environment group was divided on data centres, with some arguing that the Philippines need not compete with its neighbours on these terms, and others seeing transparent, publicly audited and accountable data centres as an opportunity for industrialisation and higher output.&lt;/p&gt;
-&lt;p&gt;Many of the recommendations do not have to wait for a new law, since executive agencies, companies and communities can act now under existing mandates such as the Data Privacy Act, the environmental impact assessment system and the Labor Code. The report treats transparency as the precondition for all other accountability, on the reasoning that no one can assess or contest what they cannot see, whether training data, data collection, energy and water use, or AI-assisted decisions. Its recommendations place accountability on upstream model developers, platforms and large deployers, and call for the groups most affected to have a guaranteed place in decisions about AI. For companies and platforms, they include disclosing where AI is used in a product, keeping records of AI-assisted decisions, accepting independent third-party audits, and letting creators opt out of training data and receive compensation.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;All seven AI bills analysed in the report are House of Representatives bills, referred to a technical working group of the House Committee on Information and Communications Technology and, as of the report&#39;s publication, still being consolidated into a substitute bill, the Artificial Intelligence Development and Regulation Act. According to a piece PhilStar ran on 14 July, marked at the foot as a contributed story, the version of the substitute bill at that time would not require most AI systems to register with the government. Registration and safety checks would apply only to high-risk systems that decide on loans, jobs and health, and startups could develop and test new systems in a government-established regulatory sandbox. The same piece quotes the working group&#39;s chair as saying the goal is &#34;a law our innovators can build on, our regulators can enforce, and every Filipino can trust&#34;.&lt;/p&gt;
-&lt;p&gt;Comparing the seven bills against nine criteria, the report finds that some are inconsistent about the scope of registration, and that the existing high-risk categories do not yet reflect the harms participants documented. It recommends explicitly listing systems that affect children, neurodivergent people and other vulnerable groups, systems that grade or assess students and workers or reject applications for jobs, loans or services, and AI used in healthcare, including government monitoring and analytics. Accountability would rest with upstream foundation model providers, which would have to create and register a local representative before operating in the country, so that there is a party in the Philippines bearing their legal obligations. Small and medium enterprises would be covered proportionately rather than exempted altogether.&lt;/p&gt;
-&lt;p&gt;On labour, the report recommends amending labour and social protection rules, and imposing a surcharge on high-compute AI use (identified, for example, through revenue or usage thresholds) to finance a welfare fund for workers outside existing protections. According to the PhilStar piece, the July version of the substitute bill provided that no Filipino may be dismissed by an algorithm alone, and that employers must give 60 days&#39; notice and retraining before any displacement caused by AI.&lt;/p&gt;
-&lt;p&gt;For the executive branch, the report recommends forming a multi-agency AI task force before a new law is passed, with its path to becoming a permanent body defined from the start. BusinessWorld reported on 29 April that the Department of Economy, Planning, and Development (DEPDev) had unveiled a draft AI governance framework, listing risks that include ethical considerations and cybercrime, cybersecurity and data privacy, labour market disruption, intellectual property and antitrust, and environmental sustainability and resource consumption. According to the report, participants expected the framework to be general and unlikely to address the issues raised in the workshops. In the same BusinessWorld article, the DEPDev secretary said that without good policy and a clear governance framework, &#34;we expose our people to unnecessary risk&#34; (as of 3 November we could not find whether the framework has been finalised).&lt;/p&gt;
-&lt;p&gt;As of 3 November we found no public response to the report from the Department of Information and Communications Technology (DICT), the National Privacy Commission (NPC) or DEPDev, and we did not separately contact the companies and platforms it mentions. The government considerations above come from the PhilStar contributed piece and the BusinessWorld report, while for the cases and risk ratings in the report, only the report&#39;s side is available so far.&lt;/p&gt;
-&lt;p&gt;The recommendation closest to anonymity and privacy tools is community-owned, locally controlled technology, such as tools that run on local networks or offline and let people share information and report violence without relying on large platforms. Participants named cost, usability and signal as obstacles for such tools, and noted that earlier open-source options have been abandoned. They added that any AI tools built for survivors should guarantee privacy, referral to a human and an emergency pathway.&lt;/p&gt;
-&lt;p&gt;Participants from the creative sector described several personal guardrails, such as keeping their own writing in a closed project folder and not using general chat tools for work they intend to publish. The report also states that the burden of literacy should not fall on users alone, and that many people feel too disempowered to set limits. Artists who took part said that once a work is in a training pool, it cannot be removed. Our inference is that such practices protect only future work, and do not reach content that has already been scraped.&lt;/p&gt;
-&lt;p&gt;South Korea&#39;s Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust, which the Ministry of Science and ICT says took full effect on 22 January 2026, sets out obligations for a defined category of high-impact AI, meaning systems used in listed areas that may significantly affect people&#39;s life, physical safety or fundamental rights, whereas the July version of the Philippine substitute bill described above requires registration only for high-risk systems. Businesses providing high-impact AI must put in place risk management, explanation and user protection measures, human oversight and documentation. On disclosure, Article 31(1) in the Korea Legislation Research Institute&#39;s English translation of the Act (Act No. 20676) requires operators to tell users in advance that a product or service runs on high-impact or generative AI. The Ministry of Science and ICT announced that fact-finding investigations and penalties under the transparency provision will be deferred for a grace period of at least a year (both checked on 1 November).&lt;/p&gt;
-&lt;p&gt;Two provisions of Taiwan&#39;s AI Basic Act (人工智慧基本法), in force since its promulgation on 14 January 2026, are addressed to government: Article 19 requires the government to carry out risk assessments when it uses AI and to set usage rules or internal control mechanisms, and Article 14 requires the competent authorities, in consultation with the personal data protection authority, to avoid unnecessary collection, processing or use of personal data in AI research and applications. Article 4 lists transparency and explainability among the Act&#39;s principles without saying to whom disclosure is owed (Articles 4 and 19 checked on 29 October, Article 14 on 23 October). In Hong Kong, the Digital Policy Office&#39;s Artificial Intelligence Adoption Guide for Government Bureaux and Departments (July 2026), written as recommendations without stating binding force, advises that important decisions should never depend exclusively on AI outputs without human review. The guide does not require telling the people affected by a decision that AI was involved (checked on 29 October).&lt;/p&gt;
-&lt;p&gt;When comparing AI governance across places, questions on rights include which training data and data collection companies must disclose, whether the people affected can contest AI-assisted decisions, and whether oversight bodies have a legal mandate and permanence. On what the policy is meant to achieve, one can also ask whether registering only high-risk systems, as in the July version, can both leave room for startups and be enforced in practice by regulators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (8)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fma.ph/ai-risk-report/&#34;&gt;Mapping the Impacts of AI in the Philippines: A Civil Society Risk-Mapping Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Foundation for Media Alternatives&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.philstar.com/business/technology/2026/07/14/2542095/proposed-ai-bill-gains-momentum-congress&#34;&gt;Proposed AI bill gains momentum in Congress&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PhilStar&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-14&#34;&gt;14 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.bworldonline.com/economy/2026/04/29/746472/depdev-unveils-ai-governance-framework/&#34;&gt;DEPDev unveils AI governance framework&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;BusinessWorld&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;29 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법&#34;&gt;인공지능 발전과 신뢰 기반 조성 등에 관한 기본법&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;국가법령정보센터&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-20&#34;&gt;20 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=71019&amp;amp;key=&amp;amp;type=new&#34;&gt;Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Korea Legislation Research Institute&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-21&#34;&gt;21 January 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&amp;amp;mId=4&amp;amp;bbsSeqNo=42&amp;amp;nttSeqNo=1215&#34;&gt;MSIT Releases Guidelines on Ensuring AI Transparency&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ministry of Science and ICT (South Korea)&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093&#34;&gt;人工智慧基本法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of The Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-14&#34;&gt;14 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smartlab.gov.hk/files/AI%20Adoption%20Guide-EN.pdf&#34;&gt;Artificial Intelligence Adoption Guide for Government Bureaux and Departments&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Digital Policy Office (Hong Kong)&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

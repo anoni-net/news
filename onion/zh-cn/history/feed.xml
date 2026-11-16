@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 16 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>伊朗 2026 年的网络过滤与汽油涨价抗议期间的近乎全国断网</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-17/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-17/2026</guid>
+<pubDate>Tue, 17 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你伊朗亲友的网络依 NetBlocks 2026 年 5 月的记录已大致恢复连接，但测量显示仍受很重的过滤（2026 年 11 月查证）。这一天，伊朗前一天开始的近乎全国断网满 24 小时，NetBlocks 记录的全国连接只剩平常的 5%。</description>
+<content:encoded>&lt;p&gt;你伊朗亲友的网络在 2026 年 2 月底开始的断网过了三个月后已大致恢复连接，但测量显示仍受很重的过滤（网络连接观测组织 NetBlocks 5 月 28 日的帖子，Iran Focus 转载，本站 2026 年 11 月 14 日查证）。依 NetBlocks 2019 年 11 月 17 日的记录，伊朗 16 日开始的近乎全国断网到这一天满 24 小时，全国连接只剩平常的 5%。网络审查观测项目 OONI 的文章里写断网在政府突然宣布汽油涨价、多个城市爆发抗议之后开始，多数伊朗人无法连上国际网络，只能使用架在国内的网站与服务。OONI 的常见问题写明运行测量工具 OONI Probe 可能有的风险要看谁在监看你的网络、你人在哪个国家，它也不是隐私工具（监看网络的政府、网络运营商或雇主可能看到你在运行它）。海外的读者衡量过这项风险后，可以用 OONI Probe 测量自己所在网络上的网站与 WhatsApp、Telegram 等通讯 App 是否被封锁，伊朗等世界各地的测量结果则可以在 OONI 公开数据的网站 OONI Explorer 查询。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>从中国大陆无法打开的 twitter.com 与上海对话里的防火墙提问</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-16/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你手机上的端到端加密保护传输中的消息，挡不住手机本身被入侵。这一天，WhatsApp 与 Facebook 在美国联邦法院起诉间谍软件公司 NSO Group，指控对方利用 WhatsApp 把间谍软件发送到约 1,400 部手机与设备。</description>
 <content:encoded>&lt;p&gt;端到端加密让消息在传输途中连经手的服务器也读不到，但手机本身被入侵时，消息在手机上解密之后仍可能被读走。WhatsApp 与 Facebook（现在的 Meta）在 2019 年 10 月 29 日向美国加州北区联邦地区法院起诉间谍软件公司 NSO Group，起诉书里写被告因为无法破解端到端加密而通过 WhatsApp 的服务器把恶意程序发送到约 1,400 部手机与设备，在消息解密后读取。法院在 2025 年 11 月作出判决并签发禁止 NSO 用间谍软件以 WhatsApp 为攻击目标的永久禁令，NSO 以禁令会对业务造成无法弥补的损害为由申请暂停执行，2026 年 1 月被上诉法院驳回。一般读者可以让手机上的 App 与系统保持最新，这是本文从 WhatsApp 当年修补漏洞后请用户更新 App 归纳出的通则。需要保护信源的人可以考虑 iPhone 的「锁定模式」，Apple 中国官网的支持页面上写它是为了减少雇佣间谍软件可能利用的攻击面，代价是大多数信息附件与链接预览无法使用（Android 的「高级保护」说明页只写一般性的防护）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>门禁与入场时登记的人脸信息</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-28/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-28/2026</guid>
-<pubDate>Wed, 28 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你在门禁或会员入场时登记的人脸信息，跟指纹一样能认出你是谁。这一天，一位大学副教授向法院起诉杭州一家动物园，园方把年卡的入园方式从指纹改成人脸识别。</description>
-<content:encoded>&lt;p&gt;你在门禁或会员入场时登记的人脸信息，跟指纹一样能认出你是谁。一位大学副教授在 2019 年 10 月 28 日向杭州市富阳区法院起诉一家动物园，原因是园方把年卡的入园方式从原本登记的指纹改成人脸识别。一审在 2020 年认为以指纹或人脸识别核验本身合法，但双方约定的是指纹入园且园方没有告知拍照的用途，判园方删除面部特征信息。2021 年的二审维持判决，并因园方已停用指纹闸机另外判删除指纹识别信息。中国大陆的《个人信息保护法》（2021 年 11 月施行）把生物识别列为处理须取得单独同意的敏感个人信息，《人脸识别技术应用安全管理办法》（2025 年 6 月施行）第十条也规定个人不同意用人脸验证身份时处理者应当提供其他合理、便捷的方式（国家另有规定的除外），你在中国大陆被要求刷脸时可以据此要求改用其他方式（在海外则可以先问有没有卡片或二维码）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
