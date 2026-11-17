@@ -1475,10 +1475,28 @@ def chunk(items: list, size: int) -> list[list]:
     return [items[i:i + size] for i in range(0, len(items), size)] or [[]]
 
 
+# JSON-LD 的 publisher 與 News sitemap 的刊物名稱
+PUBLISHER_NAME = "anoni.net"
+# News sitemap 只收這段時間內發布的導讀，見 SPEC.md「News sitemap」
+NEWS_SITEMAP_WINDOW = timedelta(days=2)
+
+
+def news_sitemap_items(posts: list[Post], target: Target, now: datetime) -> list[dict]:
+    """News sitemap 的項目：兩天內發布、已經上線的導讀，三個語系各一筆，新的在前。"""
+    items = []
+    for post in posts:
+        if not now - NEWS_SITEMAP_WINDOW <= post.created <= now:
+            continue
+        for version in (post.translations.values() or [post]):
+            items.append({"loc": target.abs_url(version.rel), "language": version.lang.code.lower(),
+                          "date": version.created.isoformat(), "title": version.title})
+    return items
+
+
 def jsonld(post: Post, target: Target, config: dict, image: str | None = None) -> str:
     """文章頁的 NewsArticle 與麵包屑。image 是這篇的預覽圖，跟 og:image 相同。見 SPEC.md「結構化資料」。"""
     homepage = config["homepage"] if target.links_only else target.rewrite(config["homepage"])
-    organization = {"@type": "Organization", "name": "anoni.net", "url": homepage,
+    organization = {"@type": "Organization", "name": PUBLISHER_NAME, "url": homepage,
                     "logo": {"@type": "ImageObject", "url": target.abs_url("logo-512.png"), "width": 512, "height": 512}}
     authors = []
     for author in post.authors:
@@ -1773,6 +1791,11 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
 
     sitemap = env.get_template("sitemap.xml.j2").render(urls=sitemap_homes + sitemap_urls)
     (target.out / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+    # 給 Google 新聞的 sitemap 只放 clearnet，ipfs 鏡像不會每小時更新，見 SPEC.md「News sitemap」
+    if target.clearnet and not target.links_only:
+        news_sitemap = env.get_template("news-sitemap.xml.j2").render(
+            publication=PUBLISHER_NAME, items=news_sitemap_items(posts, target, current_time()))
+        (target.out / "news-sitemap.xml").write_text(news_sitemap, encoding="utf-8")
 
     if not target.clearnet:
         robots = env.get_template("robots.txt.j2").render(sitemap=target.abs_url("sitemap.xml"))
@@ -2324,7 +2347,7 @@ def contract_lines(pages: list[Page]) -> list[str]:
     for page in sorted(pages, key=lambda p: p.rel):
         lines.append("/" + page.rel)
         lines += [f"\t#{anchor}" for anchor in sorted(page.anchors)]
-    lines += [f"/{lang.path}feed.xml" for lang in LANGS] + ["/sitemap.xml"]
+    lines += [f"/{lang.path}feed.xml" for lang in LANGS] + ["/sitemap.xml", "/news-sitemap.xml"]
     return lines
 
 
