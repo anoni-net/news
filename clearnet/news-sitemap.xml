@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/indonesia-komdigi-takedown/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
+<news:title>印尼社群內容下架的監測統計與通訊部的回應</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/indonesia-komdigi-takedown/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
+<news:title>印尼社交媒体内容下架的监测统计与通讯部的回应</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/indonesia-komdigi-takedown/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
+<news:title>Monitoring figures on social media takedowns in Indonesia and the communications ministry&#39;s response</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/2026/11/signal-verification-subpoena/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-18T00:00:00+08:00</news:publication_date>
+<news:title>Signal 協定一對一對話的機器檢查證明與美國大陪審團傳票</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/signal-verification-subpoena/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-18T00:00:00+08:00</news:publication_date>
+<news:title>Signal 协议一对一对话的机器检查证明与美国大陪审团传票</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/signal-verification-subpoena/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-18T00:00:00+08:00</news:publication_date>
+<news:title>Machine-checked proofs for Signal&#39;s one-to-one chats and a US grand jury subpoena</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/nyc-surveillance-pricing/</loc>
 <news:news>
 <news:publication>
@@ -64,72 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-17T00:00:00+08:00</news:publication_date>
 <news:title>The eMudhra incident report, macOS fixes and the deadline for the G1 root</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/penlink-webloc-ad-location-tracking/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-16T00:05:00+08:00</news:publication_date>
-<news:title>Penlink 的廣告定位監控系統 Webloc 與各國客戶</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/penlink-webloc-ad-location-tracking/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-16T00:05:00+08:00</news:publication_date>
-<news:title>Penlink 的广告定位监控系统 Webloc 与各国客户</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/penlink-webloc-ad-location-tracking/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-16T00:05:00+08:00</news:publication_date>
-<news:title>Webloc, Penlink&#39;s ad-based location surveillance system, and its customers in more countries</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/grapheneos-pixel-11/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-16T00:00:00+08:00</news:publication_date>
-<news:title>GrapheneOS 支援 Pixel 11 的條件</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/grapheneos-pixel-11/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-16T00:00:00+08:00</news:publication_date>
-<news:title>GrapheneOS 支持 Pixel 11 的条件</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/grapheneos-pixel-11/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-16T00:00:00+08:00</news:publication_date>
-<news:title>Conditions for GrapheneOS support on the Pixel 11</news:title>
 </news:news>
 </url>
 </urlset>

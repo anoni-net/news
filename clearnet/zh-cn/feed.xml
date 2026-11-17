@@ -6,7 +6,195 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 17 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>印尼社交媒体内容下架的监测统计与通讯部的回应</title>
+<link>https://anoni.net/news/zh-cn/2026/11/indonesia-komdigi-takedown/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/indonesia-komdigi-takedown</guid>
+<pubDate>Wed, 18 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>印尼的 SAFEnet 与 Remotivi 11 月 12 日发布监测结果，截至 11 月 8 日记录 127 则社交媒体内容被限制或下架，9 月 8 日前一次发布是 73 则。两团体把其中 94 则归为依通讯与数字部的要求。部门官员 11 月 13 日表示愿意开放记录比对，也在准备切断访问前的公开通知机制，到 11 月 14 日为止没有公布日期。印尼以外的读者不受直接影响。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，来自 SAFEnet、Kompas.com、CNN Indonesia 等 7 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;印尼数字权利团体 SAFEnet 与媒体监测团体 Remotivi 11 月 12 日发布新闻稿，截至 11 月 8 日记录到 127 则社交媒体内容被限制或下架，9 月 8 日前一次发布是 73 则。两团体把其中 94 则归为依通讯与数字部（Komdigi）的要求，Komdigi 的官员 11 月 13 日回应，愿意开放部门的记录跟两团体的数据比对。SAFEnet 10 月下旬也与其他团体开设窗口，评估对 Komdigi 的法律行动。这些限制在印尼境内生效，其他地方的读者不受直接影响。&lt;/p&gt;
+&lt;p&gt;依新闻稿，94 则占 127 则的 74.0%，前一次 73 则中有 66 则（约 90%）。平台自行依社区守则处理的比例从 9.6% 升到 26.0%（33 则），新闻稿提醒 Komdigi 的请求并没有变少。平台处理时也不一定公开说明请求来自 Komdigi。&lt;/p&gt;
+&lt;p&gt;处理最多的平台是 X 的 56 则（44.1%），其次是 Threads 的 43 则（33.9%）。Threads 最常见的做法是 geolock（地理封锁，从印尼的 IP 地址看不到该则内容），43 则中占 25 则。内容的主题以批评总统、批评官员与政府最多，各 32 则。森林与土地火灾相关的有 13 则，部分在 10 月中旬烟霾笼罩加里曼丹时被回报。&lt;/p&gt;
+&lt;p&gt;依新闻稿整理的火灾案例，X 上两则批评总统灭火太慢的帖子、一则悼念 Way Kambas 火灾与当地动物的帖子，都收到依 Komdigi 请求、涉嫌违法的通知。Instagram 一则封面放了总统照片的火灾内容，以及 Threads 一则批评总统处理火灾的帖子，依同样的请求被下架。平台依自己的社区守则删除的例子也有，一个团体回报，它谈中加里曼丹一氧化碳与空气污染指数的调查视频发布 16 小时后被 TikTok 删除。Siak 县长在火灾旧址种树的视频也被 TikTok 以违反社区守则删除，新闻稿提到视频的内容是火灾后的恢复工作。&lt;/p&gt;
+&lt;p&gt;新闻稿把两种做法列为 9 月 8 日前一次发布之后出现的新形态。Threads 上一位谈森林火灾的用户多次收到通知，帖子只开放 18 岁以上的用户观看，Meta 也在没有明确理由的情况下拒登加里曼丹火灾主题的广告。依两团体新闻稿的推测，年龄限制的依据可能是政府规章 PP Tunas，而不是《电子信息与交易法》。&lt;/p&gt;
+&lt;p&gt;依 SAFEnet 的整理，10 到 11 月有网友在网络上遭到威胁、恐吓与人肉搜索（未经同意公开个人信息）。11 月初起案例明显增加，主要在 Threads，多发生在网友要求政府为加里曼丹与苏门答腊的森林火灾负责的时候。新闻稿列出的手法包括陌生号码的私信或来电，发信者知道发帖者的真实姓名与工作地点，并要求限期删帖。其他手法还有散布姓名、电话或证件、大量发送消息与威胁家人，新闻稿没有写件数与发信者的身份。&lt;/p&gt;
+&lt;p&gt;依 Kompas 的报道，Komdigi 数字空间监督总局秘书 11 月 13 日在部门表示，公民团体的监测是公众监督的一部分。两团体若要依收到的申诉比对数据，部门准备好开放记录。秘书也提到部门跟平台通过电子系统往来，记录无法修改、可以回溯查核。依 CNN Indonesia 的报道，秘书另外表示不排除审核有误，确认有错时部门准备检讨与修正。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;geolock 依连接的 IP 地址决定是否显示帖子，帖子并没有删除，从印尼以外的网络仍可能看到（本文的推论）。年龄限制影响的是哪些人能看到帖子，广告拒登影响的是广告能否投放。OONI（志愿者在各地执行的审查测量）测的是网站能否连上，单则内容的处理不在测量范围内。外界的统计主要靠当事人回报，部门与平台的记录到 11 月 14 日为止没有公开（本文的判断）。&lt;/p&gt;
+&lt;p&gt;SAFEnet 的新闻稿写到数据仰赖公众自愿填写申诉表单，担心安全或后果的人可能不回报，案件数只是冰山一角。依 CNN Indonesia 的报道，秘书提到 74% 这个比例来自两团体收到并整理的 127 件，部门还无法确认其中 94 件是哪些案件。秘书表示依期间查询时数字对不上，部门的数字可能更多，也可能更少。&lt;/p&gt;
+&lt;p&gt;通知与透明度方面，SAFEnet 执行长 10 月 21 日接受 detikInet 采访时要求 Komdigi 说明每一项限制请求的法源、公开审核的做法，并让受影响的用户收到通知、有有效的申诉渠道。依 CNN Indonesia 的报道，政府正在准备切断访问内容的公开通知机制，回应宪法法院 9 月要求切断访问前先通知的判决。报道没有提到正式规定或上线日期，到 11 月 14 日为止，我们也查不到相关的公告。&lt;/p&gt;
+&lt;p&gt;依两团体的新闻稿，X 上三则火灾帖子收到的通知写着依 Komdigi 的请求，Instagram 与 Threads 各一则依同一请求被下架（新闻稿没有写这两则的通知内容）。新闻稿也引用宪法与环境法的条文，认为限制火灾的抗议剥夺了居民谈论自身安全的权利。在新闻稿发布之前，Komdigi 数字空间管控局长 10 月 20 日接受 detikInet 采访时表示，部门从未指示或要求平台限制、下架森林火灾的内容。局长也提到，触及下降（帖子被看到的次数减少）或删除要向平台查证。&lt;/p&gt;
+&lt;p&gt;内容在印尼被平台限制的人，通讯与数字部长 10 月 21 日的建议是先向平台申诉，再向部门回报。SAFEnet 与其他团体组成的法律团队 10 月下旬征集原告时，请当事人附上审核通知的截图、内容链接、跟平台的往来记录与触及数据。先保留这些记录，之后申诉或寻求法律协助时才有依据（本文的建议，参考法律团队列出的证据类型）。&lt;/p&gt;
+&lt;p&gt;两团体邀请通讯与数字部在 11 月 17 日进行公开检验（依 CNN Indonesia 11 月 13 日的报道），SAFEnet 的新闻稿本身没有写这项邀请。检验排在本文 11 月 14 日查证之后，是否举行与结果要另外查证。我们查不到 Meta、TikTok 与 X 对两团体新闻稿的公开说明，也查不到法律团队提起诉讼的消息（11 月 14 日查询）。仅凭公开的资料，无法判断新闻稿的案例与部门的记录是否相符（本文的判断）。&lt;/p&gt;
+&lt;p&gt;印尼《电子信息与交易法》（2024 年第二次修正）第 40 条第 (2b)、(2c)、(2d) 项让政府切断访问，或命令电子系统业者切断访问或自行审核内容，条文属于不经法院裁定的行政权限（本站 10 月 24 日查证）。立法说明把“切断访问”解释为封锁访问、关闭账号与删除内容，宪法法院 9 月的判决另外加上事先通知，没有要求法院许可。中国大陆的《网络信息内容生态治理规定》（2020 年 3 月 1 日施行，适用于中国境内）第十条要求平台发现违法信息与不良信息时立即处置、保存记录并向主管部门报告，处置义务在平台本身，不是政府下令。第十六条要求平台设置面向公众的投诉举报入口，本站 10 月 29 日逐字搜索全文，没有条文写到通知发布者或让发布者提出异议。&lt;/p&gt;
+&lt;p&gt;比较各方的说法时，可以看部门的记录跟公民团体的回报是否相符，以及平台会不会告诉发帖者请求来自政府。部门 10 月 20 日提到各平台有自己的社区守则，平台依守则自行处理的比例（这次是 26.0%）与部门请求的比例之后如何变化，也是一个指标。当事人收到通知后有没有申诉的渠道，部门表示准备修正的误判之后有没有公开的更正或统计，也可以一起看。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/komdigi-makin-agresif-takedown-konten-dan-akun-media-sosial-konten-karhutla-salah-satu-sasarannya/&#34;&gt;Komdigi Makin Agresif Takedown Konten dan Akun Media Sosial, Konten Karhutla Salah Satu Sasarannya&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nasional.kompas.com/read/2026/11/13/17180631/komdigi-siap-buka-bukan-data-konten-karhutla-yang-dihapus-dari-medsos&#34;&gt;Komdigi Siap Buka-bukan Data Konten Karhutla yang Dihapus dari Medsos&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Kompas.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnnindonesia.com/teknologi/20261113165833-185-1426952/komdigi-respons-safenet-dan-remotivi-soal-konten-karhutla&#34;&gt;Komdigi Respons SAFEnet dan Remotivi soal Konten Karhutla&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;CNN Indonesia&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inet.detik.com/security/d-8717274/isu-shadowban-konten-karhutla-di-medsos-ini-kata-safenet&#34;&gt;Isu Shadowban Konten Karhutla di Medsos, Ini Kata SAFEnet&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;detikInet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nasional.kompas.com/read/2026/10/21/19034451/menkomdigi-meutya-hafid-minta-masyarakat-ajukan-banding-jika-konten-karhutla&#34;&gt;Menkomdigi Minta Masyarakat Ajukan Banding jika Konten Karhutla Kena &amp;#34;Take Down&amp;#34;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Kompas.com&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/posko-penjaringan-calon-penggugat-komdigi-atas-dugaan-pembatasan-konten-digital/&#34;&gt;Posko Penjaringan Calon Penggugat Komdigi atas Dugaan Pembatasan Konten Digital&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://jdih.komdigi.go.id/produk_hukum/view/id/884/t/undang-undang-nomor-1-tahun-2024&#34;&gt;Undang-Undang Nomor 1 Tahun 2024 tentang Perubahan Kedua atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;JDIH Kemkomdigi&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-01-02&#34;&gt;2024 年 1 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;2019 年 12 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pasal.id/peraturan/putusan-mk/puu-mk-311-2026&#34;&gt;Putusan MK 311/PUU-XXIV/2026&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Pasal.id&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Signal 协议一对一对话的机器检查证明与美国大陪审团传票</title>
+<link>https://anoni.net/news/zh-cn/2026/11/signal-verification-subpoena/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/signal-verification-subpoena</guid>
+<pubDate>Wed, 18 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>Google DeepMind 用 AI 代理证明 Signal 协议实现 libsignal 在一对一对话的加密性质，群组对话、服务器与密钥生成不在范围内，到 11 月 14 日查不到其他研究者重现。Signal 公开 10 月一份大陪审团传票，四个电话号码只有一个有账号，交出的是创建时间与最后连线日期。用户不必调整设置。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，来自 Google DeepMind、Signal、Ars Technica 等 5 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Google DeepMind 在 11 月 10 日公布，研究团队用 AI 代理对 Signal 协议的参考实现 libsignal 写出由计算机逐步检查的数学证明。证明的范围是一对一对话建立连线与更新密钥的步骤，群组对话不在其中。Signal 在 11 月 3 日公开美国华盛顿特区联邦检察官办公室 10 月发出的大陪审团传票，四个电话号码里只有一个有账号，Signal 交出的是账号创建时间与最后连线日期。两件事都跟全球的 Signal 用户有关，用户这一端不需要调整设置。&lt;/p&gt;
+&lt;p&gt;DeepMind 的博客与技术论文列出，验证对象是 libsignal v0.105.4。研究者用标准的 Rust 编译器把它编成 AArch64（64 位 ARM 架构）的 Linux 机器码，证明对应到编译出来的程序，底层的加密函数除外。证明分成两个部分，一是建立对话时交换密钥的 PQXDH，混合了传统算法与能抵挡未来量子计算机的算法。二是每一条消息换一把新密钥的 Triple Ratchet。&lt;/p&gt;
+&lt;p&gt;论文列出的性质有前向保密（密钥外泄时，之前的消息仍无法解开）与握手的保密、身份验证。另一项是入侵后恢复（post-compromise security）。攻击者偷到当下的密钥之后，只要没有在下一次密钥更新时主动介入，之后的消息就恢复保护。论文设定的攻击者能控制网络与服务器，也可能偷到长期密钥或一方的整份状态。&lt;/p&gt;
+&lt;p&gt;DeepMind 把这套工具称为 AlphaProof Code。博客提到，研究者与 AI 模型一起把 Signal 的安全目标写成数学规格，每一条都由人类专家审过。证明则由 AI 代理用 Lean 撰写，Lean 是定理证明器，每一步推论都由程序检查。论文写到作者没有亲手写任何一行证明，AI 代理产生约 650 万行 Lean 证明，证明工作由五人在四周内完成。&lt;/p&gt;
+&lt;p&gt;根据论文的统计，读者需要信任的规格与定义约 18,000 行，另有约 8,000 行描述机器码行为的规格。为了确认系统能否分辨有问题的程序，研究者把两个已修复的 libsignal 旧漏洞放回一份隔离的代码，两个版本都被证明不安全。Ars Technica 转载 WIRED 的报道提到，验证过的部分没有找到新漏洞。&lt;/p&gt;
+&lt;p&gt;DeepMind 的博客写到，研究团队第一次用 AI 把广泛部署的加密协议验证到实现代码这一层。博客也宣称，像 Signal 这样广泛部署的协议，实现在此之前没有被任何方法形式化验证过。规格与证明已经开源。博客引述 Signal 首席技术官的话，自动化的定理证明让团队对代码能兑现隐私保证更有信心。&lt;/p&gt;
+&lt;p&gt;传票的经过公开在 Signal 的「Government Requests」页面，检察官办公室在 10 月 5 日发出传票，期限三天。传票查询的是四个电话号码在一段期间内的「all customer or subscriber account information」。附件举出的项目包括但不限于账号创建的日期与时间，以及最后连线的日期与时间。Signal 判断传票附上的标准指示是为银行写的，其中也列了支票与存款单的影像，页面写到 Signal 没有以能连到账号的方式收集这类数据。&lt;/p&gt;
+&lt;p&gt;美国公民自由联盟（ACLU）在 10 月 6 日代表 Signal 回复。四个号码里有三个没有 Signal 账号，Signal 交出剩下那个账号的创建日期与时间，以及最后连上 Signal 服务器的日期。Signal 只保留最后连线的日期、不保留时间，所以交不出时间。&lt;/p&gt;
+&lt;p&gt;这次的传票没有附不披露令（禁止 Signal 对外透露收到传票的法院命令），Signal 遮蔽电话号码、期间与政府人员的身份之后公开了文件。同一个法院在 2025 年发出、Signal 在 3 月公开的前一份传票查询了 37 个账号。其中 7 个不存在，24 个在那段期间没有相关数据，其余 6 个交出了数据。Signal 的页面提到，执法单位的要求越来越集中在 Signal 实际收集的少量数据。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;协议的证明针对消息在传送途中的保护，攻击者控制网络与服务器、甚至偷到部分密钥时也包括在内，传票的回应则显示服务器端保留了哪些数据。Signal 的页面开头列出消息、通话、联系人、群组、个人资料名称与头像都经过端到端加密，Signal 无法交出从未取得的数据。&lt;/p&gt;
+&lt;p&gt;论文列出的限定条件中，一组定理采用符号模型，假设加密算法完美无缺。符号模型不谈实际字节的保密程度，但在符号模型下证明了握手的保密能抵挡未来的量子计算机。另一组计算模型的定理只考虑传统计算机的攻击者。Triple Ratchet 里负责后量子的部分叫 SPQR，证明只显示整体不比旧的 Double Ratchet 弱，没有证明 SPQR 额外带来的后量子恢复能力。&lt;/p&gt;
+&lt;p&gt;密钥生成的程序没有验证，底层的加密函数也只用规格描述应有的行为，本身没有证明。侧信道攻击（从耗电、时间等外部信号推测密钥）与内存里的其他秘密不在范围内。机器码层级的定理只适用于双方各用一台设备的情境。双方一开始就持有对方的身份密钥，第一次联系时确认对方身份的那段流程没有包含在内。&lt;/p&gt;
+&lt;p&gt;论文把群组对话、sealed sender（隐藏发送者身份的机制）与服务器端的协议列为之后的工作。描述机器码行为的 8,000 行规格无法证明跟实际的硬件一致，论文写到硬件与操作系统内核不是可以证明的对象。Ars Technica 转载的 WIRED 报道也提到，整个 Signal App 并没有被验证。&lt;/p&gt;
+&lt;p&gt;论文的作者都来自 Google DeepMind 与 Google，致谢列出 Signal 的三位成员对方法提供意见。到 11 月 14 日为止，查不到论文经过同行评审的记录，也查不到 DeepMind 以外的研究者重现的结果。&lt;/p&gt;
+&lt;p&gt;论文提到 WhatsApp、Meta Messenger 与 Google Messages 也使用 Signal 协议的变体。验证的对象是 libsignal 的代码，不代表那些 App 的实现也通过同样的证明。&lt;/p&gt;
+&lt;p&gt;Signal 2016 年第一份公开的传票回应就写到，服务器端能交出的只有注册的日期与时间和最后连线的日期。10 月交出的仍是同样两项。以电话号码查询的回复，也让检察官知道四个号码里有三个没有 Signal 账号。&lt;/p&gt;
+&lt;p&gt;在中国大陆，GreatFire 到 2026 年 10 月 11 日的最后一次测试显示 signal.org 被 100% 封锁，干扰记录从 2017 年 7 月 2 日起算。这项测量的对象是网址，不含 App 的消息连线。OONI 2021 年的分析认为 Signal App 在 2021 年 4 月到 9 月间于中国等地遭到封锁，公开 API 在 2026 年 7 月 18 日到 10 月 17 日的 2847 笔中国 Signal 测试里有 2769 笔标为异常，确认封锁为 0 笔（异常不等于确认封锁）。&lt;/p&gt;
+&lt;p&gt;用户不需要做任何设置。需要在 Signal 上处理敏感对话的人，判断时可以参考证明的范围只涵盖一对一对话，论文没有对群组对话下结论。依 10 月的回复，服务器端保留账号创建时间与最后连线日期。之后可以留意 DeepMind 开源的证明有没有其他研究者重现，以及验证范围有没有扩及群组对话与 sealed sender，论文没有写出时程。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://deepmind.google/blog/introducing-alphaproof-code/&#34;&gt;Introducing AlphaProof Code: a breakthrough in verifying complex software at depth&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google DeepMind&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf&#34;&gt;AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google DeepMind&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://signal.org/bigbrother/district-of-columbia-2/&#34;&gt;Grand jury subpoena for Signal user data in the United States District Court for the District of Columbia (again!)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://signal.org/bigbrother/district-of-columbia/&#34;&gt;Grand jury subpoena for Signal user data in the United States District Court for the District of Columbia&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-06&#34;&gt;2026 年 3 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://signal.org/bigbrother/&#34;&gt;Government Requests&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Signal&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/&#34;&gt;Google DeepMind just mathematically verified key parts of Signal&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/signal.org&#34;&gt;Is https://signal.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2021-how-signal-private-messenger-blocked-around-the-world/&#34;&gt;How countries attempt to block Signal Private Messenger App around the world&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-10-21&#34;&gt;2021 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=signal&amp;amp;since=2026-07-18&amp;amp;until=2026-10-18&#34;&gt;OONI API&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>纽约市禁止依个人数据定价的法案与 FTC 的政策声明草案</title>
 <link>https://anoni.net/news/zh-cn/2026/11/nyc-surveillance-pricing/</link>
@@ -2153,260 +2341,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://jvn.jp/en/&#34;&gt;JVN&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;JVN&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>加拿大 C-22 法案的参议院委员会审查与加密弱点的争论</title>
-<link>https://anoni.net/news/zh-cn/2026/11/canada-c22-senate-committee/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/canada-c22-senate-committee</guid>
-<pubDate>Sun, 08 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>加拿大的 C-22 合法访问法案 10 月 22 日在参议院二读通过，交付国家安全、国防与退伍军人事务委员会审查，到 11 月 7 日为止还没有三读。Citizen Lab 的研究员主张 6 月以来 AI 带动的网络威胁出现重大变化，通信系统不该再留下弱点。政府 5 月的备询材料则主张法案不要求建立后门，服务商可以拒绝会引入系统性漏洞的要求。加拿大以外的读者现在不需要调整设置。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Parliament of Canada、Citizen Lab、Internet Society 等 10 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;加拿大的《合法访问法》（Bill C-22）10 月 22 日在参议院完成二读，同一天交付参议院国家安全、国防与退伍军人事务常设委员会审查。加拿大国会的法案数据库 LEGISinfo 列出委员会 11 月 2 日的一次会议，到 11 月 7 日为止委员会还没有提出报告。法案 6 月已在众议院三读通过，参议院 10 月辩论期间，通信与审查规避工具的服务商都公开提出反对的理由。法案还没有成为法律，加拿大以外的读者现在不需要调整设置。&lt;/p&gt;
-&lt;p&gt;法案让政府能要求通信与网络服务商建立协助执法的技术能力，也能以法规要求服务商保存元数据（通信内容以外的记录）。参议院到 11 月 7 日没有通过任何修正，委员会提出报告之后，法案才会进入三读。&lt;/p&gt;
-&lt;p&gt;Citizen Lab 是多伦多大学的研究室，10 月 23 日在网站上贴出一场座谈的视频。依主办方之一 Internet Society（在世界各地设有分会、推动开放与安全互联网的国际组织）的帖子，座谈在 10 月初为国会议员举行，主题是合法访问在 AI 带动网络威胁的时代代表什么。页面只有一段文字，写到 Citizen Lab 的资深研究员在座谈上谈法案的法律疑虑。研究员强调应该修补与预防漏洞，不要在日常的通信系统上“钻更多洞”。&lt;/p&gt;
-&lt;p&gt;同一位研究员 10 月 9 日在《环球邮报》（The Globe and Mail）发表评论，主张 6 月以来 AI 带动的网络威胁出现重大变化。作者在评论里举的例子包括 7 月 OpenAI 的 AI agent 逃出沙箱、攻击软件公司 Hugging Face，以及外界对 Anthropic 未公开发布的模型 Claude Mythos 的担忧。评论没有附这些事件的来源，本文也没有核对相关公司的原始公告。依评论的结论，政府官员假设科技公司能找到“安全的方式”削弱信息安全防护，误判了当前的威胁环境。&lt;/p&gt;
-&lt;p&gt;Citizen Lab 6 月提交给众议院委员会的意见书早于研究员 10 月的评论，内容是逐部分检视条文的法律与政策分析。意见书的核心建议是整个撤回法案第二部分，也就是规范服务商技术能力的新法。理由之一是政府可以对任何电子服务商施加任何义务，包括改变服务的运作方式或在服务里嵌入监控工具。意见书只有一句提到 AI，内容是随着 AI 监控技术增加，法案的侵入性也会跟着提高。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;依 Citizen Lab 的意见书，为了配合监控义务而修改的技术设计很难保护，范围比加拿大更窄的美国与新西兰制度也多次被外国情报机关秘密入侵。意见书引用美国国家安全局（NSA）的测试，NSA 测试的符合美国监听能力法 CALEA 的交换机每一台都有安全漏洞，也引用与中国政府有关的黑客组织 Salt Typhoon 入侵美国监听能力系统的事件。依本站 11 月 7 日整理的 &lt;a href=&#34;https://anoni.net/news/2026/11/eff-security-worse/&#34;&gt;EFF 文章&lt;/a&gt;，前沿 AI 模型让找漏洞变得便宜。10 月 10 日那篇则整理了 &lt;a href=&#34;https://anoni.net/news/2026/10/glm-5-3-cyber-capabilities/&#34;&gt;Anthropic 测试开放权重模型写出攻击浏览器程序的报告&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;依公共安全部长 5 月 5 日到众议院委员会备询的材料，政府不支持、法案也不要求建立后门，政府只订定对服务商的要求、不指定技术做法。服务商评估某项要求无法在不引入系统性漏洞（影响整类产品或大量用户、不只针对单一目标的漏洞）的情况下遵守时，就不必遵守。系统性漏洞已经在条文里定义，部长命令也要事先经情报专员（审查情报授权的独立官员）批准。Citizen Lab 的意见书则把法案的保障评为弹性大、定义不清，适用范围也没有设限。&lt;/p&gt;
-&lt;p&gt;Citizen Lab 研究员的评论把 AI 当成 6 月之后的新情况，主张政府期待服务商兼顾监控义务与信息安全的前提，已经跟不上威胁的变化。公共安全部的备询材料早于这波论点，材料转述通信安全局（CSE，加拿大负责信号情报与网络安全的机关）的意见，认为恶意网络活动的威胁本来就存在。依备询材料转述的 CSE 评估，法案让合法访问从临时、自愿的做法改成标准化的管理，能改善信息安全。公共安全部长办公室的发言人 10 月初向《环球邮报》表示，法案不允许或强迫服务商引入系统性漏洞或后门。&lt;/p&gt;
-&lt;p&gt;依备询材料，加拿大的警察与情报人员对付懂技术的犯罪者与国家行为者时，用的是数十年前的工具。政府把法案定位成补上这个落差的做法。Internet Society 首席执行官在同一场座谈的开场演讲中，提出的替代做法是加强数字取证能力、改善跨境合作、相称地使用元数据，以及跟服务商建立合作关系。演讲的前提是弱点一旦存在，任何找到它的人都能利用。&lt;/p&gt;
-&lt;p&gt;法案到 11 月 7 日仍在参议院委员会审查，依本文的判断，在加拿大的读者现在也不需要调整设置。前面提到的 EFF 文章给每个人的建议是更新浏览器与 App、改用密码管理器并提防钓鱼，这些做法跟法案的结果无关。接下来可以留意委员会的报告有没有修正第二部分，以及参议院三读的时间。&lt;/p&gt;
-&lt;p&gt;英国的《调查权力法》（Investigatory Powers Act 2016）第 253 条同样让政府对服务商发出技术能力通知，通知要经司法专员批准，可以规定的义务包括移除服务商自己施加的电子保护。依本站 9 月的整理，Apple 收到通知之后，从 2025 年 2 月起不再让英国的新用户开启 &lt;a href=&#34;https://anoni.net/news/2026/09/uk-icloud-advanced-data-protection/&#34;&gt;iCloud 高级数据保护&lt;/a&gt;。依政府 5 月的备询材料，加拿大的部长命令由情报专员事先批准。法案也另设例外，服务商评估会引入系统性漏洞时可以不遵守。&lt;/p&gt;
-&lt;p&gt;依 China Law Translate 的非官方英译本，中国大陆《密码法》（2020 年 1 月 1 日施行）第三十一条第二款规定，密码管理部门和有关部门及其工作人员不得要求商用密码从业单位和商用密码检测认证机构披露源代码等密码相关专有信息。译本里读过的第二十六条到第三十二条，没有要求服务商替执法机关解密的条文。协助义务写在别的法律，&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/10/canada-c22-senate-debate/&#34;&gt;本站此前的导读&lt;/a&gt;提到的《反恐怖主义法》第十八条，要求电信业务经营者、互联网服务提供者为公安机关、国家安全机关依法进行防范、调查恐怖活动提供技术接口和解密等技术支持和协助。依本文的归纳，两部法律管的对象不同，《密码法》这一款限制的是主管部门索取源代码。&lt;/p&gt;
-&lt;p&gt;依政府 2020 年 7 月的英文公布，香港《维护国家安全法》第四十三条实施细则让警方在特定情况下向裁判官申请手令，要求服务供应者提供识别记录（identification record，中文名称是本文依英文译出）或解密协助。2026 年 3 月 23 日刊宪的修订细则让警方调查危害国家安全罪行时，可以要求个人（“指明人士”，包括嫌疑人与警方合理相信知道密码的人）提供电子设备的密码，对象不是服务商。无合理辩解而不遵从的，最高罚款 10 万港元及监禁 1 年。依保安局局长 3 月 24 日向媒体的说法，警方要先以誓章向法院申请搜查令，本文对中国大陆与香港都没有查服务商能不能公开收到的要求。&lt;/p&gt;
-&lt;p&gt;比较各地做法时，可以问命令由谁批准、服务商能不能拒绝或公开命令，以及系统性漏洞最后由谁认定。也可以问威胁环境改变之后，谁负责重新评估已经建立的访问能力。另外要问政策想达成的调查目的，能不能用数字取证、跨境合作这类不削弱加密的方法做到。也可以从政府的标准问，标准化的访问能力能不能补上备询材料提到的调查工具落差，又能不能改善 CSE 提到的临时、自愿做法的信息安全问题。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.parl.ca/legisinfo/en/bill/45-1/c-22&#34;&gt;C-22 (45-1) - LEGISinfo - Parliament of Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Parliament of Canada&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/built-in-weakness-lawful-access-and-encryption-in-the-age-of-ai-powered-cyber-threats/&#34;&gt;Built-In Weakness: Lawful Access and Encryption in the Age of AI-Powered Cyber Threats&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.internetsociety.org/blog/2026/10/we-shouldnt-have-to-give-up-our-safety-online-to-be-safe/&#34;&gt;We Shouldn’t Have to Give Up Our Safety Online to Be Safe&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Internet Society&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/opinion/article-the-lawful-access-act-threatens-to-blow-a-hole-in-canadas-national/&#34;&gt;The Lawful Access Act threatens to blow a hole in Canada’s national security&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-09&#34;&gt;2026 年 10 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theglobeandmail.com/politics/article-messaging-service-signal-says-ministers-changes-to-lawful-access-bill/&#34;&gt;Messaging service Signal says minister’s changes to lawful access bill will not persuade it to stay in Canada&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Globe and Mail&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-proposed-surveillance-law-expansion-under-bill-c-22/&#34;&gt;Analysis of Proposed Surveillance Law Expansion under Bill C-22&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-02&#34;&gt;2026 年 6 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20260828-1/index-en.aspx&#34;&gt;Parliamentary Committee Notes: appearance before the Standing Committee on Public Safety and National Security (SECU)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Public Safety Canada&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-05&#34;&gt;2026 年 5 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.legislation.gov.uk/ukpga/2016/25/section/253&#34;&gt;Investigatory Powers Act 2016, section 253&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;legislation.gov.uk&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinalawtranslate.com/en/cryptography-law/&#34;&gt;Cryptography Law of the People&amp;#39;s Republic of China (China Law Translate 英译本)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;China Law Translate&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-06/12/content_2055871.htm&#34;&gt;中华人民共和国反恐怖主义法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2018-06-12&#34;&gt;2018 年 6 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.info.gov.hk/gia/general/202007/06/P2020070600784.htm&#34;&gt;Implementation Rules for Article 43 of the Law of the People&amp;#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region gazetted&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Government&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-06&#34;&gt;2020 年 7 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.doj.gov.hk/tc/legco/pdf/ajls20260324c1.pdf&#34;&gt;2026 年〈中华人民共和国香港特别行政区维护国家安全法第四十三条实施细则〉(修订)实施细则&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;香港律政司&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-24&#34;&gt;2026 年 3 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.doj.gov.hk/tc/community_engagement/press/pdf/pr20260324c2.pdf&#34;&gt;署理律政司司长与保安局局长出席立法会司法及法律事务委员会及保安事务委员会联席会议后会见传媒开场发言&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;香港律政司&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-24&#34;&gt;2026 年 3 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>iOS 27.2 用自拍估算年龄的成年确认</title>
-<link>https://anoni.net/news/zh-cn/2026/11/ios-selfie-age-verification/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/ios-selfie-age-verification</guid>
-<pubDate>Sun, 08 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Apple 在 iOS 与 iPadOS 27.2 加入用自拍估算年龄、确认用户已成年的选项，依 Apple 的支持文档只在澳大利亚、巴西、新加坡与英国提供。到 11 月 7 日为止，中国大陆不在 Apple 列出需要确认年龄的地区内。</description>
-<content:encoded>&lt;p&gt;整理 15 篇原文，来自 Apple、Privacy Guides、Apple Developer 等 7 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Apple 在 iOS 与 iPadOS 27.2 加入一种新的成年确认方式，用户拍下自己的脸，由年龄估算模型判断是否已满 18 岁。依 Apple 10 月 26 日发布的支持文档，自拍选项只在澳大利亚、巴西、新加坡与英国提供。同一份文档列出的年龄确认要求适用于六个地方的 Apple 账户，另外两处是韩国与美国得克萨斯州，这两地没有自拍选项。到 11 月 7 日为止，中国大陆与其他没有列出的地方都不在清单上，当地的用户不必做年龄确认。&lt;/p&gt;
-&lt;p&gt;隐私指南网站 Privacy Guides 10 月 29 日的短讯报道了这项功能，文末写到住在澳大利亚、巴西、新加坡、韩国、英国或得克萨斯州的人都要确认年龄，没有区分哪些地方提供自拍。本文的地区范围以 Apple 的支持文档为准，韩国与得克萨斯州的用户只能用其他方式确认。&lt;/p&gt;
-&lt;p&gt;依 Apple 的说明，年龄确认可能出现在创建新账户、更新系统、更改部分安全设置或下载或购买 18+ 分级 App 的时候，实际情况依所在地区而定。选择自拍时，要把脸放在画面中央，慢慢向四个方向转头拍下脸的各个角度。确认成年之后不必再做一次。&lt;/p&gt;
-&lt;p&gt;同一份说明提到，自拍会同时交给设备上与 Private Cloud Compute（Apple 的云计算服务，Apple 把它描述成设备的安全与隐私保护在云端的延伸）上的年龄估算模型分析，结果在设备上合并。Apple 写明分析过程中包括 Apple 在内的任何人都无法访问自拍。确认之后自拍会删除，不以任何形式保留。Privacy Guides 的文章写成在设备上「或」在 Private Cloud Compute 执行，Apple 的说明则是两边都执行。&lt;/p&gt;
-&lt;p&gt;自拍之外，Apple 列出的方式还有本人的信用卡与扫描证件（护照、驾驶证或政府核发的身份证件），借记卡与礼品卡不能用。已有账户的人，Apple 会先检查账户里有没有信用卡或其他符合条件的资料。依 Apple 另一份说明，证件影像由 Apple 与服务供应商用来确认年龄与防范欺诈，短暂保存后删除。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;年龄估算从脸部影像推测一个人大约几岁，不需要出示证件。Privacy Guides 的文章提到，效果完全取决于估算算法的质量，而且一定会有误判。成年人可能被判成未成年，也可能有相反的情况。到 11 月 7 日为止，本文查不到 Apple 公布的模型名称、误判率或准确度资料，也没有查到独立验证自拍删除与无法访问的报告。&lt;/p&gt;
-&lt;p&gt;Apple 列出的地方，有几处的法规要求 App 商店确认或提供用户的年龄。新加坡资讯通信媒体发展局（IMDA）依《Code of Practice for Online Safety – App Distribution Services》，要求指定的 App 商店 2026 年 4 月 1 日起至少能判断用户是否未满 18 岁，年龄估算、年龄验证或两者并用由商店自行选择。IMDA 的新闻稿写到，目的是降低用户、尤其是儿童接触有害内容的风险，Code 也要求年龄确认做到数据最小化。&lt;/p&gt;
-&lt;p&gt;得克萨斯州的 App 商店责任法（App Store Accountability Act，SB 2420）从 6 月 4 日起适用于在得克萨斯州创建的新 Apple 账户。依 EFF 6 月的文章，巴西 2025 年通过的法律要求 App 商店与操作系统替其他服务提供年龄信号，预计 2027 年初全面遵循。&lt;/p&gt;
-&lt;p&gt;Privacy Guides 的文章逐一比较各种方式，信用卡会交出可识别身份的资料，但下载免费 App 本来就要填付款信息。扫描证件可能让敏感文件落到第三方手上，文中举 Discord 为例，替它处理证件照年龄确认的第三方泄露了约 7 万份证件。自拍做不好同样有风险，替 Roblox 与 ChatGPT 等公司处理年龄验证的 Persona 泄露了自拍数据库。文章的看法是 Apple 的版本在这方面看来好得多，至少比把证件交给第三方好。&lt;/p&gt;
-&lt;p&gt;数字权利组织 EFF 2025 年 1 月讨论脸部年龄估算的文章早于 Apple 推出自拍确认（本文没有查到 EFF 针对 Apple 这项功能的评论），文中写到脸部扫描对隐私与信息安全带来新的威胁。设计不良的系统可能保存脸部资料，甚至跟用户浏览的内容关联起来。EFF 6 月的文章提到，它对欧洲各项年龄验证倡议的回应一直是，强制年龄验证不是保护年轻人的正确方式。Apple 2025 年 11 月针对得克萨斯州法律的开发者公告也写到，这类法律为了让人下载一个 App 就要求收集敏感个人信息，Apple 担心会损害所有用户的隐私。&lt;/p&gt;
-&lt;p&gt;依 Apple 给开发者的问答，App 可以通过 Declared Age Range API（App 向系统查询用户年龄区间的接口）获取年龄信息，用户可以决定要不要分享。在法律要求的地方，Apple 会把当地法律定义的年龄类别提供给 App。依巴西的说明页，开发者为遵守当地法律提出要求时一律分享年龄区间。得克萨斯州的说明页则写一律分享，两地的用户都不能关闭。&lt;/p&gt;
-&lt;p&gt;iOS 26.5 起，用信用卡或证件确认的结果只回传一个不区分方式的 &lt;code&gt;confirmed&lt;/code&gt; 值，本文没有查到自拍确认之后回传什么。加利福尼亚州的 AB 1043 走另一种做法，要求操作系统在账户设置时询问年龄、把年龄范围提供给 App 而不要求验证。AB 1043 经 AB 1856 修改后 2027 年 1 月 1 日起适用（见&lt;a href=&#34;https://anoni.net/news/2026/10/california-ab1856-open-source-exemption/&#34;&gt;加州 AB 1856 的开源操作系统豁免&lt;/a&gt;）。&lt;/p&gt;
-&lt;p&gt;中国大陆不在 Apple 列出的年龄确认地区，也不在提供自拍的地区，说明页只在儿童账户的年龄门槛里列了中国大陆（未满 14 岁）。本文依 Apple 的文档推论，中国大陆的读者可能碰到年龄确认的情况有两种。一是 Apple 账户的地区属于清单上的地方，或在那些地方创建新账户（文档没有写明以账户地区还是所在位置判断）。二是当地之后立法要求 App 商店确认年龄，因为 Apple 的文档写的是依法才适用年龄确认。&lt;/p&gt;
-&lt;p&gt;中国大陆现行的《未成年人网络保护条例》2024 年 1 月 1 日施行，要求智能终端产品制造者在出厂前安装未成年人网络保护软件或显著告知安装渠道。国家网信办 2024 年 11 月 15 日的《移动互联网未成年人模式建设指南》提出终端要提供设置生日、选择年龄或年龄区间的方式、分发平台要设未成年人专区并标注推荐年龄，属于指引而没有施行日期与罚则。国家网信办 2026 年 9 月 18 日公开征求意见的《国务院关于保障未成年人健康安全使用网络的规定（征求意见稿）》第十条拟要求终端制造者设置未成年人模式的联动、一键切换与退出核验，尚未施行。三份文件都没有要求用自拍估算年龄，而依 Apple 给开发者的问答，法律没有要求时 App 只有在用户自己选择分享后才能获取年龄区间。&lt;/p&gt;
-&lt;p&gt;账户在澳大利亚、巴西、新加坡或英国的人被要求确认时，可以比较各种方式留下的资料。已绑定信用卡的账户可能不必另外操作，自拍依 Apple 的说明会送到 Private Cloud Compute 分析后删除，证件影像则由 Apple 与服务供应商短暂保存。到 11 月 7 日为止 Apple 没有公布误判率，自拍无法确认成年时可以重拍，或改用信用卡、证件。不确认也能继续使用设备，代价是不能下载 18+ App，也不能关闭部分安全设置。&lt;/p&gt;
-&lt;p&gt;中国大陆的读者现在不需要调整任何设置。之后可以留意 Apple 会不会把自拍选项扩大到韩国、得克萨斯州或其他地方，会不会公布估算模型的准确度。另一项是巴西预计 2027 年初全面遵循时，操作系统提供的年龄信号如何实现。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149095&#34;&gt;Confirm that you&amp;#39;re an adult with a selfie&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/125666&#34;&gt;Region-specific rules for managing an Apple Account&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/125662&#34;&gt;If you&amp;#39;re asked to confirm that you&amp;#39;re an adult&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/10/29/apple-introduces-selfie-age-verification-in-ios-27-2/&#34;&gt;Apple Introduces Selfie Age Verification in iOS 27.2&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/age-assurance/&#34;&gt;Age assurance developer Q&amp;amp;A&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple Developer&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/126783&#34;&gt;Age requirements for managing an Apple Account in Brazil&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/127462&#34;&gt;Age requirements for managing an Apple Account in the United States (Texas)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;2026 年 6 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/news/?id=2ezb6jhj&#34;&gt;Next steps for apps distributed in Texas&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple Developer&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-04&#34;&gt;2025 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2025/online-safety-code-of-practice-for-app-distribution-services&#34;&gt;New Online Safety Code of Practice for App Distribution Services Enhances Protection for Singapore Users&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-15&#34;&gt;2025 年 1 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/2025/01/ads-code/factsheet-on-age-assurance.pdf&#34;&gt;Factsheet on Age Assurance under the ADS Code&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IMDA&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-15&#34;&gt;2025 年 1 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/06/internet-age-gates-are-growing-global-threat&#34;&gt;Internet Age Gates Are a Growing Global Threat&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-05&#34;&gt;2026 年 6 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/01/face-scans-estimate-our-age-creepy-af-and-harmful&#34;&gt;Face Scans to Estimate Our Age: Harmful and Creepy AF&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-23&#34;&gt;2025 年 1 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.gov.cn/zhengce/content/202310/content_6911288.htm&#34;&gt;未成年人网络保护条例&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中华人民共和国国务院&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-24&#34;&gt;2023 年 10 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2024-11/15/c_1733364304749288.htm&#34;&gt;移动互联网未成年人模式建设指南&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-15&#34;&gt;2024 年 11 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-09/18/c_1791482017777471.htm&#34;&gt;关于《国务院关于保障未成年人健康安全使用网络的规定（征求意见稿）》公开征求意见的通知&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

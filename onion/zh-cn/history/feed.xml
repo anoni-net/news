@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 17 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>社交与通讯 App 的全国封锁与孟加拉政府的命令</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-18/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-18/2026</guid>
+<pubDate>Wed, 18 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你手机上的 Facebook 等 App，可能因政府命令网络运营商封锁而无法连接。这一天，孟加拉电信管制委员会命令网络运营商封锁 Facebook、WhatsApp、Viber 等服务。</description>
+<content:encoded>&lt;p&gt;Facebook、WhatsApp 的网站在中国大陆无法直接连上（GreatFire 对 facebook.com 在 2026 年 11 月 10 日、对 whatsapp.com 在 11 月 8 日的测试结果都是 100% 被封锁，测的是网址能否连上）。孟加拉电信管制委员会（BTRC）在 2015 年 11 月 18 日命令网络运营商封锁通讯与社交服务，当地媒体 bdnews24 引述委员会官员的说法，名单包括 Facebook、WhatsApp、Viber 等（各家报道列出的服务数量不一）。邮电部国务部长宣布封锁是出于安全理由（依 bdnews24 的报道），Global Voices 引述的政府说法则是担心最高法院维持两名政治人物的死刑判决之后出现社会动荡，两人是因 1971 年独立战争期间的罪行被定罪。根据 Global Voices 的整理，Facebook 在政府与 Facebook 代表会面之后于 12 月 10 日解封，邮电部国务部长在 12 月 14 日宣布其余社交与通讯服务也一并解封。安装 OONI Probe 可以检测特定网站或 App 是否受到干扰（结果异常不等于确认封锁），但 OONI 的常见问题写明 OONI Probe 不是隐私工具，监控你网络活动的人（例如政府、网络运营商、雇主）可能看到你在运行它（风险依所在国家与个人处境而不同，2026 年 11 月 14 日查证）。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>伊朗 2026 年的网络过滤与汽油涨价抗议期间的近乎全国断网</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/11-17/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你的浏览器遇到可能仿冒其他网站的中文、韩文等域名时，会在地址栏改为显示 xn-- 开头的编码。这一天，ICANN 董事会通过一项快速申请程序，让各国家与地区可以申请用自己的文字写网址的最后一段。</description>
 <content:encoded>&lt;p&gt;浏览器会把域名里的中文、韩文等文字转成 &lt;code&gt;xn--&lt;/code&gt; 开头的字母与数字串再查询网站的地址，写法触发 Chrome 或 Firefox 的仿冒检查时（例如英文字母混用俄文或希腊文字母），地址栏就改为显示这串编码。管理全球域名的 ICANN 在 2009 年 10 月 30 日的首尔会议通过一项快速申请程序，让各国家与地区申请用自己的文字写网址的最后一段（&lt;code&gt;.cn&lt;/code&gt; 的位置），此前非拉丁文字只能用在域名的前半段。&lt;code&gt;.中国&lt;/code&gt; 与繁体写法的 &lt;code&gt;.中國&lt;/code&gt; 在 2010 年 7 月 8 日完成委派，由中国互联网络信息中心（CNNIC）管理，&lt;code&gt;.香港&lt;/code&gt; 与 &lt;code&gt;.台灣&lt;/code&gt; 分别在 7 月 12 日与 14 日完成委派。中国境内与海外的读者都可以从书签或手动输入打开常用的网站，避免点击形近的网址（本文的推论，来源没有评估效果）。Chrome 的文档里写到密码管理器只在域名完全相符时才自动填入，登录时没有出现保存的密码，就先核对网址（后半句是本文的推论）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>端到端加密与设备上的间谍软件</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/history/10-29/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-29/2026</guid>
-<pubDate>Thu, 29 Oct 2026 01:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你手机上的端到端加密保护传输中的消息，挡不住手机本身被入侵。这一天，WhatsApp 与 Facebook 在美国联邦法院起诉间谍软件公司 NSO Group，指控对方利用 WhatsApp 把间谍软件发送到约 1,400 部手机与设备。</description>
-<content:encoded>&lt;p&gt;端到端加密让消息在传输途中连经手的服务器也读不到，但手机本身被入侵时，消息在手机上解密之后仍可能被读走。WhatsApp 与 Facebook（现在的 Meta）在 2019 年 10 月 29 日向美国加州北区联邦地区法院起诉间谍软件公司 NSO Group，起诉书里写被告因为无法破解端到端加密而通过 WhatsApp 的服务器把恶意程序发送到约 1,400 部手机与设备，在消息解密后读取。法院在 2025 年 11 月作出判决并签发禁止 NSO 用间谍软件以 WhatsApp 为攻击目标的永久禁令，NSO 以禁令会对业务造成无法弥补的损害为由申请暂停执行，2026 年 1 月被上诉法院驳回。一般读者可以让手机上的 App 与系统保持最新，这是本文从 WhatsApp 当年修补漏洞后请用户更新 App 归纳出的通则。需要保护信源的人可以考虑 iPhone 的「锁定模式」，Apple 中国官网的支持页面上写它是为了减少雇佣间谍软件可能利用的攻击面，代价是大多数信息附件与链接预览无法使用（Android 的「高级保护」说明页只写一般性的防护）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
