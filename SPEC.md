@@ -909,7 +909,7 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 
 ### News sitemap
 
-2026-11 的流量以 Google 帶來的讀者為主，另外產生一份照 Google 的 [News sitemap 規格](https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap)寫的 `/news/news-sitemap.xml`，讓新文章上線後更快被新聞介面收錄。
+2026-11 的外部流量以 Google 搜尋為主，Google 新聞與 Discover 幾乎沒有帶來讀者（Umami 沒有 `news.google.com` 的 referrer，Google 帶來的瀏覽過半落在發布八天以後）。另外產生一份照 Google 的 [News sitemap 規格](https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap)寫的 `/news/news-sitemap.xml`，讓新文章上線後有機會更快被新聞介面收錄。
 
 - 只收最近兩天（48 小時）內發布的導讀，以建置當下的台北時間計算，`date.created` 落在範圍內才收。部署每小時重建，過了兩天的文章自動離開。排程中的文章跟一般 sitemap 一樣不收
 - 三個語系的版本各一個 `<url>`，`news:language` 依序寫 `zh-tw`、`zh-cn`、`en`，Google 對中文只接受這兩個代碼
