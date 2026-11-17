@@ -1208,6 +1208,43 @@ def test_sitemap_lists_every_version(fixture_site):
     assert sitemap.index("<loc>https://anoni.net/news/</loc>") < sitemap.index("<loc>https://anoni.net/news/en/</loc>")
 
 
+
+def test_news_sitemap_keeps_two_days_on_clearnet(tmp_path, monkeypatch):
+    """News sitemap 只收 48 小時內發布的導讀，三個語系各一筆，onion 與 ipfs 不產生。見 SPEC.md「News sitemap」。"""
+    import xml.etree.ElementTree as ET
+    # 9/18 00:00 的兩篇剛好滿 48 小時，範圍含邊界。fixture 有一篇的 date.updated 是 9/20 00:00，不能更早
+    monkeypatch.setattr(build, "current_time", lambda: datetime(2026, 9, 20, 0, 0, tzinfo=build.TZ))
+    targets, _, _ = build.build(FIXTURES / "posts", tmp_path)
+    assert not (targets["onion"].out / "news-sitemap.xml").exists()
+    assert not (targets["ipfs"].out / "news-sitemap.xml").exists()
+    text = (targets["clearnet"].out / "news-sitemap.xml").read_text(encoding="utf-8")
+    ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "n": "http://www.google.com/schemas/sitemap-news/0.9"}
+    urls = ET.fromstring(text).findall("s:url", ns)
+    entries = {u.findtext("s:loc", namespaces=ns): u for u in urls}
+    assert len(entries) == 6, sorted(entries)  # 9/18 的兩篇，9/10 那篇已經超過兩天
+    zkp_en = entries["https://anoni.net/news/en/2026/09/zkp-age-verification/"]
+    assert zkp_en.findtext("n:news/n:publication/n:name", namespaces=ns) == "anoni.net"
+    assert zkp_en.findtext("n:news/n:publication/n:language", namespaces=ns) == "en"
+    assert zkp_en.findtext("n:news/n:title", namespaces=ns) == "Limits of zero-knowledge proofs for age verification"
+    assert zkp_en.findtext("n:news/n:publication_date", namespaces=ns).startswith("2026-09-18T00:00:00+08:00")
+    languages = {u.findtext("n:news/n:publication/n:language", namespaces=ns) for u in urls}
+    assert languages == {"zh-tw", "zh-cn", "en"}
+    assert not any("age-verification-roundup" in loc for loc in entries)
+
+    monkeypatch.setattr(build, "current_time", lambda: datetime(2026, 9, 25, 12, 0, tzinfo=build.TZ))
+    targets, _, _ = build.build(FIXTURES / "posts", tmp_path / "later", ["clearnet"])
+    assert ET.fromstring((targets["clearnet"].out / "news-sitemap.xml").read_text(encoding="utf-8")).findall("s:url", ns) == []
+    assert "/news-sitemap.xml" in build.contract_lines([])
+
+
+def test_max_image_preview_only_on_indexable_pages(fixture_site):
+    targets, _, _ = fixture_site
+    for name in ("clearnet", "onion"):
+        out = targets[name].out
+        assert '<meta name="robots" content="max-image-preview:large">' in (out / "index.html").read_text(encoding="utf-8")
+        assert "max-image-preview" not in (out / "2026" / "index.html").read_text(encoding="utf-8")
+        assert "max-image-preview" not in (out / "404.html").read_text(encoding="utf-8")
+
 def test_not_found_page_has_three_languages(fixture_site):
     targets, _, _ = fixture_site
     page = (targets["clearnet"].out / "404.html").read_text(encoding="utf-8")

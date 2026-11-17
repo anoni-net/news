@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{% for item in items %}
+<url>
+<loc>{{ item.loc }}</loc>
+<news:news>
+<news:publication>
+<news:name>{{ publication }}</news:name>
+<news:language>{{ item.language }}</news:language>
+</news:publication>
+<news:publication_date>{{ item.date }}</news:publication_date>
+<news:title>{{ item.title }}</news:title>
+</news:news>
+</url>
+{% endfor %}
+</urlset>

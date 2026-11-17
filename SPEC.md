@@ -51,6 +51,7 @@ templates/               # Jinja2 模板
   404.html.j2
   feed.xml.j2
   sitemap.xml.j2
+  news-sitemap.xml.j2    # 只輸出到 clearnet，見「News sitemap」
   robots.txt.j2          # 只輸出到 onion，clearnet 的 robots.txt 在官網 repo
 static/                  # 各份產物共用的檔案
   css/news.css
@@ -546,6 +547,7 @@ clearnet 掛在 `anoni.net` 的路徑 `/news/` 底下，onion 則照文件站的
 | `/news/2026/09/zkp-age-verification/` | 一篇 |
 | `/news/feed.xml` | RSS 2.0 |
 | `/news/sitemap.xml` | sitemap |
+| `/news/news-sitemap.xml` | 給 Google 新聞的 sitemap，只有 clearnet，見「News sitemap」 |
 | `/news/about/` | 關於頁，見「關於頁」 |
 | `/news/subscribe/` | 用 RSS 訂閱的三個步驟，見「RSS」 |
 | `/news/reading/` | 閱讀說明，見「閱讀說明頁」 |
@@ -659,7 +661,7 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 | `<body>` 裡的連結 `https://anoni.net/…` | 改寫成根目錄的相對路徑，例如 `/docs/…` |
 | Gears 與 API 的連結 | 原樣，這兩個網站不在鏡像裡 |
 | `<head>` 的 canonical、hreflang、og、JSON-LD | 維持 clearnet 的完整網址 |
-| RSS 與 sitemap | 跟 clearnet 相同，全文的連結也不改寫 |
+| RSS 與 sitemap | 跟 clearnet 相同，全文的連結也不改寫。News sitemap 不產生，鏡像不會即時更新，兩天的範圍沒有意義 |
 | `robots.txt` | 不產生，鏡像的根目錄是社群首頁的那一份 |
 | 流量統計 | 無 |
 | 朗讀按鈕、標題字型 | 有，跟 clearnet 相同 |
@@ -900,9 +902,26 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 - `/news/` 與每一篇文章允許索引，導讀歷史的專欄首頁與日期頁也是
 - 年、月封存頁與 `/news/page/2/` 之後的列表頁加 `<meta name="robots" content="noindex, follow">`。內容跟文章重複，搜尋引擎順著連結找到文章就好，不必把列表當成搜尋結果
 - 404 頁加 `noindex`
+- 允許索引的頁面加 `<meta name="robots" content="max-image-preview:large">`，讓 Google 搜尋、新聞與 Discover 可以把 `og:image` 顯示成跟畫面同寬的大圖。沒有這個設定時，Google 可能只用小縮圖。帶 `noindex` 的頁面不加，那些頁面不會出現在搜尋結果裡。onion 與 ipfs 產物照樣輸出，這一行不含網址
 - onion 的 `robots.txt` 允許爬取並列出 onion 版的 sitemap，跟文件站的 onion 版相同，onion 的搜尋引擎可以收錄
 
 上線後在 Search Console 的 `anoni.net` 網域資源提交 `/news/sitemap.xml`，之後定期看 404 報表。文件站的轉址有一批就是從那份報表補的。
+
+### News sitemap
+
+2026-11 的外部流量以 Google 搜尋為主，Google 新聞與 Discover 幾乎沒有帶來讀者（Umami 沒有 `news.google.com` 的 referrer，Google 帶來的瀏覽過半落在發布八天以後）。另外產生一份照 Google 的 [News sitemap 規格](https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap)寫的 `/news/news-sitemap.xml`，讓新文章上線後有機會更快被新聞介面收錄。
+
+- 只收最近兩天（48 小時）內發布的導讀，以建置當下的台北時間計算，`date.created` 落在範圍內才收。部署每小時重建，過了兩天的文章自動離開。排程中的文章跟一般 sitemap 一樣不收
+- 三個語系的版本各一個 `<url>`，`news:language` 依序寫 `zh-tw`、`zh-cn`、`en`，Google 對中文只接受這兩個代碼
+- `news:publication` 的 `news:name` 三個語系都寫 `anoni.net`，跟 JSON-LD 的 `publisher` 相同。Google 新聞從 2025 年起自動產生刊物頁，刊物名稱取自網站名稱。日後 Google 新聞上顯示的名稱不同，改成那個名稱
+- `news:publication_date` 是 `date.created`，含時區。`news:title` 是文章標題
+- 更正不會讓文章回到這份清單，`date.updated` 只反映在一般 sitemap 的 `lastmod`
+- 導讀歷史、分類頁與固定頁面不收
+- 範圍內沒有文章時照樣輸出，只有空的 `<urlset>`
+- 只輸出到 clearnet。onion 不會被 Google 新聞收錄，ipfs 鏡像不會每小時更新
+- 收進網址合約，提交之後網址就不能拿掉
+
+上線後在 Search Console 另外提交 `/news/news-sitemap.xml`。官網 repo 的 `robots.txt` 可以一起列出，不列也不影響 Search Console 的提交。
 
 ### 內容品質
 
