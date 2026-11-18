@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/tv-acr/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
+<news:title>智慧電視的自動內容辨識與廠商對 17 個問題的回答</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/tv-acr/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
+<news:title>智能电视的自动内容识别与厂商对 17 个问题的回答</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/tv-acr/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
+<news:title>Automatic content recognition on smart TVs and manufacturers&#39; answers to 17 questions</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/indonesia-komdigi-takedown/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-17T00:05:00+08:00</news:publication_date>
 <news:title>New York City&#39;s surveillance pricing ban bill and the FTC&#39;s draft policy statement on personalized pricing</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/emudhra-incident-closeout/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-17T00:00:00+08:00</news:publication_date>
-<news:title>eMudhra 憑證事件的事故報告、macOS 修正版與 G1 根的期限</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/emudhra-incident-closeout/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-17T00:00:00+08:00</news:publication_date>
-<news:title>eMudhra 证书事件的事故报告、macOS 修复版与 G1 根的期限</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/emudhra-incident-closeout/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-17T00:00:00+08:00</news:publication_date>
-<news:title>The eMudhra incident report, macOS fixes and the deadline for the G1 root</news:title>
 </news:news>
 </url>
 </urlset>

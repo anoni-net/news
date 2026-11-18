@@ -6,7 +6,97 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 18 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 19 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>智慧電視的自動內容辨識與廠商對 17 個問題的回答</title>
+<link>https://anoni.net/news/2026/11/tv-acr/</link>
+<guid isPermaLink="false">anoni-news:2026/11/tv-acr</guid>
+<pubDate>Thu, 19 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>The Verge 向 11 家電視與串流裝置廠商提出 17 個是非題，7 家回答。Samsung、LG 與 Amazon 對 The Verge 表示自動內容辨識（ACR）預設關閉，Roku 表示對應的功能在美國預設關閉。依 The Verge 轉述的 Northeastern 大學量測，選擇退出後 Samsung、Roku 與 Vizio 的電視仍有疑似相關的流量。流量經過加密，內容無法確認。Samsung 台灣的隱私權政策寫到可以從設定停用（11 月 14 日查證）。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，來自 The Verge、arXiv、Samsung 等 5 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;連網的智慧電視可能用自動內容辨識（ACR）記錄使用者在看什麼。The Verge 的電視評測作者 11 月 11 日公布向 11 家廠商提出的 17 個是非題與各家的回答。Roku 的回答限定美國，其他各家沒有寫適用地區。Samsung 台灣與香港的隱私權政策沒有寫預設值，其他品牌在兩地的設定本站沒有查證。&lt;/p&gt;
+&lt;p&gt;依 The Verge 11 月 4 日的另一篇報導，ACR 取樣電視正在播放的聲音或畫面，轉成數位指紋（fingerprint）送到資料庫比對出節目。廠商用比對結果推薦節目、統計收視與投放廣告。&lt;/p&gt;
+&lt;p&gt;受邀的 11 家之中，Amazon、Apple、Google、LG、Roku、Samsung 與 TCL 提供了回答。依 The Verge 的報導，Hisense 五次聯繫都沒有回應，Panasonic、Sony 與 Walmart 旗下的 Vizio 在 17 題都沒有提供答案。以下的廠商答覆都出自 The Verge 的報導。&lt;/p&gt;
+&lt;p&gt;Apple 與 Google 的答覆分別是 Apple TV 4K 不使用 ACR、Google TV 作業系統本身不用 ACR 擷取畫面，Google 也提到電視廠商可能另外安裝 ACR 軟體。Samsung 的答覆是電視不擷取、不儲存截圖、螢幕錄影或影片（screenshots, screen recordings, or video recordings）。Samsung 台灣的隱私權政策（2024 年 2 月 1 日生效）則寫到可能用 ACR 擷取收看紀錄，電視「會傳輸視訊片段或電視選台器資訊，以判定收看的節目」。LG 的答覆是它的 ACR 用電視內部音效板產生的音訊指紋，不擷取畫面。&lt;/p&gt;
+&lt;p&gt;Samsung 的答覆是包含 ACR 的收看資訊服務預設不啟用，要使用者主動同意。LG 與 Amazon 也回答 ACR 預設關閉，Roku 的對應功能 Smart TV Experience 在美國預設關閉。TCL 把 ACR 歸給作業系統供應商或第三方軟體，使用者初次設定時決定是否開啟，之後可以關閉。&lt;/p&gt;
+&lt;p&gt;依 The Verge 11 月 4 日轉述的 Northeastern 大學研究（本文沒有取得論文本身），研究者監測 10 家廠商的 12 台電視，測試選擇退出 ACR 是否有效。多數電視退出後就不再送資料到疑似 ACR 的位址，Samsung、Roku 與 Vizio 退出後仍測得相關流量。依 The Verge 引述的論文，送往這些位址的流量幾乎都經過加密。研究者無法確認退出後殘留的流量是否為 ACR 資料，也無法得知伺服器端是否處理或保存資料。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 The Verge 的轉述，有 ACR 流量的電視都會辨識天線收到的無線電視訊號。在 Google 與 Amazon 以外的電視上，ACR 也會辨識自家串流服務播放的內容。HDMI 輸入（接機上盒、遊戲機的接口）同樣在辨識範圍內，Netflix、YouTube 這類第三方 App 幾乎沒有 ACR 流量。另一篇 2024 年發表在網路量測研討會 IMC 的論文測了 Samsung 與 LG，結論是電視只當外接螢幕用時 ACR 照樣運作。&lt;/p&gt;
+&lt;p&gt;Samsung 對 The Verge 回答，選擇退出後電視會立即停止蒐集新的收視資料，先前的 ACR 資料也會從伺服器刪除。依 The Verge 對 Northeastern 研究的轉述，Samsung 的 Tizen 系統退出後相關流量減少但沒有停止，看天線、自家串流與 HDMI 時都還測得到。2024 年的 IMC 論文測 Samsung 時，觀察到的則是退出後送往 ACR 伺服器的流量停止，兩次量測的時間與機型不同。&lt;/p&gt;
+&lt;p&gt;依同一份轉述，Roku 作業系統的兩台電視（Roku 與 TCL 的機型）退出後，ACR 仍作用在自家的 The Roku Channel。TCL 在選單裡揭露了這項限制，Roku 的電視選單沒有。Roku 的 ACR 服務政策頁則寫到，關閉 Smart TV Experience 不影響透過網路存取或串流內容時蒐集的資料，啟用期間蒐集的資料也仍由 Roku 保留、可能分享給第三方。&lt;/p&gt;
+&lt;p&gt;依同一份轉述，Vizio 的電視退出前後，相關流量沒有變化。Vizio 發言人在報導刊出後提供聲明，否認研究者看到的加密流量是 ACR 資料，表示那些是診斷、效能這類例行營運資料。&lt;/p&gt;
+&lt;p&gt;依同一份轉述，研究者也在 Vidaa 作業系統（Hisense、Toshiba 等品牌的電視採用）發現漏洞，可以收到其他 Vidaa 電視的 ACR 辨識結果。每則訊息帶有無法重設的電視識別碼、輸入來源與音訊指紋，研究者三小時內收到超過 100 萬台電視的資料。Vidaa 確認漏洞後改成需要登入，但到 11 月 4 日報導刊出時訊息仍未加密。&lt;/p&gt;
+&lt;p&gt;美國德州檢察長 2 月與 5 月先後與 Samsung、LG 達成協議。依 2 月 26 日的新聞稿，Samsung 必須取得德州消費者的明確同意，才能蒐集或處理 ACR 收視資料。5 月 11 日的新聞稿寫到與 LG 的和解是為了保護德州居民，要求取得知情同意、電視更新時跳出說明，也要提供清楚簡單的退出方式。新聞稿沒有寫其他地方的電視是否一併更新，對 Sony、Hisense 與 TCL 的案件到 5 月 11 日仍在進行，之後的進展本文沒有查到。&lt;/p&gt;
+&lt;p&gt;Samsung 美國支援頁提到 ACR 只在設定電視時同意收看資訊服務才會運作，之後隨時可以到設定選單關閉，頁面沒有列出選單路徑。Samsung 台灣的隱私權政策寫到可以隨時到設定功能表停用收看資訊服務，香港的英文政策頁有相同的說明。Roku 的政策頁列出美國機型的路徑，是到 Settings &amp;gt; Privacy &amp;gt; Smart TV Experience 取消勾選，關閉之後仍會收到個人化廣告。其他品牌在台灣的選單路徑本站沒有查證，要以電視上的選單與各品牌的官方說明為準。&lt;/p&gt;
+&lt;p&gt;依 The Verge 的轉述，Northeastern 研究者建議最簡單的做法是拔掉電視的有線與無線網路，改用不執行 ACR 的串流裝置。想繼續用內建 App 的人，研究者建議選 webOS、Fire TV、Sony 的 Google TV 與 Vidaa（前述有漏洞的系統）並盡量退出，也列出可以用 Pi-hole（在家用網路封鎖特定網域的開源工具）封鎖的端點。本站 11 月 13 日也整理過&lt;a href=&#34;https://anoni.net/news/2026/11/android-tv-residential-proxy/&#34;&gt;預載後門的 Android 電視盒&lt;/a&gt;被轉租成住宅代理的事件。&lt;/p&gt;
+&lt;p&gt;不想仰賴廠商落實設定的人可以斷開電視的網路，代價是內建的串流 App 都無法使用（本文的推論）。Amazon 與 Google 對 The Verge 回答，斷網期間可能在本機暫存資料或診斷紀錄，重新連線後再傳送。Roku 回答使用資料可能暫存到連線恢復或關機為止，TCL 回答在使用者沒有退出時會暫存診斷與效能資料，重新連線後處理。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1012372/tv-privacy-acr-questions&#34;&gt;I asked every TV manufacturer 17 questions about how they spy on you&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1026088/northeastern-university-acr-tracking-study&#34;&gt;Does opting out of TV tracking work?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2409.06203&#34;&gt;Watching TV with the Second-Party: A First Look at Automatic Content Recognition Tracking in Smart TVs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;arXiv&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-09-10&#34;&gt;2024 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/us/support/answer/ANS10010616/&#34;&gt;Samsung Smart TV Automatic Content Recognition (ACR) Feature&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.roku.com/api/v1/published/acrservicepolicy/en/US/text&#34;&gt;Roku ACR Service Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Roku&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.samsung.com/tw/info/privacy/&#34;&gt;三星隱私權政策, 三星的承諾, 全球隱私權政策 | Samsung 台灣&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/hk_en/info/privacy/&#34;&gt;Samsung Electronics Limited : Local Privacy Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs&#34;&gt;Texas Attorney General settlement with Samsung over smart TV ACR&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-26&#34;&gt;2026 年 2 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-major-agreement-lg-protect-texans-privacy-and-stop-data-being&#34;&gt;Texas Attorney General settlement with LG over smart TV ACR&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;2026 年 5 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>印尼社群內容下架的監測統計與通訊部的回應</title>
 <link>https://anoni.net/news/2026/11/indonesia-komdigi-takedown/</link>
@@ -1805,112 +1895,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/publications/files/Dforme.pdf&#34;&gt;Personal Data (Privacy) Ordinance Data Access Request Form&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>OpenSSH 在 musl 系統上的長密碼登入繞過漏洞</title>
-<link>https://anoni.net/news/2026/11/openssh-sshole/</link>
-<guid isPermaLink="false">anoni-news:2026/11/openssh-sshole</guid>
-<pubDate>Mon, 09 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>OpenSSH 11 月 5 日發布 10.6p2，修補超長密碼可以登入沒有設密碼帳號的漏洞。只有 Linux 上用 musl libc、不經 PAM 驗證密碼的 sshd 在範圍內，例如 Alpine Linux。依 OpenSSH 維護者與 HKCERT 的說明，Debian、Ubuntu、Red Hat 這類用 glibc 的系統不在範圍內，到 11 月 8 日兩家發行版的追蹤頁還沒有標為不受影響。在 Alpine 上執行 sshd 的人要更新或關閉密碼登入。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，來自 OpenSSH、Alpine Linux、oss-security 等 11 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;OpenSSH 在 11 月 5 日發布 10.6p2，修補一個用超長密碼就能登入「沒有設密碼的帳號」的漏洞，發現者取名為 *sshole。範圍很窄，只有 Linux 上用 musl libc（C 語言的標準函式庫，程式呼叫系統功能時經過它）、而且不經 PAM（Linux 上統一處理登入驗證的模組）驗證密碼的 sshd（OpenSSH 的伺服器程式）受影響。依 OpenSSH 維護者在 Mastodon 的貼文，以及香港電腦保安事故協調中心（HKCERT）與 Red Hat 的說明，Debian、Ubuntu、Red Hat 這類用 glibc 的系統不在範圍內。需要檢查的是 Alpine Linux（常用來製作容器映像的發行版）上有執行 sshd 的機器，以及其他用 musl、又裝了 OpenSSH 的系統，例如部分嵌入式裝置。&lt;/p&gt;
-&lt;p&gt;依 Alpine 的安全公告，四個條件同時成立才受影響。sshd 用的是 Alpine 預設不含 PAM 的 &lt;code&gt;openssh-server&lt;/code&gt;，或是含 PAM 的版本但設成 &lt;code&gt;UsePAM no&lt;/code&gt;。密碼登入保持開啟，這是 OpenSSH 的預設。機器上有密碼欄位為 &lt;code&gt;*&lt;/code&gt; 的帳號（只用金鑰登入、沒有設密碼的帳號常是這樣），另外至少還有一個帳號設了密碼。&lt;/p&gt;
-&lt;p&gt;符合條件時，攻擊者只要知道那個 &lt;code&gt;*&lt;/code&gt; 帳號的名稱，送出 257 到 1,024 位元組的任意密碼就能登入。公告寫只需要一次連線，每次都會成功。&lt;/p&gt;
-&lt;p&gt;依同一份公告的說明，不經 PAM 時 sshd 用 &lt;code&gt;crypt()&lt;/code&gt; 把收到的密碼算成雜湊，再跟帳號的密碼欄位比對。欄位太短、放不下 salt（混進密碼一起計算的隨機值）時，sshd 會借用其他帳號的 salt。musl 的 &lt;code&gt;crypt()&lt;/code&gt; 遇到超過 256 位元組的密碼時回傳字串 &lt;code&gt;*&lt;/code&gt; 當作錯誤標記，跟沒有密碼的帳號欄位相同，比對就成立了。依 oss-security 郵件列表上的通報，修補版改成檢查雜湊的最短長度，不再接受 &lt;code&gt;*&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;發現者的說明頁把成因追溯到三個專案各自的修改。2012 年 musl 為了避免超長密碼拖慢伺服器，把密碼限制在 256 位元組。2016 年 OpenSSH 改成借用其他帳號的 salt，用意是不讓攻擊者從回應時間判斷帳號存不存在，Alpine 則在 2022 年的 3.16 版前後把 root 的密碼欄位改成 &lt;code&gt;*&lt;/code&gt;。說明頁寫 OpenSSH 在 OpenBSD 與 glibc 上測試，musl 不測試 sshd，多數發行版又經過 PAM。&lt;/p&gt;
-&lt;p&gt;依 Alpine 的公告，OpenSSH 預設的 &lt;code&gt;PermitRootLogin prohibit-password&lt;/code&gt; 不讓 root 用密碼登入。其他能登入的帳號若能透過 doas（類似 sudo 的提權工具）取得 root 權限，這道設定就擋不住。舊版的官方雲端映像內建一個 &lt;code&gt;alpine&lt;/code&gt; 帳號，密碼欄位是 &lt;code&gt;*&lt;/code&gt;，用 doas 也不必輸入密碼。公告提到這些映像第一次開機時是安全的，管理者替任何帳號設了密碼之後（例如主控台的登入密碼）就可以被利用。&lt;/p&gt;
-&lt;p&gt;OpenSSH 的發布說明寫他們認為根本原因在 sshd 之外，但可以在 sshd 這一端避開。依 Ars Technica 的報導，一位 musl 開發者的立場是問題出在呼叫端的用法，musl 本身沒有 bug。他也提到 musl 計畫在之後的版本修改這個機制。&lt;/p&gt;
-&lt;p&gt;漏洞之後取得 CVE（公開漏洞的統一編號）CVE-2026-123158，嚴重度評分（CVSS，滿分 10）為 8.1。到 11 月 8 日，OpenSSH、Alpine、Ars Technica 與 iThome 都沒有提到實際被利用的案例，HKCERT 的通報則寫已經有公開的 PoC（證明漏洞能被利用的程式）。依 Ars Technica 引述資安公司 Detectify 的說法，Shodan（掃描全網路裝置的搜尋引擎）列出約 2,200 萬台開著 SSH 22 埠的系統。Ars 的評估是其中只有一部分符合條件，但逐台測試又快又容易，找出受影響的裝置不需要花太多力氣。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;Red Hat 的說明頁寫旗下產品不受影響，因為產品裡的 OpenSSH 連結的是 glibc，也預設使用 PAM。到 11 月 8 日，Debian 的追蹤頁把 bookworm、trixie 的 OpenSSH 標成 vulnerable、緊急程度標 unimportant，Ubuntu 的頁面則標「Needs evaluation」。Debian 的表以 sid 的 &lt;code&gt;1:10.6p2-1&lt;/code&gt; 為修正版本，更早的版本都標 vulnerable，本文據此推論是依版本號標示。緊急程度標 unimportant，也與 HKCERT、OpenSSH 維護者寫的 glibc 系統不受影響一致。&lt;/p&gt;
-&lt;p&gt;Ars 的報導寫 Docker Hub 上的 Alpine 基礎映像下載超過 10 億次，不過依 Alpine 的公告，容器裡沒有執行 sshd 的使用者不受影響。用 cloud-init（雲端主機第一次開機時套用設定的工具）寫入 &lt;code&gt;PasswordAuthentication no&lt;/code&gt; 的雲端映像也不在範圍內。&lt;/p&gt;
-&lt;p&gt;依 Ars Technica 的報導，Alpine 長年用在路由器、智慧電視與工業控制器，這類裝置很多很難更新。發現者把 OpenWrt、Buildroot、Yocto 列為用 musl 的系統。Ars 補充 OpenWrt 預設的 SSH 伺服器是 Dropbear，另外安裝 OpenSSH 才在範圍內。Ars 也寫發現者說 Buildroot 與 Yocto 受影響，但到 11 月 5 日還沒有確認。&lt;/p&gt;
-&lt;p&gt;用 Raspberry Pi OS 的樹莓派屬於 Debian 系、用 glibc，本文推論不在範圍內，裝 Alpine 的則照 Alpine 的條件檢查。家用 NAS 與路由器是否受影響，本文參考的來源都沒有提到，到 11 月 8 日也沒有查到廠商的公告。&lt;/p&gt;
-&lt;p&gt;依維護者的貼文，OpenSSH 團隊得知問題的隔天就發布修正版。理由是團隊最近多次遇到 AI 代理很快重新發現已知的漏洞，有時只隔幾小時。團隊因此認為長時間的保密期是危險的做法，主要對攻擊者有利。發布說明也寫，目前會更頻繁地發布修正版，不再累積到下一個預定版本。&lt;/p&gt;
-&lt;p&gt;依 Alpine 的公告，在 Alpine 上自己管理 sshd 的人要更新 &lt;code&gt;openssh&lt;/code&gt; 套件並重新啟動 sshd，只升級套件不會替換已經在執行的服務。Alpine 從 3.16 起的每個版本都有修補套件，包含已經停止支援的版本，版本對照與指令見公告。上游的修正版本是 OpenSSH 10.6p2，各系統的修補套件可能沿用舊的版本號（Alpine 就是如此），本文參考的來源沒有寫其他系統如何更新。&lt;/p&gt;
-&lt;p&gt;暫時無法更新時可以關閉密碼登入。依 oss-security 的通報，關閉之後就能避開漏洞，代價是不能再用密碼登入。Alpine 的公告提醒先確認金鑰登入可用，並保留目前的連線直到新的登入測試成功。&lt;/p&gt;
-&lt;p&gt;公告也列出事後檢查的方法，看登入紀錄裡有沒有沒設密碼的帳號出現 &lt;code&gt;Accepted password&lt;/code&gt;，無法排除時把機器當成已被入侵處理。只用 Debian、Ubuntu、Red Hat 系統的人，依維護者與 HKCERT 的說明不需要為這個漏洞改設定。這是依 glibc 與 PAM 的條件推論，到 11 月 8 日 Debian 與 Ubuntu 的追蹤頁還沒有跟著更新。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openssh.com/releasenotes.html#10.6p2&#34;&gt;OpenSSH Release Notes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenSSH&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/&#34;&gt;Security advisory: openssh-server password authentication bypass&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Alpine Linux&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.openwall.com/lists/oss-security/2026/11/05/3&#34;&gt;&amp;#34;sshole&amp;#34;: password authentication bypass: OpenSSH + musl libc&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;oss-security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hachyderm.io/@damienmiller/117563026759098135&#34;&gt;OpenSSH 10.6p2 has been released with a workaround for a critical vulnerability&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Hachyderm.io&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sshhole.com&#34;&gt;*sshole&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;sshhole.com&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/&#34;&gt;Meet *sshole, the vulnerability that lets hackers SSH into Linux devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180281&#34;&gt;OpenSSH發布緊急更新，修補可利用長密碼繞過身分驗證的資安漏洞SSHole&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://access.redhat.com/security/cve/CVE-2026-123158&#34;&gt;CVE-2026-123158&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Red Hat&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://security-tracker.debian.org/tracker/CVE-2026-123158&#34;&gt;CVE-2026-123158&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Debian&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ubuntu.com/security/CVE-2026-123158&#34;&gt;CVE-2026-123158&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ubuntu&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hkcert.org/security-bulletin/openssh-multiple-vulnerabilities_20261106&#34;&gt;OpenSSH Security Restriction Bypass Vulnerability&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;HKCERT&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
