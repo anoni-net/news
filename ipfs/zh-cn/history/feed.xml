@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 18 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 19 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>中国网络诽谤与寻衅滋事的司法解释，以及印度因脸书帖子与点赞被捕的案件</title>
+<link>https://anoni.net/news/zh-cn/history/11-19/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-19/2026</guid>
+<pubDate>Thu, 19 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>你在社交平台的帖子，在中国大陆可能依 2013 年两高司法解释诽谤被认定为“情节严重”，或以寻衅滋事罪论处（2026 年 11 月查证）。这一天，印度两名因脸书帖子与点赞被捕的女子交保，报业评议会主席要求处分逮捕她们的警员。</description>
+<content:encoded>&lt;p&gt;在中国大陆，2013 年最高人民法院与最高人民检察院的司法解释把利用信息网络诽谤他人的同一信息被转发 500 次以上或被点击浏览 5000 次以上认定为“情节严重”，也把编造虚假信息在网上散布、起哄闹事并造成公共秩序严重混乱的情形以寻衅滋事罪论处（本站 2026 年 11 月 14 日查证最高人民法院网站公布的解释全文）。印度孟买近郊 Palghar 一名女子 2012 年 11 月在脸书质疑孟买全市为一位政治人物的葬礼停摆，她与另一名点赞的女子遭警方依刑法与印度《2000 年信息技术法》（Information Technology Act）第 66A 条的规定逮捕（逮捕日印度通讯社 PTI 的报道是 18 日周日，BBC 的是 19 日周一）。两人 19 日交保，PTI 当天的报道写逮捕引发众怒，印度报业评议会（Press Council of India）主席要求立即处分涉案的警员。第 66A 条处罚通过计算机或通信设备发送“严重冒犯”的信息，或明知不实仍为了造成“困扰、不便”而发送的信息，印度最高法院 2015 年 3 月 24 日以“困扰、不便”这类字眼没有定义、可能限制大量受保护的言论为由宣告整条违宪（条文与判决理由依哥伦比亚大学的言论自由判例数据库 Global Freedom of Expression 的整理，判决书本身没有提到这起逮捕）。依印度的数字权利组织 Internet Freedom Foundation 与同一数据库的整理，最高法院 2022 年 10 月 12 日再命令结束判决后仍在进行的相关案件，也不得再依这条立案。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>社交与通讯 App 的全国封锁与孟加拉政府的命令</title>
 <link>https://anoni.net/news/zh-cn/history/11-18/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在中国大陆的营业厅办手机卡，要先登记真实身份并通过人像比对。这一天，印尼开始要求申办预付费手机卡时用身份证号与家庭登记号码向政府的人口数据库核验。</description>
 <content:encoded>&lt;p&gt;在中国大陆办手机卡，运营商要依工信部 2013 年 9 月 1 日施行的《电话用户真实身份信息登记规定》登记用户的真实身份（据 China Justice Observer 的法规数据库），2019 年 12 月 1 日起在营业厅等实体渠道办卡还要先通过人像比对（据自由亚洲电台与凤凰网大风号的自媒体文章转述工信部的通知）。印尼通信部在 2017 年 10 月 31 日开始要求申办预付费手机卡时用身份证号与家庭登记号码向人口登记总局的数据库核验，据 Bisnis.com 转述的该部说法，目的是防止号码被滥用。detikInet 在 2018 年 3 月报道，有一个身份证号被用来登记了 50 个手机号码（通信部在书面声明中称这是未经授权的使用、不是数据泄露），网站上也流传着身份证号与家庭登记号码。按 ANTARA 与 Bisnis.com 转述现在的通信与数字部说法，印尼公民 2026 年 7 月起新办号码改用身份证号加人脸识别，每个身份在每家运营商最多只能有 3 个预付费号码（2026 年 10 月查证）。中国境内与海外的读者目前都不需要因为印尼的规定做什么。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>地址栏里 xn-- 开头的网址</title>
-<link>https://anoni.net/news/zh-cn/history/10-30/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/10-30/2026</guid>
-<pubDate>Fri, 30 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你的浏览器遇到可能仿冒其他网站的中文、韩文等域名时，会在地址栏改为显示 xn-- 开头的编码。这一天，ICANN 董事会通过一项快速申请程序，让各国家与地区可以申请用自己的文字写网址的最后一段。</description>
-<content:encoded>&lt;p&gt;浏览器会把域名里的中文、韩文等文字转成 &lt;code&gt;xn--&lt;/code&gt; 开头的字母与数字串再查询网站的地址，写法触发 Chrome 或 Firefox 的仿冒检查时（例如英文字母混用俄文或希腊文字母），地址栏就改为显示这串编码。管理全球域名的 ICANN 在 2009 年 10 月 30 日的首尔会议通过一项快速申请程序，让各国家与地区申请用自己的文字写网址的最后一段（&lt;code&gt;.cn&lt;/code&gt; 的位置），此前非拉丁文字只能用在域名的前半段。&lt;code&gt;.中国&lt;/code&gt; 与繁体写法的 &lt;code&gt;.中國&lt;/code&gt; 在 2010 年 7 月 8 日完成委派，由中国互联网络信息中心（CNNIC）管理，&lt;code&gt;.香港&lt;/code&gt; 与 &lt;code&gt;.台灣&lt;/code&gt; 分别在 7 月 12 日与 14 日完成委派。中国境内与海外的读者都可以从书签或手动输入打开常用的网站，避免点击形近的网址（本文的推论，来源没有评估效果）。Chrome 的文档里写到密码管理器只在域名完全相符时才自动填入，登录时没有出现保存的密码，就先核对网址（后半句是本文的推论）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

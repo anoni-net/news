@@ -6,7 +6,16 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 18 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 19 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>台灣社維法的散佈謠言條款，以及印度因臉書貼文與按讚被捕的案件</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-19/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-19/2026</guid>
+<pubDate>Thu, 19 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在社群平台的貼文，在台灣可能依《社會秩序維護法》的散佈謠言條款被處以拘留或罰鍰（2026 年 11 月查證）。這一天，印度兩名因臉書貼文與按讚被捕的女子交保，報業評議會主席要求處分逮捕她們的警員。</description>
+<content:encoded>&lt;p&gt;你在社群平台或論壇的貼文，在台灣可能依《社會秩序維護法》第 63 條第 1 項第 5 款的「散佈謠言，足以影響公共之安寧者」被處三日以下拘留或新臺幣三萬元以下罰鍰（本站 2026 年 11 月 14 日查證全國法規資料庫的條文）。印度孟買近郊 Palghar 一名女子 2012 年 11 月在臉書質疑孟買全市為一位政治人物的葬禮停擺，她與另一名按讚的女子遭警方依刑法與印度《2000 年資訊科技法》（Information Technology Act）第 66A 條的規定逮捕（逮捕日印度通訊社 PTI 的報導是 18 日週日，BBC 的是 19 日週一）。兩人 19 日交保，PTI 當天的報導寫逮捕引發眾怒，印度報業評議會（Press Council of India）主席要求立即處分涉案的警員。第 66A 條處罰透過電腦或通訊設備傳送「嚴重冒犯」的訊息，或明知不實仍為了造成「困擾、不便」而傳送的訊息，印度最高法院 2015 年 3 月 24 日以「困擾、不便」這類字眼沒有定義、可能限制大量受保護的言論為由宣告整條違憲（條文與判決理由依哥倫比亞大學的言論自由判例資料庫 Global Freedom of Expression 的整理，判決書本身沒有提到這起逮捕）。依印度的數位權利組織 Internet Freedom Foundation 與同一資料庫的整理，最高法院 2022 年 10 月 12 日再命令結束判決後仍在進行的相關案件，也不得再依這條立案。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>社群與通訊 App 的全國封鎖與孟加拉政府的命令</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-18/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在台灣辦預付卡，業者要先登錄你的姓名與兩種身分證明文件號碼才能開通。這一天，印尼開始要求申辦預付卡時用身分證號與家戶登記號碼向政府的人口資料庫驗證。</description>
 <content:encoded>&lt;p&gt;在台灣辦預付卡，依《行動寬頻業務管理規則》，業者要核對並登錄姓名、住址與兩種身分證明文件號碼後才能開通。印尼通訊部在 2017 年 10 月 31 日開始要求申辦預付卡時用身分證號與家戶登記號碼向人口登記總局的資料庫驗證，依 Bisnis.com 轉述的部會說法，目的是防止門號被濫用。依 detikInet 2018 年 3 月的報導，有一個身分號碼被用來登記了 50 個門號（通訊部的書面聲明稱這是未經授權的使用、不是資料外洩），網站上也流傳著身分號碼與家戶登記號碼。依 ANTARA 與 Bisnis.com 轉述現在的通訊與數位部說法，印尼公民 2026 年 7 月起新辦門號改用身分證號加臉部辨識，新規定也限制每個身分在每家業者最多 3 個預付門號（2026 年 10 月查證）。台灣讀者目前不需要因此做什麼。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>網址列裡 xn-- 開頭的網址</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/10-30/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/10-30/2026</guid>
-<pubDate>Fri, 30 Oct 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的瀏覽器遇到可能仿冒其他網站的中文、韓文等網域時，會在網址列改顯示 xn-- 開頭的編碼。這一天，ICANN 董事會通過一項快速申請程序，讓各國家與地區可以申請用自己的文字寫網址的最後一段。</description>
-<content:encoded>&lt;p&gt;瀏覽器會把網域裡的中文、韓文等文字轉成 &lt;code&gt;xn--&lt;/code&gt; 開頭的英數字串再查詢網站的位址，寫法觸發 Chrome 或 Firefox 的仿冒檢查時（例如英文字母混用俄文或希臘文字母），網址列就改顯示這串編碼。管理全球網域名稱的 ICANN 在 2009 年 10 月 30 日的首爾會議通過一項快速申請程序，讓各國家與地區申請用自己的文字寫網址的最後一段（&lt;code&gt;.tw&lt;/code&gt; 的位置），此前非拉丁文字只能用在網域的前半段。&lt;code&gt;.中國&lt;/code&gt; 與 &lt;code&gt;.中国&lt;/code&gt; 在 2010 年 7 月 8 日完成委派、交給當地機構管理，&lt;code&gt;.香港&lt;/code&gt; 與 &lt;code&gt;.台灣&lt;/code&gt; 分別在 7 月 12 日與 14 日完成委派。讀者可以從書籤或手動輸入開啟常用的網站，避開點進形近的網址（本文的推論，來源沒有評估效果）。Chrome 的文件提到密碼管理員只在網域完全相符時才自動填入，登入時密碼沒有跳出來就可以先核對網址（後半句是本文的推論）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
