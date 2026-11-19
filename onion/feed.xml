@@ -6,7 +6,75 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Thu, 19 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>OONI Probe 的 TLS Middlebox 實驗與資料蒐集問卷</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ooni-tls-middlebox/</link>
+<guid isPermaLink="false">anoni-news:2026/11/ooni-tls-middlebox</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>OONI 11 月 10 日公告 Probe 新增定位審查設備的 TLS Middlebox 實驗，公告發布時 App 只支援預設模式。可能推估出使用者所在城市的進階模式只在命令列版本提供，需自行選擇加入。OONI 同時開放問卷到 12 月 10 日，詢問使用者能否接受蒐集更多地理與網路資料。沒有執行 Probe、也不用 OONI 資料的讀者不受影響。</description>
+<content:encoded>&lt;p&gt;整理 6 篇原文，來自 OONI&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;OONI 11 月 10 日在部落格公告，OONI Probe 新增一項 TLS Middlebox 實驗，用來找出攔截加密連線（TLS）的審查設備位在網路路徑上的哪個位置。OONI Probe 是量測網站封鎖的軟體，任何人都可以在自己的網路上執行，量測結果公開成開放資料。實驗已放進命令列版本（在終端機輸入指令操作的版本）v3.31.0，以及手機與桌面 App 的 v6.3.0。公告發布時 App 只支援預設模式，蒐集較多資料的進階模式只有命令列版本提供，而且只開放使用者選擇加入。&lt;/p&gt;
+&lt;p&gt;OONI 同一天發布一份問卷，詢問使用者能否接受 OONI 蒐集更多地理與網路層級的資料，以及這些資料對自己有多少用處。實驗公告提到，OONI 想在把進階模式加進 App 之前先收集社群的意見，App 是全球多數 Probe 使用者使用的版本。問卷開放到 12 月 10 日，問卷公告也歡迎讀者轉給其他 Probe 使用者，以及在工作中使用 OONI 量測資料的人。沒有執行 Probe、也不用 OONI 資料的讀者不必做任何事。&lt;/p&gt;
+&lt;p&gt;中間設備（middlebox）是位在使用者與網站之間、會檢查或干擾流量的網路設備。OONI 的測試規格寫到，實驗偵測的是依 SNI（建立 TLS 加密連線時以明文送出的網站名稱）攔截連線的設備。根據實驗公告的介紹，實驗出自一項研究過境審查的計畫。過境審查指流量的起點與終點都不在某個網路，經過那個網路時卻被攔下。&lt;/p&gt;
+&lt;p&gt;公告描述的步驟是先用 traceroute（列出封包沿途經過哪些路由器的工具）畫出 Probe 到目標伺服器的路徑。接著向同一台伺服器分別送出對照用網域與被審查網域的請求，讓請求在路徑上的不同位置失效。OONI 藉此判斷審查從哪一點開始，找出審查設備的網路位置。這些資料也可以幫助判斷審查設備部署在靠近使用者的地方，還是在其他網路、甚至其他國家。&lt;/p&gt;
+&lt;p&gt;預設模式對路徑上的每個路由器記錄三項，分別是 IP 位址對應的國家、所屬的 AS（自治系統，網際網路上由同一個業者或機構管理的一組網路）與 AS 的組織名稱。公告的評估是，預設模式沒有帶來其他 Probe 測試與 OONI 風險說明以外的新風險，第三方只憑路由器的國家與 AS 無法做出識別使用者的分析。代價是用處有限，審查設備要位在某個國家或網路的深處，才能確認它在那裡。&lt;/p&gt;
+&lt;p&gt;進階模式另外記錄每個路由器的 IP 位址，以及封包往返每個路由器所需的時間（RTT）。公告寫到使用者因此承擔比現有 Probe 測試更高的風險。第三方可能用路由器的時間與位置三角定位出執行 Probe 的城市，也可能從路徑反推使用者所在的 /24 網段（前三組數字相同、共 256 個位址的 IP 區段）。最壞的情況是執行當下那個網段只有一個使用中的 IP 位址，使用者的 IP 位址也就可能被找出來。&lt;/p&gt;
+&lt;p&gt;公告也描述了較實際的情境，第三方可以推估出使用者所在的城市與網路，但很難認出特定的人。OONI 的理由是同一網路有許多使用中的 IP 位址，同一城市也有許多人執行這項測試。基於這些風險，進階模式只開放選擇加入。換來的好處是審查設備落在兩個國家或兩個網路的交界時也能定位，還能以城市為單位量測審查，公告提到城市層級的資料是 OONI 社群長期的要求。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;OONI 的資料政策寫到，OONI 不以蒐集使用者的 IP 位址為目標，也會採取措施從量測資料庫移除。進階模式公開的路由器 IP 位址與往返時間，是 OONI 想取得的研究資料，也是第三方用來反推使用者所在地的資料。本文的判斷是，研究價值與曝光程度無法分開調整。&lt;/p&gt;
+&lt;p&gt;資料政策的另一條原則是送到伺服器的量測都會公開，除非使用者安全有疑慮，OONI 原則上不刪除量測。本文的推論是，選擇加入進階模式的量測會長期留在任何人都能下載的資料裡，日後仍可以用來推估城市與網段。&lt;/p&gt;
+&lt;p&gt;資料政策同樣列出，送出的每筆量測都會附上使用者的國家代碼與網路的 ASN（AS 的編號），這兩項無法單獨退出。執行 Probe 本身也有風險，OONI 的常見問題寫到 Probe 不是隱私工具，監控網路活動的人（例如政府、網路業者、雇主）可能看到你在執行它。風險說明頁則寫到，執行 Probe 的潛在風險取決於使用者的威脅模型（自己可能面對誰、對方有什麼能力）與所在國家的法規。&lt;/p&gt;
+&lt;p&gt;依 11 月 10 日的公告，App 還沒有進階模式，用 App 執行 Probe 的人不必為它做任何設定。對 OONI 蒐集更多資料有意見的 Probe 使用者，以及工作中會用到 OONI 資料的人，可以在 12 月 10 日前填寫問卷。問卷架在 Google 表單上，連結在原文清單的問卷公告裡，公告請讀者花幾分鐘填寫。&lt;/p&gt;
+&lt;p&gt;在執行 Probe 本身就可能引起注意的環境，可以照風險說明頁在 App 裡選擇要執行哪些測試。資料政策也提到，App 的設定裡可以選擇不送出量測。不送出量測可以讓結果不公開，但本文依常見問題推論，這兩種做法都改變不了監控網路的人看得到有人在執行 Probe。命令列版本的使用者考慮開啟進階模式時，代價是所在城市與網段可能被推估出來，而且量測公開後原則上不會刪除。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2026-ooni-probe-tls-middlebox-experiment/&#34;&gt;New OONI Probe TLS Middlebox Experiment&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2026-tls-middlebox-survey/&#34;&gt;Survey: Collecting Additional Geographic and Network-Level Data with OONI Probe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/about/data-policy/&#34;&gt;OONI Data Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/about/risks/&#34;&gt;Risks: Things you should know before running OONI Probe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ooni/spec/blob/master/nettests/ts-037-tlsmiddlebox.md&#34;&gt;TLS middlebox&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/support/faq/&#34;&gt;Frequently Asked Questions (FAQ)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>netiCRM 服務商主機的入侵與客戶捐款資料庫的複製</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/neticrm-breach/</link>
@@ -1759,86 +1827,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MediaNama&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>荷蘭 ASN Bank 的 Wero 付款與 Play Integrity 檢查</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/asn-bank-grapheneos/</link>
-<guid isPermaLink="false">anoni-news:2026/11/asn-bank-grapheneos</guid>
-<pubDate>Tue, 10 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>依使用者回報，荷蘭 ASN Bank 的 Android App 1.36.3 版（10 月中更新）起在 GrapheneOS 這類沒有 Google 認證的系統上不時擋下 Wero 付款，App 仍可開啟、查看帳戶。到 11 月 8 日本文查不到 ASN 的公告。打算改用 GrapheneOS 的人，可以把它當成銀行付款功能改用 Google 檢查的例子。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 GitHub、ASN Bank、Android Developers 等 6 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;依使用者在 GitHub 上一個銀行 App 相容性回報專案的留言，荷蘭 ASN Bank 的 Android App 從 10 月中更新的 1.36.3 版起，在 GrapheneOS（以 Android 開源程式碼為基礎的隱私強化手機系統）這類沒有經過 Google 認證的系統上不時擋下 Wero 付款。到 11 月 8 日本文查不到 ASN 的公告，說法都來自使用者貼出的客服與申訴回信。目前的回報只涉及 ASN 與同屬 de Volksbank 的 SNS Bank，一位 SNS Bank App 使用者寫 App 仍可開啟、查看帳戶，只是無法用 Wero 付款。荷蘭以外的讀者不會直接遇到，打算改用 GrapheneOS 的人可以把它當成銀行付款功能改用 Google 檢查的例子。&lt;/p&gt;
-&lt;p&gt;iDEAL 是荷蘭網路購物常用的付款方式，依 Security.nl 2025 年 4 月引述 Wero 的營運方 EPI（European Payments Initiative）對荷蘭《AD》報的說法，iDEAL 要在 2027 年底前完全由 Wero 取代。Wero 整合在各家銀行的 App 裡，也有獨立的 App。ASN 的說明頁寫 2026 年起 iDEAL 逐步改成 Wero，網路商店上會看到「iDEAL | Wero」的名稱。&lt;/p&gt;
-&lt;p&gt;PrivSec 的相容性名單把 ASN 寫成「ASN Bank (De Volksbank)」，回報的使用者也說 ASN 與 SNS Bank 是同一套 App 換了品牌。依使用者回報，被擋時 App 顯示的訊息用的是「iDEAL | Wero」這個名稱，內容是手機或 App 的安裝不符合銀行的安全要求。同一版也有人付款成功，有人回報時好時壞。回報者把新舊兩條流程分開描述，一位使用者寫舊的 iDEAL | Wero 流程可以付款，新的 Wero 流程則過不了 Play Integrity（Google 提供給 App 檢查裝置與系統的服務）。&lt;/p&gt;
-&lt;p&gt;依使用者貼出的 ASN IT 支援回覆，GrapheneOS 不支援 Wero，裝置須符合 Wero 的安全要求。多位使用者貼出的申訴回信內容幾乎相同。信中的理由是 iDEAL | Wero 使用一般作業系統的標準安全檢查，替代系統略過或取代了這些內建防護，所以 iDEAL | Wero 不保證交易安全。回信也寫 ASN 正與 iDEAL | Wero 研究未來是否支援替代作業系統，目前無法承諾。&lt;/p&gt;
-&lt;p&gt;使用者也去信 EPI。依使用者轉貼的回信，EPI 目前集中支援使用最廣的行動銀行平台與裝置。信中也寫，此做法可能排除不用行動銀行的人，以及偏好 Apple 與 Android 生態系以外系統與裝置的人。到 11 月 8 日本文查不到這幾封信的公開版本。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 Android 開發者文件，Play Integrity 回傳的判定分成幾個等級。基本完整性（MEETS_BASIC_INTEGRITY）只要求通過基本的系統完整性檢查，bootloader（開機載入程式）可以解鎖，裝置也可以沒有經過認證。裝置完整性（MEETS_DEVICE_INTEGRITY）要求 App 在真正且經過認證的 Android 裝置（genuine and certified Android device）上執行，Android 13 起還要有硬體證明 bootloader 已鎖、載入的是經過認證的製造商映像檔。文件裡沒有出現 GrapheneOS，本文依裝置完整性的條件推論，未經 Google 認證的系統拿不到這項判定。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 的使用說明也寫，它通過基本的完整性檢查，但沒有經過 Google 認證。GrapheneOS 不打算繞過檢查，理由是檢查一改進就會再失效。&lt;/p&gt;
-&lt;p&gt;ASN 要求哪一個等級，本文查不到官方資料。一位用 LineageOS（另一套未經認證的 Android 系統）的使用者回報基本完整性通過、裝置完整性未通過，只有 Wero 轉帳不能用（單一案例）。依使用者回報（未經銀行證實），Triodos 與 N26 的 App 在 GrapheneOS 上可以用 Wero 付款，bunq 可以設定 Wero。&lt;/p&gt;
-&lt;p&gt;依使用者轉貼的內容，EPI 在後來的另一封回信裡說明採用 Play Integrity 的理由。信中寫 Android 的硬體金鑰證明（hardware key attestation）可以驗證一組金鑰是在 TEE、StrongBox 這類跟一般系統隔開的硬體環境裡產生，而且沒有離開那裡，但驗證不了呼叫的 App 與執行中的作業系統是否完整。Play Integrity 把裝置、系統與 App 的訊號合在一份有簽章的權杖裡，由後端伺服器驗證。信中的結論是硬體金鑰證明單獨提供不了 EPI 的風險與詐騙模型需要的驗證。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 則在相容性指南裡主張銀行改用標準的 Android 硬體證明 API，把 GrapheneOS 公開的官方簽章金鑰列進允許清單。依指南，這套 API 可以驗證硬體、韌體、作業系統與 App，產生的金鑰憑證帶有 App 的 ID、簽章金鑰指紋、版本號與系統的驗證開機金鑰指紋。指南的評估是硬體證明比 Play Integrity 更強，不必依賴 Google Play 服務與 Google 的伺服器，也提到 Play Integrity 最高的強完整性（MEETS_STRONG_INTEGRITY）等級本身就建立在硬體金鑰證明上。兩邊對同一套 API 能驗證到哪裡的說法不同，本文沒有查證哪一方正確。&lt;/p&gt;
-&lt;p&gt;只有一位使用者寫舊流程可以付款，其他人的回報時好時壞，本文推論不宜把它當成穩定的做法。多位使用者已經向 ASN 與 EPI 申訴，GrapheneOS 也在指南裡鼓勵使用者寫信給 App 開發者並附上指南連結。&lt;/p&gt;
-&lt;p&gt;打算改用 GrapheneOS 的人，可以先查常用的銀行與支付 App 在 PrivSec 相容性名單上的狀況。名單由社群回報、GrapheneOS 官方不保證內容，也收錄台灣多家銀行與支付 App。到 11 月 8 日，名單上 ASN 那一項仍沒有附註（名單最後更新在 10 月 20 日，比第一則 Wero 回報早一天），App 更新之後名單可能還沒跟上。&lt;/p&gt;
-&lt;p&gt;本文的推論是，也可以另外保留一支經過 Google 認證的手機只用來付款，有使用者提到自己有備用手機、受到的影響較小。代價是多一支裝置要更新與保管，那支手機上的付款仍要通過 Google 的檢查。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105&#34;&gt;ASN Bank&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/PrivSec-dev/banking-apps-compat-report/issues/1137&#34;&gt;SNS Bank (De Volksbank) / ASN / Wero&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.asnbank.nl/asn-app-en-asn-online-bankieren/veilig-bankierennew/sneller-bestellen-en-betalen-met-ideal-wero.html&#34;&gt;Sneller bestellen en betalen met iDEAL | Wero&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ASN Bank&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/google/play/integrity/verdicts&#34;&gt;Integrity verdicts | Play Integrity | Android Developers&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/articles/attestation-compatibility-guide&#34;&gt;Attestation compatibility guide | Articles | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/usage#banking-apps&#34;&gt;Usage guide | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/&#34;&gt;Banking Applications Compatibility with GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PrivSec&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-26&#34;&gt;2022 年 1 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.security.nl/posting/883786&#34;&gt;IDeal eind 2027 volledig vervangen door nieuw betalingssysteem Wero&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Security.nl&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-11&#34;&gt;2025 年 4 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

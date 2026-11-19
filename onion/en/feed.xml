@@ -6,7 +6,84 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Thu, 19 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>The TLS Middlebox experiment in OONI Probe and a survey on data collection</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/ooni-tls-middlebox/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/ooni-tls-middlebox</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On 10 November OONI announced a TLS Middlebox experiment in OONI Probe for locating censorship equipment, and at announcement the apps supported only its default mode. An advanced mode, which could let others estimate the city a user is in, is available only in the command-line version and only to users who opt in. OONI is also running a survey until 10 December on whether users would accept the collection of more geographic and network data. Readers who neither run Probe nor use OONI data are not affected.</description>
+<content:encoded>&lt;p&gt;Based on 7 sources from OONI, OONI, Centre for Internet &amp;amp; Society&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 10 November OONI (Open Observatory of Network Interference) announced on its blog a new TLS Middlebox experiment in OONI Probe, designed to find where on the network path the equipment that intercepts encrypted (TLS) connections for censorship sits. OONI Probe is software for measuring website blocking that anyone can run on their own network, and its measurements are published as open data. The experiment ships in the command-line version (the one operated by typing commands in a terminal), v3.31.0, and in the mobile and desktop apps, v6.3.0. At announcement the apps supported only the default mode, while an advanced mode that collects more data was available only in the command-line version, and only to users who opt in.&lt;/p&gt;
+&lt;p&gt;On the same day OONI published a survey asking users whether they would accept OONI collecting more geographic and network-level data, and how useful such data would be to them. The experiment announcement says OONI wants community feedback before adding the advanced mode to the app, which is the version used by most Probe users worldwide. The survey is open until 10 December, and the survey announcement invites readers to pass it on to other Probe users and to people who use OONI measurements in their work. Readers who neither run Probe nor use OONI data do not need to do anything.&lt;/p&gt;
+&lt;p&gt;A middlebox is a network device sitting between the user and a website that inspects or interferes with traffic. OONI&#39;s test specification says the experiment detects devices that block connections based on the SNI (Server Name Indication), the website name sent in cleartext when a TLS connection is set up. According to the announcement, the experiment came out of a research project on transit censorship, where traffic that neither starts nor ends in a given network is blocked as it passes through that network.&lt;/p&gt;
+&lt;p&gt;In the steps the announcement describes, Probe first uses traceroute (a tool that lists the routers packets pass through along the way) to map the path to a target server. It then sends requests for a control domain and for a censored domain to the same server, making the requests expire at different points along the path. From this OONI can tell where censorship begins and find the network location of the censoring device. The same data can also help show whether the device is deployed close to the user or in another network, or even another country.&lt;/p&gt;
+&lt;p&gt;For each router on the path, the default mode records three things: the country of its IP address, the AS (autonomous system, a set of networks on the internet run by one operator or institution) it belongs to, and the AS&#39;s organisation name. The announcement&#39;s assessment is that the default mode brings no new risk beyond other Probe tests and OONI&#39;s risk documentation, since a third party cannot do any analysis that identifies a user from routers&#39; countries and ASes alone. The cost is limited usefulness, because a censoring device can only be confirmed in a country or network when it sits deep inside it.&lt;/p&gt;
+&lt;p&gt;The advanced mode also records each router&#39;s IP address and the round-trip time (RTT) for packets to reach each router and come back. The announcement says this exposes users to more risk than existing Probe tests. A third party could use the routers&#39; timing and location to triangulate the city where Probe was run, and could work back from the path to the user&#39;s /24 prefix (a block of 256 IP addresses sharing the first three numbers). In the worst case, if only one IP address in that block was in use at the time, the user&#39;s IP address could be found as well.&lt;/p&gt;
+&lt;p&gt;The announcement also describes a more realistic scenario, in which a third party can estimate the user&#39;s city and network but would find it hard to single out a specific person. OONI&#39;s reasoning is that a network has many live IP addresses and many people in the same city run the test. Because of these risks the advanced mode is opt-in only. In return, it can locate a censoring device even when it sits on the boundary between two countries or two networks, and it allows censorship to be measured city by city, which the announcement says the OONI community has long asked for.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;OONI&#39;s data policy says OONI does not aim to collect users&#39; IP addresses and takes steps to remove them from its measurement database. The router IP addresses and round-trip times that the advanced mode publishes are the research data OONI wants, and also the data a third party would use to work out where a user is. Our assessment is that the research value and the degree of exposure cannot be adjusted separately.&lt;/p&gt;
+&lt;p&gt;Another principle in the data policy is that measurements sent to OONI&#39;s servers are published, and OONI does not, as a rule, delete measurements unless a user&#39;s safety is at stake. We infer that measurements from users who opt in to the advanced mode will stay in data anyone can download, for the long term, and could still be used later to estimate cities and address blocks.&lt;/p&gt;
+&lt;p&gt;The data policy also lists the user&#39;s country code and the ASN (AS number) of their network as fields attached to every measurement, and neither can be opted out of on its own. Running Probe carries risk in itself: OONI&#39;s FAQ says Probe is not a privacy tool, and anyone monitoring your internet activity (for example a government, an ISP or an employer) may see that you are running it. The risks page says the potential risks of running Probe depend on the user&#39;s threat model (who they might face and what that party can do) and on the laws of the country they are in.&lt;/p&gt;
+&lt;p&gt;For an Asian comparison, OONI and the Centre for Internet &amp;amp; Society (CIS) in India published a report in July 2020 on TLS blocking on three Indian ISPs, ACT Fibernet, Bharti Airtel and Reliance Jio. The report recorded SNI-based blocking on both Bharti Airtel and Reliance Jio, and found that Reliance Jio also blocked TLS traffic depending on the web server involved in the handshake. According to the report, state authorities order ISPs to block websites under Sections 69A and 79 of the Information Technology Act without giving technical specifications, so each ISP is free to adopt its own method, and regulations under Section 69A require ISPs to keep certain blocking orders confidential. The report cites a study based on OONI data that found website blocking in India &#34;varies primarily from ISP to ISP, rather than from region to region&#34;.&lt;/p&gt;
+&lt;p&gt;The data in that report dates from 2020 and does not describe the situation today. We, a community based in Taiwan, found no OONI report dedicated to TLS middleboxes in Taiwan, Japan, Singapore, Hong Kong or South Korea (checked on 15 November).&lt;/p&gt;
+&lt;p&gt;As of the 10 November announcement, the apps do not have the advanced mode, and people running Probe through the app do not need to change any settings for it. Probe users with views on OONI collecting more data, and people who use OONI data in their work, can fill in the survey before 10 December. The survey is hosted on Google Forms, the link is in the survey announcement in the source list, and the announcement asks readers to spend a few minutes on it.&lt;/p&gt;
+&lt;p&gt;Where running Probe could itself draw attention, the risks page describes choosing which tests to run in the app. The data policy also mentions a setting in the app to stop sending measurements, which keeps results from being published. Drawing on the FAQ, we infer that neither step stops someone monitoring the network from seeing that Probe is running. For command-line users considering the advanced mode, the cost is that their city and address block may be estimated, and once measurements are published they are, as a rule, not deleted.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2026-ooni-probe-tls-middlebox-experiment/&#34;&gt;New OONI Probe TLS Middlebox Experiment&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;10 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2026-tls-middlebox-survey/&#34;&gt;Survey: Collecting Additional Geographic and Network-Level Data with OONI Probe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;10 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/about/data-policy/&#34;&gt;OONI Data Policy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/about/risks/&#34;&gt;Risks: Things you should know before running OONI Probe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ooni/spec/blob/master/nettests/ts-037-tlsmiddlebox.md&#34;&gt;TLS middlebox&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;22 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/support/faq/&#34;&gt;Frequently Asked Questions (FAQ)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/post/2020-tls-blocking-india/&#34;&gt;Investigating TLS blocking in India&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI, Centre for Internet &amp;amp; Society&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-08&#34;&gt;8 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The netiCRM provider&#39;s server breach and a client&#39;s copied donation database</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/neticrm-breach/</link>
@@ -2288,106 +2365,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-29&#34;&gt;29 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Wero payments and Play Integrity checks in the Dutch ASN Bank app</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/asn-bank-grapheneos/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/asn-bank-grapheneos</guid>
-<pubDate>Tue, 10 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>According to user reports, ASN Bank&#39;s Android app in the Netherlands has, since version 1.36.3 (updated in mid-October), intermittently blocked Wero payments on systems without Google certification such as GrapheneOS, while the app itself still opens and shows accounts. As of 8 November we could find no announcement from ASN. People planning to switch to GrapheneOS can take it as an example of a bank moving a payment feature onto Google&#39;s check.</description>
-<content:encoded>&lt;p&gt;Based on 11 sources, including GitHub, ASN Bank, Android Developers&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;According to user comments on a GitHub project that tracks banking app compatibility, the Android app of Dutch bank ASN Bank has, since version 1.36.3 was released in mid-October, intermittently blocked Wero payments on systems without Google certification, such as GrapheneOS (a privacy-hardened phone operating system built on the Android Open Source Project). As of 8 November we could find no announcement from ASN, and what is known comes from support and complaint replies that users have posted. The reports so far involve only ASN and SNS Bank, which also belongs to de Volksbank, and one SNS Bank app user wrote that the app still opens and shows accounts but can no longer pay with Wero. Readers outside the Netherlands will not run into this directly, but people planning to switch to GrapheneOS can take it as an example of a bank moving a payment feature onto Google&#39;s check.&lt;/p&gt;
-&lt;p&gt;iDEAL is a common way to pay in Dutch online shops. Security.nl reported in April 2025, citing what Wero&#39;s operator EPI (European Payments Initiative) told the Dutch newspaper &lt;em&gt;AD&lt;/em&gt;, that Wero is to replace iDEAL completely by the end of 2027. Wero is built into each bank&#39;s app and is also available as a standalone app. ASN&#39;s help page says iDEAL is gradually becoming Wero from 2026, and online shops will show the name &#34;iDEAL | Wero&#34;.&lt;/p&gt;
-&lt;p&gt;PrivSec&#39;s compatibility list names ASN as &#34;ASN Bank (De Volksbank)&#34;, and one reporting user described ASN and SNS Bank as the same app under different branding. According to users, the message the app shows when a payment is blocked uses the &#34;iDEAL | Wero&#34; name and says the phone or app installation does not meet the bank&#39;s security requirements. On the same version some people paid successfully, and others reported that it worked only some of the time. Reporters describe the old and new payment flows separately: one user wrote that the old iDEAL | Wero flow goes through, while the new Wero flow fails Play Integrity, a Google service that lets apps check the device and system they run on.&lt;/p&gt;
-&lt;p&gt;According to a reply from ASN&#39;s IT support that a user posted, GrapheneOS is not supported for Wero, and the device has to meet Wero&#39;s security requirements. Several users posted almost identical replies to their complaints. The reason given in them is that iDEAL | Wero relies on the standard security checks of mainstream operating systems, and alternative systems bypass or replace these built-in protections, so iDEAL | Wero cannot guarantee that transactions are secure. The replies also state that ASN is looking with iDEAL | Wero into whether alternative operating systems could be supported in future, but cannot make any commitment for now.&lt;/p&gt;
-&lt;p&gt;Users also wrote to EPI. In a reply reposted by one user, EPI describes its current focus as supporting the most widely used mobile banking platforms and devices, and acknowledges that this may exclude people who do not use mobile banking and people who prefer systems and devices outside the Apple and Android ecosystems. As of 8 November we could find no public version of these letters.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to the Android developer documentation, Play Integrity returns verdicts at several levels. Basic integrity (MEETS_BASIC_INTEGRITY) only requires passing basic system integrity checks; the bootloader (the program that loads the operating system at startup) may be unlocked, and the device need not be certified. Device integrity (MEETS_DEVICE_INTEGRITY) requires the app to run on a &#34;genuine and certified Android device&#34;, and from Android 13 also requires hardware-backed proof that the bootloader is locked and that a certified manufacturer image is loaded. GrapheneOS is not mentioned in the documentation, and it is our inference from the device integrity conditions that a system without Google certification cannot obtain that verdict.&lt;/p&gt;
-&lt;p&gt;GrapheneOS&#39;s usage guide states that it passes the basic integrity check but is not certified by Google. GrapheneOS does not intend to work around the check, on the grounds that any workaround would break again whenever the check is improved.&lt;/p&gt;
-&lt;p&gt;We could find no official information on which level ASN requires. One user running LineageOS (another uncertified Android system) reported passing basic integrity and failing device integrity, with only Wero transfers not working (a single case). According to user reports not confirmed by the banks, the Triodos and N26 apps can make Wero payments on GrapheneOS, and Wero can be set up in bunq.&lt;/p&gt;
-&lt;p&gt;According to a later reply reposted by a user, EPI explained why it uses Play Integrity. By the letter&#39;s account, Android hardware key attestation can verify that a key was generated in a hardware environment kept apart from the main system, such as a TEE or StrongBox, and has never left it, but cannot verify the integrity of the calling app or of the running operating system. Play Integrity combines device, system and app signals in a signed token that EPI&#39;s backend server verifies. The conclusion in the letter is that hardware key attestation on its own cannot provide the verification EPI&#39;s risk and fraud models require.&lt;/p&gt;
-&lt;p&gt;GrapheneOS, for its part, argues in its attestation compatibility guide that banks should use the standard Android hardware attestation API and add GrapheneOS&#39;s published official signing keys to an allowlist. According to the guide, this API can verify the hardware, firmware, operating system and app, and the key certificates it produces carry the app&#39;s ID, signing key fingerprint and version number, along with the fingerprint of the system&#39;s verified boot key. In the guide&#39;s assessment, hardware attestation is stronger than Play Integrity and does not depend on Google Play services or Google&#39;s servers, and Play Integrity&#39;s highest level, strong integrity (MEETS_STRONG_INTEGRITY), is itself built on hardware key attestation. The two sides give different accounts of what the same API can verify, and we have not checked which is correct.&lt;/p&gt;
-&lt;p&gt;Only one user wrote that the old flow works, and others report that it works only some of the time, so our inference is that it should not be treated as a reliable option. Several users have already complained to ASN and EPI, and GrapheneOS&#39;s guide encourages users to write to app developers with a link to the guide.&lt;/p&gt;
-&lt;p&gt;People planning to switch to GrapheneOS can first check where the banking and payment apps they use stand on PrivSec&#39;s compatibility list. The list is built from community reports, GrapheneOS makes no guarantee about its contents, and it includes many banking and payment apps from Taiwan. As of 8 November the ASN entry still carried no note (the list was last updated on 20 October, a day before the first Wero report), so the list may not yet reflect the app update.&lt;/p&gt;
-&lt;p&gt;GrapheneOS&#39;s attestation compatibility guide lists Pixel phones as the supported devices. Google Store&#39;s help page, as we checked it on 23 October, lists India, Japan, Singapore and Taiwan as the places in Asia where Pixel phones can be bought from Google Store, and does not include mainland China, Hong Kong, Macau or South Korea; the page covers Google Store only, not other retailers or carriers. In mainland China, GreatFire&#39;s Great Firewall measurements have recorded interference with GrapheneOS&#39;s update server, &lt;code&gt;releases.grapheneos.org&lt;/code&gt;, since 31 January 2026, although only one test in the 90 days before 2 October produced a conclusive result.&lt;/p&gt;
-&lt;p&gt;PrivSec&#39;s list, as updated on 20 October, has sections for Taiwan, Hong Kong, Japan and mainland China, and the only entry among them with a Play Integrity note is one Japanese app, which according to the list cannot be installed from Google Play because of the check. The other entries in those sections carry no Play Integrity note, and the list records what users report about compatibility, not any bank&#39;s policy. We could find no public rule on banking apps detecting rooted or uncertified systems from Taiwan&#39;s Financial Supervisory Commission, the Hong Kong Monetary Authority or Japan&#39;s Financial Services Agency, and could not obtain the full text of the People&#39;s Bank of China&#39;s 2019 security standard for mobile financial apps (JR/T 0092-2019) to check whether it contains one. The only Hong Kong statement on rooted devices we found is a single bank&#39;s page: DBS Hong Kong suggests that people with a rooted or jailbroken device try a factory reset, or set up its mobile banking app on another device.&lt;/p&gt;
-&lt;p&gt;We can also infer that keeping a separate Google-certified phone just for payments is another option, and some users mentioned that having a spare phone left them less affected. The cost is one more device to update and look after, and payments on that phone still have to pass Google&#39;s check.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105&#34;&gt;ASN Bank&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/PrivSec-dev/banking-apps-compat-report/issues/1137&#34;&gt;SNS Bank (De Volksbank) / ASN / Wero&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;21 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.asnbank.nl/asn-app-en-asn-online-bankieren/veilig-bankierennew/sneller-bestellen-en-betalen-met-ideal-wero.html&#34;&gt;Sneller bestellen en betalen met iDEAL | Wero&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ASN Bank&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/google/play/integrity/verdicts&#34;&gt;Integrity verdicts | Play Integrity | Android Developers&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/articles/attestation-compatibility-guide&#34;&gt;Attestation compatibility guide | Articles | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/usage#banking-apps&#34;&gt;Usage guide | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/&#34;&gt;Banking Applications Compatibility with GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PrivSec&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-26&#34;&gt;26 January 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.security.nl/posting/883786&#34;&gt;IDeal eind 2027 volledig vervangen door nieuw betalingssysteem Wero&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Security.nl&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-11&#34;&gt;11 April 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/store/answer/2462844?hl=en&#34;&gt;Learn about devices &amp;amp; services available in your region&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Store Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/releases.grapheneos.org&#34;&gt;Is https://releases.grapheneos.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.dbs.com.hk/personal/online-security/general-digibank-security-malware-jailbroken-device.page&#34;&gt;Anti-Malware Security Features&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;DBS Hong Kong&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

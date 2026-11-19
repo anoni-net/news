@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/ooni-tls-middlebox/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
+<news:title>OONI Probe 的 TLS Middlebox 實驗與資料蒐集問卷</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/ooni-tls-middlebox/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
+<news:title>OONI Probe 的 TLS Middlebox 实验与数据收集问卷</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/ooni-tls-middlebox/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
+<news:title>The TLS Middlebox experiment in OONI Probe and a survey on data collection</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/neticrm-breach/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
 <news:title>Monitoring figures on social media takedowns in Indonesia and the communications ministry&#39;s response</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/signal-verification-subpoena/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-18T00:00:00+08:00</news:publication_date>
-<news:title>Signal 協定一對一對話的機器檢查證明與美國大陪審團傳票</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/signal-verification-subpoena/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-18T00:00:00+08:00</news:publication_date>
-<news:title>Signal 协议一对一对话的机器检查证明与美国大陪审团传票</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/signal-verification-subpoena/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-18T00:00:00+08:00</news:publication_date>
-<news:title>Machine-checked proofs for Signal&#39;s one-to-one chats and a US grand jury subpoena</news:title>
 </news:news>
 </url>
 </urlset>
