@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/iphone-grey-list/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
+<news:title>iPhone 鍵盤建議與滑動輸入排除的詞組清單</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/iphone-grey-list/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
+<news:title>iPhone 键盘建议与滑动输入排除的词组清单</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/iphone-grey-list/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
+<news:title>Phrases excluded from iPhone keyboard suggestions and swipe typing</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/ooni-tls-middlebox/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
 <news:title>Automatic content recognition on smart TVs and manufacturers&#39; answers to 17 questions</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/indonesia-komdigi-takedown/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
-<news:title>印尼社群內容下架的監測統計與通訊部的回應</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/indonesia-komdigi-takedown/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
-<news:title>印尼社交媒体内容下架的监测统计与通讯部的回应</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/indonesia-komdigi-takedown/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-18T00:05:00+08:00</news:publication_date>
-<news:title>Monitoring figures on social media takedowns in Indonesia and the communications ministry&#39;s response</news:title>
 </news:news>
 </url>
 </urlset>

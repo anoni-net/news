@@ -6,7 +6,99 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 20 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Phrases excluded from iPhone keyboard suggestions and swipe typing</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/iphone-grey-list/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/iphone-grey-list</guid>
+<pubDate>Fri, 20 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>An independent researcher recovered a phrase list Apple has not disclosed from the keyboard data in iOS 27.0, with 4,513 English entries and lists for 27 other languages and scripts. Listed phrases do not appear in predictive text and most cannot be swipe-typed, while typing letter by letter is unaffected. Apple&#39;s reply to Reuters said the keyboard is set up to avoid suggestions that might be inappropriate or offensive, and as of 15 November its support page offers no setting to turn the list off.</description>
+<content:encoded>&lt;p&gt;Based on 9 sources, including Apple, Reuters (via CP24), Swipeblocked&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;According to a Reuters exclusive on 6 November, an independent researcher found that the iPhone&#39;s built-in keyboard carries a list of phrases Apple has not disclosed. Phrases on the list do not appear in predictive text (the next-word suggestions the keyboard shows during typing), and most cannot be produced by swipe typing (entering a word by sliding a finger across the letters). Typing letter by letter is unaffected, and nothing on the list stops anyone from writing a word. The lists are kept per language, and the researcher&#39;s site says Apple keeps similar lists for 27 other languages and scripts, giving a few examples.&lt;/p&gt;
+&lt;p&gt;The researcher told Reuters that in September he noticed swipe typing stumbling over &#34;white man&#34; but not &#34;black man&#34;. With the help of AI coding tools he traced the behaviour to data stored deep in the operating system, and he put a conservative estimate at about 100,000 words and phrases, not including Chinese characters. According to Reuters, an engineer at a security company said he had independently recovered the same list and got &#34;a near-perfect match&#34;. Swipeblocked, the site where the researcher publishes the list, has 4,513 English entries and says many of the other languages&#39; lists are as long as the English one.&lt;/p&gt;
+&lt;p&gt;The researcher told Reuters that the entries are overwhelmingly vulgar, offensive or related to drugs, sex or violence. According to Reuters, other phrases are &#34;politically salient&#34;, and Swipeblocked&#39;s examples include &#34;Tibetan independence&#34;, &#34;United Ireland&#34;, &#34;Kashmir dispute&#34;, &#34;sleepy Joe&#34; and &#34;make America great again&#34;. &#34;Taiwan is country&#34; is also on the list, and the site notes that only this wording is blocked, while &#34;Taiwan is a country&#34; is not. Some pairs are blocked on one side only, so &#34;read gay smut&#34; is blocked and &#34;read smut&#34; is not.&lt;/p&gt;
+&lt;p&gt;According to Swipeblocked&#39;s explanation, predictive text never offers a phrase on the list, &#34;even when it&#39;s the obvious next word&#34;. Swipe typing won&#39;t produce most of them either: the keyboard picks another word, sometimes an implausible one, and can change a word already entered. In the site&#39;s demonstration, swiping &#34;conspiracy&#34; after &#34;left wing&#34; turns &#34;wing&#34; into &#34;wrong&#34;. The rules match exact word sequences, so a slightly different wording can get through.&lt;/p&gt;
+&lt;p&gt;Reuters tested a small subset of the researcher&#39;s phrases on an iPhone and found they were all difficult to swipe-type or were not suggested via autocomplete. Swipe-typing &#34;United Ireland&#34; often yielded &#34;United Iceland&#34;, and &#34;Sleepy Joe&#34; yielded &#34;Sleepy hope&#34;. &#34;Dictator Trump&#34; could be swipe-typed but was not suggested, and Swipeblocked likewise lists it among the phrases kept out of suggestions that can still be swiped.&lt;/p&gt;
+&lt;p&gt;According to Swipeblocked&#39;s changes page, the English list grew from about 1,700 phrases in iOS 14.0 in 2020 to 4,513 in iOS 27.0. Apple updates it with new versions of iOS and, in between, through language data the iPhone downloads in the background. &#34;Dictator Trump&#34; was added in iOS 16.1, while &#34;President Trump&#34; and &#34;President Bush&#34;, blocked since a 2022 update, were removed in iOS 26.3. The only addition in iOS 27.0 was &#34;Zionist propaganda&#34;.&lt;/p&gt;
+&lt;p&gt;In an email to Reuters, Apple did not comment directly on the findings, including the size or composition of the list or its reasons for flagging certain political terms. Apple&#39;s reply said that iPhone users have always been able to type specific words or phrases and override any predictive suggestion, and that the keyboard is set up to avoid offering suggestions that &#34;might be inappropriate or offensive&#34;.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Swipeblocked&#39;s technical write-up says that before the keyboard offers a candidate, the two to six words it would complete are checked against the list. The list stores only a 32-bit fingerprint of each phrase rather than its text, and the researcher recovered the contents by generating candidate phrases and checking each one against Apple&#39;s table. Fingerprint matching also produces false hits, with 176 meaningless strings in the iOS 27.0 English list matching by coincidence, and on an iPhone these are blocked just like real phrases. The site also notes that parts of the list could not be decoded, and that a phrase&#39;s presence &#34;says nothing about why Apple added it&#34;.&lt;/p&gt;
+&lt;p&gt;Based on the keyboard code in iOS 26.3, Swipeblocked also describes a separate set of labels on single words. Words labelled vulgar are not suggested until the user has typed them three times, and words labelled offensive are never suggested.&lt;/p&gt;
+&lt;p&gt;Macworld&#39;s editor writes that &#34;This isn&#39;t a censorship list&#34;, because typing individual characters always works, though it can slow down anyone relying on swiping or suggestions to type faster. The researcher described it to Reuters as &#34;a very light-touch form of censorship&#34;, adding that &#34;at the scale that Apple is operating, it only takes a light touch to have a big impact.&#34; The Reuters report states that the list is not a ban, and that because hundreds of millions of people worldwide use iPhones, Apple&#39;s choices about which words its keyboard suggests &#34;could quietly shape how they communicate&#34;.&lt;/p&gt;
+&lt;p&gt;On disclosure and customisation, a senior counsel at the Electronic Frontier Foundation (EFF, a digital civil liberties group) told Reuters that if Apple is going to do this, &#34;this is something users should be really well aware of and have some ability to customize&#34;, and that it &#34;should not be secret&#34;. Macworld&#39;s editor still calls Apple&#39;s approach &#34;overreaching&#34; and suggests a keyboard setting that is on by default but can be turned off. Apple&#39;s reply as reported by Reuters says nothing about disclosure or settings, and as of 15 November the keyboard page on Apple&#39;s support site has no such option. The same EFF lawyer said that while a part of him found the list &#34;creepy&#34; and he wondered about Apple&#39;s judgment calls, he could see an argument for it as a way to curb unwanted or inflammatory suggestions.&lt;/p&gt;
+&lt;p&gt;On what goes on the list, the researcher told Reuters it was understandable that Apple wanted to keep users from accidentally sending obscene messages or inflammatory slogans. He also said there were inconsistencies in how Apple applied it, pointing to &#34;read gay smut&#34; and &#34;read smut&#34;. Macworld&#39;s editor suggests that Apple&#39;s motive is &#34;likely less about policing your speech than it is about avoiding lawsuits and bad PR&#34;.&lt;/p&gt;
+&lt;p&gt;According to Swipeblocked, words on the Chinese list still appear as candidates when typed in pinyin, but once one is picked the keyboard stops suggesting the next word. The site&#39;s Chinese examples include 六四 (June Fourth, the 1989 Tiananmen crackdown), 台独 (Taiwan independence), 刘晓波 (Liu Xiaobo) and 习大大 (a nickname for Xi Jinping); the name of the Kuomintang (KMT) is blocked in both the Simplified and Traditional Chinese lists, while the name of China&#39;s Communist Party is blocked only in the Traditional Chinese one. In one part of the Chinese typing engine, Apple&#39;s code also skips suggestions whenever a word is &#34;taiwan&#34; or &#34;tibet&#34; written in English. The site&#39;s explanation does not cover input methods other than pinyin, such as Zhuyin (Bopomofo).&lt;/p&gt;
+&lt;p&gt;Citizen Lab, a research lab at the University of Toronto, analysed Apple&#39;s filtering of product engravings in six regions in 2021 and found 1,105 keyword filtering rules. It concluded that &#34;part of Apple&#39;s mainland China political censorship bleeds into both Hong Kong and Taiwan&#34;, and that it was &#34;aware of no legal justification for the political censorship of content in Taiwan&#34;. A 2022 follow-up found that Apple had eliminated its Chinese political censorship in Taiwan but continued broad, keyword-based political censorship in Hong Kong. Engraving filters refuse a custom order depending on the region of sale, a different mechanism from the keyboard list, which only affects suggestions and swipe typing; Swipeblocked decoded that list by language and did not compare iPhones set to different countries or regions.&lt;/p&gt;
+&lt;p&gt;On the iPhone&#39;s built-in keyboard, typing letter by letter is unaffected by the list. People who swipe-type may want to reread a message before sending it, since the keyboard can change an earlier word (our suggestion, based on Swipeblocked&#39;s demonstration). According to the keyboard page on Apple&#39;s support site, Predictive Text can be turned off under Settings &amp;gt; General &amp;gt; Keyboard. As of 15 November the page offers no setting to turn off the list, and does not say whether swipe typing still changes words once Predictive Text is off.&lt;/p&gt;
+&lt;p&gt;The same page describes Text Replacement, which lets users set shortcuts that automatically become longer words or phrases. The iPhone User Guide adds that filling in only the Phrase field and leaving the Shortcut field blank keeps a word or phrase the user types from being replaced. Neither page says whether either method brings listed phrases back into suggestions or swipe typing, and we have not tested it. For writing a phrase on the list, the method Swipeblocked confirms is typing letter by letter, and Macworld&#39;s editor gives the cost as slower typing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/104995&#34;&gt;如何在 iPhone、iPad 或 iPod touch 上使用「自動修正」和預測字詞&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-13&#34;&gt;13 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/iphone/iph6d01d862/ios&#34;&gt;在 iPhone 上設定常用文字的縮寫&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cp24.com/news/world/2026/11/06/apples-predictive-text-restrictions-include-dictator-trump-and-sleepy-joe-researcher-finds-reuters-exclusive/&#34;&gt;Apple’s predictive text restrictions include ‘Dictator Trump’ and ‘Sleepy Joe,’ researcher finds: Reuters exclusive&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Reuters (via CP24)&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;6 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://swipeblocked.com/&#34;&gt;Swipeblocked: the phrases your iPhone won&amp;#39;t suggest&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Swipeblocked&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/104995&#34;&gt;How to use Auto-Correction and predictive text on your iPhone, iPad, or iPod touch&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-30&#34;&gt;30 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/iphone/use-shorthand-for-frequently-used-text-iph6d01d862/ios&#34;&gt;Set up shorthand for frequently used text on iPhone&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://macworld.com/article/3279221/revealed-apples-secret-list-of-slurs-insults-and-political-phrases-that-cant-be-swiped.html&#34;&gt;Revealed: Apple&amp;#39;s secret list of slurs, insults, and political phrases that can&amp;#39;t be swiped&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Macworld&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-07&#34;&gt;7 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2021/08/engrave-danger-an-analysis-of-apple-engraving-censorship-across-six-regions/&#34;&gt;Engrave Danger: An Analysis of Apple Engraving Censorship across Six Regions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-18&#34;&gt;18 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2022/03/engrave-condition-apples-political-censorship-leaves-taiwan-remains-in-hong-kong/&#34;&gt;Engrave Condition: Apple’s Political Censorship Leaves Taiwan, Remains in Hong Kong&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-03-22&#34;&gt;22 March 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>The TLS Middlebox experiment in OONI Probe and a survey on data collection</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/ooni-tls-middlebox/</link>
@@ -2223,148 +2315,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Takedown requests on X against Indian accounts that document online censorship</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/india-censorship-takedowns/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/india-censorship-takedowns</guid>
-<pubDate>Tue, 10 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Two notices bearing the name of the Delhi Police reached X between late October and early November, asking it to remove or withhold in India the accounts of two digital rights organisations and of an account that documents blocking orders. As of 8 November, the notices had not been officially confirmed as genuine, and we could not find out whether X had complied. Under X&#39;s policy, withholding is limited to the country that made the request.</description>
-<content:encoded>&lt;p&gt;Based on 16 sources, including SFLC.in, Internet Freedom Foundation, Newslaundry&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;On 31 October and 2 November, two notices bearing the name of the Delhi Police reached X, asking it to remove or withhold (hide content only in specific countries) three accounts that document online censorship. SFLC.in, an Indian digital rights organisation named in the notices, published the copies X forwarded to it and described the notices as &#34;purportedly issued&#34;. As of 8 November, neither the Delhi Police nor the Indian government had publicly confirmed them. According to X&#39;s help page, withholding is limited to the country that made the request, so what readers outside India see is not affected.&lt;/p&gt;
-&lt;p&gt;It began on 29 October, when two Indian digital rights organisations and an X account that compiles blocking orders received a legal notice claiming to act for the RSS, a Hindu nationalist organisation, demanding that they stop documenting restricted content. According to Newslaundry, relaying IFF (the Internet Freedom Foundation, an Indian digital rights organisation), several RSS functionaries later questioned on X whether the notice was genuine. The two organisations posted the notice publicly on X on 30 October, and those two posts are what the first police notice targeted, on the grounds that they defamed the RSS.&lt;/p&gt;
-&lt;p&gt;According to SFLC.in&#39;s statement of 5 November, the court order fields in both notices were left blank, and the first cited section 356 of the Bharatiya Nyaya Sanhita (BNS, India&#39;s penal code), which covers defamation. The second notice listed the three accounts in their entirety, cited section 79(3)(b) of the Information Technology Act, 2000 and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and stated that lawful notices require action within three hours. Section 79 is the safe harbour provision (the protection that keeps platforms from being liable for what users post), and section 79(3)(b) means a platform that fails to remove content after receiving notice may lose that protection.&lt;/p&gt;
-&lt;p&gt;X forwarded copies of both notices to the affected organisations on 3 November, and according to IFF the emails did not say whether X had acted on them. Reuters reported on 4 November that both organisations&#39; accounts were still viewable that afternoon, and that X, the Delhi Police, India&#39;s Ministry of Electronics and Information Technology (MeitY) and the RSS had not responded to its requests for comment. As of 8 November we could find nothing on later developments or responses, nor whether the notices had been submitted to a database of takedown notices such as Lumen.&lt;/p&gt;
-&lt;p&gt;SFLC.in checked where the notices came from. The IP address of the sending server is registered to the Delhi Police and is listed in the domain&#39;s SPF record (a public setting that lists which servers may send mail for a domain), yet emails sent to the two police addresses given in the notices bounced. Since the two findings point in different directions, SFLC.in did not draw a conclusion about authenticity from them. It asked the Delhi Police and X for clarification and, as of 5 November, had received no official reply.&lt;/p&gt;
-&lt;p&gt;SFLC.in also tested X&#39;s Law Enforcement Request form. X&#39;s Legal Request Portal sends a verification link to an official email address, but this form did not. On 4 November, using a made-up email address, SFLC.in submitted a request targeting its own post, and X logged it all the same. By that afternoon the form had been changed to send a verification code to the submitted address, and as of 8 November X had not publicly explained the flaw or the fix.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Whether a notice is valid depends on the law it cites and on who submitted it, and the people affected can only appeal once they have been notified. Besides notices, India has another route under section 69A of the Information Technology Act, 2000, through which the central government blocks content by an order that records its reasons in writing. According to the Apple notice the developer made public, the removal of Bitchat from the App Store in India on 3 October cited section 69A (see &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/bitchat-india-block/&#34;&gt;Dispute over the removal of the Bluetooth mesh messaging app Bitchat in India&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Our inference is that a notice combined with a three-hour deadline leaves a platform very little time to judge whether a request is valid. Whether a form verifies the identity of the person submitting it therefore affects whether impersonated requests can enter a platform&#39;s handling process. SFLC.in asked X through which channel the two notices had been submitted and, as of 5 November, had no answer.&lt;/p&gt;
-&lt;p&gt;According to X&#39;s help page, X determines a user&#39;s country from location information it receives, and withheld posts and accounts carry a notice. One kind of notice means X withheld the content in response to a valid legal demand, such as a court order, and the other means X withheld it under local law in response to a report filed through specific support channels. Both notices in this case are titled Illegal Content Report, so our inference is that if the content were withheld, it would more likely carry the local-law notice. X has not said how it classified these requests.&lt;/p&gt;
-&lt;p&gt;The same help page says that, unless prevented by something like a sealed court order, X notifies affected people by email to the address registered on the account or in the app. The notification usually includes a copy of the request, and people can appeal by replying to the email where content was withheld on a legal demand, or through the Help Center where it was withheld under local law. We infer from this that an organisation whose registered inbox goes unread may not learn that its account has been withheld, and may not receive the copy of the request. People who run organisation accounts in India can check the registered inbox regularly and, if X notifies them, appeal through the channel given in the notification.&lt;/p&gt;
-&lt;p&gt;On the defamation offence the notices cite, SFLC.in&#39;s analysis is that criminal defamation under the BNS is a non-cognisable offence, so police need a magistrate&#39;s order before acting. SFLC.in also argues that the officials the Delhi government authorised in June to issue such notices do not include the post that signed them, and that restricting entire accounts rather than specific content fails the tests of necessity and proportionality (this is the organisation&#39;s analysis, not a finding by a court or the government). Reuters added the Indian government&#39;s general position, not specific to this case, that its directives to platforms target unlawful or misleading content and respect lawful expression.&lt;/p&gt;
-&lt;p&gt;According to Inc42 and SFLC.in, relaying a report by the Indian Express, MeitY has begun discussing whether to reconsider safe harbour for social media platforms. As relayed by Inc42, the report says the government is studying whether to limit the protection to internet service providers, telecom operators and peer-to-peer messaging platforms, and that the discussions are still exploratory. SFLC.in relays the reasoning that platforms curate and amplify content with algorithms and so are already publishers. MeitY had made no public statement as of 8 November, and linking the police notices to the safe harbour discussion is our own connection, because both involve section 79.&lt;/p&gt;
-&lt;p&gt;Citing Supreme Court precedent, SFLC.in argues that section 79 is a statutory protection, not a privilege that executive discretion can withdraw. It also warns that if platforms become liable for user content, political speech, journalism and criticism of officials are the most likely to be over-removed. In September, MediaNama analysed what government sources had said about Meta and concluded that the position then rested entirely on anonymous briefings, and that safe harbour is a defence platforms raise when sued, for a court to decide. That analysis predates the November Indian Express report, but the sources&#39; statements it examined are similar to that report, and placing the two side by side is our own connection.&lt;/p&gt;
-&lt;p&gt;We compared how takedown requests reach platforms in three other places in Asia. In Hong Kong, Schedule 4 to the Implementation Rules for Article 43 of the National Security Law lets a designated officer, authorised by the Commissioner of Police in national security cases, require a platform to take a disabling action on a message without a magistrate&#39;s warrant, and the schedule does not say the publisher must be given reasons or a route of appeal. In Taiwan, Article 46 of the Protection of Children and Youths Welfare and Rights Act requires a platform told by the competent authority that content harms children to restrict children&#39;s access or remove the content, with no court procedure, though the provision protects children only. In mainland China, Article 52 of the Cybersecurity Law, as amended in 2025 and in force since 1 January 2026, has the state internet regulator and other authorities order network operators to stop transmission and have content from outside China blocked, and we found no requirement in the laws we read to go to a court first.&lt;/p&gt;
-&lt;p&gt;Transparency reports are one place where such requests appear. According to Hong Kong Free Press in 2023, citing Google&#39;s transparency report, the Hong Kong government asked Google to remove 330 items in 2022, 57 of them related to national security, up from 116 items in 2021. These are 2022 figures, not current ones.&lt;/p&gt;
-&lt;p&gt;Readers outside India do not need to change any settings. Points to watch next are whether X withholds these accounts in India, whether the Delhi Police or MeitY responds publicly, and whether the safe harbour discussion becomes a formal amendment or draft rules.&lt;/p&gt;
-&lt;p&gt;In its article of 6 November, EFF called on platforms to be transparent about the requests they receive, to notify affected users, and to provide avenues for appeal against restrictions. When comparing platforms, readers can also look at whether a platform verifies the identity of whoever submits a request and whether notices come with a court order. Since the government, as relayed by Reuters, says its directives target unlawful and misleading content, one question is whether platforms can tell, within the deadline, whether a notice is genuine and lawful. We found no public assessment of whether, once safe harbour is narrowed, platforms would remove unlawful content more precisely or remove more lawful speech.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-regarding-the-takedown-requests-against-its-x-account-and-posts/&#34;&gt;SFLC.in Statement Regarding the Takedown Requests Against Its X Account and Posts&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;5 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-received-supposed-rss-legal-notice-and-subsequent-takedown-requests/&#34;&gt;SFLC.in received supposed RSS Legal Notice and subsequent Takedown Requests&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-condemning-takedown-directions-affecting-digital-rights-organisations-in-india/&#34;&gt;SFLC.in Statement Condemning Takedown Directions Affecting Digital Rights Organisations in India&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://internetfreedom.in/dont-ask-people-to-give-up-a-fundamental-right-within-seven-days/&#34;&gt;Don’t ask people to give up a fundamental right within seven days&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Internet Freedom Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;30 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newslaundry.com/2026/11/03/delhi-police-seeks-to-silence-digital-rights-groups-iff-sflc-on-x-wants-accounts-removed&#34;&gt;Delhi Police seeks to silence digital rights groups IFF, SFLC on X, wants accounts removed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Newslaundry&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.devdiscourse.com/article/international/4001546-prominent-indian-free-speech-groups-say-police-ordered-x-accounts-removed&#34;&gt;Prominent Indian free speech groups say police ordered X accounts removed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Reuters (via Devdiscourse)&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/when-watchdogs-are-silenced-indias-crackdown-those-documenting-online-censorship&#34;&gt;When the Watchdogs Are Silenced: India&amp;#39;s Crackdown on Those Documenting Online Censorship&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;6 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.x.com/en/rules-and-policies/post-withheld-by-country&#34;&gt;About country withheld content&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;X Help Center&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lumendatabase.org/pages/about&#34;&gt;About&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Lumen&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-on-the-potential-removal-of-safe-harbour-protection-from-intermediaries/&#34;&gt;SFLC.in Statement on the Potential Removal of ‘Safe Harbour’ Protection from Intermediaries&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;6 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inc42.com/buzz/centre-weighs-withdrawing-safe-harbour-for-meta-google-x-report/&#34;&gt;Centre Weighs Withdrawing Safe Harbour For Meta, Google, X: Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Inc42&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;5 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.medianama.com/2026/09/223-meta-intermediary-status-safe-harbour/&#34;&gt;Can Meta Lose Safe Harbour Over Its Algorithms?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MediaNama&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gld.gov.hk/egazette/pdf/20202449e/cs220202449139.pdf&#34;&gt;Implementation Rules for Article 43 of the Law of the People&amp;#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Government Gazette&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-06&#34;&gt;6 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2023/05/09/hong-kong-asked-google-to-remove-183-items-in-latter-half-of-2022-national-security-takedown-requests-surged/&#34;&gt;Hong Kong asked Google to remove 183 items in latter half of 2022; national security takedown requests surged&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-05-09&#34;&gt;9 May 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm&#34;&gt;中华人民共和国网络安全法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-29&#34;&gt;29 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

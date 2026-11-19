@@ -6,7 +6,71 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 20 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>iPhone 鍵盤建議與滑動輸入排除的詞組清單</title>
+<link>https://anoni.net/news/2026/11/iphone-grey-list/</link>
+<guid isPermaLink="false">anoni-news:2026/11/iphone-grey-list</guid>
+<pubDate>Fri, 20 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>一位獨立研究者從 iOS 27.0 的鍵盤資料還原出 Apple 未公開的詞組清單，英文有 4,513 條，另有 27 種語言與文字的清單。清單上的詞組不會出現在預測建議，多數也無法用滑動輸入打出，逐字輸入不受影響。Apple 回覆 Reuters 時表示鍵盤的設計是避免提供可能不當或冒犯的建議，到 11 月 15 日為止，說明頁沒有關閉這份清單的設定。</description>
+<content:encoded>&lt;p&gt;整理 5 篇原文，來自 Reuters（CP24 轉載）、Swipeblocked、Apple 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;依 Reuters 11 月 6 日的獨家報導，一位獨立研究者發現 iPhone 內建鍵盤帶著一份 Apple 沒有公開的詞組清單。列在清單上的詞組不會出現在預測字詞（predictive text，打字時鍵盤列出的下一個字詞建議）裡，多數也無法用滑動輸入（手指在鍵盤上連續滑過字母來打字）打出來。一個字母一個字母輸入時不受影響，清單不會阻止使用者寫出任何字。清單依語言區分，研究者的網站寫到 Apple 另有 27 種語言與文字的類似清單，並各舉了少數例子。&lt;/p&gt;
+&lt;p&gt;研究者對 Reuters 表示，他 9 月注意到滑動輸入打「white man」時打不順，打「black man」不會。他借助 AI 程式開發工具在作業系統深處找到這份資料，保守估計各語言合計約 10 萬個詞與詞組（不含漢字）。依 Reuters，一家資安公司的工程師表示另外獨立還原出同一份清單，比對結果幾乎完全吻合。研究者整理的 Swipeblocked 網站列出英文清單 4,513 條，網站也寫到其他語言的清單不少跟英文的一樣長。&lt;/p&gt;
+&lt;p&gt;研究者對 Reuters 表示，清單上絕大多數是粗俗、冒犯或跟毒品、性、暴力相關的詞組。Reuters 另外寫到其中也有政治上敏感的詞組，Swipeblocked 列出的例子包括「Tibetan independence」、「United Ireland」、「Kashmir dispute」、「sleepy Joe」與「make America great again」。「Taiwan is country」也在清單上，網站註明只擋這個寫法，「Taiwan is a country」不擋。清單也有成對卻只擋一邊的例子，「read gay smut」被擋，「read smut」不擋。&lt;/p&gt;
+&lt;p&gt;根據 Swipeblocked 的說明，預測字詞從不提供清單上的詞組，即使那是最明顯的下一個詞。多數詞組也無法用滑動輸入打出，鍵盤會改選別的字，有時選得不合常理。鍵盤還可能改掉前一個已經輸入的字，例如網站示範滑出「left wing conspiracy」的 conspiracy 時，前面的 wing 會變成 wrong。比對只認完全相同的詞序，換個說法就可能通過。&lt;/p&gt;
+&lt;p&gt;Reuters 在 iPhone 上試了研究者列出的一小部分詞組，全部都難以滑動輸入，或不會出現在建議裡。滑動輸入「United Ireland」常變成「United Iceland」，「Sleepy Joe」變成「Sleepy hope」。「Dictator Trump」可以滑動輸入，但不會出現在建議裡，Swipeblocked 也把它列為只排除建議、仍可滑動輸入的詞組。&lt;/p&gt;
+&lt;p&gt;依 Swipeblocked 的變更頁，英文清單在 2020 年的 iOS 14.0 約有 1,700 條，到 iOS 27.0 增加到 4,513 條。Apple 會隨 iOS 新版更新清單，兩版之間也透過 iPhone 在背景下載的語言資料更新。「dictator Trump」在 iOS 16.1 加入，「President Trump」與「President Bush」從 2022 年的一次更新起被擋，在 iOS 26.3 移除。iOS 27.0 唯一新增的是「Zionist propaganda」。&lt;/p&gt;
+&lt;p&gt;Apple 在給 Reuters 的電子郵件裡沒有直接回應研究者的發現，包括清單的規模、組成，以及收入特定政治詞的理由。Apple 的回覆提到使用者一向可以自行輸入特定的字詞，也可以略過任何預測建議，鍵盤的設計是避免提供可能不當或冒犯的建議。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 Swipeblocked 的技術說明，鍵盤列出候選字之前，會以要補完的兩到六個詞比對清單。清單只存每組詞算出來的 32 位元指紋，研究者逐一產生候選詞組來比對，才還原出內容。指紋比對也會誤判，iOS 27.0 的英文清單有 176 組無意義的字串剛好吻合，在 iPhone 上一樣被擋。網站也註明清單有解不出來的部分，詞組列在清單上也不代表知道 Apple 收入的理由。&lt;/p&gt;
+&lt;p&gt;依 iOS 26.3 的鍵盤程式碼，Swipeblocked 另外寫到一套獨立的單字標籤。標為粗俗的字要使用者自行輸入三次才會出現在建議，標為冒犯的字從不建議。&lt;/p&gt;
+&lt;p&gt;Macworld 的編輯認為清單不算審查清單，因為逐字輸入一定可以，只是想靠滑動或建議打快一點的人會慢下來。研究者對 Reuters 形容這是非常輕度的審查，他認為以 Apple 的規模，輕輕一碰就有很大的影響。Reuters 的報導寫明清單不是禁令。報導也寫到全球有數億人使用 iPhone，Apple 選擇讓鍵盤建議哪些字，可能悄悄影響他們溝通的方式。&lt;/p&gt;
+&lt;p&gt;公開與自訂方面，Reuters 引述的 EFF 資深律師認為 Apple 要這麼做就應該讓使用者清楚知道並能夠自訂，不該是秘密。Macworld 的編輯仍認為 Apple 管得太多，建議加一個預設開啟、可以關閉的設定。Reuters 轉述的 Apple 回覆裡沒有提到公開或設定，Apple 支援網站的鍵盤說明頁到 11 月 15 日為止也沒有這樣的選項。同一位 EFF 律師雖然有一部分覺得清單令人不安、對 Apple 的取捨有疑問，也看得出有理由把它當成減少不想要或煽動性建議的方法。&lt;/p&gt;
+&lt;p&gt;收錄的標準方面，研究者對 Reuters 表示可以理解 Apple 不想讓使用者誤傳不雅訊息或煽動性的口號。他也認為套用得不一致，例如「read gay smut」與「read smut」的差別。Macworld 的編輯推測 Apple 比較可能是想避免官司與公關風波。&lt;/p&gt;
+&lt;p&gt;依 Swipeblocked 的說明，中文清單上的詞在拼音輸入時仍會出現在候選字裡，選了之後鍵盤就不再預測下一個詞。網站列出的中文例子有「六四」、「台独」、「刘晓波」與「习大大」，中國共產黨的名稱在簡體中文的清單不擋、在繁體中文的清單擋，國民黨則兩份都擋。中文輸入引擎有一部分的程式碼，在詞為英文的「taiwan」或「tibet」時不提供建議。網站只依語言列出清單，沒有比較不同國家或地區設定的 iPhone，說明也沒有提到注音等拼音以外的輸入方式。&lt;/p&gt;
+&lt;p&gt;用 iPhone 內建鍵盤的人，逐字輸入不受清單影響。習慣滑動輸入的人送出前可以回頭看一遍，鍵盤可能已經改掉前一個字（本文依 Swipeblocked 的示範提出的建議）。依 Apple 支援網站的鍵盤說明頁，「預測字詞」可以在「設定 &amp;gt; 一般 &amp;gt; 鍵盤」關閉。說明頁到 11 月 15 日為止沒有關閉清單的設定，也沒有寫關掉「預測字詞」之後滑動輸入是否仍會改字。&lt;/p&gt;
+&lt;p&gt;同一頁鍵盤說明另有「替代文字」，可以設定快速鍵，打快速鍵時自動換成一整個詞組。iPhone 使用手冊也寫到「輸入碼」（使用手冊對快速鍵的稱呼）欄位留白、只填字詞，能讓自己常用的字詞不被取代。這兩種做法能否讓清單上的詞組回到建議或滑動輸入，兩份說明都沒有寫，我們也沒有實測。想打出清單上的詞組，Swipeblocked 確認可行的方式是逐字輸入，Macworld 提到代價是打字變慢。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cp24.com/news/world/2026/11/06/apples-predictive-text-restrictions-include-dictator-trump-and-sleepy-joe-researcher-finds-reuters-exclusive/&#34;&gt;Apple’s predictive text restrictions include ‘Dictator Trump’ and ‘Sleepy Joe,’ researcher finds: Reuters exclusive&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Reuters（CP24 轉載）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://swipeblocked.com/&#34;&gt;Swipeblocked: the phrases your iPhone won&amp;#39;t suggest&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Swipeblocked&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/104995&#34;&gt;如何在 iPhone、iPad 或 iPod touch 上使用「自動修正」和預測字詞&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-13&#34;&gt;2026 年 4 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/guide/iphone/iph6d01d862/ios&#34;&gt;在 iPhone 上設定常用文字的縮寫&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://macworld.com/article/3279221/revealed-apples-secret-list-of-slurs-insults-and-political-phrases-that-cant-be-swiped.html&#34;&gt;Revealed: Apple&amp;#39;s secret list of slurs, insults, and political phrases that can&amp;#39;t be swiped&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Macworld&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-07&#34;&gt;2026 年 11 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>OONI Probe 的 TLS Middlebox 實驗與資料蒐集問卷</title>
 <link>https://anoni.net/news/2026/11/ooni-tls-middlebox/</link>
@@ -1714,119 +1778,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>印度記錄網路審查的組織在 X 收到的帳號下架請求</title>
-<link>https://anoni.net/news/2026/11/india-censorship-takedowns/</link>
-<guid isPermaLink="false">anoni-news:2026/11/india-censorship-takedowns</guid>
-<pubDate>Tue, 10 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>署名德里警方的兩份通知 10 月底到 11 月初送到 X，要求移除或在印度扣留兩個數位權利組織與一個記錄封鎖命令的帳號。到 11 月 8 日，通知的真偽沒有官方確認，也查不到 X 是否照辦。依 X 的政策，扣留只限於提出請求的國家。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，來自 SFLC.in、Internet Freedom Foundation、Newslaundry 等 9 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;10 月 31 日與 11 月 2 日，兩份署名德里警方的通知送到 X，要求移除或扣留（withhold，只在特定國家隱藏內容）三個記錄網路審查的帳號。被點名的印度數位權利組織 SFLC.in 公布了 X 轉來的副本，用「purportedly issued」（據稱發出）形容這兩份通知。到 11 月 8 日，德里警方與印度政府都沒有公開確認。依 X 的說明頁，扣留只限於提出請求的國家，印度以外的讀者看到的內容不受影響。&lt;/p&gt;
-&lt;p&gt;事情從 10 月 29 日開始，兩個印度數位權利組織與一個彙整封鎖命令的 X 帳號收到一封自稱代表印度教民族主義組織 RSS 的律師函，要求停止記錄受限的內容。依 Newslaundry 轉述 IFF（Internet Freedom Foundation，印度的數位權利組織）的說法，事後有幾位 RSS 幹部在 X 上質疑函件的真偽。兩個組織 10 月 30 日在 X 公開這封函件，第一份警方通知點名的就是這兩則貼文，理由是誹謗 RSS。&lt;/p&gt;
-&lt;p&gt;根據 SFLC.in 11 月 5 日的聲明，兩份通知的法院命令欄位都留白，第一份援引《印度刑法典》（Bharatiya Nyaya Sanhita，BNS）第 356 條的誹謗罪。第二份通知把三個帳號整個列進去，內文援引 2000 年《資訊科技法》第 79(3)(b) 條與 2021 年《資訊科技（中介者指引與數位媒體倫理守則）規則》，並寫明依法的通知要在三小時內處理。第 79 條是安全港（safe harbour，平台不必為使用者張貼的內容負責的保護）條款，第 79(3)(b) 條讓平台收到通知後若不移除內容，就可能失去這層保護。&lt;/p&gt;
-&lt;p&gt;X 11 月 3 日把兩份通知的副本轉給受影響的組織，依 IFF 的說法，信裡沒有交代 X 是否已照辦。路透社 11 月 4 日的報導寫兩個組織的帳號當天下午仍可瀏覽，X、德里警方、印度電子與資訊科技部（MeitY）與 RSS 都沒有回應路透社的詢問。之後的狀態與回應，到 11 月 8 日本文都查不到，兩份通知有沒有進 Lumen 這類收集下架通知的資料庫也查不到。&lt;/p&gt;
-&lt;p&gt;SFLC.in 自行查證了通知的來源。寄件伺服器的 IP 登記在德里警方名下，也列在網域的 SPF 紀錄（公開列出哪些伺服器可以代網域寄信的設定）裡，但寄到通知上兩個警方信箱的信都被退回。兩項證據指向不同方向，SFLC.in 沒有據此判定真偽。它向德里警方與 X 求證，到 11 月 5 日沒有收到正式回覆。&lt;/p&gt;
-&lt;p&gt;SFLC.in 也測試了 X 的執法機關請求表單（Law Enforcement Request form）。X 的法律請求入口（Legal Request Portal）會寄驗證連結到官方信箱，這張表單沒有。SFLC.in 11 月 4 日用虛構的電子郵件針對自己的貼文送出請求，X 照樣登記了。同一天下午表單已經改成寄驗證碼到提交的信箱，到 11 月 8 日 X 沒有公開說明這項漏洞與修正。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;平台判斷通知是否有效時，要看依據的法律與提交者，受影響的人則要先收到通知才能申訴。通知之外，印度還有 2000 年《資訊科技法》第 69A 條這條路徑，由中央政府以書面記錄理由的命令封鎖。依開發者公開的 Apple 通知，10 月 3 日 Bitchat 從印度的 App Store 下架引用的是第 69A 條（見&lt;a href=&#34;https://anoni.net/news/2026/11/bitchat-india-block/&#34;&gt;Bitchat 在印度下架的爭議&lt;/a&gt;）。&lt;/p&gt;
-&lt;p&gt;本文的推論是，通知加上三小時期限，平台要在很短的時間內判斷請求是否有效。表單有沒有驗證提交者的身分，也就影響冒名的請求能否進入平台的處理流程。SFLC.in 詢問 X 兩份通知經由哪個管道送出，到 11 月 5 日沒有得到答案。&lt;/p&gt;
-&lt;p&gt;根據 X 的說明頁，X 用它取得的位置資訊判斷使用者所在的國家，被扣留的貼文與帳號會顯示提示。一種提示表示 X 因法院命令這類有效的法律要求而扣留，另一種表示 X 依當地法律、回應經特定支援管道提交的檢舉而扣留。兩份通知的標題是 Illegal Content Report，本文推論若被扣留，比較可能顯示依當地法律扣留的提示。X 沒有說明這批請求的分類。&lt;/p&gt;
-&lt;p&gt;同一份說明頁也寫，除非受到法院密封命令這類限制，X 會寄信到帳號登記的信箱或在 App 內通知受影響的人。通知通常附上請求的副本，依法律要求扣留的可以直接回信申訴，依當地法律扣留的經由說明中心申訴。本文據此推論，登記信箱沒人收信的組織可能不知道帳號被扣留，也拿不到請求副本。在印度經營組織帳號的人可以定期確認登記信箱，收到 X 的通知後依通知裡的管道申訴。&lt;/p&gt;
-&lt;p&gt;針對通知引用的誹謗罪，SFLC.in 的分析是 BNS 的刑事誹謗屬於非可逮捕罪行，警方要有治安法官的命令才能行動。SFLC.in 也主張，德里邦政府 6 月授權發這類通知的官員不包含通知上署名的職位，限制整個帳號而不是個別內容也不符必要性與比例原則（這些是組織的分析，不是法院或政府的認定）。路透社附上印度政府對平台指令的一般說法（不是針對本案），指令針對違法或誤導的內容並尊重合法的言論。&lt;/p&gt;
-&lt;p&gt;依 Inc42 與 SFLC.in 轉述《印度快報》（Indian Express）的報導，MeitY 已開始討論是否重新考慮社群平台的安全港。依 Inc42 的轉述，報導寫政府在研究把保護限縮在網路服務業者、電信業者與點對點通訊平台，討論仍在探索階段。SFLC.in 轉述的理由是平台用演算法策展與放大內容，已是發布者。MeitY 到 11 月 8 日沒有公開說明，把警方通知與安全港的討論放在一起是本文的連結，因為兩者都涉及第 79 條。&lt;/p&gt;
-&lt;p&gt;SFLC.in 引用最高法院的先例，主張第 79 條是法定保護，不是行政裁量可以撤回的特權。它也提醒，平台若要為使用者內容負責，政治言論、新聞與對官員的批評最容易被過度移除。MediaNama 9 月針對政府消息人士對 Meta 的說法寫過分析，認為當時的立場全靠匿名簡報，安全港是平台被告時提出的抗辯、由法院判斷。該分析早於 11 月的報導，所分析的消息人士說法與《印度快報》的報導相近，把兩者並列是本文的連結。&lt;/p&gt;
-&lt;p&gt;印度以外的讀者不必做任何設定。之後可以留意 X 是否在印度扣留這些帳號、德里警方或 MeitY 是否公開回應，以及安全港的討論是否變成正式的修法或規則草案。&lt;/p&gt;
-&lt;p&gt;EFF 11 月 6 日的文章要求平台公開收到的請求、通知受影響的使用者，並讓限制措施有申訴的管道。比較各平台的做法時，也可以看平台有沒有驗證提交者的身分、通知有沒有附上法院命令。依路透社轉述的政府說法，指令針對違法與誤導的內容，可以問平台在期限內能否分辨通知的真偽與合法性。安全港收緊後，平台是更精準地移除違法內容、還是移除更多合法言論，本文沒有找到公開的評估。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-regarding-the-takedown-requests-against-its-x-account-and-posts/&#34;&gt;SFLC.in Statement Regarding the Takedown Requests Against Its X Account and Posts&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-received-supposed-rss-legal-notice-and-subsequent-takedown-requests/&#34;&gt;SFLC.in received supposed RSS Legal Notice and subsequent Takedown Requests&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-condemning-takedown-directions-affecting-digital-rights-organisations-in-india/&#34;&gt;SFLC.in Statement Condemning Takedown Directions Affecting Digital Rights Organisations in India&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://internetfreedom.in/dont-ask-people-to-give-up-a-fundamental-right-within-seven-days/&#34;&gt;Don’t ask people to give up a fundamental right within seven days&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Internet Freedom Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-30&#34;&gt;2026 年 10 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newslaundry.com/2026/11/03/delhi-police-seeks-to-silence-digital-rights-groups-iff-sflc-on-x-wants-accounts-removed&#34;&gt;Delhi Police seeks to silence digital rights groups IFF, SFLC on X, wants accounts removed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Newslaundry&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.devdiscourse.com/article/international/4001546-prominent-indian-free-speech-groups-say-police-ordered-x-accounts-removed&#34;&gt;Prominent Indian free speech groups say police ordered X accounts removed&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Reuters（經 Devdiscourse 轉載）&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/when-watchdogs-are-silenced-indias-crackdown-those-documenting-online-censorship&#34;&gt;When the Watchdogs Are Silenced: India&amp;#39;s Crackdown on Those Documenting Online Censorship&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://help.x.com/en/rules-and-policies/post-withheld-by-country&#34;&gt;About country withheld content&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;X Help Center&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lumendatabase.org/pages/about&#34;&gt;About&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Lumen&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sflc.in/sflc-in-statement-on-the-potential-removal-of-safe-harbour-protection-from-intermediaries/&#34;&gt;SFLC.in Statement on the Potential Removal of ‘Safe Harbour’ Protection from Intermediaries&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SFLC.in&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inc42.com/buzz/centre-weighs-withdrawing-safe-harbour-for-meta-google-x-report/&#34;&gt;Centre Weighs Withdrawing Safe Harbour For Meta, Google, X: Report&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Inc42&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.medianama.com/2026/09/223-meta-intermediary-status-safe-harbour/&#34;&gt;Can Meta Lose Safe Harbour Over Its Algorithms?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MediaNama&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
