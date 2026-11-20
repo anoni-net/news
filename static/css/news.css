@@ -1278,8 +1278,14 @@ p {
         gap: 0 3rem;
     }
 
+    /* 標題區橫跨兩欄，底下的粗線從內文左緣畫到原文條右緣，當成整篇的分隔線。
+       粗線停在兩欄之間時，看起來跟哪一欄都對不上。標題與描述仍限制行長 */
     .story__head {
         grid-area: head;
+    }
+
+    .story__title,
+    .story__dek {
         max-width: 48rem;
     }
 
