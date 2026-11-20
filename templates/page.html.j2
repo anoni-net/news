@@ -6,7 +6,8 @@
 {% set og_title = site_page.title %}
 {% set og_type = "website" %}
 {% block content %}
-<article class="site-page">
+{# 投稿頁示範專欄粗體的螢光筆樣式，套用專欄的 story--column，見 SPEC.md「投稿頁」 #}
+<article class="site-page{% if page_name == 'contribute' %} story--column{% endif %}">
   <header class="story__head">
     <h1 class="story__title">{{ site_page.title }}</h1>
     <p class="story__dek">{{ site_page.description }}</p>

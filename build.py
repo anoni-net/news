@@ -1770,7 +1770,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
                                                                         live=live_categories)
                 content = content.replace(CATEGORIES_PLACEHOLDER, coverage)
             write(Page(base + suffix, base + suffix + "index.html", False, version["anchors"]), "page.html.j2",
-                  lang, same_page(suffix), site_page=version, content=content)
+                  lang, same_page(suffix), site_page=version, page_name=name, content=content)
             sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))
 
         feed_posts = lposts[:config["feed_items"]]
