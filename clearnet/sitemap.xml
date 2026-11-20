@@ -22,6 +22,22 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/11/weekly-brief-2026-w47/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/weekly-brief-2026-w47/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/2026/11/boca-passport-leak/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/boca-passport-leak/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/brave-photo-metadata/</loc>
 <lastmod>2026-11-21</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/brave-photo-metadata/"/>
@@ -1522,6 +1538,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/11-20/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/history/11-21/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/11-21/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -1548,6 +1572,22 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/contribute/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/contribute/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/weekly-brief-2026-w47/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/weekly-brief-2026-w47/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/boca-passport-leak/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/boca-passport-leak/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/11/brave-photo-metadata/</loc>
@@ -3050,6 +3090,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/11-20/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/history/11-21/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/11-21/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/about/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/about/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/about/"/>
@@ -3076,6 +3124,22 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/contribute/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/contribute/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/weekly-brief-2026-w47/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/weekly-brief-2026-w47/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/weekly-brief-2026-w47/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/boca-passport-leak/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/boca-passport-leak/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/boca-passport-leak/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/11/brave-photo-metadata/</loc>
@@ -4576,6 +4640,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/11-20/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/11-20/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/11-20/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/history/11-21/</loc>
+<lastmod>2026-11-21</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/history/11-21/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/history/11-21/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/about/</loc>

@@ -6,7 +6,289 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 21 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 21 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>每週短訊 2026 第 47 週</title>
+<link>https://anoni.net/news/2026/11/weekly-brief-2026-w47/</link>
+<guid isPermaLink="false">anoni-news:2026/11/weekly-brief-2026-w47</guid>
+<pubDate>Sat, 21 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>11 月 2 日到 11 月 14 日的 8 則新聞，包括 Humble Bundle 改版時移除兩步驟驗證、Outlook.com 誤拒收沒有 DMARC 記錄的網域寄來的信、Tails 7.17 與 Tor Browser 的兩個小版本、Mullvad Browser 16.0、ChatGPT Lockdown Mode 的繞過漏洞、Zcash 的 NU7 升級、香港海關沒收在囚人士支援團體訂購的台灣書籍，以及德國縮減資訊公開的部會草案。</description>
+<content:encoded>&lt;p&gt;整理 22 篇原文，來自 PC Gamer、Privacy Guides、Notebookcheck 等 19 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;第 45、46 週沒有出刊，這一期收兩週的 8 則，其中 2 則接續之前的導讀。報導與公告的日期在 11 月 2 日到 11 月 14 日之間。&lt;/p&gt;
+&lt;h2 id=&#34;humble-bundle-2fa&#34;&gt;Humble Bundle 改版後的兩步驟驗證&lt;/h2&gt;
+&lt;p&gt;依 PC Gamer 11 月 12 日的報導，數位遊戲商店 Humble Bundle 剛上線的新版網站沒有兩步驟驗證（2FA，登入時除了密碼還要再輸入一次性驗證碼）。使用者無法新增，原本設定過的帳號也只要 email 與密碼就能登入。Privacy Guides 11 月 13 日的文章另外寫到，變更密碼時不再驗證，變更 email 時也不會寄信到原本的信箱確認。PC Gamer 的作者建議先移除帳號裡儲存的付款資料，也提到有使用者反映移除時遇到困難。&lt;/p&gt;
+&lt;p&gt;依 Notebookcheck 11 月 14 日的報導，部分使用者回報兩步驟驗證又能使用。Notebookcheck 也寫到，還沒有官方確認已對所有人恢復。到 11 月 15 日，我們沒有查到 Humble Bundle 的官方說明。&lt;/p&gt;
+&lt;h2 id=&#34;outlook-dmarc-rejections&#34;&gt;Outlook.com 的 DMARC 誤拒收&lt;/h2&gt;
+&lt;p&gt;依郵件服務商 MailRoute 的部落格，11 月 5 日起，Outlook.com、Hotmail、Live 等 Microsoft 個人信箱拒收部分來自沒有 DMARC 記錄的網域的信。DMARC 是網域在 DNS 公布的寄件驗證政策，搭配 SPF 與 DKIM（另外兩種寄件驗證機制）讓收件端確認信真的來自這個網域。受影響的網域多半已設好 SPF，不少也有 DKIM。MailRoute 11 月 6 日原本把這次拒收解讀成 Microsoft 要求所有寄件者設定 DMARC，11 月 10 日更新文章撤回了這個解讀。&lt;/p&gt;
+&lt;p&gt;依 The Register 引述 Microsoft 的事故報告 &lt;code&gt;EX1545193&lt;/code&gt;，原因是垃圾信規則的一次更新誤判並阻擋了信件。依 MailRoute 轉述 Microsoft 的說法，更新已經回滾，拒收在 11 月 9 日 11:02 UTC（台北時間 19:02）結束。依 Expert Insights 引述 Microsoft 發言人的說法，寄件者不必更改設定。&lt;/p&gt;
+&lt;p&gt;依 Microsoft 2025 年的公告，2025 年 5 月 5 日起，每天寄超過 5,000 封信到 Outlook.com 的網域才需要通過 SPF、DKIM 與 DMARC。MailRoute 提醒 Outlook.com 不會重試被拒收的信，11 月 5 日到 9 日之間被退回的重要信件需要重寄。&lt;/p&gt;
+&lt;h2 id=&#34;tails-tor-browser&#34;&gt;Tails 7.17 與 Tor Browser 16.0.1、16.0.2&lt;/h2&gt;
+&lt;p&gt;11 月 5 日的導讀〈Tor Browser 16.0 與 Tails 7.16〉寫過兩者的前一版。依 Tor Project 11 月 10 日的公告，Tor Browser 16.0.1 包含 Firefox 的重要安全更新，基礎版本換到 Firefox 153.7.0esr 並併入 Firefox 160 的安全修正。Tor 也更新到 0.4.9.16。&lt;/p&gt;
+&lt;p&gt;同一天另有只給 Android 的 16.0.2，修正 16.0.1 更新 zlib（壓縮函式庫）之後在 Android 上造成的故障。兩篇公告都沒有列出個別漏洞的 CVE 編號。&lt;/p&gt;
+&lt;p&gt;依 Tails 11 月 11 日的公告，7.17 把 Tor Browser 更新到 16.0.1、Tor 更新到 0.4.9.16，Linux 核心更新到 6.12.116。Tails 7.0 或更新的版本可以自動升級到 7.17，改成重新安裝的話，USB 隨身碟上的持久儲存區（Persistent Storage）會消失。&lt;/p&gt;
+&lt;h2 id=&#34;mullvad-browser-16&#34;&gt;Mullvad Browser 16.0&lt;/h2&gt;
+&lt;p&gt;依 VPN 業者 Mullvad 11 月 6 日的發布說明，Mullvad Browser 16.0 是第一個以 Firefox ESR 153 為基礎的版本，設定頁照 Firefox 6 月的改版重新設計。Linux 的 64 位元 ARM 電腦（例如樹莓派）也有了原生版本。新增的通用視窗標題選項開啟後，所有視窗標題都換成「Mullvad Browser」，因為電腦上的其他程式與作業系統不需特殊權限就能讀取視窗標題。&lt;/p&gt;
+&lt;p&gt;發布說明寫到選項預設關閉，原因是這一輪開發來不及評估副作用，使用螢幕閱讀器等輔助工具的人開啟後可能比較難操作。11 月 5 日的導讀寫過 Tor Browser 16.0 的同一個選項。&lt;/p&gt;
+&lt;p&gt;加密 DNS 的設定簡化成兩個選項，使用 DoH（DNS over HTTPS，把 DNS 查詢加密後送出）或使用作業系統的 DNS。Mullvad 建議搭配 VPN 時選後者。9 月 30 日的導讀〈Android 的 VPN 漏洞與 Mullvad 加密 DNS 的停用〉寫過 Mullvad 停止公開加密 DNS 服務，依這次的發布說明，原本使用這項服務的瀏覽器會自動改用非營利的公共 DNS 服務 Quad9。自訂過 DoH 設定的不會被更動，手動選過 Mullvad 加密 DNS 任一變體（例如 base、family）的人要改回預設選項。&lt;/p&gt;
+&lt;h2 id=&#34;chatgpt-lockdown-mode&#34;&gt;ChatGPT Lockdown Mode 的繞過漏洞&lt;/h2&gt;
+&lt;p&gt;依資安公司 Check Point 的研究部門 Check Point Research 11 月 5 日的文章，Lockdown Mode 是 ChatGPT 登入使用者可以選擇開啟的進階安全設定。開啟後會限制即時連網、停止載入網路圖片並關閉檔案下載等功能，減少資料從對話中流出的管道。研究者發現 OpenAI 2 月在程式碼區塊加入的 HTML 預覽，可以開出不受沙箱（把網頁內容隔離、限制它能做什麼的機制）限制的彈出視窗，繞過 Lockdown Mode 的保護。&lt;/p&gt;
+&lt;p&gt;在用 Electron 框架開發的桌面版 ChatGPT Classic 上，攻擊不需要使用者任何操作，研究者示範了一個惡意的自訂 GPT（使用者可以自建、分享的 ChatGPT 版本）在對話中把訊息悄悄送到攻擊者的伺服器。在瀏覽器裡，釣魚與散布惡意程式的情境要使用者點擊攻擊者設計的預覽畫面。&lt;/p&gt;
+&lt;p&gt;依 Check Point 的轉述，OpenAI 9 月 18 日通知研究者已經移除預覽沙箱的彈出視窗權限。研究者重新測試後確認這個手法失效。文章沒有要求使用者更新任何軟體。到 11 月 15 日，我們沒有查到 OpenAI 對這個漏洞的公開說明。&lt;/p&gt;
+&lt;h2 id=&#34;zcash-nu7&#34;&gt;Zcash 的 NU7 升級&lt;/h2&gt;
+&lt;p&gt;依 ForkLog 11 月 6 日的報導，隱私加密貨幣 Zcash 的主網當天在區塊高度 3,543,405 啟用 NU7 網路升級，目標出塊間隔從 75 秒縮短到 25 秒。報導舉例，交易所要求三次確認時，入帳時間估計從 225 秒縮短到 75 秒。礦工分到的交易手續費降為 40%，其餘 60% 暫時退出流通，預計約 2031 年 2 月起逐步作為額外的區塊獎勵發放。&lt;/p&gt;
+&lt;p&gt;ForkLog 也寫到，NU7 禁用 v4 交易，而第一代隱私交易系統 Sprout 只能用這個格式提領。留在 Sprout 裡的約 12,224 ZEC 因此無法動用，NU7 沒有附上追回的機制。Zcash Foundation 10 月 22 日發布的節點軟體 Zebra 7.0.0 的發行說明提醒主網節點要在啟用高度之前升級才能留在共識鏈上。NU7 的部署規格 ZIP 259 也寫明未升級的節點會留在舊的鏈上。&lt;/p&gt;
+&lt;h2 id=&#34;hk-seized-books&#34;&gt;香港海關沒收的台灣書籍與國安處的拘捕&lt;/h2&gt;
+&lt;p&gt;依香港自由新聞 11 月 4 日的報導，一個支援在囚人士的團體 11 月 2 日在社群媒體公布，向台灣訂購的兩箱書 10 月 20 日送到合作的零售店時只剩半箱。超過 60 本書不見了。&lt;/p&gt;
+&lt;p&gt;依同一篇報導，海關給物流公司的通知依據的是 3 月加進北京制定的《香港國安法》的新規則，讓海關官員在沒有拘捕任何人時也能扣押涉嫌有煽動意圖的物品。團體的聲明寫到被扣的書是對時事的理性討論與個人經驗，與煽動意圖無關。香港自由新聞形容，這是已知第一宗沒有伴隨拘捕的沒收書籍案件。&lt;/p&gt;
+&lt;p&gt;依 The Standard 轉述的警方聲明，香港警務處國家安全處 11 月 5 日上午在旺角拘捕一名男子，涉嫌違反香港本地立法的《維護國家安全條例》輸入具煽動意圖的刊物。這項罪名的最高刑罰是監禁七年。香港自由新聞 11 月 6 日的報導寫到，據了解被捕者是同一個團體的專案人員。&lt;/p&gt;
+&lt;p&gt;依南華早報轉述，海關發言人表示不評論個案，會依法扣留涉嫌有煽動意圖的物品並在適當時轉介國家安全處跟進。依同一篇報導，到 11 月 5 日晚間為止，被捕者仍被扣留問話。到 11 月 15 日，我們沒有查到起訴或保釋的報導。&lt;/p&gt;
+&lt;h2 id=&#34;germany-ifg&#34;&gt;德國縮減《資訊自由法》適用範圍的部會草案&lt;/h2&gt;
+&lt;p&gt;德國聯邦《資訊自由法》（IFG）讓任何人都能向聯邦機關申請公開官方資訊。依 netzpolitik.org 11 月 5 日的報導，資訊公開平台 FragDenStaat 公開了聯邦內政部《透明度調整法》（Transparenz-Anpassungsgesetz）的部會草案（Referentenentwurf，部會擬好、還沒送內閣的版本）。草案把被歸為「關鍵基礎設施」的多個政策領域排除在這部法的適用範圍之外。netzpolitik.org 11 月 10 日的報導引述 FragDenStaat，排除的領域包括能源、交通、金融、衛生、水、糧食、資訊技術與電信。&lt;/p&gt;
+&lt;p&gt;依人權觀察（HRW）11 月 11 日的文章，政府 9 月 30 日提出這份草案，11 月 5 日外洩。6 月的前一次縮減嘗試在公民社會與執政聯盟裡的社民黨（SPD）反對下沒有成功。&lt;/p&gt;
+&lt;p&gt;netzpolitik.org 11 月 10 日的報導也彙整了批評者的意見。記者工會 dju 的聯邦執行長表示，一開始就把記者排除在外是對新聞自由的直接攻擊。聯邦資料保護與資訊自由專員辦公室的一位處長在意見書中寫到，草案的排除範圍過廣、在法律上有疑慮。&lt;/p&gt;
+&lt;p&gt;HRW 在文章中主張現行的法律已經規定可能危害公共安全的資訊不得公開，草案的限縮沒有必要。到 11 月 15 日，我們沒有查到聯邦內政部對這些批評的說法，也沒有查到草案目前進行到哪個程序。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（22 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcgamer.com/software/platforms/humble-bundles-new-redesign-inexplicably-removes-2-factor-authentication-dramatically-weakening-account-security/&#34;&gt;Humble Bundle&amp;#39;s new redesign inexplicably removes 2-factor authentication, dramatically weakening account security&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;PC Gamer&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/11/13/humble-bundle-redesign-removes-2fa-and-other-important-account-security-features/&#34;&gt;Humble Bundle Redesign Removes 2FA and Other Important Account Security Features&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.notebookcheck.net/Humble-Bundle-revamps-its-website-here-s-why-users-are-complaining.1450243.0.html&#34;&gt;Humble Bundle revamps its website – here&amp;#39;s why users are complaining&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Notebookcheck&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-14&#34;&gt;2026 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mailroute.net/blog/outlook-rejecting-email-without-dmarc&#34;&gt;Outlook.com Rejected Mail From Domains Without DMARC&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MailRoute&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5308428&#34;&gt;Outlook.com bounces legit emails as Microsoft&amp;#39;s authentication crackdown goes sideways&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;2026 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://expertinsights.com/?p=63879&#34;&gt;Microsoft Rolls Back Spam Rule Change That Blocked Emails To Outlook.com&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Expert Insights&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/strengthening-email-ecosystem-outlooks-new-requirements-for-high%E2%80%90volume-senders/4399730&#34;&gt;Strengthening Email Ecosystem: Outlook&amp;#39;s New Requirements for High‐Volume Senders&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft Tech Community&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/new-release-tor-browser-1601/&#34;&gt;New Release: Tor Browser 16.0.1&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.torproject.org/new-release-tor-browser-1602/&#34;&gt;New Release (Android Only): Tor Browser 16.0.2&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://tails.net/news/version_7.17/&#34;&gt;Tails 7.17&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tails&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mullvad.net/en/blog/mullvad-browser-160&#34;&gt;Mullvad Browser 16.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mullvad&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/&#34;&gt;ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Check Point Research&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://forklog.com/en/?p=106446&#34;&gt;Zcash Activates NU7 Update to Accelerate Transactions&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ForkLog&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ZcashFoundation/zebra/releases/tag/v7.0.0&#34;&gt;Zebra 7.0.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Zcash Foundation&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://zips.z.cash/zip-0259&#34;&gt;ZIP 259: Deployment of the NU7 Network Upgrade&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Zcash Improvement Proposals&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/11/04/hong-kong-prisoner-support-group-says-customs-confiscated-over-60-books-imported-from-taiwan/&#34;&gt;Hong Kong prisoner support group says customs confiscated over 60 books imported from Taiwan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.thestandard.com.hk/news/article/347682/National-Security-Department-arrests-man-over-importing-seditious-books-for-local-bookstores&#34;&gt;National Security Department arrests man over importing seditious books for local bookstores&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Standard&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/11/06/hong-kong-national-security-police-arrest-man-over-allegedly-importing-seditious-books/&#34;&gt;Hong Kong national security police arrest man over allegedly importing ‘seditious’ books&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/07/hong-kong-police-arrest-operator-of-prisoner-support-group-over-allegedly-seditious-books&#34;&gt;Hong Kong police arrest operator of prisoner support group over allegedly seditious books&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;South China Morning Post（The Star 轉載）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-07&#34;&gt;2026 年 11 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/?p=537674&#34;&gt;Staatliche Transparenz: Innenminister will Informationsfreiheit durch die Hintertür einschränken&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://netzpolitik.org/2026/weniger-staatliche-transparenz-dobrindts-plaene-sind-angriff-auf-die-pressefreiheit/&#34;&gt;Weniger staatliche Transparenz: Dobrindts Pläne sind „Angriff auf die Pressefreiheit“&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;netzpolitik.org&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hrw.org/de/news/2026/11/11/erneuter-angriff-auf-die-informationsfreiheit-in-deutschland&#34;&gt;Erneuter Angriff auf die Informationsfreiheit in Deutschland&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Human Rights Watch&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>外交部領務局網站入侵與 72,702 個護照大頭照檔案的外洩</title>
+<link>https://anoni.net/news/2026/11/boca-passport-leak/</link>
+<guid isPermaLink="false">anoni-news:2026/11/boca-passport-leak</guid>
+<pubDate>Sat, 21 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>外交部領事事務局 11 月 4 日發現部分網站遭入侵。9 月 3 日至 11 月 2 日透過網路預約、旅行社團件與有條件式線上申換護照上傳的部分大頭照外洩，共 72,702 個檔案，臨櫃與戶政事務所的一站式服務申辦的不在範圍內。依領務局的公告與問答，護照效力不受影響，經確認在範圍內的人可在 2027 年 5 月 14 日前免費換照（11 月 15 日查證）。駐紐約辦事處驗證的授權書與 ABTC 申請資料也有部分外洩，ABTC 申請人可在 12 月 31 日前申請更換照片。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 外交部領事事務局、iThome、風傳媒 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;外交部領事事務局（領務局）11 月 9 日公告部分網站遭駭客入侵，11 月 12 日更新內容，確認三類資料遭未經授權取得。數量最多的是護照大頭照，民眾在 9 月 3 日至 11 月 2 日透過個人網路預約、旅行社團件與有條件式線上申換護照上傳的部分照片，共 72,702 個檔案。透過戶政事務所的一站式服務與臨櫃申辦的案件不在範圍內，官方問答也寫到，同一期間用這三種管道申辦的人並非全部受影響。依官方說法，已核發的護照照常有效，經確認在範圍內的人可在 116 年 5 月 14 日（2027 年 5 月 14 日）前申請免費換照。&lt;/p&gt;
+&lt;p&gt;根據領務局的公告，11 月 4 日下午陸續發現部分網站疑似遭入侵，隨即隔離相關主機、保存事證並通報資安主管機關。網站經程式修復與安全檢測後已恢復上線。官方問答依資安鑑識報告，提到尚未發現姓名、出生日期、身分證字號與護照號碼等其他個人資料外洩。到 11 月 15 日查證時，官方文件沒有寫入侵的成因與委外廠商的名稱。&lt;/p&gt;
+&lt;p&gt;第二類是駐紐約辦事處從 2011 年 10 月 26 日到 2026 年 11 月 6 日驗證的部分授權書掃描檔，共 26,072 個檔案。依授權書的問答，遭取得的是旅居紐約州、紐澤西州、賓州與康乃狄克州的僑民，委託國內親友代辦事項時驗證的授權書。國內與其他駐外館處的案件不在範圍內。仍在授權期間的授權書正本照常有效，不必重新辦理。&lt;/p&gt;
+&lt;p&gt;第三類是亞太經濟合作商務旅行卡（ABTC）的申請資料。ABTC 是向領務局申請的商務旅行卡，依 ABTC 的問答，申請資料包含申請類別（例如製造、批發、金融）、職務名稱與推薦機關。依公告，遭取得的是 9 月 1 日至 11 月 10 日從線上填表網站申請的部分資料，共 774 個申請案。外洩的欄位除了這三項，還有申請人照片、申請案號、性別與出生地，姓名、護照號碼與聯繫資訊不在其中。&lt;/p&gt;
+&lt;p&gt;公告也提到，若查出委外廠商未依契約履行資安防護義務，將依法追究責任並求償。領務局也會彙整事證，移送司法機關偵查駭客的入侵行為。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;依 11 月 13 日更新的官方問答，護照照片具有辨識個人身分的功能，屬於受《個人資料保護法》（個資法）保障的個人資料。尚無經確認因本次事件而發生的具體濫用情形。發現照片遭冒用或涉及詐騙時，要保留證據並向警方報案。官方問答的說法是，在容貌特徵沒有改變下，應無必要因此重新申請護照。&lt;/p&gt;
+&lt;p&gt;依 2025 年 9 月修正的《資通安全管理法》，公務機關知悉資通安全事件時要向主管機關與上級或監督機關通報，之後提出調查、處理及改善報告。同一部法律也要求公務機關委外維運資通系統時監督受託者的資安管理機制，並在書面契約載明違約責任。&lt;/p&gt;
+&lt;p&gt;現行個資法規定，機關違反個資法、致個人資料被竊取或洩漏時應查明後以適當方式通知當事人，官方文件對領務局是否違反個資法沒有表態。2025 年 11 月公布、尚未施行的修正條文，改成知悉個人資料洩漏時就應通知當事人，到 11 月 15 日全國法規資料庫仍標示生效日期未定。授權書的問答寫到已依法通報個資法主管機關。到 11 月 15 日查證時，公開的管道只有公告與撥打查詢專線確認照片是否外洩（見下段），官方文件沒有寫會不會個別通知照片在範圍內的人。&lt;/p&gt;
+&lt;p&gt;9 月 3 日至 11 月 2 日透過網路預約、旅行社團件或有條件式線上申換護照申辦的人，想確認照片有沒有外洩，可以撥領務局委託廠商設置的查詢專線 (02) 8979-3100。服務時間是週一至週五 09:00 至 12:00、13:30 至 18:00。事件與換照的其他問題，可以撥護照製發服務組的 (02) 2343-2807、(02) 2343-2808，或寫信到 boca4006@boca.gov.tw。授權書的授權人與被授權人有疑問，可以撥文件證明諮詢專線 +886-2-2343-2913，或聯絡駐紐約辦事處 +1-212-486-0088。&lt;/p&gt;
+&lt;p&gt;免費換照只受理經確認在外洩範圍內、護照已核發且仍有效的人，原則在 11 月 13 日公布措施後 6 個月內申請。申請人到領務局或外交部的四個辦事處臨櫃辦理，備妥身分證明、照片與舊護照，代辦者需要委任書。新護照一次性免費換發並給完整效期，舊護照繳回，統一郵寄發照。要不要換由個人自行評估。&lt;/p&gt;
+&lt;p&gt;依官方問答的提醒，換發新護照會改變護照號碼與起迄日期，已用原護照辦簽證、訂票或其他旅行安排的人要確認是否受影響。換照會換上新照片、新號碼與效期，但已外洩的照片仍是本人的臉，換照無法收回這些照片（本文的推論）。&lt;/p&gt;
+&lt;p&gt;ABTC 申請人擔心照片外洩，可在 12 月 31 日前寄新照片到 abtc1@boca.gov.tw 或撥專線 (02) 2343-2975 申請更換。寄信時主旨寫明 12 碼的申請單號與「更換照片」。審核中的案件由領務局在系統內替換照片。已領卡的人可以免費換發，作業時間 10 個工作天，期間舊卡註銷、無法使用。&lt;/p&gt;
+&lt;p&gt;ABTC 的問答提醒，不明電話、信件或訊息要求提供個人資料或點選連結時不要提供或點選，改由領務局官網所列的管道查證或撥 165 反詐騙諮詢專線。依風傳媒 11 月 12 日的報導，領務局過去曾接獲民眾反映，有人冒用「護照照片上傳系統」確認預約信的名義寄出社交工程郵件（假冒官方名義、誘使收件人點連結或補填資料的郵件）。報導的建議是，收到自稱領務局、要求點連結「確認照片」或「補填資料」的信件或簡訊時直接撥官方專線查證。護照大頭照的官方問答（11 月 13 日更新）沒有找到這項說明。&lt;/p&gt;
+&lt;p&gt;沒有在上述期間透過三種管道申辦護照、沒有在駐紐約辦事處驗證授權書，也沒有用 ABTC 線上填表的人，沒有需要依事件辦理的手續（防詐的提醒仍然適用）。之後可以看資安鑑識的完整結果、委外廠商的責任調查與移送偵查，以及領務局會不會個別通知照片在範圍內的人。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.boca.gov.tw/cp-56-8323-50e8c-1.html&#34;&gt;外交部領事事務局部分網站遭駭說明&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;外交部領事事務局&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;2026 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.boca.gov.tw/dl-5293-cfad58e9ab4743aabfb06a055f0ea4dd.html&#34;&gt;護照大頭照遭駭外洩民眾詢問參考問答&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;外交部領事事務局&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.boca.gov.tw/dl-5290-a8f80c0f35234479b41cdf0f7fbd91be.html&#34;&gt;駐紐約辦事處自民國 100 年 10 月 26 日至 115 年 11 月 6 日期間驗證的部分授權書掃描檔遭駭 民眾詢問參考問答&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;外交部領事事務局&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.boca.gov.tw/dl-5291-a68857a32e9c4b42a5ef8970edc78b40.html&#34;&gt;亞太經濟合作（APEC）商務旅行卡（ABTC）線上填表系統遭駭 民眾詢問參考問答&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;外交部領事事務局&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180446&#34;&gt;外交部領務局網站遭駭，逾7.2萬個護照大頭照外洩，另有授權書及ABTC資料遭取得&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.storm.mg/article/11180844&#34;&gt;出國注意，7萬人護照大頭貼外洩！9月後3管道申辦該換照嗎　領務局賠償、QA一鍵查詢&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;風傳媒&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297&#34;&gt;資通安全管理法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Facebook 照片裡的 FBMD 識別碼與 Brave 桌面版的移除功能</title>
 <link>https://anoni.net/news/2026/11/brave-photo-metadata/</link>
@@ -1626,137 +1908,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Singapore Police Force&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-12&#34;&gt;2025 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>生成式 AI 用在跨國鎮壓的案例與 AI 業者的因應</title>
-<link>https://anoni.net/news/2026/11/genai-transnational-repression/</link>
-<guid isPermaLink="false">anoni-news:2026/11/genai-transnational-repression</guid>
-<pubDate>Thu, 12 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>Anthropic 9 月的威脅情報報告列出國家相關行為者用 Claude 進行監控的案例，其中幾件以住在國外的異議人士為對象。Citizen Lab 研究者 10 月在 Just Security 的評論分析這份報告，建議 AI 業者在揭露與通知、偵測與拒絕、保存證據三方面著手。報告與評論都沒有給一般使用者的設定建議。</description>
-<content:encoded>&lt;p&gt;整理 3 篇原文，來自 Anthropic、Just Security、Citizen Lab&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Anthropic 的威脅情報團隊 9 月 10 日發布〈Detecting and countering misuse of AI: September 2026〉，監控一章列出 2026 年 1 到 7 月間發現並中斷的一系列行動。依報告，國家相關的組織、替國家工作的承包商與商業間諜軟體業者用 Claude 建置、執行監控。其中部分案例被報告歸為跨國鎮壓，對象是住在國外的異議人士與海外社群。&lt;/p&gt;
-&lt;p&gt;Citizen Lab 的三位研究者 10 月 12 日在 Just Security 發表評論分析這份報告，Citizen Lab 網站 10 月 22 日轉載了摘要。評論分析的案例都出自 Anthropic 的報告。報告與評論的對象都是攻擊者如何使用 AI 服務，都沒有給一般使用者的設定建議。&lt;/p&gt;
-&lt;p&gt;研究者引用 Freedom House 的定義，數位跨國鎮壓指政府用數位科技恐嚇、壓制流亡在外與海外社群裡的異議人士。依研究者先前訪談受影響者的研究，這類威脅造成恐懼與孤立，也讓人自我審查、退出倡議活動。&lt;/p&gt;
-&lt;p&gt;研究者把報告的案例歸納成四項變化。第一項是成本，數位鎮壓原本仰賴語言能力、受過訓練的情報分析師與軟體工程師，研究者認為案例顯示 AI 可以取代其中一部分。第二項是公開資料的整理，海外社群在社群平台、通訊軟體、公開資料庫與組織網站留下大量資料。AI 助理可以把零散的資料整理成情報報告，用來重建人際關係、推斷政治傾向與找出所在位置，甚至標出弱點。&lt;/p&gt;
-&lt;p&gt;第三項是把模型接進固定的流程，少數人員就能監督重複執行、部分自動化的監控報告，其中一案每天自動審閱 15 到 30 篇以上的外國媒體報導。第四項，監控的產出可以支援實體跟監、脅迫、吸收線民與干擾公民團體的活動。研究者也寫到報告沒有證明這些偵察導致了實體攻擊。&lt;/p&gt;
-&lt;p&gt;依報告的案例，模型參與的環節還包括翻譯與用方言撰寫訊息、替假的網路人設產生多語貼文，以及寫程式建造瀏覽器擴充功能這類監控工具。其中一案還在試行階段，另外備有超過 255 個合成的社群帳號，報告認為這顯示是先備好帳號、之後再投入使用。對照先前一份新聞調查描述的後續監控環節，報告在封鎖帳號之前沒有發現它們用在真實對象上。另一案計畫對流亡媒體的記者發動集體檢舉與機器人帳號放大，報告的寫法是計畫，沒有寫已經執行。&lt;/p&gt;
-&lt;p&gt;依報告，在計畫對流亡媒體記者集體檢舉的同一個行動裡，Claude 拒絕了幾項秘密訊問與大規模產生假人設的要求。在評論歸為國內監控的一件案例裡，Claude 先拒絕產出監控報告。對方換個說法重新提問之後，模型仍產出了點名 10 位平民的指引。評論提到的另一件國內案例做出的監控系統完全在本機模型上執行，Anthropic 封鎖了帳號，卻無法停用已經部署的系統。&lt;/p&gt;
-&lt;p&gt;Anthropic 的使用政策禁止用 Claude 進行未經同意的監控與側寫，也禁止用來侵害個人的公民自由與人權。依報告，每個案例都封鎖了相關帳號，也改進偵測同類手法的能力。行動影響到平台以外時，Anthropic 視情況把識別資訊與情報分享給業界夥伴與主管機關。報告另外提到部分行為者用 VPN 繞過 Anthropic 的服務地區限制。&lt;/p&gt;
-&lt;p&gt;研究者寫明這份報告只反映一家公司在短期內看得到、偵測得到的範圍，部分歸因的信心也有限。以報告本身為例，其中一案只以低信心判斷行為者是替國家安全機關工作的承包商，而不是機關本身。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;研究者提到過去對 AI 用在跨國鎮壓的警告多半從技術能力推想，少有具體的案例，並認為 Anthropic 的報告提供了少見的操作細節。研究者建議偵測不要只抓容易辨認的鎮壓字眼，改為標出社群監控、地理定位、弱點側寫與政治傾向推斷同時出現的組合，這些能力合起來可以指向一套跨國鎮壓的工作流程。&lt;/p&gt;
-&lt;p&gt;研究者的建議以聯合國《商業與人權指導原則》（UNGPs）為依據，指導原則要求企業處理自身涉入的人權負面影響。評論主張 AI 業者把跨國鎮壓列為獨立的威脅類別，跟國內監控、影響力行動分開，並在三個方向上著手。到 11 月 8 日，查不到 Anthropic、OpenAI、DeepMind 與 xAI 對評論的公開回應。業者這一方目前只看得到 Anthropic 9 月的報告，它早於評論發表，不是對建議的回應。&lt;/p&gt;
-&lt;p&gt;在第一個方向揭露與通知上，Anthropic 的報告本身就是一份公開揭露，處置的部分寫的是視情況把資訊分享給業界夥伴與主管機關。研究者肯定報告的細節，也認為 OpenAI、DeepMind 與 xAI 可能遇到類似的行動，只是沒有標準化的報告可以評估。研究者也建議通知受影響的社群，Google 與 Apple 已經有通知國家支持攻擊對象的流程。這類通知發給的是遭鎖定的自家使用者，AI 業者面對的被鎖定者卻不一定是自家的使用者，研究者因此建議用對方讀得懂的格式與語言做社群層級的通知。&lt;/p&gt;
-&lt;p&gt;在第二個方向偵測與拒絕上，研究者肯定 Anthropic 多次在行動大規模部署之前就發現並阻止，也指出部分案例換個說法重新提問就繞過了拒絕。Anthropic 的報告寫的做法是在每個案例改進偵測同類手法的能力，並把調查的結果併入防護措施。&lt;/p&gt;
-&lt;p&gt;在第三個方向保存證據上，研究者提到已有民事訴訟與刑事調查來自數位跨國鎮壓演變成實體傷害的案件。研究者因此主張業者保存包含歸因資料的詳細事件紀錄，供日後調查使用。研究者也寫明該保存什麼取決於各地法律，目前仍有爭議。&lt;/p&gt;
-&lt;p&gt;評論與 Citizen Lab 的頁面都沒有給被鎖定者的操作建議。Google 與 Apple 各有通知國家支持行動鎖定對象的流程，評論把它們當作 AI 業者建立通知機制時的參考。&lt;/p&gt;
-&lt;p&gt;之後讀到其他 AI 業者的威脅報告時，可以比較幾件事：有沒有把跨國鎮壓獨立分類、處置包含哪些步驟（封鎖帳號、改進偵測、分享情報）、有沒有通知被鎖定的社群、保存了哪些紀錄。另一組問題是效果，研究者指出部分案例換個說法就繞過了拒絕。系統部署在本機模型上時，封鎖帳號也停不了，偵測要早到哪個階段才有用也值得比較。研究者提到業界沒有標準化的報告，各家之間能不能比較，也取決於會不會建立共同的格式。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.anthropic.com/threat-intelligence-report-september-2026&#34;&gt;Detecting and countering misuse of AI: September 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Anthropic&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-10&#34;&gt;2026 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.justsecurity.org/159245/how-generative-ai-scaling-transnational-repression/&#34;&gt;How Generative AI is Scaling Transnational Repression&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Just Security&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/how-generative-ai-is-scaling-transnational-repression/&#34;&gt;How Generative AI is Scaling Transnational Repression&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Privacy Badger 的 macOS Safari 版</title>
-<link>https://anoni.net/news/2026/11/privacy-badger-safari-macos/</link>
-<guid isPermaLink="false">anoni-news:2026/11/privacy-badger-safari-macos</guid>
-<pubDate>Thu, 12 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>EFF 10 月 19 日推出阻擋追蹤器的擴充套件 Privacy Badger 的 Safari 版，只支援 Mac，需要 Safari 26.5 與 macOS 15.7.7 以上。到 11 月 8 日為止，iPhone 與 iPad 還沒有 Safari 版。</description>
-<content:encoded>&lt;p&gt;整理 8 篇原文，來自 EFF、Apple、GitHub 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國數位權利組織 EFF 在 10 月 19 日推出 Privacy Badger 的 Safari 版。Privacy Badger 是 EFF 開發的免費瀏覽器擴充套件，會自動學習辨識並阻擋追蹤器。Safari 版只支援 Mac，需要 Safari 26.5 以上，Mac App Store 頁面列出的系統需求是 macOS 15.7.7 以上。到 11 月 8 日為止，iPhone 與 iPad 的 Safari 還不能安裝。&lt;/p&gt;
-&lt;p&gt;依 EFF 的公告，Privacy Badger 已有超過 400 萬名使用者。EFF 的技術人員在新聞稿提到，支援 Safari 一直是使用者最常提出的需求之一。公告把 Privacy Badger 能在 Safari 26.5 以上推出，歸功於 Safari 對擴充套件支援的改進。&lt;/p&gt;
-&lt;p&gt;依公告，Safari 預設的瀏覽模式會限制追蹤器可以取得的資訊，但仍讓追蹤器載入。Privacy Badger 從一開始就不讓追蹤器載入，可以擋下繞過 Safari 防護的追蹤手法。嵌入的推文、留言區與影片播放器這類小工具，即使使用者沒有點擊也可能分享資料，Privacy Badger 會把它們換成點了才載入的預留框。&lt;/p&gt;
-&lt;p&gt;Privacy Badger 也會自動送出全球隱私控制（Global Privacy Control，GPC）訊號，告訴網站不要出售或分享使用者的個人資料。公告列出加州、科羅拉多、紐澤西、康乃狄克等美國的州，寫明 GPC 在這些地方已具法律效力。&lt;/p&gt;
-&lt;p&gt;Safari 版要從 Mac App Store 免費安裝，賣家是 EFF。公告提醒 Safari 安裝擴充套件的步驟比其他瀏覽器複雜，附上 Apple 的說明頁。這是 Safari 版的第一個版本，遇到問題可以寄信到 &lt;code&gt;extension-devs@eff.org&lt;/code&gt; 或在 GitHub 回報。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 privacybadger.org 的說明，Privacy Badger 用演算法判斷追蹤器，多數阻擋工具則仰賴人工維護的網域清單。它觀察第三方網域有沒有使用能唯一識別瀏覽器的 cookie、存在本機儲存空間的「超級 cookie」與畫布指紋（canvas fingerprinting，用瀏覽器繪圖的細微差異辨識裝置）。同一個第三方網域在三個不同的網站上追蹤使用者，就會被擋下。廣告沒有追蹤使用者時，Privacy Badger 不會擋。&lt;/p&gt;
-&lt;p&gt;Privacy Badger 也用清單，預設會定期從 EFF 的訓練專案 Badger Sett 取得 Badger Sett 在數千個熱門網站上找到的追蹤器資料。另有一份黃名單，收錄網站運作需要的第三方網域。Privacy Badger 會載入這些網域的內容，只擋掉第三方 cookie 與 referrer。說明頁把黃名單寫成對實用性的妥協，長期希望不再需要黃名單。&lt;/p&gt;
-&lt;p&gt;依 Apple 的說明頁，Safari 會刪除使用者沒有直接造訪並互動過的第三方網站的 cookie 與網站資料。Safari 也會向網站呈現簡化過的系統設定，讓每台 Mac 看起來更相似，降低追蹤者辨識裝置的能力。依 EFF 的公告，Privacy Badger 單獨使用就有效。跟廣告封鎖器或 Safari 進階設定裡套用到所有視窗的追蹤防護一起用時，它也能擋下不在其他工具清單裡、或其他工具選擇不擋的追蹤器。&lt;/p&gt;
-&lt;p&gt;依 privacybadger.org 的說明，GPC 的用意是在有適用隱私法的地方，對所有公司都具法律效力。公告列出的州都在美國。本文推論，其他地方的網站可能不理會這個訊號。說明頁也提到，Privacy Badger 會一併送出 Do Not Track 訊號（請網站不要追蹤使用者的瀏覽器訊號），網域收到兩種訊號之後仍收集唯一識別碼才會被擋下。&lt;/p&gt;
-&lt;p&gt;安裝時瀏覽器會警告擴充套件可以存取所有網站的資料，privacybadger.org 寫明除非使用者送出網站故障回報，否則不會分享瀏覽資料。Mac App Store 頁面的隱私標示寫「不收集資料」，這項資訊由開發者提供，Apple 沒有驗證。新聞自由組織 Freedom of the Press Foundation 介紹 Safari 版時也提醒，只安裝可信任的擴充套件。除了權限，網站也可能無法正常運作，EFF 的公告提到這時可以只對那個網站停用 Privacy Badger。&lt;/p&gt;
-&lt;p&gt;用 Mac 版 Safari、想減少跨網站追蹤的人，第一步先確認 Safari 已更新到 26.5 以上、系統是 macOS 15.7.7 以上，再從 Mac App Store 安裝並照 Apple 的說明在 Safari 啟用。擴充套件的介面有正體中文，說明頁 privacybadger.org 到 11 月 8 日為止沒有正體中文版。Privacy Badger 擋的是第三方追蹤器，直接造訪的網站自己收集的資料不在範圍內（例如直接造訪 YouTube 時，YouTube 自己的追蹤與廣告都不會被擋），iPhone 與 iPad 上的瀏覽也還無法保護。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/10/announcing-privacy-badger-safari-macos&#34;&gt;Announcing Privacy Badger for Safari on macOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/press/releases/eff-launches-privacy-badger-safari-macos&#34;&gt;EFF Launches Privacy Badger for Safari on macOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacybadger.org/&#34;&gt;Privacy Badger | Fight hidden tracking with EFF&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/privacy-badger/id6761143693&#34;&gt;Privacy Badger App - App Store&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/EFForg/privacybadger/issues/3248&#34;&gt;Support Safari on iOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/EFForg/privacybadger/tree/master/src/_locales&#34;&gt;privacybadger/src/_locales&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/privacy-badger-now-supports-safari/&#34;&gt;Privacy Badger now supports Safari&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/prevent-cross-site-tracking-sfri40732/mac&#34;&gt;Prevent cross-site tracking in Safari on Mac&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

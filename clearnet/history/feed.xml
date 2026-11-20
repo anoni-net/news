@@ -6,7 +6,16 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 20 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 21 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>中國大陸境內無法開啟的 Facebook，以及首屆世界互聯網大會會場的例外</title>
+<link>https://anoni.net/news/history/11-21/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-21/2026</guid>
+<pubDate>Sat, 21 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>你在台灣常用的 Facebook 與 Google 網站，從中國大陸境內的網路仍然無法開啟（2026 年 11 月查證）。這一天，首屆世界互聯網大會在烏鎮閉幕，會期中與會者在會場可以連上 Facebook、Twitter 等網站。</description>
+<content:encoded>&lt;p&gt;你在台灣常用的 Facebook 與 Google 網站，換到中國大陸境內的網路就無法開啟（依第三方量測網站 GreatFire 的紀錄，facebook.com 最近 61 次有結論的測試全部失敗，google.com 最近 13 次也全部失敗，本站 2026 年 11 月 15 日查證）。首屆世界互聯網大會 2014 年 11 月 19 日在浙江烏鎮開幕，法新社（AFP）引述與會者的說法，會期中與會者可以不受限制地連上 Facebook、Twitter 等中國其他地方無法連線的網站（關注中國網路審查的新聞網站 China Digital Times 寫明範圍限於會議地點的網路）。China Digital Times 轉述的 Bloomberg 報導寫到，中國常為受矚目國際會議的與會者解除網路管制，同月在北京亞太經濟合作會議（APEC）的媒體中心也可以連上 Facebook 與 Twitter。會期到 11 月 21 日結束，TIME 隔年的報導提到會議結束之後，中國過濾境外網站的防火長城（Great Firewall）又恢復了。本文建議要去中國大陸的讀者，出發前可以在 GreatFire 查詢常用網站的網址，它記錄的是從境內網路連線的量測結果。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>依所在國家隱藏的貼文與法國法院的 Yahoo 納粹物品拍賣案</title>
 <link>https://anoni.net/news/history/11-20/#y2026</link>
@@ -177,15 +186,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你的手機沒有裝上安全性更新時，軟體裡的漏洞可能被別人從網路上利用。這一天，一個程式開始在網際網路上擴散，利用軟體的漏洞侵入一台又一台電腦。</description>
 <content:encoded>&lt;p&gt;你的手機收到的系統更新裡有安全性修補，Apple 的說明頁把持續更新軟體列為維護裝置安全最重要的措施之一。依 MIT 研究人員事後的分析論文，1988 年 11 月 2 日起有一個程式在當時約有 6 萬台主機的網際網路上從一台電腦侵入另一台。它利用收發郵件程式預設開啟的除錯功能、查詢使用者資料的服務不檢查輸入長度的漏洞，也用帳號名稱、姓名的簡單變化與程式內建的字詞清單猜密碼。依論文整理的當時應變做法，移除郵件程式的除錯指令與關掉或修正查詢服務，都要在其他漏洞也補上時才有效。你可以在 iPhone 的「設定」依序點「一般」、「軟體更新」、「自動更新」開啟「自動安裝」，Google 的 Android 說明頁到 11 月 1 日寫的是大部分系統更新與安全性修補會自動安裝，舊款裝置則可能無法執行較新的版本。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>App 裡的「個性化推薦」開關</title>
-<link>https://anoni.net/news/history/11-01/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/11-01/2026</guid>
-<pubDate>Sun, 01 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你若用過中國大陸版的 App，設定裡可能有關閉「個性化推薦」的選項。這一天，中國的《個人信息保護法》開始施行，要求業者用自動化決策推送資訊時提供不針對個人特徵的選項或便捷的拒絕方式。</description>
-<content:encoded>&lt;p&gt;上海市消費者權益保護委員會依《個人信息保護法》做的測評在 2023 年 3 月公布（新浪財經轉載），中國大陸 10 個常用 App 都有關閉「個性化推薦」（依瀏覽與點擊紀錄挑選推給你的內容）的路徑，其中 9 家表示關閉後會立即停止、小紅書表示不會完全停止。《個人信息保護法》2021 年 11 月 1 日施行，要求業者以自動化決策（依個人特徵挑選內容的做法）推送資訊或行銷時，同時提供不針對個人特徵的選項或便捷的拒絕方式。2022 年 3 月施行的《互聯網信息服務算法推薦管理規定》另規定，使用者關閉演算法推薦後業者要立即停止提供相關服務。國家機關處理個人資訊同樣要依這部法告知當事人處理的事項，法律另有保密規定或告知會妨礙履行法定職責時可以不告知。使用中國大陸 App 的讀者可以在設定裡找「個性化推薦」，台灣下載的版本有沒有同樣的選項、《個人信息保護法》是否適用於台灣使用者，本文沒有查證（2026 年 10 月）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

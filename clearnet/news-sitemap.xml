@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/weekly-brief-2026-w47/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:10:00+08:00</news:publication_date>
+<news:title>每週短訊 2026 第 47 週</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/weekly-brief-2026-w47/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:10:00+08:00</news:publication_date>
+<news:title>每周短讯 2026 第 47 周</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/weekly-brief-2026-w47/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:10:00+08:00</news:publication_date>
+<news:title>Weekly brief, 2026 week 47</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/2026/11/boca-passport-leak/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:05:00+08:00</news:publication_date>
+<news:title>外交部領務局網站入侵與 72,702 個護照大頭照檔案的外洩</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/boca-passport-leak/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:05:00+08:00</news:publication_date>
+<news:title>外交部领务局网站入侵与 72,702 个护照大头照文件的外泄</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/boca-passport-leak/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:05:00+08:00</news:publication_date>
+<news:title>The Bureau of Consular Affairs website breach and 72,702 leaked passport photo files</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/brave-photo-metadata/</loc>
 <news:news>
 <news:publication>
@@ -130,39 +196,6 @@
 </news:publication>
 <news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
 <news:title>The TLS Middlebox experiment in OONI Probe and a survey on data collection</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/neticrm-breach/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-19T00:05:00+08:00</news:publication_date>
-<news:title>netiCRM 服務商主機的入侵與客戶捐款資料庫的複製</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/neticrm-breach/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-19T00:05:00+08:00</news:publication_date>
-<news:title>netiCRM 服务商主机的入侵与客户捐款数据库的复制</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/neticrm-breach/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-19T00:05:00+08:00</news:publication_date>
-<news:title>The netiCRM provider&#39;s server breach and a client&#39;s copied donation database</news:title>
 </news:news>
 </url>
 </urlset>
