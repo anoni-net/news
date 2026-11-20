@@ -24,7 +24,7 @@
 
 ## 專欄
 
-導讀的立場預設中立，專欄是作者署名、寫出自己看法的評論文章，從一個主題整理好幾則新聞，觀點屬於作者，不代表社群的立場。歡迎投稿，署名可以是本名或固定的筆名。格式見 [`SPEC.md`](./SPEC.md) 的「專欄」，寫法見 [`guides/column.md`](./guides/column.md)。
+導讀的立場預設中立，專欄是作者署名、寫出自己看法的評論文章，從一個主題整理好幾則新聞，觀點屬於作者，不代表社群的立場。歡迎投稿，署名可以是本名或固定的筆名，題目與投稿的管道見網站上的[投稿專欄](https://anoni.net/news/contribute/)。格式見 [`SPEC.md`](./SPEC.md) 的「專欄」，寫法見 [`guides/column.md`](./guides/column.md)。
 
 ## 語系
 
@@ -81,7 +81,7 @@ A side column of the briefings, one entry a day, looking back at what happened o
 
 ## Columns
 
-Briefings stay neutral by default. Columns are signed opinion pieces that draw several stories together around one theme, and the views are the author's own, not the community's. Submissions are welcome, signed with a real name or a consistent pen name. The format is under "專欄" in [`SPEC.md`](./SPEC.md) and the writing guide is [`guides/column.md`](./guides/column.md) (both in Chinese).
+Briefings stay neutral by default. Columns are signed opinion pieces that draw several stories together around one theme, and the views are the author's own, not the community's. Submissions are welcome, signed with a real name or a consistent pen name; see [Write a column](https://anoni.net/news/en/contribute/) on the site for topics and how to submit. The format is under "專欄" in [`SPEC.md`](./SPEC.md) and the writing guide is [`guides/column.md`](./guides/column.md) (both in Chinese).
 
 ## Languages
 

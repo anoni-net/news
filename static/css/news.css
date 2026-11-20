@@ -725,6 +725,20 @@ p {
     font-weight: 600;
 }
 
+/* 專欄文末的投稿邀請，樣式跟標題區的說明相同，左線用專欄色 */
+.column-invite {
+    margin: 2rem 0 0;
+    padding: 0.875rem 1rem;
+    background: var(--c-surface);
+    border-left: 3px solid var(--cat);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.column-invite a {
+    font-weight: 600;
+}
+
 /* 專欄的粗體是作者要傳達的主張，用專欄色的螢光筆底標出，跟一般的強調分開。
    底色只是裝飾，字本身用標題色與粗體，深淺模式下文字對底色都在 7:1 以上。見 SPEC.md「專欄」 */
 .story--column .story__body strong {
@@ -1286,6 +1300,7 @@ p {
 
     .story ~ .thread,
     .story ~ .related,
+    .story ~ .column-invite,
     .story ~ .subscribe,
     .story ~ .pager {
         max-width: 40rem;

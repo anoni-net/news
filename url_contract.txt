@@ -446,6 +446,13 @@
 /category/security/
 /category/surveillance/
 /category/tracking/
+/contribute/
+	#boundaries
+	#byline
+	#review
+	#submit
+	#topics
+	#writing
 /en/
 /en/2026/
 /en/2026/09/
@@ -889,6 +896,13 @@
 /en/category/security/
 /en/category/surveillance/
 /en/category/tracking/
+/en/contribute/
+	#boundaries
+	#byline
+	#review
+	#submit
+	#topics
+	#writing
 /en/history/
 /en/history/09-26/
 	#y2026
@@ -1592,6 +1606,13 @@
 /zh-cn/category/security/
 /zh-cn/category/surveillance/
 /zh-cn/category/tracking/
+/zh-cn/contribute/
+	#boundaries
+	#byline
+	#review
+	#submit
+	#topics
+	#writing
 /zh-cn/history/
 /zh-cn/history/09-26/
 	#y2026
