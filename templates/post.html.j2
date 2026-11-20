@@ -55,7 +55,7 @@
     </aside>
 {% endif %}
 {% if is_column %}
-    <p class="story__note cat--column">{{ s.column_note }}</p>
+    <p class="story__note cat--column"><a href="{{ url(home ~ 'contribute/') }}">{{ s.column_note_link }}</a>{{ s.column_note }}</p>
 {% endif %}
 {# 這件事有更新的導讀時，在標題區就提示，從搜尋或舊連結進來的讀者第一眼就知道內容可能已經不是最新 #}
 {% if followup %}

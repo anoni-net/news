@@ -735,7 +735,8 @@ p {
     line-height: 1.6;
 }
 
-.column-invite a {
+.column-invite a,
+.story__note a {
     font-weight: 600;
 }
 
