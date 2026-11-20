@@ -15,7 +15,7 @@ A piece that only retells one story, without an argument of its own, is better s
 
 Build the piece around one argument and state it in the first two paragraphs. Mark your own views in the first person and link to the source for each fact, so readers can tell which sentences are facts and which are your judgement. When you discuss views that differ from yours, quote the other side's own documents and answer their strongest reasons.
 
-There is no length limit. Keep paragraphs to two to four sentences and write in full paragraphs rather than bullet points. **Save bold for the points you most want to get across; the site marks them with a highlighter in the column colour**. You may end with one or two questions for readers.
+There is no length limit. Keep paragraphs to two to four sentences and write in full paragraphs rather than bullet points. **Save bold for the points you most want to get across; the site marks them with a highlighter in the column colour**. When you finish, read only the bold sentences and check that they carry your whole argument. You may end with one or two questions for readers.
 
 You can write in Traditional Chinese, Simplified Chinese or English. Maintainers translate the other two versions and will ask you to check them before publication. Wording follows the community's [writing style guide](https://anoni.net/en/join/writing-style/), and maintainers will help adjust it during review. The detailed rules are in the [column guide](https://github.com/anoni-net/news/blob/main/guides/column.md) on GitHub (in Chinese).
 
