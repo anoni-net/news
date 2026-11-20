@@ -358,6 +358,14 @@
 /2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
+/2026/11/open-source-contributions-ai/
+	#further-reading
+	#new-maintainers
+	#review-cost
+	#sources
+	#tightening
+	#what-it-stops
+	#what-readers-can-do
 /2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -430,6 +438,7 @@
 /category/brief/
 /category/censorship/
 /category/civil-society/
+/category/column/
 /category/encryption/
 /category/finance/
 /category/mobile/
@@ -793,6 +802,14 @@
 /en/2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
+/en/2026/11/open-source-contributions-ai/
+	#further-reading
+	#new-maintainers
+	#review-cost
+	#sources
+	#tightening
+	#what-it-stops
+	#what-readers-can-do
 /en/2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -864,6 +881,7 @@
 /en/category/brief/
 /en/category/censorship/
 /en/category/civil-society/
+/en/category/column/
 /en/category/encryption/
 /en/category/finance/
 /en/category/mobile/
@@ -1487,6 +1505,14 @@
 /zh-cn/2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
+/zh-cn/2026/11/open-source-contributions-ai/
+	#further-reading
+	#new-maintainers
+	#review-cost
+	#sources
+	#tightening
+	#what-it-stops
+	#what-readers-can-do
 /zh-cn/2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -1558,6 +1584,7 @@
 /zh-cn/category/brief/
 /zh-cn/category/censorship/
 /zh-cn/category/civil-society/
+/zh-cn/category/column/
 /zh-cn/category/encryption/
 /zh-cn/category/finance/
 /zh-cn/category/mobile/
