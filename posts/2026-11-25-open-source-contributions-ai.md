@@ -71,6 +71,23 @@ sources:
     url: https://arxiv.org/abs/2610.34933
     publisher: arXiv
     date: 2026-10-26
+  - title: Stop Closing the Door. Fix the House.
+    url: https://angiejones.tech/stop-closing-the-door-fix-the-house/
+    publisher: goose 維護者的部落格
+    date: 2026-02-07
+  - title: In the wake of the xz utils hack, two-thirds of maintainers are less trusting of contributors
+    url: https://dev.to/tidelift/in-the-wake-of-the-xz-utils-hack-two-thirds-of-maintainers-are-less-trusting-of-contributors-4kch
+    publisher: Tidelift
+    date: 2024-10-15
+  - title: The Open Source Definition
+    url: https://opensource.org/osd
+    publisher: Open Source Initiative
+  - title: SQLite Copyright
+    url: https://sqlite.org/copyright.html
+    publisher: SQLite
+  - title: "Lua: FAQ"
+    url: https://www.lua.org/faq.html
+    publisher: Lua
 ---
 
 開源專案的原始碼仍然公開，外人能送進專案的東西卻越來越受限制。我把外人向專案送出程式碼修改、回報問題或通報漏洞的管道，稱為外部貢獻的入口。2026 年有專案停掉漏洞獎金，也有平台讓維護者只開放協作者發起修改，背後的理由都跟 AI 帶來的大量投稿有關。我想釐清收緊入口能保護到什麼，以及開源專案要為此付出什麼。
@@ -140,6 +157,10 @@ Jazzband 宣布結束營運之後，原本由它維護的專案要另外找人�
 我預期入口收緊之後，專案更難從外部貢獻者裡培養新的維護者，維護者不足的問題就會一直存在。我認為這個代價跟 xz 的弱點是同一件事，維護者太少，攻擊者才有空缺可以補。
 
 ## 貢獻的轉向與讀者可以留意的訊號 {#what-readers-can-do}
+
+也有人認為關掉入口違背了開源的精神。AI 代理工具 goose 的一位維護者 2 月在部落格寫，關上大門不是解方，開源特別的地方不能放棄。這位維護者主張把貢獻的門檻寫清楚，交給 CI 自動檢查。Tidelift 2024 年在 xz 事件後做的維護者調查裡，也有受訪者表示預設信任新人才是開源的作法，應該維持下去。
+
+我的看法不同。依開放原始碼促進會（OSI）的開源定義，條文規範的是自由散布、取得原始碼與修改這些授權條件，沒有要求專案接受外部的貢獻。SQLite 與 Lua 的官方說明都自稱開源軟體，SQLite 只接受簽署聲明、把貢獻放進公有領域的人送來的修補，Lua 則請大家不要送 PR。我認為授權保障的是每個人都能取用、修改程式碼，治理方式可以由各專案依自己的人力決定。
 
 我不反對專案收緊入口，面對大量投稿，維護者需要先保護自己的時間。我希望省下來的時間投進審查與權限管理，例如誰能合併、誰能發行、權杖如何保管，前面提到的 CISA 建議可以當作檢查的起點。
 

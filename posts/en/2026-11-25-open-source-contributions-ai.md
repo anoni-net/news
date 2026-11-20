@@ -71,6 +71,23 @@ sources:
     url: https://arxiv.org/abs/2610.34933
     publisher: arXiv
     date: 2026-10-26
+  - title: Stop Closing the Door. Fix the House.
+    url: https://angiejones.tech/stop-closing-the-door-fix-the-house/
+    publisher: goose maintainer's blog
+    date: 2026-02-07
+  - title: In the wake of the xz utils hack, two-thirds of maintainers are less trusting of contributors
+    url: https://dev.to/tidelift/in-the-wake-of-the-xz-utils-hack-two-thirds-of-maintainers-are-less-trusting-of-contributors-4kch
+    publisher: Tidelift
+    date: 2024-10-15
+  - title: The Open Source Definition
+    url: https://opensource.org/osd
+    publisher: Open Source Initiative
+  - title: SQLite Copyright
+    url: https://sqlite.org/copyright.html
+    publisher: SQLite
+  - title: "Lua: FAQ"
+    url: https://www.lua.org/faq.html
+    publisher: Lua
 ---
 
 The source code of open source projects is still public, but what outsiders can send into those projects is increasingly restricted. By entry points I mean the channels through which outsiders send code changes, report problems or disclose vulnerabilities to a project. In 2026 one project ended its bug bounty and a platform now lets maintainers reserve proposed changes for collaborators, and in each case the reasons had to do with the flood of submissions that AI has brought. I want to work out what tightening these entry points protects, and what open source projects pay for it.
@@ -140,6 +157,10 @@ After Jazzband announced it was winding down, the projects it had maintained nee
 I expect that once entry points are tightened, projects will find it harder to develop new maintainers from among outside contributors, and the shortage of maintainers will persist. I see this cost as the same weakness xz had: an attacker only has a gap to fill because there are too few maintainers.
 
 ## A shift in what counts as contribution, and signals for readers {#what-readers-can-do}
+
+Some people see closing the door as going against the spirit of open source. A maintainer of the AI agent tool goose wrote on their blog in February that "Closing the door on contributors isn't the answer" and that "we can't give up on the thing that makes open source special", arguing that projects should spell out the bar for contributions and let CI check it automatically. In a survey of maintainers that Tidelift ran after the xz incident in 2024, one respondent likewise said that "Trusting new maintainers by default is the open source way, and how it should remain."
+
+I see it differently. The Open Source Initiative's Open Source Definition sets conditions on the licence, such as free redistribution, access to the source code and the right to modify it, and does not require a project to accept outside contributions. The official documentation of both SQLite and Lua calls them open source, yet SQLite only accepts patches from people who have signed an affidavit dedicating their contribution to the public domain, and Lua asks people not to send pull requests. I think the licence guarantees that everyone can take the code and change it, while each project can decide its governance according to the people it has.
 
 I am not against projects tightening their entry points; facing a flood of submissions, maintainers need to protect their time first. I hope the time saved goes into review and permission management, such as who can merge, who can release and how tokens are kept, and the CISA recommendations mentioned above can serve as a starting point for that check.
 

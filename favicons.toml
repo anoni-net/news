@@ -91,6 +91,9 @@ from = "https://android.googlesource.com/+static/apple-touch-icon.png"
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
 
+[hosts."angiejones.tech"]
+none = "圖示是個人頭像"
+
 [hosts."anoni.net"]
 icon = "anoni.net-e7cf54e0.png"
 from = "手動提供的檔案 anoni-favicon.png"
@@ -716,6 +719,10 @@ from = "https://demo.uwazi.io/public/favicon.ico"
 [hosts."democrats-foreignaffairs.house.gov"]
 icon = "democrats-foreignaffairs.house.gov-eb05aff3.png"
 from = "https://democrats-foreignaffairs.house.gov/wp-content/uploads/2026/03/cropped-hfac-icon-dems-192x192.png"
+
+[hosts."dev.to"]
+icon = "dev.to-4d51d0aa.png"
+from = "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
 
 [hosts."devb.gov.hk"]
 icon = "devb.gov.hk-1925612d.png"
@@ -1702,6 +1709,10 @@ from = "https://www.livelaw.in/images/ico/favicon.ico?v=9"
 icon = "lofgren.house.gov-9acaf926.png"
 from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
 
+[hosts."lua.org"]
+icon = "lua.org-5be79ff6.png"
+from = "https://www.lua.org/apple-touch-icon.png"
+
 [hosts."luk.tsipil.ugm.ac.id"]
 same_as = "tsipil.ugm.ac.id"
 
@@ -2102,6 +2113,10 @@ from = "https://openjdk.org/images/nanoduke.ico"
 [hosts."openrightsgroup.org"]
 icon = "openrightsgroup.org-dcb8635e.png"
 from = "https://www.openrightsgroup.org/apple-touch-icon-1024x1024.png"
+
+[hosts."opensource.org"]
+icon = "opensource.org-67b6b15c.png"
+from = "https://i0.wp.com/opensource.org/wp-content/uploads/2023/01/cropped-cropped-OSI_Horizontal_Logo_0-e1674081292667.png?fit=192%2C192&quality=80&ssl=1"
 
 [hosts."openssh.com"]
 icon = "openssh.com-6c007872.png"
@@ -2538,6 +2553,10 @@ from = "https://substackcdn.com/image/fetch/$s_!Teni!,f_auto,q_auto:good,fl_prog
 [hosts."sprs.parl.gov.sg"]
 icon = "sprs.parl.gov.sg-3f13f797.png"
 from = "https://sprs.parl.gov.sg/favicon.ico"
+
+[hosts."sqlite.org"]
+icon = "sqlite.org-cd226b88.png"
+from = "https://sqlite.org/apple-touch-icon.png"
 
 [hosts."ssd.eff.org"]
 icon = "ssd.eff.org-88f6a486.png"
