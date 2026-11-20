@@ -941,6 +941,8 @@ def test_column_page_marks_the_author_view(tmp_path):
     assert "<span>撰文：" in page and "<span>導讀：" not in page
     assert '<p class="story__note cat--column">' in page
     assert page.index('class="story__langs"') < page.index("story__note") < page.index('class="story__body')
+    if 'data-read-aloud' in page:
+        assert page.index("data-read-aloud") < page.index("story__note")
     en = (out / "en/2026/09/test-post/index.html").read_text(encoding="utf-8")
     assert "the author's own views" in en.replace("&#39;", "'")
     assert (out / "category/column/index.html").exists()

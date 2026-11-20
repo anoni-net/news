@@ -35,9 +35,6 @@
 {% endif %}
     </p>
 {% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
-{% if is_column %}
-    <p class="story__note cat--column">{{ s.column_note }}</p>
-{% endif %}
 {# 朗讀按鈕，規則見 SPEC.md「朗讀按鈕」。預設 hidden，read-aloud.js 找到本機語音才顯示，沒有 JavaScript 時看不到。
    平常只有「朗讀」與「調整」兩顆按鈕，語音、速度與說明收在調整面板裡，按「調整」才展開。
    包在 aside 裡，閱讀模式不會把按鈕與說明當成正文 #}
@@ -56,6 +53,9 @@
         <p class="listen__note">{{ s.listen_note }}<a href="{{ url(home ~ 'reading/') }}#listening">{{ s.listen_help }}</a></p>
       </div>
     </aside>
+{% endif %}
+{% if is_column %}
+    <p class="story__note cat--column">{{ s.column_note }}</p>
 {% endif %}
 {# 這件事有更新的導讀時，在標題區就提示，從搜尋或舊連結進來的讀者第一眼就知道內容可能已經不是最新 #}
 {% if followup %}

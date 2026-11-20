@@ -1,6 +1,6 @@
 ---
 title: Tighter limits on outside contributions to open source projects in the AI era
-description: curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this solves the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.
+description: curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this addresses the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.
 date: 2026-11-25T00:15:00+08:00
 slug: open-source-contributions-ai
 categories: [column]
@@ -75,7 +75,7 @@ sources:
 
 The source code of open source projects is still public, but what outsiders can send into those projects is increasingly restricted. In 2026 one project ended its bug bounty and a platform now lets maintainers reserve proposed changes for collaborators, and in each case the reasons had to do with the flood of submissions that AI has brought. I want to work out what tightening these entry points protects, and what open source projects pay for it.
 
-My view is that closing off outside PRs (pull requests, proposed code changes submitted to a project) can hold back the flood of low-quality contributions that AI sends in, and the projects tightening their entry points mostly justify it as protecting maintainers' time. Tightening solves a problem of volume; what worries me is that it gets treated as a security measure. I believe supply chain attacks mostly come in through accounts or people who are already trusted, so the trust problem remains, and what open source projects really lack is review capacity and permission management.
+My view is that closing off outside PRs (pull requests, proposed code changes submitted to a project) can hold back the flood of low-quality contributions that AI sends in, and the projects tightening their entry points mostly justify it as protecting maintainers' time. Tightening addresses a problem of volume; what worries me is that it gets treated as a security measure. I believe supply chain attacks mostly come in through accounts or people who are already trusted, so the trust problem remains, and what open source projects really lack is review capacity and permission management.
 
 Now that code has become cheap, I think what counts as a contribution should shift as well. Reviewing other people's changes, writing tests that reproduce a problem and describing a problem clearly should all count.
 
@@ -99,7 +99,7 @@ On 31 May a maintainer of Home Assistant (an open source smart home platform) wr
 
 ## Risks that tighter entry points can and cannot prevent {#what-it-stops}
 
-None of the projects cited above claims that tightening the entry points protects against supply chain attacks. I put the two together because Jazzband, an organisation that jointly maintained Python packages, linked its open membership model, safe operation and the xz backdoor in its announcement that it was shutting down.
+In the documents I cited above, the reasons I found for tightening were the volume of submissions and maintainers' time, not protection against supply chain attacks. I put the two together because Jazzband, an organisation that jointly maintained Python packages, tied its open membership model to whether it could operate safely in its announcement that it was shutting down, and cited the xz backdoor as an example of what happens after a lone maintainer burns out.
 
 I read all three measures (taking the money out of the bug bounty, capping open PRs and limiting issues to collaborators) as responses to the volume of submissions, and I think they work on the volume problem. curl's author also cautions that their guesses may be wrong, and that if so they will take further steps. According to a report in The Register on 21 October, curl announced that week that it would move low and medium severity vulnerabilities into public view, in the report's words to protect a security team "almost overwhelmed by AI-assisted reports". My reading is that the pressure of volume remained after the bounty ended, and how much tighter entry points relieve it will depend on the numbers that follow.
 
@@ -109,7 +109,7 @@ According to a public timeline that cites the xz-devel mailing list day by day, 
 
 I accept that a project taking no outside patches at all would not have given this account the starting point of that first patch. Counting from the dates in the timeline, two years and four months passed between the first patch and the backdoored release. My view is that tightening can only delay this kind of long-term effort to earn trust, and a patient attacker can still trade time for trust.
 
-According to the message on oss-security, the open source security mailing list, that publicly warned of the backdoor, one portion of it existed only in the release tarballs: a line of build script that was not in the source on git. Distributions and users often download tarballs that maintainers package separately and sign digitally, and their contents are not necessarily identical to the public source on git. My inference is that reviewing PRs would not have revealed that line either, and that what matters is who can create and sign release files.
+According to the message on oss-security, the open source security mailing list, that publicly warned of the backdoor, one portion of it existed only in the release tarballs: a line of build script that was not in the source on git. As I understand it, distributions and users often download tarballs that maintainers package separately and sign digitally, and their contents are not necessarily identical to the public source on git. My inference is that reviewing PRs would not have revealed that line either, and that what matters is who can create and sign release files.
 
 The original maintainer wrote on the mailing list in 2022 that the effort they could put in was limited (as transcribed in the same timeline). I think the weakness xz exposed lies in having too few maintainers and in permission management, and closing the entry points will not give a project one more person to share reviewing and releasing.
 
