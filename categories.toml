@@ -105,3 +105,14 @@ en = "Weekly Brief"
 zh-TW = "每週整理幾則沒有單獨成篇的隱私、匿名與審查新聞，每則一段。"
 zh-CN = "每周整理几则没有单独成篇的隐私、匿名与审查新闻，每则一段。"
 en = "A weekly round-up of privacy, anonymity and censorship news that did not get a story of its own, one paragraph each."
+
+# 專欄是作者署名、表達作者立場的文章，跟每週短訊一樣是格式，不是主題。見 SPEC.md「專欄」
+[column]
+zh-TW = "專欄"
+zh-CN = "专栏"
+en = "Column"
+
+[column.description]
+zh-TW = "作者署名的評論文章，從一個主題整理多則新聞並寫出作者的看法，觀點屬於作者，不代表 anoni.net 社群的立場。"
+zh-CN = "作者署名的评论文章，从一个主题整理多则新闻并写出作者的看法，观点属于作者，不代表 anoni.net 社区的立场。"
+en = "Signed opinion pieces that draw several news stories together around one theme. The views are the author's own, not those of the anoni.net community."

@@ -561,6 +561,9 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
     elif categories[0] not in known:
         problems.append(f"{where}：categories 的 {categories[0]!r} 不在 categories.toml 裡，可用的有 {list(known)}")
         categories = []
+    elif categories == ["column"] and any(author.get("key") == "anoni-net" for author in post_authors):
+        # 專欄寫的是作者的立場，用社群署名會讀成社群的立場，見 SPEC.md「專欄」
+        problems.append(f"{where}：專欄要用作者的署名（具名或筆名），不能用 anoni-net")
 
     follows = meta.get("follows") or []
     if not isinstance(follows, list) or not all(isinstance(ref, str) and is_post_name(ref) for ref in follows):
@@ -1509,7 +1512,8 @@ def jsonld(post: Post, target: Target, config: dict, image: str | None = None) -
             authors.append(person)
     data = {
         "@context": "https://schema.org",
-        "@type": "NewsArticle",
+        # 專欄是作者的觀點文章，schema.org 有對應的 OpinionNewsArticle，見 SPEC.md「專欄」
+        "@type": "OpinionNewsArticle" if post.categories == ["column"] else "NewsArticle",
         "headline": post.title,
         "description": post.description,
         "datePublished": post.created.isoformat(),

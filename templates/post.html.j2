@@ -15,6 +15,8 @@
 {% endif %}
 {% endblock %}
 {% block main_class %}story-wrap{% endblock %}
+{# 專欄是作者署名的觀點文章，署名改寫「撰文」，標題區另外寫明觀點屬於作者，見 SPEC.md「專欄」 #}
+{% set is_column = post.categories and post.categories[0] == "column" %}
 {% block content %}
 {# data-print-* 只給列印用，印在文章最後，見 SPEC.md「列印」 #}
 <article class="story" data-print-label="{{ s.print_from.format(site=s.site_name) }}" data-print-url="{{ page_url }}">
@@ -27,12 +29,15 @@
 {# 出處行列出的網站，圖示並排成一串放在行首，跟下方原文區塊的圖示呼應 #}
 {% set icons = post|source_icons %}
       <span class="story__sources"><a href="#sources">{% if icons %}<span class="favicon-stack">{% for rel in icons %}{% if rel %}<img src="{{ url('assets/' ~ rel) }}" width="16" height="16" alt="" decoding="async">{% else %}{{ icon('web') }}{% endif %}{% endfor %}</span>{% else %}{{ icon('file-document-multiple-outline') }}{% endif %} <span>{{ line if line else s.sources }}</span></a></span>
-      <span>{{ s.byline }}{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author|author_name }}</a>{% else %}{{ author|author_name }}{% endif %}{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</span>
+      <span>{{ s.byline_column if is_column else s.byline }}{% for author in post.authors %}{% if author.url %}<a href="{{ author.url }}" rel="author">{{ author|author_name }}</a>{% else %}{{ author|author_name }}{% endif %}{% if not loop.last %}{{ s.list_sep }}{% endif %}{% endfor %}</span>
 {% if post.updated %}
       <span>{{ s.corrected }} <time datetime="{{ post.updated|iso }}">{{ post.updated|ymd }}</time></span>
 {% endif %}
     </p>
 {% with langs_class = "story__langs" %}{% include "_other_langs.html.j2" %}{% endwith %}
+{% if is_column %}
+    <p class="story__note cat--column">{{ s.column_note }}</p>
+{% endif %}
 {# 朗讀按鈕，規則見 SPEC.md「朗讀按鈕」。預設 hidden，read-aloud.js 找到本機語音才顯示，沒有 JavaScript 時看不到。
    平常只有「朗讀」與「調整」兩顆按鈕，語音、速度與說明收在調整面板裡，按「調整」才展開。
    包在 aside 裡，閱讀模式不會把按鈕與說明當成正文 #}

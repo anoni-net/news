@@ -669,6 +669,23 @@ def test_jsonld_author_types(fixture_site):
     assert data["dateModified"].startswith("2026-09-20")
 
 
+def test_jsonld_column_is_opinion(fixture_site, tmp_path):
+    """專欄的結構化資料用 OpinionNewsArticle，其他分類維持 NewsArticle。見 SPEC.md「專欄」。"""
+    targets, _, _ = fixture_site
+    config = {"homepage": "https://anoni.net/"}
+    text = GOOD.replace("  - encryption\n", "  - column\n").replace("  - anoni-net\n", "  - named-example\n")
+    column = build.load_post(write_post(tmp_path, text), AUTHORS)
+    assert first_jsonld(build.jsonld(column, targets["clearnet"], config))["@type"] == "OpinionNewsArticle"
+    post = build.load_post(write_post(tmp_path, GOOD), AUTHORS)
+    assert first_jsonld(build.jsonld(post, targets["clearnet"], config))["@type"] == "NewsArticle"
+
+
+def test_column_needs_an_author_byline(tmp_path):
+    """專欄寫的是作者的立場，不能用社群署名。"""
+    text = GOOD.replace("  - encryption\n", "  - column\n")
+    assert any("專欄要用作者的署名" in p for p in problems_of(tmp_path, text))
+
+
 # ---------------------------------------------------------------- 網址合約
 
 def test_contract_detects_removal(fixture_site):

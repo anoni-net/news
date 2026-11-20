@@ -723,6 +723,16 @@ p {
     font-weight: 600;
 }
 
+/* 專欄的說明，寫明觀點屬於作者。放在標題區、閱讀模式與朗讀都會讀到，樣式跟後續發展的提示相同 */
+.story__note {
+    margin: 1rem 0 0;
+    padding: 0.75rem 1rem;
+    background: var(--c-surface);
+    border-left: 3px solid var(--cat, var(--c-rule));
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
 /* 朗讀按鈕，在「其他語言」那一行的下方。read-aloud.js 找到本機語音才拿掉 hidden，見 SPEC.md「朗讀按鈕」。
    平常只有「朗讀」與「調整」一列，按「調整」才展開語音、速度與說明。
    按鈕出現時，標題區的粗線從語系那一行移到這裡，粗線之後直接接內文。
@@ -1483,7 +1493,7 @@ p {
 /* ---------------------------------------------------------------- 分類標籤
 
    每篇導讀一個分類，見 categories.toml。標籤放在標題上方與文章頁的日期前面，用色系區分，
-   文字顏色在淺色底上至少 4.5:1，深色模式改用較亮的同色系。每週短訊是格式，用中性色 */
+   文字顏色在淺色底上至少 4.5:1，深色模式改用較亮的同色系。每週短訊是格式，用中性色。專欄也是格式，用跟主題分類都不同的紫紅色 */
 .cat--encryption { --cat: #0f766e; }
 .cat--tracking { --cat: #b45309; }
 .cat--surveillance { --cat: #b91c1c; }
@@ -1494,6 +1504,7 @@ p {
 .cat--finance { --cat: #4338ca; }
 .cat--press { --cat: #c2410c; }
 .cat--brief { --cat: #4b5563; }
+.cat--column { --cat: #86198f; }
 
 @media (prefers-color-scheme: dark) {
     .cat--encryption { --cat: #5eead4; }
@@ -1506,6 +1517,7 @@ p {
     .cat--finance { --cat: #a5b4fc; }
     .cat--press { --cat: #fdba74; }
     .cat--brief { --cat: #cbd5e1; }
+    .cat--column { --cat: #f0abfc; }
 }
 
 /* 字級與間距跟「導讀歷史 · 年份」的標籤相同，同一天的導讀與導讀歷史，標題上方那一行對得齊 */
