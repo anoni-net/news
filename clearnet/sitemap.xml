@@ -22,6 +22,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/11/open-source-contributions-ai/</loc>
+<lastmod>2026-11-20</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/open-source-contributions-ai/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/iphone-grey-list/</loc>
 <lastmod>2026-11-20</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/iphone-grey-list/"/>
@@ -1044,6 +1052,13 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/brief/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/category/column/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/column/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/column/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/column/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/column/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/history/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/"/>
@@ -1518,6 +1533,21 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/contribute/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/contribute/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/contribute/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/contribute/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/</loc>
+<lastmod>2026-11-20</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/open-source-contributions-ai/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/zh-cn/2026/11/iphone-grey-list/</loc>
@@ -2542,6 +2572,13 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/brief/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/category/column/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/column/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/column/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/column/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/column/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/history/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/"/>
@@ -3016,6 +3053,21 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/contribute/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/contribute/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/contribute/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/contribute/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/open-source-contributions-ai/</loc>
+<lastmod>2026-11-20</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/open-source-contributions-ai/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/open-source-contributions-ai/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/11/iphone-grey-list/</loc>
@@ -4040,6 +4092,13 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/brief/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/en/category/column/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/category/column/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/category/column/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/category/column/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/category/column/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/en/history/</loc>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/history/"/>
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/history/"/>
@@ -4514,5 +4573,12 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/reading/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/reading/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/reading/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/contribute/</loc>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/contribute/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/contribute/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/contribute/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
 </url>
 </urlset>

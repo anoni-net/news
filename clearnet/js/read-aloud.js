@@ -168,7 +168,7 @@
     if (state === "idle") box.hidden = !voice;
   }
 
-  // 要朗讀的段落：標題、副標，接著是內文的每一個區塊。程式碼區塊逐字念出來沒有意義，跳過
+  // 要朗讀的段落：標題、副標、專欄的說明，接著是內文的每一個區塊。程式碼區塊逐字念出來沒有意義，跳過
   var BLOCKS = "h2, h3, h4, p, li, blockquote, figcaption, tr";
   function collect() {
     var items = [];
@@ -180,6 +180,9 @@
     var dek = document.querySelector(".story__dek");
     if (title) add(title, title.textContent);
     if (dek) add(dek, dek.textContent);
+    // 專欄在標題區寫明觀點屬於作者，用聽的讀者也要先聽到，見 SPEC.md「專欄」
+    var note = document.querySelector(".story__note");
+    if (note) add(note, note.textContent);
     var body = document.querySelector(".story__body");
     if (!body) return items;
     var nodes = body.querySelectorAll(BLOCKS);

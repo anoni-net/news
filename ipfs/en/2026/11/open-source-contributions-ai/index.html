@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tighter limits on outside contributions to open source projects in the AI era | anoni.net News</title>
+<meta name="description" content="curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this addresses the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://anoni.net/news/en/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/open-source-contributions-ai/">
+<link rel="stylesheet" href="/news/css/news.css?v=09ccd21995">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net News" href="https://anoni.net/news/en/feed.xml">
+<meta property="og:site_name" content="anoni.net News">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tighter limits on outside contributions to open source projects in the AI era">
+<meta property="og:description" content="curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this addresses the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.">
+<meta property="og:url" content="https://anoni.net/news/en/2026/11/open-source-contributions-ai/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/11/open-source-contributions-ai-en-cfae7498.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tighter limits on outside contributions to open source projects in the AI era">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Tighter limits on outside contributions to open source projects in the AI era">
+<meta property="article:published_time" content="2026-11-20T22:30:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OpinionNewsArticle",
+  "headline": "Tighter limits on outside contributions to open source projects in the AI era",
+  "description": "curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this addresses the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.",
+  "datePublished": "2026-11-20T22:30:00+08:00",
+  "url": "https://anoni.net/news/en/2026/11/open-source-contributions-ai/",
+  "mainEntityOfPage": "https://anoni.net/news/en/2026/11/open-source-contributions-ai/",
+  "image": "https://assets.anoni.net/news/og/2026/11/open-source-contributions-ai-en-cfae7498.png",
+  "inLanguage": "en",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Toomore Chiang"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "The end of the curl bug-bounty",
+      "url": "https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Contributing to the curl project",
+      "url": "https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Welcome to the Eternal September of open source. Here's what we plan to do for maintainers.",
+      "url": "https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Limit open pull requests for users without write access",
+      "url": "https://github.blog/changelog/2026-06-17-limit-open-pull-requests-for-users-without-write-access/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Restrict issue creation to collaborators only",
+      "url": "https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Pull request limits: Exempt contributors by age or history",
+      "url": "https://github.blog/changelog/2026-10-28-pull-request-limits-exempt-contributors-by-age-or-history"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "All projects",
+      "url": "https://osssaysno.com/all"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "About",
+      "url": "https://osssaysno.com/about"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Kernel Guidelines for Tool-Generated Content",
+      "url": "https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Open source was not ready for AI-speed contributions",
+      "url": "https://frenck.dev/open-source-was-not-ready-for-ai-speed-contributions/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "XZ Utils backdoor",
+      "url": "https://tukaani.org/xz-backdoor/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "backdoor in upstream xz/liblzma leading to ssh server compromise",
+      "url": "https://www.openwall.com/lists/oss-security/2024/03/29/4"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Timeline of the xz open source attack",
+      "url": "https://research.swtch.com/xz-timeline"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "AI cuts coding time, but it's also filling open source's inbox with crap",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/21/ai-cuts-coding-time-but-its-also-filling-open-sources-inbox-with-crap/5304389"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Sunsetting Jazzband",
+      "url": "https://jazzband.co/news/2026/03/14/sunsetting-jazzband"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Widespread Supply Chain Compromise Impacting npm Ecosystem",
+      "url": "https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Open Source Stewardship Communities: \"We need you, but not your pull request\"",
+      "url": "https://arxiv.org/abs/2609.12236"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "What Will Replace Pull Requests? Rethinking Software Collaboration for AI Agents",
+      "url": "https://arxiv.org/abs/2610.34933"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Stop Closing the Door. Fix the House.",
+      "url": "https://angiejones.tech/stop-closing-the-door-fix-the-house/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "In the wake of the xz utils hack, two-thirds of maintainers are less trusting of contributors",
+      "url": "https://dev.to/tidelift/in-the-wake-of-the-xz-utils-hack-two-thirds-of-maintainers-are-less-trusting-of-contributors-4kch"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "The Open Source Definition",
+      "url": "https://opensource.org/osd"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "SQLite Copyright",
+      "url": "https://sqlite.org/copyright.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Lua: FAQ",
+      "url": "https://www.lua.org/faq.html"
+    }
+  ],
+  "articleSection": "Column"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "News",
+      "item": "https://anoni.net/news/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Column",
+      "item": "https://anoni.net/news/en/category/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tighter limits on outside contributions to open source projects in the AI era"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=e0dabe595f" data-anoni="read-aloud"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/en/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">News</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story story--column" data-print-label="From anoni.net News: " data-print-url="https://anoni.net/news/en/2026/11/open-source-contributions-ai/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--column" href="/news/en/category/column/">Column</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-11-20T22:30:00+08:00">Friday, 20 November 2026</time></p>
+    <h1 class="story__title">Tighter limits on outside contributions to open source projects in the AI era</h1>
+    <p class="story__dek">curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this addresses the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/haxx.se-55fd2aa0.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" decoding="async"></span> <span>Based on 23 sources, including curl author&#39;s blog, curl, GitHub</span></a></span>
+      <span>By Toomore Chiang</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="Other languages"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/11/open-source-contributions-ai/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/11/open-source-contributions-ai/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="Listen" data-label-playing="Pause" data-label-paused="Resume"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>Listen</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>Options</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>Voice</span> <select class="listen__select" data-voice data-group-tw="Mandarin (Taiwan)" data-group-cn="Mandarin (China)" data-group-zh="Mandarin" data-group-yue="Cantonese"></select></label>
+          <label class="listen__field"><span>Speed</span> <select class="listen__select" data-rate><option value="0.8">0.8×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label>
+        </div>
+        <p class="listen__note">Read aloud with a voice built into this device. The text is not sent to any server, and your voice and speed choices stay in this browser. <a href="/news/en/reading/#listening">More about listening</a></p>
+      </div>
+    </aside>
+    <p class="story__note cat--column"><a href="/news/en/contribute/">Columns</a> are the author&#39;s own views and do not represent the position of the anoni.net community.</p>
+  </header>
+  <div class="story__body content">
+<p>The source code of open source projects is still public, but what outsiders can send into those projects is increasingly restricted. By entry points I mean the channels through which outsiders send code changes, report problems or disclose vulnerabilities to a project. In 2026 one project ended its bug bounty (a programme that pays people who report vulnerabilities) and the code hosting platform GitHub began letting maintainers reserve proposed changes for collaborators (members a project has added and who can change its code directly), in both cases for reasons that had to do with the flood of submissions that AI has brought. I want to work out what tightening these entry points protects, and what open source projects pay for it.</p>
+<p>My view is that closing off outside PRs (pull requests, proposed code changes submitted to a project) can hold back the flood of low-quality contributions that AI sends in, and the projects tightening their entry points mostly justify it as protecting maintainers' time. <strong>Tightening addresses a problem of volume, and the trust problem remains</strong>. I believe supply chain attacks (planting malicious code in software that others depend on, so that it reaches users through updates) mostly come in through accounts or people who are already trusted, and what open source projects really lack is review capacity and permission management. What worries me is that tightening gets treated as a security measure; in its announcement that it was shutting down, Jazzband, an organisation that jointly maintained Python packages, tied open membership to whether it could operate safely.</p>
+<p>Now that AI tools make producing code fast and easy, review capacity has become the bottleneck, so I think open source projects should adjust how they think about contribution. When a project receives a change, a maintainer first has to understand the code and check it for errors and security problems before merging it, and this step is called review. Reviewing other people's changes, writing tests that reproduce a problem and describing a problem clearly have always been important parts of maintaining a project, and until now maintainers have mostly done that work themselves. With more code arriving, I think outside contributors need to share this work, and it should be recognised as contribution.</p>
+<h2 id="tightening">Tighter entry points for outside contributions</h2>
+<p>The author of curl, a widely used network transfer tool, announced on their blog on 26 January that the project's bug bounty was ending, and it officially stopped on 31 January. According to the same post, the programme confirmed 87 vulnerabilities in total over its run from April 2019, and paid out more than 100,000 USD in rewards to researchers. The author wrote that the aim of ending the bounty was to stop giving people a reason to make up reports in order to collect a reward. Anyone who wants to report a vulnerability now uses GitHub's private vulnerability reporting feature or emails the project's security address.</p>
+<p>According to GitHub's blog post of 12 February, maintainers could already limit opening PRs to collaborators, or turn PRs off entirely. From 17 June, per GitHub's changelog, maintainers can set the maximum number of PRs that any other user may have open at the same time. Once someone reaches that limit, they cannot open a new PR until an older one has been closed or merged.</p>
+<p>Draft PRs do not count towards the limit, and maintainers can add trusted contributors to a bypass list. On 28 October GitHub added automatic exemption rules, which let people go over the limit if their account is at least a set number of days old or if they have already had a set number of PRs merged in that repository.</p>
+<p>On 29 June GitHub extended the collaborators-only option to issues (threads for reporting problems or making requests), so a project can now allow only collaborators to open issues. According to the changelog, once this setting is on, nobody else can create an issue from anywhere in the repository. This change matters more to me, because I see issues as the main channel through which people who do not write code report problems.</p>
+<p>Tightening is also showing up in projects' own contribution policies: Open Source Says No, a site that tracks AI contribution policies, listed 221 projects as of 20 November. To be listed, a project needs at least 5,000 stars on GitHub, or must be widely used infrastructure such as a distribution, a language runtime or a major library. Of these, 24 ban AI-generated contributions, and most of the rest accept AI-assisted contributions with conditions attached, such as disclosing that AI was used or having the work reviewed by a person. According to its about page, the site is informational only and takes no position on whether those policies are right.</p>
+<h2 id="review-cost">The gap between the cost of creating and the cost of reviewing</h2>
+<p>According to GitHub's February post, a PR can now be generated in seconds, and generative AI makes it easy to produce code, issues and security reports at scale. In the post's words, "The cost to create has dropped but the cost to review has not." According to the same post, maintainers have always dealt with noisy inbound, and low-quality submissions are nothing new. The Linux kernel's contribution rules contain a similar passage: tools can increase the number of contributions, but the time of reviewers and maintainers is limited.</p>
+<p>According to curl's author, in earlier years more than 15% of submissions to the bounty programme turned out to be confirmed vulnerabilities, and from 2025 the rate fell below 5%. The author attributes this to an explosion of AI slop, adding that even reports that were not obviously slop had dropped in quality, a decline that began slowly in the second half of 2024 and accelerated badly in 2025.</p>
+<p>According to the same post, PRs have not been a problem for curl, because no human time needs to go into reviewing a PR until it passes all 200 CI jobs (continuous integration, the tests that run automatically on every change). I take this as an example of automated checks lowering maintainers' cost of verification: what curl tightened was the entry point for vulnerability reports, and PRs remain open.</p>
+<p>On 31 May a maintainer of Home Assistant (an open source smart home platform) wrote on their personal site that AI lets contributors send more changes, but each one still has to be verified by a maintainer. As they describe it, a contributor used to have to understand the code, write the change, run the tests and explain the result before they could submit anything, and those steps were a hurdle in themselves. The test they propose is whether the person submitting a change understands it, has validated it and takes responsibility for it, and whether AI was used is not part of the test. As I read it, what matters in this test, as with curl's automated checks, is who bears the work of verification.</p>
+<h2 id="what-it-stops">Risks that tighter entry points can and cannot prevent</h2>
+<p>In the documents I cited above, the reasons I found for tightening were the volume of submissions and maintainers' time, not protection against supply chain attacks. The Jazzband announcement mentioned at the start is the exception: it tied the open membership model to whether the organisation could operate safely, and cited the xz backdoor as an example of what happens after a lone maintainer burns out. That is why I consider tighter entry points alongside supply chain security.</p>
+<p>I see these three measures (ending the bug bounty, limiting the number of PRs and letting only collaborators open issues) as responses to the volume of submissions, and I think they can ease the volume problem. curl's author also cautions that their guesses about ending the bounty may be wrong, and that if so they will take further steps. According to a report in The Register on 21 October, curl announced that week that it would move low and medium severity vulnerabilities into public view, and the reason given in the report is to protect curl's security team, which was "almost overwhelmed by AI-assisted reports". Judging from that report, the pressure from incoming reports remained after the bounty ended, and how much tighter entry points relieve it will depend on the numbers that follow.</p>
+<p>xz is a compression tool common on Linux systems. Looked at from the entry-point side, the xz backdoor, exposed in March 2024, suggests that tighter entry points would help against this kind of attack, which differs from my view. The account that planted the backdoor started out as an outside contributor. According to the xz project's website, the release tarballs (compressed archives) of versions 5.6.0 and 5.6.1 contained the backdoor, and those two tarballs were created and signed by that same account.</p>
+<p>According to a public timeline that cites the xz-devel mailing list day by day, the account sent its first innocuous patch in October 2021, and by the end of 2022 it was able to merge changes into the project directly. In February 2024 it hid the backdoor in binary test files and then released 5.6.0.</p>
+<p>From that angle, if a project took no outside patches at all, this account could not even have taken its first step. Counting from the dates in the timeline, two years and four months passed between the first patch and the backdoored release. <strong>My view is that tightening entry points can only delay attacks in which someone spends a long time earning trust, and a patient attacker can still trade time for trust</strong>.</p>
+<p>According to the message on oss-security, the open source security mailing list, that publicly warned of the backdoor, one portion of it existed only in the release tarballs: a line of build script that was not in the source on git. As I understand it, distributions and users often download tarballs that maintainers package separately and sign digitally, and their contents are not necessarily identical to the public source on git. So my inference is that even careful review of every PR would not have revealed that line, and that what matters is who has permission to create and sign release files.</p>
+<p>The original maintainer wrote on the mailing list in 2022 that the effort they could put in was limited (as transcribed in the same timeline). <strong>I think the weakness the xz incident exposed is having too few maintainers, together with how the project managed who was given release permissions. Closing the entry points will not give a project one more person to share reviewing and releasing either</strong>.</p>
+<p>Jazzband let anyone join, and its members shared push access (permission to push changes directly into a project); in March it announced it would gradually wind down, and it disabled new sign-ups. According to the announcement, over ten years Jazzband grew to 3,135 members and maintained 84 projects. The reason given in the announcement for winding down is that a flood of AI-generated spam PRs and issues made open membership and shared push access untenable. Its lead also wrote that they could not keep giving push access to everyone who joined while still operating Jazzband safely.</p>
+<p>Another problem listed in the announcement is that every project transfer, PyPI (the Python package publishing platform) permission change and infrastructure decision had to go through the lead alone. In the same announcement, the lead describes xz as an example of a lone maintainer burning out and someone malicious filling the gap.</p>
+<p>The immediate cause given in the announcement is AI submissions, but I see it as a permission management problem. At Jazzband, anyone who joined got push access and could push changes straight into the organisation's projects. Once junk submissions multiplied, I think the lead could no longer judge whether everyone joining could be trusted, and no one else was there to share that gatekeeping. Handing out access on joining therefore stopped being workable.</p>
+<p>The Shai-Hulud worm, for its part, is a case of trusted accounts being hijacked. According to an alert from the US Cybersecurity and Infrastructure Security Agency (CISA) dated 23 September 2025, this self-replicating worm compromised over 500 packages on npm (the JavaScript package registry). How the attackers first got in is not stated in the alert, whose account begins after that point: the malware searched the environment for stored credentials, targeting GitHub tokens (keys that let a program sign in to an account in place of a password) and keys for cloud services. The worm then signed in to npm as the compromised developers, added malicious code to other packages and published new versions of them.</p>
+<p>Among the recommendations in CISA's alert are rotating all developer credentials and requiring phishing-resistant multifactor authentication (a second check at login besides the password) on GitHub and npm accounts. None of the recommendations in the alert is to restrict outside PRs. I think the xz attacker traded time for trust, while Shai-Hulud scanned for and stole developer credentials and published as the compromised developers; <strong>in both cases the damage was done through accounts that were already trusted</strong>. The difference is that the xz account spent time building up trust of its own, while Shai-Hulud stole the trust that other developers had already built up.</p>
+<h2 id="new-maintainers">Sources of new maintainers</h2>
+<p>According to GitHub's February post, these restrictions can disproportionately affect first-time contributors acting in good faith, which is why GitHub made them optional, configurable settings. My inference is that a newcomer who does not meet the automatic exemption rules has to wait for a maintainer to add them to the bypass list by hand before they can go over the cap on open PRs.</p>
+<p>In September two software engineering researchers posted a paper on arXiv (a preprint platform for academic papers). According to the abstract, AI has made it cheaper to write a change, while reviewing someone else's contribution still takes comparatively more effort. Some projects have therefore restricted who may submit code, while still welcoming other kinds of participation. The authors argue that these projects impose the restriction not because the code was written by AI, but because such code is no longer worth the effort of reviewing.</p>
+<p>The researchers call this form a stewardship community. In this kind of community, only a small group of core members can put code into the project, while other people can still shape the software without writing code. By the paper's definition, writing code there increasingly requires approval first, rather than being something contributors can start on their own. The authors also caution in the abstract that AI can replace the coding work that outside contributors used to supply, while weakening how open source communities renew themselves (by bringing in new members who can take over).</p>
+<p>In another paper posted on arXiv in October, its authors reviewed 50 grey literature documents (blog posts, announcements and other material not published through academic channels) from 31 organisations or individuals. According to the abstract, most responses kept pull requests in some form while adding tools or restrictions, and restriction was the response most often reported as adopted. My inference is that, with tightening entry points already the most common response, more and more projects will run into the question of where new maintainers will come from.</p>
+<p>I expect that once entry points are tightened, projects will find it harder to develop new maintainers from among outside contributors, and the shortage of maintainers will persist. I see this cost as the same weakness xz had: an attacker only has a gap to fill because there are too few maintainers.</p>
+<h2 id="what-readers-can-do">A shift in what counts as contribution, and signals for readers</h2>
+<p>Some people see closing the door as going against the spirit of open source. A maintainer of the AI agent tool goose wrote on their blog in February that "Closing the door on contributors isn't the answer" and that "we can't give up on the thing that makes open source special", arguing that projects should spell out the bar for contributions and let CI check it automatically. In a survey of maintainers that Tidelift ran after the xz incident in 2024, one respondent likewise said that "Trusting new maintainers by default is the open source way, and how it should remain."</p>
+<p>I see it differently: people mean different things by "the spirit", and what can serve as a shared baseline is the Open Source Definition. Published by the Open Source Initiative, the definition sets conditions on the licence, such as free redistribution, access to the source code and the right to modify it, and does not require a project to accept outside contributions. The official documentation of both SQLite and Lua calls them open source, yet SQLite only accepts patches from people who have signed an affidavit dedicating their contribution to the public domain, and Lua asks people not to send pull requests. <strong>I think the licence guarantees that everyone can take the code and change it, while each project can decide its governance according to the people it has</strong>.</p>
+<p>I am not against projects tightening their entry points; facing a flood of submissions, maintainers need to protect their time first. I hope <strong>the time saved goes into review and permission management</strong>, such as who can merge, who can release and how tokens are kept, and the CISA recommendations mentioned above can serve as a starting point for that check. The goose maintainer's suggestion, spelling out the bar for contributions and letting CI check it automatically, is also worth doing in my view, since it too lowers the cost of verification.</p>
+<p>I think the work worth counting as contribution is <strong>work that lowers maintainers' cost of verification</strong>. The xz backdoor was found because a developer noticed remote logins over ssh using an unusual amount of CPU on the development version of Debian, a Linux distribution, along with errors reported by valgrind (a tool for checking memory errors). The developer traced the cause and posted a public warning on oss-security, and I see that message as a problem description worth no less than a patch.</p>
+<p>Anyone who wants to get involved can start by reading a project's contribution policy. Among the policies collected by Open Source Says No, the Linux kernel's requires contributors to understand everything they submit and to be able to defend it. According to curl's contribution document, the project accepts code written with the help of AI as long as it meets the usual requirements on coding style, documentation and tests. Reporters who use AI tools to find problems also have to disclose this in their reports.</p>
+<p>People who do not write code can take part too: when reporting a problem, writing down the version, the steps taken and whether it can be reproduced saves maintainers verification time. When a project limits issues to collaborators, check its contribution document first for other ways to report.</p>
+<p>For people who use privacy tools, I suggest looking at how many active maintainers a project has, whether its contribution policy spells out rules on AI and permissions, and how long vulnerabilities take from report to fix (contribution documents, release notes and security advisories usually cover this). As of 20 November, Open Source Says No did not list tools such as Tor (the onion routing network), Tails (an amnesic live operating system) or Signal (an encrypted messaging app). The site only lists projects that pass a threshold of GitHub stars or breadth of use, so not being listed does not mean a project has no such rules, and that has to be checked in each project's contribution documents.</p>
+<p>These signals are only a reference, and having more maintainers does not guarantee safety either. At the end of 2022 the xz README listed two maintainers (according to the same timeline), one of whom was the account that later planted the backdoor.</p>
+<p>Does the contribution guide of the privacy tool you rely on say anything about AI or permissions? If the project stopped accepting outside PRs, how would you take part?</p>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="/news/en/2026/11/eff-security-worse/">Personal protection and open source maintenance as AI speeds up vulnerability discovery</a>: PHP's security team patched real vulnerabilities while working through more than 100 reports that turned out to be invalid or not reproducible, a situation close to curl's</li>
+<li><a href="/news/en/2026/11/ai-devtools-supply-chain/">A backdoored extension and malicious instruction files in AI coding tools</a>: a tampered extension appeared in a marketplace under a verified account, another case that came in through a trusted publishing channel</li>
+<li><a href="/news/en/2026/10/compositor-image-editor/">Compositor, an open-source image editor, and maintaining and auditing AI-generated code</a>: the developer says AI wrote all of the code, and eight patch PRs from an outside contributor were closed together, a look at reviewing AI-written code from the developer's side</li>
+</ul>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">Sources (23)</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/"><img class="source-slip__icon" src="/news/assets/favicons/haxx.se-55fd2aa0.png" width="16" height="16" alt="" loading="lazy" decoding="async">The end of the curl bug-bounty</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>curl author&#39;s blog</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-01-26">26 January 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Contributing to the curl project</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>curl</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Welcome to the Eternal September of open source. Here&#39;s what we plan to do for maintainers.</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-02-12">12 February 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/changelog/2026-06-17-limit-open-pull-requests-for-users-without-write-access/"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Limit open pull requests for users without write access</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-06-17">17 June 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only/"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Restrict issue creation to collaborators only</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-06-29">29 June 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/changelog/2026-10-28-pull-request-limits-exempt-contributors-by-age-or-history"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Pull request limits: Exempt contributors by age or history</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>GitHub</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-28">28 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://osssaysno.com/all"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>All projects</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Open Source Says No</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://osssaysno.com/about"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>About</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Open Source Says No</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Kernel Guidelines for Tool-Generated Content</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Linux kernel</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://frenck.dev/open-source-was-not-ready-for-ai-speed-contributions/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Open source was not ready for AI-speed contributions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Home Assistant maintainer&#39;s blog</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-05-31">31 May 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://tukaani.org/xz-backdoor/"><img class="source-slip__icon" src="/news/assets/favicons/tukaani.org-9230c62a.png" width="16" height="16" alt="" loading="lazy" decoding="async">XZ Utils backdoor</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Tukaani</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.openwall.com/lists/oss-security/2024/03/29/4"><img class="source-slip__icon" src="/news/assets/favicons/openwall.com-c05dca8e.png" width="16" height="16" alt="" loading="lazy" decoding="async">backdoor in upstream xz/liblzma leading to ssh server compromise</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>oss-security</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2024-03-29">29 March 2024</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://research.swtch.com/xz-timeline"><img class="source-slip__icon" src="/news/assets/favicons/research.swtch.com-49ee6add.png" width="16" height="16" alt="" loading="lazy" decoding="async">Timeline of the xz open source attack</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>xz attack timeline</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.theregister.com/ai-and-ml/2026/10/21/ai-cuts-coding-time-but-its-also-filling-open-sources-inbox-with-crap/5304389"><img class="source-slip__icon" src="/news/assets/favicons/theregister.com-315165b2.png" width="16" height="16" alt="" loading="lazy" decoding="async">AI cuts coding time, but it&#39;s also filling open source&#39;s inbox with crap</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>The Register</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-21">21 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://jazzband.co/news/2026/03/14/sunsetting-jazzband"><img class="source-slip__icon" src="/news/assets/favicons/jazzband.co-b5ad2f3e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Sunsetting Jazzband</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Jazzband</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Widespread Supply Chain Compromise Impacting npm Ecosystem</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>CISA</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2025-09-23">23 September 2025</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arxiv.org/abs/2609.12236"><img class="source-slip__icon" src="/news/assets/favicons/arxiv.org-c4f5309f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Open Source Stewardship Communities: &#34;We need you, but not your pull request&#34;</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>arXiv</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-09-10">10 September 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arxiv.org/abs/2610.34933"><img class="source-slip__icon" src="/news/assets/favicons/arxiv.org-c4f5309f.png" width="16" height="16" alt="" loading="lazy" decoding="async">What Will Replace Pull Requests? Rethinking Software Collaboration for AI Agents</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>arXiv</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-10-26">26 October 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://angiejones.tech/stop-closing-the-door-fix-the-house/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Stop Closing the Door. Fix the House.</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>goose maintainer&#39;s blog</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2026-02-07">7 February 2026</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://dev.to/tidelift/in-the-wake-of-the-xz-utils-hack-two-thirds-of-maintainers-are-less-trusting-of-contributors-4kch"><img class="source-slip__icon" src="/news/assets/favicons/dev.to-4d51d0aa.png" width="16" height="16" alt="" loading="lazy" decoding="async">In the wake of the xz utils hack, two-thirds of maintainers are less trusting of contributors</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Tidelift</dd></div>
+      <div><dt>Published</dt><dd><time datetime="2024-10-15">15 October 2024</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://opensource.org/osd"><img class="source-slip__icon" src="/news/assets/favicons/opensource.org-67b6b15c.png" width="16" height="16" alt="" loading="lazy" decoding="async">The Open Source Definition</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Open Source Initiative</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://sqlite.org/copyright.html"><img class="source-slip__icon" src="/news/assets/favicons/sqlite.org-cd226b88.png" width="16" height="16" alt="" loading="lazy" decoding="async">SQLite Copyright</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>SQLite</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.lua.org/faq.html"><img class="source-slip__icon" src="/news/assets/favicons/lua.org-5be79ff6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Lua: FAQ</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>Publisher</dt><dd>Lua</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<p class="column-invite cat--column"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg> We welcome column submissions on privacy, anonymity networks, internet censorship and the open source ecosystem. <a href="/news/en/contribute/">How to submit and what to write about</a></p>
+<p class="subscribe">Get new stories by <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>, <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>newsletter</span></a> or <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>Bluesky</span></a></p>
+<nav class="pager pager--story" aria-label="Story navigation">
+  <a class="pager__item pager__item--older" href="/news/en/2026/11/iphone-grey-list/"><span class="pager__label">Older story <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">Phrases excluded from iPhone keyboard suggestions and swipe typing</span></a>
+  <a class="pager__all" href="/news/en/">All stories</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="/news/en/subscribe/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/w21855zpca072rvgp0s2govj"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> Newsletter</a>
+      <a href="https://bsky.app/profile/news.anoni.net"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> Follow on Bluesky</a>
+      <a href="/news/en/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> Same Day, Years Apart</a>
+      <a href="/news/en/contribute/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg> Write a column</a>
+      <a href="/news/en/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> About</a>
+      <a href="/news/en/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> Reading options</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> Report an error</a>
+      <a href="/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net home</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/open-source-contributions-ai/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> Onion version</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="Other languages (footer)"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> Also in <a href="/news/2026/11/open-source-contributions-ai/" hreflang="zh-Hant" lang="zh-Hant">正體中文</a>, <a href="/news/zh-cn/2026/11/open-source-contributions-ai/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+    <p>Stories are licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>. Copyright in the quoted sources stays with their authors.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 時代開源專案收緊的外部貢獻入口 | anoni.net 新聞導讀</title>
+<meta name="description" content="curl 停掉漏洞獎金，GitHub 讓維護者限制誰能開 PR 與 issue，開源專案在 2026 年收緊外部貢獻的入口。作者認為收緊處理的是大量低品質投稿的數量問題，信任的問題仍在。xz 後門與 Shai-Hulud 蠕蟲的惡意版本都由已經受信任的開發者帳號發布，缺的是審查人力與權限管理。">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/open-source-contributions-ai/">
+<link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+<meta http-equiv="onion-location" content="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/open-source-contributions-ai/">
+<link rel="stylesheet" href="/news/css/news.css?v=09ccd21995">
+<link rel="stylesheet" href="/news/css/fonts-tc.css?v=fdd69ca3c5">
+<link rel="icon" href="/news/favicon.svg?v=48b9d7fc37" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="anoni.net 新聞導讀" href="https://anoni.net/news/feed.xml">
+<meta property="og:site_name" content="anoni.net 新聞導讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 時代開源專案收緊的外部貢獻入口">
+<meta property="og:description" content="curl 停掉漏洞獎金，GitHub 讓維護者限制誰能開 PR 與 issue，開源專案在 2026 年收緊外部貢獻的入口。作者認為收緊處理的是大量低品質投稿的數量問題，信任的問題仍在。xz 後門與 Shai-Hulud 蠕蟲的惡意版本都由已經受信任的開發者帳號發布，缺的是審查人力與權限管理。">
+<meta property="og:url" content="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+<meta property="og:image" content="https://assets.anoni.net/news/og/2026/11/open-source-contributions-ai-zh-tw-a27cd7a4.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI 時代開源專案收緊的外部貢獻入口">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="AI 時代開源專案收緊的外部貢獻入口">
+<meta property="article:published_time" content="2026-11-20T22:30:00+08:00">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OpinionNewsArticle",
+  "headline": "AI 時代開源專案收緊的外部貢獻入口",
+  "description": "curl 停掉漏洞獎金，GitHub 讓維護者限制誰能開 PR 與 issue，開源專案在 2026 年收緊外部貢獻的入口。作者認為收緊處理的是大量低品質投稿的數量問題，信任的問題仍在。xz 後門與 Shai-Hulud 蠕蟲的惡意版本都由已經受信任的開發者帳號發布，缺的是審查人力與權限管理。",
+  "datePublished": "2026-11-20T22:30:00+08:00",
+  "url": "https://anoni.net/news/2026/11/open-source-contributions-ai/",
+  "mainEntityOfPage": "https://anoni.net/news/2026/11/open-source-contributions-ai/",
+  "image": "https://assets.anoni.net/news/og/2026/11/open-source-contributions-ai-zh-tw-a27cd7a4.png",
+  "inLanguage": "zh-Hant",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Toomore Chiang"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "anoni.net",
+    "url": "https://anoni.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anoni.net/news/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "The end of the curl bug-bounty",
+      "url": "https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Contributing to the curl project",
+      "url": "https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Welcome to the Eternal September of open source. Here's what we plan to do for maintainers.",
+      "url": "https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Limit open pull requests for users without write access",
+      "url": "https://github.blog/changelog/2026-06-17-limit-open-pull-requests-for-users-without-write-access/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Restrict issue creation to collaborators only",
+      "url": "https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Pull request limits: Exempt contributors by age or history",
+      "url": "https://github.blog/changelog/2026-10-28-pull-request-limits-exempt-contributors-by-age-or-history"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "All projects",
+      "url": "https://osssaysno.com/all"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "About",
+      "url": "https://osssaysno.com/about"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Kernel Guidelines for Tool-Generated Content",
+      "url": "https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Open source was not ready for AI-speed contributions",
+      "url": "https://frenck.dev/open-source-was-not-ready-for-ai-speed-contributions/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "XZ Utils backdoor",
+      "url": "https://tukaani.org/xz-backdoor/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "backdoor in upstream xz/liblzma leading to ssh server compromise",
+      "url": "https://www.openwall.com/lists/oss-security/2024/03/29/4"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Timeline of the xz open source attack",
+      "url": "https://research.swtch.com/xz-timeline"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "AI cuts coding time, but it's also filling open source's inbox with crap",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/21/ai-cuts-coding-time-but-its-also-filling-open-sources-inbox-with-crap/5304389"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Sunsetting Jazzband",
+      "url": "https://jazzband.co/news/2026/03/14/sunsetting-jazzband"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Widespread Supply Chain Compromise Impacting npm Ecosystem",
+      "url": "https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Open Source Stewardship Communities: \"We need you, but not your pull request\"",
+      "url": "https://arxiv.org/abs/2609.12236"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "What Will Replace Pull Requests? Rethinking Software Collaboration for AI Agents",
+      "url": "https://arxiv.org/abs/2610.34933"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Stop Closing the Door. Fix the House.",
+      "url": "https://angiejones.tech/stop-closing-the-door-fix-the-house/"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "In the wake of the xz utils hack, two-thirds of maintainers are less trusting of contributors",
+      "url": "https://dev.to/tidelift/in-the-wake-of-the-xz-utils-hack-two-thirds-of-maintainers-are-less-trusting-of-contributors-4kch"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "The Open Source Definition",
+      "url": "https://opensource.org/osd"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "SQLite Copyright",
+      "url": "https://sqlite.org/copyright.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Lua: FAQ",
+      "url": "https://www.lua.org/faq.html"
+    }
+  ],
+  "articleSection": "專欄"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "新聞導讀",
+      "item": "https://anoni.net/news/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "專欄",
+      "item": "https://anoni.net/news/category/column/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI 時代開源專案收緊的外部貢獻入口"
+    }
+  ]
+}
+</script>
+<script defer src="/news/js/read-aloud.js?v=e0dabe595f" data-anoni="read-aloud"></script>
+<script data-anoni="before-send">
+(function () {
+  // 網址只留這四個 utm_ 參數，其餘 query 與 # 之後的片段一律拿掉
+  var UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+  // 允許的點擊事件與各欄位的值，來自 build.py 的 ANALYTICS_EVENTS
+  var EVENTS = {"home-story-click": {"section": ["featured", "timeline"]}, "listen-click": {}, "source-click": {}, "subscribe-click": {"channel": ["rss", "newsletter", "bluesky"], "where": ["masthead", "article", "footer"]}};
+
+  function scrubUrl(url) {
+    if (typeof url !== "string" || !url) return url;
+    var hash = url.indexOf("#");
+    if (hash >= 0) url = url.slice(0, hash);
+    var q = url.indexOf("?");
+    if (q < 0) return url;
+    var kept = [];
+    var parts = url.slice(q + 1).split("&");
+    for (var i = 0; i < parts.length; i++) {
+      if (UTM.indexOf(parts[i].split("=")[0]) >= 0 && parts[i].length <= 64) kept.push(parts[i]);
+    }
+    return kept.length ? url.slice(0, q) + "?" + kept.join("&") : url.slice(0, q);
+  }
+
+  // 螢幕尺寸捨去到百位，判斷裝置類別夠用，又不留精確的指紋
+  function coarseScreen(screen) {
+    if (typeof screen !== "string") return screen;
+    var m = screen.match(/^(\d+)x(\d+)$/);
+    if (!m) return screen;
+    var floor100 = function (n) { return Math.max(100, Math.floor(n / 100) * 100); };
+    return floor100(+m[1]) + "x" + floor100(+m[2]);
+  }
+
+  // 事件的欄位要剛好是清單上的那幾個，值也要在清單裡，否則整筆不送
+  function scrubData(name, data) {
+    var spec = EVENTS[name];
+    var out = {};
+    var count = 0;
+    if (data && typeof data === "object") {
+      for (var extra in data) {
+        if (Object.prototype.hasOwnProperty.call(data, extra) && !Object.prototype.hasOwnProperty.call(spec, extra)) return null;
+      }
+    }
+    for (var key in spec) {
+      if (!Object.prototype.hasOwnProperty.call(spec, key)) continue;
+      if (!data || spec[key].indexOf(data[key]) < 0) return null;
+      out[key] = data[key];
+      count++;
+    }
+    return count ? out : undefined;
+  }
+
+  window.anoniBeforeSend = function (type, payload) {
+    // data-do-not-track 只看舊的 doNotTrack，Global Privacy Control 在這裡一併尊重
+    if (window.navigator && window.navigator.globalPrivacyControl === true) return null;
+    if (type !== "event" || !payload || typeof payload !== "object") return null;
+    var out = {};
+    for (var key in payload) {
+      if (Object.prototype.hasOwnProperty.call(payload, key)) out[key] = payload[key];
+    }
+    out.url = scrubUrl(out.url);
+    out.referrer = scrubUrl(out.referrer);
+    out.screen = coarseScreen(out.screen);
+    if (typeof out.name === "string") {
+      if (!Object.prototype.hasOwnProperty.call(EVENTS, out.name)) return null;
+      var data = scrubData(out.name, out.data);
+      if (data === null) return null;
+      if (data) out.data = data; else delete out.data;
+    } else {
+      // 頁面瀏覽不該帶 data 與 name
+      delete out.data;
+      delete out.name;
+    }
+    return out;
+  };
+
+  // 點擊事件：帶 data-anoni-event 的連結被點時呼叫 umami.track()，不擋換頁。
+  // Umami 送出時帶 keepalive，換頁之後請求照樣完成。DNT、網域限制與上面的過濾都在 track() 裡生效
+  var PREFIX = "data-anoni-event";
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest ? e.target.closest("[" + PREFIX + "]") : null;
+    if (!el || !window.umami || typeof window.umami.track !== "function") return;
+    var data = {};
+    for (var i = 0; i < el.attributes.length; i++) {
+      var attr = el.attributes[i];
+      if (attr.name.indexOf(PREFIX + "-") === 0) data[attr.name.slice(PREFIX.length + 1)] = attr.value;
+    }
+    try {
+      window.umami.track(el.getAttribute(PREFIX), data);
+    } catch (err) {
+      // 統計壞掉不該影響連結
+    }
+  }, true);
+})();
+</script>
+<script defer src="https://aa.anoni.net/script.js" data-website-id="3790f14b-870c-4c29-83eb-dbb2977c65a9" data-domains="anoni.net" data-before-send="anoniBeforeSend" data-do-not-track="true"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__home" href="/news/"><img class="site-header__logo" src="/news/logo-wordmark-white.svg?v=debd9394d0" alt="anoni.net" width="116" height="28"> <span class="site-header__product">新聞導讀</span></a>
+  </div>
+</header>
+<main class="story-wrap">
+<article class="story story--column" data-print-label="出自 anoni.net 新聞導讀：" data-print-url="https://anoni.net/news/2026/11/open-source-contributions-ai/">
+  <header class="story__head">
+    <p class="story__date"><a class="cat cat--column" href="/news/category/column/">專欄</a>
+ <span aria-hidden="true">·</span> <time datetime="2026-11-20T22:30:00+08:00">2026 年 11 月 20 日 星期五</time></p>
+    <h1 class="story__title">AI 時代開源專案收緊的外部貢獻入口</h1>
+    <p class="story__dek">curl 停掉漏洞獎金，GitHub 讓維護者限制誰能開 PR 與 issue，開源專案在 2026 年收緊外部貢獻的入口。作者認為收緊處理的是大量低品質投稿的數量問題，信任的問題仍在。xz 後門與 Shai-Hulud 蠕蟲的惡意版本都由已經受信任的開發者帳號發布，缺的是審查人力與權限管理。</p>
+    <p class="story__byline">
+      <span class="story__sources"><a href="#sources"><span class="favicon-stack"><img src="/news/assets/favicons/haxx.se-55fd2aa0.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" decoding="async"><img src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" decoding="async"></span> <span>整理 23 篇原文，來自 curl 作者的部落格、curl、GitHub 等 18 個出處</span></a></span>
+      <span>撰文：Toomore Chiang</span>
+    </p>
+<nav class="story__langs" role="navigation" aria-label="其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/2026/11/open-source-contributions-ai/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/2026/11/open-source-contributions-ai/" hreflang="en" lang="en">English</a></nav>
+    <aside class="listen" data-read-aloud hidden>
+      <div class="listen__bar">
+        <button type="button" class="listen__button" data-listen-play data-state="idle" data-label-idle="朗讀這篇" data-label-playing="暫停" data-label-paused="繼續朗讀" data-anoni-event="listen-click"><span class="listen__play"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg></span><span class="listen__pause"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></span> <span data-label>朗讀這篇</span></button>
+        <button type="button" class="listen__toggle" data-listen-toggle aria-expanded="false" aria-controls="listen-panel"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" /></svg> <span>調整</span></button>
+      </div>
+      <div class="listen__panel" id="listen-panel" hidden>
+        <div class="listen__options">
+          <label class="listen__field" data-voice-field hidden><span>語音</span> <select class="listen__select" data-voice data-group-tw="華語（台灣）" data-group-cn="華語（中國）" data-group-zh="華語" data-group-yue="粵語"></select></label>
+          <label class="listen__field"><span>速度</span> <select class="listen__select" data-rate><option value="0.8">0.8 倍</option><option value="1" selected>1 倍</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label>
+        </div>
+        <p class="listen__note">用這台裝置內建的語音朗讀，文章不會傳到其他伺服器。選擇的語音與速度只存在這個瀏覽器裡。<a href="/news/reading/#listening">朗讀的完整說明</a></p>
+      </div>
+    </aside>
+    <p class="story__note cat--column"><a href="/news/contribute/">專欄</a>是作者的個人觀點，不代表 anoni.net 社群的立場。</p>
+  </header>
+  <div class="story__body content">
+<p>開源專案的原始碼仍然公開，外人能送進專案的東西卻越來越受限制。我把外人向專案送出程式碼修改、回報問題或通報漏洞的管道，稱為外部貢獻的入口。2026 年有專案停掉漏洞獎金（付錢給回報漏洞的人的計畫），也有程式碼託管平台 GitHub 讓維護者只開放協作者（被專案加入、能直接修改程式碼的成員）發起修改，背後的理由都跟 AI 帶來的大量投稿有關。我想釐清收緊入口能保護到什麼，以及開源專案要為此付出什麼。</p>
+<p>我的看法是，關掉外部的 PR（pull request，向專案提出的程式碼修改）能擋下 AI 送進來的大量低品質貢獻，收緊入口的專案提出的理由也多半是保護維護者的時間。<strong>收緊處理的是數量的問題，信任的問題仍在</strong>。我認為供應鏈攻擊（在別人依賴的軟體裡植入惡意程式，隨著更新散布到使用者端）多半從已經受信任的帳號或人進來，開源專案真正缺的是審查人力與權限管理。我擔心的是收緊被當成安全措施，Python 套件的共同維護組織 Jazzband 在結束營運的公告裡，就把開放加入跟能否安全營運連在一起。</p>
+<p>AI 工具讓產生程式碼變得又快又容易，審查人力就成了瓶頸，所以我認為開源專案看待貢獻的方式也要跟著調整。開源專案收到一份修改時，維護者要先讀懂程式、確認沒有錯誤或安全問題才會合併，這個步驟稱為審查（review）。審查別人的修改、寫出能重現問題的測試、把問題描述清楚，本來就是維護專案的重要工作，以往多半由維護者自己承擔。現在送來的程式碼變多，我認為這些工作更需要外部貢獻者一起分擔，也應該被當成貢獻看待。</p>
+<h2 id="tightening">外部貢獻入口的收緊</h2>
+<p>curl 是一套常用的網路傳輸工具，作者 1 月 26 日在部落格宣布結束漏洞獎金，1 月 31 日正式停止。根據同一篇文章，這個獎金計畫從 2019 年 4 月開始總共確認了 87 個漏洞，發給通報者的獎金合計超過 10 萬美元。作者寫明停掉獎金的目的，是不再讓人有動機捏造報告來領獎金。之後要通報漏洞的人，改用 GitHub 的私下通報功能，或寄信到專案的資安信箱。</p>
+<p>依 GitHub 2 月 12 日的部落格文章，維護者已經可以只讓協作者（collaborator）發起 PR，也可以整個關閉 PR。依 GitHub 的更新說明，6 月 17 日起維護者可以設定其他使用者最多能同時開幾個 PR。到了上限，要等舊的被關閉或合併才能再開新的。</p>
+<p>草稿狀態的 PR 不算在上限裡，維護者也可以把信任的貢獻者加進例外名單（bypass list）。10 月 28 日 GitHub 再加上自動豁免的規則，讓帳號註冊滿一定天數或已經在該專案合併過一定數量 PR 的人超過上限。</p>
+<p>6 月 29 日，GitHub 把同樣的限制延伸到 issue（回報問題或提出需求的討論串），專案可以設定只有協作者能開 issue。依更新說明，開啟這個設定之後，其他人從專案頁面上的任何地方都無法建立 issue。我比較在意這一項，因為我認為 issue 是不寫程式的人回報問題的主要管道。</p>
+<p>收緊也發生在各專案自己的貢獻政策上，追蹤 AI 貢獻政策的網站 Open Source Says No 到 11 月 20 日收錄 221 個專案。收錄門檻是 GitHub 上至少 5,000 顆星，或屬於發行版、程式語言執行環境、主要函式庫這類廣泛使用的基礎設施。其中 24 個禁止 AI 生成的貢獻，其餘大多數接受 AI 輔助的貢獻但附帶條件，例如要揭露用了 AI、要經過人工審查。網站在說明頁寫明只整理資訊，不判斷這些政策對不對。</p>
+<h2 id="review-cost">產生成本與審查成本的落差</h2>
+<p>依 GitHub 2 月那篇部落格，PR 現在幾秒鐘就能產生，生成式 AI 讓人大量產出程式碼、issue 與資安通報。文中的說法是產生的成本降了，審查的成本沒有降。同一篇也提到維護者一直都在處理雜訊，低品質的投稿早就存在。Linux 核心的貢獻規則也有相近的說法：工具可能讓貢獻的數量增加，但審查者與維護者的時間有限。</p>
+<p>依 curl 作者的文章，漏洞獎金計畫前幾年有超過 15% 的通報確認是漏洞，2025 年起降到 5% 以下。作者把原因歸到 AI 生成的劣質報告（原文 AI slop）暴增，就算是一眼看不出是劣質內容的報告，品質也在下降。情況從 2024 年下半年開始，2025 年急遽惡化。</p>
+<p>同一篇也提到 PR 在 curl 沒有造成問題，因為在一份 PR 通過全部 200 項 CI 工作（持續整合，每次修改都會自動執行的測試）之前，專案不必花任何人力看它。我把這看成用自動檢查降低維護者驗證成本的例子，curl 收緊的是漏洞通報這個入口，PR 仍然開著。</p>
+<p>Home Assistant（開源的智慧家庭平台）的一位維護者 5 月 31 日在個人網站提到，貢獻者借助 AI 能送出更多修改，但每一份仍要由維護者驗證。依這位維護者的描述，以前貢獻者要先讀懂程式、寫出修改、執行測試、說明結果才能送出一份修改，這些步驟本身就是一道門檻。這位維護者提出的判斷標準是，送出修改的人是否理解自己的修改、驗證過、願意負責，有沒有用到 AI 則不在標準裡。我讀起來，這個標準跟 curl 的自動檢查一樣，在意的都是驗證由誰承擔。</p>
+<h2 id="what-it-stops">收緊入口能防範與無法防範的風險</h2>
+<p>我在前面引用的幾份文件裡，讀到的收緊理由都是投稿的數量與維護者的時間，沒有讀到防範供應鏈攻擊。前言提到的 Jazzband 公告是例外，它把開放加入的模式跟能否安全營運連在一起，也舉了 xz 後門當作獨自維護的人倦怠之後的例子。所以我把收緊入口跟供應鏈安全放在一起看。</p>
+<p>取消漏洞獎金、限制 PR 的數量、只讓協作者開 issue，我把這三項措施都看成針對大量投稿的做法，也認為能減輕數量的問題。curl 的作者也提醒，停掉獎金的判斷可能有錯，錯了會再採取進一步的做法。依 The Register 10 月 21 日的報導，curl 當週宣布把低與中度嚴重性的漏洞移到公開處理，報導寫的理由是 curl 的資安團隊幾乎被 AI 輔助產生的通報壓垮。從這則報導看，停掉獎金之後通報的壓力仍在，收緊入口能減輕多少要看之後的數字。</p>
+<p>xz 是 Linux 系統常見的壓縮工具。從入口的角度看 2024 年 3 月曝光的 xz 後門，會認為收緊入口有助於防範這類攻擊，跟我的看法不同。植入後門的帳號一開始就是外部貢獻者。依 xz 專案網站的說明，5.6.0 與 5.6.1 兩個版本的發行壓縮檔（tarball）含有後門，這兩個壓縮檔就是由那個帳號製作並簽署的。</p>
+<p>依一份逐日引用 xz-devel 郵件列表的公開時間線，那個帳號 2021 年 10 月寄出第一個無害的修補，到了 2022 年底已經可以直接把修改合併進專案。2024 年 2 月，該帳號把後門藏進測試用的二進位檔，接著發行 5.6.0。</p>
+<p>從這個角度看，如果專案完全不收外部的修補，這個帳號連第一步都踏不進來。依時間線的日期計算，從第一個修補到發行含後門的版本，中間隔了兩年四個月。<strong>我的看法是，收緊入口只能延後這類花長時間取得信任的攻擊，有耐心的攻擊者仍然可以用時間換取信任</strong>。</p>
+<p>依開源資安郵件列表 oss-security 上公開警告後門的那封信，後門有一部分只存在發行的壓縮檔裡，是 git 上的原始碼沒有的一行建置腳本。我的理解是，發行版與使用者常下載維護者另外打包並加上數位簽章的壓縮檔，內容不一定跟 git 上公開的原始碼相同。所以我推論，就算仔細審查每一個 PR 也看不到那行腳本，關鍵在於誰有權限製作並簽署發行檔。</p>
+<p>原維護者 2022 年在郵件列表提到自己能投入的心力有限（依同一份時間線轉錄）。<strong>我認為 xz 事件暴露的弱點，是維護者太少，以及發行權限交給誰的管理問題。關掉入口，也不會讓專案多出一位能分擔審查與發行的人</strong>。</p>
+<p>Jazzband 開放任何人加入，成員共用 push 權限（直接把修改推進專案的權限），3 月宣布逐步結束營運、關閉新註冊。依公告，Jazzband 十年間累積 3,135 名成員、維護過 84 個專案。公告列出的原因是 AI 生成的大量垃圾 PR 與 issue，讓開放加入、共用 push 權限的做法撐不下去。負責人也表示，不能再一邊把 push 權限交給每個加入的人，一邊還要安全地營運。</p>
+<p>公告也列出另一個問題：每一次專案轉移、PyPI（Python 的套件發布平台）權限變更與基礎設施的決定，都要經過負責人一個人。負責人在同一篇公告把 xz 描述成獨自維護的人倦怠之後、由惡意的人補上空缺的例子。</p>
+<p>公告寫的直接原因是 AI 投稿，我則把它看成權限管理的問題。在 Jazzband，任何人加入就能取得 push 權限，可以直接把修改推進組織裡的專案。垃圾投稿變多之後，我認為負責人難以判斷每個加入的人是否可信，也沒有其他人能分擔把關。加入就給權限的做法，因此撐不下去。</p>
+<p>Shai-Hulud 蠕蟲則是盜用受信任帳號的例子。依美國網路安全暨基礎設施安全局（CISA）2025 年 9 月 23 日的警示，這個會自我複製的蠕蟲入侵了 500 多個 npm（JavaScript 的套件登錄庫）套件。警示沒有寫攻擊者一開始如何入侵，只寫到惡意程式會搜尋環境裡存放的憑證，鎖定 GitHub 的權杖（讓程式代替密碼登入帳號的金鑰）與雲端服務的金鑰。蠕蟲接著以被入侵的開發者身分登入 npm，把惡意程式碼加進其他套件，再發布新版本。</p>
+<p>CISA 的警示建議更換所有開發者的憑證，並在 GitHub 與 npm 帳號強制使用防釣魚的多因素驗證（登入時除了密碼，另外要求一道驗證）。這些建議裡沒有一項是限制外部 PR。我認為 xz 的攻擊者用時間換取信任，Shai-Hulud 則掃描並竊取開發者的憑證、以被入侵的開發者身分發布，<strong>兩者造成傷害時都利用了已經受信任的帳號</strong>。差別在於 xz 的帳號是自己花時間累積信任，Shai-Hulud 則是盜用別人已經累積的信任。</p>
+<h2 id="new-maintainers">新維護者的來源</h2>
+<p>GitHub 2 月那篇部落格也提到，這些限制可能對第一次參與、出於善意的貢獻者影響特別大，所以 GitHub 把它們做成選用、可以調整的設定。我的推論是，不符合自動豁免條件的新人要等維護者手動加進例外名單，才能超過同時開啟 PR 的數量上限。</p>
+<p>兩位軟體工程研究者 9 月在 arXiv（學術論文的預印本平台）公開一篇論文。依摘要，AI 讓寫出一份修改的成本降低，審查別人的貢獻卻仍然很花力氣。因此有些專案限制誰可以提交程式碼，同時歡迎其他形式的參與。論文認為，這些專案限制的原因是那些程式碼已經不值得花力氣審查，跟程式碼是不是 AI 寫的無關。</p>
+<p>研究者把這種形態稱為管家型社群（stewardship community）。在這種社群裡，只有一小群核心成員能把程式碼寫進專案，其他人不寫程式碼也仍然能影響軟體。依論文的定義，在這種社群裡想寫程式碼越來越需要先經過核准，不能自己主動送出。摘要也提醒，AI 可能取代原本由外部貢獻者提供的寫程式人力，同時削弱開源社群自我更新（培養新成員接手）的方式。</p>
+<p>另一篇 10 月在 arXiv 公開的論文，研究者整理了 31 個組織或個人的 50 份灰色文獻（部落格、公告這類沒有經過學術出版的文件）。依摘要，大多數做法仍然保留 PR 再加上工具或限制，其中最常被採用的是加上限制。我的推論是，收緊入口已經是最常見的回應，越來越多專案會遇到新維護者從哪裡來的問題。</p>
+<p>我預期入口收緊之後，專案更難從外部貢獻者裡培養新的維護者，維護者不足的問題就會一直存在。我認為這個代價跟 xz 的弱點是同一件事，維護者太少，攻擊者才有空缺可以補。</p>
+<h2 id="what-readers-can-do">貢獻的轉向與讀者可以留意的訊號</h2>
+<p>也有人認為關掉入口違背了開源的精神。AI 代理工具 goose 的一位維護者 2 月在部落格寫，關上大門不是解方，開源特別的地方不能放棄。這位維護者主張把貢獻的門檻寫清楚，交給 CI 自動檢查。Tidelift 2024 年在 xz 事件後做的維護者調查裡，也有受訪者表示預設信任新人才是開源的作法，應該維持下去。</p>
+<p>我的看法不同，「精神」的說法因人而異，能當共同基準的是開源定義。依開放原始碼促進會（OSI）的開源定義，條文規範的是自由散布、取得原始碼與修改這些授權條件，沒有要求專案接受外部的貢獻。SQLite 與 Lua 的官方說明都自稱開源軟體，SQLite 只接受簽署聲明、把貢獻放進公有領域的人送來的修補，Lua 則請大家不要送 PR。<strong>我認為授權保障的是每個人都能取用、修改程式碼，治理方式可以由各專案依自己的人力決定</strong>。</p>
+<p>我不反對專案收緊入口，面對大量投稿，維護者需要先保護自己的時間。我希望<strong>省下來的時間投進審查與權限管理</strong>，例如誰能合併、誰能發行、權杖如何保管，前面提到的 CISA 建議可以當作檢查的起點。goose 那位維護者提的做法是把門檻寫清楚、交給 CI 自動檢查，我也認為值得做，同樣是在降低驗證成本。</p>
+<p>我認為值得算作貢獻的，是<strong>降低維護者驗證成本的工作</strong>。xz 後門被發現的起點，是一位開發者在 Linux 發行版 Debian 的開發中版本上注意到用 ssh 遠端登入時異常耗用 CPU，以及 valgrind（檢查記憶體錯誤的工具）回報的錯誤。這位開發者追查之後在 oss-security 公開警告，我把那封信看成一份問題描述，價值不下於一份修補。</p>
+<p>想參與的人可以先讀專案的貢獻政策。依 Open Source Says No 收錄的政策，Linux 核心要求貢獻者理解自己送出的所有內容，並且能為它辯護。依 curl 的貢獻文件，專案接受 AI 輔助寫成的程式碼，前提是符合程式風格、文件與測試等一般要求。用 AI 工具找問題的通報者，也要在報告裡揭露。</p>
+<p>不寫程式的人也能參與，回報問題時寫清楚版本、操作步驟與能否重現，就能省下維護者驗證的時間。專案把 issue 限制在協作者時，先看貢獻文件有沒有寫其他回報管道。</p>
+<p>使用隱私工具的人，我建議看專案有幾位活躍的維護者、貢獻政策有沒有寫清楚 AI 與權限的規則，以及漏洞從通報到修補花了多久（貢獻文件、版本紀錄與資安公告多半可以找到）。到 11 月 20 日，Open Source Says No 沒有收錄 Tor、Tails、Signal 等工具。這份清單只收 GitHub 星數或使用範圍達到門檻的專案，沒收錄不代表沒有規定，要到各專案的貢獻文件確認。</p>
+<p>這些訊號只能當作參考，維護者人數多也不保證安全。xz 的 README 在 2022 年底列了兩位維護者（依前面那份時間線），其中一位就是後來植入後門的帳號。</p>
+<p>你常用的隱私工具，貢獻文件有沒有寫到 AI 與權限的規則？如果專案不再接受外部的 PR，你會用什麼方式參與？</p>
+<h2 id="further-reading">延伸閱讀</h2>
+<ul>
+<li><a href="https://anoni.net/news/2026/11/eff-security-worse/">AI 加速找漏洞之後的個人防護與開源維護</a>：PHP 的資安團隊一邊修補真漏洞，一邊處理一百多份無效或無法重現的通報，處境跟 curl 相近</li>
+<li><a href="https://anoni.net/news/2026/11/ai-devtools-supply-chain/">AI 程式開發工具的擴充套件後門與惡意指引檔</a>：被竄改的擴充套件以已驗證的帳號出現在市集上，另一起經由受信任的發布管道進來的事件</li>
+<li><a href="https://anoni.net/news/2026/10/compositor-image-editor/">開源影像編輯軟體 Compositor 與 AI 生成程式碼的維護和稽核</a>：作者自述程式全由 AI 寫成，外部開發者送來的八個修補 PR 被一起關閉，從作者這一端看 AI 程式碼的審查</li>
+</ul>
+  </div>
+<aside class="source-slip" id="sources" aria-labelledby="source-slip-heading">
+  <h2 class="source-slip__heading" id="source-slip-heading">原文（23 篇）</h2>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/haxx.se-55fd2aa0.png" width="16" height="16" alt="" loading="lazy" decoding="async">The end of the curl bug-bounty</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>curl 作者的部落格</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-01-26">2026 年 1 月 26 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Contributing to the curl project</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>curl</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Welcome to the Eternal September of open source. Here&#39;s what we plan to do for maintainers.</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GitHub</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-02-12">2026 年 2 月 12 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/changelog/2026-06-17-limit-open-pull-requests-for-users-without-write-access/" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Limit open pull requests for users without write access</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GitHub</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-06-17">2026 年 6 月 17 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only/" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Restrict issue creation to collaborators only</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GitHub</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-06-29">2026 年 6 月 29 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.blog/changelog/2026-10-28-pull-request-limits-exempt-contributors-by-age-or-history" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/github.blog-b1af9b96.png" width="16" height="16" alt="" loading="lazy" decoding="async">Pull request limits: Exempt contributors by age or history</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>GitHub</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-28">2026 年 10 月 28 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://osssaysno.com/all" data-anoni-event="source-click"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>All projects</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Open Source Says No</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://osssaysno.com/about" data-anoni-event="source-click"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>About</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Open Source Says No</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/github.com-90043607.png" width="16" height="16" alt="" loading="lazy" decoding="async">Kernel Guidelines for Tool-Generated Content</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Linux kernel</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://frenck.dev/open-source-was-not-ready-for-ai-speed-contributions/" data-anoni-event="source-click"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Open source was not ready for AI-speed contributions</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Home Assistant 維護者的部落格</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-05-31">2026 年 5 月 31 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://tukaani.org/xz-backdoor/" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/tukaani.org-9230c62a.png" width="16" height="16" alt="" loading="lazy" decoding="async">XZ Utils backdoor</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Tukaani</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.openwall.com/lists/oss-security/2024/03/29/4" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/openwall.com-c05dca8e.png" width="16" height="16" alt="" loading="lazy" decoding="async">backdoor in upstream xz/liblzma leading to ssh server compromise</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>oss-security</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2024-03-29">2024 年 3 月 29 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://research.swtch.com/xz-timeline" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/research.swtch.com-49ee6add.png" width="16" height="16" alt="" loading="lazy" decoding="async">Timeline of the xz open source attack</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>xz 攻擊時間線</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.theregister.com/ai-and-ml/2026/10/21/ai-cuts-coding-time-but-its-also-filling-open-sources-inbox-with-crap/5304389" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/theregister.com-315165b2.png" width="16" height="16" alt="" loading="lazy" decoding="async">AI cuts coding time, but it&#39;s also filling open source&#39;s inbox with crap</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>The Register</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-21">2026 年 10 月 21 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://jazzband.co/news/2026/03/14/sunsetting-jazzband" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/jazzband.co-b5ad2f3e.png" width="16" height="16" alt="" loading="lazy" decoding="async">Sunsetting Jazzband</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Jazzband</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem" data-anoni-event="source-click"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Widespread Supply Chain Compromise Impacting npm Ecosystem</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>CISA</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2025-09-23">2025 年 9 月 23 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arxiv.org/abs/2609.12236" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/arxiv.org-c4f5309f.png" width="16" height="16" alt="" loading="lazy" decoding="async">Open Source Stewardship Communities: &#34;We need you, but not your pull request&#34;</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>arXiv</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-09-10">2026 年 9 月 10 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://arxiv.org/abs/2610.34933" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/arxiv.org-c4f5309f.png" width="16" height="16" alt="" loading="lazy" decoding="async">What Will Replace Pull Requests? Rethinking Software Collaboration for AI Agents</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>arXiv</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-10-26">2026 年 10 月 26 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://angiejones.tech/stop-closing-the-door-fix-the-house/" data-anoni-event="source-click"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>Stop Closing the Door. Fix the House.</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>goose 維護者的部落格</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2026-02-07">2026 年 2 月 7 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://dev.to/tidelift/in-the-wake-of-the-xz-utils-hack-two-thirds-of-maintainers-are-less-trusting-of-contributors-4kch" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/dev.to-4d51d0aa.png" width="16" height="16" alt="" loading="lazy" decoding="async">In the wake of the xz utils hack, two-thirds of maintainers are less trusting of contributors</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Tidelift</dd></div>
+      <div><dt>原文日期</dt><dd><time datetime="2024-10-15">2024 年 10 月 15 日</time></dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://opensource.org/osd" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/opensource.org-67b6b15c.png" width="16" height="16" alt="" loading="lazy" decoding="async">The Open Source Definition</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Open Source Initiative</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://sqlite.org/copyright.html" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/sqlite.org-cd226b88.png" width="16" height="16" alt="" loading="lazy" decoding="async">SQLite Copyright</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>SQLite</dd></div>
+    </dl>
+  </div>
+  <div class="source-slip__item">
+    <p class="source-slip__title" lang="en"><a href="https://www.lua.org/faq.html" data-anoni-event="source-click"><img class="source-slip__icon" src="/news/assets/favicons/lua.org-5be79ff6.png" width="16" height="16" alt="" loading="lazy" decoding="async">Lua: FAQ</a></p>
+    <dl class="source-slip__meta">
+      <div><dt>出處</dt><dd>Lua</dd></div>
+    </dl>
+  </div>
+</aside>
+</article>
+<p class="column-invite cat--column"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg> 專欄歡迎投稿，寫下你對隱私、匿名網路、網路審查與開源生態的看法。<a href="/news/contribute/">投稿的方式與題目</a></p>
+<p class="subscribe">想收到新的導讀：<a href="/news/subscribe/" data-anoni-event="subscribe-click" data-anoni-event-channel="rss" data-anoni-event-where="article"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> <span>RSS</span></a>、<a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq" data-anoni-event="subscribe-click" data-anoni-event-channel="newsletter" data-anoni-event-where="article"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> <span>訂閱電子報</span></a>、<a href="https://bsky.app/profile/news.anoni.net" data-anoni-event="subscribe-click" data-anoni-event-channel="bluesky" data-anoni-event-where="article"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> <span>在 Bluesky 追蹤</span></a></p>
+<nav class="pager pager--story" aria-label="文章導覽">
+  <a class="pager__item pager__item--older" href="/news/2026/11/iphone-grey-list/"><span class="pager__label">較舊的一篇 <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></span> <span class="pager__title">iPhone 鍵盤建議與滑動輸入排除的詞組清單</span></a>
+  <a class="pager__all" href="/news/">所有文章</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="site-footer__links" aria-label="頁尾">
+      <a href="/news/subscribe/" data-anoni-event="subscribe-click" data-anoni-event-channel="rss" data-anoni-event-where="footer"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z" /></svg> RSS</a>
+      <a href="https://form.anoni.net/s/cmc9ceju1000dlj017fiathzq" data-anoni-event="subscribe-click" data-anoni-event-channel="newsletter" data-anoni-event-where="footer"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg> 訂閱電子報</a>
+      <a href="https://bsky.app/profile/news.anoni.net" data-anoni-event="subscribe-click" data-anoni-event-channel="bluesky" data-anoni-event-where="footer"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg> 在 Bluesky 追蹤</a>
+      <a href="/news/history/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg> 導讀歷史</a>
+      <a href="/news/contribute/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg> 投稿專欄</a>
+      <a href="/news/about/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" /></svg> 關於新聞導讀</a>
+      <a href="/news/reading/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z" /></svg> 閱讀說明</a>
+      <a href="https://github.com/anoni-net/news/issues/new"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13,10H11V6H13V10M13,12H11V14H13V12M22,4V16A2,2 0 0,1 20,18H6L2,22V4A2,2 0 0,1 4,2H20A2,2 0 0,1 22,4M20,4H4V17.2L5.2,16H20V4Z" /></svg> 回報錯誤</a>
+      <a href="https://anoni.net/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" /></svg> anoni.net 首頁</a>
+      <a href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/open-source-contributions-ai/"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.9124 17.1581zM17.9817 1.14a8.419 8.419 0 00-4.4695 3.1196A21.4277 21.4277 0 0116.512 0a12.4187 12.4187 0 00-3.9996 4.3595l.64-2.5497a14.6284 14.6284 0 00-1.8998 5.3494l1.1198.48a33.1264 33.1264 0 015.6094-6.4993zm.82 13.0686c-.82-1.5199-2.9197-3.0097-5.1295-4.3896-.51-.3-.61-1.4098-.53-1.8898l-.5099-.24a6.3693 6.3693 0 00.16 2.3898c.24.75.9999 1.5998 1.5198 2.7997a18.158 18.158 0 01.72 2.9197 13.1686 13.1686 0 01-.54 6.1193 4.2595 4.2595 0 01-1.4298 1.9198l-.24.16c4.1595.13 8.829-4.6295 5.9793-9.789zm-5.3995 4.7894a6.6193 6.6193 0 00-.42-1.9997 12.4087 12.4087 0 00-.7498-1.4399 6.2293 6.2293 0 01-.16-2.0698 6.9992 6.9992 0 00.32 1.9398 11.0788 11.0788 0 01.6899 1.2999 8.999 8.999 0 01.5899 2.2697 10.4289 10.4289 0 01-.35 2.9997 5.1094 5.1094 0 01-.4 1 4.8495 4.8495 0 00.7-1.52 12.4187 12.4187 0 00.36-4.4794 11.6087 11.6087 0 00-.46-1.8898c-.44-1.2-1.0699-2.2298-1.1499-2.4698a16.2082 16.2082 0 01-.39-3.3596 14.3084 14.3084 0 00.44 3.1197c.08.24.8 1.3798 1.2999 2.5797a7.4692 7.4692 0 01.48 1.7298 10.7188 10.7188 0 01-.53 5.1594 3.9996 3.9996 0 01-.35.82 3.7196 3.7196 0 00.8-1.41 16.1382 16.1382 0 000-8.109c-.42-1.2799-1.4099-2.3998-1.6499-3.1697a7.6792 7.6792 0 01-.08-2.3897l-2.1497-1c.56 1.44.6599 2.5598.08 2.9998-2.2598 1.8698-5.9994 3.9995-5.9994 7.1092 0 3.3196 1.9998 6.9092 7.0492 7.1792a12.9986 12.9986 0 01-1.6998-.56 3.4496 3.4496 0 01-1.3098-.8998l-.13-.14A9.339 9.339 0 016.233 18.658a2.7097 2.7097 0 01-.08-1.5199 6.6793 6.6793 0 013.2797-3.9995 10.099 10.099 0 00.9999-.61c.4699-.29.7699-1.5298 1.0798-2.5297-.16.77-.34 2.2598-1.0599 2.8197-.29.22-.6099.43-.9299.64-1.2798.8798-2.5397 1.6998-3.1696 3.8095a2.8197 2.8197 0 00.08 1.3799 9.319 9.319 0 001.9498 3.5096s.13.13.13.16a2.9997 2.9997 0 001.9397 1.1499c-.29-.16-.5299-.35-.7399-.48a4.3595 4.3595 0 01-1.9998-3.5996 3.6996 3.6996 0 012.1798-3.3896 3.5796 3.5796 0 001.6798-2.3798 3.1197 3.1197 0 01-1.5898 2.4998 3.9996 3.9996 0 00-2.0998 3.1696 5.6594 5.6594 0 001.8898 3.3996 4.0796 4.0796 0 001.5898.72 2.8897 2.8897 0 01-.4799-.5 4.9995 4.9995 0 01-.45-.9999 2.9997 2.9997 0 01-.27-.9999 3.5996 3.5996 0 01.64-2.3697 2.8397 2.8397 0 00.9-1.3499 2.8697 2.8697 0 01-.72 1.5099 2.9997 2.9997 0 00-.56 2.2397 4.0596 4.0596 0 00.29.93 3.9996 3.9996 0 00.51.9998c.18.21.26.37.5499.48a6.4793 6.4793 0 00.49-2.3498 9.519 9.519 0 000-1.7598c-.13-.7999-.4-1.5998-.4-2.2397.12.5899.43 1.3798.61 2.2097a5.6294 5.6294 0 01.11 1.7298c0 .56-.08 1-.16 1.4899a1.9998 1.9998 0 01-.45.9299 3.2097 3.2097 0 001.1099-1.9998 7.8991 7.8991 0 00.32-2.3598z"/></svg> onion 版本</a>
+    </nav>
+<nav class="site-footer__langs" role="navigation" aria-label="頁尾的其他語言"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" /></svg> 其他語言：<a href="/news/zh-cn/2026/11/open-source-contributions-ai/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>、<a href="/news/en/2026/11/open-source-contributions-ai/" hreflang="en" lang="en">English</a></nav>
+    <p>文章以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC-BY 4.0</a> 授權，引用的原文著作權屬於原作者。</p>
+    <p>本站以自架的 Umami 計算閱讀量與點擊，不使用 cookie，瀏覽器開啟「請勿追蹤」或 GPC 時不送出。onion 版本不載入。</p>
+  </div>
+</footer>
+</body>
+</html>
