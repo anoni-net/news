@@ -928,6 +928,24 @@ def test_no_pin_no_featured(tmp_path):
     assert 'class="featured' not in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
 
 
+def test_column_page_marks_the_author_view(tmp_path):
+    """專欄的署名寫「撰文」，標題區有一行說明觀點屬於作者，導讀維持原樣。見 SPEC.md「專欄」。"""
+    posts = tmp_path / "posts"
+    text = GOOD.replace("  - encryption\n", "  - column\n").replace("  - anoni-net\n", "  - named-example\n")
+    write_versions(posts, text)
+    shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
+    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
+    targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
+    out = targets["clearnet"].out
+    page = (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
+    assert "<span>撰文：" in page and "<span>導讀：" not in page
+    assert '<p class="story__note cat--column">' in page
+    assert page.index('class="story__langs"') < page.index("story__note") < page.index('class="story__body')
+    en = (out / "en/2026/09/test-post/index.html").read_text(encoding="utf-8")
+    assert "the author's own views" in en.replace("&#39;", "'")
+    assert (out / "category/column/index.html").exists()
+
+
 # ---------------------------------------------------------------- 多語系
 
 def site_problems(tmp_path, overrides=None, text=GOOD) -> list[str]:
