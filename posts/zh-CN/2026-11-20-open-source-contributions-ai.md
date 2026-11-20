@@ -1,7 +1,7 @@
 ---
 title: AI 时代开源项目收紧的外部贡献入口
 description: curl 停掉漏洞奖金，GitHub 让维护者限制谁能开 PR 与 issue，开源项目在 2026 年收紧外部贡献的入口。作者认为收紧处理的是大量低质量投稿的数量问题，信任的问题仍在。xz 后门与 Shai-Hulud 蠕虫的恶意版本都由已经受信任的开发者账号发布，缺的是审查人力与权限管理。
-date: 2026-11-25T00:15:00+08:00
+date: 2026-11-20T22:30:00+08:00
 slug: open-source-contributions-ai
 categories: [column]
 authors: [toomore]

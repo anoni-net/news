@@ -1,7 +1,7 @@
 ---
 title: Tighter limits on outside contributions to open source projects in the AI era
 description: curl ended its bug bounty, and GitHub now lets maintainers limit who can open pull requests and issues; in 2026 open source projects are narrowing the ways outsiders can contribute. The author argues that this addresses the volume problem created by floods of low-quality submissions, but the trust problem remains. The malicious releases in both the xz backdoor and the Shai-Hulud worm were published from developer accounts that were already trusted, and what is missing is review capacity and permission management.
-date: 2026-11-25T00:15:00+08:00
+date: 2026-11-20T22:30:00+08:00
 slug: open-source-contributions-ai
 categories: [column]
 authors: [toomore]
