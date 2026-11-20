@@ -147,6 +147,8 @@ People who do not write code can take part too: when reporting a problem, writin
 
 For people who use privacy tools, I suggest looking at how many active maintainers a project has, whether its contribution policy spells out rules on AI and permissions, and how long vulnerabilities take from report to fix (contribution documents, release notes and security advisories usually cover this). As of 20 November, Open Source Says No did not list tools such as Tor (the onion routing network), Tails (an amnesic live operating system) or Signal (an encrypted messaging app), so whether they have such rules has to be checked in each project's contribution documents. At the end of 2022 the xz README listed two maintainers (according to the same timeline), one of whom was the account that later planted the backdoor. So these signals are only a reference and cannot guarantee safety.
 
+Does the contribution guide of the privacy tool you rely on say anything about AI or permissions? If the project stopped accepting outside PRs, how would you take part?
+
 ## Further reading {#further-reading}
 
 - [Personal protection and open source maintenance as AI speeds up vulnerability discovery](https://anoni.net/news/en/2026/11/eff-security-worse/): PHP's security team patched real vulnerabilities while working through more than 100 reports that turned out to be invalid or not reproducible, a situation close to curl's
