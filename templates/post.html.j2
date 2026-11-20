@@ -19,7 +19,7 @@
 {% set is_column = post.categories and post.categories[0] == "column" %}
 {% block content %}
 {# data-print-* 只給列印用，印在文章最後，見 SPEC.md「列印」 #}
-<article class="story" data-print-label="{{ s.print_from.format(site=s.site_name) }}" data-print-url="{{ page_url }}">
+<article class="story{% if is_column %} story--column{% endif %}" data-print-label="{{ s.print_from.format(site=s.site_name) }}" data-print-url="{{ page_url }}">
   <header class="story__head">
     <p class="story__date">{% if post.categories %}{% with cat = post.categories[0] %}{% include "_category.html.j2" %}{% endwith %} <span aria-hidden="true">·</span> {% endif %}<time datetime="{{ post.created|iso }}">{{ post.created|full_date }}</time></p>
     <h1 class="story__title">{{ post.title }}</h1>

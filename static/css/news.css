@@ -21,6 +21,7 @@
     --brand-cyan-900: #003e57;
 
     --c-bg: #ffffff;
+    --c-column-mark: #f5d0fe;
     --c-surface: #eef6f9;
     --c-border: #cfe0e7;
     --c-text: #1d2b31;
@@ -75,6 +76,7 @@ html:lang(en) .site-header__product {
 @media (prefers-color-scheme: dark) {
     :root {
         --c-bg: #0c1b22;
+        --c-column-mark: #701a75;
         --c-surface: #132a34;
         --c-border: #24414d;
         --c-text: #e8f9ff;
@@ -721,6 +723,17 @@ p {
 
 .story__followup a {
     font-weight: 600;
+}
+
+/* 專欄的粗體是作者要傳達的主張，用專欄色的螢光筆底標出，跟一般的強調分開。
+   底色只是裝飾，字本身用標題色與粗體，深淺模式下文字對底色都在 7:1 以上。見 SPEC.md「專欄」 */
+.story--column .story__body strong {
+    color: var(--c-headline);
+    font-weight: 700;
+    padding: 0 0.08em;
+    background-image: linear-gradient(transparent 58%, var(--c-column-mark) 58%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 /* 專欄的說明，寫明觀點屬於作者。放在標題區、閱讀模式與朗讀都會讀到，樣式跟後續發展的提示相同 */
@@ -1643,6 +1656,12 @@ p {
         background: Highlight;
         color: HighlightText;
     }
+
+    /* 專欄粗體的螢光筆底會被拿掉，改用底線標出 */
+    .story--column .story__body strong {
+        text-decoration: underline 2px;
+        text-underline-offset: 0.2em;
+    }
 }
 
 /* ---------------------------------------------------------------- 增加對比 */
@@ -1793,5 +1812,14 @@ p {
         border-top: 1px solid #000000;
         font-size: 9pt;
         overflow-wrap: anywhere;
+    }
+}
+
+/* 列印時瀏覽器預設不印底色，專欄粗體的螢光筆底改成底線 */
+@media print {
+    .story--column .story__body strong {
+        background: none;
+        text-decoration: underline 1.5pt;
+        text-underline-offset: 0.2em;
     }
 }
