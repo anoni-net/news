@@ -6,7 +6,101 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 20 Nov 2026 22:30:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 21 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>The FBMD Identifier in Facebook Photos and Its Removal in Brave&#39;s Desktop Browser</title>
+<link>https://anoni.net/news/en/2026/11/brave-photo-metadata/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/brave-photo-metadata</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>From version 1.98, Brave&#39;s desktop browser automatically strips the FBMD identifier that Meta adds to Facebook photos whenever an image is saved or uploaded. Location, device and capture time are not removed, and as of 15 November the Android and iOS versions do not have the feature.</description>
+<content:encoded>&lt;p&gt;Based on 10 sources, including Brave, GitHub, IPTC&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Brave announced on 12 November that, from version 1.98, its desktop browser automatically removes the &lt;code&gt;FBMD&lt;/code&gt; identifier that Meta adds to Facebook photos whenever an image is saved or uploaded. People using Brave on desktop get the protection once they update. As of 15 November the Android and iOS versions do not have it, and the announcement describes them only as planned. A photo&#39;s location, device model and capture time are outside the scope of this change.&lt;/p&gt;
+&lt;p&gt;According to Brave&#39;s announcement, Meta stores the identifier in photo metadata (data attached to the file that is not normally visible) defined by the International Press Telecommunications Council (IPTC). The IPTC sets standards for the news industry, and photographers and publishers use its formats to embed captions, author names and copyright information in images.&lt;/p&gt;
+&lt;p&gt;When the IPTC tested how Facebook handles uploaded photos, it found that Facebook deleted most of the existing metadata and added a long string beginning with &lt;code&gt;FBMD&lt;/code&gt; to the &#34;Special Instructions&#34; field. When someone else downloaded the same photo and uploaded it again, the value stayed the same. Brave repeated the test in July and found the identifier still there.&lt;/p&gt;
+&lt;p&gt;The announcement describes a hypothetical person who runs an Instagram account under a different name, kept apart from the real-name Facebook account that family and colleagues know. They use a separate email alias for each account, and maybe a VPN to hide their IP address. If they download an image a friend posted on Facebook urging people to vote and share it on their Instagram, the identifier travels with the file, and Meta could use it to link the Instagram account to the friend&#39;s post and the real-name network around it. Once that link exists, Meta might suggest the Instagram account to people who know them on Facebook, and the link could also leak or be handed over in response to a legal request.&lt;/p&gt;
+&lt;p&gt;Brave&#39;s announcement notes that Meta has not disclosed what the identifier is for or why it is placed in image metadata. The announcement also acknowledges that Meta may not use it for tracking, and states that without public information Brave weighs every possibility and its privacy implications. As of 15 November we could find no explanation from Meta about the identifier or about Brave&#39;s announcement, and no retest other than Brave&#39;s since the IPTC&#39;s 2019 round.&lt;/p&gt;
+&lt;p&gt;When an image is saved, Brave removes the identifier before the download finishes, so it does not come along if the file is later uploaded through another browser or app. When an image is uploaded to a website, Brave sends a stripped copy and leaves the original file on the computer unchanged. The feature appears in the release notes for version 1.98.60 on 27 October, and the corresponding request was opened on Brave&#39;s GitHub in 2019.&lt;/p&gt;
+&lt;p&gt;The title and first paragraph of Brave&#39;s announcement mention Instagram alongside Facebook, but the tests and demonstration steps in it all use Facebook photos. As of 15 November we found no independent test showing that Instagram photos also carry &lt;code&gt;FBMD&lt;/code&gt;. In the IPTC&#39;s 2019 table of social media sites, the Instagram row records only that the site offers no way to save or download images and that no embedded metadata was displayed.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;In both its 2016 and 2019 tests, the IPTC found two fields whose values differed from what was uploaded, and assumed Facebook had filled them in. The Job Id field got a new value with every upload, while the &lt;code&gt;FBMD&lt;/code&gt; value in &#34;Special Instructions&#34; stayed the same when someone else uploaded the photo again. The IPTC states that it makes no assumptions about what these values are for, and in 2019 it could find no specification or statement from Facebook. Brave&#39;s announcement deals only with &lt;code&gt;FBMD&lt;/code&gt; and does not mention Job Id, and the effect it describes is making it harder for Meta to link the same photo across accounts and sites, not preventing it altogether.&lt;/p&gt;
+&lt;p&gt;Other photo metadata has legitimate uses, such as photo apps sorting pictures by date and place. Brave lists removing location, device and date and time as features it would like to add later, and says users will decide when to remove them.&lt;/p&gt;
+&lt;p&gt;Brave uses Chrome as the comparison case without this protection. In 2012 someone filed a request in Firefox&#39;s bug tracker to delete EXIF data (the shooting details a camera writes into a photo) automatically on upload, and as of 15 November its status is WONTFIX. That request concerns EXIF, which is a different format from the IPTC field that holds &lt;code&gt;FBMD&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;People using Brave on desktop only need to update to 1.98 or later, and the announcement mentions no setting to turn on. The announcement includes steps to check. Save a photo from &lt;code&gt;facebook.com&lt;/code&gt; in a browser such as Chrome, then open it in an image metadata viewer that runs in the browser, and the &#34;Special Instructions&#34; field shows a value beginning with &lt;code&gt;FBMD&lt;/code&gt;. Open the same metadata viewer in Brave and choose the same file, and the value is gone.&lt;/p&gt;
+&lt;p&gt;When we checked on 20 October, GreatFire&#39;s last test in mainland China, on 18 October, had found &lt;code&gt;brave.com&lt;/code&gt; 100% blocked, with interference recorded since 13 May 2017, and its most recent valid test of &lt;code&gt;laptop-updates.brave.com&lt;/code&gt;, used for downloads and updates, was also blocked. On the same day, Apple&#39;s iTunes lookup API returned no Brave listing in the mainland China App Store (a lookup result, not an announcement of removal by Brave or Apple), while the Taiwan, Hong Kong, Japan, South Korea and Singapore stores listed Brave 1.96 (6 October). In none of those places does the App Store version bring this protection, since as of 15 November Brave has only announced plans for mobile.&lt;/p&gt;
+&lt;p&gt;Inferring from the two points at which the identifier is removed, saving and uploading, files that were neither downloaded nor uploaded through Brave on desktop are not protected, and neither are photos saved and shared through apps on a phone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/privacy-updates/40-remove-tracking-metadata/&#34;&gt;Brave removes tracking metadata from Instagram and Facebook photos&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;12 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.brave.app/t/release-channel-1-98-60/660299&#34;&gt;Release Channel 1.98.60&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;27 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/5238&#34;&gt;Strip metadata from images on download/upload&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-14&#34;&gt;14 July 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://iptc.org/news/what-does-facebook-do-with-your-photo-metadata/&#34;&gt;IPTC investigates: what does Facebook do with your photo metadata?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IPTC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-22&#34;&gt;22 July 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://iptc.org/standards/photo-metadata/social-media-sites-photo-metadata-test-results-2019/&#34;&gt;Social Media Sites Photo Metadata Test Results 2019&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IPTC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=743152&#34;&gt;Automatically delete personal EXIF data from images when uploading&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2012-04-06&#34;&gt;6 April 2012&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/brave.com&#34;&gt;Is https://brave.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/laptop-updates.brave.com&#34;&gt;Is https://laptop-updates.brave.com blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1052879175&amp;amp;country=cn&#34;&gt;iTunes lookup API (cn)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1052879175&amp;amp;country=tw&#34;&gt;iTunes lookup API (tw)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Tighter limits on outside contributions to open source projects in the AI era</title>
 <link>https://anoni.net/news/en/2026/11/open-source-contributions-ai/</link>
@@ -2166,116 +2260,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/privacybadger.org&#34;&gt;privacybadger.org&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>US border device search figures and the unlock decision before travel</title>
-<link>https://anoni.net/news/en/2026/11/us-border-device-searches/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/us-border-device-searches</guid>
-<pubDate>Wed, 11 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>According to FPF on 4 November, citing data obtained by CBC News, US Customs and Border Protection (CBP) searched 32% more travellers&#39; electronic devices in the first three quarters of fiscal year 2026 than in the same period a year earlier. The searches affect travellers entering and leaving the US, and non-US citizens who refuse to unlock a device may be refused entry. People carrying source material to the US need to decide before departure whether they will unlock if asked.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including U.S. Customs and Border Protection, Freedom of the Press Foundation, CBP&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;On 4 November, the Freedom of the Press Foundation (FPF), a US press freedom organisation, cited data obtained by Canada&#39;s CBC News in its digital security newsletter: in the first three quarters of fiscal year 2026, US Customs and Border Protection (CBP) searched 32% more travellers&#39; electronic devices than in the same period a year earlier. The US federal fiscal year begins in October of the previous calendar year, so those three quarters run from October 2025 to June 2026. Both US citizens and foreign visitors entering or leaving the US can be searched, but the consequences of refusing to unlock a device differ. In FPF&#39;s words, border searches &#34;affect a very small percentage of international travelers, but they are disproportionately travelers who are not U.S. citizens.&#34;&lt;/p&gt;
-&lt;p&gt;As relayed by FPF, the CBC report counts 47,517 basic searches in those three quarters and another 4,564 advanced searches. The report also notes that CBP will not reveal how many of the searches took place at the northern border with Canada or the southern border with Mexico, and FPF, citing it, writes that the agency &#34;is reportedly on track for a record-setting year for device searches.&#34; Adding up the quarterly table on CBP&#39;s website, we count 52,081 searches in the first three quarters, already more than 90% of the 55,318 for the whole of fiscal year 2025. CBP&#39;s page notes that the statistics may change when finalised, and as of 8 November the table had no figure for the fourth quarter.&lt;/p&gt;
-&lt;p&gt;The difference between the two kinds of search is set out in CBP Directive 3340-049B, an internal directive that took effect on 1 January and replaced the earlier 049A. It defines an advanced search as &#34;any search in which an officer connects equipment, wired or wireless, to copy and/or analyze the contents of an electronic device,&#34; allowed only with reasonable suspicion that the traveller has broken a law CBP enforces, or a national security concern, and with supervisory approval. Connecting equipment merely to bypass a password, overcome encryption or translate content does not count as an advanced search. Every other search is a basic search, which an officer may conduct &#34;with or without suspicion,&#34; and which the journalist checklist written by FPF with EFF (the Electronic Frontier Foundation) describes as manually looking through information on a device.&lt;/p&gt;
-&lt;p&gt;The same directive obliges travellers to present devices &#34;in a condition that allows inspection of the device and its contents.&#34; If a device is protected by a passcode or encryption, officers may ask for the traveller&#39;s assistance or for the passcode, and a recorded passcode is not to be uploaded into CBP systems. A device that cannot be inspected may be detained, ordinarily for no more than five days, with longer detention needing higher-level approval. Copies of a device&#39;s contents are kept for at most 21 days after the search ends, except in cases such as probable cause to suspect a violation.&lt;/p&gt;
-&lt;p&gt;Under the directive, officers may not intentionally use a device to reach information stored only in the cloud, so during a search they ask the traveller to turn on airplane mode and turn off Bluetooth and Wi-Fi, or cut the connection themselves. For material covered by attorney-client privilege, the directive sets out a procedure of contacting the legal office and forming a separate filter team. Work-related information carried by journalists is grouped with medical records as other possibly sensitive information, which &#34;shall be handled in accordance with any applicable federal law and CBP policy.&#34;&lt;/p&gt;
-&lt;p&gt;The body of the directive does not distinguish between US citizens and foreign travellers in what follows a refusal to provide a passcode. According to CBP&#39;s explanatory page, whether a device can be inspected does not by itself decide admission, and a US citizen will not be refused entry on that ground alone. The same page says a citizen&#39;s device may still be detained and clearance may take longer, while for foreign travellers the matter can be weighed in the admission decision. FPF&#39;s article puts the possible detention at days or weeks and the checklist at days to months, and the checklist warns that refusing may bring scrutiny of a green card holder&#39;s permanent resident status, and that foreign nationals arriving on a visa or under the visa waiver programme may be denied entry.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The US Supreme Court has not yet ruled on border searches of phones, and the federal courts of appeals differ depending on how the search is done. EFF&#39;s July article reports that the Fourth Circuit held manual searches to be routine, needing neither a warrant nor individualised suspicion. On 18 September the legal blog Volokh Conspiracy summarised a Second Circuit ruling from the day before, which likewise held that a manual search of a phone needs no warrant and no suspicion at all; the traveller in that case was a lawful permanent resident of the US. We have not read either ruling in full.&lt;/p&gt;
-&lt;p&gt;According to a 13 October overview by the law firm Holland &amp;amp; Knight, the circuits are further apart on forensic searches, with the Fourth and Ninth Circuits requiring reasonable suspicion. The Eleventh Circuit holds that none is needed, and the remaining circuits have either left the question open or not yet faced it. The overview&#39;s authors expect the Supreme Court to take up the issue before long. CBP&#39;s directive also provides that where binding circuit precedent imposes different requirements, the place where the search begins determines which rules apply.&lt;/p&gt;
-&lt;p&gt;CBP&#39;s directive presents border searches as part of carrying out its customs, immigration, law enforcement and homeland security responsibilities, used among other things to detect terrorism, smuggling and child sexual abuse material. It states that &#34;courts have rejected a categorical exception to the border search doctrine for electronic devices&#34; (the doctrine under which border searches generally need no warrant), and that some of its own requirements are imposed &#34;as a policy matter,&#34; &#34;above and beyond prevailing constitutional and legal requirements.&#34; On its border searches page, EFF argues that &#34;a warrant based on probable cause, issued by a judge, is required for border device searches.&#34; In the Second Circuit case, one judge wrote a concurrence (agreeing with the outcome while giving separate reasons) arguing for at least some suspicion, and the author of the Volokh Conspiracy post argues that a warrant should be required.&lt;/p&gt;
-&lt;p&gt;FPF&#39;s article notes that makers of forensic tools rely on exploit research that can take months, &#34;so simply keeping your device up to date will make it significantly harder for someone to make a forensic copy of your device.&#34; It also recommends a long, unique passcode and powering the device down before going through border security, which returns it to its encrypted state and significantly reduces what forensic tools can extract. Modern phones encrypt the disk by default, while computer users should check that FileVault on a Mac or BitLocker on Windows is turned on. The directive treats connecting equipment to bypass a passcode as a basic search, needing neither reasonable suspicion nor supervisory approval, and FPF&#39;s article does not discuss whether updates and powering down still help in that situation.&lt;/p&gt;
-&lt;p&gt;The checklist advises deciding before the trip whether to unlock a device or give the passcode if asked. It puts the chance of being selected for a device search at less than 0.01% of international travellers, but adds that depending on what information you carry, &#34;the impact of a search may be quite high.&#34; For those who plan to unlock, it suggests moving files, chat histories and contacts they do not want seen off the device beforehand, emptying the trash, and temporarily leaving groups on messaging apps such as Signal. It also suggests logging out, on the day of travel, of accounts that border officials should not be able to access.&lt;/p&gt;
-&lt;p&gt;People who will carry source material into or out of the US can read the checklist before they leave, and FPF and EFF each host a copy in English. The checklist also recommends noting down a lawyer familiar with border cases and telling family or friends when you expect to clear the border. EFF&#39;s Surveillance Self-Defense site has a page of border advice as well, last reviewed in October 2018, which warns that some of its recommendations may be out of date. The checklist was published in June 2025, before the new directive took effect in January, but its descriptions of basic and advanced searches match the new directive&#39;s definitions.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, also looked at device inspection at borders in parts of Asia. In mainland China, the Ministry of State Security issued two sets of procedural rules for state security organs, one for administrative enforcement and one for criminal cases, which took effect on 1 July 2024; we did not obtain their text, only the account state security officers gave China News Service, a state news agency, on 11 June 2024. According to that report, officers may inspect electronic devices only while carrying out counter-espionage work and only those of individuals and organisations connected with it, which the officers said rules out ordinary inbound travellers. Each inspection needs approval from the head of a state security organ at the level of a city divided into districts or above, even in an emergency, and the officer must show enforcement credentials with the person inspected or a witness present.&lt;/p&gt;
-&lt;p&gt;For Taiwan, Hong Kong and Japan, as of 8 November we found no published rule or official guidance on customs examining the contents of travellers&#39; phones or other devices. Article 105 of Japan&#39;s Customs Act lets customs officers question people and inspect goods and the related books and documents, including electromagnetic records, but we found no provision in the Act that expressly covers devices carried by travellers and did not determine whether Article 105 extends to them.&lt;/p&gt;
-&lt;p&gt;When comparing practices across places, on privacy one can ask whether a search needs suspicion or a warrant, how long copies of device contents are kept, and whether journalists&#39; material has its own handling procedure. On effectiveness, one can ask whether raising the threshold for searches would affect CBP&#39;s work on smuggling and national security cases. Since CBP does not disclose how searches are spread across its borders, one can also ask whether outsiders can judge from the published figures whether searches are being used for the purposes the directive lists.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/travel/cbp-search-authority/border-search-electronic-devices&#34;&gt;Border Search of Electronic Devices at Ports of Entry&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;U.S. Customs and Border Protection&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/us-border-device-searches-near-record-high/&#34;&gt;U.S. border device searches near record high&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/document/directives/cbp-directive-no-3340-049b-border-search-electronic-devices&#34;&gt;CBP Directive No. 3340-049B: Border Search of Electronic Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CBP&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;28 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/border-security/&#34;&gt;Preparing devices for travel through a US border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/06/journalist-security-checklist-preparing-devices-travel-through-us-border&#34;&gt;A Journalist Security Checklist: Preparing Devices for Travel Through a US Border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-23&#34;&gt;23 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/fourth-circuit-says-border-agents-can-search-your-phone-hand-no-suspicion-required&#34;&gt;The Fourth Circuit Says Border Agents Can Search Your Phone By Hand, No Suspicion Required&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-22&#34;&gt;22 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reason.com/volokh/2026/09/18/second-circuit-rejects-limits-on-border-searches-of-cell-phones/&#34;&gt;Second Circuit Rejects Limits on Border Searches of Cell Phones&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Volokh Conspiracy&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;18 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hklaw.com/en/insights/publications/2026/10/does-privacy-exist-at-the-us-border&#34;&gt;Does Privacy Exist at the U.S. Border? An Update on the Fourth Amendment and Forensic Examination of Electronic Devices at the Border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Holland &amp;amp; Knight&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;13 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/issues/border-searches&#34;&gt;Border Searches&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/things-consider-when-crossing-us-border&#34;&gt;Things to Consider When Crossing the U.S. Border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.chinanews.com.cn/gn/2024/06-11/10231866.shtml&#34;&gt;“入境查手机”？权威回应！&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;China News Service&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-06-11&#34;&gt;11 June 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/329AC0000000061&#34;&gt;関税法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

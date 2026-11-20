@@ -6,7 +6,76 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 20 Nov 2026 22:30:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 21 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Facebook 照片裡的 FBMD 識別碼與 Brave 桌面版的移除功能</title>
+<link>https://anoni.net/news/2026/11/brave-photo-metadata/</link>
+<guid isPermaLink="false">anoni-news:2026/11/brave-photo-metadata</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>Brave 桌面版從 1.98 起，儲存或上傳圖片時自動移除 Meta 加在 Facebook 照片裡的 FBMD 識別碼。照片的位置、裝置與拍攝時間不在移除範圍，到 11 月 15 日為止 Android 與 iOS 版也還沒有。</description>
+<content:encoded>&lt;p&gt;整理 6 篇原文，來自 Brave、GitHub、IPTC 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Brave 11 月 12 日公布，桌面版從 1.98 起，儲存或上傳圖片時會自動移除 Meta 加在 Facebook 照片裡的 &lt;code&gt;FBMD&lt;/code&gt; 識別碼。用 Brave 桌面版的人更新之後就有這項保護，Android 與 iOS 版到 11 月 15 日為止還沒有，公告寫的是計畫推出。照片的位置、裝置型號與拍攝時間不在這次的移除範圍。&lt;/p&gt;
+&lt;p&gt;依 Brave 的公告，Meta 把識別碼存在國際新聞電訊委員會（IPTC）定義的照片 metadata（附在檔案裡、平常看不到的資料）裡。IPTC 為新聞業制定標準，攝影師與出版者用它的格式在圖片裡附上圖說、作者與著作權資訊。&lt;/p&gt;
+&lt;p&gt;IPTC 過去測試 Facebook 如何處理上傳的照片時，發現 Facebook 刪掉大部分原有的 metadata。Facebook 另外在「Special Instructions」欄位加上一串以 &lt;code&gt;FBMD&lt;/code&gt; 開頭的長字串。另一個人下載同一張照片再上傳，這串值維持不變。Brave 在 7 月重做同樣的測試，識別碼仍然在。&lt;/p&gt;
+&lt;p&gt;公告假設有人用另一個名字經營 Instagram 帳號，跟家人與同事認識的 Facebook 實名帳號分開。他替兩個帳號各用不同的電子郵件別名，也許還用了 VPN 隱藏 IP 位址。他下載朋友在 Facebook 貼出的投票呼籲圖片、發到自己的 Instagram 之後，識別碼跟著檔案一起過去，Meta 就可能用它把 Instagram 帳號連到朋友的貼文與周圍的實名人際關係。連結一旦存在，Meta 可能向 Facebook 上認識他的人推薦那個 Instagram 帳號，這筆連結也可能外洩或因法律請求而交出。&lt;/p&gt;
+&lt;p&gt;Brave 的公告提到，Meta 沒有公開識別碼的用途，也沒有說明為何把它加在圖片的 metadata 裡。Brave 也寫到 Meta 可能沒有拿它來追蹤，但在沒有公開資訊時，Brave 會把各種可能與對隱私的影響都納入考量。到 11 月 15 日為止，本文查不到 Meta 對這個識別碼或對 Brave 公告的說明，也查不到 2019 年 IPTC 之後、Brave 以外的重新測試。&lt;/p&gt;
+&lt;p&gt;儲存圖片時，Brave 在下載完成前拿掉識別碼，之後改用其他瀏覽器或 App 上傳也不會帶著它。上傳圖片到網站時，Brave 送出的是移除後的副本，電腦裡的原始檔案不變。功能列在 10 月 27 日的 1.98.60 版本說明裡，對應的需求 2019 年就開在 Brave 的 GitHub 上。&lt;/p&gt;
+&lt;p&gt;Brave 公告的標題與第一段把 Instagram 與 Facebook 並列，但文中的測試與示範步驟都用 Facebook 的照片。到 11 月 15 日為止，本文找不到 Instagram 照片也帶著 &lt;code&gt;FBMD&lt;/code&gt; 的獨立測試。IPTC 2019 年的社群網站測試表在 Instagram 一列只寫網站不提供另存或下載，也沒有顯示嵌入的 metadata。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;IPTC 2016 與 2019 年的測試都發現兩個欄位的值跟上傳的不同，IPTC 推測是 Facebook 填入的。Job Id 欄位每上傳一次就換一個值，「Special Instructions」欄位的 &lt;code&gt;FBMD&lt;/code&gt; 則在別人重新上傳時保持不變。IPTC 寫明不對這些值的用途做任何假設，2019 年時也找不到 Facebook 的規格或聲明。Brave 的公告只處理 &lt;code&gt;FBMD&lt;/code&gt;、沒有提到 Job Id，寫的效果是讓 Meta 更難跨帳號與網站連結同一張照片，沒有寫能完全阻止。&lt;/p&gt;
+&lt;p&gt;照片的其他 metadata 有正當用途，例如相簿 App 依日期與地點整理照片。Brave 把移除位置、裝置與日期時間列為之後想加的功能，並寫到會讓使用者決定何時移除。&lt;/p&gt;
+&lt;p&gt;Brave 拿 Chrome 當沒有這項保護的對照。2012 年有人在 Firefox 的問題追蹤系統提出上傳時自動刪除 EXIF（相機寫進照片的拍攝資訊）的請求，到 11 月 15 日為止狀態是不修正（WONTFIX）。該請求針對的是 EXIF，跟 &lt;code&gt;FBMD&lt;/code&gt; 所在的 IPTC 欄位分屬不同格式。&lt;/p&gt;
+&lt;p&gt;用 Brave 桌面版的人更新到 1.98 以上即可，公告沒有提到需要另外開啟或設定。Brave 的公告附了確認的步驟，先用 Chrome 這類瀏覽器從 &lt;code&gt;facebook.com&lt;/code&gt; 另存一張照片，再用在瀏覽器裡執行的 image metadata viewer 開啟。「Special Instructions」欄位會出現 &lt;code&gt;FBMD&lt;/code&gt; 開頭的值。改在 Brave 裡用同一個檢視網站選取該檔案，&lt;code&gt;FBMD&lt;/code&gt; 的值就不見了。&lt;/p&gt;
+&lt;p&gt;依儲存與上傳這兩個移除時間點推斷，下載與上傳都沒有經過 Brave 桌面版的檔案不在保護範圍內，在手機上用 App 儲存與分享的照片也一樣。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://brave.com/privacy-updates/40-remove-tracking-metadata/&#34;&gt;Brave removes tracking metadata from Instagram and Facebook photos&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://community.brave.app/t/release-channel-1-98-60/660299&#34;&gt;Release Channel 1.98.60&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Brave&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/brave/brave-browser/issues/5238&#34;&gt;Strip metadata from images on download/upload&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-14&#34;&gt;2019 年 7 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://iptc.org/news/what-does-facebook-do-with-your-photo-metadata/&#34;&gt;IPTC investigates: what does Facebook do with your photo metadata?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IPTC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-07-22&#34;&gt;2019 年 7 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://iptc.org/standards/photo-metadata/social-media-sites-photo-metadata-test-results-2019/&#34;&gt;Social Media Sites Photo Metadata Test Results 2019&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IPTC&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=743152&#34;&gt;Automatically delete personal EXIF data from images when uploading&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2012-04-06&#34;&gt;2012 年 4 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>AI 時代開源專案收緊的外部貢獻入口</title>
 <link>https://anoni.net/news/2026/11/open-source-contributions-ai/</link>
@@ -1688,101 +1757,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/safari/prevent-cross-site-tracking-sfri40732/mac&#34;&gt;Prevent cross-site tracking in Safari on Mac&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>美國邊境電子裝置搜查的件數與出國前的判斷</title>
-<link>https://anoni.net/news/2026/11/us-border-device-searches/</link>
-<guid isPermaLink="false">anoni-news:2026/11/us-border-device-searches</guid>
-<pubDate>Wed, 11 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>依 FPF 11 月 4 日引述 CBC 取得的資料，美國海關及邊境保護局（CBP）2026 會計年度前三季搜查旅客電子裝置的件數比前一年同期多 32%。受影響的是出入境美國的旅客，非美國公民拒絕解鎖可能被拒絕入境。攜帶消息來源資料赴美的人，出發前需要先決定被要求時要不要解鎖。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，來自 U.S. Customs and Border Protection、Freedom of the Press Foundation、CBP 等 7 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國的新聞自由組織 Freedom of the Press Foundation（FPF）11 月 4 日在數位安全電子報引述加拿大 CBC News 取得的資料，美國海關及邊境保護局（CBP）2026 會計年度前三季搜查旅客電子裝置的件數，比前一年同期多 32%。美國聯邦政府的會計年度從前一年 10 月開始，前三季是 2025 年 10 月到 2026 年 6 月。受影響的是出入境美國的旅客，美國公民與外國旅客都可能被搜查，拒絕解鎖時的後果則不同。根據 FPF 的原文，被搜查的旅客只占國際旅客的很小一部分，其中非美國公民的比例偏高。&lt;/p&gt;
-&lt;p&gt;FPF 引述的 CBC 報導列出，前三季有 47,517 件是基本搜查，另有 4,564 件是進階搜查。CBC 的報導也提到 CBP 不公開這些搜查有多少發生在北邊的加拿大邊境與南邊的墨西哥邊境，FPF 則引述報導認為 2026 會計年度的件數可能創下紀錄。本文把 CBP 網站季度統計表的數字相加，前三季共 52,081 件，已是 2025 會計年度全年 55,318 件的九成以上。CBP 的頁面註記統計在定案時可能調整，到 11 月 8 日為止，表上還沒有第四季的數字。&lt;/p&gt;
-&lt;p&gt;兩種搜查的差別寫在 CBP 的內部指令 3340-049B，這份指令 1 月 1 日生效，取代先前的 049A 版。指令定義的進階搜查是官員用有線或無線的設備連接裝置來複製或分析內容，須有旅客違法的合理懷疑或國家安全疑慮並經主管核准。只為了繞過密碼、破解加密或翻譯內容而接上設備，不算進階搜查。進階搜查以外的都算基本搜查，官員可以在沒有任何懷疑時進行，FPF 與 EFF（電子前哨基金會）合寫的記者過境檢查清單把它描述成手動翻看裝置裡的資訊。&lt;/p&gt;
-&lt;p&gt;同一份指令要求旅客讓裝置處於可以檢查的狀態。裝置有密碼或加密時，官員可以請旅客協助或要求密碼，記下的密碼不上傳 CBP 的系統。無法檢查的裝置可能被扣留，扣留通常不超過 5 天，延長需要更高層級的核准。裝置內容的副本最多保存到搜查結束後 21 天，之後除了有相當理由（probable cause）懷疑違法等例外，不再留存。&lt;/p&gt;
-&lt;p&gt;指令不允許官員刻意用裝置讀取只存在雲端的資料，搜查時會請旅客開啟飛航模式、關閉藍牙與 Wi-Fi，或由官員自行切斷連線。律師與當事人之間受保密特權保護的資料，指令訂有聯絡法務單位與另組過濾小組的程序。記者攜帶的工作資料與病歷同列為其他可能敏感的資訊，指令只寫依適用的聯邦法律與 CBP 政策處理。&lt;/p&gt;
-&lt;p&gt;指令正文沒有區分美國公民與外國旅客拒絕提供密碼的後果。根據 CBP 的說明頁，能否檢查裝置本身不決定是否准許入境，美國公民不會只因此被拒絕入境。同一頁也提到公民的裝置仍可能被扣留、通關時間可能拉長，外國旅客的情況則可以納入入境的判斷。FPF 的原文寫的扣留期間是幾天或幾週，清單寫的是幾天到幾個月，並提醒持綠卡的永久居民拒絕配合可能讓居留身分受到檢視、持簽證或免簽入境的外國旅客可能被拒絕入境。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;美國最高法院還沒有處理邊境搜查手機的問題，各巡迴上訴法院的見解依搜查方式而不同。EFF 7 月的文章提到，第四巡迴法院判決手動搜查屬於例行搜查，不需要令狀或針對個人的懷疑。法律部落格 Volokh Conspiracy 9 月 18 日的文章整理了第二巡迴法院前一天的判決，同樣認定手動搜查手機不需要令狀與任何懷疑，案中的旅客是美國的永久居民。本文沒有讀到這兩份判決的原文。&lt;/p&gt;
-&lt;p&gt;根據律師事務所 Holland &amp;amp; Knight 10 月 13 日的整理，各巡迴法院對鑑識搜查的見解分歧更大，第四與第九巡迴法院要求合理懷疑。第十一巡迴法院認為不需要，其他巡迴法院沒有表態或還沒有處理。整理的作者預期最高法院不久後會受理。CBP 的指令也寫到，有約束力的巡迴判例另有要求時，以搜查開始的地點決定適用哪一套規則。&lt;/p&gt;
-&lt;p&gt;CBP 的指令列出，邊境搜查是執行海關、移民、執法與國安職責的一部分，用途包括查緝恐怖主義、走私與兒少性剝削影像。指令也寫到法院拒絕在邊境搜查原則（border search doctrine，邊境的搜查原則上不需要令狀）之下替電子裝置設絕對的例外，並自述其中部分要求是在憲法與法律的要求之外，以政策自行加上的。EFF 在邊境搜查頁的主張是，搜查裝置應取得法官依相當理由核發的令狀。第二巡迴那份判決有一位法官在協同意見書（同意判決結果、另外寫出理由）主張至少要有某種懷疑，Volokh Conspiracy 文章的作者則認為應取得令狀。&lt;/p&gt;
-&lt;p&gt;FPF 的原文提到，鑑識設備的業者要花上幾個月研究漏洞利用，保持裝置更新就能讓鑑識複製困難許多。原文也建議用長而獨特的密碼，並在通過邊境檢查前關機，讓裝置回到加密狀態、大幅減少鑑識設備可以取出的資料。現代手機預設開啟全碟加密，電腦則要自行確認 Mac 的 FileVault 或 Windows 的 BitLocker 已經開啟。指令把 CBP 為繞過密碼接上設備歸為基本搜查，不需要合理懷疑與主管核准，原文沒有討論更新與關機在這種情況下是否有效。&lt;/p&gt;
-&lt;p&gt;清單建議出發前就決定，被要求時要不要解鎖或提供密碼。清單提到國際旅客被選中搜查的機率低於萬分之一，但依攜帶的資料不同，被搜查的影響可能很大。打算解鎖的人，清單提醒可以事先把不想被看到的檔案、聊天紀錄與聯絡人移出裝置並清空垃圾桶，也暫時退出 Signal 這類通訊軟體的群組。清單也列出，出發當天可以登出不想讓官員存取的帳號。&lt;/p&gt;
-&lt;p&gt;會攜帶消息來源資料出入境美國的人，出發前可以先讀這份清單，FPF 與 EFF 的網站各有一份英文版。清單也建議寫下熟悉邊境案件的律師聯絡方式，讓親友知道通關的時間。EFF 的 Surveillance Self-Defense 網站也有一頁邊境的建議，最後審閱日期是 2018 年 10 月，頁面上註明部分建議可能已經過時。清單發布於 2025 年 6 月，早於 1 月生效的新版指令，但清單對基本與進階搜查的說明與新版指令的定義一致。&lt;/p&gt;
-&lt;p&gt;比較各地的做法時，隱私方面可以問搜查前需不需要懷疑或令狀、裝置內容的副本保存多久、記者的資料有沒有專門的處理程序。效果方面，可以問提高搜查門檻會不會影響 CBP 查緝走私與國安案件。CBP 不公開搜查在各邊境的分布，也可以問外界能否從公開的數字評估搜查是否用在指令列出的用途上。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/travel/cbp-search-authority/border-search-electronic-devices&#34;&gt;Border Search of Electronic Devices at Ports of Entry&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;U.S. Customs and Border Protection&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/us-border-device-searches-near-record-high/&#34;&gt;U.S. border device searches near record high&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/document/directives/cbp-directive-no-3340-049b-border-search-electronic-devices&#34;&gt;CBP Directive No. 3340-049B: Border Search of Electronic Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CBP&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-28&#34;&gt;2026 年 1 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://freedom.press/digisec/blog/border-security/&#34;&gt;Preparing devices for travel through a US border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Freedom of the Press Foundation&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2025/06/journalist-security-checklist-preparing-devices-travel-through-us-border&#34;&gt;A Journalist Security Checklist: Preparing Devices for Travel Through a US Border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-23&#34;&gt;2025 年 6 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/07/fourth-circuit-says-border-agents-can-search-your-phone-hand-no-suspicion-required&#34;&gt;The Fourth Circuit Says Border Agents Can Search Your Phone By Hand, No Suspicion Required&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-22&#34;&gt;2026 年 7 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://reason.com/volokh/2026/09/18/second-circuit-rejects-limits-on-border-searches-of-cell-phones/&#34;&gt;Second Circuit Rejects Limits on Border Searches of Cell Phones&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Volokh Conspiracy&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-18&#34;&gt;2026 年 9 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hklaw.com/en/insights/publications/2026/10/does-privacy-exist-at-the-us-border&#34;&gt;Does Privacy Exist at the U.S. Border? An Update on the Fourth Amendment and Forensic Examination of Electronic Devices at the Border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Holland &amp;amp; Knight&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-13&#34;&gt;2026 年 10 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/issues/border-searches&#34;&gt;Border Searches&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ssd.eff.org/module/things-consider-when-crossing-us-border&#34;&gt;Things to Consider When Crossing the U.S. Border&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF Surveillance Self-Defense&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/brave-photo-metadata/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:00:00+08:00</news:publication_date>
+<news:title>Facebook 照片裡的 FBMD 識別碼與 Brave 桌面版的移除功能</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/brave-photo-metadata/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:00:00+08:00</news:publication_date>
+<news:title>Facebook 照片里的 FBMD 标识符与 Brave 桌面版的移除功能</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/brave-photo-metadata/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-21T00:00:00+08:00</news:publication_date>
+<news:title>The FBMD Identifier in Facebook Photos and Its Removal in Brave&#39;s Desktop Browser</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/open-source-contributions-ai/</loc>
 <news:news>
 <news:publication>
@@ -130,39 +163,6 @@
 </news:publication>
 <news:publication_date>2026-11-19T00:05:00+08:00</news:publication_date>
 <news:title>The netiCRM provider&#39;s server breach and a client&#39;s copied donation database</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/tv-acr/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
-<news:title>智慧電視的自動內容辨識與廠商對 17 個問題的回答</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/tv-acr/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
-<news:title>智能电视的自动内容识别与厂商对 17 个问题的回答</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/tv-acr/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-19T00:00:00+08:00</news:publication_date>
-<news:title>Automatic content recognition on smart TVs and manufacturers&#39; answers to 17 questions</news:title>
 </news:news>
 </url>
 </urlset>
