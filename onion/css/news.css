@@ -1283,6 +1283,13 @@ p {
         max-width: 48rem;
     }
 
+    /* 標題區裡的說明框（專欄的作者觀點、後續發展的提示）跟內文同寬，
+       不伸進右欄原文條的位置 */
+    .story__note,
+    .story__followup {
+        max-width: 40rem;
+    }
+
     .story__body {
         grid-area: body;
         max-width: 40rem;
