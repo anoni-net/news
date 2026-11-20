@@ -123,7 +123,7 @@ The immediate cause given in the announcement is AI submissions, but I see it as
 
 According to an alert from the US Cybersecurity and Infrastructure Security Agency (CISA) dated 23 September 2025, a self-replicating worm called Shai-Hulud compromised over 500 packages on npm (the JavaScript package registry). How the attackers first got in is not stated in the alert, whose account begins after that point: the malware searched the environment for stored credentials, targeting GitHub tokens (keys that let a program sign in to an account in place of a password) and keys for cloud services. The worm then signed in to npm as the compromised developers, added malicious code to other packages and published new versions of them. Among CISA's recommendations are rotating all developer credentials and requiring phishing-resistant multifactor authentication (a second check at login besides the password) on GitHub and npm accounts.
 
-None of the recommendations in CISA's alert is to restrict outside PRs. I think the xz attacker traded time for trust, while Shai-Hulud scanned for and stole developer credentials and published as the compromised developers; in both cases the damage was done through accounts that were already trusted. Two incidents do not amount to a statistic, and the "mostly" in my opening is a judgement I draw from these two examples.
+None of the recommendations in CISA's alert is to restrict outside PRs. I think the xz attacker traded time for trust, while Shai-Hulud scanned for and stole developer credentials and published as the compromised developers; in both cases the damage was done through accounts that were already trusted.
 
 ## Sources of new maintainers {#new-maintainers}
 
