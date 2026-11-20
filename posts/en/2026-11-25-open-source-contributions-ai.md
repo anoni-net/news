@@ -73,11 +73,11 @@ sources:
     date: 2026-10-26
 ---
 
-The source code of open source projects is still public, but what outsiders can send into those projects is increasingly restricted. In 2026 one project ended its bug bounty and a platform now lets maintainers reserve proposed changes for collaborators, and in each case the reasons had to do with the flood of submissions that AI has brought. I want to work out what tightening these entry points protects, and what open source projects pay for it.
+The source code of open source projects is still public, but what outsiders can send into those projects is increasingly restricted. By entry points I mean the channels through which outsiders send code changes, report problems or disclose vulnerabilities to a project. In 2026 one project ended its bug bounty and a platform now lets maintainers reserve proposed changes for collaborators, and in each case the reasons had to do with the flood of submissions that AI has brought. I want to work out what tightening these entry points protects, and what open source projects pay for it.
 
 My view is that closing off outside PRs (pull requests, proposed code changes submitted to a project) can hold back the flood of low-quality contributions that AI sends in, and the projects tightening their entry points mostly justify it as protecting maintainers' time. Tightening addresses a problem of volume; what worries me is that it gets treated as a security measure. I believe supply chain attacks mostly come in through accounts or people who are already trusted, so the trust problem remains, and what open source projects really lack is review capacity and permission management.
 
-Now that code has become cheap, I think what counts as a contribution should shift as well. Reviewing other people's changes, writing tests that reproduce a problem and describing a problem clearly should all count.
+Now that AI tools make producing code fast and easy, I think open source projects should adjust how they think about contribution. When a project receives a change, a maintainer first has to understand the code and check it for errors and security problems before merging it, and this step is called review. Reviewing other people's changes, writing tests that reproduce a problem and describing a problem clearly have always been important parts of maintaining a project, and until now maintainers have mostly done that work themselves. With more code arriving, I think outside contributors need to share this work, and it should be recognised as contribution.
 
 ## Tighter entry points for outside contributions {#tightening}
 
