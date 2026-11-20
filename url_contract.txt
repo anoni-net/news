@@ -358,6 +358,14 @@
 /2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
+/2026/11/open-source-contributions-ai/
+	#further-reading
+	#new-maintainers
+	#review-cost
+	#sources
+	#tightening
+	#what-it-stops
+	#what-readers-can-do
 /2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -430,6 +438,7 @@
 /category/brief/
 /category/censorship/
 /category/civil-society/
+/category/column/
 /category/encryption/
 /category/finance/
 /category/mobile/
@@ -437,6 +446,13 @@
 /category/security/
 /category/surveillance/
 /category/tracking/
+/contribute/
+	#boundaries
+	#byline
+	#review
+	#submit
+	#topics
+	#writing
 /en/
 /en/2026/
 /en/2026/09/
@@ -793,6 +809,14 @@
 /en/2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
+/en/2026/11/open-source-contributions-ai/
+	#further-reading
+	#new-maintainers
+	#review-cost
+	#sources
+	#tightening
+	#what-it-stops
+	#what-readers-can-do
 /en/2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -864,6 +888,7 @@
 /en/category/brief/
 /en/category/censorship/
 /en/category/civil-society/
+/en/category/column/
 /en/category/encryption/
 /en/category/finance/
 /en/category/mobile/
@@ -871,6 +896,13 @@
 /en/category/security/
 /en/category/surveillance/
 /en/category/tracking/
+/en/contribute/
+	#boundaries
+	#byline
+	#review
+	#submit
+	#topics
+	#writing
 /en/history/
 /en/history/09-26/
 	#y2026
@@ -1487,6 +1519,14 @@
 /zh-cn/2026/11/ooni-tls-middlebox/
 	#perspective
 	#sources
+/zh-cn/2026/11/open-source-contributions-ai/
+	#further-reading
+	#new-maintainers
+	#review-cost
+	#sources
+	#tightening
+	#what-it-stops
+	#what-readers-can-do
 /zh-cn/2026/11/openssh-sshole/
 	#perspective
 	#sources
@@ -1558,6 +1598,7 @@
 /zh-cn/category/brief/
 /zh-cn/category/censorship/
 /zh-cn/category/civil-society/
+/zh-cn/category/column/
 /zh-cn/category/encryption/
 /zh-cn/category/finance/
 /zh-cn/category/mobile/
@@ -1565,6 +1606,13 @@
 /zh-cn/category/security/
 /zh-cn/category/surveillance/
 /zh-cn/category/tracking/
+/zh-cn/contribute/
+	#boundaries
+	#byline
+	#review
+	#submit
+	#topics
+	#writing
 /zh-cn/history/
 /zh-cn/history/09-26/
 	#y2026

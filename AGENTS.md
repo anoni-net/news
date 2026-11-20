@@ -16,6 +16,7 @@
 |---|---|
 | 寫導讀 | `guides/posts.md`，用 AI 協作工具時加讀 `guides/ai-workflow.md` |
 | 寫每週短訊 | `guides/brief.md` |
+| 寫專欄 | `guides/column.md`，用 AI 協作工具時加讀 `guides/ai-workflow.md` |
 | 寫導讀歷史 | `guides/history.md` |
 | 用 AI 協作工具查資料、派審稿 | `guides/ai-workflow.md` |
 | 寫區域段落 | `notes/` 裡對應主題的筆記，格式見 `notes/README.md` |

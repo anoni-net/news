@@ -22,6 +22,10 @@
 
 導讀的支線專欄，每天一則，回看隱私、匿名網路與網路審查在同一天發生過的事。每年到了同一天加一則新的快照，舊的保留原樣，查證以寫稿當下查得到的資料為準。格式見 [`SPEC.md`](./SPEC.md) 的「導讀歷史」，寫法見 [`guides/history.md`](./guides/history.md)。
 
+## 專欄
+
+導讀的立場預設中立，專欄是作者署名、寫出自己看法的評論文章，從一個主題整理好幾則新聞，觀點屬於作者，不代表社群的立場。歡迎投稿，署名可以是本名或固定的筆名，題目與投稿的管道見網站上的[投稿專欄](https://anoni.net/news/contribute/)。格式見 [`SPEC.md`](./SPEC.md) 的「專欄」，寫法見 [`guides/column.md`](./guides/column.md)。
+
 ## 語系
 
 每篇都有正體中文、簡體中文與英文三個版本，同時發布。三個版本的事實相同，導讀觀點依各自的讀者重寫，英文版多寫同一件事在亞洲各地的情況。
@@ -74,6 +78,10 @@ Before writing about a tool we read its project page and check its license, the 
 ## On this day
 
 A side column of the briefings, one entry a day, looking back at what happened on the same date in privacy, anonymity networks and internet censorship. Each year a new snapshot is added on the same date and the older ones stay as they were, fact-checked against what could be verified when they were written. The format is under "導讀歷史" in [`SPEC.md`](./SPEC.md) and the writing guide is [`guides/history.md`](./guides/history.md) (both in Chinese).
+
+## Columns
+
+Briefings stay neutral by default. Columns are signed opinion pieces that draw several stories together around one theme, and the views are the author's own, not the community's. Submissions are welcome, signed with a real name or a consistent pen name; see [Write a column](https://anoni.net/news/en/contribute/) on the site for topics and how to submit. The format is under "專欄" in [`SPEC.md`](./SPEC.md) and the writing guide is [`guides/column.md`](./guides/column.md) (both in Chinese).
 
 ## Languages
 

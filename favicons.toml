@@ -91,6 +91,9 @@ from = "https://android.googlesource.com/+static/apple-touch-icon.png"
 icon = "androidauthority.com-cadbb38a.png"
 from = "https://www.androidauthority.com/favicon.ico"
 
+[hosts."angiejones.tech"]
+none = "圖示是個人頭像"
+
 [hosts."anoni.net"]
 icon = "anoni.net-e7cf54e0.png"
 from = "手動提供的檔案 anoni-favicon.png"
@@ -663,6 +666,9 @@ from = "https://cyberscoop.com/wp-content/uploads/sites/3/2023/01/cropped-cs_fav
 icon = "dailynews.co.th-44aab499.png"
 from = "https://www.dailynews.co.th/wp-content/uploads/2024/12/dailynews-favicon-2024.jpg"
 
+[hosts."daniel.haxx.se"]
+same_as = "haxx.se"
+
 [hosts."daringfireball.net"]
 icon = "daringfireball.net-c13824c2.png"
 from = "https://daringfireball.net/graphics/apple-touch-icon.png"
@@ -713,6 +719,10 @@ from = "https://demo.uwazi.io/public/favicon.ico"
 [hosts."democrats-foreignaffairs.house.gov"]
 icon = "democrats-foreignaffairs.house.gov-eb05aff3.png"
 from = "https://democrats-foreignaffairs.house.gov/wp-content/uploads/2026/03/cropped-hfac-icon-dems-192x192.png"
+
+[hosts."dev.to"]
+icon = "dev.to-4d51d0aa.png"
+from = "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
 
 [hosts."devb.gov.hk"]
 icon = "devb.gov.hk-1925612d.png"
@@ -1046,6 +1056,9 @@ from = "https://freedom.press/static/icons/apple-touch-icon.d8f894393afc.png"
 icon = "freedomhouse.org-389d9475.png"
 from = "https://freedomhouse.org/sites/default/files/favicon.ico"
 
+[hosts."frenck.dev"]
+none = "圖示是個人照片"
+
 [hosts."frontex.europa.eu"]
 icon = "frontex.europa.eu-bda9fadf.png"
 from = "https://www.frontex.europa.eu/favicon.ico"
@@ -1227,6 +1240,10 @@ from = "https://haveibeenpwned.com/apple-touch-icon.png"
 [hosts."hawksley.dev"]
 icon = "hawksley.dev-4e52ebdb.png"
 from = "https://hawksley.dev/favicons/v2/apple-touch-icon.png"
+
+[hosts."haxx.se"]
+icon = "haxx.se-55fd2aa0.png"
+from = "https://haxx.se/favicon.ico"
 
 [hosts."heise.de"]
 icon = "heise.de-b8b25202.png"
@@ -1469,6 +1486,10 @@ from = "https://www.japaneselawtranslation.go.jp/favicon.ico"
 [hosts."japantimes.co.jp"]
 none = "網站擋自動抓取"
 
+[hosts."jazzband.co"]
+icon = "jazzband.co-b5ad2f3e.png"
+from = "https://jazzband.co/static/favicons/android-icon-192x192.png"
+
 [hosts."jcgov.gov.cn"]
 icon = "jcgov.gov.cn-601cdb41.png"
 from = "https://jcgov.gov.cn/images/favicon.png"
@@ -1687,6 +1708,10 @@ from = "https://www.livelaw.in/images/ico/favicon.ico?v=9"
 [hosts."lofgren.house.gov"]
 icon = "lofgren.house.gov-9acaf926.png"
 from = "https://lofgren.house.gov/profiles/evo/assets/images/favicon.ico"
+
+[hosts."lua.org"]
+icon = "lua.org-5be79ff6.png"
+from = "https://www.lua.org/apple-touch-icon.png"
 
 [hosts."luk.tsipil.ugm.ac.id"]
 same_as = "tsipil.ugm.ac.id"
@@ -2089,6 +2114,10 @@ from = "https://openjdk.org/images/nanoduke.ico"
 icon = "openrightsgroup.org-dcb8635e.png"
 from = "https://www.openrightsgroup.org/apple-touch-icon-1024x1024.png"
 
+[hosts."opensource.org"]
+icon = "opensource.org-67b6b15c.png"
+from = "https://i0.wp.com/opensource.org/wp-content/uploads/2023/01/cropped-cropped-OSI_Horizontal_Logo_0-e1674081292667.png?fit=192%2C192&quality=80&ssl=1"
+
 [hosts."openssh.com"]
 icon = "openssh.com-6c007872.png"
 from = "https://www.openssh.com/favicon.ico"
@@ -2107,6 +2136,9 @@ same_as = "gov.cn"
 [hosts."oss-security.openwall.org"]
 icon = "oss-security.openwall.org-c05dca8e.png"
 from = "https://www.openwall.com/favicon.ico"
+
+[hosts."osssaysno.com"]
+none = "網站沒有圖示"
 
 [hosts."pages.nist.gov"]
 icon = "pages.nist.gov-17d61c32.png"
@@ -2314,6 +2346,10 @@ from = "https://releases.ict-online.ru/old/favicons/releases.ict-online.ru/apple
 icon = "research.checkpoint.com-6bb7eec9.png"
 from = "https://research.checkpoint.com/wp-content/uploads/2022/10/cropped-pavicon_CPR-03-e1666694691376-192x192.png"
 
+[hosts."research.swtch.com"]
+icon = "research.swtch.com-49ee6add.png"
+from = "https://research.swtch.com/favicon.ico"
+
 [hosts."rfa.org"]
 icon = "rfa.org-3be0b6f2.png"
 from = "https://rfa.org/pf/resources/icon/rfa/favicon.ico?d=174"
@@ -2517,6 +2553,10 @@ from = "https://substackcdn.com/image/fetch/$s_!Teni!,f_auto,q_auto:good,fl_prog
 [hosts."sprs.parl.gov.sg"]
 icon = "sprs.parl.gov.sg-3f13f797.png"
 from = "https://sprs.parl.gov.sg/favicon.ico"
+
+[hosts."sqlite.org"]
+icon = "sqlite.org-cd226b88.png"
+from = "https://sqlite.org/apple-touch-icon.png"
 
 [hosts."ssd.eff.org"]
 icon = "ssd.eff.org-88f6a486.png"
@@ -2792,6 +2832,10 @@ from = "https://www.tribuneindia.com/sortd-service/assets/v22-12/dGhldHJpYnVuZS1
 [hosts."tsipil.ugm.ac.id"]
 icon = "tsipil.ugm.ac.id-74c4a909.png"
 from = "https://tsipil.ugm.ac.id/wp-content/uploads/sites/4/2022/01/favicon.png"
+
+[hosts."tukaani.org"]
+icon = "tukaani.org-9230c62a.png"
+from = "https://tukaani.org/images/tukaani_32x32.png"
 
 [hosts."tuta.com"]
 icon = "tuta.com-99011c09.png"

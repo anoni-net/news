@@ -80,6 +80,7 @@
       <a href="{{ s.newsletter_url }}"{{ track("subscribe-click", channel="newsletter", where="footer") }}>{{ icon('email-outline') }} {{ s.newsletter }}</a>
       <a href="{{ s.bluesky_url }}"{{ track("subscribe-click", channel="bluesky", where="footer") }}>{{ icon('bluesky') }} {{ s.bluesky }}</a>
       <a href="{{ url(home ~ 'history/') }}">{{ icon('history') }} {{ s.history }}</a>
+      <a href="{{ url(home ~ 'contribute/') }}">{{ icon('pencil-outline') }} {{ s.contribute }}</a>
       <a href="{{ url(home ~ 'about/') }}">{{ icon('information-outline') }} {{ s.about }}</a>
       <a href="{{ url(home ~ 'reading/') }}">{{ icon('book-open-outline') }} {{ s.reading }}</a>
       <a href="{{ s.report_url }}">{{ icon('message-alert-outline') }} {{ s.report }}</a>

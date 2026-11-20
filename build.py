@@ -113,7 +113,7 @@ SHARED_KEYS = ("slug", "authors", "pin", "draft", "image", "categories", "follow
 STRINGS_PATH = ROOT / "strings.toml"
 # 文章以外的固定頁面，每個語系一份 Markdown，網址是 /news/<名稱>/。見 SPEC.md「關於頁」
 PAGES_DIR = ROOT / "pages"
-SITE_PAGES = ("about", "subscribe", "reading")
+SITE_PAGES = ("about", "subscribe", "reading", "contribute")
 # 固定頁面裡代入該語系 feed 的完整網址，clearnet 與 onion 各自換成自己的網址
 FEED_URL_PLACEHOLDER = "%FEED_URL%"
 # 關於頁「報導範圍」的分類清單，Markdown 裡單獨一行，建置時換成 _coverage.html.j2，說明取自 categories.toml
@@ -561,6 +561,9 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
     elif categories[0] not in known:
         problems.append(f"{where}：categories 的 {categories[0]!r} 不在 categories.toml 裡，可用的有 {list(known)}")
         categories = []
+    elif categories == ["column"] and any(author.get("key") == "anoni-net" for author in post_authors):
+        # 專欄寫的是作者的立場，用社群署名會讀成社群的立場，見 SPEC.md「專欄」
+        problems.append(f"{where}：專欄要用作者的署名（具名或筆名），不能用 anoni-net")
 
     follows = meta.get("follows") or []
     if not isinstance(follows, list) or not all(isinstance(ref, str) and is_post_name(ref) for ref in follows):
@@ -1509,7 +1512,8 @@ def jsonld(post: Post, target: Target, config: dict, image: str | None = None) -
             authors.append(person)
     data = {
         "@context": "https://schema.org",
-        "@type": "NewsArticle",
+        # 專欄是作者的觀點文章，schema.org 有對應的 OpinionNewsArticle，見 SPEC.md「專欄」
+        "@type": "OpinionNewsArticle" if post.categories == ["column"] else "NewsArticle",
         "headline": post.title,
         "description": post.description,
         "datePublished": post.created.isoformat(),
@@ -1766,7 +1770,7 @@ def build_target(target: Target, posts: list[Post], config: dict, env: Environme
                                                                         live=live_categories)
                 content = content.replace(CATEGORIES_PLACEHOLDER, coverage)
             write(Page(base + suffix, base + suffix + "index.html", False, version["anchors"]), "page.html.j2",
-                  lang, same_page(suffix), site_page=version, content=content)
+                  lang, same_page(suffix), site_page=version, page_name=name, content=content)
             sitemap_urls.append((target.abs_url(base + suffix), None, alternates(same_page(suffix), lang)))
 
         feed_posts = lposts[:config["feed_items"]]

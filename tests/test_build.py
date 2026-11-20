@@ -669,6 +669,23 @@ def test_jsonld_author_types(fixture_site):
     assert data["dateModified"].startswith("2026-09-20")
 
 
+def test_jsonld_column_is_opinion(fixture_site, tmp_path):
+    """專欄的結構化資料用 OpinionNewsArticle，其他分類維持 NewsArticle。見 SPEC.md「專欄」。"""
+    targets, _, _ = fixture_site
+    config = {"homepage": "https://anoni.net/"}
+    text = GOOD.replace("  - encryption\n", "  - column\n").replace("  - anoni-net\n", "  - named-example\n")
+    column = build.load_post(write_post(tmp_path, text), AUTHORS)
+    assert first_jsonld(build.jsonld(column, targets["clearnet"], config))["@type"] == "OpinionNewsArticle"
+    post = build.load_post(write_post(tmp_path, GOOD), AUTHORS)
+    assert first_jsonld(build.jsonld(post, targets["clearnet"], config))["@type"] == "NewsArticle"
+
+
+def test_column_needs_an_author_byline(tmp_path):
+    """專欄寫的是作者的立場，不能用社群署名。"""
+    text = GOOD.replace("  - encryption\n", "  - column\n")
+    assert any("專欄要用作者的署名" in p for p in problems_of(tmp_path, text))
+
+
 # ---------------------------------------------------------------- 網址合約
 
 def test_contract_detects_removal(fixture_site):
@@ -909,6 +926,26 @@ def test_no_pin_no_featured(tmp_path):
     shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
     targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
     assert 'class="featured' not in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
+
+
+def test_column_page_marks_the_author_view(tmp_path):
+    """專欄的署名寫「撰文」，標題區有一行說明觀點屬於作者，導讀維持原樣。見 SPEC.md「專欄」。"""
+    posts = tmp_path / "posts"
+    text = GOOD.replace("  - encryption\n", "  - column\n").replace("  - anoni-net\n", "  - named-example\n")
+    write_versions(posts, text)
+    shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
+    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
+    targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
+    out = targets["clearnet"].out
+    page = (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
+    assert "<span>撰文：" in page and "<span>導讀：" not in page
+    assert '<p class="story__note cat--column">' in page
+    assert page.index('class="story__langs"') < page.index("story__note") < page.index('class="story__body')
+    if 'data-read-aloud' in page:
+        assert page.index("data-read-aloud") < page.index("story__note")
+    en = (out / "en/2026/09/test-post/index.html").read_text(encoding="utf-8")
+    assert "the author's own views" in en.replace("&#39;", "'")
+    assert (out / "category/column/index.html").exists()
 
 
 # ---------------------------------------------------------------- 多語系
