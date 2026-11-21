@@ -399,6 +399,9 @@
 /2026/11/tv-acr/
 	#perspective
 	#sources
+/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -852,6 +855,9 @@
 	#perspective
 	#sources
 /en/2026/11/tv-acr/
+	#perspective
+	#sources
+/en/2026/11/uk-apple-encryption-order/
 	#perspective
 	#sources
 /en/2026/11/us-border-device-searches/
@@ -1574,6 +1580,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/tv-acr/
+	#perspective
+	#sources
+/zh-cn/2026/11/uk-apple-encryption-order/
 	#perspective
 	#sources
 /zh-cn/2026/11/us-border-device-searches/
