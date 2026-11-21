@@ -239,6 +239,10 @@ from = "https://bitwarden.com/icons/icon-512x512.png"
 icon = "bjnews.com.cn-12b0be0a.png"
 from = "https://www.bjnews.com.cn/favicon.ico"
 
+[hosts."bk.mufg.jp"]
+icon = "bk.mufg.jp-2a8668ad.png"
+from = "https://www.bk.mufg.jp/shared2019/cmn/apple-touch-icon.png"
+
 [hosts."bkl.co.kr"]
 icon = "bkl.co.kr-9b3cf47d.png"
 from = "https://www.bkl.co.kr/favicon.ico"
@@ -756,6 +760,10 @@ from = "https://developers.cloudflare.com/favicon.png"
 icon = "developers.google.com-ce307183.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/touchicon-180-new.png"
 
+[hosts."developers.karte.io"]
+icon = "developers.karte.io-d71fa3f4.png"
+from = "https://developers.karte.io/favicon.ico?v=e1705d17df4a"
+
 [hosts."developers.openai.com"]
 same_as = "help.openai.com"
 
@@ -766,6 +774,10 @@ from = "https://www.dexerto.com/favicon/dexerto/apple-touch-icon.png"
 [hosts."dfrlab.org"]
 icon = "dfrlab.org-e33cb1a2.png"
 from = "https://dfrlab.org/wp-content/uploads/sites/3/2020/06/cropped-DFRLab-Thumbnail-Circle-border-300x300.png"
+
+[hosts."dhc-corporate.co.jp"]
+icon = "dhc-corporate.co.jp-dddd8217.png"
+from = "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/06/apple-touch-icon-300x300.png"
 
 [hosts."digiato.com"]
 icon = "digiato.com-9cf998c5.png"
@@ -857,6 +869,9 @@ same_as = "gov.mo"
 [hosts."duckduckgo.com"]
 icon = "duckduckgo.com-c77e5388.png"
 from = "https://duckduckgo.com/static-assets/favicons/DDG-iOS-icon_60x60.png"
+
+[hosts."easylist.to"]
+none = "網站沒有提供圖示"
 
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
@@ -2226,6 +2241,10 @@ from = "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/main/assets/
 [hosts."piyolog.hatenadiary.jp"]
 icon = "piyolog.hatenadiary.jp-8b3395eb.png"
 from = "https://piyolog.hatenadiary.jp/icon/link"
+
+[hosts."plaid.co.jp"]
+icon = "plaid.co.jp-414448a9.png"
+from = "https://plaid.co.jp/assets/icons/touch-icon_192x192.png"
 
 [hosts."pm.gov.au"]
 icon = "pm.gov.au-6ab35cff.png"
