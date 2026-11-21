@@ -10,6 +10,15 @@ guides/ 規定的段落句數要靠逐句讀，2026-10 一篇導讀的第一輪�
 - 英文只檢查段落句數，不數逗號，英文的長句要靠審稿逐句讀
 - front matter 的 description，以及導讀歷史快照的 description 與「同一天還有」只檢查逗號
 
+中文的稿件另外檢查轉述感，規則見 guides/posts.md「主線與取捨」。2026-10-06 之後的導讀每千字
+以「依…，」開頭的句子、「查不到」這類句子與「本文」合計從 1.5 增加到 7.9，讀起來像逐條轉述文件：
+
+- 「（本文的推論）」這類括號標籤，改在句子裡交代依據
+- 「本文」超過 2 次
+- 交代資料缺口的句子（查不到、沒有寫、查閱時……）超過 2 句，查證過程寫在 map.md 與 PR 內文
+- 連續 3 段以上用「依」或「根據」開頭，段落跟著文件排
+- zh-TW 的導讀超過 1,500 字（只數漢字），照「主線與取捨」檢查每段接不接得回主線，短訊不算
+
 列出的是要人判斷的位置，照錄的原文標題這類不該改的可以留著。有列出項目時結束代碼為 1，
 參數錯誤、找不到檔案或 front matter 無法解析時為 2。
 """
@@ -35,6 +44,14 @@ EN_ABBREVIATIONS = ("U.S.", "U.K.", "D.C.", "e.g.", "i.e.", "No.", "Mr.", "Ms.",
 EN_END = re.compile(r"(?:(?<=[.!?])|(?<=[.!?][\"”’)])|(?<=[.!?][\"”’)]{2}))\s+(?=[A-Za-z0-9\"“(`\x00])")
 SKIP_PREFIXES = ("#", "- ", "* ", "+ ", "|", ">", "!!!", "???")
 FENCES = ("```", "~~~")
+MAX_SELF_REFERENCES = 2
+MAX_GAP_SENTENCES = 2
+MAX_SOURCE_LEADS = 2
+MAX_HAN = 1500
+SELF_LABEL = re.compile(r"（本文[^（）]{0,8}）")
+GAP = re.compile(r"查不到|找不到|沒有查到|沒有核對|查閱時|無法確認|沒有寫|沒有提到|沒有說明|沒有列出|沒有交代")
+SOURCE_LEAD = re.compile(r"^(?:依|根據)")
+HAN = re.compile(r"[\u4e00-\u9fff]")
 
 
 def site_parts(path: Path) -> tuple[str, ...]:
@@ -145,6 +162,39 @@ def long_sentences(text: str, where: str) -> list[str]:
     return found
 
 
+def is_brief(path: Path) -> bool:
+    return "weekly-brief" in path.name
+
+
+def transcription(path: Path, blocks: list[tuple[int, str]]) -> list[str]:
+    """轉述感的四項計數，見模組說明。只用在中文的稿件。"""
+    found = []
+    for line, text in blocks:
+        for label in SELF_LABEL.findall(text):
+            found.append(f"{path}:{line}：括號標籤 {label}，改在句子裡交代推論的依據")
+    selves = sum(text.count("本文") for _, text in blocks)
+    if selves > MAX_SELF_REFERENCES:
+        found.append(f"{path}：「本文」出現 {selves} 次，一篇以 {MAX_SELF_REFERENCES} 次為限")
+    gaps = [line for line, text in blocks for sentence in split_sentences(text, english=False) if GAP.search(sentence)]
+    if len(gaps) > MAX_GAP_SENTENCES:
+        shown = "、".join(str(line) for line in gaps)
+        found.append(f"{path}：交代資料缺口的句子有 {len(gaps)} 句（第 {shown} 行的段落），一篇以 {MAX_GAP_SENTENCES} 句為限")
+    run: list[int] = []
+    for line, text in blocks + [(0, "")]:
+        if SOURCE_LEAD.match(text):
+            run.append(line)
+            continue
+        if len(run) > MAX_SOURCE_LEADS:
+            found.append(f"{path}:{run[0]}：連續 {len(run)} 段用「依」或「根據」開頭，段落改依讀者的疑問排")
+        run = []
+    site = site_parts(path)
+    if site[0] == "posts" and len(site) == 2 and not is_brief(path):
+        han = sum(len(HAN.findall(text)) for _, text in blocks)
+        if han > MAX_HAN:
+            found.append(f"{path}：全文約 {han} 字，超過 {MAX_HAN:,} 字，照 guides/posts.md「主線與取捨」檢查取捨")
+    return found
+
+
 def check(path: Path) -> list[str]:
     english = is_english(path)
     limit = max_sentences(path)
@@ -160,6 +210,8 @@ def check(path: Path) -> list[str]:
             found.append(f"{where}：這一段有 {count} 句，超過 {limit} 句")
         if not english:
             found += long_sentences(text, where)
+    if not english:
+        found += transcription(path, blocks)
     return found
 
 

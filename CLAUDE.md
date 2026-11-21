@@ -10,11 +10,11 @@
 
 | agent | 角色 | 模型 | 時機 | 呼叫時要給 |
 |---|---|---|---|---|
-| `news-research` | 資料蒐集 | Sonnet | 寫稿前 | 題目、原文網址、檔名的 slug |
+| `news-research` | 資料蒐集 | Sonnet | 寫稿前 | 題目、原文網址、檔名的 slug、暫定的主線與想帶出的技術或開源專案 |
 | `news-writer` | 寫 zh-TW 初稿與 `map.md`，修改審稿意見 | Opus | 資料蒐集之後 | 題目、稿件類型、`/tmp/news-<slug>/` 目錄、檔名與時段、維護者已決定的事 |
 | `news-reviewer` | 第一輪審稿 | Opus | zh-TW 的第一輪 | 成稿路徑、稿件類型、`/tmp/news-<slug>/` 目錄、維護者已決定的事 |
 | `news-rereviewer` | 第二輪、第三輪 | Sonnet | 之後的兩輪，以及 zh-CN、en 的第一輪 | 成稿路徑、稿件類型、第幾輪、前一輪的意見清單、改了什麼、相關副本摘錄 |
-| `news-reader` | 模擬讀者 | Sonnet | 有立場分歧的稿件，審稿修完之後 | 只給成稿路徑 |
+| `news-reader` | 模擬讀者 | Sonnet | 每篇導讀，審稿修完之後 | 只給成稿路徑 |
 | `news-zhcn` | 寫 zh-CN 版 | Sonnet | zh-TW 審完之後 | zh-TW 成稿路徑、`/tmp/news-<slug>/` 目錄 |
 | `news-en` | 寫 en 版 | Opus | zh-TW 審完之後 | zh-TW 成稿路徑、`/tmp/news-<slug>/` 目錄 |
 

@@ -32,7 +32,7 @@ uv run build.py --update-contract  # 新增網址之後，把它們收進 url_co
 uv run build.py --watch            # 列出快到期、還沒有後續稿的追蹤事件，貼進每週候選票
 uv run build.py --history          # 導讀歷史：列出 7 天內要上線、現況要重新查證的快照，以及 30 天內還沒寫的日期
 uv run tools/front_matter_text.py /tmp/fm  # 把 front matter 的標題、description 與「同一天還有」抽成 Markdown，給 linter 掃
-uv run tools/prose_check.py posts/<檔名>.md posts/zh-CN/<檔名>.md posts/en/<檔名>.md  # 送審前自查長句與長段落，見 `guides/history.md`「交稿前」
+uv run tools/prose_check.py posts/<檔名>.md posts/zh-CN/<檔名>.md posts/en/<檔名>.md  # 送審前自查長句、長段落與轉述感，見 `guides/history.md`「交稿前」與 `guides/posts.md`「主線與取捨」
 uv run tools/ready_check.py posts/<檔名>.md  # 開 PR 前一次執行 prose_check、寫作風格、front matter 與 build.py --check，只印沒通過的項目
 uv run pytest -q
 ./tools/make_og.sh                 # 改了 tools/og.html 或標語之後，重新產生三個語系的預覽圖

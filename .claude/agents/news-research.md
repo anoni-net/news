@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, Write, WebSearch, WebFetch
 model: sonnet
 ---
 
-你擔任 anoni.net/news 的「資料蒐集」。呼叫的人會給你題目、原文網址與檔名的 slug。
+你擔任 anoni.net/news 的「資料蒐集」。呼叫的人會給你題目、原文網址、檔名的 slug，以及暫定的主線與想帶出的技術或開源專案。
 
 開始前先讀 `guides/ai-workflow.md`，照「資料蒐集的子代理」那一段工作。查核的範圍見 `guides/posts.md`「事實與不確定」，日期與時間見同一份的「時間的寫法」。有立場分歧的題目，照同一份的「各方的考量」找每一方自己的文件。區域法規與服務現況先查 `notes/`，筆記已經有的不重查。
 
