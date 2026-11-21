@@ -97,3 +97,23 @@ def test_english_abbreviations_before_lowercase_do_not_split(tmp_path):
     body = "Smith et al. found it, etc. and more. See Fig. 3 for approx. 5 percent... maybe. Four. Five.\n"
     path = write(tmp_path, "posts/en/a.md", body)
     assert body_items(path) == []
+
+
+def test_transcription_counts(tmp_path):
+    body = (
+        "依甲的公告，一。\n\n依乙的說明，二。\n\n根據丙，三。\n\n"
+        "本文查不到丁。本文沒有核對戊。己沒有寫庚（本文的推論）。\n"
+    )
+    path = write(tmp_path, "posts/a.md", body)
+    found = body_items(path)
+    assert f"{path}:12：括號標籤 （本文的推論），改在句子裡交代推論的依據" in found
+    assert f"{path}：「本文」出現 3 次，一篇以 2 次為限" in found
+    assert any("交代資料缺口的句子有 3 句" in item for item in found)
+    assert f"{path}:6：連續 3 段用「依」或「根據」開頭，段落改依讀者的疑問排" in found
+
+
+def test_length_only_for_zh_tw_posts(tmp_path):
+    body = "\n\n".join("字" * 99 + "。" for _ in range(16)) + "\n"
+    assert any("超過 1,500 字" in item for item in body_items(write(tmp_path, "posts/a.md", body)))
+    for rel in ("posts/zh-CN/a.md", "posts/2026-11-21-weekly-brief-2026-w47.md", "history/10-05.md"):
+        assert not any("超過 1,500 字" in item for item in body_items(write(tmp_path, rel, body)))
