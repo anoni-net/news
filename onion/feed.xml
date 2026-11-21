@@ -6,7 +6,84 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 22 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 22 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>埃及獨立媒體 Mada Masr 的無執照判決與關站命令</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/mada-masr-egypt/</link>
+<guid isPermaLink="false">anoni-news:2026/11/mada-masr-egypt</guid>
+<pubDate>Sun, 22 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>埃及法院 10 月 27 日以無執照經營新聞網站為由，判處 Mada Masr 總編輯 300 萬埃及鎊罰款，並命令網站關閉、沒收設備。總編輯另一案的聽證排在 11 月 11 日，到 11 月 15 日為止查不到結果。埃及以外的讀者不必調整任何設定。</description>
+<content:encoded>&lt;p&gt;整理 7 篇原文，來自 EFF、Al Jazeera、The National 等 7 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;依 Al Jazeera 的報導，埃及新開羅輕罪法院 10 月 27 日判決獨立新聞網站 Mada Masr 的總編輯無執照經營新聞網站罪名成立，處以法定最高的 300 萬埃及鎊罰款。法院同時命令網站關閉，並沒收這家媒體的設備。總編輯另一案的聽證排在 11 月 11 日，到 11 月 15 日為止我們查不到結果。判決發生在埃及，其他地方的讀者不受直接影響。&lt;/p&gt;
+&lt;p&gt;依 EFF 的文章，Mada Masr 2013 年創辦時就只在網路上發行。EFF、RSF 與 The National 都寫到網站從 2017 年起在埃及境內被封鎖。依保護記者委員會（CPJ）當時的報導，主管媒體執照的最高媒體管理委員會（SCMR）2023 年 10 月又宣布封鎖網站六個月。&lt;/p&gt;
+&lt;p&gt;依 The National 的報導，國家安全最高檢察署 10 月 21 日就 Mada Masr 刊出的一篇報導訊問總編輯超過六小時，總編輯以 10 萬埃及鎊交保。檢方隔天以無執照的罪名起訴，EFF 寫到整個程序只開了一次庭就判決。Al Jazeera 的報導寫總編輯判決後被拘留數小時，Mada Masr 全額繳清罰款後獲釋，EFF 的文章與聯合聲明寫的是七個小時。The National 也寫到這是六年內針對 Mada Masr 或旗下記者的第六起案件，EFF 的文章則引述 CPJ 的統計，埃及至少有 25 名記者在押。&lt;/p&gt;
+&lt;p&gt;依 Al Jazeera 引述 Mada Masr 的社論，法院拒絕律師查閱卷宗、提出證據與傳喚證人的請求。社論也寫到，總編輯的八位律師都在場、本人也表示反對，法官仍另外指派一名律師為總編輯辯護。依解放廣場中東政策研究所（TIMEP）等組織 10 月 28 日的聯合聲明，Mada Masr 的律師團隊打算上訴。Al Jazeera 也報導埃及記者工會的主席表示工會會採取法律行動。&lt;/p&gt;
+&lt;p&gt;11 月 11 日的那次開庭，EFF 11 月 2 日的文章寫成兩週內的第二場審判，罪名是散布假新聞。Al Jazeera 與聯合聲明寫的是 2024 年一件缺席判決的重審聽證，罪名是發布假新聞與經營無執照網站。依 Al Jazeera 與聯合聲明，總編輯 10 月 27 日辦理釋放手續時，才得知自己 2024 年在未出庭的情況下被判處一年徒刑。依 Al Jazeera 引述 Mada Masr，律師對缺席判決提出異議，法院排定 11 月 11 日開庭審理（Al Jazeera 寫成重審）。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;對 10 月 27 日的判決，Al Jazeera 報導時沒有官方的立即回應。到 11 月 15 日為止，我們查不到埃及政府或 SCMR 對判決的公開說法，只看到 Mada Masr 與倡議組織一方的說法。&lt;/p&gt;
+&lt;p&gt;依 Al Jazeera 的報導，判決依據的是埃及 2018 年的媒體法。經營無執照的網站處 100 萬到 300 萬埃及鎊罰款，並可關閉網站、沒收設備。同一篇報導提到，2023 年行政法院維持 SCMR 駁回 Mada Masr 執照申請的決定，理由是沒有證據顯示 Mada Masr 的商標已經註冊。Mada Masr 的說法是 2018 年與 2020 年的申請都沒有回覆，2022 年才在另一個案件中從檢方得知被駁回，律師也表示已經提交商標註冊證明。&lt;/p&gt;
+&lt;p&gt;EFF 的文章主張，要求新聞機構取得政府許可才能營運，等於提供一套限制誰能發表的機制。TIMEP 等組織的聯合聲明由 Access Now、Amnesty International、ARTICLE 19 等組織簽署，要求政府不加歧視地核發執照給獨立媒體，停止用媒體法的執照條文把新聞工作入罪。Mada Masr 2023 年 6 月提出的新申請，Al Jazeera 報導時仍在審理。&lt;/p&gt;
+&lt;p&gt;依 CPJ 的報導，SCMR 2023 年宣布封鎖網站的理由是「無執照從事媒體活動」與「未查證來源發布假新聞」，當時也把那起案件移送檢察總長。2024 年缺席判決的指控依據，我們查不到公開資料。對於假新聞的罪名，EFF 主張政府不該決定哪些報導可以刊登，尤其是報導涉及政府自身的作為時。&lt;/p&gt;
+&lt;p&gt;OONI 是志工在各地執行、公開結果的網路審查量測，每次連線網站時也從不受審查的網路連線一次當作對照組，兩者結果不一致就標為異常。依 OONI 公開 API 的資料，10 月 16 日到 11 月 15 日記錄為埃及的 &lt;code&gt;madamasr.com&lt;/code&gt; 量測共 33 筆（本文 11 月 15 日查詢）。其中 22 筆標為異常、2 筆測試失敗，沒有一筆被確認為封鎖。其餘 9 筆沒有標為異常，其中 6 筆來自 Cloudflare 的網路（不是埃及一般的網路業者），不代表一般使用者的連線。&lt;/p&gt;
+&lt;p&gt;我們抽樣檢視的兩筆異常紀錄，網域名稱查詢（DNS）的結果跟對照組一致，異常出在 HTTP 連線被重設（connection reset，連線建立後被中途切斷，網頁沒有載入）。2025 年 11 月以來每個月都有異常的量測，7 到 9 月每月只有 3 到 4 筆，10 月又增加到 15 筆。量測筆數少，OONI 也只標為異常，單看這些資料不能判斷網站在埃及是否仍被封鎖。10 月 27 日的關站命令有沒有執行、如何執行，量測也看不出來（本文的推論）。&lt;/p&gt;
+&lt;p&gt;埃及以外的讀者不必調整任何設定。想自行了解某個網站在各地能否連上的人，可以在 OONI Explorer 依網址查公開的量測紀錄。可以留意的後續有 11 月 11 日聽證的結果、10 月 27 日判決的上訴，以及網站是否依命令實際關閉。&lt;/p&gt;
+&lt;p&gt;比較各地對網路媒體的管理，可以問核發執照有沒有審查期限、駁回時是否附理由、當事人能不能救濟，以及沒有執照時的處罰是罰款還是關站。主管機關有沒有公開執照制度與假新聞罪名要達成的目的，實施之後達成了多少，也可以一起問。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（7 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/independent-digital-media-not-privilege-governments-can-revoke-fight-save-egypts&#34;&gt;Independent Digital Media Is Not a Privilege Governments Can Revoke: The Fight to Save Egypt’s Mada Masr&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aljazeera.com/news/2026/10/27/egypt-orders-closure-of-leading-independent-news-site-mada-masr&#34;&gt;Egypt orders closure of leading independent news site Mada Masr&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Al Jazeera&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.thenationalnews.com/news/mena/2026/10/28/egyptian-court-orders-closure-of-news-website-and-fines-editor-in-chief/&#34;&gt;Egyptian court orders closure of news website and fines editor-in-chief&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The National&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://rsf.org/en/declaration-war-against-independent-press-egypt-court-orders-closure-mada-masr-and-places-its&#34;&gt;&amp;#34;A declaration of war against the independent press”: In Egypt, court orders closure of Mada Masr and places its editor-in-chief in detention&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;RSF&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-27&#34;&gt;2026 年 10 月 27 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://timep.org/2026/10/28/organizations-condemn-mada-masr-shutdown-stand-with-editor-in-chief-lina-attalah/&#34;&gt;Organizations Condemn Mada Masr Shutdown, Stand With [the] Editor-in-Chief&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;TIMEP&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cpj.org/2023/10/egypt-bans-mada-masr-website-for-6-months-over-report-on-israel-gaza-war/&#34;&gt;Egypt bans Mada Masr website for 6 months over report on Israel-Gaza war&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CPJ&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-10-31&#34;&gt;2023 年 10 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/country/EG&#34;&gt;Egypt&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI Explorer&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>NIST 寫給一人事業的資安指南 CSWP 50</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/nist-solopreneur-guide/</link>
@@ -1745,119 +1822,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/orbot/id1609461599&#34;&gt;Orbot&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>美國第九巡迴法院審理的基地台傾印搜索票</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/ninth-circuit-reverse-location/</link>
-<guid isPermaLink="false">anoni-news:2026/11/ninth-circuit-reverse-location</guid>
-<pubDate>Fri, 13 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>美國第九巡迴法院審理一件基地台傾印（向電信業者調取某時某地所有手機資料）的上訴案，EFF 與 ACLU 主張傾印搜索票本身違憲。到 11 月 8 日查不到政府一方在上訴審的書狀，依本文推論關閉 Google 定位紀錄擋不了基地台傾印。</description>
-<content:encoded>&lt;p&gt;整理 12 篇原文，來自 EFF、The Register、SCOTUSblog 等 10 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;美國第九巡迴上訴法院正在審理一件基地台傾印（tower dump）搜索票的上訴案。傾印搜索票要求行動通訊業者交出某時某地所有手機的位置資料，範圍內跟案件無關的裝置也包含在內。數位權利組織 EFF 與美國公民自由聯盟（ACLU）在 11 月 3 日以法庭之友（amicus，非當事人向法院提出意見）的身分提交書狀，主張傾印搜索票本身違憲。案件只涉及美國的執法，其他地方的讀者不受直接影響。&lt;/p&gt;
-&lt;p&gt;EFF 的文章把基地台傾印與 geofence（地理圍欄）搜索票都歸為反向位置搜索（reverse location searches），兩者都先劃出時間與地點，再從資料裡找人。基地台傾印向行動通訊業者調取，geofence 向 Google 這類公司調取裝置的位置紀錄，資料來源不同。美國最高法院 6 月 29 日判決的是 geofence，第九巡迴法院的上訴案（案號 &lt;code&gt;26-689&lt;/code&gt;）是基地台傾印。&lt;/p&gt;
-&lt;p&gt;依 EFF 的文章，兩名被害人的遺體在加州一條偏遠公路旁被發現，警方在同一條公路數英里外找到其中一人的車。警方隨後聲請涵蓋該路段的基地台傾印搜索票，最後取得近 1,700 支不重複手機的位置資料。&lt;/p&gt;
-&lt;p&gt;依 The Register 引述的裁定，內華達聯邦地方法院 2025 年認定基地台傾印屬於美國憲法第四修正案（禁止不合理的搜索與扣押）所稱的搜索，本案的搜索票是第四修正案禁止的概括搜索票（general warrant，不限定對象的搜索令狀）。裁定同時沒有排除任何證據，理由是該院看來是第九巡迴法院轄區內第一個這樣認定的法院，而且善意例外（good faith exception，執法人員相信自己依搜索票合法行事時，證據原則上仍可使用）適用。被告其後向第九巡迴法院上訴。&lt;/p&gt;
-&lt;p&gt;依 EFF 的文章，書狀有三項主張。最高法院的 geofence 判決加強了基地台傾印屬於違憲概括搜索票的論點，沒有相當理由（probable cause，核發搜索票要求的具體依據）認為範圍內所有人都涉案，就不能搜索所有人。即使法院仍允許傾印搜索票，也要限制範圍與期限、通知受影響的人，並在事後刪除無關的資料。書狀也要求法院放下善意例外，實際判斷憲法問題。&lt;/p&gt;
-&lt;p&gt;最高法院的 geofence 判決以 6 比 3 認定，警方調取手機位置紀錄屬於搜索，即使時間很短、資料在第三方公司手上也一樣。依法律事務所 ZwillGen 的分析，搜索票是否具體、有沒有相當理由，發回先前審理的第四巡迴法院判斷。反向搜索票是否合憲仍未解決。EFF 的文章把第九巡迴法院的上訴案寫成判決之後第一件進入聯邦上訴法院的同類案件。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;手機開機且未開飛航模式時會連上基地台，這是行動網路的基本運作方式（本文補充的背景，下面的來源沒有直接寫這一句）。SCOTUSblog 整理最高法院 2018 年的基地台案時，把基地台位置資訊描述成手機連上基地台時產生的歷史紀錄。The Register 提到傾印可以涵蓋十分鐘到一小時內連上該基地台的所有連線。&lt;/p&gt;
-&lt;p&gt;Google 帳號的定位紀錄（Location History，Google Maps 時間軸背後的設定）是另一份資料，存放在裝置上或 Google 的伺服器，本文據此推論關閉它擋不了基地台傾印。查到的來源沒有寫出使用者這一端能避開基地台紀錄的做法，哪些連線會留下可調取的紀錄、業者保存多久也沒有寫。&lt;/p&gt;
-&lt;p&gt;到 11 月 8 日，本文查不到政府一方在第九巡迴法院上訴案提出的書狀，也查不到相關報導。依聯邦上訴程序的通則，答辯期限通常在上訴人書狀後 30 天，查不到可能只是期限未到（本文推算，未查到案卷）。下一段政府一方的論點都出自別的案件（最高法院的 geofence 案與同案的第四巡迴法院判決），當時的資料來自 Google，跟電信業者無關。&lt;/p&gt;
-&lt;p&gt;依 ABC News 的報導，政府在最高法院的 geofence 案主張，使用者把位置資訊分享給 App 與 Google 這類服務業者就放棄了隱私期待。第四巡迴法院的多數意見也認為當事人自願讓 Google 持有的兩小時位置資料不能合理期待保密（依 SCOTUSblog）。最高法院的多數意見認定資料由第三方公司持有時當事人仍有隱私期待，2018 年的基地台案判決也已認定取得基地台位置資訊屬於搜索、不適用第三方原則（third-party doctrine，交給第三方的紀錄不受第四修正案保護的見解，依 SCOTUSblog 與 Independent Institute 的整理）。這些來源沒有說明 2018 年的判決是否及於傾印，政府一方會如何主張、法院是否接受，要看上訴案的後續。&lt;/p&gt;
-&lt;p&gt;EFF 的文章主張反向位置搜索票本身違憲，並舉法律禁止警方搜索犯罪現場附近上百戶住家為例。依 The Register 的報導，密西西比一位聯邦治安法官 2025 年 2 月以缺乏對特定個人的相當理由駁回 FBI 的四張基地台傾印搜索票，政府 2025 年 6 月申請延長決定是否上訴的期限（到 11 月 8 日查不到結果）。ABC News 的報導則寫 geofence 搜索票對調查人員尋找嫌疑人、失蹤兒童與山區迷路者的價值越來越高，也寫專家認為限制可能妨礙執法。最高法院審理 geofence 案的口頭辯論時，一位大法官提出的方向是訂出合理的時間與地理範圍，再交給核發搜索票的法官落實。&lt;/p&gt;
-&lt;p&gt;地方法院認定搜索票違憲卻不排除證據，依據是善意例外。EFF 的文章主張，法院常迴避新型監控技術的憲法問題，警方可以繼續使用多年甚至數十年卻沒有明確的判決。依 EFF 2024 年的文章，第五巡迴法院在另一件 geofence 案適用善意例外的理由是 2018 年的技術還新穎，警方也向有經驗的機關求教。最高法院的不同意見同樣以善意例外為由，主張第四巡迴法院既已認定善意例外適用，判決對當事人就沒有實際影響。&lt;/p&gt;
-&lt;p&gt;台灣的《通訊保障及監察法》（全國法規資料庫 2024 年 7 月修正的版本）把位置資訊列入通信紀錄，檢察官調取原則上要向法院聲請調取票，最輕本刑十年以上之罪與條文列舉的罪名（例如詐欺、強盜）可由檢察官依職權或司法警察官經檢察官許可調取。條文沒有寫明某基地台某時段全部連線的傾印是否適用（本文比對法條的觀察，到 11 月 8 日也沒有查到官方說明）。美國上訴案的爭點落在相當理由與搜索範圍是否特定，台灣條文的門檻是必要性及關連性，部分罪名不必經法院（同為本文比對）。&lt;/p&gt;
-&lt;p&gt;想確認 Google 這一端資料的人，可以到 Android 或 iPhone 版 Google Maps App 的 Your Timeline 設定，查看定位紀錄對應的時間軸（Timeline）是否開啟。依 Google 2023 年的公告與 11 月 8 日查閱的說明頁，時間軸預設關閉、要自行同意才會開啟，資料存在裝置上。使用者另外選擇備份時，Google 伺服器上會有一份加密副本。Apple 2025 年下半年的透明報告寫明沒有資料可回應 geofence 要求。&lt;/p&gt;
-&lt;p&gt;依最高法院的不同意見與 Independent Institute 的分析，Google 修改定位紀錄服務後已無法再回應 geofence 搜索票。Independent Institute 的分析寫明改變發生在 2025 年 7 月，到 11 月 8 日沒有找到 Google 自己的說明。上面的設定與報告都只涉及 Google、Apple 手上的資料。&lt;/p&gt;
-&lt;p&gt;看上訴案的後續，第九巡迴法院會實際判斷憲法問題，還是再次停在善意例外。如果允許傾印搜索票，範圍、期限、通知與刪除的限制能否保護無關的路人，又不讓缺少嫌疑人線索的案件失去調查方法。政府一方的書狀會沿用使用者自願交出資料的論點，還是另外說明基地台紀錄跟 Google 資料的差別。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2026/11/were-asking-ninth-circuit-hold-reverse-location-warrants-categorically&#34;&gt;We’re Asking the Ninth Circuit to Hold Reverse Location Warrants Categorically Unconstitutional&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/files/2026/11/03/united_states_v._spurlock_-_eff_aclu_amicus_brief_1.pdf&#34;&gt;Brief of Amici Curiae, No. 26-689 (9th Cir.)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://theregister.com/2025/06/19/us_tower_grab_appeal/&#34;&gt;Uncle Sam seeks time in tower dump data grab case after judge calls it &amp;#39;unconstitutional&amp;#39;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-19&#34;&gt;2025 年 6 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.scotusblog.com/2026/06/court-rules-that-law-enforcements-use-of-geofence-warrant-was-a-search/&#34;&gt;Court rules that law enforcement’s use of “geofence warrant” was a “search”&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SCOTUSblog&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-29&#34;&gt;2026 年 6 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.zwillgen.com/law-enforcement/supreme-court-holds-geofence-warrants-are-fourth-amendment-searches-leaves-other-important-questions-lower-courts/&#34;&gt;Supreme Court Holds Geofence Warrants Are Fourth Amendment Searches, But Leaves Other Important Questions for Lower Courts&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ZwillGen&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-02&#34;&gt;2026 年 7 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2024/08/federal-appeals-court-finds-geofence-warrants-are-categorically-unconstitutional&#34;&gt;Federal Appeals Court Finds Geofence Warrants Are “Categorically” Unconstitutional&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;EFF&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-08-12&#34;&gt;2024 年 8 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.goodmorningamerica.com/amp/news/story/supreme-court-weighs-geofence-warrants-cellphone-data-132358022&#34;&gt;Supreme Court grapples with limits to &amp;#39;geofence warrants&amp;#39; over privacy concerns&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ABC News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-28&#34;&gt;2026 年 4 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.independent.org/article/2026/06/30/supreme-court-geofence-warrants-chatrie/&#34;&gt;No. 25-112 (U.S. June 29, 2026)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Independent Institute&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-30&#34;&gt;2026 年 6 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/products/maps/updates-to-location-history-and-new-controls-coming-soon-to-maps/&#34;&gt;Updates to Location History and new controls coming soon to Maps&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-12-12&#34;&gt;2023 年 12 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/maps/answer/6258979?hl=en&#34;&gt;Manage your Google Maps Timeline&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Maps Help&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/legal/transparency/pdf/requests-2025-h2-en.pdf&#34;&gt;Apple Transparency Report: Government and Private Party Requests, July 1 - December 31, 2025&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060044&#34;&gt;通訊保障及監察法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

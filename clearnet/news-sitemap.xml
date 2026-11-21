@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/mada-masr-egypt/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
+<news:title>埃及獨立媒體 Mada Masr 的無執照判決與關站命令</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/mada-masr-egypt/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
+<news:title>埃及独立媒体 Mada Masr 的无执照判决与关站命令</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/mada-masr-egypt/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
+<news:title>The unlicensed-website conviction and closure order against Egypt&#39;s independent outlet Mada Masr</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/nist-solopreneur-guide/</loc>
 <news:news>
 <news:publication>
@@ -163,39 +196,6 @@
 </news:publication>
 <news:publication_date>2026-11-20T22:30:00+08:00</news:publication_date>
 <news:title>Tighter limits on outside contributions to open source projects in the AI era</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/iphone-grey-list/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
-<news:title>iPhone 鍵盤建議與滑動輸入排除的詞組清單</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/iphone-grey-list/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
-<news:title>iPhone 键盘建议与滑动输入排除的词组清单</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/iphone-grey-list/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
-<news:title>Phrases excluded from iPhone keyboard suggestions and swipe typing</news:title>
 </news:news>
 </url>
 </urlset>
