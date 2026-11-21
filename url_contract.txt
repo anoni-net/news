@@ -387,6 +387,9 @@
 /2026/11/signal-verification-subpoena/
 	#perspective
 	#sources
+/2026/11/simplex-supporter-badges/
+	#perspective
+	#sources
 /2026/11/siri-ai-exclude-apps/
 	#perspective
 	#sources
@@ -837,6 +840,9 @@
 	#perspective
 	#sources
 /en/2026/11/signal-verification-subpoena/
+	#perspective
+	#sources
+/en/2026/11/simplex-supporter-badges/
 	#perspective
 	#sources
 /en/2026/11/siri-ai-exclude-apps/
@@ -1556,6 +1562,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/signal-verification-subpoena/
+	#perspective
+	#sources
+/zh-cn/2026/11/simplex-supporter-badges/
 	#perspective
 	#sources
 /zh-cn/2026/11/siri-ai-exclude-apps/

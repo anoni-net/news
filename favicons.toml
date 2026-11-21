@@ -2524,6 +2524,10 @@ from = "https://signal.org/assets/images/favicon/apple-touch-icon.png"
 icon = "simplelogin.io-188729b5.png"
 from = "https://simplelogin.io/favicon.ico"
 
+[hosts."simplex.chat"]
+icon = "simplex.chat-de87091e.png"
+from = "https://simplex.chat/img/favicon.ico"
+
 [hosts."smallpdf.com"]
 icon = "smallpdf.com-b8979d33.png"
 from = "https://s.smallpdf.com/static/e8d61118bbf714f1.png"
