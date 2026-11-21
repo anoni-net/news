@@ -274,6 +274,9 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -727,6 +730,9 @@
 	#perspective
 	#sources
 /en/2026/11/bitchat-india-block/
+	#perspective
+	#sources
+/en/2026/11/bitwarden-native-passkeys/
 	#perspective
 	#sources
 /en/2026/11/boca-passport-leak/
@@ -1449,6 +1455,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/bitchat-india-block/
+	#perspective
+	#sources
+/zh-cn/2026/11/bitwarden-native-passkeys/
 	#perspective
 	#sources
 /zh-cn/2026/11/boca-passport-leak/
