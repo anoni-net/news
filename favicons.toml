@@ -589,6 +589,10 @@ from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico
 icon = "courtlistener.com-9d872fbc.png"
 from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e6d.png"
 
+[hosts."courts.go.jp"]
+icon = "courts.go.jp-9d6e1cc5.png"
+from = "https://web.archive.org/web/20261122id_/https://www.courts.go.jp/assets/images/common/favicon.ico"
+
 [hosts."coveryourtracks.eff.org"]
 icon = "coveryourtracks.eff.org-18aa39f8.png"
 from = "https://coveryourtracks.eff.org/static/favicon.ico"
@@ -1529,6 +1533,10 @@ from = "https://jprs.jp/resources/ja/icon/favicon_jp.ico"
 [hosts."jrf.org.tw"]
 icon = "jrf.org.tw-8ba160c8.png"
 from = "https://www.jrf.org.tw/images/apple-icon-144x144.png"
+
+[hosts."judicial.gov.tw"]
+icon = "judicial.gov.tw-7110e9c1.png"
+from = "https://www.judicial.gov.tw/Styles/Unit001/images/favicon.ico"
 
 [hosts."judiciary.house.gov"]
 icon = "judiciary.house.gov-c08fed39.png"
