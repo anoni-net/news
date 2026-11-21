@@ -301,6 +301,10 @@ from = "https://www.boca.gov.tw/Styles/Unit001/C0/images/favicon.png"
 icon = "boho.or.kr-35ff434f.png"
 from = "https://www.boho.or.kr/images/homepage/www/kr/favicon.ico"
 
+[hosts."bpb.de"]
+icon = "bpb.de-f61d68af.png"
+from = "https://www.bpb.de/themes/custom/bpbtheme/favicon.ico"
+
 [hosts."brandefense.io"]
 icon = "brandefense.io-16345e4e.png"
 from = "https://brandefense.io/wp-content/themes/brandefense/customer-files/favicon/apple-touch-icon.png"
@@ -343,6 +347,10 @@ same_as = "blog.mozilla.org"
 [hosts."bugzilla.redhat.com"]
 icon = "bugzilla.redhat.com-2ed93a2c.png"
 from = "https://bugzilla.redhat.com//extensions/RedHat/web/css/favicons/production.ico?v=0"
+
+[hosts."bundesverfassungsgericht.de"]
+icon = "bundesverfassungsgericht.de-52982483.png"
+from = "https://www.bundesverfassungsgericht.de/SiteGlobals/Frontend/Images/favicon-180x180.png?__blob=normal&v=1"
 
 [hosts."business-humanrights.org"]
 none = "官網的圖示只有 SVG，抓不到點陣圖"
