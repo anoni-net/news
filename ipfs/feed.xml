@@ -6,7 +6,56 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 21 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 22 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>NIST 寫給一人事業的資安指南 CSWP 50</title>
+<link>https://anoni.net/news/2026/11/nist-solopreneur-guide/</link>
+<guid isPermaLink="false">anoni-news:2026/11/nist-solopreneur-guide</guid>
+<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>NIST 11 月 2 日發布 CSWP 50，寫給沒有雇員的一人事業，用不預設資安知識的寫法整理多因素驗證、備份、更新與釣魚辨識等行動。指南免費下載，到 11 月 15 日只查到英文版。內容以美國讀者為對象，其他地方的接案者與個人工作者可以參考其中的做法。</description>
+<content:encoded>&lt;p&gt;整理 3 篇原文，來自 NIST、數位發展部資通安全署&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;美國國家標準暨技術研究院（NIST）11 月 2 日發布 CSWP 50《Small Business Cybersecurity: Non-Employer Firms》，寫給沒有雇員、業主就是唯一有薪工作者的一人事業。依新聞稿，指南用一般人讀得懂的語言寫成，不預設讀者具備資安知識。指南已經定稿，可以免費下載，到 11 月 15 日只查到英文版。&lt;/p&gt;
+&lt;p&gt;指南以美國讀者為對象，也寫到許多小企業有跨國的業務與合作，內容可以調整後用在這些情境。美國以外的接案者與個人工作者可以參考其中的做法。本文的推論是，指南提到的美國法規與輔導方案在其他地方不適用，要換成當地的對應資源。&lt;/p&gt;
+&lt;p&gt;依新聞稿，美國有超過 2,800 萬家小企業屬於一人事業。指南的摘要寫到，對象是美國小型企業管理局定義的 non-employer firms，也就是業主以外沒有員工的事業。員工很少或 IT 設備很少的事業也可能適用。對象一節列出獨資業主、自由工作者、單一成員的有限責任公司、獨立承包商與零工經濟的工作者，也把小企業仰賴的顧問列為主要讀者之一。&lt;/p&gt;
+&lt;p&gt;依新聞稿，舊版指南 NISTIR 7621 寫給各種規模的小企業，更新後的 CSWP 50 集中在保護數位系統不受惡意攻擊。指南以 NIST 資安框架 2.0 版（CSF 2.0，NIST 用來整理組織資安工作的架構）為基礎，內容比 CSF 給小企業的快速入門指南詳細許多。新聞稿介紹的中段列出一人事業可以執行的行動，每項寫出理由、如何起步，以及事業成長之後的選項。最後是盤點資產的工作表、追蹤已完成行動的表格，以及律師、手工藝者與商業顧問三個假設案例，案例放在另外的附錄檔。&lt;/p&gt;
+&lt;p&gt;指南的導論列出九項可以大幅降低風險的行動。第一項是啟用防釣魚的多因素驗證（MFA，登入時除了密碼還要再提供一種驗證），對象是有提供 MFA 的帳號，尤其是電子郵件、銀行、密碼管理員與重要的雲端服務。密碼依 NIST 的建議至少 15 個字元，可以考慮用密碼管理員，可行時改用通行金鑰（passkey，用裝置上的指紋、臉部或 PIN 解鎖的登入憑證，不必輸入帳號密碼）。&lt;/p&gt;
+&lt;p&gt;其餘幾項是學會辨識釣魚與勒索軟體、日常工作用標準使用者帳號、盤點重要的資產與依賴的服務、建立並測試備份，以及讓所有裝置與 App 維持更新。最後兩項是列出事件發生時要通報的內外部聯絡人，並留一份紙本，以及列出跟資安有關的法律、法規與合約要求。指南在勒索軟體一節建議隔離保護重要資料的備份，第 3 章的備份項目另外建議考慮至少留一份在外接硬碟或雲端這類不連著裝置的媒介上。&lt;/p&gt;
+&lt;p&gt;指南建議盡量不要混用個人與業務的資產，讓個人裝置與業務裝置分開。裝置必須跟家人共用時，每個人要有自己的帳號，家人的帳號也不能存取敏感的業務資料。指南還提醒在家、咖啡店與共同工作空間各有不同的實體威脅，裝置要開啟定位追蹤與遠端清除。&lt;/p&gt;
+&lt;p&gt;遇到更改匯款帳號、修改發票、緊急付款或購買禮物卡這類要求時，指南建議用已知或公開的聯絡方式確認，不透過收到的訊息本身回覆。指南的釣魚一節也提到，AI 產品與服務現在可以用來製作更有說服力的釣魚訊息，指南把它們稱為「Super Intelligence」（SI）。&lt;/p&gt;
+&lt;p&gt;依指南的註腳，SI 是 9 月 29 日美國行政命令要求的改稱，命令要求行政機關把用語從「artificial intelligence」改成「super intelligence」。指南也為 AI 工具另立一節，建議盤點正在使用的 AI 工具與軟體內建的 AI 功能。輸入敏感資訊前先看過資料保留、是否用於訓練與存取權限的設定，AI 產生的內容在使用前也要先審閱。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;指南的 MFA 說明寫到，在所有提供 MFA 的帳號上啟用，是保護事業最重要的步驟之一。說明也提到有些 MFA 的形式容易被釣魚，防釣魚的例子是通行金鑰。依一般的釣魚手法，簡訊或驗證 App 的一次性密碼可能被假網站騙走後轉送出去。通行金鑰跟註冊時的網站綁在一起，假網站難以取得可用的憑證。&lt;/p&gt;
+&lt;p&gt;新聞稿引述作者之一的說法，許多行動只需有限的技術知識或很少的花費就能自行完成。指南只零星提到密碼管理員是相對便宜的做法，沒有逐項估算費用。自行處理之外也可以交給顧問或外包廠商，指南提醒外包之後，保護系統與資料的責任不會跟著轉移出去。&lt;/p&gt;
+&lt;p&gt;需要中文資料的讀者，可以參考台灣數位發展部資通安全署的《中小企業基本資安防護指引》，封面日期是 2026 年 3 月。PDF 共 11 頁，從帳號管理、設備和資料管理、資安意識培育三個面向著手，附一份自檢表。對象是中小企業，沒有針對一人事業另外寫。本文對照兩份文件，自檢表的密碼至少 15 碼、更改連網設備的預設密碼、備份、自動更新與資產清冊，都跟 NIST 指南的建議重疊。&lt;/p&gt;
+&lt;p&gt;沒有雇員、自己處理所有帳號與裝置的人，可以先用導論的九項行動逐一對照自己的狀況。指南可以從 NIST 官網免費下載，是 33 頁的英文 PDF，盤點用的工作表與三個案例另外放在 .xlsx 檔。新聞稿也引述作者的說法，指南沒有涵蓋每位一人事業的所有需求。依指南第 3 章的說明，表格列出的行動不是檢核清單或合規標準，隱私的保護也大多不在範圍內（只列了幾個基本步驟）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（3 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you&#34;&gt;Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://csrc.nist.gov/pubs/cswp/50/small-business-cybersecurity-non-employer-firms/final&#34;&gt;CSWP 50, Small Business Cybersecurity: Non-Employer Firms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www-api.moda.gov.tw/File/Get/acs/zh-tw/1rpP5Mb1iyZwZUF&#34;&gt;中小企業基本資安防護指引&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;數位發展部資通安全署&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>每週短訊 2026 第 47 週</title>
 <link>https://anoni.net/news/2026/11/weekly-brief-2026-w47/</link>
@@ -1809,105 +1858,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060044&#34;&gt;通訊保障及監察法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>家用 Android 電視盒的預載後門與住宅代理</title>
-<link>https://anoni.net/news/2026/11/android-tv-residential-proxy/</link>
-<guid isPermaLink="false">anoni-news:2026/11/android-tv-residential-proxy</guid>
-<pubDate>Fri, 13 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>家中有 Android 電視盒的人可能受影響。Google 11 月初公布瓦解預載在超過 130 萬台機上盒的 XCPE 後門，裝置被用來轉送他人流量，通過認證的機型也在內。到 11 月 8 日為止，Google 沒有提供已出貨裝置的清除步驟，換機與新加坡警方的處理建議並不相同。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，來自 Google Threat Intelligence Group、Google、Synthient 等 9 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;家中的對外連線可能正經由插在電視上的 Android 電視盒被轉租給陌生人。Google 威脅情報團隊（GTIG）11 月初公布，Google 與業界夥伴在前一週瓦解 XCPE 殭屍網路（botnet，受同一方遠端控制的大量裝置），超過 130 萬台機上盒被 XCPE 後門納入其中。受害裝置絕大多數是 Android 電視盒，也有遠距醫療裝置、卡拉 OK 機與數位看板，分布遍及全球。家中有 Android 電視盒（尤其是來源不明的機型）的讀者可以先對照機型名單與認證狀態，兩者都無法單獨確認是否受害。&lt;/p&gt;
-&lt;p&gt;住宅代理（residential proxy）把付費客戶的流量轉經一般家庭的網路送出去，目的地記錄到的來源是那個家庭的 IP。依 GTIG 的分析，XCPE 載入的模組最常見的用途是住宅代理與頻寬分享，另外也有廣告詐欺模組。一台裝置最多同時裝了三種代理用的軟體開發套件（SDK）。裝置的主人既不知情，也沒有同意。&lt;/p&gt;
-&lt;p&gt;依 IT Brief 對資安業者 TrendAI 分析的報導，惡意流量經由一般家庭與辦公室的 IP 送出，攻擊者存取線上服務時就像當地的使用者。這些流量來自真實的家庭連線，可以繞過銀行、零售商用來驗證使用者的 IP 信譽與地理位置檢查。家中 IP 因此被封鎖或被追查的實例與法律責任，到 11 月 8 日為止查到的官方文件沒有寫。&lt;/p&gt;
-&lt;p&gt;依 GTIG 的說明，後門本體是套件 &lt;code&gt;x.cpe&lt;/code&gt;（部分版本名為 &lt;code&gt;com.oemservice&lt;/code&gt;），以系統權限預載在韌體裡。使用者解除安裝之後，重新開機就會從 &lt;code&gt;/oem/&lt;/code&gt; 分割區裝回來。它會清除裝置上的使用者同意設定，關閉 Google Play Protect（Android 內建的惡意 App 防護）的 App 驗證，接著靜默下載並執行其他檔案。GTIG 在多個品牌與機型的韌體裡都找到同一套後門，時間跨越多年。&lt;/p&gt;
-&lt;p&gt;GTIG 也記錄到營運者擷取裝置的即時畫面、注入按鍵、外傳帳號與裝置資訊，以及開啟遠端命令列，指令清單裡還有探測所在網路的功能。同一份報告也提到，與受害裝置的互動絕大部分是安裝、移除與設定模組。&lt;/p&gt;
-&lt;p&gt;依 GTIG 的高度信心評估，Android 裝置代工廠 Videostrong 為了營利蓄意開發、部署並營運 XCPE 後門與殭屍網路，再把存取權賣給犯罪的附屬業者。到報導刊出時，Videostrong 沒有回覆 The Record 與 The Register 的詢問。依 Ars Technica 的報導，受害機型包含通過 Google 認證的機型。GTIG 的解釋是 Videostrong 用混淆手法鑽了測試的漏洞，在裝置首次開機之後才載入惡意程式碼。&lt;/p&gt;
-&lt;p&gt;130 萬台是 GTIG 對 XCPE 後門本身的數字。GTIG 另外估計，取下附屬業者模組的指揮控制（C2，遠端下達指令的伺服器）網域，會再切斷至少 1000 萬台受感染裝置的存取。附屬業者在 XCPE 之外還有別的散布管道，所以 1000 萬台算在 130 萬台之外。依 The Record 的報導，其中許多不是 Android 裝置。&lt;/p&gt;
-&lt;p&gt;Google 的處置包括以法律行動取下 Videostrong 與十幾個惡意程式家族使用的網域，也禁止 Videostrong 及其未來的子公司、關聯公司製造販售認證的 Android 裝置，或供應軟體給認證廠商。Google 也寫到正在改進認證 Android TV 裝置的韌體完整性檢查。到 11 月 8 日為止，GTIG 的報告與查到的其他官方說明都沒有提供已出貨裝置的清除步驟，也沒有寫是否撤銷受害機型的認證。依 The Record 的報導，Google 也沒有說明是否通知使用者或強制清除。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;要查認證狀態，可以開啟 Google Play 商店的個人資料選單，再進入「設定」的「關於」。本文沒有在電視盒上實測，畫面可能與說明頁不同。依說明頁，未認證的裝置可能不安全，裝置認證與防護惡意 App 的 Play Protect 是兩件事。顯示已認證也無法排除問題，XCPE 的受害機型包含認證機型，惡意程式碼在首次開機之後才載入。&lt;/p&gt;
-&lt;p&gt;GTIG 的合作單位 Synthient 公開了 182 個在這起事件觀察到的機型名稱，清單的說明寫到，單憑機型名稱不足以確認裝置已遭入侵。Ars Technica 建議買過 MECOOL 或來源不明白牌電視盒的人對照這份清單。GTIG 的報告沒有列出使用者可以看到的徵兆，IT Brief 的報導也提到盒子可能看起來一切正常。到 11 月 8 日為止查到的資料裡，沒有一般使用者可以確認家中 IP 是否正被出租的方法。&lt;/p&gt;
-&lt;p&gt;ChannelNews 轉述的研究人員（報導沒有寫是哪一家）建議把確認感染的裝置斷線後換掉，因為 &lt;code&gt;x.cpe&lt;/code&gt; 嵌在系統韌體裡，防毒軟體與原廠重設可能無法永久清除。代價是要另外花錢買新機，要先確認感染也不容易。要換機時，GTIG 建議向信譽良好的製造商購買，並指向 Android TV 網站的合作夥伴名單。連結到的認證夥伴頁頁首寫的是手機與平板，電視盒是否完整列入，到 11 月 8 日為止本文沒有查到。&lt;/p&gt;
-&lt;p&gt;新加坡警方與網路安全局 2025 年 11 月的提醒早於 GTIG 這次公布（到 11 月 8 日為止，沒有查到台灣 TWCERT/CC 與香港 HKCERT 針對 XCPE 的公告），對象是未認證的電視盒，建議立即斷網、掃描並移除可疑 App、檢查銀行等帳戶。發現惡意程式或未授權交易時要向新加坡警方報案，報案前不要重設，以免妨礙調查。該提醒也寫到，沒有發現惡意程式與未授權交易時可以繼續使用或完整重設，但它不是針對 XCPE 的建議。GTIG 寫明使用者無法移除 &lt;code&gt;x.cpe&lt;/code&gt;，ChannelNews 也寫防毒軟體與原廠重設可能無法永久清除，本文推論掃描沒有發現異常不代表 &lt;code&gt;x.cpe&lt;/code&gt; 不在。&lt;/p&gt;
-&lt;p&gt;依 The Record 的報導，GTIG 反制業務的主管被問到如何移除惡意程式時表示，取下網域實際上讓惡意程式不再造成危害（「effectively rendering the malware benign」）。依 Ars Technica 的評估，裝置應該可以安全使用，但 Play Protect 仍然關閉、失效的模組還裝在系統裡。GTIG 的報告提到營運者被打斷後會很快換用新的載入程式或其他變現 SDK。ChannelNews 轉述的研究人員也警告，犯罪者可能另建替代系統，受感染的裝置仍可能再遭利用。&lt;/p&gt;
-&lt;p&gt;家中 IP 也可能經由自己安裝的 App 被出租，GTIG 呼籲對「用閒置頻寬換錢」、「分享網路」的 App 格外小心，報告把它們列為非法代理網路擴張的主要管道。依 GTIG 的分析，代理業者通常只在平台政策要求時才徵求同意，到 11 月 8 日為止查到的資料裡沒有報告列出的代理業者的回應。&lt;/p&gt;
-&lt;p&gt;電視盒機型在名單上、來源不明或顯示未認證的人，第一步是中斷它的網路連線（換機與新加坡的兩種建議都從斷網開始），只需要幾分鐘。依新加坡的提醒，認為帳號可能遭入侵時要立即更改密碼並啟用多因素驗證，本文建議改用其他裝置操作。GTIG 建議確認 Play Protect 已啟用，暫時留著裝置的人可以檢查。依 Ars Technica 的報導，後門會關閉 Play Protect，來源沒有寫手動開啟之後是否會再次被關閉。&lt;/p&gt;
-&lt;p&gt;暫時還要使用的人可以把電視盒接到路由器的訪客網路，與手機、電腦分開，也要確認訪客網路有隔離區網裝置。ChannelNews 的報導寫到攻擊者可以探查同一家用網路上的其他裝置，訪客網路是本文由此做的推論。來源只提到企業的隔離，沒有評估家用訪客網路，訪客網路也擋不住營運者在盒子上擷取畫面、外傳帳號資訊與轉送流量。斷網可以停止轉送流量，但收不回可能已經外傳的帳號資訊，換新機則要付出購機費用。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet/&#34;&gt;Shutting the Door on the XCPE Botnet&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google Threat Intelligence Group&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/10248227&#34;&gt;Check &amp;amp; fix Play Protect certification status&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.android.com/certified/partners/&#34;&gt;Certified - Partners | Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md&#34;&gt;The Internals of a Badbox Operation&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Synthient&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/google/2026/11/google-dismantles-botnet-secretly-running-on-1-3-million-android-tv-boxes/&#34;&gt;Google dismantles botnet secretly running on 1.3 million Android TV boxes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/google-takes-down-massive-android-botnet-infecting-1-3-million-devices/&#34;&gt;Google Takes Down Massive Android Botnet Infecting 1.3 Million Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/google-dismantles-botnet-hidden-android-tv-boxes&#34;&gt;Google dismantles massive botnet hidden in Android TV boxes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;2026 年 11 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5307045&#34;&gt;Cops bust botnet of 1.3M infected Android TV boxes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itbrief.com.au/story/trendai-helps-disrupt-x-cpe-botnet-in-1-3m-devices&#34;&gt;TrendAI helps disrupt X.CPE botnet in 1.3m devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IT Brief Australia&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.sg/media-hub/news/2025/11/20251112_advisory_on_the_dangers_of_non_certified_streaming_devices&#34;&gt;Advisory On The Dangers Of Non-Certified Streaming Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Singapore Police Force&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-12&#34;&gt;2025 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

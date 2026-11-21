@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/nist-solopreneur-guide/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-22T00:00:00+08:00</news:publication_date>
+<news:title>NIST 寫給一人事業的資安指南 CSWP 50</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/nist-solopreneur-guide/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-22T00:00:00+08:00</news:publication_date>
+<news:title>NIST 写给一人事业的网络安全指南 CSWP 50</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/nist-solopreneur-guide/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-22T00:00:00+08:00</news:publication_date>
+<news:title>CSWP 50, NIST&#39;s cybersecurity guide for one-person businesses</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/weekly-brief-2026-w47/</loc>
 <news:news>
 <news:publication>
@@ -163,39 +196,6 @@
 </news:publication>
 <news:publication_date>2026-11-20T00:05:00+08:00</news:publication_date>
 <news:title>Phrases excluded from iPhone keyboard suggestions and swipe typing</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/ooni-tls-middlebox/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
-<news:title>OONI Probe 的 TLS Middlebox 實驗與資料蒐集問卷</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/ooni-tls-middlebox/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
-<news:title>OONI Probe 的 TLS Middlebox 实验与数据收集问卷</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/ooni-tls-middlebox/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T00:00:00+08:00</news:publication_date>
-<news:title>The TLS Middlebox experiment in OONI Probe and a survey on data collection</news:title>
 </news:news>
 </url>
 </urlset>

@@ -6,7 +6,83 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 21 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 22 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>CSWP 50, NIST&#39;s cybersecurity guide for one-person businesses</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/nist-solopreneur-guide/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/nist-solopreneur-guide</guid>
+<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On 2 November NIST published CSWP 50, a guide for one-person businesses with no employees that sets out actions such as multi-factor authentication, backups, updates and recognising phishing, written for readers with no security background. The guide is free to download, and as of 15 November we found only an English version. It is written for a US audience, though freelancers and self-employed people elsewhere can draw on its practices.</description>
+<content:encoded>&lt;p&gt;Based on 7 sources, including NIST, Administration for Cyber Security, Ministry of Digital Affairs (Taiwan), Information-technology Promotion Agency, Japan (IPA)&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 2 November the US National Institute of Standards and Technology (NIST) published CSWP 50, Small Business Cybersecurity: Non-Employer Firms, a guide for one-person businesses with no employees, where the owner is the only paid worker. According to the press release, the guide is written in lay language and assumes no prior cybersecurity knowledge. It is final and free to download, and as of 15 November we found only an English version.&lt;/p&gt;
+&lt;p&gt;According to the guide, it was developed for a US audience, though many small businesses engage in international commerce or collaborations and the content can be adapted to support that work. Freelancers and self-employed people outside the US can draw on its practices. We infer that the US laws and support programmes it mentions do not apply elsewhere, and readers will need to substitute local equivalents.&lt;/p&gt;
+&lt;p&gt;According to the press release, more than 28 million small businesses in the US are one-person businesses. In the guide&#39;s abstract, the audience is &#34;non-employer&#34; firms as defined by the US Small Business Administration (SBA), meaning businesses with no employees other than the owner, and the guide may also be useful to businesses with very few employees or minimal IT infrastructure. The section on audience covers sole proprietors, freelancers, single-member limited liability companies (LLCs), independent contractors and gig economy workers, and counts the consultants that many small businesses rely on as another key audience.&lt;/p&gt;
+&lt;p&gt;According to the press release, the earlier guide, NISTIR 7621, was aimed at small businesses of varying sizes, while the revised CSWP 50 concentrates on protecting digital systems from malicious attack. The guide is based on version 2.0 of the NIST Cybersecurity Framework (CSF 2.0, the structure NIST uses to organise an organisation&#39;s cybersecurity work) and is much more detailed than the CSF quick-start guide for small businesses. In the middle section, as the press release describes it, are actions a one-person business can take, each with the reason for it, how to get started and options once the business grows. The last part has a worksheet for inventorying assets, a table for tracking completed actions, and three hypothetical cases (a lawyer, an artisan and a business consultant), which are in a separate appendix file.&lt;/p&gt;
+&lt;p&gt;The guide&#39;s introduction has a list of nine actions that can significantly reduce risk. The first is to turn on phishing-resistant multi-factor authentication (MFA, which asks for a second form of verification besides the password at login) on accounts that offer it, especially email, banking, password managers and critical cloud services. Following NIST&#39;s guidance, passwords should be at least 15 characters long, a password manager is worth considering, and where possible passkeys can be used instead (a passkey is a login credential unlocked with a fingerprint, face or PIN on the device, with no username and password to type).&lt;/p&gt;
+&lt;p&gt;The other actions are learning to recognise phishing and ransomware, using a standard user account for routine work, inventorying important assets and the services the business depends on, setting up and testing backups, and keeping all devices and apps updated. The last two are listing the internal and external contacts to notify when an incident happens and keeping a printed copy, and listing the laws, regulations and contractual requirements that relate to cybersecurity. The ransomware section advises securing and isolating backups of important data, and the backup item in Chapter 3 also suggests considering at least one copy on a medium that is not connected to the device, such as an external hard drive or the cloud.&lt;/p&gt;
+&lt;p&gt;The guide&#39;s advice is to avoid mixing personal and business assets where possible, keeping personal devices separate from business devices. Where a device has to be shared with family members, each person should have their own account, and family members&#39; accounts should not have access to sensitive business data. Another point in the guide is that home, cafés and co-working spaces each carry different physical threats, and that devices should have location tracking and remote wipe turned on.&lt;/p&gt;
+&lt;p&gt;For requests to change bank account details, amend an invoice, make an urgent payment or buy gift cards, the guide advises confirming through known or public contact details rather than replying to the message itself. The phishing section also mentions that AI products and services can now be used to craft more convincing phishing messages, and the guide calls them &#34;Super Intelligence&#34; (SI).&lt;/p&gt;
+&lt;p&gt;A footnote in the guide explains that SI follows a US executive order of 29 September, which directed executive agencies to change their usage from &#34;artificial intelligence&#34; to &#34;super intelligence&#34;. A separate section on AI tools recommends taking stock of the AI tools in use and the AI features built into other software. Before entering sensitive information, users should check the settings for data retention, use for training and access permissions, and AI-generated content should be reviewed before it is used.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;In the guide&#39;s explanation of MFA, turning it on for every account that offers it is one of the most important steps for protecting a business. The same explanation mentions that some forms of MFA are susceptible to phishing, and gives passkeys as the phishing-resistant example. In common phishing techniques, a one-time code from a text message or an authenticator app can be captured by a fake site and passed on. A passkey is bound to the site where it was registered, so a fake site has difficulty obtaining a usable credential.&lt;/p&gt;
+&lt;p&gt;The press release quotes one of the authors as saying that many of the actions can be carried out on one&#39;s own with limited technical knowledge or minimal financial investment. The guide mentions only in passing that a password manager is a relatively inexpensive approach, and it does not estimate the cost of each action. Instead of doing the work themselves, owners can also hand it to a consultant or an outside provider, and the guide cautions that outsourcing does not transfer the responsibility for protecting systems and data.&lt;/p&gt;
+&lt;p&gt;Readers who want a Chinese-language counterpart can turn to the guidelines on basic cybersecurity protection for small and medium-sized enterprises, or SMEs (中小企業基本資安防護指引) from Taiwan&#39;s Administration for Cyber Security, part of the Ministry of Digital Affairs, which carries a cover date of March 2026. The 11-page PDF covers three areas (account management, device and data management, and security awareness) and comes with a self-assessment checklist. It is written for SMEs, with nothing separate for one-person businesses. Comparing the two documents, we found that the checklist&#39;s items on passwords of at least 15 characters, changing default passwords on connected devices, backups, automatic updates and an asset inventory all overlap with NIST&#39;s recommendations.&lt;/p&gt;
+&lt;p&gt;We, a community based in Taiwan, also looked at guidance from public bodies in Japan, Singapore and Hong Kong (checked on 15 November), and like Taiwan&#39;s, each is aimed at SMEs in general rather than at one-person businesses. Japan&#39;s Information-technology Promotion Agency (IPA) published version 4.0 of its guidelines on information security measures for SMEs (中小企業の情報セキュリティ対策ガイドライン) on 27 March 2026, a 70-page main volume in Japanese, while the English edition linked from that page is version 3.1. The Cyber Security Agency of Singapore (CSA) offers toolkits for enterprise leaders and SME owners, aimed at businesses that may not have dedicated IT staff and listed on its page as English PDFs. In Hong Kong, the Hong Kong Computer Emergency Response Team Coordination Centre (HKCERT) released Seven Habits of Cyber Security for SMEs, which includes a self-assessment checklist, in September 2018, and an Incident Response Guideline for SMEs, also written for non-technical readers, in July 2022.&lt;/p&gt;
+&lt;p&gt;People with no employees who look after all their own accounts and devices can start by checking their situation against the nine actions in the introduction, one at a time. The guide is a free 33-page English PDF on the NIST website, with the inventory worksheets and the three cases in a separate .xlsx file. The press release also quotes one of the authors as saying that the guide will not address all the needs of every one-person business. According to Chapter 3, the actions in its tables are not intended as a checklist or compliance criteria, and privacy is mostly outside the guide&#39;s scope apart from a few basic steps.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you&#34;&gt;Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://csrc.nist.gov/pubs/cswp/50/small-business-cybersecurity-non-employer-firms/final&#34;&gt;CSWP 50, Small Business Cybersecurity: Non-Employer Firms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www-api.moda.gov.tw/File/Get/acs/zh-tw/1rpP5Mb1iyZwZUF&#34;&gt;中小企業基本資安防護指引&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Administration for Cyber Security, Ministry of Digital Affairs (Taiwan)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ipa.go.jp/security/keihatsu/sme/guideline/&#34;&gt;中小企業の情報セキュリティ対策ガイドライン&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Information-technology Promotion Agency, Japan (IPA)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.csa.gov.sg/our-programmes/support-for-enterprises/sg-cyber-safe-programme/cybersecurity-toolkits/enterprise-leaders-and-sme-owners&#34;&gt;Toolkits for enterprise leaders and SME owners&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyber Security Agency of Singapore&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hkcert.org/security-guideline/seven-habits-of-cyber-security-for-smes&#34;&gt;Seven Habits of Cyber Security for SMEs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;HKCERT&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2018-09-11&#34;&gt;11 September 2018&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.hkcert.org/security-guideline/incident-response-guideline-for-smes&#34;&gt;Incident Response Guideline for SMEs&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;HKCERT&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-07-29&#34;&gt;29 July 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Weekly brief, 2026 week 47</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/weekly-brief-2026-w47/</link>
@@ -2260,115 +2336,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/323AC0000000131&#34;&gt;刑事訴訟法（昭和二十三年法律第百三十一号）&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Preloaded backdoors and residential proxies on home Android TV boxes</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/android-tv-residential-proxy/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/android-tv-residential-proxy</guid>
-<pubDate>Fri, 13 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>People with an Android TV box at home may be affected. In early November Google announced the takedown of XCPE, a backdoor preloaded on more than 1.3 million set-top boxes, certified models included, that used them to relay other people&#39;s traffic. As of 8 November, Google had published no removal steps for devices already sold, and advice on replacing a box differs from Singapore police guidance.</description>
-<content:encoded>&lt;p&gt;Based on 11 sources, including Google Threat Intelligence Group, Google, Synthient&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;A home internet connection may be getting rented out to strangers through the Android TV box plugged into the television. In early November, Google Threat Intelligence Group (GTIG) reported that Google and industry partners had, the week before, dismantled the XCPE botnet (a large set of devices remotely controlled by one party), into which the XCPE backdoor had enrolled more than 1.3 million set-top boxes. The overwhelming majority of the infected devices are Android TV boxes, along with some telehealth devices, karaoke machines and digital signage, spread around the world. Readers with an Android TV box at home, especially one of unknown origin, can start by checking the model list and certification status, although neither can confirm an infection on its own.&lt;/p&gt;
-&lt;p&gt;A residential proxy sends a paying customer&#39;s traffic out through an ordinary household&#39;s connection, so the destination records that household&#39;s IP address as the source. According to GTIG&#39;s analysis, the modules XCPE loaded were most often tied to residential proxies and bandwidth sharing, with some ad fraud modules as well. As many as three proxy software development kits (SDKs) were installed on a single device. The devices&#39; owners neither knew nor agreed.&lt;/p&gt;
-&lt;p&gt;According to IT Brief&#39;s report on analysis by the security company TrendAI, malicious traffic passed through ordinary home and office IP addresses, so attackers appeared as local users when accessing online services. Because the traffic came from real household connections, it could get past the IP reputation and geolocation checks that banks and retailers use to verify users. As of 8 November, the official documents we found did not address whether a home IP had been blocked or investigated as a result, or whether its owner could face legal liability.&lt;/p&gt;
-&lt;p&gt;GTIG describes the backdoor as a package named &lt;code&gt;x.cpe&lt;/code&gt; (&lt;code&gt;com.oemservice&lt;/code&gt; in some builds), preloaded in firmware with system privileges. If a user uninstalls it, it reinstalls from the &lt;code&gt;/oem/&lt;/code&gt; partition on reboot. It wipes the device&#39;s user consent settings and disables app verification in Google Play Protect (Android&#39;s built-in defense against malicious apps), then silently downloads and runs other files. GTIG found the same backdoor in the firmware of many brands and models over multiple years.&lt;/p&gt;
-&lt;p&gt;GTIG also recorded the operators capturing live screenshots, injecting keystrokes, exfiltrating account and device information and opening remote shells, and the command list includes a function for probing the local network. According to the same report, most interactions with infected devices were about installing, removing and configuring modules.&lt;/p&gt;
-&lt;p&gt;GTIG assesses with high confidence that the Android device manufacturer Videostrong deliberately developed, deployed and operated the XCPE backdoor and botnet for profit, then sold access to criminal affiliates. Videostrong had not replied to inquiries from The Record or The Register when those outlets published. Ars Technica reported that the affected models include Google-certified ones. GTIG&#39;s explanation is that Videostrong used obfuscation to exploit a gap in Google&#39;s tests, loading the malicious code after the device&#39;s first boot.&lt;/p&gt;
-&lt;p&gt;The 1.3 million figure is GTIG&#39;s count for the XCPE backdoor itself. GTIG separately estimates that taking down the command-and-control (C2, the servers that issue remote instructions) domains of the affiliates&#39; modules will cut off access to at least 10 million more infected devices. The affiliates distribute their malware through channels beyond XCPE, so those 10 million are in addition to the 1.3 million. The Record reported that many of them are not Android devices.&lt;/p&gt;
-&lt;p&gt;Google&#39;s response included legal action to take down domains used by Videostrong and more than a dozen malware families, and a ban on Videostrong and its future subsidiaries and affiliates building or selling certified Android devices or supplying software to certified vendors. Google&#39;s report also says the company is improving firmware integrity checks on certified Android TV devices. As of 8 November, neither that report nor any other official statement we found offered removal steps for devices already sold, or said whether certification would be revoked for the affected models. According to The Record, Google also did not explain whether users would be notified or the malware forcibly removed.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;To check certification status, open the Google Play Store&#39;s profile menu, then go to Settings and About. We did not test this on a TV box, and the screens may differ from the help page. According to that page, non-certified devices may not be secure, and device certification is separate from Play Protect, which guards against harmful apps. A certified status does not rule out a problem either, since XCPE&#39;s affected models include certified ones and the malicious code loaded after first boot.&lt;/p&gt;
-&lt;p&gt;Synthient, one of GTIG&#39;s partners, published 182 model names observed in this case, with a note that a model name alone is not sufficient to confirm compromise. Ars Technica recommended that anyone who bought a MECOOL box, or a white-label Android TV box of unknown origin, check the list. GTIG&#39;s report lists no symptoms users can see, and IT Brief&#39;s report mentions that a box may appear to work normally. As of 8 November, we had found no method for an ordinary user to confirm whether their home IP is being rented out.&lt;/p&gt;
-&lt;p&gt;Researchers cited by ChannelNews (the report does not say which firm) recommend disconnecting a confirmed infected device and replacing it, because &lt;code&gt;x.cpe&lt;/code&gt; is embedded in system firmware and antivirus tools and factory resets may not permanently remove it. That means paying for a new box, and confirming an infection first is not easy. For anyone replacing a box, GTIG recommends buying from reputable manufacturers and points to the partner list on the Android TV website. The linked certified partners page is headed with phones and tablets, and as of 8 November we had not established whether TV boxes are fully listed there.&lt;/p&gt;
-&lt;p&gt;Singapore&#39;s police and Cyber Security Agency issued an advisory in November 2025, ahead of GTIG&#39;s disclosure, covering non-certified TV boxes. It advises disconnecting from the internet immediately, scanning for and uninstalling suspicious apps, and checking bank and other accounts. Anyone who finds malware or unauthorized transactions is told to file a report with Singapore police and not to factory-reset the device first, as that could hinder investigations.&lt;/p&gt;
-&lt;p&gt;The advisory also allows continued use or a full factory reset when no malware or unauthorized transactions turn up, but it was not written for XCPE. GTIG states that users cannot remove &lt;code&gt;x.cpe&lt;/code&gt;, and ChannelNews reports that antivirus tools and factory resets may not permanently clear it, so our inference is that a clean scan does not show that &lt;code&gt;x.cpe&lt;/code&gt; is absent.&lt;/p&gt;
-&lt;p&gt;According to The Record, the head of GTIG&#39;s disruption operations, asked about removing the malware, replied that taking down the domains severed the botnet&#39;s communications, &#34;effectively rendering the malware benign.&#34; Ars Technica&#39;s assessment is that the devices should be safe to use, but Play Protect remains disabled and the inactive modules are still installed in the system. According to GTIG&#39;s report, operators who are disrupted quickly move to new loaders or other monetization SDKs. Researchers cited by ChannelNews also warn that criminals could set up replacement systems, leaving infected devices open to further abuse.&lt;/p&gt;
-&lt;p&gt;A home IP can also be rented out through apps people install themselves. GTIG urges extra caution with apps that offer payment for &#34;unused bandwidth&#34; or &#34;sharing your internet,&#34; and its report lists them as primary ways for illicit proxy networks to grow. According to GTIG&#39;s analysis, proxy operators generally seek consent only when platform policy requires it, and as of 8 November the materials we found included no response from the proxy operators named in the report.&lt;/p&gt;
-&lt;p&gt;Among the official action on TV boxes we could find in Asia, Singapore&#39;s 2025 advisory tells people to use official streaming services or buy certified devices from reputable brands, which on our reading would not by itself have protected against XCPE, since its affected models include certified ones. The Hong Kong news outlet Sing Tao Headline reported in June 2025 that the Customs and Excise Department, in operations on 11 and 25 June against suspected illegal streaming devices, arrested two men on suspicion of breaching the Copyright Ordinance and seized 99 set-top boxes from more than 10 brands along with specific apps. According to that report, customs officers found trojans and spyware in some of the apps and warned that connecting such boxes to a home network would endanger personal privacy and could affect other connected devices. Those findings concern apps, while GTIG found XCPE preloaded in firmware.&lt;/p&gt;
-&lt;p&gt;Japan&#39;s National Police Agency is among the partners GTIG names in the XCPE operation, though we found no notice of the agency&#39;s own. As of 8 November we also found no XCPE notice from the computer emergency response teams TWCERT/CC in Taiwan or HKCERT in Hong Kong.&lt;/p&gt;
-&lt;p&gt;If a TV box&#39;s model is on the list, its origin is unknown or it shows as non-certified, the first step is to cut its network connection (both the replacement advice and the Singapore advice begin there), which takes a few minutes. Singapore&#39;s advisory tells anyone who believes an account may be compromised to change the password immediately and turn on multi-factor authentication, and we suggest doing that from a different device. GTIG recommends making sure Play Protect is active, which people keeping the device for now can check. According to Ars Technica the backdoor disables Play Protect, and the sources do not say whether it would be turned off again after being re-enabled manually.&lt;/p&gt;
-&lt;p&gt;Anyone still using the box for now can connect it to the router&#39;s guest network, apart from phones and computers, and confirm that the guest network isolates local devices. ChannelNews reported that attackers could investigate other devices on the same home network, and the guest network is our inference from that. Isolation appears in the sources only for businesses, with no assessment of home guest networks, and a guest network does not stop operators from capturing screens, exfiltrating account information or relaying traffic on the box. Disconnecting stops the relaying but cannot recover account information that may already have left, and replacing the box costs the price of a new one.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet/&#34;&gt;Shutting the Door on the XCPE Botnet&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google Threat Intelligence Group&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/android/answer/10248227&#34;&gt;Check &amp;amp; fix Play Protect certification status&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.android.com/certified/partners/&#34;&gt;Certified - Partners | Android&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/synthient/public-research/blob/main/2026/11/Videostrong/README.md&#34;&gt;The Internals of a Badbox Operation&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Synthient&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arstechnica.com/google/2026/11/google-dismantles-botnet-secretly-running-on-1-3-million-android-tv-boxes/&#34;&gt;Google dismantles botnet secretly running on 1.3 million Android TV boxes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Ars Technica&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.channelnews.com.au/google-takes-down-massive-android-botnet-infecting-1-3-million-devices/&#34;&gt;Google Takes Down Massive Android Botnet Infecting 1.3 Million Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ChannelNews&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/google-dismantles-botnet-hidden-android-tv-boxes&#34;&gt;Google dismantles massive botnet hidden in Android TV boxes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-03&#34;&gt;3 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theregister.com/a/5307045&#34;&gt;Cops bust botnet of 1.3M infected Android TV boxes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Register&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itbrief.com.au/story/trendai-helps-disrupt-x-cpe-botnet-in-1-3m-devices&#34;&gt;TrendAI helps disrupt X.CPE botnet in 1.3m devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IT Brief Australia&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;5 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.police.gov.sg/media-hub/news/2025/11/20251112_advisory_on_the_dangers_of_non_certified_streaming_devices&#34;&gt;Advisory On The Dangers Of Non-Certified Streaming Devices&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Police Force&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-12&#34;&gt;12 November 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.stheadline.com/breaking-news/3468064/&#34;&gt;北角深水埗兩店售侵權機頂盒 標榜永久免費收看 海關拘2人&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Sing Tao Headline&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-06-26&#34;&gt;26 June 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
