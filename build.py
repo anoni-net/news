@@ -1051,7 +1051,8 @@ SNAPSHOT_REQUIRED = {"date", "title", "description", "event", "sources", "author
 # 三個版本同一個年份必須相同的欄位，date 另外比 created
 SNAPSHOT_SHARED_KEYS = ("event", "authors", "regions", "draft")
 YEAR_HEADING_RE = re.compile(r"^##\s+(\d{4})\s+\{#y(\d{4})\}\s*$")
-# 一段內文只能轉出一個 <p>，不能有其他區塊
+# 每個年份底下一到兩段，只能轉出 <p>，不能有其他區塊
+MAX_SNAPSHOT_PARAGRAPHS = 2
 SNAPSHOT_BLOCK_RE = re.compile(r"<(?:p|h[1-6]|img|table|pre|ul|ol|blockquote|figure|hr)\b")
 
 
@@ -1265,8 +1266,9 @@ def load_history_day(path: Path, authors: dict[str, dict], lang: Lang, now: date
             problems.append(f"{at}：draft 只能寫 true 或 false")
             draft = False
         html_text = render_markdown(text)
-        if not text or len(SNAPSHOT_BLOCK_RE.findall(html_text)) != 1 or not html_text.startswith("<p>"):
-            problems.append(f"{at}：每個年份底下寫一段，不放其他小標題、圖片、表格、清單與程式碼區塊")
+        blocks = SNAPSHOT_BLOCK_RE.findall(html_text)
+        if not text or not 1 <= len(blocks) <= MAX_SNAPSHOT_PARAGRAPHS or any(block != "<p" for block in blocks):
+            problems.append(f"{at}：每個年份底下寫一到兩段，不放其他小標題、圖片、表格、清單與程式碼區塊")
         snapshot = Snapshot(
             day=day, year=year, title=str(item["title"]).strip(), description=str(item["description"]).strip(),
             created=created, updated=updated, event=event,

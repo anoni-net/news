@@ -301,6 +301,10 @@ from = "https://www.boca.gov.tw/Styles/Unit001/C0/images/favicon.png"
 icon = "boho.or.kr-35ff434f.png"
 from = "https://www.boho.or.kr/images/homepage/www/kr/favicon.ico"
 
+[hosts."bpb.de"]
+icon = "bpb.de-f61d68af.png"
+from = "https://www.bpb.de/themes/custom/bpbtheme/favicon.ico"
+
 [hosts."brandefense.io"]
 icon = "brandefense.io-16345e4e.png"
 from = "https://brandefense.io/wp-content/themes/brandefense/customer-files/favicon/apple-touch-icon.png"
@@ -343,6 +347,10 @@ same_as = "blog.mozilla.org"
 [hosts."bugzilla.redhat.com"]
 icon = "bugzilla.redhat.com-2ed93a2c.png"
 from = "https://bugzilla.redhat.com//extensions/RedHat/web/css/favicons/production.ico?v=0"
+
+[hosts."bundesverfassungsgericht.de"]
+icon = "bundesverfassungsgericht.de-52982483.png"
+from = "https://www.bundesverfassungsgericht.de/SiteGlobals/Frontend/Images/favicon-180x180.png?__blob=normal&v=1"
 
 [hosts."business-humanrights.org"]
 none = "官網的圖示只有 SVG，抓不到點陣圖"
@@ -1800,6 +1808,10 @@ from = "https://www.mehrnews.com/resources/theme/mehrnews/img/favicon.ico"
 icon = "meity.gov.in-533aec3e.png"
 from = "https://www.meity.gov.in/favicon.ico"
 
+[hosts."memory.nhrm.gov.tw"]
+icon = "memory.nhrm.gov.tw-cb370607.png"
+from = "https://memory.nhrm.gov.tw/images/ico.ico"
+
 [hosts."meta.com"]
 icon = "meta.com-1115e2bb.png"
 from = "https://web.archive.org/web/20260927id_/https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp"
@@ -2821,6 +2833,10 @@ from = "https://www.torproject.org/static/images/favicon/favicon.ico"
 [hosts."torrentfreak.com"]
 icon = "torrentfreak.com-18555ce1.png"
 from = "https://torrentfreak.com/apple-touch-icon.png"
+
+[hosts."tps.moj.gov.tw"]
+icon = "tps.moj.gov.tw-70cdc219.png"
+from = "https://www.tps.moj.gov.tw/media/170169/favicon-1.png"
 
 [hosts."translations.telegram.org"]
 same_as = "telegram.org"
