@@ -72,12 +72,17 @@ def test_years_are_appended_in_order(tmp_path):
 @pytest.mark.parametrize("body, expected", [
     ("## 二〇二六 {#y2026}\n\n一段。\n", "小標題只能寫年份"),
     ("前言\n\n## 2026 {#y2026}\n\n一段。\n", "第一個年份小標題之前不能有內文"),
-    ("## 2026 {#y2026}\n\n第一段。\n\n第二段。\n", "每個年份底下寫一段"),
-    ("## 2026 {#y2026}\n\n- 清單\n", "每個年份底下寫一段"),
+    ("## 2026 {#y2026}\n\n第一段。\n\n第二段。\n\n第三段。\n", "每個年份底下寫一到兩段"),
+    ("## 2026 {#y2026}\n\n- 清單\n", "每個年份底下寫一到兩段"),
     ("## 2025 {#y2025}\n\n一段。\n", "跟小標題的 2025 不同"),
 ])
 def test_body_rules(tmp_path, body, expected):
     assert any(expected in p for p in problems_of(tmp_path, snapshot_yaml(), body))
+
+
+def test_two_paragraphs_are_allowed(tmp_path):
+    body = "## 2026 {#y2026}\n\n那一天的一段。\n\n從那時到現在的一段。\n"
+    assert not any("每個年份底下" in p for p in problems_of(tmp_path, snapshot_yaml(), body))
 
 
 def test_heading_count_matches_snapshots(tmp_path):
