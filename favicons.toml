@@ -56,6 +56,10 @@ from = "https://ai-act-service-desk.ec.europa.eu/themes/contrib/oe_theme/images/
 icon = "aisi.gov.uk-d819a7e1.png"
 from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf52818a86a4f9f86_AISI%20icon%20256.png"
 
+[hosts."al-monitor.com"]
+icon = "al-monitor.com-91664532.png"
+from = "https://www.al-monitor.com/themes/custom/alm/icons/apple-touch-icon-192x192.png"
+
 [hosts."aljazeera.com"]
 icon = "aljazeera.com-ea349389.png"
 from = "https://www.aljazeera.com/favicon_aje.ico"
@@ -1605,6 +1609,10 @@ from = "https://krebsonsecurity.com/favicon.ico"
 [hosts."ksl.com"]
 icon = "ksl.com-620fb1b6.png"
 from = "https://img.ksl.com/slc/2951/295162/29516202.png"
+
+[hosts."kurdistan24.net"]
+icon = "kurdistan24.net-82abd793.png"
+from = "https://d2wqffb2bc8st5.cloudfront.net/website/apple-touch-icon.png"
 
 [hosts."landing.google.com"]
 icon = "landing.google.com-53ae8c75.png"
