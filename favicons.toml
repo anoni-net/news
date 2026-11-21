@@ -1105,6 +1105,10 @@ same_as = "cs.umd.edu"
 icon = "getsession.org-bcdaa238.png"
 from = "https://getsession.org/apple-touch-icon.png"
 
+[hosts."gfw.report"]
+icon = "gfw.report-e13a9c02.png"
+from = "https://gfw.report/apple-touch-icon.png"
+
 [hosts."gigazine.net"]
 icon = "gigazine.net-ed9908b3.png"
 from = "https://gigazine.net/apple-touch-icon.png"
