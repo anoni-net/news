@@ -18,6 +18,8 @@ guides/ 規定的段落句數要靠逐句讀，2026-10 一篇導讀的第一輪�
 - 交代資料缺口的句子（查不到、沒有寫、查閱時……）超過 2 句，查證過程寫在 map.md 與 PR 內文
 - 連續 3 段以上用「依」或「根據」開頭，段落跟著文件排
 - zh-TW 的導讀超過 1,500 字（只數漢字），照「主線與取捨」檢查每段接不接得回主線，短訊不算
+- 連同括號超過 80 個漢字的句子。括號裡的逗號不算分句，出處與查證日期塞進括號時，上面的長句檢查抓不到
+- 寫出處或轉述的括號，例如「（依……保存的說明頁）」，出處改寫在句子裡，頁面與日期放在 sources
 
 列出的是要人判斷的位置，照錄的原文標題這類不該改的可以留著。有列出項目時結束代碼為 1，
 參數錯誤、找不到檔案或 front matter 無法解析時為 2。
@@ -52,6 +54,9 @@ SELF_LABEL = re.compile(r"（本文[^（）]{0,8}）")
 GAP = re.compile(r"查不到|找不到|沒有查到|沒有核對|查閱時|無法確認|沒有寫|沒有提到|沒有說明|沒有列出|沒有交代")
 SOURCE_LEAD = re.compile(r"^(?:依|根據)")
 HAN = re.compile(r"[\u4e00-\u9fff]")
+MAX_SENTENCE_HAN = 80
+PAREN = re.compile(r"（[^（）]*）")
+SOURCE_IN_PAREN = re.compile(r"依|根據|引述|轉述|報導|保存的|收錄")
 
 
 def site_parts(path: Path) -> tuple[str, ...]:
@@ -187,6 +192,16 @@ def transcription(path: Path, blocks: list[tuple[int, str]]) -> list[str]:
         if len(run) > MAX_SOURCE_LEADS:
             found.append(f"{path}:{run[0]}：連續 {len(run)} 段用「依」或「根據」開頭，段落改依讀者的疑問排")
         run = []
+    for line, text in blocks:
+        _, pieces = mask(text)
+        for sentence in split_sentences(text, english=False):
+            shown = unmask(sentence, pieces)
+            han = len(HAN.findall(shown))
+            if han > MAX_SENTENCE_HAN:
+                found.append(f"{path}:{line}：一句 {han} 字，超過 {MAX_SENTENCE_HAN} 字（括號也算）：{shown[:30]}…")
+        for paren in PAREN.findall(text):
+            if SOURCE_IN_PAREN.search(paren) and len(HAN.findall(paren)) > 6:
+                found.append(f"{path}:{line}：出處寫在括號裡 {paren[:30]}，改寫在句子裡，頁面與日期放在 sources")
     site = site_parts(path)
     if site[0] == "posts" and len(site) == 2 and not is_brief(path):
         han = sum(len(HAN.findall(text)) for _, text in blocks)

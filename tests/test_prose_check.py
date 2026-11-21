@@ -117,3 +117,12 @@ def test_length_only_for_zh_tw_posts(tmp_path):
     assert any("超過 1,500 字" in item for item in body_items(write(tmp_path, "posts/a.md", body)))
     for rel in ("posts/zh-CN/a.md", "posts/2026-11-21-weekly-brief-2026-w47.md", "history/10-05.md"):
         assert not any("超過 1,500 字" in item for item in body_items(write(tmp_path, rel, body)))
+
+
+def test_long_sentence_counts_parentheses_and_source_parens(tmp_path):
+    long = "甲" * 50 + "（" + "乙" * 40 + "）。"
+    path = write(tmp_path, "history/11-20.md", long + "\n\n丙寫到丁（依某網站保存的說明頁）。\n")
+    found = body_items(path)
+    assert any("一句 90 字，超過 80 字" in item for item in found)
+    assert any("出處寫在括號裡 （依某網站保存的說明頁）" in item for item in found)
+    assert not any("出處寫在括號裡" in item for item in body_items(write(tmp_path, "posts/b.md", "甲（2026 年 11 月 8 日查閱）。\n")))
