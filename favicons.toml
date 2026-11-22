@@ -379,6 +379,10 @@ from = "手動提供的檔案 cabforum.png"
 icon = "cac.gov.cn-ce2d7d32.png"
 from = "https://www.cac.gov.cn/favicon.ico"
 
+[hosts."california.public.law"]
+icon = "california.public.law-ef93eed2.png"
+from = "https://california.public.law/assets/jurisdiction/256x256/california-d6768fb6.png"
+
 [hosts."calmatters.digitaldemocracy.org"]
 icon = "calmatters.digitaldemocracy.org-33e29a9c.png"
 from = "https://calmatters.digitaldemocracy.org/apple-touch-icon-ca-calmatters.png"
@@ -707,6 +711,10 @@ from = "https://www.dawo.community/favicon.svg（轉成 PNG）"
 [hosts."dbs.com.hk"]
 icon = "dbs.com.hk-aea0e8a1.png"
 from = "https://www.dbs.com.hk/_next/public/favicon.ico?q=c2ceb8e2-6809-43d4-8233-a64c629a4993"
+
+[hosts."deadline.com"]
+icon = "deadline.com-09dabe13.png"
+from = "https://deadline.com/wp-content/uploads/2019/04/cropped-icon-512x512.png?w=192"
 
 [hosts."deccanherald.com"]
 icon = "deccanherald.com-84da2aa0.png"
