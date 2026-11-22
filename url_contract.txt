@@ -340,6 +340,9 @@
 /2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -798,6 +801,9 @@
 /en/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/en/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /en/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -1034,6 +1040,8 @@
 	#y2026
 /en/history/11-22/
 	#y2026
+/en/history/11-23/
+	#y2026
 /en/history/11-29/
 	#y2026
 /en/history/12-15/
@@ -1167,6 +1175,8 @@
 /history/11-21/
 	#y2026
 /history/11-22/
+	#y2026
+/history/11-23/
 	#y2026
 /history/11-29/
 	#y2026
@@ -1523,6 +1533,9 @@
 /zh-cn/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/zh-cn/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -1758,6 +1771,8 @@
 /zh-cn/history/11-21/
 	#y2026
 /zh-cn/history/11-22/
+	#y2026
+/zh-cn/history/11-23/
 	#y2026
 /zh-cn/history/11-29/
 	#y2026
