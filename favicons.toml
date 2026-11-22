@@ -864,6 +864,10 @@ from = "https://doit.gov.taipei/images/favicon.ico"
 icon = "doj.gov.hk-54bc34f1.png"
 from = "https://www.doj.gov.hk/favicon.ico"
 
+[hosts."dotdotnews.com"]
+icon = "dotdotnews.com-e59d50c1.png"
+from = "https://www.dotdotnews.com/favicon.ico"
+
 [hosts."doublepulsar.com"]
 none = "網站擋下自動抓取，抓不到圖示"
 
@@ -3054,6 +3058,9 @@ icon = "xtech.nikkei.com-89316336.png"
 from = "https://xtech.nikkei.com/apple-touch-icon.png"
 
 [hosts."xusheng.dev"]
+none = "網站沒有提供圖示"
+
+[hosts."yzwb.net"]
 none = "網站沒有提供圖示"
 
 [hosts."z.ai"]
