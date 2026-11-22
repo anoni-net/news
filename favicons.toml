@@ -56,6 +56,10 @@ from = "https://ai-act-service-desk.ec.europa.eu/themes/contrib/oe_theme/images/
 icon = "aisi.gov.uk-d819a7e1.png"
 from = "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6851b4acf52818a86a4f9f86_AISI%20icon%20256.png"
 
+[hosts."al-monitor.com"]
+icon = "al-monitor.com-91664532.png"
+from = "https://www.al-monitor.com/themes/custom/alm/icons/apple-touch-icon-192x192.png"
+
 [hosts."aljazeera.com"]
 icon = "aljazeera.com-ea349389.png"
 from = "https://www.aljazeera.com/favicon_aje.ico"
@@ -112,6 +116,9 @@ from = "https://www.apc.org/themes/custom/apc_barrio/apple-touch-icon.png"
 
 [hosts."api.ooni.org"]
 same_as = "ooni.org"
+
+[hosts."api.parliament.uk"]
+same_as = "parliament.uk"
 
 [hosts."apple.com"]
 icon = "apple.com-573bbc30.png"
@@ -238,6 +245,10 @@ from = "https://bitwarden.com/icons/icon-512x512.png"
 [hosts."bjnews.com.cn"]
 icon = "bjnews.com.cn-12b0be0a.png"
 from = "https://www.bjnews.com.cn/favicon.ico"
+
+[hosts."bk.mufg.jp"]
+icon = "bk.mufg.jp-2a8668ad.png"
+from = "https://www.bk.mufg.jp/shared2019/cmn/apple-touch-icon.png"
 
 [hosts."bkl.co.kr"]
 icon = "bkl.co.kr-9b3cf47d.png"
@@ -374,6 +385,10 @@ from = "手動提供的檔案 cabforum.png"
 [hosts."cac.gov.cn"]
 icon = "cac.gov.cn-ce2d7d32.png"
 from = "https://www.cac.gov.cn/favicon.ico"
+
+[hosts."california.public.law"]
+icon = "california.public.law-ef93eed2.png"
+from = "https://california.public.law/assets/jurisdiction/256x256/california-d6768fb6.png"
 
 [hosts."calmatters.digitaldemocracy.org"]
 icon = "calmatters.digitaldemocracy.org-33e29a9c.png"
@@ -543,6 +558,10 @@ from = "https://community.torproject.org/static/images/favicon.ico?h=2192192d"
 icon = "comparitech.com-dc5ebd8e.png"
 from = "https://cdn.comparitech.com/wp-content/uploads/2018/12/cropped-favicon-1-192x192.jpg"
 
+[hosts."computerworld.com"]
+icon = "computerworld.com-a7097a26.png"
+from = "https://www.computerworld.com/wp-content/uploads/2026/11/favicon-512x512-1.png"
+
 [hosts."congress.gov"]
 icon = "congress.gov-1737b801.png"
 from = "https://www.congress.gov/apple-touch-icon.png"
@@ -588,6 +607,10 @@ from = "https://web.archive.org/web/20260927id_/https://court.gov.cn/favicon.ico
 [hosts."courtlistener.com"]
 icon = "courtlistener.com-9d872fbc.png"
 from = "https://storage.courtlistener.com/static/png/apple-touch-icon.bd1491b64e6d.png"
+
+[hosts."courts.go.jp"]
+icon = "courts.go.jp-9d6e1cc5.png"
+from = "https://web.archive.org/web/20261122id_/https://www.courts.go.jp/assets/images/common/favicon.ico"
 
 [hosts."coveryourtracks.eff.org"]
 icon = "coveryourtracks.eff.org-18aa39f8.png"
@@ -704,6 +727,10 @@ from = "https://www.dawo.community/favicon.svg（轉成 PNG）"
 icon = "dbs.com.hk-aea0e8a1.png"
 from = "https://www.dbs.com.hk/_next/public/favicon.ico?q=c2ceb8e2-6809-43d4-8233-a64c629a4993"
 
+[hosts."deadline.com"]
+icon = "deadline.com-09dabe13.png"
+from = "https://deadline.com/wp-content/uploads/2019/04/cropped-icon-512x512.png?w=192"
+
 [hosts."deccanherald.com"]
 icon = "deccanherald.com-84da2aa0.png"
 from = "https://www.deccanherald.com/apple-touch-icon.png"
@@ -756,6 +783,10 @@ from = "https://developers.cloudflare.com/favicon.png"
 icon = "developers.google.com-ce307183.png"
 from = "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/touchicon-180-new.png"
 
+[hosts."developers.karte.io"]
+icon = "developers.karte.io-d71fa3f4.png"
+from = "https://developers.karte.io/favicon.ico?v=e1705d17df4a"
+
 [hosts."developers.openai.com"]
 same_as = "help.openai.com"
 
@@ -766,6 +797,10 @@ from = "https://www.dexerto.com/favicon/dexerto/apple-touch-icon.png"
 [hosts."dfrlab.org"]
 icon = "dfrlab.org-e33cb1a2.png"
 from = "https://dfrlab.org/wp-content/uploads/sites/3/2020/06/cropped-DFRLab-Thumbnail-Circle-border-300x300.png"
+
+[hosts."dhc-corporate.co.jp"]
+icon = "dhc-corporate.co.jp-dddd8217.png"
+from = "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/06/apple-touch-icon-300x300.png"
 
 [hosts."digiato.com"]
 icon = "digiato.com-9cf998c5.png"
@@ -848,6 +883,10 @@ from = "https://doit.gov.taipei/images/favicon.ico"
 icon = "doj.gov.hk-54bc34f1.png"
 from = "https://www.doj.gov.hk/favicon.ico"
 
+[hosts."dotdotnews.com"]
+icon = "dotdotnews.com-e59d50c1.png"
+from = "https://www.dotdotnews.com/favicon.ico"
+
 [hosts."doublepulsar.com"]
 none = "網站擋下自動抓取，抓不到圖示"
 
@@ -857,6 +896,9 @@ same_as = "gov.mo"
 [hosts."duckduckgo.com"]
 icon = "duckduckgo.com-c77e5388.png"
 from = "https://duckduckgo.com/static-assets/favicons/DDG-iOS-icon_60x60.png"
+
+[hosts."easylist.to"]
+none = "網站沒有提供圖示"
 
 [hosts."ec.europa.eu"]
 icon = "ec.europa.eu-8c67fe09.png"
@@ -915,6 +957,14 @@ from = "https://en.greatfire.org/apple-touch-icon.png"
 icon = "en.wikipedia.org-6d780b78.png"
 from = "https://en.wikipedia.org/static/apple-touch/wikipedia.png"
 
+[hosts."en.wikisource.org"]
+icon = "en.wikisource.org-921e55d0.png"
+from = "https://en.wikisource.org/static/favicon/wikisource.ico"
+
+[hosts."encykorea.aks.ac.kr"]
+icon = "encykorea.aks.ac.kr-95192cd6.png"
+from = "https://encykorea.aks.ac.kr/images/favicon180_251109.png"
+
 [hosts."engadget.com"]
 icon = "engadget.com-698acb61.png"
 from = "https://www.engadget.com/img/engadget-favicon.png"
@@ -956,6 +1006,9 @@ from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR
 [hosts."facebook.com"]
 icon = "facebook.com-de7506c8.png"
 from = "https://web.archive.org/web/20261020id_/https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico"
+
+[hosts."faroutliers.com"]
+none = "網站沒有提供圖示"
 
 [hosts."fas.org"]
 icon = "fas.org-3f60befe.png"
@@ -1199,6 +1252,10 @@ from = "https://www.gov.mo/zh-hant/wp-content/static/favicon/android-icon-192x19
 icon = "gov.sg-ea01f39a.png"
 from = "https://isomer-user-content.by.gov.sg/34/fe559f70-7f30-4dbc-9735-4138562c6d50/favicon.ico"
 
+[hosts."gov.taipei"]
+icon = "gov.taipei-4070e3ff.png"
+from = "https://web.archive.org/web/20261122id_/https://gov.taipei/images/favicon.ico"
+
 [hosts."gov.uk"]
 icon = "gov.uk-e6aebb21.png"
 from = "https://www.gov.uk/assets/frontend/govuk-icon-180-d45a306f0549414cfa5085f16e4a3816a77558b139e5bc226f23162d1d0decb0.png"
@@ -1283,6 +1340,10 @@ from = "https://help.yahoo.com/favicon.ico"
 [hosts."helpnetsecurity.com"]
 icon = "helpnetsecurity.com-eb4f8b13.png"
 from = "https://img.helpnetsecurity.com/wp-content/uploads/2019/09/09093400/cropped-hns2-192x192.png"
+
+[hosts."heraldk.com"]
+icon = "heraldk.com-8515f0d1.png"
+from = "https://www.heraldk.com/assets/images/common/favicon.ico"
 
 [hosts."hirundo.io"]
 icon = "hirundo.io-c5bb7e30.png"
@@ -1534,9 +1595,17 @@ from = "https://jprs.jp/resources/ja/icon/favicon_jp.ico"
 icon = "jrf.org.tw-8ba160c8.png"
 from = "https://www.jrf.org.tw/images/apple-icon-144x144.png"
 
+[hosts."judicial.gov.tw"]
+icon = "judicial.gov.tw-7110e9c1.png"
+from = "https://www.judicial.gov.tw/Styles/Unit001/images/favicon.ico"
+
 [hosts."judiciary.house.gov"]
 icon = "judiciary.house.gov-c08fed39.png"
 from = "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/favicon.png"
+
+[hosts."judiciary.uk"]
+icon = "judiciary.uk-1ac18bfd.png"
+from = "https://www.judiciary.uk/wp-content/themes/judiciary-website-theme/static/img/apple-touch-icon.png"
 
 [hosts."justice.gov"]
 icon = "justice.gov-5506ec60.png"
@@ -1610,6 +1679,10 @@ from = "https://krebsonsecurity.com/favicon.ico"
 icon = "ksl.com-620fb1b6.png"
 from = "https://img.ksl.com/slc/2951/295162/29516202.png"
 
+[hosts."kurdistan24.net"]
+icon = "kurdistan24.net-82abd793.png"
+from = "https://d2wqffb2bc8st5.cloudfront.net/website/apple-touch-icon.png"
+
 [hosts."landing.google.com"]
 icon = "landing.google.com-53ae8c75.png"
 from = "https://landing.google.com/favicon.ico"
@@ -1641,6 +1714,9 @@ from = "https://www.lawfaremedia.org/assets/icons/apple-touch-icon.png"
 [hosts."laws.e-gov.go.jp"]
 icon = "laws.e-gov.go.jp-1d3e542a.png"
 from = "https://laws.e-gov.go.jp/favicon.ico"
+
+[hosts."laws.gov.taipei"]
+same_as = "gov.taipei"
 
 [hosts."lawson.co.jp"]
 icon = "lawson.co.jp-510e993a.png"
@@ -1780,6 +1856,10 @@ from = "https://maritime-executive.com/img/apple-touch-icon.png"
 icon = "marketing-interactive.com-f72720fd.png"
 from = "https://www.marketing-interactive.com/apple-touch-icon.png"
 
+[hosts."marxists.org"]
+icon = "marxists.org-57e38318.png"
+from = "https://www.marxists.org/favicon.ico"
+
 [hosts."mas.gov.sg"]
 icon = "mas.gov.sg-760a368b.png"
 from = "https://www.mas.gov.sg/html/site/_favicon/apple-touch-icon.png"
@@ -1871,6 +1951,9 @@ from = "https://ws.moi.gov.tw/001/Upload/400/sites/pagebackimage/ef9b9560-7f3e-4
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
+
+[hosts."mojlaw.moj.gov.tw"]
+same_as = "law.moj.gov.tw"
 
 [hosts."mondaq.com"]
 icon = "mondaq.com-c16c2f25.png"
@@ -2115,6 +2198,10 @@ from = "https://www.onvista.de/favicon_192x192.png"
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
 
+[hosts."open-web-advocacy.org"]
+icon = "open-web-advocacy.org-68dea5ef.png"
+from = "https://open-web-advocacy.org/images/logo-192.png"
+
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
@@ -2167,6 +2254,10 @@ from = "https://pardok.parlament-berlin.de/favicon.ico"
 [hosts."parl.ca"]
 icon = "parl.ca-cc71bd4e.png"
 from = "https://www.parl.ca/favicon.ico"
+
+[hosts."parliament.uk"]
+icon = "parliament.uk-72945912.png"
+from = "https://web.archive.org/web/20261122id_/https://parliament.uk/img/favicon.ico"
 
 [hosts."pasal.id"]
 icon = "pasal.id-f365b25f.png"
@@ -2230,6 +2321,10 @@ from = "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/main/assets/
 [hosts."piyolog.hatenadiary.jp"]
 icon = "piyolog.hatenadiary.jp-8b3395eb.png"
 from = "https://piyolog.hatenadiary.jp/icon/link"
+
+[hosts."plaid.co.jp"]
+icon = "plaid.co.jp-414448a9.png"
+from = "https://plaid.co.jp/assets/icons/touch-icon_192x192.png"
 
 [hosts."pm.gov.au"]
 icon = "pm.gov.au-6ab35cff.png"
@@ -2597,6 +2692,10 @@ from = "https://sslmate.com/assets/@9e36fda1926f2047cead1adb754d0fe2.png"
 icon = "sso.agc.gov.sg-7300262d.png"
 from = "https://sso.agc.gov.sg/CMS/Content/icons/apple-icon-180x180.png"
 
+[hosts."stats.gov.cn"]
+icon = "stats.gov.cn-0cc61294.png"
+from = "https://www.stats.gov.cn/favicon.ico"
+
 [hosts."steamshipmutual.com"]
 icon = "steamshipmutual.com-736e3127.png"
 from = "https://www.steamshipmutual.com/sites/default/files/simsl-fav_8.png"
@@ -2955,6 +3054,10 @@ from = "https://weblate.cryptpad.org/favicon.ico"
 icon = "wechat.com-0bcdde9f.png"
 from = "https://newres.wechat.com/t/fed_upload/08b92997-2415-408f-b706-442ed4ede518/OTE0YTAw.png"
 
+[hosts."weekly.khan.co.kr"]
+icon = "weekly.khan.co.kr-cc9a8a81.png"
+from = "https://img.khan.co.kr/spko/icon/apple-touch-icon-precomposed-web.png"
+
 [hosts."weixin.qq.com"]
 icon = "weixin.qq.com-3e88c836.png"
 from = "https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico"
@@ -3013,6 +3116,12 @@ from = "https://www.xinhuanet.com/favicon.ico"
 [hosts."xtech.nikkei.com"]
 icon = "xtech.nikkei.com-89316336.png"
 from = "https://xtech.nikkei.com/apple-touch-icon.png"
+
+[hosts."xusheng.dev"]
+none = "網站沒有提供圖示"
+
+[hosts."yzwb.net"]
+none = "網站沒有提供圖示"
 
 [hosts."z.ai"]
 icon = "z.ai-e7bc4841.png"
