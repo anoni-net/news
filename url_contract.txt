@@ -274,6 +274,9 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -287,6 +290,9 @@
 	#perspective
 	#sources
 /2026/11/character-ai-chats-sale/
+	#perspective
+	#sources
+/2026/11/circumvolve/
 	#perspective
 	#sources
 /2026/11/cisa-scuba-config-tools/
@@ -313,6 +319,9 @@
 /2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
+/2026/11/hk-laguna-city-facial-recognition/
+	#perspective
+	#sources
 /2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -328,6 +337,9 @@
 /2026/11/ios-android-exploits-lockdown/
 	#perspective
 	#sources
+/2026/11/ios-browser-engines/
+	#perspective
+	#sources
 /2026/11/ios-full-tor-browser/
 	#perspective
 	#sources
@@ -337,6 +349,8 @@
 /2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/2026/11/iraq-jordan-telegram-block/
+/2026/11/karte-breach/
 /2026/11/korea-health-data-bill/
 	#perspective
 	#sources
@@ -402,6 +416,9 @@
 /2026/11/tv-acr/
 	#perspective
 	#sources
+/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -424,6 +441,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -732,6 +752,9 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /en/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -745,6 +768,9 @@
 	#perspective
 	#sources
 /en/2026/11/character-ai-chats-sale/
+	#perspective
+	#sources
+/en/2026/11/circumvolve/
 	#perspective
 	#sources
 /en/2026/11/cisa-scuba-config-tools/
@@ -771,6 +797,9 @@
 /en/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
+/en/2026/11/hk-laguna-city-facial-recognition/
+	#perspective
+	#sources
 /en/2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -786,6 +815,9 @@
 /en/2026/11/ios-android-exploits-lockdown/
 	#perspective
 	#sources
+/en/2026/11/ios-browser-engines/
+	#perspective
+	#sources
 /en/2026/11/ios-full-tor-browser/
 	#perspective
 	#sources
@@ -795,6 +827,8 @@
 /en/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/en/2026/11/iraq-jordan-telegram-block/
+/en/2026/11/karte-breach/
 /en/2026/11/korea-health-data-bill/
 	#perspective
 	#sources
@@ -860,6 +894,9 @@
 /en/2026/11/tv-acr/
 	#perspective
 	#sources
+/en/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /en/2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -882,6 +919,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/en/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /en/2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -1034,6 +1074,12 @@
 	#y2026
 /en/history/11-22/
 	#y2026
+/en/history/11-23/
+/en/history/11-24/
+/en/history/11-25/
+/en/history/11-26/
+/en/history/11-27/
+	#y2026
 /en/history/11-29/
 	#y2026
 /en/history/12-15/
@@ -1167,6 +1213,12 @@
 /history/11-21/
 	#y2026
 /history/11-22/
+	#y2026
+/history/11-23/
+/history/11-24/
+/history/11-25/
+/history/11-26/
+/history/11-27/
 	#y2026
 /history/11-29/
 	#y2026
@@ -1457,6 +1509,9 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /zh-cn/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -1470,6 +1525,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/character-ai-chats-sale/
+	#perspective
+	#sources
+/zh-cn/2026/11/circumvolve/
 	#perspective
 	#sources
 /zh-cn/2026/11/cisa-scuba-config-tools/
@@ -1496,6 +1554,9 @@
 /zh-cn/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
+/zh-cn/2026/11/hk-laguna-city-facial-recognition/
+	#perspective
+	#sources
 /zh-cn/2026/11/hk-mall-facial-recognition/
 	#perspective
 	#sources
@@ -1511,6 +1572,9 @@
 /zh-cn/2026/11/ios-android-exploits-lockdown/
 	#perspective
 	#sources
+/zh-cn/2026/11/ios-browser-engines/
+	#perspective
+	#sources
 /zh-cn/2026/11/ios-full-tor-browser/
 	#perspective
 	#sources
@@ -1520,6 +1584,8 @@
 /zh-cn/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/zh-cn/2026/11/iraq-jordan-telegram-block/
+/zh-cn/2026/11/karte-breach/
 /zh-cn/2026/11/korea-health-data-bill/
 	#perspective
 	#sources
@@ -1585,6 +1651,9 @@
 /zh-cn/2026/11/tv-acr/
 	#perspective
 	#sources
+/zh-cn/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /zh-cn/2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -1607,6 +1676,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/zh-cn/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /zh-cn/2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -1758,6 +1830,12 @@
 /zh-cn/history/11-21/
 	#y2026
 /zh-cn/history/11-22/
+	#y2026
+/zh-cn/history/11-23/
+/zh-cn/history/11-24/
+/zh-cn/history/11-25/
+/zh-cn/history/11-26/
+/zh-cn/history/11-27/
 	#y2026
 /zh-cn/history/11-29/
 	#y2026
