@@ -1538,6 +1538,10 @@ from = "https://www.jrf.org.tw/images/apple-icon-144x144.png"
 icon = "judiciary.house.gov-c08fed39.png"
 from = "https://judiciary.house.gov/sites/evo-subsites/republicans-judiciary.house.gov/files/favicon.png"
 
+[hosts."judiciary.uk"]
+icon = "judiciary.uk-1ac18bfd.png"
+from = "https://www.judiciary.uk/wp-content/themes/judiciary-website-theme/static/img/apple-touch-icon.png"
+
 [hosts."justice.gov"]
 icon = "justice.gov-5506ec60.png"
 from = "https://www.justice.gov/themes/custom/usdoj_uswds/images/touch-icons/apple-touch-icon-precomposed-114x114.png"
