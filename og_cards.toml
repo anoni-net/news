@@ -127,7 +127,13 @@
 "2026-11-21-weekly-brief-2026-w47" = { "en" = "og/2026/11/weekly-brief-2026-w47-en-bf1ea21d.png", "zh-CN" = "og/2026/11/weekly-brief-2026-w47-zh-cn-0d4e74aa.png", "zh-TW" = "og/2026/11/weekly-brief-2026-w47-zh-tw-7500cb2e.png" }
 "2026-11-22-mada-masr-egypt" = { "en" = "og/2026/11/mada-masr-egypt-en-efbc273f.png", "zh-CN" = "og/2026/11/mada-masr-egypt-zh-cn-ada2c034.png", "zh-TW" = "og/2026/11/mada-masr-egypt-zh-tw-f5fc95b8.png" }
 "2026-11-22-nist-solopreneur-guide" = { "en" = "og/2026/11/nist-solopreneur-guide-en-9ac53937.png", "zh-CN" = "og/2026/11/nist-solopreneur-guide-zh-cn-dd155bc2.png", "zh-TW" = "og/2026/11/nist-solopreneur-guide-zh-tw-6ac22843.png" }
+"2026-11-23-iraq-jordan-telegram-block" = { "en" = "og/2026/11/iraq-jordan-telegram-block-en-45cef13f.png", "zh-CN" = "og/2026/11/iraq-jordan-telegram-block-zh-cn-1d6353ca.png", "zh-TW" = "og/2026/11/iraq-jordan-telegram-block-zh-tw-ecdca313.png" }
 "2026-11-23-simplex-supporter-badges" = { "en" = "og/2026/11/simplex-supporter-badges-en-6a7989c6.png", "zh-CN" = "og/2026/11/simplex-supporter-badges-zh-cn-9d3d1cbf.png", "zh-TW" = "og/2026/11/simplex-supporter-badges-zh-tw-45cdc73e.png" }
+"2026-11-24-bitwarden-native-passkeys" = { "en" = "og/2026/11/bitwarden-native-passkeys-en-69e75ae0.png", "zh-CN" = "og/2026/11/bitwarden-native-passkeys-zh-cn-1bc60847.png", "zh-TW" = "og/2026/11/bitwarden-native-passkeys-zh-tw-81d85c45.png" }
+"2026-11-24-uk-apple-encryption-order" = { "en" = "og/2026/11/uk-apple-encryption-order-en-72f36737.png", "zh-CN" = "og/2026/11/uk-apple-encryption-order-zh-cn-295d4f05.png", "zh-TW" = "og/2026/11/uk-apple-encryption-order-zh-tw-6e0d0766.png" }
+"2026-11-25-hk-laguna-city-facial-recognition" = { "en" = "og/2026/11/hk-laguna-city-facial-recognition-en-0e325ddc.png", "zh-CN" = "og/2026/11/hk-laguna-city-facial-recognition-zh-cn-125c4087.png", "zh-TW" = "og/2026/11/hk-laguna-city-facial-recognition-zh-tw-361563d2.png" }
+"2026-11-25-windows-dev-tool-telemetry" = { "en" = "og/2026/11/windows-dev-tool-telemetry-en-5fc84901.png", "zh-CN" = "og/2026/11/windows-dev-tool-telemetry-zh-cn-6fd770cf.png", "zh-TW" = "og/2026/11/windows-dev-tool-telemetry-zh-tw-a77f87e2.png" }
+"2026-11-26-karte-breach" = { "en" = "og/2026/11/karte-breach-en-ea2b7ac8.png", "zh-CN" = "og/2026/11/karte-breach-zh-cn-f99326e0.png", "zh-TW" = "og/2026/11/karte-breach-zh-tw-ee9247b2.png" }
 "history/09-26" = { "en" = "og/history/09-26-en-9b12d0d1.png", "zh-CN" = "og/history/09-26-zh-cn-89b13cd7.png", "zh-TW" = "og/history/09-26-zh-tw-8f9aed48.png" }
 "history/09-27" = { "en" = "og/history/09-27-en-4d1935f0.png", "zh-CN" = "og/history/09-27-zh-cn-e84c22bf.png", "zh-TW" = "og/history/09-27-zh-tw-776dd33b.png" }
 "history/09-28" = { "en" = "og/history/09-28-en-a41f4d1a.png", "zh-CN" = "og/history/09-28-zh-cn-238461eb.png", "zh-TW" = "og/history/09-28-zh-tw-9f143f22.png" }
@@ -186,6 +192,9 @@
 "history/11-20" = { "en" = "og/history/11-20-en-b81c74ae.png", "zh-CN" = "og/history/11-20-zh-cn-956fcf1d.png", "zh-TW" = "og/history/11-20-zh-tw-9e82d5ef.png" }
 "history/11-21" = { "en" = "og/history/11-21-en-d809605d.png", "zh-CN" = "og/history/11-21-zh-cn-f6278bbb.png", "zh-TW" = "og/history/11-21-zh-tw-70896307.png" }
 "history/11-22" = { "en" = "og/history/11-22-en-91b04904.png", "zh-CN" = "og/history/11-22-zh-cn-b2baa3af.png", "zh-TW" = "og/history/11-22-zh-tw-e1b5dceb.png" }
+"history/11-23" = { "en" = "og/history/11-23-en-8b4e7c92.png", "zh-CN" = "og/history/11-23-zh-cn-2f040225.png", "zh-TW" = "og/history/11-23-zh-tw-840d2249.png" }
+"history/11-24" = { "en" = "og/history/11-24-en-99158c11.png", "zh-CN" = "og/history/11-24-zh-cn-f46982c8.png", "zh-TW" = "og/history/11-24-zh-tw-5757674d.png" }
+"history/11-25" = { "en" = "og/history/11-25-en-c9fbcd3b.png", "zh-CN" = "og/history/11-25-zh-cn-8721e852.png", "zh-TW" = "og/history/11-25-zh-tw-2fa4b3a1.png" }
 "history/11-26" = { "en" = "og/history/11-26-en-52b3857f.png", "zh-CN" = "og/history/11-26-zh-cn-20780587.png", "zh-TW" = "og/history/11-26-zh-tw-26a0b2ee.png" }
 "history/11-29" = { "en" = "og/history/11-29-en-b746eeb5.png", "zh-CN" = "og/history/11-29-zh-cn-cba9d4e2.png", "zh-TW" = "og/history/11-29-zh-tw-4c3fce14.png" }
 "history/12-15" = { "en" = "og/history/12-15-en-cdf66928.png", "zh-CN" = "og/history/12-15-zh-cn-81168d95.png", "zh-TW" = "og/history/12-15-zh-tw-fd48325f.png" }
