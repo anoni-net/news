@@ -551,6 +551,10 @@ from = "https://community.torproject.org/static/images/favicon.ico?h=2192192d"
 icon = "comparitech.com-dc5ebd8e.png"
 from = "https://cdn.comparitech.com/wp-content/uploads/2018/12/cropped-favicon-1-192x192.jpg"
 
+[hosts."computerworld.com"]
+icon = "computerworld.com-a7097a26.png"
+from = "https://www.computerworld.com/wp-content/uploads/2026/11/favicon-512x512-1.png"
+
 [hosts."congress.gov"]
 icon = "congress.gov-1737b801.png"
 from = "https://www.congress.gov/apple-touch-icon.png"
@@ -3048,6 +3052,9 @@ from = "https://www.xinhuanet.com/favicon.ico"
 [hosts."xtech.nikkei.com"]
 icon = "xtech.nikkei.com-89316336.png"
 from = "https://xtech.nikkei.com/apple-touch-icon.png"
+
+[hosts."xusheng.dev"]
+none = "網站沒有提供圖示"
 
 [hosts."z.ai"]
 icon = "z.ai-e7bc4841.png"

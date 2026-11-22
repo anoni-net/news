@@ -430,6 +430,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -894,6 +897,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/en/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /en/2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -1633,6 +1639,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/zh-cn/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /zh-cn/2026/11/xandr-norway-fine/
 	#perspective
 	#sources
