@@ -1,6 +1,6 @@
 # Telegram 在亞洲各地的連線狀況與透明度數字
 
-範圍是 Telegram 的網站在中國大陸能不能直接連上，以及 Telegram 透明度報告裡亞洲幾個地方的請求數。第一次整理是寫 anoni-net/news 的 Telegram 交給美國執法單位的使用者資料那篇的時候，查證日期 2026-10-20。
+範圍有三項：Telegram 的網站在中國大陸能不能直接連上，OONI 的 Telegram 測試在中國大陸、台灣與香港的彙總，以及 Telegram 透明度報告裡亞洲幾個地方的請求數。第一次整理是寫 anoni-net/news 的 Telegram 交給美國執法單位的使用者資料那篇的時候，查證日期 2026-10-20。
 
 ## 中國大陸的連線
 
@@ -10,6 +10,17 @@
     - 來源：GreatFire，<https://en.greatfire.org/https/telegram.org>
 - 事實：OONI 公開 API 的彙總，2026 年 7 月 18 日到 10 月 18 日在中國的 Telegram 測試共 2877 筆，其中 2819 筆標為異常（anomaly），確認封鎖（confirmed）為 0 筆。異常不等於確認封鎖，引用時不要寫成「已確認封鎖」
     - 來源：OONI API，<https://api.ooni.org/api/v1/aggregation?probe_cc=CN&test_name=telegram&since=2026-07-18&until=2026-10-18>，查詢日 2026-10-20
+- 事實：OONI 公開 API 的彙總，2026 年 8 月 22 日到 11 月 21 日在中國的 Telegram 測試共 2,324 筆，其中 2,231 筆（約 96%）標為異常、93 筆正常，確認封鎖為 0 筆。同樣不能寫成「已確認封鎖」
+    - 來源：OONI API，<https://api.ooni.org/api/v1/aggregation?probe_cc=CN&test_name=telegram&since=2026-08-22&until=2026-11-21>，查詢日 2026-11-21
+
+## 台灣與香港的 OONI 量測
+
+寫 anoni-net/news 的伊拉克與約旦封鎖 Telegram 那篇時加上，查證日期 2026-11-21。異常率低只代表這段期間的 Telegram 測試大多正常，不是官方的說明。台灣、香港政府封鎖 Telegram 的公告或紀錄，資料蒐集時沒有找到（查不到，不代表沒有）。
+
+- 事實：2026 年 8 月 22 日到 11 月 21 日，台灣的 Telegram 測試共 11,530 筆，異常 177 筆（約 1.5%），確認封鎖 0 筆
+    - 來源：OONI API，<https://api.ooni.org/api/v1/aggregation?probe_cc=TW&test_name=telegram&since=2026-08-22&until=2026-11-21>，查詢日 2026-11-21
+- 事實：同一段期間，香港的 Telegram 測試共 2,485 筆，異常 15 筆（約 0.6%），確認封鎖 0 筆
+    - 來源：OONI API，<https://api.ooni.org/api/v1/aggregation?probe_cc=HK&test_name=telegram&since=2026-08-22&until=2026-11-21>，查詢日 2026-11-21
 
 ## 透明度報告的取得方式
 
