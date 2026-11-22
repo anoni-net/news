@@ -334,6 +334,9 @@
 /2026/11/ios-android-exploits-lockdown/
 	#perspective
 	#sources
+/2026/11/ios-browser-engines/
+	#perspective
+	#sources
 /2026/11/ios-full-tor-browser/
 	#perspective
 	#sources
@@ -803,6 +806,9 @@
 	#perspective
 	#sources
 /en/2026/11/ios-android-exploits-lockdown/
+	#perspective
+	#sources
+/en/2026/11/ios-browser-engines/
 	#perspective
 	#sources
 /en/2026/11/ios-full-tor-browser/
@@ -1551,6 +1557,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/ios-android-exploits-lockdown/
+	#perspective
+	#sources
+/zh-cn/2026/11/ios-browser-engines/
 	#perspective
 	#sources
 /zh-cn/2026/11/ios-full-tor-browser/

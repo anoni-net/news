@@ -2186,6 +2186,10 @@ from = "https://www.onvista.de/favicon_192x192.png"
 icon = "ooni.org-01981e09.png"
 from = "https://ooni.org/images/apple-touch-icon.png"
 
+[hosts."open-web-advocacy.org"]
+icon = "open-web-advocacy.org-68dea5ef.png"
+from = "https://open-web-advocacy.org/images/logo-192.png"
+
 [hosts."openai.com"]
 icon = "openai.com-c5ef3d83.png"
 from = "https://web.archive.org/web/20260927id_/https://openai.com/favicon.ico"
