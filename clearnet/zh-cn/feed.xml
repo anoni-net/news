@@ -6,7 +6,109 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 23 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>伊拉克与约旦的 Telegram 封锁与 OONI 测量</title>
+<link>https://anoni.net/news/zh-cn/2026/11/iraq-jordan-telegram-block/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/iraq-jordan-telegram-block</guid>
+<pubDate>Mon, 23 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>伊拉克与约旦 11 月 16 日宣布封锁 Telegram。依 OONI Probe 的测量，两国的 Telegram 测试在 11 月 15 日到 16 日之间（UTC）转为异常，到 11 月 20 日仍然全部异常。两国的命令只适用于各自境内的网络，其他地方的读者不受这次封锁影响。</description>
+<content:encoded>&lt;p&gt;整理 12 篇原文，来自 net4people、OONI Explorer、OONI 等 8 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;政府宣布封锁时，公告不一定交代何时生效、涵盖哪些网络，外界可以从当地网络上的测量确认。伊拉克通信与媒体委员会 11 月 16 日依总理的指令，宣布在全国封锁 Telegram，约旦的公共安全局同一天也宣布封锁。依 OONI Probe（测量网络封锁的开源软件）的测量，两国的 Telegram 测试在 11 月 15 日到 16 日之间（UTC）转为异常，到 20 日仍然全部异常。两国的命令只适用于各自境内的网络，其他地方的读者不受这次封锁影响。&lt;/p&gt;
+&lt;p&gt;伊拉克的委员会指 Telegram 没有处理平台上的违法内容、没有履行伊拉克法律规定的义务，给运营公司 30 天补正法律地位。Kurdistan24 报道的声明没有指出决定依据的是哪些频道或帖子，也没有说明期限内要完成哪些步骤、期限过后会如何处理。依 Al Jazeera 的报道，约旦的公共安全局以遏止违法内容与极端主义的内容为由宣布封锁。路透的报道写 Telegram 否认伊拉克的指控，Telegram 给路透的声明提到它打击恐怖主义的做法超出法律的要求。&lt;/p&gt;
+&lt;p&gt;OONI Probe 由用户在自己的网络上运行，测量结果公开，日期以协调世界时（UTC）计。伊拉克在封锁前每天有 67 到 80 笔 Telegram 测试，几乎没有异常。16 日的 72 笔有 33 笔异常，17 日起全部异常。讨论网络审查的公开论坛 net4people 上，一则 11 月 19 日整理两国测量的帖子提到，同一周伊拉克的 WhatsApp 与 Signal 测试维持平常的水平。&lt;/p&gt;
+&lt;p&gt;约旦的测量少得多，封锁前每天只有 1 到 8 笔，都没有异常。15 日的 13 笔有 7 笔异常，16 日起全部异常。OONI 以 UTC 计日，约旦当地时间比 UTC 快 3 小时。UTC 15 日的最后 3 小时在约旦已经是 16 日，从这些数字分不出异常是否早于公告。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;OONI 的 Telegram 测试在用户的网络上试着连上 Telegram App 使用的服务器，也试着打开网页版 &lt;code&gt;web.telegram.org&lt;/code&gt;。依 OONI 的测试说明，App 的服务器全部无法连接或网页版无法正常打开时，Telegram 可能遭到封锁。测量标为异常，代表结果符合其中一种情况，连接失败的原因要另外判断。&lt;/p&gt;
+&lt;p&gt;伊拉克 11 月 17 日以后有测量的 12 个 AS（互联网上由同一个运营商或机构管理的一组网络），以及约旦 16 日以后的 4 个 AS，每一笔测量都是异常。从这些数字看不出封锁用什么技术、在网络的哪一处拦下。一般而言，拦截的方式会影响其他服务是否一并受波及。&lt;/p&gt;
+&lt;p&gt;能看出两国的转折，是因为封锁前已经有每天正常的测量可以对照。测量只涵盖有人运行测试的网络，像约旦这样每天只有个位数测试的网络，很难判断转折发生在哪个时刻。想看数字的人不必安装，在 OONI 公开测量结果的网站 OONI Explorer 选择国家与 Telegram 测试就能查询。&lt;/p&gt;
+&lt;p&gt;在自己的网络上运行 Probe 也有代价。OONI 的常见问题写到 Probe 不是隐私工具，监控网络活动的人（例如政府、网络运营商、雇主）可能看到你在运行它。风险说明页则写到，运行 Probe 的潜在风险取决于用户的威胁模型（自己可能面对谁、对方有什么能力）与所在国家的法规。本站 11 月 20 日&lt;a href=&#34;https://anoni.net/news/zh-cn/2026/11/ooni-tls-middlebox/&#34;&gt;OONI Probe 的 TLS Middlebox 实验与数据收集问卷&lt;/a&gt;那篇写了 App 里可以选择运行哪些测试、不发送测量，以及做了这些设置，有人在运行 Probe 仍可能被看到。&lt;/p&gt;
+&lt;p&gt;依 OONI 公开的测量汇总，2026 年 8 月 22 日到 11 月 21 日中国大陆的 Telegram 测试共 2,324 笔，约 96% 标为异常。异常代表测试结果显示可能受到干扰，单凭这个标记还不能断定是封锁。GreatFire 对网址的测试显示，&lt;code&gt;telegram.org&lt;/code&gt; 在中国大陆到 2026 年 10 月 18 日的最后一次测试为止 100% 无法连上，自 2015 年 7 月起就有干扰记录。这两组数据量的是测试与网址的连通情况，不能直接当成 App 里消息连接的状况。&lt;/p&gt;
+&lt;p&gt;伊拉克与约旦以外的读者不必为这次封锁做任何设置。依路透的报道，伊拉克 2023 年也封锁过 Telegram，一周后在政府表示公司已回应安全部门的要求之后恢复服务。两国宣布解除之后，Telegram 测试有没有回到正常，同样可以在 OONI Explorer 对照。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（12 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/net4people/bbs/issues/686&#34;&gt;Iraq and Jordan block Telegram (16 Nov 2026): OONI measurements&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;net4people&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=IQ&amp;amp;since=2026-11-01&amp;amp;until=2026-11-21&amp;amp;time_grain=day&amp;amp;axis_x=measurement_start_day&amp;amp;test_name=telegram&#34;&gt;Iraq&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI Explorer&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://explorer.ooni.org/chart/mat?probe_cc=JO&amp;amp;since=2026-11-01&amp;amp;until=2026-11-21&amp;amp;time_grain=day&amp;amp;axis_x=measurement_start_day&amp;amp;test_name=telegram&#34;&gt;Jordan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI Explorer&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/nettest/telegram/&#34;&gt;Telegram test&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/support/faq/&#34;&gt;Frequently Asked Questions (FAQ)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/about/risks/&#34;&gt;Risks: Things you should know before running OONI Probe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/ooni/probe&#34;&gt;ooni/probe&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.kurdistan24.net/en/story/953424/iraqi-government-orders-telegram-ban-over-regulatory-violations&#34;&gt;Iraqi Government Orders Telegram Ban Over Regulatory Violations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Kurdistan24&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;2026 年 11 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.al-monitor.com/originals/2026/11/jordan-and-iraq-block-telegram-app-over-national-security-concerns&#34;&gt;Jordan and Iraq block Telegram app over national security concerns&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Al-Monitor（转载路透）&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-17&#34;&gt;2026 年 11 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.aljazeera.com/news/2026/11/16/jordan-bans-telegram-messing-app-over-national-security-concerns&#34;&gt;Jordan and Iraq block Telegram over national security concerns&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Al Jazeera&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;2026 年 11 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/telegram.org&#34;&gt;Is https://telegram.org blocked in mainland China?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=telegram&amp;amp;since=2026-08-22&amp;amp;until=2026-11-21&#34;&gt;OONI API aggregation: telegram, CN&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>SimpleX 支持者徽章的付款与身份</title>
 <link>https://anoni.net/news/zh-cn/2026/11/simplex-supporter-badges/</link>
@@ -2023,122 +2125,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;凤凰网（转载 IT之家）&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;2026 年 11 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Gemini 个人账号对话用于模型训练的范围与关闭方式</title>
-<link>https://anoni.net/news/zh-cn/2026/11/gemini-chat-training/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/gemini-chat-training</guid>
-<pubDate>Sat, 14 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>年满 18 岁的 Gemini 个人账号默认开启“保留活动记录”（Keep Activity），开启时 Google 会用活动记录训练生成式 AI 模型，部分对话经人工审查（依 Google 说明页，11 月 8 日查阅）。关闭设置或改用临时对话（Temporary Chat）后，对话不用于训练（关闭设置时提供意见反馈例外），保留 72 小时。经人工审查的对话最多保留三年。说明页没有区分付费与免费方案。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Google、Hacker News、中国人大网 等 4 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;年满 18 岁的用户登录个人 Google 账号使用 Gemini 时，“保留活动记录”（Keep Activity）设置默认为开启。开启期间，Google 会用活动记录改进服务与训练生成式 AI 模型，其中一部分对话会经过人工审查。默认值写在“管理及删除活动记录”说明页，用途写在 Gemini 帮助中心的隐私权专区（本文于 11 月 8 日查阅），工作或学校账号可能适用其他条款。11 月 4 日一则 Hacker News 帖子提到付费订阅者的对话同样会用于训练并引起讨论，下文的规则出自 Google 的现行文件，推论处另行标明。&lt;/p&gt;
-&lt;p&gt;依隐私权专区（隐私权声明 2026 年 10 月 13 日版、问答 10 月 26 日版），Google 列出的活动记录用途是提供、开发及改进服务（包括训练生成式 AI 模型），以及保护 Google、用户和一般大众。同一页提到系统不会使用 Gemini 对话作为展示广告的依据（日后调整会提供清楚说明），Google 也不会出售个人信息。&lt;/p&gt;
-&lt;p&gt;设置开启时，对话、上传的文件与共享的屏幕画面都会存进活动记录，关联应用（Connected Apps，让 Gemini 调用其他 Google 应用与第三方服务数据的功能）的数据与从其他 AI 平台导入的对话同样用于改进服务。活动记录默认 18 个月后自动删除，可以改成 3 个月、36 个月或不自动删除。音频、Gemini Live（以语音与 Gemini 自然对话的功能）的视频与屏幕共享默认不用于改进服务，需要另外勾选，Live 对话的转录稿与分享给 Live 的上传内容则在“保留活动记录”开启时用于改进服务。&lt;/p&gt;
-&lt;p&gt;隐私权专区提到 Google AI 方案（Google 的付费订阅方案）时，只把订阅相关信息列为收集项目，训练与人工审查的段落没有区分付费与免费。本文据此推论两者适用同一份声明，Google 没有明文写出这句话，到 11 月 8 日也查不到 Google AI 方案专属的隐私文件。&lt;/p&gt;
-&lt;p&gt;工作与学校账号的活动记录设置由 Google Workspace 管理员控制，适用的规则可能不同。Workspace 的生成式 AI 隐私权专区（10 月 6 日版）只适用符合资格的 Workspace 版本，未经 Workspace 客户（订阅的组织）事先许可或指示，客户数据不会用于训练模型。这些版本的 Gemini 应用里，对话与上传文件未经许可不会在组织域之外由人工审查，也不用于训练生成式 AI 模型。&lt;/p&gt;
-&lt;p&gt;依隐私权专区，人工审查员会评估回复是否质量低下、不准确或有害，并提出更好的回复。对话也会为了维护安全、处理违反服务条款的行为而接受审查。页面只写“部分对话”，没有公布比例。&lt;/p&gt;
-&lt;p&gt;对话送交受过专业训练的服务提供商审查之前，会先解除与账号的关联。审查过的对话与相关数据（例如使用语言、设备类型、位置信息）最多保留三年，页面没有区分审查原因，用户删除活动记录时也不会一并删除。本文据此推论，关闭设置后为保护用途审查过的对话，保留时间也可能超过 72 小时。用户在对话里写下的姓名或地址仍在文字之中，这也是本文的推论。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;维持开启时，一般对话默认保留 18 个月，用于训练并有部分经人工审查。关闭“保留活动记录”后，日后的对话除提供意见反馈的情况外不用于训练、不经改进服务的人工审查，保留 72 小时。临时对话（Temporary Chat，逐次使用、不显示在活动记录与近期对话、离开后无法再访问的对话模式）同样保留 72 小时，不用于训练，也不经改进服务的人工审查。三种做法都不影响为保护 Google、用户和一般大众而处理对话（“过程中可能会借助人工审查”），审查过的对话最多保留三年，Gemini 设置也无法控制把对话处理成去标识化数据、借以改进 Google 服务的流程。&lt;/p&gt;
-&lt;p&gt;“保留活动记录”同时控制对话的存储与模型训练，查阅的说明页没有列出只保留对话、不用于训练的选项。隐私权专区的句子只涵盖日后的对话，没有提到关闭之前已存进活动记录的对话（包括已用于训练的数据）之后如何处理。关闭之后的短期保留，隐私权专区列出的用途是回复用户、处理意见反馈与保护 Google、用户和一般大众，举的例子是系统发生故障时数据可以访问。&lt;/p&gt;
-&lt;p&gt;隐私权专区写到 Gemini 设置无法控制去标识化处理，也写到关闭设置且不提供意见反馈时，日后的对话不会用于改进 AI 模型。两句的关系页面没有说明。&lt;/p&gt;
-&lt;p&gt;设置关闭时提交意见反馈，Google 会收集反馈内容、过去 24 小时内的对话，以及对话里的上传项目与关联应用的数据。反馈与相关对话会交由受过训练的团队审查，并依 Google 隐私权政策用于改进产品与机器学习技术。&lt;/p&gt;
-&lt;p&gt;依设置说明页，关闭之后可用的关联应用有设备小帮手（device assistant）、Gemini Notebook（存放笔记本来源文件的服务）、Google 信息（Google Messages）、电话与 WhatsApp。以 Gem（用户创建并保存、用来获得符合特定需求回复的自定义项目）创建的对话不会保留，Gem 本身留在账号里。关闭期间的对话事后无法在活动记录查阅。&lt;/p&gt;
-&lt;p&gt;不想关闭设置的人可以逐次使用临时对话。Google Messages 与 Chrome 里的 Gemini 没有这项功能，工作与学校账号也不能用。对话中无法使用 Gem、需要开启“保留活动记录”的关联应用与个性化回复，也无法提供意见反馈。&lt;/p&gt;
-&lt;p&gt;对话能否用于训练，牵涉用户对自己数据的控制与产品改进两种考量。Google 在隐私权专区的说明是审查员的建议会用来改善模型日后的回复，并请用户不要输入不想让审查员看到、或不愿供 Google 改进服务的机密信息。到 11 月 8 日，查不到 Google 对 Hacker News 帖子的公开回应，也查不到消费者团体或数据保护机构针对 Gemini 个人对话训练的正式文件。本文呈现的只有 Google 这一方的文件。&lt;/p&gt;
-&lt;p&gt;Gemini 网页版的服务地区清单里，中国大陆标注为“仅限 Workspace”，移动 App 的清单不含中国大陆（11 月 8 日查阅，说明页没有标日期）。隐私权专区说明的是个人账号的 Gemini 应用，个人账号的说明如何适用于大陆境内，本文没有查到 Google 的说明。中国大陆《个人信息保护法》第十三条把取得个人同意列为处理个人信息的合法情形之一，第四十四条赋予个人限制或拒绝他人处理其个人信息的权利。《生成式人工智能服务管理暂行办法》第七条要求涉及个人信息的训练数据取得个人同意或符合法律、行政法规规定的其他情形，依第二条第三款该办法只适用于向境内公众提供的服务，这些条文是否涵盖 Gemini 个人账号的对话本文没有查到解释。&lt;/p&gt;
-&lt;p&gt;电脑版的路径是在 &lt;code&gt;gemini.google.com&lt;/code&gt; 依次点按“设置与帮助”（Settings &amp;amp; help）、“活动记录”（Activity），再到画面上方点“开启”，选“关闭”或“关闭并删除活动记录”（Turn off and delete activity，名称依正体中文界面转写，简体界面用字可能不同，说明页有移动 App 的步骤）。依隐私权专区的规则推论，不希望对话用于训练的人可以关闭设置或每次改用临时对话。需要长期保留对话、或在个人账号关联 Google Workspace 这类应用的人可以维持开启，敏感内容改用临时对话。机密内容能否输入，需要依各种做法留下的保留期与审查范围自行评估。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=en&#34;&gt;Gemini Apps Privacy Hub&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13594961?hl=zh-Hant&#34;&gt;Gemini 系列應用程式隱私權專區&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13278892?hl=zh-Hant&#34;&gt;管理及刪除 Gemini 系列應用程式活動記錄&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13275745?hl=zh-Hant&#34;&gt;使用 Gemini 系列應用程式&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/16836988?hl=zh-Hant&#34;&gt;關於透過「連結的應用程式」享有的個人化體驗&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/15146780?hl=zh-Hant&#34;&gt;在 Gemini 系列應用程式中使用 Gem&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/15274899?hl=zh-Hant&#34;&gt;和 Gemini Live 自然對話&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/a/answer/15706919?hl=en&#34;&gt;Generative AI in Google Workspace Privacy Hub&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-06&#34;&gt;2026 年 10 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=50363461&#34;&gt;Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hacker News&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/13575153?hl=en&#34;&gt;Where you can use the Gemini web app&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/gemini/answer/14579026?hl=en&#34;&gt;Gemini mobile app availability&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm&#34;&gt;生成式人工智能服务管理暂行办法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

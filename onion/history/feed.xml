@@ -6,7 +6,17 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sun, 22 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 23 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>2009 年菲律賓馬京達瑙省的車隊遇襲事件</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-23/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-23/2026</guid>
+<pubDate>Mon, 23 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>這一天，菲律賓一支前往替候選人登記參選的車隊遭到伏擊，保護記者委員會統計的 58 名罹難者裡有 32 名新聞工作者與媒體工作人員。在職記者因報導工作遇到緊急狀況時，到 2026 年 11 月 21 日仍可以向保護記者委員會申請短期的緊急支援。</description>
+<content:encoded>&lt;p&gt;依保護記者委員會（CPJ）2019 年的文章，2009 年菲律賓南部馬京達瑙省當時的省長出身當地的政治家族，家族擁有自己的私人武裝。11 月 23 日一支有記者同行的車隊要替挑戰省長的候選人登記參選，遇害的人相信不會有人攻擊這麼多人，因此同意結隊出發。車隊在開闊的道路上遭到伏擊，家族的私人武裝在地方警察的支援下殺害了 58 人，其中 32 人是新聞工作者與媒體工作人員。CPJ 到 2019 年的紀錄裡，這次是新聞界在單一事件中死亡人數最多的一次。依 CPJ 2010 年的年報，先前最多的是 2006 年伊拉克一家電視台的 11 名員工。&lt;/p&gt;
+&lt;p&gt;依同一篇文章，法院在事發十年後判兩名主謀與 26 名共犯謀殺罪成立，判決時仍有至少 80 名嫌犯在逃。到 2026 年 11 月 21 日，無國界記者（RSF）菲律賓國家頁上的計數是 2026 年 1 月 1 日以來有 3 名記者遇害。在職的記者與媒體工作人員因報導工作遇到緊急狀況時，可以向 CPJ 申請短期的緊急支援，說明頁上寫 CPJ 會優先處理緊急情況。一般讀者不需要採取行動。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>在香港被限制顯示的 Facebook 貼文，以及報導中為重返中國開發的審查軟體</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-22/#y2026</link>
@@ -177,15 +187,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你用的美國郵件與雲端服務，業者可能被美國政府要求協助蒐集境外非美國人的通訊。這一天，美國政府正式公布成立負責通訊情報的國家安全局。</description>
 <content:encoded>&lt;p&gt;提供你郵件、雲端與通訊服務的美國業者，可能收過司法部長與國家情報總監依《外國情報監視法》（FISA）第 702 條發出的書面指令，要求協助蒐集被合理相信位於美國境外的非美國人的通訊。依 NSA 官方頁，美國總統在 1952 年 10 月 24 日以備忘錄設立國家安全局（NSA，本文引用的來源沒有寫到它在 702 條蒐集裡的角色）負責美國政府的通訊情報，正式公布則延到 11 月 4 日選舉日（依美國科學家聯盟 FAS 的 Secrecy News 引述 NSA 的說法）。美國法典的註記載明 702 條在 2026 年 6 月 12 日廢止（11 月 2 日查證時未見延長法案），但保留過渡程序的例外，倡議組織 Brennan Center 在 6 月的文件中認為蒐集會延續到 2027 年 3 月。Apple 在透明度報告裡列出 FISA 法院命令的數量時沒有分出哪些與 702 條有關，為了分開列出內容與非內容資料（用戶資料、交易與連線紀錄），依法須延後 6 個月並以 500 為級距列出。本文據此推論你無法從報告得知自己的帳號是否在內，來源也沒有寫使用者這一端有什麼做法能避免被蒐集。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>瀏覽器送出的「不要出售或分享」訊號</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/history/11-03/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/11-03/2026</guid>
-<pubDate>Tue, 03 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>有些瀏覽器可以替你向網站送出「不要出售或分享個人資料」的訊號。這一天，加州選民以公投通過隱私權法，給居民要求業者不分享個人資訊的權利。</description>
-<content:encoded>&lt;p&gt;部分瀏覽器可以在你連上網站時附帶 Global Privacy Control（GPC）訊號，GPC 網站寫這個訊號是為了依加州消費者隱私法提出不要出售或分享個人資料的請求。依加州州務卿的開票結果與投票指南，2020 年 11 月 3 日加州選民以 56.2% 的贊成票通過第 24 號提案《2020 年加州隱私權法》（CPRA），內容包括設立加州隱私保護局、讓消費者可以阻止業者分享個人資訊。依條文，訂定這類訊號技術規格的權限交給隱私保護局，該局現行的法規要求出售或分享個人資訊的業者把符合規格的訊號當成有效的退出請求。條文定義的消費者限於加州居民，本文據此推論不住在加州的讀者（包括台灣的讀者）開了 GPC 不會因此得到這部法律的保障。想送出訊號的人可以改用 DuckDuckGo 瀏覽器，或在原本的瀏覽器裝 DuckDuckGo 的擴充套件（說明頁到 11 月 2 日寫兩者都預設開啟），只是來源沒有寫網站收到加州以外使用者的訊號會不會照辦。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
