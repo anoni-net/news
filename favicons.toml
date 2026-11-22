@@ -117,6 +117,9 @@ from = "https://www.apc.org/themes/custom/apc_barrio/apple-touch-icon.png"
 [hosts."api.ooni.org"]
 same_as = "ooni.org"
 
+[hosts."api.parliament.uk"]
+same_as = "parliament.uk"
+
 [hosts."apple.com"]
 icon = "apple.com-573bbc30.png"
 from = "https://www.apple.com/apple-touch-icon.png"
@@ -950,6 +953,10 @@ from = "https://en.greatfire.org/apple-touch-icon.png"
 icon = "en.wikipedia.org-6d780b78.png"
 from = "https://en.wikipedia.org/static/apple-touch/wikipedia.png"
 
+[hosts."en.wikisource.org"]
+icon = "en.wikisource.org-921e55d0.png"
+from = "https://en.wikisource.org/static/favicon/wikisource.ico"
+
 [hosts."encykorea.aks.ac.kr"]
 icon = "encykorea.aks.ac.kr-95192cd6.png"
 from = "https://encykorea.aks.ac.kr/images/favicon180_251109.png"
@@ -995,6 +1002,9 @@ from = "https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR
 [hosts."facebook.com"]
 icon = "facebook.com-de7506c8.png"
 from = "https://web.archive.org/web/20261020id_/https://static.xx.fbcdn.net/rsrc.php/y1/r/ay1hV6OlegS.ico"
+
+[hosts."faroutliers.com"]
+none = "網站沒有提供圖示"
 
 [hosts."fas.org"]
 icon = "fas.org-3f60befe.png"
@@ -1834,6 +1844,10 @@ from = "https://maritime-executive.com/img/apple-touch-icon.png"
 icon = "marketing-interactive.com-f72720fd.png"
 from = "https://www.marketing-interactive.com/apple-touch-icon.png"
 
+[hosts."marxists.org"]
+icon = "marxists.org-57e38318.png"
+from = "https://www.marxists.org/favicon.ico"
+
 [hosts."mas.gov.sg"]
 icon = "mas.gov.sg-760a368b.png"
 from = "https://www.mas.gov.sg/html/site/_favicon/apple-touch-icon.png"
@@ -1925,6 +1939,9 @@ from = "https://ws.moi.gov.tw/001/Upload/400/sites/pagebackimage/ef9b9560-7f3e-4
 [hosts."moj.go.jp"]
 icon = "moj.go.jp-21a2efa2.png"
 from = "https://www.moj.go.jp/content/001428634.ico"
+
+[hosts."mojlaw.moj.gov.tw"]
+same_as = "law.moj.gov.tw"
 
 [hosts."mondaq.com"]
 icon = "mondaq.com-c16c2f25.png"
@@ -2221,6 +2238,10 @@ from = "https://pardok.parlament-berlin.de/favicon.ico"
 [hosts."parl.ca"]
 icon = "parl.ca-cc71bd4e.png"
 from = "https://www.parl.ca/favicon.ico"
+
+[hosts."parliament.uk"]
+icon = "parliament.uk-72945912.png"
+from = "https://web.archive.org/web/20261122id_/https://parliament.uk/img/favicon.ico"
 
 [hosts."pasal.id"]
 icon = "pasal.id-f365b25f.png"
@@ -2654,6 +2675,10 @@ from = "https://sslmate.com/assets/@9e36fda1926f2047cead1adb754d0fe2.png"
 [hosts."sso.agc.gov.sg"]
 icon = "sso.agc.gov.sg-7300262d.png"
 from = "https://sso.agc.gov.sg/CMS/Content/icons/apple-icon-180x180.png"
+
+[hosts."stats.gov.cn"]
+icon = "stats.gov.cn-0cc61294.png"
+from = "https://www.stats.gov.cn/favicon.ico"
 
 [hosts."steamshipmutual.com"]
 icon = "steamshipmutual.com-736e3127.png"
