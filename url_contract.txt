@@ -274,6 +274,9 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -340,6 +343,9 @@
 /2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -402,6 +408,9 @@
 /2026/11/tv-acr/
 	#perspective
 	#sources
+/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -424,6 +433,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -732,6 +744,9 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /en/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -798,6 +813,9 @@
 /en/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/en/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /en/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -860,6 +878,9 @@
 /en/2026/11/tv-acr/
 	#perspective
 	#sources
+/en/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /en/2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -882,6 +903,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/en/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /en/2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -1034,6 +1058,10 @@
 	#y2026
 /en/history/11-22/
 	#y2026
+/en/history/11-23/
+/en/history/11-24/
+/en/history/11-25/
+	#y2026
 /en/history/11-29/
 	#y2026
 /en/history/12-15/
@@ -1167,6 +1195,10 @@
 /history/11-21/
 	#y2026
 /history/11-22/
+	#y2026
+/history/11-23/
+/history/11-24/
+/history/11-25/
 	#y2026
 /history/11-29/
 	#y2026
@@ -1457,6 +1489,9 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /zh-cn/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -1523,6 +1558,9 @@
 /zh-cn/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/zh-cn/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -1585,6 +1623,9 @@
 /zh-cn/2026/11/tv-acr/
 	#perspective
 	#sources
+/zh-cn/2026/11/uk-apple-encryption-order/
+	#perspective
+	#sources
 /zh-cn/2026/11/us-border-device-searches/
 	#perspective
 	#sources
@@ -1607,6 +1648,9 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/zh-cn/2026/11/windows-dev-tool-telemetry/
+	#perspective
+	#sources
 /zh-cn/2026/11/xandr-norway-fine/
 	#perspective
 	#sources
@@ -1758,6 +1802,10 @@
 /zh-cn/history/11-21/
 	#y2026
 /zh-cn/history/11-22/
+	#y2026
+/zh-cn/history/11-23/
+/zh-cn/history/11-24/
+/zh-cn/history/11-25/
 	#y2026
 /zh-cn/history/11-29/
 	#y2026
