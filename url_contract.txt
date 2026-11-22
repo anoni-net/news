@@ -274,6 +274,9 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -337,6 +340,9 @@
 /2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -397,6 +403,9 @@
 	#perspective
 	#sources
 /2026/11/tv-acr/
+	#perspective
+	#sources
+/2026/11/uk-apple-encryption-order/
 	#perspective
 	#sources
 /2026/11/us-border-device-searches/
@@ -729,6 +738,9 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /en/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -792,6 +804,9 @@
 /en/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/en/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /en/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -852,6 +867,9 @@
 	#perspective
 	#sources
 /en/2026/11/tv-acr/
+	#perspective
+	#sources
+/en/2026/11/uk-apple-encryption-order/
 	#perspective
 	#sources
 /en/2026/11/us-border-device-searches/
@@ -1028,6 +1046,7 @@
 	#y2026
 /en/history/11-22/
 	#y2026
+/en/history/11-23/
 /en/history/11-24/
 	#y2026
 /en/history/11-29/
@@ -1164,6 +1183,7 @@
 	#y2026
 /history/11-22/
 	#y2026
+/history/11-23/
 /history/11-24/
 	#y2026
 /history/11-29/
@@ -1455,6 +1475,9 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /zh-cn/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -1518,6 +1541,9 @@
 /zh-cn/2026/11/iphone-grey-list/
 	#perspective
 	#sources
+/zh-cn/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/
 	#perspective
 	#sources
@@ -1578,6 +1604,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/tv-acr/
+	#perspective
+	#sources
+/zh-cn/2026/11/uk-apple-encryption-order/
 	#perspective
 	#sources
 /zh-cn/2026/11/us-border-device-searches/
@@ -1754,6 +1783,7 @@
 	#y2026
 /zh-cn/history/11-22/
 	#y2026
+/zh-cn/history/11-23/
 /zh-cn/history/11-24/
 	#y2026
 /zh-cn/history/11-29/
