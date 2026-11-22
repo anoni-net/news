@@ -274,6 +274,9 @@
 /2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -335,6 +338,9 @@
 	#perspective
 	#sources
 /2026/11/iphone-grey-list/
+	#perspective
+	#sources
+/2026/11/iraq-jordan-telegram-block/
 	#perspective
 	#sources
 /2026/11/lenovo-fingerprint-usb/
@@ -732,6 +738,9 @@
 /en/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/en/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /en/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -793,6 +802,9 @@
 	#perspective
 	#sources
 /en/2026/11/iphone-grey-list/
+	#perspective
+	#sources
+/en/2026/11/iraq-jordan-telegram-block/
 	#perspective
 	#sources
 /en/2026/11/lenovo-fingerprint-usb/
@@ -1034,6 +1046,8 @@
 	#y2026
 /en/history/11-22/
 	#y2026
+/en/history/11-23/
+	#y2026
 /en/history/11-29/
 	#y2026
 /en/history/12-15/
@@ -1167,6 +1181,8 @@
 /history/11-21/
 	#y2026
 /history/11-22/
+	#y2026
+/history/11-23/
 	#y2026
 /history/11-29/
 	#y2026
@@ -1457,6 +1473,9 @@
 /zh-cn/2026/11/bitchat-india-block/
 	#perspective
 	#sources
+/zh-cn/2026/11/bitwarden-native-passkeys/
+	#perspective
+	#sources
 /zh-cn/2026/11/boca-passport-leak/
 	#perspective
 	#sources
@@ -1518,6 +1537,9 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/iphone-grey-list/
+	#perspective
+	#sources
+/zh-cn/2026/11/iraq-jordan-telegram-block/
 	#perspective
 	#sources
 /zh-cn/2026/11/lenovo-fingerprint-usb/
@@ -1758,6 +1780,8 @@
 /zh-cn/history/11-21/
 	#y2026
 /zh-cn/history/11-22/
+	#y2026
+/zh-cn/history/11-23/
 	#y2026
 /zh-cn/history/11-29/
 	#y2026
