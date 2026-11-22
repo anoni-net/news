@@ -919,6 +919,10 @@ from = "https://en.greatfire.org/apple-touch-icon.png"
 icon = "en.wikipedia.org-6d780b78.png"
 from = "https://en.wikipedia.org/static/apple-touch/wikipedia.png"
 
+[hosts."encykorea.aks.ac.kr"]
+icon = "encykorea.aks.ac.kr-95192cd6.png"
+from = "https://encykorea.aks.ac.kr/images/favicon180_251109.png"
+
 [hosts."engadget.com"]
 icon = "engadget.com-698acb61.png"
 from = "https://www.engadget.com/img/engadget-favicon.png"
@@ -1199,6 +1203,10 @@ from = "https://www.gov.mo/zh-hant/wp-content/static/favicon/android-icon-192x19
 icon = "gov.sg-ea01f39a.png"
 from = "https://isomer-user-content.by.gov.sg/34/fe559f70-7f30-4dbc-9735-4138562c6d50/favicon.ico"
 
+[hosts."gov.taipei"]
+icon = "gov.taipei-4070e3ff.png"
+from = "https://web.archive.org/web/20261122id_/https://gov.taipei/images/favicon.ico"
+
 [hosts."gov.uk"]
 icon = "gov.uk-e6aebb21.png"
 from = "https://www.gov.uk/assets/frontend/govuk-icon-180-d45a306f0549414cfa5085f16e4a3816a77558b139e5bc226f23162d1d0decb0.png"
@@ -1283,6 +1291,10 @@ from = "https://help.yahoo.com/favicon.ico"
 [hosts."helpnetsecurity.com"]
 icon = "helpnetsecurity.com-eb4f8b13.png"
 from = "https://img.helpnetsecurity.com/wp-content/uploads/2019/09/09093400/cropped-hns2-192x192.png"
+
+[hosts."heraldk.com"]
+icon = "heraldk.com-8515f0d1.png"
+from = "https://www.heraldk.com/assets/images/common/favicon.ico"
 
 [hosts."hirundo.io"]
 icon = "hirundo.io-c5bb7e30.png"
@@ -1649,6 +1661,9 @@ from = "https://www.lawfaremedia.org/assets/icons/apple-touch-icon.png"
 [hosts."laws.e-gov.go.jp"]
 icon = "laws.e-gov.go.jp-1d3e542a.png"
 from = "https://laws.e-gov.go.jp/favicon.ico"
+
+[hosts."laws.gov.taipei"]
+same_as = "gov.taipei"
 
 [hosts."lawson.co.jp"]
 icon = "lawson.co.jp-510e993a.png"
@@ -2962,6 +2977,10 @@ from = "https://weblate.cryptpad.org/favicon.ico"
 [hosts."wechat.com"]
 icon = "wechat.com-0bcdde9f.png"
 from = "https://newres.wechat.com/t/fed_upload/08b92997-2415-408f-b706-442ed4ede518/OTE0YTAw.png"
+
+[hosts."weekly.khan.co.kr"]
+icon = "weekly.khan.co.kr-cc9a8a81.png"
+from = "https://img.khan.co.kr/spko/icon/apple-touch-icon-precomposed-web.png"
 
 [hosts."weixin.qq.com"]
 icon = "weixin.qq.com-3e88c836.png"
