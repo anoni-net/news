@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/simplex-supporter-badges/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
+<news:title>SimpleX 支持者徽章的付款與身分</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/simplex-supporter-badges/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
+<news:title>SimpleX 支持者徽章的付款与身份</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/simplex-supporter-badges/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
+<news:title>Payment and identity in SimpleX supporter badges</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/mada-masr-egypt/</loc>
 <news:news>
 <news:publication>
@@ -130,72 +163,6 @@
 </news:publication>
 <news:publication_date>2026-11-21T00:05:00+08:00</news:publication_date>
 <news:title>The Bureau of Consular Affairs website breach and 72,702 leaked passport photo files</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/brave-photo-metadata/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-21T00:00:00+08:00</news:publication_date>
-<news:title>Facebook 照片裡的 FBMD 識別碼與 Brave 桌面版的移除功能</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/brave-photo-metadata/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-21T00:00:00+08:00</news:publication_date>
-<news:title>Facebook 照片里的 FBMD 标识符与 Brave 桌面版的移除功能</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/brave-photo-metadata/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-21T00:00:00+08:00</news:publication_date>
-<news:title>The FBMD Identifier in Facebook Photos and Its Removal in Brave&#39;s Desktop Browser</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/open-source-contributions-ai/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T22:30:00+08:00</news:publication_date>
-<news:title>AI 時代開源專案收緊的外部貢獻入口</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/open-source-contributions-ai/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T22:30:00+08:00</news:publication_date>
-<news:title>AI 时代开源项目收紧的外部贡献入口</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/open-source-contributions-ai/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-20T22:30:00+08:00</news:publication_date>
-<news:title>Tighter limits on outside contributions to open source projects in the AI era</news:title>
 </news:news>
 </url>
 </urlset>

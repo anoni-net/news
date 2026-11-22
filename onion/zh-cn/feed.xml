@@ -6,7 +6,88 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sun, 22 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>SimpleX 支持者徽章的付款与身份</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/simplex-supporter-badges/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/simplex-supporter-badges</guid>
+<pubDate>Mon, 23 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>SimpleX Chat 销售支持者徽章，购买者可以发送更大的文件。依设计，SimpleX 无法从出示的徽章得知是哪一笔购买，但信用卡付款与同一周到期的分组仍会留下线索。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，来自 SimpleX Chat、GitHub、IETF 等 6 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;SimpleX 的公告写到，其他通信软件的付费功能附在账号上，运营者因此知道是谁付了钱、用这项功能做什么。SimpleX Chat 9 月起销售支持者徽章，购买者发送的文件上限从 1 GB 提高到 2 GB（传奇等级 5 GB），文件在服务器上也保存得更久（支持者 7 天、传奇 21 天）。SimpleX 的网络没有用户账号，徽章改用匿名凭证（anonymous credential）证明持有者付过钱、不透露是谁。到 11 月 21 日，SimpleX Chat App 的 7.1 版已经包含这项功能。&lt;/p&gt;
+&lt;p&gt;依 SimpleX 的技术白皮书，徽章是一份 BBS 签名（一种还在制定中的数字签名规范），由 SimpleX 运营的徽章服务签发、存在用户自己的设备上。App 每次向联系人或服务器出示徽章时，都用它生成一份新的零知识证明（zero-knowledge proof）。零知识证明的作用像是只证明“年满 18 岁”、不交出整张证件，本站整理&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/09/eu-age-verification-blueprint/&#34;&gt;欧盟年龄验证 App&lt;/a&gt; 时也写过这项技术。联系人与服务器运营者因此只能获得徽章类型与到期日，无法把两次出示连在一起，也无法连回购买。&lt;/p&gt;
+&lt;p&gt;SimpleX 的公告写到，凭证每次只签发一个月，所有徽章都在一周里的同一天到期。持有者因此隐身在那一周到期的所有支持者之中。依白皮书，App 每月换新凭证时会把申请新凭证与向联系人显示新徽章排在不同天，让旁人难以从时间认出持有者。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;互联网标准组织 IETF 制定的 Privacy Pass 是另一种做法，用户通过一次验证获得令牌（token），出示时不必透露身份。依白皮书，这类令牌出示一次就作废，也不带到期日与类型。徽章要在每段对话、每次连接一再出示，SimpleX 因此选用可以重复生成新证明的 BBS 签名。&lt;/p&gt;
+&lt;p&gt;依白皮书，徽章服务保存每笔购买的付款记录，信用卡付款也像其他服务一样会关联到这笔购买。同一周到期的徽章到期日相同，服务器运营者能把这些支持者的连接归成一组，持有者隐身其中的人数取决于那一周有多少人到期。刚购买或刚用兑换码兑换的徽章会立刻显示，在徽章服务自己的群组里领兑换码的人，SimpleX 可以从新徽章出现的时间推测是谁兑换。Google Play 的订阅换设备时用 Restore purchases（把商店里的订阅移到当前个人资料的功能）搬移，SimpleX 能把前后两笔购买关联起来，但无法关联到持有它们的个人资料。&lt;/p&gt;
+&lt;p&gt;从 Google Play 安装的 Android 版可以在 App 内付款，有单月方案，以及每月、每年自动续订的方案。iOS 版、从 F-Droid 或 GitHub 安装的版本与桌面版会打开浏览器的购买页，用信用卡、Bitcoin 或 Monero 付款后取得一组兑换码，粘贴进 App 的设置就能换成徽章。白皮书写到，想让付款本身保密的人可以改用加密货币。在网页购买的徽章不会自动续订，到 11 月 21 日也还不能搬到新设备。&lt;/p&gt;
+&lt;p&gt;提供购买页与官网下载的 simplex.chat，依 GreatFire 11 月 17 日的最近一次测试（样本仅 1 次）在中国大陆 100% 被封锁，Google Play 在 11 月 1 日的测试也是 100% 被封锁。到 11 月 21 日，中国区 App Store 没有 SimpleX Chat 的条目。用中国境内金融机构处理的信用卡付款，如前面所说会连到这笔购买，而《中华人民共和国反洗钱法》第三十四条要求金融机构把交易记录保存至少十年。&lt;/p&gt;
+&lt;p&gt;徽章只加在一个个人资料上，匿名（incognito）个人资料不显示徽章。徽章无法撤销，设备或备份被入侵时，取得徽章数据的人可以一直用到期满。购买多个月份的，入侵者还能向徽章服务申请剩下月份的新凭证。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://simplex.chat/blog/20260919-simplex-supporter-badges.html&#34;&gt;SimpleX Supporter Badges — Send Larger Files That Stay Available Longer, Without Being Identified&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;SimpleX Chat&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-19&#34;&gt;2026 年 9 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/simplex-chat/simplex-chat/blob/master/docs/protocol/badges-overview.md&#34;&gt;SimpleX Supporter Badges&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;SimpleX Chat&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-22&#34;&gt;2026 年 10 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://simplex.chat/docs/guide/supporter-badges.html&#34;&gt;Supporter badges&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;SimpleX Chat&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/simplex-chat/simplex-chat/releases&#34;&gt;Releases · simplex-chat/simplex-chat&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc9576.html&#34;&gt;The Privacy Pass Architecture&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;IETF&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/simplex.chat&#34;&gt;Is https://simplex.chat blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/play.google.com&#34;&gt;Is https://play.google.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202411/t20241108_440887.html&#34;&gt;中华人民共和国反洗钱法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-11-08&#34;&gt;2024 年 11 月 8 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1605771084&amp;amp;country=cn&#34;&gt;iTunes Search API&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>埃及独立媒体 Mada Masr 的无执照判决与关站命令</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/mada-masr-egypt/</link>
@@ -2058,93 +2139,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-07-13&#34;&gt;2023 年 7 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>iPhone 上的 Tor 选项与完整 Tor Browser 的开发计划</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/ios-full-tor-browser/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/ios-full-tor-browser</guid>
-<pubDate>Sat, 14 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>到 11 月 8 日为止，iPhone 上没有 Tor Browser，Tor Project 推荐的是 Onion Browser。Guardian Project 公布一年路线图，Alpha 测试版排在标示为 2027 年 4 月的那一季，Alpha 推出前无法安装。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，来自 Guardian Project、Tor Project、Onion Browser 等 4 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;到 11 月 8 日为止，iPhone 上没有 Tor Browser（经 Tor 网络连接的浏览器）。Tor Project 在安装说明页推荐改用 Onion Browser，也提醒它的隐私保护比不上 Tor Browser。Guardian Project 在 11 月 2 日公布一年路线图，目标是把完整的 Tor Browser 带到 iOS，第一个 Alpha 测试版排在路线图标示为 2027 年 4 月的那一季。计划还在决定走哪一条发行路线，Alpha 推出前无法安装，iPhone 用户手上的选项没有改变。&lt;/p&gt;
-&lt;p&gt;依 Onion Browser 的常见问题页（FAQ），Tor 能让监看连接的人看不到你访问的网站，也让网站无法得知你的实际位置。在 iPhone 上经 Tor 浏览网页，可以用开源的 Onion Browser。它有两种连接方式：搭配另一款 App Orbot，或用 App 内建的 Tor（Onion Browser 的 FAQ 里标注 iOS 17 only）。依 App Store 的资料，到 11 月 8 日为止两款都免费、最低要求都是 iOS 15，最近一次更新分别在 10 月 20 日与 10 月 15 日。&lt;/p&gt;
-&lt;p&gt;依 FAQ 的比较，Orbot 比较安全，内建的 Tor 比较稳定。使用内建的 Tor 时，真实 IP 会经由 WebRTC（浏览器直接传输音视频与数据的技术）泄露给访问的网站，音频与视频流也无法经过 Tor。FAQ 里的原因是 Apple 提供并强制使用的浏览器引擎 WebKit（引擎是解析与显示网页的核心组件）。Orbot 使用 Apple 的 Network Extensions（网络扩展），Apple 只给它 50 MB 内存，Tor 客户端接近上限时会被终止并重新启动。&lt;/p&gt;
-&lt;p&gt;依 FAQ，Onion Browser 会在离开前台时自动清除数据、默认不保留缓存与 cookie，也能检测网站的 .onion 地址并自动切换。至于浏览器指纹（网站用设备和浏览器的细节识别访客的手法），FAQ 里的说法是 iOS 内建的 WebKit 能调整的地方很少，最好的做法是跟其他 iOS 用户看起来一样。&lt;/p&gt;
-&lt;p&gt;只想让整台 iPhone 的连接走 Tor 时，也可以用 Orbot 搭配 Safari。依 FAQ，Orbot 把设备上所有流量都送进 Tor，搭配 Safari 时同样有 Tor 的效果。Orbot 被终止时 Safari 的连接会如何，FAQ 里没有交代。&lt;/p&gt;
-&lt;p&gt;FAQ 里 Onion Browser 比 Safari 多的保护，首先是确认 Tor 正在运行并接手请求之后才发出连接，另外还有自动清除与 .onion 切换。本文依 Tor Project 与 FAQ 对 WebKit 的说明推论，Safari 与 Onion Browser 一样受 WebKit 限制，同样达不到 Tor Browser 的反追踪能力。&lt;/p&gt;
-&lt;p&gt;Guardian Project 在公告自述有十年以上开发与发行 Onion Browser、iOS 版 Orbot 的经验。新计划要在 iOS 上提供以 Firefox 的 Gecko 引擎为基础、纳入 Tor Project 补丁的 Tor Browser，同时继续维护 Onion Browser 与 Orbot。依公告，Onion Browser 特意取了不同的名字，因为它并非完整的 Tor Browser。iOS 版要使用 Tor Browser 的名称，还要取得 Tor Project 的批准。&lt;/p&gt;
-&lt;p&gt;路线图以季为单位，标示为 2027 年 1 月的第二季要展示在 iOS 上运行 Gecko 的原型，并选定主要路线。标示为 2027 年 4 月的第三季要通过 TestFlight（Apple 的测试版分发渠道）与侧载（不经 App Store 安装 App）推出第一个 Alpha。标示为 2027 年 7 月的第四季才要决定下一步是 Beta 还是正式推出。&lt;/p&gt;
-&lt;p&gt;公告里也写到哪条路最好仍不确定，路线图列了两条。Apple 路线的依据是欧盟《数字市场法》（Digital Markets Act，DMA）要求 Apple 在 iOS 上开放第三方浏览器引擎，以及日本的替代浏览器引擎方案。Gecko 会通过 BrowserEngineKit（Apple 提供给替代引擎的开发工具）运行，经官方商店发行。开放路线改走 AltStore 这类侧载渠道，公告的用语是摆脱 App Store 的审查与限制。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;依 Tor Project 的说明页，Apple 要求 iOS 上的浏览器使用 WebKit，Onion Browser 因此无法具备与 Tor Browser 相同的隐私保护（欧盟与日本另有方案，见下一段）。FAQ 里的说明是 Tor Browser 在电脑与 Android 上以 Firefox 的 Gecko 为基础，实现代理与反追踪时有更多控制空间，也更可靠。本文的理解是，换成 Gecko 处理的是引擎这一层的限制，经 Tor 连接本身 Onion Browser 现在就能做到。&lt;/p&gt;
-&lt;p&gt;Apple 的开发者文档到 11 月 8 日为止列出的条件是欧盟方案需要 iOS 17.4 或 iPadOS 18 以上、日本方案需要 iOS 26.2 以上。App 要先通过 Apple 的授权，也只能在当地发行（日本的文档另有 Apple 明确许可的例外）。本文依这些条件推论，除非 Apple 另外许可，欧盟与日本以外的 iPhone 用户无法从官方商店获取走 Apple 路线的 Tor Browser。公告里也有只能在欧洲与日本发行的假设，Guardian Project 打算推动 Apple 在全球开放第三方浏览器引擎。&lt;/p&gt;
-&lt;p&gt;公告里以 malicious compliance（恶意遵从）形容 Apple 遵循 DMA 的做法，路线图也排了针对 Apple 这个平台与发行者的风险分析。Apple 的文档里写的是，只授权符合特定标准、承诺持续遵守隐私与安全要求的开发者使用替代引擎。依公告，官方商店能触及欧洲与日本只会从 Apple 官方渠道获取 App 的普通用户。侧载对已经面临 App Store 审查的用户是否更有帮助，公告里只有问句，没有结论。&lt;/p&gt;
-&lt;p&gt;Alpha 的时间表来自路线图，公告里没有它能在哪些地区安装的信息。公告对经欧盟与日本商店发行 iOS 版 Tor Browser 的说法是 when and if（准备好才会进行）。&lt;/p&gt;
-&lt;p&gt;要对访问的网站隐藏 IP 的人，依 FAQ 的比较适合让 Onion Browser 搭配 Orbot（两款都可以从 App Store 免费安装，需要 iOS 15 以上）。Orbot 反复重新启动时，内建的 Tor 比较稳定，代价是前面提到的 IP 泄露与音视频不经 Tor。以上做法都仍用 WebKit。本文依 Tor Project 的说明推论，需要 Tor Browser 完整防护的人目前要改到电脑或 Android 上使用。&lt;/p&gt;
-&lt;p&gt;依 Apple 的 iTunes 查询接口在 11 月 8 日的回传，中国大陆区 App Store 查不到 Onion Browser 与 Orbot（各 0 笔），美国区各查到 1 笔。结果只是接口的回传，没有用各地账号实际打开商店页，下架或从未上架的原因与时间点也查不到。公告里没有讨论大陆区商店查不到这两款 App 时，Apple 路线与侧载路线各有什么影响。&lt;/p&gt;
-&lt;p&gt;不需要对访问的网站隐藏 IP 的读者现在不必做任何设置，要回来看的时间点有两个。标示为 2027 年 1 月的那一季会选定主要路线，本文推论路线的选择会影响欧盟与日本以外的读者能否获取。标示为 2027 年 4 月的那一季要看 Alpha 是否如期推出、开放哪些地区。Guardian Project 规划继续维护 Onion Browser 与 Orbot，路线图的第三季（标示为 2027 年 4 月）也排了协助用户判断该用 Onion Browser 或 iOS 版 Tor Browser 的工作。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://guardianproject.info/2026/11/02/brewing-onion-cider-bringing-a-full-tor-browser-to-ios/&#34;&gt;Brewing Onion Cider: Bringing a full Tor Browser to iOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Guardian Project&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.torproject.org/tormobile/tormobile-3/&#34;&gt;How to install Tor Browser&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Tor Project&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://onionbrowser.com/faqs&#34;&gt;FAQs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Onion Browser&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines/&#34;&gt;Using alternative browser engines in the European Union&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines-jp/&#34;&gt;Using alternative browser engines in Japan&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/onion-browser/id519296448&#34;&gt;Onion Browser&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://apps.apple.com/us/app/orbot/id1609461599&#34;&gt;Orbot&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=519296448&amp;amp;country=cn&#34;&gt;Apple iTunes 查询接口，Onion Browser，中国大陆区&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1609461599&amp;amp;country=cn&#34;&gt;Apple iTunes 查询接口，Orbot，中国大陆区&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
