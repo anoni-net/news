@@ -82,7 +82,7 @@ STANDALONE_IMG_RE = re.compile(r"<p>\s*(<img\b[^>]*>)\s*</p>")
 INGEST_HINT = "維護者合併前執行 uv run tools/ingest_images.py 把圖片搬到 assets.anoni.net"
 
 # 原文的網站圖示，規則見 SPEC.md「原文的網站圖示」
-FAVICONS_PATH = ROOT / "favicons.toml"
+FAVICONS_PATH = ROOT / "favicons"  # 一個主機一個檔案，<主機>.toml
 FAVICON_DIR = "favicons/"
 FAVICON_SIZE = 64
 MAX_FAVICON_BYTES = 8_000
@@ -185,8 +185,8 @@ def categories_table() -> dict[str, dict[str, str]]:
 # ---------------------------------------------------------------- 預覽卡片
 
 # 每篇導讀的社群預覽卡片：tools/make_cards.py 用 tools/card.html 產圖，上傳到圖片主機的 og/，
-# 檔名寫進 og_cards.toml。卡片不進 repo，頁面直接引用圖片主機的網址。見 SPEC.md「預覽卡片」
-CARDS_PATH = ROOT / "og_cards.toml"
+# 檔名寫進 og_cards/ 底下這一頁的登記檔。卡片不進 repo，頁面直接引用圖片主機的網址。見 SPEC.md「預覽卡片」
+CARDS_PATH = ROOT / "og_cards"
 CARD_TEMPLATE = ROOT / "tools" / "card.html"
 CARD_DIR = "og"
 
@@ -224,12 +224,25 @@ def history_card(day: "HistoryDay", snap: "Snapshot") -> tuple[str, str, dict]:
     return f"history/{day.mmdd}", _card_rel(f"history/{day.mmdd}-{lang}", data), data
 
 
-def load_cards(path: Path = CARDS_PATH) -> dict[str, dict[str, str]]:
-    """og_cards.toml：文章的檔名（不含 .md）或 history/MM-DD，對到三個語系上傳好的卡片路徑。"""
-    if not path.exists():
+def card_file(key: str, root: Path = CARDS_PATH) -> Path:
+    """卡片登記檔的位置：og_cards/<文章的檔名>.toml 或 og_cards/history/<MM-DD>.toml。
+    一頁一個檔案，平行的 PR 各自新增，不會在同一個檔案裡衝突。"""
+    return root / f"{key}.toml"
+
+
+def dump_card(entry: dict[str, str]) -> str:
+    return "".join(f'"{code}" = "{rel}"\n' for code, rel in sorted(entry.items()))
+
+
+def load_cards(root: Path = CARDS_PATH) -> dict[str, dict[str, str]]:
+    """og_cards/ 底下的登記檔。鍵是文章的檔名（不含 .md）或 history/MM-DD，值是三個語系上傳好的卡片路徑。"""
+    if not root.exists():
         return {}
-    with path.open("rb") as handle:
-        return tomllib.load(handle).get("cards", {})
+    cards = {}
+    for path in sorted(root.rglob("*.toml")):
+        with path.open("rb") as handle:
+            cards[path.relative_to(root).as_posix().removesuffix(".toml")] = tomllib.load(handle)
+    return cards
 
 
 def card_url(card: tuple[str, str, dict], lang: "Lang", cards: dict[str, dict[str, str]]) -> str | None:
@@ -274,7 +287,7 @@ class Source:
 
 
 def source_host(url: str) -> str:
-    """favicons.toml 的鍵：網址的主機名稱，去掉開頭的 www.。"""
+    """網站圖示登記檔的主機：網址的主機名稱，去掉開頭的 www.。"""
     host = (urllib.parse.urlsplit(url).hostname or "").lower()
     return host[4:] if host.startswith("www.") else host
 
@@ -729,13 +742,21 @@ def process_images(post: Post, store: AssetStore, problems: list[str]) -> None:
             problems.append(f"{where}：圖片 {src} 要獨立成一段，不能跟文字寫在同一段")
 
 
-def load_favicons(path: Path) -> dict[str, dict]:
-    """讀 favicons.toml，每個主機只能是 icon、same_as、none 其中一種。"""
-    with open(path, "rb") as f:
-        hosts = tomllib.load(f).get("hosts", {})
+def favicon_file(host: str, root: Path = FAVICONS_PATH) -> Path:
+    """網站圖示的登記檔：favicons/<主機>.toml。一個主機一個檔案，平行的 PR 各自新增，不會衝突。"""
+    return root / f"{host}.toml"
+
+
+def load_favicons(root: Path) -> dict[str, dict]:
+    """讀 favicons/ 底下的登記檔，每個主機只能是 icon、same_as、none 其中一種。
+    same_as 指向別的主機，要全部讀完才檢查得了。"""
+    hosts: dict[str, dict] = {}
+    for path in sorted(root.glob("*.toml")):
+        with open(path, "rb") as f:
+            hosts[path.name.removesuffix(".toml")] = tomllib.load(f)
     problems = []
     for host, entry in hosts.items():
-        where = f"{path.name} 的 {host}"
+        where = f"{root.name}/{host}.toml"
         if not isinstance(entry, dict):
             problems.append(f"{where} 要寫成表格")
             continue
@@ -773,14 +794,14 @@ def resolve_favicons(posts: list[Post], hosts: dict[str, dict], store: AssetStor
             entry = hosts.get(host)
             if entry is None:
                 if host not in reported:
-                    problems.append(f"{post.where}：原文 {source.url} 的網站 {host} 不在 favicons.toml，{FAVICON_HINT}")
+                    problems.append(f"{post.where}：原文 {source.url} 的網站 {host} 沒有登記圖示（{FAVICONS_PATH.name}/{host}.toml），{FAVICON_HINT}")
                     reported.add(host)
                 continue
             if "same_as" in entry:
                 entry = hosts[entry["same_as"]]
             if "icon" not in entry:
                 continue
-            where = f"favicons.toml 的 {host}"
+            where = f"{FAVICONS_PATH.name}/{host}.toml"
             asset = store.get(ASSETS_PREFIX + FAVICON_DIR + entry["icon"], where, problems)
             if not asset:
                 continue
@@ -995,7 +1016,7 @@ def watch_report(posts: list[Post], today: date) -> str:
 def load_site(posts_dir: Path, authors: dict[str, dict], store: AssetStore | None = None,
               favicons: dict[str, dict] | None = None) -> list[Post]:
     """讀三個語系，檢查對應之後回傳 zh-TW 的文章，其他版本放在 translations。
-    favicons 是 favicons.toml 的內容，沒給就不解析網站圖示，原文一律用通用圖示。"""
+    favicons 是 favicons/ 登記檔的內容，沒給就不解析網站圖示，原文一律用通用圖示。"""
     problems: list[str] = []
     by_lang: dict[str, list[Post]] = {}
     for lang in LANGS:
@@ -2309,7 +2330,7 @@ def build(posts_dir: Path = ROOT / "posts", out_root: Path | None = None,
     # 測試用的圖片放在文章目錄旁邊的 assets/，不必連網
     assets_dir = posts_dir.parent / "assets"
     store = AssetStore(assets_dir if assets_dir.exists() else None)
-    favicons_path = posts_dir.parent / "favicons.toml"
+    favicons_path = posts_dir.parent / FAVICONS_PATH.name
     favicons = load_favicons(favicons_path if favicons_path.exists() else FAVICONS_PATH)
     strings()  # 介面文字有缺漏時在這裡就失敗
     posts = load_site(posts_dir, authors, store, favicons)
@@ -2678,7 +2699,7 @@ def run_check(args, targets, pages, posts, contract: list[Page]) -> int:
     for page, anchor in sorted(removed):
         problems.append(f"網址合約：{page}{'#' + anchor if anchor else ''} 不見了")
     if added:
-        notices.append(f"網址合約：新增 {len(added)} 項，執行 --update-contract 收進合約")
+        notices.append(f"網址合約：新增 {len(added)} 項，每週短訊的 PR 執行 --update-contract 收進合約，稿件的 PR 不必收")
 
     problems += check_contrast(ROOT / "static" / "css" / "news.css")
 

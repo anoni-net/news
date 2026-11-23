@@ -350,7 +350,11 @@
 	#perspective
 	#sources
 /2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /2026/11/karte-breach/
+	#perspective
+	#sources
 /2026/11/korea-health-data-bill/
 	#perspective
 	#sources
@@ -828,7 +832,11 @@
 	#perspective
 	#sources
 /en/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /en/2026/11/karte-breach/
+	#perspective
+	#sources
 /en/2026/11/korea-health-data-bill/
 	#perspective
 	#sources
@@ -1075,9 +1083,13 @@
 /en/history/11-22/
 	#y2026
 /en/history/11-23/
+	#y2026
 /en/history/11-24/
+	#y2026
 /en/history/11-25/
+	#y2026
 /en/history/11-26/
+	#y2026
 /en/history/11-27/
 	#y2026
 /en/history/11-29/
@@ -1215,9 +1227,13 @@
 /history/11-22/
 	#y2026
 /history/11-23/
+	#y2026
 /history/11-24/
+	#y2026
 /history/11-25/
+	#y2026
 /history/11-26/
+	#y2026
 /history/11-27/
 	#y2026
 /history/11-29/
@@ -1585,7 +1601,11 @@
 	#perspective
 	#sources
 /zh-cn/2026/11/iraq-jordan-telegram-block/
+	#perspective
+	#sources
 /zh-cn/2026/11/karte-breach/
+	#perspective
+	#sources
 /zh-cn/2026/11/korea-health-data-bill/
 	#perspective
 	#sources
@@ -1832,9 +1852,13 @@
 /zh-cn/history/11-22/
 	#y2026
 /zh-cn/history/11-23/
+	#y2026
 /zh-cn/history/11-24/
+	#y2026
 /zh-cn/history/11-25/
+	#y2026
 /zh-cn/history/11-26/
+	#y2026
 /zh-cn/history/11-27/
 	#y2026
 /zh-cn/history/11-29/

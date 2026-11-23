@@ -1,4 +1,4 @@
-"""維護者的機器上一次完成網站圖示、網址合約與預覽卡片，給 news-publish-assets 指令呼叫。
+"""維護者的機器上一次完成網站圖示與預覽卡片，給 news-publish-assets 指令呼叫。
 
     news-publish-assets --dry-run <稿件路徑> ...
     news-publish-assets [--from 主機=網址或檔案] [--none 主機=理由] [--same-as 主機=另一個主機] <稿件路徑> ...
@@ -6,7 +6,8 @@
 稿件路徑可以是任一個語系的檔案，也可以是絕對路徑，例如
 /home/.../worktrees/<分支>/posts/2026-11-20-slug.md 或 history/en/11-20.md。同一篇的三個語系會一起處理。
 
-依序執行 tools/fetch_favicons.py、build.py --update-contract、tools/make_cards.py 與 build.py --check。
+依序執行 tools/fetch_favicons.py、tools/make_cards.py 與 build.py --check。網址合約不在這裡更新，
+稿件的 PR 不收新網址，由每週短訊的 PR 一次收進去，見 SPEC.md「網址合約」。
 --dry-run 只執行前者與卡片的試跑，產生 .cache/favicons/preview.html 與 .cache/cards/preview.html，
 不上傳也不改登記表。上傳的目的地讀 ~/.config/anoni-news/assets-rsync，不寫進 repo。
 開始上傳之前先確認連得到圖片主機，連不到就停下來說明原因，不嘗試上傳。
@@ -102,10 +103,9 @@ def main() -> None:
     reachable(dest)
     env["NEWS_ASSETS_RSYNC"] = dest
     run(["uv", "run", "tools/fetch_favicons.py", *favicon_opts, *files], env)
-    run(["uv", "run", "build.py", "--update-contract"], env)
     run(["uv", "run", "tools/make_cards.py", *targets], env)
     run(["uv", "run", "build.py", "--check"], env)
-    print("完成：網站圖示、網址合約與預覽卡片都已更新，請 commit favicons.toml、og_cards.toml 與 url_contract.txt")
+    print("完成：網站圖示與預覽卡片都已更新，請 commit favicons/ 與 og_cards/ 底下新增或改動的檔案")
 
 
 if __name__ == "__main__":

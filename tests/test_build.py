@@ -923,7 +923,7 @@ def test_no_pin_no_featured(tmp_path):
     posts = tmp_path / "posts"
     write_versions(posts, GOOD)
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
-    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
+    shutil.copytree(FIXTURES / "favicons", tmp_path / "favicons")
     targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
     assert 'class="featured' not in (targets["clearnet"].out / "index.html").read_text(encoding="utf-8")
 
@@ -934,7 +934,7 @@ def test_column_page_marks_the_author_view(tmp_path):
     text = GOOD.replace("  - encryption\n", "  - column\n").replace("  - anoni-net\n", "  - named-example\n")
     write_versions(posts, text)
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
-    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
+    shutil.copytree(FIXTURES / "favicons", tmp_path / "favicons")
     targets, _, _ = build.build(posts, tmp_path / "out", ["clearnet"])
     out = targets["clearnet"].out
     page = (out / "2026/09/test-post/index.html").read_text(encoding="utf-8")
@@ -1454,7 +1454,7 @@ def test_scheduled_post_is_left_out_until_its_time(tmp_path, monkeypatch):
         .replace("authors:", "follows:\n  - 2026-09-18-test-post\nauthors:")
     write_versions(posts, later, "2026-09-19-next-post.md")
     shutil.copy(FIXTURES / "authors.yml", tmp_path / "authors.yml")
-    shutil.copy(FIXTURES / "favicons.toml", tmp_path / "favicons.toml")
+    shutil.copytree(FIXTURES / "favicons", tmp_path / "favicons")
 
     monkeypatch.setattr(build, "current_time", lambda: NOW)
     targets, pages, all_posts = build.build(posts, tmp_path / "out", ["clearnet"])
@@ -1492,7 +1492,7 @@ FAVICON = "eff.org-512902b2.png"
 
 
 def favicon_problems(tmp_path, hosts: dict, files: dict | None = None) -> list[str]:
-    """GOOD 的原文在 example.org，hosts 是 favicons.toml 的內容，files 是圖示主機上的檔案。"""
+    """GOOD 的原文在 example.org，hosts 是 favicons/ 登記檔的內容，files 是圖示主機上的檔案。"""
     posts, assets = tmp_path / "posts", tmp_path / "assets"
     write_versions(posts, GOOD)
     for name, options in (files or {}).items():
@@ -1526,7 +1526,7 @@ def test_feed_has_no_favicons(fixture_site):
 
 def test_unregistered_host_fails(tmp_path):
     problems = favicon_problems(tmp_path, {"eff.org": {"none": "x"}})
-    assert len([p for p in problems if "example.org 不在 favicons.toml" in p]) == 1, problems
+    assert len([p for p in problems if "example.org 沒有登記圖示（favicons/example.org.toml）" in p]) == 1, problems
 
 
 def test_same_as_and_none_resolve(tmp_path):
@@ -1545,20 +1545,22 @@ def test_same_as_and_none_resolve(tmp_path):
     ({"same_as": "missing.org"}, "不在登記表裡"),
 ])
 def test_favicon_registry_problems(tmp_path, entry, expected):
-    path = tmp_path / "favicons.toml"
+    root = tmp_path / "favicons"
+    root.mkdir()
     lines = [f'{key} = {value!r}' if isinstance(value, int) else f'{key} = "{value}"' for key, value in entry.items()]
-    path.write_text('[hosts."example.org"]\n' + "\n".join(lines) + "\n", encoding="utf-8")
+    (root / "example.org.toml").write_text("\n".join(lines) + "\n", encoding="utf-8")
     with pytest.raises(build.BuildError) as error:
-        build.load_favicons(path)
+        build.load_favicons(root)
     assert any(expected in p for p in error.value.problems), error.value.problems
 
 
 def test_same_as_cannot_chain(tmp_path):
-    path = tmp_path / "favicons.toml"
-    path.write_text('[hosts."a.org"]\nsame_as = "b.org"\n[hosts."b.org"]\nsame_as = "c.org"\n'
-                    '[hosts."c.org"]\nnone = "x"\n', encoding="utf-8")
+    root = tmp_path / "favicons"
+    root.mkdir()
+    for host, line in (("a.org", 'same_as = "b.org"'), ("b.org", 'same_as = "c.org"'), ("c.org", 'none = "x"')):
+        (root / f"{host}.toml").write_text(line + "\n", encoding="utf-8")
     with pytest.raises(build.BuildError) as error:
-        build.load_favicons(path)
+        build.load_favicons(root)
     assert any("本身也是 same_as" in p for p in error.value.problems), error.value.problems
 
 
@@ -1718,3 +1720,18 @@ def test_structured_data_has_section_breadcrumb_and_logo(fixture_site):
     category = (out / "category" / "censorship" / "index.html").read_text(encoding="utf-8")
     assert '<p class="list-intro">' in category and '"@type": "BreadcrumbList"' in category
     assert (out / "logo-512.png").exists()
+
+
+# ---------------------------------------------------------------- 預覽卡片的登記檔
+
+def test_cards_one_file_per_page(tmp_path):
+    """og_cards/ 底下一頁一個檔案，導讀歷史放在 history/ 子目錄，讀回來的鍵跟以前的登記表相同。"""
+    entry = {"en": "og/2026/09/a-en-00000000.png", "zh-CN": "og/2026/09/a-zh-cn-00000000.png",
+             "zh-TW": "og/2026/09/a-zh-tw-00000000.png"}
+    for key in ("2026-09-18-test-post", "history/11-25"):
+        path = build.card_file(key, tmp_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(build.dump_card(entry), encoding="utf-8")
+    assert (tmp_path / "history" / "11-25.toml").exists()
+    assert build.load_cards(tmp_path) == {"2026-09-18-test-post": entry, "history/11-25": entry}
+    assert build.load_cards(tmp_path / "missing") == {}
