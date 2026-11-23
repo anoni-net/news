@@ -66,6 +66,7 @@ tools/
   card.html              # 每篇導讀與導讀歷史日期頁的預覽卡片模板
   make_cards.py          # 維護者產生預覽卡片，上傳到 assets.anoni.net 並登記
   ingest_images.py       # 維護者合併前把稿件裡的圖片搬到 assets.anoni.net
+  merge_prs.sh           # 依序更新分支、等 CI、合併幾個已同意合併的 PR
 authors.yml              # 署名清單，front matter 的 authors 對應這裡的鍵
 site.toml                # 兩個輸出目標的差異
 build.py
@@ -73,9 +74,12 @@ layout_check.py          # 驗證第 8 項，用 headless Chrome 量版面
 tests/
   test_build.py
   fixtures/              # 測試用的文章與署名，--check 的版面檢查也用這一批
-url_contract.txt         # 網址合約，由 build.py --update-contract 產生
-og_cards.toml            # 預覽卡片的登記表，由 tools/make_cards.py 寫入
+url_contract.txt         # 網址合約，由 build.py --update-contract 產生，每週短訊的 PR 更新
+og_cards/                # 預覽卡片的登記檔，一頁一個，由 tools/make_cards.py 寫入
+favicons/                # 原文網站圖示的登記檔，一個主機一個，由 tools/fetch_favicons.py 寫入
 ```
+
+每篇稿件的 PR 只新增自己的檔案，不改共用的清單，同時開著的 PR 才不會互相衝突。2026-11-22 一次合併 14 個 PR，有 9 個卡在三份共用清單（預覽卡片、網站圖示、網址合約）的衝突，之後拆成一頁或一個主機一個檔案（anoni-net/news#280）。
 
 產物寫到 `public/clearnet/`、`public/onion/` 與 `public/ipfs/`，不進 `main`，由 CI 推到 `build` 分支（見「部署」）。
 
@@ -309,7 +313,7 @@ front matter 只有 `snapshots`，一個年份一筆，順序跟內文的年份�
 | `title` | 是 | 這一年回看的事件與年代，用名詞片語，寫法見 `guides/history.md` |
 | `description` | 是 | 兩句，第一句寫那一天發生什麼事，第二句寫跟今天讀者的關係，寫法見 `guides/history.md`。首頁時間軸只顯示標題與這兩句，也用在專欄的 RSS 與日期頁的 `<meta name="description">`（取最新的一則） |
 | `event` | 是 | 事件發生的日期，月日要跟檔名相同，年份要早於 `date`，選題的年代規則見 `guides/history.md`。來源之間差一天時（例如時區不同，或當事人自己也記不清），照官方或當事方的紀錄寫，必要時在內文寫明 |
-| `sources` | 是 | 同導讀，至少一筆，官方或當事方的紀錄優先。主機一樣要登記在 `favicons.toml` |
+| `sources` | 是 | 同導讀，至少一筆，官方或當事方的紀錄優先。主機一樣要在 `favicons/` 登記 |
 | `authors` | 是 | 同導讀 |
 | `regions` | 否 | 同導讀，填事件發生的地方 |
 | `draft` | 否 | 同導讀，`true` 時這一年的快照不產出 |
@@ -334,7 +338,7 @@ front matter 只有 `snapshots`，一個年份一筆，順序跟內文的年份�
 
 - 每則一句，不換行。寫法跟快照的內文相同，不寫人名，不寫「這一天」，年份由頁面顯示
 - 最多 3 則，依 `event` 由舊到新排。`event` 的月日跟檔名相同、早於 `date`，不能跟快照的主要事件同一天
-- 來源只有一個，`publisher` 必填，頁面上用它當連結文字，完整標題放在連結的 `title`。不顯示網站圖示，主機不必登記在 `favicons.toml`
+- 來源只有一個，`publisher` 必填，頁面上用它當連結文字，完整標題放在連結的 `title`。不顯示網站圖示，主機不必在 `favicons/` 登記
 - 不收人物的生日與忌日，也不收以特定個人為主角的事件
 - 三個語系列同樣的事件與來源，順序相同，句子各自依語系改寫
 - 跟著寫下它的那一年，上線之後一樣不改寫。隔年查到的其他事件寫進隔年那一則的 `also`
@@ -474,7 +478,7 @@ zh-CN 與 en 照同樣的結構放在 `/news/zh-cn/history/` 與 `/news/en/histo
 
 原文區塊的每一筆標題前面放來源網站的圖示（favicon），讀者掃過就知道這篇整理了哪幾家的報導。圖示跟內文圖片放在同一台主機，由維護者抓取、審核、上傳，建置時抓進產物，讀者不會連到來源網站。
 
-登記表是 repo 根目錄的 `favicons.toml`，鍵是 `sources` 網址的主機名稱，去掉開頭的 `www.`。每個主機寫成下面三種之一：
+登記檔放在 repo 根目錄的 `favicons/`，一個主機一個檔案，檔名是 `sources` 網址的主機名稱去掉開頭的 `www.`，例如 `favicons/eff.org.toml`。每個檔案寫成下面三種之一：
 
 | 欄位 | 說明 |
 |---|---|
@@ -482,7 +486,7 @@ zh-CN 與 en 照同樣的結構放在 `/news/zh-cn/history/` 與 `/news/en/histo
 | `same_as` | 沿用另一個主機的圖示，例如 `support.signal.org` 沿用 `signal.org`。指向的主機要直接寫 `icon` 或 `none` |
 | `none` | 不放網站的圖示，改用通用的地球圖示。值寫理由，例如網站沒有提供、抓取被擋、圖示不適合放 |
 
-- `sources` 的主機不在登記表時建置失敗，投稿的 PR 在圖示登記好之前是紅燈，跟圖片相同
+- `sources` 的主機沒有登記檔時建置失敗，投稿的 PR 在圖示登記好之前是紅燈，跟圖片相同
 - 圖示一律是 64×64 的 PNG，不超過 8KB，不能帶 metadata。頁面上以 16px 顯示，高解析度螢幕照樣清楚
 - 圖示底下墊一塊白色的圓角底，透明底的深色圖示在深色模式也看得見
 - `alt` 留空，網站名稱已經寫在旁邊的標題或出處欄。圖示放在連結裡面，點圖示同樣連到原文
@@ -493,7 +497,7 @@ zh-CN 與 en 照同樣的結構放在 `/news/zh-cn/history/` 與 `/news/en/histo
 上稿流程：
 
 1. 維護者執行 `uv run tools/fetch_favicons.py --dry-run posts/<檔名>.md`。工具列出還沒登記的主機，下載並轉好圖示，另外產生一頁預覽 `.cache/favicons/preview.html`，把每個圖示放在淺色與深色背景上
-2. 看過預覽，設好 `NEWS_ASSETS_RSYNC` 之後拿掉 `--dry-run` 再執行一次。工具把圖示上傳到 `favicons/`，確認每個網址回 200 之後才寫進 `favicons.toml`
+2. 看過預覽，設好 `NEWS_ASSETS_RSYNC` 之後拿掉 `--dry-run` 再執行一次。工具把圖示上傳到 `favicons/`，確認每個網址回 200 之後才寫進各主機的登記檔
 3. 抓不到或抓到的圖不適合時，用 `--from <主機>=<網址或檔案>` 指定來源，或用 `--none <主機>=<理由>` 登記成通用圖示
 
 工具依序試網站首頁 `<link>` 宣告的 apple-touch-icon、標了尺寸的 PNG 或 ICO 圖示，最後才試 `/favicon.ico`，取最大的一張縮成 64×64，非正方形的補透明邊。SVG 不收，理由同內文圖片。原站擋下自動抓取時（例如 Cloudflare 回 403），改從 Internet Archive 取同一個網站最近的存檔，用的仍是原站自己的圖示，`from` 記存檔的網址。三段以上的主機還是抓不到時改抓上一層，例如 `support.signal.org` 改抓 `signal.org`，成功的話登記成 `same_as`。已經登記的主機要重新抓取時用 `--refetch <主機>`。
@@ -598,7 +602,9 @@ clearnet 用路徑，跟文件站的 `anoni.net/docs` 同一個模式，官網�
 
 ### 網址合約
 
-`build.py --update-contract` 把所有頁面網址與每一篇的錨點寫進 `url_contract.txt`。CI 比對產物與合約，新增只印提醒，移除或改名讓建置失敗。判準與文件站的 `tools/check_url_contract.py` 相同：拿走讀者已經收藏或分享出去的網址，才算破壞性變更。
+`build.py --update-contract` 把所有頁面網址與每一篇的錨點寫進 `url_contract.txt`。CI 比對產物與合約，新增只印提醒，移除或改名讓建置失敗。
+
+稿件的 PR 不更新合約，新網址由每週短訊的 PR 一次收進去。合約是一份共用的清單，每篇都更新的話，同時開著的 PR 都會改到同一個檔案而衝突。代價是新文章上線後，最多晚一週才受到合約保護。判準與文件站的 `tools/check_url_contract.py` 相同：拿走讀者已經收藏或分享出去的網址，才算破壞性變更。
 
 合約只記 clearnet 的路徑。onion 的網址由「去掉 `/news` 前綴、接上 `news.<onion 位址>`」這條固定的對應推得，不另外記一份。
 
@@ -904,13 +910,13 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 
 - 卡片 1200×630，墨色底，上方是 logo 與「新聞導讀」，接著是分類的色塊與名稱、標題、日期。分類用 `news.css` 深色模式那組較亮的顏色。`tools/card.html` 只寫了 2026-10 那八個分類的顏色，改模板會讓每一張卡片的雜湊一起換掉，所以之後加的分類由 `tools/make_cards.py` 產圖時從 `news.css` 補上，模板不動。導讀歷史在分類的位置寫「導讀歷史 · 事件年份」，標題與日期用那一天最新的一則快照
 - 模板是 `tools/card.html`，維護者執行 `tools/make_cards.py`，用 Chrome 截圖，轉成調色盤 PNG，一張約 20KB，不超過 150KB
-- 卡片不進 repo。工具把卡片上傳到圖片主機的 `og/`（`https://assets.anoni.net/news/og/`），確認回 200 之後把檔名寫進 `og_cards.toml`，repo 裡只有這份登記表
+- 卡片不進 repo。工具把卡片上傳到圖片主機的 `og/`（`https://assets.anoni.net/news/og/`），確認回 200 之後把檔名寫進這一頁的登記檔，repo 裡只有登記檔。導讀寫在 `og_cards/<文章的檔名>.toml`，導讀歷史寫在 `og_cards/history/<MM-DD>.toml`，三個語系各一行
 - 檔名帶雜湊，算的是卡片上的每一個字與模板。標題、分類、日期改了，或改了模板，檔名就換，不會重複使用，也不必處理快取
-- 建置時算出這一頁目前該用的檔名，跟登記表對得上才引用，對不上（還沒產生，或內容改過）就退回全站的 `og.png`，不會掛著舊標題的卡片。建置不抓卡片、也不檢查圖片主機，每小時的排程重建不受圖片主機影響
+- 建置時算出這一頁目前該用的檔名，跟登記檔對得上才引用，對不上（還沒產生，或內容改過）就退回全站的 `og.png`，不會掛著舊標題的卡片。建置不抓卡片、也不檢查圖片主機，每小時的排程重建不受圖片主機影響
 - 只有 clearnet 引用卡片，onion 產物維持站內的全站預覽圖，產物裡不出現 clearnet 的網址
 - front matter 指定了 `image` 的文章用那張圖，不產生卡片
 - Bluesky 自動發文的預覽圖跟 `og:image` 相同，用同一張卡片
-- 導讀歷史隔年增補快照時，日期頁的卡片要重新產生。新的快照還在排程中的那段時間，日期頁的卡片對不上登記表，暫時用全站的預覽圖
+- 導讀歷史隔年增補快照時，日期頁的卡片要重新產生。新的快照還在排程中的那段時間，日期頁的卡片對不上登記檔，暫時用全站的預覽圖
 - 中文標題用瀏覽器的 `Intl.Segmenter` 斷詞，只在詞與詞之間換行，「支援」這類詞不會拆在兩行。再用 `text-wrap: balance` 讓各行長度平均，避免最後一行只剩一個字，也避免開頭的英文單字自成一行。字級從 76px 往下縮到放得進三行為止
 
 上稿流程：新文章合併前，維護者設好 `NEWS_ASSETS_RSYNC`，執行 `uv run tools/make_cards.py`，沒給檔名時會處理所有還沒有卡片或已過期的頁面。先加 `--dry-run` 只產圖，看過 `.cache/cards/preview.html` 再上傳。忘了產生也不會讓建置失敗，那一篇暫時用全站的預覽圖。
@@ -962,7 +968,7 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 
 `uv run build.py` 產出三份產物，`uv run build.py --check` 在產出後執行下列檢查，任何一項不過就 exit 1：
 
-1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）。`sources` 的每個主機都在 `favicons.toml` 裡，圖示的格式與尺寸符合規定（見「原文的網站圖示」）。導讀歷史的路徑、欄位與內文（見「導讀歷史」的「建置時檢查」）
+1. front matter 的欄位、日期、slug 與檔名，slug 在同一個年月內不重複，`authors` 的每個鍵都在 `authors.yml` 裡。三個語系的對應（見「多語系」）。圖片的來源、格式、metadata、大小、替代文字與圖說（見「圖片」）。`sources` 的每個主機在 `favicons/` 都有登記檔，圖示的格式與尺寸符合規定（見「原文的網站圖示」）。導讀歷史的路徑、欄位與內文（見「導讀歷史」的「建置時檢查」）
 2. 內文的錨點
 3. 文章、固定頁面與 `strings.toml` 有連到文件站時，網址對得上文件站的網址合約。訂閱頁連到的 RSS 訂閱入門搬家或改名，這一項會擋下來
 4. 產物沒有可執行的 `<script>`（`application/ld+json` 除外，而且內容要能解析成 JSON），也沒有指向站外的資源。clearnet 的流量統計與朗讀按鈕照各自一節的條件放行。`.js` 檔只能有 `js/read-aloud.js`，而且只在設定了 `read_aloud` 的目標。字型檔與 `css/fonts-*.css` 只在設定了 `fonts` 的目標，頁面裡 `fonts-*.css` 的版本號都換上了

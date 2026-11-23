@@ -110,12 +110,15 @@ def test_registry_round_trip_passes_build(tmp_path):
         "support.signal.org": {"same_as": "signal.org"},
         "openai.com": {"none": "抓取被擋下，理由裡有 \"引號\""},
     }
-    path = tmp_path / "favicons.toml"
-    path.write_text(fetch_favicons.dump_registry(hosts), encoding="utf-8")
-    assert build.load_favicons(path) == hosts
-    # 依主機名稱排序，diff 才看得出改了哪幾筆
-    text = path.read_text(encoding="utf-8")
-    assert text.index('"openai.com"') < text.index('"signal.org"') < text.index('"support.signal.org"')
+    root = tmp_path / "favicons"
+    fetch_favicons.write_registry(hosts, root)
+    assert build.load_favicons(root) == hosts
+    assert fetch_favicons.load_registry(root) == hosts
+    # 一個主機一個檔案，平行的 PR 各自新增，不會在同一個檔案裡衝突
+    assert sorted(p.name for p in root.iterdir()) == ["openai.com.toml", "signal.org.toml", "support.signal.org.toml"]
+    # 只寫這次處理的主機，其他主機的檔案不動
+    fetch_favicons.write_registry({"eff.org": {"none": "x"}}, root)
+    assert build.load_favicons(root) == {**hosts, "eff.org": {"none": "x"}}
 
 
 def test_fetched_name_follows_content():

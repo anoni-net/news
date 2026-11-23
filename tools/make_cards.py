@@ -1,4 +1,4 @@
-"""產生導讀與導讀歷史日期頁的社群預覽卡片，上傳到圖片主機，寫進 og_cards.toml。規則見 SPEC.md「預覽卡片」。
+"""產生導讀與導讀歷史日期頁的社群預覽卡片，上傳到圖片主機，寫進 og_cards/ 底下這一頁的登記檔。規則見 SPEC.md「預覽卡片」。
 
     uv run tools/make_cards.py --dry-run [posts/<檔名>.md | history/MM-DD.md ...]
     NEWS_ASSETS_RSYNC=<rsync 目標> uv run tools/make_cards.py [posts/<檔名>.md | history/MM-DD.md ...]
@@ -9,7 +9,8 @@
 
 --dry-run 只產圖，放在 .cache/cards/，另外產生一頁 .cache/cards/preview.html 把卡片排在一起看。
 拿掉 --dry-run 之後上傳到 $NEWS_ASSETS_RSYNC/og/，確認 https://assets.anoni.net/news/og/ 底下
-回 200，才寫進 og_cards.toml。卡片不進 repo，repo 裡只有登記表。
+回 200，才寫進 og_cards/<文章的檔名>.toml 或 og_cards/history/<MM-DD>.toml。
+卡片不進 repo，repo 裡只有登記檔。
 
 需要 Chrome 與 Noto Serif CJK、Noto Sans CJK 的 TC 與 SC 字型。
 """
@@ -95,14 +96,12 @@ def pending(paths: list[str]) -> list[tuple[str, str, tuple[str, str, dict]]]:
     return [(where, lang.code, card) for _, where, lang, card in items if build.card_url(card, lang, cards) is None]
 
 
-def write_registry(cards: dict[str, dict[str, str]]) -> None:
-    lines = ["# 每篇導讀的社群預覽卡片，由 tools/make_cards.py 寫入，不要手改。見 SPEC.md「預覽卡片」。",
-             "# 鍵是文章的檔名（不含 .md）或 history/MM-DD，值是三個語系的卡片在 https://assets.anoni.net/news/ 底下的路徑。",
-             "", "[cards]"]
-    for stem in sorted(cards):
-        values = ", ".join(f'"{code}" = "{rel}"' for code, rel in sorted(cards[stem].items()))
-        lines.append(f'"{stem}" = {{ {values} }}')
-    build.CARDS_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+def write_registry(cards: dict[str, dict[str, str]], keys: set[str]) -> None:
+    """只寫這次產生卡片的那幾頁，一頁一個檔案，其他頁的登記檔不動。"""
+    for key in sorted(keys):
+        path = build.card_file(key)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(build.dump_card(cards[key]), encoding="utf-8")
 
 
 def preview(made: list[tuple[str, Path]]) -> Path:
@@ -152,8 +151,9 @@ def main() -> int:
             if response.status != 200:
                 raise SystemExit(f"{url} 回 {response.status}，登記表沒有改動")
         cards.setdefault(key, {})[code] = rel
-    write_registry(cards)
-    print(f"已上傳 {len(made)} 張，寫進 {build.CARDS_PATH.name}")
+    keys = {key for _, _, (key, _, _) in todo}
+    write_registry(cards, keys)
+    print(f"已上傳 {len(made)} 張，寫進 {build.CARDS_PATH.name}/ 底下 {len(keys)} 頁的登記檔")
     return 0
 
 

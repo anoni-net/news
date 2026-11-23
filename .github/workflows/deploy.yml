@@ -39,7 +39,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .cache/assets
-          key: assets-${{ hashFiles('favicons.toml', 'posts/**/*.md') }}
+          key: assets-${{ hashFiles('favicons/*.toml', 'posts/**/*.md') }}
           restore-keys: assets-
 
       # 標題字型的原始檔（約 40 MB），build.py 下載後會比對 sha256。版本固定，key 跟著

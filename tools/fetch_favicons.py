@@ -1,4 +1,4 @@
-"""維護者抓取原文網站的圖示，上傳到 assets.anoni.net 並登記在 favicons.toml。規則見 SPEC.md「原文的網站圖示」。
+"""維護者抓取原文網站的圖示，上傳到 assets.anoni.net 並登記在 favicons/<主機>.toml。規則見 SPEC.md「原文的網站圖示」。
 
     uv run tools/fetch_favicons.py --dry-run                     # 全部文章，只抓取與轉檔，產生預覽
     uv run tools/fetch_favicons.py --dry-run posts/2026-09-18-slug.md
@@ -6,7 +6,7 @@
     uv run tools/fetch_favicons.py --from openai.com=~/Downloads/openai.png --none ooni.org=網站沒有提供圖示
     uv run tools/fetch_favicons.py --refetch openai.com                  # 已登記的主機重新抓取
 
-只處理 favicons.toml 還沒登記的主機。每個主機依序試網站首頁 <link> 宣告的 apple-touch-icon、
+只處理 favicons/ 底下還沒有登記檔的主機。每個主機依序試網站首頁 <link> 宣告的 apple-touch-icon、
 標了尺寸的 PNG 或 ICO，最後才試 /favicon.ico，取最大的一張縮成 64×64 的 PNG。原站擋下自動抓取時，
 改從 Internet Archive 取同一個網站最近的存檔。上傳到
 $NEWS_ASSETS_RSYNC/favicons/，確認 https://assets.anoni.net/news/favicons/ 底下回 200 之後才寫進登記表。
@@ -53,10 +53,6 @@ ARCHIVE_RETRY_WAITS = (10, 30, 60)
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"
 LINK_RE = re.compile(r"<link\b[^>]*>", re.I)
 ATTR_RE = re.compile(r'([a-zA-Z-]+)\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s>]+))')
-HEADER = """\
-# 原文網站的圖示登記表，格式與流程見 SPEC.md「原文的網站圖示」。
-# 鍵是 sources 網址的主機名稱，去掉開頭的 www.。由 tools/fetch_favicons.py 寫入，手改之前先讀規格。
-"""
 
 
 @dataclass
@@ -198,23 +194,27 @@ def from_override(host: str, value: str) -> Fetched:
 
 # ---------------------------------------------------------------- 登記表
 
-def load_registry(path: Path) -> dict[str, dict]:
-    if not path.exists():
+def load_registry(root: Path) -> dict[str, dict]:
+    if not root.exists():
         return {}
-    with open(path, "rb") as f:
-        return tomllib.load(f).get("hosts", {})
+    registry = {}
+    for path in sorted(root.glob("*.toml")):
+        with open(path, "rb") as f:
+            registry[path.name.removesuffix(".toml")] = tomllib.load(f)
+    return registry
 
 
-def dump_registry(hosts: dict[str, dict]) -> str:
-    """依主機名稱排序寫回，欄位順序固定，diff 才看得出改了哪幾筆。"""
-    blocks = [HEADER]
-    for host in sorted(hosts):
-        lines = [f"[hosts.{json.dumps(host)}]"]
-        for key in ("icon", "from", "same_as", "none"):
-            if key in hosts[host]:
-                lines.append(f"{key} = {json.dumps(hosts[host][key], ensure_ascii=False)}")
-        blocks.append("\n".join(lines) + "\n")
-    return "\n".join(blocks)
+def dump_entry(entry: dict) -> str:
+    """一個主機的登記檔，欄位順序固定，diff 才看得出改了什麼。"""
+    return "".join(f"{key} = {json.dumps(entry[key], ensure_ascii=False)}\n"
+                   for key in ("icon", "from", "same_as", "none") if key in entry)
+
+
+def write_registry(entries: dict[str, dict], root: Path) -> None:
+    """只寫這次處理的主機，一個主機一個檔案，其他主機的檔案不動。"""
+    root.mkdir(exist_ok=True)
+    for host, entry in entries.items():
+        build.favicon_file(host, root).write_text(dump_entry(entry), encoding="utf-8")
 
 
 def source_hosts(paths: list[Path]) -> dict[str, str]:
@@ -376,10 +376,9 @@ def main() -> int:
             print("\n".join(f"  {name}" for name in missing))
             return 1
 
-    registry.update(entries)
-    build.FAVICONS_PATH.write_text(dump_registry(registry), encoding="utf-8")
+    write_registry(entries, build.FAVICONS_PATH)
     build.load_favicons(build.FAVICONS_PATH)  # 寫回去的格式不對時在這裡就失敗
-    print(f"已寫入 {build.FAVICONS_PATH.name}，共 {len(entries)} 個主機")
+    print(f"已寫入 {build.FAVICONS_PATH.name}/ 底下 {len(entries)} 個主機的登記檔")
     return 1 if failed else 0
 
 
