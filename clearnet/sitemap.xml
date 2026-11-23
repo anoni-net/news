@@ -22,6 +22,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/2026/11/bitwarden-native-passkeys/</loc>
+<lastmod>2026-11-24</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/bitwarden-native-passkeys/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/iraq-jordan-telegram-block/</loc>
 <lastmod>2026-11-23</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/iraq-jordan-telegram-block/"/>
@@ -1622,6 +1630,14 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
 </url>
 <url>
+<loc>https://anoni.net/news/zh-cn/2026/11/bitwarden-native-passkeys/</loc>
+<lastmod>2026-11-24</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/bitwarden-native-passkeys/"/>
+</url>
+<url>
 <loc>https://anoni.net/news/zh-cn/2026/11/iraq-jordan-telegram-block/</loc>
 <lastmod>2026-11-23</lastmod>
 <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/iraq-jordan-telegram-block/"/>
@@ -3220,6 +3236,14 @@
 <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/contribute/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/contribute/"/>
 <xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/contribute/"/>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/</loc>
+<lastmod>2026-11-24</lastmod>
+<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://anoni.net/news/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="zh-Hans" href="https://anoni.net/news/zh-cn/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://anoni.net/news/2026/11/bitwarden-native-passkeys/"/>
 </url>
 <url>
 <loc>https://anoni.net/news/en/2026/11/iraq-jordan-telegram-block/</loc>

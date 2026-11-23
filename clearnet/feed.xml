@@ -6,7 +6,83 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Mon, 23 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Bitwarden 桌面版與 Windows 11、macOS 的通行金鑰整合</title>
+<link>https://anoni.net/news/2026/11/bitwarden-native-passkeys/</link>
+<guid isPermaLink="false">anoni-news:2026/11/bitwarden-native-passkeys</guid>
+<pubDate>Tue, 24 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>與已經在 Windows 11 或 macOS 上使用 Bitwarden 的人有關。Bitwarden 11 月 18 日公告桌面版可以設成系統的通行金鑰提供者，電腦上建立的通行金鑰可以存進 Bitwarden 保管庫、跟著帳號同步。Windows 11 要用 Microsoft Store 安裝的版本，依 Privacy Guides 的新聞簡訊，Linux 使用者這次無法使用。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Bitwarden、Privacy Guides、Microsoft 等 4 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Bitwarden 11 月 18 日公告，桌面版可以設成 Windows 11 與 macOS 的通行金鑰提供者（電腦上負責保存通行金鑰、登入時交出來使用的程式）。通行金鑰（passkey）用裝置的螢幕鎖定取代密碼登入，網站只存公開金鑰，登入用的私鑰存在裝置或密碼管理器裡。桌面版設成提供者之後，網站或桌面應用程式建立通行金鑰時跳出的系統視窗會列出 Bitwarden 作為存放位置。Windows 11 要用從 Microsoft Store 安裝的版本，Privacy Guides 的新聞簡訊則提到 Linux 使用者這次無法使用。&lt;/p&gt;
+&lt;p&gt;Bitwarden 從 2024 年初開始在瀏覽器擴充套件與手機 App 保管通行金鑰。依 Privacy Guides 11 月 19 日的新聞簡訊，擴充套件適用網站，登入桌面應用程式時可能要改用手機或硬體安全金鑰。在電腦上建立的通行金鑰，也可能被存進 Windows 或 macOS 預設的憑證管理工具，沒有進到 Bitwarden。&lt;/p&gt;
+&lt;p&gt;透過系統視窗建立的通行金鑰會成為保管庫裡的一筆登入項目，任何一個 Bitwarden App 都能管理。保管庫裡已經有使用者名稱相同的登入項目時，通行金鑰會自動加到這筆項目。項目裡原本就存了通行金鑰時，會先跳出覆寫的警告。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;已經在 Windows 11 或 macOS 上使用 Bitwarden 的人才與這次的整合有關，沒有用 Bitwarden 的人不受影響。設定之後，電腦上建立的通行金鑰可以存進 Bitwarden 並跟著帳號同步到其他裝置，不必留在系統預設的工具裡。從公告描述的同步方式來看，私鑰跟著 Bitwarden 帳號走，帳號的保護與復原因此也牽動這些通行金鑰。之後要再搬到其他密碼管理器時，直接轉移用的協定還在草案階段。&lt;/p&gt;
+&lt;p&gt;建立與登入時的視窗由 Windows 11 與 macOS 提供，私鑰則存在 Bitwarden 保管庫。依 Microsoft 的說明，Windows 11 搭配第三方提供者時，通行金鑰由該提供者保護與管理。&lt;/p&gt;
+&lt;p&gt;要搬走或備份時，匯出成檔案只有 &lt;code&gt;.json&lt;/code&gt; 格式包含通行金鑰，Bitwarden 在匯出頁建議選加密的格式。密碼保護（Password protected）的加密匯出才能匯入其他 Bitwarden 帳號，限定原帳號的只能匯回同一個帳號。Bitwarden 2024.3.1 版以前建立的通行金鑰帶有每次使用都會增加的計數器，匯出頁寫了這類匯出檔不適合當長期備份。&lt;/p&gt;
+&lt;p&gt;桌面版能不能直接轉移到其他密碼管理器，匯出頁沒有寫，列出的直接轉移只有手機的做法（各家的支援範圍見本站 10 月 19 日的&lt;a href=&#34;https://anoni.net/news/2026/10/passkey-attestation-debate/&#34;&gt;通行金鑰證明機制導讀&lt;/a&gt;）。直接轉移用的是 FIDO 聯盟的憑證交換協定（CXP），到 11 月 21 日，FIDO 聯盟頁面列出的 CXP 是 2024 年 10 月的工作草案。&lt;/p&gt;
+&lt;p&gt;想讓建立的通行金鑰存進 Bitwarden 保管庫的人，在 Windows 11 上要用 Microsoft Store 版的桌面版，Bitwarden 2025 年 11 月的測試版則是從 GitHub 安裝。Microsoft 表示這項能力隨 2025 年 11 月的安全性更新提供。之後在桌面版設定的 Passkey provider 一項選 Manage in system settings，再照系統跳出的視窗啟用 Bitwarden，macOS 跳出的是詢問是否使用 Bitwarden 自動填入的視窗。Bitwarden 在說明頁建議同時關閉瀏覽器擴充套件的通行金鑰功能，以免兩邊衝突。&lt;/p&gt;
+&lt;p&gt;登入 Bitwarden 帳號本身用的通行金鑰不會存進保管庫。既然保管庫不收這把金鑰，用通行金鑰登入 Bitwarden 的人就要另外保存它。Linux 使用者與不想換安裝來源的 Windows 11 使用者，仍可以用瀏覽器擴充套件在網站上保管與使用通行金鑰，登入桌面應用程式則不在範圍內。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bitwarden.com/blog/integrate-bitwarden-native-passkeys/&#34;&gt;Integrate Bitwarden with Windows and macOS for native passkey creation and use&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitwarden&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/11/19/bitwarden-adds-native-passkey-support-for-windows-and-macos/&#34;&gt;Bitwarden Adds Native Passkey Support for Windows and macOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bitwarden.com/help/storing-passkeys/&#34;&gt;Autofill Passkeys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitwarden&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bitwarden.com/blog/bitwarden-launches-passkey-management/&#34;&gt;Bitwarden launches passkey management&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitwarden&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://techcommunity.microsoft.com/blog/windows-itpro-blog/windows-11-expands-passkey-manager-support/4467572&#34;&gt;Windows 11 expands passkey manager support&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-11-11&#34;&gt;2025 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/security/identity-protection/passkeys/&#34;&gt;Passkeys&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bitwarden.com/help/export-your-data/&#34;&gt;Export Vault Data&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Bitwarden&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fidoalliance.org/specifications/download-credential-exchange-specifications/&#34;&gt;Download Credential Exchange Specifications&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;FIDO Alliance&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>伊拉克與約旦的 Telegram 封鎖與 OONI 量測</title>
 <link>https://anoni.net/news/2026/11/iraq-jordan-telegram-block/</link>
@@ -1689,120 +1765,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2016-11-30&#34;&gt;2016 年 11 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Lenovo 指紋隨身碟的未加密 SD 卡與加密宣稱的判斷方式</title>
-<link>https://anoni.net/news/2026/11/lenovo-fingerprint-usb/</link>
-<guid isPermaLink="false">anoni-news:2026/11/lenovo-fingerprint-usb</guid>
-<pubDate>Sun, 15 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>依研究者的投影片，Lenovo ThinkPlus FU100 指紋隨身碟標榜硬體加密與 AES-256，裡面卻是沒有加密的 SD 卡。Lenovo 的聲明寫這批產品只由 Lenovo 在中國大陸販售，受影響的客戶可以安排更換。聲明沒有回答 AES-256 宣稱是否屬實（11 月 8 日查證）。其他品牌標榜加密的隨身碟，可以從金鑰是否依賴密碼來判斷。</description>
-<content:encoded>&lt;p&gt;整理 13 篇原文，來自 RE//verse 2026、NVD、Tom&amp;#39;s Hardware 等 10 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;隨身碟標榜「加密」或「指紋解鎖」，不代表裡面的檔案經過加密。一位研究者 2026 年 3 月在逆向工程研討會 RE//verse 的投影片拆解了 Lenovo ThinkPlus FU100 指紋隨身碟，結論是外殼裡只有一張 SD 卡，資料沒有任何加密。依 Lenovo 經 Tom&#39;s Hardware 轉載的聲明，這批 ThinkPlus 儲存產品為中國市場設計，也只由 Lenovo 在中國大陸販售。投影片另外列出其他受影響的裝置，下面的判斷方式也可用在其他品牌標榜加密的產品。&lt;/p&gt;
-&lt;p&gt;拆解與結論都出自投影片，以下依投影片的文字與 Tom&#39;s Hardware、資安部落格 HackingPassion 的轉述。投影片寫著「It&#39;s just an SD card in a fancy case」（只是裝在漂亮外殼裡的 SD 卡），指紋辨識只控制 USB 連線。依 HackingPassion 的描述，指紋決定的是隨身碟要不要連上電腦，卡上的檔案不受它影響。&lt;/p&gt;
-&lt;p&gt;「硬體加密」與 AES-256（廣泛使用的加密演算法）兩項宣稱列在投影片的 FU100 介紹頁，圖片來源標示為 Alibaba.com。到 11 月 8 日，本文查不到 Lenovo 官網的 FU100 產品頁，無法確認 Lenovo 自己的通路是否用過同樣的文字。&lt;/p&gt;
-&lt;p&gt;依投影片與 HackingPassion，研究者 2025 年 8 月 2 日通報 Lenovo。2025 年 8 月 27 日的暫時修補是在 SD 卡上覆蓋一層環氧樹脂（epoxy），完整修補排在 2025 年 12 月。Lenovo 的聲明提到接獲通報後與研究者協調揭露，透過硬體與軟體升級修正，並在 2026 年 1 月發布安全公告與三個 CVE（公開的漏洞編號）。&lt;/p&gt;
-&lt;p&gt;Lenovo 公告 LEN-210545 的原頁在 11 月 8 日查閱時回應 Access Denied，公告內容只能依二手來源與美國國家漏洞資料庫（NVD）的紀錄。NVD 上由 Lenovo 提交的紀錄寫到，有實體接觸的人可能讀取隨身碟上的資料，受影響的是 ThinkPlus FU100、FU200、TU800 與 TSD303 的第一代。&lt;/p&gt;
-&lt;p&gt;依 HackingPassion 與 Tom&#39;s Hardware，同一場演講裡的外接 SSD TSD303 有加密資料，問題出在密碼驗證。裝置會把正確的密碼以明文經 USB 傳回電腦上的程式比對。第一版修補改成加密後傳送，金鑰卻可由程式推算，2025 年 12 月的第二版改由裝置自行比對。依 HackingPassion 的整理，投影片列出的十款使用相同軟體套件的裝置（投影片上的廠商名稱經過遮蔽）有兩款把資料未加密存在 micro SD 卡上，八款的問題在密碼傳送。&lt;/p&gt;
-&lt;p&gt;Lenovo 的聲明沒有回答 AES-256 與硬體加密的宣稱是否屬實，也沒有承認或否認 SD 卡未加密。依 HackingPassion，Lenovo 與研究者都沒有提到有人實際遭到攻擊，本文到 11 月 8 日也沒有查到受害案例。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;指紋與密碼畫面控制的可能只是連線，資料有沒有受到保護，要看解密金鑰從哪裡來。依 HackingPassion 的整理，第一種可靠的做法是金鑰由密碼經過 PBKDF2 或 Argon2 這類刻意放慢的函式衍生，每猜一次都要花時間。另一種是驗證完全在裝置自己的晶片內進行，密碼與金鑰都不離開晶片。依投影片，FU100 的資料沒有加密，兩種做法都沒有用上（本文的推論）。&lt;/p&gt;
-&lt;p&gt;儲存裝置廠商 Netac 的軟體加密工具在研究者測試的版本裡，AES-256 金鑰是寫在程式裡的固定值，跟使用者的密碼無關（依 Tom&#39;s Hardware 與 HackingPassion）。Tom&#39;s Hardware 也寫到，Netac 到研究者 2026 年 3 月的演講時沒有修補。軟體加密與 FU100 完全沒有加密的性質不同，標示 AES-256 同樣看不出金鑰的來源（本文的歸納）。&lt;/p&gt;
-&lt;p&gt;FIPS 140（美國政府的密碼模組標準）由 NIST 的密碼模組驗證計畫（CMVP）管理，模組交由獨立實驗室測試。證書可以在 NIST 的清單查詢，依 NIST 的頁面，FIPS 140-2 的證書在 2026 年 9 月 21 日後移到 Historical List（歷史清單）。依 IEEE Spectrum 的報導，德國資安公司 SySS 2009 年 12 月公開繞過多款 FIPS 140-2 認證隨身碟的方法，不論密碼為何都能在數秒內還原資料。IEEE Spectrum 引述 GCN 的報導，NIST 當時新聞稿的初步分析把問題指向授權解密的軟體（the software authorizing decryption）而非通過認證的密碼模組，也提到正在調查認證流程是否需要調整。&lt;/p&gt;
-&lt;p&gt;到 11 月 8 日，本文查不到 FU100 通過 FIPS 140 或中國商用密碼認證（中國對商用密碼產品的認證制度）的資料。HackingPassion 的建議是把隨身碟上的指紋或密碼畫面當成存取的鎖，除非廠商說明金鑰依賴它。NIST 的初步分析把問題指向軟體，本文據此推論，查到證書之後仍需要廠商說明金鑰如何產生、密碼在哪裡驗證。&lt;/p&gt;
-&lt;p&gt;手上有 NVD 列出的四款第一代裝置的人，依 Lenovo 的聲明可以聯繫支援安排更換。依 HackingPassion 轉述，免費升級（free upgrade）要撥打中國的服務專線，裝置會送回更換或到場升級韌體。同樣依 HackingPassion 轉述，Lenovo 建議送出前先備份資料，再抹除或格式化。&lt;/p&gt;
-&lt;p&gt;其他品牌的隨身碟要放敏感檔案時，可以在檔案放上去之前自行加密，讓金鑰來自自己設定的密碼（HackingPassion 列出的建議之一）。VeraCrypt（開源的磁碟加密軟體）的下載頁列出 Windows、macOS 與 Linux 版本，非系統磁碟區與檔案容器支援 PBKDF2 與 Argon2id 兩種金鑰衍生方式。代價是每台要開檔的電腦都要能執行 VeraCrypt。&lt;/p&gt;
-&lt;p&gt;Microsoft 的說明頁只列出 Windows Pro、Enterprise、Education 等版本可以啟用 BitLocker，Home 版不在表內。依 BitLocker FAQ，BitLocker To Go 涵蓋 USB 隨身碟與 SD 卡，加密後可以在另一台電腦用密碼開啟。Home 版能否解鎖已加密的隨身碟，本文沒有核對到官方文件。&lt;/p&gt;
-&lt;p&gt;Apple 的安全指南寫到 FileVault 保護內接與可移除的儲存裝置，磁碟工具程式也可以在格式化時用密碼加密外接裝置，加密前需先抹除裝置。LUKS（Linux 常用的磁碟加密格式）依 cryptsetup 的 FAQ 以 PBKDF2 或 Argon2 處理密碼，FAQ 也建議備份 LUKS 標頭（header），標頭損壞可能無法解密。macOS 加密的外接碟與 LUKS 能否在其他作業系統開啟，本文沒有核對到官方文件，要跨電腦使用的人需先實際試過。&lt;/p&gt;
-&lt;p&gt;自行加密可以應對隨身碟遺失或被別人取走的情況，電腦本身已遭入侵、密碼太短或忘記密碼時都幫不上忙（本文的推論）。只放公開資料的隨身碟不需要多做這一步，要放個人資料或工作文件的人，再衡量每台電腦都要能執行加密軟體的代價。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/xusheng6/breaking_encrypted_USB_drives_with_TTD/blob/main/Breaking_Encrypted_USB_Drives_v2.pdf&#34;&gt;Breaking Encrypted USB Drives with Time-Travel Debugging&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;RE//verse 2026&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2025-13453&#34;&gt;NVD-CVE-2025-13453&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NVD&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-14&#34;&gt;2026 年 1 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.tomshardware.com/tech-industry/cyber-security/lenovo-fingerprint-usb-stick-sold-as-aes-256-encrypted-had-a-plain-sd-card-inside-ai-assisted-follow-up-finds-a-backdoor-and-hardcoded-keys-in-other-secure-usb-products&#34;&gt;Lenovo&amp;#39;s &amp;#39;encrypted&amp;#39; fingerprint USB drive is just an unencrypted SD card in a fancy case — AI-assisted follow-up finds a backdoor and hardcoded keys in other ‘secure’ USB products (updated)&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Tom&amp;#39;s Hardware&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;2026 年 11 月 1 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hackingpassion.com/lenovo-thinkplus-encrypted-usb-sd-card/&#34;&gt;Lenovo ThinkPlus Fingerprint USB Drive Sold as Encrypted Was a Plain SD Card Inside&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;HackingPassion&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-29&#34;&gt;2026 年 10 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://spectrum.ieee.org/fips-1402-cerified-flash-drives-have-security-flaw&#34;&gt;FIPS 140-2 Cerified Flash Drives Have Security Flaw&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IEEE Spectrum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2010-01-12&#34;&gt;2010 年 1 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://csrc.nist.gov/projects/cryptographic-module-validation-program&#34;&gt;Cryptographic Module Validation Program&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;NIST&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://veracrypt.io/en/Header%20Key%20Derivation.html&#34;&gt;Header Key Derivation, Salt, and Iteration Count&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;VeraCrypt&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://veracrypt.io/en/Downloads.html&#34;&gt;VeraCrypt Downloads&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;VeraCrypt&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/&#34;&gt;BitLocker overview&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/faq&#34;&gt;BitLocker FAQ&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/security/volume-encryption-with-filevault-sec4c6dc1b6e/web&#34;&gt;Volume encryption with FileVault in macOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/guide/disk-utility/encrypt-protect-a-storage-device-password-dskutl35612/mac&#34;&gt;Encrypt and protect a storage device with a password in Disk Utility on Mac&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://gitlab.com/cryptsetup/cryptsetup/-/raw/main/FAQ.md&#34;&gt;Frequently Asked Questions Cryptsetup/LUKS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;cryptsetup&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

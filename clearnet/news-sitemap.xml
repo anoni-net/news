@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/bitwarden-native-passkeys/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
+<news:title>Bitwarden 桌面版與 Windows 11、macOS 的通行金鑰整合</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/bitwarden-native-passkeys/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
+<news:title>Bitwarden 桌面版与 Windows 11、macOS 的通行密钥集成</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
+<news:title>Native passkey integration in the Bitwarden desktop app for Windows 11 and macOS</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/iraq-jordan-telegram-block/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
 <news:title>The unlicensed-website conviction and closure order against Egypt&#39;s independent outlet Mada Masr</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/nist-solopreneur-guide/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-22T00:00:00+08:00</news:publication_date>
-<news:title>NIST 寫給一人事業的資安指南 CSWP 50</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/nist-solopreneur-guide/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-22T00:00:00+08:00</news:publication_date>
-<news:title>NIST 写给一人事业的网络安全指南 CSWP 50</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/nist-solopreneur-guide/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-22T00:00:00+08:00</news:publication_date>
-<news:title>CSWP 50, NIST&#39;s cybersecurity guide for one-person businesses</news:title>
 </news:news>
 </url>
 </urlset>
