@@ -6,7 +6,87 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>英國政府對 Apple 技術能力通知的保密主張與調查權力法庭判決</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/uk-apple-encryption-order/</link>
+<guid isPermaLink="false">anoni-news:2026/11/uk-apple-encryption-order</guid>
+<pubDate>Tue, 24 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>英國調查權力法庭 11 月 19 日的判決認定政府沒有證明公開確認曾對 Apple 發出技術能力通知會損害國家安全，通知是否合法還沒有審理，內容也沒有公布。雙方表示可望以 2027 年上半年為目標安排實質聽證，依 Apple 的說明頁，到 11 月 21 日英國以外的使用者仍可開啟 iCloud 進階資料保護。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 Investigatory Powers Tribunal、The Record、Privacy International 等 6 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;英國調查權力法庭（審理部分國家安全案件的法庭）11 月 19 日公布判決，認定政府沒有證明公開確認「曾對 Apple 發出技術能力通知」會損害國家安全。技術能力通知是政府要求業者保有協助調查能力的命令，判決寫明政府確實對 Apple 發出了通知。法庭沒有判斷通知是否合法，也沒有公布通知的內容。&lt;/p&gt;
+&lt;p&gt;判決處理的是英國政府對 Apple 的要求，Apple 的英國說明頁寫明進階資料保護（ADP，讓 iCloud 備份、照片等資料只有使用者裝置能解密）在英國以外的地方繼續提供。到 11 月 21 日英國的新使用者仍不能開啟 ADP，已經開啟的人之後要自行關閉才能繼續使用 iCloud 帳號。Apple 寫會給這些人一段期間，MacRumors 11 月 19 日的報導寫期限仍沒有公布，我們也沒有查到 Apple 對判決的公開聲明。&lt;/p&gt;
+&lt;p&gt;媒體從 2025 年 2 月起報導，英國政府依《2016 年調查權力法》要求 Apple 維持以解密形式存取使用者資料的能力。依倡議組織 Privacy International 整理的時間線，英國據報撤回一份通知，《金融時報》之後報導的第二份通知範圍據信只限英國。Apple 與 Privacy International 等倡議組織都對通知提出申訴，法庭這次把兩邊的申訴一起處理。&lt;/p&gt;
+&lt;p&gt;英國政府對這類通知採取「不證實也不否認」的政策，在法庭上主張連確認通知存在都會損害國安。法庭推斷，《泰晤士報》與《金融時報》引述政府消息來源的報導是經政府授權的說明，因此認定官方確認不會讓惡意者多掌握實質的資訊。法庭同意把通知內容與雙方的證據全部公開會損害國安，哪些細節可以公開要等雙方交換證據之後再決定。之後要審理通知本身是否合法的實質聽證，雙方表示可望以 2027 年上半年為目標安排。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;英國政府在判決後的聲明由 The Record 引述，聲明提到 Apple 多年來依法協助警方與情報機關追查罪犯，「這份技術能力通知只是要求他們維持這樣的能力」。iCloud 預設的標準資料保護會加密資料，金鑰則存放在 Apple 的資料中心，開啟 ADP 後大部分資料的金鑰只留在使用者信任的裝置上。我們依政府聲明的說法推論，要對開啟 ADP 的帳號維持這種能力，Apple 就需要重新取得金鑰。Apple 則在 2025 年 9 月的英國說明頁寫到，從未在任何產品或服務中建置後門或萬能鑰匙，將來也不會。&lt;/p&gt;
+&lt;p&gt;Apple 在申訴中質疑《調查權力法》的權力能否用來規範公司提供的安全或隱私服務，也質疑通知對歐洲人權公約保障的權利所做的限制，是否超出達成目的所需的程度。政府的聲明則寫到隱私雖然重要也不該以英國民眾的安全為代價，影響民眾安全的決定應由民選政府與獨立的法官做出，不在科技公司的董事會裡決定。&lt;/p&gt;
+&lt;p&gt;判決沒有改變英國使用者目前的限制。Apple 台灣的正體中文說明頁沒有寫地區限制，iPhone 與 iPad 使用者照頁面的步驟點進「進階資料保護」，還沒開啟的帳號會看到「開啟進階資料保護」。開啟前要先設定復原聯絡人或復原密鑰，開啟後 Apple 沒有協助復原所需的密鑰，無法取用帳號時要靠這些方式或裝置密碼復原資料。開啟之後 iCloud 備份、iCloud 雲碟、照片、備忘錄等資料改用端對端加密，iCloud 郵件、聯絡人與行事曆仍由 Apple 保管金鑰。&lt;/p&gt;
+&lt;p&gt;之後的實質聽證要處理的問題之一，是《調查權力法》的權力能否用來規範公司提供給客戶的安全或隱私服務。如果可以，在英國提供服務的公司還能不能提供金鑰只留在使用者裝置上的設計？政府想達成的調查效果在這種設計下能否做到？法庭也要在英國民眾了解這項權力範圍的需要，與政府主張公開細節會帶來的國安風險之間，決定審理能公開到什麼程度。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.judiciary.uk/wp-content/uploads/2026/11/OPEN-Judgment-Apple-Inc.-and-Privacy-Int.-Ors.pdf&#34;&gt;OPEN Judgment Apple Inc. and Privacy Int. Ors&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Investigatory Powers Tribunal&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/apple-uk-encryption-notice&#34;&gt;UK court confirms British government served Apple with secret encryption notice&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/news-analysis/5896/win-tribunal-orders-uk-government-come-clean-about-secret-order-apple&#34;&gt;Win! Tribunal orders UK Government to come clean about secret order to Apple&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2026/11/19/uk-loses-secrecy-fight-over-apple-backdoor-order/&#34;&gt;UK Loses Secrecy Fight Over Apple &amp;#39;Backdoor&amp;#39; Order&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/&#34;&gt;UK Government Forced to Admit It Issued Apple a Secret Encryption Order&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MacAnorak&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;2025 年 9 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102651&#34;&gt;iCloud data security overview&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;2026 年 1 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟「iCloud 進階資料保護」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;2026 年 4 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Bitwarden 桌面版與 Windows 11、macOS 的通行金鑰整合</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/bitwarden-native-passkeys/</link>
@@ -1699,72 +1779,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>中國數字時代 404 文庫 2026 年 9 月收錄的被刪文章</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/cdt-404-september/</link>
-<guid isPermaLink="false">anoni-news:2026/11/cdt-404-september</guid>
-<pubDate>Sun, 15 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>中國數字時代（CDT）9 月把 31 篇被刪文章收進 404 文庫，主要來自微信。CDT 的整理與文庫說明都寫出統計並不全面，31 篇不能當成中國網路刪文的總量。《互联网信息服务管理办法》修訂草案到 11 月 8 日未見正式公布，中國以外的讀者不必調整設定。</description>
-<content:encoded>&lt;p&gt;整理 5 篇原文，來自 China Digital Times、中國網信網、Citizen Lab&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;記錄中國網路審查的網站中國數字時代（China Digital Times，CDT）11 月 2 日發布 9 月的整理，CDT 中文站在 9 月 1 日到 30 日把 31 篇文章收進「404 文庫」（404 是網頁不存在時的錯誤代碼），主要來自微信。同一份整理也寫到，收錄的內容只占每天從中國網路消失內容的一小部分，31 篇不能當成中國網路刪文的總量。刪文發生在中國的平台上，中國以外的讀者不必調整任何設定，引用或轉貼中國平台文章的人則要考慮原始連結失效。&lt;/p&gt;
-&lt;p&gt;依文庫列表頁的說明，這個項目存檔被網路審查封鎖或刪除的文章，2021 年起整理成逐篇附上原地址與 CDT 備份的列表。受編輯精力與採集方式所限，列表頁寫出「被删文章」的統計並不全面，也不代表完整的網路審查狀況。文章消失的原因，文庫的判斷是絕大多數遭遇內容審查，極少部分可能是作者迫於壓力主動刪除。原地址欄只記錄連結已失效，沒有刪除理由。&lt;/p&gt;
-&lt;p&gt;CDT 整理裡的日期以文章放上 CDT 網站的時間為準，31 篇實際被刪的時間不一定落在 9 月。本文依列表頁 11 月 8 日的內容盤點，31 篇裡有 29 篇來自微信公眾號（在微信上發布文章的帳號）。知乎與一個媒體集體網站各有 1 篇，沒有來自微博的文章。盤點的結果反映文庫收到哪些文章，也受採集方式影響，不能當成各平台刪文的比例。&lt;/p&gt;
-&lt;p&gt;CDT 存檔篇數最多的是一名北京女子失聯 26 年後在山東被找到的事件，共有 6 篇被刪文章。評論者質疑拐賣、戶籍與官方責任，11 月 2 日的整理寫警方似乎尚未立案。廣州商圈發生持刀傷人案後，被刪的文章批評網路上用「無差別」形容案件，理由是攻擊者看起來只針對女性。CDT 同時整理了一篇談審查與自我審查的文章，並寫這篇因為沒有具體提到這起案件而躲過審查。&lt;/p&gt;
-&lt;p&gt;湖南邵陽一起被 CDT 形容為官方勒索的「遠洋捕撈」（警方到其他轄區抓人，以恫嚇索取金錢的做法）案，CDT 整理的三篇相關文章裡只有一篇知乎回答被刪。整理裡的一名創業者遭指定居所監視居住（RSDL，在看守所以外的指定地點限制人身自由的強制措施），繳交人民幣一億元，其中 6,500 萬進入邵陽政府帳戶。縣公安局正副局長 2025 年 7 月被免職，至少 15 人受處分，到 11 月 2 日的整理為止沒有刑事指控。&lt;/p&gt;
-&lt;p&gt;同一份摘要裡，北京的無人機新規原定 11 月中旬施行，一篇 CDT 編輯形容語氣溫和的微信公眾號文章被刪。常州一家車燈製造商的 107 名新進員工抵制公司要求離職或轉調產線（領半個月薪資離職，或轉到薪資較低的產線），公司道歉並提高員工的補償。相關的兩篇文章被刪，其中一篇主張學英文以便向國際發聲。武漢一名相聲演員改編紅歌的調查結案，主辦方被罰人民幣 486,874 元、劇場被罰 11 萬元，相關文章被刪一篇。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;文庫記錄的是連結失效的結果，看不到由誰、依什麼規則刪除。研究機構 Citizen Lab 2016 年的報告測試了另一段流程，也就是微信聊天訊息與內建瀏覽器的過濾。報告的結論是過濾在伺服器端執行，關鍵詞過濾只對以中國大陸手機號碼註冊的帳號啟用，帳號之後綁定國際號碼仍會持續。訊息被擋時使用者不會收到通知，群組聊天被擋的關鍵詞也比一對一聊天多，部分關鍵詞在後來的測試裡又可以傳送。&lt;/p&gt;
-&lt;p&gt;Citizen Lab 的量測在 2016 年進行，對象是聊天訊息的關鍵詞與內建瀏覽器的網址。公眾號文章發布後被刪是另一種機制，不能用它解釋 9 月的 31 篇。報告能提供的是同一款 App 依帳號套用不同規則的紀錄，內建瀏覽器的網址過濾也是中國帳號與國際帳號各用一份名單。之後的規則有沒有改變，不在報告的範圍內。&lt;/p&gt;
-&lt;p&gt;現行規定之一是《网络信息内容生态治理规定》，2020 年 3 月 1 日施行，適用於中國境內。規定列出 11 款不得「制作、复制、发布」的「违法信息」，包括危害國家安全、散布謠言、侮辱誹謗與侵害隱私，另有 9 款要防範的「不良信息」。平台發現時要立即處置、保存記錄並向主管機關報告。本站 10 月 29 日逐字搜尋這份規定的全文，裡面沒有條文寫到處置內容時要通知發布者，或發布者可以提出異議。&lt;/p&gt;
-&lt;p&gt;修訂中的《互联网信息服务管理办法（修订草案征求意见稿）》是草案，國家互聯網信息辦公室 2026 年 7 月 3 日再次公開徵求意見（8 月 2 日截止），到 11 月 8 日本文沒有找到正式公布的消息。網信辦的通知寫明，草案是為了「促进互联网信息服务健康有序发展，保护公民、法人和其他组织的合法权益，维护国家安全和公共利益」。草案要求平台發現違規內容時採取刪除、封鎖、斷開連結、限制帳號功能與營利權限、關閉帳號等措施，並寫明「防止信息扩散」。&lt;/p&gt;
-&lt;p&gt;《网络信息内容生态治理规定》只寫公眾投訴舉報，這份草案修訂的是另一部辦法，另外要求使用者申訴與人工客服。大型平台要在 24 小時內處理涉及法律、行政法規禁止內容與不良資訊的投訴、舉報和申訴。&lt;/p&gt;
-&lt;p&gt;網信辦的通知說明的是草案的目的，不涉及個別文章。文庫的說明把絕大多數文章的消失歸因於內容審查，但沒有記載個別文章的刪除理由。本文也沒有另外查詢平台或主管機關對個別文章的說明，單篇的原因無法從文庫的資料判定。&lt;/p&gt;
-&lt;p&gt;需要長期引用微信公眾號文章的人，可以在引用當下另存一份副本。本文從文庫的連結失效紀錄推得這項建議，CDT 沒有提出。副本解決連結失效，無法證明內容未經改動。身在中國境內的人還要考量另一層風險，現行規定禁止的行為包含複製，本文推論轉存或轉傳被認定為違法資訊的內容也在規定的範圍內。&lt;/p&gt;
-&lt;p&gt;文庫列表頁設有「404给CDT」的投稿入口，發現文章被刪的人可以交給文庫。本文沒有查證這個入口對投稿者身分的保護程度，所在地有風險的人投稿前需要先評估。&lt;/p&gt;
-&lt;p&gt;之後可以留意草案是否正式公布，使用者申訴與大型平台 24 小時處理的要求有沒有保留，以及 CDT 接下來幾個月的整理。&lt;/p&gt;
-&lt;p&gt;比較各地的內容移除制度時，可以問處置時要不要寫明理由、通知發布者，發布者能否申訴、由誰審理。官方文件的標準也可以放進比較，例如處置謠言、侮辱誹謗內容的速度如何與申訴程序兼顧，被舉報的內容能否在時限內處理。第三方存檔保存被刪文章時適用哪些規定，也是各地可以對照的問題。申訴制度能否讓發布者知道文章被刪的原因，要看正式條文與平台的實作。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/11/cdts-404-deleted-content-archive-summary-for-september-2026/&#34;&gt;CDT’s “404 Deleted Content Archive” Summary for September 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/chinese/404-articles-archive&#34;&gt;中国数字时代404文库&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;2019 年 12 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-07/03/c_1784822399677167.htm&#34;&gt;国家互联网信息办公室关于《互联网信息服务管理办法（修订草案征求意见稿）》再次公开征求意见的通知&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-03&#34;&gt;2026 年 7 月 3 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/&#34;&gt;One App, Two Systems: How WeChat uses one censorship policy in China and another internationally&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2016-11-30&#34;&gt;2016 年 11 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

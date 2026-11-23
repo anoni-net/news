@@ -6,7 +6,116 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>UK secrecy over the Apple technical capability notice and the Investigatory Powers Tribunal ruling</title>
+<link>https://anoni.net/news/en/2026/11/uk-apple-encryption-order/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/uk-apple-encryption-order</guid>
+<pubDate>Tue, 24 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The Investigatory Powers Tribunal ruled on 19 November that the UK government had not shown that publicly confirming it gave Apple a technical capability notice would damage national security. Whether the notice is lawful has not been heard and its content has not been published. The parties indicate they are likely to agree arrangements aimed at a substantive hearing in the first half of 2027, and according to Apple&#39;s support page, users outside the UK could still turn on iCloud Advanced Data Protection as of 21 November.</description>
+<content:encoded>&lt;p&gt;Based on 12 sources, including Investigatory Powers Tribunal, The Record, Privacy International&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;The Investigatory Powers Tribunal, a UK court that hears certain national security cases, published a judgment on 19 November finding that the government had not shown that publicly confirming it had given Apple a &#34;technical capability notice&#34; would damage national security. A technical capability notice is a government order requiring a company to maintain the ability to help with investigations, and the tribunal confirmed in the judgment that the government had given Apple one. The tribunal did not decide whether the notice is lawful, and it did not publish the notice&#39;s content.&lt;/p&gt;
+&lt;p&gt;On its support page about the UK, Apple writes that Advanced Data Protection (ADP, which lets only the user&#39;s own devices decrypt data such as iCloud backups and photos) &#34;continues to be available everywhere else in the world.&#34; As of 21 November, new users in the UK still cannot turn ADP on, and those who already have it will need to turn it off themselves to keep using their iCloud account. Apple wrote that it would give them a period of time to do so, but MacRumors reported on 19 November that no deadline had yet been set, and we have not found a public statement from Apple on the ruling.&lt;/p&gt;
+&lt;p&gt;Since February 2025, media have reported that the UK government used the Investigatory Powers Act 2016 to require Apple to keep the ability to access user data in decrypted form. According to a timeline compiled by the advocacy group Privacy International, the UK reportedly withdrew one notice, and a second notice later reported by the Financial Times was believed to apply only to the UK. Apple and advocacy groups including Privacy International each challenged the notice, and the tribunal dealt with both challenges together.&lt;/p&gt;
+&lt;p&gt;The UK government follows a &#34;neither confirm nor deny&#34; policy on such notices, and argued before the tribunal that even confirming the notice existed would damage national security. The tribunal inferred that reports in The Times and the Financial Times citing government sources were based on briefings the government had authorised, and therefore found that official confirmation would not add materially to what malign actors already know. It agreed that making the notice&#39;s content and all of both sides&#39; evidence public would damage national security, and left the question of which details can be disclosed until the parties have exchanged evidence. For the substantive hearing on whether the notice itself is lawful, the parties indicated that they are likely to agree arrangements aimed at the first half of 2027.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;In a statement after the ruling, quoted by The Record, a government spokesperson said Apple had been helping the police and intelligence agencies pursue criminals for several years, in accordance with the law, and that &#34;This Technical Capability Notice simply requires that they maintain the ability to do so.&#34; Under iCloud&#39;s default standard data protection, data is encrypted but the keys are held in Apple&#39;s data centres. With ADP turned on, the keys for most data stay only on the user&#39;s trusted devices. Our reading of the government&#39;s statement is that maintaining that ability for accounts with ADP would require Apple to get hold of those keys again, while Apple wrote on its UK support page in September 2025 that &#34;we have never built a backdoor or master key to any of our products or services and we never will.&#34;&lt;/p&gt;
+&lt;p&gt;In its challenge, Apple questions whether the powers in the Investigatory Powers Act can be used to regulate the security or privacy services a company offers, and whether the notice&#39;s interference with rights protected by the European Convention on Human Rights goes further than its aim requires. The spokesperson also said that the right to privacy is crucial but &#34;should not come at the expense of the safety of the British public,&#34; and that decisions affecting the public&#39;s safety &#34;must be made by democratically elected governments and independent judges, not in the boardrooms of technology companies.&#34;&lt;/p&gt;
+&lt;p&gt;The ruling does not change the current restriction for UK users; where ADP is offered, Apple&#39;s steps for iPhone and iPad go through Settings, your name and iCloud to Advanced Data Protection, where an account that has not enabled it will see Turn on Advanced Data Protection. Before turning it on you set up a recovery contact or recovery key. Once it is on, Apple does not have the keys needed to help with recovery, so if you lose access to your account you recover your data with one of those methods or your device passcode. With ADP on, iCloud Backup, iCloud Drive, Photos, Notes and other data move to end-to-end encryption, while Apple still holds the keys for iCloud Mail, Contacts and Calendars.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s Traditional Chinese support pages for Taiwan and Hong Kong carry the same steps as the English page, consistent with the UK page&#39;s statement that ADP remains available everywhere else. In mainland China, iCloud is operated by GCBD (AIPO Cloud (Guizhou) Technology Co. Ltd), and according to Apple&#39;s privacy statement for customers in China, personal information on that service, including photos, documents and other iCloud data, is stored inside China. Whether accounts on GCBD-operated iCloud can turn on ADP is not stated on Apple&#39;s ADP support pages.&lt;/p&gt;
+&lt;p&gt;One of the questions for the substantive hearing is whether the powers in the Investigatory Powers Act can be used to regulate the security or privacy services a company offers its customers. In our reading, if they can, what follows is whether a company operating in the UK could still offer a design in which the keys stay only on users&#39; devices, and whether the investigative effect the government wants could be achieved under such a design. The tribunal will also have to decide how much of the hearing can be held in public, weighing the British public&#39;s need to understand the scope of this power against the national security risks the government says disclosure would bring.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.judiciary.uk/wp-content/uploads/2026/11/OPEN-Judgment-Apple-Inc.-and-Privacy-Int.-Ors.pdf&#34;&gt;OPEN Judgment Apple Inc. and Privacy Int. Ors&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Investigatory Powers Tribunal&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/apple-uk-encryption-notice&#34;&gt;UK court confirms British government served Apple with secret encryption notice&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://privacyinternational.org/news-analysis/5896/win-tribunal-orders-uk-government-come-clean-about-secret-order-apple&#34;&gt;Win! Tribunal orders UK Government to come clean about secret order to Apple&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy International&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.macrumors.com/2026/11/19/uk-loses-secrecy-fight-over-apple-backdoor-order/&#34;&gt;UK Loses Secrecy Fight Over Apple &amp;#39;Backdoor&amp;#39; Order&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MacRumors&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/&#34;&gt;UK Government Forced to Admit It Issued Apple a Secret Encryption Order&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MacAnorak&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/122234&#34;&gt;Apple can no longer offer Advanced Data Protection in the United Kingdom to new users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-09-22&#34;&gt;22 September 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/102651&#34;&gt;iCloud data security overview&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-05&#34;&gt;5 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-tw/108756&#34;&gt;如何開啟「iCloud 進階資料保護」&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;24 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/108756&#34;&gt;How to turn on Advanced Data Protection for iCloud&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-17&#34;&gt;17 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-hk/108756&#34;&gt;如何開啟「iCloud 進階資料保護」 (How to turn on Advanced Data Protection for iCloud, Apple Support Hong Kong)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-24&#34;&gt;24 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/111754&#34;&gt;Learn more about iCloud in China mainland&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-04-15&#34;&gt;15 April 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://support.apple.com/zh-cn/121767&#34;&gt;适用于中国客户的 Apple 和云上贵州数据隐私声明 (Apple and GCBD data privacy statement for customers in China)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-12-10&#34;&gt;10 December 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Native passkey integration in the Bitwarden desktop app for Windows 11 and macOS</title>
 <link>https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/</link>
@@ -2161,108 +2270,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/store/answer/2462844?hl=en&#34;&gt;Learn about devices &amp;amp; services available in your region - Google Store Help&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Deleted articles added to China Digital Times&#39; 404 archive in September 2026</title>
-<link>https://anoni.net/news/en/2026/11/cdt-404-september/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/cdt-404-september</guid>
-<pubDate>Sun, 15 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>In September, China Digital Times (CDT) added 31 deleted articles, mostly from WeChat, to its 404 archive. Both CDT&#39;s summary and the archive&#39;s own notes make clear that the count is incomplete, so 31 cannot be taken as the total of deletions on the Chinese internet. As of 8 November we had found no final text of the draft revision to China&#39;s Measures for the Administration of Internet Information Services. Readers outside China do not need to change any settings.</description>
-<content:encoded>&lt;p&gt;Based on 10 sources, including China Digital Times, 中國網信網, Citizen Lab&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;China Digital Times (CDT), a site that documents censorship on the Chinese internet, added 31 articles, mainly from WeChat, to its &#34;404 Deleted Content Archive&#34; between 1 and 30 September, according to a summary it published on 2 November (404 is the error code for a page that does not exist). In the same summary, the archive&#39;s contents are described as only a small fraction of what disappears from the Chinese internet each day, so the 31 articles cannot be taken as the total of deletions there. The deletions happen on Chinese platforms and readers outside China do not need to change any settings, but anyone citing or reposting articles from those platforms should allow for the original links to stop working.&lt;/p&gt;
-&lt;p&gt;According to the archive&#39;s list page, the project preserves articles blocked or deleted by internet censorship, and since 2021 it has been organised as a list giving each article&#39;s original address and a CDT backup. On the same page, limited editorial capacity and the way articles are collected are given as the reasons the count of &#34;deleted articles&#34; is not comprehensive and does not represent the full picture of online censorship. In the archive&#39;s assessment, the great majority of these articles disappeared because of content censorship, and a very small share may have been deleted by their authors under pressure. The original-address column records only that a link is dead and gives no reason for the deletion.&lt;/p&gt;
-&lt;p&gt;The dates in CDT&#39;s summary refer to when articles were posted on the CDT website, so the 31 were not necessarily deleted in September. We went through the list page as it stood on 8 November and found that 29 of the 31 came from WeChat Official Accounts (accounts that publish articles on WeChat), with one from the question-and-answer site Zhihu, one from a media collective&#39;s website, and none from Weibo. The tally shows which articles reached the archive and is shaped by how they were collected, so it cannot be read as each platform&#39;s share of deletions.&lt;/p&gt;
-&lt;p&gt;The largest group among the September additions concerns a Beijing woman found in Shandong 26 years after she went missing, with six deleted articles. Commentators raised questions about trafficking, household registration and official responsibility, and according to the 2 November summary police apparently had not opened a case. After a knife attack in a Guangzhou shopping district, the deleted commentary objected to the word &#34;indiscriminate&#34; being used online to describe the case, on the grounds that the attacker appeared to target only women. CDT also compiled a piece on censorship and self-censorship, and wrote that it escaped censorship because it did not specifically mention the attack.&lt;/p&gt;
-&lt;p&gt;CDT describes a case in Shaoyang, Hunan, as official extortion through &#34;distant-water fishing&#34; (police going to other jurisdictions to arrest people and intimidate them for money), and of the three related articles CDT compiled, only one, a Zhihu answer, was deleted. In the summary, an entrepreneur held under residential surveillance at a designated location (RSDL, a coercive measure that restricts a person&#39;s liberty somewhere other than a detention centre) paid RMB 100 million, of which RMB 65 million went into Shaoyang government accounts. The county public security bureau&#39;s chief and deputy chief were removed from their posts in July 2025 and at least 15 people were disciplined, and as of the 2 November summary no criminal charges had been brought.&lt;/p&gt;
-&lt;p&gt;The same summary covers new drone rules in Beijing, due to take effect in mid-November, and the deletion of a WeChat Official Account article about them that a CDT editor described as mild in tone. At a car-lamp manufacturer in Changzhou, 107 new employees resisted a company demand that they either leave with half a month&#39;s pay or move to a lower-paid production line, and the company apologised and raised their compensation. Two related articles were deleted, one of which argued for learning English in order to speak out internationally. An investigation in Wuhan into a xiangsheng (crosstalk comedy) performer&#39;s adaptation of a revolutionary &#34;red song&#34; ended with the organiser fined RMB 486,874 and the theatre fined RMB 110,000, and one related article was deleted.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;The archive records the result, a dead link, and does not show who deleted an article or under which rules. A 2016 report by the research group Citizen Lab tested a different part of the process, the filtering of WeChat chat messages and of the app&#39;s built-in browser. The report&#39;s conclusion is that filtering runs on the server side and that keyword filtering is enabled only for accounts registered with mainland China phone numbers, continuing even after such an account links an international number. Users receive no notice when a message is blocked, more keywords are blocked in group chats than in one-to-one chats, and some keywords that were blocked could be sent in later tests.&lt;/p&gt;
-&lt;p&gt;Citizen Lab&#39;s measurements date from 2016 and cover chat keywords and URLs in the built-in browser. Deleting an Official Account article after publication is a different mechanism, so the report cannot explain September&#39;s 31 articles. Its value here is as a record of one app applying different rules by account, with separate URL lists for China-registered and international accounts in the built-in browser. Whether those rules have changed since is outside the report&#39;s scope.&lt;/p&gt;
-&lt;p&gt;One rule currently in force is the Provisions on the Governance of the Online Information Content Ecosystem (网络信息内容生态治理规定), issued by the Cyberspace Administration of China (CAC), in force since 1 March 2020 and applicable within China. The Provisions list 11 kinds of &#34;illegal information&#34; (违法信息) that may not be created, copied or published (制作、复制、发布), including content that endangers national security, spreads rumours, insults or defames others, or violates privacy, plus nine kinds of &#34;negative information&#34; (不良信息) to be guarded against. A platform that finds such content must act immediately, keep records and report to the competent authorities. On 29 October we searched the full text word by word and found no provision requiring a platform to notify the publisher when it acts on content, or allowing the publisher to object.&lt;/p&gt;
-&lt;p&gt;The revision of the Measures for the Administration of Internet Information Services (互联网信息服务管理办法（修订草案征求意见稿）) is still a draft. The CAC opened a second round of public comment on 3 July 2026, closing on 2 August, and as of 8 November we had found no report of a final text. The purpose stated in the CAC&#39;s notice is promoting the healthy and orderly development of internet information services, protecting the lawful rights and interests of citizens, legal persons and other organisations, and safeguarding national security and the public interest. Under the draft, platforms that find prohibited content must take measures such as deleting or blocking it, cutting links, restricting account functions and monetisation, or closing accounts, with the stated aim of preventing the information from spreading (防止信息扩散).&lt;/p&gt;
-&lt;p&gt;The Provisions provide only for complaints and reports from the public. The draft, which revises a separate set of measures, additionally requires channels for user appeals and human customer service. Large platforms would have to handle complaints, reports and appeals concerning content prohibited by laws and administrative regulations, and concerning negative information, within 24 hours.&lt;/p&gt;
-&lt;p&gt;The CAC&#39;s notice covers the purpose of the draft and does not address any individual article. The archive&#39;s notes attribute most disappearances to content censorship but do not record why any given article was deleted. We did not separately look for explanations from platforms or regulators about individual articles, so the reason for any single deletion cannot be determined from the archive&#39;s data.&lt;/p&gt;
-&lt;p&gt;Anyone who needs to cite a WeChat Official Account article over the long term can save a copy at the time of citing it. That advice is our own inference from the archive&#39;s record of dead links, and CDT does not make it. A copy deals with the dead link but cannot prove the text has not been altered. People inside China have another risk to weigh, since the conduct the current Provisions prohibit includes copying, and we infer that saving or forwarding content deemed illegal information falls within their scope.&lt;/p&gt;
-&lt;p&gt;The archive&#39;s list page has a submission entry, &#34;404给CDT&#34; (&#34;404 to CDT&#34;), for anyone who finds a deleted article and wants to pass it to the archive. We have not checked how well this entry protects submitters&#39; identities, and people in places where submitting carries risk need to assess that first.&lt;/p&gt;
-&lt;p&gt;Still to watch are whether the draft is formally published, whether the user-appeal and 24-hour requirements for large platforms stay in it, and CDT&#39;s summaries over the coming months.&lt;/p&gt;
-&lt;p&gt;For comparison, in Hong Kong, Part 2 of Schedule 4 to the Implementation Rules for Article 43 of the National Security Law, as published in 2020, lets a designated officer require a publisher to remove a message, or a platform to disable it, without first going to court. The officer acts on the authorisation of the Commissioner of Police, approved by the Secretary for Security, where there are reasonable grounds to suspect the message is likely to constitute or cause an offence endangering national security. A requirement sent to a publisher must be in writing, but the schedule has no provision for giving reasons or a route of appeal, or for notifying the publisher when the requirement goes to the platform (we did not check whether later amendments changed this schedule). According to Hong Kong Free Press, citing Google&#39;s transparency report, the Hong Kong government asked Google to remove 330 items in 2022, 57 of them related to national security.&lt;/p&gt;
-&lt;p&gt;Singapore&#39;s Protection from Online Falsehoods and Manipulation Act (POFMA) starts from a different remedy. On the POFMA Office&#39;s website, the primary tools are correction directions, which require the recipient to insert a notice against the original post with a link to the Government&#39;s clarification and do not require removal, while a stop communication or disabling direction may be used in more serious cases. We read only those web pages, so the text of the Act, its appeal process and the number of directions issued are not covered here. We are a community based in Taiwan, where Article 46 of the Protection of Children and Youths Welfare and Rights Act requires a platform to restrict children&#39;s access to content, or remove it first, once the competent authority tells the platform the content harms children&#39;s physical or mental health; the article has no court step and protects only children and young people.&lt;/p&gt;
-&lt;p&gt;When comparing content-removal regimes, readers can ask whether a reason must be given and the publisher notified when content is acted on, whether the publisher can appeal, and who hears that appeal. The standards in official documents belong in the comparison too, for example how the speed of acting on rumours, insults and defamation is balanced against an appeals process, and whether reported content can be dealt with inside a time limit. Which rules apply to third-party archives of deleted articles is another point to compare. Whether an appeals system lets publishers learn why an article was deleted depends on the final text and on how platforms implement it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/2026/11/cdts-404-deleted-content-archive-summary-for-september-2026/&#34;&gt;CDT’s “404 Deleted Content Archive” Summary for September 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://chinadigitaltimes.net/chinese/404-articles-archive&#34;&gt;中国数字时代404文库&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;China Digital Times&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm&#34;&gt;网络信息内容生态治理规定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2019-12-20&#34;&gt;20 December 2019&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-07/03/c_1784822399677167.htm&#34;&gt;国家互联网信息办公室关于《互联网信息服务管理办法（修订草案征求意见稿）》再次公开征求意见的通知&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中國網信網&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-03&#34;&gt;3 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/&#34;&gt;One App, Two Systems: How WeChat uses one censorship policy in China and another internationally&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2016-11-30&#34;&gt;30 November 2016&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gld.gov.hk/egazette/pdf/20202449e/cs220202449139.pdf&#34;&gt;Implementation Rules for Article 43 of the Law of the People&amp;#39;s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Government Gazette&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-06&#34;&gt;6 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2023/05/09/hong-kong-asked-google-to-remove-183-items-in-latter-half-of-2022-national-security-takedown-requests-surged/&#34;&gt;Hong Kong asked Google to remove 183 items in latter half of 2022; national security takedown requests surged&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-05-09&#34;&gt;9 May 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pofmaoffice.gov.sg/&#34;&gt;POFMA Office&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;POFMA Office&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pofmaoffice.gov.sg/regulations/&#34;&gt;Regulations&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;POFMA Office&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-04&#34;&gt;4 June 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001&#34;&gt;兒童及少年福利與權益保障法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/uk-apple-encryption-order/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-24T00:05:00+08:00</news:publication_date>
+<news:title>英國政府對 Apple 技術能力通知的保密主張與調查權力法庭判決</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/uk-apple-encryption-order/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-24T00:05:00+08:00</news:publication_date>
+<news:title>英国政府对 Apple 技术能力通知的保密主张与调查权力法庭判决</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/uk-apple-encryption-order/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-24T00:05:00+08:00</news:publication_date>
+<news:title>UK secrecy over the Apple technical capability notice and the Investigatory Powers Tribunal ruling</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/bitwarden-native-passkeys/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
 <news:title>Payment and identity in SimpleX supporter badges</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/mada-masr-egypt/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
-<news:title>埃及獨立媒體 Mada Masr 的無執照判決與關站命令</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/mada-masr-egypt/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
-<news:title>埃及独立媒体 Mada Masr 的无执照判决与关站命令</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/mada-masr-egypt/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-22T00:05:00+08:00</news:publication_date>
-<news:title>The unlicensed-website conviction and closure order against Egypt&#39;s independent outlet Mada Masr</news:title>
 </news:news>
 </url>
 </urlset>

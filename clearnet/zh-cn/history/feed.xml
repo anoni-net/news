@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Mon, 23 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>1979 年戒严下首尔 YWCA 的伪装婚礼</title>
+<link>https://anoni.net/news/zh-cn/history/11-24/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-24/2026</guid>
+<pubDate>Tue, 24 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>这一天，韩国的在野人士在戒严下把集会伪装成婚礼，新郎入场后 140 多人被带走。到 2026 年 11 月 21 日，台湾与中国大陆的一般室外集会都要事先取得许可。</description>
+<content:encoded>&lt;p&gt;1979 年 10 月韩国总统身亡，10 月 27 日起除了济州岛以外的全国实施戒严。依周刊报道，戒严下根本不可能取得集会许可，在野人士于是把集会伪装成首尔明洞 YWCA 的一场婚礼。新郎的妹妹在同一篇报道里回忆，负责监视他的刑警事前多次登门问“儿子真的要结婚吗”，母亲每次都回答“要结”。11 月 24 日傍晚新郎一入场，有人在会场散发反对依维新宪法由统一主体国民会议间接选举总统的声明，执法者随后闯入并前后带走 140 多人。&lt;/p&gt;
+&lt;p&gt;依同一篇周刊报道，被带走的人受到的酷刑在审判中被揭露，14 人被拘押并判处徒刑。依 Newsis 的报道，2019 年 11 月首尔高等法院的再审宣告当年被判徒刑的在野人士无罪，理由是据以定罪的戒严布告违宪无效。韩国现行的《集会及示威法》要求室外集会事先向警方申报，宪法裁判所在 2026 年 2 月 26 日认定其中一律处罚未申报者的条文与宪法不合，尚待修法。到 2026 年 11 月 21 日，台北市法规查询系统收录的《集会游行法》条文规定在台湾一般的室内集会不必申请，一般的室外集会、游行要在六天前申请许可。依共产党员网转载的《集会游行示威法》全文，在中国大陆的露天公共场所举行集会、游行、示威必须向主管机关申请并获得许可。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>2009 年菲律宾马京达瑙省的车队遇袭事件</title>
 <link>https://anoni.net/news/zh-cn/history/11-23/#y2026</link>
@@ -178,15 +188,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你手上预装 Google 应用的 Android 手机可能会定期把崩溃报告、已安装的应用等信息发给 Google，Google 隐私权政策到 11 月 2 日查证时仍这样写。这一天，Google 等 34 家公司组成联盟，宣布开发开放源代码的手机平台 Android。</description>
 <content:encoded>&lt;p&gt;Google 隐私权政策写明，由 Google 或合作伙伴销售、内置 Google Play 服务与 Gmail、地图等应用的 Android 设备会定期连接 Google 的服务器，提供设备类型、运营商名称、崩溃报告、已安装的应用以及视设备设置而定的其他使用情况。当年的新闻稿写到，Google、台湾的 HTC 等 34 家公司在 2007 年 11 月 5 日组成开放手机联盟（Open Handset Alliance），宣布要以开放源代码许可发布移动设备平台 Android。Android 官方说明页写明系统的源代码公开给任何人使用，Google 的应用与服务则另成一组，兼容 Android 的设备才有机会获得授权预装。GreatFire 的第三方测量显示 play.google.com 在中国大陆 100% 被封锁（最后一次测试在 2026 年 11 月 1 日，干扰记录从 2012 年 3 月起），这项测量看的是网址能否连线，不等于手机上的上报能否送达。不论在中国境内还是海外，想关闭的话可以在“设置”依次点“Google”、“更多”、“使用情况和诊断信息”（Google 帐号帮助的简体页面到 11 月 2 日写明关闭后仍可获得 Android 更新、不影响应用收集信息，没有写是否也停止发送隐私权政策列出的项目）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>美国互联网企业协助的境外通信收集</title>
-<link>https://anoni.net/news/zh-cn/history/11-04/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/11-04/2026</guid>
-<pubDate>Wed, 04 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你用的美国邮件与云服务，企业可能被美国政府要求协助收集境外非美国人的通信。这一天，美国政府正式公布成立负责通信情报的国家安全局。</description>
-<content:encoded>&lt;p&gt;为你提供邮件、云和通信服务的美国企业，可能收过司法部长与国家情报总监依《外国情报监视法》（FISA）第 702 条发出的书面指令，要求协助收集被合理相信位于美国境外的非美国人的通信。依 NSA 官方页面，美国总统在 1952 年 10 月 24 日以备忘录设立负责通信情报的国家安全局（NSA，来源没有写到它在 702 条收集中的角色），正式公布则延到 11 月 4 日选举日（依 FAS 引述 NSA 的说法）。美国法典的注记载明 702 条在 2026 年 6 月 12 日废止（11 月 2 日查证时未见延长法案），但保留过渡程序的例外，倡议组织 Brennan Center 在 6 月的文件中认为收集会延续到 2027 年 3 月。Apple 的透明度报告没有分出哪些 FISA 法院命令与 702 条有关，内容与非内容数据（用户数据、交易与连接记录）依法须延后 6 个月并以 500 为级距列出（本文据此推论你无法从报告得知自己的账号是否在内，来源也没有写用户这一端有什么做法能避免被收集）。中国境内与海外的非美国人读者同样可能成为 702 条所说的目标，中国《国家情报法》第七条另写明的「任何组织和公民都应当依法支持、协助和配合国家情报工作」是组织与公民的协助义务（11 月 2 日查证共产党员网转载的条文，没有限定境外通信，也没有提到电子通信业者，与 702 条管的事不同）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
