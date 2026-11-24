@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/windows-dev-tool-telemetry/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-25T00:00:00+08:00</news:publication_date>
+<news:title>Windows 11 診斷資料裡的 coding agent 與開發工具紀錄</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/windows-dev-tool-telemetry/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-25T00:00:00+08:00</news:publication_date>
+<news:title>Windows 11 诊断数据里的 coding agent 与开发工具记录</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/windows-dev-tool-telemetry/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-25T00:00:00+08:00</news:publication_date>
+<news:title>Coding agent and developer tool records in Windows 11 diagnostic data</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/uk-apple-encryption-order/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-23T00:05:00+08:00</news:publication_date>
 <news:title>OONI measurements of the Telegram blocks in Iraq and Jordan</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/simplex-supporter-badges/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
-<news:title>SimpleX 支持者徽章的付款與身分</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/simplex-supporter-badges/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
-<news:title>SimpleX 支持者徽章的付款与身份</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/simplex-supporter-badges/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-23T00:00:00+08:00</news:publication_date>
-<news:title>Payment and identity in SimpleX supporter badges</news:title>
 </news:news>
 </url>
 </urlset>

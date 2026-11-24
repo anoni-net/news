@@ -6,7 +6,68 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 24 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Windows 11 診斷資料裡的 coding agent 與開發工具紀錄</title>
+<link>https://anoni.net/news/2026/11/windows-dev-tool-telemetry/</link>
+<guid isPermaLink="false">anoni-news:2026/11/windows-dev-tool-telemetry</guid>
+<pubDate>Wed, 25 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>一位研究者在一台 Windows 11 虛擬機上實測，系統元件會記錄執行過哪些 coding agent 與哪幾類開發工具，紀錄歸在選用診斷資料並排進了上傳佇列。選用診斷資料可以在設定裡關閉，必要診斷資料的清單另列有一筆判斷是否為開發者的分群事件，Microsoft 沒說明它與上述紀錄的關係。</description>
+<content:encoded>&lt;p&gt;整理 6 篇原文，來自 xusheng.dev、Microsoft&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Windows 11 的診斷資料除了當機紀錄與硬體資訊，還可能包括使用者執行過哪些 coding agent（替使用者撰寫、修改程式碼的 AI 工具）與開發工具。一位研究者 11 月 16 日在個人部落格發表逆向工程（拆解程式、還原它如何運作）與實測的結果，在一個系統元件裡找到 &lt;code&gt;codex.exe&lt;/code&gt;、&lt;code&gt;claude.exe&lt;/code&gt;、&lt;code&gt;copilot.exe&lt;/code&gt;、&lt;code&gt;cursor.exe&lt;/code&gt; 等 coding agent，以及 &lt;code&gt;python.exe&lt;/code&gt;、&lt;code&gt;gcc.exe&lt;/code&gt; 等開發工具的執行檔名稱。元件比對程式執行時的檔名，讀者可以從自己平常執行哪些程式判斷是否相關。coding agent 的檢查只在研究者自己的一台虛擬機上實測，其他電腦是否開啟，他沒有驗證。&lt;/p&gt;
+&lt;p&gt;依研究者的分析，名為 &lt;code&gt;MissionControlAggregator&lt;/code&gt; 的元件讀取 Windows 原本就有的程式啟動紀錄，比對成功就在一組位元（bitmap，每個位置只記有或沒有）裡標記。coding agent 逐一記錄，開發工具只記到類別，例如 GCC 與 Clang 屬於同一類。研究者的判讀是，來源紀錄裡的執行時間與互動次數看起來沒有被保留。他沒有在事件裡找到提示詞或原始碼，但認為光是記錄一個人用哪些工具，就有明顯的隱私影響。&lt;/p&gt;
+&lt;p&gt;Windows 的診斷資料分成必要與選用兩級，依 Microsoft 的支援頁，使用者第一次設定 Windows 時可以選擇是否傳送選用診斷資料。研究者另外用最新的官方映像檔全新安裝一台美國地區設定的 Windows 11 Home，在改任何隱私設定之前，選用資料的開關已經是開啟的。新裝的那台只用來看開關的預設值，他沒有檢查它是否啟用 coding agent 的紀錄。&lt;/p&gt;
+&lt;p&gt;coding agent 的檢查在研究者的虛擬機上已經啟用，他沒有手動開啟。在允許選用資料的設定下，他在 Windows 的上傳佇列（等待送出的診斷資料暫存區）裡找到工具使用的紀錄，紀錄標為選用資料。原文的結論是資料會上傳到 Microsoft，他列出的證據到排進上傳佇列為止，沒有實際送出的連線紀錄。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;Microsoft 給組織的設定說明裡，選用診斷資料包括應用程式的使用情形，例如啟動了哪些程式、執行多久。同一份說明把完全不送診斷資料的選項只開放給 Windows Server、Enterprise 與 Education，照這份說明整理，Home 與 Pro 的使用者無法關閉必要資料。Microsoft 公開的必要診斷資料清單裡，另列有一筆依應用程式的使用情形、回報使用者是否為開發者（IsDeveloper）的分群事件 &lt;code&gt;Segments.Cohorts&lt;/code&gt;，跟研究者抓到、歸在選用資料的紀錄是不同的事件。Microsoft 沒有寫判定方式，也沒有說明兩者是否相關。&lt;/p&gt;
+&lt;p&gt;想確認自己的電腦送出哪些診斷資料的人，可以從 Microsoft Store 安裝診斷資料檢視器（Diagnostic Data Viewer），再到「設定 &amp;gt; 隱私權與安全性 &amp;gt; 診斷與意見反應」（Settings &amp;gt; Privacy &amp;amp; security &amp;gt; Diagnostics &amp;amp; feedback）打開「開啟診斷資料檢視器」的開關。開啟之後 Windows 會把診斷資料存在本機、直到關閉為止，預設最多占用系統磁碟 1 GB，說明頁上的建議因此是看完就關閉。說明頁上也寫了，開啟後要照常使用幾天再回來看，檢視器列出的事件也不一定已經上傳。研究者抓到的工具使用紀錄是否會列在檢視器裡，到 11 月 22 日還沒有人公開驗證。&lt;/p&gt;
+&lt;p&gt;平常在 Windows 11 執行開發工具或 coding agent、不想讓工具紀錄成為診斷資料一部分的人，可以關閉「診斷資料」底下傳送選用資料的開關（英文介面為 Send optional diagnostic data）。開關在同一個設定頁，新安裝時也可以在設定流程中拒絕，地區不是美國的讀者可以直接到設定頁看開關目前的狀態。&lt;/p&gt;
+&lt;p&gt;研究者抓到的紀錄標為選用，依這個標記，關閉之後它應該不會再排進上傳佇列。Microsoft 的支援頁寫到，不送選用資料的裝置一樣安全，也會正常運作。原文沒有做關閉選用資料之後的對照實驗，Microsoft 的公開頁面也沒有寫工具使用紀錄的用途。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://xusheng.dev/posts/windows-coding-agent-telemetry/&#34;&gt;Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;xusheng.dev&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;2026 年 11 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/privacy/required-diagnostic-events-fields-windows-11-24h2&#34;&gt;Windows 11, versions 25H2 and 24H2 required diagnostic data events and fields&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization&#34;&gt;Configure Windows diagnostic data in your organization&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.microsoft.com/en-us/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319&#34;&gt;Diagnostics, feedback, and privacy in Windows&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/privacy/diagnostic-data-viewer-overview&#34;&gt;Diagnostic Data Viewer&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-tw/windows/privacy/diagnostic-data-viewer-overview&#34;&gt;診斷資料檢視器&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>英國政府對 Apple 技術能力通知的保密主張與調查權力法庭判決</title>
 <link>https://anoni.net/news/2026/11/uk-apple-encryption-order/</link>
@@ -1648,137 +1709,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-09&#34;&gt;2026 年 4 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>GrapheneOS 支援 Pixel 11 的條件</title>
-<link>https://anoni.net/news/2026/11/grapheneos-pixel-11/</link>
-<guid isPermaLink="false">anoni-news:2026/11/grapheneos-pixel-11</guid>
-<pubDate>Mon, 16 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>隱私強化手機系統 GrapheneOS 8 月底以 Pixel 11 缺少記憶體標記擴充（MTE）為由，建議不要購買。GrapheneOS 11 月的貼文提到 Android 17 QPR2 已替 Pixel 11 補上 MTE 的韌體支援，GrapheneOS 要等 QPR2 進入 Android 開源專案並完成移植才能支援。到 11 月 14 日官方支援清單還沒有 Pixel 11，建議購買的機型仍是 Pixel 8 到 Pixel 10a。</description>
-<content:encoded>&lt;p&gt;整理 15 篇原文，來自 GrapheneOS Discussion Forum、GrapheneOS、Google 等 5 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;GrapheneOS 是以 Android 開源程式碼為基礎的隱私強化手機系統（本站寫過它的&lt;a href=&#34;https://anoni.net/news/2026/10/grapheneos-clipboard-toggle/&#34;&gt;剪貼簿讀取開關&lt;/a&gt;），到 11 月 14 日，官方的支援清單與版本紀錄都還沒有 Google 8 月推出的 Pixel 11 系列。依 GrapheneOS 11 月在 Bluesky 的貼文，Android 17 QPR2 已替 Pixel 11 補上記憶體標記擴充（MTE，在硬體層級偵測並攔下利用記憶體錯誤發動攻擊的功能）的韌體支援。GrapheneOS 要等 QPR2 的原始碼釋出到 Android 開源專案（AOSP）並完成移植，才能加入 Pixel 11。受影響的是打算買新機安裝 GrapheneOS 的人，以及已經有 Pixel 11、想改裝 GrapheneOS 的人。&lt;/p&gt;
-&lt;p&gt;依 GrapheneOS 8 月 29 日在官方論壇的公告，Pixel 11 系列 8 月 20 日上架後，團隊花了約一週完成部分移植。公告提到軟體與韌體缺少 MTE 的支援，硬體也可能沒有，移植因此無法完成。公告推測 Google 為了節省成本拿掉了這項安全功能，公告提到的不符項目只有 MTE。公告強烈建議不要購買 Pixel 11，也寫到可能跳過整個系列，把重心移到即將推出的 Motorola 機型。&lt;/p&gt;
-&lt;p&gt;同一篇公告也列出 Pixel 11 的安全改進，包括改用能抵抗量子電腦破解的驗證開機簽章（ML-DSA），以及新的 Titan M3 安全晶片。根據公告的說明，Titan M3 應該能讓開機後、第一次解鎖前的手機更難被取出資料，對沒有設定高強度密碼的人有幫助。少了 MTE，手機解鎖過之後的安全性則會大幅下降。公告另外寫到 Pixel 10 比較便宜，硬體相近也有 MTE。&lt;/p&gt;
-&lt;p&gt;依 Privacy Guides 轉引的 GrapheneOS 9 月 1 日 Bluesky 貼文，Pixel 11 的硬體仍有最低限度的 MTE 支援。GrapheneOS 在那則貼文推測 Google 為了省錢拿掉了 CPU 快取大部分的硬體加速，MTE 的效能因此太差，最後在韌體裡完全關閉。貼文也寫到 MTE 可能仍然可以使用。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 11 月 11 日的貼文寫到，Android 17 QPR2 替 Pixel 11 加入了 MTE 支援，GrapheneOS 已用自己的 QPR2 移植確認可以運作。同一天的另一則貼文提到開啟 MTE 的效能可以接受，跟前幾代 Pixel 相近。GrapheneOS 在同一則貼文寫到，外流消息提到的移除出現在 Google 最後沒有採用的設計上。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 11 月 13 日的貼文提到，Pixel 11 要等 Android 17 QPR2 推送到 AOSP、GrapheneOS 對 QPR2 的移植完成之後才能支援。GrapheneOS 等的是 QPR2 的原始碼進入 AOSP，Google 推送 QPR2 給 Pixel 手機的更新不算在內（本文依貼文的說法推論）。到 11 月 14 日，本文沒有查到 QPR2 已經進入 AOSP 的紀錄。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 11 月 11 日談 QPR2 移植進度的貼文提到，移植接近完成，先替已支援的機型推出之後再加入 Pixel 11。貼文也寫到 QPR2 之後的主要優先是完成 Motorola 新機 Signature 27 的支援，Pixel 11 的支援早已大致完成，同樣可以在 QPR2 之後推出。到 11 月 14 日，GrapheneOS 沒有公布 Pixel 11 加入的時程。Privacy Guides 報導這件事的標題是「GrapheneOS Announces Pixel 11 Support Can Be Completed Now」，GrapheneOS 自己的貼文寫的仍是 QPR2 進入 AOSP、移植完成之後。&lt;/p&gt;
-&lt;p&gt;到 11 月 14 日，Pixel 11 與 MTE 的說法只有 GrapheneOS 一方。Google 8 月 12 日的 Pixel 11 發表文沒有提到 MTE，Android Developers 的 QPR2 版本說明也沒有 MTE 的條目，本文沒有查到 Google 對 Pixel 11 MTE 的說明。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 Privacy Guides 的說明，ARM 晶片的硬體功能 MTE 會替一段記憶體加上標籤，存取它的指標也帶同一個標籤。兩者不符時程式不會繼續執行，利用記憶體安全錯誤（例如讀寫到不該存取的記憶體位置）的攻擊因此被擋下。GrapheneOS 的論壇公告寫到，MTE 大幅提升了對幾乎所有遠端攻擊與許多本機攻擊的防護。&lt;/p&gt;
-&lt;p&gt;依同一篇公告，Pixel 8 在 2023 年 10 月推出時開始有硬體 MTE。GrapheneOS 當月開始使用，到公告發布時已在整個基礎系統啟用，包括核心與每個標準的系統程序（少數裝置專用的程序暫時關閉）。Android 與 Pixel 原廠系統沒有預設啟用，Android 16 的進階保護模式只替少數程序開啟（進階保護的開啟方式見&lt;a href=&#34;https://anoni.net/news/2026/11/ios-android-exploits-lockdown/&#34;&gt;舊版 iOS 與 Android 被利用的已知漏洞&lt;/a&gt;）。公告也提到 iPhone 17 的 Memory Integrity Enforcement（MIE）一直開啟，是用最新標準擴充實作的 MTE。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 的 FAQ 把硬體記憶體標記列為未來支援機型的需求，跟至少 5 年的更新、每月完整的 Android 安全公告修補放在同一份清單。GrapheneOS 11 月 7 日在 Bluesky 的貼文提到，要達到跟 iPhone 相比的業界標準漏洞防護就需要 MTE，自從硬體推出就把它當成必要條件。&lt;/p&gt;
-&lt;p&gt;根據 Google 的更新說明頁，Pixel 8 以後的手機從在美國 Google Store 開賣起提供 7 年的系統與安全更新，清單包括 Pixel 11 系列。照 GrapheneOS FAQ 用上市日起算 7 年的方式，本文推算 Pixel 11 約到 2033 年 8 月，Google 的頁面沒有寫結束的月份。留在原廠系統的 Pixel 11 使用者照常收到這些更新。依 GrapheneOS 11 月 7 日的貼文，到那天 Google 仍只在 Android 的進階保護模式裡替少數程序啟用 MTE。&lt;/p&gt;
-&lt;p&gt;GrapheneOS 在 11 月 6 日的貼文寫到，Motorola Signature 27 符合它所有的安全需求，搭載 Qualcomm 的 MTE 實作。貼文也寫到 GrapheneOS 將可以替這款手機提供上市起 7 年的更新。同一天的另一則貼文提到，Pixel 11 加入之後，符合全部安全需求的當代機型會有兩個系列。&lt;/p&gt;
-&lt;p&gt;打算買手機安裝 GrapheneOS 的人，到 11 月 14 日 FAQ 強烈建議購買的是 Pixel 8、8 Pro、8a、Pixel 9 系列、9a、Pixel 10 系列與 10a。FAQ 的支援年限表裡這幾款都有上市後 7 年的原廠最低支援，最早結束的 Pixel 8 與 8 Pro 到 2030 年 10 月，最晚的 Pixel 10a 到 2033 年 3 月。FAQ 也提醒，GrapheneOS 只能在原廠持續發布更新時提供完整的安全更新。GrapheneOS 論壇管理者的回覆寫到，到 10 月 23 日查證時，GrapheneOS 自己新增的設定與 App 只有英文。&lt;/p&gt;
-&lt;p&gt;已經有 Pixel 11 的人不必做任何設定，原廠系統照常更新。想改裝 GrapheneOS 的人，可以留意 Android 17 QPR2 何時推送到 AOSP，以及 GrapheneOS 的 FAQ 與版本紀錄何時列出 Pixel 11。依 8 月論壇公告的比較，Pixel 10 價格較低、硬體相近也有 MTE，是 GrapheneOS 已經支援的機型。原廠支援結束的時間比 Pixel 11 的推算早一年左右（FAQ 的表上 Pixel 10 到 2032 年 8 月）。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（15 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/41564-pixel-11-doesnt-yet-meet-the-grapheneos-security-standards-and-may-be-skipped&#34;&gt;Pixel 11 doesn&amp;#39;t yet meet the GrapheneOS security standards and may be skipped - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-29&#34;&gt;2026 年 8 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117596333575500952&#34;&gt;GrapheneOS: &amp;#34;Our port to the Pixel 11 series was nearly comple…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117596341370458465&#34;&gt;GrapheneOS: &amp;#34;Our port to Android 17 QPR2 is nearly complete. P…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3mzztj5fbk226&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3n277527yrk2u&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117570889454162312&#34;&gt;GrapheneOS: &amp;#34;Motorola Signature 27 meets all of our official s…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3mzogzkzr622p&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3mzqmjgfuxs2o&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-07&#34;&gt;2026 年 11 月 7 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#recommended-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases&#34;&gt;Releases | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/5030-grapheneos-translate-to-other-languages&#34;&gt;GrapheneOS translate to other languages - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/&#34;&gt;Google introduces Pixel 11, Pixel 11 Pro and Pixel 11 Pro XL&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-12&#34;&gt;2026 年 8 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/nexus/answer/4457705?hl=en&#34;&gt;Learn when you&amp;#39;ll get software updates on Google Pixel phones - Nexus Help&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/17/qpr2/release-notes&#34;&gt;Release notes | Android Developers&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/11/12/grapheneos-announces-pixel-11-support-can-be-completed-now/&#34;&gt;GrapheneOS Announces Pixel 11 Support Can Be Completed Now&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

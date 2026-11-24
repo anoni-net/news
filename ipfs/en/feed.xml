@@ -6,7 +6,76 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Tue, 24 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>Coding agent and developer tool records in Windows 11 diagnostic data</title>
+<link>https://anoni.net/news/en/2026/11/windows-dev-tool-telemetry/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/windows-dev-tool-telemetry</guid>
+<pubDate>Wed, 25 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Testing on a Windows 11 virtual machine, a researcher found that a system component records which coding agents and which kinds of developer tools have been run, and that the record is classed as optional diagnostic data and placed in the upload queue. Optional diagnostic data can be turned off in Settings. Microsoft&#39;s list of required diagnostic data separately includes a cohort event that reports whether a user is a developer, and Microsoft has not explained how it relates to these records.</description>
+<content:encoded>&lt;p&gt;Based on 7 sources from xusheng.dev, Microsoft, Computerworld&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Besides crash reports and hardware details, Windows 11 diagnostic data may also include which coding agents (AI tools that write and edit code for the user) and developer tools a person has run. In a post on his personal blog, a researcher used reverse engineering (taking a program apart to work out how it functions) and testing to show that one system component contains the executable names of coding agents such as &lt;code&gt;codex.exe&lt;/code&gt;, &lt;code&gt;claude.exe&lt;/code&gt;, &lt;code&gt;copilot.exe&lt;/code&gt; and &lt;code&gt;cursor.exe&lt;/code&gt;, and of developer tools such as &lt;code&gt;python.exe&lt;/code&gt; and &lt;code&gt;gcc.exe&lt;/code&gt;. The component matches the file name of a program when it runs, so readers can judge from the programs they normally run whether this concerns them. He tested the coding agent check on only one virtual machine of his own, and did not verify whether it is switched on for other computers.&lt;/p&gt;
+&lt;p&gt;According to the analysis he published on 16 November, a component called &lt;code&gt;MissionControlAggregator&lt;/code&gt; reads the program launch records that Windows already keeps, and when a name matches, it sets a mark in a bitmap (a row of positions, each holding only yes or no). Coding agents are recorded one by one, while developer tools are recorded only by category, so GCC and Clang, for example, fall into the same one. In the researcher&#39;s reading, the component &#34;appears to discard&#34; the run times and interaction counts in the source records. He found no prompts or source code in the event, but considers that &#34;collecting which agents and developer tools someone uses already has significant privacy implications.&#34;&lt;/p&gt;
+&lt;p&gt;Windows diagnostic data comes in two levels, required and optional, and according to Microsoft&#39;s support page, users can choose whether to send optional diagnostic data when they first set up Windows. The researcher also did a clean install of Windows 11 Home from the latest official image with the region set to the United States, and found the optional data switch already on before he changed any privacy setting. He used that installation only to check the switch&#39;s default, and did not check whether the coding agent records were enabled on it.&lt;/p&gt;
+&lt;p&gt;On the researcher&#39;s virtual machine, the coding agent check was already enabled, and he had not switched it on himself. With optional data allowed, he found a tool usage record in the Windows upload queue (where diagnostic data is held until it is sent), marked as optional data. His conclusion in the post is that the data is uploaded to Microsoft, but the evidence he lists stops at the record being queued, with no record of an actual outgoing connection.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;In Microsoft&#39;s guide for organizations on configuring diagnostic data, the contents of optional diagnostic data include &#34;App activity, such as which programs are launched on a device, how long they run&#34;. The same guide states that the setting that sends no diagnostic data at all &#34;is only available on Windows Server, Windows Enterprise, and Windows Education editions&#34;, so in our reading of the guide, Home and Pro users cannot turn off required data. Microsoft&#39;s published list of required diagnostic data includes a separate cohort event, &lt;code&gt;Segments.Cohorts&lt;/code&gt;, described as one that &#34;classifies users into Cohorts based on App usage&#34;, with the line &#34;IsDeveloper is the only cohort being reported&#34;. It is a different event from the record the researcher captured, which is classed as optional, and Microsoft has neither published how a user is judged to be a developer nor explained whether the two are connected.&lt;/p&gt;
+&lt;p&gt;In mainland China, Microsoft released Windows 10 China Government Edition in 2017, developed with the Chinese technology and defence company China Electronics Technology Group Corp (CETC). In a Microsoft blog post quoted in a Computerworld column, the plan for the edition was to use Windows manageability features to remove features Chinese government employees do not need, such as OneDrive, &#34;to manage all telemetry and updates&#34;, and to let the government use its own encryption algorithms. The researcher&#39;s tests ran on Windows 11 and did not cover this 2017 Windows 10 edition.&lt;/p&gt;
+&lt;p&gt;To see what diagnostic data your own computer sends, you can install the Diagnostic Data Viewer from the Microsoft Store, then go to Settings &amp;gt; Privacy &amp;amp; security &amp;gt; Diagnostics &amp;amp; feedback and switch on &#34;Turn on the Diagnostic Data Viewer&#34;. Once it is on, Windows stores diagnostic data on the device until you turn it off, using up to 1 GB of the system drive by default, and according to the viewer&#39;s documentation, &#34;We strongly recommend that you turn off data viewing when you&#39;re done&#34;. The instructions on the same page are to use the device as usual for a few days before coming back to look, and its wording on queued events is &#34;Seeing an event doesn&#39;t necessarily mean it has been uploaded yet.&#34; As of 22 November, no one had publicly checked whether the tool usage records the researcher found appear in the viewer.&lt;/p&gt;
+&lt;p&gt;If you run developer tools or coding agents on Windows 11 and do not want that record to become part of your diagnostic data, you can turn off Send optional diagnostic data under Diagnostic data. The switch is on the same Settings page, and on a new installation you can also decline optional data during setup. Readers outside the United States can go straight to the Settings page to see the switch&#39;s current state.&lt;/p&gt;
+&lt;p&gt;The records the researcher found are marked optional, so in our reading of that label, they should no longer be queued for upload once the switch is off. According to Microsoft&#39;s support page, &#34;Regardless of whether you choose to send Optional diagnostic data, your device will be just as secure and will operate normally.&#34; The researcher&#39;s post includes no comparison test with optional data turned off, and Microsoft has not published what the tool usage records are used for.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (7)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://xusheng.dev/posts/windows-coding-agent-telemetry/&#34;&gt;Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;xusheng.dev&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;16 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/privacy/required-diagnostic-events-fields-windows-11-24h2&#34;&gt;Windows 11, versions 25H2 and 24H2 required diagnostic data events and fields&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization&#34;&gt;Configure Windows diagnostic data in your organization&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.microsoft.com/en-us/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319&#34;&gt;Diagnostics, feedback, and privacy in Windows&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/privacy/diagnostic-data-viewer-overview&#34;&gt;Diagnostic Data Viewer&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-tw/windows/privacy/diagnostic-data-viewer-overview&#34;&gt;診斷資料檢視器&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.computerworld.com/article/3200375/microsoft-windows/for-real-windows-10-privacy-you-need-the-china-government-edition.html&#34;&gt;For real Windows 10 privacy, you need the China Government Edition&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Computerworld&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2017-06-12&#34;&gt;12 June 2017&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>UK secrecy over the Apple technical capability notice and the Investigatory Powers Tribunal ruling</title>
 <link>https://anoni.net/news/en/2026/11/uk-apple-encryption-order/</link>
@@ -2132,144 +2201,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Conditions for GrapheneOS support on the Pixel 11</title>
-<link>https://anoni.net/news/en/2026/11/grapheneos-pixel-11/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/grapheneos-pixel-11</guid>
-<pubDate>Mon, 16 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>GrapheneOS, a privacy-hardened mobile operating system, advised against buying the Pixel 11 in late August because it lacked the Memory Tagging Extension (MTE). In November GrapheneOS posted that Android 17 QPR2 has added MTE firmware support for the Pixel 11, and that it can support the phones once QPR2 reaches the Android Open Source Project and its port is complete. As of 14 November the Pixel 11 is not on the official supported list, and the recommended devices for purchase are still the Pixel 8 through the Pixel 10a.</description>
-<content:encoded>&lt;p&gt;Based on 16 sources, including GrapheneOS Discussion Forum, GrapheneOS, Google&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;GrapheneOS is a privacy-hardened mobile operating system built on Android&#39;s open-source code (we have covered its &lt;a href=&#34;https://anoni.net/news/en/2026/10/grapheneos-clipboard-toggle/&#34;&gt;clipboard read toggle&lt;/a&gt;), and as of 14 November neither its official supported device list nor its releases page includes the Pixel 11 series that Google launched in August. According to GrapheneOS&#39;s November posts on Bluesky, Android 17 QPR2 has added firmware support on the Pixel 11 for the Memory Tagging Extension (MTE, a hardware feature that detects and stops attacks exploiting memory errors). GrapheneOS can add the Pixel 11 only after the QPR2 source code is released to the Android Open Source Project (AOSP) and its own port is complete. This matters to people planning to buy a new phone for GrapheneOS, and to people who already own a Pixel 11 and want to switch to GrapheneOS.&lt;/p&gt;
-&lt;p&gt;According to GrapheneOS&#39;s announcement on its official forum on 29 August, the team had a partial port about a week after the Pixel 11 series went on sale on 20 August, but could not complete it because MTE support was missing in software and firmware, and potentially in hardware. In the announcement&#39;s words, &#34;It appears Google cut an important security feature to save money&#34;, and MTE is the only unmet requirement the announcement names. GrapheneOS strongly recommended against buying the Pixel 11 and wrote that it might skip the whole series and shift its focus to upcoming Motorola devices.&lt;/p&gt;
-&lt;p&gt;The Pixel 11&#39;s security improvements are also listed in the same announcement, including post-quantum secure verified boot (ML-DSA, a signature scheme designed to resist quantum computers) and the new Titan M3 security chip. According to the announcement, the Titan M3 should make it harder to extract data from a phone that has been turned on but not yet unlocked for the first time, which helps people without a strong passphrase. Without MTE, security after the phone has been unlocked drops sharply (&#34;losing MTE craters AFU security&#34;). Per the same announcement, the Pixel 10 is cheaper, with similar hardware and MTE.&lt;/p&gt;
-&lt;p&gt;According to a GrapheneOS Bluesky post from 1 September quoted by Privacy Guides, the Pixel 11 hardware still has at least bare minimum MTE support. In that post GrapheneOS speculated that Google removed most of the hardware acceleration from the CPU cache to save money, which made MTE perform so poorly that it ended up fully disabled in firmware. GrapheneOS added in the same post that MTE &#34;may still be usable&#34;.&lt;/p&gt;
-&lt;p&gt;In a post on 11 November, GrapheneOS wrote that Android 17 QPR2 has added MTE support for the Pixel 11 series and that it had confirmed this works with its own QPR2 port. In another post the same day, GrapheneOS described performance with MTE enabled as acceptable and comparable to previous Pixel generations. It also wrote there that the removal described in leaked information concerned designs Google did not end up using.&lt;/p&gt;
-&lt;p&gt;In a post on 13 November, GrapheneOS wrote that the Pixel 11 can be supported after Android 17 QPR2 is pushed to AOSP and its port to QPR2 is completed. What GrapheneOS is waiting for is the QPR2 source code reaching AOSP, and Google&#39;s QPR2 update to Pixel phones does not count (our inference from the wording of the post). As of 14 November, we could not find any record of QPR2 having reached AOSP.&lt;/p&gt;
-&lt;p&gt;In its 11 November post on QPR2 progress, GrapheneOS wrote that the port is nearly complete and that Pixel 11 support can be added after it ships for the already supported devices. According to the same post, completing support for Motorola&#39;s new Signature 27 is the main priority after QPR2, and since Pixel 11 support was essentially finished long ago, it can also ship after QPR2. As of 14 November, GrapheneOS had not announced a timeline for adding the Pixel 11. Privacy Guides ran the story under the headline &#34;GrapheneOS Announces Pixel 11 Support Can Be Completed Now&#34;, while GrapheneOS&#39;s own posts still put support after QPR2 reaches AOSP and the port is finished.&lt;/p&gt;
-&lt;p&gt;As of 14 November, the account of the Pixel 11 and MTE comes from GrapheneOS alone. Google&#39;s Pixel 11 launch post of 12 August does not mention MTE, the Android Developers release notes for QPR2 have no entry on MTE, and we could not find any explanation from Google about MTE on the Pixel 11.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to Privacy Guides, MTE is a hardware feature of ARM chips that assigns a tag to a region of memory and the same tag to the pointers that access it. When the two do not match, the code does not continue, which stops attacks that exploit memory safety bugs (such as reading or writing memory locations that should be off limits). According to GrapheneOS&#39;s forum announcement, MTE &#34;greatly improves protection against nearly all remote exploits and many local exploits&#34;.&lt;/p&gt;
-&lt;p&gt;Per the same announcement, hardware MTE arrived with the Pixel 8 in October 2023. GrapheneOS began using it that month, and by the time of the announcement had it enabled across the entire base OS, including the kernel and every standard base OS process (it is temporarily disabled for a few device-specific processes). Android and the stock Pixel OS never turned it on by default, and Advanced Protection Mode in Android 16 enables it only for a few processes (how to turn on Advanced Protection is covered in &lt;a href=&#34;https://anoni.net/news/en/2026/11/ios-android-exploits-lockdown/&#34;&gt;Known flaws exploited on older iOS and Android&lt;/a&gt;). Also according to the announcement, Memory Integrity Enforcement (MIE) on the iPhone 17 is always enabled and is an implementation of MTE using the latest standard extensions.&lt;/p&gt;
-&lt;p&gt;Hardware memory tagging is on the list of requirements in GrapheneOS&#39;s FAQ for devices it will support in the future, alongside at least 5 years of updates and complete monthly Android Security Bulletin patches. In a Bluesky post on 7 November, GrapheneOS wrote that it needs MTE &#34;to have industry standard protection against exploits when comparing to an iPhone&#34; and has considered it required since the hardware shipped.&lt;/p&gt;
-&lt;p&gt;According to Google&#39;s help page on software updates, Pixel 8 and later phones get 7 years of OS and security updates starting from when the device first became available on the Google Store in the US, and the list includes the Pixel 11 series. Counting 7 years from launch, as the GrapheneOS FAQ does, we calculate that the Pixel 11 is covered until about August 2033; Google&#39;s page gives no end month. Pixel 11 owners who stay on the stock OS receive these updates as usual. In its 7 November post, GrapheneOS wrote that as of that day Google still used MTE only in Android&#39;s Advanced Protection Mode, which enables it for a small number of processes.&lt;/p&gt;
-&lt;p&gt;In a post on 6 November, GrapheneOS wrote that the Motorola Signature 27 meets all of its security requirements with Qualcomm&#39;s implementation of MTE, and that it will be able to provide 7 years of updates from launch for the phone. In another post the same day, it wrote that once the Pixel 11 is added there will be two current-generation device families meeting all of its security requirements.&lt;/p&gt;
-&lt;p&gt;For anyone buying a phone to install GrapheneOS, the devices the FAQ strongly recommends as of 14 November are the Pixel 8, 8 Pro, 8a, the Pixel 9 series, 9a, the Pixel 10 series and 10a. In the FAQ&#39;s support table each has a 7-year OEM minimum support period from launch, ending earliest for the Pixel 8 and 8 Pro in October 2030 and latest for the Pixel 10a in March 2033. As the FAQ puts it, GrapheneOS &#34;can only fully provide security updates to a device provided that the OEM is releasing them&#34;. According to a moderator&#39;s reply on the GrapheneOS forum, checked on 23 October, the settings and apps GrapheneOS develops itself are in English only.&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, also checked where the Google Store sells these phones in Asia. As of 14 November, the places in Asia listed on Google Store Help for buying the Pixel 11, 11 Pro, 11 Pro XL and 11 Pro Fold from the Google Store are India, Japan, Singapore and Taiwan, the same four as for the Pixel 10 and 10a on that page. Mainland China, Hong Kong, Macau and South Korea are not on these lists. The page covers only the Google Store itself, not other retailers or carriers, and a buyer&#39;s shipping address must be in the same region as the Google Store site.&lt;/p&gt;
-&lt;p&gt;Pixel 11 owners do not need to change any settings, and the stock OS keeps updating as usual. Those who want to switch to GrapheneOS can watch for when Android 17 QPR2 is pushed to AOSP, and for when GrapheneOS&#39;s FAQ and releases page list the Pixel 11. By the comparison in the August forum announcement, the Pixel 10 is cheaper, with similar hardware and MTE, and it is a device GrapheneOS already supports. Its OEM support ends about a year earlier than our estimate for the Pixel 11 (August 2032 in the FAQ&#39;s table).&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (16)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/41564-pixel-11-doesnt-yet-meet-the-grapheneos-security-standards-and-may-be-skipped&#34;&gt;Pixel 11 doesn&amp;#39;t yet meet the GrapheneOS security standards and may be skipped - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-29&#34;&gt;29 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117596333575500952&#34;&gt;GrapheneOS: &amp;#34;Our port to the Pixel 11 series was nearly comple…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;11 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117596341370458465&#34;&gt;GrapheneOS: &amp;#34;Our port to Android 17 QPR2 is nearly complete. P…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;11 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3mzztj5fbk226&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;11 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3n277527yrk2u&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.social/@GrapheneOS/117570889454162312&#34;&gt;GrapheneOS: &amp;#34;Motorola Signature 27 meets all of our official s…&amp;#34; - GrapheneOS Mastodon&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;6 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3mzogzkzr622p&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;6 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bsky.app/profile/grapheneos.org/post/3mzqmjgfuxs2o&#34;&gt;@grapheneos.org on Bluesky&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-07&#34;&gt;7 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/faq#recommended-devices&#34;&gt;Frequently Asked Questions | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://grapheneos.org/releases&#34;&gt;Releases | GrapheneOS&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://discuss.grapheneos.org/d/5030-grapheneos-translate-to-other-languages&#34;&gt;GrapheneOS translate to other languages - GrapheneOS Discussion Forum&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GrapheneOS Discussion Forum&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/&#34;&gt;Google introduces Pixel 11, Pixel 11 Pro and Pixel 11 Pro XL&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-12&#34;&gt;12 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/nexus/answer/4457705?hl=en&#34;&gt;Learn when you&amp;#39;ll get software updates on Google Pixel phones - Nexus Help&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/17/qpr2/release-notes&#34;&gt;Release notes | Android Developers&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Android Developers&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.privacyguides.org/news/2026/11/12/grapheneos-announces-pixel-11-support-can-be-completed-now/&#34;&gt;GrapheneOS Announces Pixel 11 Support Can Be Completed Now&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Privacy Guides&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;12 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.google.com/store/answer/2462844?hl=en&#34;&gt;Learn about devices &amp;amp; services available in your region - Google Store Help&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Google&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
