@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Tue, 24 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>1947 年華爾道夫飯店的聲明與好萊塢黑名單</title>
+<link>https://anoni.net/news/history/11-25/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-25/2026</guid>
+<pubDate>Wed, 25 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>這一天，美國的電影公司主管開會後宣布將十位拒絕回答國會提問的編劇與導演解僱或停職，也不會明知是共產黨員還僱用。依 2026 年 11 月 22 日查到的條文，台灣的《就業服務法》禁止雇主以思想或黨派為由歧視求職人或員工。</description>
+<content:encoded>&lt;p&gt;眾議院的調查委員會追問十位編劇與導演是否為共產黨員，他們以言論與結社自由為由拒答，眾議院在 1947 年 11 月 24 日通過對他們的藐視國會案。48 位電影公司主管與律師在紐約華爾道夫飯店閉門開了兩天會，依 Deadline 的報導，有四人反對。其中一位反對者 1979 年的回憶錄裡寫，有人提出加州州法禁止雇主因政治理念解僱員工，律師則主張以讓產業蒙羞為由引用合約的道德條款。美國電影協會的會長摔下旅館鑰匙、揚言辭職，最後沒有表決就決定解僱。主管們在 25 日的聲明裡宣布將十人解僱或停職、不會明知是共產黨員還僱用，也承認不僱用共產黨員的政策有傷及無辜的危險，表示會加以防範。&lt;/p&gt;
+&lt;p&gt;好萊塢的黑名單從這份聲明開始，後來擴大到數百人，有些編劇改用化名或借朋友掛名寫劇本。《加州勞動法典》第 1101、1102 條禁止雇主訂定規則控制員工的政治活動或以解僱相脅，台灣的《就業服務法》第 5 條也規定雇主不得以「思想」、「黨派」為由歧視求職人或員工。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>1979 年戒嚴下首爾 YWCA 的偽裝婚禮</title>
 <link>https://anoni.net/news/history/11-24/#y2026</link>
@@ -179,15 +189,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在 X 註冊時填的電子郵件或電話號碼，依 1 月生效的隱私政策會跟帳號連在一起。這一天，美國檢方公開一份刑事控訴書，兩名前 Twitter 員工被控替沙烏地政府查詢批評該國政府的使用者資料。</description>
 <content:encoded>&lt;p&gt;依 2026 年 1 月 15 日生效的隱私政策，你在 X（前身是 Twitter）建立帳號時要提供電子郵件或電話號碼其中一種，填了就會跟帳號連在一起。2019 年 11 月 6 日，美國加州北區聯邦檢察署公開一份刑事控訴書（當時還沒經過審判的指控），兩名前 Twitter 員工與一名沙烏地國民被控擔任沙烏地政府的非法代理人。依司法部新聞稿，兩名員工未經授權用員工權限查詢批評沙烏地政府的使用者資料，包括可能被用來找出發文者身分與所在地的電子郵件、電話號碼、連線用的 IP 位址與出生日期。依司法部後來的新聞稿與最高法院的判決，其中一名前員工 2022 年被陪審團認定有罪、判處 42 個月徒刑，最高法院 2026 年 6 月只就偽造紀錄這一項罪名的審判地點撤銷上訴法院的判決並發回。到 11 月 2 日查證時，X 的隱私政策沒有寫哪些員工可以存取這些帳號資料，也沒有寫存取時受什麼控管。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>預載 Google 應用程式的 Android 手機定期傳出的資訊</title>
-<link>https://anoni.net/news/history/11-05/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/11-05/2026</guid>
-<pubDate>Thu, 05 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你手上預載 Google 應用程式的 Android 手機可能會定期把當機報告、已安裝的應用程式等資訊傳給 Google，Google 隱私權政策到 11 月 2 日查證時仍這樣寫。這一天，Google 等 34 家公司組成聯盟，宣布開發開放原始碼的手機平台 Android。</description>
-<content:encoded>&lt;p&gt;你手上的 Android 手機如果是 Google 或合作廠商販售、內建 Google Play 服務與 Gmail、地圖等應用程式的機種，Google 隱私權政策寫明這類裝置會定期連線到 Google 的伺服器，提供裝置類型、電信業者名稱、當機報告、已安裝的應用程式以及視裝置設定而定的其他使用情形。當年的新聞稿寫到，Google、台灣的 HTC 等 34 家公司在 2007 年 11 月 5 日組成開放手機聯盟（Open Handset Alliance），宣布要以開放原始碼授權釋出行動裝置平台 Android。Android 官方說明頁寫明作業系統的原始碼現在公開給任何人使用，Google 的應用程式與服務則另成一組，相容 Android 的裝置才有機會取得授權預載。Google 帳戶說明頁到 11 月 2 日寫明，手機設定裡的「使用狀況與診斷」關閉後仍可取得 Android 的更新、也不會影響應用程式收集資訊，但沒有寫是否也停止傳送隱私權政策列出的項目。不想把電池電量、應用程式的使用頻率這類資訊傳給 Google 的人，可以在「設定」依序點「Google」、「更多」、「使用狀況與診斷」把它關閉，各廠牌的選單位置可能不同。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

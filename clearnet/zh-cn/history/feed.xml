@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 24 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>1947 年华尔道夫饭店的声明与好莱坞黑名单</title>
+<link>https://anoni.net/news/zh-cn/history/11-25/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-25/2026</guid>
+<pubDate>Wed, 25 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>这一天，美国的电影公司主管开会后宣布将十位拒绝回答国会提问的编剧与导演解雇或停职，也不会明知是共产党员还雇用。依 2026 年 11 月 22 日查到的条文，台湾的《就业服务法》禁止雇主以思想或党派为由歧视求职人或员工，中国大陆的《就业促进法》列举民族、种族、性别、宗教信仰等不得歧视的事由。</description>
+<content:encoded>&lt;p&gt;众议院的调查委员会追问十位编剧与导演是否为共产党员，他们以言论与结社自由为由拒答，众议院在 1947 年 11 月 24 日通过对他们的藐视国会案。48 位电影公司主管与律师在纽约华尔道夫饭店闭门开了两天会，依 Deadline 的报道，有四人反对。其中一位反对者 1979 年的回忆录里写，有人提出加州州法禁止雇主因政治理念解雇员工，律师则主张以让行业蒙羞为由引用合同的道德条款。美国电影协会的会长摔下旅馆钥匙、扬言辞职，最后没有表决就决定解雇。主管们在 25 日的声明里宣布将十人解雇或停职、不会明知是共产党员还雇用，也承认不雇用共产党员的政策有伤及无辜的危险，表示会加以防范。&lt;/p&gt;
+&lt;p&gt;好莱坞的黑名单从这份声明开始，后来扩大到数百人，有些编剧改用化名或借朋友挂名写剧本。《加州劳动法典》第 1101、1102 条禁止雇主订立规则控制员工的政治活动或以解雇相威胁，台湾的《就业服务法》第 5 条也规定雇主不得以「思想」、「党派」为由歧视求职人或员工。到 2026 年 11 月 22 日，中国大陆的《就业促进法》第 3 条规定劳动者就业不因民族、种族、性别、宗教信仰等不同而受歧视，第 26 条要求用人单位招用人员时不得实施就业歧视。第 3 条列举的事由以「等」收尾，没有写出政治立场或党派。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>1979 年戒严下首尔 YWCA 的伪装婚礼</title>
 <link>https://anoni.net/news/zh-cn/history/11-24/#y2026</link>
@@ -179,15 +189,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在 X 注册时填的电子邮件或电话号码，依 1 月生效的隐私政策会跟账号连在一起。这一天，美国检方公开一份刑事控诉书，两名前 Twitter 员工被控替沙特政府查询批评该国政府的用户数据。</description>
 <content:encoded>&lt;p&gt;依 2026 年 1 月 15 日生效的隐私政策，你在 X（前身是 Twitter）创建账号时要提供电子邮件或电话号码其中一种，填了就会跟账号连在一起。2019 年 11 月 6 日，美国加州北区联邦检察署公开一份刑事控诉书（当时还没经过审判的指控），两名前 Twitter 员工与一名沙特国民被控担任沙特政府的非法代理人。依司法部新闻稿，两名员工未经授权用员工权限查询批评沙特政府的用户数据，包括可能被用来找出发帖者身份与所在地的电子邮件、电话号码、联网用的 IP 地址与出生日期。依司法部后来的新闻稿与最高法院的判决，其中一名前员工 2022 年被陪审团认定有罪、判处 42 个月徒刑，最高法院 2026 年 6 月只就伪造记录这一项罪名的审判地点撤销上诉法院的判决并发回。到 11 月 2 日查证时，X 的隐私政策没有写哪些员工可以访问这些账号数据、访问时受什么管控，GreatFire 的检测页则显示 twitter.com 在中国大陆打不开（最后检测日 10 月 12 日，页面不涵盖 x.com）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>预装 Google 应用的 Android 手机定期传出的信息</title>
-<link>https://anoni.net/news/zh-cn/history/11-05/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/11-05/2026</guid>
-<pubDate>Thu, 05 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你手上预装 Google 应用的 Android 手机可能会定期把崩溃报告、已安装的应用等信息发给 Google，Google 隐私权政策到 11 月 2 日查证时仍这样写。这一天，Google 等 34 家公司组成联盟，宣布开发开放源代码的手机平台 Android。</description>
-<content:encoded>&lt;p&gt;Google 隐私权政策写明，由 Google 或合作伙伴销售、内置 Google Play 服务与 Gmail、地图等应用的 Android 设备会定期连接 Google 的服务器，提供设备类型、运营商名称、崩溃报告、已安装的应用以及视设备设置而定的其他使用情况。当年的新闻稿写到，Google、台湾的 HTC 等 34 家公司在 2007 年 11 月 5 日组成开放手机联盟（Open Handset Alliance），宣布要以开放源代码许可发布移动设备平台 Android。Android 官方说明页写明系统的源代码公开给任何人使用，Google 的应用与服务则另成一组，兼容 Android 的设备才有机会获得授权预装。GreatFire 的第三方测量显示 play.google.com 在中国大陆 100% 被封锁（最后一次测试在 2026 年 11 月 1 日，干扰记录从 2012 年 3 月起），这项测量看的是网址能否连线，不等于手机上的上报能否送达。不论在中国境内还是海外，想关闭的话可以在“设置”依次点“Google”、“更多”、“使用情况和诊断信息”（Google 帐号帮助的简体页面到 11 月 2 日写明关闭后仍可获得 Android 更新、不影响应用收集信息，没有写是否也停止发送隐私权政策列出的项目）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

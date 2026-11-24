@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/hk-laguna-city-facial-recognition/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-25T00:05:00+08:00</news:publication_date>
+<news:title>香港麗港城的臉部辨識門禁與私隱專員公署的循規審查</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/hk-laguna-city-facial-recognition/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-25T00:05:00+08:00</news:publication_date>
+<news:title>香港丽港城的人脸识别门禁与私隐专员公署的循规审查</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/hk-laguna-city-facial-recognition/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-25T00:05:00+08:00</news:publication_date>
+<news:title>Facial recognition gates at Hong Kong&#39;s Laguna City and the privacy commissioner&#39;s compliance check</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/windows-dev-tool-telemetry/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
 <news:title>Native passkey integration in the Bitwarden desktop app for Windows 11 and macOS</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/iraq-jordan-telegram-block/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-23T00:05:00+08:00</news:publication_date>
-<news:title>伊拉克與約旦的 Telegram 封鎖與 OONI 量測</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/iraq-jordan-telegram-block/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-23T00:05:00+08:00</news:publication_date>
-<news:title>伊拉克与约旦的 Telegram 封锁与 OONI 测量</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/iraq-jordan-telegram-block/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-23T00:05:00+08:00</news:publication_date>
-<news:title>OONI measurements of the Telegram blocks in Iraq and Jordan</news:title>
 </news:news>
 </url>
 </urlset>

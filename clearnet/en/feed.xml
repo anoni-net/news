@@ -6,7 +6,101 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>Facial recognition gates at Hong Kong&#39;s Laguna City and the privacy commissioner&#39;s compliance check</title>
+<link>https://anoni.net/news/en/2026/11/hk-laguna-city-facial-recognition/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/hk-laguna-city-facial-recognition</guid>
+<pubDate>Wed, 25 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On 13 November, Hong Kong&#39;s Office of the Privacy Commissioner for Personal Data began a compliance check, on its own initiative, into the facial recognition access gates being installed at Laguna City, a private housing estate in Lam Tin, saying more than 8,000 households may be involved. The property management company said it would issue notices and hold sessions to introduce the system before launch, but its public responses do not say whether residents can keep using door cards or how long facial data will be kept. Readers outside Hong Kong are not affected.</description>
+<content:encoded>&lt;p&gt;Based on 10 sources, including am730, Hong Kong Free Press, 點新聞&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;On 13 November, Hong Kong&#39;s Office of the Privacy Commissioner for Personal Data (PCPD, the statutory body responsible for personal data protection) said it had begun a compliance check, on its own initiative, into the facial recognition access system at Laguna City. In a compliance check, the PCPD asks an organisation for information to see whether it is complying with the Personal Data (Privacy) Ordinance. Laguna City is a private housing estate (the Hong Kong term for a large residential development) in Lam Tin, and according to the PCPD&#39;s statement more than 8,000 households may be involved. Laguna City residents are directly affected, other Hong Kong estates that bring in similar systems are bound by the same ordinance, and places outside Hong Kong are not affected.&lt;/p&gt;
+&lt;p&gt;Laguna City has four phases, and the property management company is installing facial recognition gates in phases 1, 2 and 4. A Sing Tao Headline reporter at the estate on 13 November saw installed gates still covered with paper. According to Dot Dot News, which relayed the company&#39;s response to the media, the gates are meant to make coming and going easier for residents and to improve management services, and before launch the company will hold tea gatherings and issue notices to introduce the system to residents. The company also said the personal data it collects will be handled in accordance with the ordinance, and Hong Kong Free Press (HKFP) reported that a Kwun Tong district councillor said on an RTHK programme that the system is due to go live in January.&lt;/p&gt;
+&lt;p&gt;HKFP also reported that the councillor had heard views both for and against, with some elderly residents finding the new system more convenient. Of the residents Sing Tao Headline interviewed, some said they would not use it because they worried about data leaks, and one found tapping a door card quicker and easier than facial recognition. Another planned to wait and see, and to try it once it is in use.&lt;/p&gt;
+&lt;p&gt;According to the PCPD&#39;s statement as quoted by HKFP, &#34;facial images constitute sensitive personal data&#34;, and on that basis the PCPD asked the property management company for further information. According to the statement, the check is to make sure the company follows the ordinance and its data protection principles in collecting, holding, processing and using biometric data, in particular the requirements on data security. The data protection principles are the ordinance&#39;s basic rules on how personal data is collected, kept, used and protected. HKFP reported that the company told the media on 16 November that it would cooperate with the check.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;The property management company gave convenience as its reason for the gates, and some elderly residents see it the same way. The PCPD&#39;s Guidance on Collection and Use of Biometric Data, first published in 2015 and revised in 2020, lists facial images among physiological data, most of which cannot be changed. Among the consequences of wrongful disclosure of biometric data set out in the guidance are re-identification, impersonation and even discrimination. Its recommendations for reducing the risk include deriving templates (numerical values extracted from an image and used for matching) from the original images as soon as possible, safely discarding the originals, and storing templates in a form that is technically infeasible or difficult to convert back into images.&lt;/p&gt;
+&lt;p&gt;On our reading, alternatives, consent and how long data is kept are the questions that follow from the PCPD&#39;s earlier guidance and the gaps in the reports, while the focus of the check given in the statement is data security. The good practices in the biometric guidance include offering an alternative where practicable, and its example is a smartcard in place of fingerprint-based attendance at work. In the guidance&#39;s workplace example, the Privacy Commissioner will not interfere where people have another option and choose to register voluntarily, and if the same standard is applied here, whether door cards are kept bears on whether Laguna City residents&#39; registration counts as voluntary. The president of the Hong Kong Institute of Housing told Sing Tao Headline that biometric authentication would become the norm, but that residential facial recognition must have residents&#39; consent and should come with other ways of verifying identity for residents to choose from.&lt;/p&gt;
+&lt;p&gt;Before registering their faces, Laguna City residents can ask the property management company whether they can keep using door cards, how consent will be given at registration and how long the data will be kept, since none of these appears in the reports or the company&#39;s responses. After registering, residents can make a data access request, asking the organisation for a copy of the personal data it holds about them, and anyone who suspects their privacy has been infringed can complain to the PCPD (telephone 2827 2827). Our reading is that, in answering a data access request, an organisation supplies only the data it acknowledges holding, so residents would still find it hard to confirm whether facial templates count as data they can request, or whether backups are deleted too. The company has said it will issue notices and hold sessions to explain how the system works before launch, and residents can raise these questions there.&lt;/p&gt;
+&lt;p&gt;A compliance check is not a finding of a breach. According to the PCPD&#39;s explanation of the ordinance, when the Privacy Commissioner receives a complaint or has reasonable grounds to believe the ordinance has been contravened, the decision whether to investigate depends on the facts and evidence. If an investigation finds a contravention, the Privacy Commissioner can issue an enforcement notice directing the organisation to take remedial steps, and failing to comply with the notice is an offence. This site&#39;s 9 November article covered &lt;a href=&#34;https://anoni.net/news/en/2026/11/hk-mall-facial-recognition/&#34;&gt;the plan to add facial recognition to the Hong Kong police&#39;s SmartView programme&lt;/a&gt;, a police CCTV network, whereas the Laguna City system is being brought in by the management company of a private estate.&lt;/p&gt;
+&lt;p&gt;In mainland China, under a 2021 judicial interpretation by the Supreme People&#39;s Court, where a property management company makes facial recognition the only way for owners or occupants to enter the area it manages, courts will support those who do not agree and ask for another reasonable means of verification. The Measures for the Security Management of Facial Recognition Technology Applications (人脸识别技术应用安全管理办法), in force since 1 June 2025, apply to facial recognition in general and do not address residential estates specifically. Under these measures, facial recognition may not be the only means of verification where other non-facial-recognition methods can achieve the same purpose or meet the same business requirements, and people who do not consent must be offered another reasonable and convenient way. Facial data may also be kept no longer than the shortest time needed for the purpose of processing.&lt;/p&gt;
+&lt;p&gt;According to a September 2026 report in Yangtse Evening Post, a court in Chongqing&#39;s Yuzhong District ordered a property company that had installed facial recognition gates at an estate&#39;s only entrance to delete an owner&#39;s facial and ID card data and to provide another reasonable way in, and neither side appealed. In Hong Kong, the alternative appears in the PCPD&#39;s guidance as a recommended good practice, to be offered as far as practicable.&lt;/p&gt;
+&lt;p&gt;Next, it is worth watching whether the PCPD publishes the result of the check, and how the property management company explains door-card alternatives and the retention period for facial data in its sessions and notices before launch.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (10)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.am730.com.hk/article/1063667&#34;&gt;私隱公署對麗港城人臉識別門禁系統作循規審查　確保住戶資料獲保障&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;am730&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/11/17/hong-kong-privacy-watchdog-launches-compliance-check-over-facial-recognition-system-at-lam-tin-estate/&#34;&gt;Hong Kong privacy watchdog launches compliance check over facial recognition system at Lam Tin estate&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-17&#34;&gt;17 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.dotdotnews.com/a/202611/13/AP6af6bed9e4b091a65a2f7fc6.html&#34;&gt;藍田麗港城引人臉識別涉31幢大廈　私隱公署主動審查確保住戶個資獲保障&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;點新聞&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.stheadline.com/society/3636888/&#34;&gt;麗港城擬引入人臉識別門禁系統  居民憂私隱安全斷言不會使用：資料洩漏問題防不勝防&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;星島頭條&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/GN_biometric_e.pdf&#34;&gt;Guidance on Collection and Use of Biometric Data&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html&#34;&gt;The Ordinance at a Glance&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/DAR_e.pdf&#34;&gt;Proper Handling of Data Access Request and Charging of Data Access Request Fee by Data Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm&#34;&gt;人脸识别技术应用安全管理办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Cyberspace Administration of China&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-21&#34;&gt;21 March 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.elawcn.com/rule/2021/0809/899.html&#34;&gt;《关于审理使用人脸识别技术处理个人信息相关民事案件适用法律若干问题的规定》解读&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中国互联网法务网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-09&#34;&gt;9 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.yzwb.net/news/sh/202609/t20260929_398197.html&#34;&gt;小区强制“刷脸”进门，业主将物业告上法庭！法院：你的“脸”你做主，物业需提供其他进入小区验证方式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;扬子晚报网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;29 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Coding agent and developer tool records in Windows 11 diagnostic data</title>
 <link>https://anoni.net/news/en/2026/11/windows-dev-tool-telemetry/</link>
@@ -2128,79 +2222,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Webloc, Penlink&#39;s ad-based location surveillance system, and its customers in more countries</title>
-<link>https://anoni.net/news/en/2026/11/penlink-webloc-ad-location-tracking/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/penlink-webloc-ad-location-tracking</guid>
-<pubDate>Mon, 16 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>According to Citizen Lab&#39;s update of 12 November relaying a Bloomberg investigation, security agencies in more countries, including the UK, Germany and Singapore, have acquired Webloc, which tracks phone locations using app and advertising data. The confirmed customers in Citizen Lab&#39;s April report were in the United States, El Salvador and Hungary, and the update adds that Austria&#39;s Ministry of the Interior has been confirmed as a customer (checked on 14 November). Phone settings for tracking and location permissions can reduce what apps send out, but the report says they cannot reliably prevent it.</description>
-<content:encoded>&lt;p&gt;Based on 6 sources, including Citizen Lab, National People&amp;#39;s Congress, e-Gov 法令検索&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;According to an update Citizen Lab published on 12 November, a Bloomberg investigation building on Citizen Lab&#39;s April research has found security agencies in more countries that acquired Webloc. Webloc is a location surveillance system sold by Penlink, a US surveillance technology vendor, and it tracks where devices are and how they move using data bought from mobile apps and digital advertising. According to Citizen Lab&#39;s April report, maps in documents describing Webloc show it was used to track people in a number of countries, and any app that displays ads is potentially a source of the data.&lt;/p&gt;
-&lt;p&gt;The April report sorts customers into confirmed and potential ones. The confirmed customers are Hungary&#39;s domestic intelligence service (using Webloc since at least 2022 and still using it when the report was published), El Salvador&#39;s National Civil Police, which bought it in 2021, and in the United States, Immigration and Customs Enforcement (ICE), the US military, the Texas Department of Public Safety and police departments in several cities. A senior researcher quoted in the update describes Webloc as a tool &#34;trickling down from military and intelligence agencies to federal law enforcement and then to state and local police.&#34; The evidence for potential customers includes vague answers to freedom of information requests, procurement records, training records and server analysis, and the report names the Netherlands, Mexico, Vietnam and Singapore as places where further research would be fruitful.&lt;/p&gt;
-&lt;p&gt;The update says Austria&#39;s Ministry of the Interior has since been confirmed as a customer, without saying where the confirmation came from. The April report had listed it as a potential customer because it bought Tangles in December 2024 and refused to say, in answer to a freedom of information request, whether the purchase included Webloc. As relayed by the update, the Bloomberg investigation found customers in other countries including the UK, the Netherlands, Germany, Mexico, Singapore, Saudi Arabia, the UAE and Israel, and the update says these findings align with the potential customers listed in April. Besides the countries it named for further research, the April report&#39;s discussion of potential customers also covers UK and Dutch agencies that refused to answer freedom of information requests, and Israeli military personnel trained on Webloc.&lt;/p&gt;
-&lt;p&gt;Webloc was developed by Cobwebs Technologies, an Israeli company, and has been sold by Penlink since the two companies merged in 2023, as an add-on to Tangles, a social media and web intelligence system. When the April report was published, Penlink&#39;s website mentioned Webloc only once, in connection with a training course, so the report&#39;s analysis draws on a technical proposal leaked from El Salvador&#39;s National Civil Police in 2021, contract documents from the US Office of Naval Intelligence and other sources.&lt;/p&gt;
-&lt;p&gt;According to 2021 documents cited in the report, Webloc offers a constantly updated stream of records from up to 500 million mobile devices worldwide (each tracked at least once a month), refreshed every 4 to 24 hours. A 2023 contract document from a US law enforcement agency says three years of historical data are available. The fields listed in the same 2021 documents include the advertising ID, a timestamp, coordinates derived from GPS or Wi-Fi, the IP address, the Wi-Fi network name, the device model and operating system, age, gender, language, the apps in use and advertising segments, for both Android and iOS. The researchers write that they cannot assess the current coverage and accuracy of this data.&lt;/p&gt;
-&lt;p&gt;According to Penlink&#39;s response, Webloc contains only location data tied to device identifiers, and no age, gender, parenthood, interest categories or websites visited. The researchers could not verify this, and they cite a 2025 Penlink document stating that Webloc &#34;generates demographic insights&#34;. Even without those fields, the researchers write, location records on their own reveal a person&#39;s habits, interests and personal characteristics.&lt;/p&gt;
-&lt;p&gt;Analysts can draw an area on a map (a geofence) and list the devices that have been inside it, or find devices that appeared in two or more places. According to the El Salvador document, heat maps can show where a device usually is during the day and at night, from which a home and workplace can be inferred. The document also suggests sending &#34;ground forces&#34; to a suspect&#39;s location, and names identifying the people behind the devices as the purpose of Webloc.&lt;/p&gt;
-&lt;p&gt;The server analysis relies on hostnames and login pages. Where a server shows a Tangles login page, the researchers have high confidence that it belongs to a Tangles deployment, while linking hostnames to Webloc and other products from the letters in them carries only medium confidence. Even for countries where they are confident related servers exist, the researchers write that it is still unknown whether the products are actually in operation. The researchers also do not know whether the country where a server sits is the country where the customer is.&lt;/p&gt;
-&lt;p&gt;Penlink replied to the summary of findings Citizen Lab sent on 3 April, and its response is published in full in the report. According to the response, the findings &#34;appear to rely on either inaccurate information or a misunderstanding about how we operate, including practices that Penlink does not engage in following our acquisition of Cobwebs Technologies in 2023.&#34; The response also says the report names companies and products that no longer exist and countries Penlink does not do business in, without specifying which.&lt;/p&gt;
-&lt;p&gt;The response further states that the data comes from providers that obtain user consent through SDKs (third-party code libraries that app developers embed) and filter out sensitive locations, consistent with the requirements of the US Federal Trade Commission (FTC), and that the company complies with US state privacy laws. The report&#39;s assessment is that the response left most of its questions unanswered and did not address privacy laws outside the United States. The researchers also could not verify the claim about consent.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Surveillance based on app and advertising data has been called advertising intelligence (ADINT), a term the report says was reportedly coined by the surveillance industry itself. Real-time bidding (RTB) is one of the data sources described in the report&#39;s background section: every time an app or web page shows an ad, an auction runs in under a second, and the user&#39;s data is shared with dozens or hundreds of marketing firms in the process. Another source is third-party tracking code inside apps, and surveillance vendors typically buy that data from data brokers (companies that collect and resell personal data) who run such code. &lt;a href=&#34;https://anoni.net/news/en/2026/10/adfection-targeted-ads-spyware/&#34;&gt;Another Citizen Lab report&lt;/a&gt; we covered in October also exploited the advertising supply chain, but that was a different vendor delivering spyware through targeted ads, and a separate system from Webloc.&lt;/p&gt;
-&lt;p&gt;The report says it is not currently possible to determine where Penlink gets Webloc&#39;s data, which might come from tracking code in apps, from bidding data, or from both. The 2021 documents show Webloc holding Wi-Fi network names, which bidding data does not provide, and on that basis the researchers infer that the data then came from tracking code in apps. They also consider it almost certain that the 2026 sources differ from those of 2021, because these supply chains keep shifting, and data brokers collecting for surveillance vendors have repeatedly been cut off from their app data sources.&lt;/p&gt;
-&lt;p&gt;According to the report, location and advertising data can reveal a person&#39;s home, workplace, religion, political views, sexual orientation or health issues, and many parties can match an advertising ID to a name, email address and phone number. The update says the lawfulness of using such systems in Europe and the UK is highly controversial, and that their use in the authoritarian countries identified by reporting is particularly dangerous. Based on the responses to 96 freedom of information requests, the report concludes that governments in Europe and the UK are highly nontransparent.&lt;/p&gt;
-&lt;p&gt;As of 14 November, Citizen Lab&#39;s pages do not say which agencies in each country Bloomberg identified as customers or how they use Webloc, and do not cite any response from Penlink or those agencies to the Bloomberg investigation. With the data supply chain unknown, readers also have no way to tell which apps&#39; data ends up in Webloc (our inference).&lt;/p&gt;
-&lt;p&gt;We, a community based in Taiwan, compared how the laws of mainland China, Japan and Taiwan treat the kind of location data Webloc is built on, and did not examine whether these provisions reach police or intelligence agencies that buy it. Mainland China&#39;s Personal Information Protection Law lists whereabouts among the categories of sensitive personal information, and handling them requires the person&#39;s separate consent (Articles 28 and 29). Under Article 23, a company providing personal information to another handler has to tell the person who the recipient is and for what purpose, and obtain separate consent.&lt;/p&gt;
-&lt;p&gt;The guidelines of Japan&#39;s Personal Information Protection Commission give a person&#39;s location information as one example of &#34;personally referable information&#34;. Under Article 31 of the Act on the Protection of Personal Information, when the recipient is expected to acquire such information as data identifying the person, the company providing it has to confirm beforehand that the person&#39;s consent has been obtained, outside the listed exceptions. The Personal Data Protection Act of Taiwan has no provision specifically on advertising identifiers, real-time bidding or targeted advertising, and on our reading of the text, the categories its Article 6 restricts in principle (medical records, medical care, genetic data, sex life, health checks and criminal records) do not list location; we did not check regulator or court interpretations, or which general rules apply to such data. These rules govern companies handling the data and do not by themselves restrict agencies that buy it.&lt;/p&gt;
-&lt;p&gt;The report&#39;s advice for iPhone users is to deny new apps permission to track your activity across other companies&#39; apps and websites when installing them, and to review the apps previously allowed to track you. The feature is not available on versions before iOS 14.5. On Android, depending on the device maker and system version, you can delete the advertising ID or opt out of ads personalization in settings. iPhone users can review which apps have access to location and other information, and Android users can review location permissions.&lt;/p&gt;
-&lt;p&gt;According to the report, these steps can minimize but not reliably prevent apps from sharing data with third parties, since an app may still pass data it processes to run the app directly from its own servers to other companies. It also cites Google&#39;s statement that once a user deletes the advertising ID, apps might use other &#34;persistent or proprietary identifiers&#34;. Apps that show no ads may also share data directly or indirectly, so people who need to keep their movements private should assume, even after these settings are in place, that apps on their phone may still send location data (our inference from the report&#39;s caveats).&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (6)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/security-agencies-worldwide-found-to-use-ad-based-surveillance-system/&#34;&gt;Security Agencies Worldwide Found to Use Ad-Based Surveillance System&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;12 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/&#34;&gt;Uncovering Webloc: An Analysis of Penlink’s Ad-based Geolocation Surveillance Tech&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-09&#34;&gt;9 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/415AC0000000057&#34;&gt;個人情報の保護に関する法律&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov 法令検索&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ppc.go.jp/files/pdf/260614_guidelines01.pdf&#34;&gt;個人情報の保護に関する法律についてのガイドライン（通則編）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Personal Information Protection Commission&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -6,7 +6,101 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>香港丽港城的人脸识别门禁与私隐专员公署的循规审查</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/hk-laguna-city-facial-recognition/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/hk-laguna-city-facial-recognition</guid>
+<pubDate>Wed, 25 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>香港个人资料私隐专员公署 11 月 13 日主动对蓝田私人屋苑丽港城正在安装的人脸识别门禁进行循规审查，声明写可能涉及 8,000 多户。物业管理公司表示启用前会发通告、办交流会向居民介绍，住户能否继续用门卡、人脸数据保存多久在公开的回应里没有答案，香港以外的读者不受影响。</description>
+<content:encoded>&lt;p&gt;整理 10 篇原文，来自 am730、Hong Kong Free Press、點新聞 等 8 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;香港个人资料私隐专员公署（负责个人资料保护的法定机构，以下简称公署）11 月 13 日发出声明，主动对丽港城的人脸识别门禁系统进行循规审查。公署的循规审查是要求机构提供资料，检查是否符合《个人资料（私隐）条例》。丽港城是蓝田的私人屋苑（香港对大型住宅小区的称呼），公署的声明写系统「可能涉及8,000多户」。丽港城的住户直接受影响，香港其他屋苑引入同类系统时同样要遵守这部条例，香港以外的地方不受影响。&lt;/p&gt;
+&lt;p&gt;丽港城共有四期，物业管理公司正在第 1、2、4 期安装人脸识别闸机，星岛头条的记者 11 月 13 日在现场看到装好的闸机仍用纸张遮着。点新闻转述公司回应传媒的内容，安装是为了让住户出入更方便、改善物业管理服务，启用前会举办茶聚交流会、发出通告向居民介绍。公司也表示收集的个人资料会依条例处理。Hong Kong Free Press（HKFP）报道一位观塘区议员在香港电台的节目上说，系统预定 1 月启用。&lt;/p&gt;
+&lt;p&gt;HKFP 的报道里也写，这位区议员接到支持与反对两种意见，部分长者认为新系统比较方便。星岛头条访问的住户有人因为担心数据外泄而不打算使用，也有人觉得感应门卡比人脸识别方便快捷。另一位住户打算先观望，实行了会试用。&lt;/p&gt;
+&lt;p&gt;公署在声明里以面容影像属于敏感的个人资料为由，要求物业管理公司提供进一步资料。公署要确认物业管理公司收集、持有、处理与使用生物识别数据时，有没有遵守条例与保障资料原则，「特别是资料保安的规定」。保障资料原则是条例里规范个人资料如何收集、保存、使用与保护的几项基本原则。HKFP 报道物业管理公司 11 月 16 日回复媒体时表示会配合审查。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;物业管理公司把出入方便列为安装的理由，部分长者也这么认为。公署 2015 年发布、2020 年修订的生物识别数据指引写到，人脸影像这类生理数据大多无法更改。外泄的生物识别数据可能让人被重新识别、被冒用身份，甚至受到歧视。为了降低风险，指引里建议尽快从原始影像生成特征模板（从影像提取、用来比对的数值）并安全删除原始影像，模板也要存成技术上难以还原成影像的形式。&lt;/p&gt;
+&lt;p&gt;替代方式、同意与保存期限是我们依公署过去的指引与报道的空缺提出的问题，这次声明写的审查重点是资料保安。生物识别数据指引的良好作业建议包括在可行的范围内提供替代方式，例子是职场考勤用智能卡取代按指纹打卡。照指引的标准，当事人有其他方式可选并自愿登记时公署不会介入，门卡是否保留因此关系到丽港城住户的登记算不算自愿。香港房屋经理学会会长接受星岛头条访问时认为生物特征认证将是大势所趋，但住宅使用人脸识别必须取得住户同意，也应该提供其他身份认证方式让住户选择。&lt;/p&gt;
+&lt;p&gt;丽港城的住户可以在登记人脸数据之前，向物业管理公司询问能否继续用门卡、登记时如何表示同意、数据保存多久，这几项在报道与公司的回应里都没有答案。登记之后可以提出查阅资料要求，也就是要求机构提供它持有的、关于自己的个人资料副本，怀疑私隐受侵犯时则可以向公署投诉（电话 2827 2827）。我们判断查阅资料要求只能取得机构承认持有的资料，人脸特征模板算不算可查阅的资料、备份是否一并删除，住户仍难以确认。物业管理公司表示启用前会发通告、办交流会向居民介绍运作方式，这些问题可以在那时提出。&lt;/p&gt;
+&lt;p&gt;循规审查还不是对违规的认定，根据公署对条例的说明，公署收到投诉或有合理理由相信有人违反条例时会依事实与证据决定是否调查。调查认定违反之后，公署可以发出执行通知要求机构补救，不遵守通知属于罪行。本站 11 月 9 日整理过&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/hk-mall-facial-recognition/&#34;&gt;香港警方锐眼计划加入人脸识别的计划&lt;/a&gt;，那是警方的闭路电视联网，丽港城的系统则由私人屋苑的物业管理公司计划引入。&lt;/p&gt;
+&lt;p&gt;丽港城住户还没有答案的门卡与保存期限，在中国大陆的《人脸识别技术应用安全管理办法》（2025 年 6 月 1 日施行）里各有对应的一般条文。第十条规定为实现相同目的或达到同等业务要求存在其他非人脸识别方式时，不得把人脸识别作为唯一验证方式，个人不同意的应当提供其他合理、便捷的方式。第八条规定人脸信息的保存期限不得超过实现处理目的所必需的最短时间。除法律、行政法规另有规定或取得个人单独同意外，人脸信息还应当存储于设备内，不得通过互联网对外传输。&lt;/p&gt;
+&lt;p&gt;依中国互联网法务网转载的条文，住宅小区的专门规定在最高人民法院 2021 年的司法解释（法释〔2021〕15 号）第十条。物业服务企业以人脸识别作为业主出入的唯一验证方式，业主不同意并请求提供其他合理验证方式的，法院依法予以支持。扬子晚报网 2026 年 9 月 29 日报道，人民法院案例库当天收录一起重庆案例，物业公司在小区唯一入口安装人脸识别道闸。报道还写到，重庆市渝中区人民法院判决物业删除业主的人脸识别信息并提供其他验证方式，双方均未上诉。&lt;/p&gt;
+&lt;p&gt;之后可以留意公署是否公布审查结果，以及物业管理公司在启用前的交流会与通告里，如何说明门卡的替代方式与人脸数据的保存期限。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.am730.com.hk/article/1063667&#34;&gt;私隱公署對麗港城人臉識別門禁系統作循規審查　確保住戶資料獲保障&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;am730&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://hongkongfp.com/2026/11/17/hong-kong-privacy-watchdog-launches-compliance-check-over-facial-recognition-system-at-lam-tin-estate/&#34;&gt;Hong Kong privacy watchdog launches compliance check over facial recognition system at Lam Tin estate&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Hong Kong Free Press&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-17&#34;&gt;2026 年 11 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.dotdotnews.com/a/202611/13/AP6af6bed9e4b091a65a2f7fc6.html&#34;&gt;藍田麗港城引人臉識別涉31幢大廈　私隱公署主動審查確保住戶個資獲保障&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;點新聞&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.stheadline.com/society/3636888/&#34;&gt;麗港城擬引入人臉識別門禁系統  居民憂私隱安全斷言不會使用：資料洩漏問題防不勝防&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;星島頭條&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/GN_biometric_e.pdf&#34;&gt;Guidance on Collection and Use of Biometric Data&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/data_privacy_law/ordinance_at_a_Glance/ordinance.html&#34;&gt;The Ordinance at a Glance&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/DAR_e.pdf&#34;&gt;Proper Handling of Data Access Request and Charging of Data Access Request Fee by Data Users&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Office of the Privacy Commissioner for Personal Data&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm&#34;&gt;人脸识别技术应用安全管理办法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-03-21&#34;&gt;2025 年 3 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.elawcn.com/rule/2021/0809/899.html&#34;&gt;《关于审理使用人脸识别技术处理个人信息相关民事案件适用法律若干问题的规定》解读&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国互联网法务网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-09&#34;&gt;2021 年 8 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.yzwb.net/news/sh/202609/t20260929_398197.html&#34;&gt;小区强制“刷脸”进门，业主将物业告上法庭！法院：你的“脸”你做主，物业需提供其他进入小区验证方式&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;扬子晚报网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-29&#34;&gt;2026 年 9 月 29 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Windows 11 诊断数据里的 coding agent 与开发工具记录</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/windows-dev-tool-telemetry/</link>
@@ -1984,67 +2078,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Penlink 的广告定位监控系统 Webloc 与各国客户</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/zh-cn/2026/11/penlink-webloc-ad-location-tracking/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/penlink-webloc-ad-location-tracking</guid>
-<pubDate>Mon, 16 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>Citizen Lab 11 月 12 日的更新页转述 Bloomberg 的调查，用 App 与广告数据追踪手机位置的 Webloc 有更多国家的安全机关采购，包括英国、德国、新加坡等国。4 月报告确认的客户在美国、萨尔瓦多与匈牙利，更新页另写奥地利内政部已确认是客户（11 月 14 日查证）。手机的追踪与位置权限设置可以减少 App 发出的数据，但报告也写无法可靠阻止。</description>
-<content:encoded>&lt;p&gt;整理 4 篇原文，来自 Citizen Lab、中国人大网、中国网信网&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;依 Citizen Lab 11 月 12 日的更新页，Bloomberg 的调查以 Citizen Lab 4 月的研究为基础，找到更多国家的安全机关采购 Webloc。Webloc 是美国监控技术厂商 Penlink 销售的定位监控系统，用从手机 App 与数字广告购得的数据追踪设备的位置与行动。Citizen Lab 4 月的报告提到，描述 Webloc 的文件附的地图显示它曾用来追踪多个国家的人。同一份报告也写，任何显示广告的 App 都可能成为数据来源。&lt;/p&gt;
-&lt;p&gt;4 月的报告把客户分成确认与潜在两层。确认的客户有匈牙利的国内情报单位（至少从 2022 年起使用，到报告发表时仍在使用）、2021 年购买的萨尔瓦多国家民警，以及美国移民及海关执法局（ICE）、美军、得州公共安全厅与多个城市的警察局。更新页引述的一位资深研究员形容，Webloc 从军方与情报机关扩散到联邦执法单位，再到州与地方警察。潜在客户的依据包括信息公开申请的含糊回复、采购记录、培训记录与服务器分析，报告写值得进一步研究的是荷兰、墨西哥、越南与新加坡。&lt;/p&gt;
-&lt;p&gt;更新页写奥地利内政部之后也已确认是客户，没有交代确认的来源。4 月的报告因它在 2024 年 12 月采购 Tangles、拒答信息公开申请是否包含 Webloc，原本列为潜在客户。依更新页转述 Bloomberg 的调查，其他国家的客户包括英国、荷兰、德国、墨西哥、新加坡、沙特阿拉伯、阿联酋与以色列，更新页写这些发现与 4 月报告列的潜在客户相符。4 月的报告谈潜在客户时除了值得进一步研究的国家，也写到拒答信息公开申请的英国与荷兰机关与受过 Webloc 培训的以色列军方人员。&lt;/p&gt;
-&lt;p&gt;Webloc 由以色列公司 Cobwebs Technologies 开发，2023 年 Cobwebs 与 Penlink 合并后改由 Penlink 销售，是社交媒体与网络情报系统 Tangles 的加购产品。到 4 月报告发表时，Penlink 的官网只提到一次 Webloc 的课程，报告的分析依据是 2021 年萨尔瓦多国家民警外流的技术提案、美国海军情报署的合同文件等。&lt;/p&gt;
-&lt;p&gt;依报告引述的 2021 年文件，Webloc 提供全球最多 5 亿台移动设备（一个月内至少被追踪过一次）持续更新的记录，每 4 到 24 小时更新一次。2023 年一份美国执法单位的合同文件则写可以查三年的历史数据。同一批 2021 年文件列出的字段包括广告标识符、时间、依 GPS 或 Wi-Fi 推算的坐标、IP 地址、Wi-Fi 名称、设备型号与操作系统、年龄、性别、语言、使用的 App 与广告分群，Android 与 iOS 都有。报告也写无法评估这些数据现在的覆盖范围与准确度。&lt;/p&gt;
-&lt;p&gt;依 Penlink 的回应，Webloc 只含跟设备标识符连在一起的位置数据，不含年龄、性别、是否为人父母、兴趣分类与访问的网站。研究者无法验证这个说法，并引述一份 2025 年的 Penlink 文件，里面写 Webloc 会产生人口统计的洞察（generates demographic insights）。报告也写，即使不再包含这些字段，位置记录本身就能看出一个人的习惯、兴趣与个人特征。&lt;/p&gt;
-&lt;p&gt;分析人员可以在地图上圈出一个范围（地理围栏，geofence），列出曾出现在范围内的设备，也可以找出在两个以上地点都出现过的设备。依萨尔瓦多的文件，热度图可以显示设备白天与夜间常在的位置，据此推断住家与工作地址。文件里也有派「地面部队」到嫌疑人位置的建议，并把识别设备背后的人列为 Webloc 的目的。&lt;/p&gt;
-&lt;p&gt;服务器分析靠的是主机名称与登录页面。出现 Tangles 登录页的主机，研究者有高信心属于 Tangles 的部署，从主机名称的字母推测对应 Webloc 等产品的只有中等信心。即使有把握某些国家有相关的服务器，报告也写仍不知道这些产品是否实际在运作。服务器所在的国家是否就是客户所在的国家，研究者同样不知道。&lt;/p&gt;
-&lt;p&gt;Penlink 回复了 Citizen Lab 在 4 月 3 日寄出的报告摘要，回应全文刊在报告里。依 Penlink 的回应，报告「似乎依据不正确的信息或误解」，包括 Penlink 在 2023 年收购 Cobwebs 之后不再采用的做法。回应也写报告提到已不存在的公司与产品、Penlink 没有生意往来的国家，但没有指出是哪些。&lt;/p&gt;
-&lt;p&gt;回应另外写数据来自通过 SDK（App 开发者嵌入的第三方程序包）取得用户同意、会过滤敏感地点的供应商，符合美国联邦贸易委员会（FTC）的要求，公司也遵守美国各州的隐私法。报告的评语是回应没有回答多数问题，也没有谈及美国以外的隐私法规。研究者也无法验证取得同意的说法。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;利用 App 与广告数据的监控被称为广告情报（ADINT），据报告转述，这个词出自监控产业本身。实时竞价（RTB）是报告背景说明列的其中一条数据来源，App 或网页每次显示广告前会在不到一秒内举行拍卖，用户的数据同时发给几十到上百家营销公司。另一条是 App 里的第三方追踪程序，监控厂商通常向经营这类程序的数据经纪商（data broker，收集并转卖个人数据的公司）购买。本站 10 月介绍过的&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/10/adfection-targeted-ads-spyware/&#34;&gt;另一份 Citizen Lab 报告&lt;/a&gt;同样利用广告供应链，那是另一家厂商用定向广告投递间谍软件，跟 Webloc 是不同的系统。&lt;/p&gt;
-&lt;p&gt;报告写目前无法确定 Penlink 从哪里取得 Webloc 的数据，可能是 App 的追踪程序、竞价数据或两者兼有。2021 年的文件显示 Webloc 有 Wi-Fi 名称的数据，竞价数据取不到这一项，研究者据此推测当时的数据来自 App 里的追踪程序。研究者也认为 2026 年的来源几乎可以确定跟 2021 年不同，因为这类数据供应链一直在变，替监控厂商收集数据的数据经纪商也一再被切断 App 的数据来源。&lt;/p&gt;
-&lt;p&gt;报告写位置与广告数据可以看出一个人的住家、工作地点、宗教、政治立场、性取向或健康状况，也有不少业者能把广告标识符对回姓名、email 与电话号码。更新页写这类系统在欧洲与英国使用是否合法有高度争议，用在报道提到的威权国家尤其危险。依 96 件信息公开申请的回复，报告的结论是欧洲与英国政府高度不透明。&lt;/p&gt;
-&lt;p&gt;Bloomberg 找到的各国客户是哪些机关、如何使用，到 11 月 14 日为止 Citizen Lab 的页面没有写出，也没有引述 Penlink 或这些机关对 Bloomberg 调查的回应。数据供应链既然不明，读者也无从得知哪些 App 的数据流到 Webloc（本文的推论）。&lt;/p&gt;
-&lt;p&gt;报告的客户与服务器名单都没有中国大陆。依国家网信办 2026 年 1 月的个人信息保护问答，用户标识符与 IMEI 等设备信息属于个人信息，连续精准定位轨迹信息是敏感个人信息的常见类别（《个人信息保护法》第二十九条要求处理敏感个人信息取得单独同意，Webloc 的位置记录是否属于此类本文没有判断）。第二十三条规定向其他处理者提供个人信息要告知接收方并取得单独同意，条文没有写到广告（2026 年 10 月 31 日查证）。这些条文是否适用于广告链上的数据传递与购买这类数据的警察或情报机关，以及境外读者所在地的规定，本文都没有核对。&lt;/p&gt;
-&lt;p&gt;报告的防护建议是 iPhone 安装新 App 时拒绝让它追踪你在其他公司 App 与网站上的活动，并回头检查先前允许追踪的 App。iOS 14.5 以前的版本没有这项功能。Android 依设备厂商与系统版本，在设置里删除广告 ID 或停用广告个性化。iPhone 可以查看哪些 App 取得了位置与其他信息的权限，Android 也可以查看位置权限。&lt;/p&gt;
-&lt;p&gt;报告提醒这些做法只能减少、无法可靠阻止 App 把数据分享给第三方。App 仍可能把运作时处理的数据从自己的服务器直接交给其他公司。报告也引述 Google 的说明，用户删除广告 ID 之后，App 可能改用其他持久或专有的标识符。不显示广告的 App 也可能直接或间接分享数据，行踪需要保密的人完成设置之后，仍要假设手机上的 App 可能发出位置数据（本文从报告的限制推论）。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（4 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/security-agencies-worldwide-found-to-use-ad-based-surveillance-system/&#34;&gt;Security Agencies Worldwide Found to Use Ad-Based Surveillance System&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/&#34;&gt;Uncovering Webloc: An Analysis of Penlink’s Ad-based Geolocation Surveillance Tech&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Citizen Lab&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-09&#34;&gt;2026 年 4 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2026-01/09/c_1769688003183197.htm&#34;&gt;个人信息保护政策法规问答（2026年1月）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国网信网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-09&#34;&gt;2026 年 1 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
