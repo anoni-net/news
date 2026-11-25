@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Wed, 25 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 26 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>1917 年《曼徹斯特衛報》刊出的祕密條約摘要</title>
+<link>https://anoni.net/news/history/11-26/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-26/2026</guid>
+<pubDate>Thu, 26 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>這一天，英國的《曼徹斯特衛報》刊出俄國新政府公布的舊政權祕密條約摘要。依 2026 年 11 月 22 日查到的條文，你可以向台灣的機關申請閱覽檔案，涉及國家機密的可能被拒絕。</description>
+<content:encoded>&lt;p&gt;俄國新政府在 1917 年 11 月的〈和平法令〉宣布廢除祕密外交。新政府的外交首長公布沙皇政府與臨時政府各自和協約國談成的條約時，在聲明裡寫「我們沒有什麼要隱瞞」。11 月 26 日的《曼徹斯特衛報》刊出路透社從彼得格勒轉發新政府通訊社的摘要，列出俄國對君士坦丁堡、法國對阿爾薩斯與洛林的要求。《The First Casualty》書裡寫，《泰晤士報》刊出了摘要，但決定不讓英、法、義政府為難並盡量刪減駐彼得格勒記者這方面的電稿。11 月 29 日英國下議院有議員要求說明，政府的答覆是「現在不準備發表任何這類聲明」，被問到文件是否真實時說「有些可能是真的，有些不是」。&lt;/p&gt;
+&lt;p&gt;1917 年那批條約是接手的新政府從前政權的外交檔案裡公布的，台灣現行的法律則規定國家機密與國家檔案至遲 30 年內開放應用。依 2026 年 11 月 22 日查到的條文，有特殊情形可經立法院同意延長，涉及國家安全情報來源或管道的國家機密報請延長保密時也不受這個期限限制。你可以依《檔案法》向機關申請閱覽、抄錄或複製檔案，機關沒有法律依據不得拒絕，檔案涉及國家機密的可以拒絕。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>1947 年華爾道夫飯店的聲明與好萊塢黑名單</title>
 <link>https://anoni.net/news/history/11-25/#y2026</link>
@@ -180,15 +190,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你若用中國大陸區碼 +86 以外的手機號碼註冊 WeChat，依 WeChat 的隱私政策個人資訊存在新加坡與馬來西亞的伺服器。這一天，中國全國人大常委會通過《網絡安全法》，要求關鍵資訊基礎設施的營運者把在境內收集的個人資訊原則上存在境內。</description>
 <content:encoded>&lt;p&gt;依 2026 年 8 月 6 日更新、11 月 3 日查證的 WeChat 隱私政策，你若用中國大陸區碼 +86 以外的手機號碼註冊 WeChat，個人資訊存在新加坡與馬來西亞的伺服器（香港與澳門使用者的資料存在香港）。政策裡也寫了資料在有限的情況下可能為了技術支援從中國大陸遠端存取，你跟 Weixin（騰訊把 +86 號碼註冊的帳號歸為微信）使用者互動的資訊也會分享給 Weixin，由它在中國大陸、在必要範圍內處理。中國全國人大常委會在 2016 年 11 月 7 日通過《中華人民共和國網絡安全法》，要求關鍵資訊基礎設施（通訊、能源、金融等重要行業的系統，範圍由國務院另定）的營運者把在境內收集與產生的個人資訊、重要資料存在境內（確需出境的須經安全評估），2026 年 1 月 1 日施行的修正沒有改動這項規定。騰訊在 +86 帳號適用的《微信隱私保護指引》（8 月 17 日生效）裡寫明境內收集的個人資訊原則上依法律法規存在中國境內，沒有列出是哪幾部法規，WeChat 的隱私政策則沒有說明上述存放安排跟中國法律的關係。想知道 WeChat 存了你哪些資料，可以在「Me」&amp;gt;「Settings」&amp;gt;「My Information &amp;amp; Authorizations」選「Export Personal Data」（中文介面的選項名稱可能不同，政策只列英文），匯出的內容有帳號資料、聯絡人、朋友圈、收藏、位置與登入資料等類別。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>綁在帳號上的電子郵件與電話號碼</title>
-<link>https://anoni.net/news/history/11-06/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/11-06/2026</guid>
-<pubDate>Fri, 06 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你在 X 註冊時填的電子郵件或電話號碼，依 1 月生效的隱私政策會跟帳號連在一起。這一天，美國檢方公開一份刑事控訴書，兩名前 Twitter 員工被控替沙烏地政府查詢批評該國政府的使用者資料。</description>
-<content:encoded>&lt;p&gt;依 2026 年 1 月 15 日生效的隱私政策，你在 X（前身是 Twitter）建立帳號時要提供電子郵件或電話號碼其中一種，填了就會跟帳號連在一起。2019 年 11 月 6 日，美國加州北區聯邦檢察署公開一份刑事控訴書（當時還沒經過審判的指控），兩名前 Twitter 員工與一名沙烏地國民被控擔任沙烏地政府的非法代理人。依司法部新聞稿，兩名員工未經授權用員工權限查詢批評沙烏地政府的使用者資料，包括可能被用來找出發文者身分與所在地的電子郵件、電話號碼、連線用的 IP 位址與出生日期。依司法部後來的新聞稿與最高法院的判決，其中一名前員工 2022 年被陪審團認定有罪、判處 42 個月徒刑，最高法院 2026 年 6 月只就偽造紀錄這一項罪名的審判地點撤銷上訴法院的判決並發回。到 11 月 2 日查證時，X 的隱私政策沒有寫哪些員工可以存取這些帳號資料，也沒有寫存取時受什麼控管。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/karte-breach/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-26T00:05:00+08:00</news:publication_date>
+<news:title>日本行銷平台 KARTE 的入侵與數百家企業的會員資料</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/karte-breach/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-26T00:05:00+08:00</news:publication_date>
+<news:title>日本营销平台 KARTE 的入侵与数百家企业的会员数据</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/karte-breach/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-26T00:05:00+08:00</news:publication_date>
+<news:title>The breach of Japanese marketing platform KARTE and member data from hundreds of companies</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/2026/11/ios-browser-engines/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-26T00:00:00+08:00</news:publication_date>
+<news:title>iOS 瀏覽器引擎在歐盟與日本的開放條件與爭議</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/ios-browser-engines/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-26T00:00:00+08:00</news:publication_date>
+<news:title>iOS 浏览器引擎在欧盟与日本的开放条件与争议</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/ios-browser-engines/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-26T00:00:00+08:00</news:publication_date>
+<news:title>Conditions and disputes over alternative browser engines on iOS in the EU and Japan</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/hk-laguna-city-facial-recognition/</loc>
 <news:news>
 <news:publication>
@@ -64,72 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-25T00:00:00+08:00</news:publication_date>
 <news:title>Coding agent and developer tool records in Windows 11 diagnostic data</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/uk-apple-encryption-order/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-24T00:05:00+08:00</news:publication_date>
-<news:title>英國政府對 Apple 技術能力通知的保密主張與調查權力法庭判決</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/uk-apple-encryption-order/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-24T00:05:00+08:00</news:publication_date>
-<news:title>英国政府对 Apple 技术能力通知的保密主张与调查权力法庭判决</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/uk-apple-encryption-order/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-24T00:05:00+08:00</news:publication_date>
-<news:title>UK secrecy over the Apple technical capability notice and the Investigatory Powers Tribunal ruling</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/bitwarden-native-passkeys/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
-<news:title>Bitwarden 桌面版與 Windows 11、macOS 的通行金鑰整合</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/bitwarden-native-passkeys/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
-<news:title>Bitwarden 桌面版与 Windows 11、macOS 的通行密钥集成</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/bitwarden-native-passkeys/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-24T00:00:00+08:00</news:publication_date>
-<news:title>Native passkey integration in the Bitwarden desktop app for Windows 11 and macOS</news:title>
 </news:news>
 </url>
 </urlset>

@@ -6,7 +6,211 @@
 <atom:link href="https://anoni.net/news/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Wed, 25 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 26 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>The breach of Japanese marketing platform KARTE and member data from hundreds of companies</title>
+<link>https://anoni.net/news/en/2026/11/karte-breach/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/karte-breach</guid>
+<pubDate>Thu, 26 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>KARTE, a marketing platform run by the Japanese company PLAID, Inc., was broken into by an outside attacker on 13 November. PLAID&#39;s investigation findings of 20 November list member data imported by hundreds of companies, and records of visitors&#39; behaviour on those companies&#39; websites, as leaked or possibly leaked, including data from companies whose contracts had ended and whose data should already have been deleted. Ordinary visitors may not know that a website uses KARTE. Customers and members of these companies, and users of their websites and apps, can watch for notices from the companies.</description>
+<content:encoded>&lt;p&gt;Based on 13 sources, including PLAID, MUFG Bank, DHC&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;People who have signed up as members on a Japanese shopping site or banking app may have their data stored at a marketing company they have never dealt with directly. KARTE is a marketing platform from the Japanese company PLAID, Inc. that is embedded in companies&#39; websites and apps to record what visitors view and click, and companies also import their own member data into KARTE to use alongside those records. PLAID detected an outside attacker on 13 November and shut down the entire KARTE service the same day, and its investigation findings published on 20 November list data entrusted by hundreds of companies as leaked or possibly leaked. Only customers and members of companies that have used KARTE, and people who have used those companies&#39; websites or apps, can fall within the scope of this breach.&lt;/p&gt;
+&lt;p&gt;According to PLAID&#39;s announcement of 16 November, the attacker exploited a vulnerability in PLAID&#39;s servers in the early hours of the 13th to steal the credentials used to connect to its databases, and read data out of them. The attacker then used the same credentials to take over accounts and log in to KARTE&#39;s admin console, and PLAID detected the intrusion that morning and shut down its servers in the afternoon.&lt;/p&gt;
+&lt;p&gt;The 20 November announcement sorts the data that companies entrusted to KARTE into four categories, and because some companies fall into more than one, the per-category counts cannot be added up; the announcement gives no overall total. The two categories that concern website users directly are customer data the companies imported, such as member data (570 companies), and records of visitors&#39; page views and clicks (487 companies), and in each case it is part of that data that leaked or may have leaked. The other two are cached data that KARTE held temporarily, which includes visitor identifiers, and credentials for connecting to services such as email delivery, the equivalent of keys or passwords. The credentials contain no personal data, but if they are not revoked they could be used to access those services.&lt;/p&gt;
+&lt;p&gt;The affected companies also include ones whose contracts with PLAID had fully or partly ended, a correction the 20 November announcement made to what PLAID said on 16 November. Under the terms of service this data should have been deleted when the contracts ended, but it remained because of lapses in staff operations and management, and PLAID plans to delete it and send notifications once the verification it will carry out for resuming the service is complete.&lt;/p&gt;
+&lt;p&gt;Company notices began appearing on 17 November, and by 21 November the Japanese security blog piyolog had listed 108 organisations that had published one. What leaked varies widely from company to company, and the two examples below are ones whose original notices we checked. MUFG Bank&#39;s notice covers about 6.5 million records containing only customers&#39; gender, age and area of residence, with no names or contact details. DHC&#39;s covers about 19.11 million records, including names, email addresses, dates of birth and member IDs, but not login passwords or credit card data.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;KARTE&#39;s tracking tag is a piece of code that a company issues from the admin console and places on its web pages, and according to the developer documentation, once a visitor&#39;s browser loads it, the tag sends browsing events to KARTE. Companies separately import their own member data, so both kinds of data sit on the same platform, and data from hundreds of companies is concentrated with a single provider. The &lt;a href=&#34;https://anoni.net/news/en/2026/11/neticrm-breach/&#34;&gt;netiCRM incident&lt;/a&gt; we covered on 19 November was also a break-in at a service provider&#39;s server, after which one client organisation announced it had been notified that its donation database had been copied.&lt;/p&gt;
+&lt;p&gt;Visitors never sign up for KARTE themselves, and their data is handled by PLAID on behalf of the companies. PLAID&#39;s FAQ for ordinary visitors says it cannot answer whether a particular website uses KARTE or whether a given person&#39;s data is within the scope of the leak, and its announcements offer no way to look this up. To find out whether you are affected, you have to wait for a company&#39;s notice or ask the companies you deal with, and whether and when to notify is up to each company. Since data from companies whose contracts had ended was still on PLAID&#39;s systems, our reading is that data may also stay with the provider after a company stops using KARTE, and a request to delete it likewise goes to the company.&lt;/p&gt;
+&lt;p&gt;Content-blocking extensions can reduce the behavioural data that third-party tools collect in the browser, and filter lists such as EasyPrivacy can be applied to decide which addresses to block. The 21 November version of EasyPrivacy has blocking rules for only some KARTE addresses and also makes exceptions for 3 websites, so installing an extension does not guarantee that every request to KARTE is blocked. Extensions work only inside the browser and have no effect on collection inside apps. Member data is data a company already holds and imports into KARTE itself, so blocking KARTE&#39;s code in the browser does not stop the company from sending data it already has.&lt;/p&gt;
+&lt;p&gt;People who receive a notice from a company can check in it which items leaked, and the notices from MUFG Bank and DHC both say the companies will contact affected customers individually. DHC&#39;s notice asks customers who receive suspicious emails claiming to be from DHC not to open links or attachments, and not to enter personal data or passwords. Following these reminders lowers the chance of being tricked into handing over data by impersonation emails, but data that has already leaked cannot be taken back.&lt;/p&gt;
+&lt;p&gt;Japan&#39;s national data protection regulator is the Personal Information Protection Commission (PPC). Under Article 26(1) of the Act on the Protection of Personal Information, as in force on 9 October 2026, a business that handles personal data on another business&#39;s behalf need not report a breach to the PPC itself if it has notified the business that entrusted it with the data in the manner the PPC&#39;s rules set. Article 26(2) also excludes a business that has given such notice from the duty to notify the people affected, so in our reading, where PLAID has notified its clients in this way, telling customers falls to each client company.&lt;/p&gt;
+&lt;p&gt;JINS Japan is among the companies that issued notices, and according to iThome, JINS in Taiwan announced on 18 November that the leak was limited to systems in Japan and that Taiwanese members&#39; data is managed separately and was not affected. In Taiwan, Article 12 of the Personal Data Protection Act as in force on 9 October 2026 requires an organisation that violates the Act, resulting in personal data being stolen or leaked, to notify the people concerned by appropriate means once the facts are established, but sets no deadline and no duty to report to a regulator, and amendments promulgated in November 2025 that add a reporting duty had no effective date as of that day. Reporting comes instead from sector rules, such as those of the Financial Supervisory Commission (FSC), which require banks and other financial institutions to report serious incidents within 72 hours. In mainland China, Article 57 of the Personal Information Protection Law requires a personal information handler, when personal information has been or may have been leaked, to take remedial measures immediately and notify the responsible authorities and the individuals concerned, with no set number of days, though individuals need not be notified if the measures can effectively prevent harm, unless the authorities consider harm possible and require notification.&lt;/p&gt;
+&lt;p&gt;PLAID has set mid-January 2027 as its target for resuming KARTE in stages, will also bring in a third-party organisation for verification, and plans to hand detailed data to each company in turn from 24 November. As of 22 November, the PPC had not posted anything about the incident on its website, while PLAID&#39;s announcement says it is in the process of reporting to the commission. Things to watch are whether companies update the number of records and the items in their notices once they have the detailed data, and how the commission handles the case.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://plaid.co.jp/news/20261120/&#34;&gt;「KARTE」への不正アクセスに関する当社調査結果と、サービス再開の見通し等のお知らせ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PLAID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-20&#34;&gt;20 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://plaid.co.jp/news/20261116/&#34;&gt;不正アクセスによる個人情報を含む可能性のある情報等の漏えいに関するお詫びとお知らせ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PLAID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;16 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://plaid.co.jp/notice/202611-faq/&#34;&gt;当社サービスへの不正アクセスについて（KARTEをご利用いただいている企業のお客様向けのご案内）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PLAID&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.bk.mufg.jp/news/news2026/pdf/news1118.pdf&#34;&gt;当行委託先が提供するサービスへの不正アクセスについて&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;MUFG Bank&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;18 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/11/2d7a589cb5008fbc262624582782444f.pdf&#34;&gt;外部サービス「KARTE」への不正アクセスに伴うお客様情報漏えいに関するお詫びとお知らせ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;DHC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;18 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://piyolog.hatenadiary.jp/entry/2026/11/18/010752&#34;&gt;プレイドのCXプラットフォーム「KARTE」への不正アクセスについてまとめてみた&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;piyolog&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;18 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://developers.karte.io/reference/js-sdk&#34;&gt;JS SDK（計測タグ）について&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;KARTE Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://easylist.to/easylist/easyprivacy.txt&#34;&gt;EasyPrivacy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;EasyList&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-21&#34;&gt;21 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.e-gov.go.jp/law/415AC0000000057&#34;&gt;個人情報の保護に関する法律&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;e-Gov法令検索&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180640&#34;&gt;JINS、三菱UFJ銀行等數十家日本企業陸續發布資安事件公告，皆因第三方行銷科技業者PLAID旗下KARTE平臺遭駭&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021&#34;&gt;個人資料保護法（民國 112 年 05 月 31 日版）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380233&#34;&gt;金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>Conditions and disputes over alternative browser engines on iOS in the EU and Japan</title>
+<link>https://anoni.net/news/en/2026/11/ios-browser-engines/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/ios-browser-engines</guid>
+<pubDate>Thu, 26 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>The EU and Japan require Apple to allow browser engines other than WebKit on iOS, and Apple has set conditions on security and privacy grounds. Mozilla writes that these conditions have kept it from launching a Gecko-based Firefox, and according to its 20 November post no developer had launched a non-WebKit iOS browser by then.</description>
+<content:encoded>&lt;p&gt;Based on 9 sources, including Mozilla, Apple, Japan Fair Trade Commission&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Every browser on the iPhone and iPad, whether Safari, Chrome, Firefox or one marketed on privacy, runs on Apple&#39;s WebKit engine (the core component that parses and displays web pages). Laws in the EU and Japan require Apple to allow other engines, and Apple has set conditions in both places on security and privacy grounds. In a post on 20 November, Mozilla writes that these conditions have so far kept it from launching a Firefox built on its own engine, and that not one developer had launched a non-WebKit browser on iOS by the time of the post. Apple&#39;s App Review Guidelines require apps that browse the web to use WebKit, and the conditions for an exception are set out on two separate pages, one for the EU and one for Japan.&lt;/p&gt;
+&lt;p&gt;According to Mozilla&#39;s post, iPhones and iPads are the only major platforms with this restriction. On Apple&#39;s own macOS, people can use the version of Firefox built on Gecko, the browser engine Mozilla develops. Many of Firefox&#39;s features are built into Gecko, which is why Mozilla cannot easily bring the full Firefox to the iPhone.&lt;/p&gt;
+&lt;p&gt;According to a summary by the advocacy group Open Web Advocacy (OWA), the EU&#39;s Digital Markets Act (DMA) requires large platforms designated as gatekeepers to allow other browser engines, an obligation Apple has had to meet since March 2024. Japan&#39;s Act on Promotion of Competition for Specified Smartphone Software (Mobile Software Competition Act, MSCA) has a similar provision. In the outline of the act published by the Japan Fair Trade Commission (JFTC), providers that exceed a size threshold and are designated by the JFTC &#34;must not prevent other application developers from using other browser engines, for example, by imposing conditions that only allow the use of designated providers&#39; proprietary browser engines&#34;. Exceptions are allowed where there are justifiable reasons such as security and privacy.&lt;/p&gt;
+&lt;p&gt;Under Apple&#39;s developer documentation, a developer who wants to use another engine must first be authorised by Apple, and the app can only be distributed in the EU or in Japan (the Japan conditions were published in December 2025). On security, vulnerabilities that are already being exploited must be mitigated &#34;in a timely manner&#34;, and the example given in the documentation is &#34;30 days for the simplest classes of vulnerabilities being actively exploited&#34;. On privacy, the engine must block third-party cookies (cookies that can be used to track people across websites) by default.&lt;/p&gt;
+&lt;p&gt;According to Mozilla, using Gecko would mean it could not simply update the Firefox app people already have, and would instead have to build &#34;a whole separate app, a second Firefox&#34;. Users would then have to download the new app, move their bookmarks, passwords and history across, and switch over by hand. Mozilla writes that &#34;[a] significant proportion of people would understandably give up, including many who picked Firefox from the EU&#39;s choice screen&#34;. One of the conditions bars Mozilla from disclosing non-public information about the project, but it still gave this example of what it is up against.&lt;/p&gt;
+&lt;p&gt;Browser engines constantly handle untrusted and potentially malicious content and have visibility of sensitive user data, which, according to Apple&#39;s developer documentation, makes them &#34;one of the most common attack vectors for bad actors&#34;. Apple therefore only authorises developers who meet specific criteria and commit to ongoing security and privacy requirements. As quoted by OWA, Apple&#39;s vice president for legal said at a 2025 DMA workshop that third parties such as Google and Mozilla are able to bring their own engines, adding, &#34;for whatever reason, they have chosen not to do so&#34;.&lt;/p&gt;
+&lt;p&gt;In a May post, OWA wrote that no browser vendor had brought its own engine to iOS in the EU, and asked the European Commission to investigate whether Apple is complying with the DMA in practice. As of 22 November we had found no Commission decision on Apple&#39;s browser engine conditions, and no public response from Apple to Mozilla&#39;s post.&lt;/p&gt;
+&lt;p&gt;The UK&#39;s Competition and Markets Authority (CMA) designated Apple&#39;s mobile platform as having strategic market status in October 2025, with the designation covering mobile browsers and browser engines. Following the designation, the CMA can impose targeted measures on Apple. On the CMA&#39;s programme of work page as of 22 November, work on Apple &#34;concerning browsers (removal of the WebKit restriction)&#34; is among the things the CMA expects to progress next, with no timetable given.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Switching to another browser on iOS changes the interface, the default settings and the extra features, but the engine is WebKit every time. As this site&#39;s &lt;a href=&#34;https://anoni.net/news/en/2026/11/ios-full-tor-browser/&#34;&gt;14 November article on Tor options for the iPhone&lt;/a&gt; set out from the Tor Project&#39;s documentation, Tor Browser is built on Firefox&#39;s Gecko, and Onion Browser on the iPhone (an open-source browser that connects through the Tor onion routing network) cannot offer the same protection because of WebKit&#39;s limits. The &lt;a href=&#34;https://anoni.net/news/en/2026/10/firefox-ios-ad-blocker/&#34;&gt;built-in ad blocker in Firefox for iOS&lt;/a&gt;, covered in October, is likewise built on WebKit&#39;s content blocking technology, while Firefox on desktop and Android can install extensions directly.&lt;/p&gt;
+&lt;p&gt;Our reading of the local-distribution condition is that even if browsers with other engines appear in the EU or Japan, iPhone users in Taiwan, Hong Kong and elsewhere would still get WebKit browsers from the App Store. The exceptions would be separate permission from Apple, or a local law that also requires other engines to be allowed. The plan for an iOS Tor Browser covered in the 14 November article would face the same condition if it were distributed through the App Store.&lt;/p&gt;
+&lt;p&gt;Japan is the only place in Asia covered by Apple&#39;s alternative engine programmes, from iOS 26.2 onwards. According to Mozilla, no developer had launched a non-WebKit browser there either, almost a year after Apple published its Japan conditions. The conditions on Apple&#39;s Japan page match the EU page item by item, except that they cover iOS only, not iPadOS, allow distribution elsewhere only where &#34;expressly permitted by Apple&#34;, and limit embedded engines for in-app browsing to browser engine stewards (organisations primarily responsible for operating an engine). Everywhere else, the App Review Guidelines require WebKit and list exceptions only for the EU and Japan, so going by the text of the guidelines, the same rule applies in mainland China, Taiwan and Hong Kong, and as of 22 November no local law requiring Apple to allow other engines could be found in any of the three.&lt;/p&gt;
+&lt;p&gt;Apple&#39;s two public pages of conditions include security and privacy requirements and the local-distribution limit, but no wording about building a separate app. Mozilla, for its part, writes that a confidentiality condition prevents it from disclosing the details. On why no browser has launched, Mozilla and OWA point to Apple&#39;s conditions, while Apple&#39;s vice president for legal, at the 2025 workshop, pointed to the vendors&#39; own choice.&lt;/p&gt;
+&lt;p&gt;Anyone who needs to browse through Tor on an iPhone can use Onion Browser, covered in the 14 November article, together with Orbot (an app that sends the phone&#39;s connections into the Tor network). Pages are handled by WebKit in this setup too, and according to the same article, very little can be adjusted against browser fingerprinting (identifying visitors from details of their device and browser). Tor Browser exists only for desktop and Android, so anyone who needs its full protection has to use one of those devices, and the same goes for anyone who wants Firefox extensions. Readers who only use Safari or another browser have nothing to change now.&lt;/p&gt;
+&lt;p&gt;In comparing how different places handle this, Apple&#39;s 30-day example offers a security test, whether vulnerabilities can still be dealt with in time once other engines are allowed, and the migration cost Mozilla describes offers a competition test, whether users drop away when they have to switch apps.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/&#34;&gt;Why there are still no non-WebKit browsers on iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-20&#34;&gt;20 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines/&#34;&gt;Using alternative browser engines in the European Union&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines-jp/&#34;&gt;Using alternative browser engines in Japan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/&#34;&gt;App Review Guidelines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;16 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2025/12/apple-announces-changes-to-ios-in-japan/&#34;&gt;Apple announces changes to iOS in Japan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-17&#34;&gt;17 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.japaneselawtranslation.go.jp/en/outlines/view/154&#34;&gt;Outline of the Act on Promotion of Competition for Specified Smartphone Software (Mobile Software Competition Act (MSCA))&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Japan Fair Trade Commission&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/guidance/the-cmas-programme-of-work-across-mobile-platforms&#34;&gt;The CMA&amp;#39;s programme of work across mobile platforms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Competition and Markets Authority&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-10&#34;&gt;10 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://open-web-advocacy.org/blog/the-digital-markets-act-is-delivering-real-wins-but-not-yet-for-browser-engines/&#34;&gt;The Digital Markets Act Is Delivering Real Wins, But Not Yet for Browser Engines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Open Web Advocacy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-15&#34;&gt;15 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://open-web-advocacy.org/blog/how_apples_key_tactic_could_prevent_japans_smartphone_act_from_improving_browser_competition/&#34;&gt;How Apple’s Key Tactic Could Prevent Japan’s Smartphone Act from Improving Browser Competition&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Open Web Advocacy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-06&#34;&gt;6 January 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>Facial recognition gates at Hong Kong&#39;s Laguna City and the privacy commissioner&#39;s compliance check</title>
 <link>https://anoni.net/news/en/2026/11/hk-laguna-city-facial-recognition/</link>
@@ -1992,236 +2196,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Department of Justice, HKSAR&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-03-24&#34;&gt;24 March 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>New York City&#39;s surveillance pricing ban bill and the FTC&#39;s draft policy statement on personalized pricing</title>
-<link>https://anoni.net/news/en/2026/11/nyc-surveillance-pricing/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/nyc-surveillance-pricing</guid>
-<pubDate>Tue, 17 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The New York City Council passed a bill on 12 November that, with some exceptions, bars businesses from using algorithms and personal data to charge different customers different prices for the same product. As of 14 November the bill was awaiting the mayor&#39;s signature, and it takes effect one year after becoming law. A draft policy statement the US Federal Trade Commission (FTC) proposed in August would instead require businesses to disclose personalized pricing in certain circumstances. Readers outside New York City are not directly affected by the city bill.</description>
-<content:encoded>&lt;p&gt;Based on 11 sources, including New York City Council, Federal Trade Commission, The Record&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The New York City Council voted 44 to 5 on 12 November to pass a bill that, with some exceptions, bars businesses from using algorithms and personal data to charge different customers different prices for the same goods or services. It applies to businesses domiciled in the city or transacting with consumers there, so readers elsewhere are not directly affected by this city bill. As of 14 November, the council&#39;s legislative system still listed the bill as awaiting the mayor&#39;s signature, and the text takes effect one year after it becomes law.&lt;/p&gt;
-&lt;p&gt;The bill calls the practice it bans surveillance pricing, while a draft from the US Federal Trade Commission (FTC) and documents from industry groups call it personalized pricing. The text defines it as pricing set completely or in part by an algorithm that uses personal data to offer different prices to different customers for the same goods or services. Personal data under the bill means any data that identifies or could reasonably be linked, directly or indirectly, with a specific consumer or device. Location data that consumers provide themselves and that is used to calculate trip and delivery fees or to assess local supply and demand does not count.&lt;/p&gt;
-&lt;p&gt;The bill also permits several kinds of what it calls bona fide custom discounts. Loyalty or rewards programs that consumers opt into can tier members by past purchase history, provided that history is not combined or cross-referenced with other personal data. Status such as veteran, senior or teacher, or a birthday, must be offered by the consumer rather than inferred by the business, and both kinds of discount must be clearly disclosed. Insurance, pricing that assesses creditworthiness based on credit reports, and pricing required or expressly authorized by federal or state law fall outside the ban.&lt;/p&gt;
-&lt;p&gt;Enforcement falls to the city&#39;s Department of Consumer and Worker Protection (DCWP), with civil penalties of up to $1,000 per violation. Under the text, a business with fewer than 15 locations nationwide that operates mainly in physical locations in New York City can, after a first violation, correct it and issue full refunds within 30 days of being notified. Businesses that offer custom discounts or use surveillance pricing must also set up a procedure that lets consumers who shop in the city request what personal data was considered in setting a price and how it was considered.&lt;/p&gt;
-&lt;p&gt;On 19 August the FTC proposed a draft enforcement policy statement on personalized pricing (Proposed Enforcement Policy Statement), which sets out how it intends to enforce existing law and is not a new rule in itself. According to the draft, Congress has not given the FTC authority to prohibit personalized pricing in all circumstances, and the FTC intends to enforce Section 5 of the FTC Act, which prohibits unfair or deceptive practices in commerce, aggressively. Where consumers reasonably expect that prices will not vary based on their personal data, businesses should clearly disclose that the price is personalized, the basis for the personalization and the types of data used, and failing to do so is likely to violate Section 5. The comment period closed in September, and as of 14 November we had found no final version.&lt;/p&gt;
-&lt;p&gt;The draft includes several examples, which the FTC marks as non-exhaustive and offered only for discussion. They include a food delivery company quoting higher prices to customers whose data suggests they are unlikely or unable to leave home, a grocery chain charging a delivery customer more for milk because several children live in the household, and a rideshare company charging more for a ride to a medical facility when data suggests the user has a medical emergency. Separately, The Record reported that grocery stores, ride-sharing companies and airlines are thought to be widely using this kind of pricing, though public evidence is limited.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;As the FTC&#39;s draft describes it, businesses analyze personal data to estimate how much an individual consumer is willing to pay and whether they are likely to comparison shop, then set prices accordingly. One investigation cited in the council&#39;s press release found that a major grocery delivery platform&#39;s pricing experiments produced price differences between individuals as high as 23 percent. In another cited in the release, the price of a television rose from $499.99 to $599.99 after the customer pulled into the store&#39;s parking lot. According to the release, consumers find this kind of pricing hard to detect.&lt;/p&gt;
-&lt;p&gt;Under New York City&#39;s bill, businesses cannot price based on personal data even if they tell customers in advance. The exceptions listed in the text are the discounts described above, plus insurance, credit reports and pricing required or authorized by law. A Consumer Reports policy analyst who worked on the campaign for the bill told The Record that once the law takes effect, eight million people in New York City will no longer have to guess whether their search history or where their cursor hovers on a page is shaping the price they see.&lt;/p&gt;
-&lt;p&gt;The FTC&#39;s draft relies on disclosure instead, and in a footnote the FTC declines for now to take a position on whether some personalized pricing is still unfair even when fully disclosed. The draft&#39;s own example is that telling consumers only that a price is &#34;exclusive&#34; is likely misleading, while explaining that it was estimated from purchase history on the same logged-in account may be sufficient.&lt;/p&gt;
-&lt;p&gt;The Future of Privacy Forum (FPF), which describes itself as a non-profit organization advancing data protection and digital governance practices, filed comments in September. It asked the FTC to clarify whether all undisclosed personalized pricing counts as deceptive or only pricing that leads to higher prices, and how it would judge whether a price is higher. FPF wrote that many retailers personalize prices to offer some consumers lower prices, through loyalty programs, personalized coupons and discounts for students and seniors, and recommended comparing against a retailer&#39;s real internal baseline price. It also cited limited space and user-experience considerations as obstacles to in-depth pricing disclosures and asked the FTC for guidance on putting the disclosure requirement into practice.&lt;/p&gt;
-&lt;p&gt;According to City &amp;amp; State, the bill has faced opposition from businesses whose services fall under it, including Uber, though we could not find a public statement from Uber itself. In the same report, the council Speaker rejected claims that the bill would stop businesses from offering some discounts, saying they can still give discounts but cannot mine personal data to charge different prices for the same product. NACS, a trade association for convenience and fuel retailers, asked the FTC in August to extend the comment deadline, and its notice said the issue is rife with misinformation and poses significant risks to longstanding retail pricing practices, loyalty programs and discounts.&lt;/p&gt;
-&lt;p&gt;In the draft, the FTC cites limited economic research, including a 2023 study, indicating that personalized pricing is likely to increase business profits while benefiting some consumers and harming others, and that more sophisticated methods are less likely to benefit consumers. In comments marked as representing only the author&#39;s views, American Action Forum&#39;s director of competition policy cites the same 2023 study, which found that over 60 percent of consumers benefited from personalization even when overall consumer surplus (the gap between what consumers are willing to pay and what they actually pay) declined. The author argues that a consumer-expectations standard could chill pricing innovation and competition and lead to subjective enforcement, and urges the FTC to focus Section 5 enforcement on clear fraud and misrepresentation, such as claiming everyone pays the same price while personalizing it with customer data.&lt;/p&gt;
-&lt;p&gt;Explaining why disclosure matters, the FTC writes in the draft that consumers who do not know a price is personalized cannot use a VPN or private browsing, switch businesses, or walk away to avoid higher prices. According to American Action Forum&#39;s comments, once prices are disclosed consumers may try to hide information that signals they are willing to pay more. Neither document says how much of the price difference these measures can avoid.&lt;/p&gt;
-&lt;p&gt;Readers outside New York City do not need to do anything now, and consumers in the city will have to wait until the law takes effect before they can ask businesses which personal data went into a price and how. Even then, insurance, pricing that assesses creditworthiness based on credit reports, and pricing required or authorized by law remain outside the ban. We infer that purchase history and loyalty data built up under a logged-in account do not disappear when someone switches to a VPN or private browsing. As of 14 November, the legislative system showed no mayoral signature, and the FTC&#39;s draft had not been finalized.&lt;/p&gt;
-&lt;p&gt;According to The Record and City &amp;amp; State, the mayor supports the bill. Developments to watch are whether the mayor signs it and whether the FTC&#39;s final version changes the disclosure requirements. The Record also cited Consumer Reports as saying that the New York State Legislature passed a similar state bill in June, which the governor had still not signed as of the report on 13 November.&lt;/p&gt;
-&lt;p&gt;In mainland China, three sets of rules address this kind of pricing, starting with Article 24 of the Personal Information Protection Law, in force since 1 November 2021, requires automated decisions made with personal information to be transparent and fair, and bars unreasonable differential treatment of individuals in transaction terms such as price. Article 21 of the algorithmic recommendation provisions issued by the Cyberspace Administration of China (CAC), in force since 1 March 2022, bars recommendation providers selling to consumers from using algorithms to apply unreasonable differential treatment in price based on characteristics such as preferences or transaction habits. The Rules on Price Conduct of Internet Platforms, issued by the National Development and Reform Commission, the State Administration for Market Regulation and the CAC and in force since 10 April 2026 with a five-year term. Article 15 bars platforms and their merchants from using data, algorithms or platform rules to set different prices for the same product under the same terms based on information such as willingness to pay, ability to pay, preferences or habits &#34;without the consumer&#39;s knowledge&#34; (our translation).&lt;/p&gt;
-&lt;p&gt;In our reading, tying the prohibition to whether consumers know may put Article 15 closer to the FTC&#39;s emphasis on disclosure than to New York City&#39;s bill, which applies even when a business gives notice. We could not confirm whether Article 15 still applies once a consumer knows, and the other two rules leave open what counts as unreasonable. When we checked on 14 November, we found no rule or public statement from authorities in Taiwan, Hong Kong, Singapore, Japan or South Korea that specifically addresses pricing based on personal data, which does not mean none exists.&lt;/p&gt;
-&lt;p&gt;When comparing New York City&#39;s approach with the FTC&#39;s, readers can ask on the privacy side which personal data may be used to set prices, and whether consumers can learn and look up which data a business used. On effectiveness, they can ask whether an outright ban or a disclosure requirement does more to let consumers avoid markups based on personal data while keeping discounts such as loyalty and student pricing. With public evidence limited, another question is whether regulators can detect personalized pricing at all. Since, according to its draft, the FTC lacks authority for a blanket ban, readers can also ask how the tools available to cities, states and the federal government differ.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (11)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=8027985&amp;amp;GUID=A6815BBB-AC2B-487F-A27B-46449A644474&#34;&gt;The New York City Council - File #: Int 0891-2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://council.nyc.gov/press/2026/11/12/3336/&#34;&gt;New York City Council to Vote on Surveillance Pricing Ban&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;12 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ftc.gov/system/files/ftc_gov/pdf/p034101-ftc-enforcement-policy-statement-re-personalized-pricing-proposed-for-public-comment.pdf&#34;&gt;Federal Trade Commission’s Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Federal Trade Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-19&#34;&gt;19 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/nyc-council-passes-bill-ban-surveillance-pricing&#34;&gt;NYC to bar surveillance pricing as momentum for bans grows nationwide&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cityandstateny.com/policy/2026/11/julie-menins-surveillance-pricing-ban-passes-council/417196/&#34;&gt;Julie Menin’s surveillance pricing ban passes the council&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;City &amp;amp; State New York&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fpf.org/resource/fpf-submits-comments-in-response-to-the-federal-trade-commissions-request-for-feedback-on-its-proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;FPF Submits Comments in Response to the Federal Trade Commission’s Request for Feedback on its Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Future of Privacy Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;30 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.americanactionforum.org/comments-for-record/proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;American Action Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;24 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://convenience.org/stay-current/news/2026/august/28/nacs-asks-ftc-to-extend-personalized-pricing-comment-deadline&#34;&gt;NACS Asks FTC to Extend Personalized Pricing Comment Deadline&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;NACS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;28 August 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全国人民代表大会&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm&#34;&gt;互联网信息服务算法推荐管理规定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-04&#34;&gt;4 January 2022&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-12/20/c_1767870953332182.htm&#34;&gt;关于印发《互联网平台价格行为规则》的通知&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-20&#34;&gt;20 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The eMudhra incident report, macOS fixes and the deadline for the G1 root</title>
-<link>https://anoni.net/news/en/2026/11/emudhra-incident-closeout/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/emudhra-incident-closeout</guid>
-<pubDate>Tue, 17 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The weak private key incident at the Indian certificate authority eMudhra had three developments in November. On 9 November Apple released macOS 27.2.1, 26.7.3 and 15.8.3, fixing git, curl and other built-in command-line tools. People who use these tools on a Mac should update, and everyone else needs no extra setup. On 10 November eMudhra filed an incident report covering the eight RSA intermediate certificates it separately revoked on 7 November. According to the source code we read on 14 November, Chrome and Mozilla no longer trust certificates chaining to emSign Root CA - G1 that are issued after 16 November UTC, and Microsoft has scheduled the removal of trust in G1 from Edge and WebView2 on the same day.</description>
-<content:encoded>&lt;p&gt;Based on 13 sources, including Mozilla Bugzilla, Apple, Microsoft 365 Message Center Archive&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;The Indian certificate authority eMudhra (certificate brand emSign) had eight intermediate certificates whose private keys could be computed directly, and since the incident became public in mid-October there have been three developments in November. On 9 November Apple released macOS 27.2.1, 26.7.3 and 15.8.3, which fix the built-in command-line tools and update the root certificate file &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;. On 10 November eMudhra filed a full incident report on Mozilla&#39;s Bugzilla incident ticket &lt;code&gt;2083449&lt;/code&gt;. Chrome and Mozilla have put a date limit on another eMudhra root certificate, emSign Root CA - G1, and Microsoft has scheduled the removal of trust in it from Edge and WebView2 (the component Windows apps use to embed web pages).&lt;/p&gt;
-&lt;p&gt;People who use the built-in git, curl, python3 or similar tools on a Mac to reach &lt;code&gt;https://&lt;/code&gt; URLs should update to one of these versions, and everyone else needs no extra setup. According to Apple&#39;s support document, Safari, Mail and apps that use Apple&#39;s networking and security frameworks were already blocking the affected certificates automatically, with no update to install. According to Microsoft&#39;s notice, the related updates for Edge and WebView2 arrive through component updates.&lt;/p&gt;
-&lt;p&gt;Apple&#39;s support document, revised on 9 November, says that from macOS 27.2.1 the command-line tools that ship with macOS and the Xcode Command Line Tools also block the 12 affected intermediate certificates. Six of the eight ECDSA intermediates revoked in October are TLS intermediates, and each exists as two certificates, 12 in all: one chains to eMudhra&#39;s root emSign ECC Root CA - G3, and the other is cross-signed by Sectigo and chains to AAA Certificate Services. The update also removes five root certificates from &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;, including those two roots and emSign Root CA - G1, and the corresponding fixes for macOS 26 and macOS 15 are 26.7.3 and 15.8.3.&lt;/p&gt;
-&lt;p&gt;According to the incident report, eMudhra revoked eight RSA-4096 intermediate certificates (the G2B and G2C series) on 7 November. Together with the eight ECDSA intermediates revoked on 18 October, that makes 16 affected intermediates. The revocation reason given on 7 November was cessation of operation (&lt;code&gt;cessationOfOperation&lt;/code&gt;), while the earlier ECDSA batch was revoked for CA key compromise (&lt;code&gt;caCompromise&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;The report says the eight RSA private keys are not weak, and their signatures all match the public keys in the certificates. All 16 keys were created at the same key generation ceremony on 30 April 2025, and when they were imported, the private key material passed through the memory of a Python program on a host machine, outside the hardware security module (HSM, hardware built to generate and hold private keys). As a result, eMudhra cannot show that its handling of these keys met the private key transfer rules in its own Certification Practice Statement (CPS, the operating rules a certificate authority publicly commits to). The report says the RSA problem was confirmed in early November after root programs discussed this rule, without saying which program raised it or whether the revocation was made at its request.&lt;/p&gt;
-&lt;p&gt;The report gives no evidence that anyone obtained the RSA private keys, and for the incident as a whole it says there are no known cases of misuse. On the day the report was filed, a commenter on the ticket asked why, if eMudhra cannot show the keys were handled in compliance, the revocation reason was not key compromise (&lt;code&gt;keyCompromise&lt;/code&gt;). As of 14 November, eMudhra had not replied to this question on the ticket.&lt;/p&gt;
-&lt;p&gt;According to the report&#39;s appendix, six of the eight are TLS intermediates (issuer emSign Root TLS CA - G1) and two are code-signing intermediates (issuer emSign Root CS CA - G2). Each kind has G2B and G2C versions, and the four G2B intermediates never issued end-entity certificates. The four G2C intermediates went into use in the United States from May and issued both website certificates and code-signing certificates. The G2C intermediates last issued a certificate on 3 November, and the report says the end-entity certificates have been migrated or reissued.&lt;/p&gt;
-&lt;p&gt;According to eMudhra&#39;s 28 October update, the US customer ecosystem holding about 30,800 G3 certificates has moved to issuing from eMudhra&#39;s G1 RSA root. The incident report describes the main customer of the G1 hierarchy as a university federation in North America. Comparing the 28 October update with the incident report, we infer that this G1 RSA pathway includes the G2C intermediates revoked this time, though neither document says so directly. The report lists the issuer of the TLS intermediates as emSign Root TLS CA - G1, and we found no primary source on how it relates to emSign Root CA - G1.&lt;/p&gt;
-&lt;p&gt;InCommon (a certificate service for US universities and research institutions) wrote in its 10 November announcement that &#34;Our current G1 issuing Certificate Authority (CA) is no longer viable for public trust&#34;. A later update on the same page says issuance has moved from emSign to SSL.com and asks institutions to replace the affected certificates by the end of 16 November. The report does not name the university federation, and from the two descriptions we infer that InCommon is the same customer.&lt;/p&gt;
-&lt;p&gt;eMudhra&#39;s report says all issuance under the G1 hierarchy will stop before 16 November, and when the report was filed on 10 November this item was listed as in progress. The Chromium and Firefox source code we read on 14 November both put a date limit on emSign Root CA - G1. Certificates issued after 23:59:59 UTC on 16 November (07:59:59 on 17 November, UTC+8) are no longer trusted, while those issued earlier still are. We found no announcement from Chrome or Mozilla about G1, and the source code does not say when stable releases will carry the setting.&lt;/p&gt;
-&lt;p&gt;Microsoft&#39;s notice, updated on 11 November, says a component update ships on 16 November, after which Edge and WebView2 remove default trust in four eMudhra roots, G1 among them. As of 14 November, we had found nothing on the outcome of this update.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;Under the source code settings as of 14 November, Chrome&#39;s limit goes by the time a certificate was recorded in a Certificate Transparency log (CT log, a public log that records every certificate), and Mozilla&#39;s list sets a deadline on the same day. Once the settings take effect, certificates already issued can be used until they expire, and new ones issued after the deadline are rejected. Microsoft&#39;s planned update for Edge and WebView2 removes G1 outright, as does the macOS command-line tools update, so website certificates chaining to G1 may fail verification no matter when they were issued. From this we infer that a website that has not yet replaced its G1 certificate may open normally in Chrome but fail verification in Edge or in curl on a Mac.&lt;/p&gt;
-&lt;p&gt;eMudhra&#39;s incident statement, updated on 5 November, says Apple plans to remove and distrust the G1 root on 30 November, after which no certificate under G1, whenever issued, will be trusted on Apple&#39;s platforms. InCommon&#39;s 10 November announcement repeats this date. As of 14 November, Apple&#39;s support document revised on 9 November did not give this date, and said only that G1 had been removed from &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Our previous article noted that people who did not want to wait for an update could follow Apple&#39;s steps to remove G3 and AAA Certificate Services from &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; by hand. According to the same support document, after updating to 27.2.1, 26.7.3 or 15.8.3 there is no need to repeat those steps. The backup file &lt;code&gt;/etc/ssl/cert.pem.orig&lt;/code&gt; left by Apple&#39;s steps can be deleted with &lt;code&gt;sudo rm&lt;/code&gt;, and a backup made before the update should not be restored either. The updated file has five fewer roots, and Apple warns that tools that read only this file may be unable to verify some websites whose certificates chain to these roots.&lt;/p&gt;
-&lt;p&gt;The command-line tools that need the update include the built-in git, curl, python3, ruby, perl and openssl. On a Mac that cannot update to one of these versions, you can remove the root certificates from &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; by hand following the steps in Apple&#39;s support document, which requires an administrator account. Apps and tools that bring their own root certificate list do not read &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; and do not apply Apple&#39;s block either. System updates do not protect these tools, and you need to ask their developers.&lt;/p&gt;
-&lt;p&gt;In its earnings call on 5 November, whose transcript it filed with India&#39;s stock exchanges on 9 November, eMudhra said it had added significant clients in Indonesia, the Philippines, Germany, Qatar and Abu Dhabi, and that its trust services pipeline in the UAE was still awaiting a licence. On the same call the company put its publicly trusted TLS business at about 1% of revenue, said its digital signatures, eSign and five enterprise platforms were not affected, and described a university federation in the US as the only customer directly affected. Its business responsibility and sustainability report for the year ended 31 March 2025 lists &#34;Middle East &amp;amp; Africa&#34; and &#34;Far East &amp;amp; Indonesia&#34; among its operating regions, along with wholly owned subsidiaries including eMudhra DMCC and eMudhra Pte Ltd. As of 14 November we had found no public TLS customers or business of eMudhra in mainland China, Hong Kong or Taiwan, nor anything linking the RSA revocation to websites there.&lt;/p&gt;
-&lt;p&gt;The explainer page&#39;s list of who has shipped fixes for the G3 and ECDSA intermediates, maintained by a researcher rather than by the vendors, still marked OpenHarmony/HarmonyOS NEXT as pending when we read it on 14 November, and as of 2 November we had found no statement from Huawei. The same page says many Android devices received Google&#39;s block through the Google Play services update channel, and that on devices without the updated blocklist users may be able to disable the affected roots in Settings, though its steps name only emSign ECC Root CA - G3 and AAA Certificate Services, not G1. GreatFire&#39;s last test on 1 November found &lt;code&gt;play.google.com&lt;/code&gt; fully blocked in mainland China, a measure of whether the site can be reached rather than whether devices receive updates. The page does not mention G1 or the RSA intermediates, we did not check how HarmonyOS or Android handle G1, and as of 14 November we had found no statement from systems or browsers in mainland China, Hong Kong or Singapore on the RSA revocation.&lt;/p&gt;
-&lt;p&gt;People who use only Safari, Mail and apps built on Apple&#39;s frameworks need to do nothing. Things to watch next are the independent KPMG review that eMudhra expects to complete on 4 December, whether Apple acts on G1 on 30 November, and whether Chrome and Mozilla, which as of 14 November had only set a date limit, go on to remove G1 from their trust lists entirely.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c82&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;10 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;9 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/100100&#34;&gt;Apple security releases&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;11 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://incommon.org/about/news/incommon-certificate-service-update&#34;&gt;Moving Forward Together: InCommon Certificate Service Update&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;InCommon&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;10 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;5 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-firefox/firefox/blob/main/security/nss/lib/ckfw/builtins/certdata.txt&#34;&gt;certdata.txt&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180445&#34;&gt;eMudhra憑證事故擴大，再有8張RSA中繼CA憑證遭撤銷&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;13 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nsearchives.nseindia.com/corporate/EMUDHRA2008_09112026195622_Conferencecall_Transcript__1_.pdf&#34;&gt;Transcript of the Earnings Call held on Thursday, November 05, 2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;9 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nsearchives.nseindia.com/corporate/EMUDHRA2008_28052025174638_BRSR.pdf&#34;&gt;Business Responsibility and Sustainability Report for the financial year ended on March 31, 2025&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-05-28&#34;&gt;28 May 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://en.greatfire.org/https/play.google.com&#34;&gt;Is https://play.google.com blocked in mainland China? — GreatFire&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GreatFire&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-01&#34;&gt;1 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

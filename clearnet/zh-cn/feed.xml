@@ -6,7 +6,210 @@
 <atom:link href="https://anoni.net/news/zh-cn/feed.xml" rel="self" type="application/rss+xml"/>
 <description>从科技与开源的角度，导读国际隐私、匿名网络与网络审查的新闻，每篇附上原文与导读观点。</description>
 <language>zh-CN</language>
-<lastBuildDate>Wed, 25 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Thu, 26 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>日本营销平台 KARTE 的入侵与数百家企业的会员数据</title>
+<link>https://anoni.net/news/zh-cn/2026/11/karte-breach/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/karte-breach</guid>
+<pubDate>Thu, 26 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>日本 PLAID 公司的营销平台 KARTE 11 月 13 日遭外部攻击者入侵。PLAID 11 月 20 日的调查结果列出数百家企业导入的会员数据与访客在网站上的行为记录泄露或可能泄露，也包括合同已经结束、数据本该删除的企业。一般访客不一定知道网站用了 KARTE。这些企业的客户、会员与网站或 App 的用户，可以留意企业的通知。</description>
+<content:encoded>&lt;p&gt;整理 9 篇原文，来自 PLAID、三菱UFJ銀行、DHC 等 7 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;在日本的购物网站或银行 App 注册会员的人，数据也可能存放在一家没有直接往来的营销公司。KARTE 是日本 PLAID 公司提供的营销平台，嵌在企业的网站与 App 里记录访客的浏览与点击，企业也把自己的会员数据导入 KARTE 一起使用。PLAID 11 月 13 日检测到外部攻击者入侵，当天停止整个 KARTE 服务，11 月 20 日公布的调查结果列出数百家企业托管的数据泄露或可能泄露。只有采用过 KARTE 的企业的客户、会员，以及用过这些企业网站或 App 的人，才可能在这次的范围里。&lt;/p&gt;
+&lt;p&gt;PLAID 11 月 16 日公告的入侵经过，是攻击者在 13 日凌晨利用服务器的漏洞窃取数据库的连接认证信息，从数据库读出数据。攻击者再用同一批认证信息接管账号、登录 KARTE 的管理界面，PLAID 当天上午检测到入侵，下午停止服务器。&lt;/p&gt;
+&lt;p&gt;11 月 20 日的公告把企业托管的数据分成四类，各类的家数因为有重复而不能相加，公告也没有写总数。跟网站用户直接相关的是企业导入的客户数据（例如会员数据，570 家）与访客的浏览、点击记录（487 家），泄露或可能泄露的都是其中一部分。另外两类是 KARTE 暂存、含访客标识符的缓存数据，以及连接邮件发送等服务用的认证信息（相当于密钥或密码）。后者不含个人数据，但没有作废时可能被用来访问那些服务。&lt;/p&gt;
+&lt;p&gt;受影响的企业也包括合同已经全部或部分结束的企业，这是 20 日公告对 16 日说法的更正。这些数据依服务条款本该在合同结束后删除，因为人员操作与管理的疏失留了下来，PLAID 预定在恢复服务时进行的验证完成后删除并通知。&lt;/p&gt;
+&lt;p&gt;企业的公告从 11 月 17 日起陆续发布，日本的信息安全博客 piyolog 到 11 月 21 日整理出 108 个发布公告的组织。各家泄露的项目差异很大，以下两家是本站核对过公告原文的例子。三菱 UFJ 银行约 650 万条，只有客户的性别、年龄与居住地区，不含姓名与联系方式。DHC 约 1,911 万条，含姓名、电子邮件、生日与会员 ID 等，不含登录密码与信用卡数据。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;KARTE 的追踪标签是企业从管理界面发行、放在网页上的一段代码，依开发者文档，访客的浏览器加载它之后就把浏览事件发送到 KARTE。企业另外把自己的会员数据导入，两种数据因此存在同一个平台上，数百家企业的数据也集中在同一个供应商。本站 11 月 19 日整理的 &lt;a href=&#34;https://anoni.net/news/zh-cn/2026/11/neticrm-breach/&#34;&gt;netiCRM 事件&lt;/a&gt;也是服务商的主机遭入侵，一个客户组织公告接到通知，捐款数据库曾遭复制。&lt;/p&gt;
+&lt;p&gt;访客不会直接注册 KARTE，数据是企业委托 PLAID 处理的。依 PLAID 给一般访客的常见问题，PLAID 不回答个别网站有没有使用 KARTE 与个人的数据是否在泄露范围里，公告也没有提供查询方式。要知道自己有没有受影响，需等企业通知或向往来的企业询问，是否通知、何时通知由企业决定。从合同结束的企业数据仍留着来看，企业停用 KARTE 之后数据也可能还在供应商那里，要求删除的对象同样是企业。&lt;/p&gt;
+&lt;p&gt;内容拦截扩展可以减少第三方工具在浏览器里收集的行为数据，要拦哪些网址可以套用 EasyPrivacy 这类过滤列表。EasyPrivacy 在 11 月 21 日的版本只有部分 KARTE 网址有拦截的规则，也对 3 个网站另外放行，装了扩展不保证拦住 KARTE 的全部请求。扩展只在浏览器里运作，无法涵盖 App 里的收集。会员数据是企业把自己持有的数据导入 KARTE，访客在浏览器拦下 KARTE 的代码，不影响企业发送已经持有的数据。&lt;/p&gt;
+&lt;p&gt;中国大陆的读者可以对照《个人信息保护法》第 57 条：个人信息处理者发生或者可能发生个人信息泄露、篡改、丢失时，须立即采取补救措施，并通知履行个人信息保护职责的部门和个人。通知要写明泄露的信息种类、原因和可能造成的危害，处理者采取的补救措施与个人可以采取的减轻危害的措施，以及处理者的联系方式。条文只写“立即”，没有写天数。采取措施能够有效避免危害时处理者可以不通知个人，但主管部门认为可能造成危害的，有权要求通知。&lt;/p&gt;
+&lt;p&gt;收到企业通知的人，可以从通知确认泄露的是哪些项目，三菱 UFJ 银行与 DHC 的公告都写会分别联系受影响的客户。DHC 的公告提醒客户，收到假冒 DHC 的可疑邮件时不要打开链接与附件，也不要输入个人数据或密码。照这些提醒做可以减少被冒名邮件骗取数据的机会，已经泄露的数据仍然无法收回。&lt;/p&gt;
+&lt;p&gt;PLAID 把 KARTE 分阶段恢复服务的目标定在 2027 年 1 月中旬，也会请第三方机构验证，并预定 11 月 24 日起依序把详细数据交给各企业。到 11 月 22 日，日本的个人数据主管机构个人情报保护委员会还没有在网站上公告这起事件，PLAID 的公告写正在向委员会报告。可以留意企业取得详细数据之后是否更新公告的件数与项目，以及委员会的处理。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://plaid.co.jp/news/20261120/&#34;&gt;「KARTE」への不正アクセスに関する当社調査結果と、サービス再開の見通し等のお知らせ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PLAID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-20&#34;&gt;2026 年 11 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://plaid.co.jp/news/20261116/&#34;&gt;不正アクセスによる個人情報を含む可能性のある情報等の漏えいに関するお詫びとお知らせ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PLAID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;2026 年 11 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://plaid.co.jp/notice/202611-faq/&#34;&gt;当社サービスへの不正アクセスについて（KARTEをご利用いただいている企業のお客様向けのご案内）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;PLAID&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.bk.mufg.jp/news/news2026/pdf/news1118.pdf&#34;&gt;当行委託先が提供するサービスへの不正アクセスについて&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;三菱UFJ銀行&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/11/2d7a589cb5008fbc262624582782444f.pdf&#34;&gt;外部サービス「KARTE」への不正アクセスに伴うお客様情報漏えいに関するお詫びとお知らせ&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;DHC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://piyolog.hatenadiary.jp/entry/2026/11/18/010752&#34;&gt;プレイドのCXプラットフォーム「KARTE」への不正アクセスについてまとめてみた&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;piyolog&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://developers.karte.io/reference/js-sdk&#34;&gt;JS SDK（計測タグ）について&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;KARTE Developers&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://easylist.to/easylist/easyprivacy.txt&#34;&gt;EasyPrivacy&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;EasyList&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-21&#34;&gt;2026 年 11 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
+<item>
+<title>iOS 浏览器引擎在欧盟与日本的开放条件与争议</title>
+<link>https://anoni.net/news/zh-cn/2026/11/ios-browser-engines/</link>
+<guid isPermaLink="false">anoni-news:zh-cn/2026/11/ios-browser-engines</guid>
+<pubDate>Thu, 26 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>欧盟与日本要求 Apple 在 iOS 开放 WebKit 以外的浏览器引擎，Apple 以安全与隐私为由订了条件，Mozilla 则写到这些条件让它未能推出 Gecko 版的 Firefox。依 Mozilla 11 月 20 日的文章，到那时没有开发者推出非 WebKit 的 iOS 浏览器。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，来自 Mozilla、Apple、Japan Fair Trade Commission 等 5 个出处&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;iPhone 与 iPad 上的浏览器，不论是 Safari、Chrome、Firefox 还是标榜隐私的浏览器，都使用 Apple 的 WebKit 引擎（解析与显示网页的核心组件）。欧盟与日本的法规要求 Apple 开放其他引擎，Apple 以安全与隐私为由订了两地的条件。Mozilla 11 月 20 日的文章写到，这些条件让它至今未能推出以自家引擎为基础的 Firefox，到发文时也没有任何开发者推出非 WebKit 的 iOS 浏览器。依 Apple 的 App 审核指南，浏览网页的 App 要使用 WebKit，申请例外的条件分别写在欧盟与日本的两份页面。&lt;/p&gt;
+&lt;p&gt;依 Mozilla 的文章，主要平台里只有 iPhone 与 iPad 有这项限制。在 Apple 自己的 macOS 上，用户也能使用以 Gecko（Mozilla 开发的浏览器引擎）为基础的 Firefox。Firefox 的许多功能实现在 Gecko 里，Mozilla 因此很难把完整的 Firefox 带到 iPhone 上。&lt;/p&gt;
+&lt;p&gt;依倡议组织 Open Web Advocacy（OWA）的整理，欧盟《数字市场法》（Digital Markets Act，DMA）要求被认定为守门人的大型平台开放其他浏览器引擎，Apple 从 2024 年 3 月起要遵守。日本的《智能手机软件竞争促进法》（日文简称スマホソフトウェア競争促進法，英文 Mobile Software Competition Act，MSCA）也有类似的规定。日本公平交易委员会（JFTC）的法律概要写到，规模达到门槛、由 JFTC 指定的业者，不得以只允许自家引擎这类条件妨碍其他开发者使用别的引擎。业者为了安全、隐私等正当理由时可以例外。&lt;/p&gt;
+&lt;p&gt;开发者要使用其他引擎，依 Apple 的开发者文档需先取得授权，App 也只能在欧盟或日本当地发行（日本的条件在 2025 年 12 月公布）。安全方面，已经遭到攻击利用的漏洞要及时修补，文档举的例子是最简单的类别在 30 天内处置。隐私方面，引擎要默认拦截第三方 cookie（可以用来跨网站追踪的 cookie）。&lt;/p&gt;
+&lt;p&gt;依 Mozilla 的说法，要使用 Gecko 就不能直接更新用户已经安装的 Firefox，需要另做第二个 Firefox。用户得下载新 App，迁移书签、密码与浏览记录，再手动切换。Mozilla 写到相当比例的人会因此放弃，包括从欧盟的浏览器选择界面挑了 Firefox 的人。条件之一要求 Mozilla 不得披露项目的非公开信息，它仍举了这个例子说明面对的难处。&lt;/p&gt;
+&lt;p&gt;浏览器引擎经常处理不受信任、可能恶意的内容，也能接触用户的敏感数据，依 Apple 的开发者文档是最常见的攻击途径之一。Apple 因此只授权符合标准、承诺持续遵守安全与隐私要求的开发者。依 OWA 的引述，Apple 的法务副总裁在 2025 年的 DMA 工作坊提到 Google、Mozilla 等第三方可以带入自己的引擎，「for whatever reason, they have chosen not to do so」（不论出于什么原因，它们选择不这么做）。&lt;/p&gt;
+&lt;p&gt;OWA 在 5 月的文章写到没有浏览器业者在欧盟推出自家引擎，并请欧盟执委会调查 Apple 是否确实遵守 DMA。到 11 月 22 日，我们没有查到执委会针对 Apple 浏览器引擎条件的决定，也没有查到 Apple 对 Mozilla 这篇文章的公开回应。&lt;/p&gt;
+&lt;p&gt;英国竞争与市场管理局（CMA）2025 年 10 月把 Apple 的移动平台认定为具有策略市场地位（strategic market status），范围包括移动浏览器与浏览器引擎。认定之后，CMA 可以对 Apple 采取针对性的措施。到 11 月 22 日，CMA 的工作计划页把移除 Apple 要求浏览器使用 WebKit 的限制列为接下来预期推进的工作，页面没有写时程。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
+&lt;p&gt;iOS 上换一款浏览器，界面、默认设置与附加功能会不同，引擎都是 WebKit。本站 &lt;a href=&#34;https://anoni.net/news/2026/11/ios-full-tor-browser/&#34;&gt;11 月 14 日的导读&lt;/a&gt;依 Tor Project 的说明整理过，Tor Browser 以 Firefox 的 Gecko 为基础，iPhone 上的 Onion Browser（经 Tor 连接的开源浏览器）受 WebKit 限制而达不到同样的保护。10 月整理的 &lt;a href=&#34;https://anoni.net/news/2026/10/firefox-ios-ad-blocker/&#34;&gt;Firefox iOS 版广告拦截&lt;/a&gt;也是用 WebKit 的内容拦截技术实现的，电脑版与 Android 版的 Firefox 则能直接安装扩展。&lt;/p&gt;
+&lt;p&gt;照 Apple 只能在当地发行的条件推想，即使欧盟或日本之后出现使用其他引擎的浏览器，台湾、香港与其他地区的 iPhone 用户从 App Store 获取的仍会是 WebKit 浏览器。例外是 Apple 另外许可，或当地的法规也要求开放。11 月 14 日那篇整理的 iOS 版 Tor Browser 开发计划，经 App Store 发行时同样受这项条件限制。&lt;/p&gt;
+&lt;p&gt;Apple 公开的两份条件页列了安全与隐私要求，也列了只能在当地发行的限制，其中没有另做一个 App 的文字。Mozilla 则写到自己受保密条件限制，无法公开细节。对于没有浏览器上架，Mozilla 与 OWA 归因于 Apple 的条件，Apple 的法务副总裁在 2025 年的工作坊上则归因于业者自己的选择。&lt;/p&gt;
+&lt;p&gt;在 iPhone 上需要经 Tor 浏览网页的人，可以用 11 月 14 日那篇整理的 Onion Browser 搭配 Orbot（把手机连接送进 Tor 网络的 App）。网页仍由 WebKit 处理，依同一篇整理的说明，浏览器指纹（网站用设备与浏览器的细节识别访客的手法）能调整的地方很少。Tor Browser 只有电脑与 Android 版，需要它完整防护的人要改用这两种设备，想用 Firefox 扩展的人也一样。只用 Safari 或其他浏览器上网的读者现在不需要调整设置。&lt;/p&gt;
+&lt;p&gt;Apple 的两份条件页只写了欧盟与日本，没有为中国大陆另订浏览器引擎规定，我们也没有找到中国大陆要求开放的当地法规。App 审核指南要求浏览网页的 App 使用 WebKit，例外只列了欧盟与日本。按指南的文字，中国大陆区 App Store 里的 Chrome 与 Firefox（10 月 23 日时有上架）应该仍是 WebKit 浏览器。&lt;/p&gt;
+&lt;p&gt;11 月 8 日时，中国大陆区 App Store 没有上架前面提到的 Onion Browser 与 Orbot，台湾、香港、日本与美国区有上架。&lt;/p&gt;
+&lt;p&gt;比较各地的做法时，安全方面可以用 Apple 举的 30 天例子看开放之后漏洞能否及时处置，竞争方面可以用 Mozilla 描述的迁移数据成本看用户是否因此流失。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/&#34;&gt;Why there are still no non-WebKit browsers on iOS&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-20&#34;&gt;2026 年 11 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines/&#34;&gt;Using alternative browser engines in the European Union&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/support/alternative-browser-engines-jp/&#34;&gt;Using alternative browser engines in Japan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://developer.apple.com/app-store/review/guidelines/&#34;&gt;App Review Guidelines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-16&#34;&gt;2026 年 10 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.apple.com/newsroom/2025/12/apple-announces-changes-to-ios-in-japan/&#34;&gt;Apple announces changes to iOS in Japan&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-17&#34;&gt;2025 年 12 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.japaneselawtranslation.go.jp/en/outlines/view/154&#34;&gt;Outline of the Act on Promotion of Competition for Specified Smartphone Software (Mobile Software Competition Act (MSCA))&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Japan Fair Trade Commission&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.gov.uk/guidance/the-cmas-programme-of-work-across-mobile-platforms&#34;&gt;The CMA&amp;#39;s programme of work across mobile platforms&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Competition and Markets Authority&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-10&#34;&gt;2026 年 2 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://open-web-advocacy.org/blog/the-digital-markets-act-is-delivering-real-wins-but-not-yet-for-browser-engines/&#34;&gt;The Digital Markets Act Is Delivering Real Wins, But Not Yet for Browser Engines&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Open Web Advocacy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-15&#34;&gt;2026 年 5 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://open-web-advocacy.org/blog/how_apples_key_tactic_could_prevent_japans_smartphone_act_from_improving_browser_competition/&#34;&gt;How Apple’s Key Tactic Could Prevent Japan’s Smartphone Act from Improving Browser Competition&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Open Web Advocacy&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-01-06&#34;&gt;2026 年 1 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=535886823&amp;amp;country=cn&#34;&gt;Apple iTunes 查询接口，Chrome，中国大陆区&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=989804926&amp;amp;country=cn&#34;&gt;Apple iTunes 查询接口，Firefox，中国大陆区&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=519296448&amp;amp;country=cn&#34;&gt;Apple iTunes 查询接口，Onion Browser，中国大陆区&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://itunes.apple.com/lookup?id=1609461599&amp;amp;country=cn&#34;&gt;Apple iTunes 查询接口，Orbot，中国大陆区&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>香港丽港城的人脸识别门禁与私隐专员公署的循规审查</title>
 <link>https://anoni.net/news/zh-cn/2026/11/hk-laguna-city-facial-recognition/</link>
@@ -1871,213 +2074,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://api.ooni.org/api/v1/aggregation?probe_cc=CN&amp;amp;test_name=signal&amp;amp;since=2026-07-18&amp;amp;until=2026-10-18&#34;&gt;OONI API&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>纽约市禁止依个人数据定价的法案与 FTC 的政策声明草案</title>
-<link>https://anoni.net/news/zh-cn/2026/11/nyc-surveillance-pricing/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/nyc-surveillance-pricing</guid>
-<pubDate>Tue, 17 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>纽约市议会 11 月 12 日通过法案，原则上禁止商家用算法依个人数据对同一商品开出不同价格。到 11 月 14 日法案还在等市长签署，成为法律一年后生效。美国联邦贸易委员会（FTC）8 月提出的政策声明草案，则是在特定情况下要求商家披露个性化定价。纽约市以外的读者不受这项市法案直接影响。</description>
-<content:encoded>&lt;p&gt;整理 11 篇原文，来自 New York City Council、Federal Trade Commission、The Record 等 9 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;纽约市议会 11 月 12 日以 44 比 5 通过一项法案，原则上禁止商家用算法依个人数据，对同一件商品或服务向不同顾客开出不同价格。法案适用于设在纽约市或与市内消费者交易的商家，其他地方的读者不受这项市法案直接影响。到 11 月 14 日为止，市议会的议事系统仍把法案列为等待市长签署，条文订在成为法律一年后生效。&lt;/p&gt;
-&lt;p&gt;法案条文把禁止的做法定名为 surveillance pricing（监控定价），FTC 的草案与行业团体的文件则称为个性化定价（personalized pricing）。条文的定义是全部或部分由算法决定、利用个人数据对同一商品向不同顾客开出不同的价格。条文里的个人数据，指可以识别、或可以合理地直接或间接关联到特定消费者或设备的任何数据。消费者主动提供、用来计算行程与配送费用或评估当地供需的位置数据不算在内。&lt;/p&gt;
-&lt;p&gt;条文另外允许几种条文认可的定制折扣（bona fide custom discount）。消费者主动加入的会员或积分方案可以依过去的购买记录分级，前提是记录不与其他个人数据合并比对。退伍军人、年长者、教师这类身份或生日要由消费者自己提出，不能由商家推断，两种折扣都要明确披露。保险、依信用报告评估信用的定价，以及联邦或州法要求或明文授权的定价，不在禁止的范围内。&lt;/p&gt;
-&lt;p&gt;执法由纽约市消费者与劳工保护局（DCWP）负责，每件违规最高罚 1,000 美元。依条文，全美分店少于 15 家、主要在纽约市实体营业的商家第一次违规时，可以在接到通知后 30 天内更正并全额退款。提供定制折扣或使用监控定价的商家也要建立程序，让在市内购物的消费者可以请求获取定价时考虑了哪些个人数据、如何考虑。&lt;/p&gt;
-&lt;p&gt;美国联邦贸易委员会（FTC）8 月 19 日提出的是个性化定价的执法政策声明草案（Proposed Enforcement Policy Statement），说明 FTC 打算如何执法，本身不是新的规则。草案提到国会没有授权 FTC 在所有情况下禁止个性化定价（personalized pricing），FTC 打算依《FTC 法》第 5 条（禁止不公平或欺骗的商业行为）积极执法。消费者合理预期价格不会因个人数据而不同时，商家要清楚披露价格经过个性化、个性化的依据与使用的数据类型，不披露很可能违反第 5 条。意见征询已在 9 月截止，到 11 月 14 日为止，本文没有查到定稿的版本。&lt;/p&gt;
-&lt;p&gt;草案附了几个举例，FTC 注明不是完整的清单，只供讨论。例子包括外卖商家依数据判断顾客不太能出门而报较高的价格、超市依家中有几个孩子给配送的牛奶加价，以及网约车商家推测用户有紧急病况，提高送往医疗机构的车费。The Record 的报道则写到，超市、网约车与航空业普遍被认为使用这类定价，但公开的证据有限。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;依 FTC 草案的描述，商家分析个人数据推算一位消费者愿意付多少钱、会不会比价，再据此定价。市议会新闻稿引用的一份调查发现，某大型生鲜配送平台的定价实验让个人之间的价差达到 23%。新闻稿引用的另一份调查里，电视的价格在顾客把车开进卖场停车场之后从 499.99 美元涨到 599.99 美元。新闻稿也提到，消费者很难察觉这种定价。&lt;/p&gt;
-&lt;p&gt;依纽约市的法案，商家即使事先告知也不能依个人数据定价。条文列出的例外是前面提到的折扣，以及保险、信用报告与法律要求或授权的定价。参与推动法案的 Consumer Reports 政策分析师在给 The Record 的回复里表示，法律生效后，纽约市 800 万人不必再猜测搜索记录、在网页上光标停留的地方是否影响看到的价格。&lt;/p&gt;
-&lt;p&gt;FTC 的草案则要求披露，脚注提到 FTC 暂不表示，有些个性化定价在完整披露之后是否仍属不公平。草案自己举的例子是，只告诉消费者这是“专属”价格很可能造成误导，说明价格依同一个登录账号的购买记录推算则可能足够。&lt;/p&gt;
-&lt;p&gt;Future of Privacy Forum（FPF，自述为推动数据保护与数字治理实践的非营利组织）9 月提交意见书，请 FTC 澄清没有披露的个性化定价是否都算欺骗、还是只有导致较高价格的才算，以及如何判断价格较高。FPF 写到许多零售商做个性化定价是为了给部分消费者较低的价格，例如会员方案、个性化优惠券与学生、年长者优惠，并建议以商家内部实际的基准价比较。FPF 另外提到版面空间与使用体验让深入披露定价信息有困难，请 FTC 提供落实披露的指引。&lt;/p&gt;
-&lt;p&gt;依 City &amp;amp; State 的报道，纽约市的法案受到服务在适用范围内的 Uber 等商家反对，本文查不到 Uber 自己的公开说法。报道里市议会议长反驳法案会让商家无法提供某些折扣的说法，表示商家仍可以给折扣，只是不能挖掘个人数据、对同一件商品收不同的价格。便利店与燃油零售业的行业组织 NACS 8 月要求 FTC 延长意见期限，公告提到这个议题充斥错误信息，对零售业长期的定价做法、会员方案与折扣构成重大风险。&lt;/p&gt;
-&lt;p&gt;FTC 的草案提到有限的经济研究（包括一份 2023 年的研究）显示个性化定价很可能增加商家的利润，部分消费者受益的同时另一部分受损，手法越精细越不可能让消费者受益。American Action Forum 的竞争政策主任在意见书（文末注明只代表作者本人）引用同一份 2023 年研究的结果：个性化定价使整体的消费者剩余（消费者愿意付的价格与实际付出的差额）下降时，仍有超过六成的消费者因个性化而受益。作者认为以消费者预期为标准可能抑制定价的创新与竞争、让执法流于主观，主张 FTC 把第 5 条的执法集中在明显的欺诈与不实陈述，例如宣称人人同价、实际却用顾客数据个性化。&lt;/p&gt;
-&lt;p&gt;FTC 的草案说明披露为何重要时提到，不知道价格经过个性化的消费者，无法用 VPN 或隐私浏览、换商家或不完成交易来避开较高的价格。American Action Forum 的意见书写到，披露之后消费者可能设法隐藏显示自己愿意多付钱的信息，两份文件都没有写到这些做法能避开多少差价。&lt;/p&gt;
-&lt;p&gt;纽约市以外的读者现在不需要做任何事，纽约市的消费者也要等法案生效，才能向商家请求获取定价考虑的个人数据。即使法案生效，保险、依信用报告评估信用的定价与法律要求或授权的定价仍不在禁止范围内。本文的推论是，登录账号之后累积的购买记录与会员数据不会因为换用 VPN 或隐私浏览而消失。到 11 月 14 日为止，议事系统还没有市长签署的记录，FTC 的草案也没有定稿。&lt;/p&gt;
-&lt;p&gt;依 The Record 与 City &amp;amp; State 的报道，市长表态支持这项法案。可以留意的后续是市长是否签署，以及 FTC 的定稿版有没有修改披露要求。The Record 也引述 Consumer Reports 的说法，纽约州议会 6 月通过类似的州法案，到 11 月 13 日报道时州长仍未签署。&lt;/p&gt;
-&lt;p&gt;中国大陆《个人信息保护法》第 24 条（2021 年 11 月 1 日施行）要求个人信息处理者做自动化决策时不得对个人在交易价格等条件上实行不合理的差别待遇，《互联网信息服务算法推荐管理规定》第 21 条对算法推荐服务提供者写了同类的限制。《互联网平台价格行为规则》（国家发改委、市场监管总局与国家网信办 2025 年 12 月 20 日公开发布，2026 年 4 月 10 日起施行）第 15 条禁止在消费者不知情的情况下依支付意愿、支付能力、消费偏好等信息，用数据和算法对同一商品在同等条件下设置不同的价格。本文推论第 15 条以消费者不知情为前提，比起事先告知也不得依个人数据定价的纽约市法案，可能更接近 FTC 草案强调的披露。本文没有查到消费者知情后是否仍受第 15 条限制，也没有查到执法机关如何认定“不合理”。&lt;/p&gt;
-&lt;p&gt;读者比较纽约市与 FTC 这两种做法时，隐私方面可以问哪些个人数据可以用来定价、消费者能不能知道并查询商家用了哪些数据。效果方面可以问，直接禁止与要求披露哪一种能让消费者避开依个人数据的加价，同时保留会员与学生优惠这类折扣。公开的证据有限，也可以问主管机关能不能发现个性化定价。依 FTC 的草案，FTC 没有全面禁止的权限，也可以问城市、州与联邦能用的工具有什么不同。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=8027985&amp;amp;GUID=A6815BBB-AC2B-487F-A27B-46449A644474&#34;&gt;The New York City Council - File #: Int 0891-2026&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://council.nyc.gov/press/2026/11/12/3336/&#34;&gt;New York City Council to Vote on Surveillance Pricing Ban&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;New York City Council&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ftc.gov/system/files/ftc_gov/pdf/p034101-ftc-enforcement-policy-statement-re-personalized-pricing-proposed-for-public-comment.pdf&#34;&gt;Federal Trade Commission’s Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Federal Trade Commission&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-19&#34;&gt;2026 年 8 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://therecord.media/nyc-council-passes-bill-ban-surveillance-pricing&#34;&gt;NYC to bar surveillance pricing as momentum for bans grows nationwide&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;The Record&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cityandstateny.com/policy/2026/11/julie-menins-surveillance-pricing-ban-passes-council/417196/&#34;&gt;Julie Menin’s surveillance pricing ban passes the council&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;City &amp;amp; State New York&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://fpf.org/resource/fpf-submits-comments-in-response-to-the-federal-trade-commissions-request-for-feedback-on-its-proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;FPF Submits Comments in Response to the Federal Trade Commission’s Request for Feedback on its Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Future of Privacy Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-30&#34;&gt;2026 年 9 月 30 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.americanactionforum.org/comments-for-record/proposed-enforcement-policy-statement-regarding-personalized-pricing/&#34;&gt;Proposed Enforcement Policy Statement Regarding Personalized Pricing&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;American Action Forum&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-24&#34;&gt;2026 年 9 月 24 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://convenience.org/stay-current/news/2026/august/28/nacs-asks-ftc-to-extend-personalized-pricing-comment-deadline&#34;&gt;NACS Asks FTC to Extend Personalized Pricing Comment Deadline&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;NACS&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-08-28&#34;&gt;2026 年 8 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;中国人大网&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;2021 年 8 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm&#34;&gt;互联网信息服务算法推荐管理规定&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-01-04&#34;&gt;2022 年 1 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.cac.gov.cn/2025-12/20/c_1767870953332182.htm&#34;&gt;互联网平台价格行为规则&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;国家互联网信息办公室&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-20&#34;&gt;2025 年 12 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>eMudhra 证书事件的事故报告、macOS 修复版与 G1 根的期限</title>
-<link>https://anoni.net/news/zh-cn/2026/11/emudhra-incident-closeout/</link>
-<guid isPermaLink="false">anoni-news:zh-cn/2026/11/emudhra-incident-closeout</guid>
-<pubDate>Tue, 17 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>印度证书颁发机构 eMudhra 的弱私钥事件在 11 月有三项进展。Apple 11 月 9 日推出 macOS 27.2.1、26.7.3 与 15.8.3，修复内置的 git、curl 等命令行工具。在 Mac 上用这些工具的人要更新系统，其他人不必另外设置。eMudhra 11 月 10 日提交事故报告，交代 11 月 7 日另外吊销的八张 RSA 中间证书。依 11 月 14 日读到的源代码，Chrome 与 Mozilla 不再信任 UTC 11 月 16 日之后签发、以 emSign Root CA - G1 为根的证书，Microsoft 排定同一天移除 Edge 与 WebView2 对 G1 的信任。</description>
-<content:encoded>&lt;p&gt;整理 10 篇原文，来自 Mozilla Bugzilla、Apple、Microsoft 365 Message Center Archive 等 9 个出处&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;印度证书颁发机构 eMudhra（证书品牌 emSign）有八张中间证书的私钥可以直接算出，事件 10 月中公开之后，11 月有三项进展。Apple 11 月 9 日推出 macOS 27.2.1、26.7.3 与 15.8.3，修复内置的命令行工具，也更新了根证书列表文件 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;。eMudhra 11 月 10 日在 Mozilla 的 Bugzilla 事故单 2083449 提交完整事故报告。Chrome 与 Mozilla 对 eMudhra 的另一张根证书 emSign Root CA - G1 设下日期限制，Microsoft 则排定移除 Edge 与 WebView2（Windows App 内嵌网页用的组件）对它的信任。&lt;/p&gt;
-&lt;p&gt;在 Mac 上用内置的 git、curl、python3 等工具连 &lt;code&gt;https://&lt;/code&gt; 网址的人，要把系统更新到上述其中一个版本，其他人不必另外设置。依 Apple 的支持文档，Safari、Mail 与使用 Apple 网络和安全框架的 App 早已自动封锁受影响的证书，不必安装更新。依 Microsoft 的公告，Edge 与 WebView2 的相关更新通过组件推送。&lt;/p&gt;
-&lt;p&gt;依 Apple 11 月 9 日改版的支持文档，从 macOS 27.2.1 起，macOS 与 Xcode Command Line Tools 附带的命令行工具也会拦下受影响的 12 份中间证书。10 月吊销的八张 ECDSA 中间证书里有六张是 TLS 用的中间证书，每张各有两份证书，合计 12 份。两份分别连到 eMudhra 的根 emSign ECC Root CA - G3，以及经 Sectigo 交叉签名连到 AAA Certificate Services。更新同时从 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 移除五张根证书，包括这两张根与 emSign Root CA - G1，macOS 26 与 macOS 15 对应的修复版是 26.7.3 与 15.8.3。&lt;/p&gt;
-&lt;p&gt;依事故报告，eMudhra 在 11 月 7 日吊销八张 RSA-4096 的中间证书（G2B 与 G2C 系列）。加上 10 月 18 日吊销的八张 ECDSA 中间证书，受影响的中间证书共 16 张。11 月 7 日填的吊销理由是停止营运（&lt;code&gt;cessationOfOperation&lt;/code&gt;），前一批 ECDSA 中间证书填的是 CA 私钥泄露（&lt;code&gt;caCompromise&lt;/code&gt;）。&lt;/p&gt;
-&lt;p&gt;依报告，八把 RSA 私钥没有弱私钥的问题，签名都对得上证书里的公钥。16 把密钥在 2025 年 4 月 30 日的同一场密钥生成仪式建立，导入时私钥材料经过主机上一支 Python 程序的内存，离开了硬件安全模块（HSM，专门生成与保管私钥的硬件）。eMudhra 因此无法证明这批私钥的处理符合自家证书实践声明（CPS，证书颁发机构公开承诺的作业规范）对私钥转移的规定。报告写 RSA 的问题是在 11 月初、根证书计划讨论这条规定之后确认，没有写是哪一家计划，也没有写吊销是否出于对方要求。&lt;/p&gt;
-&lt;p&gt;报告没有写有人取得 RSA 私钥的证据，对整起事件的说法是没有已知的滥用案例。报告提交当天有人在事故单上留言，问既然无法证明私钥的处理合规，吊销理由为何不用私钥泄露（&lt;code&gt;keyCompromise&lt;/code&gt;）。到 11 月 14 日，事故单上没有 eMudhra 对这则提问的回复。&lt;/p&gt;
-&lt;p&gt;依报告的附录，八张里有六张是 TLS 用的中间证书（颁发者 emSign Root TLS CA - G1），另外两张是代码签名用的中间证书（颁发者 emSign Root CS CA - G2）。两种中间证书各有 G2B 与 G2C 版本，G2B 的四张没有签发过终端证书。G2C 的四张 5 月起在美国投入使用，签发过网站证书与代码签名证书。G2C 最后一次签发在 11 月 3 日，报告写终端证书已经迁移或换发。&lt;/p&gt;
-&lt;p&gt;依 eMudhra 10 月 28 日的更新，约 3 万 800 张 G3 证书所属的美国客户生态系统，已改由 eMudhra 的 G1 RSA 根签发。事故报告把 G1 层级的主要服务对象写成北美的一个大学联盟。本文对照 10 月 28 日的更新与事故报告推论，那条 G1 RSA 通道包含这次吊销的 G2C 中间证书，两份文档都没有直接写出。报告列的 TLS 中间证书颁发者是 emSign Root TLS CA - G1，它与 emSign Root CA - G1 的关系，本文没有查到第一手资料。&lt;/p&gt;
-&lt;p&gt;InCommon（美国大学与研究机构的证书服务）11 月 10 日的公告写，自家目前经 G1 签发的证书颁发机构已无法再取得公开信任（&#34;Our current G1 issuing Certificate Authority (CA) is no longer viable for public trust&#34;）。同一页之后的更新写签发已从 emSign 改到 SSL.com，并请各机构在 11 月 16 日当天结束前换掉受影响的证书。InCommon 是否就是报告里的大学联盟，报告没有写名称，本文依两者的描述推论是同一个客户。&lt;/p&gt;
-&lt;p&gt;eMudhra 的报告写 G1 层级的所有签发在 11 月 16 日前停止，报告 11 月 10 日提交时，这一项列为进行中。本文 11 月 14 日读到的 Chromium 与 Firefox 源代码，都对 emSign Root CA - G1 设了日期限制。UTC 11 月 16 日 23:59:59（台北时间 11 月 17 日 07:59:59）之后签发的证书不再信任，之前签发的仍信任。本文没有查到 Chrome 与 Mozilla 针对 G1 的公告，源代码也没有写正式版何时带上这项设置。&lt;/p&gt;
-&lt;p&gt;Microsoft 11 月 11 日更新的公告写，11 月 16 日推出组件更新，Edge 与 WebView2 收到后移除 G1 在内四张 eMudhra 根的默认信任。到 11 月 14 日，本文没有查到这项更新推出的结果。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;导读观点&lt;/h2&gt;
-&lt;p&gt;照 11 月 14 日的源代码设置，Chrome 的限制看证书记进证书透明度日志（CT log，公开记录每一张证书的日志）的时间，Mozilla 的列表也设了同一天的期限。设置生效后，已经发出的证书可以用到过期，期限之后的新证书不被接受。Microsoft 为 Edge 与 WebView2 预定的更新则直接拿掉 G1，macOS 命令行工具更新后也一样，连到 G1 的网站证书不论何时签发都可能无法通过验证。本文据此推论，还没换掉 G1 证书的网站可能在 Chrome 正常打开，在 Edge 或 Mac 的 curl 里验证失败。&lt;/p&gt;
-&lt;p&gt;依 eMudhra 11 月 5 日更新的事件声明，Apple 预定在 11 月 30 日移除并不再信任 G1 根，G1 底下任何时间签发的证书都不再被 Apple 的平台信任。InCommon 11 月 10 日的公告也转述了这个日期。到 11 月 14 日，Apple 11 月 9 日改版的支持文档没有写这个日期，只写了 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 移除 G1。&lt;/p&gt;
-&lt;p&gt;前篇提到，不想等更新的人可以依 Apple 的步骤，从 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 手动移除 G3 与 AAA Certificate Services。依同一份支持文档，更新到 27.2.1、26.7.3 或 15.8.3 之后就不必再重做这些步骤。照 Apple 步骤操作时留下的备份文件 &lt;code&gt;/etc/ssl/cert.pem.orig&lt;/code&gt; 可以用 &lt;code&gt;sudo rm&lt;/code&gt; 删掉，也不要还原更新前做的备份。更新后的文件少了五张根，Apple 提醒只读这份文件的工具，可能无法验证部分证书连到这些根的网站。&lt;/p&gt;
-&lt;p&gt;研究者维护的说明页（不是华为或 Google 的公告）11 月 14 日的清单，仍把 OpenHarmony 与 HarmonyOS NEXT 列为尚未修复，写这类设备不允许用户停用系统根证书。同一页的 Android 段落写，没收到更新后封锁列表的设备也许能在受信任凭据里停用相关根证书，但步骤只列 emSign ECC Root CA - G3 与 AAA Certificate Services 而没有 G1。上述清单对应 G3 与 ECDSA 中间证书，页面没有提到 RSA 中间证书与 G1。中国与香港的系统和浏览器如何处理 RSA 吊销，本文没有查到。&lt;/p&gt;
-&lt;p&gt;需要更新的命令行工具包括内置的 git、curl、python3、ruby、perl 与 openssl。无法更新到上述版本的 Mac，可以照 Apple 支持文档的步骤从 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt; 手动移除根证书，需要管理员账号。自带根证书列表的 App 与工具不读 &lt;code&gt;/etc/ssl/cert.pem&lt;/code&gt;，也不套用 Apple 的封锁。系统更新保护不到这些工具，要向开发者确认。&lt;/p&gt;
-&lt;p&gt;只用 Safari、Mail 与使用 Apple 框架的 App 的人不需要做任何事。接下来可以留意 eMudhra 预定 12 月 4 日完成的 KPMG 独立审查、Apple 是否在 11 月 30 日对 G1 有所处置，以及到 11 月 14 日只设了日期限制的 Chrome 与 Mozilla，之后会不会把 G1 整个移出信任列表。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（10 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c82&#34;&gt;2083449 - eMudhra: Private key compromise of Intermediate Certificates&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla Bugzilla&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/149555&#34;&gt;About the compromised eMudhra intermediate CAs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;2026 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://support.apple.com/en-us/100100&#34;&gt;Apple security releases&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Apple&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mc.merill.net/message/MC1529467&#34;&gt;MC1529467 - Microsoft Windows: Updates to address compromised eMudhra certificate authority keys&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Microsoft 365 Message Center Archive&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://incommon.org/about/news/incommon-certificate-service-update&#34;&gt;Moving Forward Together: InCommon Certificate Service Update&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;InCommon&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.com/en/post/certificate-security-incident&#34;&gt;eMudhra Statement on Recent Certificate Security Incident&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;eMudhra&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-05&#34;&gt;2026 年 11 月 5 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.textproto&#34;&gt;root_store.textproto&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Chromium&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/mozilla-firefox/firefox/blob/main/security/nss/lib/ckfw/builtins/certdata.txt&#34;&gt;certdata.txt&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;Mozilla&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180445&#34;&gt;eMudhra憑證事故擴大，再有8張RSA中繼CA憑證遭撤銷&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://emudhra.we-have-a-problem.com/&#34;&gt;eMudhra Intermediate CA Compromise&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出处&lt;/dt&gt;&lt;dd&gt;emudhra.we-have-a-problem.com&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
