@@ -10,6 +10,7 @@
 |---|---|---|
 | 合併 PR | `anoni-net/news` 的寫入權限 | 分支保護只要求 `check` 通過、分支跟 `main` 同步，不要求核可，見 `SPEC.md`「發布權限」 |
 | 選題與排程 | 編輯台（私有的 GitHub Project）的存取權 | 見下方「編輯台」 |
+| 週規劃的候選池 | 維護者工作區的存取權 | 來源清單、粗篩規則與每天累積候選的排程都在維護者的工作區，不在本 repo |
 | 上傳網站圖示、預覽卡片與圖片 | 圖片主機的寫入權限 | 見 `AGENTS.md` 的 `news-publish-assets` 與搬圖 |
 | 伺服器、nginx 與 Cloudflare | 主機的登入權限 | 屬於正式主機的寫入，著手前先跟其他維護者確認 |
 | Bluesky 主帳號 `@anoni.net` 的轉貼 | 主帳號 | `@news.anoni.net` 由 deploy workflow 自動發文，見 `SPEC.md`「Bluesky」 |
@@ -55,6 +56,7 @@
 - 衝突用把 `origin/main` 合併進分支的方式解，不要 force push。anoni-net/news#281 之後網站圖示與預覽卡片一頁一個登記檔，稿件的 PR 之間很少再衝突
 - 手動合併前先取出 check 的結論確認是成功，不要用 `gh pr view && gh pr merge` 這類串法，2026-09-27 紅燈照樣合併過。版面檢查偶爾因為 Chrome 的偵錯連接埠失敗，看過 log 確認是這個原因再用 `gh run rerun --failed`
 - 在 worktree 裡執行 `gh pr merge`，可能出現 `'main' is already used by worktree`。那是合併之後的本機步驟失敗，遠端已經合併，用 `gh pr view <n> --json mergedAt` 確認。不要加 `--delete-branch`
+- 合併之後的清理照順序做：先用 `gh pr view <n> --json state` 確認是 `MERGED`，再移除 worktree、刪掉本機與遠端的分支，最後快轉主 clone。2026-11-21 有一個 PR 因為分支要跟 `main` 同步，合併還沒完成時遠端分支就被刪掉，PR 跟著關閉，只好從 commit 還原分支、重新開啟再合併
 - 要更新別人開的 PR 分支時，用 `git checkout --detach origin/<分支>`，改完再 `git push origin HEAD:<分支>`。不要用 `git checkout -B` 建立同名分支，git 2.43 會默默移動其他 worktree 正在用的分支
 
 ## 上線的排查

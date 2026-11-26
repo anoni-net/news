@@ -66,6 +66,8 @@ uv run tools/make_cards.py --dry-run    # 維護者：產生還沒有或已過�
 
 網站圖示與預覽卡片可以用一個指令完成。在能連到圖片主機的機器上執行一次 `tools/install_publish_assets.sh --dest <rsync 目標>`，它會把指令裝到 `~/.local/bin/`、把目的地寫進 `~/.config/anoni-news/assets-rsync`，並在 `~/.claude/settings.json` 加上允許規則，Claude Code 的 auto mode 會直接放行這個指令。
 
+產生卡片要用 Chrome，預設呼叫 `google-chrome`。macOS 沒有這個指令，2026-11-21 在 macOS 第一次執行時就停在找不到 Chrome。在 `~/.zshrc` 用 `export CHROME=...` 指向 Chrome 或 Chromium 的執行檔，指令前面不能加環境變數（見下方的寫法），所以要寫進 shell 的設定檔。
+
 ```bash
 news-publish-assets --dry-run <稿件路徑>   # 試抓圖示、試產卡片，看過兩個 preview.html
 news-publish-assets <稿件路徑>             # 上傳圖示與卡片、執行 build.py --check
