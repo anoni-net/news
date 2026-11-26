@@ -6,7 +6,113 @@
 <atom:link href="https://anoni.net/news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Fri, 27 Nov 2026 00:05:00 +0800</lastBuildDate>
+<item>
+<title>韓國國會的生物資料法案與健康資料研究利用的爭議</title>
+<link>https://anoni.net/news/2026/11/korea-health-data-bill/</link>
+<guid isPermaLink="false">anoni-news:2026/11/korea-health-data-bill</guid>
+<pubDate>Fri, 27 Nov 2026 00:05:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>韓國國會到 11 月 22 日仍在審議的生物資料法案，讓研究機構與研究者可以把假名處理後的部分基因與臨床資料，不經本人同意用於 AI 生技研究。推動方的理由是研究者取得資料最長要等一年六個月，六個醫療、病友與社會福利團體則擔心不經同意使用與統合審議，11 月 18 日發表聲明要求廢棄。保健福祉委員會同時在審議政府提出的另一部健康資料法案。</description>
+<content:encoded>&lt;p&gt;整理 11 篇原文，來自 국회입법예고、디지털정의네트워크、대한민국 정책브리핑 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;韓國國會的科學技術資訊放送通信委員會（科技委）正在審議兩部生物資料法案，保健福祉委員會也在審議保健福祉部提出的《數位健康照護法》政府對案。議員 2025 年 12 月提出的《生物資料活用與 AI 生技研發促進法案》（以下稱生物資料法案），到 11 月 22 日還沒有通過，仍在等待科技委的法案審查小組審查。法案若通過，研究機構與研究者可以把假名處理後的部分基因與臨床資料用於 AI 生技研究，不必取得本人同意。&lt;/p&gt;
+&lt;p&gt;推動方的理由是取得資料太慢，韓國《電子新聞》報導推動立法的討論會時寫到，罕病患者的資料用於研究最長要等一年六個月。六個醫療、病友與社會福利團體則擔心不經同意使用與統合審議，11 月 18 日刊登聲明，要求廢棄兩部生物資料法案。&lt;/p&gt;
+&lt;p&gt;生物資料法案讓科學技術資訊通信部（科技部）部長可以建置國家生物資料統合系統，向國民健康保險公團等公共機關請求資料。提供前要先做假名處理，把姓名這類欄位換成代號，跟完全認不出本人的匿名化不同。第 23 條列出可不經本人同意使用的範圍，包括單獨無法認出個人的部分基因資訊，以及不特定個人或多數人的臨床、環境等資料。總統令（行政命令）還可以再增加項目，容易結合其他資訊認出本人的資料除外。&lt;/p&gt;
+&lt;p&gt;第 21 條設研究審議委員會統合審議，委員 20 人以內，由科技部部長任命或委託。委員中包含保健福祉部部長與個人情報保護委員會（PIPC，韓國的個資主管機關）委員長推薦的人。經它審議的事項，視為已受《生命倫理及安全法》規定的審議，也就是各機構的機構審查委員會（IRB）所做的研究倫理審查。第 21、23 條只在 2025 年 12 月提出的那一部，聲明寫到另一部已刪去這些條文。&lt;/p&gt;
+&lt;p&gt;第 4 條規定，生物資料的活用與 AI 生技研發除了其他法律另有特別規定，都適用這部法律。依聲明轉述，PIPC 擔心這部法律若優先於個資法適用，既有的保護體系會受損。&lt;/p&gt;
+&lt;p&gt;團體在聲明裡也批評政府對案不經同意使用假名資料，但主張健康資料至少應在保健醫療的法律體系內討論。韓國醫療媒體 Medigate 報導，保健福祉部與共同民主黨的目標是讓政府對案在 2026 年底前通過。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;假名處理拿掉的是直接識別的欄位，同一個人的紀錄仍然串在一起。研究需要這一點，重新識別的風險也來自這裡。韓國 NoCut 新聞 10 月報導，保健福祉部的官員談到生物資料法案時表示，很難說只靠假名處理就能消除所有識別風險。&lt;/p&gt;
+&lt;p&gt;《電子新聞》10 月 19 日的報導寫到，保健福祉部對集中診療資訊、與既有 IRB 及資料審議委員會（DRB，審核資料提供的委員會）功能重疊的問題持審慎立場。科技部則表示為了促進 AI 研究需要立法，會持續跟保健福祉部溝通。&lt;/p&gt;
+&lt;p&gt;生物資料法案第 23 條只規定使用範圍，退出機制（opt-out，資料預設納入、本人可以申請排除）的爭論集中在政府對案。大法院 2025 年 7 月判決，為科學研究、統計與公益紀錄保存所做的假名處理，本人不能要求停止。保健福祉部據此說明政府對案沿用現行個資法的體系，罕病等重新識別風險高的資訊則另外要求同意。&lt;/p&gt;
+&lt;p&gt;11 月 2 日針對政府對案的國會討論會上，公共衛生領域的研究團體研究員主張保障退出，保健福祉部的課長則表示退出機制有必要檢討。韓國醫師協會的代表在《數位健康照護法》公聽會上也提到，醫療資料一旦用於 AI 訓練就很難收回。&lt;/p&gt;
+&lt;p&gt;生物資料法案由第 21 條的委員會統合審議，聲明寫到保健福祉部曾以可能妨礙生命倫理把關為由反對。政府對案則由各機關的審議委員會審議，保健福祉部說明委員包含資訊主體代表與外部委員。《電子新聞》的記者寫到，研究延宕的原因是 IRB 免審與 DRB 審議要分別申請，兩邊作風保守、一再要求補件。&lt;/p&gt;
+&lt;p&gt;英國的 OpenSAFELY 依官方文件讓資料留在原本的持有者那一端，研究者把分析程式送進那裡的安全區執行，結果經審核才能帶出。生物資料法案的做法則是把資料先集中到統合系統。&lt;/p&gt;
+&lt;p&gt;這兩部法案仍在審議中，讀者目前不必做任何事。可以留意科技委的法案審查小組何時審查，以及政府對案能否在 2026 年底前通過。&lt;/p&gt;
+&lt;p&gt;比較各地的制度時，可以問誰能取得資料、資料是否集中、本人能不能拒絕、已經用掉的資料如何處理。也可以問審查委員由誰任命、制度能否縮短研究者等待資料的時間。台灣在憲法法庭 111 年（2022 年）憲判字第 13 號判決之後，2025 年 12 月公布的《全民健康保險資料管理條例》規定當事人可以請求停止目的外利用。停止的效力不溯及既往，請求之前已經發生的目的外利用不受影響。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（11 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pal.assembly.go.kr/napal/lgsltpa/lgsltpaDone/view.do?lgsltPaId=PRC_F2D5E1C2D2B4Q1R0P4P7O0P3N7N2V3&#34;&gt;[2215618] 바이오데이터 활용 및 인공지능바이오 연구개발 촉진에 관한 법률안&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;국회입법예고&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-31&#34;&gt;2025 年 12 月 31 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://digitaljustice.kr/54604/&#34;&gt;[성명] 국회 과학기술정보방송통신위원회는 국민 건강정보 법안에서 손을 떼라&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;디지털정의네트워크&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pal.assembly.go.kr/napal/lgsltpa/lgsltpaDone/view.do?lgsltPaId=PRC_0752EC0CD0F4441997ABF69D53A75F&#34;&gt;[2222563] 인공지능 바이오 연구개발을 위한 바이오데이터·보건의료정보 활용 및 인공지능 바이오 연구개발 촉진에 관한 법률안&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;국회입법예고&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-09&#34;&gt;2026 年 11 月 9 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.korea.kr/briefing/actuallyView.do?newsId=148975831&#34;&gt;[보도설명자료][11.16.월 경향신문]내 의료정보 동의 없이 AI 연구에 활용 디지털헬스케어법 논란 관련&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;대한민국 정책브리핑&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;2026 年 11 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.etnews.com/20261019000220&#34;&gt;“바이오데이터 연구 활용…美는 일주일, 한국은 최소 1년”&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;전자신문&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-19&#34;&gt;2026 年 10 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.nocutnews.co.kr/news/6596475&#34;&gt;병원에 남긴 진료기록이 신약의 단서가 된다면?&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;노컷뉴스&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-25&#34;&gt;2026 年 10 月 25 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://medigatenews.com/news/2572099134&#34;&gt;디지털헬스케어법 속도 내는 정부에 제동…환자 정보, 기업의 산업자원 아냐&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;메디게이트뉴스&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-02&#34;&gt;2026 年 11 月 2 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://news.mtn.co.kr/news-detail/2026062216501591102&#34;&gt;의료데이터 사업 길 열릴까…의료계 &amp;#34;정보보호 우선&amp;#34;&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;MTN 머니투데이방송&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-06-22&#34;&gt;2026 年 6 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.opensafely.org/how-opensafely-works/&#34;&gt;A high level overview of how OpenSAFELY works&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OpenSAFELY documentation&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://laws.gov.taipei/law/Judge/ConstitutionalJudgeContent/CJ00000872&#34;&gt;憲法法庭 111年憲判字第13號判決&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;臺北市法規查詢系統&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2022-08-12&#34;&gt;2022 年 8 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060042&#34;&gt;全民健康保險資料管理條例&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-19&#34;&gt;2025 年 12 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>用大型語言模型搜尋審查規避策略的 CircumVolve 研究</title>
 <link>https://anoni.net/news/2026/11/circumvolve/</link>
@@ -1638,78 +1744,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;2026 年 5 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>印尼社群內容下架的監測統計與通訊部的回應</title>
-<link>https://anoni.net/news/2026/11/indonesia-komdigi-takedown/</link>
-<guid isPermaLink="false">anoni-news:2026/11/indonesia-komdigi-takedown</guid>
-<pubDate>Wed, 18 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>印尼的 SAFEnet 與 Remotivi 11 月 12 日發布監測結果，截至 11 月 8 日記錄 127 則社群媒體內容被限制或下架，9 月 8 日前一次發布是 73 則。兩團體把其中 94 則歸為依通訊與數位部的要求。部會官員 11 月 13 日表示願意開放紀錄比對，也在準備切斷存取前的公開通知機制，到 11 月 14 日為止沒有公布日期。印尼以外的讀者不受直接影響。</description>
-<content:encoded>&lt;p&gt;整理 6 篇原文，來自 SAFEnet、Kompas.com、CNN Indonesia 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;印尼數位權利團體 SAFEnet 與媒體監測團體 Remotivi 11 月 12 日發布新聞稿，截至 11 月 8 日記錄到 127 則社群媒體內容被限制或下架，9 月 8 日前一次發布是 73 則。兩團體把其中 94 則歸為依通訊與數位部（Komdigi）的要求，Komdigi 的官員 11 月 13 日回應，願意開放部會的紀錄跟兩團體的資料比對。SAFEnet 10 月下旬也與其他團體開設窗口，評估對 Komdigi 的法律行動。這些限制在印尼境內生效，其他地方的讀者不受直接影響。&lt;/p&gt;
-&lt;p&gt;依新聞稿，94 則占 127 則的 74.0%，前一次 73 則中有 66 則（約 90%）。平台自行依社群守則處理的比例從 9.6% 升到 26.0%（33 則），新聞稿提醒 Komdigi 的請求並沒有變少。平台處理時也不一定公開說明請求來自 Komdigi。&lt;/p&gt;
-&lt;p&gt;處理最多的平台是 X 的 56 則（44.1%），其次是 Threads 的 43 則（33.9%）。Threads 最常見的做法是 geolock（地理封鎖，從印尼的 IP 位址看不到該則內容），43 則中占 25 則。內容的主題以批評總統、批評官員與政府最多，各 32 則。森林與土地火災相關的有 13 則，部分在 10 月中旬煙霾籠罩加里曼丹時被回報。&lt;/p&gt;
-&lt;p&gt;依新聞稿整理的火災案例，X 上兩則批評總統滅火太慢的貼文、一則悼念 Way Kambas 火災與當地動物的貼文，都收到依 Komdigi 請求、涉嫌違法的通知。Instagram 一則封面放了總統照片的火災內容，以及 Threads 一則批評總統處理火災的貼文，依同樣的請求被下架。平台依自己的社群守則刪除的例子也有，一個團體回報，它談中加里曼丹一氧化碳與空氣污染指數的調查影片發布 16 小時後被 TikTok 刪除。Siak 縣長在火災舊址種樹的影片也被 TikTok 以違反社群守則刪除，新聞稿提到影片的內容是火災後的復原工作。&lt;/p&gt;
-&lt;p&gt;新聞稿把兩種做法列為 9 月 8 日前一次發布之後出現的新型態。Threads 上一位談森林火災的使用者多次收到通知，貼文只開放 18 歲以上的使用者觀看，Meta 也在沒有明確理由的情況下拒登加里曼丹火災主題的廣告。依兩團體新聞稿的推測，年齡限制的依據可能是政府規章 PP Tunas，而不是《電子資訊與交易法》。&lt;/p&gt;
-&lt;p&gt;依 SAFEnet 的整理，10 到 11 月有網友在網路上遭到威脅、恐嚇與起底（未經同意公開個人資料）。11 月初起案例明顯增加，主要在 Threads，多發生在網友要求政府為加里曼丹與蘇門答臘的森林火災負責的時候。新聞稿列出的手法包括陌生號碼的私訊或來電，傳訊者知道發文者的真實姓名與工作地點，並要求限期刪文。其他手法還有散布姓名、電話或證件、大量發送訊息與威脅家人，新聞稿沒有寫件數與傳訊者的身分。&lt;/p&gt;
-&lt;p&gt;依 Kompas 的報導，Komdigi 數位空間監督總局秘書 11 月 13 日在部會表示，公民團體的監測是公眾監督的一部分。兩團體若要依收到的申訴比對資料，部會準備好開放紀錄。秘書也提到部會跟平台透過電子系統往來，紀錄無法修改、可以回溯查核。依 CNN Indonesia 的報導，秘書另外表示不排除審核有誤，確認有錯時部會準備檢討與修正。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;geolock 依連線的 IP 位址決定是否顯示貼文，貼文並沒有刪除，從印尼以外的網路仍可能看到（本文的推論）。年齡限制影響的是哪些人能看到貼文，廣告拒登影響的是廣告能否投放。OONI（志工在各地執行的審查量測）量的是網站能否連上，單則內容的處理不在量測範圍內。外界的統計主要靠當事人回報，部會與平台的紀錄到 11 月 14 日為止沒有公開（本文的判斷）。&lt;/p&gt;
-&lt;p&gt;SAFEnet 的新聞稿寫到資料仰賴大眾自願填寫申訴表單，擔心安全或後果的人可能不回報，案件數只是冰山一角。依 CNN Indonesia 的報導，秘書提到 74% 這個比例來自兩團體收到並整理的 127 件，部會還無法確認其中 94 件是哪些案件。秘書表示依期間查詢時數字對不上，部會的數字可能更多，也可能更少。&lt;/p&gt;
-&lt;p&gt;通知與透明度方面，SAFEnet 執行長 10 月 21 日接受 detikInet 訪問時要求 Komdigi 說明每一項限制請求的法源、公開審核的做法，並讓受影響的使用者收到通知、有有效的申訴管道。依 CNN Indonesia 的報導，政府正在準備切斷存取內容的公開通知機制，回應憲法法院 9 月要求切斷存取前先通知的判決。報導沒有提到正式規定或上線日期，到 11 月 14 日為止，我們也查不到相關的公告。&lt;/p&gt;
-&lt;p&gt;依兩團體的新聞稿，X 上三則火災貼文收到的通知寫著依 Komdigi 的請求，Instagram 與 Threads 各一則依同一請求被下架（新聞稿沒有寫這兩則的通知內容）。新聞稿也引用憲法與環境法的條文，認為限制火災的抗議剝奪了居民談論自身安全的權利。在新聞稿發布之前，Komdigi 數位空間管控局長 10 月 20 日接受 detikInet 訪問時表示，部會從未指示或要求平台限制、下架森林火災的內容。局長也提到，觸及下降（貼文被看到的次數減少）或刪除要向平台查證。&lt;/p&gt;
-&lt;p&gt;內容在印尼被平台限制的人，通訊與數位部長 10 月 21 日的建議是先向平台申訴，再向部會回報。SAFEnet 與其他團體組成的法律團隊 10 月下旬徵集原告時，請當事人附上審核通知的截圖、內容連結、跟平台的往來紀錄與觸及數據。先保留這些紀錄，之後申訴或尋求法律協助時才有依據（本文的建議，參考法律團隊列出的證據類型）。&lt;/p&gt;
-&lt;p&gt;兩團體邀請通訊與數位部在 11 月 17 日進行公開檢驗（依 CNN Indonesia 11 月 13 日的報導），SAFEnet 的新聞稿本身沒有寫這項邀請。檢驗排在本文 11 月 14 日查證之後，是否舉行與結果要另外查證。我們查不到 Meta、TikTok 與 X 對兩團體新聞稿的公開說明，也查不到法律團隊提起訴訟的消息（11 月 14 日查詢）。僅憑公開的資料，無法判斷新聞稿的案例與部會的紀錄是否相符（本文的判斷）。&lt;/p&gt;
-&lt;p&gt;比較各方的說法時，可以看部會的紀錄跟公民團體的回報是否相符，以及平台會不會告訴發文者請求來自政府。部會 10 月 20 日提到各平台有自己的社群守則，平台依守則自行處理的比例（這次是 26.0%）與部會請求的比例之後如何變化，也是一個指標。當事人收到通知後有沒有申訴的管道，部會表示準備修正的誤判之後有沒有公開的更正或統計，也可以一起看。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（6 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/komdigi-makin-agresif-takedown-konten-dan-akun-media-sosial-konten-karhutla-salah-satu-sasarannya/&#34;&gt;Komdigi Makin Agresif Takedown Konten dan Akun Media Sosial, Konten Karhutla Salah Satu Sasarannya&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nasional.kompas.com/read/2026/11/13/17180631/komdigi-siap-buka-bukan-data-konten-karhutla-yang-dihapus-dari-medsos&#34;&gt;Komdigi Siap Buka-bukan Data Konten Karhutla yang Dihapus dari Medsos&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Kompas.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cnnindonesia.com/teknologi/20261113165833-185-1426952/komdigi-respons-safenet-dan-remotivi-soal-konten-karhutla&#34;&gt;Komdigi Respons SAFEnet dan Remotivi soal Konten Karhutla&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CNN Indonesia&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-13&#34;&gt;2026 年 11 月 13 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://inet.detik.com/security/d-8717274/isu-shadowban-konten-karhutla-di-medsos-ini-kata-safenet&#34;&gt;Isu Shadowban Konten Karhutla di Medsos, Ini Kata SAFEnet&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;detikInet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://nasional.kompas.com/read/2026/10/21/19034451/menkomdigi-meutya-hafid-minta-masyarakat-ajukan-banding-jika-konten-karhutla&#34;&gt;Menkomdigi Minta Masyarakat Ajukan Banding jika Konten Karhutla Kena &amp;#34;Take Down&amp;#34;&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Kompas.com&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-21&#34;&gt;2026 年 10 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://safenet.or.id/posko-penjaringan-calon-penggugat-komdigi-atas-dugaan-pembatasan-konten-digital/&#34;&gt;Posko Penjaringan Calon Penggugat Komdigi atas Dugaan Pembatasan Konten Digital&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SAFEnet&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-23&#34;&gt;2026 年 10 月 23 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
