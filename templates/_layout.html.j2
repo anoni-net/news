@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page_title }}</title>
-<meta name="description" content="{{ page_description }}">
+<meta name="description" content="{{ page_description|meta_description }}">
 {% if noindex %}
 <meta name="robots" content="noindex, follow">
 {% else %}
@@ -31,7 +31,7 @@
 <meta property="og:locale" content="{{ lang.og_locale }}">
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:title" content="{{ og_title }}">
-<meta property="og:description" content="{{ page_description }}">
+<meta property="og:description" content="{{ page_description|meta_description }}">
 <meta property="og:url" content="{{ page_url }}">
 {% if og_image %}
 <meta property="og:image" content="{{ og_image }}">

@@ -98,6 +98,80 @@ def test_filename_slug_must_match(tmp_path):
     assert any("檔名的 slug" in p for p in problems)
 
 
+# ---------------------------------------------------------------- <title> 與 <meta name="description">
+
+def test_meta_description_keeps_short_text():
+    assert build.meta_description("一句話的描述。", "zh-TW") == "一句話的描述。"
+
+
+def test_meta_description_cuts_at_sentence_end():
+    text = "第一句寫誰受影響，" + "也" * 60 + "。第二句補充細節，" + "也" * 60 + "。"
+    assert build.meta_description(text, "zh-TW") == "第一句寫誰受影響，" + "也" * 60 + "。"
+
+
+def test_meta_description_english_sentences_and_abbreviations():
+    first = "The U.S. court ordered Telegram to hand over data, e.g. phone numbers, for version 1.94 users."
+    text = first + " " + "More detail follows here, " * 8 + "and the sentence ends."
+    assert build.meta_description(text, "en") == first
+
+
+def test_meta_description_keeps_closing_quote():
+    first = 'Brave calls the feature "farbling." '
+    text = first + "Another clause that pushes the text far beyond the limit, " * 4 + "and ends."
+    assert build.meta_description(text, "en") == first.strip()
+
+
+def test_meta_description_long_first_sentence_gets_ellipsis():
+    text = "Android phones verify numbers, " + "and add them to every account " * 10 + "on the phone."
+    out = build.meta_description(text, "en")
+    assert len(out) <= 155 and out.endswith("…") and not out.endswith(",…")
+
+
+def test_short_title_and_meta_description_override(tmp_path):
+    text = GOOD.replace("authors:", "short_title: 短標\nmeta_description: 給搜尋結果的摘要。\nauthors:")
+    post = build.load_post(write_post(tmp_path, text), AUTHORS)
+    assert post.head_title == "短標" and post.title == "測試文章"
+    assert post.head_description == "給搜尋結果的摘要。" and post.description == "一句話的描述。"
+
+
+def test_head_falls_back_to_title_and_description(tmp_path):
+    post = build.load_post(write_post(tmp_path, GOOD), AUTHORS)
+    assert post.head_title == "測試文章" and post.head_description == "一句話的描述。"
+
+
+@pytest.mark.parametrize("line, expected", [
+    ("short_title: 測試文章的完整標題", "short_title 要比 title 短"),
+    ("short_title: ''", "short_title 要是非空的文字"),
+    ("meta_description: " + "長" * 101, "meta_description 有 101 個字"),
+])
+def test_short_title_and_meta_description_problems(tmp_path, line, expected):
+    problems = problems_of(tmp_path, GOOD.replace("authors:", f"{line}\nauthors:"))
+    assert any(expected in p for p in problems), problems
+
+
+def test_head_uses_short_title_and_capped_description(tmp_path):
+    """<title> 用 short_title、description 在上限內；og:title、<h1> 與 RSS 維持完整的 title 與 description。"""
+    import shutil
+    shutil.copytree(FIXTURES, tmp_path / "fixtures")
+    posts = tmp_path / "fixtures" / "posts"
+    en = posts / "en" / "2026-09-18-zkp-age-verification.md"
+    long = "EFF finds that zero-knowledge proofs used for age verification still leave a single point of failure. " * 3
+    text = en.read_text(encoding="utf-8").replace(
+        "description: EFF finds that zero-knowledge proofs used for age verification still leave a single point of failure and a metadata trail.",
+        f"short_title: Zero-knowledge proofs and age checks\ndescription: {long.strip()}")
+    en.write_text(text, encoding="utf-8")
+    targets, _, _ = build.build(posts, tmp_path / "out")
+    out = targets["clearnet"].out
+    page = (out / "en/2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert "<title>Zero-knowledge proofs and age checks | anoni.net News</title>" in page
+    assert 'property="og:title" content="Limits of zero-knowledge proofs for age verification"' in page
+    desc = re.search(r'name="description" content="(.*?)"', page).group(1)
+    assert len(desc) <= 155 and desc.endswith("failure.")
+    assert re.search(r'property="og:description" content="(.*?)"', page).group(1) == desc
+    feed = (out / "en/feed.xml").read_text(encoding="utf-8")
+    assert long.strip() in feed
+
+
 def test_date_mapping(tmp_path):
     text = GOOD.replace("date: 2026-09-18", "date:\n  created: 2026-09-18\n  updated: 2026-09-20")
     post = build.load_post(write_post(tmp_path, text), AUTHORS)

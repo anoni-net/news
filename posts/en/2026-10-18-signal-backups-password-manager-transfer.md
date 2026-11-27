@@ -1,6 +1,8 @@
 ---
 title: Signal's cross-platform encrypted backups and password manager transfers on Android
+short_title: Signal's cross-platform encrypted backups
 description: Signal released iOS 8.30 on 28 September, and its encrypted Signal Secure Backups can now be restored between Android and iPhone, so chats can follow you to a new platform. In September Google added a way on Android to move passwords and passkeys between password managers without exporting a file, starting with four apps.
+meta_description: Signal Secure Backups can now be restored between Android and iPhone, and Android can move passwords and passkeys between password managers without a file.
 date: 2026-10-18T02:15:00+08:00
 slug: signal-backups-password-manager-transfer
 categories:

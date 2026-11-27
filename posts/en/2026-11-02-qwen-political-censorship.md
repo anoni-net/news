@@ -1,6 +1,8 @@
 ---
 title: Measurements of censorship and code security gaps in China's open-weight Qwen models
+short_title: Qwen censorship and code security gaps
 description: In October, two companies that publish modified versions of Qwen models each released their own measurements, one of censorship in answers to political questions in Chinese, the other of a gap in code security that follows the client named in the prompt. The findings concern people who ask Qwen political questions and developers who write code with Qwen3-Coder, whether the model runs locally or through a service. As of 1 November, we had found no third-party replication and no response from the Qwen team.
+meta_description: Two companies that publish modified Qwen models measured censorship of political questions in Chinese and code security that varies by client.
 date: 2026-11-02T00:05:00+08:00
 slug: qwen-political-censorship
 categories:

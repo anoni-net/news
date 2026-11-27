@@ -1,6 +1,8 @@
 ---
 title: Aftermath of the eMudhra weak private keys, and macOS command-line tools
+short_title: eMudhra weak keys and macOS tools
 description: After the private keys of eight intermediate certificates from the Indian certificate authority eMudhra were computed, Apple, Microsoft and Chrome have all blocked or removed the related certificates, and ordinary users' browsers, phones and computers need no extra setup. The git, curl and other command-line tools built into macOS may still accept these certificates, and as of 2 November we had found no fix from Apple. eMudhra has announced it is leaving the public TLS certificate business, and as of 1 November had not filed a formal incident report on the incident ticket.
+meta_description: Browsers and phones already block the eMudhra certificates with computed private keys, but macOS tools like git and curl may still trust them.
 date: 2026-11-03T00:05:00+08:00
 slug: emudhra-key-compromise-followup
 categories:

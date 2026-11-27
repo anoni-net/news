@@ -46,7 +46,7 @@ DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
 FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin",
-                     "follows", "watch", "regions"}
+                     "follows", "watch", "regions", "short_title", "meta_description"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "names", "description", "url"}
@@ -72,6 +72,14 @@ HREF_RE = re.compile(r'(href)="([^"]*)"')
 
 # 圖片規則見 SPEC.md「圖片」
 ASSETS_PREFIX = "https://assets.anoni.net/news/"
+# 搜尋結果裡摘要顯示得到的長度，英文算字元，中文算字數。<meta name="description"> 超過時，
+# 在上限內取到句子結尾，front matter 寫了 meta_description 就用它。見 SPEC.md「標題與描述」
+META_DESCRIPTION_LIMIT = {"en": 155}
+META_DESCRIPTION_LIMIT_CJK = 100
+# 句子結尾的位置：句號、問號、驚嘆號，後面可能接著引號或括號。英文另外要求後面有空白、下一句以
+# 大寫、數字或引號開頭，並排除 U.S.、e.g.、i.e. 這類縮寫，避免在縮寫或版本號中間切開
+CJK_SENTENCE_END_RE = re.compile(r"[。！？][」』）]*")
+EN_SENTENCE_END_RE = re.compile(r"(?<!\b[A-Z])(?<!\be\.g)(?<!\bi\.e)[.!?][\"'’”)]*(?=\s+[A-Z0-9\"'‘“(])")
 ASSETS_CACHE = ROOT / ".cache" / "assets"
 IMAGE_EXTS = {".webp", ".png", ".jpg", ".jpeg"}
 IMAGE_FORMATS = {"WEBP", "PNG", "JPEG"}
@@ -325,8 +333,22 @@ class Post:
     lang: Lang = DEFAULT_LANG
     # date 晚於建置當下，排程中，這次不產出
     scheduled: bool = False
+    # <title> 用的短標題，沒寫就用 title。見 SPEC.md「標題與描述」
+    short_title: str | None = None
+    # <meta name="description"> 用的摘要，沒寫就從 description 截取。見 SPEC.md「標題與描述」
+    meta_description: str | None = None
     # 同一篇的三個版本，鍵是語系代碼，包含自己。由 load_site 填入
     translations: dict[str, "Post"] = field(default_factory=dict)
+
+    @property
+    def head_title(self) -> str:
+        """<title> 用的標題，站名由模板接在後面。"""
+        return self.short_title or self.title
+
+    @property
+    def head_description(self) -> str:
+        """<meta name="description"> 與 og:description 用的摘要。"""
+        return self.meta_description or meta_description(self.description, self.lang.code)
 
     @property
     def image_rel(self) -> str | None:
@@ -350,6 +372,30 @@ class Post:
 def featured_post(posts: list[Post], today: date) -> Post | None:
     """首頁的焦點：pin 還沒過期的文章裡最新發布的一篇，都過期了就沒有焦點。posts 由新到舊排列。"""
     return next((post for post in posts if post.pin and post.pin >= today), None)
+
+
+def meta_description_limit(lang_code: str) -> int:
+    return META_DESCRIPTION_LIMIT.get(lang_code, META_DESCRIPTION_LIMIT_CJK)
+
+
+def meta_description(text: str, lang_code: str) -> str:
+    """<meta name="description"> 用的摘要：上限內就原樣，超過時取上限內完整的句子。
+    第一句就超過上限時，在上限內最後一個逗號、頓號或空白截斷，加上刪節號。"""
+    text = " ".join(text.split())
+    limit = meta_description_limit(lang_code)
+    if len(text) <= limit:
+        return text
+    end_re = EN_SENTENCE_END_RE if lang_code == "en" else CJK_SENTENCE_END_RE
+    ends = [m.end() for m in end_re.finditer(text) if m.end() <= limit]
+    if ends:
+        return text[:ends[-1]].rstrip()
+    head = text[:limit - 1]
+    marks = (", ", "; ", " ") if lang_code == "en" else ("，", "、", "；", "：", " ")
+    for mark in marks:
+        cut = head.rfind(mark)
+        if cut >= limit // 2:
+            return head[:cut].rstrip(" ，、；：,;") + "…"
+    return head.rstrip() + "…"
 
 
 def current_time() -> datetime:
@@ -557,6 +603,29 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         problems.append(f"{where}：image 要是 {ASSETS_PREFIX} 開頭的網址，{INGEST_HINT}")
         image = None
 
+    short_title = meta.get("short_title")
+    if short_title is not None:
+        if not isinstance(short_title, str) or not short_title.strip():
+            problems.append(f"{where}：short_title 要是非空的文字，不需要時整行拿掉")
+            short_title = None
+        elif isinstance(meta["title"], str) and len(short_title.strip()) >= len(meta["title"].strip()):
+            problems.append(f"{where}：short_title 要比 title 短，一樣長時不必寫")
+            short_title = None
+        else:
+            short_title = short_title.strip()
+
+    meta_desc = meta.get("meta_description")
+    limit = meta_description_limit(lang.code)
+    if meta_desc is not None:
+        if not isinstance(meta_desc, str) or not meta_desc.strip():
+            problems.append(f"{where}：meta_description 要是非空的文字，不需要時整行拿掉")
+            meta_desc = None
+        elif len(" ".join(meta_desc.split())) > limit:
+            problems.append(f"{where}：meta_description 有 {len(' '.join(meta_desc.split()))} 個字，這個語系的上限是 {limit}")
+            meta_desc = None
+        else:
+            meta_desc = " ".join(meta_desc.split())
+
     pin = meta.get("pin")
     if pin is not None and (not isinstance(pin, date) or isinstance(pin, datetime)):
         problems.append(f"{where}：pin 填焦點的最後一天（YYYY-MM-DD），例如 pin: 2026-10-14，過了這天自動離開焦點")
@@ -625,6 +694,8 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         anchors=anchors,
         lang=lang,
         scheduled=created > now,
+        short_title=short_title,
+        meta_description=meta_desc,
     )
 
 
@@ -2307,6 +2378,8 @@ def make_env() -> Environment:
     # 原文標題是英文時標上 lang="en"，瀏覽器才會用英文的斷字與字型
     env.tests["cjk"] = lambda text: re.search(r"[\u3400-\u9fff]", str(text)) is not None
     env.filters["iso"] = lambda d: d.isoformat()
+    # <meta name="description"> 與 og:description 的長度上限，見 SPEC.md「標題與描述」
+    env.filters["meta_description"] = pass_context(lambda ctx, text: meta_description(str(text), ctx["lang"].code))
     env.globals["icon"] = icon
     env.globals["categories"] = categories_table()
     env.globals["track"] = track

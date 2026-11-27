@@ -1,6 +1,8 @@
 ---
 title: The Tor Project's decision on its relationship with Mullvad, and the debate around it
+short_title: Tor Project's Mullvad decision and debate
 description: After a political donation by a co-founder of VPN provider Mullvad drew criticism, the Tor Project said on 9 October that it would keep working with Mullvad but pause co-branding and revise how it describes Mullvad Browser. Neither browser has announced a halt in maintenance, and comments on the statement are divided.
+meta_description: The Tor Project said on 9 October it would keep working with Mullvad but pause co-branding, after a Mullvad co-founder's political donation drew criticism.
 date: 2026-10-14T00:00:00+08:00
 slug: tor-mullvad-relationship
 categories:

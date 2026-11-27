@@ -1,5 +1,6 @@
 ---
 title: Compositor, an open-source image editor, and maintaining and auditing AI-generated code
+short_title: Compositor and auditing AI-generated code
 description: A designer released Compositor, a free, open-source image editor for the Mac that needs no account, and says AI wrote all of its code. The criticism we found centers on the phrase "I built" and on who reviews and maintains AI-written code. As of 12 October it runs only on Apple silicon Macs with macOS 26 or later.
 date: 2026-10-17T00:00:00+08:00
 slug: compositor-image-editor

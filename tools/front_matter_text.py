@@ -31,7 +31,7 @@ def lines_for(path: Path) -> list[str]:
     meta = front_matter(path)
     rel = path.relative_to(ROOT)
     out = []
-    for key in ("title", "description"):
+    for key in ("title", "short_title", "description", "meta_description"):
         if isinstance(meta.get(key), str):
             out.append(f"{rel} {key}：{meta[key]}")
     for snap in meta.get("snapshots") or []:

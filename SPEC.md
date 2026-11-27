@@ -110,7 +110,7 @@ authors:
 | 欄位 | 必填 | 說明 |
 |---|---|---|
 | `title` | 是 | 用名詞片語，套貢獻者百科的標題句構。照錄原文標題時不在此限 |
-| `description` | 是 | 一兩句話，用在列表頁、RSS 與 `<meta name="description">` |
+| `description` | 是 | 一兩句話，用在列表頁、RSS、Bluesky 與文章頁標題下方的導言。`<meta name="description">` 從這裡截取，見「標題與描述」 |
 | `date` | 是 | 發布的時間，決定網址裡的年月，發布之後不能改。晚於現在（台北時間）就是排程中，見「排程發布」。可以帶時間，例如 `2026-09-28T00:00:00+08:00`，同一天發布多篇時由時間決定排序，頁面上只顯示日期。有更正時寫成 `date: {created: 2026-09-18, updated: 2026-09-20}`，`updated` 是實際改稿的時間，不能晚於現在 |
 | `slug` | 是 | 小寫英文、數字與連字號，3 到 60 個字元，同一個年月內不重複。Material 的 blog 預設從標題產生 slug，寫明才能確保換工具後網址不變 |
 | `sources` | 是 | 原文，至少一筆。每筆的 `title` 與 `url` 必填，`publisher` 與 `date` 選填。一篇可以列多筆，用在同一事件的多篇報導，也用在把好幾篇原文整理成一篇觀點 |
@@ -121,6 +121,8 @@ authors:
 | `pin` | 否 | 放在首頁最上方「焦點」的最後一天，寫 `YYYY-MM-DD`，不能早於發布日。期限內的文章有好幾篇時取最新發布的那篇，過了期限自動離開焦點，部署每小時重建就會換掉，不必回頭改文章。焦點由維護者挑選，寫稿時在新文章的 PR 裡一起設好。改 `pin` 不算更正，`date.updated` 不動。2026-10 以前寫 `true`，沒人記得換，焦點停在同一篇五天多，才改成填期限。欄位名稱沿用 Material blog 的置頂 |
 | `follows` | 否 | 這篇接續的舊文章，寫檔名、不含 `.md`，例如 `2026-09-18-zkp-age-verification`。用清單，一篇可以接續兩件事。見「前情與後續」 |
 | `watch` | 否 | 之後要回頭查的事，只寫在 zh-TW 版本。每一筆有 `date`（回頭查的日期）與 `note`（要查什麼）。見「追蹤中的事件」 |
+| `short_title` | 否 | `<title>` 用的短標題，要比 `title` 短。頁面上的標題、`og:title`、JSON-LD 與列表照樣用 `title`。見「標題與描述」 |
+| `meta_description` | 否 | `<meta name="description">` 與 `og:description` 用的摘要，取代從 `description` 自動截取的結果。英文 155 個字元、中文 100 個字以內，超過時建置報錯。見「標題與描述」 |
 | `regions` | 否 | 新聞發生的國家或地區，填 ISO 3166-1 的兩碼大寫代碼，例如 `ES`、`MM`，歐盟層級填 `EU`，英國是 `GB`，挪威要加引號寫成 `"NO"`，否則 YAML 會讀成 false。全球性的新聞不填。三個語系相同。目前只存不產頁，之後用在區域摘要與地圖，見「待決定的事」 |
 
 多出來的欄位建置時報錯，避免打錯字的欄位被靜默忽略。
@@ -886,7 +888,11 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 
 ### 標題與描述
 
-`<title>` 固定寫成「文章標題 | 站名」，列表頁只寫站名，站名依語系而不同（見「多語系」）。`<meta name="description">` 用 front matter 的 `description`。每頁只有一個 `<h1>`，文章頁放文章標題。
+`<title>` 固定寫成「文章標題 | 站名」，列表頁只寫站名，站名依語系而不同（見「多語系」）。文章寫了 `short_title` 時用它取代文章標題，頁面上的 `<h1>`、`og:title` 與 JSON-LD 維持 `title`。每頁只有一個 `<h1>`，文章頁放文章標題。
+
+搜尋結果的標題大約顯示 60 個字元，「 | anoni.net News」佔了 17 個，英文標題超過 43 個字元時後半段會被截掉。英文標題常常比這個長，需要讓搜尋結果顯示完整時，另寫 `short_title`，同樣用名詞片語，保留讀者會搜尋的產品名或事件名稱，例如 `title: Measurements of censorship and code security gaps in China's open-weight Qwen models` 配 `short_title: Qwen censorship and code security gaps`。中文標題多半在範圍內，不必另寫。
+
+`<meta name="description">` 與 `og:description` 的長度上限是英文 155 個字元、中文 100 個字，超過的部分搜尋結果不會顯示。`description` 同時用在列表、RSS 與 Bluesky，寫成兩三句的導言，常常超過這個上限，所以建置時另外截取：上限內就原樣使用，超過時取上限內完整的句子，第一句就超過上限時，在上限內最後一個逗號、頓號或空白截斷，接上刪節號。英文的句子結尾要接空白與大寫、數字或引號開頭的下一句，U.S.、e.g. 與版本號不會被切開。截出來的結果不理想，例如只剩刪節號結尾的半句，就在 front matter 寫 `meta_description` 取代。已發布的文章補上 `short_title` 或 `meta_description` 不改變讀者看到的內容，不算更正，`date.updated` 不動。分類頁、關於頁與導讀歷史的日期頁也套用同樣的上限。2026-11 檢查搜尋結果時量到英文 description 的中位數約 450 個字元，標題加上站名有八成超過 60 個字元，搜尋結果只顯示前段，才加上這兩個欄位與自動截取。
 
 ### 社群分享的預覽
 
@@ -895,7 +901,7 @@ iPhone 與 Mac 的「增加對比」是另一個設定，瀏覽器不強制改�
 | 欄位 | 文章頁 | 列表頁與封存頁 |
 |---|---|---|
 | `og:type` | `article` | `website` |
-| `og:title`、`og:description`、`og:url` | 標題、`description`、本頁網址 | 同左 |
+| `og:title`、`og:description`、`og:url` | 標題、跟 `<meta name="description">` 相同的摘要、本頁網址 | 同左 |
 | `og:image` | front matter 的 `image`，沒填時用這篇的預覽卡片，卡片不在時用全站共用的 `og.png` | 全站共用的 `og.png`，導讀歷史的日期頁用那一天的預覽卡片 |
 | `article:published_time` | `date.created` | 無 |
 | `article:modified_time` | 有更正時放 `date.updated` | 無 |

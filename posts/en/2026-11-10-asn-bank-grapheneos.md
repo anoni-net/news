@@ -1,6 +1,8 @@
 ---
 title: Wero payments and Play Integrity checks in the Dutch ASN Bank app
+short_title: Wero and Play Integrity in ASN Bank's app
 description: According to user reports, ASN Bank's Android app in the Netherlands has, since version 1.36.3 (updated in mid-October), intermittently blocked Wero payments on systems without Google certification such as GrapheneOS, while the app itself still opens and shows accounts. As of 8 November we could find no announcement from ASN. People planning to switch to GrapheneOS can take it as an example of a bank moving a payment feature onto Google's check.
+meta_description: Users report that the Dutch ASN Bank app intermittently blocks Wero payments on GrapheneOS and other systems without Google certification.
 date: 2026-11-10T00:00:00+08:00
 slug: asn-bank-grapheneos
 categories:

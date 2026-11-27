@@ -1,5 +1,6 @@
 ---
 title: The Excluded Apps setting for Siri AI in iOS 27.2
+short_title: Siri AI's Excluded Apps setting in iOS 27.2
 description: iOS 27.2 adds Excluded Apps under Siri in Settings, for choosing apps that Siri, Search and suggestions may not read. According to EFF, on-screen awareness also stops working for excluded apps. Siri AI on iPhone and iPad is not offered in the EU or mainland China, and as of 2 November its languages do not include Chinese, so people whose device and Siri language are set to Chinese cannot use it for now.
 date: 2026-11-03T00:00:00+08:00
 slug: siri-ai-exclude-apps
