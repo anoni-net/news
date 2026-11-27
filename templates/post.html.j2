@@ -1,7 +1,7 @@
 {% extends "_layout.html.j2" %}
 {% block header_langs %}{% endblock %}
-{% set page_title = post.title ~ " | " ~ s.site_name %}
-{% set page_description = post.description %}
+{% set page_title = post.head_title ~ " | " ~ s.site_name %}
+{% set page_description = post.head_description %}
 {% set og_title = post.title %}
 {% set og_type = "article" %}
 {% block head %}
