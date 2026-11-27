@@ -6,7 +6,84 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 27 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>透過短波無線電收發電子郵件的開源系統 HERMES 與 Mercury</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/hermes-hf-radio/</link>
+<guid isPermaLink="false">anoni-news:2026/11/hermes-hf-radio</guid>
+<pubDate>Sat, 28 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>非營利組織 Rhizomatica 的 HERMES 讓沒有手機訊號與網際網路的社區透過短波無線電收發電子郵件與檔案，5 月釋出的數據機軟體 Mercury 讓整套系統全部開源。無線電訊號在接收範圍內人人都能接收，業餘頻段可否加密各國規定不同。到 11 月 23 日，台灣的業餘無線電不得使用未經主管機關核准的密語或密碼通信。</description>
+<content:encoded>&lt;p&gt;整理 8 篇原文，來自 ARDC、IEEE Spectrum、Rhizomatica 等 8 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;在沒有手機訊號與網際網路的地方，短波（HF）無線電可以把訊號送到幾百公里外。推動偏遠社區通訊的非營利組織 Rhizomatica 開發了 HERMES，讓沒有太多無線電與技術經驗的人也能透過短波收發訊息、電子郵件與檔案。Rhizomatica 在 5 月釋出開源的數據機軟體 Mercury（把資料轉成無線電能傳送的訊號）。依補助 HERMES 的業餘無線電基金會 ARDC 11 月 6 日刊出的介紹，Mercury 取代了每台電台都要付授權費的專有數據機 VARA，整套 HERMES 從此全部開源。&lt;/p&gt;
+&lt;p&gt;短波訊號經大氣上層的電離層反射，能連到難以架設地面基礎設施的地方。Rhizomatica 的創辦人在 IEEE Spectrum 的訪談提到，他們用輸出約 20 瓦的小型電台，兩台之間大致能穩定連上 400 到 600 公里。短波的限制是速度，同一篇報導裡提到，一般短波電台的數位傳輸速率只有每秒幾百位元。&lt;/p&gt;
+&lt;p&gt;創辦人在公共利益技術小組（Public Interest Technology Group）網站的一篇文章寫到，HERMES 會先壓縮資料，再用 UUCP 這種早期、能容忍連線中斷的協定傳遞郵件。依專案手冊，有網際網路的地方通常設一座閘道站（短波網路與網際網路的交接點），沒有其他通訊方式的社區各設一座遠端站。&lt;/p&gt;
+&lt;p&gt;HERMES 最大的一次部署有近 90 台電台，ARDC 的介紹裡提到部分站點要步行或搭船好幾天才能抵達。Rhizomatica 跟在地夥伴合作，把訓練集中在一小群社區成員身上，目標是讓社區自行安裝、操作與維護。創辦人在訪談裡提到，一項試辦計畫在 10 或 11 艘漁船上裝了 HERMES，其中一艘在離岸 100 或 200 公里處故障。他說船員用 HERMES 傳出 GPS 位置與求救訊號，人和船都獲救。&lt;/p&gt;
+&lt;p&gt;依 ARDC 的介紹，Mercury 也能脫離 HERMES 單獨使用，業餘無線電操作者可以把它接上自己的電台。已經有操作者用它收發電子郵件，也回報錯誤、貢獻修改。&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
+&lt;p&gt;無線電訊號在接收範圍內，任何有接收機的人都能接收，而短波的接收範圍可達數百公里。《紐約客》10 月報導過鄉間透過 AM 廣播電台互傳私人訊息的傳統，因為廣播的訊息人人都能聽到，訊息常用含糊的措辭寫成。&lt;/p&gt;
+&lt;p&gt;創辦人在公共利益技術小組的文章主張，短波很難判斷訊號從哪裡發出，更難知道誰在接收。他在 IEEE Spectrum 的訪談解釋，各國對業餘無線電加密的規定不同，所以 HERMES 的加密可以開也可以關。內建加密是因為部分合作夥伴身處非常敏感的地區，不想送出容易被截收、被用來對付自己的資訊。不過訊號本身仍然任何人都能錄下，從 Mercury 的原始碼公開這點推想，錄下的人用同一套軟體原則上就能還原沒有加密的資料。&lt;/p&gt;
+&lt;p&gt;台灣的業餘無線電由國家通訊傳播委員會 2020 年訂定的《業餘無線電人員及電臺管理辦法》規範。到 11 月 23 日，辦法規定業餘無線電人員操作業餘電臺時，不得使用未經主管機關核准的密語或密碼通信。依這條規定，在台灣的業餘頻段使用 HERMES 時，加密功能沒有取得核准就不能開啟。&lt;/p&gt;
+&lt;p&gt;能上網的讀者不需要這套系統，已經有業餘無線電執照、想試短波數據通訊的人，可以從 Mercury 開始。Mercury 的原始碼放在 GitHub，專案頁列出支援 Linux（含 Raspberry Pi）與 Windows，到 11 月 23 日最新的版本是 11 月 21 日釋出的 v1.9.25。在台灣的業餘頻段試用時，送出的內容要當成任何人都能接收的公開訊息。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（8 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ardc.net/rhizomaticas-hermes-and-mercury-expand-open-source-hf-communications-for-remote-communities-while-appealing-to-experimenters/&#34;&gt;Rhizomatica’s HERMES and Mercury Expand Open-Source HF Communications for Remote Communities While Appealing to Experimenters&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;ARDC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;2026 年 11 月 6 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://spectrum.ieee.org/hermes-shortwave-radio-digital-data&#34;&gt;This Digital Radio Gets Messages to the World’s Remotest Locations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;IEEE Spectrum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;2026 年 9 月 21 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mercury.hermes.radio/&#34;&gt;Mercury — The Open-Source HF Modem&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Rhizomatica&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/Rhizomatica/mercury&#34;&gt;Rhizomatica/mercury&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://rhizomatica.github.io/hermes-documentation/manual_en_complete/node22.html&#34;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;HERMES 手冊&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pitg.gitlab.io/news/techdive/2025/07/19/hermes-hf-radio-communication.html&#34;&gt;Further and Safer: Reviving HF Radio in the Digital Age&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Public Interest Technology Group&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-19&#34;&gt;2025 年 7 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newyorker.com/magazine/2026/10/19/the-first-social-network&#34;&gt;The First Social Network&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The New Yorker&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;2026 年 10 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060145&#34;&gt;業餘無線電人員及電臺管理辦法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>韓國國會的生物資料法案與健康資料研究利用的爭議</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/korea-health-data-bill/</link>
@@ -1654,96 +1731,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;個人資料保護委員會籌備處&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-26&#34;&gt;2025 年 12 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>智慧電視的自動內容辨識與廠商對 17 個問題的回答</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/tv-acr/</link>
-<guid isPermaLink="false">anoni-news:2026/11/tv-acr</guid>
-<pubDate>Thu, 19 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>The Verge 向 11 家電視與串流裝置廠商提出 17 個是非題，7 家回答。Samsung、LG 與 Amazon 對 The Verge 表示自動內容辨識（ACR）預設關閉，Roku 表示對應的功能在美國預設關閉。依 The Verge 轉述的 Northeastern 大學量測，選擇退出後 Samsung、Roku 與 Vizio 的電視仍有疑似相關的流量。流量經過加密，內容無法確認。Samsung 台灣的隱私權政策寫到可以從設定停用（11 月 14 日查證）。</description>
-<content:encoded>&lt;p&gt;整理 9 篇原文，來自 The Verge、arXiv、Samsung 等 5 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;連網的智慧電視可能用自動內容辨識（ACR）記錄使用者在看什麼。The Verge 的電視評測作者 11 月 11 日公布向 11 家廠商提出的 17 個是非題與各家的回答。Roku 的回答限定美國，其他各家沒有寫適用地區。Samsung 台灣與香港的隱私權政策沒有寫預設值，其他品牌在兩地的設定本站沒有查證。&lt;/p&gt;
-&lt;p&gt;依 The Verge 11 月 4 日的另一篇報導，ACR 取樣電視正在播放的聲音或畫面，轉成數位指紋（fingerprint）送到資料庫比對出節目。廠商用比對結果推薦節目、統計收視與投放廣告。&lt;/p&gt;
-&lt;p&gt;受邀的 11 家之中，Amazon、Apple、Google、LG、Roku、Samsung 與 TCL 提供了回答。依 The Verge 的報導，Hisense 五次聯繫都沒有回應，Panasonic、Sony 與 Walmart 旗下的 Vizio 在 17 題都沒有提供答案。以下的廠商答覆都出自 The Verge 的報導。&lt;/p&gt;
-&lt;p&gt;Apple 與 Google 的答覆分別是 Apple TV 4K 不使用 ACR、Google TV 作業系統本身不用 ACR 擷取畫面，Google 也提到電視廠商可能另外安裝 ACR 軟體。Samsung 的答覆是電視不擷取、不儲存截圖、螢幕錄影或影片（screenshots, screen recordings, or video recordings）。Samsung 台灣的隱私權政策（2024 年 2 月 1 日生效）則寫到可能用 ACR 擷取收看紀錄，電視「會傳輸視訊片段或電視選台器資訊，以判定收看的節目」。LG 的答覆是它的 ACR 用電視內部音效板產生的音訊指紋，不擷取畫面。&lt;/p&gt;
-&lt;p&gt;Samsung 的答覆是包含 ACR 的收看資訊服務預設不啟用，要使用者主動同意。LG 與 Amazon 也回答 ACR 預設關閉，Roku 的對應功能 Smart TV Experience 在美國預設關閉。TCL 把 ACR 歸給作業系統供應商或第三方軟體，使用者初次設定時決定是否開啟，之後可以關閉。&lt;/p&gt;
-&lt;p&gt;依 The Verge 11 月 4 日轉述的 Northeastern 大學研究（本文沒有取得論文本身），研究者監測 10 家廠商的 12 台電視，測試選擇退出 ACR 是否有效。多數電視退出後就不再送資料到疑似 ACR 的位址，Samsung、Roku 與 Vizio 退出後仍測得相關流量。依 The Verge 引述的論文，送往這些位址的流量幾乎都經過加密。研究者無法確認退出後殘留的流量是否為 ACR 資料，也無法得知伺服器端是否處理或保存資料。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依 The Verge 的轉述，有 ACR 流量的電視都會辨識天線收到的無線電視訊號。在 Google 與 Amazon 以外的電視上，ACR 也會辨識自家串流服務播放的內容。HDMI 輸入（接機上盒、遊戲機的接口）同樣在辨識範圍內，Netflix、YouTube 這類第三方 App 幾乎沒有 ACR 流量。另一篇 2024 年發表在網路量測研討會 IMC 的論文測了 Samsung 與 LG，結論是電視只當外接螢幕用時 ACR 照樣運作。&lt;/p&gt;
-&lt;p&gt;Samsung 對 The Verge 回答，選擇退出後電視會立即停止蒐集新的收視資料，先前的 ACR 資料也會從伺服器刪除。依 The Verge 對 Northeastern 研究的轉述，Samsung 的 Tizen 系統退出後相關流量減少但沒有停止，看天線、自家串流與 HDMI 時都還測得到。2024 年的 IMC 論文測 Samsung 時，觀察到的則是退出後送往 ACR 伺服器的流量停止，兩次量測的時間與機型不同。&lt;/p&gt;
-&lt;p&gt;依同一份轉述，Roku 作業系統的兩台電視（Roku 與 TCL 的機型）退出後，ACR 仍作用在自家的 The Roku Channel。TCL 在選單裡揭露了這項限制，Roku 的電視選單沒有。Roku 的 ACR 服務政策頁則寫到，關閉 Smart TV Experience 不影響透過網路存取或串流內容時蒐集的資料，啟用期間蒐集的資料也仍由 Roku 保留、可能分享給第三方。&lt;/p&gt;
-&lt;p&gt;依同一份轉述，Vizio 的電視退出前後，相關流量沒有變化。Vizio 發言人在報導刊出後提供聲明，否認研究者看到的加密流量是 ACR 資料，表示那些是診斷、效能這類例行營運資料。&lt;/p&gt;
-&lt;p&gt;依同一份轉述，研究者也在 Vidaa 作業系統（Hisense、Toshiba 等品牌的電視採用）發現漏洞，可以收到其他 Vidaa 電視的 ACR 辨識結果。每則訊息帶有無法重設的電視識別碼、輸入來源與音訊指紋，研究者三小時內收到超過 100 萬台電視的資料。Vidaa 確認漏洞後改成需要登入，但到 11 月 4 日報導刊出時訊息仍未加密。&lt;/p&gt;
-&lt;p&gt;美國德州檢察長 2 月與 5 月先後與 Samsung、LG 達成協議。依 2 月 26 日的新聞稿，Samsung 必須取得德州消費者的明確同意，才能蒐集或處理 ACR 收視資料。5 月 11 日的新聞稿寫到與 LG 的和解是為了保護德州居民，要求取得知情同意、電視更新時跳出說明，也要提供清楚簡單的退出方式。新聞稿沒有寫其他地方的電視是否一併更新，對 Sony、Hisense 與 TCL 的案件到 5 月 11 日仍在進行，之後的進展本文沒有查到。&lt;/p&gt;
-&lt;p&gt;Samsung 美國支援頁提到 ACR 只在設定電視時同意收看資訊服務才會運作，之後隨時可以到設定選單關閉，頁面沒有列出選單路徑。Samsung 台灣的隱私權政策寫到可以隨時到設定功能表停用收看資訊服務，香港的英文政策頁有相同的說明。Roku 的政策頁列出美國機型的路徑，是到 Settings &amp;gt; Privacy &amp;gt; Smart TV Experience 取消勾選，關閉之後仍會收到個人化廣告。其他品牌在台灣的選單路徑本站沒有查證，要以電視上的選單與各品牌的官方說明為準。&lt;/p&gt;
-&lt;p&gt;依 The Verge 的轉述，Northeastern 研究者建議最簡單的做法是拔掉電視的有線與無線網路，改用不執行 ACR 的串流裝置。想繼續用內建 App 的人，研究者建議選 webOS、Fire TV、Sony 的 Google TV 與 Vidaa（前述有漏洞的系統）並盡量退出，也列出可以用 Pi-hole（在家用網路封鎖特定網域的開源工具）封鎖的端點。本站 11 月 13 日也整理過&lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/android-tv-residential-proxy/&#34;&gt;預載後門的 Android 電視盒&lt;/a&gt;被轉租成住宅代理的事件。&lt;/p&gt;
-&lt;p&gt;不想仰賴廠商落實設定的人可以斷開電視的網路，代價是內建的串流 App 都無法使用（本文的推論）。Amazon 與 Google 對 The Verge 回答，斷網期間可能在本機暫存資料或診斷紀錄，重新連線後再傳送。Roku 回答使用資料可能暫存到連線恢復或關機為止，TCL 回答在使用者沒有退出時會暫存診斷與效能資料，重新連線後處理。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（9 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1012372/tv-privacy-acr-questions&#34;&gt;I asked every TV manufacturer 17 questions about how they spy on you&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;2026 年 11 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1026088/northeastern-university-acr-tracking-study&#34;&gt;Does opting out of TV tracking work?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;2026 年 11 月 4 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2409.06203&#34;&gt;Watching TV with the Second-Party: A First Look at Automatic Content Recognition Tracking in Smart TVs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;arXiv&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-09-10&#34;&gt;2024 年 9 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/us/support/answer/ANS10010616/&#34;&gt;Samsung Smart TV Automatic Content Recognition (ACR) Feature&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.roku.com/api/v1/published/acrservicepolicy/en/US/text&#34;&gt;Roku ACR Service Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Roku&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.samsung.com/tw/info/privacy/&#34;&gt;三星隱私權政策, 三星的承諾, 全球隱私權政策 | Samsung 台灣&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/hk_en/info/privacy/&#34;&gt;Samsung Electronics Limited : Local Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs&#34;&gt;Texas Attorney General settlement with Samsung over smart TV ACR&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-26&#34;&gt;2026 年 2 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-major-agreement-lg-protect-texans-privacy-and-stop-data-being&#34;&gt;Texas Attorney General settlement with LG over smart TV ACR&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;2026 年 5 月 11 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

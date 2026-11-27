@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/hermes-hf-radio/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-28T00:00:00+08:00</news:publication_date>
+<news:title>透過短波無線電收發電子郵件的開源系統 HERMES 與 Mercury</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/hermes-hf-radio/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-28T00:00:00+08:00</news:publication_date>
+<news:title>通过短波无线电收发电子邮件的开源系统 HERMES 与 Mercury</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/hermes-hf-radio/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-28T00:00:00+08:00</news:publication_date>
+<news:title>HERMES and Mercury, open-source systems for sending email over shortwave radio</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/korea-health-data-bill/</loc>
 <news:news>
 <news:publication>
@@ -97,39 +130,6 @@
 </news:publication>
 <news:publication_date>2026-11-26T00:05:00+08:00</news:publication_date>
 <news:title>The breach of Japanese marketing platform KARTE and member data from hundreds of companies</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/2026/11/ios-browser-engines/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-26T00:00:00+08:00</news:publication_date>
-<news:title>iOS 瀏覽器引擎在歐盟與日本的開放條件與爭議</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/ios-browser-engines/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-26T00:00:00+08:00</news:publication_date>
-<news:title>iOS 浏览器引擎在欧盟与日本的开放条件与争议</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/ios-browser-engines/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-26T00:00:00+08:00</news:publication_date>
-<news:title>Conditions and disputes over alternative browser engines on iOS in the EU and Japan</news:title>
 </news:news>
 </url>
 </urlset>

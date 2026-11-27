@@ -6,7 +6,91 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Fri, 27 Nov 2026 00:05:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0800</lastBuildDate>
+<item>
+<title>HERMES and Mercury, open-source systems for sending email over shortwave radio</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/hermes-hf-radio/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/hermes-hf-radio</guid>
+<pubDate>Sat, 28 Nov 2026 00:00:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>HERMES, built by the nonprofit Rhizomatica, lets communities without mobile signal or internet access exchange email and files over shortwave radio, and Mercury, a modem released in May, has made the whole system open source. Anyone within range can receive a radio signal, and the rules on encryption over amateur radio differ by country. As of 23 November, amateur radio operators in Taiwan may not communicate in code words or ciphers without the regulator&#39;s approval, and those in mainland China must communicate in plain language or recognised amateur abbreviations, using public protocols.</description>
+<content:encoded>&lt;p&gt;Based on 9 sources, including ARDC, IEEE Spectrum, Rhizomatica&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Where there is no mobile signal or internet access, shortwave (HF) radio can carry a signal several hundred kilometres. Rhizomatica, a nonprofit working to bring communications to underserved communities, developed HERMES so that people without much radio or technical experience can send and receive messages, email and files over shortwave. In May, Rhizomatica released Mercury, an open-source modem (software that turns data into signals a radio can transmit). According to a write-up published on 6 November by ARDC, an amateur radio foundation that funds the project, Mercury replaces VARA, a proprietary modem that required a paid license for every radio, and with it the whole of HERMES is now open source.&lt;/p&gt;
+&lt;p&gt;Shortwave signals are reflected by the ionosphere in the upper atmosphere, so they can reach places where ground infrastructure is hard to build. In an interview with IEEE Spectrum, Rhizomatica&#39;s founder said they use small radios with an output of about 20 watts, and can link two radios 400 to 600 kilometres apart fairly reliably. The trade-off is speed. According to the same article, typical shortwave radios carry digital data at only a few hundred bits per second.&lt;/p&gt;
+&lt;p&gt;In an article on the Public Interest Technology Group website, the founder wrote that HERMES first compresses the data and then passes email along with UUCP, an early protocol designed to cope with interrupted connections. According to the project manual, a gateway station (the point where the shortwave network meets the internet) is usually set up somewhere with internet access, and each community with no other means of communication gets a remote station.&lt;/p&gt;
+&lt;p&gt;The largest HERMES deployment has nearly 90 radios, and according to ARDC&#39;s write-up some of the sites take days to reach on foot or by boat. Rhizomatica works with local partners and concentrates training on a small group of community members, with the aim that communities install, operate and maintain the system themselves. In the interview, the founder described a pilot project that put HERMES on 10 or 11 fishing boats, one of which broke down 100 or 200 kilometres offshore. He said the crew used HERMES to send their GPS position and a distress message, and both the crew and the boat were rescued.&lt;/p&gt;
+&lt;p&gt;According to ARDC, Mercury can also be used on its own, without HERMES, so amateur radio operators can connect it to their own radios. Some operators are already using it to exchange email, and have reported bugs and contributed changes.&lt;/p&gt;
+&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
+&lt;p&gt;Anyone with a receiver within range can pick up a radio signal, and on shortwave that range can stretch to hundreds of kilometres. In October The New Yorker reported on a rural tradition of passing private messages over AM radio stations, where the messages are often worded vaguely because anyone can hear what is broadcast.&lt;/p&gt;
+&lt;p&gt;In his Public Interest Technology Group article, the founder argues that with shortwave it is hard to tell where a signal is coming from, and harder still to know who is receiving it. He explained in the IEEE Spectrum interview that the rules on encryption for amateur radio differ by country, which is why encryption in HERMES can be switched on or off. The encryption was built in because some of Rhizomatica&#39;s partners are in very sensitive areas and do not want to send information that can easily be intercepted and used against them. The signal itself can still be recorded by anyone, though, and since Mercury&#39;s source code is public, whoever records it could in principle use the same software to recover any data that was not encrypted.&lt;/p&gt;
+&lt;p&gt;Amateur radio in Taiwan is governed by the Regulations Governing Amateur Radio Operators and Stations, issued by the National Communications Commission (NCC) in 2020. As of 23 November, the regulations prohibit amateur radio operators from communicating in code words or ciphers that the competent authority has not approved while operating an amateur station. Under this rule, HERMES cannot be used on Taiwan&#39;s amateur bands with encryption switched on unless approval has been obtained.&lt;/p&gt;
+&lt;p&gt;Mainland China&#39;s Measures for the Administration of Amateur Radio Stations (MIIT Order No. 67), issued by the Ministry of Industry and Information Technology and in force since 1 March 2024, limit amateur stations to communicating with one another, technical research and self-training, and bar their use for commercial gain. As of 23 November, the measures also require operators to communicate in plain language or in abbreviations and shorthand recognised in amateur radio, using public technical systems and communication protocols. Encrypted content is not plain language, so going by the republished text of the measures, switching on HERMES&#39;s encryption on mainland China&#39;s amateur bands may not meet this requirement, although the measures do not mention encryption by name.&lt;/p&gt;
+&lt;p&gt;Readers who can get online do not need this system. Licensed amateur radio operators who want to try HF data communication can start with Mercury. Its source code is on GitHub, the project page lists support for Linux (including Raspberry Pi) and Windows, and as of 23 November the latest release was v1.9.25, published on 21 November. Anyone trying it on amateur bands in Taiwan or mainland China should treat whatever they send as a public message that anyone within range can receive.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (9)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.ardc.net/rhizomaticas-hermes-and-mercury-expand-open-source-hf-communications-for-remote-communities-while-appealing-to-experimenters/&#34;&gt;Rhizomatica’s HERMES and Mercury Expand Open-Source HF Communications for Remote Communities While Appealing to Experimenters&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;ARDC&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-06&#34;&gt;6 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://spectrum.ieee.org/hermes-shortwave-radio-digital-data&#34;&gt;This Digital Radio Gets Messages to the World’s Remotest Locations&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;IEEE Spectrum&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-09-21&#34;&gt;21 September 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://mercury.hermes.radio/&#34;&gt;Mercury — The Open-Source HF Modem&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Rhizomatica&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/Rhizomatica/mercury&#34;&gt;Rhizomatica/mercury&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://rhizomatica.github.io/hermes-documentation/manual_en_complete/node22.html&#34;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;HERMES manual&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://pitg.gitlab.io/news/techdive/2025/07/19/hermes-hf-radio-communication.html&#34;&gt;Further and Safer: Reviving HF Radio in the Digital Age&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Public Interest Technology Group&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-07-19&#34;&gt;19 July 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.newyorker.com/magazine/2026/10/19/the-first-social-network&#34;&gt;The First Social Network&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The New Yorker&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-12&#34;&gt;12 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060145&#34;&gt;業餘無線電人員及電臺管理辦法&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of Taiwan&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.waizi.org.cn/doc/227732.html&#34;&gt;业余无线电台管理办法（工业和信息化部令第 67 号）&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;waizi.org.cn (republished)&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>South Korea&#39;s biodata bill and the dispute over research use of health data</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/korea-health-data-bill/</link>
@@ -2052,116 +2136,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PDPC&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;29 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>Automatic content recognition on smart TVs and manufacturers&#39; answers to 17 questions</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/tv-acr/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/tv-acr</guid>
-<pubDate>Thu, 19 Nov 2026 00:00:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>The Verge put 17 yes-or-no questions to 11 TV and streaming device makers, and 7 answered. Samsung, LG and Amazon told The Verge that automatic content recognition (ACR) is off by default, and Roku said its equivalent feature is off by default in the US. In Northeastern University measurements reported by The Verge, Samsung, Roku and Vizio TVs still sent traffic consistent with ACR after opt-out, though the traffic was encrypted and its contents could not be confirmed. Samsung&#39;s Taiwan privacy policy says the service can be disabled in settings (checked on 14 November).</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including The Verge, arXiv, Samsung&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;Internet-connected smart TVs can use automatic content recognition (ACR) to record what viewers are watching. On 11 November The Verge&#39;s TV reviewer published 17 yes-or-no questions put to 11 manufacturers, along with their answers. Roku limited its answer to the US, and the others did not say which regions their answers cover. Samsung&#39;s privacy policies for Taiwan and Hong Kong do not state a default, and we, a community based in Taiwan, have not checked other brands&#39; settings in either place.&lt;/p&gt;
-&lt;p&gt;According to another Verge report, from 4 November, ACR samples the audio or video playing on the TV and turns it into a digital fingerprint that is matched against a database to identify the programme. Manufacturers use the matches to recommend content, measure audiences and serve ads.&lt;/p&gt;
-&lt;p&gt;Of the 11 companies approached, Amazon, Apple, Google, LG, Roku, Samsung and TCL answered. According to The Verge, Hisense did not respond after five attempts, and Panasonic, Sony and Walmart&#39;s Vizio provided no answers to any of the 17 questions. All manufacturer answers below come from The Verge&#39;s report.&lt;/p&gt;
-&lt;p&gt;Apple answered that Apple TV 4K does not use ACR, and Google that the Google TV operating system itself does not use ACR to capture on-screen video, adding that TV makers may install separate ACR software. Samsung&#39;s answer was that its TVs do not capture or store &#34;screenshots, screen recordings, or video recordings&#34;. Samsung&#39;s Taiwan privacy policy (effective 1 February 2024), however, says ACR may be used to capture viewing information, and the Hong Kong English page carries the same sentence: &#34;Your Smart TV transfers video snippets or TV tuner information in order to determine the programs watched.&#34; LG answered that its ACR uses audio fingerprints generated by the TV&#39;s internal soundboard and does not capture images.&lt;/p&gt;
-&lt;p&gt;Samsung answered that viewing information services, which include ACR, are not enabled by default and require the user to opt in. LG and Amazon also answered that ACR is off by default, and Roku that its equivalent feature, Smart TV Experience, is off by default in the US. TCL attributed ACR to the operating system provider or third-party software, which users choose to turn on or not at initial setup and can turn off later.&lt;/p&gt;
-&lt;p&gt;The Verge&#39;s 4 November report describes a Northeastern University study (we did not obtain the paper itself) in which researchers monitored 12 TVs from 10 manufacturers to test whether opting out of ACR works. Most TVs stopped sending data to suspected ACR addresses after opt-out, while Samsung, Roku and Vizio TVs still showed related traffic. According to the paper as quoted by The Verge, almost all traffic to those addresses was encrypted. The researchers could not confirm whether the traffic remaining after opt-out was ACR data, or whether data was processed or retained on the server side.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to The Verge&#39;s account, every TV with ACR traffic scanned over-the-air broadcasts received by antenna. On all but the Google and Amazon TVs, ACR also covered the manufacturer&#39;s own streaming services. HDMI inputs (where set-top boxes and game consoles plug in) were in scope too, while third-party apps such as Netflix and YouTube showed almost no ACR traffic. A separate 2024 paper for the Internet Measurement Conference (IMC) tested Samsung and LG, and found that ACR kept running when the TV was used only as an external display.&lt;/p&gt;
-&lt;p&gt;Samsung told The Verge that after opt-out the TV immediately stops collecting new viewing data and previously collected ACR data is deleted from its servers. In The Verge&#39;s account of the Northeastern study, traffic from Samsung&#39;s Tizen (Samsung&#39;s TV operating system) fell after opt-out but did not stop, and was still present when watching via antenna, first-party streaming and HDMI. When the 2024 IMC paper tested Samsung, traffic to ACR servers stopped after opt-out, and the two measurements used different models at different times.&lt;/p&gt;
-&lt;p&gt;By the same account, on the two TVs running Roku OS (one Roku model and one TCL model), ACR still applied to Roku&#39;s own The Roku Channel after opt-out. TCL discloses this limitation in its menus, while the Roku TV&#39;s menus do not. Roku&#39;s ACR Service Policy says that turning off Smart TV Experience does not affect data collected when content is accessed or streamed over the internet, and that data collected while it was on is retained by Roku and may still be shared with third parties.&lt;/p&gt;
-&lt;p&gt;By the same account, opting out on the Vizio TV made no difference to the related traffic. After the report was published, a Vizio spokesperson sent a statement denying that the encrypted traffic the researchers observed was ACR data, describing it as routine operational data such as diagnostics and performance.&lt;/p&gt;
-&lt;p&gt;The researchers also found a vulnerability in Vidaa OS (used on TVs from Hisense, Toshiba and other brands) that let them receive ACR results from other Vidaa TVs, by the same account. Each message carried a permanent TV identifier that cannot be reset, the input source and an audio fingerprint, and in three hours the researchers collected data from more than 1 million TVs. Vidaa confirmed the flaw and added a login requirement, but as of the report&#39;s publication on 4 November the messages were still unencrypted.&lt;/p&gt;
-&lt;p&gt;The Texas Attorney General reached agreements with Samsung in February and LG in May. The 26 February press release says Samsung must obtain Texas consumers&#39; express consent before collecting or processing ACR viewing data. The 11 May release describes the LG settlement as protecting Texans, requiring informed consent, a pop-up disclosure on TV updates and &#34;a clear and simple way to opt out&#34;. The releases do not say whether TVs elsewhere get the same update, the cases against Sony, Hisense and TCL were still pending as of 11 May, and we found nothing on them since.&lt;/p&gt;
-&lt;p&gt;Samsung&#39;s US support page says ACR runs only if the user opted in to viewing information services when setting up the TV, and that it can be turned off at any time in the Settings menu, though the page gives no menu path. Samsung&#39;s Taiwan privacy policy says viewing information services can be disabled at any time from the settings menu, and the Hong Kong English policy page says the same. Roku&#39;s policy page gives the path for US models as Settings &amp;gt; Privacy &amp;gt; Smart TV Experience, and personalised ads continue after it is turned off. We have not checked other brands&#39; menu paths in Taiwan, so readers should go by the TV&#39;s own menus and each brand&#39;s official instructions.&lt;/p&gt;
-&lt;p&gt;We found no guidance or enforcement specific to smart TV ACR from regulators in Taiwan, Hong Kong, Singapore or mainland China (one search, 14 November). Taiwan&#39;s Personal Data Protection Act has no provision specific to targeted advertising. Mainland China&#39;s Personal Information Protection Law (Article 24) requires that information pushes and commercial marketing based on automated decision-making come with an option not targeted at personal characteristics or a convenient way to refuse, and we found no guidance applying it to TVs. Samsung&#39;s Singapore privacy policy, unlike its Taiwan and Hong Kong pages, contains no mention of viewing information services or ACR.&lt;/p&gt;
-&lt;p&gt;According to The Verge&#39;s account, the Northeastern researchers recommend as the easiest step disconnecting the TV from both wired and wireless networks and using a streaming device that does not run ACR instead. For people who want to keep using built-in apps, the researchers suggest webOS, Fire TV, Google TV on Sony and Vidaa (the system with the vulnerability above), opting out of everything possible, and they also list endpoints that can be blocked with Pi-hole (an open-source tool that blocks specified domains on a home network). On 13 November we also covered &lt;a href=&#34;http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/android-tv-residential-proxy/&#34;&gt;Android TV boxes with preinstalled backdoors&lt;/a&gt; being rented out as residential proxies.&lt;/p&gt;
-&lt;p&gt;People who do not want to rely on manufacturers honouring the settings can disconnect the TV from the network, at the cost of every built-in streaming app (our inference). Amazon and Google told The Verge that while offline a TV may store data or diagnostic logs locally and send them once reconnected. Roku said some usage data may be held on the device until the connection returns or the device is turned off, and TCL said that unless the user has opted out, the TV stores diagnostic and performance data offline and processes it once reconnected.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1012372/tv-privacy-acr-questions&#34;&gt;I asked every TV manufacturer 17 questions about how they spy on you&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-11&#34;&gt;11 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.theverge.com/tech/1026088/northeastern-university-acr-tracking-study&#34;&gt;Does opting out of TV tracking work?&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;The Verge&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-04&#34;&gt;4 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://arxiv.org/abs/2409.06203&#34;&gt;Watching TV with the Second-Party: A First Look at Automatic Content Recognition Tracking in Smart TVs&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;arXiv&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2024-09-10&#34;&gt;10 September 2024&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/us/support/answer/ANS10010616/&#34;&gt;Samsung Smart TV Automatic Content Recognition (ACR) Feature&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://docs.roku.com/api/v1/published/acrservicepolicy/en/US/text&#34;&gt;Roku ACR Service Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Roku&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.samsung.com/tw/info/privacy/&#34;&gt;三星隱私權政策, 三星的承諾, 全球隱私權政策 | Samsung 台灣&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/hk_en/info/privacy/&#34;&gt;Samsung Electronics Limited : Local Privacy Policy&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs&#34;&gt;Texas Attorney General settlement with Samsung over smart TV ACR&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-02-26&#34;&gt;26 February 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-major-agreement-lg-protect-texans-privacy-and-stop-data-being&#34;&gt;Texas Attorney General settlement with LG over smart TV ACR&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Texas Attorney General&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-05-11&#34;&gt;11 May 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.samsung.com/sg/info/privacy/&#34;&gt;Privacy | Samsung SG&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Samsung&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Laws &amp;amp; Regulations Database of the Republic of China (Taiwan)&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html&#34;&gt;中华人民共和国个人信息保护法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;National People&amp;#39;s Congress of the People&amp;#39;s Republic of China&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2021-08-20&#34;&gt;20 August 2021&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;
