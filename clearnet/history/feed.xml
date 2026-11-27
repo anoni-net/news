@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Fri, 27 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>2010 年維基解密開始公開的美國外交電報</title>
+<link>https://anoni.net/news/history/11-28/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-28/2026</guid>
+<pubDate>Sat, 28 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>這一天，維基解密開始發布美國國務院的外交電報，合作的五家報社事前遮蔽了部分電報裡可能讓人被認出的名字與細節。你在公開對話截圖之前，也可以照同樣的做法遮掉能認出身分的人名、地名與日期。</description>
+<content:encoded>&lt;p&gt;依《紐約時報》2010 年的報導，美國的外交電報多半保密數十年，國務院公開的外交史料當時只編到 1976 年。維基解密在 2010 年 11 月 28 日開始發布 251,287 份電報，首批上線的 220 份有一部分已由合作的五家報社刪去可能讓消息來源被認出的人名。白宮聲明稱這是魯莽而危險的行動，完整公開可能危及消息來源，維基解密的頁面則寫民主國家的公民應要求看見幕後的事。依哥倫比亞大學新聞學院的個案研究，《衛報》遮蔽的電報有些連地名與日期也刪掉，可能認出女性發言者時也刪掉代名詞。&lt;/p&gt;
+&lt;p&gt;NPR 轉述的《明鏡》報導寫完整電報的加密檔從 2011 年初起已在網路上，維基解密在同年 9 月公開未經遮蔽的完整電報後，五家報社發表聯合聲明譴責。依 NPR 轉述的《華爾街日報》報導，維基解密指稱《衛報》在書中公開了用來解開加密檔的密碼，《衛報》的報導則寫該報當時理解那是只放幾小時的暫時檔案。到 2026 年 11 月 23 日，OONI（網路審查量測計畫）8 月以來在台灣的 1,196 次測試有 1,121 次正常連上維基解密的網站，站上仍能搜尋這批電報。公開對話截圖或文件之前，可以照當年報社遮蔽電報的做法，除了人名也遮掉能認出身分的地名與日期。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>1986 年神奈川縣警竊聽日本共產黨幹部電話的事件</title>
 <link>https://anoni.net/news/history/11-27/#y2026</link>
@@ -182,15 +192,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你的桌機版 Firefox 從 2022 年 6 月起預設讓 Cookie 只能在建立它的網站使用，2026 年 11 月查證時開發中的原始碼仍是如此。這一天，Mozilla 基金會釋出 Firefox 1.0，內建彈出視窗阻擋與協助防範釣魚網站的功能。</description>
 <content:encoded>&lt;p&gt;你的桌機版 Firefox 存下的 Cookie（網站存進瀏覽器的小檔案）預設只能在建立它的網站使用，這項預設從 2022 年 6 月開始，到 2026 年 11 月 8 日查證時開發中的 Firefox 原始碼仍這樣設定。Mozilla 的公告寫到，追蹤公司因此無法用這些 Cookie 跨網站記錄你瀏覽過哪些網站。2004 年 11 月 9 日 Mozilla 基金會釋出 Firefox 1.0，新聞稿列出的功能有內建的彈出視窗阻擋，以及顯示安全網站真實身分、協助防範釣魚與偽冒網站的設計。Firefox 也從 2019 年 9 月起對所有使用者預設開啟追蹤保護，封鎖追蹤器清單上的第三方 Cookie（網頁裡嵌入的廣告或分析服務存下的 Cookie）。Cookie 只限建立它的網站使用是目前查證過的預設，用 Firefox 的讀者沒有自行調整過就不需要另外設定這一項，用其他瀏覽器的讀者可以到設定裡找有沒有封鎖追蹤 Cookie 的選項。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>台灣業者把個資傳到國外時的把關機關</title>
-<link>https://anoni.net/news/history/11-08/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/11-08/2026</guid>
-<pubDate>Sun, 08 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的個資被台灣的業者傳到國外時，目前（2026 年 11 月查證）由業者所屬的中央目的事業主管機關把關。這一天，歐洲理事會開放簽署一份議定書，要求締約方設立完全獨立的個資監督機關並限制個資傳到保護不足的非締約國家或組織。</description>
-<content:encoded>&lt;p&gt;你的個資被台灣的業者傳到國外時，現行個資法只讓中央目的事業主管機關在涉及國家重大利益、接受國的個資法規不完善等四種情形下可以限制業者傳輸。2001 年 11 月 8 日，歐洲理事會（Council of Europe，跟歐盟是不同的組織）開放簽署《個人資料自動化處理之個人保護公約》的附加議定書，要求每個締約方設立完全獨立行使職權、受理任何人對個資處理提出申訴的監督機關。議定書也規定接收個資的非締約國家或組織必須有足夠的保護程度，但有兩種例外：國內法基於當事人的特定利益或正當且優先的利益（尤其是重要的公共利益）而允許傳輸，或傳輸的一方提供經主管機關認可的保障（例如契約條款）。台灣個資法 2023 年增訂的條文把主管機關定為個人資料保護委員會，2025 年 11 月 11 日修正公布的條文也讓委員會可以限制業者把個資傳到國外。兩者都尚未施行：全國法規資料庫到 11 月 7 日查證時仍標示最後生效日期「未定」，施行前業者處理個資仍由所屬的中央目的事業主管機關或直轄市、縣市政府監管。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>
