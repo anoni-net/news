@@ -1,6 +1,8 @@
 ---
 title: Law enforcement claims tying Pixel phones and GrapheneOS to crime, and the disputes around them
+short_title: Disputed police claims about GrapheneOS
 description: In September a police source in Toronto told The Globe and Mail that a key phone in a shooting investigation runs GrapheneOS, a privacy-hardened operating system that supports only Pixel phones, and that investigators had not been able to unlock it. From 31 October the GrapheneOS account posted a series of messages alleging a state-sponsored smear campaign in the Netherlands and Germany. Law enforcement in Canada, Spain and France and GrapheneOS each give their own account of who uses it, whether it can be unlocked and what developers are responsible for.
+meta_description: Law enforcement in Canada, Spain and France and the GrapheneOS project give differing accounts of who uses GrapheneOS and whether it can be unlocked.
 date: 2026-11-06T00:05:00+08:00
 slug: police-pixel-crime-claims
 categories:

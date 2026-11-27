@@ -1,5 +1,6 @@
 ---
 title: Character.AI's bankruptcy sale and the handling of user chats
+short_title: Character.AI's bankruptcy and user chats
 description: Character Technologies, the company behind the chatbot platform Character.AI, filed for bankruptcy in the US in October and plans to sell its assets. The U.S. Trustee at the Justice Department and 39 states plus Washington, D.C. asked the court to appoint a privacy ombudsman to advise on whether, and on what terms, user data can be sold with the assets, while the company argues that its privacy policy already permits the transfer. According to MLex, the judge did not require an appointment on 30 October but encouraged the company to consider one.
 date: 2026-11-05T00:05:00+08:00
 slug: character-ai-chats-sale

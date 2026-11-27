@@ -1,5 +1,6 @@
 ---
 title: User data Telegram handed over to US law enforcement
+short_title: Telegram user data handed to US authorities
 description: A newly filed US federal court record includes a letter in which Telegram provided a user's phone number, user ID and IP address under a court order. Since September 2024, Telegram's privacy policy has allowed it to hand over IP addresses and phone numbers in criminal cases involving violations of its Terms of Service, no longer only for terror suspects, and the clause has no regional limit. As of 20 October, we had not seen a public response from Telegram to the filing.
 date: 2026-10-22T00:05:00+08:00
 slug: telegram-data-us-court

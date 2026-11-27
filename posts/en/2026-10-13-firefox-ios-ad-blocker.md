@@ -1,5 +1,6 @@
 ---
 title: Firefox for iOS's built-in ad blocker and system-level blocking on Android
+short_title: Firefox for iOS's built-in ad blocker
 description: Firefox on iPhone and iPad now has a built-in ad blocker, first listed in the 156 release notes in mid-September. It is off by default. On Android, the system-level options surveyed in a personal blog post mostly mean trusting whoever runs the service or app.
 date: 2026-10-13T00:05:00+08:00
 slug: firefox-ios-ad-blocker

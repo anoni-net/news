@@ -1,6 +1,8 @@
 ---
 title: Facial recognition and mall cameras in Hong Kong's SmartView programme
+short_title: Facial recognition in Hong Kong's SmartView
 description: According to Hong Kong media reports of a police briefing on 5 November, facial recognition is due to be added to the SmartView programme within November, and cameras at the first malls could be connected by the end of the year. The police said the connection complies with Hong Kong's privacy law, but as of 8 November we could find no public response from the Office of the Privacy Commissioner for Personal Data, and neither facial recognition nor the mall connection had been announced as launched. People who live in Hong Kong or travel there for leisure or business may have their images sent into the police system when they pass through a connected mall, and places outside Hong Kong are not affected.
+meta_description: Per reports of a police briefing, SmartView is to add facial recognition in November, and the first Hong Kong mall cameras could be linked by year-end.
 date: 2026-11-09T00:05:00+08:00
 slug: hk-mall-facial-recognition
 categories:

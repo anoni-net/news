@@ -1,6 +1,8 @@
 ---
 title: Two tiers of iCloud Advanced Data Protection in the UK
+short_title: iCloud Advanced Data Protection in the UK
 description: Since February 2025 new UK users cannot turn on Advanced Data Protection, while those who enabled it earlier keep it, leaving two levels of iCloud encryption in the same country. Users outside the UK can still turn it on.
+meta_description: Since February 2025 new UK users cannot turn on iCloud Advanced Data Protection, while earlier users keep it. Users outside the UK can still turn it on.
 date: 2026-09-27T07:28:00+08:00
 slug: uk-icloud-advanced-data-protection
 categories:

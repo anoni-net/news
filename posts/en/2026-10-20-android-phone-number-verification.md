@@ -1,6 +1,8 @@
 ---
 title: Automatic phone number verification on Android and the linking of Google accounts
+short_title: Android automatic phone number verification
 description: Android phones verify phone numbers automatically by default and add them to every Google Account signed in on the phone, including work and secondary accounts. Verification can be turned off in settings, but according to Android Authority, numbers already added have to be removed from each account one by one. As of 18 October, we had not seen a public response from Google.
+meta_description: Android verifies phone numbers by default and adds them to every Google Account signed in on the phone, including work and secondary accounts.
 date: 2026-10-20T00:00:00+08:00
 slug: android-phone-number-verification
 categories:
