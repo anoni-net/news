@@ -961,6 +961,13 @@ p {
     font-size: 0.875rem;
 }
 
+/* 相關的文件與工具：連到文件站與 Gears，第一行是網站名稱，版面跟同一事件的導讀相同 */
+.tools {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 3px solid var(--c-rule);
+}
+
 /* 同分類的其他導讀，上緣用分類的顏色，跟同一事件的導讀區分 */
 .related {
     margin: 2rem 0 0;
@@ -1313,6 +1320,7 @@ p {
     }
 
     .story ~ .thread,
+    .story ~ .tools,
     .story ~ .related,
     .story ~ .column-invite,
     .story ~ .subscribe,
@@ -1756,6 +1764,7 @@ p {
     .subscribe,
     .pager,
     .thread,
+    .tools,
     .related,
     .masthead__bar {
         display: none !important;
