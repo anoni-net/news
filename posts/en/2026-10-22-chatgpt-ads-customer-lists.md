@@ -1,6 +1,8 @@
 ---
 title: Customer-list matching and conversation context in ChatGPT ads
 description: Advertisers on ChatGPT can upload lists of email addresses, phone numbers or mobile advertising IDs so that their ads reach only the people on those lists. Ads appear only on the Free and Go plans and began rolling out in Taiwan on 23 September. According to OpenAI's help page as of 20 October, ChatGPT still picks ads based on the current conversation after ad personalisation is turned off.
+short_title: ChatGPT ads and customer-list matching
+meta_description: ChatGPT's Custom Audiences match advertiser lists of emails, phone numbers or Android ad IDs against users. Targeting needs 25,000 matched users.
 date: 2026-10-22T00:00:00+08:00
 slug: chatgpt-ads-customer-lists
 categories:

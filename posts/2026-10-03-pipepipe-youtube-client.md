@@ -1,6 +1,7 @@
 ---
 title: 開源 YouTube 用戶端 PipePipe 5.4.0
 description: PipePipe 是從 NewPipe 分支出來的 Android 開源用戶端，不需要帳號與 Google Play 就能觀看 YouTube、NicoNico 與 BiliBili。5.4.0 改善了在電視上的操作，也修正了 12 個問題。
+meta_description: Android 開源 YouTube 用戶端 PipePipe 5.4.0 不需要帳號與 Google Play，可從 GitHub 下載 APK，或用 F-Droid、IzzyOnDroid 安裝。
 date: 2026-10-03T00:05:00+08:00
 slug: pipepipe-youtube-client
 categories:

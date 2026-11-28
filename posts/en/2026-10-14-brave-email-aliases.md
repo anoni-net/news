@@ -1,6 +1,7 @@
 ---
 title: Brave's Email Aliases
 description: Brave's desktop browser offers email aliases from version 1.94, letting you sign up with a forwarding address instead of your real one. Everyone gets five free, with a Brave account required. As of 12 October there is no mobile version, and Brave does not say whether you can reply from an alias.
+meta_description: Brave 1.94 on desktop adds email aliases, five free with a Brave account, set up at brave://settings/email-aliases. No mobile version as of 12 October.
 date: 2026-10-14T00:05:00+08:00
 slug: brave-email-aliases
 categories:
