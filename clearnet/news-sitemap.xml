@@ -99,37 +99,4 @@
 <news:title>South Korea&#39;s biodata bill and the dispute over research use of health data</news:title>
 </news:news>
 </url>
-<url>
-<loc>https://anoni.net/news/2026/11/circumvolve/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-27T00:00:00+08:00</news:publication_date>
-<news:title>用大型語言模型搜尋審查規避策略的 CircumVolve 研究</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/circumvolve/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-27T00:00:00+08:00</news:publication_date>
-<news:title>用大型语言模型搜索审查规避策略的 CircumVolve 研究</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/circumvolve/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-27T00:00:00+08:00</news:publication_date>
-<news:title>CircumVolve, a study using large language models to search for censorship evasion strategies</news:title>
-</news:news>
-</url>
 </urlset>
