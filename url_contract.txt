@@ -319,6 +319,9 @@
 /2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
+/2026/11/hermes-hf-radio/
+	#perspective
+	#sources
 /2026/11/hk-laguna-city-facial-recognition/
 	#perspective
 	#sources
@@ -445,6 +448,14 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/2026/11/weekly-brief-2026-w48/
+	#france-dns-pharos
+	#garante-meta-camera-roll
+	#gpgme-double-free
+	#optimizely-malware
+	#securedrop-workstation-usb
+	#sources
+	#ublock-origin-element-picker
 /2026/11/windows-dev-tool-telemetry/
 	#perspective
 	#sources
@@ -801,6 +812,9 @@
 /en/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
+/en/2026/11/hermes-hf-radio/
+	#perspective
+	#sources
 /en/2026/11/hk-laguna-city-facial-recognition/
 	#perspective
 	#sources
@@ -927,6 +941,14 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/en/2026/11/weekly-brief-2026-w48/
+	#france-dns-pharos
+	#garante-meta-camera-roll
+	#gpgme-double-free
+	#optimizely-malware
+	#securedrop-workstation-usb
+	#sources
+	#ublock-origin-element-picker
 /en/2026/11/windows-dev-tool-telemetry/
 	#perspective
 	#sources
@@ -1092,6 +1114,8 @@
 	#y2026
 /en/history/11-27/
 	#y2026
+/en/history/11-28/
+	#y2026
 /en/history/11-29/
 	#y2026
 /en/history/12-15/
@@ -1235,6 +1259,8 @@
 /history/11-26/
 	#y2026
 /history/11-27/
+	#y2026
+/history/11-28/
 	#y2026
 /history/11-29/
 	#y2026
@@ -1570,6 +1596,9 @@
 /zh-cn/2026/11/grapheneos-pixel-11/
 	#perspective
 	#sources
+/zh-cn/2026/11/hermes-hf-radio/
+	#perspective
+	#sources
 /zh-cn/2026/11/hk-laguna-city-facial-recognition/
 	#perspective
 	#sources
@@ -1696,6 +1725,14 @@
 	#sources
 	#tails-tor-browser
 	#zcash-nu7
+/zh-cn/2026/11/weekly-brief-2026-w48/
+	#france-dns-pharos
+	#garante-meta-camera-roll
+	#gpgme-double-free
+	#optimizely-malware
+	#securedrop-workstation-usb
+	#sources
+	#ublock-origin-element-picker
 /zh-cn/2026/11/windows-dev-tool-telemetry/
 	#perspective
 	#sources
@@ -1860,6 +1897,8 @@
 /zh-cn/history/11-26/
 	#y2026
 /zh-cn/history/11-27/
+	#y2026
+/zh-cn/history/11-28/
 	#y2026
 /zh-cn/history/11-29/
 	#y2026
