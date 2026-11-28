@@ -4,6 +4,8 @@
 
 三個地方的規定各自處理不同的事。新加坡管 App 商店的年齡確認，中國大陸管終端的未成年人模式，日本管手機販售時的內容過濾。三者的文件都沒有寫出加州 AB 1043 那種「作業系統在帳號設定時蒐集年齡，再用 API 把年齡範圍傳給 App」的設計，各地的條目另寫明文件裡有沒有對應的條文。
 
+線上服務本身（遊戲、社群平台）層級的年齡確認與實名規定另見 `age-assurance-online-services-asia.md`。
+
 ## 新加坡
 
 - 事實：資訊通信媒體發展局（IMDA）依廣播法（Broadcasting Act 1994）第 45L 條發布《Code of Practice for Online Safety – App Distribution Services》，2025 年 3 月 31 日生效，適用於依該法第 45K(1) 條指定的 App 發行服務（App Distribution Services，簡稱 ADS）
