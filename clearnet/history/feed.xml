@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隱私、匿名網路與網路審查在同一天發生過的事，每年同一天增補一段。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 28 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 29 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>1934 年公布的戒嚴法與郵電檢查</title>
+<link>https://anoni.net/news/history/11-29/#y2026</link>
+<guid isPermaLink="false">anoni-news:history/11-29/2026</guid>
+<pubDate>Sun, 29 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>這一天，國民政府公布施行戒嚴法，後來修正的條文讓戒嚴地區的最高司令官可以拆閱郵件與電報。你在台灣的通訊若在偵查中被監察，到 2026 年 11 月 21 日要由檢察官向法院聲請監察書。</description>
+<content:encoded>&lt;p&gt;國民政府在 1934 年 11 月 29 日公布施行戒嚴法，1948 年修正後的條文讓戒嚴地區的最高司令官可以拆閱郵件與電報。台灣從 1949 年 5 月 20 日起成為戒嚴地區，到 1987 年 7 月 15 日才解嚴。依國家人權記憶庫的條目，警備總司令部在 1958 年由保安司令部等四個單位合編而成，負責郵電檢查的特檢處前身是保安司令部特檢處。條目記載特檢處在全台設有 34 個特檢組。&lt;/p&gt;
+&lt;p&gt;解嚴之後，《戡亂時期郵電抽查條例》又施行了約 7 年半，到 1995 年才廢止。條例讓軍方會同地方行政機關，報請行政院核准後抽查郵電。1999 年制定的《通訊保障及監察法》規範通訊監察，偵查中原本由檢察官核發監察書。2007 年大法官解釋時認定這項規定不符憲法保障的秘密通訊自由。到 2026 年 11 月 21 日，偵查中的監察書要由檢察官向法院聲請、由法院核發。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>2010 年維基解密開始公開的美國外交電報</title>
 <link>https://anoni.net/news/history/11-28/#y2026</link>
@@ -183,15 +193,6 @@
 <dc:creator>anoni.net 社群</dc:creator>
 <description>你在緬甸的朋友手機上的 Signal，依 Freedom House 的紀錄在 2024 年被當局封鎖過。這一天，緬甸監獄裡的特別法庭不公開審理，判處一名部落客 20 年 6 個月徒刑。</description>
 <content:encoded>&lt;p&gt;你用 Signal 聯絡緬甸的朋友或同事時，依 Freedom House 2025 年的報告，對方那端的 Signal 與主要的 VPN（把連線先轉到其他主機、常用來避開封鎖的服務）在 2024 年 6、7 月間被當局封鎖。2025 年 1 月頒布的《網路安全法》依非官方英譯規定設立或提供 VPN 要先取得主管部會的許可，RFA 的報導寫成處罰未經許可提供，Access Now 則寫成使用 VPN 也入罪。依新聞自由組織 RSF 的報導，一名在仰光經營網咖、寫部落格的部落客被捕時持有軍政府禁止的影片。2008 年 11 月 10 日仰光永盛監獄（Insein）裡的特別法庭判處他 20 年 6 個月徒刑，另一個新聞自由組織 CPJ 記載審理不公開、其中 15 年依據「電子法」，他在 2012 年 1 月的特赦中獲釋。網路審查觀測計畫 OONI 在 2026 年 7 到 9 月的緬甸網站連線測試，每月有約 2.7 萬到 3.9 萬筆量測結果被標為異常（異常不等於確認封鎖），想了解當地連線狀況的讀者可以在 OONI Explorer 查詢。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Firefox 預設開啟的追蹤保護</title>
-<link>https://anoni.net/news/history/11-09/#y2026</link>
-<guid isPermaLink="false">anoni-news:history/11-09/2026</guid>
-<pubDate>Mon, 09 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>你的桌機版 Firefox 從 2022 年 6 月起預設讓 Cookie 只能在建立它的網站使用，2026 年 11 月查證時開發中的原始碼仍是如此。這一天，Mozilla 基金會釋出 Firefox 1.0，內建彈出視窗阻擋與協助防範釣魚網站的功能。</description>
-<content:encoded>&lt;p&gt;你的桌機版 Firefox 存下的 Cookie（網站存進瀏覽器的小檔案）預設只能在建立它的網站使用，這項預設從 2022 年 6 月開始，到 2026 年 11 月 8 日查證時開發中的 Firefox 原始碼仍這樣設定。Mozilla 的公告寫到，追蹤公司因此無法用這些 Cookie 跨網站記錄你瀏覽過哪些網站。2004 年 11 月 9 日 Mozilla 基金會釋出 Firefox 1.0，新聞稿列出的功能有內建的彈出視窗阻擋，以及顯示安全網站真實身分、協助防範釣魚與偽冒網站的設計。Firefox 也從 2019 年 9 月起對所有使用者預設開啟追蹤保護，封鎖追蹤器清單上的第三方 Cookie（網頁裡嵌入的廣告或分析服務存下的 Cookie）。Cookie 只限建立它的網站使用是目前查證過的預設，用 Firefox 的讀者沒有自行調整過就不需要另外設定這一項，用其他瀏覽器的讀者可以到設定裡找有沒有封鎖追蹤 Cookie 的選項。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

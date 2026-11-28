@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/en/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>One event a day from the history of privacy, anonymity networks and censorship, with a new look back added on the same date every year.</description>
 <language>en</language>
-<lastBuildDate>Sat, 28 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 29 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>The 1934 Martial Law Act and the inspection of mail and telegrams</title>
+<link>https://anoni.net/news/en/history/11-29/#y2026</link>
+<guid isPermaLink="false">anoni-news:en/history/11-29/2026</guid>
+<pubDate>Sun, 29 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>On this day, the Nationalist government promulgated the Martial Law Act, whose later amended text let the supreme commander of a martial law area open mail and telegrams. In Taiwan, a warrant to monitor communications during a criminal investigation is now requested by a prosecutor and issued by a court (as of 21 November 2026).</description>
+<content:encoded>&lt;p&gt;On 29 November 1934, the Nationalist government promulgated the Martial Law Act (戒嚴法), and its text as amended in 1948 allowed the supreme commander of an area under martial law to open mail and telegrams. Taiwan became a martial law area on 20 May 1949 and stayed one until martial law was lifted on 15 July 1987. According to an entry in the National Human Rights Memory Bank (國家人權記憶庫), the Taiwan Garrison Command was formed in 1958 by merging four units, including the Taiwan Provincial Security Command. Its Special Inspection Department, which inspected mail and telegrams, grew out of a department of the same name in the Security Command. The entry says the department had 34 inspection teams across Taiwan.&lt;/p&gt;
+&lt;p&gt;After martial law ended, the statute on spot checks of mail and telegrams (戡亂時期郵電抽查條例) stayed in force for about seven and a half years, until it was abolished in 1995. It let military commands inspect mail and telegrams after the military and local administrative authorities obtained approval from the Executive Yuan (the cabinet). Taiwan&#39;s Communication Security and Surveillance Act of 1999 originally let prosecutors issue surveillance warrants during investigations, and in 2007 the Council of Grand Justices held that this did not conform to the freedom of confidential communication protected by the Constitution. As of 21 November 2026, a warrant during an investigation must be requested by a prosecutor and issued by a court. In mainland China, a separate Martial Law (戒严法) adopted in 1996 lets the authorities enforcing martial law decide, while it is in effect, to impose controls on communications, post and telecommunications in the affected areas (Article 13).&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>The US diplomatic cables WikiLeaks began releasing in 2010</title>
 <link>https://anoni.net/news/en/history/11-28/#y2026</link>
@@ -183,15 +193,6 @@
 <dc:creator>anoni.net community</dc:creator>
 <description>Signal on your friends&#39; phones in Myanmar was blocked by the authorities in 2024, according to Freedom House. On this day, a special court inside a Myanmar prison sentenced a blogger to 20 years and six months after a closed trial.</description>
 <content:encoded>&lt;p&gt;If you message friends or colleagues in Myanmar on Signal, Freedom House&#39;s 2025 report says authorities there blocked Signal and major VPNs (services that route your connection through another server, often to get around blocking) in June and July 2024, before the military adopted a Cybersecurity Law in January 2025. Under an unofficial English translation, the law requires ministry permission to set up or provide a VPN; RFA reported it as penalising unauthorised provision, while Access Now said it also criminalises use. According to the press freedom group RSF, a blogger who ran internet cafés in Yangon was arrested with a video banned by the military government, and on 10 November 2008 a special court inside Yangon&#39;s Insein Prison sentenced him to 20 years and six months. CPJ, another press freedom group, recorded that the trial was held behind closed doors and that 15 years of the sentence came under the &#34;Electronic Act&#34;, and he was freed in an amnesty in January 2012. In website connection tests run in Myanmar by the censorship measurement project OONI from July to September 2026, about 27,000 to 39,000 results a month were flagged as anomalous (an anomaly is not a confirmed block), and you can look up local connectivity on OONI Explorer.&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Firefox&#39;s default tracking protection</title>
-<link>https://anoni.net/news/en/history/11-09/#y2026</link>
-<guid isPermaLink="false">anoni-news:en/history/11-09/2026</guid>
-<pubDate>Mon, 09 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>Firefox on your desktop has by default let a cookie be used only on the site that created it since June 2022, and Firefox&#39;s development source code was still set that way when checked in November 2026. On this day, the Mozilla Foundation released Firefox 1.0 with a built-in pop-up blocker and features to help guard against phishing sites.</description>
-<content:encoded>&lt;p&gt;Firefox on your desktop by default lets a cookie (a small file a website stores in your browser) be used only on the site that created it. Mozilla&#39;s June 2022 announcement said this default applies to all Firefox desktop users worldwide and stops tracking companies from following your browsing across sites, and it was still set that way in Firefox&#39;s development source code when we checked on 8 November 2026. On 9 November 2004, the Mozilla Foundation released Firefox 1.0, available in Japanese the same day according to Japan&#39;s Internet Watch, and its press release listed a built-in pop-up blocker and a clear display of secure sites&#39; real identity to help guard against phishing and spoofed sites. In mainland China, the Chinese news site IT之家 and CyberInsider reported in July 2025 that Beijing Firefox (北京谋智火狐信息技术有限公司), Firefox&#39;s local operator, would end its account, sync and community services later that year, though the browser could still be downloaded from firefox.com. If you use Firefox and have not changed the cookie setting, you do not need to turn anything on, and on other browsers you can look for an option to block tracking cookies.&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

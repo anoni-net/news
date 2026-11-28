@@ -6,7 +6,17 @@
 <atom:link href="https://anoni.net/news/zh-cn/history/feed.xml" rel="self" type="application/rss+xml"/>
 <description>每天回看隐私、匿名网络与网络审查在同一天发生过的事，每年同一天增补一段。</description>
 <language>zh-CN</language>
-<lastBuildDate>Sat, 28 Nov 2026 00:10:00 +0800</lastBuildDate>
+<lastBuildDate>Sun, 29 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>1934 年公布的戒严法与邮电检查</title>
+<link>https://anoni.net/news/zh-cn/history/11-29/#y2026</link>
+<guid isPermaLink="false">anoni-news:zh-cn/history/11-29/2026</guid>
+<pubDate>Sun, 29 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社区</dc:creator>
+<description>这一天，国民政府公布施行戒严法，后来修正的条文让戒严地区的最高司令官可以拆阅邮件与电报。中国大陆 1996 年通过的《戒严法》规定，戒严期间可由戒严实施机关决定管制通讯。</description>
+<content:encoded>&lt;p&gt;国民政府在 1934 年 11 月 29 日公布施行戒严法，1948 年修正后的条文让戒严地区的最高司令官可以拆阅邮件与电报。台湾从 1949 年 5 月 20 日起成为戒严地区，到 1987 年 7 月 15 日才解严。依国家人权记忆库的条目，警备总司令部在 1958 年由保安司令部等四个单位合编而成，负责邮电检查的特检处前身是保安司令部特检处。条目记载特检处在台湾各地设有 34 个特检组。&lt;/p&gt;
+&lt;p&gt;解严之后，《戡乱时期邮电抽查条例》让军方会同地方行政机关报请行政院核准后抽查邮电。条例又施行了约 7 年半，到 1995 年才废止。台湾 1999 年制定《通讯保障及监察法》规范通讯监察，现在侦查中的监察书由检察官向法院申请、由法院核发。在中国大陆，1996 年通过的《戒严法》第十三条规定，戒严实施机关在戒严期间可以决定对戒严地区实行通讯、邮政、电信管制。&lt;/p&gt;</content:encoded>
+</item>
 <item>
 <title>2010 年维基解密开始公开的美国外交电报</title>
 <link>https://anoni.net/news/zh-cn/history/11-28/#y2026</link>
@@ -183,15 +193,6 @@
 <dc:creator>anoni.net 社区</dc:creator>
 <description>你在缅甸的朋友手机上的 Signal，依 Freedom House 的记录在 2024 年被当局封锁过。这一天，缅甸监狱里的特别法庭不公开审理，判处一名博主 20 年 6 个月徒刑。</description>
 <content:encoded>&lt;p&gt;你用 Signal 联系缅甸的朋友或同事时，依 Freedom House 2025 年的报告，对方那端的 Signal 与主要的 VPN（把连接先转到其他主机、常用来避开封锁的服务）在 2024 年 6、7 月间被当局封锁。2025 年 1 月颁布的《网络安全法》依非官方英译规定设立或提供 VPN 要先取得主管部委的许可，RFA 的报道写成处罚未经许可提供，Access Now 则写成使用 VPN 也入罪。新闻自由组织 RSF 报道一名在仰光经营网吧并写博客的博主被捕时持有军政府禁止的视频，2008 年 11 月 10 日仰光永盛监狱（Insein）的特别法庭判处他 20 年 6 个月徒刑（CPJ 记载审理不公开、其中 15 年依据“电子法”），他在 2012 年 1 月的特赦中获释。在中国大陆，工信部 2017 年的通知规定，未经批准不得自行建立或租用专线（含 VPN）开展跨境经营活动（条文限定经营活动，没有写个人使用，2026 年 10 月 7 日依工信部网站的文本查证）。&lt;/p&gt;</content:encoded>
-</item>
-<item>
-<title>Firefox 默认开启的跟踪保护</title>
-<link>https://anoni.net/news/zh-cn/history/11-09/#y2026</link>
-<guid isPermaLink="false">anoni-news:zh-cn/history/11-09/2026</guid>
-<pubDate>Mon, 09 Nov 2026 00:10:00 +0800</pubDate>
-<dc:creator>anoni.net 社区</dc:creator>
-<description>你的桌面版 Firefox 从 2022 年 6 月起默认让 Cookie 只能在创建它的网站使用，2026 年 11 月查证时开发中的源代码仍是如此。这一天，Mozilla 基金会发布 Firefox 1.0，内置弹出窗口拦截与协助防范钓鱼网站的功能。</description>
-<content:encoded>&lt;p&gt;依 Mozilla 2022 年的公告，不分所在地，你的桌面版 Firefox 存下的 Cookie（网站存进浏览器的小文件）默认只能在创建它的网站使用（2022 年 6 月起，2026 年 11 月 8 日查证时开发中的 Firefox 源代码仍这样设置）。2004 年 11 月 9 日 Mozilla 基金会发布 Firefox 1.0，新闻稿列出的功能有内置的弹出窗口拦截，以及显示安全网站真实身份、协助防范钓鱼与仿冒网站的设计。在中国大陆，Firefox 中国版的账号与同步服务原由北京谋智火狐信息技术有限公司运营，依 IT之家转载的公告在 2025 年 9 月底停止。公告写到 Mozilla 与该公司 2025 年 5 月 8 日达成一致，浏览器本身继续可用（停止日在转载的公告写 9 月 29 日，Wikipedia 写 9 月 24 日，Mozilla 与北京火狐的原公告未能取得）。&lt;/p&gt;</content:encoded>
 </item>
 </channel>
 </rss>

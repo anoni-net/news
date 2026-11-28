@@ -66,37 +66,4 @@
 <news:title>HERMES and Mercury, open-source systems for sending email over shortwave radio</news:title>
 </news:news>
 </url>
-<url>
-<loc>https://anoni.net/news/2026/11/korea-health-data-bill/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-tw</news:language>
-</news:publication>
-<news:publication_date>2026-11-27T00:05:00+08:00</news:publication_date>
-<news:title>韓國國會的生物資料法案與健康資料研究利用的爭議</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/zh-cn/2026/11/korea-health-data-bill/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>zh-cn</news:language>
-</news:publication>
-<news:publication_date>2026-11-27T00:05:00+08:00</news:publication_date>
-<news:title>韩国国会的生物数据法案与健康数据研究利用的争议</news:title>
-</news:news>
-</url>
-<url>
-<loc>https://anoni.net/news/en/2026/11/korea-health-data-bill/</loc>
-<news:news>
-<news:publication>
-<news:name>anoni.net</news:name>
-<news:language>en</news:language>
-</news:publication>
-<news:publication_date>2026-11-27T00:05:00+08:00</news:publication_date>
-<news:title>South Korea&#39;s biodata bill and the dispute over research use of health data</news:title>
-</news:news>
-</url>
 </urlset>
