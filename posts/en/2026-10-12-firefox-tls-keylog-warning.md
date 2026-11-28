@@ -1,6 +1,7 @@
 ---
 title: Firefox 157's TLS key logging warning
 description: Firefox 157 for desktop, released on 29 September, shows a warning when the computer is set up to record encryption keys. Mozilla's support page says antivirus or security software is the most likely cause and the warning does not mean the computer is infected. If sites fail to load, check that software's HTTPS scanning first.
+meta_description: Firefox 157 on desktop warns when SSLKEYLOGFILE is set, most often by antivirus HTTPS scanning. It does not mean infection; check that software first.
 date: 2026-10-12T00:00:00+08:00
 slug: firefox-tls-keylog-warning
 categories:

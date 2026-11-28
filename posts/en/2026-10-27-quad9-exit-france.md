@@ -1,6 +1,8 @@
 ---
 title: Quad9's exit from France and French DNS blocking orders
 description: Public DNS resolver Quad9 announced on 22 October that from 24 November it will stop serving users located in France. According to Quad9, a French court applying anti-piracy rules for sports broadcasts ordered it to block a list of domains for users in France. We compare how Taiwan, India and Japan handle site blocking.
+short_title: Quad9's exit from France over DNS blocking
+meta_description: Quad9 said it would stop serving users in France from 24 November rather than block sports piracy domains under a court order sought by beIN.
 date: 2026-10-27T00:00:00+08:00
 slug: quad9-exit-france
 categories:
