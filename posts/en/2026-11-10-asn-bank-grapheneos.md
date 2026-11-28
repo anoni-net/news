@@ -9,6 +9,9 @@ categories:
   - finance
 regions:
   - NL
+related:
+  - title: GrapheneOS, a hardened mobile operating system
+    url: https://anoni.net/docs/en/tools/grapheneos/
 sources:
   - title: ASN Bank
     url: https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105

@@ -5,6 +5,9 @@ date: 2026-10-14T00:05:00+08:00
 slug: brave-email-aliases
 categories:
   - tracking
+related:
+  - title: 郵件別名怎麼用，以及它把信任交給誰
+    url: https://anoni.net/docs/tools/email-alias/
 sources:
   - title: Brave launches Email Aliases to keep your personal email address private from websites
     url: https://brave.com/privacy-updates/39-email-aliases/

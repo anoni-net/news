@@ -5,6 +5,11 @@ date: 2026-10-09T00:10:00+08:00
 slug: gmail-attachment-preview-phishing
 categories:
   - security
+related:
+  - title: 網路釣魚的辨識與防範
+    url: https://anoni.net/docs/tools/phishing/
+  - title: 信件檢查，判斷釣魚信與假冒的通知信
+    url: https://anoni.net/gears/email-check/
 sources:
   - title: China-nexus UAT-11587 targets government and policy organizations across Asia with Antino backdoor
     url: https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/

@@ -1,0 +1,36 @@
+# 文章頁「相關的文件與工具」可以連的 Gears 頁面，一行一個路徑，寫 zh-TW 的寫法。
+# zh-CN 與 en 的網址在 /gears/ 後面多一段 zh-cn/ 或 en/，比對時拿掉那一段。
+# 取自 https://anoni.net/gears/sitemap.xml 的 zh-TW 頁面，Gears 新增或改名工具頁時更新，見 SPEC.md「相關的文件與工具」。
+/gears/
+/gears/about/
+/gears/age-keygen/
+/gears/blend/
+/gears/decrypt/
+/gears/doc-check/
+/gears/email-check/
+/gears/encrypt/
+/gears/feedback/
+/gears/heic-to-jpeg/
+/gears/licenses/
+/gears/nearby/
+/gears/passphrase/
+/gears/pdf-pages/
+/gears/print-dots/
+/gears/privacy/
+/gears/qrcode/
+/gears/qr-read/
+/gears/redact/
+/gears/remote/
+/gears/remote-server/
+/gears/samples/
+/gears/software-verify/
+/gears/storage/
+/gears/strip-metadata/
+/gears/testing/
+/gears/text-crypt/
+/gears/transcribe/
+/gears/url-check/
+/gears/verify/
+/gears/video-frames/
+/gears/why/
+/gears/writing-style/

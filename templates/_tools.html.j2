@@ -1,0 +1,13 @@
+{# 相關的文件與工具：讀完導讀觀點的最後一段之後，接著會用到的文件站或 Gears 頁面，由 front matter 的 related 指定。
+   放在 <article> 外面並標上 role，閱讀模式、朗讀與 RSS 都不會讀到。規則見 SPEC.md「相關的文件與工具」 #}
+<nav class="tools" role="navigation" aria-labelledby="tools-heading">
+  <h2 class="thread__heading" id="tools-heading">{{ s.tools_heading }}</h2>
+  <ul class="thread__list">
+{% for page in post.related_pages %}
+    <li class="thread__item">
+      <span class="thread__date">{{ s['tools_site_' ~ page.site] }}</span>
+      <a class="thread__title" href="{{ page.url }}"{{ track("next-read-click", block="tools") }}>{{ page.title }}</a>
+    </li>
+{% endfor %}
+  </ul>
+</nav>

@@ -7,6 +7,9 @@ date: 2026-10-20T00:00:00+08:00
 slug: android-phone-number-verification
 categories:
   - tracking
+related:
+  - title: Phone privacy settings, step by step
+    url: https://anoni.net/docs/en/tools/phone-privacy-settings/
 sources:
   - title: Manage phone number verification on your device
     url: https://support.google.com/android/answer/7521240?hl=en

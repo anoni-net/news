@@ -172,6 +172,72 @@ def test_head_uses_short_title_and_capped_description(tmp_path):
     assert long.strip() in feed
 
 
+RELATED_DOCS = "related:\n  - title: 威脅模型\n    url: https://anoni.net/docs/basics/threat-model/\n"
+
+
+def test_related_pages_load(tmp_path):
+    text = GOOD.replace("authors:", RELATED_DOCS + "  - title: 清除中繼資料\n    url: https://anoni.net/gears/strip-metadata/\nauthors:")
+    post = build.load_post(write_post(tmp_path, text), AUTHORS)
+    assert [(p.site, p.url) for p in post.related_pages] == [
+        ("docs", "https://anoni.net/docs/basics/threat-model/"),
+        ("gears", "https://anoni.net/gears/strip-metadata/"),
+    ]
+
+
+@pytest.mark.parametrize("block, expected", [
+    ("related: []\n", "related 要是清單"),
+    ("related:\n  - url: https://anoni.net/docs/basics/threat-model/\n", "要有 title（連結文字）與 url"),
+    ("related:\n  - title: x\n    url: https://example.org/\n", "要連到文件站"),
+    ("related:\n  - title: x\n    url: https://anoni.net/docs/en/basics/threat-model/\n", "要連到這個語系的版本"),
+    ("related:\n  - title: x\n    url: https://anoni.net/gears/no-such-tool/\n", "不在 gears_pages.txt 裡"),
+    ("related:\n" + "  - title: x\n    url: https://anoni.net/docs/basics/threat-model/\n" * 2, "related 有重複的網址"),
+    ("related:\n" + "".join(f"  - title: x\n    url: https://anoni.net/docs/p{i}/\n" for i in range(3)), "related 最多 2 筆"),
+])
+def test_related_pages_problems(tmp_path, block, expected):
+    problems = problems_of(tmp_path, GOOD.replace("authors:", block + "authors:"))
+    assert any(expected in p for p in problems), problems
+
+
+def test_related_pages_follow_the_language():
+    lang = build.LANGS[2]  # en
+    problems: list[str] = []
+    pages = build.parse_related([{"title": "x", "url": "https://anoni.net/gears/en/strip-metadata/"},
+                                 {"title": "y", "url": "https://anoni.net/docs/en/tools/rss/"}], lang, "en", problems)
+    assert not problems and [p.site for p in pages] == ["gears", "docs"]
+    build.parse_related([{"title": "x", "url": "https://anoni.net/docs/tools/rss/"}], lang, "en", problems)
+    assert any("https://anoni.net/docs/en/ 開頭" in p for p in problems), problems
+
+
+def test_related_docs_links_checked_against_contract(tmp_path):
+    text = GOOD.replace("authors:", "related:\n  - title: x\n    url: https://anoni.net/docs/basics/no-such-page/\nauthors:")
+    post = build.load_post(write_post(tmp_path, text), AUTHORS)
+    problems, _ = build.check_docs_links([post], build.parse_docs_contract(DOCS_CONTRACT))
+    assert any("related" in p for p in problems), problems
+
+
+def test_related_block_on_post_page(tmp_path):
+    """相關的文件與工具放在 <article> 外面，連結帶點擊事件；onion 改寫到各自的子網域，RSS 不收。"""
+    shutil.copytree(FIXTURES, tmp_path / "fixtures")
+    posts = tmp_path / "fixtures" / "posts"
+    zh = posts / "2026-09-18-zkp-age-verification.md"
+    text = zh.read_text(encoding="utf-8").replace(
+        "\nauthors:", "\nrelated:\n  - title: 威脅模型的白話說明\n    url: https://anoni.net/docs/basics/threat-model/\n"
+        "  - title: 清除照片的中繼資料\n    url: https://anoni.net/gears/strip-metadata/\nauthors:", 1)
+    zh.write_text(text, encoding="utf-8")
+    targets, _, _ = build.build(posts, tmp_path / "out")
+    page = (targets["clearnet"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    block = page[page.index('<nav class="tools"'):]
+    block = block[:block.index("</nav>")]
+    assert page.index("</article>") < page.index('<nav class="tools"')
+    assert "相關的文件與工具" in block and "文件站" in block and "檔案工作台" in block
+    assert 'href="https://anoni.net/gears/strip-metadata/" data-anoni-event="next-read-click" data-anoni-event-block="tools"' in block
+    assert 'data-anoni-event-block="pager"' in page
+    onion = (targets["onion"].out / "2026/09/zkp-age-verification/index.html").read_text(encoding="utf-8")
+    assert f'href="http://gears.{ONION_HOST}/strip-metadata/"' in onion
+    assert f'href="http://docs.{ONION_HOST}/basics/threat-model/"' in onion
+    assert "威脅模型的白話說明" not in (targets["clearnet"].out / "feed.xml").read_text(encoding="utf-8")
+
+
 def test_date_mapping(tmp_path):
     text = GOOD.replace("date: 2026-09-18", "date:\n  created: 2026-09-18\n  updated: 2026-09-20")
     post = build.load_post(write_post(tmp_path, text), AUTHORS)
@@ -298,6 +364,7 @@ def onion_target():
     ("https://anoni.net/news/2026/09/x/", "http://news."),
     ("https://anoni.net/docs/tools/", "http://docs."),
     ("https://form.anoni.net/s/abc", "http://form."),
+    ("https://anoni.net/gears/strip-metadata/", "http://gears."),
     ("https://anoni.net/", "http://anoninet"),
     ("https://example.org/", "https://example.org/"),
 ])
