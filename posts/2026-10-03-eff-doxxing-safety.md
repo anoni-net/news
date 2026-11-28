@@ -5,6 +5,11 @@ date: 2026-10-03T00:00:00+08:00
 slug: eff-doxxing-safety
 categories:
   - civil-society
+related:
+  - title: 密碼管理器入門
+    url: https://anoni.net/docs/tools/password-manager/
+  - title: 社群平台的隱私設定
+    url: https://anoni.net/docs/tools/social-media-settings/
 sources:
   - title: "Doxxing Safety Pt I: Prevention and Footprint Management"
     url: https://www.eff.org/deeplinks/2026/08/doxxing-safety-pt-i-prevention-and-footprint-management

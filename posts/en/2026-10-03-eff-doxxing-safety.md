@@ -5,6 +5,11 @@ date: 2026-10-03T00:00:00+08:00
 slug: eff-doxxing-safety
 categories:
   - civil-society
+related:
+  - title: Getting Started with Password Managers
+    url: https://anoni.net/docs/en/tools/password-manager/
+  - title: Social media privacy settings
+    url: https://anoni.net/docs/en/tools/social-media-settings/
 sources:
   - title: "Doxxing Safety Pt I: Prevention and Footprint Management"
     url: https://www.eff.org/deeplinks/2026/08/doxxing-safety-pt-i-prevention-and-footprint-management

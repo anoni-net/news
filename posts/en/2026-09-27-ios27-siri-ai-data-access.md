@@ -5,6 +5,11 @@ date: 2026-09-27T03:21:00+08:00
 slug: ios27-siri-ai-data-access
 categories:
   - tracking
+related:
+  - title: Phone privacy settings, step by step
+    url: https://anoni.net/docs/en/tools/phone-privacy-settings/
+  - title: Using AI at work without leaking data
+    url: https://anoni.net/docs/en/tools/ai-privacy/
 sources:
   - title: How to Limit What Apple's New Siri AI Can Access in iOS 27
     url: https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27

@@ -5,6 +5,9 @@ date: 2026-10-09T00:05:00+08:00
 slug: muse-dots-agent-memory-permissions
 categories:
   - tracking
+related:
+  - title: Using AI at work without leaking data
+    url: https://anoni.net/docs/en/tools/ai-privacy/
 sources:
   - title: "Introducing Muse: The World’s First Personal AI Agent Built for Everyone"
     url: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/

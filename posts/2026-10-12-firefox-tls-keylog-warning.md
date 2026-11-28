@@ -5,6 +5,9 @@ date: 2026-10-12T00:00:00+08:00
 slug: firefox-tls-keylog-warning
 categories:
   - security
+related:
+  - title: 惡意軟體的防範與處理
+    url: https://anoni.net/docs/tools/malware/
 sources:
   - title: Firefox 157.0, See All New Features, Updates and Fixes
     url: https://www.firefox.com/en-US/firefox/157.0/releasenotes/

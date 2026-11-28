@@ -5,6 +5,9 @@ date: 2026-09-27T07:28:00+08:00
 slug: uk-icloud-advanced-data-protection
 categories:
   - encryption
+related:
+  - title: 端对端加密的保护范围
+    url: https://anoni.net/docs/zh-cn/basics/e2ee/
 sources:
   - title: Apple can no longer offer Advanced Data Protection in the United Kingdom to new users
     url: https://support.apple.com/en-us/122234

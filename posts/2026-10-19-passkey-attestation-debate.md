@@ -5,6 +5,11 @@ date: 2026-10-19T00:05:00+08:00
 slug: passkey-attestation-debate
 categories:
   - security
+related:
+  - title: 什麼是 passkey
+    url: https://anoni.net/docs/tools/what-is-passkey/
+  - title: 密碼管理器入門
+    url: https://anoni.net/docs/tools/password-manager/
 sources:
   - title: Passkeys are a trap. Do not use them.
     url: https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them

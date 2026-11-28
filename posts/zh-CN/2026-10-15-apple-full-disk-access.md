@@ -7,6 +7,9 @@ categories:
   - tracking
 follows:
   - 2026-10-09-muse-dots-agent-memory-permissions
+related:
+  - title: 恶意软件的防范与处理
+    url: https://anoni.net/docs/zh-cn/tools/malware/
 sources:
   - title: Updates to Full Disk Access in macOS
     url: https://developer.apple.com/news/?id=p6zjojqw

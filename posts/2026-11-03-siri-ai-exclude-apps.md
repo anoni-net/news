@@ -10,6 +10,11 @@ follows:
 watch:
   - date: 2026-12-03
     note: Siri AI 是否加入中文，How to get Siri AI 說明頁與各地功能可用性頁的語言是否跟上 27.2 的版本說明，Google 是否讓 Gemini 的螢幕情境可以依 App 關閉
+related:
+  - title: 手機隱私設定逐步指引
+    url: https://anoni.net/docs/tools/phone-privacy-settings/
+  - title: 用 AI 工作時怎麼避免資料外洩
+    url: https://anoni.net/docs/tools/ai-privacy/
 sources:
   - title: About iOS 27 Updates
     url: https://support.apple.com/en-us/149076

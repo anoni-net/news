@@ -5,6 +5,9 @@ date: 2026-11-14T00:00:00+08:00
 slug: ios-full-tor-browser
 categories:
   - mobile
+related:
+  - title: Tor on a phone
+    url: https://anoni.net/docs/en/tools/tor-browser-mobile/
 sources:
   - title: "Brewing Onion Cider: Bringing a full Tor Browser to iOS"
     url: https://guardianproject.info/2026/11/02/brewing-onion-cider-bringing-a-full-tor-browser-to-ios/

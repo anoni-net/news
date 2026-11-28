@@ -5,6 +5,9 @@ date: 2026-10-25T00:00:00+08:00
 slug: browser-fingerprinting-cookies
 categories:
   - tracking
+related:
+  - title: A browser fingerprint cannot be cleared the way a cookie can
+    url: https://anoni.net/docs/en/basics/browser-fingerprinting/
 sources:
   - title: Our response to Google's policy change on fingerprinting
     url: https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/12/our-response-to-google-s-policy-change-on-fingerprinting/
