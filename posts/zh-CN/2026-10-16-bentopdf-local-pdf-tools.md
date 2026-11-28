@@ -5,6 +5,9 @@ date: 2026-10-16T00:00:00+08:00
 slug: bentopdf-local-pdf-tools
 categories:
   - security
+related:
+  - title: PDF 拆分、删除页面
+    url: https://anoni.net/gears/zh-cn/pdf-pages/
 sources:
   - title: Privacy Policy
     url: https://www.bentopdf.com/privacy

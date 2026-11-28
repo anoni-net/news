@@ -5,6 +5,11 @@ date: 2026-09-26T01:23:00+08:00
 slug: signal-numberless-registration
 categories:
   - encryption
+related:
+  - title: Signal 的设置与群组管理
+    url: https://anoni.net/docs/zh-cn/tools/signal-guide/
+  - title: 密码管理器入门
+    url: https://anoni.net/docs/zh-cn/tools/password-manager/
 sources:
   - title: Phone Numberless Registration for Android
     url: https://support.signal.org/hc/en-us/articles/11197884108826-Phone-Numberless-Registration-for-Android

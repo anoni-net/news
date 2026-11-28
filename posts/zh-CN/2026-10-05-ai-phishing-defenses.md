@@ -5,6 +5,11 @@ date: 2026-10-05T00:00:00+08:00
 slug: ai-phishing-defenses
 categories:
   - security
+related:
+  - title: 什么是 passkey
+    url: https://anoni.net/docs/zh-cn/tools/what-is-passkey/
+  - title: 网络钓鱼的辨识与防范
+    url: https://anoni.net/docs/zh-cn/tools/phishing/
 sources:
   - title: "Ask a security trainer: Does AI make phishing worse?"
     url: https://freedom.press/digisec/blog/ask-a-security-trainer-does-ai-make-phishing-worse/

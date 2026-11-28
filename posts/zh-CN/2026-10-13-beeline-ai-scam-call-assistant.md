@@ -7,6 +7,9 @@ categories:
   - security
 regions:
   - RU
+related:
+  - title: 网络钓鱼的辨识与防范
+    url: https://anoni.net/docs/zh-cn/tools/phishing/
 sources:
   - title: Мошенники общались с «киберсемьёй» Билайна 6 тыс. дней
     url: https://beelinenow.ru/articles/moshenniki-obshchalis-s-kibersemyey-bilayna-6-tys-dney/

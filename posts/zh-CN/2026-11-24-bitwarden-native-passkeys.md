@@ -5,6 +5,11 @@ date: 2026-11-24T00:00:00+08:00
 slug: bitwarden-native-passkeys
 categories:
   - security
+related:
+  - title: 什么是 passkey
+    url: https://anoni.net/docs/zh-cn/tools/what-is-passkey/
+  - title: 密码管理器入门
+    url: https://anoni.net/docs/zh-cn/tools/password-manager/
 sources:
   - title: Integrate Bitwarden with Windows and macOS for native passkey creation and use
     url: https://bitwarden.com/blog/integrate-bitwarden-native-passkeys/

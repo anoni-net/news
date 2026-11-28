@@ -5,6 +5,11 @@ date: 2026-10-19T00:05:00+08:00
 slug: passkey-attestation-debate
 categories:
   - security
+related:
+  - title: What is a passkey?
+    url: https://anoni.net/docs/en/tools/what-is-passkey/
+  - title: Getting Started with Password Managers
+    url: https://anoni.net/docs/en/tools/password-manager/
 sources:
   - title: Passkeys are a trap. Do not use them.
     url: https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them

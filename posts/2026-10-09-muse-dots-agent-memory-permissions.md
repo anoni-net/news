@@ -5,6 +5,9 @@ date: 2026-10-09T00:05:00+08:00
 slug: muse-dots-agent-memory-permissions
 categories:
   - tracking
+related:
+  - title: 用 AI 工作時怎麼避免資料外洩
+    url: https://anoni.net/docs/tools/ai-privacy/
 sources:
   - title: "Introducing Muse: The World’s First Personal AI Agent Built for Everyone"
     url: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/

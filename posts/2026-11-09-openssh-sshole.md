@@ -5,6 +5,9 @@ date: 2026-11-09T00:00:00+08:00
 slug: openssh-sshole
 categories:
   - security
+related:
+  - title: 組織網站遇到重大漏洞時的確認與應對
+    url: https://anoni.net/docs/scenarios/org-website-vulnerability/
 sources:
   - title: OpenSSH Release Notes
     url: https://www.openssh.com/releasenotes.html#10.6p2

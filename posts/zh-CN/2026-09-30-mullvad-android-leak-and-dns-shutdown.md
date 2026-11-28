@@ -5,6 +5,11 @@ date: 2026-09-30T00:00:00+08:00
 slug: mullvad-android-leak-and-dns-shutdown
 categories:
   - mobile
+related:
+  - title: 加密 DNS 怎么选、怎么确认真的生效
+    url: https://anoni.net/docs/zh-cn/tools/encrypted-dns/
+  - title: VPN 的风险与选择
+    url: https://anoni.net/docs/zh-cn/tools/vpn-guide/
 sources:
   - title: Another way to leak traffic on Android has been discovered
     url: https://www.mullvad.net/en/blog/2026/9/10/another-way-to-leak-traffic-on-android-has-been-discovered/

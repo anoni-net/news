@@ -8,6 +8,9 @@ categories:
 watch:
   - date: 2026-12-05
     note: 新的線路顯示是否已進到 Tor Browser Alpha，Android 版是否出現線路顯示，通用視窗標題是否仍預設關閉
+related:
+  - title: 什麼是 Tails
+    url: https://anoni.net/docs/tools/what-is-tails/
 sources:
   - title: "New Release: Tor Browser 16.0"
     url: https://blog.torproject.org/new-release-tor-browser-160/

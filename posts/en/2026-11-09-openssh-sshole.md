@@ -5,6 +5,9 @@ date: 2026-11-09T00:00:00+08:00
 slug: openssh-sshole
 categories:
   - security
+related:
+  - title: Checking and responding to a critical vulnerability on your organisation's website
+    url: https://anoni.net/docs/en/scenarios/org-website-vulnerability/
 sources:
   - title: OpenSSH Release Notes
     url: https://www.openssh.com/releasenotes.html#10.6p2

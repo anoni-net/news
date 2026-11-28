@@ -5,6 +5,9 @@ date: 2026-11-14T00:05:00+08:00
 slug: gemini-chat-training
 categories:
   - tracking
+related:
+  - title: Using AI at work without leaking data
+    url: https://anoni.net/docs/en/tools/ai-privacy/
 sources:
   - title: Gemini Apps Privacy Hub
     url: https://support.google.com/gemini/answer/13594961?hl=en

@@ -5,6 +5,11 @@ date: 2026-10-12T00:05:00+08:00
 slug: japan-data-breaches-2026
 categories:
   - security
+related:
+  - title: Getting Started with Password Managers
+    url: https://anoni.net/docs/en/tools/password-manager/
+  - title: What is a passkey?
+    url: https://anoni.net/docs/en/tools/what-is-passkey/
 sources:
   - title: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起
     url: https://www.jpcert.or.jp/at/2026/at260030.html

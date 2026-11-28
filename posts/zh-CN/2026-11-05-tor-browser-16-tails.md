@@ -5,6 +5,9 @@ date: 2026-11-05T00:00:00+08:00
 slug: tor-browser-16-tails
 categories:
   - tracking
+related:
+  - title: 什么是 Tails
+    url: https://anoni.net/docs/zh-cn/tools/what-is-tails/
 sources:
   - title: "New Release: Tor Browser 16.0"
     url: https://blog.torproject.org/new-release-tor-browser-160/

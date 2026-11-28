@@ -5,6 +5,11 @@ date: {created: 2026-09-27T03:21:00+08:00, updated: 2026-10-01T13:43:00+08:00}
 slug: ios27-siri-ai-data-access
 categories:
   - tracking
+related:
+  - title: 手机隐私设置逐步指引
+    url: https://anoni.net/docs/zh-cn/tools/phone-privacy-settings/
+  - title: 用 AI 工作时怎么避免数据外泄
+    url: https://anoni.net/docs/zh-cn/tools/ai-privacy/
 sources:
   - title: How to Limit What Apple's New Siri AI Can Access in iOS 27
     url: https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27

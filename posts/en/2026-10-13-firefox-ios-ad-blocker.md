@@ -6,6 +6,9 @@ date: 2026-10-13T00:05:00+08:00
 slug: firefox-ios-ad-blocker
 categories:
   - mobile
+related:
+  - title: How to choose encrypted DNS, and how to check it actually works
+    url: https://anoni.net/docs/en/tools/encrypted-dns/
 sources:
   - title: "Introducing Ad Blocker for Firefox on iOS: More control, fewer distractions"
     url: https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/

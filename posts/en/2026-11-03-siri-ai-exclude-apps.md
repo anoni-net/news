@@ -8,6 +8,11 @@ categories:
   - tracking
 follows:
   - 2026-09-27-ios27-siri-ai-data-access
+related:
+  - title: Phone privacy settings, step by step
+    url: https://anoni.net/docs/en/tools/phone-privacy-settings/
+  - title: Using AI at work without leaking data
+    url: https://anoni.net/docs/en/tools/ai-privacy/
 sources:
   - title: About iOS 27 Updates
     url: https://support.apple.com/en-us/149076

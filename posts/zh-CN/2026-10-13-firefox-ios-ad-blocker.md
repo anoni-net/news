@@ -5,6 +5,9 @@ date: 2026-10-13T00:05:00+08:00
 slug: firefox-ios-ad-blocker
 categories:
   - mobile
+related:
+  - title: 加密 DNS 怎么选、怎么确认真的生效
+    url: https://anoni.net/docs/zh-cn/tools/encrypted-dns/
 sources:
   - title: "Introducing Ad Blocker for Firefox on iOS: More control, fewer distractions"
     url: https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/
