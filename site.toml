@@ -41,11 +41,12 @@ out = "public/onion"
 base_url = "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"
 prefix = "/"
 clearnet = false
-# 由上往下比對，第一條比對到的就套用。news 與 docs 要排在官網那條前面。
+# 由上往下比對，第一條比對到的就套用。news、docs、form 與 gears 要排在官網那條前面。
 rewrites = [
     ["https://anoni.net/news/", "http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
     ["https://anoni.net/docs/", "http://docs.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
     ["https://form.anoni.net/", "http://form.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
+    ["https://anoni.net/gears/", "http://gears.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
     ["https://anoni.net/", "http://anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/"],
 ]
 

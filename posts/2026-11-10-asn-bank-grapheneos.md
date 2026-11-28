@@ -7,6 +7,9 @@ categories:
   - finance
 regions:
   - NL
+related:
+  - title: GrapheneOS，高度隱私的行動作業系統
+    url: https://anoni.net/docs/tools/grapheneos/
 sources:
   - title: ASN Bank
     url: https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105

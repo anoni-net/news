@@ -5,6 +5,9 @@ date: 2026-11-16T00:00:00+08:00
 slug: grapheneos-pixel-11
 categories:
   - mobile
+related:
+  - title: GrapheneOS，高度隐私的行动作业系统
+    url: https://anoni.net/docs/zh-cn/tools/grapheneos/
 sources:
   - title: Pixel 11 doesn't yet meet the GrapheneOS security standards and may be skipped - GrapheneOS Discussion Forum
     url: https://discuss.grapheneos.org/d/41564-pixel-11-doesnt-yet-meet-the-grapheneos-security-standards-and-may-be-skipped

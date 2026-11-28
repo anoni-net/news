@@ -34,6 +34,9 @@ def lines_for(path: Path) -> list[str]:
     for key in ("title", "short_title", "description", "meta_description"):
         if isinstance(meta.get(key), str):
             out.append(f"{rel} {key}：{meta[key]}")
+    for index, item in enumerate(meta.get("related") or [], 1):
+        if isinstance(item, dict) and isinstance(item.get("title"), str):
+            out.append(f"{rel} related {index}：{item['title']}")
     for snap in meta.get("snapshots") or []:
         year = str(snap.get("date", ""))[:4]
         for key in ("title", "description"):

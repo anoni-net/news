@@ -71,6 +71,9 @@
 {% if thread %}
 {% include "_thread.html.j2" %}
 {% endif %}
+{% if post.related_pages %}
+{% include "_tools.html.j2" %}
+{% endif %}
 {% if related %}
 {% include "_related.html.j2" %}
 {% endif %}
@@ -83,10 +86,10 @@
 {# 讀完一篇接著讀相鄰的文章。用「較新、較舊」跟列表頁的翻頁說法一致，帶標題讓讀者知道點下去是什麼 #}
 <nav class="pager pager--story" aria-label="{{ s.story_nav_label }}">
 {% if newer %}
-  <a class="pager__item pager__item--newer" href="{{ url(newer.rel) }}"><span class="pager__label">{{ icon('arrow-left') }} {{ s.newer_story }}</span> <span class="pager__title">{{ newer.title }}</span></a>
+  <a class="pager__item pager__item--newer" href="{{ url(newer.rel) }}"{{ track("next-read-click", block="pager") }}><span class="pager__label">{{ icon('arrow-left') }} {{ s.newer_story }}</span> <span class="pager__title">{{ newer.title }}</span></a>
 {% endif %}
 {% if older %}
-  <a class="pager__item pager__item--older" href="{{ url(older.rel) }}"><span class="pager__label">{{ s.older_story }} {{ icon('arrow-right') }}</span> <span class="pager__title">{{ older.title }}</span></a>
+  <a class="pager__item pager__item--older" href="{{ url(older.rel) }}"{{ track("next-read-click", block="pager") }}><span class="pager__label">{{ s.older_story }} {{ icon('arrow-right') }}</span> <span class="pager__title">{{ older.title }}</span></a>
 {% endif %}
   <a class="pager__all" href="{{ url(home) }}">{{ s.all_stories }}</a>
 </nav>

@@ -8,9 +8,9 @@
 {% for item in related %}
     <li class="thread__item">
       <time class="thread__date" datetime="{{ item.created|iso }}">{{ item.created|ymd }}</time>
-      <a class="thread__title" href="{{ url(item.rel) }}">{{ item.title }}</a>
+      <a class="thread__title" href="{{ url(item.rel) }}"{{ track("next-read-click", block="category") }}>{{ item.title }}</a>
     </li>
 {% endfor %}
   </ol>
-  <p class="related__all"><a href="{{ url(home ~ 'category/' ~ cat ~ '/') }}">{{ s.related_all.format(category=categories[cat][lang.code], count=category_count) }}</a></p>
+  <p class="related__all"><a href="{{ url(home ~ 'category/' ~ cat ~ '/') }}"{{ track("next-read-click", block="category") }}>{{ s.related_all.format(category=categories[cat][lang.code], count=category_count) }}</a></p>
 </nav>

@@ -9,7 +9,7 @@
 {% if item.rel == post.rel %}
       <span><span class="thread__title">{{ item.title }}</span> <span class="thread__here">{{ s.thread_current }}</span></span>
 {% else %}
-      <a class="thread__title" href="{{ url(item.rel) }}">{{ item.title }}</a>
+      <a class="thread__title" href="{{ url(item.rel) }}"{{ track("next-read-click", block="thread") }}>{{ item.title }}</a>
 {% endif %}
     </li>
 {% endfor %}

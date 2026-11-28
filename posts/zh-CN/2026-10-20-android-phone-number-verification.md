@@ -5,6 +5,9 @@ date: 2026-10-20T00:00:00+08:00
 slug: android-phone-number-verification
 categories:
   - tracking
+related:
+  - title: 手机隐私设置逐步指引
+    url: https://anoni.net/docs/zh-cn/tools/phone-privacy-settings/
 sources:
   - title: 在裝置上管理電話號碼驗證
     url: https://support.google.com/android/answer/7521240?hl=zh-Hant

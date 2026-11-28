@@ -41,12 +41,17 @@ from markupsafe import Markup
 ROOT = Path(__file__).resolve().parent
 TZ = timezone(timedelta(hours=8))
 DOCS_PREFIX = "https://anoni.net/docs/"
+GEARS_PREFIX = "https://anoni.net/gears/"
+# 文章頁「相關的文件與工具」可以連的 Gears 頁面，一行一個路徑。見 SPEC.md「相關的文件與工具」
+GEARS_PAGES_PATH = ROOT / "gears_pages.txt"
+RELATED_KEYS = {"title", "url"}
+RELATED_MAX = 2
 NEWS_PREFIX = "https://anoni.net/news/"
 DOCS_CONTRACT_URL = "https://raw.githubusercontent.com/anoni-net/docs/main/tools/data/url_contract.txt"
 DOCS_CONTRACT_CACHE = ROOT / ".cache" / "docs_url_contract.txt"
 
 FRONT_MATTER_KEYS = {"title", "description", "date", "slug", "sources", "authors", "categories", "draft", "image", "pin",
-                     "follows", "watch", "regions", "short_title", "meta_description"}
+                     "follows", "watch", "regions", "short_title", "meta_description", "related"}
 REQUIRED_KEYS = {"title", "description", "date", "slug", "sources", "authors"}
 SOURCE_KEYS = {"title", "url", "publisher", "date"}
 AUTHOR_KEYS = {"name", "names", "description", "url"}
@@ -308,6 +313,14 @@ class Watch:
 
 
 @dataclass
+class RelatedPage:
+    """文章頁「相關的文件與工具」的一筆，連到文件站或 Gears。site 是 docs 或 gears。"""
+    title: str
+    url: str
+    site: str
+
+
+@dataclass
 class Post:
     path: Path
     title: str
@@ -337,6 +350,8 @@ class Post:
     short_title: str | None = None
     # <meta name="description"> 用的摘要，沒寫就從 description 截取。見 SPEC.md「標題與描述」
     meta_description: str | None = None
+    # 讀完之後接著會用到的文件站或 Gears 頁面。見 SPEC.md「相關的文件與工具」
+    related_pages: list[RelatedPage] = field(default_factory=list)
     # 同一篇的三個版本，鍵是語系代碼，包含自己。由 load_site 填入
     translations: dict[str, "Post"] = field(default_factory=dict)
 
@@ -558,6 +573,56 @@ def parse_regions(raw, where: str, problems: list[str]) -> list[str]:
     return list(regions)
 
 
+_gears_pages: frozenset[str] | None = None
+
+
+def gears_pages() -> frozenset[str]:
+    """gears_pages.txt 列的 Gears 頁面路徑（zh-TW 的寫法，例如 /gears/strip-metadata/）。"""
+    global _gears_pages
+    if _gears_pages is None:
+        lines = GEARS_PAGES_PATH.read_text(encoding="utf-8").splitlines() if GEARS_PAGES_PATH.exists() else []
+        _gears_pages = frozenset(line.strip() for line in lines if line.strip() and not line.startswith("#"))
+    return _gears_pages
+
+
+def parse_related(raw, lang: Lang, where: str, problems: list[str]) -> list[RelatedPage]:
+    """front matter 的 related：連到文件站或 Gears 的頁面，最多 RELATED_MAX 筆，網址要是這個語系的版本。"""
+    if raw is None:
+        return []
+    if not isinstance(raw, list) or not raw:
+        problems.append(f"{where}：related 要是清單，每一筆有 title 與 url，不需要時整個拿掉")
+        return []
+    if len(raw) > RELATED_MAX:
+        problems.append(f"{where}：related 最多 {RELATED_MAX} 筆，只放讀完會接著用到的頁面")
+    pages: list[RelatedPage] = []
+    for index, item in enumerate(raw, 1):
+        if (not isinstance(item, dict) or set(item) != RELATED_KEYS
+                or not all(isinstance(item[k], str) and item[k].strip() for k in RELATED_KEYS)):
+            problems.append(f"{where}：related 第 {index} 筆要有 title（連結文字）與 url 兩個欄位")
+            continue
+        url = item["url"].strip()
+        site = "docs" if url.startswith(DOCS_PREFIX) else "gears" if url.startswith(GEARS_PREFIX) else None
+        if site is None:
+            problems.append(f"{where}：related 第 {index} 筆的網址要連到文件站（{DOCS_PREFIX}）或 Gears（{GEARS_PREFIX}）")
+            continue
+        prefix = DOCS_PREFIX if site == "docs" else GEARS_PREFIX
+        rest = url[len(prefix):]
+        other = [l.path for l in LANGS if l.path and l != lang]
+        if (lang.path and not rest.startswith(lang.path)) or any(rest.startswith(o) for o in other):
+            want = prefix + lang.path
+            problems.append(f"{where}：related 第 {index} 筆要連到這個語系的版本，網址以 {want} 開頭")
+            continue
+        if site == "gears":
+            page = "/gears/" + rest[len(lang.path):].split("#", 1)[0]
+            if page not in gears_pages():
+                problems.append(f"{where}：related 第 {index} 筆的 {page} 不在 gears_pages.txt 裡")
+                continue
+        pages.append(RelatedPage(item["title"].strip(), url, site))
+    if len({page.url for page in pages}) != len(pages):
+        problems.append(f"{where}：related 有重複的網址")
+    return pages
+
+
 def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -> Post | None:
     """讀一篇文章。草稿回傳 None，不符合規格就丟 BuildError。"""
     where = f"{lang.dir}/{path.name}" if lang.dir else path.name
@@ -670,6 +735,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
                 watch.append(Watch(item["date"], item["note"].strip()))
 
     regions = parse_regions(meta.get("regions"), where, problems)
+    related_pages = parse_related(meta.get("related"), lang, where, problems)
 
     anchors = check_headings(body, where, problems)
     if problems:
@@ -696,6 +762,7 @@ def load_post(path: Path, authors: dict[str, dict], lang: Lang = DEFAULT_LANG) -
         scheduled=created > now,
         short_title=short_title,
         meta_description=meta_desc,
+        related_pages=related_pages,
     )
 
 
@@ -2297,6 +2364,8 @@ ANALYTICS_EVENTS: dict[str, dict[str, list[str]]] = {
     "home-story-click": {"section": ["featured", "timeline"]},
     # 文章頁的朗讀按鈕，一次瀏覽只記第一次點擊
     "listen-click": {},
+    # 文章頁讀完之後的下一步：相關的文件與工具、同一事件、同分類、前後篇。只記區塊，不記點了哪一頁
+    "next-read-click": {"block": ["tools", "thread", "category", "pager"]},
 }
 # 點擊事件用自己的屬性，由 _analytics.html.j2 的 listener 呼叫 umami.track()。
 # 不用 Umami 內建的 data-umami-event，它會先擋下換頁、等統計請求完成才跳轉，端點連不上時連結會卡住
@@ -2555,6 +2624,10 @@ def check_docs_links(posts: list[Post], contract: DocsContract,
         for href in hrefs(text):
             if href.startswith(DOCS_PREFIX):
                 check_docs_link(href, where, contract, problems, notices)
+    for post in posts:
+        for page in post.related_pages:
+            if page.site == "docs":
+                check_docs_link(page.url, f"{post.where} 的 related", contract, problems, notices)
     for code, s in strings().items():
         for key, value in s.items():
             if isinstance(value, str) and value.startswith(DOCS_PREFIX):
