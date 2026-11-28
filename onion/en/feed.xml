@@ -6,7 +6,137 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/feed.xml" rel="self" type="application/rss+xml"/>
 <description>News on privacy, anonymity networks and Internet censorship, read from a tech and open-source angle with a view from Asia. Every story links to its original sources.</description>
 <language>en</language>
-<lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>Weekly brief, 2026 week 48</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/weekly-brief-2026-w48/</link>
+<guid isPermaLink="false">anoni-news:en/2026/11/weekly-brief-2026-w48</guid>
+<pubDate>Sat, 28 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net community</dc:creator>
+<description>Six stories from 14 to 22 November: a vulnerability in uBlock Origin&#39;s element picker, a double free in GPGME, malware planted on Optimizely customers&#39; websites, the USB vulnerability fixed in SecureDrop Workstation 1.9.1, the Italian data protection authority&#39;s fine against Meta, and France&#39;s idea of DNS filtering for social media platforms along with an amendment extending Pharos&#39;s powers.</description>
+<content:encoded>&lt;p&gt;Based on 13 sources, including iter.ca, uBlock Origin, GnuPG&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;Week 48 brings together six stories from reports and announcements dated between 14 and 22 November, and the one on France starts with what happened in October.&lt;/p&gt;
+&lt;h2 id=&#34;ublock-origin-element-picker&#34;&gt;The uBlock Origin element picker vulnerability&lt;/h2&gt;
+&lt;p&gt;According to the project&#39;s security advisory on GitHub, uBlock Origin, a browser extension that blocks ads and trackers, had a high-severity vulnerability in version 1.75.2 and earlier, which was fixed in version 1.75.4, released on 3 November. The researcher who reported it published the details on their blog on 15 November, explaining that a malicious website could trick the extension into adding arbitrary trusted filters. According to the researcher, such filters can inject JavaScript into web pages, so an attacker could run their own code on any website. The researcher wrote that all it takes to trigger the attack is for the website to get the user to click once on the page.&lt;/p&gt;
+&lt;p&gt;The version the researcher actually tested was the one for Firefox built on the older Manifest V2 (MV2) specification, and the researcher mentioned a similar but less problematic issue in uBO Lite, which uses the newer MV3 specification. The release notes for 1.77.0, published on 22 November, differ: they state that none of the reported security issues affect uBO Lite. The same notes also list a second vulnerability, reported by another researcher and fixed in 1.76.2, and in both cases the user had to visit a web page controlled by an attacker first.&lt;/p&gt;
+&lt;p&gt;In the 1.77.0 release notes, users are advised to confirm that every filter list they subscribe to is one they added themselves, and that every custom filter is one they created. Anyone who has turned on the &#34;Allow custom filters requiring trust&#34; option should check their trusted filters in particular.&lt;/p&gt;
+&lt;h2 id=&#34;gpgme-double-free&#34;&gt;A double free vulnerability in GPGME&lt;/h2&gt;
+&lt;p&gt;GnuPG is an open-source tool for OpenPGP encryption and signing, and GPGME is the library that lets programs such as mail clients and clients for the XMPP instant messaging protocol call on GnuPG&#39;s functions. According to a security advisory the GnuPG developers sent on 20 November, all publicly released versions before 2.3.1 contain a critical vulnerability. With an OpenPGP key that has a crafted, very long user ID, an attacker can trigger a double free (a bug where the same block of memory is freed twice) and steal data from applications, for example by sending signed data. The advisory adds that using the bug for remote code execution cannot be ruled out.&lt;/p&gt;
+&lt;p&gt;The software using GPGME named in the advisory includes Gpg4win, an encryption suite for Windows, most mail clients, many XMPP clients and the file-sharing software Samba. The advisory recommends updating immediately, and Gpg4win users can move to version 5.1.2, which includes the fixed GPGME. People who maintain packages need to update the GPGME shared library to 2.3.1, and programs that link GPGME statically need to be rebuilt against 2.3.1.&lt;/p&gt;
+&lt;h2 id=&#34;optimizely-malware&#34;&gt;Malware injected into Optimizely customers&#39; websites&lt;/h2&gt;
+&lt;p&gt;People who visited some large websites on 16 November may have had their browsers load malware that steals payment card details and cryptocurrency. According to an article published that day by the security company Report URI, the websites of 178 organisations served malicious JavaScript to their visitors through Optimizely&#39;s Web Experimentation service, which lets a website show different layouts to different visitors as a test. The list Report URI published includes Zoom, the BBC, CNN and IKEA, as well as HSBC&#39;s Taiwan website, &lt;code&gt;www.hsbc.com.tw&lt;/code&gt;, and the real number of affected organisations is likely higher. The malware swapped cryptocurrency wallet addresses for the attacker&#39;s, skimmed payment cards and stole cookies and screenshots, and on iPhones and iPads it also delivered two iOS exploit kits.&lt;/p&gt;
+&lt;p&gt;The attacker modified the Project JavaScript in customer projects, which is code that customers write themselves in the Optimizely dashboard and that runs on every page of their site. According to Optimizely&#39;s account as reported by CMSWire on 18 November, the attacker exploited a flaw in the Web Experimentation account signup flow to impersonate users in targeted customer accounts. The attacker then inserted malicious code into those customers&#39; projects. According to the same account, Optimizely closed the vulnerability within three hours of detecting it, and fewer than 5% of its customers were affected.&lt;/p&gt;
+&lt;p&gt;Report URI observed that by 23:11 UTC on 16 November (07:11 Taipei time on 17 November), all the infected files had been cleaned. Report URI advised anyone who paid by card on an affected site to watch their card statements. According to Report URI&#39;s analysis, card numbers entered in fields hosted by payment services such as Stripe and Adyen were out of the skimmer&#39;s reach, while card numbers typed directly into a site&#39;s own forms were not. Comments in the exploit kit&#39;s own code list iOS 18.7.3 and later and 26.3 and later as patched, so Report URI recommends updating iOS 18 to 18.7.3 or later and iOS 26 to 26.3 or later.&lt;/p&gt;
+&lt;h2 id=&#34;securedrop-workstation-usb&#34;&gt;The USB vulnerability fixed in SecureDrop Workstation 1.9.1&lt;/h2&gt;
+&lt;p&gt;SecureDrop is a system that news organisations use to receive documents submitted by sources, and SecureDrop Workstation is the workstation journalists use to handle those documents, built on Qubes OS, an operating system that isolates different tasks in separate virtual machines. According to SecureDrop&#39;s advisory on 19 November, version 1.9.1, released on 17 November, fixes a high-severity vulnerability in the code that attaches USB devices automatically. The workstation isolates USB and other devices in a separate qube (a virtual machine in Qubes OS), and when a USB stick is plugged in, it is attached automatically to &lt;code&gt;sd-devices&lt;/code&gt;, the qube used for exporting documents, while a printer is attached to &lt;code&gt;sd-printers&lt;/code&gt;. A flaw in the permissions policy meant that either of these qubes, once compromised, could gain access to any connected device, such as a webcam or a Bluetooth adapter, provided the attacker had first gained the ability to run code inside the qube.&lt;/p&gt;
+&lt;p&gt;Both qubes are configured as offline, disposable qubes, which limits an attacker&#39;s ability to exfiltrate data and makes exported or printed documents harder to reach after a reboot. Gaining access to devices could still give an attacker some form of network access or persistence. The project is not aware of any exploitation. The advisory asks administrators to check whether a webcam, microphone or other peripherals appear in the Qubes devices menu and, if so, to disable whichever of those devices they can in the laptop&#39;s BIOS settings.&lt;/p&gt;
+&lt;h2 id=&#34;garante-meta-camera-roll&#34;&gt;The Italian data protection authority&#39;s fine on Meta&lt;/h2&gt;
+&lt;p&gt;The Android version of the Facebook app has a camera roll suggestions feature (&#34;Get camera roll suggestions when you&#39;re browsing Facebook&#34;) that picks photos and videos from the phone&#39;s camera roll and suggests them to users as material for posts. In a press release on 14 November, the Garante, Italy&#39;s data protection authority, announced a fine of €805 million against Meta over this feature. The grounds were that Meta used the feature to access photos, videos and related metadata on Italian users&#39; phones without obtaining specific consent and without adequately informing them. The investigation found that a single permission for camera roll access covered several features across the whole app, that the prompt shown before granting it said only &#34;enable other features&#34;, and that the feature itself was turned on by default.&lt;/p&gt;
+&lt;p&gt;Under the Garante&#39;s interpretation of Article 122 of the Italian Data Protection Code (Codice privacy), any access to information stored on a phone requires free and informed consent, whether or not any data is transmitted. The Garante ordered Meta to make camera roll suggestions off by default within 60 days, including for users who have already granted permission, and to obtain separate consent for this feature. In setting the fine, the Garante considered the number of people affected, about 20 million Android users in Italy. A new feature launched in 2026, which processes camera roll content in the cloud, falls outside this decision, and the Garante has reserved the right to investigate it separately.&lt;/p&gt;
+&lt;p&gt;According to the Italian outlet L&#39;Unione Sarda, a Meta spokesperson said the company strongly disagrees with the Garante&#39;s assessment of the facts and its application of the law, and Meta announced that it would appeal. The spokesperson called the fine disproportionate, and said the feature requires prior permission on the device and can be changed in the settings at any time.&lt;/p&gt;
+&lt;h2 id=&#34;france-dns-pharos&#34;&gt;France&#39;s idea of DNS filtering for social media platforms, and the amendment extending Pharos&lt;/h2&gt;
+&lt;p&gt;French media reported that in October the government had considered using DNS filtering to block social media platforms in specific areas during protests, a plan that was never carried out. DNS filtering stops a domain name from resolving to its address, so it can only block an entire service and cannot remove individual posts or accounts. According to a CircleID report on 26 October, citing La Tribune&#39;s reporting on documents obtained by the investigative outlet Blast, the Prime Minister&#39;s office sent a confidential letter on 22 October asking four telecom operators to be ready. If the demonstrations on 24 October turned violent, the government wanted the operators to be able to temporarily restrict TikTok, Instagram and Snapchat on 4G and 5G networks in specific areas, and X was later added to the list.&lt;/p&gt;
+&lt;p&gt;According to the same report, at a meeting on 23 October the operators questioned whether this was technically feasible, and pointed out that switching to a VPN or another DNS resolver would get around this kind of filtering. According to a CircleID report on 18 November, the digital rights organisation ARTICLE 19 urged the French authorities in a statement on 17 November to abandon the idea of broad platform blocking, warning that such restrictions could disrupt lawful communications without effectively preventing access to the targeted content.&lt;/p&gt;
+&lt;p&gt;According to reports by CircleID on 26 October and Public Sénat on 28 October, the government submitted Amendment No. 94 on 26 October to the &#34;casseurs-payeurs&#34; bill (literally &#34;vandals pay&#34;), which the Senate was then debating. The amendment would extend Pharos, the mechanism the administrative authorities use to demand the removal of online content, to content on social networks that incites attacks on people&#39;s lives, theft or vandalism and is likely to seriously disrupt public order. Under the amendment, the authorities could require hosting providers and publishers to remove such content within 24 hours, and the amendment passed with the support of the Senate majority and several other political groups.&lt;/p&gt;
+&lt;p&gt;In the chamber, the interior minister said the amendment used Pharos to remove content and did not aim to shut down social networks, while left-wing senators denounced it as an authoritarian drift (dérive autoritaire). As of CircleID&#39;s 18 November report, the bill still had to go through further parliamentary stages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (13)&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://iter.ca/post/ubo-uxss/&#34;&gt;Universal XSS in uBlock Origin from website-driven element picker&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iter.ca&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-15&#34;&gt;15 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gorhill/uBlock/security/advisories/GHSA-cmqw-9r2w-6wv2&#34;&gt;Universal XSS from website-driven element picker&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;uBlock Origin&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-15&#34;&gt;15 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gorhill/uBlock/releases/tag/1.77.0&#34;&gt;1.77.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;uBlock Origin&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-22&#34;&gt;22 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html&#34;&gt;[Announce] GnuPG Security Advisory for GPGME (T8557,CVE-2026-129975)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GnuPG&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-20&#34;&gt;20 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/&#34;&gt;World&amp;#39;s Largest Brands Infected With Malware Via Optimizely&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Report URI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;16 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cmswire.com/digital-experience/optimizely-works-through-web-experimentation-security-incident/&#34;&gt;Optimizely Works Through Web Experimentation Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CMSWire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;18 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/freedomofpress/securedrop-workstation/releases/tag/1.9.1&#34;&gt;SecureDrop Workstation 1.9.1&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SecureDrop&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-17&#34;&gt;17 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://securedrop.org/news/advisory-compromised-qube-could-attach-any-device/&#34;&gt;Advisory: Compromised qube could attach any device&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;SecureDrop&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;19 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://garanteprivacy.it/garante/doc.jsp?ID=10321080&#34;&gt;Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Garante per la protezione dei dati personali&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-14&#34;&gt;14 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.unionesarda.it/en/italy/meta-faces-a-massive-805-million-fine-and-the-company-is-preparing-to-appeal-oz56mokc&#34;&gt;Meta faces a massive €805 million fine, and the company is preparing to appeal.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;L&amp;#39;Unione Sarda&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-14&#34;&gt;14 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://circleid.com/posts/france-proposes-one-hour-social-media-removal-rule-after-secret-dns-blocking-plans&#34;&gt;France Proposes One-Hour Social Media Removal Rule After Secret DNS-Blocking Plans&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CircleID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;26 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.publicsenat.fr/actualites/politique/derive-autoritaire-la-gauche-senatoriale-vent-debout-apres-ladoption-dun-amendement-sur-le-blocage-de-certains-contenus-sur-les-reseaux-sociaux&#34;&gt;« Dérive autoritaire » : la gauche sénatoriale vent debout après l’adoption d’un amendement sur le blocage de certains contenus sur les réseaux sociaux&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Public Sénat&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;28 October 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://circleid.com/posts/frances-proposed-dns-blocks-draw-criticism-over-internet-access-and-free-expression&#34;&gt;France’s Proposed DNS Blocks Draw Criticism Over Internet Access and Free Expression&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;CircleID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;18 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>HERMES and Mercury, open-source systems for sending email over shortwave radio</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/hermes-hf-radio/</link>
@@ -2026,116 +2156,6 @@
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;OONI, Centre for Internet &amp;amp; Society&lt;/dd&gt;&lt;/div&gt;
       &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2020-07-08&#34;&gt;8 July 2020&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>The netiCRM provider&#39;s server breach and a client&#39;s copied donation database</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/en/2026/11/neticrm-breach/</link>
-<guid isPermaLink="false">anoni-news:en/2026/11/neticrm-breach</guid>
-<pubDate>Thu, 19 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net community</dc:creator>
-<description>NETivism, the Taiwanese provider of netiCRM, a donation and membership management system for non-profits, had an internal management server broken into on 9 November. The provider confirmed that data such as client organisations&#39; contact names and email addresses was stolen. According to an iThome update on 13 November, one client organisation was also notified that its donation database had been copied. For other clients&#39; donor data, iThome wrote that the investigation was still ongoing (as of 14 November). People who donated, joined or registered for events through an organisation using netiCRM can watch for notices from that organisation and for impersonation scams.</description>
-<content:encoded>&lt;p&gt;Based on 12 sources, including iThome, GitHub, 全國法規資料庫&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;An attacker broke into the internal management server of NETivism, the Taiwanese company behind netiCRM, a donation and membership management system for non-profit organisations, in the early hours of 9 November. According to an iThome update on 13 November, one client organisation announced on 12 November that the provider had notified it that its donation database had been copied. The organisation&#39;s notice lists donors&#39; names, email addresses, phone numbers, postal addresses and donation records as possibly exposed. As for whether other client organisations and the people who donate to them are affected, iThome wrote that donor data was still under investigation (as of 14 November).&lt;/p&gt;
-&lt;p&gt;iThome&#39;s report of 12 November ran under a headline saying no leak of donor data had been found so far, based on the provider&#39;s statement of 11 November. As iThome relayed it, the provider had by then confirmed the theft of client data it held itself, including organisation contacts&#39; names and email addresses, service plans, billing data and customer support records. For donor and supporter data on the non-profits&#39; websites, the investigation had not yet found signs of theft, and the report did not say which records the investigation examined. The news that a donation database had been copied appears further down the same page, relayed through two layers, the client organisation&#39;s notice and iThome.&lt;/p&gt;
-&lt;p&gt;The account of the intrusion comes from the provider&#39;s statement in iThome&#39;s report of 10 November. The attacker obtained a username and password for the provider&#39;s internal code management system, then exploited a system vulnerability to gain administrator access to a server, breaking in at 01:55 on 9 November (Taipei time). The provider cut off all of the attacker&#39;s connections to that server at about 03:30 and sent clients a security incident notice the same day. According to the client notice that iThome quoted on 12 November, the provider reported the incident to the Ministry of Digital Affairs on the afternoon of 10 November and filed a report with the Taipei City Police Department.&lt;/p&gt;
-&lt;p&gt;In its statement of 10 November, the provider treated the admin accounts of client websites and the email account settings used for sending mail as possibly exposed, and said admin passwords were stored hashed (a one-way transformation that cannot be turned back into the password directly). According to what a client organisation relayed on the evening of 10 November, the breached machine was the provider&#39;s internal technical management server, not the server holding donation records. By 11 November, the provider&#39;s statement was that this server had administrative access to other servers, so every client server was being checked and rebuilt. Client websites and the netiCRM service might be temporarily unavailable during the rebuild.&lt;/p&gt;
-&lt;p&gt;According to the provider&#39;s statement of 11 November as relayed by iThome, its clients are more than 500 non-profit organisations. The provider had isolated the affected systems, identified the point of entry and replaced all leaked keys, and had also scanned and updated every client&#39;s mail server. Rebuilding the official website &lt;code&gt;neticrm.tw&lt;/code&gt;, an investigation with outside experts and monitoring each server for anomalies were still under way at the time of the report, and the provider said the outside security firm it contacted had no staff available to help for now. When we, a community based in Taiwan, fetched &lt;code&gt;neticrm.tw&lt;/code&gt; with a script on 14 November, we received only a verification page, so every statement from the provider in this article is relayed through iThome or client organisations.&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;Perspective&lt;/h2&gt;
-&lt;p&gt;According to its official GitHub page, netiCRM is a fork of CiviCRM (a relationship management system for non-profits developed since 2005), and its source code is public. The provider has offered it since 2011 as SaaS (software as a service, where the provider hosts and runs the servers and the system). Organisations do not have to run their own servers, and in turn the security of donor data depends on how well the provider protects its internal accounts and management servers (our inference).&lt;/p&gt;
-&lt;p&gt;According to the provider&#39;s statement of 11 November as relayed by iThome, the breached management server held the management system&#39;s code, parameters and data. The attacker could use the stolen code and data to go on to attack client websites and vulnerable servers, and at the time the provider was working on fixing the stolen code. Changing passwords and keys only blocks connections that use the old credentials; once the management system&#39;s code is out, flaws in the code itself also need patching (our inference).&lt;/p&gt;
-&lt;p&gt;According to iThome, the client organisation whose donation database was copied urged supporters to stay alert to phishing emails, unknown callers and impersonation scams. The claim that credit card data was unaffected comes only from that organisation&#39;s notice. iThome reported on 10 November that more than 30 organisations had issued warnings, telling donors to watch for suspicious calls and scam messages. To find out whether an organisation you donated to, joined or registered for an event with has been affected, check that organisation&#39;s own notices.&lt;/p&gt;
-&lt;p&gt;The fields that organisation listed as possibly exposed include phone numbers, addresses and donation records, so an impersonator might be able to tell a donor which organisation they gave to and how much (our inference). If a call or email from someone claiming to be from the organisation asks you to transfer money, give a credit card number or change a direct debit, you can hold off and call back on the number listed on the organisation&#39;s official website. Calling back is our suggestion, not something the sources say. It stops impersonated requests, but it cannot stop data that may already have leaked from being reused.&lt;/p&gt;
-&lt;p&gt;The provider gave organisations using netiCRM advice on two occasions. In iThome&#39;s report of 10 November, it advised changing the passwords of every admin account as soon as possible, reminding donors to watch for scam calls and messages, and notifying internal stakeholders. On 11 November it advised first telling donors and members on the official website or social media that online donations and event registration might be temporarily unavailable, and posting an anti-scam reminder at the same time. The provider also said some of the attack sources pointed to IP addresses at client offices and that it had notified those clients, without giving details.&lt;/p&gt;
-&lt;p&gt;According to the provider, whether to report to the regulator is up to each organisation, based on the applicable laws, its internal rules and its arrangements with the regulator. Those who are unsure can ask the regulator or a legal adviser.&lt;/p&gt;
-&lt;p&gt;Article 12 of Taiwan&#39;s current Personal Data Protection Act requires a government or non-government agency that violates the Act, resulting in personal data being stolen or leaked, to notify the people concerned by appropriate means after the facts are established. The article contains no duty to report to a regulator and no deadline. Amendments promulgated in November 2025 add a duty to report to the regulator when an incident falls within a defined reporting scope, with the effective date to be set by the Executive Yuan (Taiwan&#39;s cabinet), and as of 14 November the Laws &amp;amp; Regulations Database still listed that date as undetermined. A Q&amp;amp;A from Taiwan&#39;s Personal Data Protection Commission Preparatory Office says the current Act continues to apply until the amendments take effect.&lt;/p&gt;
-&lt;p&gt;As of 9 October 2026, if a similar incident happened in Hong Kong, the organisation holding the data would have no statutory duty to report it to the Office of the Privacy Commissioner for Personal Data (PCPD), which treats notification as recommended practice. The PCPD&#39;s June 2023 guidance advises notifying the office and the affected people as soon as practicable, particularly where the breach is likely to cause a real risk of harm. Amendment proposals that would make breach notification mandatory and regulate data processors directly were still under government study at that date, with no bill published.&lt;/p&gt;
-&lt;p&gt;As of 9 October 2026, if a similar incident happened in Singapore, the Personal Data Protection Act 2012 would make a breach notifiable if it results or is likely to result in significant harm to an affected person, or affects or is likely to affect 500 or more people. A data intermediary, which processes personal data on behalf of another organisation, must notify that organisation without undue delay. That organisation then assesses whether the breach is notifiable, which Singapore&#39;s Personal Data Protection Commission (PDPC) generally expects within 30 calendar days, and if it is, must notify the PDPC within three calendar days of the assessment. Affected people must be notified only where significant harm is likely.&lt;/p&gt;
-&lt;p&gt;People who have not donated, joined or registered for events through an organisation using netiCRM do not need to do anything. For organisations that use netiCRM, the provider has confirmed that contacts&#39; names and email addresses were stolen, so staff may also receive impersonation emails (our inference). As of 14 November, iThome had reported only one client organisation being notified that its donation database had been copied, and did not say whether other clients were in the same situation. Next to watch are the provider&#39;s full investigation findings and the outside experts&#39; investigation, and whether other client organisations receive the same notice.&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;Sources (12)&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180438&#34;&gt;netiCRM服務商內部管理主機遭駭，暫未發現捐款人資料外洩，已將500家客戶主機納入檢查及重建範圍&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;12 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180384&#34;&gt;netiCRM服務商遭駭，超過30個非營利組織接連示警（標題略去組織名稱）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;10 November 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/NETivism/netiCRM&#34;&gt;netiCRM&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://ws.pdpc.gov.tw/FS01/FilePath/3/relfile/30/1072/a842b3f2-3399-4742-96ae-3f6648bd071a.pdf&#34;&gt;個人資料保護法修法問答集&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;個人資料保護委員會籌備處&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-26&#34;&gt;26 December 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/enforcement/data_breach_notification/dbn.html&#34;&gt;Data Breach Notification&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PCPD&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pcpd.org.hk/english/resources_centre/publications/files/guidance_note_dbn_e.pdf&#34;&gt;Guidance on Data Breach Handling and Data Breach Notifications&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PCPD&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2023-06-30&#34;&gt;30 June 2023&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.info.gov.hk/gia/general/202501/22/P2025012200305.htm&#34;&gt;Prevention of personal data breaches and financial crimes&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Hong Kong Government&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-01-22&#34;&gt;22 January 2025&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.legco.gov.hk/yr2026/chinese/panels/itb/papers/itb20260713cb2-1000-3-c.pdf&#34;&gt;有關維護資訊保安的工作&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;香港立法會&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-07-13&#34;&gt;13 July 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sso.agc.gov.sg/Act/PDPA2012?ProvIds=P16A-&#34;&gt;Personal Data Protection Act 2012, Part 6A&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Statutes Online&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://sso.agc.gov.sg/SL/PDPA2012-S64-2021&#34;&gt;Personal Data Protection (Notification of Data Breaches) Regulations 2021&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;Singapore Statutes Online&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/advisory-guidelines/ag-on-key-concepts/advisory-guidelines-on-key-concepts-in-the-pdpa-17-may-2022.pdf&#34;&gt;Advisory Guidelines on Key Concepts in the Personal Data Protection Act&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;Publisher&lt;/dt&gt;&lt;dd&gt;PDPC&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;Published&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-04-29&#34;&gt;29 April 2026&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

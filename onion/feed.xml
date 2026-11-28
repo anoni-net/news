@@ -6,7 +6,137 @@
 <atom:link href="http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/feed.xml" rel="self" type="application/rss+xml"/>
 <description>從科技與開源的角度，導讀國際隱私、匿名網路與網路審查的新聞，每篇附上原文與導讀觀點。</description>
 <language>zh-TW</language>
-<lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0800</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 00:10:00 +0800</lastBuildDate>
+<item>
+<title>每週短訊 2026 第 48 週</title>
+<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/weekly-brief-2026-w48/</link>
+<guid isPermaLink="false">anoni-news:2026/11/weekly-brief-2026-w48</guid>
+<pubDate>Sat, 28 Nov 2026 00:10:00 +0800</pubDate>
+<dc:creator>anoni.net 社群</dc:creator>
+<description>11 月 14 日到 11 月 22 日的 6 則新聞，包括 uBlock Origin 元素選取器的漏洞、GPGME 的雙重釋放漏洞、Optimizely 客戶網站被植入的惡意程式、SecureDrop Workstation 1.9.1 修正的 USB 漏洞、義大利個資保護機關對 Meta 的罰款，以及法國的社群平台 DNS 過濾構想與擴大 Pharos 權限的修正案。</description>
+<content:encoded>&lt;p&gt;整理 13 篇原文，來自 iter.ca、uBlock Origin、GnuPG 等 10 個出處&lt;/p&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;p&gt;第 48 週收 6 則，報導與公告的日期在 11 月 14 日到 11 月 22 日之間，其中法國的一則從 10 月的經過寫起。&lt;/p&gt;
+&lt;h2 id=&#34;ublock-origin-element-picker&#34;&gt;uBlock Origin 元素選取器的漏洞&lt;/h2&gt;
+&lt;p&gt;依專案在 GitHub 的安全公告，阻擋廣告與追蹤的瀏覽器擴充套件 uBlock Origin 在 1.75.2 與更早的版本有一個高嚴重度的漏洞，11 月 3 日發布的 1.75.4 已經修正。回報漏洞的研究者 11 月 15 日在部落格公開細節，指出惡意網站能誘使擴充套件加入任意的受信任過濾規則（trusted filters）。依研究者的說明，這類規則可以把 JavaScript 注入網頁，攻擊者因此能在任何網站上執行自己的程式碼。研究者提到，只要網站能讓使用者在頁面上點擊一次就足以觸發。&lt;/p&gt;
+&lt;p&gt;研究者實際測試的是 Firefox 上採用舊規格 MV2（Manifest V2）的版本，並提到採用新規格 MV3 的 uBO Lite 也有類似但較輕的問題。11 月 22 日 1.77.0 的發布說明寫的不同，回報的安全問題都不影響 uBO Lite。同一份說明也列出另一位研究者回報、在 1.76.2 修正的漏洞，兩個漏洞都需要使用者先造訪攻擊者控制的網頁。&lt;/p&gt;
+&lt;p&gt;1.77.0 的發布說明建議使用者確認訂閱的過濾清單都是自己加入的、自訂規則都是自己建立的。開啟過「Allow custom filters requiring trust」選項的人，尤其要檢查受信任過濾規則。&lt;/p&gt;
+&lt;h2 id=&#34;gpgme-double-free&#34;&gt;GPGME 的雙重釋放漏洞&lt;/h2&gt;
+&lt;p&gt;GnuPG 是開源的 OpenPGP 加密與簽章工具，GPGME 是讓郵件軟體、即時通訊協定 XMPP 的用戶端等程式呼叫 GnuPG 功能的函式庫。GnuPG 開發者 11 月 20 日寄出的安全公告提到，2.3.1 之前公開發布過的版本都有一個嚴重的漏洞。攻擊者用一把使用者 ID 特別長的 OpenPGP 金鑰可以觸發雙重釋放（double free，同一塊記憶體被釋放兩次的錯誤），並藉由傳送簽署過的資料這類方式，從應用程式竊取資料。公告也寫了這個漏洞可能被用來遠端執行程式碼。&lt;/p&gt;
+&lt;p&gt;公告舉出的、使用 GPGME 的軟體包括 Windows 上的加密套件 Gpg4win、大多數的郵件軟體、許多 XMPP 用戶端與檔案共享軟體 Samba。公告建議立即更新，使用 Gpg4win 的人可以更新到內含修正版的 5.1.2。維護套件的人要把 GPGME 的共用函式庫更新到 2.3.1，編譯時靜態連結 GPGME 的程式也要用 2.3.1 重新編譯。&lt;/p&gt;
+&lt;h2 id=&#34;optimizely-malware&#34;&gt;Optimizely 客戶網站被植入的惡意程式&lt;/h2&gt;
+&lt;p&gt;11 月 16 日造訪部分大型網站的人，瀏覽器可能載入了竊取付款卡資料與加密貨幣的惡意程式。依資安公司 Report URI 當天的文章，178 個組織的網站透過 Optimizely 的網站實驗服務 Web Experimentation（讓網站對不同訪客測試不同版面）把惡意的 JavaScript 送給了訪客。Report URI 列出的名單包括 Zoom、BBC、CNN 與 IKEA，也有滙豐銀行台灣的網站 &lt;code&gt;www.hsbc.com.tw&lt;/code&gt;，實際數字可能更高。惡意程式會把加密貨幣錢包地址換成攻擊者的，也會側錄付款卡資料、竊取 cookie 與螢幕截圖，在 iPhone 與 iPad 上還會投放兩套 iOS 攻擊工具。&lt;/p&gt;
+&lt;p&gt;攻擊者改的是客戶專案裡的 Project JavaScript（客戶在 Optimizely 後台自行撰寫、在網站每個頁面執行的程式碼）。依 CMSWire 11 月 18 日轉述 Optimizely 的說明，攻擊者利用 Web Experimentation 註冊帳號流程的漏洞，冒用目標客戶帳號裡的使用者。攻擊者接著在這些客戶的專案裡插入惡意程式碼。依同一份說明，Optimizely 在偵測後三小時內修補了漏洞，受影響的客戶不到 5%。&lt;/p&gt;
+&lt;p&gt;Report URI 觀察到，到 UTC 11 月 16 日 23:11（台北時間 11 月 17 日 07:11）為止，受感染的檔案都已清除。在受影響的網站用卡片付款過的人，Report URI 提醒要留意帳單。依 Report URI 的分析，在 Stripe、Adyen 這類付款服務代管的輸入框裡填的卡號不在側錄範圍內，直接填在網站自己表單裡的卡號在範圍內。攻擊工具本身的註解列出 iOS 18.7.3 與 26.3 以後的版本已經修補，Report URI 因此建議 iOS 18 更新到 18.7.3 以上、iOS 26 更新到 26.3 以上。&lt;/p&gt;
+&lt;h2 id=&#34;securedrop-workstation-usb&#34;&gt;SecureDrop Workstation 1.9.1 修正的 USB 漏洞&lt;/h2&gt;
+&lt;p&gt;SecureDrop 是新聞機構接收消息來源提交文件的系統，SecureDrop Workstation 是新聞工作者處理這些文件的工作站，建立在用虛擬機隔離各項工作的作業系統 Qubes OS 上。依 SecureDrop 11 月 19 日的公告，11 月 17 日發布的 1.9.1 修正了 USB 自動連接程式的一個高嚴重度漏洞。工作站把 USB 等裝置隔離在獨立的 qube（Qubes OS 裡的虛擬機），插入隨身碟時自動接到匯出文件用的 &lt;code&gt;sd-devices&lt;/code&gt;，印表機接到 &lt;code&gt;sd-printers&lt;/code&gt;。權限政策的缺陷讓這兩個 qube 被入侵之後能存取任何連接的裝置，例如網路攝影機與藍牙轉接器，前提是攻擊者先在 qube 裡取得執行程式碼的能力。&lt;/p&gt;
+&lt;p&gt;兩個 qube 設定成離線、用完即丟，能限制攻擊者外流資料，重新開機之後也較難取用已匯出或列印的文件。不過取得裝置的存取權，仍可能讓攻擊者取得某種網路連線或持續駐留。專案沒有發現被利用的案例，公告建議管理員檢查 Qubes 的裝置選單有沒有出現網路攝影機、麥克風等周邊，有的話在筆電的 BIOS 設定裡停用可以停用的裝置。&lt;/p&gt;
+&lt;h2 id=&#34;garante-meta-camera-roll&#34;&gt;義大利個資保護機關對 Meta 的罰款&lt;/h2&gt;
+&lt;p&gt;Android 版 Facebook App 有一項相簿建議功能（Get camera roll suggestions when you&#39;re browsing Facebook），會從手機相簿挑出照片與影片，當作發文的素材推薦給使用者。義大利個資保護機關 Garante 11 月 14 日在新聞稿公布，為了這項功能對 Meta 處以 8.05 億歐元的罰款。理由是 Meta 透過這項功能存取義大利使用者手機裡的照片、影片與相關 metadata，卻沒有取得專門的同意，也沒有充分告知。調查認定相簿的存取權用一次授權涵蓋整個 App 的多項功能，授權前的提示只寫「啟用其他功能」，功能本身也預設開啟。&lt;/p&gt;
+&lt;p&gt;依 Garante 對義大利《個資保護法典》（Codice privacy）第 122 條的解釋，存取手機裡的資訊都要取得自由且知情的同意，不論資料有沒有傳出去。Garante 命令 Meta 在 60 天內讓相簿建議預設關閉，已經授權過的使用者也一樣，並針對這項功能另外取得使用者的同意。Garante 裁罰時考量了受影響的人數，約 2,000 萬名義大利的 Android 使用者。2026 年推出、在雲端處理相簿內容的新功能不在這次處分的範圍，Garante 保留另外調查的權利。&lt;/p&gt;
+&lt;p&gt;依義大利媒體 L&#39;Unione Sarda 轉述 Meta 發言人的說法，Meta 強烈不同意 Garante 對事實與法律的認定，也宣布將上訴。發言人認為罰款不成比例，也表示這項功能需要在裝置上事先授權、隨時可以在設定裡變更。&lt;/p&gt;
+&lt;h2 id=&#34;france-dns-pharos&#34;&gt;法國的社群平台 DNS 過濾構想與擴大 Pharos 權限的修正案&lt;/h2&gt;
+&lt;p&gt;法國媒體報導，政府 10 月曾考慮在抗議期間於特定地區用 DNS 過濾封鎖社群平台，計畫最後沒有實施。DNS 過濾讓網域名稱無法解析成對應的位址，只能擋下整個服務，無法只移除個別的貼文或帳號。依 CircleID 10 月 26 日引述 La Tribune 對調查媒體 Blast 取得文件的報導，總理辦公室 10 月 22 日以機密信函要求四家電信業者做好準備。政府希望 10 月 24 日的示威轉為暴力時，業者能在特定地區的 4G、5G 網路暫時限制 TikTok、Instagram 與 Snapchat，X 隨後也被加入名單。&lt;/p&gt;
+&lt;p&gt;同一篇報導提到，業者在 10 月 23 日的會議上質疑技術可行性，並指出改用 VPN 或其他 DNS 解析服務可以繞過這類過濾。依 CircleID 11 月 18 日的報導，數位權利組織 ARTICLE 19 在 11 月 17 日的聲明裡呼籲法國當局放棄大範圍封鎖平台的構想，因為這類限制可能干擾合法的通訊卻無法有效阻止取用目標內容。&lt;/p&gt;
+&lt;p&gt;依 CircleID 10 月 26 日與 Public Sénat 10 月 28 日的報導，政府 10 月 26 日提出第 94 號修正案，附在參議院正在審議的「casseurs-payeurs」法案（直譯為「破壞者付費」）上。修正案要把行政機關用來要求移除網路內容的 Pharos 機制，擴及社群網路上煽動侵害生命、竊盜與破壞等行為，而且可能嚴重擾亂公共秩序的內容。行政機關可以要求主機服務業者與發行者在 24 小時內移除這類內容，修正案獲得參議院多數派與其他幾個黨團的支持而通過。&lt;/p&gt;
+&lt;p&gt;內政部長在議場表示修正案是用 Pharos 移除內容，沒有要關閉社群網路，左派參議員則譴責修正案是威權化的傾向（dérive autoritaire）。到 11 月 18 日 CircleID 的報導為止，法案還要經過國會後續的審議。&lt;/p&gt;
+&lt;/div&gt;
+&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
+  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（13 篇）&lt;/h2&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://iter.ca/post/ubo-uxss/&#34;&gt;Universal XSS in uBlock Origin from website-driven element picker&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iter.ca&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-15&#34;&gt;2026 年 11 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gorhill/uBlock/security/advisories/GHSA-cmqw-9r2w-6wv2&#34;&gt;Universal XSS from website-driven element picker&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;uBlock Origin&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-15&#34;&gt;2026 年 11 月 15 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/gorhill/uBlock/releases/tag/1.77.0&#34;&gt;1.77.0&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;uBlock Origin&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-22&#34;&gt;2026 年 11 月 22 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html&#34;&gt;[Announce] GnuPG Security Advisory for GPGME (T8557,CVE-2026-129975)&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GnuPG&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-20&#34;&gt;2026 年 11 月 20 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/&#34;&gt;World&amp;#39;s Largest Brands Infected With Malware Via Optimizely&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Report URI&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-16&#34;&gt;2026 年 11 月 16 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.cmswire.com/digital-experience/optimizely-works-through-web-experimentation-security-incident/&#34;&gt;Optimizely Works Through Web Experimentation Security Incident&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CMSWire&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/freedomofpress/securedrop-workstation/releases/tag/1.9.1&#34;&gt;SecureDrop Workstation 1.9.1&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SecureDrop&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-17&#34;&gt;2026 年 11 月 17 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://securedrop.org/news/advisory-compromised-qube-could-attach-any-device/&#34;&gt;Advisory: Compromised qube could attach any device&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;SecureDrop&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-19&#34;&gt;2026 年 11 月 19 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://garanteprivacy.it/garante/doc.jsp?ID=10321080&#34;&gt;Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Garante per la protezione dei dati personali&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-14&#34;&gt;2026 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.unionesarda.it/en/italy/meta-faces-a-massive-805-million-fine-and-the-company-is-preparing-to-appeal-oz56mokc&#34;&gt;Meta faces a massive €805 million fine, and the company is preparing to appeal.&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;L&amp;#39;Unione Sarda&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-14&#34;&gt;2026 年 11 月 14 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://circleid.com/posts/france-proposes-one-hour-social-media-removal-rule-after-secret-dns-blocking-plans&#34;&gt;France Proposes One-Hour Social Media Removal Rule After Secret DNS-Blocking Plans&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CircleID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-26&#34;&gt;2026 年 10 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.publicsenat.fr/actualites/politique/derive-autoritaire-la-gauche-senatoriale-vent-debout-apres-ladoption-dun-amendement-sur-le-blocage-de-certains-contenus-sur-les-reseaux-sociaux&#34;&gt;« Dérive autoritaire » : la gauche sénatoriale vent debout après l’adoption d’un amendement sur le blocage de certains contenus sur les réseaux sociaux&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;Public Sénat&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-10-28&#34;&gt;2026 年 10 月 28 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;source-slip__item&#34;&gt;
+    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://circleid.com/posts/frances-proposed-dns-blocks-draw-criticism-over-internet-access-and-free-expression&#34;&gt;France’s Proposed DNS Blocks Draw Criticism Over Internet Access and Free Expression&lt;/a&gt;&lt;/p&gt;
+    &lt;dl class=&#34;source-slip__meta&#34;&gt;
+      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;CircleID&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-18&#34;&gt;2026 年 11 月 18 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</content:encoded>
+</item>
 <item>
 <title>透過短波無線電收發電子郵件的開源系統 HERMES 與 Mercury</title>
 <link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/hermes-hf-radio/</link>
@@ -1669,68 +1799,6 @@
     &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://ooni.org/support/faq/&#34;&gt;Frequently Asked Questions (FAQ)&lt;/a&gt;&lt;/p&gt;
     &lt;dl class=&#34;source-slip__meta&#34;&gt;
       &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;OONI&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;
-</content:encoded>
-</item>
-<item>
-<title>netiCRM 服務商主機的入侵與客戶捐款資料庫的複製</title>
-<link>http://news.anoninetru5tflukgfaehun7q6khowgmymcff3gtk5oyesqazhmfxtyd.onion/2026/11/neticrm-breach/</link>
-<guid isPermaLink="false">anoni-news:2026/11/neticrm-breach</guid>
-<pubDate>Thu, 19 Nov 2026 00:05:00 +0800</pubDate>
-<dc:creator>anoni.net 社群</dc:creator>
-<description>台灣的服務商 NETivism 提供非營利組織捐款與會員管理系統 netiCRM，內部管理主機 11 月 9 日遭入侵。服務商確認組織聯絡人的姓名與電子郵件等資料遭竊。依 iThome 11 月 13 日的更新，一個客戶組織也接獲通知，捐款資料庫曾遭複製。其他客戶的捐款人資料，iThome 寫仍在調查（11 月 14 日查證）。曾透過使用 netiCRM 的組織捐款、入會或報名活動的人，可以留意組織的通知與冒名詐騙。</description>
-<content:encoded>&lt;p&gt;整理 5 篇原文，來自 iThome、GitHub、全國法規資料庫 等 4 個出處&lt;/p&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;p&gt;非營利組織的捐款與會員管理系統 netiCRM 由台灣的 NETivism 提供，服務商的內部管理主機在 11 月 9 日凌晨遭攻擊者入侵。依 iThome 11 月 13 日的更新，一個客戶組織 12 日公告接獲服務商通知，該組織的捐款資料庫曾遭複製。該組織公告可能外洩的有捐款者姓名、電子郵件、電話、地址與捐款紀錄。其他客戶組織與捐款給它們的人是否受影響，iThome 寫捐款人資料仍在調查（11 月 14 日查證）。&lt;/p&gt;
-&lt;p&gt;iThome 11 月 12 日發表的報導，標題寫的是「暫未發現捐款人資料外洩」，依據是服務商 11 月 11 日的說明。依 iThome 的轉述，服務商當時確認遭竊的是它自己持有的客戶資料，包括組織聯絡人的姓名與電子郵件、服務方案、帳務資料與客服紀錄。非營利組織網站上的捐款人與支持者資料，調查「尚未發現遭竊跡象」，報導沒有寫這項調查檢查了哪些紀錄。捐款資料庫遭複製的消息排在同一頁的後面，經客戶組織的公告與 iThome 兩層轉述。&lt;/p&gt;
-&lt;p&gt;入侵的經過出自服務商在 iThome 11 月 10 日報導中的說明。攻擊者取得服務商內部程式碼管理系統的一組帳號密碼，再利用系統漏洞取得一台伺服器的管理權限，11 月 9 日凌晨 1 時 55 分入侵。服務商約在凌晨 3 時 30 分切斷攻擊者對這台主機的所有連線，同一天寄出資安事件通知給客戶。依 iThome 11 月 12 日轉述的客戶通報信，服務商 11 月 10 日下午向數位發展部通報資安事件，並向臺北市警察局報案。&lt;/p&gt;
-&lt;p&gt;服務商在 11 月 10 日的說明中把客戶網站的後台帳號與寄信用的郵件帳號設定視為可能外洩，後台密碼經過雜湊（單向的轉換，無法直接還原成密碼）處理後儲存。依客戶組織同一天晚上轉述的回報，遭入侵的是服務商的內部技術管理主機，不是存放捐款紀錄的主機。到 11 月 11 日，服務商的說明是這台主機有其他主機的管理權限，所以全部客戶主機都納入檢查與重建。重建期間客戶網站與 netiCRM 服務可能暫時中斷。&lt;/p&gt;
-&lt;p&gt;依服務商 11 月 11 日經 iThome 轉述的說明，客戶有 500 多家非營利組織。服務商已隔離相關系統、找到入侵的破口並更新所有外洩的密鑰，也掃描並更新所有客戶的寄信伺服器。官方網站 &lt;code&gt;neticrm.tw&lt;/code&gt; 的重建、外部專家的協助調查與各伺服器的異常監測，在報導當時仍在進行，服務商聯繫外部資安廠商時遇到對方暫無人力支援。11 月 14 日查證時，本站以程式抓取 &lt;code&gt;neticrm.tw&lt;/code&gt; 只取得驗證頁，文中服務商的說法都經 iThome 或客戶組織轉述。&lt;/p&gt;
-&lt;h2 id=&#34;perspective&#34;&gt;導讀觀點&lt;/h2&gt;
-&lt;p&gt;依官方 GitHub 頁面的說明，netiCRM 從 CiviCRM（2005 年起開發的非營利組織關係管理系統）分支而來，原始碼公開。服務商 2011 年起以 SaaS（軟體即服務，由服務商代管主機與系統）的方式提供。組織不必自己維運主機，相對地，捐款人資料的安全也取決於服務商內部帳號與管理主機的保護（本文的推論）。&lt;/p&gt;
-&lt;p&gt;依服務商 11 月 11 日經 iThome 轉述的說明，遭入侵的管理主機存放管理系統的程式碼、參數與資料。攻擊者可能用已竊取的程式與資料，進一步攻擊客戶的網站與有弱點的主機，服務商在說明當時正著手修正遭竊的程式。換掉密碼與金鑰只能擋下用舊憑證的連線，管理系統的程式碼外流之後，程式本身的弱點也要一併修補（本文的推論）。&lt;/p&gt;
-&lt;p&gt;依 iThome 轉述，捐款資料庫遭複製的那個客戶組織提醒支持者提高警覺，慎防釣魚郵件、陌生來電與冒名詐騙。信用卡資料不受影響的說法，只出自該組織的公告。依 iThome 11 月 10 日的報導，超過 30 個組織陸續發布警訊，提醒捐款人留意可疑來電與詐騙訊息。自己捐款、入會或報名活動的組織有沒有受影響，可以看該組織的公告。&lt;/p&gt;
-&lt;p&gt;那個組織公告可能外洩的欄位包括電話、地址與捐款紀錄，冒名詐騙時可能說得出捐款人捐給哪個組織、捐了多少（本文的推論）。自稱組織人員的來電或信件要求轉帳、提供信用卡號碼或更改扣款方式時，可以先不回應，再用組織官網上的電話回撥確認。回撥確認是本文的建議，來源沒有寫。它能擋下冒名的要求，擋不住可能已經外洩的資料被再利用。&lt;/p&gt;
-&lt;p&gt;對使用 netiCRM 的組織，服務商分兩次提出建議。iThome 11 月 10 日的報導裡，服務商建議儘速更改後台所有管理員的密碼、提醒捐款人留意詐騙電話與訊息，並通知內部利害關係人。服務商 11 月 11 日則建議先在官網或社群平台告知捐款人與會員，線上捐款與活動報名可能暫時無法使用，同時發布預防詐騙的提醒。服務商另外提到部分攻擊來源指向客戶辦公室的 IP 位址，已通知相關客戶處理，沒有說明細節。&lt;/p&gt;
-&lt;p&gt;依服務商的說明，要不要向主管機關通報，由各組織依適用法規、內部規定與跟主管機關的約定自行判斷。不確定時可以洽詢主管機關或法律顧問。&lt;/p&gt;
-&lt;p&gt;台灣現行的個人資料保護法第 12 條規定，公務機關或非公務機關違反個資法致個人資料被竊取或洩漏時，應查明後以適當方式通知當事人。條文沒有向主管機關通報的規定，也沒有時限。2025 年 11 月公布的修正條文增加了符合一定通報範圍時向主管機關通報的義務，施行日期由行政院定之，到 11 月 14 日查證時全國法規資料庫仍標示未定。個人資料保護委員會籌備處的問答集寫到，新法施行前仍依現行有效的個資法辦理。&lt;/p&gt;
-&lt;p&gt;沒有透過使用 netiCRM 的組織捐款、入會或報名活動的人，不必做任何事。使用 netiCRM 的組織，聯絡人的姓名與電子郵件已由服務商確認遭竊，組織人員同樣可能收到冒名的信件（本文的推論）。到 11 月 14 日查證時，iThome 的報導只寫到一個客戶組織接獲捐款資料庫遭複製的通知，沒有寫其他客戶是否也是同樣情況。之後可以看服務商公布的完整調查結果與外部專家的調查，以及其他客戶組織是否陸續收到同樣的通知。&lt;/p&gt;
-&lt;/div&gt;
-&lt;aside class=&#34;source-slip&#34; id=&#34;sources&#34; aria-labelledby=&#34;source-slip-heading&#34;&gt;
-  &lt;h2 class=&#34;source-slip__heading&#34; id=&#34;source-slip-heading&#34;&gt;原文（5 篇）&lt;/h2&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180438&#34;&gt;netiCRM服務商內部管理主機遭駭，暫未發現捐款人資料外洩，已將500家客戶主機納入檢查及重建範圍&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-12&#34;&gt;2026 年 11 月 12 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://www.ithome.com.tw/news/180384&#34;&gt;netiCRM服務商遭駭，超過30個非營利組織接連示警（標題略去組織名稱）&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;iThome&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2026-11-10&#34;&gt;2026 年 11 月 10 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;en&#34;&gt;&lt;a href=&#34;https://github.com/NETivism/netiCRM&#34;&gt;netiCRM&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;GitHub&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021&#34;&gt;個人資料保護法&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;全國法規資料庫&lt;/dd&gt;&lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;source-slip__item&#34;&gt;
-    &lt;p class=&#34;source-slip__title&#34; lang=&#34;zh-Hant&#34;&gt;&lt;a href=&#34;https://ws.pdpc.gov.tw/FS01/FilePath/3/relfile/30/1072/a842b3f2-3399-4742-96ae-3f6648bd071a.pdf&#34;&gt;個人資料保護法修法問答集&lt;/a&gt;&lt;/p&gt;
-    &lt;dl class=&#34;source-slip__meta&#34;&gt;
-      &lt;div&gt;&lt;dt&gt;出處&lt;/dt&gt;&lt;dd&gt;個人資料保護委員會籌備處&lt;/dd&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;dt&gt;原文日期&lt;/dt&gt;&lt;dd&gt;&lt;time datetime=&#34;2025-12-26&#34;&gt;2025 年 12 月 26 日&lt;/time&gt;&lt;/dd&gt;&lt;/div&gt;
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/aside&gt;

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 <url>
+<loc>https://anoni.net/news/2026/11/weekly-brief-2026-w48/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-tw</news:language>
+</news:publication>
+<news:publication_date>2026-11-28T00:10:00+08:00</news:publication_date>
+<news:title>每週短訊 2026 第 48 週</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/zh-cn/2026/11/weekly-brief-2026-w48/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>zh-cn</news:language>
+</news:publication>
+<news:publication_date>2026-11-28T00:10:00+08:00</news:publication_date>
+<news:title>每周短讯 2026 第 48 周</news:title>
+</news:news>
+</url>
+<url>
+<loc>https://anoni.net/news/en/2026/11/weekly-brief-2026-w48/</loc>
+<news:news>
+<news:publication>
+<news:name>anoni.net</news:name>
+<news:language>en</news:language>
+</news:publication>
+<news:publication_date>2026-11-28T00:10:00+08:00</news:publication_date>
+<news:title>Weekly brief, 2026 week 48</news:title>
+</news:news>
+</url>
+<url>
 <loc>https://anoni.net/news/2026/11/hermes-hf-radio/</loc>
 <news:news>
 <news:publication>
